@@ -1,0 +1,88 @@
+{
+  "title": "Laryngeal Paralysis Survey",
+  "description": "Survey about diagnosis and treament of canine laryngeal paralysis",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "text",
+          "name": "fullName",
+          "title": "Your Facebook Handle",
+          "isRequired": true,
+          "titleLocation": "left"
+        },
+        {
+          "type": "panel",
+          "name": "accordion_container",
+          "panelExpandMode": "single",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "treatment_panel",
+              "title": "Treatment",
+              "state": "expanded",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "treatment_method",
+                  "title": "How was your dog treated for laryngeal paralysis?",
+                  "choices": [
+                    {
+                      "value": "Surgery",
+                      "text": "Surgery",
+                      "visibleIf": "{treatment_method} empty or {treatment_method} = 'Surgery'"
+                    },
+                    {
+                      "value": "Stent",
+                      "text": "Stent",
+                      "visibleIf": "{treatment_method} empty or {treatment_method} = 'Stent'"
+                    },
+                    {
+                      "value": "Alternative treatment by licensed veterinarian",
+                      "text": "Alternative treatment by licensed veterinarian",
+                      "visibleIf": "{treatment_method} empty or {treatment_method} = 'Alternative treatment by licensed veterinarian'"
+                    },
+                    {
+                      "value": "Medical management with pharmaceuticals",
+                      "text": "Medical management with pharmaceuticals",
+                      "visibleIf": "{treatment_method} empty or {treatment_method} = 'Medical management with pharmaceuticals'"
+                    },
+                    {
+                      "value": "Other means",
+                      "text": "Other means",
+                      "visibleIf": "{treatment_method} empty or {treatment_method} = 'Other means'"
+                    }
+                  ]
+                },
+                {
+                  "type": "panel",
+                  "name": "surgery_questions_panel",
+                  "title": "Surgery Details",
+                  "visibleIf": "{treatment_method} = 'Surgery'",
+                  "elements": [
+                    {
+                      "type": "radiogroup",
+                      "name": "surgery_type",
+                      "title": "What type of surgery was performed?",
+                      "choices": [
+                        "Tieback (UAL)",
+                        "BVEAP",
+                        "Arytenoidectomy",
+                        "Laser Ablation",
+                        "Other",
+                        "Don't know"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "showQuestionNumbers": "off",
+  "showCompletedPage": false
+}

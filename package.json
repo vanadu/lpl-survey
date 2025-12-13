@@ -31,7 +31,9 @@
     "react-modal": "^3.16.1",
     "react-tabs": "^6.0.1",
     "react-tooltip": "^5.10.5",
-    "stylelint-config-recommended-scss": "^10.0.0"
+    "stylelint-config-recommended-scss": "^10.0.0",
+    "survey-core": "^2.5.0",
+    "survey-react-ui": "^2.5.0"
   },
   "devDependencies": {
     "eslint-config-next": "^14.2.23",
@@ -46,6 +48,6 @@
     "stylelint-prettier": "^3.0.0"
   },
   "stylelint": {
-      "extends": "@company/stylelint-config"
+    "extends": "@company/stylelint-config"
   }
 }
