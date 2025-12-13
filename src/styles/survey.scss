@@ -66,27 +66,36 @@
 }
 
 // !VA Survey content
-//---------------------
+// ----------------------------------------------------------
+// !VA Default overrides
+// ---------------------
 
-// !VA sd-question
+// !VA es-question: Default vertical padding between question ITEMS, not between questions
 .survey-wrapper .sd-question {
-  // !VA Default vertical padding between question ITEMS, not between questions
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)));
 
 }
 
-// !VA sd-imagepicker
-// !VA  
+.survey-wrapper .sd-question input {
+  // padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  padding: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+}
 
+// !VA Individual element overrides
+// ---------------------
+
+// !VA crossedOver imagepacker
+// !VA crossedOver imagepicker wrapper
 .sd-question[data-name="crossedOver"] {
 }
 
+// !VA crossedOver header
 .sd-question[data-name="crossedOver"] .sd-question__header {
-  // text-align: center;
   padding-bottom: 10px;
 }
 
+// !VA Crossed over images container width
 .sd-question[data-name="crossedOver"]  .sd-imagepicker  {
   width: 400px;
   justify-content: space-around;
@@ -133,11 +142,15 @@
   // text-align: center!important;
 }
 
-// .survey-wrapper .sd-title  {
-//   align-items: center!important;
-//   text-align: center!important;
-//   background: rgba(0, 128, 0, .3) !important; //devgreen
-// }
+.sd-question[data-name="animalType"] fieldset.sd-selectbase {
+  position: relative;
+  margin-left: -50px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+
 
 
 

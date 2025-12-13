@@ -34,7 +34,7 @@
         {
           "type": "html",
           "name": "aboutCompanionText",
-          "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next onr.  </p>"
+          "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
         },
         {
           "type": "radiogroup",
@@ -43,7 +43,7 @@
           "choices": ["Dog", "Cat", "Horse"]
         },
         {
-          "type": "html",
+      "type": "html",
           "name": "aboutCompanionText",
           "html": "<p>The second question we need to ask is the hardest. We know how hard it is to lose a beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p>"
         },
