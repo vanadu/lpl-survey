@@ -7,12 +7,12 @@
       "elements": [
         {
           "type": "html",
-          "name": "survey_heading",
+          "name": "introHeading",
           "html": "<h2>About this survey</h2>"
         },
         {
           "type": "html",
-          "name": "survey_intro_text",
+          "name": "introText",
           "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>"
         },
         {
@@ -22,18 +22,23 @@
         },
         {
           "type": "text",
-          "name": "userName",
+          "name": "userContact",
           "title": "Facebook account name or email",
           "isRequired": true
         },
         {
           "type": "html",
-          "name": "survey_intro_text",
+          "name": "aboutCompanionHeading",
+          "html": "<h3>About your LP companion.<h3>"
+        },
+        {
+          "type": "html",
+          "name": "aboutCompanionText",
           "html": "<p>LP affects your companions their entire lives so many of our questions reflect that. </p>"
         },
         {
           "type": "imagepicker",
-          "name": "pet_status",
+          "name": "crossedOver",
           "title": "Is your companion still with you or have they crossed over the Rainbow Bridge?",
           "isRequired": true,
           "choices": [

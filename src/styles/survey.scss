@@ -9,7 +9,7 @@
 // !VA Survey container - background color is inherited from survey-wrapper
 // ----------------------------------------------------------
 .sd-container-modern {
-    background: $content_bg_color;
+    background: $home_bg_color;
 }
 
 
@@ -38,7 +38,7 @@
 // -------------------------------------------------------------------------
 // Left/right padding between page and wrapper
 .survey-wrapper .sd-page {
-  background: rgba(255, 0, 0, .3) !important; //devred
+  // !VA Nothing yet
 }
   
 // !VA Survey panel
@@ -46,12 +46,12 @@
 // !VA Horiz padding within panel between panel and page
 .survey-wrapper .sd-panel {
 
-
 }
 
+// !VA Top panel margin, i.e. directly above the introHeading
 .survey-wrapper .sd-panel__content {
   // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  --sd-base-padding: calc(2* var(--sjs-base-unit, var(--base-unit, 8px)));
+  --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)));
   
 
 }
@@ -61,21 +61,64 @@
 // !VA sets row top margins, 
 // !VA does not set padding, bottom margins
 .survey-wrapper .sd-row {
-  // !VA Works
-  // margin-top: 0;
+  // --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  --sd-base-vertical-padding: calc(2* var(--sjs-base-unit, var(--base-unit, 8px)));
 }
 
 // !VA Survey content
 //---------------------
 
+// !VA sd-question
+.survey-wrapper .sd-question {
+  // !VA Default vertical padding between question ITEMS, not between questions
+  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)));
+
+}
+
+// !VA sd-imagepicker
+// !VA  
+
+.sd-question[data-name="crossedOver"] .sd-question__header {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.survey-wrapper .sd-imagepicker {
+  width: 400px;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
 // !VA Survey Title
-// !VA sd-question is any question content. This targets only the survey_heading element.
-.sd-question[data-name="survey_heading"] h2 {
+// !VA introHeading
+.sd-question[data-name="introHeading"] h2 {
   font-family: $secondary_font;
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin: 0!important;
   padding: 0!important;
 }
+
+// !VA introText
+.sd-question[data-name="introText"] p {
+  margin: 0!important;
+  padding: 0!important;
+}
+
+// !VA Padding above introText to reduce space between introText and introHeading
+.sd-row:has(> div > .sd-question[data-name="introText"]) {
+  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
+
+}
+
+// !VA Padding above userContact to reduce space between info link and label
+.sd-row:has(> div > .sd-question[data-name="userContact"]) {
+  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
+}
+
+
 
 
 // !VA HTML content
