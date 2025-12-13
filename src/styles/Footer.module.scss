@@ -1,0 +1,237 @@
+@import './variables.scss';
+@import './mixins/mediaqueries.scss';
+
+.footer {
+  @include mphone {
+    padding: .75rem 0 5rem;
+  }
+  @include lphone {
+    padding: .75rem 0 5rem;  
+  }
+  @include tablet {
+    padding: .75rem 0 5rem;
+  }
+  @include desktop {
+    padding: .75rem 0 5rem;
+  }
+  @include ldesktop {
+    padding: .75rem 0 5rem;
+  }
+  padding: .25rem 0 2rem;
+  background: $home_bg_color;
+  // background: $primary_color;
+}
+
+.top_bar {
+  width: 100%;
+  height: .5rem;
+  background: $primary_color;
+}
+
+.two_column_content {
+  @include mphone {
+    display: block;
+    margin: 0 auto;
+    padding: 0 .75rem 0;
+    width: 365px;
+  }
+  @include lphone {
+    display: block;
+    margin: 0 auto;
+    padding: 0 0 0;
+    width: 374px
+  }
+  @include tablet {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem 0;
+  }
+  @include desktop {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem 0;
+  }
+  @include ldesktop {
+    display: block;
+    width: 1400px;
+    margin: 0 auto;
+    padding: 0 5.688rem 0;
+  }
+  display: flex;
+  flex-direction: column;
+
+  width: 310px;
+  margin: 0 auto;
+  padding: 0 .25rem 0;
+  // background: $content_bg_color;
+  background: $home_bg_color;
+}
+
+.column_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.head {
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  @include ldesktop {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  @include tablet {
+    width: 90px;
+  }
+  @include desktop {
+    width: 94px;
+  }
+  @include ldesktop {
+    width: 98px;
+  }
+  width: 80px;
+  height: auto;
+}
+
+.logo_img {
+  @include mphone {
+    margin: .25rem 0 0;
+  }
+  @include lphone {
+    margin: .25rem 0 0;
+  }
+  @include tablet {
+    margin: .75rem 0 .25rem;
+  }
+  @include desktop {
+    margin: .75rem 0 .25rem;
+  }
+  @include ldesktop {
+    margin: .75rem 0 .25rem;
+  }
+  margin: .25rem 0 0;
+}
+
+.copyright {
+  margin: 0 0 .75rem;
+}
+
+.copyright_text {
+  @include mphone {
+    font-size: $mphoneXXSFontSize;
+    line-height: $mphoneXXSLineHeight;
+  }
+  @include lphone {
+    font-size: $lphoneXXSFontSize;
+    line-height: $lphoneXXSLineHeight;
+  }
+  @include tablet {
+    font-size: $tabletXXSFontSize;
+    line-height: $tabletXXSLineHeight;
+  }
+  @include desktop {
+    font-size: $desktopXXSFontSize;
+    line-height: $desktopXXSLineHeight;
+  }
+  @include ldesktop {
+    font-size: $ldesktopXXSFontSize;
+    line-height: $ldesktopXXSLineHeight;
+  }
+  color: $light_text_color;
+  font-size: $rootXXSFontSize;
+  line-height: $rootXXSLineHeight;
+  text-align: center;
+}
+
+.icons {
+  @include mphone {
+    margin: .5rem 0;
+  }
+  @include lphone {
+    margin: .5rem 0;
+  }
+  @include desktop {
+    margin: .5rem 0;
+  }
+  display: flex;
+  align-items: center;
+  margin: .5rem 0;
+}
+
+.icon {
+    @include mphone {
+      font-size: 1.75rem;
+    }
+    @include lphone {
+      font-size: 1.813rem;
+      // padding: 1.75rem 1rem 0;
+    }
+    @include tablet {
+      font-size: 1.875rem;
+      padding: .5rem 1rem 0;
+    }
+    @include desktop {
+      font-size: 1.938rem;
+      padding: .5rem 1.5rem 0;
+    }
+    @include ldesktop {
+      font-size: 2rem;
+      padding: 0 1.5rem;
+    }
+  font-size: 1.625rem;
+  padding: 0 1rem;
+  color: $primary_color;
+}
+
+.disclaimer {
+  width: 100%;
+}
+
+.disclaimer_text {
+  @include mphone {
+    font-size: $mphoneXXSFontSize;
+    line-height: $mphoneXXSLineHeight;
+  }
+  @include lphone {
+    font-size: $lphoneXXSFontSize;
+    line-height: $lphoneXXSLineHeight;
+  }
+  @include tablet {
+    font-size: $tabletXXSFontSize;
+    line-height: $tabletXXSLineHeight;
+  }
+  @include desktop {
+    font-size: $desktopXXSFontSize;
+    line-height: $desktopXXSLineHeight;
+  }
+  @include ldesktop {
+    font-size: $ldesktopXXSFontSize;
+    line-height: $ldesktopXXSLineHeight;
+  }
+  color: $light_text_color;
+  font-size: $rootXXSFontSize;
+  line-height: $rootXXSLineHeight;
+  text-align: left;
+}

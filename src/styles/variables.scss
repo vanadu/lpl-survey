@@ -1,0 +1,246 @@
+// FOREGROUND COLORS
+//------------------
+// $primary_color: #FCB900;
+// $primary_color: goldenrod;
+// !VA primary_color_rgb: 218, 165, 32
+$primary_color: #DAA520;
+// !VA 2024 Blue as per the color wheel
+// !VA secondary_color_rgb: 32, 85, 218
+
+$secondary_color: #2055DA;
+// !VA 2024 Heart red
+// $secondary_color: #aa0000;
+$tertiary_color: #20DA48;
+$marquee_color: #AD0110;
+$accent_color: #DA20B2;
+$icon_color: #8b0000;
+// BACKGROUND COLORS
+//------------------
+$home_bg_color: #212121;
+$content_bg_color: #E1E1E1;
+$subnav1_bg_color: #E1E1E1;
+$footer_bg_color: #0e2660;
+$guide_menu_color: #E1E1E1; // .dropdown .dropdown_content
+// $footer_bg_color: #A520DA;
+
+
+// COMMUNITY COLORS
+// Home community block colors - CTA text and links in community block use community_cta_color
+$community_bg_color: #2055DA;
+$community_link_color:  #f7bd36;
+$community_marquee_color: #a6baea;
+$community_marquee_color: #d4e0fc;
+
+
+// TYPOGRAPHY
+//-----------
+// $light_text_color: antiquewhite;
+$home_text-color: #212121;
+$light_text_color: #FFF;
+$dark_text_color: #212121;
+$gray_text_color: #252525;
+$guide_menu_text_color: #161616; //guide_menu_item_block
+$showmore_text_color: #8E000B;
+$primary_font: 'Open Sans', sans-serif;
+$secondary_font: 'Oswald', 'Arial Narrow', sans-serif;
+$boogaloo_font: 'Boogaloo', 'Oswald', sans-serif;
+$inter_font: 'Inter', sans-serif;
+// $condensed_font: 'Roboto Condensed', sans-serif;
+$monospace_font: 'Inconsolata', monospace;
+
+// ACCENTS
+// -------
+$primary_accent_color: #474747;
+$secondary_accent_color: #959595;
+$tertiary_accent_color: #E1E1E1;
+$horiz_rule_color: #666;
+// LINKS
+//------
+$primary_link_color: #FCB900;
+$primary_hover_color:  #8DD1FF;
+$secondary_link_color: #896400;
+$secondary_hover_color: #FCB900;
+$showmore_link_color: #8e000b;
+// UI AND TOOLTIPS
+// ---------------
+$primary_icon_color: #d3d3d3;
+$button_color: #841117;
+$separator_color: #808080;
+$tooltip_color: #4c3800;
+$tooltip_color: #725503;
+
+$test_color: #606060;
+
+// !VA Mobile Menu Size
+$rootMobileMenuBg: 60px;
+$mphoneMobileMenuBg: 60px;
+$lphoneMobileMenuBg: 75px;
+$tabletMobileMenuBg: 75px;
+$desktopMobileMenuBg: 75px;
+$ldesktopMobileMenuBg: 75px;
+
+
+/* !VA Font sizes   
+------------------
+*/
+
+
+
+// !VA HUGE
+$rootHugeFontSize: 1.375rem;
+$rootHugeLineHeight: 1.938rem;
+$mphoneHugeFontSize: 1.438rem;
+$mphoneHugeLineHeight: 2rem;
+$lphoneHugeFontSize: 1.5rem;
+$lphoneHugeLineHeight: 2.125rem;
+$tabletHugeFontSize: 1.625rem;
+$tabletHugeLineHeight: 2.25rem;
+$desktopHugeFontSize: 1.75rem;
+$desktopHugeLineHeight: 2.375rem;
+$ldesktopHugeFontSize: 2rem;
+$ldesktopHugeLineHeight: 2.5rem;
+
+
+$rootXXLFontSize: 1.313rem;
+$rootXXLLineHeight: 1.875rem;
+$mphoneXXLFontSize: 1.375rem;
+$mphoneXXLLineHeight: 1.936rem;
+$lphoneXXLFontSize: 1.438rem;
+$lphoneXXLLineHeight: 2rem;
+$tabletXXLFontSize: 1.5rem;
+$tabletXXLLineHeight: 2rem;
+$desktopXXLFontSize: 1.563rem;
+$desktopXXLLineHeight: 2.063rem;
+$ldesktopXXLFontSize: 1.625rem;
+$ldesktopXXLLineHeight: 2.125rem;
+
+// !VA XL Font Size and Line Height 
+$rootXLFontSize: 1.188rem;
+$rootXLLineHeight: 1.688rem;
+$mphoneXLFontSize: 1.25rem;
+$mphoneXLLineHeight: 1.75rem;
+$lphoneXLFontSize: 1.313rem;
+$lphoneXLLineHeight: 1.813rem;
+$tabletXLFontSize: 1.375rem;
+$tabletXLLineHeight: 1.875rem;
+$desktopXLFontSize: 1.438rem;
+$desktopXLLineHeight: 1.936rem;
+$ldesktopXLFontSize: 1.5rem;
+$ldesktopXLLineHeight: 2rem;
+
+// !VA Header Slug 
+$rootSlugLineHeight: 1.375rem;
+$mphoneSlugLineHeight: 1.638rem;
+$lphoneSlugLineHeight: 1.75rem;
+$tabletSlugLineHeight: 1.75rem;
+$desktopSlugLineHeight: 2.938rem;
+$ldesktopSlugLineHeight: 2.25rem;
+
+// !VA Text Content, subhead h2
+$rootLargeFontSize: 1.063rem;
+$rootLargeLineHeight: 1.5rem;
+$mphoneLargeFontSize: 1.125rem;
+$mphoneLargeLineHeight: 1.625rem;
+$lphoneLargeFontSize: 1.188rem;
+$lphoneLargeLineHeight: 1.688rem;
+$tabletLargeFontSize: 1.25rem;
+$tabletLargeLineHeight: 1.875rem;
+$desktopLargeFontSize: 1.313rem;
+$desktopLargeLineHeight: 1.938rem;
+$ldesktopLargeFontSize: 1.375rem;
+$ldesktopLargeLineHeight: 2.063rem;
+
+// !VA List Line Height, 135% of text line height, just a bit tighter than normal to offset lists visually
+$rootListLineHeight: 1.5rem;
+$mphoneListLineHeight: 1.563rem;
+$lphoneListLineHeight: 1.625rem;
+$tabletListLineHeight: 1.688rem;
+$desktopListLineHeight: 2.063rem;
+$ldesktopListLineHeight: 2.125rem;
+
+
+
+// Nav Menu
+// !VA Text Content
+$tabletMenuFontSize: .938rem;
+$tabletMenuLineHeight: 1.25rem;
+$desktopMenuFontSize: 1.063rem;
+$desktopMenuLineHeight: 1.625rem;
+$ldesktopMenuFontSize: 1.188rem;
+$ldesktopMenuLineHeight: 1.688rem;
+
+// Blog Post Listing Link
+$rootNormalFontSize: 1rem;
+$rootNormalLineHeight: 1.438rem;
+$mphoneNormalFontSize: 1.063rem;
+$mphoneNormalLineHeight: 1.563rem;
+$lphoneNormalFontSize: 1.125rem;
+$lphoneNormalLineHeight: 1.688rem;
+$tabletNormalFontSize: 1.188rem;
+$tabletNormalLineHeight: 1.75rem;
+$desktopNormalFontSize: 1.25rem;
+$desktopNormalLineHeight: 1.625rem;
+$ldesktopNormalFontSize: 1.313rem;
+$ldesktopNormalLineHeight: 1.875rem;
+
+// !VA Consent Form
+$rootSmallFontSize: .938rem;
+$rootSmallLineHeight: 1.375rem;
+$mphoneSmallFontSize: 1rem;
+$mphoneSmallLineHeight: 1.438rem;
+$lphoneSmallFontSize: 1.063rem;
+$lphoneSmallLineHeight: 1.5rem;
+$tabletSmallFontSize: 1.125rem;
+$tabletSmallLineHeight: 1.563rem;
+$desktopSmallFontSize: 1.188rem;
+$desktopSmallLineHeight: 1.625rem;
+$ldesktopSmallFontSize: 1.25rem;
+$ldesktopSmallLineHeight: 1.813rem;
+
+
+// !VA Table cells
+$rootXSFontSize: .875rem;
+$rootXSLineHeight: 1.313rem;
+$mphoneXSFontSize: .938rem;
+$mphoneXSLineHeight: 1.375rem;
+$lphoneXSFontSize: 1rem;
+$lphoneXSLineHeight: 1.438rem;
+$tabletXSFontSize: 1.063rem;
+$tabletXSLineHeight: 1.5rem;
+$desktopXSFontSize: 1.188rem;
+$desktopXSLineHeight: 1.563rem;
+$ldesktopXSFontSize: 1.25rem;
+$ldesktopXSLineHeight: 1.625rem;
+
+// ShowMore link text, list item text
+$rootShowmoreFontSize: 1.063rem;
+$rootShowmoreLineHeight: 1.438rem;
+$mphoneShowmoreFontSize: 1.125rem;
+$mphoneShowmoreLineHeight: 1.5rem;
+$lphoneShowmoreFontSize: 1.188rem;
+$lphoneShowmoreLineHeight: 1.563rem;
+$tabletShowmoreFontSize: 1.25rem;
+$tabletShowmoreLineHeight: 1.688rem;
+$desktopShowmoreFontSize: 1.313rem;
+$desktopShowmoreLineHeight: 1.813rem;
+$ldesktopShowmoreFontSize: 1.5rem;
+$ldesktopShowmoreLineHeight: 1.938rem;
+
+// !VA Footnotes
+$rootXXSFontSize: .813rem;
+$rootXXSLineHeight: 1.25rem;
+$mphoneXXSFontSize: .875rem;
+$mphoneXXSLineHeight: 1.313rem;
+$lphoneXXSFontSize: .938rem;
+$lphoneXXSLineHeight: 1.375rem;
+$tabletXXSFontSize: 1rem;
+$tabletXXSLineHeight: 1.438rem;
+$desktopXXSFontSize: 1.063rem;
+$desktopXXSLineHeight: 1.5rem;
+$ldesktopXXSFontSize: 1.188rem;
+$ldesktopXXSLineHeight: 1.563rem;
+
+
+
+
+

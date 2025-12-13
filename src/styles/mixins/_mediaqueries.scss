@@ -1,0 +1,37 @@
+// !VA Media Query Mixins
+// !VA Default is the 'tiny' phone, i.e. the original iPhone SE at 320px width. sPhone is the 2020 iPhone SE at 375 px width. But we also need a mq for that -- for the case when we need to apply !important to ONLY to the smallest phone, this comes up only with the React Tooltip component, see custom.scss.
+@mixin sphone {
+  @media screen and (max-width: 374px)   {
+    @content;
+  }
+}
+
+@mixin mphone {
+  @media screen and (min-width: 375px) and (max-width: 413px)   {
+    @content;
+  }
+}
+
+@mixin lphone {
+  @media screen and (min-width: 414px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 960px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin ldesktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}

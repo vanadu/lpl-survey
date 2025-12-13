@@ -1,0 +1,968 @@
+@import './variables.scss';
+@import './mixins/mediaqueries.scss';
+
+.header {
+  @include mphone {
+   height: 104px; 
+   box-shadow: 1px -2px 9px 4px rgba(0,0,0,0.32) inset;
+  }
+  @include lphone {
+    height: 120px; 
+  }
+  @include tablet {
+    align-items: center;
+    height: 120px; 
+    box-shadow: 1px -4px 9px 4px rgba(0,0,0,0.32) inset;
+  }
+  @include desktop {
+    align-items: center;
+    box-shadow: 1px -7px 9px 4px rgba(0,0,0,0.32) inset;
+    height: 130px; 
+  }
+  @include ldesktop {
+    align-items: center;
+    box-shadow: 1px -12px 12px 5px rgba(0,0,0,.35) inset;
+    height: 150px; 
+  }
+  display: flex;
+  flex-direction: column;
+  height: 94px;
+  // !VA Bottom gradient
+  // background-size: 100% 100%;
+  // background-position: 0px 0px;
+  // background-image: linear-gradient(0deg, rgba(0, 0, 0, .3) 1%, rgba(0, 0, 0, 0) 17%);
+  // !VA Box shadow mostly only on bottom, probably better than gradient.
+  box-shadow: 1px -2px 8px 3px rgba(0,0,0,0.32) inset;
+}
+
+
+// !VA BRICKS
+// !VA 2024.04.08 Replacing header_img_box with HeaderBricks from CBE
+// !VA Start HeaderBricks styles
+// -------------------------------------------------------------------
+.bricks_container {
+  @include mphone {
+    height: 104px; 
+  }
+  @include lphone {
+    height: 121px;
+  }
+  @include tablet {
+    // width: 2058px;
+    height: 120px;
+  }
+  @include desktop {
+    // VA! 2024
+    height: 130px;
+  }
+  @include ldesktop {
+    // !VA At some point, I noted that I was trying to get rid of the vertical scrollbar here
+    height: 150px;
+  }
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 95px; 
+  overflow: hidden; 
+  background: $primary_accent_color;
+  // !VA 2024
+  background: $secondary_color;
+  background: transparent;
+  opacity: 1;
+  // !VA I don't know what I did here, but the z-index works now and the bricks don't overlay the 
+  z-index: 1;
+}
+
+// !VA This is in Header.js
+.bricks_slider {
+  display: block;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  }
+
+
+.bricks_slider .bricks {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  height: auto;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  animation: moveSlideshow 120s linear infinite;
+  opacity: .3;
+  z-index: 1;
+}
+
+// !VA Stop animation on hover
+.bricks:hover, .bricks:focus {
+  cursor: pointer;
+  animation-play-state: paused;
+}
+
+@keyframes moveSlideshow {
+  100% { 
+    // !VA Initial from the demo, see links in OneNote CSS notebook
+    // transform: translateX(-66.6666%);  
+    transform: translateX(-50%);  
+  }
+}
+
+// !VA brick_img is in the Brick component
+.brick_img {
+  position: relative;
+  width: auto;
+  // !VA Height is defined in bricks_container
+  height: 100%;
+  // !VA Exposes the primary_accent_color background of the parent
+  padding: 2px .125rem 2px 0;
+  z-index: 1;
+}
+
+.ldesktop_brick_img {
+  display: none;
+}
+
+// !VA HEADER content section
+.header_content {
+  @include mphone {
+    height: 90px;
+  }
+  @include lphone {
+    height: 90px;
+  }
+  @include tablet {
+    height: 96px;
+    width: 768px;
+  }
+  @include desktop {
+    // !VA 2024 trying to push this container up to the top...
+    align-items: flex-start;
+    height: 138px;
+    width: 960px;
+  }
+  @include ldesktop {
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 138px;
+    // !VA This is a problem
+    width: 85%;
+  }
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+  align-items: flex-start;
+  height: 138px;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  overflow: hidden; 
+}
+
+// !VA NAV Section
+// -------------
+
+// !VA ICON BAR
+.icon_bar {
+  // !VA 2024 This is just the container, I think ???
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    display: block;
+  }
+  @include ldesktop {
+    display: block;
+  }
+  position: relative;
+  display: none;
+  z-index: 10;
+}
+
+.icons {
+  // @include desktop {
+  //   margin: .375rem .5rem 0 0;
+  //   padding-top: .125rem;
+  // }
+  // @include ldesktop {
+  //   margin: .375rem .5rem 0 0;
+  // }
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding-top: .125rem;
+  background: $secondary_color;
+  border-radius: 20px;
+}
+
+
+.icon {
+    @include tablet {
+      padding: .125rem .75rem .063rem;
+      font-size: 1rem;
+    }
+    @include desktop {
+      padding: .125rem 1rem .063rem;
+      font-size: 1.125rem;
+    }
+    @include ldesktop {
+      padding: .125rem 1rem .063rem;
+      font-size: 1.188rem;
+    }
+  // !VA 2024 Not visible on mobile
+}
+
+// !VA 2024 There's a whole thing with the highlighting the active route that doesn't work now with the new responsive menu
+
+.nav_container {
+  @include tablet {
+    // position: relative;
+    // align-items: center;
+    margin: .688rem 0 0 0;
+  }
+  @include desktop {
+    margin: .936rem 0 0 0;
+  }
+  @include ldesktop {
+    margin: .688rem 2rem 0 0;
+    width: 100%;
+    justify-content: flex-end;
+
+  }
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 10px;
+  width: auto;
+  // !VA 2024
+  z-index: 100;
+}
+
+.nav_menu_items {
+  @include lphone {
+    padding-top: 2rem;
+    // justify-content: center;
+  }
+  @include tablet {
+    position: relative;
+    top: auto;
+    left: auto;
+    flex-flow: row wrap;
+    // width: 100%;
+    margin: .188rem .5rem 0 0; 
+    transition: none;
+    transform: none;
+    transform-origin: none;
+    background: transparent;
+  }
+  @include desktop {
+    position: relative;
+    flex-flow: row wrap;
+    margin: .188rem .75rem 0 0; 
+    transition: none;
+    transform: none;
+    transform-origin: none;
+    background: transparent;
+  }
+  @include ldesktop {
+    position: relative;
+    flex-flow: row wrap;
+    // margin: .188rem .75rem 0 0; 
+    transition: none;
+    transform: none;
+    transform-origin: none;
+    background: transparent;
+  }
+  position: fixed;
+  display: flex;
+  // align-items: stretch;
+  flex-flow: column wrap;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  // !VA From the website I got this menu from...commented out
+  // flex-flow: row wrap;
+  // flex-direction: row;
+  // margin: 0 0 0 1rem; 
+  background: $content_bg_color;
+  text-align: center;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  // !VA 2024 Check this, lots of these running around
+  // !VA Trying to get the mobile menu to display over the menu items
+  // !VA 2024 Has no effect on anything...
+  z-index: auto;
+}
+
+
+
+// !VA Putting the background image in the pseudoelement, otherwise it will screw up the layout of the hamburger menu. I don't know if this will have an effect on the page load...
+.nav_main_list_item::after {
+  @include mphone {
+    background-position: -170px 0;
+  }
+  @include lphone {
+    background-position: -290px 0;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+  @include ldesktop {
+    display: none;
+  } 
+  content: "";
+  background-image: url('../../public/bricks/img-brick-11.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -150px 0;
+  opacity: 0.03;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.nav_menu_items a {
+  // !VA 2024 This affects the mobile AND desktop menu items
+  @include mphone {
+    padding: 1.125rem 1rem;
+    font-size: $mphoneXXLFontSize;
+    line-height: $mphoneXXLLineHeight;
+  }
+  @include lphone {
+    padding: 1.25rem 1rem;
+    font-size: $lphoneXXLFontSize;
+    line-height: $lphoneXXLLineHeight;
+  }
+  @include tablet {
+    padding: 0 .638rem;
+    font-size: $tabletMenuFontSize;
+    line-height: $tabletMenuLineHeight;
+    font-weight: 600;
+  }
+  @include desktop {
+    padding: 0 .75rem;
+    font-size: $desktopMenuFontSize;
+    line-height: $desktopMenuLineHeight;
+    font-weight: 600;
+  }
+  @include ldesktop {
+    padding: .25rem 1rem 0;
+    font-size: $ldesktopMenuFontSize;
+    line-height: $ldesktopMenuLineHeight;
+    font-weight: 600;
+  }
+  text-decoration: none;
+  display: block;
+  padding: .813rem 1rem;
+  color: $dark_text_color;
+  font-family: $inter_font;
+  font-size: $rootXXLFontSize;
+  line-height: $rootXXLLineHeight;
+  font-weight: 600;
+}
+
+// !VA Logo in the mobile menu
+.nav_logo {
+  @include mphone {
+    width: 140px;
+  }
+  @include lphone {
+    width: 160px;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+  @include ldesktop {
+    display: none;
+  }
+  display: block;  
+  width: 120px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav_logo a {
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.nav_dropdown_icon {
+  font-size: 80%;
+  font-weight: 600;
+  vertical-align: -1px;
+  padding-left: .063rem;
+}
+
+
+
+// !VA This is the icon bar displayed in the mobile menu, styled differently in the mobile vs desktop view
+.icon_bar_menu_item .icon_bar {
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+  @include ldesktop {
+    display: none;
+  }
+  display: block;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  width: 240px;
+}
+
+.icon_bar_menu_item .icon_bar .icons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: .125rem;
+  background: $secondary_color;
+  border-radius: 20px;
+}
+
+.icon_bar_menu_item .icon_bar .icon  {
+  color: white;
+  padding: .125rem .75rem .063rem;
+  font-size: 1.75rem;
+}
+
+.myfoo {
+  position:relative;
+  color: white;
+  padding: .125rem .75rem .063rem;
+  font-size: 10rem;
+  cursor: pointer;
+  z-index: 10000;
+  // background: rgba(255, 0, 0, .3) !important; //devred
+}
+
+.devFoo {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 128, 0, .3) !important; //devgreen
+}
+
+// !VA This has to be outside the media query block for the mobile menu
+.checkbox {
+  @include tablet {
+    display: none;
+    opacity: 0;
+  }
+  @include desktop {
+    display: none;
+  }
+  @include ldesktop {
+    display: none;
+    opacity: 0;
+  }
+  display: block;
+}
+
+.mobile_menu_bg {
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+  @include ldesktop {
+    display: none;
+  }
+}
+
+// !VA Did nothing
+.menu_span {
+  @include ldesktop {
+    display: none;
+  }
+}
+
+
+
+// !VA Devices up to 767px i.e. smaller than a standard iPad.
+// !VA THIS IS THE MEDIA QUERY BLOCK FOR THE MOBILE MENU. Also includes embedded media queries for mobile menu size modifications for lphones.
+@media screen and (max-width: 767px) {
+
+  // !VA HAMBURGER MOBILE MENU
+  // !VA mobile menu background semicircle from here: https://codepen.io/xram/pen/DjbWbb
+  // !VA mobile menu variables are in variables.scss
+  .mobile_menu_bg {
+    @include lphone {
+      top: 0;
+      right: -75px;
+    }
+    position: fixed;
+    top: 0;
+    right: -60px;
+    // background: white;
+    background-color: rgba(218, 165, 32, .4);
+    // background-color: rgba(32, 85, 218, .4);
+    display: inline-block;
+    display: block;
+    // margin: 0 1em 1em 0;
+    height: auto;
+    opacity: .7;
+      z-index: 50;
+  }
+
+  // !VA mobile menu bg height and width
+  .mobile_menu_bg_top,
+  .mobile_menu_bg_bottom {
+    @include lphone {
+      height: $lphoneMobileMenuBg;
+      width: $lphoneMobileMenuBg * 2;
+    }
+    height: $rootMobileMenuBg;
+    width: $rootMobileMenuBg * 2;
+  }
+
+  // !VA mobile menu bg bottom left radius
+  .mobile_menu_bg_bottom {
+    border-bottom-left-radius: $rootMobileMenuBg * 2;
+    border-bottom-right-radius: $rootMobileMenuBg * 2;
+  }
+
+
+  // !VA These are the menu items expanded
+  .menu_link {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  
+  .menu_link:hover {
+    color: #6a7;
+  }
+  
+  /* !VA mobile menu - just the 3 lines and X. background must be transparent to  show the header bricks behind it.
+  position: lock to screen position, prevent scroll
+  top: distance from top of screen
+  right: distance from right of screen
+  */
+  .nav_menu {
+    @include lphone {
+      top: 20px; 
+      right: 10px;
+    }
+    // !VA 2024
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 28px; 
+    right: 8px;
+    -webkit-user-select: none;
+    user-select: none;
+    background: transparent;
+    // z-index: 100;
+  }
+
+  // !VA Not sure why the checkbox opacity is set at all here. Actually opacity is set below under .nav__ .checkbox. Commenting this out for now.
+  // .checkbox {
+  //   opacity: 1;
+  // }
+
+  // !VA Makes the input element invisible. THe invisible checkbox MUST directly overlay the visible open and close boxes
+ .nav_menu .checkbox {
+    @include lphone {
+      top: -10px;
+      right: -3px;
+    }
+    position: absolute;
+    display: block;
+    z-index: 100;
+    top: -24px;
+    right: -3px;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+    // !VA Set opacity here to show the checkbox for dev. Hide it for production. 
+    opacity: 0;
+    -webkit-touch-callout: none;
+    overflow: hidden;
+    background: red;
+  }
+  
+  /* !VA The hamburger/mobile _ itself, i.e. the open/close toggle
+    These are the actual lines that make up the hamburger icons and the X. 
+    width: The length of each of the lines that comprises the burger icon
+    height: The thickness of each of the lines that comprises the burger icon and the X
+    margin-bottom: The distance between the lines of the burger icon
+    border-radius: The rounding of the end cap of the lines
+    transition: This is the animation. Doesn't affect the properties of the burger or the X
+  */
+  .nav_menu .menu_span { 
+    @include lphone {
+      // top: 30px;
+      // right: 30px;
+      top: -10px;
+      right: -3px;
+      width: 2.5em;
+      height: .313em; 
+      margin-bottom: .575em; 
+      border-radius: 3px;
+    }
+    position: relative;
+    top: -22px;
+    right: -2px;
+    width: 2.25em;
+    height: .313em; 
+    margin-bottom: .5em; 
+    border-radius: 3px;
+    background: $dark_text_color;
+    transform-origin: 4px 0px;
+    // !VA This is the animation. Doesn't affect the shape of the burger or the X
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+    // !VA 2024 This can't have a stacking context otherwise it will block the checkbox from user actions.
+    z-index: 50;
+  }
+  
+
+  .nav_menu .menu_span:first-child {
+    transform-origin: 0% 0%;
+  }
+  
+  .nav_menu .menu_span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  
+  // !VA The BACKSLASH in the X after transform
+  .nav_menu .checkbox:checked ~ .menu_span {
+    opacity: 1;
+    // !VA The angle of the SLASH in the X
+    // !VA The first value is the X axis distance from top left at 45 deg rotation. The second value is the Y axis distance from top left at 45 deg rotation.  
+    transform: rotate(45deg) translate(2px, -2px);
+    background: black;
+  }
+  
+  // !VA The middle link in the burger - invisible in the X
+  .nav_menu .checkbox:checked ~ .menu_span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  // !VA The SLASH in the X after transform
+  // !VA The first value is the X axis distance from top left at 45 deg rotation. The second value is the Y axis distance from top left at 45 deg rotation.  
+  .nav_menu .checkbox:checked ~ .menu_span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+    transform: rotate(-45deg) translate(5px, -1px);
+  }
+
+  // !VA HAMBURGER MOBILE MENU END
+
+  // !VA NAV MENU ITEMS MOVED OUT OF THIS MEDIA QUERY BLOCK
+
+  .nav_menu .checkbox:checked ~ ul {
+    // !VA Turning off the transform prevents it from sliding in...not sure why
+    transform: none;
+  }
+}
+
+// !VA LOGO
+// --------
+
+.logo {
+  @include mphone {
+    width: 92px;
+    margin: .5rem 0 0 1rem;
+  }
+  @include lphone {
+    width: 100px;
+    margin: .75rem 0 0 1rem;
+  }
+  @include tablet {
+    // !VA img width depends on nav menu width...
+    width: 120px;
+    margin: .575rem 0 0 1rem;
+  }
+  @include desktop {
+    width: 140px;
+    margin: .75rem 0 0 1.5rem;
+  }
+  @include ldesktop {
+    width: 175px;
+    margin: .5rem 0 0 0;
+  }
+  margin: .5rem 0 0 .75rem;
+  width: 88px;
+  height: auto;
+  position: relative; 
+  // !VA 2024
+  // !VA Makes logo opaque over the bricks container
+  z-index: 2;
+}
+
+
+// !VA SLUG Section
+// -----------
+.header_slug {
+  @include mphone {
+    top: 70px;
+  }
+  @include lphone {
+    top: 80px;
+  }
+  @include tablet {
+    top: 78px;
+  }
+  @include desktop {
+    top: 80px;
+  }
+  @include ldesktop {
+    top: 100px;
+  }
+  position: absolute;
+  display: block;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  // !VA Makes slug opaque over the bricks container
+  z-index: 2;
+}
+
+.header_slug_text {
+  @include mphone {
+    font-size: $mphoneXLFontSize;
+    line-height: $mphoneSlugLineHeight;
+  }
+  @include lphone {
+    font-size: $lphoneXLFontSize;
+    line-height: $lphoneSlugLineHeight;
+  }
+  @include tablet {
+    font-size: $tabletXLFontSize;
+    line-height: $tabletSlugLineHeight;
+  }
+  @include desktop {
+    font-size: $desktopXLFontSize;
+    line-height: $desktopSlugLineHeight;
+  }
+  @include ldesktop {
+    font-size: $ldesktopXLFontSize;
+    line-height: $ldesktopSlugLineHeight;
+  }
+  color: $dark_text_color;
+  font-family: $secondary_font;
+  font-size: $rootXLFontSize;
+  line-height: $rootSlugLineHeight;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: -2px -2px 2px rgba(90,90,90,0.2);
+}
+
+// !VA STORIES NAV - This is just a banner on the Stories page until I get more stories, assuming that ever happens.
+.stories_banner {
+  width: 100%;
+  background: $primary_color;
+}
+
+.stories_banner_text {
+  padding: .25rem 0;
+  font-family: $primary_font;
+  font-size: $rootLargeFontSize;
+  line-height: $rootLargeLineHeight;
+  text-align: center;
+}
+
+
+
+// !VA 2024 BOTTOM NAV
+// -------------------
+
+// !VA Bottom Nav Styles
+.bottom_nav {
+  position: fixed;
+  bottom: -65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.bottom_nav_items {
+  @include tablet {
+    align-items: center;
+  }
+  @include tablet {
+    align-items: center;
+  }
+  @include desktop {
+    align-items: center;
+  }
+  @include ldesktop {
+    align-items: center;
+  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.bottom_nav_bg {
+  @include lphone {
+    left: -75px;
+  }
+  @include tablet {
+    left: auto;
+    bottom: -1.25rem;
+  }
+  @include desktop {
+    left: auto;
+    bottom: -1.25rem;
+  }
+  @include ldesktop {
+    left: auto;
+    bottom: -1.25rem;
+  }
+  position: absolute;
+  top: auto;
+  left: -60px;
+  bottom: 0;
+  background-color: rgba(218, 165, 32, .8);
+  // background-color: rgba(32, 85, 218, .9);
+  height: auto;
+  opacity: .8;
+}
+
+
+// !VA bottom nav bg height and width
+.bottom_nav_bg_top,
+.bottom_nav_bg_bottom {
+  @include lphone {
+    height: $lphoneMobileMenuBg;
+    width: $lphoneMobileMenuBg * 2;
+  }
+  @include tablet {
+    height: $tabletMobileMenuBg;
+    width: $tabletMobileMenuBg * 2;
+  }
+  @include desktop {
+    height: $desktopMobileMenuBg;
+    width: $desktopMobileMenuBg * 2;
+  }
+  @include ldesktop {
+    height: $ldesktopMobileMenuBg;
+    width: $ldesktopMobileMenuBg * 2;
+  }
+  height: $rootMobileMenuBg;
+  width: $rootMobileMenuBg * 2;
+}
+
+.bottom_nav_bg_bottom {
+  @include tablet {
+    border-top-left-radius: $tabletMobileMenuBg * 2;
+    border-top-right-radius: $tabletMobileMenuBg * 2;
+  }
+  @include desktop {
+    border-top-left-radius: $desktopMobileMenuBg * 2;
+    border-top-right-radius: $desktopMobileMenuBg * 2;
+  }
+  @include ldesktop {
+    border-top-left-radius: $ldesktopMobileMenuBg * 2;
+    border-top-right-radius: $ldesktopMobileMenuBg * 2;
+  }
+  border-top-left-radius: $rootMobileMenuBg * 2;
+  border-top-right-radius: $rootMobileMenuBg * 2;
+  // border-top-left-radius: $rootMobileMenuBg * 2;
+  // border-top-right-radius: $rootMobileMenuBg * 2;
+}
+
+.bottom_nav_content {
+  @include tablet {
+    align-items: center; 
+  }
+  @include desktop {
+    align-items: center; 
+  }
+  @include ldesktop {
+    align-items: center; 
+  }
+  position: relative;
+  // top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0;
+  pointer-events: none;
+}
+
+// !VA Getting rid of the text...not necessary
+.bottom_nav_text {
+  display: none;
+}
+
+.bottom_nav_icon {
+  @include lphone {
+    font-size: 2.5rem;
+  }
+  @include tablet {
+    font-size: 2.5rem;
+    margin-bottom: -.25rem;
+  }
+  @include desktop {
+    font-size: 2.5rem;
+    margin-bottom: -.5rem;
+  }
+  @include ldesktop {
+    font-size: 2.5rem;
+    margin-bottom: -.5rem;
+  }
+  position: relative;
+  margin-left: .25rem;
+  color: black;
+  font-size: 2.125rem;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.bottom_nav_icon-svg {
+  // color: white !important;
+}
+
+.go_back, .go_to_top, .go_to_menu {
+  cursor: pointer;
+}
+
+
+
+.sticky_nav {
+  position: fixed;
+  bottom: 0;
+  animation: bottomNavBump .25s;
+  z-index: 10;
+}
+
+@keyframes bottomNavBump {
+  0% {  transform: translateY(10rem);}
+  // 50% { transform: translateX(-1356px); }
+  // 80% { transform: translateY(10rem); }
+  100% { transform: translateY(0); }
+}
+

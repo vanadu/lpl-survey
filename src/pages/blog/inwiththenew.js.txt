@@ -1,0 +1,162 @@
+import React from 'react'
+import { useState, useRef } from 'react'
+import Link from 'next/link'
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import Image from 'next/image'
+// !VA React Tooltip
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
+// !VA Styles
+import * as styles from '../../styles/Light.module.scss'
+// !VA Components
+import ScrollToTop from '../../components/ScrollToTop'
+import BottomNav from '@/components/BottomNav'
+// !VA Images
+import Caplan from '../../../public/img-caplan.jpg'
+import Caplan2 from '../../../public/img-caplan2.jpg'
+import MissBInSnow from '../../../public/img-miss-b-in-snow.jpg'
+import MeAndMissB from '../../../public/img-me-and-miss-b-2015.jpg'
+import Treats from '../../../public/img-treats.jpg'
+import Treats2 from '../../../public/img-treats-02.jpg'
+import Treats3 from '../../../public/img-treats-03.jpg'
+// !VA Icons
+import { FaPaw } from 'react-icons/fa'
+// !VA StoriesNav
+import StoriesNav from '@/components/subnav1/StoriesNav'
+
+const InWithTheNew = () => {
+
+  // !VA Section menu anchors
+  const refJul = useRef();
+  const refAug = useRef();
+  const refSep = useRef();
+  const refEpi = useRef();
+  // !VA Section menu active state
+  const [isActive, setIsActive ] = useState('false')
+  // !VA Not sure why these are grayed
+  const toggleMenu = () => {
+      setIsActive(!isActive)
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // for smoothly scrolling
+    });
+  };
+
+  return (
+    <>
+      <Head>
+        <meta name="title" content="In With The New &mdash; Facebook Groups and Laryngeal Paralysis in Dogs" />
+        <meta name="description" content="When you join a private Facebook Group about laryngeal paralysis in dogs, be aware of the admin&rsquo;s hidden agenda" />
+        <meta name="keywords" content="laryngeal paralysis in dogs, stent, laryngeal stent, surgery, cost, treatment options, laryngeal stent, tieback surgery, symptoms, causes, diagnosis, sound, progress, canine laryngeal paralysis, LarPar, geriatric-onset laryngeal paralysis, GOLPP"></meta>
+      </Head>
+      <section className={styles.section}>
+        <div className={styles.section_content}>
+  
+          {/* <div className={styles.content}> */}
+            <div className={styles.blog_post_header}>
+              <div className={styles.blog_post_header_text}>
+                <h2 className={styles.blog_post_header_title}>LarPar Chronicles</h2>
+                {/* <hr className={styles.blog_post_header_rule} /> */}
+              </div>
+            </div>
+  
+            <div 
+              className={ [styles.two_column_content].join(' ') }>
+              <div 
+                className= { [styles.container_flex_center, styles.menu_spacer].join(' ') }
+                // ref={refJul}
+                >
+              </div>
+  
+  
+  
+              <div className={styles.blog_post}>
+                <div className={styles.blog_post_title}>
+                  <h2 className={styles.blog_post_title_text}>In With The New</h2>
+                  <hr className={styles.blog_post_title_rule} />
+                  <h5 className={styles.blog_post_title_date}>2023.04.24</h5>
+                </div>
+  
+                <p className={styles.content_text}>
+                  My grandfather suffocated to death. His final days were spent on morphine but conscious, battling for every last breath. We watched his body heave, rest, then heave again until he could not fight anymore and died. That scene is engraved on my consciousness. Anyone who has witnessed the losing battle for dying breaths comes away a changed person.  
+                </p>
+                
+                <p className={styles.content_text}>
+                  So consider this statement made recently by the administrator of a Facebook group for laryngeal paralysis:
+                </p>
+  
+                <p className={styles.content_text}>
+                  <span className={styles.blog_quote}>
+                  &rdquo;We wouldn&rsquo;t let a human struggle to breathe &mdash; same should apply to&nbsp;dogs.&ldquo;</span>
+                </p>
+  
+                <p className={styles.content_text}>
+                  That statement is obviously false, so what is really the messaging here? Is it that people never struggle to breathe? Of course they do, just ask anyone who works in hospice or any other person with a loved one who has died of emphysema or lung cancer. Or is it that humans and dogs are equal, or that we should be providing the same medical treatment to dogs that humans get? If that&rsquo;s the intent, then this person needs to have their moral compass adjusted for trivializing people&rsquo;s suffering. Animals, unlike humans, have the option of euthanasia for end-of-life, so they don&rsquo;t have to suffer until their last breath. And humans, unlike animals, have healthcare institutions and comprehensive insurance that cover the cost of treatment. So besides the obvious wrongness, what makes this manipulative messaging contemptible is that while people like this admin like to tell others what they should do with their animals, they never offer to pay for it. 
+                </p>
+                
+                <div className={styles.blog_post_heading}>
+                  <h3 className={styles.blog_post_heading_text}>The Algorithm of Control</h3>
+                </div>
+                
+                <p className={styles.content_text}>
+                  The admin&rsquo;s bizarre comment reflects the manipulation and peer pressure prevalent on some Facebook LP groups. The hidden messaging behind the statement is:
+                </p>
+                
+                <p className={styles.content_text}>
+                  <span className={styles.blog_quote}>
+                  Good people don&rsquo;t let our dogs struggle for breath. Good people cough up the money for tieback surgery. So, if you can&rsquo;t or won&rsquo;t pay for tieback, then you&rsquo;re a bad&nbsp;person.
+                  </span>
+                </p>
+  
+                <p className={styles.content_text}>
+                  Peer pressure and messaging manipulation are inherent in the algorithm of Facebook groups, which <a href="https://www.aeaweb.org/research/social-media-news%20consumption-polarization-facebook" className={styles.blog_link}target="_blank" rel="noreferrer noopener">amplify the majority opinion and marginalize dissent</a>. The algorithm could be described as, &lsquo;The Loudest People In The Room Win.&lsquo; If a person posts a question about treatment options, the response will be a unified chorus of voices singing the praises of tieback surgery. Dissenting voices are not only drowned out by the pro-tieback choir, but they often must defend themselves before the mob mentality of the group. The result is the very unpleasant feeling of having been bullied. This behavior is much more prevalent in the private LP groups because the admins of private groups have a clear pro-tieback agenda to enforce. In the German LarPar Facebook group for instance, the messaging is tightly controlled, and discussions of non-surgical, i.e., pharmaceutical or naturopathic treatment options, are not tolerated. In this way, the private Facebook group becomes essentially a pro-surgery, <a href="https://www.nbcnews.com/better/lifestyle/problem-social-media-reinforcement-bubbles-what-you-can-do-about-ncna1063896" className={styles.blog_link} target="_blank" rel="noreferrer noopener">self-reinforcing bubble</a>, whereby regardless of the original poster&rsquo;s question, the answer is always that surgery is the only option.
+                </p>
+  
+                
+                <p className={styles.content_text}>
+                  Facebook bullying can take more subtle but equally insensitive and hurtful forms. When a group member states that tieback surgery isn&rsquo;t within their financial means, instead of taking that cue as a request for compassionate alternatives, this same Facebook group admin &lsquo;suggests&rsquo; a GoFundMe drive. Obviously, most people in the mostly older LP demographic, <span className={styles.blog_italic}>a)</span> don&rsquo;t have enough of a social network to generate funds, <span className={styles.blog_italic}>b)</span> don&rsquo;t have the technical savvy to set up or run an effective campaign, <span className={styles.blog_italic}>and/or c)</span> view such actions as a form of begging. But the &rsquo;suggestion&lsquo; is made, regardless of how it makes the person feel. Whether it leaves the person more alienated and despondent because they don&rsquo;t have the money and can&rsquo;t do these high-tech things save their companion animal, is of no concern to the group admin. Finding no help and no compassion, the person will likely leave the group and never be cared about nor heard from again.
+                </p>
+  
+                <div className={styles.blog_post_heading}>
+                  <h3 className={styles.blog_post_heading_text}>                The Narrative of Power</h3>
+                </div>
+                
+                <p className={styles.content_text}>
+                  I observed this behavior of particular this Facebook LarPar group many times and kept mum, mainly to avoid being bullied myself. But the &ldquo;we wouldn&rsquo;t let a human struggle to breathe&rdquo; episode pushed me over the line, and I responded that the statement was offensive to me personally and had crossed the line of truth and respect. Instead of retracting the absurd statement, the admin dug in her heels, revealing both her bullying nature and true motivations as Facebook group administrator &mdash; the power of control:
+                </p>
+  
+                <p className={styles.content_text}>
+                  <span className={styles.blog_quote}>I&rsquo;ve just removed your post again. You simply don&rsquo;t seem to get it &mdash; it&rsquo;s not your call what is appropriate or not to be shared in this group. Don&rsquo;t like that? Feel free to leave. I gave you tons of leeway to post about the stent when plenty of others would not have. Still not enough for you? Then we&rsquo;re not the right group for you.</span>
+                </p>
+  
+                <p className={styles.content_text}>
+                  People who challenge the authority of group admins such as this one are a threat to their absolute power and must be eliminated. By banning dissenting voices, this kind of admin controls the narrative and molds the group opinion, which eventually becomes the majority opinion, whereby all dissenting voices are progressively weakened until they stop speaking altogether. And with regard to LarPar, the silenced voice is always the one that doesn&rsquo;t fully support tieback surgery as the only acceptable option in laryngeal paralysis treatment.
+                </p>
+                
+                <p className={styles.content_text}>
+                  It&rsquo;s a tragedy for LP dogs and their humans that some &mdash; but not all &mdash; Facebook LP groups have devolved into pro-tieback mouthpieces. Tieback surgery has undeniably improved the long-term quality of life for untold thousands of dogs. It&rsquo;s also undeniably associated with percentually small but statistically significant life-threatening risks. The <a href="https://www.petmd.com/dog/conditions/respiratory/c_dg_laryngeal_disease" className={styles.blog_link} target="_blank" rel="noreferrer noopener">average cost of tieback surgery in the US</a> is $<span className="italic bold">4200</span>. The <a href="https://www.dvm360.com/view/veterinary-practices-performing-more-euthanasias-despite-increase-stop-treatment-point" className={styles.blog_link}target="_blank" rel="noreferrer noopener">threshold for veterinary costs above which the average animal owner will decline treatment</a> lies at approximately <span className="italic bold">$1700</span>. So it stands to reason that the majority of LarPar dog owners don&rsquo;t choose surgery, but rather attempt to manage symptoms as well as they can until end-of-life. I have ultimate compassion for those folks, because I am one myself. I don&rsquo;t regret not choosing surgery, and if I hadn&rsquo;t been able to find a stent provider, I would have cried my eyes out and let my dog, who I have taken with me everywhere for almost 15 years, go. Why? Because for people with limited financial means, there is a cost/benefit involved. If Miss B had only survived 4 months after surgery, the tieback bill would have come to $1050 a month. Best case, if she survived the surgery and lived 2 years, it would have come to $2100 a year, the last few months of which would have been polyneuropathic decline and most likely a horrible death due to cancer, liver disease, or old age. I envy people who can afford to ante up that kind of money for a gamble with those odds. But I can&rsquo;t, and a lot of the average-income people who come to Facebook groups looking for help can&rsquo;t either &mdash; so they deserve to get that help rather than just an endless list of repetitive tieback testimonials. 
+                </p>
+                
+                <p className={styles.content_text}>
+                  I make no bones about it. My dog has had her stent for eight months and now I can say with conviction &mdash; tieback surgery is a crappy solution. It&rsquo;s a relic of the 20th century and belongs there. It will always have its place for dogs with congenital LarPar and those that develop LarPar at a young age due to trauma, and people will always have that choice. But for older dogs with GOLPP, laryngeal stenting for LarPar is the 21st century solution, just as stenting has been replacing all kinds of surgeries in human medicine since the 1990&rsquo;s. Sure, it has kinks, just as tieback had (and still has) when it first premiered 40 years ago. But what&rsquo;s preventing these kinks from getting worked out in practice, as was done with tieback, is institutional inertia and the weird power politics of Facebook group admins who faithfully cling to their 20th Century tieback, not because it&rsquo;s what&rsquo;s best for the dogs, but because it&rsquo;s what <span className={styles.blog_emphasis}>they</span> did. In the meantime, dogs are dying unnecessarily. So the sooner the affordable, non-surgical stent procedure is adopted and perfected, and the sooner these Facebook groups with their manipulative shenanigans are obsolete, the better. I won&rsquo;t mourn, and neither will the thousands of canine stent recipients who will live out their natural lives without invasive surgery, off-label meds, or unnecessary conflict.
+                </p>
+  
+                
+                <p className={styles.content_text}>
+                <span className={styles.blog_disclaimer}>[The views expressed on this blog and website represent the opinions of the author regarding statements of persons in the public sphere and their posts on the public social media platform Facebook. No statement is intended to constitute veterinary advice. For information regarding the health of your animal, consult with your veterinarian.]</span>
+                </p>
+              </div>
+            </div>
+  
+  
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default InWithTheNew

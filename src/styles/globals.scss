@@ -1,0 +1,569 @@
+/* stylelint-disable comment-empty-line-before */
+@import './mixins/mediaqueries.scss';
+@import './variables.scss';
+@import './react-tabs.scss';
+@import './consent.scss';
+
+/* !VA 2024.04.06
+Removed Unused Styles: To restore git back to 830a1ad (HEAD -> master) 2024.04.06A - Purging  unused SCSS
+-----------------------
+.bottom_nav_bar
+.photo-block
+.photo-block-legend
+.photo-block-figure
+.photo-block-figure-img
+.smile_svg
+#crossfade-img1
+#crossfade-img2
+*/
+
+// VA! 2024 Why are these variables all defined here AND in variables.scss? I deleted all these references...no bad. This whole thing can go away.
+// $primary_color: #FCB900;
+// $secondary_color: #8DD1FF;
+// $marquee_color: #AD0110;
+// $home_bg_color: #212121;
+// $light_text_color: #000;
+// $dark_text_color: #7e7e7e;
+// $primary_font: 'Open Sans', sans-serif;
+// $secondary_font: 'Oswald', sans-serif;
+// $condensed_font: 'Roboto Condensed', sans-serif;
+// $primary_accent_color: #474747;
+// $secondary_accent_color: #959595;
+// $tertiary_accent_color: #E1E1E1;
+// $horiz_rule_color: #666;
+// $primary_link_color: #FCB900;
+// $primary_hover_color:  #8DD1FF;
+// $secondary_link_color: #896400;
+// $secondary_hover_color: #FCB900;
+// $primary_icon_color: #d3d3d3;
+// $button_color: #841117;
+// $separator_color: #808080;
+// $tooltip_color: #725503;
+
+
+.dvred {
+  background: red;
+}
+.dvblu {
+  background: blue;
+}
+.dvgrn {
+  background: green;
+}
+
+// !VA body/html styles
+// !VA I can't remember what this is for.
+html{scroll-behavior: smooth;}
+
+// !VA Changed
+.active {
+  @include tablet {
+    text-decoration-thickness: 7px;
+  }
+  @include desktop {
+    text-decoration-thickness: 5px;
+  }
+  @include ldesktop {
+    text-decoration-thickness:8px;
+  }
+  // !VA 2024
+  // color: $marquee_color;
+  color: $gray_text_color !important;
+  width: auto;
+  text-decoration: underline;
+  text-decoration-color: $primary_color;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 5px;
+}
+
+// !VA 2024.04.05 Not in js
+.review-hide {
+  visibility: hidden;
+}
+
+// !VA 2024.04.05 Not in js
+.review-show {
+  visibility: visible;
+  color: red; 
+}
+
+
+// !VA Font styles
+// ---------------
+
+.selected {
+  border: 8px solid $primary_color!important;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+// !VA 2024.04.05 Not in js, moved to module?
+.read_more {
+  color: $primary_color;
+  display: block;
+  text-align: center;
+}
+
+// !VA 2024.04.05 Not in js, moved to module?
+.read_more_inline {
+  @include tablet {
+    display: inline;
+  }
+  @include desktop {
+    display: inline;
+  }
+  @include ldesktop {
+    display: inline;
+  }
+  display: block;
+  color: $primary_color;
+}
+
+// !VA 2024.04.05 In pages/index.js - move to module
+.read_more_svg {
+  vertical-align: -3px;
+  display: inline;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.semibold  {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.semibold-italic  {
+  font-style: italic;
+  font-weight: 600;
+}
+
+// !VA This is a red font color for testing
+.red {
+  color: red!important;
+}
+
+
+.green {
+  color: green!important;
+}
+
+
+
+.link {
+  font-weight: 600;
+  color: $secondary_link_color;
+}
+
+// !VA 2024.04.05 link-dark-nowrap not in js
+.link-dark, .link-dark-nowrap {
+  display: inline;
+  font-weight: 600;
+  color: $secondary_link_color;
+}
+
+// !VA 2024.04.05 link-dark-nowrap not in js
+.link-dark-nowrap {
+  white-space: nowrap;
+}
+
+.blob {
+  position: relative;
+  display: inline;
+  font-weight: 600;
+  color: $secondary_link_color;
+}
+
+// !VA 2024.04.05 Only in patients/links
+.link-underline {
+  text-decoration: underline;
+}
+
+// !VA 2024.04.05 Only in surgerytypes.js
+.link-source {
+  font-size: 90%;
+  font-weight: 300;
+  color: $secondary_link_color;
+  text-decoration: underline;
+}
+
+// !VA 2024.04.05 Doesn't appear to be in any js
+.block {
+  display: block;
+}
+
+// !VA 2024.04.05 Doesn't appear to be in any js
+.centered {
+  text-align: center;
+}
+
+// !VA 2024.04.05 Doesn't appear to be in any js
+.container {
+  display: block;
+  width: 100%;
+}
+
+// !VA 2024.04.05 Not in any js
+.padding-top {
+  padding-top: 2rem;
+}
+
+// !VA 2024.04.05 Not in any js
+.image-credits {
+  display: block;
+  font-size: .938rem;
+  margin-top: .125rem;
+}
+
+// !VA Hide on all mobile devices including tablet
+.tablet-hide-inline {
+  @include mphone {
+    display: none;
+  }
+  @include lphone {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: inline;
+  }
+  @include ldesktop {
+    display: inline;
+  }
+display: none;
+}
+
+// !VA Hide on  mobile phones only excluding tablet
+.mobile-hide-inline {
+    @include mphone {
+      display: none;
+    }
+    @include lphone {
+      display: none;
+    }
+    @include tablet {
+      display: inline;
+    }
+    @include desktop {
+      display: inline;
+    }
+    @include ldesktop {
+      display: inline;
+    }
+  display: none;
+}
+
+.mobile-show-inline {
+  @include mphone {
+    display: inline;
+  }
+  @include lphone {
+    display: inline;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+  @include ldesktop {
+    display: none;
+  }
+display: inline;
+}
+
+// !VA Hide on all mobile devices including tablet
+.tablet-hide {
+  @include mphone {
+    display: none;
+  }
+  @include lphone {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: inline;
+  }
+  @include ldesktop {
+    display: inline;
+  }
+display: none;
+}
+
+
+// !VA Hide on mobile phones only excluding tablet
+.mobile-hide {
+  @include mphone {
+    display: none;
+  }
+  @include lphone {
+    display: none;
+  }
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    display: block;
+  }
+  @include ldesktop {
+    display: block;
+  }
+  display: none;
+}
+
+// !VA 2024.04.05 Not in any js
+.heart {
+  margin: 0 .25rem;
+  color: #bf0707;
+  font-size: 120%;
+  vertical-align: -.5rem;
+}
+
+// !VA This is NOT in the scss module - it's generic cross-module.
+// !VA 2024.04.05 Appears to only be in Layout.js - check this, it has devred
+.content {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+// !VA 2024.04.05 Appears to only be in patients/aboutlarpar, needs review
+.section_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  // !VA Gutter on everything BUT .landing
+  padding: 0 .75rem .5rem;
+}
+
+// !VA 2024 MOVED ALL POST STYLES TO Blog.module.scss
+// !VA This required code changes to the Post.js component
+// !VA See this SO article for what I did: https://stackoverflow.com/questions/72752054/how-to-style-react-mdx-rendered-elements-with-css-module/79237448#79237448
+
+
+
+// !VA Changed - necessary to make sure the a wrapping the icon is clicked, not the svg or path itself: https://stackoverflow.com/questions/2296097/making-an-svg-image-object-clickable-with-onclick-avoiding-absolute-positioning
+svg {pointer-events: none;}
+
+// !VA 2024.04.05 IMPORTANT! What is this?
+.being_updated {
+  @include tablet {
+    padding: .313rem 0;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+  @include desktop {
+    padding: .313rem 0;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+  @include ldesktop {
+    padding: .313rem 0;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+  padding: .25rem 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+// !VA ACCORDION styles
+.accordion-container {
+  margin: 1rem auto;
+  scroll-margin: 75px;
+  width: 100% !important;;
+  // width: 280px !important;
+}
+
+.accordion {
+  cursor: pointer;
+  margin: 0 0 1rem;
+  width: 100%;
+  padding: .5rem;
+  // !VA 2024.04.03 Tried commenting out the border but that looks too bare.
+  border: 1px solid gray;
+  border-radius: 6px;
+}
+
+.accordion .accordion__title {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+
+}
+
+.accordion .accordion__title .accordion__icon {
+  height: 20px;
+  margin-right: .5rem;
+  position: relative;
+  width: 20px;
+}
+
+.accordion .accordion__title h3 {
+  @include mphone {
+    font-size: $mphoneLargeFontSize;
+    line-height: $mphoneLargeLineHeight;
+  }
+  @include lphone {
+    font-size: $lphoneLargeFontSize;
+    line-height: $lphoneLargeLineHeight;
+  }
+  @include tablet {
+    font-size: $tabletLargeFontSize;
+    line-height: $tabletLargeLineHeight;
+  }
+  @include desktop {
+    font-size: $desktopLargeFontSize;
+    line-height: $desktopLargeLineHeight;
+  }
+  @include ldesktop {
+    font-size: $ldesktopLargeFontSize;
+    line-height: $ldesktopLargeLineHeight;
+  }
+  color: #1c1c1c;
+  font-family: $secondary_font;
+  font-size: $rootLargeFontSize;
+  line-height: $rootLargeLineHeight;
+  font-weight: 400;
+  margin: .125rem 0 .125rem 0rem;
+  text-align: left;
+  width: 100%;
+}
+
+.accordion .accordion__content {
+  @include tablet {
+    padding: .75rem;
+  }
+  @include desktop {
+    padding: 1rem;
+  }
+  @include ldesktop {
+    padding: 1rem;
+  }
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__text, .accordion__list-item {
+    @include mphone {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+    }
+    @include lphone {
+      font-size: 1.188rem;
+      line-height: 1.625rem;
+    }
+    @include tablet {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    @include desktop {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    @include ldesktop {
+      font-size: 1.313rem;
+      line-height: 1.875rem;
+    }
+    display: block;
+    font-size: $rootLargeFontSize;
+    line-height: $rootLargeLineHeight;
+    // font-size: 1.125rem;
+    // line-height: 1.375rem;
+}
+
+.accordion__list {
+  list-style-type: none;
+}
+
+.accordion__list-item {
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+}
+
+// !VA All showmore styles moved to Light.module.scss 
+
+.image-crossfade-container {
+    @include mphone {
+      width: 300px;
+      height: 225px;
+    }
+    @include lphone {
+      width: 335px;
+      height: 252px;    
+    }
+    @include tablet {
+      width: 224px;
+      height: 168px;      
+    }
+    @include desktop {
+      width: 272px;
+      height: 204px;
+    }
+    @include ldesktop {
+      width: 400px;
+      height: 300px;
+    }
+  position: relative;
+  display: block;
+  width: 260px;
+  height: 195px;
+  margin: 0 auto;
+
+}
+
+.image-crossfade-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: fade 9s infinite;
+  animation: fade 9s infinite;
+}
+// !VA Required for the crossfade image on the Surgery Types page, or any crossfade image for that matter. See the ImageCrossfade component.
+#crossfade-img1 {
+  animation-delay: 0s;
+  // background-image: url('/img-sam-menu-img.png');
+}
+#crossfade-img2 {
+  // background-image: url('/img-miss-b-xmas.jpg');
+  animation-delay: 4.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  59% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

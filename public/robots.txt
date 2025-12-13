@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: /cdn-cgi/
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+Sitemap: https://larparlife.com/sitemap.xml
