@@ -1,34 +1,60 @@
 @import './variables.scss';
 
-// !VA Survey container - background color
+// !VA Survey wrapper 
+.survey-wrapper {
+  // !VA Nothing here
+}
+
+
+// !VA Survey container - background color is inherited from survey-wrapper
 // ----------------------------------------------------------
 .sd-container-modern {
-  background: rgba(0, 0, 255, .3) !important; //devblue
+    background: $content_bg_color;
 }
 
 
 
 
-// !VA Survey body -- background, top and bottom padding, margins, max-width
+// !VA Survey body
 // -------------------------------------------------------------------------
-// !VA Centered with margin: 0 by default
-// !VA USE THIS PATTERN!!!
+// !VA  -- background, top and bottom padding, margins, max-width, centered with margin: 0 by default
 .survey-wrapper .sd-body.sd-body--static {
-    // !VA Width does nothing.
-    width: 1000px!important;
-    // !VA 720 by default, probably for tablets
-    max-width: 1000px;
-    padding-top: calc(6 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    padding-bottom: calc(10 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    
-    
-    background: rgba(255, 0, 0, .3) !important; //devred
-    @include sphone {
-     padding: 4px 0 10px !important;
-     margin-top: -6px !important;
-    }
+  // !VA Width does nothing.
+  // width: 1000px!important;
+  // !VA 720 by default, probably for tablets
+  max-width: 1000px;
+  // !VA Mod 6->3, 10 -> 6
+  padding-top: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-bottom: calc(6 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  
+  @include sphone {
+    padding: 4px 0 10px !important;
+    margin-top: -6px !important;
   }
+}
 
+
+// !VA Survey page
+// -------------------------------------------------------------------------
+// Left/right padding between page and wrapper
+.survey-wrapper .sd-page {
+  background: rgba(255, 0, 0, .3) !important; //devred
+}
+  
+// !VA Survey panel
+// ----------------------------------------------------------
+// !VA Horiz padding within panel between panel and page
+.survey-wrapper .sd-panel {
+
+
+}
+
+.survey-wrapper .sd-panel__content {
+  // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  --sd-base-padding: calc(2* var(--sjs-base-unit, var(--base-unit, 8px)));
+  
+
+}
 
 
 
