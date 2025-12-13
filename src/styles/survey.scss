@@ -79,12 +79,15 @@
 // !VA sd-imagepicker
 // !VA  
 
+.sd-question[data-name="crossedOver"] {
+}
+
 .sd-question[data-name="crossedOver"] .sd-question__header {
-  text-align: center;
+  // text-align: center;
   padding-bottom: 10px;
 }
 
-.survey-wrapper .sd-imagepicker {
+.sd-question[data-name="crossedOver"]  .sd-imagepicker  {
   width: 400px;
   justify-content: space-around;
   margin: 0 auto;
@@ -105,23 +108,47 @@
   padding: 0!important;
 }
 
-// !VA Padding above introText to reduce space between introText and introHeading
+// !VA introText: Padding above introText to reduce space between introText and introHeading
 .sd-row:has(> div > .sd-question[data-name="introText"]) {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 
 }
 
-// !VA Padding above userContact to reduce space between info link and label
+// !VA userContact: Padding above userContact to reduce space between info link and label
 .sd-row:has(> div > .sd-question[data-name="userContact"]) {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 }
 
+// !VA userContact: Padding above userContact to reduce space between info link and label
+ .sd-question[data-name="userContact"] {
+  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
+}
+
+.sd-question[data-name="animalType"] .sv-title-actions {
+  // background: rgba(0, 0, 255, .3) !important; //devblue
+  // display: block;
+  // text-align: center!important;
+}
+
+// .survey-wrapper .sd-title  {
+//   align-items: center!important;
+//   text-align: center!important;
+//   background: rgba(0, 128, 0, .3) !important; //devgreen
+// }
+
+
 
 
 
 // !VA HTML content
+
+.survey-wrapper .sd-html h3 {
+  font-family: $secondary_font;
+  font-size: 1.5rem;
+}
 
 // !VA Any p text in an html type 
 .survey-wrapper .sd-html p {
