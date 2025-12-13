@@ -7,8 +7,8 @@
       "elements": [
         {
           "type": "html",
-          "name": "survey_intro_heading",
-          "html": "<h2 class='lp-survey-heading'>About this survey</h2>"
+          "name": "survey_heading",
+          "html": "<h2>About this survey</h2>"
         },
         {
           "type": "html",

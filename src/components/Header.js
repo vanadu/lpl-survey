@@ -5,9 +5,6 @@ import IconBar from './IconBar'
 import logo from '../../public/img-lpl-logo.png'
 import * as styles from '../styles/Header.module.scss'
 
-// !VA 2024
-import MainNav from './MainNav'
-
 import { motion } from 'framer-motion'
 
 import HeaderBrick from '../components/HeaderBrick'

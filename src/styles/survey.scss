@@ -1,0 +1,73 @@
+@import './variables.scss';
+
+// !VA Survey container - background color
+// ----------------------------------------------------------
+.sd-container-modern {
+  background: rgba(0, 0, 255, .3) !important; //devblue
+}
+
+
+
+
+// !VA Survey body -- background, top and bottom padding, margins, max-width
+// -------------------------------------------------------------------------
+// !VA Centered with margin: 0 by default
+// !VA USE THIS PATTERN!!!
+.survey-wrapper .sd-body.sd-body--static {
+    // !VA Width does nothing.
+    width: 1000px!important;
+    // !VA 720 by default, probably for tablets
+    max-width: 1000px;
+    padding-top: calc(6 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(10 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    
+    
+    background: rgba(255, 0, 0, .3) !important; //devred
+    @include sphone {
+     padding: 4px 0 10px !important;
+     margin-top: -6px !important;
+    }
+  }
+
+
+
+
+// !VA sets row top margins, 
+// !VA does not set padding, bottom margins
+.survey-wrapper .sd-row {
+  // !VA Works
+  // margin-top: 0;
+}
+
+// !VA Survey content
+//---------------------
+
+// !VA Survey Title
+// !VA sd-question is any question content. This targets only the survey_heading element.
+.sd-question[data-name="survey_heading"] h2 {
+  font-family: $secondary_font;
+  font-size: 2rem;
+  margin: 0!important;
+  padding: 0!important;
+}
+
+
+// !VA HTML content
+
+// !VA Any p text in an html type 
+.survey-wrapper .sd-html p {
+  font-size: 1.25rem;
+}
+
+.sd-html .survey-info-icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: -3px;
+}
+
+.sd-html .survey-info-link {
+  font-size: .75rem;
+  color: #B70B0C;
+  font-weight: bold;
+  text-decoration: none;
+}
