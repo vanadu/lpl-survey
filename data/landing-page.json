@@ -36,12 +36,89 @@
           "name": "aboutCompanionText",
           "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
         },
+
+
+
+
         {
-          "type": "radiogroup",
-          "name": "animalType",
-          "title": "1. What kind of animal are you taking this survey for?",
-          "choices": ["Dog", "Cat", "Horse"]
+          "type": "panel",
+          "name": "companionDetailsPanel",
+          "readOnly": true,
+          "title": "Companion Details",
+          "description": "Please share details about your LP companion here.",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "companionDetailsSubpanel1",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "companionName",
+                  "title": "Name:",
+                  "isRequired": true
+                },
+                {
+                  "type": "text",
+                  "name": "companionBreed",
+                  "title": "Breed or mix:",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "companionDetailsSubpanel2",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "CompanionDOB",
+                  "title": "Approximate date of birth:",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "companionGender",
+                  "title": "Gender:",
+                  "isRequired": true,
+                  "labelTrue": "Female",
+                  "labelFalse": "Male"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "companionDetailsSubpanel3",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "companionWeight",
+                  "title": "Approximate weight:",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "CompanionWeightUnits",
+                  "title": "Please choose pounds or kilos:",
+                  "isRequired": true,
+                  "labelTrue": "Kg",
+                  "labelFalse": "Lbs"
+                }
+              ]
+            }
+          ]
         },
+
+
+
+
+
+
+
+
+
+
+
+
         {
       "type": "html",
           "name": "aboutCompanionText",
@@ -106,22 +183,14 @@
               "title": "Share a favorite memory of your pet"
             }
           ]
-        },
-
-        {
-          "type": "text",
-          "name": "companionName",
-          "title": "What is your LP companion's name?",
-          "isRequired": true,
-          "titleLocation": "left"
-        },
-        {
-          "type": "text",
-          "name": "tricks",
-          "title": "Does {companionName} do tricks?",
-          "isRequired": true,
-          "titleLocation": "left"
         }
+
+
+
+
+
+
+
 
 
       ]

@@ -99,7 +99,8 @@
 .sd-question[data-name="crossedOver"]  .sd-imagepicker  {
   width: 400px;
   justify-content: space-around;
-  margin: 0 auto;
+  margin-left: 160px;
+  // margin: 0 auto;
 }
 
 // !VA Survey Title
@@ -150,7 +151,55 @@
   padding-top: 10px;
 }
 
+// !VA Companion details panel
+.companion-details-panel > .sd-element--nested-with-borders {
+  border: none !important;
+  /* Optional: remove box-shadow or outline if visible */
+  box-shadow: none !important;
+  outline: none !important;
+}
 
+.companion-details-subpanel-1 {
+
+
+  background: rgba(255, 0, 0, .3) !important; //devred
+}
+
+.companion-details-subpanel-1, .companion-details-subpanel-2, .companion-details-subpanel-3 {
+ .sd-panel__content {
+  padding: 0!important;
+  margin: 0!important;
+  display: flex;
+  background: rgba(0, 128, 0, .3) !important; //devgreen
+ }
+
+
+}
+
+.companion-details-subpanel-1.sd-element--nested-with-borders {
+  border: none !important;
+  /* Optional: remove box-shadow or outline if visible */
+  box-shadow: none !important;
+  outline: none !important;
+  background: rgba(0, 0, 255, .3) !important; //devblue
+}
+
+// .sd-element--nested-with-borders {
+//   border: none !important;
+//   /* Optional: remove box-shadow or outline if visible */
+//   box-shadow: none !important;
+//   outline: none !important;
+// }
+
+.companion-details-subpanel-1, .companion-details-subpanel-2, .companion-details-subpanel-3 {
+  .sd-clearfix {
+    // padding: 0!important;
+
+    margin: 0!important;
+    margin: 10px !important;
+
+  }
+}
 
 
 
@@ -165,7 +214,8 @@
 
 // !VA Any p text in an html type 
 .survey-wrapper .sd-html p {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
 }
 
 .sd-html .survey-info-icon {
