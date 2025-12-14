@@ -9,14 +9,13 @@ import { SharpLight } from "survey-core/themes";
 // VA! Replaced surveyConfig with an independent header
 // import surveyConfig from "../../data/survey-config.json";
 import landing from "../../data/landing-page.json";
+import alive from "../../data/alive-page.json"
 
 // Assemble the final survey JSON object
+// VA! Removed the survey header in survey-config.json. I don't understand how this works.
 const surveyJson = {
-  // VA! Removed the survey header in survey-config.json. I don't understand how this works.
-  // ...surveyConfig,
   pages: [
     landing
-    // We will add other page objects here as we build them
   ]
 };
 
