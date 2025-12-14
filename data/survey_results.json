@@ -1,30 +1,21 @@
 [
   {
-    "fullName": "van"
-  },
-  {
-    "fullName": "abc"
-  },
-  {
-    "fullName": "asdfasdf",
-    "diagnosis_method": "Laryngoscopy"
-  },
-  {
-    "fullName": "asdfsadsf"
-  },
-  {
-    "fullName": "asdf"
-  },
-  {
-    "fullName": "asdf"
-  },
-  {
-    "fullName": "zxcvzxcv"
-  },
-  {
-    "fullName": "qwerqwer"
-  },
-  {
-    "fullName": "1234"
+    "crossedOver": "alive",
+    "pet_name": "Billie",
+    "pet_type": "Dog",
+    "aliveUserContact": "asdf",
+    "aliveCompanionName": "Van",
+    "aliveCompanionBreed": "Bollie",
+    "aliveCompanionDOB": "2020-01-01",
+    "aliveCompanionGender": true,
+    "aliveCompanionWeight": 50,
+    "aliveCompanionWeightUnits": false,
+    "deceasedUserContact": "Ben",
+    "deceasedCompanionName": "Missy",
+    "deceasedCompanionBreed": "Lab",
+    "deceasedCompanionDOB": "2005-03-03",
+    "deceasedCompanionGender": false,
+    "deceasedCompanionWeightUnits": false,
+    "deceasedCompanionWeight": 75
   }
 ]

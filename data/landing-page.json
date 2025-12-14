@@ -1,5 +1,6 @@
 {
   "name": "landing_page",
+  "navigationButtonsVisibility": "hidden",
   "elements": [
     {
       "type": "panel",
@@ -87,8 +88,6 @@
             }
           ]
         }
-
-
 
       ]
     }

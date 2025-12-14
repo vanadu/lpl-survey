@@ -10,11 +10,9 @@ import { NextSeo } from 'next-seo'
 // !VA Styles
 // import * as styles from '../styles/Home.module.scss'
 
-const Home = () => {
+const Landing = () => {
   // !VA Log out the posts exported from the getStaticProps function below 
-  const router = useRouter()
 
-  const [activeIndex, setActiveIndex] = useState(0)
 
 
   return (
@@ -44,7 +42,7 @@ const Home = () => {
 
 
           <div className="survey-wrapper">
-            <SurveyComponent />
+            <SurveyComponent startPageName = 'landing_page' />
           </div>
 
         </div>
@@ -53,5 +51,5 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Landing
 

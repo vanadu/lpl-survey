@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "npm run build && next export -o _static"
+    "export": "npm run build && next export -o _static",
+    "merge-surveys": "node scripts/merge-surveys.js"
   },
   "dependencies": {
     "@analytics/google-tag-manager": "^0.5.3",

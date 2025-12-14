@@ -17,51 +17,44 @@
         },
         {
           "type": "html",
-          "name": "whyContact",
+          "name": "aliveWhyContact",
           "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Why provide a contact?</a>"
         },
         {
           "type": "text",
-          "name": "userContact",
+          "name": "aliveUserContact",
           "title": "Facebook account name or email",
           "isRequired": true
         },
         {
           "type": "html",
-          "name": "aboutCompanionHeading",
+          "name": "aliveAboutCompanionHeading",
           "html": "<h3>About your LP companion<h3>"
         },
-
-
-
-
-
-
-
         {
           "type": "html",
-          "name": "aboutCompanionText",
+          "name": "aliveAboutCompanionText",
           "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
         },
         {
           "type": "panel",
-          "name": "companionDetailsPanel",
+          "name": "aliveCompanionDetailsPanel",
           "title": "Companion Details",
           "description": "Please share details about your LP companion here.",
           "elements": [
             {
               "type": "panel",
-              "name": "companionDetailsSubpanel1",
+              "name": "aliveCompanionDetailsSubpanel1",
               "elements": [
                 {
                   "type": "text",
-                  "name": "companionName",
+                  "name": "aliveCompanionName",
                   "title": "Name:",
                   "isRequired": true
                 },
                 {
                   "type": "text",
-                  "name": "companionBreed",
+                  "name": "aliveCompanionBreed",
                   "title": "Breed or mix:",
                   "isRequired": true
                 }
@@ -69,18 +62,18 @@
             },
             {
               "type": "panel",
-              "name": "companionDetailsSubpanel2",
+              "name": "aliveCompanionDetailsSubpanel2",
               "elements": [
                 {
                   "type": "text",
-                  "name": "CompanionDOB",
+                  "name": "aliveCompanionDOB",
                   "title": "Approximate date of birth:",
                   "isRequired": true,
                   "inputType": "date"
                 },
                 {
                   "type": "boolean",
-                  "name": "companionGender",
+                  "name": "aliveCompanionGender",
                   "title": "Gender:",
                   "isRequired": true,
                   "labelTrue": "Female",
@@ -90,18 +83,18 @@
             },
             {
               "type": "panel",
-              "name": "companionDetailsSubpanel3",
+              "name": "aliveCompanionDetailsSubpanel3",
               "elements": [
                 {
                   "type": "text",
-                  "name": "companionWeight",
+                  "name": "aliveCompanionWeight",
                   "title": "Approximate weight (number):",
                   "isRequired": true,
                   "inputType": "number"
                 },
                 {
                   "type": "boolean",
-                  "name": "CompanionWeightUnits",
+                  "name": "aliveCompanionWeightUnits",
                   "title": "Please choose pounds or kilos:",
                   "isRequired": true,
                   "labelTrue": "Kg",

@@ -10,6 +10,9 @@ const Alive = () => {
         <div className="section_content">
           <div className="top-links">
             <Link href="/">
+              MASTER 
+            </Link>
+            <Link href="/landing">
               Landing 
             </Link>
             <Link href="/alive">
