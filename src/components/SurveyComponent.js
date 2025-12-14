@@ -10,16 +10,21 @@ import { SharpLight } from "survey-core/themes";
 // import surveyConfig from "../../data/survey-config.json";
 import landing from "../../data/landing-page.json";
 import alive from "../../data/alive-page.json"
+import deceased from "../../data/deceased-page.json"
 
 // Assemble the final survey JSON object
 // VA! Removed the survey header in survey-config.json. I don't understand how this works.
 const surveyJson = {
   pages: [
-    landing
+    landing,
+    alive,
+    deceased
   ]
 };
 
-export default function SurveyComponent() {
+export default function SurveyComponent({ startPageName }) {
+
+  console.log("startPageName is: " + startPageName);
 
   // Create the survey model instance only once and keep it in state
   const [survey] = useState(() => {
@@ -76,6 +81,19 @@ export default function SurveyComponent() {
     //   options.htmlElement.classList.add("panel-horses");
     // }
   });
+
+  //VA! 
+
+    useEffect(() => {
+      if (startPageName) {
+        const activePage = survey.pages.find(p => p.name === startPageName);
+        console.log("Active page object:", activePage?.name); // <-- Log it here!
+        if (activePage) {
+          survey.currentPage = activePage;
+        }
+      }
+    }, [startPageName, survey]);
+
 
 
 

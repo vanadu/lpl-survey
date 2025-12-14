@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useRouter} from 'next/router'
+import Link from 'next/link';
 
 import SurveyComponent from '@/components/SurveyComponent'
 
@@ -25,9 +26,22 @@ const Home = () => {
         />
       <section className="section">
         <div className="section_content">
+          <div className="top-links">
+            <Link href="/">
+              Landing 
+            </Link>
+            <Link href="/alive">
+              Still alive!
+            </Link>
+            <Link href="/deceased">
+              Crossed over :-( 
+            </Link>
+          </div>
+
+
 
           <div className="survey-wrapper">
-            <SurveyComponent />
+            <SurveyComponent startPageName = 'landing_page' />
           </div>
 
         </div>

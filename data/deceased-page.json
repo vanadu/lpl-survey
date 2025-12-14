@@ -1,0 +1,119 @@
+{
+  "name": "deceased_page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "deceased_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "deceasedHeading",
+          "html": "<h2>Deceased Page</h2>"
+        },
+        {
+          "type": "html",
+          "name": "deceasedText",
+          "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>"
+        },
+        {
+          "type": "html",
+          "name": "whyContact",
+          "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Why provide a contact?</a>"
+        },
+        {
+          "type": "text",
+          "name": "userContact",
+          "title": "Facebook account name or email",
+          "isRequired": true
+        },
+        {
+          "type": "html",
+          "name": "aboutCompanionHeading",
+          "html": "<h3>About your LP companion<h3>"
+        },
+
+
+
+
+
+
+
+        {
+          "type": "html",
+          "name": "aboutCompanionText",
+          "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
+        },
+        {
+          "type": "panel",
+          "name": "companionDetailsPanel",
+          "title": "Companion Details",
+          "description": "Please share details about your LP companion here.",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "companionDetailsSubpanel1",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "companionName",
+                  "title": "Name:",
+                  "isRequired": true
+                },
+                {
+                  "type": "text",
+                  "name": "companionBreed",
+                  "title": "Breed or mix:",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "companionDetailsSubpanel2",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "CompanionDOB",
+                  "title": "Approximate date of birth:",
+                  "isRequired": true,
+                  "inputType": "date"
+                },
+                {
+                  "type": "boolean",
+                  "name": "companionGender",
+                  "title": "Gender:",
+                  "isRequired": true,
+                  "labelTrue": "Female",
+                  "labelFalse": "Male"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "companionDetailsSubpanel3",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "companionWeight",
+                  "title": "Approximate weight (number):",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "boolean",
+                  "name": "CompanionWeightUnits",
+                  "title": "Please choose pounds or kilos:",
+                  "isRequired": true,
+                  "labelTrue": "Kg",
+                  "labelFalse": "Lbs"
+                }
+              ]
+            }
+          ]
+        }
+
+
+      ]
+    }
+  ]
+}

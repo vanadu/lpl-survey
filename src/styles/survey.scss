@@ -1,5 +1,18 @@
 @import './variables.scss';
 
+
+.top-links {
+  display: flex;
+  justify-content: center;
+
+  color: blue;
+  font-weight: bold;
+  a {
+    margin: 10px;
+    padding: 0 10px;
+  }
+}
+
 // !VA Survey wrapper 
 .survey-wrapper {
   // !VA Nothing here
