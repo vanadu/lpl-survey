@@ -31,98 +31,13 @@
           "name": "aboutCompanionHeading",
           "html": "<h3>About your LP companion<h3>"
         },
-        {
-          "type": "html",
-          "name": "aboutCompanionText",
-          "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
-        },
-
-
-
-
-        {
-          "type": "panel",
-          "name": "companionDetailsPanel",
-          "readOnly": true,
-          "title": "Companion Details",
-          "description": "Please share details about your LP companion here.",
-          "elements": [
-            {
-              "type": "panel",
-              "name": "companionDetailsSubpanel1",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "companionName",
-                  "title": "Name:",
-                  "isRequired": true
-                },
-                {
-                  "type": "text",
-                  "name": "companionBreed",
-                  "title": "Breed or mix:",
-                  "isRequired": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "companionDetailsSubpanel2",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "CompanionDOB",
-                  "title": "Approximate date of birth:",
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "companionGender",
-                  "title": "Gender:",
-                  "isRequired": true,
-                  "labelTrue": "Female",
-                  "labelFalse": "Male"
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "companionDetailsSubpanel3",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "companionWeight",
-                  "title": "Approximate weight:",
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "CompanionWeightUnits",
-                  "title": "Please choose pounds or kilos:",
-                  "isRequired": true,
-                  "labelTrue": "Kg",
-                  "labelFalse": "Lbs"
-                }
-              ]
-            }
-          ]
-        },
-
-
-
-
-
-
-
-
-
 
 
 
         {
       "type": "html",
           "name": "aboutCompanionText",
-          "html": "<p>The second question we need to ask is the hardest. We know how hard it is to lose a beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p>"
+          "html": "<p>Before we begin, this survey asks questions about your experience with LarPar and how it affected your companion. We know how hard it is to lose a beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you think you're ready to continue, please let us know if your companion is still with you or has crossed over the Rainbow Bridge. This will determine what questions we will ask in the survey.</p>"
         },
         {
           "type": "imagepicker",
@@ -183,14 +98,86 @@
               "title": "Share a favorite memory of your pet"
             }
           ]
+        },
+
+
+
+
+
+
+        {
+          "type": "html",
+          "name": "aboutCompanionText",
+          "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
+        },
+        {
+          "type": "panel",
+          "name": "companionDetailsPanel",
+          "title": "Companion Details",
+          "description": "Please share details about your LP companion here.",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "companionDetailsSubpanel1",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "companionName",
+                  "title": "Name:",
+                  "isRequired": true
+                },
+                {
+                  "type": "text",
+                  "name": "companionBreed",
+                  "title": "Breed or mix:",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "companionDetailsSubpanel2",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "CompanionDOB",
+                  "title": "Approximate date of birth:",
+                  "isRequired": true,
+                  "inputType": "date"
+                },
+                {
+                  "type": "boolean",
+                  "name": "companionGender",
+                  "title": "Gender:",
+                  "isRequired": true,
+                  "labelTrue": "Female",
+                  "labelFalse": "Male"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "companionDetailsSubpanel3",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "companionWeight",
+                  "title": "Approximate weight (number):",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "boolean",
+                  "name": "CompanionWeightUnits",
+                  "title": "Please choose pounds or kilos:",
+                  "isRequired": true,
+                  "labelTrue": "Kg",
+                  "labelFalse": "Lbs"
+                }
+              ]
+            }
+          ]
         }
-
-
-
-
-
-
-
 
 
       ]

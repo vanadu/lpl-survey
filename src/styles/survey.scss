@@ -162,7 +162,6 @@
 .companion-details-subpanel-1 {
 
 
-  background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 .companion-details-subpanel-1, .companion-details-subpanel-2, .companion-details-subpanel-3 {
@@ -170,20 +169,15 @@
   padding: 0!important;
   margin: 0!important;
   display: flex;
-  background: rgba(0, 128, 0, .3) !important; //devgreen
  }
 
 
 }
 
-.companion-details-subpanel-1.sd-element--nested-with-borders {
-  border: none !important;
-  /* Optional: remove box-shadow or outline if visible */
-  box-shadow: none !important;
-  outline: none !important;
-  background: rgba(0, 0, 255, .3) !important; //devblue
-}
 
+
+
+// !VA This is how you remove the panel border, but I like it better with the border
 // .sd-element--nested-with-borders {
 //   border: none !important;
 //   /* Optional: remove box-shadow or outline if visible */
@@ -193,14 +187,14 @@
 
 .companion-details-subpanel-1, .companion-details-subpanel-2, .companion-details-subpanel-3 {
   .sd-clearfix {
-    // padding: 0!important;
-
-    margin: 0!important;
     margin: 10px !important;
-
   }
 }
 
+.sd-boolean {
+  padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  padding: calc(0* (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+}
 
 
 
