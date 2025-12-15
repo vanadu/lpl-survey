@@ -29,7 +29,7 @@
         {
           "type": "html",
           "name": "livAboutCompHeading",
-          "html": "<h3>About your LP companion<h3>"
+          "html": "<h3>Tell us about your LarPar companion!<h3>"
         },
         {
           "type": "html",
@@ -39,12 +39,11 @@
         {
           "type": "panel",
           "name": "livCompDetailsPanel",
-          "title": "Companion Details",
-          "description": "Please share details about your LP companion here.",
           "elements": [
             {
               "type": "panel",
               "name": "livCompDetailsSubpanel1",
+              "title": "What is your companion's name and breed or breed mix?",
               "elements": [
                 {
                   "type": "text",
@@ -63,13 +62,41 @@
             {
               "type": "panel",
               "name": "livCompDetailsSubpanel2",
+              "title": "What is your companion's age (in years and months) and gender?",
               "elements": [
                 {
                   "type": "text",
-                  "name": "livCompDOB",
-                  "title": "Approximate date of birth:",
+                  "inputType": "number",
+                  "name": "livCompYears",
+                  "title": "Age in years (number):",
                   "isRequired": true,
-                  "inputType": "date"
+                  "min": "1",
+                  "max": "40",
+                   "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "livCompMonths",
+                  "title": "Months (number 1 - 12)",
+                  "isRequired": true,
+                  "min": 1,
+                  "max": 12,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 12,
+                      "text": "Months must be between 1 and 12"
+                    }
+                  ]
                 },
                 {
                   "type": "boolean",
@@ -84,13 +111,24 @@
             {
               "type": "panel",
               "name": "livCompDetailsSubpanel3",
+              "title": "About how much does your companion weigh in pounds or kilos?",
               "elements": [
                 {
                   "type": "text",
                   "name": "livCompWeight",
-                  "title": "Approximate weight (number):",
+                  "title": "Weight (number):",
                   "isRequired": true,
-                  "inputType": "number"
+                  "inputType": "number",
+                  "min": 1,
+                  "max": 12,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 2200,
+                      "text": "Weight must be between 1 and 2200"
+                    }
+                  ]
                 },
                 {
                   "type": "boolean",
@@ -101,7 +139,32 @@
                   "labelFalse": "Lbs"
                 }
               ]
+            },
+
+
+
+            {
+              "type": "panel",
+              "name": "livCompDetailsSubpanel4",
+              "title": "How energetic, excitable, or anxious is your companion (1=very calm, 5=very excitable)?",
+              "elements": [
+                {
+                  "type": "rating",
+                  "name": "LivCompExcitable",
+                  "title": ""
+                }
+              ]
             }
+
+
+
+
+
+
+
+
+
+
           ]
         }
 

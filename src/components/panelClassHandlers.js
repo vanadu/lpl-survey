@@ -12,6 +12,9 @@ export function addCustomClasses(panel, htmlElement) {
     if (panel.name === 'livCompDetailsSubpanel3') {
       htmlElement.classList.add("liv-comp-details-subpanel-3");
     }
+    if (panel.name === 'livCompDetailsSubpanel4') {
+      htmlElement.classList.add("liv-comp-details-subpanel-4");
+    }
     // Deceased Companion Details Panel and Subpanel
     if (panel.name === 'decCompDetailsPanel') {
       htmlElement.classList.add("dec-comp-details-panel");
@@ -24,6 +27,9 @@ export function addCustomClasses(panel, htmlElement) {
     }
     if (panel.name === 'decCompDetailsSubpanel3') {
       htmlElement.classList.add("dec-comp-details-subpanel-3");
+    }
+    if (panel.name === 'decCompDetailsSubpanel4') {
+      htmlElement.classList.add("dec-comp-details-subpanel-4");
     }
 
 

@@ -117,35 +117,36 @@
 }
 
 // !VA Survey Title
-// !VA introHeading
-.sd-question[data-name="introHeading"] h2 {
+// !VA livHeading, decHeading
+.sd-question[data-name="livHeading"] h2, .sd-question[data-name="decHeading"] h2 {
   font-family: $secondary_font;
   font-size: 1.75rem;
   margin: 0!important;
   padding: 0!important;
 }
 
-// !VA introText
-.sd-question[data-name="introText"] p {
+// !VA liv
+.sd-question[data-name="livText"] p, .sd-question[data-name="decText"] p {
   margin: 0!important;
   padding: 0!important;
 }
 
-// !VA introText: Padding above introText to reduce space between introText and introHeading
-.sd-row:has(> div > .sd-question[data-name="introText"]) {
+// !VA livText, decText: Padding above introText to reduce space between introText and introHeading
+.sd-row:has(> div > .sd-question[data-name="livText"]), .sd-row:has(> div > .sd-question[data-name="decText"]) {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 
 }
 
 // !VA userContact: Padding above userContact to reduce space between info link and label
-.sd-row:has(> div > .sd-question[data-name="userContact"]) {
+.sd-row:has(> div > .sd-question[data-name="livUserContact"]), 
+.sd-row:has(> div > .sd-question[data-name="decUserContact"]) {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 }
 
 // !VA userContact: Padding above userContact to reduce space between info link and label
- .sd-question[data-name="userContact"] {
+ .sd-question[data-name="livUserContact"], .sd-question[data-name="decUserContact"] {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 }
@@ -164,18 +165,37 @@
   padding-top: 10px;
 }
 
-// !VA Companion details panel
-.liv-comp-details-panel > .sd-element--nested-with-borders,
-.dec-comp-details-panel > .sd-element--nested-with-borders
+// !VA Remove outer border around ...CompDetailsPanel
+.liv-comp-details-panel.sd-element--nested-with-borders,
+.dec-comp-details-panel.sd-element--nested-with-borders
  {
   border: none !important;
   /* Optional: remove box-shadow or outline if visible */
   box-shadow: none !important;
   outline: none !important;
+  // !VA Horizontal padding around subpanels. 0 makes it basically as if the parent panel weren't there, so the outer panel exists only for organization, not for layout.
+  // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  --sd-base-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 }
 
-.liv-comp-details-subpanel-1,  {
 
+// !VA Adjust the top and bottom paddings on ALL panel headers. That's going to be a problem later, probably.
+.sd-panel__header {
+    // padding: 0!important;
+    // margin: 0!important;
+    padding-top: 16px!important;
+    padding-bottom: 0!important;
+}
+
+
+.sd-element__header--location-top {
+    padding-bottom: calc(0 * var(--sd-base-vertical-padding));
+    // background: rgba(0, 0, 255, .3) !important; //devblue
+
+  }
+
+// !VA It doesn't appear to be possible to get rid of the bottom border on the subpanel header
+.liv-comp-details-subpanel-1 .sd-panel__header {
 
 }
 
@@ -185,12 +205,7 @@
   margin: 0!important;
   display: flex;
  }
-
-
 }
-
-
-
 
 // !VA This is how you remove the panel border, but I like it better with the border
 // .sd-element--nested-with-borders {
@@ -200,7 +215,9 @@
 //   outline: none !important;
 // }
 
+// !VA All liv subpanels
 .liv-comp-details-subpanel-1, .liv-comp-details-subpanel-2, .liv-comp-details-subpanel-3, .dec-comp-details-subpanel-1, .dec-comp-details-subpanel-2, .dec-comp-details-subpanel-3 {
+  // !VA Sets margin on the subpanel's children, otherwise they appear wonky with flex
   .sd-clearfix {
     margin: 10px !important;
   }
@@ -211,22 +228,60 @@
   }
   // !VA Sets the height of the boolean element
   .sd-boolean__label, .sd-boolean__thumb {
-    // padding: var(--sjs-base-unit, var(--base-unit, 8px)) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))));
     // line-height: calc(.5 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
     line-height: calc(1 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
   }
 }
 
-
-
-
-// !VA This isn't the height of the boolean, it's the space between the sliding button and the outer border
-.sd-boolean {
-  // padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  // padding-top: calc(0* (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  // padding-bottom: calc(0* (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+.sd-question[data-name="livCompYears"], .sd-question[data-name="livCompMonths"], .sd-question[data-name="livCompWeight"] {
+  input {
+    width: 200px!important;
+  }
 }
 
+// !VA Hide the Excitable rating title, if you leave it out it displays the element name
+.sd-question[data-name="LivCompExcitable"] .sd-title {
+  display: none;
+}
+
+// !VA Reduce top padding on Ratings numbers
+.liv-comp-details-subpanel-4 {
+    .sd-panel__content {
+      padding-top: 10px; 
+    }
+}
+
+
+// !VA Add an icon or image to the panel headers
+// .sd-panel__header::before {
+//     content: "";
+//     // position: absolute;
+//   display: inline-block;
+//   /* Optional size */
+//   // "../../public/img-info-icon.png"
+//   background-image: url("../../public/img-info-icon.png");
+//   width: 18px;
+//   height: 18px;
+//   background-size: contain;       /* Or: cover */
+//   background-repeat: no-repeat;
+// }
+
+// !VA Display the icon and 
+.sd-panel__header {
+  display: flex;
+    // padding: 0!important;
+    // margin: 0!important;
+}
+
+// !VA Clear the bottom border in the subpanel title 
+.sd-panel__header::after { 
+  content: none !important;
+  display: none !important;
+  border: none !important;
+  background: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+}
 
 
 
