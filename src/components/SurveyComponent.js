@@ -5,6 +5,8 @@ import React, { useState, useCallback, useEffect } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
+// VA! import the classes to add to the SurveyJS elements here:
+import { addCustomClasses } from "./panelClassHandlers";
 
 // Import the modularized survey definition files
 // VA! Replaced surveyConfig with an independent header
@@ -63,24 +65,8 @@ export default function SurveyComponent({ startPageName }) {
 
   // Attach onAfterRenderPanel before rendering the survey
   survey.onAfterRenderPanel.add(function(sender, options) {
-    if (options.panel.name === 'companionDetailsPanel') {
-      options.htmlElement.classList.add("companion-details-panel");
-    }
-    if (options.panel.name === 'companionDetailsSubpanel1') {
-      options.htmlElement.classList.add("companion-details-subpanel-1");
-    }
-    if (options.panel.name === 'companionDetailsSubpanel2') {
-      options.htmlElement.classList.add("companion-details-subpanel-2");
-    }
-    if (options.panel.name === 'companionDetailsSubpanel3') {
-      options.htmlElement.classList.add("companion-details-subpanel-3");
-    }
-	  // if (options.panel.name === 'cats') {
-    //   options.htmlElement.classList.add("panel-cats");
-    // }
-		// if (options.panel.name === 'horses') {
-    //   options.htmlElement.classList.add("panel-horses");
-    // }
+    // console.log({ panel: options.panel, htmlElement: options.htmlElement });
+    addCustomClasses(options.panel, options.htmlElement);
   });
 
   //VA! 

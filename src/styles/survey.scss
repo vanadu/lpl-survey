@@ -165,19 +165,21 @@
 }
 
 // !VA Companion details panel
-.companion-details-panel > .sd-element--nested-with-borders {
+.liv-comp-details-panel > .sd-element--nested-with-borders,
+.dec-comp-details-panel > .sd-element--nested-with-borders
+ {
   border: none !important;
   /* Optional: remove box-shadow or outline if visible */
   box-shadow: none !important;
   outline: none !important;
 }
 
-.companion-details-subpanel-1 {
+.liv-comp-details-subpanel-1,  {
 
 
 }
 
-.companion-details-subpanel-1, .companion-details-subpanel-2, .companion-details-subpanel-3 {
+.liv-comp-details-subpanel-1, .liv-comp-details-subpanel-2, .liv-comp-details-subpanel-3, .dec-comp-details-subpanel-1, .dec-comp-details-subpanel-2, .dec-comp-details-subpanel-3  {
  .sd-panel__content {
   padding: 0!important;
   margin: 0!important;
@@ -198,15 +200,31 @@
 //   outline: none !important;
 // }
 
-.companion-details-subpanel-1, .companion-details-subpanel-2, .companion-details-subpanel-3 {
+.liv-comp-details-subpanel-1, .liv-comp-details-subpanel-2, .liv-comp-details-subpanel-3, .dec-comp-details-subpanel-1, .dec-comp-details-subpanel-2, .dec-comp-details-subpanel-3 {
   .sd-clearfix {
     margin: 10px !important;
   }
+  // !VA Sets the padding between the switch and the outer border
+  .sd-boolean {
+    // padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    padding: calc(0.25 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  }
+  // !VA Sets the height of the boolean element
+  .sd-boolean__label, .sd-boolean__thumb {
+    // padding: var(--sjs-base-unit, var(--base-unit, 8px)) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    // line-height: calc(.5 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
+    line-height: calc(1 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
+  }
 }
 
+
+
+
+// !VA This isn't the height of the boolean, it's the space between the sliding button and the outer border
 .sd-boolean {
-  padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  padding: calc(0* (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  // padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  // padding-top: calc(0* (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  // padding-bottom: calc(0* (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
 
 
