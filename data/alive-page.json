@@ -1,5 +1,6 @@
 {
   "name": "alive_page",
+  "visibleIf": "{crossedOver} = 'alive'",
   "elements": [
     {
       "type": "panel",
@@ -8,12 +9,12 @@
         {
           "type": "html",
           "name": "livHeading",
-          "html": "<h2>Alive Page</h2>"
+          "html": "<h2>Laryngeal Paralysis Survey Questions</h2>"
         },
         {
           "type": "html",
           "name": "livText",
-          "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>"
+          "html": "<p>We know how hard it is to deal with LarPar. There are no simple questions, no clear-cut answers, and all the choices are lesser-evil ones. </p>"
         },
         {
           "type": "html",
@@ -120,7 +121,7 @@
                   "isRequired": true,
                   "inputType": "number",
                   "min": 1,
-                  "max": 12,
+                  "max": 2200,
                   "validators": [
                     {
                       "type": "numeric",

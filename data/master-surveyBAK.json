@@ -52,18 +52,33 @@
               "showLabel": true
             },
             {
-              "type": "html",
-              "name": "makeSelectionText",
-              "html": "<p>Please make a selection and choose 'Next' to continue.</p>"
+              "name": "alivePage",
+              "visibleIf": "{crossedOver} = 'alive'",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "aliveMessage",
+                  "html": "<h3>We are glad your companion is still with you.</h3>"
+                }
+              ]
+            },
+            {
+              "name": "passedPage",
+              "visibleIf": "{crossedOver} = 'passed'",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "passedMessage",
+                  "html": "<h3>We are sorry for your loss.</h3>"
+                }
+              ]
             }
-
           ]
         }
       ]
     },
     {
       "name": "alive_page",
-      "visibleIf": "{crossedOver} = 'alive'",
       "elements": [
         {
           "type": "panel",
@@ -224,7 +239,6 @@
     },
     {
       "name": "deceased_page",
-      "visibleIf": "{crossedOver} = 'deceased'",
       "elements": [
         {
           "type": "panel",

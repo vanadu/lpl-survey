@@ -42,7 +42,7 @@
                   "text": "Still with us"
                 },
                 {
-                  "value": "passed",
+                  "value": "deceased",
                   "imageLink": "./img-companions-rainbow.png",
                   "text": "Crossed over"
                 }
@@ -50,47 +50,6 @@
               "imageWidth": 120,
               "imageHeight": 120,
               "showLabel": true
-            },
-            {
-              "type": "panel",
-              "name": "alivePanel",
-              "title": "Questions for Living Pets",
-              "visibleIf": "{crossedOver} = 'alive'",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "pet_name",
-                  "title": "What is your pet's name?"
-                },
-                {
-                  "type": "dropdown",
-                  "name": "pet_type",
-                  "title": "What type of pet do you have?",
-                  "choices": [
-                    "Dog",
-                    "Cat",
-                    "Other"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "passedPanel",
-              "title": "Questions for Pet Memorial",
-              "visibleIf": "{crossedOver} = 'passed'",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "pet_name_memorial",
-                  "title": "What was your pet's name?"
-                },
-                {
-                  "type": "comment",
-                  "name": "memory",
-                  "title": "Share a favorite memory of your pet"
-                }
-              ]
             }
           ]
         }
@@ -98,6 +57,7 @@
     },
     {
       "name": "alive_page",
+      "visibleIf": "{crossedOver} = 'alive'",
       "elements": [
         {
           "type": "panel",
@@ -106,12 +66,12 @@
             {
               "type": "html",
               "name": "livHeading",
-              "html": "<h2>Alive Page</h2>"
+              "html": "<h2>Laryngeal Paralysis Survey Questions</h2>"
             },
             {
               "type": "html",
               "name": "livText",
-              "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>"
+              "html": "<p>We know how hard it is to deal with LarPar. There are no simple questions, no clear-cut answers, and all the choices are lesser-evil ones. </p>"
             },
             {
               "type": "html",
@@ -127,7 +87,7 @@
             {
               "type": "html",
               "name": "livAboutCompHeading",
-              "html": "<h3>About your LP companion<h3>"
+              "html": "<h3>Tell us about your LarPar companion!<h3>"
             },
             {
               "type": "html",
@@ -137,12 +97,11 @@
             {
               "type": "panel",
               "name": "livCompDetailsPanel",
-              "title": "Companion Details",
-              "description": "Please share details about your LP companion here.",
               "elements": [
                 {
                   "type": "panel",
                   "name": "livCompDetailsSubpanel1",
+                  "title": "What is your companion's name and breed or breed mix?",
                   "elements": [
                     {
                       "type": "text",
@@ -161,13 +120,41 @@
                 {
                   "type": "panel",
                   "name": "livCompDetailsSubpanel2",
+                  "title": "What is your companion's age (in years and months) and gender?",
                   "elements": [
                     {
                       "type": "text",
-                      "name": "livCompDOB",
-                      "title": "Approximate date of birth:",
+                      "inputType": "number",
+                      "name": "livCompYears",
+                      "title": "Age in years (number):",
                       "isRequired": true,
-                      "inputType": "date"
+                      "min": "1",
+                      "max": "40",
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 40,
+                          "text": "Age must be between 1 and 40"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "livCompMonths",
+                      "title": "Months (number 1 - 12)",
+                      "isRequired": true,
+                      "min": 1,
+                      "max": 12,
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 12,
+                          "text": "Months must be between 1 and 12"
+                        }
+                      ]
                     },
                     {
                       "type": "boolean",
@@ -182,13 +169,24 @@
                 {
                   "type": "panel",
                   "name": "livCompDetailsSubpanel3",
+                  "title": "About how much does your companion weigh in pounds or kilos?",
                   "elements": [
                     {
                       "type": "text",
                       "name": "livCompWeight",
-                      "title": "Approximate weight (number):",
+                      "title": "Weight (number):",
                       "isRequired": true,
-                      "inputType": "number"
+                      "inputType": "number",
+                      "min": 1,
+                      "max": 2200,
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 2200,
+                          "text": "Weight must be between 1 and 2200"
+                        }
+                      ]
                     },
                     {
                       "type": "boolean",
@@ -197,6 +195,18 @@
                       "isRequired": true,
                       "labelTrue": "Kg",
                       "labelFalse": "Lbs"
+                    }
+                  ]
+                },
+                {
+                  "type": "panel",
+                  "name": "livCompDetailsSubpanel4",
+                  "title": "How energetic, excitable, or anxious is your companion (1=very calm, 5=very excitable)?",
+                  "elements": [
+                    {
+                      "type": "rating",
+                      "name": "LivCompExcitable",
+                      "title": ""
                     }
                   ]
                 }
@@ -208,6 +218,7 @@
     },
     {
       "name": "deceased_page",
+      "visibleIf": "{crossedOver} = 'deceased'",
       "elements": [
         {
           "type": "panel",

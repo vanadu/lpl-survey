@@ -1,0 +1,52 @@
+{
+  "pages": [
+    {
+      "name": "chooseStatus",
+      "elements": [
+        {
+          "type": "imagepicker",
+          "name": "crossedOver",
+          "title": "2. Is your companion still with you or have they crossed over the Rainbow Bridge?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "alive",
+              "imageLink": "./img-companions.png",
+              "text": "Still with us"
+            },
+            {
+              "value": "passed",
+              "imageLink": "./img-companions-rainbow.png",
+              "text": "Crossed over"
+            }
+          ],
+          "imageWidth": 120,
+          "imageHeight": 120,
+          "showLabel": true
+        }
+      ]
+    },
+    {
+      "name": "alivePage",
+      "visibleIf": "{crossedOver} = 'alive'",
+      "elements": [
+        {
+          "type": "html",
+          "name": "aliveMessage",
+          "html": "<h3>We are glad your companion is still with you.</h3>"
+        }
+      ]
+    },
+    {
+      "name": "passedPage",
+      "visibleIf": "{crossedOver} = 'passed'",
+      "elements": [
+        {
+          "type": "html",
+          "name": "passedMessage",
+          "html": "<h3>We are sorry for your loss.</h3>"
+        }
+      ]
+    }
+  ]
+}

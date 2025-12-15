@@ -33,6 +33,10 @@ export default function SurveyComponent({ startPageName }) {
   const [survey] = useState(() => {
     const surveyModel = new Model(surveyJson);
     surveyModel.applyTheme(SharpLight);
+
+  // Enable auto-advance - according to AI bot, this will only work if SurveyJS considers the input the only “required” interaction on that page at runtime.
+    // surveyModel.goNextPageAutomatic = true;
+
     return surveyModel;
   });
 

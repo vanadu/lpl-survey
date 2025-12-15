@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useRouter} from 'next/router'
 import Link from 'next/link';
 
+import MasterSurveyComponent from '@/components/MasterSurveyComponent'
 import SurveyComponent from '@/components/SurveyComponent'
 
 import { NextSeo } from 'next-seo'
@@ -43,8 +44,12 @@ const Home = () => {
 
 
 
+          {/* <div className="survey-wrapper">
+            <MasterSurveyComponent />
+          </div> */}
+
           <div className="survey-wrapper">
-            <SurveyComponent />
+            <SurveyComponent startPageName="landing_page" />
           </div>
 
         </div>

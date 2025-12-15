@@ -1,20 +1,3 @@
 [
-  {
-    "crossedOver": "alive",
-    "pet_name": "Bobbie",
-    "livCompName": "Sammi",
-    "livCompBreed": "Boxer",
-    "livCompDOB": "2020-01-01",
-    "livCompGender": true,
-    "livCompWeightUnits": false,
-    "livCompWeight": 50,
-    "livUserContact": "asdf",
-    "decUserContact": "zxcv",
-    "decCompName": "Bee",
-    "decCompBreed": "Lab",
-    "decCompDOB": "2009-03-03",
-    "decCompGender": false,
-    "decCompWeight": 75,
-    "decCompWeightUnits": true
-  }
+
 ]

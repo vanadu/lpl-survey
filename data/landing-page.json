@@ -40,7 +40,7 @@
               "text": "Still with us"
             },
             {
-              "value": "passed",
+              "value": "deceased",
               "imageLink": "./img-companions-rainbow.png",
               "text": "Crossed over"
             }
@@ -48,47 +48,12 @@
           "imageWidth": 120,
           "imageHeight": 120,
           "showLabel": true
-        },
-
-        {
-          "type": "panel",
-          "name": "alivePanel",
-          "title": "Questions for Living Pets",
-          "visibleIf": "{crossedOver} = 'alive'",
-          "elements": [
-            {
-              "type": "text",
-              "name": "pet_name",
-              "title": "What is your pet's name?"
-            },
-            {
-              "type": "dropdown",
-              "name": "pet_type",
-              "title": "What type of pet do you have?",
-              "choices": ["Dog", "Cat", "Other"]
-            }
-          ]
-        },
-
-        {
-          "type": "panel",
-          "name": "passedPanel",
-          "title": "Questions for Pet Memorial",
-          "visibleIf": "{crossedOver} = 'passed'",
-          "elements": [
-            {
-              "type": "text",
-              "name": "pet_name_memorial",
-              "title": "What was your pet's name?"
-            },
-            {
-              "type": "comment",
-              "name": "memory",
-              "title": "Share a favorite memory of your pet"
-            }
-          ]
-        }
-
+          },
+          {
+            "type": "html",
+            "name": "makeSelectionText",
+            "html": "<p>Please make a selection and choose 'Next' to continue.</p>"
+          }
       ]
     }
   ]
