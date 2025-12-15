@@ -3,58 +3,58 @@
   "elements": [
     {
       "type": "panel",
-      "name": "alive_page",
+      "name": "liv_panel",
       "elements": [
         {
           "type": "html",
-          "name": "aliveHeading",
+          "name": "livHeading",
           "html": "<h2>Alive Page</h2>"
         },
         {
           "type": "html",
-          "name": "aliveText",
+          "name": "livText",
           "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>"
         },
         {
           "type": "html",
-          "name": "aliveWhyContact",
+          "name": "livWhyContact",
           "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Why provide a contact?</a>"
         },
         {
           "type": "text",
-          "name": "aliveUserContact",
+          "name": "livUserContact",
           "title": "Facebook account name or email",
           "isRequired": true
         },
         {
           "type": "html",
-          "name": "aliveAboutCompanionHeading",
+          "name": "livAboutCompHeading",
           "html": "<h3>About your LP companion<h3>"
         },
         {
           "type": "html",
-          "name": "aliveAboutCompanionText",
+          "name": "livAboutCompText",
           "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
         },
         {
           "type": "panel",
-          "name": "aliveCompanionDetailsPanel",
+          "name": "livCompDetailsPanel",
           "title": "Companion Details",
           "description": "Please share details about your LP companion here.",
           "elements": [
             {
               "type": "panel",
-              "name": "aliveCompanionDetailsSubpanel1",
+              "name": "livCompDetailsSubpanel1",
               "elements": [
                 {
                   "type": "text",
-                  "name": "aliveCompanionName",
+                  "name": "livCompName",
                   "title": "Name:",
                   "isRequired": true
                 },
                 {
                   "type": "text",
-                  "name": "aliveCompanionBreed",
+                  "name": "livCompBreed",
                   "title": "Breed or mix:",
                   "isRequired": true
                 }
@@ -62,18 +62,18 @@
             },
             {
               "type": "panel",
-              "name": "aliveCompanionDetailsSubpanel2",
+              "name": "livCompDetailsSubpanel2",
               "elements": [
                 {
                   "type": "text",
-                  "name": "aliveCompanionDOB",
+                  "name": "livCompDOB",
                   "title": "Approximate date of birth:",
                   "isRequired": true,
                   "inputType": "date"
                 },
                 {
                   "type": "boolean",
-                  "name": "aliveCompanionGender",
+                  "name": "livCompGender",
                   "title": "Gender:",
                   "isRequired": true,
                   "labelTrue": "Female",
@@ -83,18 +83,18 @@
             },
             {
               "type": "panel",
-              "name": "aliveCompanionDetailsSubpanel3",
+              "name": "livCompDetailsSubpanel3",
               "elements": [
                 {
                   "type": "text",
-                  "name": "aliveCompanionWeight",
+                  "name": "livCompWeight",
                   "title": "Approximate weight (number):",
                   "isRequired": true,
                   "inputType": "number"
                 },
                 {
                   "type": "boolean",
-                  "name": "aliveCompanionWeightUnits",
+                  "name": "livCompWeightUnits",
                   "title": "Please choose pounds or kilos:",
                   "isRequired": true,
                   "labelTrue": "Kg",

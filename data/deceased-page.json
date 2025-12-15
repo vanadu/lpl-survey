@@ -3,58 +3,58 @@
   "elements": [
     {
       "type": "panel",
-      "name": "deceased_page",
+      "name": "dec_panel",
       "elements": [
         {
           "type": "html",
-          "name": "deceasedHeading",
+          "name": "decHeading",
           "html": "<h2>Deceased Page</h2>"
         },
         {
           "type": "html",
-          "name": "deceasedText",
+          "name": "decText",
           "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>"
         },
         {
           "type": "html",
-          "name": "deceasedWhyContact",
+          "name": "decWhyContact",
           "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Why provide a contact?</a>"
         },
         {
           "type": "text",
-          "name": "deceasedUserContact",
+          "name": "decUserContact",
           "title": "Facebook account name or email",
           "isRequired": true
         },
         {
           "type": "html",
-          "name": "deceasedAboutCompanionHeading",
+          "name": "decAboutCompHeading",
           "html": "<h3>About your LP companion<h3>"
         },
         {
           "type": "html",
-          "name": "deceasedAboutCompanionText",
+          "name": "decAboutCompText",
           "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
         },
         {
           "type": "panel",
-          "name": "deceasedCompanionDetailsPanel",
+          "name": "decCompDetailsPanel",
           "title": "Companion Details",
           "description": "Please share details about your LP companion here.",
           "elements": [
             {
               "type": "panel",
-              "name": "deceasedCompanionDetailsSubpanel1",
+              "name": "decCompDetailsSubpanel1",
               "elements": [
                 {
                   "type": "text",
-                  "name": "deceasedCompanionName",
+                  "name": "decCompName",
                   "title": "Name:",
                   "isRequired": true
                 },
                 {
                   "type": "text",
-                  "name": "deceasedCompanionBreed",
+                  "name": "decCompBreed",
                   "title": "Breed or mix:",
                   "isRequired": true
                 }
@@ -62,18 +62,18 @@
             },
             {
               "type": "panel",
-              "name": "deceasedCompanionDetailsSubpanel2",
+              "name": "decCompDetailsSubpanel2",
               "elements": [
                 {
                   "type": "text",
-                  "name": "deceasedCompanionDOB",
+                  "name": "decCompDOB",
                   "title": "Approximate date of birth:",
                   "isRequired": true,
                   "inputType": "date"
                 },
                 {
                   "type": "boolean",
-                  "name": "deceasedCompanionGender",
+                  "name": "decCompGender",
                   "title": "Gender:",
                   "isRequired": true,
                   "labelTrue": "Female",
@@ -83,18 +83,18 @@
             },
             {
               "type": "panel",
-              "name": "deceasedCompanionDetailsSubpanel3",
+              "name": "decCompDetailsSubpanel3",
               "elements": [
                 {
                   "type": "text",
-                  "name": "deceasedCompanionWeight",
+                  "name": "decCompWeight",
                   "title": "Approximate weight (number):",
                   "isRequired": true,
                   "inputType": "number"
                 },
                 {
                   "type": "boolean",
-                  "name": "deceasedCompanionWeightUnits",
+                  "name": "decCompWeightUnits",
                   "title": "Please choose pounds or kilos:",
                   "isRequired": true,
                   "labelTrue": "Kg",

@@ -1,21 +1,20 @@
 [
   {
     "crossedOver": "alive",
-    "pet_name": "Billie",
-    "pet_type": "Dog",
-    "aliveUserContact": "asdf",
-    "aliveCompanionName": "Van",
-    "aliveCompanionBreed": "Bollie",
-    "aliveCompanionDOB": "2020-01-01",
-    "aliveCompanionGender": true,
-    "aliveCompanionWeight": 50,
-    "aliveCompanionWeightUnits": false,
-    "deceasedUserContact": "Ben",
-    "deceasedCompanionName": "Missy",
-    "deceasedCompanionBreed": "Lab",
-    "deceasedCompanionDOB": "2005-03-03",
-    "deceasedCompanionGender": false,
-    "deceasedCompanionWeightUnits": false,
-    "deceasedCompanionWeight": 75
+    "pet_name": "Bobbie",
+    "livCompName": "Sammi",
+    "livCompBreed": "Boxer",
+    "livCompDOB": "2020-01-01",
+    "livCompGender": true,
+    "livCompWeightUnits": false,
+    "livCompWeight": 50,
+    "livUserContact": "asdf",
+    "decUserContact": "zxcv",
+    "decCompName": "Bee",
+    "decCompBreed": "Lab",
+    "decCompDOB": "2009-03-03",
+    "decCompGender": false,
+    "decCompWeight": 75,
+    "decCompWeightUnits": true
   }
 ]
