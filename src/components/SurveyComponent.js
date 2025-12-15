@@ -7,6 +7,7 @@ import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
 // VA! import the classes to add to the SurveyJS elements here:
 import { addCustomClasses } from "./panelClassHandlers";
+import prefillData from '../../data/prefill.json';
 
 // Import the modularized survey definition files
 // VA! Replaced surveyConfig with an independent header
@@ -77,6 +78,10 @@ export default function SurveyComponent({ startPageName }) {
 
     useEffect(() => {
       if (startPageName) {
+
+
+        survey.data = prefillData;
+
         const activePage = survey.pages.find(p => p.name === startPageName);
         console.log("Active page object:", activePage?.name); // <-- Log it here!
         if (activePage) {

@@ -1,6 +1,5 @@
 {
   "name": "alive_page",
-  "visibleIf": "{crossedOver} = 'alive'",
   "elements": [
     {
       "type": "panel",
@@ -141,9 +140,6 @@
                 }
               ]
             },
-
-
-
             {
               "type": "panel",
               "name": "livCompDetailsSubpanel4",
@@ -153,23 +149,13 @@
                   "type": "rating",
                   "name": "LivCompExcitable",
                   "title": ""
+                  
                 }
               ]
             }
 
-
-
-
-
-
-
-
-
-
           ]
         }
-
-
       ]
     }
   ]
