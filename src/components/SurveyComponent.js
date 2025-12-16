@@ -5,8 +5,9 @@ import React, { useState, useCallback, useEffect } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
-// VA! import the classes to add to the SurveyJS elements here:
+// VA! Import the classes to add to the SurveyJS elements here:
 import { addCustomClasses } from "./panelClassHandlers";
+// !VA Prefill the survey question responses with this data
 import prefillData from '../../data/prefill.json';
 
 // Import the modularized survey definition files
@@ -34,10 +35,11 @@ export default function SurveyComponent({ startPageName }) {
   console.log("startPageName is: " + startPageName);
 
   // Create the survey model instance only once and keep it in state
+  // !VA This is where the survey object is created that's referenced multiple times below
   const [survey] = useState(() => {
     const surveyModel = new Model(surveyJson);
     surveyModel.applyTheme(SharpLight);
-    // Enable auto-advance - according to AI bot, this will only work if SurveyJS considers the input the only “required” interaction on that page at runtime.
+    // VA! Enable auto-advance - according to AI bot, this will only work if SurveyJS considers the input the only “required” interaction on that page at runtime.
     // surveyModel.goNextPageAutomatic = true;
     return surveyModel;
   });
@@ -69,7 +71,7 @@ export default function SurveyComponent({ startPageName }) {
     }
   }, []);
 
-  // !VA Import the custom classes from panelClassHandlers.js
+  // !VA Load the custom classes from panelClassHandlers.js
   // Attach onAfterRenderPanel before rendering the survey
   survey.onAfterRenderPanel.add(function(sender, options) {
     // console.log({ panel: options.panel, htmlElement: options.htmlElement });
@@ -102,6 +104,7 @@ export default function SurveyComponent({ startPageName }) {
     };
   }, [survey, handleComplete]);
 
+  // !VA Handler for the Reset button
   const handleReset = () => {
     // !VA This from the version where the AI bot had created a 'Reset' button so I didn't have to keep refreshing the page. 
     survey.clear(true, true); // Clear survey data and go to the first page

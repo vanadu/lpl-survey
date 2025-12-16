@@ -13,7 +13,7 @@ const pages = pageFiles.map(filename =>
 );
 
 const masterSurvey = {
-  title: "Rainbow Bridge Survey",
+  title: "Master Survey Build",
   showProgressBar: "bottom",
   pages
 };

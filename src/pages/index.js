@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useRouter} from 'next/router'
 import Link from 'next/link';
 
-import MasterSurveyComponent from '@/components/MasterSurveyComponent'
+import SurveyComponentMaster from '@/components/SurveyComponentMaster'
 import SurveyComponent from '@/components/SurveyComponent'
 
 import { NextSeo } from 'next-seo'
@@ -45,7 +45,7 @@ const Home = () => {
 
 
           {/* <div className="survey-wrapper">
-            <MasterSurveyComponent />
+            <SurveyComponentMaster />
           </div> */}
 
           <div className="survey-wrapper">
