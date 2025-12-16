@@ -13,19 +13,19 @@ import prefillData from '../../data/prefill.json';
 // Import the modularized survey definition files
 // VA! Replaced surveyConfig with an independent header
 // import surveyConfig from "../../data/survey-config.json";
-import landing from "../../data/landing-page.json";
-import alive from "../../data/alive-page.json"
-import alive2 from "../../data/alive-page-2.json"
-import deceased from "../../data/deceased-page.json"
+import lndgRoot from "../../data/lndgRoot-page.json";
+import lvngRoot from "../../data/lvngRoot-page.json"
+import lvngCmpn from "../../data/lvngCmpn-page.json"
+import dcsdRoot from "../../data/dcsdRoot-page.json"
 
 // Assemble the final survey JSON object
 // VA! IMPORTANT: this is only for dev, where we are using separate pages and separate JSON data files to build the app. Populate surveyJson with the pages imported from the data json files.  
 const surveyJson = {
   pages: [
-    landing,
-    alive,
-    alive2,
-    deceased
+    lndgRoot,
+    lvngRoot,
+    lvngCmpn,
+    dcsdRoot
   ]
 };
 

@@ -3,9 +3,10 @@ const path = require("path");
 const DATA_DIR = path.join(__dirname, "../data");
 
 const pageFiles = [
-  "landing-page.json",
-  "alive-page.json",
-  "deceased-page.json"
+  "lndgRoot-page.json",
+  "lvngRoot-page.json",
+  "lvngCmpn-page.json",
+  "dcsdRoot-page.json"
 ];
 
 const pages = pageFiles.map(filename =>

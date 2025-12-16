@@ -42,7 +42,7 @@ const Landing = () => {
 
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'landing_page' />
+            <SurveyComponent startPageName = 'lndgRoot_page' />
           </div>
 
         </div>

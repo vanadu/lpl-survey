@@ -1,59 +1,59 @@
 {
-  "name": "alive_page",
+  "name": "lvngRoot_page",
   "elements": [
     {
       "type": "panel",
-      "name": "liv_panel",
+      "name": "lvngRoot_panel",
       "elements": [
         {
           "type": "html",
-          "name": "livHeading",
+          "name": "lvngRootHeading",
           "html": "<h2>Laryngeal Paralysis Survey Questions</h2>"
         },
         {
           "type": "html",
-          "name": "livText",
+          "name": "lvngRootText",
           "html": "<p>We know how hard it is to deal with LarPar. There are no simple questions, no clear-cut answers, and all the choices are lesser-evil ones. </p>"
         },
         {
           "type": "html",
-          "name": "livWhyContact",
+          "name": "lvngRootWhyContact",
           "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Why provide a contact?</a>"
         },
         {
           "type": "text",
-          "name": "livUserContact",
+          "name": "lvngRootUserContact",
           "title": "Facebook account name or email",
           "isRequired": true
         },
         {
           "type": "html",
-          "name": "livAboutCompHeading",
+          "name": "lvngCmpnAboutCompHeading",
           "html": "<h3>Tell us about your LarPar companion!<h3>"
         },
         {
           "type": "html",
-          "name": "livAboutCompText",
+          "name": "lvngCmpnAboutCompText",
           "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
         },
         {
           "type": "panel",
-          "name": "livCompDetailsPanel",
+          "name": "lvngCmpnDetailsPanel",
           "elements": [
             {
               "type": "panel",
-              "name": "livCompDetailsSubpanel1",
+              "name": "lvngCmpnDetailsSubpanel1",
               "title": "What is your companion's name and breed or breed mix?",
               "elements": [
                 {
                   "type": "text",
-                  "name": "livCompName",
+                  "name": "lvngCmpnName",
                   "title": "Name:",
                   "isRequired": true
                 },
                 {
                   "type": "text",
-                  "name": "livCompBreed",
+                  "name": "lvngCmpnBreed",
                   "title": "Breed or mix:",
                   "isRequired": true
                 }
@@ -61,13 +61,13 @@
             },
             {
               "type": "panel",
-              "name": "livCompDetailsSubpanel2",
+              "name": "lvngCmpnDetailsSubpanel2",
               "title": "What is your companion's age (in years and months) and gender?",
               "elements": [
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "livCompYears",
+                  "name": "lvngCmpnAgeYears",
                   "title": "Age in years (number):",
                   "isRequired": true,
                   "min": "1",
@@ -84,7 +84,7 @@
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "livCompMonths",
+                  "name": "lvngCmpnAgeMonths",
                   "title": "Months (number 1 - 12)",
                   "isRequired": true,
                   "min": 1,
@@ -100,7 +100,7 @@
                 },
                 {
                   "type": "boolean",
-                  "name": "livCompGender",
+                  "name": "lvngCmpnGender",
                   "title": "Gender:",
                   "isRequired": true,
                   "labelTrue": "Female",
@@ -110,12 +110,12 @@
             },
             {
               "type": "panel",
-              "name": "livCompDetailsSubpanel3",
+              "name": "lvngCmpnDetailsSubpanel3",
               "title": "About how much does your companion weigh in pounds or kilos?",
               "elements": [
                 {
                   "type": "text",
-                  "name": "livCompWeight",
+                  "name": "lvngCmpnWeight",
                   "title": "Weight (number):",
                   "isRequired": true,
                   "inputType": "number",
@@ -132,7 +132,7 @@
                 },
                 {
                   "type": "boolean",
-                  "name": "livCompWeightUnits",
+                  "name": "lvngCmpnWeightUnits",
                   "title": "Please choose pounds or kilos:",
                   "isRequired": true,
                   "labelTrue": "Kg",
@@ -142,12 +142,12 @@
             },
             {
               "type": "panel",
-              "name": "livCompDetailsSubpanel4",
+              "name": "lvngCmpnDetailsSubpanel4",
               "title": "How energetic, excitable, or anxious is your companion (1=very calm, 5=very excitable)?",
               "elements": [
                 {
                   "type": "rating",
-                  "name": "LivCompExcitable",
+                  "name": "lvngCmpnCompExcitable",
                   "title": ""
                   
                 }

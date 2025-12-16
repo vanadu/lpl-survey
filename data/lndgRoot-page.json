@@ -1,41 +1,41 @@
 {
-  "name": "landing_page",
+  "name": "lndgRoot_page",
   "navigationButtonsVisibility": "hidden",
   "elements": [
     {
       "type": "panel",
-      "name": "landing_panel",
+      "name": "lndgPanel",
       "elements": [
         {
           "type": "html",
-          "name": "introHeading",
+          "name": "lndgIntroHeading",
           "html": "<h2>About this survey</h2>"
         },
         {
           "type": "html",
-          "name": "introText",
+          "name": "lndgIntroText",
           "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>"
         },
         {
           "type": "html",
-          "name": "aboutCompanionHeading",
+          "name": "lndgCrossedOverHeading",
           "html": "<h3>About your LP companion<h3>"
         },
         {
         "type": "html",
-          "name": "aboutCompanionText",
+          "name": "lndgCrossedOverText",
           "html": "<p>Before we begin, this survey asks questions about your experience with LarPar and how it affected your companion. We know how hard it is to lose a beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you think you're ready to continue, please let us know if your companion is still with you or has crossed over the Rainbow Bridge. This will determine what questions we will ask in the survey.</p>"
         },
 
 
         {
           "type": "imagepicker",
-          "name": "crossedOver",
-          "title": "2. Is your companion still with you or have they crossed over the Rainbow Bridge?",
+          "name": "lndgCrossedOver",
+          "title": "Is your companion still with you or have they crossed over the Rainbow Bridge?",
           "isRequired": true,
           "choices": [
             {
-              "value": "alive",
+              "value": "living",
               "imageLink": "./img-companions.png",
               "text": "Still with us"
             },
@@ -51,7 +51,7 @@
           },
           {
             "type": "html",
-            "name": "makeSelectionText",
+            "name": "lndgMakeSelection",
             "html": "<p>Please make a selection and choose 'Next' to continue.</p>"
           }
       ]

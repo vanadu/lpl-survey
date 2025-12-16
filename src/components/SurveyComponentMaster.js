@@ -39,11 +39,11 @@ export default function MasterSurveyComponent() {
   });
 
   // !VA This is probably wrong! But here I need to prefill the question responses
-  // useEffect(() => {
-  //   if (prefillData) {
-  //     survey.data = prefillData;
-  //   }
-  // }, [survey]);
+  useEffect(() => {
+    if (prefillData) {
+      survey.data = prefillData;
+    }
+  }, [survey]);
 
   // Add and remove the onComplete event handler using useEffect
   useEffect(() => {

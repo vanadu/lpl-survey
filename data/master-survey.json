@@ -1,9 +1,9 @@
 {
-  "title": "Rainbow Bridge Survey",
+  "title": "Master Survey Build",
   "showProgressBar": "bottom",
   "pages": [
     {
-      "name": "landing_page",
+      "name": "lndgRoot_page",
       "navigationButtonsVisibility": "hidden",
       "elements": [
         {
@@ -50,14 +50,18 @@
               "imageWidth": 120,
               "imageHeight": 120,
               "showLabel": true
+            },
+            {
+              "type": "html",
+              "name": "makeSelectionText",
+              "html": "<p>Please make a selection and choose 'Next' to continue.</p>"
             }
           ]
         }
       ]
     },
     {
-      "name": "alive_page",
-      "visibleIf": "{crossedOver} = 'alive'",
+      "name": "lvngRoot_page",
       "elements": [
         {
           "type": "panel",
@@ -217,8 +221,34 @@
       ]
     },
     {
-      "name": "deceased_page",
-      "visibleIf": "{crossedOver} = 'deceased'",
+      "name": "lvngCmpn-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "alive_panel_2_panel",
+          "title": "Information Section",
+          "elements": [
+            {
+              "type": "html",
+              "name": "html1",
+              "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac tempor eros. Duis efficitur, nibh eu ultricies lacinia, mi sapien sodales urna, ut eleifend tortor risus in nisi.</p>"
+            },
+            {
+              "type": "html",
+              "name": "html2",
+              "html": "<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus eleifend, ante non gravida pulvinar, urna turpis pharetra purus, nec cursus nulla felis ut elit.</p>"
+            },
+            {
+              "type": "html",
+              "name": "html3",
+              "html": "<p>Morbi molestie, odio at dictum aliquam, libero felis pulvinar metus, eget pulvinar dui dui ac erat. Sed rutrum mi nec nulla blandit, vitae dictum massa laoreet.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dcsdRoot_page",
       "elements": [
         {
           "type": "panel",

@@ -24,7 +24,7 @@ const Alive = () => {
           </div>
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'alive_page' />
+            <SurveyComponent startPageName = 'lvngRoot_page' />
           </div>
 
         </div>

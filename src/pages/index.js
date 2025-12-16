@@ -43,13 +43,13 @@ const Home = () => {
           </div>
 
 
-
-          {/* <div className="survey-wrapper">
+{/* 
+          <div className="survey-wrapper">
             <SurveyComponentMaster />
           </div> */}
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName="landing_page" />
+            <SurveyComponent startPageName="lndgRoot_page" />
           </div>
 
         </div>

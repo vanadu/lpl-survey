@@ -22,7 +22,7 @@ const Deceased = () => {
           </div>
 
         <div className="survey-wrapper">
-          <SurveyComponent startPageName = 'deceased_page' />
+          <SurveyComponent startPageName = 'dcsdRoot_page' />
         </div>
 
       </div>
