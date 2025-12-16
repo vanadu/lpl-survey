@@ -147,7 +147,7 @@
               "elements": [
                 {
                   "type": "rating",
-                  "name": "lvngCmpnCompExcitable",
+                  "name": "lvngCmpnExcitable",
                   "title": ""
                   
                 }
