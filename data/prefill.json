@@ -1,5 +1,5 @@
 {
-  "lvngUserContact": "example@example.com",
+  "lvngRootUserContact": "example@example.com",
   "lvngCmpnName": "Sammi",
   "lvngCmpnBreed": "Boxer",
   "lvngCmpnAgeYears": 5,
@@ -7,6 +7,7 @@
   "lvngCmpnGender": true,
   "lvngCmpnWeight": 50,
   "lvngCmpnWeightUnits": true,
+  "lvngCmpnExcitable": 5,
   "dcsdUserContact": "example@example.com",
   "dcsdCmpnName": "Bee",
   "dcsdCmpnBreed": "Lab",

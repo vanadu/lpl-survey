@@ -4,6 +4,7 @@
     {
       "type": "panel",
       "name": "lvngRoot_panel",
+      "visibleIf": "{lndgCrossedOver} = 'living'",
       "elements": [
         {
           "type": "html",

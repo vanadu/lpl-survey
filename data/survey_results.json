@@ -1,3 +1,18 @@
 [
-
+  {
+    "lvngUserContact": "example@example.com",
+    "lvngCmpnName": "Sammi",
+    "lvngCmpnBreed": "Boxer",
+    "lvngCmpnAgeYears": 5,
+    "lvngCmpnAgeMonths": 2,
+    "lvngCmpnGender": true,
+    "lvngCmpnWeight": 50,
+    "lvngCmpnWeightUnits": true,
+    "dcsdUserContact": "example@example.com",
+    "dcsdCmpnYears": 12,
+    "dcsdCmpnMonths": 2,
+    "lndgCrossedOver": "living",
+    "lvngRootUserContact": "Tuesday morning A",
+    "lvngCmpnExcitable": 5
+  }
 ]

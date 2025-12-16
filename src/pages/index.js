@@ -43,14 +43,14 @@ const Home = () => {
           </div>
 
 
-{/* 
-          <div className="survey-wrapper">
-            <SurveyComponentMaster />
-          </div> */}
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName="lndgRoot_page" />
+            <SurveyComponentMaster />
           </div>
+
+          {/* <div className="survey-wrapper">
+            <SurveyComponent startPageName="lndgRoot_page" />
+          </div> */}
 
         </div>
       </section>
