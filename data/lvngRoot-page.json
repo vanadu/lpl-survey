@@ -7,7 +7,7 @@
       "elements": [
         {
           "type": "text",
-          "name": "lndgCompanionName",
+          "name": "lndgCmpnName",
           "placeholder": "fake"
         },
         {
@@ -34,7 +34,7 @@
         {
           "type": "html",
           "name": "lvngCmpnAboutCompHeading",
-          "html": "<h3>Tell us about {lndgCompanionName}!<h3>"
+          "html": "<h3>Tell us about {lndgCmpnName}!<h3>"
         },
         {
           "type": "html",
@@ -48,7 +48,7 @@
             {
               "type": "panel",
               "name": "lvngCmpnDetailsSubpanel1",
-              "title": "What is your companion's name and breed or breed mix?",
+              "title": "What is {lndgCmpnName}'s name and breed or breed mix?",
               "elements": [
                 {
                   "type": "text",
@@ -67,7 +67,7 @@
             {
               "type": "panel",
               "name": "lvngCmpnDetailsSubpanel2",
-              "title": "What is your companion's age (in years and months) and gender?",
+              "title": "What is {lndgCmpnName}'s age (in years and months) and gender?",
               "elements": [
                 {
                   "type": "text",
@@ -116,7 +116,7 @@
             {
               "type": "panel",
               "name": "lvngCmpnDetailsSubpanel3",
-              "title": "About how much does your companion weigh in pounds or kilos?",
+              "title": "About how much does {lndgCmpnName} weigh in pounds or kilos?",
               "elements": [
                 {
                   "type": "text",
@@ -148,7 +148,7 @@
             {
               "type": "panel",
               "name": "lvngCmpnDetailsSubpanel4",
-              "title": "How energetic, excitable, or anxious is your companion (1=very calm, 5=very excitable)?",
+              "title": "How energetic, excitable, or anxious is your {lndgCmpnName}? (1=very calm, 5=very excitable)?",
               "elements": [
                 {
                   "type": "rating",
