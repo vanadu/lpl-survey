@@ -124,8 +124,8 @@
 }
 
 // !VA userContact: Padding above userContact to reduce space between info link and label
-.sd-row:has(> div > .sd-question[data-name="lvngUserContact"]), 
-.sd-row:has(> div > .sd-question[data-name="dcsdUserContact"]) {
+.sd-row:has(> div > .sd-question[data-name="lvngRootUserContact"]), 
+.sd-row:has(> div > .sd-question[data-name="dcsdRootUserContact"]) {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 }
@@ -216,16 +216,6 @@
       margin-left: 50px;
     }
   }
-}
-
-// !VA crossedOver header
-// .sd-question[data-name="lndgCrossedOver"] .sd-question__header {
-
-// }
-
-// !VA Crossed over images container width
-.sd-question[data-name="lndgCrossedOver"]  .sd-imagepicker  {
-
 }
 
 

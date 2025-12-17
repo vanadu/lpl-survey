@@ -3,8 +3,13 @@
   "elements": [
     {
       "type": "panel",
-      "name": "lvngRoot_panel",
+      "name": "lvngRootPanel",
       "elements": [
+        {
+          "type": "text",
+          "name": "lndgCompanionName",
+          "placeholder": "fake"
+        },
         {
           "type": "html",
           "name": "lvngRootHeading",
@@ -29,7 +34,7 @@
         {
           "type": "html",
           "name": "lvngCmpnAboutCompHeading",
-          "html": "<h3>Tell us about your LarPar companion!<h3>"
+          "html": "<h3>Tell us about {lndgCompanionName}!<h3>"
         },
         {
           "type": "html",

@@ -4,21 +4,20 @@
   "pages": [
     {
       "name": "lndgRoot_page",
-      "navigationButtonsVisibility": "hidden",
       "elements": [
         {
           "type": "panel",
-          "name": "lndgPanel",
+          "name": "lndgRootPanel",
           "elements": [
             {
               "type": "html",
-              "name": "lndgIntroHeading",
+              "name": "lndgRootHeading",
               "html": "<h2>About this survey</h2>"
             },
             {
               "type": "html",
-              "name": "lndgIntroText",
-              "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>"
+              "name": "lndgRootText",
+              "html": "<p>This survey asks detailed questions about your experience with laryngeal paralysis and how it affected your companion animal's life. </p> <p>We know how hard it is to lose one's beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p>"
             },
             {
               "type": "html",
@@ -28,33 +27,45 @@
             {
               "type": "html",
               "name": "lndgCrossedOverText",
-              "html": "<p>Before we begin, this survey asks questions about your experience with LarPar and how it affected your companion. We know how hard it is to lose a beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you think you're ready to continue, please let us know if your companion is still with you or has crossed over the Rainbow Bridge. This will determine what questions we will ask in the survey.</p>"
+              "html": "<p>If you think you'd like to continue, please tell us your companion's name and if your companion has crossed over the Rainbow Bridge. This will allow us to personalize the survey to your individual situation.</p>"
             },
             {
-              "type": "imagepicker",
-              "name": "lndgCrossedOver",
-              "title": "Is your companion still with you or have they crossed over the Rainbow Bridge?",
-              "isRequired": true,
-              "choices": [
+              "type": "panel",
+              "name": "lndgCmpnDetailsPanel",
+              "elements": [
                 {
-                  "value": "living",
-                  "imageLink": "./img-companions.png",
-                  "text": "Still with us"
+                  "type": "text",
+                  "name": "lndgCmpnName",
+                  "title": "Please tell us your companion's name:",
+                  "isRequired": true
                 },
                 {
-                  "value": "deceased",
-                  "imageLink": "./img-companions-rainbow.png",
-                  "text": "Crossed over"
+                  "type": "imagepicker",
+                  "name": "lndgCrossedOver",
+                  "title": "Has your companion crossed over the Rainbow Bridge?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "deceased",
+                      "imageLink": "./img-companions-rainbow.png",
+                      "text": "Crossed over"
+                    },
+                    {
+                      "value": "living",
+                      "imageLink": "./img-companions.png",
+                      "text": "Still with us"
+                    }
+                  ],
+                  "imageWidth": 120,
+                  "imageHeight": 120,
+                  "showLabel": true
                 }
-              ],
-              "imageWidth": 120,
-              "imageHeight": 120,
-              "showLabel": true
+              ]
             },
             {
               "type": "html",
               "name": "lndgMakeSelection",
-              "html": "<p>Please make a selection and choose 'Next' to continue.</p>"
+              "html": "<p>Once you've made your selection, please choose 'Next' to begin the survey.</p>"
             }
           ]
         }
@@ -65,9 +76,13 @@
       "elements": [
         {
           "type": "panel",
-          "name": "lvngRoot_panel",
-          "visibleIf": "{lndgCrossedOver} = 'living'",
+          "name": "lvngRootPanel",
           "elements": [
+            {
+              "type": "text",
+              "name": "lndgCompanionName",
+              "placeholder": "fake"
+            },
             {
               "type": "html",
               "name": "lvngRootHeading",
@@ -92,7 +107,7 @@
             {
               "type": "html",
               "name": "lvngCmpnAboutCompHeading",
-              "html": "<h3>Tell us about your LarPar companion!<h3>"
+              "html": "<h3>Tell us about {lndgCompanionName}!<h3>"
             },
             {
               "type": "html",
@@ -226,23 +241,136 @@
       "elements": [
         {
           "type": "panel",
-          "name": "alive_panel_2_panel",
+          "name": "lvngCmpn-panel",
           "title": "Information Section",
           "elements": [
             {
               "type": "html",
-              "name": "html1",
-              "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac tempor eros. Duis efficitur, nibh eu ultricies lacinia, mi sapien sodales urna, ut eleifend tortor risus in nisi.</p>"
+              "name": "lvngCmpnAboutCompHeading",
+              "html": "<h3>Tell us about your LarPar companion!<h3>"
             },
             {
               "type": "html",
-              "name": "html2",
-              "html": "<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus eleifend, ante non gravida pulvinar, urna turpis pharetra purus, nec cursus nulla felis ut elit.</p>"
+              "name": "lvngCmpnAboutCompText",
+              "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
             },
             {
-              "type": "html",
-              "name": "html3",
-              "html": "<p>Morbi molestie, odio at dictum aliquam, libero felis pulvinar metus, eget pulvinar dui dui ac erat. Sed rutrum mi nec nulla blandit, vitae dictum massa laoreet.</p>"
+              "type": "panel",
+              "name": "lvngCmpnDetailsPanel",
+              "elements": [
+                {
+                  "type": "panel",
+                  "name": "lvngCmpnDetailsSubpanel1",
+                  "title": "What is your companion's name and breed or breed mix?",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "name": "lvngCmpnName",
+                      "title": "Name:",
+                      "isRequired": true
+                    },
+                    {
+                      "type": "text",
+                      "name": "lvngCmpnBreed",
+                      "title": "Breed or mix:",
+                      "isRequired": true
+                    }
+                  ]
+                },
+                {
+                  "type": "panel",
+                  "name": "lvngCmpnDetailsSubpanel2",
+                  "title": "What is your companion's age (in years and months) and gender?",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "lvngCmpnAgeYears",
+                      "title": "Age in years (number):",
+                      "isRequired": true,
+                      "min": "1",
+                      "max": "40",
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 40,
+                          "text": "Age must be between 1 and 40"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "lvngCmpnAgeMonths",
+                      "title": "Months (number 1 - 12)",
+                      "isRequired": true,
+                      "min": 1,
+                      "max": 12,
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 12,
+                          "text": "Months must be between 1 and 12"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "lvngCmpnGender",
+                      "title": "Gender:",
+                      "isRequired": true,
+                      "labelTrue": "Female",
+                      "labelFalse": "Male"
+                    }
+                  ]
+                },
+                {
+                  "type": "panel",
+                  "name": "lvngCmpnDetailsSubpanel3",
+                  "title": "About how much does your companion weigh in pounds or kilos?",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "name": "lvngCmpnWeight",
+                      "title": "Weight (number):",
+                      "isRequired": true,
+                      "inputType": "number",
+                      "min": 1,
+                      "max": 2200,
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 2200,
+                          "text": "Weight must be between 1 and 2200"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "lvngCmpnWeightUnits",
+                      "title": "Please choose pounds or kilos:",
+                      "isRequired": true,
+                      "labelTrue": "Kg",
+                      "labelFalse": "Lbs"
+                    }
+                  ]
+                },
+                {
+                  "type": "panel",
+                  "name": "lvngCmpnDetailsSubpanel4",
+                  "title": "How energetic, excitable, or anxious is your companion (1=very calm, 5=very excitable)?",
+                  "elements": [
+                    {
+                      "type": "rating",
+                      "name": "lvngCmpnExcitable",
+                      "title": ""
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -254,7 +382,6 @@
         {
           "type": "panel",
           "name": "dcsdRoot_panel",
-          "visibleIf": "{lndgCrossedOver} = 'deceased'",
           "elements": [
             {
               "type": "html",

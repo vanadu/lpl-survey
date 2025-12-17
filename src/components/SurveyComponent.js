@@ -76,6 +76,9 @@ export default function SurveyComponent({ startPageName }) {
   survey.onAfterRenderPanel.add(function(sender, options) {
     // console.log({ panel: options.panel, htmlElement: options.htmlElement });
     addCustomClasses(options.panel, options.htmlElement);
+
+    options.htmlElement.setAttribute("data-name", options.panel.name);
+
   });
 
      //VA! 
