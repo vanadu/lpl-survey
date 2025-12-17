@@ -1,5 +1,8 @@
 export function addCustomClasses(panel, htmlElement) {
     // Living Companion Details Panel and Subpanel
+    if (panel.name === 'lndgCmpnDetailsPanel') {
+      htmlElement.classList.add("lndg-cmpn-details-panel");
+    }
     if (panel.name === 'lvngCmpnDetailsPanel') {
       htmlElement.classList.add("lvng-cmpn-details-panel");
     }

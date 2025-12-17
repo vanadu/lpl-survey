@@ -3,23 +3,138 @@
   "elements": [
     {
       "type": "panel",
-      "name": "alive_panel_2_panel",
+      "name": "lvngCmpn-panel",
       "title": "Information Section",
       "elements": [
         {
           "type": "html",
-          "name": "html1",
-          "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac tempor eros. Duis efficitur, nibh eu ultricies lacinia, mi sapien sodales urna, ut eleifend tortor risus in nisi.</p>"
+          "name": "lvngCmpnAboutCompHeading",
+          "html": "<h3>Tell us about your LarPar companion!<h3>"
         },
         {
           "type": "html",
-          "name": "html2",
-          "html": "<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus eleifend, ante non gravida pulvinar, urna turpis pharetra purus, nec cursus nulla felis ut elit.</p>"
+          "name": "lvngCmpnAboutCompText",
+          "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
         },
         {
-          "type": "html",
-          "name": "html3",
-          "html": "<p>Morbi molestie, odio at dictum aliquam, libero felis pulvinar metus, eget pulvinar dui dui ac erat. Sed rutrum mi nec nulla blandit, vitae dictum massa laoreet.</p>"
+          "type": "panel",
+          "name": "lvngCmpnDetailsPanel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "lvngCmpnDetailsSubpanel1",
+              "title": "What is your companion's name and breed or breed mix?",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "lvngCmpnName",
+                  "title": "Name:",
+                  "isRequired": true
+                },
+                {
+                  "type": "text",
+                  "name": "lvngCmpnBreed",
+                  "title": "Breed or mix:",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngCmpnDetailsSubpanel2",
+              "title": "What is your companion's age (in years and months) and gender?",
+              "elements": [
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnAgeYears",
+                  "title": "Age in years (number):",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                   "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnAgeMonths",
+                  "title": "Months (number 1 - 12)",
+                  "isRequired": true,
+                  "min": 1,
+                  "max": 12,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 12,
+                      "text": "Months must be between 1 and 12"
+                    }
+                  ]
+                },
+                {
+                  "type": "boolean",
+                  "name": "lvngCmpnGender",
+                  "title": "Gender:",
+                  "isRequired": true,
+                  "labelTrue": "Female",
+                  "labelFalse": "Male"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngCmpnDetailsSubpanel3",
+              "title": "About how much does your companion weigh in pounds or kilos?",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "lvngCmpnWeight",
+                  "title": "Weight (number):",
+                  "isRequired": true,
+                  "inputType": "number",
+                  "min": 1,
+                  "max": 2200,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 2200,
+                      "text": "Weight must be between 1 and 2200"
+                    }
+                  ]
+                },
+                {
+                  "type": "boolean",
+                  "name": "lvngCmpnWeightUnits",
+                  "title": "Please choose pounds or kilos:",
+                  "isRequired": true,
+                  "labelTrue": "Kg",
+                  "labelFalse": "Lbs"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngCmpnDetailsSubpanel4",
+              "title": "How energetic, excitable, or anxious is your companion (1=very calm, 5=very excitable)?",
+              "elements": [
+                {
+                  "type": "rating",
+                  "name": "lvngCmpnExcitable",
+                  "title": ""
+                  
+                }
+              ]
+            }
+
+          ]
         }
       ]
     }

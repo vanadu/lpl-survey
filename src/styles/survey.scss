@@ -98,27 +98,11 @@
 // !VA Individual element overrides
 // ---------------------
 
-// !VA crossedOver imagepacker
-// !VA crossedOver imagepicker wrapper
-.sd-question[data-name="crossedOver"] {
-}
 
-// !VA crossedOver header
-.sd-question[data-name="crossedOver"] .sd-question__header {
-  padding-bottom: 10px;
-}
-
-// !VA Crossed over images container width
-.sd-question[data-name="crossedOver"]  .sd-imagepicker  {
-  width: 400px;
-  justify-content: space-around;
-  margin-left: 160px;
-  // margin: 0 auto;
-}
 
 // !VA Survey Title
 // !VA livHeading, decHeading
-.sd-question[data-name="livHeading"] h2, .sd-question[data-name="decHeading"] h2 {
+.sd-question[data-name="lndgRootHeading"] h2, .sd-question[data-name="lvngRootHeading"] h2, .sd-question[data-name="dcsdRootHeading"] h2 {
   font-family: $secondary_font;
   font-size: 1.75rem;
   margin: 0!important;
@@ -126,27 +110,28 @@
 }
 
 // !VA liv
-.sd-question[data-name="livText"] p, .sd-question[data-name="decText"] p {
+.sd-question[data-name="lndgRootText"] p, .sd-question[data-name="lvngRootText"] p, .sd-question[data-name="dcsdRootText"] p {
   margin: 0!important;
   padding: 0!important;
+  padding-bottom: .5rem !important;
 }
 
 // !VA livText, decText: Padding above introText to reduce space between introText and introHeading
-.sd-row:has(> div > .sd-question[data-name="livText"]), .sd-row:has(> div > .sd-question[data-name="decText"]) {
+.sd-row:has(> div > .sd-question[data-name="lvngRootText"]), .sd-row:has(> div > .sd-question[data-name="dcsdRootText"]) {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 
 }
 
 // !VA userContact: Padding above userContact to reduce space between info link and label
-.sd-row:has(> div > .sd-question[data-name="livUserContact"]), 
-.sd-row:has(> div > .sd-question[data-name="decUserContact"]) {
+.sd-row:has(> div > .sd-question[data-name="lvngUserContact"]), 
+.sd-row:has(> div > .sd-question[data-name="dcsdUserContact"]) {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 }
 
 // !VA userContact: Padding above userContact to reduce space between info link and label
- .sd-question[data-name="livUserContact"], .sd-question[data-name="decUserContact"] {
+ .sd-question[data-name="lvngUserContact"], .sd-question[data-name="dcsdUserContact"] {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 }
@@ -195,9 +180,55 @@
   }
 
 // !VA It doesn't appear to be possible to get rid of the bottom border on the subpanel header
+// !VA This is actually in the ::after pseudoelement.
 .lvng-cmpn-details-subpanel-1 .sd-panel__header {
 
 }
+
+
+
+
+
+
+// !VA Special styling for the companion panel on the landing page;
+.lndg-cmpn-details-panel {
+  padding: 0!important;
+  margin: 0!important;
+  input {
+    width: 320px;
+  }
+  .sd-panel__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    // margin: 0 auto;
+    margin-left: 20px;
+    .sd-question {
+      margin: 0 auto; 
+    }
+    .sd-question__header {
+    padding-bottom: 10px;
+    }
+    .sd-imagepicker {
+      width: 300px;
+      justify-content: space-around;
+      margin-left: 50px;
+    }
+  }
+}
+
+// !VA crossedOver header
+// .sd-question[data-name="lndgCrossedOver"] .sd-question__header {
+
+// }
+
+// !VA Crossed over images container width
+.sd-question[data-name="lndgCrossedOver"]  .sd-imagepicker  {
+
+}
+
+
 
 .lvng-cmpn-details-subpanel-1, .lvng-cmpn-details-subpanel-2, .lvng-cmpn-details-subpanel-3, .dcsd-cmpn-details-subpanel-1, .dcsd-cmpn-details-subpanel-2, .dcsd-cmpn-details-subpanel-3  {
  .sd-panel__content {

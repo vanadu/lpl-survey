@@ -4,7 +4,6 @@
     {
       "type": "panel",
       "name": "dcsdRoot_panel",
-      "visibleIf": "{lndgCrossedOver} = 'deceased'",
       "elements": [
         {
           "type": "html",

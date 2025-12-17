@@ -1,20 +1,19 @@
 {
   "name": "lndgRoot_page",
-  "navigationButtonsVisibility": "hidden",
   "elements": [
     {
       "type": "panel",
-      "name": "lndgPanel",
+      "name": "lndgRootPanel",
       "elements": [
         {
           "type": "html",
-          "name": "lndgIntroHeading",
+          "name": "lndgRootHeading",
           "html": "<h2>About this survey</h2>"
         },
         {
           "type": "html",
-          "name": "lndgIntroText",
-          "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>"
+          "name": "lndgRootText",
+          "html": "<p>This survey asks detailed questions about your experience with laryngeal paralysis and how it affected your companion animal's life. </p> <p>We know how hard it is to lose one's beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p>"
         },
         {
           "type": "html",
@@ -24,36 +23,49 @@
         {
         "type": "html",
           "name": "lndgCrossedOverText",
-          "html": "<p>Before we begin, this survey asks questions about your experience with LarPar and how it affected your companion. We know how hard it is to lose a beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you think you're ready to continue, please let us know if your companion is still with you or has crossed over the Rainbow Bridge. This will determine what questions we will ask in the survey.</p>"
+          "html": "<p>If you think you'd like to continue, please tell us your companion's name and if your companion has crossed over the Rainbow Bridge. This will allow us to personalize the survey to your individual situation.</p>"
         },
 
-
         {
-          "type": "imagepicker",
-          "name": "lndgCrossedOver",
-          "title": "Is your companion still with you or have they crossed over the Rainbow Bridge?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "living",
-              "imageLink": "./img-companions.png",
-              "text": "Still with us"
-            },
-            {
-              "value": "deceased",
-              "imageLink": "./img-companions-rainbow.png",
-              "text": "Crossed over"
-            }
-          ],
-          "imageWidth": 120,
-          "imageHeight": 120,
-          "showLabel": true
-          },
+          "type": "panel",
+          "name": "lndgCmpnDetailsPanel",
+          "elements": [
           {
-            "type": "html",
-            "name": "lndgMakeSelection",
-            "html": "<p>Please make a selection and choose 'Next' to continue.</p>"
-          }
+          "type": "text",
+          "name": "lndgCmpnName",
+          "title": "Please tell us your companion's name:",
+          "isRequired": true
+          },
+            {
+              "type": "imagepicker",
+              "name": "lndgCrossedOver",
+              "title": "Has your companion crossed over the Rainbow Bridge?",
+              "isRequired": true,
+              "choices": [
+              {
+                  "value": "deceased",
+                  "imageLink": "./img-companions-rainbow.png",
+                  "text": "Crossed over"
+                },
+                {
+                  "value": "living",
+                  "imageLink": "./img-companions.png",
+                  "text": "Still with us"
+                }
+
+              ],
+              "imageWidth": 120,
+              "imageHeight": 120,
+              "showLabel": true
+            }
+
+          ]
+        },
+                    {
+              "type": "html",
+              "name": "lndgMakeSelection",
+              "html": "<p>Once you've made your selection, please choose 'Next' to begin the survey.</p>"
+            }
       ]
     }
   ]
