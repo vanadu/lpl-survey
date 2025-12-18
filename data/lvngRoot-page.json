@@ -13,152 +13,105 @@
         {
           "type": "html",
           "name": "lvngRootHeading",
-          "html": "<h2>Laryngeal Paralysis Survey Questions</h2>"
+          "html": "<h2>What's This All About?</h2>"
         },
         {
           "type": "html",
           "name": "lvngRootText",
-          "html": "<p>We know how hard it is to deal with LarPar. There are no simple questions, no clear-cut answers, and all the choices are lesser-evil ones. </p>"
-        },
-        {
-          "type": "html",
-          "name": "lvngRootWhyContact",
-          "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Why provide a contact?</a>"
-        },
-        {
-          "type": "text",
-          "name": "lvngRootUserContact",
-          "title": "Facebook account name or email",
-          "isRequired": true
-        },
-        {
-          "type": "html",
-          "name": "lvngCmpnAboutCompHeading",
-          "html": "<h3>Tell us about {lndgCmpnName}!<h3>"
-        },
-        {
-          "type": "html",
-          "name": "lvngCmpnAboutCompText",
-          "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
+          "html": "<p>This survey seeks to gather information about how people are dealing with their beloved companion's laryngeal paralysis. It's the first comprehensive survey of its kind, and it will help veterinarians, researchers, and individuals like yourselves better understand how this disease affects people and the animals they love. We're not asking for your last name, so we have no way to connect you with any of your private data. We believe you're more likely to help us if you feel safe. Click the links below to learn about how your privacy is protected and what we'll be doing with this survey information.</p>"
         },
         {
           "type": "panel",
-          "name": "lvngCmpnDetailsPanel",
+          "name": "lvngRootAboutSurveyPanel",
+          "title": "About this survey",
+          "elements": [
+              {
+                "type": "html",
+                "name": "lvngRootInfoPrivacy",
+                "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>About your privacy</a>"
+              },
+              {
+                "type": "html",
+                "name": "lvngRootInfoYourData",
+                "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>How will we be using your information?</a>"
+              }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "A Little About You",
+          "name": "lvngRootAboutUserPanel",
           "elements": [
             {
-              "type": "panel",
-              "name": "lvngCmpnDetailsSubpanel1",
-              "title": "What is {lndgCmpnName}'s name and breed or breed mix?",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "lvngCmpnName",
-                  "title": "Name:",
-                  "isRequired": true
-                },
-                {
-                  "type": "text",
-                  "name": "lvngCmpnBreed",
-                  "title": "Breed or mix:",
-                  "isRequired": true
-                }
-              ]
+              "type": "html",
+              "name": "lvngRootWhyContact",
+              "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Why provide a contact?</a>"
             },
             {
-              "type": "panel",
-              "name": "lvngCmpnDetailsSubpanel2",
-              "title": "What is {lndgCmpnName}'s age (in years and months) and gender?",
-              "elements": [
-                {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "lvngCmpnAgeYears",
-                  "title": "Age in years (number):",
-                  "isRequired": true,
-                  "min": "1",
-                  "max": "40",
-                   "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 40,
-                      "text": "Age must be between 1 and 40"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "lvngCmpnAgeMonths",
-                  "title": "Months (number 1 - 12)",
-                  "isRequired": true,
-                  "min": 1,
-                  "max": 12,
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 12,
-                      "text": "Months must be between 1 and 12"
-                    }
-                  ]
-                },
-                {
-                  "type": "boolean",
-                  "name": "lvngCmpnGender",
-                  "title": "Gender:",
-                  "isRequired": true,
-                  "labelTrue": "Female",
-                  "labelFalse": "Male"
-                }
-              ]
+              "type": "text",
+              "title": "Facebook account or email address:",
+              "name": "lvngRootUserContact",
+              "isRequired": true
             },
             {
-              "type": "panel",
-              "name": "lvngCmpnDetailsSubpanel3",
-              "title": "About how much does {lndgCmpnName} weigh in pounds or kilos?",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "lvngCmpnWeight",
-                  "title": "Weight (number):",
-                  "isRequired": true,
-                  "inputType": "number",
-                  "min": 1,
-                  "max": 2200,
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 2200,
-                      "text": "Weight must be between 1 and 2200"
-                    }
-                  ]
-                },
-                {
-                  "type": "boolean",
-                  "name": "lvngCmpnWeightUnits",
-                  "title": "Please choose pounds or kilos:",
-                  "isRequired": true,
-                  "labelTrue": "Kg",
-                  "labelFalse": "Lbs"
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "lvngCmpnDetailsSubpanel4",
-              "title": "How energetic, excitable, or anxious is your {lndgCmpnName}? (1=very calm, 5=very excitable)?",
-              "elements": [
-                {
-                  "type": "rating",
-                  "name": "lvngCmpnExcitable",
-                  "title": ""
-                  
-                }
-              ]
+              "type": "text",
+              "title": "Your First Name:",
+              "name": "lvngRootUserName",
+              "isRequired": true
             }
-
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Your Animals",
+          "name": "lvngRootUserAnimalsPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "lvngRootUserAnimalsHeading",
+              "html": "<h2>Including {lndgCmpnName}, how many animals do you have in your care?</h2>"
+            },
+            {
+              "type": "dropdown",
+              "name": "lvngRootUserAnimalsDogs",
+              "title": "Dogs",
+              "choices": [
+                1,
+                2,
+                3,
+                "More than three"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "lvngRootUserAnimalsCats",
+              "title": "Cats",
+              "choices": [
+                0,
+                1,
+                2,
+                3,
+                "More than three"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "lvngRootUserAnimalsCats",
+              "title": "Horses",
+              "choices": [
+                0,
+                1,
+                2,
+                3,
+                "More than three"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Other animals in your care:",
+              "name": "lvngRootUserOtherAnimals",
+              "isRequired": true
+            }
           ]
         }
       ]

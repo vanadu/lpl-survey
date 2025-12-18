@@ -185,11 +185,6 @@
 
 }
 
-
-
-
-
-
 // !VA Special styling for the companion panel on the landing page;
 .lndg-cmpn-details-panel {
   padding: 0!important;
@@ -217,6 +212,10 @@
     }
   }
 }
+
+
+
+
 
 
 
@@ -330,4 +329,12 @@
   color: #B70B0C;
   font-weight: bold;
   text-decoration: none;
+}
+
+// !VA 2025.12.18
+// !VA OVERRIDES default h2 for sd-html elements.
+.survey-wrapper .sd-html h2 {
+  font-size: var(--sjs-article-font-x-large-fontSize, calc(1 * (var(--sjs-font-size, 16px))));
+  line-height: calc(1.5 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+
 }
