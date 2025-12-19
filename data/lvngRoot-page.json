@@ -4,113 +4,125 @@
     {
       "type": "panel",
       "name": "lvngRootPanel",
+      "title": "lvngRootPanel",
       "elements": [
-        {
-          "type": "text",
-          "name": "lndgCmpnName",
-          "placeholder": "fake"
-        },
         {
           "type": "html",
           "name": "lvngRootHeading",
-          "html": "<h2>What's This All About?</h2>"
+          "html": "<h2>About You(lvngRootHeading.h2)</h2>"
         },
         {
           "type": "html",
           "name": "lvngRootText",
-          "html": "<p>This survey seeks to gather information about how people are dealing with their beloved companion's laryngeal paralysis. It's the first comprehensive survey of its kind, and it will help veterinarians, researchers, and individuals like yourselves better understand how this disease affects people and the animals they love. We're not asking for your last name, so we have no way to connect you with any of your private data. We believe you're more likely to help us if you feel safe. Click the links below to learn about how your privacy is protected and what we'll be doing with this survey information.</p>"
+          "html": "<p>(lvngRootText.p)We're not asking for your last name, so we have no way to connect you with any of your private data. We believe you're more likely to help us if you feel safe. Click the links below to learn about how your privacy is protected and what we'll be doing with this survey information.</p>"
         },
         {
           "type": "panel",
           "name": "lvngRootAboutSurveyPanel",
-          "title": "About this survey",
+          "title": "lvngRootAboutSurveyPanel",
           "elements": [
               {
                 "type": "html",
                 "name": "lvngRootInfoPrivacy",
-                "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>About your privacy</a>"
+                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>(lvngRootInfoPrivacy)About your privacy</a></div>"
               },
               {
                 "type": "html",
                 "name": "lvngRootInfoYourData",
-                "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>How will we be using your information?</a>"
+                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>(lvngRootInfoYourData)How will we be using your information?</a></div>"
               }
           ]
         },
         {
           "type": "panel",
-          "title": "A Little About You",
+          "title": "lvngRootAboutUserPanel",
           "name": "lvngRootAboutUserPanel",
           "elements": [
             {
               "type": "html",
               "name": "lvngRootWhyContact",
-              "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Why provide a contact?</a>"
+              "html": "<div class='srvy-question-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>(lvngRootInfoWhyContact)Why are we asking for your contact info?</a></div>"
             },
             {
               "type": "text",
-              "title": "Facebook account or email address:",
+              "title": "(lvngRootUserContact)Facebook account or email address:",
               "name": "lvngRootUserContact",
               "isRequired": true
             },
             {
               "type": "text",
-              "title": "Your First Name:",
+              "title": "(lvngRootUserName)Your First Name:",
               "name": "lvngRootUserName",
+              "isRequired": true
+            },
+            {
+              "type": "boolean",
+              "name": "lvngRootContactOK",
+              "title": "(lvngRootContactOK)May we contact you to talk about {lndgCmpnName}'s experience with laryngeal paralysis?",
               "isRequired": true
             }
           ]
         },
         {
           "type": "panel",
-          "title": "Your Animals",
+          "title": "(lvngRootUserAnimalsPanel)About Your Animals",
           "name": "lvngRootUserAnimalsPanel",
           "elements": [
+
             {
-              "type": "html",
-              "name": "lvngRootUserAnimalsHeading",
-              "html": "<h2>Including {lndgCmpnName}, how many animals do you have in your care?</h2>"
+            "type": "dropdown",
+            "name": "lvngRootAnimalsCount",
+            "title": "(lvngRootAnimalsCount)Including {lndgCmpnName}, how many animals do you have in your care?",
+            "required": true,
+            "choices": [
+              {
+                "value": "1",
+                "text": "One"
+              },
+              {
+                "value": "2",
+                "text": "Two"
+              },
+              {
+                "value": "3",
+                "text": "Three"
+              },
+              {
+                "value": "4",
+                "text": "More than three"
+              }
+            ],
+            "choicesOrder": "none",
+            "otherText": "More than three",
+            "choicesMin": 1
             },
             {
-              "type": "dropdown",
-              "name": "lvngRootUserAnimalsDogs",
-              "title": "Dogs",
-              "choices": [
-                1,
-                2,
-                3,
-                "More than three"
-              ]
-            },
+            "type": "boolean",
+            "name": "lvngRootHasInsurance",
+            "required": true,
+            "title": "(lvngRootHasInsurance)Do you have pet insurance for {lndgCmpnName}?"
+             },
             {
-              "type": "dropdown",
-              "name": "lvngRootUserAnimalsCats",
-              "title": "Cats",
-              "choices": [
-                0,
-                1,
-                2,
-                3,
-                "More than three"
-              ]
-            },
-            {
-              "type": "dropdown",
-              "name": "lvngRootUserAnimalsCats",
-              "title": "Horses",
-              "choices": [
-                0,
-                1,
-                2,
-                3,
-                "More than three"
-              ]
-            },
-            {
-              "type": "text",
-              "title": "Other animals in your care:",
-              "name": "lvngRootUserOtherAnimals",
-              "isRequired": true
+            "type": "radiogroup",
+            "name": "lvngRootHasInsuranceOther",
+            "title": "(lvngRootHasInsuranceOther)Do you have pet insurance for your other animals?",
+            "visibleIf": "{lvngRootHasInsurance} = true",
+            "required": true,
+            "choices": [
+              {
+                "value": "1",
+                "text": "No"
+              },
+              {
+                "value": "2",
+                "text": "Some, but not all"
+              },
+              {
+                "value": "3",
+                "text": "All"
+              }
+              ],
+              "choicesOrder": "none"
             }
           ]
         }

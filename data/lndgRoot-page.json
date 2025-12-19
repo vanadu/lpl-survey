@@ -4,42 +4,44 @@
     {
       "type": "panel",
       "name": "lndgRootPanel",
+      "title": "lndgRootPanel",
       "elements": [
         {
           "type": "html",
           "name": "lndgRootHeading",
-          "html": "<h2>About this survey</h2>"
+          "html": "<h2>(lndgRootHeading.h2)About this survey</h2>"
         },
         {
           "type": "html",
           "name": "lndgRootText",
-          "html": "<p>This survey asks detailed questions about your experience with laryngeal paralysis and how it affected your companion animal's life. </p> <p>We know how hard it is to lose one's beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p>"
+          "html": "<p>(lndgRootText.p)This survey seeks to gather information about how laryngeal paralysis (LarPar, LP) affects the lives of people and the animals they love. It's the first comprehensive survey of its kind and should take no more than ten minutes of your time. We recommend taking the survey on a tablet or desktop, but it works on phones, too. It might just take a little longer.</p> <p>We know how hard it is to lose one's beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p>"
         },
         {
           "type": "html",
-          "name": "lndgCrossedOverHeading",
-          "html": "<h3>About your LP companion<h3>"
+          "name": "lndgRootCrossedOverHeading",
+          "html": "<h3>(lndgRootCrossedOverHeading.h3)About your LP companion<h3>"
         },
         {
         "type": "html",
-          "name": "lndgCrossedOverText",
-          "html": "<p>If you think you'd like to continue, please tell us your companion's name and if your companion has crossed over the Rainbow Bridge. This will allow us to personalize the survey to your individual situation.</p>"
+          "name": "lndgRootCrossedOverText",
+          "html": "<p>(lndgRootCrossedOverText.p)If you'd like to continue now, now please tell us your LP companion's name and if your LP companion has crossed over the Rainbow Bridge. This will allow us to personalize the survey to your individual situation.</p>"
         },
 
         {
           "type": "panel",
-          "name": "lndgCmpnDetailsPanel",
+          "name": "lndgRootCmpnDetailsPanel",
+          "title": "lndgRootCmpnDetailsPanel",
           "elements": [
           {
           "type": "text",
-          "name": "lndgCmpnName",
-          "title": "Please tell us your companion's name:",
+          "name": "lndgRootCmpnName",
+          "title": "(lndgRootCmpnName)Please tell us your companion's name:",
           "isRequired": true
           },
             {
               "type": "imagepicker",
-              "name": "lndgCrossedOver",
-              "title": "Has your companion crossed over the Rainbow Bridge?",
+              "name": "lndgRootCrossedOver",
+              "title": "(lndgRootCrossedOver)Has your companion crossed over the Rainbow Bridge?",
               "isRequired": true,
               "choices": [
               {
@@ -63,8 +65,8 @@
         },
                     {
               "type": "html",
-              "name": "lndgMakeSelection",
-              "html": "<p>Once you've made your selection, please choose 'Next' to begin the survey.</p>"
+              "name": "lndgRootMakeSelection",
+              "html": "<p>(lndgRootMakeSelection.p)Once you've made your selection, please choose 'Next' to begin the survey.</p>"
             }
       ]
     }

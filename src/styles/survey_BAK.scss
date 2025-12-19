@@ -65,6 +65,8 @@
 .survey-wrapper .sd-panel__content {
   // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  
+
 }
 
 
@@ -88,7 +90,6 @@
 
 }
 
-// !VA Height of input fields: this makes input fields shorter than the default
 .survey-wrapper .sd-question input {
   // padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   padding: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
@@ -98,7 +99,7 @@
 // ---------------------
 
 
-// !VA 2025.12.19 I'm removing this and replacing it with the default H2 at the bottom of this page
+
 // !VA Survey Title
 // !VA livHeading, decHeading
 // .sd-question[data-name="lndgRootHeading"] h2, .sd-question[data-name="lvngRootHeading"] h2, .sd-question[data-name="dcsdRootHeading"] h2 {
@@ -108,31 +109,25 @@
 //   padding: 0!important;
 // }
 
-// !VA 2025.12.19 I'm removing this and replacing it with the default p definition at the botom of this page
-// .sd-question[data-name="lndgRootText"] p, .sd-question[data-name="lvngRootText"] p, .sd-question[data-name="dcsdRootText"] p {
-//   margin: 0!important;
-//   padding: 0!important;
-//   padding-bottom: .5rem !important;
-// }
+// !VA liv
+.sd-question[data-name="lndgRootText"] p, .sd-question[data-name="lvngRootText"] p, .sd-question[data-name="dcsdRootText"] p {
+  margin: 0!important;
+  padding: 0!important;
+  padding-bottom: .5rem !important;
+}
 
-// !VA 2025.12.19 I don't know what this was all about, but it removes all the padding below H2s. 
 // !VA livText, decText: Padding above introText to reduce space between introText and introHeading
-// .sd-row:has(> div > .sd-question[data-name="lvngRootText"]), .sd-row:has(> div > .sd-question[data-name="dcsdRootText"]) {
+.sd-row:has(> div > .sd-question[data-name="lvngRootText"]), .sd-row:has(> div > .sd-question[data-name="dcsdRootText"]) {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
-// }
+  --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 
+}
 
-
-
-
-// !VA 2025.12.19 This removes the padding above the input. It's supposed to close up the gap between the info link and the input, but it's no good because it applies to ALL input fields
 // !VA userContact: Padding above userContact to reduce space between info link and label
 .sd-row:has(> div > .sd-question[data-name="lvngRootUserContact"]), 
 .sd-row:has(> div > .sd-question[data-name="dcsdRootUserContact"]) {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // background: rgba(255, 0, 0, .3) !important; //devred
+  --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
 }
 
 // !VA userContact: Padding above userContact to reduce space between info link and label
@@ -323,7 +318,18 @@
   line-height: 1.5rem;
 }
 
+.sd-html .survey-info-icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: -3px;
+}
 
+.sd-html .survey-info-link {
+  font-size: .75rem;
+  color: #B70B0C;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 // !VA 2025.12.19
 // !VA OVERRIDES default h2 for sd-html elements.
@@ -340,55 +346,3 @@
   font-size: var(--sjs-article-font-x-large-fontSize, calc(1.5 * (var(--sjs-font-size, 16px))));
   line-height: calc(1.75 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
 }
-
-// !VA OVERRIDES default p for sd-html elements
-.survey-wrapper .sd-html p {
-    padding-bottom: .5rem !important;
-}
-
-
-
-
-
-// !VA INFO icons and links
-// --------------------------
-
-// !VA .srvy-general-info is the div wrapper that lives inside the HTML element for general info, i.e. info that's not attached to a question label.
-.survey-wrapper .srvy-general-info {
-  // background: rgba(255, 0, 0, .3) !important; //devred
-}
-
-.survey-wrapper .srvy-info-icon {
-  width: 16px;
-  height: 16px;
-  vertical-align: -2px;
-}
-
-.survey-wrapper .srvy-info-link {
-  font-size: 1rem;
-  color: #B70B0C;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-
-// !VA Position info label on inputs or other question elements absolutely and move it down 18px. .srvy-input-info is the div wrapper that lives inside the HTML element.
-// !VA IMPORTANT -- not sure if this is doing to work.
-.survey-wrapper .srvy-question-info {
-  position: absolute;
-  bottom: -14px;
-}
-
-.survey-wrapper .srvy-question-info .srvy-info-icon {
-  width: 14px;
-  height: 14px;
-  vertical-align: -3px;
-}
-
-.survey-wrapper .srvy-question-info .srvy-info-link {
-  font-size: .813rem;
-  color: #B70B0C;
-  font-weight: bold;
-  text-decoration: none;
-}
-
