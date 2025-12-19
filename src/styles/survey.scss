@@ -58,9 +58,10 @@
 // ----------------------------------------------------------
 // !VA Horiz padding within panel between panel and page
 .survey-wrapper .sd-panel {
-
+  // !VA Nothing yet
 }
 
+// !VA 2025.12.19 This applies to ALL panels, not just the top-level
 // !VA Top panel margin, i.e. directly above the introHeading
 .survey-wrapper .sd-panel__content {
   // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
@@ -68,9 +69,8 @@
 }
 
 
-
-// !VA sets row top margins, 
-// !VA does not set padding, bottom margins
+// !VA 2025.12.19 OK for now
+// !VA sets row top margins, does not set padding, bottom margins
 .survey-wrapper .sd-row {
   // --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(2* var(--sjs-base-unit, var(--base-unit, 8px)));
@@ -81,6 +81,7 @@
 // !VA Default overrides
 // ---------------------
 
+// !VA 2025.12.19 OK
 // !VA es-question: Default vertical padding between question ITEMS, not between questions
 .survey-wrapper .sd-question {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
@@ -88,65 +89,21 @@
 
 }
 
+// !VA 2025.12.19 OK
+// !VA Input and dropdown height
+// ------------------------------
 // !VA Height of input fields: this makes input fields shorter than the default
-.survey-wrapper .sd-question input {
+.survey-wrapper .sd-input {
   // padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   padding: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
 }
 
-// !VA Individual element overrides
-// ---------------------
-
-
-// !VA 2025.12.19 I'm removing this and replacing it with the default H2 at the bottom of this page
-// !VA Survey Title
-// !VA livHeading, decHeading
-// .sd-question[data-name="lndgRootHeading"] h2, .sd-question[data-name="lvngRootHeading"] h2, .sd-question[data-name="dcsdRootHeading"] h2 {
-//   font-family: $secondary_font;
-//   font-size: 1.75rem;
-//   margin: 0!important;
-//   padding: 0!important;
-// }
-
-// !VA 2025.12.19 I'm removing this and replacing it with the default p definition at the botom of this page
-// .sd-question[data-name="lndgRootText"] p, .sd-question[data-name="lvngRootText"] p, .sd-question[data-name="dcsdRootText"] p {
-//   margin: 0!important;
-//   padding: 0!important;
-//   padding-bottom: .5rem !important;
-// }
-
-// !VA 2025.12.19 I don't know what this was all about, but it removes all the padding below H2s. 
-// !VA livText, decText: Padding above introText to reduce space between introText and introHeading
-// .sd-row:has(> div > .sd-question[data-name="lvngRootText"]), .sd-row:has(> div > .sd-question[data-name="dcsdRootText"]) {
-  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
-// }
-
-
-
-
-
-// !VA 2025.12.19 This removes the padding above the input. It's supposed to close up the gap between the info link and the input, but it's no good because it applies to ALL input fields
-// !VA userContact: Padding above userContact to reduce space between info link and label
-.sd-row:has(> div > .sd-question[data-name="lvngRootUserContact"]), 
-.sd-row:has(> div > .sd-question[data-name="dcsdRootUserContact"]) {
-  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // background: rgba(255, 0, 0, .3) !important; //devred
+// !VA Set top and bottom padding on dropdowns 0 to match the shorter input height. Leave the horizontal padding base units.
+.survey-wrapper .sd-dropdown {
+    padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
 }
 
-// !VA userContact: Padding above userContact to reduce space between info link and label
- .sd-question[data-name="lvngUserContact"], .sd-question[data-name="dcsdUserContact"] {
-  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  --sd-base-vertical-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
-}
-
-.sd-question[data-name="animalType"] .sv-title-actions {
-  // background: rgba(0, 0, 255, .3) !important; //devblue
-  // display: block;
-  // text-align: center!important;
-}
-
+// !VA 2025.12.19 ???
 .sd-question[data-name="animalType"] fieldset.sd-selectbase {
   position: relative;
   margin-left: -50px;
@@ -155,6 +112,7 @@
   padding-top: 10px;
 }
 
+// !VA 2025.12.19 ???
 // !VA Remove outer border around ...CompDetailsPanel
 .lvng-cmpn-details-panel.sd-element--nested-with-borders,
 .dcsd-cmpn-details-panel.sd-element--nested-with-borders
@@ -276,28 +234,6 @@
     }
 }
 
-
-// !VA Add an icon or image to the panel headers
-// .sd-panel__header::before {
-//     content: "";
-//     // position: absolute;
-//   display: inline-block;
-//   /* Optional size */
-//   // "../../public/img-info-icon.png"
-//   background-image: url("../../public/img-info-icon.png");
-//   width: 18px;
-//   height: 18px;
-//   background-size: contain;       /* Or: cover */
-//   background-repeat: no-repeat;
-// }
-
-// !VA Display the icon and 
-.sd-panel__header {
-  display: flex;
-    // padding: 0!important;
-    // margin: 0!important;
-}
-
 // !VA Clear the bottom border in the subpanel title 
 .sd-panel__header::after { 
   content: none !important;
@@ -309,24 +245,41 @@
 }
 
 
+// !VA 2025.12.19 Changes as of today
+// =====================================
 
-// !VA HTML content
+// !VA Global JSSurvey style overrides
+// -----------------------------------
 
-.survey-wrapper .sd-html h3 {
-  font-family: $secondary_font;
-  font-size: 1.5rem;
+// !VA Boolean switch: global size mods
+// !VA Sets the padding between the switch and the outer border
+.survey-wrapper .sd-boolean {
+  // padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  padding: calc(0.25 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+}
+// !VA Sets the height of the boolean element
+.survey-wrapper .sd-boolean__label, .survey-wrapper .sd-boolean__thumb {
+  // line-height: calc(.5 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
+  line-height: calc(1 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
 }
 
-// !VA Any p text in an html type 
-.survey-wrapper .sd-html p {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+
+// !VA 
+.sd-panel[data-name="lvngRootAboutSurveyPanel"] {
+  .sd-panel__content {
+    display: flex;
+    justify-content: space-between;
+    // !VA This only applies to top padding, bottom is determined by vertical-padding
+    --sd-base-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)));
+    .sd-row {
+        margin: 0!important;
+    }
+  }
 }
 
-
-
-// !VA 2025.12.19
-// !VA OVERRIDES default h2 for sd-html elements.
+// !VA 2025.12.19 
+// !VA sd-html element overrides.
+// -------------------------------
 .survey-wrapper .sd-html h2 {
   font-family: $secondary_font;
   font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
@@ -343,19 +296,16 @@
 
 // !VA OVERRIDES default p for sd-html elements
 .survey-wrapper .sd-html p {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
     padding-bottom: .5rem !important;
 }
 
-
-
-
-
 // !VA INFO icons and links
 // --------------------------
-
 // !VA .srvy-general-info is the div wrapper that lives inside the HTML element for general info, i.e. info that's not attached to a question label.
 .survey-wrapper .srvy-general-info {
-  // background: rgba(255, 0, 0, .3) !important; //devred
+  // !VA Defaults
 }
 
 .survey-wrapper .srvy-info-icon {
@@ -371,12 +321,11 @@
   text-decoration: none;
 }
 
-
 // !VA Position info label on inputs or other question elements absolutely and move it down 18px. .srvy-input-info is the div wrapper that lives inside the HTML element.
 // !VA IMPORTANT -- not sure if this is doing to work.
 .survey-wrapper .srvy-question-info {
   position: absolute;
-  bottom: -14px;
+  bottom: -16px;
 }
 
 .survey-wrapper .srvy-question-info .srvy-info-icon {
@@ -391,4 +340,34 @@
   font-weight: bold;
   text-decoration: none;
 }
+
+
+// !VA Panels that have two elements two-up in the top row and a third element full-width in the bottom row.
+// !VA Currently: lvngRootUserAnimalsPanel, lvngRootAboutUserPanel
+.sd-panel[data-name="lvngRootUserAnimalsPanel"], .sd-panel[data-name="lvngRootAboutUserPanel"] {
+  .sd-panel__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem; /* Optional */
+  }
+}
+
+.sd-panel[data-name="lvngRootUserAnimalsPanel"], .sd-panel[data-name="lvngRootAboutUserPanel"] {
+  .sd-panel__content {
+     > :nth-child(3) {
+        grid-column: 1 / -1;
+     }
+     .sd-row {
+        padding: 0!important;
+        margin: 0!important;
+     }
+     .sd-input {
+      width: 90%!important;
+     }
+  }
+
+}
+
+
 

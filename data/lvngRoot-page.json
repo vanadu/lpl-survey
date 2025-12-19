@@ -36,26 +36,22 @@
         {
           "type": "panel",
           "title": "lvngRootAboutUserPanel",
-          "name": "lvngRootAboutUserPanel",
+          "description": "asdfasdfasdf",
+          "name": "lvngRootAboutUserPanel", 
           "elements": [
             {
-              "type": "html",
-              "name": "lvngRootWhyContact",
-              "html": "<div class='srvy-question-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>(lvngRootInfoWhyContact)Why are we asking for your contact info?</a></div>"
-            },
-            {
               "type": "text",
-              "title": "(lvngRootUserContact)Facebook account or email address:",
+              "title": "Facebook account or email address:",
               "name": "lvngRootUserContact",
               "isRequired": true
             },
             {
               "type": "text",
-              "title": "(lvngRootUserName)Your First Name:",
+              "title": "Your First Name:",
               "name": "lvngRootUserName",
               "isRequired": true
             },
-            {
+                        {
               "type": "boolean",
               "name": "lvngRootContactOK",
               "title": "(lvngRootContactOK)May we contact you to talk about {lndgCmpnName}'s experience with laryngeal paralysis?",
