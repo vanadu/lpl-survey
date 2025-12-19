@@ -4,44 +4,41 @@
     {
       "type": "panel",
       "name": "lvngRootPanel",
-      "title": "lvngRootPanel",
       "elements": [
         {
           "type": "html",
           "name": "lvngRootHeading",
-          "html": "<h2>About You(lvngRootHeading.h2)</h2>"
+          "html": "<h2>About You</h2>"
         },
         {
           "type": "html",
           "name": "lvngRootText",
-          "html": "<p>(lvngRootText.p)We're not asking for your last name, so we have no way to connect you with any of your private data. We believe you're more likely to help us if you feel safe. Click the links below to learn about how your privacy is protected and what we'll be doing with this survey information.</p>"
+          "html": "<p>We're not asking for your last name, so we have no way to connect you with any of your private data. We believe you're more likely to help us if you feel safe. Click the links below to learn about how your privacy is protected and what we'll be doing with this survey information.</p>"
         },
         {
           "type": "panel",
           "name": "lvngRootAboutSurveyPanel",
-          "title": "lvngRootAboutSurveyPanel",
           "elements": [
               {
                 "type": "html",
                 "name": "lvngRootInfoPrivacy",
-                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>(lvngRootInfoPrivacy)About your privacy</a></div>"
+                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About your privacy</a></div>"
               },
               {
                 "type": "html",
                 "name": "lvngRootInfoYourData",
-                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>(lvngRootInfoYourData)How will we be using your information?</a></div>"
+                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>How will we be using your information?</a></div>"
               }
           ]
         },
         {
           "type": "html",
           "name": "lvngRootUserText",
-          "html": "<p>(lvngRootUserText.p)For verification purposes, we'll contact a random sample of survey particpants, so you may or may not get a message from us. If you're concerned about providing your email address, feel free to use your Facebook account name so we can contact you via Facebook Messenger if need be.</p><p>Your Facebook account name is the part after the Facebook URL. Example: https://www.facebook.com/your.account.name </p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
+          "html": "<p>For verification purposes, we'll contact a random sample of survey particpants, so you may or may not get a message from us. If you're concerned about providing your email address, feel free to use your Facebook account name so we can contact you via Facebook Messenger if need be.</p><p>Your Facebook account name is the part after the Facebook URL. Example: https://www.facebook.com/your.account.name </p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
         },
         {
 
           "type": "panel",
-          "title": "lvngRootAboutUserPanel",
           "name": "lvngRootAboutUserPanel", 
           "elements": [
             {
@@ -56,29 +53,35 @@
               "name": "lvngRootUserName",
               "isRequired": true
             },
-                        {
+            {
+              "type": "boolean",
+              "name": "lvngRootAlreadyTaken",
+              "title": "Have you taken this survey before?",
+              "isRequired": true
+            },
+
+            {
               "type": "boolean",
               "name": "lvngRootContactOK",
-              "title": "(lvngRootContactOK)May we contact you to talk more about your and {lndgCmpnName}'s experience with laryngeal paralysis?",
+              "title": "May we contact you to talk more about your and {lndgCmpnName}'s experience with laryngeal paralysis?",
               "isRequired": true
             }
           ]
         },
         {
           "type": "panel",
-          "title": "(lvngRootUserAnimalsPanel)About Your Animals",
           "name": "lvngRootUserAnimalsPanel",
           "elements": [
 
             {
             "type": "dropdown",
             "name": "lvngRootAnimalsCount",
-            "title": "(lvngRootAnimalsCount)Including {lndgCmpnName}, how many animals do you have in your care?",
+            "title": "How many animals do you have in your care?",
             "required": true,
             "choices": [
               {
                 "value": "1",
-                "text": "One"
+                "text": "Just {lndgCmpnName}"
               },
               {
                 "value": "2",
@@ -101,13 +104,13 @@
             "type": "boolean",
             "name": "lvngRootHasInsurance",
             "required": true,
-            "title": "(lvngRootHasInsurance)Do you have pet insurance for {lndgCmpnName}?"
+            "title": "Do you have pet insurance for {lndgCmpnName}?"
              },
             {
             "type": "radiogroup",
             "name": "lvngRootHasInsuranceOther",
-            "title": "(lvngRootHasInsuranceOther)Do you have pet insurance for your other animals?",
-            "visibleIf": "{lvngRootHasInsurance} = true",
+            "title": "Do you have pet insurance for your other animals?",
+            "visibleIf": "{lvngRootAnimalsCount} != 1",
             "required": true,
             "choices": [
               {

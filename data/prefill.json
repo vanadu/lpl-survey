@@ -4,6 +4,7 @@
   "lvngRootUserContact": "example@example.com",
   "lvngRootUserName": "Jane",
   "lvngRootContactOK": true,
+  "lvngRootAlreadyTaken": false,
   "lvngRootHasInsurance": true,
   "lvngRootHasInsuranceOther": "2",
   "lvngRootAnimalsCount": "2",

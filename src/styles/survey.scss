@@ -342,9 +342,28 @@
 }
 
 
+// !VA
+.sd-panel[data-name="lvngRootAboutUserPanel"] {
+  .sd-panel__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    grid-template-rows: 1fr 1fr;    /* 2 equal rows */
+    gap: 1rem;                      /* optional spacing between items */
+  }
+    .sd-row {
+    padding: 0!important;
+    margin: 0!important;
+  }
+}
+
+
+
+
+
+
 // !VA Panels that have two elements two-up in the top row and a third element full-width in the bottom row.
 // !VA Currently: lvngRootUserAnimalsPanel, lvngRootAboutUserPanel
-.sd-panel[data-name="lvngRootUserAnimalsPanel"], .sd-panel[data-name="lvngRootAboutUserPanel"] {
+.sd-panel[data-name="lvngRootUserAnimalsPanel"] {
   .sd-panel__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -353,7 +372,7 @@
   }
 }
 
-.sd-panel[data-name="lvngRootUserAnimalsPanel"], .sd-panel[data-name="lvngRootAboutUserPanel"] {
+.sd-panel[data-name="lvngRootUserAnimalsPanel"]  {
   .sd-panel__content {
      > :nth-child(3) {
         grid-column: 1 / -1;
