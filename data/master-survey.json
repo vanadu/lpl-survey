@@ -8,41 +8,43 @@
         {
           "type": "panel",
           "name": "lndgRootPanel",
+          "title": "lndgRootPanel",
           "elements": [
             {
               "type": "html",
               "name": "lndgRootHeading",
-              "html": "<h2>About this survey</h2>"
+              "html": "<h2>(lndgRootHeading.h2)About this survey</h2>"
             },
             {
               "type": "html",
               "name": "lndgRootText",
-              "html": "<p>This survey asks detailed questions about your experience with laryngeal paralysis and how it affected your companion animal's life. </p> <p>We know how hard it is to lose one's beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p>"
+              "html": "<p>(lndgRootText.p)This survey seeks to gather information about how laryngeal paralysis (LarPar, LP) affects the lives of people and the animals they love. It's the first comprehensive survey of its kind and should take no more than ten minutes of your time. We recommend taking the survey on a tablet or desktop, but it works on phones, too. It might just take a little longer.</p> <p>We know how hard it is to lose one's beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p>"
             },
             {
               "type": "html",
-              "name": "lndgCrossedOverHeading",
-              "html": "<h3>About your LP companion<h3>"
+              "name": "lndgRootCrossedOverHeading",
+              "html": "<h3>(lndgRootCrossedOverHeading.h3)About your LP companion<h3>"
             },
             {
               "type": "html",
-              "name": "lndgCrossedOverText",
-              "html": "<p>If you think you'd like to continue, please tell us your companion's name and if your companion has crossed over the Rainbow Bridge. This will allow us to personalize the survey to your individual situation.</p>"
+              "name": "lndgRootCrossedOverText",
+              "html": "<p>(lndgRootCrossedOverText.p)If you'd like to continue now, now please tell us your LP companion's name and if your LP companion has crossed over the Rainbow Bridge. This will allow us to personalize the survey to your individual situation.</p>"
             },
             {
               "type": "panel",
-              "name": "lndgCmpnDetailsPanel",
+              "name": "lndgRootCmpnDetailsPanel",
+              "title": "lndgRootCmpnDetailsPanel",
               "elements": [
                 {
                   "type": "text",
-                  "name": "lndgCmpnName",
-                  "title": "Please tell us your companion's name:",
+                  "name": "lndgRootCmpnName",
+                  "title": "(lndgRootCmpnName)Please tell us your companion's name:",
                   "isRequired": true
                 },
                 {
                   "type": "imagepicker",
-                  "name": "lndgCrossedOver",
-                  "title": "Has your companion crossed over the Rainbow Bridge?",
+                  "name": "lndgRootCrossedOver",
+                  "title": "(lndgRootCrossedOver)Has your companion crossed over the Rainbow Bridge?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -64,8 +66,8 @@
             },
             {
               "type": "html",
-              "name": "lndgMakeSelection",
-              "html": "<p>Once you've made your selection, please choose 'Next' to begin the survey.</p>"
+              "name": "lndgRootMakeSelection",
+              "html": "<p>(lndgRootMakeSelection.p)Once you've made your selection, please choose 'Next' to begin the survey.</p>"
             }
           ]
         }
@@ -77,158 +79,124 @@
         {
           "type": "panel",
           "name": "lvngRootPanel",
+          "title": "lvngRootPanel",
           "elements": [
-            {
-              "type": "text",
-              "name": "lndgCompanionName",
-              "placeholder": "fake"
-            },
             {
               "type": "html",
               "name": "lvngRootHeading",
-              "html": "<h2>Laryngeal Paralysis Survey Questions</h2>"
+              "html": "<h2>About You(lvngRootHeading.h2)</h2>"
             },
             {
               "type": "html",
               "name": "lvngRootText",
-              "html": "<p>We know how hard it is to deal with LarPar. There are no simple questions, no clear-cut answers, and all the choices are lesser-evil ones. </p>"
-            },
-            {
-              "type": "html",
-              "name": "lvngRootWhyContact",
-              "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Why provide a contact?</a>"
-            },
-            {
-              "type": "text",
-              "name": "lvngRootUserContact",
-              "title": "Facebook account name or email",
-              "isRequired": true
-            },
-            {
-              "type": "html",
-              "name": "lvngCmpnAboutCompHeading",
-              "html": "<h3>Tell us about {lndgCompanionName}!<h3>"
-            },
-            {
-              "type": "html",
-              "name": "lvngCmpnAboutCompText",
-              "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
+              "html": "<p>(lvngRootText.p)We're not asking for your last name, so we have no way to connect you with any of your private data. We believe you're more likely to help us if you feel safe. Click the links below to learn about how your privacy is protected and what we'll be doing with this survey information.</p>"
             },
             {
               "type": "panel",
-              "name": "lvngCmpnDetailsPanel",
+              "name": "lvngRootAboutSurveyPanel",
+              "title": "lvngRootAboutSurveyPanel",
               "elements": [
                 {
-                  "type": "panel",
-                  "name": "lvngCmpnDetailsSubpanel1",
-                  "title": "What is your companion's name and breed or breed mix?",
-                  "elements": [
-                    {
-                      "type": "text",
-                      "name": "lvngCmpnName",
-                      "title": "Name:",
-                      "isRequired": true
-                    },
-                    {
-                      "type": "text",
-                      "name": "lvngCmpnBreed",
-                      "title": "Breed or mix:",
-                      "isRequired": true
-                    }
-                  ]
+                  "type": "html",
+                  "name": "lvngRootInfoPrivacy",
+                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>(lvngRootInfoPrivacy)About your privacy</a></div>"
                 },
                 {
-                  "type": "panel",
-                  "name": "lvngCmpnDetailsSubpanel2",
-                  "title": "What is your companion's age (in years and months) and gender?",
-                  "elements": [
-                    {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "lvngCmpnAgeYears",
-                      "title": "Age in years (number):",
-                      "isRequired": true,
-                      "min": "1",
-                      "max": "40",
-                      "validators": [
-                        {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 40,
-                          "text": "Age must be between 1 and 40"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "lvngCmpnAgeMonths",
-                      "title": "Months (number 1 - 12)",
-                      "isRequired": true,
-                      "min": 1,
-                      "max": 12,
-                      "validators": [
-                        {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 12,
-                          "text": "Months must be between 1 and 12"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "boolean",
-                      "name": "lvngCmpnGender",
-                      "title": "Gender:",
-                      "isRequired": true,
-                      "labelTrue": "Female",
-                      "labelFalse": "Male"
-                    }
-                  ]
+                  "type": "html",
+                  "name": "lvngRootInfoYourData",
+                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>(lvngRootInfoYourData)How will we be using your information?</a></div>"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "lvngRootUserText",
+              "html": "<p>(lvngRootUserText.p)For verification purposes, we'll contact a random sample of survey particpants, so you may or may not get a message from us. If you're concerned about providing your email address, feel free to use your Facebook account name so we can contact you via Facebook Messenger if need be.</p><p>Your Facebook account name is the part after the Facebook URL. Example: https://www.facebook.com/your.account.name </p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
+            },
+            {
+              "type": "panel",
+              "title": "lvngRootAboutUserPanel",
+              "name": "lvngRootAboutUserPanel",
+              "elements": [
+                {
+                  "type": "text",
+                  "title": "Facebook account or email address:",
+                  "name": "lvngRootUserContact",
+                  "isRequired": true
                 },
                 {
-                  "type": "panel",
-                  "name": "lvngCmpnDetailsSubpanel3",
-                  "title": "About how much does your companion weigh in pounds or kilos?",
-                  "elements": [
-                    {
-                      "type": "text",
-                      "name": "lvngCmpnWeight",
-                      "title": "Weight (number):",
-                      "isRequired": true,
-                      "inputType": "number",
-                      "min": 1,
-                      "max": 2200,
-                      "validators": [
-                        {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 2200,
-                          "text": "Weight must be between 1 and 2200"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "boolean",
-                      "name": "lvngCmpnWeightUnits",
-                      "title": "Please choose pounds or kilos:",
-                      "isRequired": true,
-                      "labelTrue": "Kg",
-                      "labelFalse": "Lbs"
-                    }
-                  ]
+                  "type": "text",
+                  "title": "Your First Name:",
+                  "name": "lvngRootUserName",
+                  "isRequired": true
                 },
                 {
-                  "type": "panel",
-                  "name": "lvngCmpnDetailsSubpanel4",
-                  "title": "How energetic, excitable, or anxious is your companion (1=very calm, 5=very excitable)?",
-                  "elements": [
+                  "type": "boolean",
+                  "name": "lvngRootContactOK",
+                  "title": "(lvngRootContactOK)May we contact you to talk more about your and {lndgCmpnName}'s experience with laryngeal paralysis?",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "title": "(lvngRootUserAnimalsPanel)About Your Animals",
+              "name": "lvngRootUserAnimalsPanel",
+              "elements": [
+                {
+                  "type": "dropdown",
+                  "name": "lvngRootAnimalsCount",
+                  "title": "(lvngRootAnimalsCount)Including {lndgCmpnName}, how many animals do you have in your care?",
+                  "required": true,
+                  "choices": [
                     {
-                      "type": "rating",
-                      "name": "lvngCmpnExcitable",
-                      "title": ""
+                      "value": "1",
+                      "text": "One"
+                    },
+                    {
+                      "value": "2",
+                      "text": "Two"
+                    },
+                    {
+                      "value": "3",
+                      "text": "Three"
+                    },
+                    {
+                      "value": "4",
+                      "text": "More than three"
                     }
-                  ]
+                  ],
+                  "choicesOrder": "none",
+                  "otherText": "More than three",
+                  "choicesMin": 1
+                },
+                {
+                  "type": "boolean",
+                  "name": "lvngRootHasInsurance",
+                  "required": true,
+                  "title": "(lvngRootHasInsurance)Do you have pet insurance for {lndgCmpnName}?"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "lvngRootHasInsuranceOther",
+                  "title": "(lvngRootHasInsuranceOther)Do you have pet insurance for your other animals?",
+                  "visibleIf": "{lvngRootHasInsurance} = true",
+                  "required": true,
+                  "choices": [
+                    {
+                      "value": "1",
+                      "text": "No"
+                    },
+                    {
+                      "value": "2",
+                      "text": "Some, but not all"
+                    },
+                    {
+                      "value": "3",
+                      "text": "All"
+                    }
+                  ],
+                  "choicesOrder": "none"
                 }
               ]
             }
@@ -261,7 +229,7 @@
                 {
                   "type": "panel",
                   "name": "lvngCmpnDetailsSubpanel1",
-                  "title": "What is your companion's name and breed or breed mix?",
+                  "title": "What is {lndgCompName} name and breed or breed mix?",
                   "elements": [
                     {
                       "type": "text",
@@ -280,7 +248,7 @@
                 {
                   "type": "panel",
                   "name": "lvngCmpnDetailsSubpanel2",
-                  "title": "What is your companion's age (in years and months) and gender?",
+                  "title": "What is {lndgCompName}'s age (in years and months) and gender?",
                   "elements": [
                     {
                       "type": "text",
@@ -329,7 +297,7 @@
                 {
                   "type": "panel",
                   "name": "lvngCmpnDetailsSubpanel3",
-                  "title": "About how much does your companion weigh in pounds or kilos?",
+                  "title": "About how much does {lndgCompName} in pounds or kilos?",
                   "elements": [
                     {
                       "type": "text",
@@ -361,7 +329,7 @@
                 {
                   "type": "panel",
                   "name": "lvngCmpnDetailsSubpanel4",
-                  "title": "How energetic, excitable, or anxious is your companion (1=very calm, 5=very excitable)?",
+                  "title": "How energetic, excitable, or anxious is {lndgCompName}? (1=very calm, 5=very excitable)?",
                   "elements": [
                     {
                       "type": "rating",

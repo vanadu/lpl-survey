@@ -34,9 +34,14 @@
           ]
         },
         {
+          "type": "html",
+          "name": "lvngRootUserText",
+          "html": "<p>(lvngRootUserText.p)For verification purposes, we'll contact a random sample of survey particpants, so you may or may not get a message from us. If you're concerned about providing your email address, feel free to use your Facebook account name so we can contact you via Facebook Messenger if need be.</p><p>Your Facebook account name is the part after the Facebook URL. Example: https://www.facebook.com/your.account.name </p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
+        },
+        {
+
           "type": "panel",
           "title": "lvngRootAboutUserPanel",
-          "description": "asdfasdfasdf",
           "name": "lvngRootAboutUserPanel", 
           "elements": [
             {
@@ -54,7 +59,7 @@
                         {
               "type": "boolean",
               "name": "lvngRootContactOK",
-              "title": "(lvngRootContactOK)May we contact you to talk about {lndgCmpnName}'s experience with laryngeal paralysis?",
+              "title": "(lvngRootContactOK)May we contact you to talk more about your and {lndgCmpnName}'s experience with laryngeal paralysis?",
               "isRequired": true
             }
           ]
