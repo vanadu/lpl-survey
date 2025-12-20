@@ -34,7 +34,7 @@
         {
           "type": "html",
           "name": "lvngRootUserText",
-          "html": "<p>For verification purposes, we'll contact a random sample of survey particpants, so you may or may not get a message from us. If you're concerned about providing your email address, feel free to use your Facebook account name so we can contact you via Facebook Messenger if need be.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p><p>You can take the survey more than once, but only one set of results are saved for each Facebook account or email. Each time you take, it, existing results will be updated with the most recent ones.</p>"
+          "html": "<p>For verification purposes, we'll contact a random sample of survey particpants, so you may or may not get a message from us. If you're concerned about providing your email address, please use your Facebook account name and Facebook Messenger for verification.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p><p>If more than one of your beloved animals have LP, you can take the survey for each of them. You can also update the survey responses for each animal, but only one set of results are saved for each Facebook account or email and each animal. Each time you take, it, existing results will be updated with the most recent ones.</p>"
         },
         {
           "type": "html",
@@ -49,29 +49,39 @@
           "elements": [
             {
               "type": "text",
-              "title": "Facebook account or email address:",
-              "name": "lvngRootUserContact",
-              "isRequired": true
-            },
-            {
-              "type": "text",
               "title": "Your First Name:",
               "name": "lvngRootUserName",
               "isRequired": true
             },
             {
               "type": "boolean",
-              "name": "lvngRootAlreadyTaken",
-              "title": "Have you taken this survey before?",
-              "isRequired": true
+              "name": "lvngRootUserContactType",
+              "title": "Would you like to use email or Facebook Messenger for verification?",
+              "isRequired": true,
+              "labelTrue": "Facebook",
+              "labelFalse": "Email"
             },
-
             {
               "type": "boolean",
               "name": "lvngRootContactOK",
               "title": "May we contact you to talk more about your LP experience?",
               "isRequired": true
+            },
+            {
+              "type": "text",
+              "title": "Email address:",
+              "name": "lvngRootUserContactTypeEmail",
+              "isRequired": true,
+              "visibleIf": "{lvngRootUserContactType} = false"
+            },
+            {
+              "type": "text",
+              "title": "Faceboook account:",
+              "name": "lvngRootUserContactTypeFacebook",
+              "isRequired": true,
+              "visibleIf": "{lvngRootUserContactType} = true"
             }
+
           ]
         },
         {
