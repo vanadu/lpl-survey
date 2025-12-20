@@ -2,7 +2,7 @@ import React from 'react'
 import SurveyComponent from '@/components/SurveyComponent'
 import Link from 'next/link';
 
-const Deceased = () => {
+const dcsdroot = () => {
   return (
     <section className="section">
       <div className="section_content">
@@ -10,14 +10,17 @@ const Deceased = () => {
             <Link href="/">
               MASTER 
             </Link>
-            <Link href="/landing">
-              Landing 
+            <Link href="/lndgroot">
+              lndgRoot 
             </Link>
-            <Link href="/alive">
-              Still alive!
+            <Link href="/lvngroot">
+             lvngRoot
             </Link>
-            <Link href="/deceased">
-              Crossed over :-( 
+            <Link href="/lvngcmpn">
+             lvngCmpn
+            </Link>
+            <Link href="/dcsdroot">
+              dcsdRoot :-( 
             </Link>
           </div>
 
@@ -30,4 +33,4 @@ const Deceased = () => {
   )
 }
 
-export default Deceased
+export default dcsdroot

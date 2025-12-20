@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import React from 'react'
 
-const Alive = () => {
+const LvngRoot = () => {
   return (
       <section className="section">
         <div className="section_content">
@@ -12,14 +12,17 @@ const Alive = () => {
             <Link href="/">
               MASTER 
             </Link>
-            <Link href="/landing">
-              Landing 
+            <Link href="/lndgroot">
+              lndgRoot 
             </Link>
-            <Link href="/alive">
-              Still alive!
+            <Link href="/lvngroot">
+             lvngRoot
             </Link>
-            <Link href="/deceased">
-              Crossed over :-( 
+            <Link href="/lvngcmpn">
+             lvngCmpn
+            </Link>
+            <Link href="/dcsdroot">
+              dcsdRoot :-( 
             </Link>
           </div>
 
@@ -32,4 +35,4 @@ const Alive = () => {
   )
 }
 
-export default Alive
+export default LvngRoot

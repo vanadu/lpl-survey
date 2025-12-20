@@ -10,7 +10,7 @@ import { NextSeo } from 'next-seo'
 // !VA Styles
 // import * as styles from '../styles/Home.module.scss'
 
-const Landing = () => {
+const LndgRoot = () => {
   // !VA Log out the posts exported from the getStaticProps function below 
 
 
@@ -28,14 +28,17 @@ const Landing = () => {
             <Link href="/">
               MASTER 
             </Link>
-            <Link href="/landing">
-              Landing 
+            <Link href="/lndgroot">
+              lndgRoot 
             </Link>
-            <Link href="/alive">
-              Still alive!
+            <Link href="/lvngroot">
+             lvngRoot
             </Link>
-            <Link href="/deceased">
-              Crossed over :-( 
+            <Link href="/lvngcmpn">
+             lvngCmpn
+            </Link>
+            <Link href="/dcsdroot">
+              dcsdRoot :-( 
             </Link>
           </div>
 
@@ -51,5 +54,5 @@ const Landing = () => {
   )
 }
 
-export default Landing
+export default LndgRoot
 

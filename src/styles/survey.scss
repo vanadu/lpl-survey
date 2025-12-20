@@ -176,30 +176,7 @@
   }
 }
 
-
-
-
-
-
-
-.lvng-cmpn-details-subpanel-1, .lvng-cmpn-details-subpanel-2, .lvng-cmpn-details-subpanel-3, .dcsd-cmpn-details-subpanel-1, .dcsd-cmpn-details-subpanel-2, .dcsd-cmpn-details-subpanel-3  {
- .sd-panel__content {
-  padding: 0!important;
-  margin: 0!important;
-  display: flex;
- }
-}
-
-// !VA This is how you remove the panel border, but I like it better with the border
-// .sd-element--nested-with-borders {
-//   border: none !important;
-//   /* Optional: remove box-shadow or outline if visible */
-//   box-shadow: none !important;
-//   outline: none !important;
-// }
-
-// !VA All liv subpanels
-.lvng-cmpn-details-subpanel-1, .lvng-cmpn-details-subpanel-2, .lvng-cmpn-details-subpanel-3, .dcsd-cmpn-details-subpanel-1, .dcsd-cmpn-details-subpanel-2, .dcsd-cmpn-details-subpanel-3 {
+.srvy-flex-row {
   // !VA Sets margin on the subpanel's children, otherwise they appear wonky with flex
   .sd-clearfix {
     margin: 10px !important;
@@ -216,14 +193,31 @@
   }
 }
 
-.sd-question[data-name="livCompAgeYears"], .sd-question[data-name="livCompAgeMonths"], .sd-question[data-name="livCompWeight"] {
+.srvy-flex-row {
+  .sd-panel__content {
+    padding: 0!important;
+    margin: 0!important;
+    display: flex;
+ }
+}
+
+// !VA This is how you remove the panel border, but I like it better with the border
+// .sd-element--nested-with-borders {
+//   border: none !important;
+//   /* Optional: remove box-shadow or outline if visible */
+//   box-shadow: none !important;
+//   outline: none !important;
+// }
+
+
+.sd-question[data-name="lvngCmpnAgeYears"], .sd-question[data-name="lvngCmpnAgeMonths"], .sd-question[data-name="lvngCmpnWeight"] {
   input {
     width: 200px!important;
   }
 }
 
 // !VA Hide the Excitable rating title, if you leave it out it displays the element name
-.sd-question[data-name="lvngCmpnExcitable"] .sd-title {
+.sd-question[data-name="lvngCmpnDemeanor"] .sd-title {
   display: none;
 }
 
@@ -387,7 +381,7 @@
   }
 }
 
-.sd-question[data-name="lvngRootHasInsuranceOther"] {
+.sd-question[data-name="lvngRootHasInsuranceOther"], .sd-question[data-name="lvngCmpnAnimalType"] {
   .sd-selectbase {
     display: flex;
     justify-content: space-around;

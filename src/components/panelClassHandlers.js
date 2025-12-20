@@ -1,22 +1,25 @@
 export function addCustomClasses(panel, htmlElement) {
-    // Living Companion Details Panel and Subpanel
+    // lvngCmpn Details Panel and Subpanel
     if (panel.name === 'lndgCmpnDetailsPanel') {
       htmlElement.classList.add("lndg-cmpn-details-panel");
     }
     if (panel.name === 'lvngCmpnDetailsPanel') {
       htmlElement.classList.add("lvng-cmpn-details-panel");
     }
-    if (panel.name === 'lvngCmpnDetailsSubpanel1') {
-      htmlElement.classList.add("lvng-cmpn-details-subpanel-1");
+    if (panel.name === 'lvngCmpnDetailsAnimalType') {
+      htmlElement.classList.add("srvy-flex-row");
     }
-    if (panel.name === 'lvngCmpnDetailsSubpanel2') {
-      htmlElement.classList.add("lvng-cmpn-details-subpanel-2");
+    if (panel.name === 'lvngCmpnDetailsBreedGender') {
+      htmlElement.classList.add("srvy-flex-row");
     }
-    if (panel.name === 'lvngCmpnDetailsSubpanel3') {
-      htmlElement.classList.add("lvng-cmpn-details-subpanel-3");
+    if (panel.name === 'lvngCmpnDetailsAge') {
+      htmlElement.classList.add("srvy-flex-row");
     }
-    if (panel.name === 'lvngCmpnDetailsSubpanel4') {
-      htmlElement.classList.add("lvng-cmpn-details-subpanel-4");
+    if (panel.name === 'lvngCmpnDetailsWeight') {
+      htmlElement.classList.add("srvy-flex-row");
+    }
+    if (panel.name === 'lvngCmpnDetailsAge') {
+      htmlElement.classList.add("srvy-flex-row");
     }
     // Deceased cmpnanion Details Panel and Subpanel
     if (panel.name === 'dcsdCmpnDetailsPanel') {

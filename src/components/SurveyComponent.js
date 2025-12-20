@@ -84,12 +84,15 @@ export default function SurveyComponent({ startPageName }) {
      //VA! 
     useEffect(() => {
       if (startPageName) {
+        // console.log("startPageName in useEffect is:", startPageName);
         // !VA Prefill the question responses as per prefill.json
         survey.data = prefillData;
         // !VA activePage is the object containing the survey data from the imported json. startPageName is the prop passed in from the SurveyComponent call in the respective Next.js route page, i.e. <SurveyComponent startPageName = 'lvngRoot_page' /> in alive.js
+        // console.log("survey.pages:", survey.pages);
         const activePage = survey.pages.find(p => p.name === startPageName);
         // !VA Log the .name property of the activePage object
-        // console.log("Active page object:", activePage?.name);
+        // console.log("Active page object:", activePage);
+        console.log("Active page object name:", activePage?.name);
         if (activePage) {
           survey.currentPage = activePage;
         }

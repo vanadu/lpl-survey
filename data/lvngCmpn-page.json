@@ -1,10 +1,9 @@
 {
-  "name": "lvngCmpn-page",
+  "name": "lvngCmpn_page",
   "elements": [
     {
       "type": "panel",
-      "name": "lvngCmpn-panel",
-      "title": "Information Section",
+      "name": "lvngCmpnPanel",
       "elements": [
         {
           "type": "html",
@@ -20,29 +19,48 @@
           "type": "panel",
           "name": "lvngCmpnDetailsPanel",
           "elements": [
-            {
+              {
+                "type": "panel",
+                "name": "lvngCmpnDetailsAnimalType",
+                "elements": [
+                  {
+                    "type": "radiogroup",
+                    "name": "lvngCmpnAnimalType",
+                    "title": "What kind of animal is Billie?",
+                    "isRequired": true,
+                    "choices": [
+                      "Dog",
+                      "Cat",
+                      "Horse"
+                    ]
+                  }
+                ]
+              },
+              {
               "type": "panel",
-              "name": "lvngCmpnDetailsSubpanel1",
-              "title": "What is {lndgCompName} name and breed or breed mix?",
+              "name": "lvngCmpnDetailsBreedGender",
+              "title": "What is {lndgCmpnName}'s name and breed or breed mix and gender?",
               "elements": [
-                {
-                  "type": "text",
-                  "name": "lvngCmpnName",
-                  "title": "Name:",
-                  "isRequired": true
-                },
                 {
                   "type": "text",
                   "name": "lvngCmpnBreed",
                   "title": "Breed or mix:",
                   "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "lvngCmpnGender",
+                  "title": "Gender:",
+                  "isRequired": true,
+                  "labelTrue": "Female",
+                  "labelFalse": "Male"
                 }
               ]
             },
             {
               "type": "panel",
-              "name": "lvngCmpnDetailsSubpanel2",
-              "title": "What is {lndgCompName}'s age (in years and months) and gender?",
+              "name": "lvngCmpnDetailsAge",
+              "title": "What is {lndgCmpnName}'s age (in years and months) and gender?",
               "elements": [
                 {
                   "type": "text",
@@ -77,21 +95,13 @@
                       "text": "Months must be between 1 and 12"
                     }
                   ]
-                },
-                {
-                  "type": "boolean",
-                  "name": "lvngCmpnGender",
-                  "title": "Gender:",
-                  "isRequired": true,
-                  "labelTrue": "Female",
-                  "labelFalse": "Male"
                 }
               ]
             },
             {
               "type": "panel",
-              "name": "lvngCmpnDetailsSubpanel3",
-              "title": "About how much does {lndgCompName} in pounds or kilos?",
+              "name": "lvngCmpnDetailsWeight",
+              "title": "About how much does {lndgCmpnName} weigh in pounds or kilos?",
               "elements": [
                 {
                   "type": "text",
@@ -122,12 +132,12 @@
             },
             {
               "type": "panel",
-              "name": "lvngCmpnDetailsSubpanel4",
-              "title": "How energetic, excitable, or anxious is {lndgCompName}? (1=very calm, 5=very excitable)?",
+              "name": "lvngCmpnDetailsDemeanor",
+              "title": "How energetic, excitable, or anxious is {lndgCmpnName}? (1=very calm, 5=very excitable)?",
               "elements": [
                 {
                   "type": "rating",
-                  "name": "lvngCmpnExcitable",
+                  "name": "lvngCmpnDemeanor",
                   "title": ""
                   
                 }

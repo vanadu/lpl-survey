@@ -31,14 +31,17 @@ const Home = () => {
             <Link href="/">
               MASTER 
             </Link>
-            <Link href="/landing">
-              Landing 
+            <Link href="/lndgroot">
+              lndgRoot 
             </Link>
-            <Link href="/alive">
-              Still alive!
+            <Link href="/lvngroot">
+             lvngRoot
             </Link>
-            <Link href="/deceased">
-              Crossed over :-( 
+            <Link href="/lvngcmpn">
+             lvngCmpn
+            </Link>
+            <Link href="/dcsdroot">
+              dcsdRoot :-( 
             </Link>
           </div>
 

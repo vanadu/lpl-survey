@@ -72,16 +72,24 @@
               "title": "Email address:",
               "name": "lvngRootUserContactTypeEmail",
               "isRequired": true,
-              "visibleIf": "{lvngRootUserContactType} = false"
+              "visibleIf": "{lvngRootUserContactType} = false",
+              "inputType": "email"
             },
             {
               "type": "text",
-              "title": "Faceboook account:",
+              "title": "Facebook account:",
               "name": "lvngRootUserContactTypeFacebook",
               "isRequired": true,
-              "visibleIf": "{lvngRootUserContactType} = true"
+              "visibleIf": "{lvngRootUserContactType} = true",
+              "placeholder": "eg. https://www.facebook.com/my.profile.name",
+              "validators": [
+                {
+                  "type": "regex",
+                  "regex": "^(https?:\\/\\/)?(www\\.)?facebook\\.com\\/[a-zA-Z0-9.]{5,}$",
+                  "text": "Please enter a valid Facebook profile URL, e.g., https://facebook.com/your.username"
+                }
+              ]
             }
-
           ]
         },
         {
