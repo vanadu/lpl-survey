@@ -21,6 +21,9 @@ export function addCustomClasses(panel, htmlElement) {
     if (panel.name === 'lvngCmpnDetailsAge') {
       htmlElement.classList.add("srvy-flex-row");
     }
+    if (panel.name === 'lvngInfoSources') {
+      htmlElement.classList.add("srvy-flex-row");
+    }
     // Deceased cmpnanion Details Panel and Subpanel
     if (panel.name === 'dcsdCmpnDetailsPanel') {
       htmlElement.classList.add("dcsd-cmpn-details-panel");

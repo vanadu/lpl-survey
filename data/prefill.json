@@ -15,6 +15,7 @@
   "lvngCmpnWeight": 50,
   "lvngCmpnWeightUnits": true,
   "lvngCmpnDemeanor": 5,
+  "lvngInfoLevel": 3,
   "dcsdUserContact": "example@example.com",
   "dcsdCmpnName": "Bee",
   "dcsdCmpnBreed": "Lab",

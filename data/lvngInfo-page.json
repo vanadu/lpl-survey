@@ -1,0 +1,79 @@
+{
+  "name": "lvngInfo_page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "lvngInfoPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "lvngInfoHeading",
+          "html": "<h2>What do you know?</h2>"
+        },
+        {
+          "type": "html",
+          "name": "lvngInfoText",
+          "html": "<p>What do you know about LarPar?</p>"
+        },
+        {
+          "type": "panel",
+          "name": "panel1",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "lvngInfoLevel",
+              "title": "How well informed about {lndgCmpnName}'s laryngeal paralysis do you consider yourself?",
+              "isRequired": true,
+              "description": "(1=not well informed, 5=very well informed)"
+            }
+          ]
+        },
+        {
+              "type": "checkbox",
+              "name": "lvngInfoSources",
+              "title": "Which sources of information about LP did you use to inform yourself?",
+              "choices": [
+                {
+                  "value": "Institutional Websites",
+                  "text": "Institutional websites (i.e. teaching colleges)"
+                },
+                {
+                  "value": "Private websites",
+                  "text": "Private websites"
+                },
+                {
+                  "value": "Facebook groups",
+                  "text": "Facebook groups"
+                },
+                {
+                  "value": "Primary veterinarians",
+                  "text": "Primary veterinarians"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Veterinary specialists (i.e. surgeons)"
+                },
+                {
+                  "value": "AI models",
+                  "text": "AI models like ChatGPT"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "Which of those sources did you find most useful?",
+              "choices": [
+                "Institutional Websites",
+                "Private websites",
+                "Facebook groups",
+                "Primary veterinarians",
+                "Veterinary specialists",
+                "AI models like ChatGPT"
+              ]
+            }
+
+
+      ]
+    }
+  ]
+}

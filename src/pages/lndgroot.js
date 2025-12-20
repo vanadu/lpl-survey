@@ -37,6 +37,9 @@ const LndgRoot = () => {
             <Link href="/lvngcmpn">
              lvngCmpn
             </Link>
+            <Link href="/lvnginfo">
+              lvngInfo 
+            </Link>
             <Link href="/dcsdroot">
               dcsdRoot :-( 
             </Link>

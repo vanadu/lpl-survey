@@ -16,6 +16,7 @@ import prefillData from '../../data/prefill.json';
 import lndgRoot from "../../data/lndgRoot-page.json";
 import lvngRoot from "../../data/lvngRoot-page.json"
 import lvngCmpn from "../../data/lvngCmpn-page.json"
+import lvngInfo from "../../data/lvngInfo-page.json"
 import dcsdRoot from "../../data/dcsdRoot-page.json"
 
 // Assemble the final survey JSON object
@@ -25,6 +26,7 @@ const surveyJson = {
     lndgRoot,
     lvngRoot,
     lvngCmpn,
+    lvngInfo,
     dcsdRoot
   ]
 };
