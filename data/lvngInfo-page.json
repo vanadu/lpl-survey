@@ -35,7 +35,7 @@
               "choices": [
                 {
                   "value": "Institutional Websites",
-                  "text": "Institutional websites (i.e. teaching colleges)"
+                  "text": "Institutional websites (i.e. universities)"
                 },
                 {
                   "value": "Private websites",
@@ -50,7 +50,7 @@
                   "text": "Primary veterinarians"
                 },
                 {
-                  "value": "Item 6",
+                  "value": "Veterinary specialists",
                   "text": "Veterinary specialists (i.e. surgeons)"
                 },
                 {
@@ -61,7 +61,8 @@
             },
             {
               "type": "dropdown",
-              "name": "Which of those sources did you find most useful?",
+              "name": "lvngInfoBestSource",
+              "title": "Which of those sources did you find most useful?",
               "choices": [
                 "Institutional Websites",
                 "Private websites",

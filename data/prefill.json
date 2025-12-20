@@ -16,6 +16,12 @@
   "lvngCmpnWeightUnits": true,
   "lvngCmpnDemeanor": 5,
   "lvngInfoLevel": 3,
+  "lvngInfoSources": [
+    "Private websites",
+    "Facebook groups",
+    "Veterinary specialists"
+  ],
+  "lvngInfoBestSource": "Facebook groups",
   "dcsdUserContact": "example@example.com",
   "dcsdCmpnName": "Bee",
   "dcsdCmpnBreed": "Lab",
