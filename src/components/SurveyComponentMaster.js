@@ -28,8 +28,27 @@ export default function MasterSurveyComponent() {
   // !VA 
   const handleComplete = useCallback(async (sender) => {
     const result = sender.data;
-    
-    setIsCompleted(true);
+    console.log("Survey results:", result);
+
+    try {
+      const response = await fetch('/api/save-survey', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(result),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setIsCompleted(true);
+      } else {
+        alert(`Error: ${data.message}`);
+      }
+    } catch (error) {
+      console.error('Failed to save survey data:', error);
+      alert('Failed to save survey data. See console for details.');
+    }
   }, []);
 
   // !VA Load the custom classes from panelClassHandlers.js

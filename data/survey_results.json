@@ -1,18 +1,34 @@
 [
   {
-    "lvngUserContact": "example@example.com",
-    "lvngCmpnName": "Sammi",
+    "lndgCmpnName": "Billie",
+    "lvngRootUserName": "Jane",
+    "lvngRootUserAge": "Over 65",
+    "lvngRootUserGender": "Woman",
+    "lvngRootUserContactType": "false",
+    "lvngRootUserContactTypeEmail": "example@example.com",
+    "lvngRootContactOK": true,
+    "lvngRootHasInsurance": true,
+    "lvngRootHasInsuranceOther": "2",
+    "lvngRootAnimalsCount": "2",
+    "lvngCmpnAnimalType": "Dog",
     "lvngCmpnBreed": "Boxer",
     "lvngCmpnAgeYears": 5,
     "lvngCmpnAgeMonths": 2,
     "lvngCmpnGender": true,
     "lvngCmpnWeight": 50,
     "lvngCmpnWeightUnits": true,
+    "lvngCmpnDemeanor": 5,
+    "lvngInfoLevel": 3,
+    "lvngInfoSources": [
+      "Private websites",
+      "Facebook groups",
+      "Veterinary specialists"
+    ],
+    "lvngInfoBestSource": "Facebook groups",
     "dcsdUserContact": "example@example.com",
     "dcsdCmpnYears": 12,
     "dcsdCmpnMonths": 2,
-    "lndgCrossedOver": "living",
-    "lvngRootUserContact": "Tuesday morning A",
-    "lvngCmpnExcitable": 5
+    "lndgRootCmpnName": "John",
+    "lndgRootCrossedOver": "living"
   }
 ]
