@@ -8,12 +8,12 @@
         {
           "type": "html",
           "name": "lvngRootHeading",
-          "html": "<h2>About You</h2>"
+          "html": "<h2>Please tell us a little about yourself</h2>"
         },
         {
           "type": "html",
           "name": "lvngRootText",
-          "html": "<p>We believe you're more likely to help us if you know your data can't be used anywhere else. We're not asking for your last name, so we have no way to connect you with any of your private data. Click the links below to learn about how your privacy is protected and what we'll be doing with this survey information.</p>"
+          "html": "<p>We believe you're more likely to help us if you know your data can't be used anywhere else. We're not asking for your last name, so we have no way to connect you with any of your private data. Click the links below to learn about how your privacy is protected and what we'll be doing with this survey information.</p><p>If more than one of your beloved companions have LP, you can take the survey for each of them. You can also update the survey responses for each animal, but only one set of results are saved for each Facebook account or email and each animal. Each time you take, it, existing results will be updated with the most recent ones.</p>"
         },
         {
           "type": "panel",
@@ -32,19 +32,8 @@
           ]
         },
         {
-          "type": "html",
-          "name": "lvngRootUserText",
-          "html": "<p>For verification purposes, we'll contact a random sample of survey particpants, so you may or may not get a message from us. If you're concerned about providing your email address, please use your Facebook account name and Facebook Messenger for verification.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p><p>If more than one of your beloved animals have LP, you can take the survey for each of them. You can also update the survey responses for each animal, but only one set of results are saved for each Facebook account or email and each animal. Each time you take, it, existing results will be updated with the most recent ones.</p>"
-        },
-        {
-          "type": "html",
-          "name": "",
-          "title": "",
-          "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;You can find your Facebook user name at the end of the Facebook URL after the slash. Example: https://facebook.com/my.user.name.</div>"
-        },
-        {
-
           "type": "panel",
+          "title": "A little about you",
           "name": "lvngRootAboutUserPanel", 
           "elements": [
             {
@@ -52,6 +41,54 @@
               "title": "Your First Name:",
               "name": "lvngRootUserName",
               "isRequired": true
+            },
+            {
+              "type": "html",
+              "name": "",
+              "title": "",
+              "html": "<p>We're asking for optional basic demographic information to help understand how different people manage the animals in their care. "
+            },
+            {
+              "type": "radiogroup",
+              "name": "lvngRootUserAge",
+              "title": "Age group:",
+              "isRequired": false,
+              "choices": [
+                "Under 20",
+                "20-34",
+                "35-49",
+                "50-64",
+                "Over 65"
+              ],
+              "hasOther": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "lvngRootUserGender",
+              "title": "Gender:",
+              "isRequired": false,
+              "choices": [
+                "Woman",
+                "Man",
+                "Non-binary",
+                "Prefer not to say"
+              ],
+              "hasOther": true,
+              "otherText": "Prefer to self-describe"
+            }
+          ]
+        },
+
+
+        {
+          "type": "panel",
+          "title": "Verification contact",
+          "name": "lvngRootVerificationPanel", 
+          "elements": [
+            {
+              "type": "html",
+              "name": "lvngRootUserText",
+              "html": "<p>We'll need to contact a random sample of participants for verification purposes. If you don't want to share your email, you can use your Facebook account name for verification via Facebook Messenger.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
             },
             {
               "type": "boolean",
@@ -62,18 +99,19 @@
               "labelFalse": "Email"
             },
             {
-              "type": "boolean",
-              "name": "lvngRootContactOK",
-              "title": "May we contact you to talk more about your LP experience?",
-              "isRequired": true
-            },
-            {
               "type": "text",
               "title": "Email address:",
               "name": "lvngRootUserContactTypeEmail",
               "isRequired": true,
               "visibleIf": "{lvngRootUserContactType} = false",
               "inputType": "email"
+            },
+            {
+              "type": "html",
+              "name": "",
+              "title": "",
+              "visibleIf":"{lvngRootUserContactType} = true",
+              "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
             },
             {
               "type": "text",
@@ -89,11 +127,18 @@
                   "text": "Please enter a valid Facebook profile URL, e.g., https://facebook.com/your.username"
                 }
               ]
+            },
+            {
+              "type": "boolean",
+              "name": "lvngRootContactOK",
+              "title": "May we contact you to talk more about your LP experience?",
+              "isRequired": true
             }
           ]
         },
         {
           "type": "panel",
+          "title": "Your Beloved Companions",
           "name": "lvngRootUserAnimalsPanel",
           "elements": [
 

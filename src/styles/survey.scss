@@ -86,8 +86,17 @@
 .survey-wrapper .sd-question {
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)));
-
 }
+
+// !VA Panel title font
+.sd-panel[data-name="lvngRootVerificationPanel"],
+.sd-panel[data-name="lvngRootAboutUserPanel"],
+
+.sd-panel__title span {
+  font-family: $secondary_font;
+  font-size: 1.25rem!important;
+}
+
 
 // !VA 2025.12.19 OK
 // !VA Input and dropdown height
@@ -104,13 +113,32 @@
 }
 
 // !VA 2025.12.19 ???
-.sd-question[data-name="animalType"] fieldset.sd-selectbase {
+.sd-question[data-name="animalType"]
+{
+  fieldset.sd-selectbase {
   position: relative;
   margin-left: -50px;
   display: flex;
   justify-content: space-around;
   padding-top: 10px;
+  }
 }
+
+.sd-question[data-name="lvngRootUserGender"],
+.sd-question[data-name="lvngRootUserAge"],
+
+{
+  fieldset.sd-selectbase {
+ display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding-top: 10px;
+  }
+}
+
+
+
+
 
 // !VA 2025.12.19 ???
 // !VA Remove outer border around ...CompDetailsPanel
@@ -144,9 +172,9 @@
 
 // !VA It doesn't appear to be possible to get rid of the bottom border on the subpanel header
 // !VA This is actually in the ::after pseudoelement.
-.lvng-cmpn-details-subpanel-1 .sd-panel__header {
+// .lvng-cmpn-details-subpanel-1 .sd-panel__header {
 
-}
+// }
 
 // !VA Special styling for the companion panel on the landing page;
 .lndg-cmpn-details-panel {
@@ -218,12 +246,35 @@
 //   outline: none !important;
 // }
 
-
-.sd-question[data-name="lvngCmpnAgeYears"], .sd-question[data-name="lvngCmpnAgeMonths"], .sd-question[data-name="lvngCmpnWeight"] {
+// !VA CUSTOM INPUT WIDTHS
+// ---------------------------
+// !VA 200px
+.sd-question[data-name="lvngCmpnAgeYears"], 
+.sd-question[data-name="lvngCmpnAgeMonths"], 
+.sd-question[data-name="lvngCmpnWeight"] {
   input {
     width: 200px!important;
   }
 }
+
+// !VA 320px
+.sd-question[data-name="lvngRootUserName"],
+.sd-question[data-name="lvngRootUserContactTypeEmail"],
+{
+  input {
+    width: 320px;
+  }
+} 
+
+// !VA 500px
+.sd-question[data-name="lvngRootUserContactTypeEmail"],
+.sd-question[data-name="lvngRootUserContactTypeFacebook"]
+{
+  input {
+    width: 500px;
+  }
+} 
+
 
 // !VA Hide the Excitable rating title, if you leave it out it displays the element name
 .sd-question[data-name="lvngCmpnDemeanor"] .sd-title {
@@ -345,21 +396,21 @@
 }
 
 
-// !VA
-.sd-panel[data-name="lvngRootAboutUserPanel"] {
-  .sd-panel__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 equal columns */
-    grid-template-rows: 1fr 1fr;    /* 2 equal rows */
-    gap: 1rem;                      /* optional spacing between items */
-  }
-    .sd-row {
-    padding: 0!important;
-    margin: 0!important;
-  }
-}
+// !VA This grid layout looks terrible because the element titles are too long and wrap strangely. Just use default column display, but reduce the text field width 
+// .sd-panel[data-name="lvngRootAboutUserPanel"] {
+// .sd-panel__content {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr; /* 2 equal columns */
+//   grid-template-rows: 1fr 1fr;    /* 2 equal rows */
+//   gap: 1rem;                      /* optional spacing between items */
+//   }
+//     .sd-row {
+//     padding: 0!important;
+//     margin: 0!important;
+//   }
+// }
 
-
+              
 
 
 

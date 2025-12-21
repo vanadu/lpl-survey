@@ -1,8 +1,11 @@
 {
   "lndgCmpnName": "Billie",
+  "lvngRootUserName": "Jane",
+  "lvngRootUserAge": "Over 65",
+  "lvngRootUserGender": "Woman",
   "lvngRootUserContactType": "false",
   "lvngRootUserContactTypeEmail": "example@example.com",
-  "lvngRootUserName": "Jane",
+  "lvngRootUserContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "lvngRootContactOK": true,
   "lvngRootHasInsurance": true,
   "lvngRootHasInsuranceOther": "2",
