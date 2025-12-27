@@ -1,0 +1,181 @@
+{
+  "name": "lvngErly_page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "lvngErlyPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "lvngErlyHeading",
+          "html": "<h3>Your early encounters with laryngeal paralysis (LP)</h3>"
+        },
+        {
+          "type": "html",
+          "name": "lvngErlyText",
+          "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP journey and how you came to accept that your companion might have it.</p>"
+        },
+        {
+          "type": "panel",
+          "name": "lvngEarlyFirstSignsPanel",
+          "title": "About how old was {lndgRootCmpnName} (in years and months) when you first noticed signs of what you later learned was LP?",
+          "elements": [
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "lvngEarlyFirstSignsAgeYears",
+              "title": "Years",
+              "isRequired": true,
+              "min": "1",
+              "max": "40",
+                "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 40,
+                  "text": "Age must be between 1 and 40"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "lvngEarlyFirstSignsAgeMonths",
+              "title": "Months (number 1 - 12)",
+              "isRequired": true,
+              "min": 1,
+              "max": 12,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 12,
+                  "text": "Months must be between 1 and 12"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "lvngErlySymptomsPanel",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "lvngErlySymptoms",
+              "title": "What symptoms did {lndgRootCmpnName} have at that time?",
+              "choices": [
+                {
+                  "value": "Noisy Breathing",
+                  "text": "Noisy or raspy breathing"
+                },
+                {
+                  "value": "Excess panting",
+                  "text": "Excess panting"
+                },
+                {
+                  "value": "Changes in bark",
+                  "text": "Changes in bark"
+                },
+                {
+                  "value": "Coughing or hacking",
+                  "text": "Coughing or hacking"
+                },
+                {
+                  "value": "Gagging or retching",
+                  "text": "Gagging or retching"
+                },
+                {
+                  "value": "Labored breathing",
+                  "text": "Labored Breathing"
+                },
+                {
+                  "value": "Exercise and heat intolerance",
+                  "text": "Exercise and heat intolerance"
+                },
+                {
+                  "value": "Tongue turning blue",
+                  "text": "Tongue or gums turning blue"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "noneText": "Don't know",
+              "otherText": "Other (please describe)"
+            },
+            {
+              "type": "rating",
+              "name": "lvngErlyImmediateDanger",
+              "title": "How severe did you think {lndgRootCmpnName}'s early symptoms were?",
+              "description": "1 = mild, 5 = severe",
+              "isRequired": true
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "lvngErlyVetVisitPanel",
+          "elements": [
+
+
+            {
+              "type": "radiogroup",
+              "name": "lvngErlyVetVisit",
+              "title": "During this early stage, did you have an opportunity to discuss {lndgRootCmpnName}'s condition with your primary vet before the symptoms worsened?",
+              "choices": [
+                "Yes",
+                "No",
+                "Don't remember"
+              ]
+            },
+
+            {
+            "type": "radiogroup",
+            "name": "lvngErlyVetVisitDiagnosis",
+            "title": "To what did your primary vet ascribe {lndgRootCmpnName}'s symptoms?",
+            "visibleIf": "{lvngErlyVetVisit} = 'Yes'",
+            "required": true,
+            "choices": [
+                {
+                  "value": "1",
+                  "text": "Possible LP"
+                },
+                {
+                  "value": "2",
+                  "text": "Reflux"
+                },
+                {
+                "value": "3",
+                "text": "Other"
+                }
+              ],
+              "choicesOrder": "none",
+              "otherText": "Other"
+            },
+
+
+
+
+
+            {
+              "type": "rating",
+              "name": "lvngErlyVetVisitConfidence",
+              "title": "How confident were you in your primary vet's evaluation of {lndgRootCmpnName}'s symptoms?",
+              "description": "1 = not confident, 5 = very confident",
+              "isRequired": true,
+              "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" },
+              { "value": "na", "text": "Don't know" }
+              ]
+            }
+
+          ]
+        }
+      ]
+    }
+  ]
+}

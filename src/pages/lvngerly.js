@@ -2,7 +2,7 @@ import React from 'react'
 import SurveyComponent from '@/components/SurveyComponent'
 import Link from 'next/link';
 
-const LvngInfo = () => {
+const LvngErly = () => {
   return (
       <section className="section">
         <div className="section_content">
@@ -31,7 +31,7 @@ const LvngInfo = () => {
           </div>
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'lvngInfo_page' />
+            <SurveyComponent startPageName = 'lvngErly_page' />
           </div>
 
         </div>
@@ -39,4 +39,4 @@ const LvngInfo = () => {
   )
 }
 
-export default LvngInfo
+export default LvngErly

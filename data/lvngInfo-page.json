@@ -8,7 +8,12 @@
         {
           "type": "html",
           "name": "lvngInfoHeading",
-          "html": "<h2>How did you learn about laryngeal paralysis (LP)?</h2>"
+          "html": "<h3>How did you learn about laryngeal paralysis (LP)?</h3>"
+        },
+        {
+          "type": "html",
+          "name": "lvngCmpnAboutCompText",
+          "html": "<p>This section asks some questions about how you learned about LP and whether the information you found helped you make decisions for {lndgRootCmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
         },
         {
           "type": "panel",

@@ -13,7 +13,7 @@
         {
           "type": "html",
           "name": "lvngCmpnAboutCompText",
-          "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
+          "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to complete the survey. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances.</p>"
         },
         {
           "type": "panel",
@@ -44,7 +44,7 @@
                 {
                   "type": "text",
                   "name": "lvngCmpnBreed",
-                  "title": "Breed or mix:",
+                  "title": "Breed or mix (if unknown, type 'Don't know'):",
                   "isRequired": true
                 },
                 {
@@ -60,7 +60,7 @@
             {
               "type": "panel",
               "name": "lvngCmpnDetailsAge",
-              "title": "What is {lndgRootCmpnName}'s age (in years and months) and gender?",
+              "title": "What is {lndgRootCmpnName}'s approximate age (in years and months)?",
               "elements": [
                 {
                   "type": "text",

@@ -30,8 +30,21 @@
   "lvngInfoBestSource": [
     "Facebook groups"
   ],
+  "lvngInfoHardToUnderstand": "4",
   "lvngInfoContradictory": "4",
   "lvngInfoHardAnswers": "3",
+
+  "lvngEarlyFirstSignsAgeYears": "11",
+  "lvngEarlyFirstSignsAgeMonths": "2",
+  "lvngErlySymptoms": [
+    "Gagging or retching",
+    "Exercise and heat intolerance",
+    "Coughing or hacking"
+  ],
+  "lvngErlyImmediateDanger": "1",
+
+
+
   "dcsdUserContact": "example@example.com",
   "dcsdCmpnName": "Bee",
   "dcsdCmpnBreed": "Lab",

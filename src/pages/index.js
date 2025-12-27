@@ -43,6 +43,9 @@ const Home = () => {
             <Link href="/lvnginfo">
               lvngInfo 
             </Link>
+            <Link href="/lvngerly">
+              lvngErly 
+            </Link>
             <Link href="/dcsdroot">
               dcsdRoot :-( 
             </Link>
