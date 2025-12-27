@@ -1,6 +1,8 @@
 {
-  "lndgCmpnName": "Billie",
+  "lndgRootCmpnName": "Miss B",
+  "lndgRootCrossedOver": "living",
   "lvngRootUserName": "Jane",
+  "lvngRootUserCountry": "United Kingdom",
   "lvngRootUserAge": "Over 65",
   "lvngRootUserGender": "Woman",
   "lvngRootUserContactType": "false",
@@ -18,13 +20,18 @@
   "lvngCmpnWeight": 50,
   "lvngCmpnWeightUnits": true,
   "lvngCmpnDemeanor": 5,
+  "lvngInfoPriorInfo": false,
   "lvngInfoLevel": 3,
   "lvngInfoSources": [
-    "Private websites",
+    "Institutional websites",
     "Facebook groups",
     "Veterinary specialists"
   ],
-  "lvngInfoBestSource": "Facebook groups",
+  "lvngInfoBestSource": [
+    "Facebook groups"
+  ],
+  "lvngInfoContradictory": "4",
+  "lvngInfoHardAnswers": "3",
   "dcsdUserContact": "example@example.com",
   "dcsdCmpnName": "Bee",
   "dcsdCmpnBreed": "Lab",

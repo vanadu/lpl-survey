@@ -107,7 +107,7 @@
             },
             {
               "type": "panel",
-              "title": "A little about you",
+              "title": "First, a little about you...",
               "name": "lvngRootAboutUserPanel",
               "elements": [
                 {
@@ -117,8 +117,32 @@
                   "isRequired": true
                 },
                 {
+                  "type": "dropdown",
+                  "name": "lvngRootUserCountry",
+                  "title": "Country:",
+                  "isRequired": true,
+                  "choices": [
+                    "United States",
+                    "United Kingdom",
+                    "Germany",
+                    "Canada",
+                    "Australia/NZ",
+                    "France",
+                    "Spain",
+                    "Portugal"
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "livRootOptionalInfo",
+              "title": "Age and Gender (optional)",
+              "elements": [
+                {
                   "type": "html",
-                  "name": "",
+                  "name": "lvngRootDemographicInfo",
                   "title": "",
                   "html": "<p>We're asking for optional basic demographic information to help understand how different people manage the animals in their care. "
                 },
@@ -207,68 +231,6 @@
                   "isRequired": true
                 }
               ]
-            },
-            {
-              "type": "panel",
-              "title": "Your Beloved Companions",
-              "name": "lvngRootUserAnimalsPanel",
-              "elements": [
-                {
-                  "type": "dropdown",
-                  "name": "lvngRootAnimalsCount",
-                  "title": "How many animals do you have in your care?",
-                  "required": true,
-                  "choices": [
-                    {
-                      "value": "1",
-                      "text": "Just {lndgCmpnName}"
-                    },
-                    {
-                      "value": "2",
-                      "text": "Two"
-                    },
-                    {
-                      "value": "3",
-                      "text": "Three"
-                    },
-                    {
-                      "value": "4",
-                      "text": "More than three"
-                    }
-                  ],
-                  "choicesOrder": "none",
-                  "otherText": "More than three",
-                  "choicesMin": 1
-                },
-                {
-                  "type": "boolean",
-                  "name": "lvngRootHasInsurance",
-                  "required": true,
-                  "title": "Do you have pet insurance for {lndgCmpnName}?"
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "lvngRootHasInsuranceOther",
-                  "title": "Do you have pet insurance for your other animals?",
-                  "visibleIf": "{lvngRootAnimalsCount} != 1",
-                  "required": true,
-                  "choices": [
-                    {
-                      "value": "1",
-                      "text": "No"
-                    },
-                    {
-                      "value": "2",
-                      "text": "Some, but not all"
-                    },
-                    {
-                      "value": "3",
-                      "text": "All"
-                    }
-                  ],
-                  "choicesOrder": "none"
-                }
-              ]
             }
           ]
         }
@@ -302,7 +264,7 @@
                     {
                       "type": "radiogroup",
                       "name": "lvngCmpnAnimalType",
-                      "title": "What kind of animal is Billie?",
+                      "title": "What kind of animal is {lndgRootCmpnName}?",
                       "isRequired": true,
                       "choices": [
                         "Dog",
@@ -315,7 +277,7 @@
                 {
                   "type": "panel",
                   "name": "lvngCmpnDetailsBreedGender",
-                  "title": "What is {lndgCmpnName}'s name and breed or breed mix and gender?",
+                  "title": "What is {lndgRootCmpnName}'s name and breed or breed mix and gender?",
                   "elements": [
                     {
                       "type": "text",
@@ -336,7 +298,7 @@
                 {
                   "type": "panel",
                   "name": "lvngCmpnDetailsAge",
-                  "title": "What is {lndgCmpnName}'s age (in years and months) and gender?",
+                  "title": "What is {lndgRootCmpnName}'s age (in years and months) and gender?",
                   "elements": [
                     {
                       "type": "text",
@@ -377,7 +339,7 @@
                 {
                   "type": "panel",
                   "name": "lvngCmpnDetailsWeight",
-                  "title": "About how much does {lndgCmpnName} weigh in pounds or kilos?",
+                  "title": "About how much does {lndgRootCmpnName} weigh in pounds or kilos?",
                   "elements": [
                     {
                       "type": "text",
@@ -409,12 +371,73 @@
                 {
                   "type": "panel",
                   "name": "lvngCmpnDetailsDemeanor",
-                  "title": "How energetic, excitable, or anxious is {lndgCmpnName}? (1=very calm, 5=very excitable)?",
+                  "title": "How energetic, excitable, or anxious is {lndgRootCmpnName}? (1=very calm, 5=very excitable)?",
                   "elements": [
                     {
                       "type": "rating",
                       "name": "lvngCmpnDemeanor",
                       "title": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "panel",
+                  "name": "lvngRootUserAnimalsPanel",
+                  "elements": [
+                    {
+                      "type": "dropdown",
+                      "name": "lvngRootAnimalsCount",
+                      "title": "How many animals do you have in your care?",
+                      "required": true,
+                      "choices": [
+                        {
+                          "value": "1",
+                          "text": "Just {lndgRootCmpnName}"
+                        },
+                        {
+                          "value": "2",
+                          "text": "Two"
+                        },
+                        {
+                          "value": "3",
+                          "text": "Three"
+                        },
+                        {
+                          "value": "4",
+                          "text": "More than three"
+                        }
+                      ],
+                      "choicesOrder": "none",
+                      "otherText": "More than three",
+                      "choicesMin": 1
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "lvngRootHasInsurance",
+                      "required": true,
+                      "title": "Do you have pet insurance for {lndgRootCmpnName}?"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "lvngRootHasInsuranceOther",
+                      "title": "Do you have pet insurance for your other animals?",
+                      "visibleIf": "{lvngRootAnimalsCount} != 1",
+                      "required": true,
+                      "choices": [
+                        {
+                          "value": "1",
+                          "text": "No"
+                        },
+                        {
+                          "value": "2",
+                          "text": "Some, but not all"
+                        },
+                        {
+                          "value": "3",
+                          "text": "All"
+                        }
+                      ],
+                      "choicesOrder": "none"
                     }
                   ]
                 }
@@ -434,68 +457,170 @@
             {
               "type": "html",
               "name": "lvngInfoHeading",
-              "html": "<h2>What do you know?</h2>"
-            },
-            {
-              "type": "html",
-              "name": "lvngInfoText",
-              "html": "<p>What do you know about LarPar?</p>"
+              "html": "<h2>How did you learn about LarPar?</h2>"
             },
             {
               "type": "panel",
-              "name": "panel1",
+              "name": "lvngInfoInformedLevel",
               "elements": [
+                {
+                  "type": "boolean",
+                  "name": "lvngInfoPriorInfo",
+                  "title": "Had you ever heard of LarPar before {lndgRootCmpnName} got it?",
+                  "isRequired": true
+                },
                 {
                   "type": "rating",
                   "name": "lvngInfoLevel",
-                  "title": "How well informed about {lndgCmpnName}'s laryngeal paralysis do you consider yourself?",
+                  "title": "How well informed about {lndgRootCmpnName}'s laryngeal paralysis do you consider yourself now?",
                   "isRequired": true,
-                  "description": "(1=not well informed, 5=very well informed)"
+                  "description": "(1=not well informed, 5=very well informed)",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "na",
+                      "text": "Don't know"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "type": "checkbox",
-              "name": "lvngInfoSources",
-              "title": "Which sources of information about LP did you use to inform yourself?",
-              "choices": [
+              "type": "panel",
+              "name": "lvngInfoSourcesPanel",
+              "elements": [
                 {
-                  "value": "Institutional Websites",
-                  "text": "Institutional websites (i.e. universities)"
+                  "type": "checkbox",
+                  "name": "lvngInfoSources",
+                  "title": "Which sources of information about LP did you use to inform yourself?",
+                  "choices": [
+                    {
+                      "value": "Institutional Websites",
+                      "text": "Institutional websites (i.e. universities)"
+                    },
+                    {
+                      "value": "Private websites",
+                      "text": "Private websites"
+                    },
+                    {
+                      "value": "Facebook groups",
+                      "text": "Facebook groups"
+                    },
+                    {
+                      "value": "Primary veterinarians",
+                      "text": "Primary veterinarians"
+                    },
+                    {
+                      "value": "Veterinary specialists",
+                      "text": "Veterinary specialists (i.e. surgeons)"
+                    },
+                    {
+                      "value": "AI models",
+                      "text": "AI models like ChatGPT"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true,
+                  "noneText": "Don't know",
+                  "otherText": "Other (please describe)"
                 },
                 {
-                  "value": "Private websites",
-                  "text": "Private websites"
-                },
-                {
-                  "value": "Facebook groups",
-                  "text": "Facebook groups"
-                },
-                {
-                  "value": "Primary veterinarians",
-                  "text": "Primary veterinarians"
-                },
-                {
-                  "value": "Veterinary specialists",
-                  "text": "Veterinary specialists (i.e. surgeons)"
-                },
-                {
-                  "value": "AI models",
-                  "text": "AI models like ChatGPT"
+                  "type": "dropdown",
+                  "name": "lvngInfoBestSource",
+                  "title": "Which of those sources did you find most useful?",
+                  "choices": []
                 }
               ]
             },
             {
-              "type": "dropdown",
-              "name": "lvngInfoBestSource",
-              "title": "Which of those sources did you find most useful?",
-              "choices": [
-                "Institutional Websites",
-                "Private websites",
-                "Facebook groups",
-                "Primary veterinarians",
-                "Veterinary specialists",
-                "AI models like ChatGPT"
+              "type": "panel",
+              "name": "lvngInfoQualityPanel",
+              "elements": [
+                {
+                  "type": "rating",
+                  "name": "lvngInfoContradictory",
+                  "title": "Do you feel like a lot of the information you got about LarPar was contradictory?",
+                  "description": "1 = not at all contridictory, 5 = very contradictory",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "na",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "lvngInfoHardAnswers",
+                  "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {lndgRootCmpnName}?",
+                  "description": "1 = yes, very hard, 5 = No, not hard at all",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "na",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
               ]
             }
           ]

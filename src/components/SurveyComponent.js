@@ -101,6 +101,30 @@ export default function SurveyComponent({ startPageName }) {
       }
     }, [startPageName, survey]);
 
+    // !VA IMPORTANT: This defines WHICH options will appear in the lvngInfoBestSource dropdown! You can't do this in dev because onValueChanged looks for USERDEFINED changes, not prefilled ones. I worked around this by making lvngInfoSources and lvngInfoBestSource optional for now. But this will need to be dealt with in production.
+    useEffect(() => {
+      function handleValueChanged(sender, options) {
+        if (options.name === "lvngInfoSources") {
+          const selectedInfoSources = options.value || [];
+          const dropdown = sender.getQuestionByName("lvngInfoBestSource");
+          // Update dropdown choices to match checked fruits
+          dropdown.choices = selectedInfoSources;
+          // Clear dropdown if its value is no longer in the choices
+          if (!selectedInfoSources.includes(dropdown.value)) {
+            dropdown.value = undefined;
+          }
+        }
+      }
+      survey.onValueChanged.add(handleValueChanged);
+      // Clean up on unmount
+      return () => {
+        survey.onValueChanged.remove(handleValueChanged);
+      };
+    }, [survey]);
+
+
+
+
 
 
 

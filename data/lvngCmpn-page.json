@@ -26,7 +26,7 @@
                   {
                     "type": "radiogroup",
                     "name": "lvngCmpnAnimalType",
-                    "title": "What kind of animal is Billie?",
+                    "title": "What kind of animal is {lndgRootCmpnName}?",
                     "isRequired": true,
                     "choices": [
                       "Dog",
@@ -39,7 +39,7 @@
               {
               "type": "panel",
               "name": "lvngCmpnDetailsBreedGender",
-              "title": "What is {lndgCmpnName}'s name and breed or breed mix and gender?",
+              "title": "What is {lndgRootCmpnName}'s breed or breed mix and gender?",
               "elements": [
                 {
                   "type": "text",
@@ -60,7 +60,7 @@
             {
               "type": "panel",
               "name": "lvngCmpnDetailsAge",
-              "title": "What is {lndgCmpnName}'s age (in years and months) and gender?",
+              "title": "What is {lndgRootCmpnName}'s age (in years and months) and gender?",
               "elements": [
                 {
                   "type": "text",
@@ -101,7 +101,7 @@
             {
               "type": "panel",
               "name": "lvngCmpnDetailsWeight",
-              "title": "About how much does {lndgCmpnName} weigh in pounds or kilos?",
+              "title": "About how much does {lndgRootCmpnName} weigh in pounds or kilos?",
               "elements": [
                 {
                   "type": "text",
@@ -133,7 +133,7 @@
             {
               "type": "panel",
               "name": "lvngCmpnDetailsDemeanor",
-              "title": "How energetic, excitable, or anxious is {lndgCmpnName}? (1=very calm, 5=very excitable)?",
+              "title": "How energetic, excitable, or anxious is {lndgRootCmpnName}? (1=very calm, 5=very excitable)?",
               "elements": [
                 {
                   "type": "rating",
@@ -142,7 +142,69 @@
                   
                 }
               ]
+            },
+                    {
+          "type": "panel",
+          "name": "lvngRootUserAnimalsPanel",
+          "elements": [
+
+            {
+            "type": "dropdown",
+            "name": "lvngRootAnimalsCount",
+            "title": "How many animals do you have in your care?",
+            "required": true,
+            "choices": [
+              {
+                "value": "1",
+                "text": "Just {lndgRootCmpnName}"
+              },
+              {
+                "value": "2",
+                "text": "Two"
+              },
+              {
+                "value": "3",
+                "text": "Three"
+              },
+              {
+                "value": "4",
+                "text": "More than three"
+              }
+            ],
+            "choicesOrder": "none",
+            "otherText": "More than three",
+            "choicesMin": 1
+            },
+            {
+            "type": "boolean",
+            "name": "lvngRootHasInsurance",
+            "required": true,
+            "title": "Do you have pet insurance for {lndgRootCmpnName}?"
+             },
+            {
+            "type": "radiogroup",
+            "name": "lvngRootHasInsuranceOther",
+            "title": "Do you have pet insurance for your other animals?",
+            "visibleIf": "{lvngRootAnimalsCount} != 1",
+            "required": true,
+            "choices": [
+              {
+                "value": "1",
+                "text": "No"
+              },
+              {
+                "value": "2",
+                "text": "Some, but not all"
+              },
+              {
+                "value": "3",
+                "text": "All"
+              }
+              ],
+              "choicesOrder": "none"
             }
+          ]
+        }
 
           ]
         }

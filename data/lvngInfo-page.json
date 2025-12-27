@@ -8,33 +8,46 @@
         {
           "type": "html",
           "name": "lvngInfoHeading",
-          "html": "<h2>What do you know?</h2>"
-        },
-        {
-          "type": "html",
-          "name": "lvngInfoText",
-          "html": "<p>What do you know about LarPar?</p>"
+          "html": "<h2>How did you learn about laryngeal paralysis (LP)?</h2>"
         },
         {
           "type": "panel",
-          "name": "panel1",
+          "name": "lvngInfoInformedLevel",
           "elements": [
+            {
+              "type": "boolean",
+              "name": "lvngInfoPriorInfo",
+              "title": "Had you ever heard of LP before {lndgRootCmpnName} got it?",
+              "isRequired": true
+            },
             {
               "type": "rating",
               "name": "lvngInfoLevel",
-              "title": "How well informed about {lndgCmpnName}'s laryngeal paralysis do you consider yourself?",
+              "title": "How well informed about {lndgRootCmpnName}'s LP do you consider yourself now?",
               "isRequired": true,
-              "description": "(1=not well informed, 5=very well informed)"
+              "description": "(1=not well informed, 5=very well informed)",
+              "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" },
+              { "value": "na", "text": "Don't know" }
+              ]
             }
           ]
         },
         {
+          "type": "panel",
+          "name": "lvngInfoSourcesPanel",
+          "elements": [
+            {
               "type": "checkbox",
               "name": "lvngInfoSources",
               "title": "Which sources of information about LP did you use to inform yourself?",
               "choices": [
                 {
-                  "value": "Institutional Websites",
+                  "value": "Institutional websites",
                   "text": "Institutional websites (i.e. universities)"
                 },
                 {
@@ -54,26 +67,84 @@
                   "text": "Veterinary specialists (i.e. surgeons)"
                 },
                 {
+                  "value": "Social media video",
+                  "text": "Youtube, Instagram or other video"
+                },
+                {
+                  "value": "Social media chat",
+                  "text": "Reddit or other social media chat"
+                },
+                {
                   "value": "AI models",
                   "text": "AI models like ChatGPT"
                 }
-              ]
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "noneText": "Don't know",
+              "otherText": "Other (please describe)"
             },
             {
               "type": "dropdown",
               "name": "lvngInfoBestSource",
-              "title": "Which of those sources did you find most useful?",
+              "title": "Which of those information sources did you find MOST useful (please select one)?",
               "choices": [
-                "Institutional Websites",
-                "Private websites",
-                "Facebook groups",
-                "Primary veterinarians",
-                "Veterinary specialists",
-                "AI models like ChatGPT"
+                "Facebook groups"
               ]
             }
-
-
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "lvngInfoQualityPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "lvngInfoHardToUnderstand",
+              "title": "Did you find the information you got about LP difficult to understand?",
+              "description": "1 = no, not difficult at all, 5 = very difficult",
+              "isRequired": true,
+              "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" },
+              { "value": "na", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "lvngInfoContradictory",
+              "title": "Do you feel like a lot of the information you got about LP was contradictory?",
+              "description": "1 = not at all contridictory, 5 = very contradictory",
+              "isRequired": true,
+              "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" },
+              { "value": "na", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "lvngInfoHardAnswers",
+              "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {lndgRootCmpnName}?",
+              "description": "1 = No, not hard at all, 5 = yes, very hard",
+              "isRequired": true,
+              "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" },
+              { "value": "na", "text": "Don't know" }
+              ]
+            }
+          ]
+        }
       ]
     }
   ]

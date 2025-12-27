@@ -28,15 +28,18 @@ export default function MasterSurveyComponent() {
   // !VA 
   const handleComplete = useCallback(async (sender) => {
     const result = sender.data;
-    console.log("Survey results:", result);
-
+    const timestampedResult = {
+    ...result,
+    completedAt: new Date().toISOString(), // Add ISO-8601 formatted date-time
+  };
+    console.log("Survey results:", timestampedResult);
     try {
       const response = await fetch('/api/save-survey', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(result),
+        body: JSON.stringify(timestampedResult),
       });
 
       const data = await response.json();
@@ -57,7 +60,34 @@ export default function MasterSurveyComponent() {
     addCustomClasses(options.panel, options.htmlElement);
   });
 
-  // !VA This is probably wrong! But here I need to prefill the question responses
+
+  // !VA IMPORTANT: This defines WHICH options will appear in the lvngInfoBestSource dropdown! You can't do this in dev because onValueChanged looks for USERDEFINED changes, not prefilled ones. I worked around this by making lvngInfoSources and lvngInfoBestSource optional for now. But this will need to be dealt with in production.
+  useEffect(() => {
+    function handleValueChanged(sender, options) {
+      if (options.name === "lvngInfoSources") {
+        const selectedInfoSources = options.value || [];
+        const dropdown = sender.getQuestionByName("lvngInfoBestSource");
+        // Update dropdown choices to match checked fruits
+        dropdown.choices = selectedInfoSources;
+        // Clear dropdown if its value is no longer in the choices
+        if (!selectedInfoSources.includes(dropdown.value)) {
+          dropdown.value = undefined;
+        }
+      }
+    }
+    survey.onValueChanged.add(handleValueChanged);
+    // Clean up on unmount
+    return () => {
+      survey.onValueChanged.remove(handleValueChanged);
+    };
+  }, [survey]);
+
+
+
+
+
+
+  // !VA Here prefill the question responses
   useEffect(() => {
     if (prefillData) {
       survey.data = prefillData;
