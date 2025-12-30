@@ -143,69 +143,67 @@
                 }
               ]
             },
-                    {
-          "type": "panel",
-          "name": "lvngRootUserAnimalsPanel",
-          "elements": [
-
             {
-            "type": "dropdown",
-            "name": "lvngRootAnimalsCount",
-            "title": "How many animals do you have in your care?",
-            "required": true,
-            "choices": [
-              {
-                "value": "1",
-                "text": "Just {lndgRootCmpnName}"
-              },
-              {
-                "value": "2",
-                "text": "Two"
-              },
-              {
-                "value": "3",
-                "text": "Three"
-              },
-              {
-                "value": "4",
-                "text": "More than three"
-              }
-            ],
-            "choicesOrder": "none",
-            "otherText": "More than three",
-            "choicesMin": 1
-            },
-            {
-            "type": "boolean",
-            "name": "lvngRootHasInsurance",
-            "required": true,
-            "title": "Do you have pet insurance for {lndgRootCmpnName}?"
-             },
-            {
-            "type": "radiogroup",
-            "name": "lvngRootHasInsuranceOther",
-            "title": "Do you have pet insurance for your other animals?",
-            "visibleIf": "{lvngRootAnimalsCount} != 1",
-            "required": true,
-            "choices": [
-              {
-                "value": "1",
-                "text": "No"
-              },
-              {
-                "value": "2",
-                "text": "Some, but not all"
-              },
-              {
-                "value": "3",
-                "text": "All"
-              }
-              ],
-              "choicesOrder": "none"
+            "type": "panel",
+            "name": "lvngRootUserAnimalsPanel",
+            "elements": [
+                {
+                "type": "dropdown",
+                "name": "lvngRootAnimalsCount",
+                "title": "How many animals do you have in your care?",
+                "required": true,
+                "choices": [
+                  {
+                    "value": "1",
+                    "text": "Just {lndgRootCmpnName}"
+                  },
+                  {
+                    "value": "2",
+                    "text": "Two"
+                  },
+                  {
+                    "value": "3",
+                    "text": "Three"
+                  },
+                  {
+                    "value": "4",
+                    "text": "More than three"
+                  }
+                ],
+                "choicesOrder": "none",
+                "otherText": "More than three",
+                "choicesMin": 1
+                },
+                {
+              "type": "boolean",
+              "name": "lvngRootHasInsurance",
+              "required": true,
+              "title": "Do you have pet insurance for {lndgRootCmpnName}?"
+                },
+                {
+                "type": "radiogroup",
+                "name": "lvngRootHasInsuranceOther",
+                "title": "Do you have pet insurance for your other animals?",
+                "visibleIf": "{lvngRootAnimalsCount} != 1",
+                "required": true,
+                "choices": [
+                  {
+                    "value": "1",
+                    "text": "No"
+                  },
+                  {
+                    "value": "2",
+                    "text": "Some, but not all"
+                  },
+                  {
+                    "value": "3",
+                    "text": "All"
+                  }
+                  ],
+                  "choicesOrder": "none"
+                }
+              ]
             }
-          ]
-        }
-
           ]
         }
       ]

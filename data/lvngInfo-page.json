@@ -26,19 +26,10 @@
               "isRequired": true
             },
             {
-              "type": "rating",
-              "name": "lvngInfoLevel",
-              "title": "How well informed about {lndgRootCmpnName}'s LP do you consider yourself now?",
-              "isRequired": true,
-              "description": "(1=not well informed, 5=very well informed)",
-              "rateValues": [
-              { "value": 1, "text": "1" },
-              { "value": 2, "text": "2" },
-              { "value": 3, "text": "3" },
-              { "value": 4, "text": "4" },
-              { "value": 5, "text": "5" },
-              { "value": "na", "text": "Don't know" }
-              ]
+              "type": "boolean",
+              "name": "lvngInfoLearningMore",
+              "title": "Now that you know about LP, have you been trying to learn more about it?",
+              "isRequired": true
             }
           ]
         },
@@ -49,7 +40,7 @@
             {
               "type": "checkbox",
               "name": "lvngInfoSources",
-              "title": "Which sources of information about LP did you use to inform yourself?",
+              "title": "Which sources of information have you accessed to learn about LP?",
               "choices": [
                 {
                   "value": "Institutional websites",

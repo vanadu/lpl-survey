@@ -34,17 +34,27 @@
   "lvngInfoContradictory": "4",
   "lvngInfoHardAnswers": "3",
 
-  "lvngEarlyFirstSignsAgeYears": "11",
-  "lvngEarlyFirstSignsAgeMonths": "2",
+  "lvngErlyFirstSignsAgeYears": "11",
+  "lvngErlyFirstSignsAgeMonths": "2",
   "lvngErlySymptoms": [
     "Gagging or retching",
     "Exercise and heat intolerance",
     "Coughing or hacking"
   ],
-  "lvngErlyImmediateDanger": "1",
-
-
-
+  "lvngErlySymptomSeverity": "1",
+  "lvngErlyHindEndWeakness": "Don't remember",
+  "lvngErlyOtherConditions": [
+    "Acid reflux",
+    "Periodontal disease"
+  ],
+  "lvngErlyIntubated": true,
+  "lvngErlyIntubatedReason": "Teeth cleaning",
+  "lvngErlyIntubatedFacility": "Primary veterinarian",
+  "lvngErlyIntubationConcerns": true,
+  "lvngErlyIntubationSymptoms": [
+    "Gagging and retching",
+    "Difficulty breathing"
+  ],
   "dcsdUserContact": "example@example.com",
   "dcsdCmpnName": "Bee",
   "dcsdCmpnBreed": "Lab",
