@@ -109,6 +109,16 @@
               "title": "How severe did you think {lndgRootCmpnName}'s early symptoms were?",
               "description": "1 = mild, 5 = severe",
               "isRequired": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "lvngErlyHindEndWeakness",
+              "title": "Was {lndgRootCmpnName} already showing signs of hind-end weakness in this early stage?",
+              "choices": [
+                "Yes",
+                "No",
+                "Don't remember"
+              ]
             }
           ]
         },
@@ -116,8 +126,6 @@
           "type": "panel",
           "name": "lvngErlyVetVisitPanel",
           "elements": [
-
-
             {
               "type": "radiogroup",
               "name": "lvngErlyVetVisit",
@@ -128,7 +136,6 @@
                 "Don't remember"
               ]
             },
-
             {
             "type": "radiogroup",
             "name": "lvngErlyVetVisitDiagnosis",
@@ -142,27 +149,35 @@
                 },
                 {
                   "value": "2",
-                  "text": "Reflux"
+                  "text": "Acid Reflux"
                 },
                 {
-                "value": "3",
+                  "value": "3",
+                  "text": "Allergies"
+                },
+                {
+                  "value": "4",
+                  "text": "Bacterial or viral infection (i.e., kennel cough)"
+                },
+                {
+                "value": "5",
                 "text": "Other"
+                },
+                {
+                "value": "6",
+                "text": "Could not say without further tests"
                 }
               ],
               "choicesOrder": "none",
               "otherText": "Other"
             },
-
-
-
-
-
             {
               "type": "rating",
               "name": "lvngErlyVetVisitConfidence",
               "title": "How confident were you in your primary vet's evaluation of {lndgRootCmpnName}'s symptoms?",
               "description": "1 = not confident, 5 = very confident",
               "isRequired": true,
+              "visibleIf": "{lvngErlyVetVisit} = 'Yes'",
               "rateValues": [
               { "value": 1, "text": "1" },
               { "value": 2, "text": "2" },
