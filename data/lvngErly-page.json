@@ -17,13 +17,13 @@
         },
         {
           "type": "panel",
-          "name": "lvngEarlyFirstSignsPanel",
+          "name": "lvngErlyFirstSignsPanel",
           "title": "About how old was {lndgRootCmpnName} (in years and months) when you first noticed signs of what you later learned was LP?",
           "elements": [
             {
               "type": "text",
               "inputType": "number",
-              "name": "lvngEarlyFirstSignsAgeYears",
+              "name": "lvngErlyFirstSignsAgeYears",
               "title": "Years",
               "isRequired": true,
               "min": "1",
@@ -40,7 +40,7 @@
             {
               "type": "text",
               "inputType": "number",
-              "name": "lvngEarlyFirstSignsAgeMonths",
+              "name": "lvngErlyFirstSignsAgeMonths",
               "title": "Months (number 1 - 12)",
               "isRequired": true,
               "min": 1,

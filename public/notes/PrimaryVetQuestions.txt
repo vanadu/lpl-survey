@@ -1,0 +1,366 @@
+NEED TO VISIBLEIF HERE BASED ON DOGNAME"S AGE!
+THESE QUESTIONS PERTAIN TO YOUR EXPERIENCE WITH YOUR ORIGINAL VETERINARIAN!
+
+
+YOUR LP JOURNEY PHASE II -- PRIMARY VETERINARIANS
+The next ZZZ survey sections are about your interactions with your primary vet or vets about dogname's LP symptoms. 
+=================================================
+
+
+PREVIOUS PRIMARY VETS  5 questions (1 visibleIF) 
+*****************************
+
+Did you ever change primary veterinarians because how they handled dogname's LP/GOLPP symptoms?
+No
+Yes, just once.
+Yes, more than once.
+
+visibleIF = Yes
+
+Why did you change veterinarians after dogname started showing symptoms of LP/GOLPP?
+Description: Please check all that apply.
+
+The prior primary vet/vets didn't seem to take dogname's symptoms seriously.
+The prior primary vet/vets didn't seem interested in determining the cause of the dogname's symptoms.
+The prior primary vet/vets ascribed dogname's symptoms to age without further explanation.
+The prior primary vet/vets ordered tests that were not pertinent to dogname's symptoms.
+I did not feel I was getting any value from first primary veterinarian's approach.
+The prior primary vet/vets misdiagnosed dogname's LP/GOLPP.
+Other
+
+
+Did your previous primary vet/s make any recommendations about dogname's LP symptoms?
+No, said nothing could be done.
+Prescribed treatments or procedures that did not help dogname.
+Recommended seeing a specialist.
+Recommended humane euthanasia.
+Other
+
+How confident were you in your previous primary vet/s' knowledge level regarding LP/GOLPP?
+Not at all confident - Very confident
+
+How satisfied were you with your previous primary veterinarian's handling of dogname's LP/GOLPP
+Very unsatisfied 			Very satisfied
+
+
+
+
+PRIMARY VETERINARIANS & YOUR LP/GOLPP JOURNEY  (9 questions, 3 visibleIf) 
+*****************************
+
+This section is about the discovery phase of your LP journey where you work with primary veterinarians to find the best path forward for dogname.
+
+
+Approximately how old was dogname when you first communicated your concerns about LP symptoms with a primary vet? 
+Description: Note: This includes your first primary vet and any subsequent ones, in case you've changed dogname's primary vet.
+Years and Months
+
+Has a surgeon, stent provider, or other specialist assumed responsibility for dogname's LP/GOLPP treatment from your current primary veterinarian?    
+Yes
+No
+Don't know
+
+VisibleIf = yes
+About how old was dogname when the surgeon, specialist, or stent provider assumed responsibility for dogname's LP/GOLPP treatment?
+Years and Months
+
+In the {calculate time } in which dogname's LP/GOLPP has been under the care of a primary veterinarian (not a specialist or surgeon), did dogname's symptoms get worse?
+No, did not get worse  yes - got much worse.
+
+
+About how many times did you visit a primary veterinarian (including your current one) about dogname's LP/GOLPP symptoms?
+Once Twice Three times More than three times Don't know
+
+About what was the total pre-insurance cost of these visits to primary veterinarians about dogname's LP/GOLPP symptoms?
+Info: 'Pre-insurance cost' refers to the total amount billed, not your out-of-pocket cost. If you don't know exactly, please guestimate.
+Under $1000  $1000 -$3000  Over $3000
+Don't know
+Prefer not to say
+
+
+
+
+
+YOUR CURRENT PRIMARY VET & DOGNAME'S LP/GOLPP (10 Questions, 5 visibleIf)
+***************************
+
+These questions are about your current primary veterinarian's engagement with dogname's LP/GOLPP.
+
+
+When you began working with your current primary veterinarian, did they suggest that LP/GOLPP might be the cause of the symptoms?
+Yes
+No
+Don't remember
+
+
+Did your current primary order any imaging to determine the cause of the symptoms?
+yes/no/don't know
+
+
+What imaging procedures did your current primary vet order?
+visibleIf
+If you're not sure if a specific imaging was done on dogname, please leave it unchecked. 
+No
+X-ray
+CT scan
+Ultrasound
+PET Scan
+Visual exam under sedation
+Endoscope or laryngoscope under anesthesia
+Don't know
+
+Did your current primary vet give you a diagnosis of LP for dogname? 
+Info: If your primary talked about LP/GOLPP but you're unsure about what a definitive diagnosis entails, select option 2.
+1) No, could not give a possible cause for the symptoms.
+2) No, suggested it as possible cause for symptoms but deferred to a specialist for diagnosis
+3) Yes, provided a diagnosis of LP but recommended confirmation by a specialist
+4) Yes, provided a diagnosis and did not recommend visiting a specialist to confirm.
+Don't know
+
+VISIBLEIF
+What diagnostic procedure did your current primary veterinarian use to arrive at their diagnosis?
+Info: Please check all that you know for sure apply. If you're not sure, please leave unchecked.
+Visible/audible symptoms during routine physical exam
+X-ray
+Sedated visual exam of larynx area or sedated endoscopy
+Ultrasound
+Video endoscope or laryngoscope under anesthesia
+Don't know exactly
+
+visibleIF
+Was dogname intubated for the LP/GOLPP imaging or diagnostic procedure?
+Yes
+No
+Don't know
+
+Did your current primary veterinarian observe any inflammation or irritation in the larynx/pharynx area?
+What is the pharynx?
+Yes
+No
+Don't know
+
+Did your current primary veterinarian provide any treatment or medications to alleviate symptoms?
+No
+Yes
+Don't remember
+
+visibleIf = YES:
+What pharmaceuticals if any did your primary veterinarian prescribe or recommend for dogname's LP/GOLPP?
+
+Doxepin
+Trazadone
+Gabapentin
+Prednisone
+NSAID like carprofen
+Librela/Beransa
+Cerenia/maropitant citrate
+Don't Know
+Other 
+
+Did your current primary veterinarian recommend any non-pharmaceutical, non-prescription supplements, herbal remedies, or holistic approaches to LP treatment?
+Yes/No/Don't know
+
+visibleIf = YES:
+What products did they recommend?
+Acupuncture
+Physical therapy
+LLLT/Cold laser therapy
+CBD/Hemp-based products
+Commercially-available non-prescription supplements
+Don't know
+Other
+
+
+
+**********************************************
+BREATHING CRISIS -- SEPARATE PAGE (8 Questions, 4 visibleIf)
+
+
+Has dogname ever had a breathing crisis/emergency that required a special visit to a veterinary professional?
+Yes
+No
+Don't know
+
+VisibleIF
+How many times did dogname have to visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?
+Once
+Twice
+Three times
+More than three times
+Don't know
+
+visibleIF
+About what was the total pre-insurance cost of these visits to veterinary professionals due to LP/GOLPP-induced breathing crises/emergencies?
+Info: 'Pre-insurance cost' refers to the total amount billed, not your out-of-pocket cost. If you don't know exactly, please guestimate.
+Under $1000  $1000 -$3000  $3000-$5000 Over $5000
+
+
+Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?
+Yes
+No
+Don't remember
+
+visibleIf = Yes
+What advice did they give you?
+Administer a sedative
+Get to a cool place
+Apply ice, cold water, cooling garment or other cooling agent
+Blow air into nostrils (CPR)
+Get to an emergency facility immediately
+Other
+
+
+Did any veterinary professional provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?
+No, I didn't receive anything.
+I received a sedative
+I received a steriod, such as prednisone
+I received supplemental oxygen
+Other substance or product
+Don't remember
+
+
+visibleIf
+In what form was the sedative or steriod provided?
+Injectible
+Liquid
+Suppository
+Paste or gel
+Pill
+Don't know 
+
+
+
+Where did you get the most helpful advice about how to deal with an LP/GOLPP-induced breathing crisis?
+Primary veterinarian
+Specialist/Surgeon
+Emergency veterinarian
+Veterinary technician
+Facebook groups
+Don't know
+Other
+
+*********************************************
+YOUR PRIMARY VET'S INPUT & ADVICE
+
+
+Did your current primary veterinarian give you helpful inforamation about how LP/GOLPP might affect dogname?
+Yes/No
+
+visibleIf
+
+What information or recommendation did you receive?
+Possible loss of bark
+Risk of suffocation
+Exacerbating effect of hot, humid weather
+Risk of recurring breathing crisis
+Necessity of avoiding exercise and excitement
+Necessity of keeping the patient cool and calm
+Use of fans to promote air movement
+Other
+
+Did your current primary advise you about treatment options (i.e., surgery, stent, medical management) regarding dogname's LP/GOLPP?
+Yes/No/Don't know 
+
+visibleIf
+
+What were the options they named?
+Veterinary-medical treatment such as tieback surgery, BVEAP, or stent
+Management of symptoms with pharmaceuticals and/or supplements
+Acupuncture or other non-phamaceutical treatment
+Humane euthanasia
+Other
+
+
+Did your primary veterinarian make a recommendation about tieback or other invasive LP/GOLPP surgeries for dogname?
+Info: What is UAL (tieback) surgery?
+Advised for
+Advised against
+Did not make a specific recommendation
+Don't know
+
+
+
+visibleIf = Advised against
+What reason did your primary veterinarian give for advising against invasive procedures such as UAL (tieback) surgery?
+Risk of recurring post-op aspiration pneumonia
+Risk of general post-op complications
+Risk of procedure failure or death during or immediately following procedure
+Risk of anesthesia-related complications
+High cost vs potential benefit
+Low prospects for quality of life post-surgery
+Dogname's age
+Gave no specific reason
+Other
+
+
+visibleIf = advised against
+Do you feel like your recommendation against surgery was because of dogname's particular condition or due to a negative perception of tieback surgery in general?
+Because of dogname's specific condition
+Because of a generally negative perception of tieback or other LP surgery.
+Other
+Don't know
+
+How confident were you in your current primary veterinarian's knowledge level regarding LP/GOLPP?
+Not confident - Very confident
+
+How satisfied were you with your current primary veterinarian's handling of dogname's LP/GOLPP
+Very unsatisfied 			Very satisfied
+
+
+
+
+YOUR LP JOURNEY PHASE III -- TREATMENT DECISIONS
+================================================
+
+This sections asks questions about your interactions with specialists for dogname's LP/GOLPP.
+
+
+
+
+Did you end up going to a specialist (i.e. soft-tissue surgeon) to continue dogname's LP journey?
+Yes
+No
+Don't know or prefer not to say
+
+Did your current primary veterinarian refer you to a specific specialist?
+No
+Yes
+Don't know
+
+VisibleIF
+
+What kind of specialist did your current primary veterinarian refer you to?
+Neurologist
+Orthopedic Surgeon
+Soft-tissue surgeon specializing in LP surgery and upper respiratory conditions 
+Veterinary internal medicine specialist or internist
+Don't remember
+Other
+
+Have you decided to pursue as veterinary-medical treatment such as surgery or stent for dogname's LP/GOLPP?
+Yes, we will explore surgery or a stent implant
+No, we will not explore surgery or a stent implant
+We have not yet made a decision about surgery or stent implant
+
+VisibleIf if no or not yet decided.
+
+This is where we branch to the Treatment Considerations section.
+
+
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
