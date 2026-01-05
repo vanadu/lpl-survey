@@ -1,0 +1,106 @@
+{
+  "name": "04L_INTUBATION_HISTORY-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "IntubationHistoryPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "IntubationHistoryHeading",
+          "html": "<h3>Improper intubation can lead to damage to the larynx. These questions relate to {CmpnName}'s intubation history prior to LP/GOLPP symptoms.</h3>"
+        },
+        {
+          "type": "panel",
+          "name": "IntubationHistorySubpanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "IntubationHistoryWasIntubated",
+              "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Not sure"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "IntubationHistoryReason",
+              "title": "For what reason was {CmpnName} intubated prior to the first LP symptoms appearing?",
+              "choices": [
+                  {
+                    "value": "TEETH_CLEANING",
+                    "text": "Teeth cleaning"
+                  },
+                  {
+                    "value": "DENTAL_SURGERY",
+                    "text": "Dental surgery"
+                  },
+                  {
+                    "value": "NON_DENTAL_SURGERY",
+                    "text": "Non-dental surgery"
+                  },
+                  {
+                    "value": "DIAGNOSTIC",
+                    "text": "Diagnostic procedure"
+                  },
+                  {
+                    "value": "EMERGENCY",
+                    "text": "Emergency procedure"
+                  }
+                ],
+                "choicesOrder": "none",
+                "otherText": "Other",
+                "showOtherItem": true,
+                "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'"
+            },
+            {
+              "type": "boolean",
+              "name": "IntubationHistoryConcerns",
+              "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
+              "isRequired": true,
+              "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'"
+            },
+            {
+              "type": "checkbox",
+              "name": "lvngErlyIntubationSymptoms",
+              "title": "What symptoms did {lndgRootCmpnName} have after the intubation/anesthesia?",
+              "choices": [
+                {
+                  "value": "COUGHING",
+                  "text": "Coughing/hacking"
+                },
+                {
+                  "value": "GAGGING",
+                  "text": "Gagging/retching"
+                },
+                {
+                  "value": "PANTING",
+                  "text": "Excessive panting"
+                },
+                {
+                  "value": "LABORED_BREATHING",
+                  "text": "Labored breathing"
+                }
+              ],
+              "choicesOrder": "none",
+              "otherText": "Other",
+              "visibleIf": "{IntubationHistoryWasIntubated} = 'true'",
+              "showOtherItem": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

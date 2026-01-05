@@ -1,0 +1,133 @@
+{
+  "name": "03_INFO_SOURCES-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "InfoSourcesPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "InfoSourcesHeading",
+          "html": "<h3>How did you learn about laryngeal paralysis (LP)?</h3>"
+        },
+        {
+          "type": "html",
+          "name": "InfoSourcesText",
+          "html": "<p>This section asks some questions about how you learned about LP and whether the information you found helped you make decisions for {lndgRootCmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
+        },
+        {
+          "type": "panel",
+          "name": "InfoSourcesPriorKnowledgePanel",
+          "elements": [
+            {
+              "type": "boolean",
+              "name": "InfoSourcesPriorKnowledge",
+              "title": "Had you ever heard of LP before {lndgRootCmpnName} got it?",
+              "isRequired": true
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "InfoSourcesTypesPanel",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "InfoSourcesTypes",
+              "title": "Which sources of information have you accessed to learn about LP?",
+              "choices": [
+                {
+                  "value": "Veterinarians",
+                  "text": "VETERINARIANS"
+                },
+                {
+                  "value": "WEBSITES",
+                  "text": "Websites"
+                },
+                {
+                  "value": "FACEBOOK_GROUPS",
+                  "text": "Facebook groups"
+                },
+                {
+                  "value": "SOCIAL_VIDEO",
+                  "text": "Youtube, Instagram or other video"
+                },
+                {
+                  "value": "SOCIAL_CHAT",
+                  "text": "Reddit, X (Twitter), or other social media"
+                },
+                {
+                  "value": "AI_MODELS",
+                  "text": "AI models like ChatGPT"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "noneText": "Don't know",
+              "otherText": "Other (please describe)"
+            },
+            {
+              "type": "dropdown",
+              "name": "lvngInfoBestSource",
+              "title": "Which of those information sources did you find MOST useful (please select one)?",
+              "choices": [
+                "Facebook groups"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "InfoSourcesQualityPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "InfoSourcesHardToUnderstand",
+              "title": "Did you find the information you got about LP difficult to understand?",
+              "description": "1 = no, not difficult at all, 5 = very difficult",
+              "isRequired": true,
+              "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" },
+              { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "InfoSourcesContradictory",
+              "title": "Do you feel like a lot of the information you got about LP was contradictory?",
+              "description": "1 = not at all contridictory, 5 = very contradictory",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "InfoSourcesHardAnswers",
+              "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {lndgRootCmpnName}?",
+              "description": "1 = No, not hard at all, 5 = yes, very hard",
+              "isRequired": true,
+              "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" },
+              { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "name": "02_USER_INFO-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "UserInfoPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "UserInfoHeading",
+          "html": "<h2>Please tell us a little about yourself</h2>"
+        },
+        {
+          "type": "html",
+          "name": "UserInfoText",
+          "html": "<p>We believe you're more likely to help us if you know your data can't be used anywhere else. We're not asking for your last name, so we have no way to connect you with any of your private data. Click the links below to learn about how your privacy is protected and what we'll be doing with this survey information.</p><p>If more than one of your beloved companions have LP, you can take the survey for each of them. You can also update the survey responses for each animal, but only one set of results are saved for each Facebook account or email and each animal. Each time you take, it, existing results will be updated with the most recent ones.</p>"
+        },
+        {
+          "type": "panel",
+          "name": "UserInfoAboutSurveyPanel",
+          "elements": [
+              {
+                "type": "html",
+                "name": "UserInfoPrivacy",
+                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About your privacy</a></div>"
+              },
+              {
+                "type": "html",
+                "name": "UserInfoYourData",
+                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>How will we be using your information?</a></div>"
+              }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "First, a little about you...",
+          "name": "UserInfoAboutPanel", 
+          "elements": [
+            {
+              "type": "text",
+              "title": "Your First Name:",
+              "name": "UserInfoFirstName",
+              "isRequired": true
+            },
+            {
+              "type": "dropdown",
+              "name": "UserInfoCountry",
+              "title": "Country:",
+              "isRequired": true,
+              "choices": [
+                "US",
+                "UK",
+                "DE",
+                "CA",
+                "AU/NZ",
+                "FR",
+                "ES",
+                "PT"
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "text",
+              "name": "UserInfoStateRegion",
+              "title": "What state or region do you live in (optional)",
+              "isRequired": false
+            }
+            
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "UserInfoAgeGenderPanel",
+          "title": "Age and Gender (optional)",
+          "elements": [
+            {
+              "type": "html",
+              "name": "UserInfoDemographicInfo",
+              "title": "",
+              "html": "<p>We're asking for optional basic demographic information to help understand how different people manage the animals in their care. "
+            },
+            {
+              "type": "dropdown",
+              "name": "UserInfoAgeGroup",
+              "title": "Approximately what is your age?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "UNDER_20",
+                  "text": "Under 20"
+                },
+                {
+                  "value": "20_34",
+                  "text": "20-34"
+                },
+                {
+                  "value": "35_49",
+                  "text": "35-49"
+                },
+                "50-64",
+                {
+                  "value": "OVER_65",
+                  "text": "Over 65"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "lvngRootUserGender",
+              "title": "Gender:",
+              "isRequired": false,
+              "choices": [
+                {
+                "value": "WOMAN",
+                "text": "Woman"
+                },
+                {
+                  "value": "MAN",
+                  "text": "Man"
+                },
+                {
+                  "value": "NON_BINARY",
+                  "text": "Non-binary"
+                },
+                {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Prefer to self-describe"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "title": "Verification contact",
+          "name": "UserInfoVerificationPanel", 
+          "elements": [
+            {
+              "type": "html",
+              "name": "lvngRootUserText",
+              "html": "<p>We'll need to contact a random sample of participants for verification purposes. If you don't want to share your email, you can use your Facebook account name for verification via Facebook Messenger.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
+            },
+            {
+              "type": "boolean",
+              "name": "UserInfoContactType",
+              "title": "Would you like to use email or Facebook Messenger for verification?",
+              "isRequired": true,
+              "labelTrue": "Facebook",
+              "labelFalse": "Email"
+            },
+            {
+              "type": "text",
+              "title": "Email address:",
+              "name": "UserInfoContactTypeEmail",
+              "isRequired": true,
+              "visibleIf": "{UserInfoContactType} = false",
+              "inputType": "email"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoContactTypeFacebookInstructions",
+              "title": "z",
+              "visibleIf":"{lvngRootUserContactType} = true",
+              "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
+            },
+            {
+              "type": "text",
+              "title": "Facebook account:",
+              "name": "lvngRootUserContactTypeFacebook",
+              "isRequired": true,
+              "visibleIf": "{lvngRootUserContactType} = true",
+              "placeholder": "eg. https://www.facebook.com/my.profile.name",
+              "validators": [
+                {
+                  "type": "regex",
+                  "regex": "^(https?:\\/\\/)?(www\\.)?facebook\\.com\\/[a-zA-Z0-9.]{5,}$",
+                  "text": "Please enter a valid Facebook profile URL, e.g., https://facebook.com/your.username"
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "lvngRootContactOK",
+              "title": "May we contact you to talk more about your LP experience?",
+              "isRequired": true
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

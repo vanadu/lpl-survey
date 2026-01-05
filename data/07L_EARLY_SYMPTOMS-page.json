@@ -1,0 +1,161 @@
+{
+  "name": "07L_EARLY_SYMPTOMS-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "lvngErlyPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "lvngErlyHeading",
+          "html": "<h3>Your early encounters with laryngeal paralysis (LP)</h3>"
+        },
+        {
+          "type": "html",
+          "name": "lvngErlyText",
+          "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP journey and how you came to accept that {lndgRootCmpnName} might have it.</p>"
+        },
+        {
+          "type": "panel",
+          "name": "lvngErlyFirstSignsPanel",
+          "title": "About how old was {lndgRootCmpnName} (in years and months) when you first noticed signs of what you later learned was LP?",
+          "elements": [
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "lvngErlyFirstSignsAgeYears",
+              "title": "Years",
+              "isRequired": true,
+              "min": "1",
+              "max": "40",
+                "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 40,
+                  "text": "Age must be between 1 and 40"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "lvngErlyFirstSignsAgeMonths",
+              "title": "Months (number 1 - 12)",
+              "isRequired": true,
+              "min": 1,
+              "max": 12,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 12,
+                  "text": "Months must be between 1 and 12"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "lvngErlySymptomsPanel",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "lvngErlySymptoms",
+              "title": "What symptoms did {lndgRootCmpnName} have at that time?",
+              "choices": [
+                {
+                  "value": "Noisy Breathing",
+                  "text": "Noisy or raspy breathing"
+                },
+                {
+                  "value": "Excess panting",
+                  "text": "Excess panting"
+                },
+                {
+                  "value": "Changes in bark",
+                  "text": "Changes in bark"
+                },
+                {
+                  "value": "Coughing or hacking",
+                  "text": "Coughing or hacking"
+                },
+                {
+                  "value": "Gagging or retching",
+                  "text": "Gagging or retching"
+                },
+                {
+                  "value": "Labored breathing",
+                  "text": "Labored Breathing"
+                },
+                {
+                  "value": "Exercise and heat intolerance",
+                  "text": "Exercise and heat intolerance"
+                },
+                {
+                  "value": "Tongue turning blue",
+                  "text": "Tongue or gums turning blue"
+                },
+                {
+                  "value": "Syncope",
+                  "text": "Syncope (passing out)"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "noneText": "Don't know",
+              "otherText": "Other (please describe)"
+            },
+            {
+              "type": "rating",
+              "name": "lvngErlySymptomSeverity",
+              "title": "How severe did you think {lndgRootCmpnName}'s early symptoms were?",
+              "description": "1 = mild, 5 = severe",
+              "isRequired": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "lvngErlyHindEndWeakness",
+              "title": "Was {lndgRootCmpnName} already showing signs of hind-end weakness in this early stage?",
+              "choices": [
+                "Yes",
+                "No",
+                "Don't remember"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "lvngErlyOtherConditions",
+          "elements": [
+            {
+            "type": "checkbox",
+            "name": "lvngErlyOtherConditions",
+            "title": "Which other conditions did {lndgRootCmpnName} have when the first LP symptoms appeared?",
+            "required": true,
+            "choices": [
+                {
+                  "value": "Acid reflux",
+                  "text": "Acid reflux (GERD)"
+                },
+                {
+                  "value": "Megaesophagus",
+                  "text": "Megaesophagus"
+                },
+                {
+                  "value": "Periodontal disease",
+                  "text": "Periodontal disease"
+                }
+              ],
+              "choicesOrder": "none",
+              "otherText": "Other",
+              "showOtherItem": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
