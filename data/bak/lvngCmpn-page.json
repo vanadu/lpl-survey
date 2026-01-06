@@ -143,6 +143,38 @@
                 }
               ]
             },
+
+
+
+      {
+        "type": "rating",
+        "name": "RatingQuestionExtended",
+        "title": "Rating Question Extended Title:",
+        "description": "1 = no, not at all, 5 = yes, very",
+        "isRequired": true,
+        "rateValues": [
+        { "value": 1, "text": "1" },
+        { "value": 2, "text": "2" },
+        { "value": 3, "text": "3" },
+        { "value": 4, "text": "4" },
+        { "value": 5, "text": "5" },
+        { "value": "DONT_KNOW", "text": "Don't know" }
+        ]
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
             {
             "type": "panel",
             "name": "lvngRootUserAnimalsPanel",

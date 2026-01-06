@@ -3,53 +3,62 @@
   "elements": [
     {
       "type": "panel",
-      "name": "lvngCmpnPanel",
+      "name": "lvngCmpnInfoPanel",
       "elements": [
         {
           "type": "html",
-          "name": "lvngCmpnAboutCompHeading",
+          "name": "lvngCmpnInfoHeading",
           "html": "<h3>Tell us about your LarPar companion!<h3>"
         },
         {
           "type": "html",
-          "name": "lvngCmpnAboutCompText",
+          "name": "lvngCmpnInfoText",
           "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to complete the survey. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances.</p>"
         },
         {
           "type": "panel",
-          "name": "lvngCmpnDetailsPanel",
+          "name": "lvngCmpnInfoDetailsPanel",
           "elements": [
               {
                 "type": "panel",
-                "name": "lvngCmpnDetailsAnimalType",
+                "name": "lvngCmpnInfoAnimalTypePanel",
                 "elements": [
                   {
                     "type": "radiogroup",
-                    "name": "lvngCmpnAnimalType",
-                    "title": "What kind of animal is {lndgRootCmpnName}?",
+                    "name": "lvngCmpnInfoAnimalType",
+                    "title": "What kind of animal is {CmpnName}?",
                     "isRequired": true,
                     "choices": [
-                      "Dog",
-                      "Cat",
-                      "Horse"
+                      {
+                        "value": "CANINE",
+                        "text": "Dog"
+                      },
+                      {
+                        "value": "FELINE",
+                        "text": "Cat"
+                      },
+                      {
+                        "value": "EQUINE",
+                        "text": "Horse"
+                      }
                     ]
                   }
                 ]
               },
               {
               "type": "panel",
-              "name": "lvngCmpnDetailsBreedGender",
-              "title": "What is {lndgRootCmpnName}'s breed or breed mix and gender?",
+              "name": "lvngCmpnInfoBreedGenderPanel",
+              "title": "What is {CmpnName}'s breed or breed mix and gender?",
               "elements": [
                 {
                   "type": "text",
-                  "name": "lvngCmpnBreed",
+                  "name": "lvngCmpnInfoBreed",
                   "title": "Breed or mix (if unknown, type 'Don't know'):",
                   "isRequired": true
                 },
                 {
                   "type": "boolean",
-                  "name": "lvngCmpnGender",
+                  "name": "lvngCmpnInfoGender",
                   "title": "Gender:",
                   "isRequired": true,
                   "labelTrue": "Female",
@@ -59,13 +68,13 @@
             },
             {
               "type": "panel",
-              "name": "lvngCmpnDetailsAge",
-              "title": "What is {lndgRootCmpnName}'s approximate age (in years and months)?",
+              "name": "lvngCmpnInfoAgePanel",
+              "title": "What is {CmpnName}'s approximate age (in years and months)?",
               "elements": [
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "lvngCmpnAgeYears",
+                  "name": "lvngCmpnInfoAgeYears",
                   "title": "Age in years (number):",
                   "isRequired": true,
                   "min": "1",
@@ -82,7 +91,7 @@
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "lvngCmpnAgeMonths",
+                  "name": "lvngCmpnInfoAgeMonths",
                   "title": "Months (number 1 - 12)",
                   "isRequired": true,
                   "min": 1,
@@ -100,12 +109,12 @@
             },
             {
               "type": "panel",
-              "name": "lvngCmpnDetailsWeight",
-              "title": "About how much does {lndgRootCmpnName} weigh in pounds or kilos?",
+              "name": "lvngCmpnInfoWeightPanel",
+              "title": "About how much does {CmpnName} weigh in pounds or kilos?",
               "elements": [
                 {
                   "type": "text",
-                  "name": "lvngCmpnWeight",
+                  "name": "lvngCmpnInfoWeight",
                   "title": "Weight (number):",
                   "isRequired": true,
                   "inputType": "number",
@@ -122,7 +131,7 @@
                 },
                 {
                   "type": "boolean",
-                  "name": "lvngCmpnWeightUnits",
+                  "name": "lvngCmpnInfoWeightUnits",
                   "title": "Please choose pounds or kilos:",
                   "isRequired": true,
                   "labelTrue": "Kg",
@@ -132,30 +141,39 @@
             },
             {
               "type": "panel",
-              "name": "lvngCmpnDetailsDemeanor",
-              "title": "How energetic, excitable, or anxious is {lndgRootCmpnName}? (1=very calm, 5=very excitable)?",
+              "name": "lvngCmpnInfoDemeanorPanel",
+              "title": "",
               "elements": [
                 {
                   "type": "rating",
-                  "name": "lvngCmpnDemeanor",
-                  "title": ""
-                  
+                  "name": "lvngCmpnInfoDemeanor",
+                  "title": "How energetic, excitable, or anxious would you describe {CmpnName}?",
+                  "description": "1 = very calm, 5 = very excitable",
+                  "isRequired": true,
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
                 }
               ]
             },
             {
             "type": "panel",
-            "name": "lvngRootUserAnimalsPanel",
+            "name": "lvngCmpnInfoAnimalsPanel",
             "elements": [
                 {
                 "type": "dropdown",
-                "name": "lvngRootAnimalsCount",
+                "name": "lvngCmpnInfoAnimalsCount",
                 "title": "How many animals do you have in your care?",
                 "required": true,
                 "choices": [
                   {
                     "value": "1",
-                    "text": "Just {lndgRootCmpnName}"
+                    "text": "Just {CmpnName}"
                   },
                   {
                     "value": "2",
@@ -176,15 +194,15 @@
                 },
                 {
               "type": "boolean",
-              "name": "lvngRootHasInsurance",
+              "name": "lvngCmpnInfoHasInsurance",
               "required": true,
-              "title": "Do you have pet insurance for {lndgRootCmpnName}?"
+              "title": "Do you have pet insurance for {CmpnName}?"
                 },
                 {
                 "type": "radiogroup",
-                "name": "lvngRootHasInsuranceOther",
+                "name": "lvngCmpnInfoHasInsuranceOther",
                 "title": "Do you have pet insurance for your other animals?",
-                "visibleIf": "{lvngRootAnimalsCount} != 1",
+                "visibleIf": "{lvngCmpnInfoHasInsurance} != 1",
                 "required": true,
                 "choices": [
                   {

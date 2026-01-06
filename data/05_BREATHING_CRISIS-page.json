@@ -1,0 +1,250 @@
+{
+  "name": "05_BREATHING_CRISIS-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "BreathingCrisisPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "BreathingCrisis",
+          "html": "<h3>LP Breathing Crisis</h3>"
+        },
+        {
+          "type": "html",
+          "name": "BreathingCrisisText",
+          "html": "<p>Breathing emergencies are terrifying.</p>"
+        },
+        {
+          "type": "panel",
+          "name": "BreathingCrisisDetailsPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "question4BreathingCrisisDidHave",
+              "title": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisCount",
+              "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Once"
+                },
+                {
+                  "value": "TWO",
+                  "text": "Twice"
+                },
+                {
+                  "value": "MORE_THAN_TWO",
+                  "text": "More than twice"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisCount",
+              "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Once"
+                },
+                {
+                  "value": "TWO",
+                  "text": "Twice"
+                },
+                {
+                  "value": "MORE_THAN_TWO",
+                  "text": "More than twice"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisCost",
+              "title": "About what was the total pre-insurance cost of these visits to veterinary professionals due to LP/GOLPP-induced breathing crises/emergencies?",
+              "choices": [
+                {
+                  "value": "LESS_THAN_1000",
+                  "text": "Less than $1000"
+                },
+                {
+                  "value": "1000_3000",
+                  "text": "$1000 - $3000"
+                },
+                {
+                  "value": "3000 - 5000",
+                  "text": "$3000 - $5000"
+                },
+                {
+                  "value": "MORE_THAN_5000",
+                  "text": "More than $5000"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisAdvice",
+              "title": "Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "Don't know",
+                  "text": "DONT_KNOW"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "BreathingCrisisAdviceType",
+              "title": "What advice did they give you to help you deal with a breathing crisis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "SEDATIVE",
+                  "text": "Adminster a sedative"
+                },
+                {
+                  "value": "COOL_PLACE",
+                  "text": "Get them to a cool place"
+                },
+                {
+                  "value": "COOLING_AGENT",
+                  "text": "Apply ice, a cooling vest, or some other cooling agent"
+                },
+                {
+                  "value": "BLOW_AIR",
+                  "text": "Blow air into their nose (CPR)"
+                },
+                {
+                  "value": "EMERGENCY_FACILITY",
+                  "text": "Bring them to an emergency facility immediately"
+                }
+              ],
+              "showOtherItem": true,
+              "required": true,
+              "visibleIf": "{BreathingCrisisAdvice} = 'YES'"
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisProvidedSubstance",
+              "title": "Did a veterinary professional provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Other option"
+            },
+
+            {
+            "type": "checkbox",
+            "name": "BreathingCrisisProvidedSubstanceType",
+            "title": "What substance or product did they provide?",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "SEDATIVE",
+                "text": "Sedative"
+              },
+              {
+                "value": "STERIOD",
+                "text": "Steroid, i.e., prednisone"
+              },
+              {
+                "value": "OXYGEN",
+                "text": "Supplemental oxygen"
+              },
+              {
+                "value": "DONT_KNOW",
+                "text": "Don't know"
+              }
+            ],
+            "showOtherItem": true,
+            "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'"
+            },
+            {
+            "type": "dropdown",
+            "name": "BreathingCrisisSubstanceForm",
+            "title": "In what form was the sedative or steriod provided?",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "INJECTIBLE",
+                "text": "Injectible"
+              },
+              {
+                "value": "LIQUID",
+                "text": "Liquid"
+              },
+              {
+                "value": "SUPPOSITORY",
+                "text": "Suppository"
+              },
+              {
+                "value": "GEL",
+                "text": "Gel or paste"
+              },
+              {
+                "value": "PILL",
+                "text": "Pill or tablet"
+              },
+              {
+                "value": "DONT_KNOW",
+                "text": "Don't know"
+              }
+            ],
+            "showOtherItem": true,
+            "showNoneItem": true,
+            "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -48,7 +48,7 @@
                   "text": "Over the Rainbow Bridge"
                 },
                 {
-                  "value": "LIVING",
+                  "value": "L",
                   "imageLink": "./img-companions.png",
                   "text": "Still here on Earth"
                 }
@@ -63,7 +63,7 @@
         },
                     {
               "type": "html",
-              "name": "lndgRootMakeSelection",
+              "name": "CmpnNameLifeStatusMakeSelection",
               "html": "<p>Once you've made your selection, please choose 'Next' to begin the survey.</p>"
             }
       ]
