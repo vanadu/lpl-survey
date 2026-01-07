@@ -48,14 +48,30 @@
               "title": "Country:",
               "isRequired": true,
               "choices": [
-                "US",
-                "UK",
-                "DE",
-                "CA",
-                "AU/NZ",
-                "FR",
-                "ES",
-                "PT"
+                { "value": "US",
+                  "text": "United States"
+                },
+                { "value": "UK",
+                  "text": "United Kingdom"
+                },
+                { "value": "CA",
+                  "text": "Canada"
+                },
+                { "value": "DE",
+                  "text": "Germany"
+                },
+                { "value": "AU/NZ",
+                  "text": "Australia/New Zealand"
+                },
+                { "value": "FR",
+                  "text": "France"
+                },
+                { "value": "ES",
+                  "text": "Spain"
+                },
+                { "value": "PT",
+                  "text": "Portugal"
+                }
               ],
               "showOtherItem": true
             },
@@ -106,7 +122,7 @@
             },
             {
               "type": "radiogroup",
-              "name": "lvngRootUserGender",
+              "name": "UserInfoGender",
               "title": "Gender:",
               "isRequired": false,
               "choices": [
@@ -139,7 +155,7 @@
           "elements": [
             {
               "type": "html",
-              "name": "lvngRootUserText",
+              "name": "UserInfoVerificationPanelText",
               "html": "<p>We'll need to contact a random sample of participants for verification purposes. If you don't want to share your email, you can use your Facebook account name for verification via Facebook Messenger.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
             },
             {
@@ -162,13 +178,13 @@
               "type": "html",
               "name": "UserInfoContactTypeFacebookInstructions",
               "title": "z",
-              "visibleIf":"{lvngRootUserContactType} = true",
+              "visibleIf":"{UserInfoContactType} = true",
               "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
             },
             {
               "type": "text",
               "title": "Facebook account:",
-              "name": "lvngRootUserContactTypeFacebook",
+              "name": "UserInfoContactTypeFacebook",
               "isRequired": true,
               "visibleIf": "{lvngRootUserContactType} = true",
               "placeholder": "eg. https://www.facebook.com/my.profile.name",
@@ -182,7 +198,7 @@
             },
             {
               "type": "boolean",
-              "name": "lvngRootContactOK",
+              "name": "UserInfoContactOK",
               "title": "May we contact you to talk more about your LP experience?",
               "isRequired": true
             }

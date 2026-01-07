@@ -23,7 +23,7 @@
             {
               "type": "text",
               "inputType": "number",
-              "name": "LvngEarlySymptomsAgeYears",
+              "name": "lvngEarlySymptomsAgeYears",
               "title": "Years",
               "isRequired": true,
               "min": "1",
@@ -40,7 +40,7 @@
             {
               "type": "text",
               "inputType": "number",
-              "name": "LvngEarlySymptomsAgeMonths",
+              "name": "lvngEarlySymptomsAgeMonths",
               "title": "Months (number 1 - 12)",
               "isRequired": true,
               "min": 1,
@@ -62,7 +62,7 @@
           "elements": [
             {
               "type": "checkbox",
-              "name": "LvngEarlySymptomsType",
+              "name": "lvngEarlySymptomsType",
               "title": "What symptoms did {CmpnName} have at that time?",
               "choices": [
                 {
@@ -109,19 +109,28 @@
             },
             {
               "type": "rating",
-              "name": "LvngEarlySymtomsSeverity",
+              "name": "lvngEarlySymtomsSeverity",
               "title": "How severe did you think {CmpnName}'s early symptoms were?",
               "description": "1 = mild, 5 = severe",
               "isRequired": true
             },
             {
               "type": "radiogroup",
-              "name": "LvngEarlySymptomsHindEndWeakness",
+              "name": "lvngEarlySymptomsHindEndWeakness",
               "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
               "choices": [
-                "Yes",
-                "No",
-                "Don't remember"
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't remember"
+                }
               ]
             }
           ]
@@ -137,15 +146,15 @@
             "required": true,
             "choices": [
                 {
-                  "value": "Acid reflux",
+                  "value": "GERD",
                   "text": "Acid reflux (GERD)"
                 },
                 {
-                  "value": "Megaesophagus",
+                  "value": "ME",
                   "text": "Megaesophagus"
                 },
                 {
-                  "value": "Periodontal disease",
+                  "value": "PERIODONTAL",
                   "text": "Periodontal disease"
                 }
               ],

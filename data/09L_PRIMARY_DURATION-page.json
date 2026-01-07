@@ -23,7 +23,7 @@
             {
               "type": "text",
               "inputType": "number",
-              "name": "LvngPrimaryDurationBeginYears",
+              "name": "lvngPrimaryDurationBeginYears",
               "title": "Age in years (number):",
               "isRequired": true,
               "min": "1",
@@ -41,7 +41,7 @@
             {
               "type": "text",
               "inputType": "number",
-              "name": "LvngPrimaryDurationBeginMonths",
+              "name": "lvngPrimaryDurationBeginMonths",
               "title": "Months (number 1 - 12)",
               "isRequired": true,
               "min": 1,
@@ -49,50 +49,17 @@
               "validators": [
                 {
                   "type": "numeric",
-                  "minValue": 1,
+                  "minValue": 0,
                   "maxValue": 12,
                   "text": "Months must be between 1 and 12"
                 }
               ]
             },
-            {
-              "type": "text",
-              "inputType": "number",
-              "name": "LvngPrimaryDurationEndYears",
-              "title": "Age in years (number):",
-              "isRequired": true,
-              "min": "1",
-              "max": "40",
-              "validators": [
-                {
-                  "type": "numeric",
 
-                  "minValue": 1,
-                  "maxValue": 40,
-                  "text": "Age must be between 1 and 40"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "inputType": "number",
-              "name": "LvngPrimaryDurationEndMonths",
-              "title": "Months (number 1 - 12)",
-              "isRequired": true,
-              "min": 1,
-              "max": 12,
-              "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 12,
-                  "text": "Months must be between 1 and 12"
-                }
-              ]
-            },
+
             {
               "type": "radiogroup",
-              "name": "RLvngPrimaryDurationVisitsNumber",
+              "name": "lvngPrimaryDurationVisitsNumber",
               "title": "About how many times did you visit a primary veterinarian (including your current one) about {CmpnName}'s LP/GOLPP symptoms?",
               "isRequired": true,
               "choices": [
@@ -118,7 +85,7 @@
             },
             {
               "type": "radiogroup",
-              "name": "LvngPrimaryDurationCost",
+              "name": "lvngPrimaryDurationCost",
               "title": "About what was the total pre-insurance cost of these visits to primary veterinarians about dogname's LP/GOLPP symptoms?",
               "isRequired": true,
               "choices": [
@@ -131,8 +98,12 @@
                   "text": "$1000-$3000"
                 },
                 {
-                  "value": "OVER_3000",
-                  "text": "Over $3000"
+                  "value": "3000_5000",
+                  "text": "$3000-$5000"
+                },
+                {
+                  "value": "OVER_5000",
+                  "text": "Over $5000"
                 },
                 {
                   "value": "DONT_KNOW",

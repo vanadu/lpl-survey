@@ -24,7 +24,7 @@
 
             {
               "type": "radiogroup",
-              "name": "LvngChangedVets",
+              "name": "lvngChangedVets",
               "title": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
               "isRequired": true,
               "choices": [
@@ -49,7 +49,7 @@
 
             {
               "type": "checkbox",
-              "name": "LvngChangedVetsReason",
+              "name": "lvngChangedVetsReason",
               "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?:",
               "isRequired": true,
               "choices": [
@@ -87,26 +87,26 @@
             },
 
             {
-              "type": "checkbox",
-              "name": "LvngChangedVetsAdvice",
-              "title": "Did your previous primary vet/s give you advice about dogname's LP/GOLPP symptoms?",
+              "type": "radio",
+              "name": "lvngChangedVetsAdvice",
+              "title": "What, if any, advice did your previous primary vet/s give you advice about dogname's LP/GOLPP symptoms?",
               "isRequired": true,
               "choices": [
                 {
                   "value": "NOTHING_CAN_BE_DONE",
-                  "text": "ITEM_1"
+                  "text": "Said nothing can be done"
                 },
                 {
                   "value": "INEFFECTIVE_TREATMENTS",
-                  "text": "ITEM_2"
+                  "text": "Provided ineffective treatments"
                 },
                 {
                   "value": "RECOMMENDED_SPECIALIST",
-                  "text": "ITEM_3"
+                  "text": "Recommended consulting a specialist"
                 },
                 {
                   "value": "RECOMMENDED_EUTHANASIA",
-                  "text": "Item4"
+                  "text": "Recommended euthanasia"
                 },
                 {
                   "value": "OTHER",
@@ -118,8 +118,39 @@
             },
 
             {
+              "type": "radiogroup",
+              "name": "lvngChangedVetsSpecialistRecommendation",
+              "title": "What kind of specialist did your previous vet recommend or refer?",
+              "isRequired": true,
+              "visibleIf": "{lvngChangedVetsAdvice} = 'RECOMMENDED_SPECIALIST'",
+              "choices": [
+                {
+                  "value": "AIRWAY_SURGEON",
+                  "text": "Surgeon experienced in tieback or other LP surgery"
+                },
+                {
+                  "value": "ORTHOPEDIC_SURGEON",
+                  "text": "General or orthopedic surgeon"
+                },
+                {
+                  "value": "NEUROLOGIST",
+                  "text": "NEUROLOGIST"
+                },
+                {
+                  "value": "STENT_PROVIDER",
+                  "text": "Stent provider"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Other"
+            },
+            {
               "type": "rating",
-              "name": "LvngChangeVetsConfidence",
+              "name": "lvngChangeVetsConfidence",
               "title": "How confident were you in your previous primary vet/s' knowledge level regarding LP/GOLPP?",
               "description": "1 = no confident at all, 5 = very confident",
               "isRequired": true,

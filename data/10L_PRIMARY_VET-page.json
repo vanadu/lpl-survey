@@ -8,12 +8,12 @@
         {
           "type": "html",
           "name": "lvngPrimaryVetHeading",
-          "html": "<h3>Did you change vets?(LP)</h3>"
+          "html": "<h3>About your current primary veterinarian(LP)</h3>"
         },
         {
           "type": "html",
           "name": "lvngPrimaryVetText",
-          "html": "<p>Tell us why you changed vets.</p>"
+          "html": "<p>Tell us about our experience with your current primary veterinarian.</p>"
         },
         {
           "type": "panel",
@@ -25,7 +25,7 @@
 
             {
               "type": "radiogroup",
-              "name": "LvngPrimaryVetDiagnosis",
+              "name": "lvngPrimaryVetDiagnosis",
               "title": "Did your current primary vet give you a diagnosis of LP for {CmpnName}? ",
               "isRequired": true,
               "choices": [
@@ -54,8 +54,8 @@
             },
 
             {
-              "type": "checkbox",
-              "name": "LvngPrimaryVetDiagnosticType",
+              "type": "radiogroup",
+              "name": "lvngPrimaryVetDiagnosticType",
               "title": "What diagnostic procedure did your current primary veterinarian use to arrive at their conclusion?",
               "isRequired": true,
               "choices": [
@@ -93,8 +93,8 @@
             },
             {
               "type": "radiogroup",
-              "name": "RadioGroup",
-              "title": "Radio group title",
+              "name": "lvngPrimaryVetInflammation",
+              "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
               "isRequired": true,
               "choices": [
                 {
@@ -114,7 +114,7 @@
             },
             {
               "type": "radiogroup",
-              "name": "LvngPrimaryVetPrescriptions",
+              "name": "lvngPrimaryVetPrescriptions",
               "title": "Did your current primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
               "isRequired": true,
               "choices": [
@@ -136,7 +136,7 @@
             },
             {
               "type": "checkbox",
-              "name": "LvngPrimaryVetPrescriptionType",
+              "name": "lvngPrimaryVetPrescriptionType",
               "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
               "isRequired": true,
               "choices": [
@@ -153,40 +153,40 @@
                   "text": "Gabapentin"
                 },
                 {
-                  "value": "PREDNISONE",
-                  "text": "OTHER"
+                  "value": "STERIOD",
+                  "text": "Prednisone or other steriod"
                 },
                 {
                   "value": "NSAID",
-                  "text": "OTHER"
+                  "text": "Carprofen or other NSAID"
                 },
                 {
                   "value": "LIBRELA",
-                  "text": "OTHER"
+                  "text": "Librela/Beransa"
                 },
                 {
                   "value": "CERENIA",
-                  "text": "OTHER"
+                  "text": "Cerenia (maripotant citrate)"
                 },
                 {
                   "value": "MELOXICAM",
-                  "text": "OTHER"
+                  "text": "Meloxicam"
                 },
                 {
-                  "value": "ACEPROMINE",
-                  "text": "OTHER"
+                  "value": "ACEPROMAZINE",
+                  "text": "Acepromazine (Atravet, ACP)"
                 },
                 {
                   "value": "ALBUTEROL",
-                  "text": "OTHER"
+                  "text": "Albuterol or other inhaler"
                 },
                 {
                   "value": "TEMARIL P",
-                  "text": "OTHER"
+                  "text": "Temaril P"
                 },
                 {
-                  "value": "TEMARIL P",
-                  "text": "OTHER"
+                  "value": "OTHER",
+                  "text": "Other prescription medication"
                 }
               ],
               "showOtherItem": true,
@@ -194,7 +194,7 @@
             },
             {
               "type": "rating",
-              "name": "LvngPrimaryVetPrescriptionEffectiveness",
+              "name": "lvngPrimaryVetPrescriptionEffectiveness",
               "title": "How effective were these prescription medicatons for {CmpnName}'s LP/GOLPP?",
               "description": "1 = not at all effective, 5 = very effective",
               "isRequired": true,
@@ -210,7 +210,7 @@
 
             {
               "type": "checkbox",
-              "name": "LvngPrimaryVetNonPrescription",
+              "name": "lvngPrimaryVetNonPrescription",
               "title": "Did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
               "isRequired": true,
               "choices": [
@@ -232,8 +232,8 @@
 
             {
               "type": "checkbox",
-              "name": "LvngPrimaryVetNonPrescriptionType",
-              "title": "What non-prescription treatments did your current primary veterinarian recommend?",
+              "name": "lvngPrimaryVetNonPrescriptionType",
+              "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
               "isRequired": true,
               "choices": [
                 {
@@ -261,9 +261,9 @@
             },
             {
               "type": "rating",
-              "name": "LvngPrimaryVetNonPrescriptionEffectiveness",
+              "name": "lvngPrimaryVetNonPrescriptionEffectiveness",
               "title": "How effective were these treatments?",
-              "description": "1 = not effective, 5 = very effective",
+              "description": "1 = not at all effective, 5 = very effective",
               "isRequired": true,
               "rateValues": [
                 { "value": 1, "text": "1" },
@@ -274,16 +274,6 @@
                 { "value": "DONT_KNOW", "text": "Don't know" }
               ]
             }
-
-
-
-
-
-
-
-
-
-
           ]
         }
       ]

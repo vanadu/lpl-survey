@@ -1,67 +1,132 @@
 {
-  "lndgRootCmpnName": "Miss B",
-  "lndgRootCrossedOver": "living",
-  "lvngRootUserName": "Jane",
-  "lvngRootUserCountry": "United Kingdom",
-  "lvngRootUserAge": "Over 65",
-  "lvngRootUserGender": "Woman",
-  "lvngRootUserContactType": "false",
-  "lvngRootUserContactTypeEmail": "example@example.com",
-  "lvngRootUserContactTypeFacebook": "https://www.facebook.com/my.profile.name",
-  "lvngRootContactOK": true,
-  "lvngRootHasInsurance": true,
-  "lvngRootHasInsuranceOther": "2",
-  "lvngRootAnimalsCount": "2",
-  "lvngCmpnAnimalType": "Dog",
-  "lvngCmpnBreed": "Boxer",
-  "lvngCmpnAgeYears": 5,
-  "lvngCmpnAgeMonths": 2,
-  "lvngCmpnGender": true,
-  "lvngCmpnWeight": 50,
-  "lvngCmpnWeightUnits": true,
-  "lvngCmpnDemeanor": 5,
-  "lvngInfoPriorInfo": false,
-  "lvngInfoLevel": 3,
-  "lvngInfoSources": [
-    "Institutional websites",
-    "Facebook groups",
-    "Veterinary specialists"
-  ],
-  "lvngInfoBestSource": [
-    "Facebook groups"
-  ],
-  "lvngInfoHardToUnderstand": "4",
-  "lvngInfoContradictory": "4",
-  "lvngInfoHardAnswers": "3",
+  "CmpnName": "Miss B",
+  "LifeStatusCrossedOver": "LIVING",
 
-  "lvngErlyFirstSignsAgeYears": "11",
-  "lvngErlyFirstSignsAgeMonths": "2",
-  "lvngErlySymptoms": [
-    "Gagging or retching",
-    "Exercise and heat intolerance",
-    "Coughing or hacking"
+
+  "UserInfoFirstName": "Jane",
+  "UserInfoCountry": "US",
+  "UserInfoStateRegion": "MD",
+  "UserInfoAgeGroup": "OVER_65",
+  "UserInfoGender": "NOT_SAY",
+  "UserInfoContactType": false,
+  "UserInfoContactTypeEmail": "example@example.com",
+  "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
+  "UserInfoContactOK": true,
+
+
+  "InfoSourcesPriorKnowledge": false,
+  "InfoSourcesTypes": [
+    "WEBSITES",
+    "FACEBOOK_GROUPS",
+    "VETERINARIANS"
   ],
-  "lvngErlySymptomSeverity": "1",
-  "lvngErlyHindEndWeakness": "Don't remember",
+  "InfoSourcesBestSource": [
+    "FACEBOOK_GROUPS"
+  ],
+  "InfoSourcesHardToUnderstand": "4",
+  "InfoSourcesContradictory": "4",
+  "InfoSourcesClearAnswers": "3",
+
+  "IntubationHistoryWasIntubated": "YES",
+  "IntubationHistoryReason": [
+    "TEETH_CLEANING",
+    "DIAGNOSTIC"
+  ],
+  "IntubationHistoryConcerns": "YES",
+  "IntubationHistorySymptoms": [
+    "COUGHING",
+    "PANTING",
+    "GAGGING"
+  ],
+
+
+  "BreathingCrisisDidHave": "YES",
+  "BreathingCrisisCount": "TWO",
+  "BreathingCrisisCost": "1000_3000",
+  "BreathingCrisisAdvice": "YES",
+  "BreathingCrisisAdviceType": [
+    "COOL_PLACE",
+    "COOLING_AGENT",
+    "EMERGENCY_FACILITY"
+  ],
+  "BreathingCrisisProvidedSubstance": "YES",
+  "BreathingCrisisProvidedSubstanceType": [
+    "STERIOD"
+  ],
+  "BreathingCrisisSubstanceForm": [
+    "Injectible"
+  ],
+
+
+  "lvngCmpnInfoAnimalType": "Dog",
+  "lvngCmpnInfoBreed": "Boxer",
+  "lvngCmpnInfoGender": 5,
+  "lvngCmpnInfoAgeYears": 2,
+  "lvngCmpnInfoAgeMonths": true,
+  "lvngCmpnInfoWeight": 50,
+  "lvngCmpnInfoWeightUnits": true,
+  "lvngCmpnInfoDemeanor": 5,
+  "lvngCmpnInfoAnimalsCount": "2",
+  "lvngCmpnInfoHasInsurance": true,
+  "lvngCmpnInfoHasInsuranceOther": "2",
+
+
+  "lvngEarlySymptomsAgeYears": "11",
+  "lvngEarlySymptomsAgeMonths": "2",
+  "lvngEarlySymptomsType": [
+    "PANTING",
+    "BARK_CHANGES",
+    "EXERCISE_INTOLERANCE"
+  ],
+  "lvngEarlySymtomsSeverity": "1",
+  "lvngEarlySymptomsHindEndWeakness": "Don't remember",
   "lvngErlyOtherConditions": [
-    "Acid reflux",
-    "Periodontal disease"
+    "GERD",
+    "PERIODONTAL"
   ],
-  "lvngErlyIntubated": true,
-  "lvngErlyIntubatedReason": "Teeth cleaning",
-  "lvngErlyIntubatedFacility": "Primary veterinarian",
-  "lvngErlyIntubationConcerns": true,
-  "lvngErlyIntubationSymptoms": [
-    "Gagging and retching",
-    "Difficulty breathing"
+
+  "lvngChangedVets": "ONCE",
+  "lvngChangedVetsReason": [
+    "AGE_ONLY",
+    "NO_VALUE"
   ],
-  "dcsdUserContact": "example@example.com",
-  "dcsdCmpnName": "Bee",
-  "dcsdCmpnBreed": "Lab",
-  "dcsdCmpnYears": 12,
-  "dcsdCmpnMonths": 2,
-  "dcsdCmpnGender": true,
-  "dcsdCmpnWeight": 75,
-  "dcsdCmpnWeightUnits": true
+  "lvngChangedVetsAdvice": [
+    "RECOMMENDED_SPECIALIST"
+  ],
+  "lvngChangedVetsSpecialistRecommendation": "NEUROLOGIST",
+  "lvngChangeVetsConfidence": "2",
+
+
+  "lvngPrimaryDurationBeginYears": "12",
+  "lvngPrimaryDurationBeginMonths": "0",
+  "lvngPrimaryDurationVisitsNumber": "MORE_THAN_TWO",
+  "lvngPrimaryDurationCost": "OVER_5000",
+
+
+  "lvngPrimaryVetDiagnosis": "YES_UNCONFIRMED",
+  "lvngPrimaryVetDiagnosticType": "SEDATED_VISUAL",
+  "lvngPrimaryVetInflammation": "YES",
+  "lvngPrimaryVetPrescriptions": "YES",
+  "lvngPrimaryVetPrescriptionType": [
+    {
+      "value": "DOXEPIN",
+      "text": "Doxepin"
+    },
+    {
+      "value": "CERENIA",
+      "text": "Cerenia (maripotant citrate)"
+    },
+    {
+      "value": "GABAPENTIN",
+      "text": "Gabapentin"
+    }
+  ],
+  "lvngPrimaryVetPrescriptionEffectiveness": "3",
+  "lvngPrimaryVetNonPrescription": "YES",
+  "lvngPrimaryVetNonPrescriptionType": [
+    "ACUPUNCTURE",
+    "PHYSICAL_THERAPY"
+  ],
+  "lvngPrimaryVetNonPrescriptionEffectiveness": "2"
 
 }

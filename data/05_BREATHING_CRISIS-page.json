@@ -21,7 +21,7 @@
           "elements": [
             {
               "type": "radiogroup",
-              "name": "question4BreathingCrisisDidHave",
+              "name": "BreathingCrisisDidHave",
               "title": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
               "choices": [
                 {

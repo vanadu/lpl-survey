@@ -68,7 +68,7 @@
             },
             {
               "type": "dropdown",
-              "name": "lvngInfoBestSource",
+              "name": "InfoSourcesBestSource",
               "title": "Which of those information sources did you find MOST useful (please select one)?",
               "choices": [
                 "Facebook groups"
@@ -112,7 +112,7 @@
             },
             {
               "type": "rating",
-              "name": "InfoSourcesHardAnswers",
+              "name": "InfoSourcesClearAnswers",
               "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {lndgRootCmpnName}?",
               "description": "1 = No, not hard at all, 5 = yes, very hard",
               "isRequired": true,

@@ -34,7 +34,7 @@
               ]
             },
             {
-              "type": "radiogroup",
+              "type": "checkbox",
               "name": "IntubationHistoryReason",
               "title": "For what reason was {CmpnName} intubated prior to the first LP symptoms appearing?",
               "choices": [
@@ -73,7 +73,7 @@
             },
             {
               "type": "checkbox",
-              "name": "lvngErlyIntubationSymptoms",
+              "name": "IntubationHistorySymptoms",
               "title": "What symptoms did {lndgRootCmpnName} have after the intubation/anesthesia?",
               "choices": [
                 {
