@@ -1,0 +1,150 @@
+{
+  "name": "09L_PRIMARY_DURATION-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "lvngPrimaryDurationPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "lvngPrimaryDurationHeading",
+          "html": "<h3>How long were you in the care of a primary vet?(LP)</h3>"
+        },
+        {
+          "type": "html",
+          "name": "lvngPrimaryDurationText",
+          "html": "<p>Tells how long a primary vet was responsible for {CmpnName}'s LP/GOLPP issues.</p>"
+        },
+        {
+          "type": "panel",
+          "name": "lvngPrimaryDurationDetailsPanel",
+          "title": "",
+          "elements": [
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "LvngPrimaryDurationBeginYears",
+              "title": "Age in years (number):",
+              "isRequired": true,
+              "min": "1",
+              "max": "40",
+              "validators": [
+                {
+                  "type": "numeric",
+
+                  "minValue": 1,
+                  "maxValue": 40,
+                  "text": "Age must be between 1 and 40"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "LvngPrimaryDurationBeginMonths",
+              "title": "Months (number 1 - 12)",
+              "isRequired": true,
+              "min": 1,
+              "max": 12,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 12,
+                  "text": "Months must be between 1 and 12"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "LvngPrimaryDurationEndYears",
+              "title": "Age in years (number):",
+              "isRequired": true,
+              "min": "1",
+              "max": "40",
+              "validators": [
+                {
+                  "type": "numeric",
+
+                  "minValue": 1,
+                  "maxValue": 40,
+                  "text": "Age must be between 1 and 40"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "LvngPrimaryDurationEndMonths",
+              "title": "Months (number 1 - 12)",
+              "isRequired": true,
+              "min": 1,
+              "max": 12,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 12,
+                  "text": "Months must be between 1 and 12"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "RLvngPrimaryDurationVisitsNumber",
+              "title": "About how many times did you visit a primary veterinarian (including your current one) about {CmpnName}'s LP/GOLPP symptoms?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Once"
+                },
+                {
+                  "value": "TWO",
+                  "text": "Twice"
+                },
+                {
+                  "value": "MORE_THAN_TWO",
+                  "text": "More than twice"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Other option"
+            },
+            {
+              "type": "radiogroup",
+              "name": "LvngPrimaryDurationCost",
+              "title": "About what was the total pre-insurance cost of these visits to primary veterinarians about dogname's LP/GOLPP symptoms?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "UNDER_1000",
+                  "text": "Under $1000"
+                },
+                {
+                  "value": "1000_3000",
+                  "text": "$1000-$3000"
+                },
+                {
+                  "value": "OVER_3000",
+                  "text": "Over $3000"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Other option"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

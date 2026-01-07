@@ -1,0 +1,292 @@
+{
+  "name": "08L_PRIMARY_VET-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "lvngPrimaryVetPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "lvngPrimaryVetHeading",
+          "html": "<h3>Did you change vets?(LP)</h3>"
+        },
+        {
+          "type": "html",
+          "name": "lvngPrimaryVetText",
+          "html": "<p>Tell us why you changed vets.</p>"
+        },
+        {
+          "type": "panel",
+          "name": "lvngPrimaryVetDetailsPanel",
+          "title": "",
+          "elements": [
+
+
+
+            {
+              "type": "radiogroup",
+              "name": "LvngPrimaryVetDiagnosis",
+              "title": "Did your current primary vet give you a diagnosis of LP for {CmpnName}? ",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO_MENTION",
+                  "text": "No, did not mention LP/GOLPP at all."
+                },
+                {
+                  "value": "NO_SUGGESTED",
+                  "text": "Item2"
+                },
+                {
+                  "value": "YES_UNCONFIRMED",
+                  "text": "Item3"
+                },
+                {
+                  "value": "YES_CONFIRMED",
+                  "text": "Don't know"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+            {
+              "type": "checkbox",
+              "name": "LvngPrimaryVetDiagnosticType",
+              "title": "What diagnostic procedure did your current primary veterinarian use to arrive at their conclusion?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ROUTINE_EXAM",
+                  "text": "Routine exam"
+                },
+                {
+                  "value": "SEDATED_VISUAL",
+                  "text": "Visual exam under sedation"
+                },
+                {
+                  "value": "XRAY",
+                  "text": "X-Ray or other imaging"
+                },
+                {
+                  "value": "ULTRASOUND",
+                  "text": "Ultrasound"
+                },
+                {
+                  "value": "SCOPE",
+                  "text": "Video endoscope or laryngoscope under anesthesia"
+                },
+                {
+                  "value": "Other",
+                  "text": "OTHER"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "RadioGroup",
+              "title": "Radio group title",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "LvngPrimaryVetPrescriptions",
+              "title": "Did your current primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Other option"
+            },
+            {
+              "type": "checkbox",
+              "name": "LvngPrimaryVetPrescriptionType",
+              "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "DOXEPIN",
+                  "text": "Doxepin"
+                },
+                {
+                  "value": "TRAZODONE",
+                  "text": "Trazodone"
+                },
+                {
+                  "value": "GABAPENTIN",
+                  "text": "Gabapentin"
+                },
+                {
+                  "value": "PREDNISONE",
+                  "text": "OTHER"
+                },
+                {
+                  "value": "NSAID",
+                  "text": "OTHER"
+                },
+                {
+                  "value": "LIBRELA",
+                  "text": "OTHER"
+                },
+                {
+                  "value": "CERENIA",
+                  "text": "OTHER"
+                },
+                {
+                  "value": "MELOXICAM",
+                  "text": "OTHER"
+                },
+                {
+                  "value": "ACEPROMINE",
+                  "text": "OTHER"
+                },
+                {
+                  "value": "ALBUTEROL",
+                  "text": "OTHER"
+                },
+                {
+                  "value": "TEMARIL P",
+                  "text": "OTHER"
+                },
+                {
+                  "value": "TEMARIL P",
+                  "text": "OTHER"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
+            },
+            {
+              "type": "rating",
+              "name": "LvngPrimaryVetPrescriptionEffectiveness",
+              "title": "How effective were these prescription medicatons for {CmpnName}'s LP/GOLPP?",
+              "description": "1 = not at all effective, 5 = very effective",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+
+            {
+              "type": "checkbox",
+              "name": "LvngPrimaryVetNonPrescription",
+              "title": "Did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+            {
+              "type": "checkbox",
+              "name": "LvngPrimaryVetNonPrescriptionType",
+              "title": "What non-prescription treatments did your current primary veterinarian recommend?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ACUPUNCTURE",
+                  "text": "Acupuncture"
+                },
+                {
+                  "value": "PHYSICAL_THERAPY",
+                  "text": "Physical or hydro therapy"
+                },
+                {
+                  "value": "LLLT",
+                  "text": "Cold laser or red light therapy"
+                },
+                {
+                  "value": "COUPAGE",
+                  "text": "Coupage"
+                },
+                {
+                  "value": "Other",
+                  "text": "OTHER"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "rating",
+              "name": "LvngPrimaryVetNonPrescriptionEffectiveness",
+              "title": "How effective were these treatments?",
+              "description": "1 = not effective, 5 = very effective",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+
+
+
+
+
+
+
+
+
+
+          ]
+        }
+      ]
+    }
+  ]
+}
