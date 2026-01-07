@@ -3,11 +3,16 @@ const path = require("path");
 const DATA_DIR = path.join(__dirname, "../data");
 
 const pageFiles = [
-  "lndgRoot-page.json",
-  "lvngRoot-page.json",
-  "lvngCmpn-page.json",
-  "lvngInfo-page.json",
-  "dcsdRoot-page.json"
+  "01_CMPN_NAME_LIFE_STATUS-page.json",
+  "02_USER_INFO-page.json",
+  "03_INFO_SOURCES-page.json",
+  "04_INTUBATION_HISTORY-page.json",
+  "05_BREATHING_CRISIS-page.json",
+  "06L_CMPN_INFO-page.json",
+  "07L_EARLY_SYMPTOMS-page.json",
+  "08L_CHANGED_VETS-page.json",
+  "09L_PRIMARY_DURATION-page.json",
+  "10L_PRIMARY_VET-page.json",
 ];
 
 const pages = pageFiles.map(filename => {

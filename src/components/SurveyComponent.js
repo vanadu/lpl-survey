@@ -13,23 +13,22 @@ import prefillData from '../../data/prefill.json';
 // Import the modularized survey definition files
 // VA! Replaced surveyConfig with an independent header
 // import surveyConfig from "../../data/survey-config.json";
-import lndgRoot from "../../data/lndgRoot-page.json";
-import lvngRoot from "../../data/lvngRoot-page.json"
-import lvngCmpn from "../../data/lvngCmpn-page.json"
-import lvngInfo from "../../data/lvngInfo-page.json"
-import lvngErly from "../../data/lvngErly-page.json"
-import dcsdRoot from "../../data/dcsdRoot-page.json"
+import CMPN_NAME_LIFE_STATUS from "../../data/01_CMPN_NAME_LIFE_STATUS-page.json";
+import USER_INFO from "../../data/02_USER_INFO-page.json"
+import INFO_SOURCES from "../../data/03_INFO_SOURCES-page.json"
+import INTUBATION_HISTORY from "../../data/04_INTUBATION_HISTORY-page.json"
+import BREATHING_CRISIS from "../../data/05_BREATHING_CRISIS-page.json"
+
 
 // Assemble the final survey JSON object
 // VA! IMPORTANT: this is only for dev, where we are using separate pages and separate JSON data files to build the app. Populate surveyJson with the pages imported from the data json files.  
 const surveyJson = {
   pages: [
-    lndgRoot,
-    lvngRoot,
-    lvngCmpn,
-    lvngInfo,
-    lvngErly,
-    dcsdRoot
+    CMPN_NAME_LIFE_STATUS,
+    USER_INFO,
+    INFO_SOURCES,
+    INTUBATION_HISTORY,
+    BREATHING_CRISIS,
   ]
 };
 
@@ -92,10 +91,10 @@ export default function SurveyComponent({ startPageName }) {
         // !VA Prefill the question responses as per prefill.json
         survey.data = prefillData;
         // !VA activePage is the object containing the survey data from the imported json. startPageName is the prop passed in from the SurveyComponent call in the respective Next.js route page, i.e. <SurveyComponent startPageName = 'lvngRoot_page' /> in alive.js
-        // console.log("survey.pages:", survey.pages);
+        console.log("survey.pages:", survey.pages);
         const activePage = survey.pages.find(p => p.name === startPageName);
         // !VA Log the .name property of the activePage object
-        // console.log("Active page object:", activePage);
+        console.log("Active page object:", activePage);
         console.log("Active page object name:", activePage?.name);
         if (activePage) {
           survey.currentPage = activePage;

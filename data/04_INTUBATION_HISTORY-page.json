@@ -1,5 +1,5 @@
 {
-  "name": "04_INTUBATION_HISTORY-page",
+  "name": "INTUBATION_HISTORY-page",
   "elements": [
     {
       "type": "panel",
@@ -74,7 +74,8 @@
             {
               "type": "checkbox",
               "name": "IntubationHistorySymptoms",
-              "title": "What symptoms did {lndgRootCmpnName} have after the intubation/anesthesia?",
+              "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
+              "visibleIf": "{IntubationHistoryConcerns} = 'Yes'",
               "choices": [
                 {
                   "value": "COUGHING",
@@ -95,7 +96,6 @@
               ],
               "choicesOrder": "none",
               "otherText": "Other",
-              "visibleIf": "{IntubationHistoryWasIntubated} = 'true'",
               "showOtherItem": true
             }
           ]

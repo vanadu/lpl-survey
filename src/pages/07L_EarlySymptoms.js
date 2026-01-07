@@ -1,30 +1,9 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import { useRouter} from 'next/router'
+import SurveyComponent from '@/components/SurveyComponent'
 import Link from 'next/link';
 
-import SurveyComponentMaster from '@/components/SurveyComponentMaster'
-import SurveyComponent from '@/components/SurveyComponent'
-
-import { NextSeo } from 'next-seo'
-
-// !VA Styles
-// import * as styles from '../styles/Home.module.scss'
-
-const Home = () => {
-  // !VA Log out the posts exported from the getStaticProps function below 
-  const router = useRouter()
-
-  const [activeIndex, setActiveIndex] = useState(0)
-
-
+const lvngEarlySymptoms = () => {
   return (
-    <>
-      <NextSeo 
-        title="Lar Par: 21st Century Guide to Laryngeal Paralysis in Dogs"
-        description="Love your dog? Learn all about laryngeal paralysis symptoms, surgery, stent and treatment alternatives."
-        canonical="https://larparlife.com"
-        />
       <section className="section">
         <div className="section_content">
           <div className="top-links">
@@ -66,21 +45,13 @@ const Home = () => {
             </Link>
           </div>
 
-
-
           <div className="survey-wrapper">
-            <SurveyComponentMaster />
+            <SurveyComponent startPageName = '07L_EarlySymptoms' />
           </div>
-
-          {/* <div className="survey-wrapper">
-            <SurveyComponent startPageName="lndgRoot_page" />
-          </div> */}
 
         </div>
       </section>
-    </>
   )
 }
 
-export default Home
-
+export default lvngEarlySymptoms

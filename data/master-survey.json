@@ -3,55 +3,55 @@
   "showProgressBar": "bottom",
   "pages": [
     {
-      "name": "lndgRoot_page",
+      "name": "01_CMPN_NAME_LIFE_STATUS-page",
       "elements": [
         {
           "type": "panel",
-          "name": "lndgRootPanel",
+          "name": "CmpnNameLifeStatusPanel",
           "elements": [
             {
               "type": "html",
-              "name": "lndgRootHeading",
+              "name": "CmpnNameLifeStatusHeading",
               "html": "<h2>About this survey</h2>"
             },
             {
               "type": "html",
-              "name": "lndgRootText",
+              "name": "CmpnNameLifeStatusText",
               "html": "<p>The goal of this survey is to gather information about how laryngeal paralysis (LarPar, LP) affects the lives of people and the animals they love. It's the first comprehensive online survey of its kind, and should take no more than ten minutes of your time.</p><p> We recommend taking the survey on a tablet, laptop, or desktop, but it works on phones, too. It just might take a few minutes longer because of the smaller screen .</p>"
             },
             {
               "type": "html",
-              "name": "lndgRootCrossedOverHeading",
+              "name": "CmpnNameCrossedOverHeading",
               "html": "<h3>About your LP companion<h3>"
             },
             {
               "type": "html",
-              "name": "lndgRootCrossedOverText",
+              "name": "CmpnNameCrossedOverText",
               "html": "<p>We know how hard it is to lose one's beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you'd like to continue now, now please tell us your LP companion's name and if your LP companion has crossed over the Rainbow Bridge. This will allow us to tailor the questions to your individual situation.</p>"
             },
             {
               "type": "panel",
-              "name": "lndgRootCmpnDetailsPanel",
+              "name": "CmpnNameLifeStatusDetailsPanel",
               "elements": [
                 {
                   "type": "text",
-                  "name": "lndgRootCmpnName",
+                  "name": "CmpnName",
                   "title": "Please tell us your companion's name:",
                   "isRequired": true
                 },
                 {
                   "type": "imagepicker",
-                  "name": "lndgRootCrossedOver",
+                  "name": "LifeStatusCrossedOver",
                   "title": "Has your companion crossed over the Rainbow Bridge?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "deceased",
+                      "value": "DECEASED",
                       "imageLink": "./img-companions-rainbow.png",
                       "text": "Over the Rainbow Bridge"
                     },
                     {
-                      "value": "living",
+                      "value": "LIVING",
                       "imageLink": "./img-companions.png",
                       "text": "Still here on Earth"
                     }
@@ -64,7 +64,7 @@
             },
             {
               "type": "html",
-              "name": "lndgRootMakeSelection",
+              "name": "CmpnNameLifeStatusMakeSelection",
               "html": "<p>Once you've made your selection, please choose 'Next' to begin the survey.</p>"
             }
           ]
@@ -72,35 +72,34 @@
       ]
     },
     {
-      "name": "lvngRoot_page",
-      "visibleIf": "{lndgRootCrossedOver} = 'living'",
+      "name": "02_USER_INFO-page",
       "elements": [
         {
           "type": "panel",
-          "name": "lvngRootPanel",
+          "name": "UserInfoPanel",
           "elements": [
             {
               "type": "html",
-              "name": "lvngRootHeading",
+              "name": "UserInfoHeading",
               "html": "<h2>Please tell us a little about yourself</h2>"
             },
             {
               "type": "html",
-              "name": "lvngRootText",
+              "name": "UserInfoText",
               "html": "<p>We believe you're more likely to help us if you know your data can't be used anywhere else. We're not asking for your last name, so we have no way to connect you with any of your private data. Click the links below to learn about how your privacy is protected and what we'll be doing with this survey information.</p><p>If more than one of your beloved companions have LP, you can take the survey for each of them. You can also update the survey responses for each animal, but only one set of results are saved for each Facebook account or email and each animal. Each time you take, it, existing results will be updated with the most recent ones.</p>"
             },
             {
               "type": "panel",
-              "name": "lvngRootAboutSurveyPanel",
+              "name": "UserInfoAboutSurveyPanel",
               "elements": [
                 {
                   "type": "html",
-                  "name": "lvngRootInfoPrivacy",
+                  "name": "UserInfoPrivacy",
                   "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About your privacy</a></div>"
                 },
                 {
                   "type": "html",
-                  "name": "lvngRootInfoYourData",
+                  "name": "UserInfoYourData",
                   "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>How will we be using your information?</a></div>"
                 }
               ]
@@ -108,70 +107,123 @@
             {
               "type": "panel",
               "title": "First, a little about you...",
-              "name": "lvngRootAboutUserPanel",
+              "name": "UserInfoAboutPanel",
               "elements": [
                 {
                   "type": "text",
                   "title": "Your First Name:",
-                  "name": "lvngRootUserName",
+                  "name": "UserInfoFirstName",
                   "isRequired": true
                 },
                 {
                   "type": "dropdown",
-                  "name": "lvngRootUserCountry",
+                  "name": "UserInfoCountry",
                   "title": "Country:",
                   "isRequired": true,
                   "choices": [
-                    "United States",
-                    "United Kingdom",
-                    "Germany",
-                    "Canada",
-                    "Australia/NZ",
-                    "France",
-                    "Spain",
-                    "Portugal"
+                    {
+                      "value": "US",
+                      "text": "United States"
+                    },
+                    {
+                      "value": "UK",
+                      "text": "United Kingdom"
+                    },
+                    {
+                      "value": "CA",
+                      "text": "Canada"
+                    },
+                    {
+                      "value": "DE",
+                      "text": "Germany"
+                    },
+                    {
+                      "value": "AU/NZ",
+                      "text": "Australia/New Zealand"
+                    },
+                    {
+                      "value": "FR",
+                      "text": "France"
+                    },
+                    {
+                      "value": "ES",
+                      "text": "Spain"
+                    },
+                    {
+                      "value": "PT",
+                      "text": "Portugal"
+                    }
                   ],
                   "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "UserInfoStateRegion",
+                  "title": "What state or region do you live in (optional)",
+                  "isRequired": false
                 }
               ]
             },
             {
               "type": "panel",
-              "name": "livRootOptionalInfo",
+              "name": "UserInfoAgeGenderPanel",
               "title": "Age and Gender (optional)",
               "elements": [
                 {
                   "type": "html",
-                  "name": "lvngRootDemographicInfo",
+                  "name": "UserInfoDemographicInfo",
                   "title": "",
                   "html": "<p>We're asking for optional basic demographic information to help understand how different people manage the animals in their care. "
                 },
                 {
-                  "type": "radiogroup",
-                  "name": "lvngRootUserAge",
-                  "title": "Age group:",
-                  "isRequired": false,
+                  "type": "dropdown",
+                  "name": "UserInfoAgeGroup",
+                  "title": "Approximately what is your age?",
+                  "isRequired": true,
                   "choices": [
-                    "Under 20",
-                    "20-34",
-                    "35-49",
+                    {
+                      "value": "UNDER_20",
+                      "text": "Under 20"
+                    },
+                    {
+                      "value": "20_34",
+                      "text": "20-34"
+                    },
+                    {
+                      "value": "35_49",
+                      "text": "35-49"
+                    },
                     "50-64",
-                    "Over 65"
-                  ],
-                  "hasOther": false
+                    {
+                      "value": "OVER_65",
+                      "text": "Over 65"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
-                  "name": "lvngRootUserGender",
+                  "name": "UserInfoGender",
                   "title": "Gender:",
                   "isRequired": false,
                   "choices": [
-                    "Woman",
-                    "Man",
-                    "Non-binary",
-                    "Prefer not to say"
+                    {
+                      "value": "WOMAN",
+                      "text": "Woman"
+                    },
+                    {
+                      "value": "MAN",
+                      "text": "Man"
+                    },
+                    {
+                      "value": "NON_BINARY",
+                      "text": "Non-binary"
+                    },
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    }
                   ],
-                  "hasOther": true,
+                  "showOtherItem": true,
                   "otherText": "Prefer to self-describe"
                 }
               ]
@@ -179,16 +231,16 @@
             {
               "type": "panel",
               "title": "Verification contact",
-              "name": "lvngRootVerificationPanel",
+              "name": "UserInfoVerificationPanel",
               "elements": [
                 {
                   "type": "html",
-                  "name": "lvngRootUserText",
+                  "name": "UserInfoVerificationPanelText",
                   "html": "<p>We'll need to contact a random sample of participants for verification purposes. If you don't want to share your email, you can use your Facebook account name for verification via Facebook Messenger.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
                 },
                 {
                   "type": "boolean",
-                  "name": "lvngRootUserContactType",
+                  "name": "UserInfoContactType",
                   "title": "Would you like to use email or Facebook Messenger for verification?",
                   "isRequired": true,
                   "labelTrue": "Facebook",
@@ -197,22 +249,22 @@
                 {
                   "type": "text",
                   "title": "Email address:",
-                  "name": "lvngRootUserContactTypeEmail",
+                  "name": "UserInfoContactTypeEmail",
                   "isRequired": true,
-                  "visibleIf": "{lvngRootUserContactType} = false",
+                  "visibleIf": "{UserInfoContactType} = false",
                   "inputType": "email"
                 },
                 {
                   "type": "html",
-                  "name": "",
-                  "title": "",
-                  "visibleIf": "{lvngRootUserContactType} = true",
+                  "name": "UserInfoContactTypeFacebookInstructions",
+                  "title": "z",
+                  "visibleIf": "{UserInfoContactType} = true",
                   "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
                 },
                 {
                   "type": "text",
                   "title": "Facebook account:",
-                  "name": "lvngRootUserContactTypeFacebook",
+                  "name": "UserInfoContactTypeFacebook",
                   "isRequired": true,
                   "visibleIf": "{lvngRootUserContactType} = true",
                   "placeholder": "eg. https://www.facebook.com/my.profile.name",
@@ -226,7 +278,7 @@
                 },
                 {
                   "type": "boolean",
-                  "name": "lvngRootContactOK",
+                  "name": "UserInfoContactOK",
                   "title": "May we contact you to talk more about your LP experience?",
                   "isRequired": true
                 }
@@ -237,57 +289,608 @@
       ]
     },
     {
-      "name": "lvngCmpn_page",
+      "name": "03_INFO_SOURCES-page",
       "elements": [
         {
           "type": "panel",
-          "name": "lvngCmpnPanel",
+          "name": "InfoSourcesPanel",
           "elements": [
             {
               "type": "html",
-              "name": "lvngCmpnAboutCompHeading",
+              "name": "InfoSourcesHeading",
+              "html": "<h3>How did you learn about laryngeal paralysis (LP)?</h3>"
+            },
+            {
+              "type": "html",
+              "name": "InfoSourcesText",
+              "html": "<p>This section asks some questions about how you learned about LP and whether the information you found helped you make decisions for {lndgRootCmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
+            },
+            {
+              "type": "panel",
+              "name": "InfoSourcesPriorKnowledgePanel",
+              "elements": [
+                {
+                  "type": "boolean",
+                  "name": "InfoSourcesPriorKnowledge",
+                  "title": "Had you ever heard of LP before {lndgRootCmpnName} got it?",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "InfoSourcesTypesPanel",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "InfoSourcesTypes",
+                  "title": "Which sources of information have you accessed to learn about LP?",
+                  "choices": [
+                    {
+                      "value": "Veterinarians",
+                      "text": "VETERINARIANS"
+                    },
+                    {
+                      "value": "WEBSITES",
+                      "text": "Websites"
+                    },
+                    {
+                      "value": "FACEBOOK_GROUPS",
+                      "text": "Facebook groups"
+                    },
+                    {
+                      "value": "SOCIAL_VIDEO",
+                      "text": "Youtube, Instagram or other video"
+                    },
+                    {
+                      "value": "SOCIAL_CHAT",
+                      "text": "Reddit, X (Twitter), or other social media"
+                    },
+                    {
+                      "value": "AI_MODELS",
+                      "text": "AI models like ChatGPT"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true,
+                  "noneText": "Don't know",
+                  "otherText": "Other (please describe)"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "InfoSourcesBestSource",
+                  "title": "Which of those information sources did you find MOST useful (please select one)?",
+                  "choices": [
+                    "Facebook groups"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "InfoSourcesQualityPanel",
+              "elements": [
+                {
+                  "type": "rating",
+                  "name": "InfoSourcesHardToUnderstand",
+                  "title": "Did you find the information you got about LP difficult to understand?",
+                  "description": "1 = no, not difficult at all, 5 = very difficult",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "InfoSourcesContradictory",
+                  "title": "Do you feel like a lot of the information you got about LP was contradictory?",
+                  "description": "1 = not at all contridictory, 5 = very contradictory",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "InfoSourcesClearAnswers",
+                  "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {lndgRootCmpnName}?",
+                  "description": "1 = No, not hard at all, 5 = yes, very hard",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "04_INTUBATION_HISTORY-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "IntubationHistoryPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "IntubationHistoryHeading",
+              "html": "<h3>Improper intubation can lead to damage to the larynx. These questions relate to {CmpnName}'s intubation history prior to LP/GOLPP symptoms.</h3>"
+            },
+            {
+              "type": "panel",
+              "name": "IntubationHistorySubpanel",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "IntubationHistoryWasIntubated",
+                  "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Not sure"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "IntubationHistoryReason",
+                  "title": "For what reason was {CmpnName} intubated prior to the first LP symptoms appearing?",
+                  "choices": [
+                    {
+                      "value": "TEETH_CLEANING",
+                      "text": "Teeth cleaning"
+                    },
+                    {
+                      "value": "DENTAL_SURGERY",
+                      "text": "Dental surgery"
+                    },
+                    {
+                      "value": "NON_DENTAL_SURGERY",
+                      "text": "Non-dental surgery"
+                    },
+                    {
+                      "value": "DIAGNOSTIC",
+                      "text": "Diagnostic procedure"
+                    },
+                    {
+                      "value": "EMERGENCY",
+                      "text": "Emergency procedure"
+                    }
+                  ],
+                  "choicesOrder": "none",
+                  "otherText": "Other",
+                  "showOtherItem": true,
+                  "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'"
+                },
+                {
+                  "type": "boolean",
+                  "name": "IntubationHistoryConcerns",
+                  "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
+                  "isRequired": true,
+                  "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'"
+                },
+                {
+                  "type": "checkbox",
+                  "name": "IntubationHistorySymptoms",
+                  "title": "What symptoms did {lndgRootCmpnName} have after the intubation/anesthesia?",
+                  "choices": [
+                    {
+                      "value": "COUGHING",
+                      "text": "Coughing/hacking"
+                    },
+                    {
+                      "value": "GAGGING",
+                      "text": "Gagging/retching"
+                    },
+                    {
+                      "value": "PANTING",
+                      "text": "Excessive panting"
+                    },
+                    {
+                      "value": "LABORED_BREATHING",
+                      "text": "Labored breathing"
+                    }
+                  ],
+                  "choicesOrder": "none",
+                  "otherText": "Other",
+                  "visibleIf": "{IntubationHistoryWasIntubated} = 'true'",
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "05_BREATHING_CRISIS-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "BreathingCrisisPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "BreathingCrisis",
+              "html": "<h3>LP Breathing Crisis</h3>"
+            },
+            {
+              "type": "html",
+              "name": "BreathingCrisisText",
+              "html": "<p>Breathing emergencies are terrifying.</p>"
+            },
+            {
+              "type": "panel",
+              "name": "BreathingCrisisDetailsPanel",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "BreathingCrisisDidHave",
+                  "title": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "BreathingCrisisCount",
+                  "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+                  "choices": [
+                    {
+                      "value": "ONE",
+                      "text": "Once"
+                    },
+                    {
+                      "value": "TWO",
+                      "text": "Twice"
+                    },
+                    {
+                      "value": "MORE_THAN_TWO",
+                      "text": "More than twice"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "BreathingCrisisCount",
+                  "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+                  "choices": [
+                    {
+                      "value": "ONE",
+                      "text": "Once"
+                    },
+                    {
+                      "value": "TWO",
+                      "text": "Twice"
+                    },
+                    {
+                      "value": "MORE_THAN_TWO",
+                      "text": "More than twice"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "BreathingCrisisCost",
+                  "title": "About what was the total pre-insurance cost of these visits to veterinary professionals due to LP/GOLPP-induced breathing crises/emergencies?",
+                  "choices": [
+                    {
+                      "value": "LESS_THAN_1000",
+                      "text": "Less than $1000"
+                    },
+                    {
+                      "value": "1000_3000",
+                      "text": "$1000 - $3000"
+                    },
+                    {
+                      "value": "3000 - 5000",
+                      "text": "$3000 - $5000"
+                    },
+                    {
+                      "value": "MORE_THAN_5000",
+                      "text": "More than $5000"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "BreathingCrisisAdvice",
+                  "title": "Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "Don't know",
+                      "text": "DONT_KNOW"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "BreathingCrisisAdviceType",
+                  "title": "What advice did they give you to help you deal with a breathing crisis?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "SEDATIVE",
+                      "text": "Adminster a sedative"
+                    },
+                    {
+                      "value": "COOL_PLACE",
+                      "text": "Get them to a cool place"
+                    },
+                    {
+                      "value": "COOLING_AGENT",
+                      "text": "Apply ice, a cooling vest, or some other cooling agent"
+                    },
+                    {
+                      "value": "BLOW_AIR",
+                      "text": "Blow air into their nose (CPR)"
+                    },
+                    {
+                      "value": "EMERGENCY_FACILITY",
+                      "text": "Bring them to an emergency facility immediately"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "required": true,
+                  "visibleIf": "{BreathingCrisisAdvice} = 'YES'"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "BreathingCrisisProvidedSubstance",
+                  "title": "Did a veterinary professional provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Other option"
+                },
+                {
+                  "type": "checkbox",
+                  "name": "BreathingCrisisProvidedSubstanceType",
+                  "title": "What substance or product did they provide?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "SEDATIVE",
+                      "text": "Sedative"
+                    },
+                    {
+                      "value": "STERIOD",
+                      "text": "Steroid, i.e., prednisone"
+                    },
+                    {
+                      "value": "OXYGEN",
+                      "text": "Supplemental oxygen"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "BreathingCrisisSubstanceForm",
+                  "title": "In what form was the sedative or steriod provided?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "INJECTIBLE",
+                      "text": "Injectible"
+                    },
+                    {
+                      "value": "LIQUID",
+                      "text": "Liquid"
+                    },
+                    {
+                      "value": "SUPPOSITORY",
+                      "text": "Suppository"
+                    },
+                    {
+                      "value": "GEL",
+                      "text": "Gel or paste"
+                    },
+                    {
+                      "value": "PILL",
+                      "text": "Pill or tablet"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "06L_CMPN_INFO-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "lvngCmpnInfoPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "lvngCmpnInfoHeading",
               "html": "<h3>Tell us about your LarPar companion!<h3>"
             },
             {
               "type": "html",
-              "name": "lvngCmpnAboutCompText",
+              "name": "lvngCmpnInfoText",
               "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to complete the survey. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances.</p>"
             },
             {
               "type": "panel",
-              "name": "lvngCmpnDetailsPanel",
+              "name": "lvngCmpnInfoDetailsPanel",
               "elements": [
                 {
                   "type": "panel",
-                  "name": "lvngCmpnDetailsAnimalType",
+                  "name": "lvngCmpnInfoAnimalTypePanel",
                   "elements": [
                     {
                       "type": "radiogroup",
-                      "name": "lvngCmpnAnimalType",
-                      "title": "What kind of animal is {lndgRootCmpnName}?",
+                      "name": "lvngCmpnInfoAnimalType",
+                      "title": "What kind of animal is {CmpnName}?",
                       "isRequired": true,
                       "choices": [
-                        "Dog",
-                        "Cat",
-                        "Horse"
+                        {
+                          "value": "CANINE",
+                          "text": "Dog"
+                        },
+                        {
+                          "value": "FELINE",
+                          "text": "Cat"
+                        },
+                        {
+                          "value": "EQUINE",
+                          "text": "Horse"
+                        }
                       ]
                     }
                   ]
                 },
                 {
                   "type": "panel",
-                  "name": "lvngCmpnDetailsBreedGender",
-                  "title": "What is {lndgRootCmpnName}'s breed or breed mix and gender?",
+                  "name": "lvngCmpnInfoBreedGenderPanel",
+                  "title": "What is {CmpnName}'s breed or breed mix and gender?",
                   "elements": [
                     {
                       "type": "text",
-                      "name": "lvngCmpnBreed",
+                      "name": "lvngCmpnInfoBreed",
                       "title": "Breed or mix (if unknown, type 'Don't know'):",
                       "isRequired": true
                     },
                     {
                       "type": "boolean",
-                      "name": "lvngCmpnGender",
+                      "name": "lvngCmpnInfoGender",
                       "title": "Gender:",
                       "isRequired": true,
                       "labelTrue": "Female",
@@ -297,13 +900,13 @@
                 },
                 {
                   "type": "panel",
-                  "name": "lvngCmpnDetailsAge",
-                  "title": "What is {lndgRootCmpnName}'s approximate age (in years and months)?",
+                  "name": "lvngCmpnInfoAgePanel",
+                  "title": "What is {CmpnName}'s approximate age (in years and months)?",
                   "elements": [
                     {
                       "type": "text",
                       "inputType": "number",
-                      "name": "lvngCmpnAgeYears",
+                      "name": "lvngCmpnInfoAgeYears",
                       "title": "Age in years (number):",
                       "isRequired": true,
                       "min": "1",
@@ -320,7 +923,7 @@
                     {
                       "type": "text",
                       "inputType": "number",
-                      "name": "lvngCmpnAgeMonths",
+                      "name": "lvngCmpnInfoAgeMonths",
                       "title": "Months (number 1 - 12)",
                       "isRequired": true,
                       "min": 1,
@@ -338,12 +941,12 @@
                 },
                 {
                   "type": "panel",
-                  "name": "lvngCmpnDetailsWeight",
-                  "title": "About how much does {lndgRootCmpnName} weigh in pounds or kilos?",
+                  "name": "lvngCmpnInfoWeightPanel",
+                  "title": "About how much does {CmpnName} weigh in pounds or kilos?",
                   "elements": [
                     {
                       "type": "text",
-                      "name": "lvngCmpnWeight",
+                      "name": "lvngCmpnInfoWeight",
                       "title": "Weight (number):",
                       "isRequired": true,
                       "inputType": "number",
@@ -360,7 +963,7 @@
                     },
                     {
                       "type": "boolean",
-                      "name": "lvngCmpnWeightUnits",
+                      "name": "lvngCmpnInfoWeightUnits",
                       "title": "Please choose pounds or kilos:",
                       "isRequired": true,
                       "labelTrue": "Kg",
@@ -370,29 +973,57 @@
                 },
                 {
                   "type": "panel",
-                  "name": "lvngCmpnDetailsDemeanor",
-                  "title": "How energetic, excitable, or anxious is {lndgRootCmpnName}? (1=very calm, 5=very excitable)?",
+                  "name": "lvngCmpnInfoDemeanorPanel",
+                  "title": "",
                   "elements": [
                     {
                       "type": "rating",
-                      "name": "lvngCmpnDemeanor",
-                      "title": ""
+                      "name": "lvngCmpnInfoDemeanor",
+                      "title": "How energetic, excitable, or anxious would you describe {CmpnName}?",
+                      "description": "1 = very calm, 5 = very excitable",
+                      "isRequired": true,
+                      "rateValues": [
+                        {
+                          "value": 1,
+                          "text": "1"
+                        },
+                        {
+                          "value": 2,
+                          "text": "2"
+                        },
+                        {
+                          "value": 3,
+                          "text": "3"
+                        },
+                        {
+                          "value": 4,
+                          "text": "4"
+                        },
+                        {
+                          "value": 5,
+                          "text": "5"
+                        },
+                        {
+                          "value": "DONT_KNOW",
+                          "text": "Don't know"
+                        }
+                      ]
                     }
                   ]
                 },
                 {
                   "type": "panel",
-                  "name": "lvngRootUserAnimalsPanel",
+                  "name": "lvngCmpnInfoAnimalsPanel",
                   "elements": [
                     {
                       "type": "dropdown",
-                      "name": "lvngRootAnimalsCount",
+                      "name": "lvngCmpnInfoAnimalsCount",
                       "title": "How many animals do you have in your care?",
                       "required": true,
                       "choices": [
                         {
                           "value": "1",
-                          "text": "Just {lndgRootCmpnName}"
+                          "text": "Just {CmpnName}"
                         },
                         {
                           "value": "2",
@@ -413,15 +1044,15 @@
                     },
                     {
                       "type": "boolean",
-                      "name": "lvngRootHasInsurance",
+                      "name": "lvngCmpnInfoHasInsurance",
                       "required": true,
-                      "title": "Do you have pet insurance for {lndgRootCmpnName}?"
+                      "title": "Do you have pet insurance for {CmpnName}?"
                     },
                     {
                       "type": "radiogroup",
-                      "name": "lvngRootHasInsuranceOther",
+                      "name": "lvngCmpnInfoHasInsuranceOther",
                       "title": "Do you have pet insurance for your other animals?",
-                      "visibleIf": "{lvngRootAnimalsCount} != 1",
+                      "visibleIf": "{lvngCmpnInfoHasInsurance} != 1",
                       "required": true,
                       "choices": [
                         {
@@ -448,172 +1079,325 @@
       ]
     },
     {
-      "name": "lvngInfo_page",
+      "name": "07L_EARLY_SYMPTOMS-page",
       "elements": [
         {
           "type": "panel",
-          "name": "lvngInfoPanel",
+          "name": "lvngEarlySymptomsPanel",
           "elements": [
             {
               "type": "html",
-              "name": "lvngInfoHeading",
-              "html": "<h3>How did you learn about laryngeal paralysis (LP)?</h3>"
+              "name": "lvngEarlySymptomsHeading",
+              "html": "<h3>Your early encounters with laryngeal paralysis (LP)</h3>"
             },
             {
               "type": "html",
-              "name": "lvngCmpnAboutCompText",
-              "html": "<p>This section asks some questions about how you learned about LP and whether the information you found helped you make decisions for {lndgRootCmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
+              "name": "lvngEarlySymptomsText",
+              "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP journey and how you came to accept that {CmpnName} might have it.</p>"
             },
             {
               "type": "panel",
-              "name": "lvngInfoInformedLevel",
+              "name": "lvngEarlySymptomsFirstSignsPanel",
+              "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of what you later learned was LP?",
               "elements": [
                 {
-                  "type": "boolean",
-                  "name": "lvngInfoPriorInfo",
-                  "title": "Had you ever heard of LP before {lndgRootCmpnName} got it?",
-                  "isRequired": true
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngEarlySymptomsAgeYears",
+                  "title": "Years",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
                 },
                 {
-                  "type": "boolean",
-                  "name": "lvngInfoLearningMore",
-                  "title": "Now that you know about LP, have you been trying to learn more about it?",
-                  "isRequired": true
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngEarlySymptomsAgeMonths",
+                  "title": "Months (number 1 - 12)",
+                  "isRequired": true,
+                  "min": 1,
+                  "max": 12,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 12,
+                      "text": "Months must be between 1 and 12"
+                    }
+                  ]
                 }
               ]
             },
             {
               "type": "panel",
-              "name": "lvngInfoSourcesPanel",
+              "name": "lvngErlySymptomsDetailsPanel",
               "elements": [
                 {
                   "type": "checkbox",
-                  "name": "lvngInfoSources",
-                  "title": "Which sources of information have you accessed to learn about LP?",
+                  "name": "lvngEarlySymptomsType",
+                  "title": "What symptoms did {CmpnName} have at that time?",
                   "choices": [
                     {
-                      "value": "Institutional websites",
-                      "text": "Institutional websites (i.e. universities)"
+                      "value": "STRIDOR",
+                      "text": "Noisy or raspy breathing"
                     },
                     {
-                      "value": "Private websites",
-                      "text": "Private websites"
+                      "value": "PANTING",
+                      "text": "Excess panting"
                     },
                     {
-                      "value": "Facebook groups",
-                      "text": "Facebook groups"
+                      "value": "BARK_CHANGES",
+                      "text": "Changes in bark"
                     },
                     {
-                      "value": "Primary veterinarians",
-                      "text": "Primary veterinarians"
+                      "value": "COUGHING",
+                      "text": "Coughing or hacking"
                     },
                     {
-                      "value": "Veterinary specialists",
-                      "text": "Veterinary specialists (i.e. surgeons)"
+                      "value": "GAGGING",
+                      "text": "Gagging or retching"
                     },
                     {
-                      "value": "Social media video",
-                      "text": "Youtube, Instagram or other video"
+                      "value": "LABORED_BREATHING",
+                      "text": "Labored Breathing"
                     },
                     {
-                      "value": "Social media chat",
-                      "text": "Reddit or other social media chat"
+                      "value": "EXERCISE_INTOLERANCE",
+                      "text": "Exercise and heat intolerance"
                     },
                     {
-                      "value": "AI models",
-                      "text": "AI models like ChatGPT"
+                      "value": "CYANOSIS",
+                      "text": "Tongue or gums turning blue"
+                    },
+                    {
+                      "value": "SYNCOPE",
+                      "text": "Syncope (passing out)"
                     }
                   ],
                   "showOtherItem": true,
                   "showNoneItem": true,
                   "noneText": "Don't know",
-                  "otherText": "Other (please describe)"
+                  "otherText": "Other (max 250 characters)"
                 },
                 {
-                  "type": "dropdown",
-                  "name": "lvngInfoBestSource",
-                  "title": "Which of those information sources did you find MOST useful (please select one)?",
+                  "type": "rating",
+                  "name": "lvngEarlySymtomsSeverity",
+                  "title": "How severe did you think {CmpnName}'s early symptoms were?",
+                  "description": "1 = mild, 5 = severe",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "lvngEarlySymptomsHindEndWeakness",
+                  "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
                   "choices": [
-                    "Facebook groups"
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't remember"
+                    }
                   ]
                 }
               ]
             },
             {
               "type": "panel",
-              "name": "lvngInfoQualityPanel",
+              "name": "lvngErlyOtherConditions",
               "elements": [
                 {
-                  "type": "rating",
-                  "name": "lvngInfoHardToUnderstand",
-                  "title": "Did you find the information you got about LP difficult to understand?",
-                  "description": "1 = no, not difficult at all, 5 = very difficult",
+                  "type": "checkbox",
+                  "name": "lvngErlyOtherConditions",
+                  "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
+                  "required": true,
+                  "choices": [
+                    {
+                      "value": "GERD",
+                      "text": "Acid reflux (GERD)"
+                    },
+                    {
+                      "value": "ME",
+                      "text": "Megaesophagus"
+                    },
+                    {
+                      "value": "PERIODONTAL",
+                      "text": "Periodontal disease"
+                    }
+                  ],
+                  "choicesOrder": "none",
+                  "otherText": "Other (max. 250 characters)",
+                  "showOtherItem": true,
+                  "showNoneItem": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "08L_CHANGED_VETS-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "lvngChangedVetsPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "lvngChangedVetsHeading",
+              "html": "<h3>Did you change vets?(LP)</h3>"
+            },
+            {
+              "type": "html",
+              "name": "lvngChangedVetsText",
+              "html": "<p>Tell us why you changed vets.</p>"
+            },
+            {
+              "type": "panel",
+              "name": "lvngChangedVetsDetailsPanel",
+              "title": "",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "lvngChangedVets",
+                  "title": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
                   "isRequired": true,
-                  "rateValues": [
+                  "choices": [
                     {
-                      "value": 1,
-                      "text": "1"
+                      "value": "NO",
+                      "text": "No"
                     },
                     {
-                      "value": 2,
-                      "text": "2"
+                      "value": "ONCE",
+                      "text": "Once"
                     },
                     {
-                      "value": 3,
-                      "text": "3"
+                      "value": "MORE_THAN_ONCE",
+                      "text": "More than once"
                     },
                     {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "na",
+                      "value": "DONT_KNOW",
                       "text": "Don't know"
                     }
                   ]
                 },
                 {
-                  "type": "rating",
-                  "name": "lvngInfoContradictory",
-                  "title": "Do you feel like a lot of the information you got about LP was contradictory?",
-                  "description": "1 = not at all contridictory, 5 = very contradictory",
+                  "type": "checkbox",
+                  "name": "lvngChangedVetsReason",
+                  "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?:",
                   "isRequired": true,
-                  "rateValues": [
+                  "choices": [
                     {
-                      "value": 1,
-                      "text": "1"
+                      "value": "NOT_SERIOUS",
+                      "text": "ITEM_1"
                     },
                     {
-                      "value": 2,
-                      "text": "2"
+                      "value": "NOT_INTERESTED",
+                      "text": "ITEM_2"
                     },
                     {
-                      "value": 3,
-                      "text": "3"
+                      "value": "AGE_ONLY",
+                      "text": "ITEM_3"
                     },
                     {
-                      "value": 4,
-                      "text": "4"
+                      "value": "BAD_TESTS",
+                      "text": "OTHER"
                     },
                     {
-                      "value": 5,
-                      "text": "5"
+                      "value": "NO_VALUE",
+                      "text": "OTHER"
                     },
                     {
-                      "value": "na",
+                      "value": "MISDIAGNOSED",
+                      "text": "OTHER"
+                    },
+                    {
+                      "value": "OTHER",
+                      "text": "Other (max. 250 characters)"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radio",
+                  "name": "lvngChangedVetsAdvice",
+                  "title": "What, if any, advice did your previous primary vet/s give you advice about dogname's LP/GOLPP symptoms?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "NOTHING_CAN_BE_DONE",
+                      "text": "Said nothing can be done"
+                    },
+                    {
+                      "value": "INEFFECTIVE_TREATMENTS",
+                      "text": "Provided ineffective treatments"
+                    },
+                    {
+                      "value": "RECOMMENDED_SPECIALIST",
+                      "text": "Recommended consulting a specialist"
+                    },
+                    {
+                      "value": "RECOMMENDED_EUTHANASIA",
+                      "text": "Recommended euthanasia"
+                    },
+                    {
+                      "value": "OTHER",
+                      "text": "Other (max. 250 characters)"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "lvngChangedVetsSpecialistRecommendation",
+                  "title": "What kind of specialist did your previous vet recommend or refer?",
+                  "isRequired": true,
+                  "visibleIf": "{lvngChangedVetsAdvice} = 'RECOMMENDED_SPECIALIST'",
+                  "choices": [
+                    {
+                      "value": "AIRWAY_SURGEON",
+                      "text": "Surgeon experienced in tieback or other LP surgery"
+                    },
+                    {
+                      "value": "ORTHOPEDIC_SURGEON",
+                      "text": "General or orthopedic surgeon"
+                    },
+                    {
+                      "value": "NEUROLOGIST",
+                      "text": "NEUROLOGIST"
+                    },
+                    {
+                      "value": "STENT_PROVIDER",
+                      "text": "Stent provider"
+                    },
+                    {
+                      "value": "DONT_KNOW",
                       "text": "Don't know"
                     }
-                  ]
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Other"
                 },
                 {
                   "type": "rating",
-                  "name": "lvngInfoHardAnswers",
-                  "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {lndgRootCmpnName}?",
-                  "description": "1 = No, not hard at all, 5 = yes, very hard",
+                  "name": "lvngChangeVetsConfidence",
+                  "title": "How confident were you in your previous primary vet/s' knowledge level regarding LP/GOLPP?",
+                  "description": "1 = no confident at all, 5 = very confident",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -637,7 +1421,7 @@
                       "text": "5"
                     },
                     {
-                      "value": "na",
+                      "value": "DONT_KNOW",
                       "text": "Don't know"
                     }
                   ]
@@ -649,107 +1433,426 @@
       ]
     },
     {
-      "name": "dcsdRoot_page",
-      "visibleIf": "{lndgRootCrossedOver} = 'deceased'",
+      "name": "09L_PRIMARY_DURATION-page",
       "elements": [
         {
           "type": "panel",
-          "name": "dcsdRoot_panel",
+          "name": "lvngPrimaryDurationPanel",
           "elements": [
             {
               "type": "html",
-              "name": "dcsdRootHeading",
-              "html": "<h2>Deceased Page</h2>"
+              "name": "lvngPrimaryDurationHeading",
+              "html": "<h3>How long were you in the care of a primary vet?(LP)</h3>"
             },
             {
               "type": "html",
-              "name": "dcsdRootText",
-              "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>"
-            },
-            {
-              "type": "html",
-              "name": "dcsdRootWhyContact",
-              "html": "<img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Why provide a contact?</a>"
-            },
-            {
-              "type": "text",
-              "name": "dcsdRootUserContact",
-              "title": "Facebook account name or email",
-              "isRequired": true
-            },
-            {
-              "type": "html",
-              "name": "dcsdCmpnAboutHeading",
-              "html": "<h3>About your LP companion<h3>"
-            },
-            {
-              "type": "html",
-              "name": "dcsdCmpnAboutText",
-              "html": "<p>We're focusing on dogs right now, but if you have a horse or cat with LP, feel free to answer the questions as best as you can. If a question doesn't apply, just leave it blank and skip to the next one.  </p>"
+              "name": "lvngPrimaryDurationText",
+              "html": "<p>Tells how long a primary vet was responsible for {CmpnName}'s LP/GOLPP issues.</p>"
             },
             {
               "type": "panel",
-              "name": "dcsdCmpnDetailsPanel",
-              "title": "Companion Details",
-              "description": "Please share details about your LP companion here.",
+              "name": "lvngPrimaryDurationDetailsPanel",
+              "title": "",
               "elements": [
                 {
-                  "type": "panel",
-                  "name": "dcsdCmpnDetailsSubpanel1",
-                  "elements": [
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngPrimaryDurationBeginYears",
+                  "title": "Age in years (number):",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                  "validators": [
                     {
-                      "type": "text",
-                      "name": "dcsdCmpnName",
-                      "title": "Name:",
-                      "isRequired": true
-                    },
-                    {
-                      "type": "text",
-                      "name": "dcsdCmpnBreed",
-                      "title": "Breed or mix:",
-                      "isRequired": true
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
                     }
                   ]
                 },
                 {
-                  "type": "panel",
-                  "name": "dcsdCmpnDetailsSubpanel2",
-                  "elements": [
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngPrimaryDurationBeginMonths",
+                  "title": "Months (number 1 - 12)",
+                  "isRequired": true,
+                  "min": 1,
+                  "max": 12,
+                  "validators": [
                     {
-                      "type": "text",
-                      "name": "dcsdCmpnDOB",
-                      "title": "Approximate date of birth:",
-                      "isRequired": true,
-                      "inputType": "date"
-                    },
-                    {
-                      "type": "boolean",
-                      "name": "dcsdCmpnGender",
-                      "title": "Gender:",
-                      "isRequired": true,
-                      "labelTrue": "Female",
-                      "labelFalse": "Male"
+                      "type": "numeric",
+                      "minValue": 0,
+                      "maxValue": 12,
+                      "text": "Months must be between 1 and 12"
                     }
                   ]
                 },
                 {
-                  "type": "panel",
-                  "name": "dcsdCmpnDetailsSubpanel3",
-                  "elements": [
+                  "type": "radiogroup",
+                  "name": "lvngPrimaryDurationVisitsNumber",
+                  "title": "About how many times did you visit a primary veterinarian (including your current one) about {CmpnName}'s LP/GOLPP symptoms?",
+                  "isRequired": true,
+                  "choices": [
                     {
-                      "type": "text",
-                      "name": "dcsdCmpnWeight",
-                      "title": "Approximate weight (number):",
-                      "isRequired": true,
-                      "inputType": "number"
+                      "value": "ONE",
+                      "text": "Once"
                     },
                     {
-                      "type": "boolean",
-                      "name": "dcsdCmpnWeightUnits",
-                      "title": "Please choose pounds or kilos:",
-                      "isRequired": true,
-                      "labelTrue": "Kg",
-                      "labelFalse": "Lbs"
+                      "value": "TWO",
+                      "text": "Twice"
+                    },
+                    {
+                      "value": "MORE_THAN_TWO",
+                      "text": "More than twice"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Other option"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "lvngPrimaryDurationCost",
+                  "title": "About what was the total pre-insurance cost of these visits to primary veterinarians about dogname's LP/GOLPP symptoms?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "UNDER_1000",
+                      "text": "Under $1000"
+                    },
+                    {
+                      "value": "1000_3000",
+                      "text": "$1000-$3000"
+                    },
+                    {
+                      "value": "3000_5000",
+                      "text": "$3000-$5000"
+                    },
+                    {
+                      "value": "OVER_5000",
+                      "text": "Over $5000"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Other option"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "08L_PRIMARY_VET-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "lvngPrimaryVetPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "lvngPrimaryVetHeading",
+              "html": "<h3>About your current primary veterinarian(LP)</h3>"
+            },
+            {
+              "type": "html",
+              "name": "lvngPrimaryVetText",
+              "html": "<p>Tell us about our experience with your current primary veterinarian.</p>"
+            },
+            {
+              "type": "panel",
+              "name": "lvngPrimaryVetDetailsPanel",
+              "title": "",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "lvngPrimaryVetDiagnosis",
+                  "title": "Did your current primary vet give you a diagnosis of LP for {CmpnName}? ",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "NO_MENTION",
+                      "text": "No, did not mention LP/GOLPP at all."
+                    },
+                    {
+                      "value": "NO_SUGGESTED",
+                      "text": "Item2"
+                    },
+                    {
+                      "value": "YES_UNCONFIRMED",
+                      "text": "Item3"
+                    },
+                    {
+                      "value": "YES_CONFIRMED",
+                      "text": "Don't know"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "lvngPrimaryVetDiagnosticType",
+                  "title": "What diagnostic procedure did your current primary veterinarian use to arrive at their conclusion?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ROUTINE_EXAM",
+                      "text": "Routine exam"
+                    },
+                    {
+                      "value": "SEDATED_VISUAL",
+                      "text": "Visual exam under sedation"
+                    },
+                    {
+                      "value": "XRAY",
+                      "text": "X-Ray or other imaging"
+                    },
+                    {
+                      "value": "ULTRASOUND",
+                      "text": "Ultrasound"
+                    },
+                    {
+                      "value": "SCOPE",
+                      "text": "Video endoscope or laryngoscope under anesthesia"
+                    },
+                    {
+                      "value": "Other",
+                      "text": "OTHER"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "lvngPrimaryVetInflammation",
+                  "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "lvngPrimaryVetPrescriptions",
+                  "title": "Did your current primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Other option"
+                },
+                {
+                  "type": "checkbox",
+                  "name": "lvngPrimaryVetPrescriptionType",
+                  "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "DOXEPIN",
+                      "text": "Doxepin"
+                    },
+                    {
+                      "value": "TRAZODONE",
+                      "text": "Trazodone"
+                    },
+                    {
+                      "value": "GABAPENTIN",
+                      "text": "Gabapentin"
+                    },
+                    {
+                      "value": "STERIOD",
+                      "text": "Prednisone or other steriod"
+                    },
+                    {
+                      "value": "NSAID",
+                      "text": "Carprofen or other NSAID"
+                    },
+                    {
+                      "value": "LIBRELA",
+                      "text": "Librela/Beransa"
+                    },
+                    {
+                      "value": "CERENIA",
+                      "text": "Cerenia (maripotant citrate)"
+                    },
+                    {
+                      "value": "MELOXICAM",
+                      "text": "Meloxicam"
+                    },
+                    {
+                      "value": "ACEPROMAZINE",
+                      "text": "Acepromazine (Atravet, ACP)"
+                    },
+                    {
+                      "value": "ALBUTEROL",
+                      "text": "Albuterol or other inhaler"
+                    },
+                    {
+                      "value": "TEMARIL P",
+                      "text": "Temaril P"
+                    },
+                    {
+                      "value": "OTHER",
+                      "text": "Other prescription medication"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true
+                },
+                {
+                  "type": "rating",
+                  "name": "lvngPrimaryVetPrescriptionEffectiveness",
+                  "title": "How effective were these prescription medicatons for {CmpnName}'s LP/GOLPP?",
+                  "description": "1 = not at all effective, 5 = very effective",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "lvngPrimaryVetNonPrescription",
+                  "title": "Did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "checkbox",
+                  "name": "lvngPrimaryVetNonPrescriptionType",
+                  "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ACUPUNCTURE",
+                      "text": "Acupuncture"
+                    },
+                    {
+                      "value": "PHYSICAL_THERAPY",
+                      "text": "Physical or hydro therapy"
+                    },
+                    {
+                      "value": "LLLT",
+                      "text": "Cold laser or red light therapy"
+                    },
+                    {
+                      "value": "COUPAGE",
+                      "text": "Coupage"
+                    },
+                    {
+                      "value": "Other",
+                      "text": "OTHER"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "rating",
+                  "name": "lvngPrimaryVetNonPrescriptionEffectiveness",
+                  "title": "How effective were these treatments?",
+                  "description": "1 = not at all effective, 5 = very effective",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
                     }
                   ]
                 }
