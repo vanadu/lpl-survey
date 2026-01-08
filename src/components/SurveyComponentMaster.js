@@ -67,7 +67,7 @@ export default function MasterSurveyComponent() {
       if (options.name === "InfoSourcesTypes") {
         const selectedInfoSources = options.value || [];
         const dropdown = sender.getQuestionByName("InfoSourcesBestSource");
-        // Update dropdown choices to match checked fruits
+        // Update dropdown choices to match 
         dropdown.choices = selectedInfoSources;
         // Clear dropdown if its value is no longer in the choices
         if (!selectedInfoSources.includes(dropdown.value)) {

@@ -12,7 +12,7 @@ const pageFiles = [
   "07L_EARLY_SYMPTOMS-page.json",
   "08L_CHANGED_VETS-page.json",
   "09L_PRIMARY_DURATION-page.json",
-  "10L_PRIMARY_VET-page.json",
+  "10L_PRIMARY_VET-page.json"
 ];
 
 const pages = pageFiles.map(filename => {

@@ -3,7 +3,7 @@
   "showProgressBar": "bottom",
   "pages": [
     {
-      "name": "CMPN_NAME_LIFE_STATUS-page",
+      "name": "01_CMPN_NAME_LIFE_STATUS-page",
       "elements": [
         {
           "type": "panel",
@@ -72,7 +72,7 @@
       ]
     },
     {
-      "name": "USER_INFO-page",
+      "name": "02_USER_INFO-page",
       "elements": [
         {
           "type": "panel",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "name": "INFO_SOURCES-page",
+      "name": "03_INFO_SOURCES-page",
       "elements": [
         {
           "type": "panel",
@@ -476,7 +476,7 @@
       ]
     },
     {
-      "name": "INTUBATION_HISTORY-page",
+      "name": "04_INTUBATION_HISTORY-page",
       "elements": [
         {
           "type": "panel",
@@ -551,8 +551,7 @@
                 {
                   "type": "checkbox",
                   "name": "IntubationHistorySymptoms",
-                  "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
-                  "visibleIf": "{IntubationHistoryConcerns} = 'Yes'",
+                  "title": "What symptoms did {lndgRootCmpnName} have after the intubation/anesthesia?",
                   "choices": [
                     {
                       "value": "COUGHING",
@@ -573,6 +572,7 @@
                   ],
                   "choicesOrder": "none",
                   "otherText": "Other",
+                  "visibleIf": "{IntubationHistoryWasIntubated} = 'true'",
                   "showOtherItem": true
                 }
               ]
@@ -582,7 +582,7 @@
       ]
     },
     {
-      "name": "BREATHING_CRISIS-page",
+      "name": "05_BREATHING_CRISIS-page",
       "elements": [
         {
           "type": "panel",
@@ -831,7 +831,7 @@
       ]
     },
     {
-      "name": "L_CMPN_INFO-page",
+      "name": "06L_CMPN_INFO-page",
       "elements": [
         {
           "type": "panel",
@@ -1079,7 +1079,7 @@
       ]
     },
     {
-      "name": "L_EARLY_SYMPTOMS-page",
+      "name": "07L_EARLY_SYMPTOMS-page",
       "elements": [
         {
           "type": "panel",
@@ -1250,7 +1250,7 @@
       ]
     },
     {
-      "name": "L_CHANGED_VETS-page",
+      "name": "08L_CHANGED_VETS-page",
       "elements": [
         {
           "type": "panel",
@@ -1433,7 +1433,7 @@
       ]
     },
     {
-      "name": "L_PRIMARY_DURATION-page",
+      "name": "09L_PRIMARY_DURATION-page",
       "elements": [
         {
           "type": "panel",
@@ -1551,7 +1551,7 @@
       ]
     },
     {
-      "name": "L_PRIMARY_VET-page",
+      "name": "08L_PRIMARY_VET-page",
       "elements": [
         {
           "type": "panel",
