@@ -22,7 +22,7 @@
             {
               "type": "html",
               "name": "CmpnNameCrossedOverHeading",
-              "html": "<h3>About your LP companion<h3>"
+              "html": "<h3>About your LP companion</h3>"
             },
             {
               "type": "html",
@@ -266,7 +266,7 @@
                   "title": "Facebook account:",
                   "name": "UserInfoContactTypeFacebook",
                   "isRequired": true,
-                  "visibleIf": "{lvngRootUserContactType} = true",
+                  "visibleIf": "{UserInfoContactType} = true",
                   "placeholder": "eg. https://www.facebook.com/my.profile.name",
                   "validators": [
                     {
@@ -552,7 +552,7 @@
                   "type": "checkbox",
                   "name": "IntubationHistorySymptoms",
                   "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
-                  "visibleIf": "{IntubationHistoryConcerns} = 'Yes'",
+                  "visibleIf": "{IntubationHistoryConcerns} = true",
                   "choices": [
                     {
                       "value": "COUGHING",
@@ -618,27 +618,6 @@
                     {
                       "value": "DONT_KNOW",
                       "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": true,
-                  "showNoneItem": true
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "BreathingCrisisCount",
-                  "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
-                  "choices": [
-                    {
-                      "value": "ONE",
-                      "text": "Once"
-                    },
-                    {
-                      "value": "TWO",
-                      "text": "Twice"
-                    },
-                    {
-                      "value": "MORE_THAN_TWO",
-                      "text": "More than twice"
                     }
                   ],
                   "showOtherItem": true,
@@ -1333,7 +1312,7 @@
                   "showOtherItem": true
                 },
                 {
-                  "type": "radio",
+                  "type": "radiogroup",
                   "name": "lvngChangedVetsAdvice",
                   "title": "What, if any, advice did your previous primary vet/s give you advice about dogname's LP/GOLPP symptoms?",
                   "isRequired": true,
