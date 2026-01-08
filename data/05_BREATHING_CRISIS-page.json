@@ -63,27 +63,6 @@
             },
             {
               "type": "radiogroup",
-              "name": "BreathingCrisisCount",
-              "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
-              "choices": [
-                {
-                  "value": "ONE",
-                  "text": "Once"
-                },
-                {
-                  "value": "TWO",
-                  "text": "Twice"
-                },
-                {
-                  "value": "MORE_THAN_TWO",
-                  "text": "More than twice"
-                }
-              ],
-              "showOtherItem": true,
-              "showNoneItem": true
-            },
-            {
-              "type": "radiogroup",
               "name": "BreathingCrisisCost",
               "title": "About what was the total pre-insurance cost of these visits to veterinary professionals due to LP/GOLPP-induced breathing crises/emergencies?",
               "choices": [

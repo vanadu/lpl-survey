@@ -87,7 +87,7 @@
             },
 
             {
-              "type": "radio",
+              "type": "radiogroup",
               "name": "lvngChangedVetsAdvice",
               "title": "What, if any, advice did your previous primary vet/s give you advice about dogname's LP/GOLPP symptoms?",
               "isRequired": true,

@@ -186,7 +186,7 @@
               "title": "Facebook account:",
               "name": "UserInfoContactTypeFacebook",
               "isRequired": true,
-              "visibleIf": "{lvngRootUserContactType} = true",
+              "visibleIf": "{UserInfoContactType} = true",
               "placeholder": "eg. https://www.facebook.com/my.profile.name",
               "validators": [
                 {

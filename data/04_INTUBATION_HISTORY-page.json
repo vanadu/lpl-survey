@@ -75,7 +75,7 @@
               "type": "checkbox",
               "name": "IntubationHistorySymptoms",
               "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
-              "visibleIf": "{IntubationHistoryConcerns} = 'Yes'",
+              "visibleIf": "{IntubationHistoryConcerns} = true",
               "choices": [
                 {
                   "value": "COUGHING",
