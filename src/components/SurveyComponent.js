@@ -18,6 +18,11 @@ import USER_INFO from "../../data/02_USER_INFO-page.json"
 import INFO_SOURCES from "../../data/03_INFO_SOURCES-page.json"
 import INTUBATION_HISTORY from "../../data/04_INTUBATION_HISTORY-page.json"
 import BREATHING_CRISIS from "../../data/05_BREATHING_CRISIS-page.json"
+import L_CMPN_INFO from "../../data/06L_CMPN_INFO-page.json"
+import L_EARLY_SYMPTOMS from "../../data/07L_EARLY_SYMPTOMS-page.json"
+import L_CHANGED_VETS from "../../data/08L_CHANGED_VETS-page.json"
+import L_PRIMARY_DURATION from "../../data/09L_PRIMARY_DURATION-page.json"
+import L_PRIMARY_VET from "../../data/10L_PRIMARY_VET-page.json"
 
 
 // Assemble the final survey JSON object
@@ -29,6 +34,11 @@ const surveyJson = {
     INFO_SOURCES,
     INTUBATION_HISTORY,
     BREATHING_CRISIS,
+    L_CMPN_INFO,
+    L_EARLY_SYMPTOMS,
+    L_CHANGED_VETS,
+    L_PRIMARY_DURATION,
+    L_PRIMARY_VET
   ]
 };
 
