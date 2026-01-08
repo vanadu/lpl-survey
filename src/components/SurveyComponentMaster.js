@@ -61,12 +61,12 @@ export default function MasterSurveyComponent() {
   });
 
 
-  // !VA IMPORTANT: This defines WHICH options will appear in the lvngInfoBestSource dropdown! You can't do this in dev because onValueChanged looks for USERDEFINED changes, not prefilled ones. I worked around this by making lvngInfoSources and lvngInfoBestSource optional for now. But this will need to be dealt with in production.
+  // !VA IMPORTANT: This defines WHICH options will appear in the InfoSourcesBestSource dropdown! You can't do this in dev because onValueChanged looks for USERDEFINED changes, not prefilled ones. I worked around this by making InfoSourcesTypes and InfoSourcesBestSource optional for now. But this will need to be dealt with in production.
   useEffect(() => {
     function handleValueChanged(sender, options) {
-      if (options.name === "lvngInfoSources") {
+      if (options.name === "InfoSourcesTypes") {
         const selectedInfoSources = options.value || [];
-        const dropdown = sender.getQuestionByName("lvngInfoBestSource");
+        const dropdown = sender.getQuestionByName("InfoSourcesBestSource");
         // Update dropdown choices to match checked fruits
         dropdown.choices = selectedInfoSources;
         // Clear dropdown if its value is no longer in the choices
