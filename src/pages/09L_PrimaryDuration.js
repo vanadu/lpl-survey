@@ -10,7 +10,7 @@ const L_PRIMARY_DURATION = () => {
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            {/* <SurveyComponent startPageName = 'L_PRIMARY_DURATION-page' /> */}
+            <SurveyComponent startPageName = 'L_PRIMARY_DURATION-page' />
           </div>
 
         </div>

@@ -11,7 +11,7 @@ const BreathingCrisis = () => {
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            {/* <SurveyComponent startPageName = 'BREATHING_CRISIS-page' /> */}
+            <SurveyComponent startPageName = 'BREATHING_CRISIS-page' />
           </div>
 
         </div>

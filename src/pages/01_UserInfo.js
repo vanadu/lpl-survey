@@ -12,7 +12,7 @@ const UserInfo = () => {
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            {/* <SurveyComponent startPageName = 'USER_INFO-page' /> */}
+            <SurveyComponent startPageName = 'USER_INFO-page' />
           </div>
 
         </div>

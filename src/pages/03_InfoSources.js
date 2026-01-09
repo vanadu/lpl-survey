@@ -11,7 +11,7 @@ const InfoSources = () => {
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            {/* <SurveyComponent startPageName = 'INFO_SOURCES-page' /> */}
+            <SurveyComponent startPageName = 'INFO_SOURCES-page' />
           </div>
 
         </div>

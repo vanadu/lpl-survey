@@ -30,7 +30,7 @@ const CmpnNameLifeStatus = () => {
 
 
           <div className="survey-wrapper">
-            {/* <SurveyComponent startPageName = 'CMPN_NAME_LIFE_STATUS-page' /> */}
+            <SurveyComponent startPageName = 'CMPN_NAME_LIFE_STATUS-page' />
           </div>
 
         </div>

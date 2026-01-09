@@ -13,8 +13,8 @@ import prefillData from '../../data/prefill.json';
 // Import the modularized survey definition files
 // VA! Replaced surveyConfig with an independent header
 // import surveyConfig from "../../data/survey-config.json";
-import CMPN_NAME_LIFE_STATUS from "../../data/01_CMPN_NAME_LIFE_STATUS-page.json";
-import USER_INFO from "../../data/02_USER_INFO-page.json"
+import USER_INFO from "../../data/01_USER_INFO-page.json"
+import CMPN_NAME_LIFE_STATUS from "../../data/02_CMPN_NAME_LIFE_STATUS-page.json";
 import INFO_SOURCES from "../../data/03_INFO_SOURCES-page.json"
 import INTUBATION_HISTORY from "../../data/04_INTUBATION_HISTORY-page.json"
 import BREATHING_CRISIS from "../../data/05_BREATHING_CRISIS-page.json"
@@ -29,8 +29,8 @@ import L_PRIMARY_VET from "../../data/10L_PRIMARY_VET-page.json"
 // VA! IMPORTANT: this is only for dev, where we are using separate pages and separate JSON data files to build the app. Populate surveyJson with the pages imported from the data json files.  
 const surveyJson = {
   pages: [
-    CMPN_NAME_LIFE_STATUS,
     USER_INFO,
+    CMPN_NAME_LIFE_STATUS,
     INFO_SOURCES,
     INTUBATION_HISTORY,
     BREATHING_CRISIS,

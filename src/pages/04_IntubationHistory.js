@@ -10,7 +10,7 @@ const IntubationHistory = () => {
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            {/* <SurveyComponent startPageName = 'INTUBATION_HISTORY-page' /> */}
+            <SurveyComponent startPageName = 'INTUBATION_HISTORY-page' />
           </div>
 
         </div>
