@@ -10,7 +10,7 @@ const L_PRIMARY_VET = () => {
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'L_PRIMARY_VET-page' />
+            {/* <SurveyComponent startPageName = 'L_PRIMARY_VET-page' /> */}
           </div>
 
         </div>

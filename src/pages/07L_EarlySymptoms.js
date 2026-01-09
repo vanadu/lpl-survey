@@ -10,7 +10,7 @@ const L_EARLY_SYMPTOMS = () => {
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'L_EARLY_SYMPTOMS-page' />
+            {/* <SurveyComponent startPageName = 'L_EARLY_SYMPTOMS-page' /> */}
           </div>
 
         </div>

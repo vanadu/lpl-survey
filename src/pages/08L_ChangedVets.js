@@ -12,7 +12,7 @@ const lvngChangedVets = () => {
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'L_CHANGED_VETS-page' />
+            {/* <SurveyComponent startPageName = 'L_CHANGED_VETS-page' /> */}
           </div>
 
         </div>

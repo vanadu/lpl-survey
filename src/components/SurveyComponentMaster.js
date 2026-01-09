@@ -15,8 +15,10 @@ import prefillData from '../../data/prefill.json';
 import masterSurvey from "../../data/master-survey.json";
 
 export default function MasterSurveyComponent() {
+
   const [survey] = useState(() => {
     const surveyModel = new Model(masterSurvey);
+    console.log('masterSurvey', masterSurvey)
     surveyModel.applyTheme(SharpLight);
     // VA! Enable auto-advance - according to AI bot, this will only work if SurveyJS considers the input the only “required” interaction on that page at runtime.
     // surveyModel.goNextPageAutomatic = true;

@@ -30,8 +30,8 @@
         "react-tabs": "^6.0.1",
         "react-tooltip": "^5.10.5",
         "stylelint-config-recommended-scss": "^10.0.0",
-        "survey-core": "^2.5.5",
-        "survey-react-ui": "^2.5.5"
+        "survey-core": "^2.5.0",
+        "survey-react-ui": "^2.5.0"
       },
       "devDependencies": {
         "eslint-config-next": "^14.2.23",
@@ -7536,21 +7536,21 @@
       }
     },
     "node_modules/survey-core": {
-      "version": "2.5.5",
-      "resolved": "https://registry.npmjs.org/survey-core/-/survey-core-2.5.5.tgz",
-      "integrity": "sha512-DHhSeQOh66zD/pZhx1MSat2ZVGCdLq4rzoL8UD73NrzeQTLVPWufRdMA1Yshna5Yby0/l4yKd3kqvPKR3u9vlA==",
+      "version": "2.5.0",
+      "resolved": "https://registry.npmjs.org/survey-core/-/survey-core-2.5.0.tgz",
+      "integrity": "sha512-jzdtcHRmKeXQvIGPFYYeLbZ56M1SUjGJdk3piHKg7t799bNWff0bzyTcF67FXqlqGM7ebQLzDQYLKz/XQiT0LQ==",
       "license": "MIT",
       "peer": true
     },
     "node_modules/survey-react-ui": {
-      "version": "2.5.5",
-      "resolved": "https://registry.npmjs.org/survey-react-ui/-/survey-react-ui-2.5.5.tgz",
-      "integrity": "sha512-XJCUex9mp1mYjr4M8E9QZ8bnzOWndqDP8klGOgvYuHAyR3g6LYWjT8JYnDkYWebvwYPJEGL1JS4db6A4kDvi+Q==",
+      "version": "2.5.0",
+      "resolved": "https://registry.npmjs.org/survey-react-ui/-/survey-react-ui-2.5.0.tgz",
+      "integrity": "sha512-MItD4LEX98MXca1OUiLTWvFTde8oPu6280z5OOT/eXHbF6/bWBNORJ860Qc5A9Y9UbZJ4rrxAJWfVflJaKjzzA==",
       "license": "MIT",
       "peerDependencies": {
         "react": "^16.5.0 || ^17.0.1 || ^18.1.0 || ^19.0.0",
         "react-dom": "^16.5.0 || ^17.0.1 || ^18.1.0 || ^19.0.0",
-        "survey-core": "2.5.5"
+        "survey-core": "2.5.0"
       }
     },
     "node_modules/svg-tags": {
@@ -13732,15 +13732,15 @@
       "integrity": "sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w=="
     },
     "survey-core": {
-      "version": "2.5.5",
-      "resolved": "https://registry.npmjs.org/survey-core/-/survey-core-2.5.5.tgz",
-      "integrity": "sha512-DHhSeQOh66zD/pZhx1MSat2ZVGCdLq4rzoL8UD73NrzeQTLVPWufRdMA1Yshna5Yby0/l4yKd3kqvPKR3u9vlA==",
+      "version": "2.5.0",
+      "resolved": "https://registry.npmjs.org/survey-core/-/survey-core-2.5.0.tgz",
+      "integrity": "sha512-jzdtcHRmKeXQvIGPFYYeLbZ56M1SUjGJdk3piHKg7t799bNWff0bzyTcF67FXqlqGM7ebQLzDQYLKz/XQiT0LQ==",
       "peer": true
     },
     "survey-react-ui": {
-      "version": "2.5.5",
-      "resolved": "https://registry.npmjs.org/survey-react-ui/-/survey-react-ui-2.5.5.tgz",
-      "integrity": "sha512-XJCUex9mp1mYjr4M8E9QZ8bnzOWndqDP8klGOgvYuHAyR3g6LYWjT8JYnDkYWebvwYPJEGL1JS4db6A4kDvi+Q==",
+      "version": "2.5.0",
+      "resolved": "https://registry.npmjs.org/survey-react-ui/-/survey-react-ui-2.5.0.tgz",
+      "integrity": "sha512-MItD4LEX98MXca1OUiLTWvFTde8oPu6280z5OOT/eXHbF6/bWBNORJ860Qc5A9Y9UbZJ4rrxAJWfVflJaKjzzA==",
       "requires": {}
     },
     "svg-tags": {

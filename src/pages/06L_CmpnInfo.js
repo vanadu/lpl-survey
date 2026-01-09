@@ -11,7 +11,7 @@ const L_CMPN_INFO = () => {
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'L_CMPN_INFO-page' />
+            {/* <SurveyComponent startPageName = 'L_CMPN_INFO-page' /> */}
           </div>
 
         </div>
