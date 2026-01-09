@@ -16,65 +16,18 @@ import masterSurvey from "../../data/master-survey.json";
 
 export default function MasterSurveyComponent() {
 
-  // !VA Constant for show/hide Next button depending on consent question 
-  const CONSENT_QUESTION = "consent";
-  const CONSENT_PAGE_INDEX = 0;
-
   const [survey] = useState(() => {
     const surveyModel = new Model(masterSurvey);
     console.log('masterSurvey', masterSurvey)
     surveyModel.applyTheme(SharpLight);
-
-    // !VA  Hide navigation on initial load (LANDING). To show/hide Next button on landing page depending on consent question
-    surveyModel.showNavigationButtons = false;
-   
+    // VA! Enable auto-advance - according to AI bot, this will only work if SurveyJS considers the input the only “required” interaction on that page at runtime.
+    // surveyModel.goNextPageAutomatic = true;
     return surveyModel;
   });
 
   const [isCompleted, setIsCompleted] = useState(false);
 
-  /** VA! This was added by ChatGPT for show/hide Next button depending on consent question
-   * 🛡 Safety net: block navigation if consent not Yes
-   */
-  useEffect(() => {
-    function handleValidatePage(sender, options) {
-      if (sender.currentPageNo !== CONSENT_PAGE_INDEX) return;
-
-      if (sender.getValue(CONSENT_QUESTION) !== "Yes") {
-        options.errors.push({
-          text: "You must agree to the terms to continue."
-        });
-      }
-    }
-
-    survey.onValidatePage.add(handleValidatePage);
-    return () => survey.onValidatePage.remove(handleValidatePage);
-  }, [survey]);
-
-  /** VA! Added by ChatGTP for show/hide Next button depending on answer to consent question
-   *  Auto-advance immediately when Yes is selected
-   */
-  useEffect(() => {
-    function handleConsentChange(sender, options) {
-      if (
-        sender.currentPageNo === CONSENT_PAGE_INDEX &&
-        options.name === CONSENT_QUESTION &&
-        options.value === "Yes"
-      ) {
-        // Re-enable navigation for the rest of the survey
-        sender.showNavigationButtons = true;
-
-        // Advance immediately
-        sender.nextPage();
-      }
-    }
-
-    survey.onValueChanged.add(handleConsentChange);
-    return () => survey.onValueChanged.remove(handleConsentChange);
-  }, [survey]);
-
-
-  // !VA This is supposed to add a timestamp to the completed survery results
+  // !VA 
   const handleComplete = useCallback(async (sender) => {
     const result = sender.data;
     const timestampedResult = {
@@ -130,6 +83,10 @@ export default function MasterSurveyComponent() {
       survey.onValueChanged.remove(handleValueChanged);
     };
   }, [survey]);
+
+
+
+
 
 
   // !VA Here prefill the question responses

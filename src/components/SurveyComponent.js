@@ -36,6 +36,8 @@ const surveyJson = {
 };
 
 export default function SurveyComponent({ startPageName }) {
+  
+  // !VA Constant for show/hide Next button depending on consent question 
   const CONSENT_QUESTION = "consent";
   const CONSENT_PAGE_INDEX = 0;
 
@@ -43,7 +45,7 @@ export default function SurveyComponent({ startPageName }) {
     const surveyModel = new Model(surveyJson);
     surveyModel.applyTheme(SharpLight);
 
-    // 🔒 Hide navigation on initial load (LANDING)
+    // !VA  Hide navigation on initial load (LANDING). To show/hide Next button on landing page depending on consent question
     surveyModel.showNavigationButtons = false;
 
     return surveyModel;
@@ -51,7 +53,7 @@ export default function SurveyComponent({ startPageName }) {
 
   const [isCompleted, setIsCompleted] = useState(false);
 
-  /**
+  /** VA! This was added by ChatGPT for show/hide Next button depending on consent question
    * 🛡 Safety net: block navigation if consent not Yes
    */
   useEffect(() => {
@@ -69,8 +71,8 @@ export default function SurveyComponent({ startPageName }) {
     return () => survey.onValidatePage.remove(handleValidatePage);
   }, [survey]);
 
-  /**
-   * 🚀 Auto-advance immediately when Yes is selected
+  /** VA! Added by ChatGTP for show/hide Next button depending on answer to consent question
+   *  Auto-advance immediately when Yes is selected
    */
   useEffect(() => {
     function handleConsentChange(sender, options) {
@@ -111,11 +113,15 @@ export default function SurveyComponent({ startPageName }) {
     }
   }, []);
 
+
+  // !VA This adds custom classes to the data-name property...not sure where it came from or if it works
   survey.onAfterRenderPanel.add((sender, options) => {
     addCustomClasses(options.panel, options.htmlElement);
     options.htmlElement.setAttribute("data-name", options.panel.name);
   });
 
+
+  // !VA Prefill data based on prefill.json
   useEffect(() => {
     if (startPageName) {
       survey.data = prefillData;
@@ -126,11 +132,15 @@ export default function SurveyComponent({ startPageName }) {
     }
   }, [startPageName, survey]);
 
+
+
   useEffect(() => {
     survey.onComplete.add(handleComplete);
     return () => survey.onComplete.remove(handleComplete);
   }, [survey, handleComplete]);
 
+
+  // !VA This was added a long time ago...not sure if it works or is useful
   const handleReset = () => {
     survey.clear(true, true);
     survey.showNavigationButtons = false;
