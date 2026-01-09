@@ -61,10 +61,10 @@
   "lvngCmpnInfoAnimalType": "Dog",
   "lvngCmpnInfoBreed": "Boxer",
   "lvngCmpnInfoGender": 5,
-  "lvngCmpnInfoAgeYears": 2,
-  "lvngCmpnInfoAgeMonths": true,
+  "lvngCmpnInfoAgeYears": 12,
+  "lvngCmpnInfoAgeMonths": 2,
   "lvngCmpnInfoWeight": 50,
-  "lvngCmpnInfoWeightUnits": true,
+  "lvngCmpnInfoWeightUnits": false,
   "lvngCmpnInfoDemeanor": 5,
   "lvngCmpnInfoAnimalsCount": "2",
   "lvngCmpnInfoHasInsurance": true,
@@ -79,7 +79,7 @@
     "EXERCISE_INTOLERANCE"
   ],
   "lvngEarlySymtomsSeverity": "1",
-  "lvngEarlySymptomsHindEndWeakness": "Don't remember",
+  "lvngEarlySymptomsHindEndWeakness": "DONT_KNOW",
   "lvngErlyOtherConditions": [
     "GERD",
     "PERIODONTAL"
@@ -97,8 +97,8 @@
   "lvngChangeVetsConfidence": "2",
 
 
-  "lvngPrimaryDurationBeginYears": "12",
-  "lvngPrimaryDurationBeginMonths": "0",
+  "lvngPrimaryDurationFirstConsultYears": 13,
+  "lvngPrimaryDurationFirstConsultMonths": 0,
   "lvngPrimaryDurationVisitsNumber": "MORE_THAN_TWO",
   "lvngPrimaryDurationCost": "OVER_5000",
 

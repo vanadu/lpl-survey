@@ -8,12 +8,12 @@
         {
           "type": "html",
           "name": "lvngChangedVetsHeading",
-          "html": "<h3>Did you change vets?(LP)</h3>"
+          "html": "<h3>Change of veterinarians due to LP/GOLPP</h3>"
         },
         {
           "type": "html",
           "name": "lvngChangedVetsText",
-          "html": "<p>Tell us why you changed vets.</p>"
+          "html": "<p>This section asks whether you changed primary veterinarians because of how {CmpnName}'s LP/GOLPP symptoms were handled and why you made that decision. </p>"
         },
         {
           "type": "panel",
@@ -39,10 +39,6 @@
                 {
                   "value": "MORE_THAN_ONCE",
                   "text": "More than once"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
                 }
               ]
             },
@@ -50,55 +46,64 @@
             {
               "type": "checkbox",
               "name": "lvngChangedVetsReason",
-              "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?:",
+              "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP (please check all that apply)?",
               "isRequired": true,
+              "visibleIf": "{lvngChangedVets} != NO",
               "choices": [
                 {
-                  "value": "NOT_SERIOUS",
-                  "text": "ITEM_1"
+                  "value": "NO_KNOWLEDGE",
+                  "text": "The previous vet couldn't give possible causes for {CmpnName}'s symptoms."
                 },
                 {
-                  "value": "NOT_INTERESTED",
-                  "text": "ITEM_2"
+                  "value": "NOT_SERIOUS",
+                  "text": "The previous vet didn't take {CmpnName}'s symptoms seriously."
                 },
                 {
                   "value": "AGE_ONLY",
-                  "text": "ITEM_3"
+                  "text": "The previous vet said {CmpnName}'s symptoms were just due to age."
                 },
                 {
                   "value": "BAD_TESTS",
-                  "text": "OTHER"
+                  "text": "The previous vet ordered tests that I didn't think were relevant to {CmpnName}'s symptoms."
                 },
                 {
                   "value": "NO_VALUE",
-                  "text": "OTHER"
+                  "text": "I wasn't getting enough value from the previous vet's handling of {CmpnName}'s symptoms."
                 },
                 {
                   "value": "MISDIAGNOSED",
-                  "text": "OTHER"
-                },
-                {
-                  "value": "OTHER",
-                  "text": "Other (max. 250 characters)"
+                  "text": "The previous vet misdiagnosed {CmpnName}'s symptoms."
                 }
-
               ],
               "showOtherItem": true
+            },
+            {
+              "type": "rating",
+              "name": "lvngChangeVetsConfidence",
+              "title": "How confident were you in your previous primary vet's knowledge level about LP/GOLPP?",
+              "description": "1 = no confident at all, 5 = very confident",
+              "isRequired": true,
+              "visibleIf": "{lvngChangedVets} != NO",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+
+              ]
             },
 
             {
               "type": "radiogroup",
               "name": "lvngChangedVetsAdvice",
-              "title": "What, if any, advice did your previous primary vet/s give you advice about dogname's LP/GOLPP symptoms?",
+              "title": "What advice or recommendation did your previous primary vet's give you advice about dogname's LP/GOLPP symptoms?",
               "isRequired": true,
+              "visibleIf": "{lvngChangedVets} != NO",
               "choices": [
                 {
                   "value": "NOTHING_CAN_BE_DONE",
-                  "text": "Said nothing can be done"
-                },
-                {
-                  "value": "INEFFECTIVE_TREATMENTS",
-                  "text": "Provided ineffective treatments"
+                  "text": "Explicitly said nothing can be done about {CmpnName}'s symptoms"
                 },
                 {
                   "value": "RECOMMENDED_SPECIALIST",
@@ -107,10 +112,6 @@
                 {
                   "value": "RECOMMENDED_EUTHANASIA",
                   "text": "Recommended euthanasia"
-                },
-                {
-                  "value": "OTHER",
-                  "text": "Other (max. 250 characters)"
                 }
               ],
               "showOtherItem": true,
@@ -134,34 +135,15 @@
                 },
                 {
                   "value": "NEUROLOGIST",
-                  "text": "NEUROLOGIST"
+                  "text": "Neurologist"
                 },
                 {
                   "value": "STENT_PROVIDER",
                   "text": "Stent provider"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
                 }
               ],
               "showOtherItem": true,
               "otherText": "Other"
-            },
-            {
-              "type": "rating",
-              "name": "lvngChangeVetsConfidence",
-              "title": "How confident were you in your previous primary vet/s' knowledge level regarding LP/GOLPP?",
-              "description": "1 = no confident at all, 5 = very confident",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
             }
           ]
         }

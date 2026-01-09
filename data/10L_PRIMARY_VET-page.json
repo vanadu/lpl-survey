@@ -8,12 +8,12 @@
         {
           "type": "html",
           "name": "lvngPrimaryVetHeading",
-          "html": "<h3>About your current primary veterinarian(LP)</h3>"
+          "html": "<h3>Your current primary veterinarians and {CmpnName}'s LP/GOLPP</h3>"
         },
         {
           "type": "html",
           "name": "lvngPrimaryVetText",
-          "html": "<p>Tell us about our experience with your current primary veterinarian.</p>"
+          "html": "<p>This section asks questions about how your current primary veterinarian has handled {CmpnName}'s LP/GOLPP journey.</p>"
         },
         {
           "type": "panel",
@@ -35,15 +35,15 @@
                 },
                 {
                   "value": "NO_SUGGESTED",
-                  "text": "Item2"
+                  "text": "Suggested {CmpnName}'s symptoms might be due to LP/GOLPP but did not give a definitive diagnosis."
                 },
                 {
                   "value": "YES_UNCONFIRMED",
-                  "text": "Item3"
+                  "text": "Provided a definitive diagnosis of LP/GOLPP but recommended confirming with a specialist."
                 },
                 {
                   "value": "YES_CONFIRMED",
-                  "text": "Don't know"
+                  "text": "Provided definitive diagnosis and did not recommend confirmation by a specialist."
                 },
                 {
                   "value": "DONT_KNOW",
@@ -58,6 +58,7 @@
               "name": "lvngPrimaryVetDiagnosticType",
               "title": "What diagnostic procedure did your current primary veterinarian use to arrive at their conclusion?",
               "isRequired": true,
+              "visibleIf": "{lvngPrimaryVetDiagnosis} != 'NO_MENTION'",
               "choices": [
                 {
                   "value": "ROUTINE_EXAM",
@@ -80,16 +81,11 @@
                   "text": "Video endoscope or laryngoscope under anesthesia"
                 },
                 {
-                  "value": "Other",
-                  "text": "OTHER"
-                },
-                {
                   "value": "DONT_KNOW",
                   "text": "Don't know"
                 }
               ],
-              "showOtherItem": true,
-              "showNoneItem": true
+              "showOtherItem": true
             },
             {
               "type": "radiogroup",
@@ -131,14 +127,14 @@
                   "text": "Don't know"
                 }
               ],
-              "showOtherItem": true,
-              "otherText": "Other option"
+              "showOtherItem": false
             },
             {
               "type": "checkbox",
               "name": "lvngPrimaryVetPrescriptionType",
               "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
               "isRequired": true,
+              "visibleIf": "{lvngPrimaryVetPrescriptions} = YES",
               "choices": [
                 {
                   "value": "DOXEPIN",
@@ -183,10 +179,6 @@
                 {
                   "value": "TEMARIL P",
                   "text": "Temaril P"
-                },
-                {
-                  "value": "OTHER",
-                  "text": "Other prescription medication"
                 }
               ],
               "showOtherItem": true,
@@ -198,6 +190,7 @@
               "title": "How effective were these prescription medicatons for {CmpnName}'s LP/GOLPP?",
               "description": "1 = not at all effective, 5 = very effective",
               "isRequired": true,
+              "visibleIf": "{lvngPrimaryVetPrescriptions} = YES",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -209,9 +202,9 @@
             },
 
             {
-              "type": "checkbox",
+              "type": "radiogroup",
               "name": "lvngPrimaryVetNonPrescription",
-              "title": "Did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
+              "title": "Not including OTC supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
               "isRequired": true,
               "choices": [
                 {
@@ -235,6 +228,7 @@
               "name": "lvngPrimaryVetNonPrescriptionType",
               "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
               "isRequired": true,
+              "visibleIf": "{lvngPrimaryVetNonPrescription} = YES",
               "choices": [
                 {
                   "value": "ACUPUNCTURE",
@@ -265,6 +259,7 @@
               "title": "How effective were these treatments?",
               "description": "1 = not at all effective, 5 = very effective",
               "isRequired": true,
+              "visibleIf": "{lvngPrimaryVetNonPrescription} = YES",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

@@ -8,22 +8,22 @@
         {
           "type": "html",
           "name": "lvngPrimaryDurationHeading",
-          "html": "<h3>How long were you in the care of a primary vet?(LP)</h3>"
+          "html": "<h3>Duration of care by primary veterinarian for LP/GOLPP symptoms</h3>"
         },
         {
           "type": "html",
           "name": "lvngPrimaryDurationText",
-          "html": "<p>Tells how long a primary vet was responsible for {CmpnName}'s LP/GOLPP issues.</p>"
+          "html": "<p>This section asks questions about how long {CmpnName} was in the care of primary veterinarians for LP/GOLPP symptoms and how {CmpnName}'s condition changed over this time period. </p>"
         },
         {
           "type": "panel",
-          "name": "lvngPrimaryDurationDetailsPanel",
-          "title": "",
+          "name": "lvngPrimaryDurationFirstConsult",
+          "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
           "elements": [
             {
               "type": "text",
               "inputType": "number",
-              "name": "lvngPrimaryDurationBeginYears",
+              "name": "lvngPrimaryDurationFirstConsultYears",
               "title": "Age in years (number):",
               "isRequired": true,
               "min": "1",
@@ -31,8 +31,7 @@
               "validators": [
                 {
                   "type": "numeric",
-
-                  "minValue": 1,
+                  "minValue": 0,
                   "maxValue": 40,
                   "text": "Age must be between 1 and 40"
                 }
@@ -41,7 +40,7 @@
             {
               "type": "text",
               "inputType": "number",
-              "name": "lvngPrimaryDurationBeginMonths",
+              "name": "lvngPrimaryDurationFirstConsultMonths",
               "title": "Months (number 1 - 12)",
               "isRequired": true,
               "min": 1,
@@ -54,9 +53,14 @@
                   "text": "Months must be between 1 and 12"
                 }
               ]
-            },
+            }
+          ]
+        },
 
-
+        {
+          "type": "panel",
+          "name": "lvngPrimaryDurationCountCost",
+          "elements": [
             {
               "type": "radiogroup",
               "name": "lvngPrimaryDurationVisitsNumber",
@@ -110,8 +114,7 @@
                   "text": "Don't know"
                 }
               ],
-              "showOtherItem": true,
-              "otherText": "Other option"
+              "showOtherItem": false
             }
           ]
         }
