@@ -13,7 +13,7 @@
         {
           "type": "html",
           "name": "InfoSourcesText",
-          "html": "<p>This section asks some questions about how you learned about LP and whether the information you found helped you make decisions for {lndgRootCmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
+          "html": "<p>This section asks some questions about how you learned about LP and whether the information you found helped you make decisions for {CmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
         },
         {
           "type": "panel",
@@ -22,7 +22,7 @@
             {
               "type": "boolean",
               "name": "InfoSourcesPriorKnowledge",
-              "title": "Had you ever heard of LP before {lndgRootCmpnName} got it?",
+              "title": "Had you ever heard of LP before {CmpnName} got it?",
               "isRequired": true
             }
           ]
@@ -37,8 +37,8 @@
               "title": "Which sources of information have you accessed to learn about LP?",
               "choices": [
                 {
-                  "value": "Veterinarians",
-                  "text": "VETERINARIANS"
+                  "value": "VETERINARIANS",
+                  "text": "Veterinarians"
                 },
                 {
                   "value": "WEBSITES",
@@ -113,7 +113,7 @@
             {
               "type": "rating",
               "name": "InfoSourcesClearAnswers",
-              "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {lndgRootCmpnName}?",
+              "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {CmpnName}?",
               "description": "1 = No, not hard at all, 5 = yes, very hard",
               "isRequired": true,
               "rateValues": [

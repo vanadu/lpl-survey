@@ -1,6 +1,6 @@
 {
   "title": "Master Survey Build",
-  "showProgressBar": "bottom",
+  "showProgressBar": "top",
   "pages": [
     {
       "name": "LANDING-page",
@@ -40,6 +40,22 @@
               "html": "<p>With this info, we can ensure that all the survey respondents are unique and verifiable without having to collect any information that makes you identifiable outside the context of the survey. For details about how we'll use the data we collect and further steps we'll take to anonymize your contact information, select the 'About your privacy' and 'Consent information' links.</p>"
             },
             {
+              "type": "panel",
+              "name": "LandingPrivacyAndData",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "LandingPrivacy",
+                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About your privacy</a></div>"
+                },
+                {
+                  "type": "html",
+                  "name": "LandingData",
+                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>How will we be using your information?</a></div>"
+                }
+              ]
+            },
+            {
               "type": "html",
               "name": "LandingConsentHeading",
               "html": "<p>By clicking the checkbox below, you confirm that you're ready to answer questions about your LP companion and consent to the terms of our privacy and consent statements.</p>"
@@ -67,39 +83,27 @@
             {
               "type": "html",
               "name": "UserInfoHeading",
-              "html": "<h2>Please tell us a little about yourself</h2>"
+              "html": "<h2>About You</h2>"
             },
             {
               "type": "html",
               "name": "UserInfoText",
-              "html": "<p>We believe you're more likely to help us if you know your data can't be used anywhere else. We're not asking for your last name, so we have no way to connect you with any of your private data. Click the links below to learn about how your privacy is protected and what we'll be doing with this survey information.</p><p>If more than one of your beloved companions have LP, you can take the survey for each of them. You can also update the survey responses for each animal, but only one set of results are saved for each Facebook account or email and each animal. Each time you take, it, existing results will be updated with the most recent ones.</p>"
+              "html": "<p>We're asking for contact info (email or Facebook account name), which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions.</p>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoVerificationHeading",
+              "html": "<h3>Verification Contact</h3>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoVerificationPanelText",
+              "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable commicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
             },
             {
               "type": "panel",
-              "name": "UserInfoAboutSurveyPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "UserInfoPrivacy",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About your privacy</a></div>"
-                },
-                {
-                  "type": "html",
-                  "name": "UserInfoYourData",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>How will we be using your information?</a></div>"
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "title": "Verification contact",
               "name": "UserInfoVerificationPanel",
               "elements": [
-                {
-                  "type": "html",
-                  "name": "UserInfoVerificationPanelText",
-                  "html": "<p>We'll need to contact a random sample of participants for verification purposes. If you don't want to share your email, you can use your Facebook account name for verification via Facebook Messenger.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
-                },
                 {
                   "type": "boolean",
                   "name": "UserInfoContactType",
@@ -145,6 +149,136 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "html",
+              "name": "UserInfoNameCountryHeading",
+              "html": "<h3>Your First Name and Country</h3>"
+            },
+            {
+              "type": "panel",
+              "name": "UserInfoAboutPanel",
+              "elements": [
+                {
+                  "type": "text",
+                  "title": "First Name:",
+                  "name": "UserInfoFirstName",
+                  "isRequired": true
+                },
+                {
+                  "type": "dropdown",
+                  "name": "UserInfoCountry",
+                  "title": "Country:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "US",
+                      "text": "United States"
+                    },
+                    {
+                      "value": "UK",
+                      "text": "United Kingdom"
+                    },
+                    {
+                      "value": "CA",
+                      "text": "Canada"
+                    },
+                    {
+                      "value": "DE",
+                      "text": "Germany"
+                    },
+                    {
+                      "value": "AU/NZ",
+                      "text": "Australia/New Zealand"
+                    },
+                    {
+                      "value": "FR",
+                      "text": "France"
+                    },
+                    {
+                      "value": "ES",
+                      "text": "Spain"
+                    },
+                    {
+                      "value": "PT",
+                      "text": "Portugal"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "UserInfoStateRegion",
+                  "title": "What state, province or region do you live in (optional)",
+                  "isRequired": false
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "UserInfoAgeGenderHeading",
+              "html": "<h3>Age and Gender (optional)</h3>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoAgeGenderText",
+              "html": "<p>We're asking for basic demographic information to help understand how different people manage the animals in their care.</p>"
+            },
+            {
+              "type": "panel",
+              "name": "UserInfoAgeGenderPanel",
+              "elements": [
+                {
+                  "type": "dropdown",
+                  "name": "UserInfoAgeGroup",
+                  "title": "Approximately what is your age?",
+                  "choices": [
+                    {
+                      "value": "UNDER_20",
+                      "text": "Under 20"
+                    },
+                    {
+                      "value": "20_34",
+                      "text": "20-34"
+                    },
+                    {
+                      "value": "35_49",
+                      "text": "35-49"
+                    },
+                    "50-64",
+                    {
+                      "value": "OVER_65",
+                      "text": "Over 65"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "UserInfoGender",
+                  "title": "Gender information:",
+                  "isRequired": false,
+                  "choices": [
+                    {
+                      "value": "WOMAN",
+                      "text": "Woman"
+                    },
+                    {
+                      "value": "MAN",
+                      "text": "Man"
+                    },
+                    {
+                      "value": "NON_BINARY",
+                      "text": "Non-binary"
+                    },
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Prefer to self-describe"
+                }
+              ]
             }
           ]
         }
@@ -160,21 +294,11 @@
             {
               "type": "html",
               "name": "CmpnNameLifeStatusHeading",
-              "html": "<h2>About this survey</h2>"
+              "html": "<h2>About Your Companion Animal</h2>"
             },
             {
               "type": "html",
               "name": "CmpnNameLifeStatusText",
-              "html": "<p>The goal of this survey is to gather information about how laryngeal paralysis (LarPar, LP) affects the lives of people and the animals they love. It's the first comprehensive online survey of its kind, and should take no more than ten minutes of your time.</p><p> We recommend taking the survey on a tablet, laptop, or desktop, but it works on phones, too. It just might take a few minutes longer because of the smaller screen .</p>"
-            },
-            {
-              "type": "html",
-              "name": "CmpnNameCrossedOverHeading",
-              "html": "<h3>About your LP companion</h3>"
-            },
-            {
-              "type": "html",
-              "name": "CmpnNameCrossedOverText",
               "html": "<p>We know how hard it is to lose one's beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you'd like to continue now, now please tell us your LP companion's name and if your LP companion has crossed over the Rainbow Bridge. This will allow us to tailor the questions to your individual situation.</p>"
             },
             {
@@ -234,7 +358,7 @@
             {
               "type": "html",
               "name": "InfoSourcesText",
-              "html": "<p>This section asks some questions about how you learned about LP and whether the information you found helped you make decisions for {lndgRootCmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
+              "html": "<p>This section asks some questions about how you learned about LP and whether the information you found helped you make decisions for {CmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
             },
             {
               "type": "panel",
@@ -243,7 +367,7 @@
                 {
                   "type": "boolean",
                   "name": "InfoSourcesPriorKnowledge",
-                  "title": "Had you ever heard of LP before {lndgRootCmpnName} got it?",
+                  "title": "Had you ever heard of LP before {CmpnName} got it?",
                   "isRequired": true
                 }
               ]
@@ -370,7 +494,7 @@
                 {
                   "type": "rating",
                   "name": "InfoSourcesClearAnswers",
-                  "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {lndgRootCmpnName}?",
+                  "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {CmpnName}?",
                   "description": "1 = No, not hard at all, 5 = yes, very hard",
                   "isRequired": true,
                   "rateValues": [

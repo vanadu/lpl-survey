@@ -35,6 +35,25 @@
           "name": "LandingAboutPrivacyText02",
           "html": "<p>With this info, we can ensure that all the survey respondents are unique and verifiable without having to collect any information that makes you identifiable outside the context of the survey. For details about how we'll use the data we collect and further steps we'll take to anonymize your contact information, select the 'About your privacy' and 'Consent information' links.</p>"
         },
+
+        {
+          "type": "panel",
+          "name": "LandingPrivacyAndData",
+          "elements": [
+              {
+                "type": "html",
+                "name": "LandingPrivacy",
+                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About your privacy</a></div>"
+              },
+              {
+                "type": "html",
+                "name": "LandingData",
+                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>How will we be using your information?</a></div>"
+              }
+          ]
+        },
+
+
         {
           "type": "html",
           "name": "LandingConsentHeading",

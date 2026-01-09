@@ -8,22 +8,12 @@
         {
           "type": "html",
           "name": "CmpnNameLifeStatusHeading",
-          "html": "<h2>About this survey</h2>"
-        },
-        {
-          "type": "html",
-          "name": "CmpnNameLifeStatusText",
-          "html": "<p>The goal of this survey is to gather information about how laryngeal paralysis (LarPar, LP) affects the lives of people and the animals they love. It's the first comprehensive online survey of its kind, and should take no more than ten minutes of your time.</p><p> We recommend taking the survey on a tablet, laptop, or desktop, but it works on phones, too. It just might take a few minutes longer because of the smaller screen .</p>"
-        },
-        {
-          "type": "html",
-          "name": "CmpnNameCrossedOverHeading",
-          "html": "<h3>About your LP companion</h3>"
+          "html": "<h2>About Your Companion Animal</h2>"
         },
         {
         "type": "html",
-          "name": "CmpnNameCrossedOverText",
-          "html": "<p>We know how hard it is to lose one's beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you'd like to continue now, now please tell us your LP companion's name and if your LP companion has crossed over the Rainbow Bridge. This will allow us to tailor the questions to your individual situation.</p>"
+          "name": "CmpnNameLifeStatusText",
+          "html": "<p>We know how hard it is to lose one's beloved companion animal. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge. This will help us avoid questions that are inappropriate for your situation.</p>"
         },
 
         {
@@ -60,12 +50,7 @@
             }
 
           ]
-        },
-                    {
-              "type": "html",
-              "name": "CmpnNameLifeStatusMakeSelection",
-              "html": "<p>Once you've made your selection, please choose 'Next' to begin the survey.</p>"
-            }
+        }
       ]
     }
   ]

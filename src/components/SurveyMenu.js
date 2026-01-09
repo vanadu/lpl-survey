@@ -29,9 +29,6 @@ const SurveyHeader = () => {
         <li className="survey-dropdown__item"><Link href="/06L_CmpnInfo">
           06L_CmpnInfo 
         </Link></li>
-        <li className="survey-dropdown__item"><Link href="/06L_CmpnInfo">
-          06L_CmpnInfo 
-        </Link></li>
         <li className="survey-dropdown__item"><Link href="/07L_EarlySymptoms">
           07L_EarlySymptoms 
         </Link></li>

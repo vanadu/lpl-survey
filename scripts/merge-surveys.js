@@ -44,7 +44,7 @@ const pages = pageFiles.map(filename => {
 
 const masterSurvey = {
   title: "Master Survey Build",
-  showProgressBar: "bottom",
+  showProgressBar: "top",
   pages
 };
 

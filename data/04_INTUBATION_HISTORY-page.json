@@ -8,7 +8,12 @@
         {
           "type": "html",
           "name": "IntubationHistoryHeading",
-          "html": "<h3>Improper intubation can lead to damage to the larynx. These questions relate to {CmpnName}'s intubation history prior to LP/GOLPP symptoms.</h3>"
+          "html": "<h3>Intubation History</h3>"
+        },
+        {
+          "type": "html",
+          "name": "IntubationHistoryText",
+          "html": "Some research has indicated that improper intubation techniques may result in damage to laryngeal tissue and under certain circumstances may play a role in some cases of acquired laryngeal paralysis."
         },
         {
           "type": "panel",
