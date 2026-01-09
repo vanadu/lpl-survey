@@ -8,6 +8,9 @@ const SurveyHeader = () => {
     <div className="survey-dropdown" id="myDropdown">
       <button className="survey-dropdown__button">MASTER</button>
       <ul className="survey-dropdown__list">
+        <li className="survey-dropdown__item"> <Link href="/00_Landing">
+          00_Landing
+        </Link></li>
         <li className="survey-dropdown__item"> <Link href="/01_UserInfo">
           01_UserInfo
         </Link></li>
@@ -44,13 +47,6 @@ const SurveyHeader = () => {
         <li className="survey-dropdown__item">XXX</li>
       </ul>
     </div>
-
-
-
-
-
-
-
 
     </>
   )

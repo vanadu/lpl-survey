@@ -3,6 +3,42 @@
   "showProgressBar": "bottom",
   "pages": [
     {
+      "name": "LANDING-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "LandingPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingHeading",
+              "html": "<h2>THIS IS THE LANDING PAGE</h2>"
+            },
+            {
+              "type": "html",
+              "name": "LandingText",
+              "html": "<p>Reprehenderit nostrud quis labore enim cupidatat officia. Ad id cillum pariatur nisi ex id. Dolor sunt Lorem officia ea pariatur amet duis mollit proident ut ipsum. Do nisi ea ullamco consequat dolor eu in dolor labore. Eu laboris minim duis tempor in incididunt nisi fugiat occaecat amet.</p>"
+            },
+            {
+              "type": "html",
+              "name": "LandingAreYouReadyHeading",
+              "html": "<h3>Are you ready?</h3>"
+            },
+            {
+              "type": "html",
+              "name": "LandingAreYouReadyText",
+              "html": "<p>We know how hard it is to lose one's beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p>"
+            },
+            {
+              "type": "html",
+              "name": "CmpnNameLifeStatusMakeSelection",
+              "html": "<p>To begin the survey select the 'Next' button.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "USER_INFO-page",
       "elements": [
         {

@@ -3,6 +3,7 @@ const path = require("path");
 const DATA_DIR = path.join(__dirname, "../data");
 
 const pageFiles = [
+  "00_LANDING-page.json",
   "01_USER_INFO-page.json",
   "02_CMPN_NAME_LIFE_STATUS-page.json",
   "03_INFO_SOURCES-page.json",
