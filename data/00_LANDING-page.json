@@ -61,7 +61,7 @@
         },
         {
           "type": "radiogroup",
-          "name": "consent",
+          "name": "LandingConsent",
           "title": "Do you agree to the terms and conditions?",
           "choices": ["Yes"],
           "isRequired": true

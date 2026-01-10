@@ -62,7 +62,7 @@
             },
             {
               "type": "radiogroup",
-              "name": "consent",
+              "name": "LandingConsent",
               "title": "Do you agree to the terms and conditions?",
               "choices": [
                 "Yes"
@@ -98,7 +98,7 @@
             {
               "type": "html",
               "name": "UserInfoVerificationPanelText",
-              "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable commicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
+              "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
             },
             {
               "type": "panel",
@@ -299,7 +299,7 @@
             {
               "type": "html",
               "name": "CmpnNameLifeStatusText",
-              "html": "<p>We know how hard it is to lose one's beloved companion. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you'd like to continue now, now please tell us your LP companion's name and if your LP companion has crossed over the Rainbow Bridge. This will allow us to tailor the questions to your individual situation.</p>"
+              "html": "<p>We know how hard it is to lose one's beloved companion animal. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge. This will help us avoid questions that are inappropriate for your situation.</p>"
             },
             {
               "type": "panel",
@@ -333,11 +333,6 @@
                   "showLabel": true
                 }
               ]
-            },
-            {
-              "type": "html",
-              "name": "CmpnNameLifeStatusMakeSelection",
-              "html": "<p>Once you've made your selection, please choose 'Next' to begin the survey.</p>"
             }
           ]
         }
@@ -382,8 +377,8 @@
                   "title": "Which sources of information have you accessed to learn about LP?",
                   "choices": [
                     {
-                      "value": "Veterinarians",
-                      "text": "VETERINARIANS"
+                      "value": "VETERINARIANS",
+                      "text": "Veterinarians"
                     },
                     {
                       "value": "WEBSITES",
@@ -540,7 +535,12 @@
             {
               "type": "html",
               "name": "IntubationHistoryHeading",
-              "html": "<h3>Improper intubation can lead to damage to the larynx. These questions relate to {CmpnName}'s intubation history prior to LP/GOLPP symptoms.</h3>"
+              "html": "<h3>Intubation History</h3>"
+            },
+            {
+              "type": "html",
+              "name": "IntubationHistoryText",
+              "html": "Some research has indicated that improper intubation techniques may result in damage to laryngeal tissue and under certain circumstances may play a role in some cases of acquired laryngeal paralysis."
             },
             {
               "type": "panel",
@@ -651,7 +651,7 @@
             {
               "type": "html",
               "name": "BreathingCrisisText",
-              "html": "<p>Breathing emergencies are terrifying.</p>"
+              "html": "<p>In a breathing crisis, the paralyzed arytenoid cartilages block the airway and cut off airflow to the lungs. In extreme cases, the crisis escalates into a breathing emergency that requires care at a veterinary facility to restore breathing. These questions are about breathing emergencies that required care from a licensed veterinarian. </p>"
             },
             {
               "type": "panel",
@@ -675,8 +675,8 @@
                       "text": "Don't know"
                     }
                   ],
-                  "showOtherItem": true,
-                  "showNoneItem": true
+                  "showOtherItem": false,
+                  "showNoneItem": false
                 },
                 {
                   "type": "radiogroup",
@@ -696,8 +696,8 @@
                       "text": "More than twice"
                     }
                   ],
-                  "showOtherItem": true,
-                  "showNoneItem": true
+                  "showOtherItem": false,
+                  "showNoneItem": false
                 },
                 {
                   "type": "radiogroup",
@@ -721,8 +721,8 @@
                       "text": "More than $5000"
                     }
                   ],
-                  "showOtherItem": true,
-                  "showNoneItem": true
+                  "showOtherItem": false,
+                  "showNoneItem": false
                 },
                 {
                   "type": "radiogroup",
@@ -772,7 +772,6 @@
                     }
                   ],
                   "showOtherItem": true,
-                  "required": true,
                   "visibleIf": "{BreathingCrisisAdvice} = 'YES'"
                 },
                 {
@@ -794,8 +793,7 @@
                       "text": "Don't know"
                     }
                   ],
-                  "showOtherItem": true,
-                  "otherText": "Other option"
+                  "showOtherItem": false
                 },
                 {
                   "type": "checkbox",
@@ -828,6 +826,7 @@
                   "name": "BreathingCrisisSubstanceForm",
                   "title": "In what form was the sedative or steriod provided?",
                   "isRequired": true,
+                  "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
                   "choices": [
                     {
                       "value": "INJECTIBLE",
@@ -855,8 +854,7 @@
                     }
                   ],
                   "showOtherItem": true,
-                  "showNoneItem": true,
-                  "required": true
+                  "showNoneItem": true
                 }
               ]
             }
@@ -874,7 +872,7 @@
             {
               "type": "html",
               "name": "lvngCmpnInfoHeading",
-              "html": "<h3>Tell us about your LarPar companion!<h3>"
+              "html": "<h3>Tell us about your LP/GOLPP companion!<h3>"
             },
             {
               "type": "html",
@@ -883,228 +881,222 @@
             },
             {
               "type": "panel",
-              "name": "lvngCmpnInfoDetailsPanel",
+              "name": "lvngCmpnInfoAnimalTypePanel",
               "elements": [
                 {
-                  "type": "panel",
-                  "name": "lvngCmpnInfoAnimalTypePanel",
-                  "elements": [
+                  "type": "radiogroup",
+                  "name": "lvngCmpnInfoAnimalType",
+                  "title": "What kind of animal is {CmpnName}?",
+                  "isRequired": true,
+                  "choices": [
                     {
-                      "type": "radiogroup",
-                      "name": "lvngCmpnInfoAnimalType",
-                      "title": "What kind of animal is {CmpnName}?",
-                      "isRequired": true,
-                      "choices": [
-                        {
-                          "value": "CANINE",
-                          "text": "Dog"
-                        },
-                        {
-                          "value": "FELINE",
-                          "text": "Cat"
-                        },
-                        {
-                          "value": "EQUINE",
-                          "text": "Horse"
-                        }
-                      ]
+                      "value": "CANINE",
+                      "text": "Dog"
+                    },
+                    {
+                      "value": "FELINE",
+                      "text": "Cat"
+                    },
+                    {
+                      "value": "EQUINE",
+                      "text": "Horse"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngCmpnInfoBreedGenderPanel",
+              "title": "What is {CmpnName}'s breed or breed mix and gender?",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "lvngCmpnInfoBreed",
+                  "title": "Breed or mix (if unknown, type 'Don't know'):",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "lvngCmpnInfoGender",
+                  "title": "Gender:",
+                  "isRequired": true,
+                  "labelTrue": "Female",
+                  "labelFalse": "Male"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngCmpnInfoAgePanel",
+              "title": "What is {CmpnName}'s approximate age (in years and months)?",
+              "elements": [
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnInfoAgeYears",
+                  "title": "Age in years (number):",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
                     }
                   ]
                 },
                 {
-                  "type": "panel",
-                  "name": "lvngCmpnInfoBreedGenderPanel",
-                  "title": "What is {CmpnName}'s breed or breed mix and gender?",
-                  "elements": [
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnInfoAgeMonths",
+                  "title": "Months (number 1 - 12)",
+                  "isRequired": true,
+                  "min": 1,
+                  "max": 12,
+                  "validators": [
                     {
-                      "type": "text",
-                      "name": "lvngCmpnInfoBreed",
-                      "title": "Breed or mix (if unknown, type 'Don't know'):",
-                      "isRequired": true
-                    },
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 12,
+                      "text": "Months must be between 1 and 12"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngCmpnInfoWeightPanel",
+              "title": "About how much does {CmpnName} weigh in pounds or kilos?",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "lvngCmpnInfoWeight",
+                  "title": "Weight (number):",
+                  "isRequired": true,
+                  "inputType": "number",
+                  "min": 1,
+                  "max": 2200,
+                  "validators": [
                     {
-                      "type": "boolean",
-                      "name": "lvngCmpnInfoGender",
-                      "title": "Gender:",
-                      "isRequired": true,
-                      "labelTrue": "Female",
-                      "labelFalse": "Male"
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 2200,
+                      "text": "Weight must be between 1 and 2200"
                     }
                   ]
                 },
                 {
-                  "type": "panel",
-                  "name": "lvngCmpnInfoAgePanel",
-                  "title": "What is {CmpnName}'s approximate age (in years and months)?",
-                  "elements": [
+                  "type": "boolean",
+                  "name": "lvngCmpnInfoWeightUnits",
+                  "title": "Please choose pounds or kilos:",
+                  "isRequired": true,
+                  "labelTrue": "Kg",
+                  "labelFalse": "Lbs"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngCmpnInfoDemeanorPanel",
+              "title": "",
+              "elements": [
+                {
+                  "type": "rating",
+                  "name": "lvngCmpnInfoDemeanor",
+                  "title": "How energetic, excitable, or anxious would you describe {CmpnName}?",
+                  "description": "1 = very calm, 5 = very excitable",
+                  "isRequired": true,
+                  "rateValues": [
                     {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "lvngCmpnInfoAgeYears",
-                      "title": "Age in years (number):",
-                      "isRequired": true,
-                      "min": "1",
-                      "max": "40",
-                      "validators": [
-                        {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 40,
-                          "text": "Age must be between 1 and 40"
-                        }
-                      ]
+                      "value": 1,
+                      "text": "1"
                     },
                     {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "lvngCmpnInfoAgeMonths",
-                      "title": "Months (number 1 - 12)",
-                      "isRequired": true,
-                      "min": 1,
-                      "max": 12,
-                      "validators": [
-                        {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 12,
-                          "text": "Months must be between 1 and 12"
-                        }
-                      ]
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngCmpnInfoAnimalsPanel",
+              "elements": [
+                {
+                  "type": "dropdown",
+                  "name": "lvngCmpnInfoAnimalsCount",
+                  "title": "How many animals do you have in your care?",
+                  "required": true,
+                  "choices": [
+                    {
+                      "value": "1",
+                      "text": "Just {CmpnName}"
+                    },
+                    {
+                      "value": "2",
+                      "text": "Two"
+                    },
+                    {
+                      "value": "3",
+                      "text": "Three"
+                    },
+                    {
+                      "value": "4",
+                      "text": "More than three"
+                    }
+                  ],
+                  "choicesOrder": "none",
+                  "otherText": "More than three",
+                  "choicesMin": 1
                 },
                 {
-                  "type": "panel",
-                  "name": "lvngCmpnInfoWeightPanel",
-                  "title": "About how much does {CmpnName} weigh in pounds or kilos?",
-                  "elements": [
-                    {
-                      "type": "text",
-                      "name": "lvngCmpnInfoWeight",
-                      "title": "Weight (number):",
-                      "isRequired": true,
-                      "inputType": "number",
-                      "min": 1,
-                      "max": 2200,
-                      "validators": [
-                        {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 2200,
-                          "text": "Weight must be between 1 and 2200"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "boolean",
-                      "name": "lvngCmpnInfoWeightUnits",
-                      "title": "Please choose pounds or kilos:",
-                      "isRequired": true,
-                      "labelTrue": "Kg",
-                      "labelFalse": "Lbs"
-                    }
-                  ]
+                  "type": "boolean",
+                  "name": "lvngCmpnInfoHasInsurance",
+                  "required": true,
+                  "title": "Do you have pet insurance for {CmpnName}?"
                 },
                 {
-                  "type": "panel",
-                  "name": "lvngCmpnInfoDemeanorPanel",
-                  "title": "",
-                  "elements": [
+                  "type": "radiogroup",
+                  "name": "lvngCmpnInfoHasInsuranceOther",
+                  "title": "Do you have pet insurance for your other animals?",
+                  "visibleIf": "{lvngCmpnInfoHasInsurance} != '1'",
+                  "required": true,
+                  "choices": [
                     {
-                      "type": "rating",
-                      "name": "lvngCmpnInfoDemeanor",
-                      "title": "How energetic, excitable, or anxious would you describe {CmpnName}?",
-                      "description": "1 = very calm, 5 = very excitable",
-                      "isRequired": true,
-                      "rateValues": [
-                        {
-                          "value": 1,
-                          "text": "1"
-                        },
-                        {
-                          "value": 2,
-                          "text": "2"
-                        },
-                        {
-                          "value": 3,
-                          "text": "3"
-                        },
-                        {
-                          "value": 4,
-                          "text": "4"
-                        },
-                        {
-                          "value": 5,
-                          "text": "5"
-                        },
-                        {
-                          "value": "DONT_KNOW",
-                          "text": "Don't know"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "panel",
-                  "name": "lvngCmpnInfoAnimalsPanel",
-                  "elements": [
-                    {
-                      "type": "dropdown",
-                      "name": "lvngCmpnInfoAnimalsCount",
-                      "title": "How many animals do you have in your care?",
-                      "required": true,
-                      "choices": [
-                        {
-                          "value": "1",
-                          "text": "Just {CmpnName}"
-                        },
-                        {
-                          "value": "2",
-                          "text": "Two"
-                        },
-                        {
-                          "value": "3",
-                          "text": "Three"
-                        },
-                        {
-                          "value": "4",
-                          "text": "More than three"
-                        }
-                      ],
-                      "choicesOrder": "none",
-                      "otherText": "More than three",
-                      "choicesMin": 1
+                      "value": "1",
+                      "text": "No"
                     },
                     {
-                      "type": "boolean",
-                      "name": "lvngCmpnInfoHasInsurance",
-                      "required": true,
-                      "title": "Do you have pet insurance for {CmpnName}?"
+                      "value": "2",
+                      "text": "Some, but not all"
                     },
                     {
-                      "type": "radiogroup",
-                      "name": "lvngCmpnInfoHasInsuranceOther",
-                      "title": "Do you have pet insurance for your other animals?",
-                      "visibleIf": "{lvngCmpnInfoHasInsurance} != 1",
-                      "required": true,
-                      "choices": [
-                        {
-                          "value": "1",
-                          "text": "No"
-                        },
-                        {
-                          "value": "2",
-                          "text": "Some, but not all"
-                        },
-                        {
-                          "value": "3",
-                          "text": "All"
-                        }
-                      ],
-                      "choicesOrder": "none"
+                      "value": "3",
+                      "text": "All"
                     }
-                  ]
+                  ],
+                  "choicesOrder": "none"
                 }
               ]
             }
@@ -1201,7 +1193,7 @@
                     },
                     {
                       "value": "LABORED_BREATHING",
-                      "text": "Labored Breathing"
+                      "text": "Labored breathing"
                     },
                     {
                       "value": "EXERCISE_INTOLERANCE",
@@ -1293,12 +1285,12 @@
             {
               "type": "html",
               "name": "lvngChangedVetsHeading",
-              "html": "<h3>Did you change vets?(LP)</h3>"
+              "html": "<h3>Change of veterinarians due to LP/GOLPP</h3>"
             },
             {
               "type": "html",
               "name": "lvngChangedVetsText",
-              "html": "<p>Tell us why you changed vets.</p>"
+              "html": "<p>This section asks whether you changed primary veterinarians because of how {CmpnName}'s LP/GOLPP symptoms were handled and why you made that decision. </p>"
             },
             {
               "type": "panel",
@@ -1322,63 +1314,83 @@
                     {
                       "value": "MORE_THAN_ONCE",
                       "text": "More than once"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
                     }
                   ]
                 },
                 {
                   "type": "checkbox",
                   "name": "lvngChangedVetsReason",
-                  "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?:",
+                  "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP (please check all that apply)?",
                   "isRequired": true,
+                  "visibleIf": "{lvngChangedVets} != NO",
                   "choices": [
                     {
-                      "value": "NOT_SERIOUS",
-                      "text": "ITEM_1"
+                      "value": "NO_KNOWLEDGE",
+                      "text": "The previous vet couldn't give possible causes for {CmpnName}'s symptoms."
                     },
                     {
-                      "value": "NOT_INTERESTED",
-                      "text": "ITEM_2"
+                      "value": "NOT_SERIOUS",
+                      "text": "The previous vet didn't take {CmpnName}'s symptoms seriously."
                     },
                     {
                       "value": "AGE_ONLY",
-                      "text": "ITEM_3"
+                      "text": "The previous vet said {CmpnName}'s symptoms were just due to age."
                     },
                     {
                       "value": "BAD_TESTS",
-                      "text": "OTHER"
+                      "text": "The previous vet ordered tests that I didn't think were relevant to {CmpnName}'s symptoms."
                     },
                     {
                       "value": "NO_VALUE",
-                      "text": "OTHER"
+                      "text": "I wasn't getting enough value from the previous vet's handling of {CmpnName}'s symptoms."
                     },
                     {
                       "value": "MISDIAGNOSED",
-                      "text": "OTHER"
-                    },
-                    {
-                      "value": "OTHER",
-                      "text": "Other (max. 250 characters)"
+                      "text": "The previous vet misdiagnosed {CmpnName}'s symptoms."
                     }
                   ],
                   "showOtherItem": true
                 },
                 {
+                  "type": "rating",
+                  "name": "lvngChangeVetsConfidence",
+                  "title": "How confident were you in your previous primary vet's knowledge level about LP/GOLPP?",
+                  "description": "1 = no confident at all, 5 = very confident",
+                  "isRequired": true,
+                  "visibleIf": "{lvngChangedVets} != NO",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
                   "type": "radiogroup",
                   "name": "lvngChangedVetsAdvice",
-                  "title": "What, if any, advice did your previous primary vet/s give you advice about dogname's LP/GOLPP symptoms?",
+                  "title": "What advice or recommendation did your previous primary vet's give you advice about dogname's LP/GOLPP symptoms?",
                   "isRequired": true,
+                  "visibleIf": "{lvngChangedVets} != NO",
                   "choices": [
                     {
                       "value": "NOTHING_CAN_BE_DONE",
-                      "text": "Said nothing can be done"
-                    },
-                    {
-                      "value": "INEFFECTIVE_TREATMENTS",
-                      "text": "Provided ineffective treatments"
+                      "text": "Explicitly said nothing can be done about {CmpnName}'s symptoms"
                     },
                     {
                       "value": "RECOMMENDED_SPECIALIST",
@@ -1387,10 +1399,6 @@
                     {
                       "value": "RECOMMENDED_EUTHANASIA",
                       "text": "Recommended euthanasia"
-                    },
-                    {
-                      "value": "OTHER",
-                      "text": "Other (max. 250 characters)"
                     }
                   ],
                   "showOtherItem": true,
@@ -1413,52 +1421,15 @@
                     },
                     {
                       "value": "NEUROLOGIST",
-                      "text": "NEUROLOGIST"
+                      "text": "Neurologist"
                     },
                     {
                       "value": "STENT_PROVIDER",
                       "text": "Stent provider"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
                     }
                   ],
                   "showOtherItem": true,
                   "otherText": "Other"
-                },
-                {
-                  "type": "rating",
-                  "name": "lvngChangeVetsConfidence",
-                  "title": "How confident were you in your previous primary vet/s' knowledge level regarding LP/GOLPP?",
-                  "description": "1 = no confident at all, 5 = very confident",
-                  "isRequired": true,
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
                 }
               ]
             }
@@ -1476,22 +1447,22 @@
             {
               "type": "html",
               "name": "lvngPrimaryDurationHeading",
-              "html": "<h3>How long were you in the care of a primary vet?(LP)</h3>"
+              "html": "<h3>Duration of care by primary veterinarian for LP/GOLPP symptoms</h3>"
             },
             {
               "type": "html",
               "name": "lvngPrimaryDurationText",
-              "html": "<p>Tells how long a primary vet was responsible for {CmpnName}'s LP/GOLPP issues.</p>"
+              "html": "<p>This section asks questions about how long {CmpnName} was in the care of primary veterinarians for LP/GOLPP symptoms and how {CmpnName}'s condition changed over this time period. </p>"
             },
             {
               "type": "panel",
-              "name": "lvngPrimaryDurationDetailsPanel",
-              "title": "",
+              "name": "lvngPrimaryDurationFirstConsult",
+              "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
               "elements": [
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "lvngPrimaryDurationBeginYears",
+                  "name": "lvngPrimaryDurationFirstConsultYears",
                   "title": "Age in years (number):",
                   "isRequired": true,
                   "min": "1",
@@ -1499,7 +1470,7 @@
                   "validators": [
                     {
                       "type": "numeric",
-                      "minValue": 1,
+                      "minValue": 0,
                       "maxValue": 40,
                       "text": "Age must be between 1 and 40"
                     }
@@ -1508,7 +1479,7 @@
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "lvngPrimaryDurationBeginMonths",
+                  "name": "lvngPrimaryDurationFirstConsultMonths",
                   "title": "Months (number 1 - 12)",
                   "isRequired": true,
                   "min": 1,
@@ -1521,7 +1492,13 @@
                       "text": "Months must be between 1 and 12"
                     }
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngPrimaryDurationCountCost",
+              "elements": [
                 {
                   "type": "radiogroup",
                   "name": "lvngPrimaryDurationVisitsNumber",
@@ -1575,8 +1552,7 @@
                       "text": "Don't know"
                     }
                   ],
-                  "showOtherItem": true,
-                  "otherText": "Other option"
+                  "showOtherItem": false
                 }
               ]
             }
@@ -1594,12 +1570,12 @@
             {
               "type": "html",
               "name": "lvngPrimaryVetHeading",
-              "html": "<h3>About your current primary veterinarian(LP)</h3>"
+              "html": "<h3>Your current primary veterinarians and {CmpnName}'s LP/GOLPP</h3>"
             },
             {
               "type": "html",
               "name": "lvngPrimaryVetText",
-              "html": "<p>Tell us about our experience with your current primary veterinarian.</p>"
+              "html": "<p>This section asks questions about how your current primary veterinarian has handled {CmpnName}'s LP/GOLPP journey.</p>"
             },
             {
               "type": "panel",
@@ -1618,15 +1594,15 @@
                     },
                     {
                       "value": "NO_SUGGESTED",
-                      "text": "Item2"
+                      "text": "Suggested {CmpnName}'s symptoms might be due to LP/GOLPP but did not give a definitive diagnosis."
                     },
                     {
                       "value": "YES_UNCONFIRMED",
-                      "text": "Item3"
+                      "text": "Provided a definitive diagnosis of LP/GOLPP but recommended confirming with a specialist."
                     },
                     {
                       "value": "YES_CONFIRMED",
-                      "text": "Don't know"
+                      "text": "Provided definitive diagnosis and did not recommend confirmation by a specialist."
                     },
                     {
                       "value": "DONT_KNOW",
@@ -1640,6 +1616,7 @@
                   "name": "lvngPrimaryVetDiagnosticType",
                   "title": "What diagnostic procedure did your current primary veterinarian use to arrive at their conclusion?",
                   "isRequired": true,
+                  "visibleIf": "{lvngPrimaryVetDiagnosis} != 'NO_MENTION'",
                   "choices": [
                     {
                       "value": "ROUTINE_EXAM",
@@ -1662,16 +1639,11 @@
                       "text": "Video endoscope or laryngoscope under anesthesia"
                     },
                     {
-                      "value": "Other",
-                      "text": "OTHER"
-                    },
-                    {
                       "value": "DONT_KNOW",
                       "text": "Don't know"
                     }
                   ],
-                  "showOtherItem": true,
-                  "showNoneItem": true
+                  "showOtherItem": true
                 },
                 {
                   "type": "radiogroup",
@@ -1713,14 +1685,14 @@
                       "text": "Don't know"
                     }
                   ],
-                  "showOtherItem": true,
-                  "otherText": "Other option"
+                  "showOtherItem": false
                 },
                 {
                   "type": "checkbox",
                   "name": "lvngPrimaryVetPrescriptionType",
                   "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
                   "isRequired": true,
+                  "visibleIf": "{lvngPrimaryVetPrescriptions} = YES",
                   "choices": [
                     {
                       "value": "DOXEPIN",
@@ -1765,10 +1737,6 @@
                     {
                       "value": "TEMARIL P",
                       "text": "Temaril P"
-                    },
-                    {
-                      "value": "OTHER",
-                      "text": "Other prescription medication"
                     }
                   ],
                   "showOtherItem": true,
@@ -1780,6 +1748,7 @@
                   "title": "How effective were these prescription medicatons for {CmpnName}'s LP/GOLPP?",
                   "description": "1 = not at all effective, 5 = very effective",
                   "isRequired": true,
+                  "visibleIf": "{lvngPrimaryVetPrescriptions} = YES",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1808,9 +1777,9 @@
                   ]
                 },
                 {
-                  "type": "checkbox",
+                  "type": "radiogroup",
                   "name": "lvngPrimaryVetNonPrescription",
-                  "title": "Did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
+                  "title": "Not including OTC supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1833,6 +1802,7 @@
                   "name": "lvngPrimaryVetNonPrescriptionType",
                   "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
                   "isRequired": true,
+                  "visibleIf": "{lvngPrimaryVetNonPrescription} = YES",
                   "choices": [
                     {
                       "value": "ACUPUNCTURE",
@@ -1863,6 +1833,7 @@
                   "title": "How effective were these treatments?",
                   "description": "1 = not at all effective, 5 = very effective",
                   "isRequired": true,
+                  "visibleIf": "{lvngPrimaryVetNonPrescription} = YES",
                   "rateValues": [
                     {
                       "value": 1,

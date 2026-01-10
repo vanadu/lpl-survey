@@ -38,7 +38,7 @@ const surveyJson = {
 export default function SurveyComponent({ startPageName }) {
   
   // !VA Constant for show/hide Next button depending on consent question 
-  const CONSENT_QUESTION = "consent";
+  const CONSENT_QUESTION = "LandingConsent";
   const CONSENT_PAGE_INDEX = 0;
 
   const [survey] = useState(() => {

@@ -17,7 +17,7 @@ import masterSurvey from "../../data/master-survey.json";
 export default function MasterSurveyComponent() {
 
   // !VA Constant for show/hide Next button depending on consent question 
-  const CONSENT_QUESTION = "consent";
+  const CONSENT_QUESTION = "LandingConsent";
   const CONSENT_PAGE_INDEX = 0;
 
   const [survey] = useState(() => {
