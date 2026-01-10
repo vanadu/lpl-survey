@@ -13,7 +13,7 @@
         {
           "type": "html",
           "name": "IntubationHistoryText",
-          "html": "Some research has indicated that improper intubation techniques may result in damage to laryngeal tissue and under certain circumstances may play a role in some cases of acquired laryngeal paralysis."
+          "html": "Some research has indicated that improper intubation techniques may result in damage to laryngeal tissue and under certain circumstances may play a role in some cases of acquired laryngeal paralysis. This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms."
         },
         {
           "type": "panel",
@@ -41,7 +41,7 @@
             {
               "type": "checkbox",
               "name": "IntubationHistoryReason",
-              "title": "For what reason was {CmpnName} intubated prior to the first LP symptoms appearing?",
+              "title": "For what reason or reasons was {CmpnName} intubated prior to the first LP symptoms appearing?",
               "choices": [
                   {
                     "value": "TEETH_CLEANING",

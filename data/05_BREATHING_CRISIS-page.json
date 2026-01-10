@@ -17,7 +17,7 @@
         },
         {
           "type": "panel",
-          "name": "BreathingCrisisDetailsPanel",
+          "name": "BreathingCrisisDidHavePanel",
           "elements": [
             {
               "type": "radiogroup",
@@ -39,7 +39,14 @@
               ],
               "showOtherItem": false,
               "showNoneItem": false
-            },
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "BreathingCrisisDetailsPanel",
+          "visibleIf": "{BreathingCrisisDidHave} = 'YES'",          
+          "elements": [
             {
               "type": "radiogroup",
               "name": "BreathingCrisisCount",
@@ -81,6 +88,10 @@
                 {
                   "value": "MORE_THAN_5000",
                   "text": "More than $5000"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or prefer not to say"
                 }
               ],
               "showOtherItem": false,
@@ -111,6 +122,7 @@
               "name": "BreathingCrisisAdviceType",
               "title": "What advice did they give you to help you deal with a breathing crisis?",
               "isRequired": true,
+              "visibleIf": "{BreathingCrisisAdvice} = 'YES'",
               "choices": [
                 {
                   "value": "SEDATIVE",
@@ -133,8 +145,7 @@
                   "text": "Bring them to an emergency facility immediately"
                 }
               ],
-              "showOtherItem": true,
-              "visibleIf": "{BreathingCrisisAdvice} = 'YES'"
+              "showOtherItem": true
             },
             {
               "type": "radiogroup",
@@ -163,6 +174,7 @@
             "name": "BreathingCrisisProvidedSubstanceType",
             "title": "What substance or product did they provide?",
             "isRequired": true,
+            "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
             "choices": [
               {
                 "value": "SEDATIVE",
@@ -181,8 +193,7 @@
                 "text": "Don't know"
               }
             ],
-            "showOtherItem": true,
-            "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'"
+            "showOtherItem": true
             },
             {
             "type": "dropdown",

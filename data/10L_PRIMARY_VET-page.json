@@ -17,12 +17,36 @@
         },
         {
           "type": "panel",
-          "name": "lvngPrimaryVetDetailsPanel",
+          "name": "lvngPrimaryVetInflammationPanel",
           "title": "",
           "elements": [
-
-
-
+            {
+              "type": "radiogroup",
+              "name": "lvngPrimaryVetInflammation",
+              "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "lvngPrimaryVetDiagnosisPanel",
+          "elements": [
             {
               "type": "radiogroup",
               "name": "lvngPrimaryVetDiagnosis",
@@ -52,13 +76,12 @@
               ],
               "showOtherItem": false
             },
-
             {
               "type": "radiogroup",
               "name": "lvngPrimaryVetDiagnosticType",
               "title": "What diagnostic procedure did your current primary veterinarian use to arrive at their conclusion?",
               "isRequired": true,
-              "visibleIf": "{lvngPrimaryVetDiagnosis} != 'NO_MENTION'",
+              "visibleIf": "{lvngPrimaryVetDiagnosis} = 'NO_SUGGESTED' || {lvngPrimaryVetDiagnosis} = 'YES_UNCONFIRMED' || {lvngPrimaryVetDiagnosis} = 'YES_CONFIRMED' ",
               "choices": [
                 {
                   "value": "ROUTINE_EXAM",
@@ -86,28 +109,15 @@
                 }
               ],
               "showOtherItem": true
-            },
-            {
-              "type": "radiogroup",
-              "name": "lvngPrimaryVetInflammation",
-              "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
-            },
+            }
+    
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "panelName",
+          "elements": [
+
             {
               "type": "radiogroup",
               "name": "lvngPrimaryVetPrescriptions",
@@ -187,7 +197,7 @@
             {
               "type": "rating",
               "name": "lvngPrimaryVetPrescriptionEffectiveness",
-              "title": "How effective were these prescription medicatons for {CmpnName}'s LP/GOLPP?",
+              "title": "How effective were these prescription medications for {CmpnName}'s LP/GOLPP?",
               "description": "1 = not at all effective, 5 = very effective",
               "isRequired": true,
               "visibleIf": "{lvngPrimaryVetPrescriptions} = YES",
@@ -199,12 +209,18 @@
                 { "value": 5, "text": "5" },
                 { "value": "DONT_KNOW", "text": "Don't know" }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "lvngPrimaryVetNonPrescriptionPanel",
+          "elements": [
 
             {
               "type": "radiogroup",
               "name": "lvngPrimaryVetNonPrescription",
-              "title": "Not including OTC supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
+              "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
               "isRequired": true,
               "choices": [
                 {
@@ -222,7 +238,6 @@
               ],
               "showOtherItem": false
             },
-
             {
               "type": "checkbox",
               "name": "lvngPrimaryVetNonPrescriptionType",
@@ -241,14 +256,6 @@
                 {
                   "value": "LLLT",
                   "text": "Cold laser or red light therapy"
-                },
-                {
-                  "value": "COUPAGE",
-                  "text": "Coupage"
-                },
-                {
-                  "value": "Other",
-                  "text": "OTHER"
                 }
               ],
               "showOtherItem": true

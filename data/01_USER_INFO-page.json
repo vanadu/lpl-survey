@@ -13,7 +13,7 @@
         {
           "type": "html",
           "name": "UserInfoText",
-          "html": "<p>We're asking for contact info (email or Facebook account name), which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions.</p>"
+          "html": "<p>We're asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and verifiable.  </p>"
         },
         {
           "type": "html",

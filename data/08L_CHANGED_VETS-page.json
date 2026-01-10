@@ -13,7 +13,7 @@
         {
           "type": "html",
           "name": "lvngChangedVetsText",
-          "html": "<p>This section asks whether you changed primary veterinarians because of how {CmpnName}'s LP/GOLPP symptoms were handled and why you made that decision. </p>"
+          "html": "<p>This section asks whether you changed primary veterinarians because of how {CmpnName}'s LP/GOLPP symptoms were handled and why you made that decision. This doesn't include specialists like surgeons or neurologists, only whether you moved {CmpnName}'s care from one primary veterinarian to another because of how {CmpnName}'s LP/GOLPP was handled.</p>"
         },
         {
           "type": "panel",
@@ -103,7 +103,7 @@
               "choices": [
                 {
                   "value": "NOTHING_CAN_BE_DONE",
-                  "text": "Explicitly said nothing can be done about {CmpnName}'s symptoms"
+                  "text": "Said nothing can be done about {CmpnName}'s symptoms"
                 },
                 {
                   "value": "RECOMMENDED_SPECIALIST",
@@ -115,7 +115,7 @@
                 }
               ],
               "showOtherItem": true,
-              "showNoneItem": true
+              "showNoneItem": false
             },
 
             {

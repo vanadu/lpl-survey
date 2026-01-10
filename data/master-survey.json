@@ -540,7 +540,7 @@
             {
               "type": "html",
               "name": "IntubationHistoryText",
-              "html": "Some research has indicated that improper intubation techniques may result in damage to laryngeal tissue and under certain circumstances may play a role in some cases of acquired laryngeal paralysis."
+              "html": "Some research has indicated that improper intubation techniques may result in damage to laryngeal tissue and under certain circumstances may play a role in some cases of acquired laryngeal paralysis. This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms."
             },
             {
               "type": "panel",
@@ -568,7 +568,7 @@
                 {
                   "type": "checkbox",
                   "name": "IntubationHistoryReason",
-                  "title": "For what reason was {CmpnName} intubated prior to the first LP symptoms appearing?",
+                  "title": "For what reason or reasons was {CmpnName} intubated prior to the first LP symptoms appearing?",
                   "choices": [
                     {
                       "value": "TEETH_CLEANING",
@@ -655,7 +655,7 @@
             },
             {
               "type": "panel",
-              "name": "BreathingCrisisDetailsPanel",
+              "name": "BreathingCrisisDidHavePanel",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -677,7 +677,14 @@
                   ],
                   "showOtherItem": false,
                   "showNoneItem": false
-                },
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "BreathingCrisisDetailsPanel",
+              "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+              "elements": [
                 {
                   "type": "radiogroup",
                   "name": "BreathingCrisisCount",
@@ -719,6 +726,10 @@
                     {
                       "value": "MORE_THAN_5000",
                       "text": "More than $5000"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know or prefer not to say"
                     }
                   ],
                   "showOtherItem": false,
@@ -749,6 +760,7 @@
                   "name": "BreathingCrisisAdviceType",
                   "title": "What advice did they give you to help you deal with a breathing crisis?",
                   "isRequired": true,
+                  "visibleIf": "{BreathingCrisisAdvice} = 'YES'",
                   "choices": [
                     {
                       "value": "SEDATIVE",
@@ -771,8 +783,7 @@
                       "text": "Bring them to an emergency facility immediately"
                     }
                   ],
-                  "showOtherItem": true,
-                  "visibleIf": "{BreathingCrisisAdvice} = 'YES'"
+                  "showOtherItem": true
                 },
                 {
                   "type": "radiogroup",
@@ -800,6 +811,7 @@
                   "name": "BreathingCrisisProvidedSubstanceType",
                   "title": "What substance or product did they provide?",
                   "isRequired": true,
+                  "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
                   "choices": [
                     {
                       "value": "SEDATIVE",
@@ -818,8 +830,7 @@
                       "text": "Don't know"
                     }
                   ],
-                  "showOtherItem": true,
-                  "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'"
+                  "showOtherItem": true
                 },
                 {
                   "type": "dropdown",
@@ -1114,7 +1125,7 @@
             {
               "type": "html",
               "name": "lvngEarlySymptomsHeading",
-              "html": "<h3>Your early encounters with laryngeal paralysis (LP)</h3>"
+              "html": "<h3>Your early encounters with LP/GOLPP</h3>"
             },
             {
               "type": "html",
@@ -1290,7 +1301,7 @@
             {
               "type": "html",
               "name": "lvngChangedVetsText",
-              "html": "<p>This section asks whether you changed primary veterinarians because of how {CmpnName}'s LP/GOLPP symptoms were handled and why you made that decision. </p>"
+              "html": "<p>This section asks whether you changed primary veterinarians because of how {CmpnName}'s LP/GOLPP symptoms were handled and why you made that decision. This doesn't include specialists like surgeons or neurologists, only whether you moved {CmpnName}'s care from one primary veterinarian to another because of how {CmpnName}'s LP/GOLPP was handled.</p>"
             },
             {
               "type": "panel",
@@ -1390,7 +1401,7 @@
                   "choices": [
                     {
                       "value": "NOTHING_CAN_BE_DONE",
-                      "text": "Explicitly said nothing can be done about {CmpnName}'s symptoms"
+                      "text": "Said nothing can be done about {CmpnName}'s symptoms"
                     },
                     {
                       "value": "RECOMMENDED_SPECIALIST",
@@ -1402,7 +1413,7 @@
                     }
                   ],
                   "showOtherItem": true,
-                  "showNoneItem": true
+                  "showNoneItem": false
                 },
                 {
                   "type": "radiogroup",
@@ -1452,7 +1463,7 @@
             {
               "type": "html",
               "name": "lvngPrimaryDurationText",
-              "html": "<p>This section asks questions about how long {CmpnName} was in the care of primary veterinarians for LP/GOLPP symptoms and how {CmpnName}'s condition changed over this time period. </p>"
+              "html": "<p>This section asks questions about how long {CmpnName} has been in the care of primary veterinarians for LP/GOLPP symptoms and how {CmpnName}'s condition changed over this time period. This includes your current primary veterinarian and any prior vets who examined {CmpnName} with LP/GOLPP symptoms.</p>"
             },
             {
               "type": "panel",
@@ -1497,12 +1508,12 @@
             },
             {
               "type": "panel",
-              "name": "lvngPrimaryDurationCountCost",
+              "name": "lvngPrimaryDurationVisitsNumberPanel",
               "elements": [
                 {
                   "type": "radiogroup",
                   "name": "lvngPrimaryDurationVisitsNumber",
-                  "title": "About how many times did you visit a primary veterinarian (including your current one) about {CmpnName}'s LP/GOLPP symptoms?",
+                  "title": "About how many times have you visited a primary veterinarian (including your current one) about {CmpnName}'s LP/GOLPP symptoms?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1522,8 +1533,7 @@
                       "text": "Don't know"
                     }
                   ],
-                  "showOtherItem": true,
-                  "otherText": "Other option"
+                  "showOtherItem": false
                 },
                 {
                   "type": "radiogroup",
@@ -1549,7 +1559,7 @@
                     },
                     {
                       "value": "DONT_KNOW",
-                      "text": "Don't know"
+                      "text": "Don't know or prefer not to say"
                     }
                   ],
                   "showOtherItem": false
@@ -1579,8 +1589,35 @@
             },
             {
               "type": "panel",
-              "name": "lvngPrimaryVetDetailsPanel",
+              "name": "lvngPrimaryVetInflammationPanel",
               "title": "",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "lvngPrimaryVetInflammation",
+                  "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngPrimaryVetDiagnosisPanel",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -1616,7 +1653,7 @@
                   "name": "lvngPrimaryVetDiagnosticType",
                   "title": "What diagnostic procedure did your current primary veterinarian use to arrive at their conclusion?",
                   "isRequired": true,
-                  "visibleIf": "{lvngPrimaryVetDiagnosis} != 'NO_MENTION'",
+                  "visibleIf": "{lvngPrimaryVetDiagnosis} = 'NO_SUGGESTED' || {lvngPrimaryVetDiagnosis} = 'YES_UNCONFIRMED' || {lvngPrimaryVetDiagnosis} = 'YES_CONFIRMED' ",
                   "choices": [
                     {
                       "value": "ROUTINE_EXAM",
@@ -1644,28 +1681,13 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "lvngPrimaryVetInflammation",
-                  "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "panelName",
+              "elements": [
                 {
                   "type": "radiogroup",
                   "name": "lvngPrimaryVetPrescriptions",
@@ -1745,7 +1767,7 @@
                 {
                   "type": "rating",
                   "name": "lvngPrimaryVetPrescriptionEffectiveness",
-                  "title": "How effective were these prescription medicatons for {CmpnName}'s LP/GOLPP?",
+                  "title": "How effective were these prescription medications for {CmpnName}'s LP/GOLPP?",
                   "description": "1 = not at all effective, 5 = very effective",
                   "isRequired": true,
                   "visibleIf": "{lvngPrimaryVetPrescriptions} = YES",
@@ -1775,11 +1797,17 @@
                       "text": "Don't know"
                     }
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngPrimaryVetNonPrescriptionPanel",
+              "elements": [
                 {
                   "type": "radiogroup",
                   "name": "lvngPrimaryVetNonPrescription",
-                  "title": "Not including OTC supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
+                  "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1815,14 +1843,6 @@
                     {
                       "value": "LLLT",
                       "text": "Cold laser or red light therapy"
-                    },
-                    {
-                      "value": "COUPAGE",
-                      "text": "Coupage"
-                    },
-                    {
-                      "value": "Other",
-                      "text": "OTHER"
                     }
                   ],
                   "showOtherItem": true

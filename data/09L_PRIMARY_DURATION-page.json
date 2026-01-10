@@ -13,7 +13,7 @@
         {
           "type": "html",
           "name": "lvngPrimaryDurationText",
-          "html": "<p>This section asks questions about how long {CmpnName} was in the care of primary veterinarians for LP/GOLPP symptoms and how {CmpnName}'s condition changed over this time period. </p>"
+          "html": "<p>This section asks questions about how long {CmpnName} has been in the care of primary veterinarians for LP/GOLPP symptoms and how {CmpnName}'s condition changed over this time period. This includes your current primary veterinarian and any prior vets who examined {CmpnName} with LP/GOLPP symptoms.</p>"
         },
         {
           "type": "panel",
@@ -59,12 +59,12 @@
 
         {
           "type": "panel",
-          "name": "lvngPrimaryDurationCountCost",
+          "name": "lvngPrimaryDurationVisitsNumberPanel",
           "elements": [
             {
               "type": "radiogroup",
               "name": "lvngPrimaryDurationVisitsNumber",
-              "title": "About how many times did you visit a primary veterinarian (including your current one) about {CmpnName}'s LP/GOLPP symptoms?",
+              "title": "About how many times have you visited a primary veterinarian (including your current one) about {CmpnName}'s LP/GOLPP symptoms?",
               "isRequired": true,
               "choices": [
                 {
@@ -84,8 +84,7 @@
                   "text": "Don't know"
                 }
               ],
-              "showOtherItem": true,
-              "otherText": "Other option"
+              "showOtherItem": false
             },
             {
               "type": "radiogroup",
@@ -111,7 +110,7 @@
                 },
                 {
                   "value": "DONT_KNOW",
-                  "text": "Don't know"
+                  "text": "Don't know or prefer not to say"
                 }
               ],
               "showOtherItem": false

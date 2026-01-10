@@ -54,11 +54,11 @@
     "STERIOD"
   ],
   "BreathingCrisisSubstanceForm": [
-    "Injectible"
+    "LIQUID"
   ],
 
 
-  "lvngCmpnInfoAnimalType": "Dog",
+  "lvngCmpnInfoAnimalType": "CANINE",
   "lvngCmpnInfoBreed": "Boxer",
   "lvngCmpnInfoGender": 5,
   "lvngCmpnInfoAgeYears": 12,
