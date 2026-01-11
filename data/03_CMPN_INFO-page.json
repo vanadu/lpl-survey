@@ -188,8 +188,8 @@
             {
               "type": "rating",
               "name": "CmpnInfoDemeanor",
-              "title": "How energetic, excitable, or anxious would you describe {CmpnName}?",
-              "description": "1 = very calm, 5 = very excitable",
+              "title": "How would you describe {CmpnName}'s demeanor?",
+              "description": "1 = very calm, 5 = very energetic",
               "isRequired": true,
               "rateValues": [
                 { "value": 1, "text": "1" },
@@ -209,7 +209,7 @@
           "elements": [
             {
               "type": "rating",
-              "name": "CmpnInfoDemeanor",
+              "name": "CmpnInfoAnxiety",
               "title": "How would you describe {CmpnName}'s anxiety level?",
               "description": "1 = not at all anxious, 5 = very anxious",
               "isRequired": true,

@@ -41,9 +41,9 @@
               "type": "text",
               "inputType": "number",
               "name": "lvngPrimaryDurationFirstConsultMonths",
-              "title": "Months (number 1 - 12)",
+              "title": "Months (number 0 - 12)",
               "isRequired": true,
-              "min": 1,
+              "min": 0,
               "max": 12,
               "validators": [
                 {

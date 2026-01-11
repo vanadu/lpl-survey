@@ -23,11 +23,11 @@
   "CmpnInfoWeight": 50,
   "CmpnInfoWeightUnits": false,
   "CmpnInfoDemeanor": 5,
+  "CmpnInfoAnxiety": 3,
   "CmpnInfoAnimalsCount": "TWO",
   "lvngCmpnInfoHasInsurance": true,
   "dcsdCmpnInfoHasInsurance": true,
-  
-  "CmpnInfoHasInsuranceOther": "2",
+    "CmpnInfoHasInsuranceOther": "2",
 
 
   "InfoSourcesPriorKnowledge": false,
@@ -103,7 +103,7 @@
 
 
   "lvngPrimaryDurationFirstConsultYears": 13,
-  "lvngPrimaryDurationFirstConsultMonths": 0,
+  "lvngPrimaryDurationFirstConsultMonths": 1,
   "lvngPrimaryDurationVisitsNumber": "MORE_THAN_TWO",
   "lvngPrimaryDurationCost": "OVER_5000",
 
