@@ -1,28 +1,28 @@
 {
-  "name": "L_PRIMARY_VET-page",
+  "name": "L_PRIMARY_HANDLING-page",
   "elements": [
     {
       "type": "panel",
-      "name": "lvngPrimaryVetPanel",
+      "name": "lvngPrimaryHandlingPanel",
       "elements": [
         {
           "type": "html",
-          "name": "lvngPrimaryVetHeading",
+          "name": "lvngPrimaryHandlingHeading",
           "html": "<h3>Your current primary veterinarians and {CmpnName}'s LP/GOLPP</h3>"
         },
         {
           "type": "html",
-          "name": "lvngPrimaryVetText",
+          "name": "lvngPrimaryHandlingText",
           "html": "<p>This section asks questions about how your current primary veterinarian has handled {CmpnName}'s LP/GOLPP journey.</p>"
         },
         {
           "type": "panel",
-          "name": "lvngPrimaryVetInflammationPanel",
+          "name": "lvngPrimaryHandlingInflammationPanel",
           "title": "",
           "elements": [
             {
               "type": "radiogroup",
-              "name": "lvngPrimaryVetInflammation",
+              "name": "lvngPrimaryHandlingInflammation",
               "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
               "isRequired": true,
               "choices": [
@@ -45,11 +45,11 @@
         },
         {
           "type": "panel",
-          "name": "lvngPrimaryVetDiagnosisPanel",
+          "name": "lvngPrimaryHandlingDiagnosisPanel",
           "elements": [
             {
               "type": "radiogroup",
-              "name": "lvngPrimaryVetDiagnosis",
+              "name": "lvngPrimaryHandlingDiagnosis",
               "title": "Did your current primary vet give you a diagnosis of LP for {CmpnName}? ",
               "isRequired": true,
               "choices": [
@@ -78,10 +78,10 @@
             },
             {
               "type": "radiogroup",
-              "name": "lvngPrimaryVetDiagnosticType",
+              "name": "lvngPrimaryHandlingDiagnosticType",
               "title": "What diagnostic procedure did your current primary veterinarian use to arrive at their conclusion?",
               "isRequired": true,
-              "visibleIf": "{lvngPrimaryVetDiagnosis} = 'NO_SUGGESTED' || {lvngPrimaryVetDiagnosis} = 'YES_UNCONFIRMED' || {lvngPrimaryVetDiagnosis} = 'YES_CONFIRMED' ",
+              "visibleIf": "{lvngPrimaryHandlingDiagnosis} = 'NO_SUGGESTED' || {lvngPrimaryHandlingDiagnosis} = 'YES_UNCONFIRMED' || {lvngPrimaryHandlingDiagnosis} = 'YES_CONFIRMED' ",
               "choices": [
                 {
                   "value": "ROUTINE_EXAM",
@@ -120,7 +120,7 @@
 
             {
               "type": "radiogroup",
-              "name": "lvngPrimaryVetPrescriptions",
+              "name": "lvngPrimaryHandlingPrescriptions",
               "title": "Did your current primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
               "isRequired": true,
               "choices": [
@@ -141,10 +141,10 @@
             },
             {
               "type": "checkbox",
-              "name": "lvngPrimaryVetPrescriptionType",
+              "name": "lvngPrimaryHandlingPrescriptionType",
               "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
               "isRequired": true,
-              "visibleIf": "{lvngPrimaryVetPrescriptions} = YES",
+              "visibleIf": "{lvngPrimaryHandlingPrescriptions} = YES",
               "choices": [
                 {
                   "value": "DOXEPIN",
@@ -196,11 +196,11 @@
             },
             {
               "type": "rating",
-              "name": "lvngPrimaryVetPrescriptionEffectiveness",
+              "name": "lvngPrimaryHandlingPrescriptionEffectiveness",
               "title": "How effective were these prescription medications for {CmpnName}'s LP/GOLPP?",
               "description": "1 = not at all effective, 5 = very effective",
               "isRequired": true,
-              "visibleIf": "{lvngPrimaryVetPrescriptions} = YES",
+              "visibleIf": "{lvngPrimaryHandlingPrescriptions} = YES",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -214,12 +214,12 @@
         },
         {
           "type": "panel",
-          "name": "lvngPrimaryVetNonPrescriptionPanel",
+          "name": "lvngPrimaryHandlingNonPrescriptionPanel",
           "elements": [
 
             {
               "type": "radiogroup",
-              "name": "lvngPrimaryVetNonPrescription",
+              "name": "lvngPrimaryHandlingNonPrescription",
               "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
               "isRequired": true,
               "choices": [
@@ -240,10 +240,10 @@
             },
             {
               "type": "checkbox",
-              "name": "lvngPrimaryVetNonPrescriptionType",
+              "name": "lvngPrimaryHandlingNonPrescriptionType",
               "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
               "isRequired": true,
-              "visibleIf": "{lvngPrimaryVetNonPrescription} = YES",
+              "visibleIf": "{lvngPrimaryHandlingNonPrescription} = YES",
               "choices": [
                 {
                   "value": "ACUPUNCTURE",
@@ -262,11 +262,11 @@
             },
             {
               "type": "rating",
-              "name": "lvngPrimaryVetNonPrescriptionEffectiveness",
+              "name": "lvngPrimaryHandlingNonPrescriptionEffectiveness",
               "title": "How effective were these treatments?",
               "description": "1 = not at all effective, 5 = very effective",
               "isRequired": true,
-              "visibleIf": "{lvngPrimaryVetNonPrescription} = YES",
+              "visibleIf": "{lvngPrimaryHandlingNonPrescription} = YES",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

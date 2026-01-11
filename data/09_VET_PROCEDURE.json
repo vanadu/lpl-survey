@@ -1,0 +1,17 @@
+{
+  "name": "VET_PROCEDURE-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "VetProcedurePanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "VetProcedureHeading",
+          "html": "<h3>This section if {CmpnName} underwent any veterinary-medical procedure such as surgery or stent implant for LP/GOLPP and if so, which procedure.</h3>"
+        }
+
+      ]
+    }
+  ]
+}

@@ -10,28 +10,32 @@ import prefillData from "../../data/prefill.json";
 import LANDING from "../../data/00_LANDING-page.json";
 import USER_INFO from "../../data/01_USER_INFO-page.json";
 import CMPN_NAME_LIFE_STATUS from "../../data/02_CMPN_NAME_LIFE_STATUS-page.json";
-import INFO_SOURCES from "../../data/03_INFO_SOURCES-page.json";
-import INTUBATION_HISTORY from "../../data/04_INTUBATION_HISTORY-page.json";
-import BREATHING_CRISIS from "../../data/05_BREATHING_CRISIS-page.json";
-import L_CMPN_INFO from "../../data/06L_CMPN_INFO-page.json";
+import CMPN_INFO from "../../data/03_CMPN_INFO-page.json";
+import INFO_SOURCES from "../../data/04_INFO_SOURCES-page.json";
+import INTUBATION_HISTORY from "../../data/05_INTUBATION_HISTORY-page.json";
+import BREATHING_CRISIS from "../../data/06_BREATHING_CRISIS-page.json";
 import L_EARLY_SYMPTOMS from "../../data/07L_EARLY_SYMPTOMS-page.json";
 import L_CHANGED_VETS from "../../data/08L_CHANGED_VETS-page.json";
-import L_PRIMARY_DURATION from "../../data/09L_PRIMARY_DURATION-page.json";
-import L_PRIMARY_VET from "../../data/10L_PRIMARY_VET-page.json";
+import VET_PROCEDURE from "../../data/09_VET_PROCEDURE.json";
+import L_PRIMARY_DURATION from "../../data/10L_PRIMARY_DURATION-page.json";
+import L_PRIMARY_HANDLING from "../../data/11L_PRIMARY_HANDLING-page.json";
+import PRIMARY_RECOMMENDATION from "../../data/12_PRIMARY_RECOMMENDATION-page.json";
 
 const surveyJson = {
   pages: [
     LANDING,
     USER_INFO,
     CMPN_NAME_LIFE_STATUS,
+    CMPN_INFO,
     INFO_SOURCES,
     INTUBATION_HISTORY,
     BREATHING_CRISIS,
-    L_CMPN_INFO,
     L_EARLY_SYMPTOMS,
     L_CHANGED_VETS,
+    VET_PROCEDURE,
     L_PRIMARY_DURATION,
-    L_PRIMARY_VET
+    L_PRIMARY_HANDLING,
+    PRIMARY_RECOMMENDATION,
   ]
 };
 
@@ -93,6 +97,8 @@ export default function SurveyComponent({ startPageName }) {
     return () => survey.onValueChanged.remove(handleConsentChange);
   }, [survey]);
 
+
+
   const handleComplete = useCallback(async (sender) => {
     try {
       const response = await fetch("/api/save-survey", {
@@ -124,6 +130,7 @@ export default function SurveyComponent({ startPageName }) {
   // !VA Prefill data based on prefill.json
   useEffect(() => {
     if (startPageName) {
+      console.log('startPageName :>> ' + startPageName);
       survey.data = prefillData;
       const activePage = survey.pages.find(p => p.name === startPageName);
       if (activePage) {

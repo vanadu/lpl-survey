@@ -22,7 +22,7 @@ export default function MasterSurveyComponent() {
 
   const [survey] = useState(() => {
     const surveyModel = new Model(masterSurvey);
-    console.log('masterSurvey', masterSurvey)
+    // console.log('masterSurvey', masterSurvey)
     surveyModel.applyTheme(SharpLight);
 
     // !VA  Hide navigation on initial load (LANDING). To show/hide Next button on landing page depending on consent question

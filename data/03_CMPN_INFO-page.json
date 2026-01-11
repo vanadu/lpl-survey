@@ -1,29 +1,30 @@
 {
-  "name": "L_CMPN_INFO-page",
+  "name": "CMPN_INFO-page",
   "elements": [
     {
       "type": "panel",
-      "name": "lvngCmpnInfoPanel",
+      "name": "CmpnInfoPanel",
       "elements": [
         {
           "type": "html",
-          "name": "lvngCmpnInfoHeading",
-          "html": "<h3>Tell us about your LP/GOLPP companion!<h3>"
+          "name": "CmpnInfoHeading",
+          "html": "<h3>About your LP/GOLPP companion!<h3>"
         },
         {
           "type": "html",
-          "name": "lvngCmpnInfoText",
+          "name": "CmpnInfoText",
           "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to complete the survey. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances.</p>"
         },
 
         {
           "type": "panel",
-          "name": "lvngCmpnInfoAnimalTypePanel",
+          "name": "CmpnInfoAnimalTypePanel",
+          "title": "Please tell us about {CmpnName}",
           "elements": [
             {
               "type": "radiogroup",
-              "name": "lvngCmpnInfoAnimalType",
-              "title": "What kind of animal is {CmpnName}?",
+              "name": "CmpnInfoAnimalType",
+              "title": "Species:",
               "isRequired": true,
               "choices": [
                 {
@@ -44,18 +45,18 @@
         },
         {
         "type": "panel",
-        "name": "lvngCmpnInfoBreedGenderPanel",
-        "title": "What is {CmpnName}'s breed or breed mix and gender?",
+        "name": "CmpnInfoBreedGenderPanel",
+        "title": "Breed or breed mix and gender:",
         "elements": [
           {
             "type": "text",
-            "name": "lvngCmpnInfoBreed",
+            "name": "CmpnInfoBreed",
             "title": "Breed or mix (if unknown, type 'Don't know'):",
             "isRequired": true
           },
           {
             "type": "boolean",
-            "name": "lvngCmpnInfoGender",
+            "name": "CmpnInfoGender",
             "title": "Gender:",
             "isRequired": true,
             "labelTrue": "Female",
@@ -65,8 +66,51 @@
         },
         {
           "type": "panel",
+          "name": "dcsdCmpnInfoAgePanel",
+          "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+          "visibleIf": "{LifeStatusCrossedOver} = 'DECEASED'",
+          "elements": [
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "dcsdCmpnInfoAgeYears",
+              "title": "Age in years (number):",
+              "isRequired": true,
+              "min": "1",
+              "max": "40",
+                "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 40,
+                  "text": "Age must be between 1 and 40"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "dcsdCmpnInfoAgeMonths",
+              "title": "Months (number 1 - 12)",
+              "isRequired": true,
+              "min": 1,
+              "max": 12,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 12,
+                  "text": "Months must be between 1 and 12"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
           "name": "lvngCmpnInfoAgePanel",
           "title": "What is {CmpnName}'s approximate age (in years and months)?",
+          "visibleIf": "{LifeStatusCrossedOver} = 'LIVING'",
           "elements": [
             {
               "type": "text",
@@ -106,12 +150,12 @@
         },
         {
           "type": "panel",
-          "name": "lvngCmpnInfoWeightPanel",
-          "title": "About how much does {CmpnName} weigh in pounds or kilos?",
+          "name": "CmpnInfoWeightPanel",
+          "title": "{CmpnName}'s last known weight in pounds or kilos:",
           "elements": [
             {
               "type": "text",
-              "name": "lvngCmpnInfoWeight",
+              "name": "CmpnInfoWeight",
               "title": "Weight (number):",
               "isRequired": true,
               "inputType": "number",
@@ -128,7 +172,7 @@
             },
             {
               "type": "boolean",
-              "name": "lvngCmpnInfoWeightUnits",
+              "name": "CmpnInfoWeightUnits",
               "title": "Please choose pounds or kilos:",
               "isRequired": true,
               "labelTrue": "Kg",
@@ -138,12 +182,12 @@
         },
         {
           "type": "panel",
-          "name": "lvngCmpnInfoDemeanorPanel",
+          "name": "CmpnInfoDemeanorPanel",
           "title": "",
           "elements": [
             {
               "type": "rating",
-              "name": "lvngCmpnInfoDemeanor",
+              "name": "CmpnInfoDemeanor",
               "title": "How energetic, excitable, or anxious would you describe {CmpnName}?",
               "description": "1 = very calm, 5 = very excitable",
               "isRequired": true,
@@ -160,46 +204,75 @@
         },
         {
           "type": "panel",
-          "name": "lvngCmpnInfoAnimalsPanel",
+          "name": "CmpnInfoAnxietyPanel",
+          "title": "",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "CmpnInfoDemeanor",
+              "title": "How would you describe {CmpnName}'s anxiety level?",
+              "description": "1 = not at all anxious, 5 = very anxious",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "CmpnInfoAnimalsPanel",
           "elements": [
             {
             "type": "dropdown",
-            "name": "lvngCmpnInfoAnimalsCount",
+            "name": "CmpnInfoAnimalsCount",
             "title": "How many animals do you have in your care?",
             "required": true,
             "choices": [
               {
-                "value": "1",
-                "text": "Just {CmpnName}"
+                "value": "ONE",
+                "text": "One"
               },
               {
-                "value": "2",
+                "value": "TWO",
                 "text": "Two"
               },
               {
-                "value": "3",
+                "value": "THREE",
                 "text": "Three"
               },
               {
-                "value": "4",
+                "value": "MORE_THAN_THREE",
                 "text": "More than three"
               }
             ],
             "choicesOrder": "none",
-            "otherText": "More than three",
             "choicesMin": 1
             },
             {
               "type": "boolean",
               "name": "lvngCmpnInfoHasInsurance",
               "required": true,
-              "title": "Do you have pet insurance for {CmpnName}?"
+              "title": "Do you have pet insurance for {CmpnName}?",
+              "visibleIf": "{LifeStatusCrossedOver} = 'LIVING'"
+            },
+            {
+              "type": "boolean",
+              "name": "dcsdCmpnInfoHasInsurance",
+              "required": true,
+              "title": "Did you have pet insurance for {CmpnName}?",
+              "visibleIf": "{LifeStatusCrossedOver} = 'DECEASED'"
             },
             {
             "type": "radiogroup",
-            "name": "lvngCmpnInfoHasInsuranceOther",
+            "name": "CmpnInfoHasInsuranceOther",
             "title": "Do you have pet insurance for your other animals?",
-            "visibleIf": "{lvngCmpnInfoHasInsurance} != '1'",
+            "visibleIf": "{lvngCmpnInfoHasInsurance} = true || {dcsdCmpnInfoHasInsurance} = true",
             "required": true,
             "choices": [
               {

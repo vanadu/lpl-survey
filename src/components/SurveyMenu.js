@@ -17,17 +17,17 @@ const SurveyHeader = () => {
         <li className="survey-dropdown__item"><Link href="/02_CmpnNameLifeStatus">
           02_CmpnNameLifeStatus 
         </Link></li>
-        <li className="survey-dropdown__item"><Link href="/03_InfoSources">
-          03_InfoSources
+        <li className="survey-dropdown__item"><Link href="/03_CmpnInfo">
+          03_CmpnInfo 
         </Link></li>
-        <li className="survey-dropdown__item"><Link href="/04_IntubationHistory">
-          04_IntubationHistory 
+        <li className="survey-dropdown__item"><Link href="/04_InfoSources">
+          04_InfoSources
         </Link></li>
-        <li className="survey-dropdown__item"><Link href="/05_BreathingCrisis">
-          05_BreathingCrisis 
+        <li className="survey-dropdown__item"><Link href="/05_IntubationHistory">
+          05_IntubationHistory 
         </Link></li>
-        <li className="survey-dropdown__item"><Link href="/06L_CmpnInfo">
-          06L_CmpnInfo 
+        <li className="survey-dropdown__item"><Link href="/06_BreathingCrisis">
+          06_BreathingCrisis 
         </Link></li>
         <li className="survey-dropdown__item"><Link href="/07L_EarlySymptoms">
           07L_EarlySymptoms 
@@ -35,13 +35,18 @@ const SurveyHeader = () => {
         <li className="survey-dropdown__item"><Link href="/08L_ChangedVets">
           08L_ChangedVets 
         </Link></li>
-        <li className="survey-dropdown__item"><Link href="/09L_PrimaryDuration">
-          09_PrimaryDuration 
+        <li className="survey-dropdown__item"><Link href="/09_VetProcedure">
+          09_VetProcedure 
         </Link></li>
-        <li className="survey-dropdown__item"><Link href="/10L_PrimaryVet">
-          10L_PrimaryVet
+        <li className="survey-dropdown__item"><Link href="/10L_PrimaryDuration">
+          10L_PrimaryDuration 
         </Link></li>
-        <li className="survey-dropdown__item">XXX</li>
+        <li className="survey-dropdown__item"><Link href="/11L_PrimaryHandling">
+          11L_PrimaryHandling
+        </Link></li>
+        <li className="survey-dropdown__item"><Link href="/12_PrimaryRecommendation">
+          12_PrimaryRecommendation
+        </Link></li>
       </ul>
     </div>
 

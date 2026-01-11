@@ -88,7 +88,7 @@
             {
               "type": "html",
               "name": "UserInfoText",
-              "html": "<p>We're asking for contact info (email or Facebook account name), which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions.</p>"
+              "html": "<p>We're asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and  </p>"
             },
             {
               "type": "html",
@@ -331,6 +331,339 @@
                   "imageWidth": 120,
                   "imageHeight": 120,
                   "showLabel": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CMPN_INFO-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "CmpnInfoPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "CmpnInfoHeading",
+              "html": "<h3>About your LP/GOLPP companion!<h3>"
+            },
+            {
+              "type": "html",
+              "name": "CmpnInfoText",
+              "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to complete the survey. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances.</p>"
+            },
+            {
+              "type": "panel",
+              "name": "CmpnInfoAnimalTypePanel",
+              "title": "Please tell us about {CmpnName}",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "CmpnInfoAnimalType",
+                  "title": "Species:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "CANINE",
+                      "text": "Dog"
+                    },
+                    {
+                      "value": "FELINE",
+                      "text": "Cat"
+                    },
+                    {
+                      "value": "EQUINE",
+                      "text": "Horse"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "CmpnInfoBreedGenderPanel",
+              "title": "Breed or breed mix and gender:",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "CmpnInfoBreed",
+                  "title": "Breed or mix (if unknown, type 'Don't know'):",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "CmpnInfoGender",
+                  "title": "Gender:",
+                  "isRequired": true,
+                  "labelTrue": "Female",
+                  "labelFalse": "Male"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "dcsdCmpnInfoAgePanel",
+              "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+              "visibleIf": "{LifeStatusCrossedOver = 'DECEASED'}",
+              "elements": [
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "dcsdCmpnInfoAgeYears",
+                  "title": "Age in years (number):",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "dcsdCmpnInfoAgeMonths",
+                  "title": "Months (number 1 - 12)",
+                  "isRequired": true,
+                  "min": 1,
+                  "max": 12,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 12,
+                      "text": "Months must be between 1 and 12"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngCmpnInfoAgePanel",
+              "title": "What is {CmpnName}'s approximate age (in years and months)?",
+              "visibleIf": "{LifeStatusCrossedOver = 'LIVING'}",
+              "elements": [
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnInfoAgeYears",
+                  "title": "Age in years (number):",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnInfoAgeMonths",
+                  "title": "Months (number 1 - 12)",
+                  "isRequired": true,
+                  "min": 1,
+                  "max": 12,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 12,
+                      "text": "Months must be between 1 and 12"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "CmpnInfoWeightPanel",
+              "title": "Last known weight (pounds or kilos):",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "CmpnInfoWeight",
+                  "title": "Weight (number):",
+                  "isRequired": true,
+                  "inputType": "number",
+                  "min": 1,
+                  "max": 2200,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 2200,
+                      "text": "Weight must be between 1 and 2200"
+                    }
+                  ]
+                },
+                {
+                  "type": "boolean",
+                  "name": "CmpnInfoWeightUnits",
+                  "title": "Please choose pounds or kilos:",
+                  "isRequired": true,
+                  "labelTrue": "Kg",
+                  "labelFalse": "Lbs"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "CmpnInfoDemeanorPanel",
+              "title": "",
+              "elements": [
+                {
+                  "type": "rating",
+                  "name": "CmpnInfoDemeanor",
+                  "title": "How energetic, excitable, or anxious would you describe {CmpnName}?",
+                  "description": "1 = very calm, 5 = very excitable",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "CmpnInfoAnxietyPanel",
+              "title": "",
+              "elements": [
+                {
+                  "type": "rating",
+                  "name": "CmpnInfoDemeanor",
+                  "title": "How would you describe {CmpnName}'s anxiety level?",
+                  "description": "1 = not at all anxious, 5 = very anxious",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "CmpnInfoAnimalsPanel",
+              "elements": [
+                {
+                  "type": "dropdown",
+                  "name": "CmpnInfoAnimalsCount",
+                  "title": "How many animals do you have in your care?",
+                  "required": true,
+                  "choices": [
+                    {
+                      "value": "ONE",
+                      "text": "One"
+                    },
+                    {
+                      "value": "TWO",
+                      "text": "Two"
+                    },
+                    {
+                      "value": "THREE",
+                      "text": "Three"
+                    },
+                    {
+                      "value": "MORE_THAN_THREE",
+                      "text": "More than three"
+                    }
+                  ],
+                  "choicesOrder": "none",
+                  "choicesMin": 1
+                },
+                {
+                  "type": "boolean",
+                  "name": "lvngCmpnInfoHasInsurance",
+                  "required": true,
+                  "title": "Do you have pet insurance for {CmpnName}?",
+                  "visibleIf": "{LifeStatusCrossedOver = 'LIVING'}"
+                },
+                {
+                  "type": "boolean",
+                  "name": "dcsdCmpnInfoHasInsurance",
+                  "required": true,
+                  "title": "Did you have pet insurance for {CmpnName}?",
+                  "visibleIf": "{LifeStatusCrossedOver = 'DECEASED'}"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "CmpnInfoHasInsuranceOther",
+                  "title": "Do you have pet insurance for your other animals?",
+                  "visibleIf": "{lvngCmpnInfoHasInsurance} = true || {dcsdCmpnInfoHasInsurance} = true",
+                  "required": true,
+                  "choices": [
+                    {
+                      "value": "1",
+                      "text": "No"
+                    },
+                    {
+                      "value": "2",
+                      "text": "Some, but not all"
+                    },
+                    {
+                      "value": "3",
+                      "text": "All"
+                    }
+                  ],
+                  "choicesOrder": "none"
                 }
               ]
             }
@@ -874,248 +1207,6 @@
       ]
     },
     {
-      "name": "L_CMPN_INFO-page",
-      "elements": [
-        {
-          "type": "panel",
-          "name": "lvngCmpnInfoPanel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "lvngCmpnInfoHeading",
-              "html": "<h3>Tell us about your LP/GOLPP companion!<h3>"
-            },
-            {
-              "type": "html",
-              "name": "lvngCmpnInfoText",
-              "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to complete the survey. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances.</p>"
-            },
-            {
-              "type": "panel",
-              "name": "lvngCmpnInfoAnimalTypePanel",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "lvngCmpnInfoAnimalType",
-                  "title": "What kind of animal is {CmpnName}?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "CANINE",
-                      "text": "Dog"
-                    },
-                    {
-                      "value": "FELINE",
-                      "text": "Cat"
-                    },
-                    {
-                      "value": "EQUINE",
-                      "text": "Horse"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "lvngCmpnInfoBreedGenderPanel",
-              "title": "What is {CmpnName}'s breed or breed mix and gender?",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "lvngCmpnInfoBreed",
-                  "title": "Breed or mix (if unknown, type 'Don't know'):",
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "lvngCmpnInfoGender",
-                  "title": "Gender:",
-                  "isRequired": true,
-                  "labelTrue": "Female",
-                  "labelFalse": "Male"
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "lvngCmpnInfoAgePanel",
-              "title": "What is {CmpnName}'s approximate age (in years and months)?",
-              "elements": [
-                {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "lvngCmpnInfoAgeYears",
-                  "title": "Age in years (number):",
-                  "isRequired": true,
-                  "min": "1",
-                  "max": "40",
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 40,
-                      "text": "Age must be between 1 and 40"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "lvngCmpnInfoAgeMonths",
-                  "title": "Months (number 1 - 12)",
-                  "isRequired": true,
-                  "min": 1,
-                  "max": 12,
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 12,
-                      "text": "Months must be between 1 and 12"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "lvngCmpnInfoWeightPanel",
-              "title": "About how much does {CmpnName} weigh in pounds or kilos?",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "lvngCmpnInfoWeight",
-                  "title": "Weight (number):",
-                  "isRequired": true,
-                  "inputType": "number",
-                  "min": 1,
-                  "max": 2200,
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 2200,
-                      "text": "Weight must be between 1 and 2200"
-                    }
-                  ]
-                },
-                {
-                  "type": "boolean",
-                  "name": "lvngCmpnInfoWeightUnits",
-                  "title": "Please choose pounds or kilos:",
-                  "isRequired": true,
-                  "labelTrue": "Kg",
-                  "labelFalse": "Lbs"
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "lvngCmpnInfoDemeanorPanel",
-              "title": "",
-              "elements": [
-                {
-                  "type": "rating",
-                  "name": "lvngCmpnInfoDemeanor",
-                  "title": "How energetic, excitable, or anxious would you describe {CmpnName}?",
-                  "description": "1 = very calm, 5 = very excitable",
-                  "isRequired": true,
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "lvngCmpnInfoAnimalsPanel",
-              "elements": [
-                {
-                  "type": "dropdown",
-                  "name": "lvngCmpnInfoAnimalsCount",
-                  "title": "How many animals do you have in your care?",
-                  "required": true,
-                  "choices": [
-                    {
-                      "value": "1",
-                      "text": "Just {CmpnName}"
-                    },
-                    {
-                      "value": "2",
-                      "text": "Two"
-                    },
-                    {
-                      "value": "3",
-                      "text": "Three"
-                    },
-                    {
-                      "value": "4",
-                      "text": "More than three"
-                    }
-                  ],
-                  "choicesOrder": "none",
-                  "otherText": "More than three",
-                  "choicesMin": 1
-                },
-                {
-                  "type": "boolean",
-                  "name": "lvngCmpnInfoHasInsurance",
-                  "required": true,
-                  "title": "Do you have pet insurance for {CmpnName}?"
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "lvngCmpnInfoHasInsuranceOther",
-                  "title": "Do you have pet insurance for your other animals?",
-                  "visibleIf": "{lvngCmpnInfoHasInsurance} != '1'",
-                  "required": true,
-                  "choices": [
-                    {
-                      "value": "1",
-                      "text": "No"
-                    },
-                    {
-                      "value": "2",
-                      "text": "Some, but not all"
-                    },
-                    {
-                      "value": "3",
-                      "text": "All"
-                    }
-                  ],
-                  "choicesOrder": "none"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "L_EARLY_SYMPTOMS-page",
       "elements": [
         {
@@ -1449,6 +1540,22 @@
       ]
     },
     {
+      "name": "VET_PROCEDURE-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "VetProcedurePanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "VetProcedureHeading",
+              "html": "<h3>This section if {CmpnName} underwent any veterinary-medical procedure such as surgery or stent implant for LP/GOLPP and if so, which procedure.</h3>"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "L_PRIMARY_DURATION-page",
       "elements": [
         {
@@ -1571,30 +1678,30 @@
       ]
     },
     {
-      "name": "L_PRIMARY_VET-page",
+      "name": "L_PRIMARY_HANDLING-page",
       "elements": [
         {
           "type": "panel",
-          "name": "lvngPrimaryVetPanel",
+          "name": "lvngPrimaryHandlingPanel",
           "elements": [
             {
               "type": "html",
-              "name": "lvngPrimaryVetHeading",
+              "name": "lvngPrimaryHandlingHeading",
               "html": "<h3>Your current primary veterinarians and {CmpnName}'s LP/GOLPP</h3>"
             },
             {
               "type": "html",
-              "name": "lvngPrimaryVetText",
+              "name": "lvngPrimaryHandlingText",
               "html": "<p>This section asks questions about how your current primary veterinarian has handled {CmpnName}'s LP/GOLPP journey.</p>"
             },
             {
               "type": "panel",
-              "name": "lvngPrimaryVetInflammationPanel",
+              "name": "lvngPrimaryHandlingInflammationPanel",
               "title": "",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryVetInflammation",
+                  "name": "lvngPrimaryHandlingInflammation",
                   "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
                   "isRequired": true,
                   "choices": [
@@ -1617,11 +1724,11 @@
             },
             {
               "type": "panel",
-              "name": "lvngPrimaryVetDiagnosisPanel",
+              "name": "lvngPrimaryHandlingDiagnosisPanel",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryVetDiagnosis",
+                  "name": "lvngPrimaryHandlingDiagnosis",
                   "title": "Did your current primary vet give you a diagnosis of LP for {CmpnName}? ",
                   "isRequired": true,
                   "choices": [
@@ -1650,10 +1757,10 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryVetDiagnosticType",
+                  "name": "lvngPrimaryHandlingDiagnosticType",
                   "title": "What diagnostic procedure did your current primary veterinarian use to arrive at their conclusion?",
                   "isRequired": true,
-                  "visibleIf": "{lvngPrimaryVetDiagnosis} = 'NO_SUGGESTED' || {lvngPrimaryVetDiagnosis} = 'YES_UNCONFIRMED' || {lvngPrimaryVetDiagnosis} = 'YES_CONFIRMED' ",
+                  "visibleIf": "{lvngPrimaryHandlingDiagnosis} = 'NO_SUGGESTED' || {lvngPrimaryHandlingDiagnosis} = 'YES_UNCONFIRMED' || {lvngPrimaryHandlingDiagnosis} = 'YES_CONFIRMED' ",
                   "choices": [
                     {
                       "value": "ROUTINE_EXAM",
@@ -1690,7 +1797,7 @@
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryVetPrescriptions",
+                  "name": "lvngPrimaryHandlingPrescriptions",
                   "title": "Did your current primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
                   "isRequired": true,
                   "choices": [
@@ -1711,10 +1818,10 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "lvngPrimaryVetPrescriptionType",
+                  "name": "lvngPrimaryHandlingPrescriptionType",
                   "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
                   "isRequired": true,
-                  "visibleIf": "{lvngPrimaryVetPrescriptions} = YES",
+                  "visibleIf": "{lvngPrimaryHandlingPrescriptions} = YES",
                   "choices": [
                     {
                       "value": "DOXEPIN",
@@ -1766,11 +1873,11 @@
                 },
                 {
                   "type": "rating",
-                  "name": "lvngPrimaryVetPrescriptionEffectiveness",
+                  "name": "lvngPrimaryHandlingPrescriptionEffectiveness",
                   "title": "How effective were these prescription medications for {CmpnName}'s LP/GOLPP?",
                   "description": "1 = not at all effective, 5 = very effective",
                   "isRequired": true,
-                  "visibleIf": "{lvngPrimaryVetPrescriptions} = YES",
+                  "visibleIf": "{lvngPrimaryHandlingPrescriptions} = YES",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1802,11 +1909,11 @@
             },
             {
               "type": "panel",
-              "name": "lvngPrimaryVetNonPrescriptionPanel",
+              "name": "lvngPrimaryHandlingNonPrescriptionPanel",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryVetNonPrescription",
+                  "name": "lvngPrimaryHandlingNonPrescription",
                   "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
                   "isRequired": true,
                   "choices": [
@@ -1827,10 +1934,10 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "lvngPrimaryVetNonPrescriptionType",
+                  "name": "lvngPrimaryHandlingNonPrescriptionType",
                   "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
                   "isRequired": true,
-                  "visibleIf": "{lvngPrimaryVetNonPrescription} = YES",
+                  "visibleIf": "{lvngPrimaryHandlingNonPrescription} = YES",
                   "choices": [
                     {
                       "value": "ACUPUNCTURE",
@@ -1849,11 +1956,11 @@
                 },
                 {
                   "type": "rating",
-                  "name": "lvngPrimaryVetNonPrescriptionEffectiveness",
+                  "name": "lvngPrimaryHandlingNonPrescriptionEffectiveness",
                   "title": "How effective were these treatments?",
                   "description": "1 = not at all effective, 5 = very effective",
                   "isRequired": true,
-                  "visibleIf": "{lvngPrimaryVetNonPrescription} = YES",
+                  "visibleIf": "{lvngPrimaryHandlingNonPrescription} = YES",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1882,6 +1989,22 @@
                   ]
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PRIMARY_RECOMMENDATION-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "PrimaryRecommendationPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "PrimaryRecommendationHeading",
+              "html": "<h3>This section asks about specific recommendations your primary made about {CmpnName}'s LP/GOLPP symptoms.</h3>"
             }
           ]
         }

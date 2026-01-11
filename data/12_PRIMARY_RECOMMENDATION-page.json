@@ -1,0 +1,16 @@
+{
+  "name": "PRIMARY_RECOMMENDATION-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "PrimaryRecommendationPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "PrimaryRecommendationHeading",
+          "html": "<h3>This section asks about specific recommendations your primary made about {CmpnName}'s LP/GOLPP symptoms.</h3>"
+        }
+      ]
+    }
+  ]
+}

@@ -3,15 +3,14 @@ import Link from 'next/link';
 import SurveyComponent from '@/components/SurveyComponent'
 import SurveyMenu from '@/components/SurveyMenu'
 
-const L_CMPN_INFO = () => {
+const L_PRIMARY_HANDLING = () => {
   return (
       <section className="section">
         <div className="section_content">
-
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'L_CMPN_INFO-page' />
+            <SurveyComponent startPageName = 'L_PRIMARY_HANDLING-page' />
           </div>
 
         </div>
@@ -19,4 +18,4 @@ const L_CMPN_INFO = () => {
   )
 }
 
-export default L_CMPN_INFO
+export default L_PRIMARY_HANDLING

@@ -1,6 +1,6 @@
 {
   "CmpnName": "Miss B",
-  "LifeStatusCrossedOver": "LIVING",
+  "LifeStatusCrossedOver": "DECEASED",
 
 
   "UserInfoFirstName": "Jane",
@@ -12,6 +12,22 @@
   "UserInfoContactTypeEmail": "example@example.com",
   "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "UserInfoContactOK": true,
+
+  "CmpnInfoAnimalType": "CANINE",
+  "CmpnInfoBreed": "Boxer",
+  "CmpnInfoGender": 5,
+  "lvngCmpnInfoAgeYears": 12,
+  "lvngCmpnInfoAgeMonths": 2,
+  "dcsdCmpnInfoAgeYears": 14,
+  "dcsdCmpnInfoAgeMonths": 6,
+  "CmpnInfoWeight": 50,
+  "CmpnInfoWeightUnits": false,
+  "CmpnInfoDemeanor": 5,
+  "CmpnInfoAnimalsCount": "TWO",
+  "lvngCmpnInfoHasInsurance": true,
+  "dcsdCmpnInfoHasInsurance": true,
+  
+  "CmpnInfoHasInsuranceOther": "2",
 
 
   "InfoSourcesPriorKnowledge": false,
@@ -58,18 +74,7 @@
   ],
 
 
-  "lvngCmpnInfoAnimalType": "CANINE",
-  "lvngCmpnInfoBreed": "Boxer",
-  "lvngCmpnInfoGender": 5,
-  "lvngCmpnInfoAgeYears": 12,
-  "lvngCmpnInfoAgeMonths": 2,
-  "lvngCmpnInfoWeight": 50,
-  "lvngCmpnInfoWeightUnits": false,
-  "lvngCmpnInfoDemeanor": 5,
-  "lvngCmpnInfoAnimalsCount": "2",
-  "lvngCmpnInfoHasInsurance": true,
-  "lvngCmpnInfoHasInsuranceOther": "2",
-
+ 
 
   "lvngEarlySymptomsAgeYears": "11",
   "lvngEarlySymptomsAgeMonths": "2",
