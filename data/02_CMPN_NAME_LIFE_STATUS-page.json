@@ -20,12 +20,12 @@
           "type": "panel",
           "name": "CmpnNameLifeStatusDetailsPanel",
           "elements": [
-          {
-          "type": "text",
-          "name": "CmpnName",
-          "title": "Please tell us your companion's name:",
-          "isRequired": true
-          },
+            {
+            "type": "text",
+            "name": "CmpnName",
+            "title": "Please tell us your companion's name:",
+            "isRequired": true
+            },
             {
               "type": "imagepicker",
               "name": "LifeStatusCrossedOver",

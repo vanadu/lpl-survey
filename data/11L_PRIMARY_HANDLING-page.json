@@ -13,7 +13,7 @@
         {
           "type": "html",
           "name": "lvngPrimaryHandlingText",
-          "html": "<p>This section asks questions about how your current primary veterinarian has handled {CmpnName}'s LP/GOLPP journey.</p>"
+          "html": "<p>This section asks questions about how your current primary veterinarian's handling {CmpnName}'s LP/GOLPP journey.</p>"
         },
         {
           "type": "panel",
