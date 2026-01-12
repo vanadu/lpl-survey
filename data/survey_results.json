@@ -1,106 +1,5 @@
 [
   {
-    "lndgRootCmpnName": "Miss B",
-    "lndgRootCrossedOver": "living",
-    "lvngRootUserName": "Jane",
-    "lvngRootUserCountry": "United Kingdom",
-    "lvngRootUserAge": "Over 65",
-    "lvngRootUserGender": "Woman",
-    "lvngRootUserContactType": "false",
-    "lvngRootUserContactTypeEmail": "example@example.com",
-    "lvngRootContactOK": true,
-    "lvngRootHasInsurance": true,
-    "lvngRootHasInsuranceOther": "2",
-    "lvngRootAnimalsCount": "2",
-    "lvngCmpnAnimalType": "Dog",
-    "lvngCmpnBreed": "Boxer",
-    "lvngCmpnAgeYears": 5,
-    "lvngCmpnAgeMonths": 2,
-    "lvngCmpnGender": true,
-    "lvngCmpnWeight": 50,
-    "lvngCmpnWeightUnits": true,
-    "lvngCmpnDemeanor": 5,
-    "lvngInfoLevel": 3,
-    "lvngInfoSources": [
-      "Private websites",
-      "Facebook groups",
-      "Veterinary specialists"
-    ],
-    "lvngInfoBestSource": "Facebook groups",
-    "dcsdUserContact": "example@example.com",
-    "dcsdCmpnYears": 12,
-    "dcsdCmpnMonths": 2,
-    "lvngInfoPriorInfo": false,
-    "lvngInfoContradictory": 4,
-    "lvngInfoHardAnswers": 4,
-    "completedAt": "2025-12-21T11:56:47.219Z"
-  },
-  {
-    "lndgRootCmpnName": "Miss B",
-    "lndgRootCrossedOver": "living",
-    "lvngRootUserName": "Jane",
-    "lvngRootUserCountry": "United Kingdom",
-    "lvngRootUserAge": "Over 65",
-    "lvngRootUserGender": "Woman",
-    "lvngRootUserContactType": "false",
-    "lvngRootUserContactTypeEmail": "example@example.com",
-    "lvngRootContactOK": true,
-    "lvngRootHasInsurance": true,
-    "lvngRootHasInsuranceOther": "2",
-    "lvngRootAnimalsCount": "2",
-    "lvngCmpnAnimalType": "Dog",
-    "lvngCmpnBreed": "Boxer",
-    "lvngCmpnAgeYears": 5,
-    "lvngCmpnAgeMonths": 2,
-    "lvngCmpnGender": true,
-    "lvngCmpnWeight": 50,
-    "lvngCmpnWeightUnits": true,
-    "lvngCmpnDemeanor": 5,
-    "lvngInfoPriorInfo": false,
-    "lvngInfoLevel": 3,
-    "lvngInfoContradictory": "4",
-    "lvngInfoHardAnswers": "3",
-    "dcsdUserContact": "example@example.com",
-    "dcsdCmpnYears": 12,
-    "dcsdCmpnMonths": 2,
-    "completedAt": "2025-12-21T14:02:00.914Z"
-  },
-  {
-    "lndgRootCmpnName": "Miss B",
-    "lndgRootCrossedOver": "living",
-    "lvngRootUserName": "Jane",
-    "lvngRootUserCountry": "United Kingdom",
-    "lvngRootUserAge": "Over 65",
-    "lvngRootUserGender": "Woman",
-    "lvngRootUserContactType": true,
-    "lvngRootUserContactTypeFacebook": "https://www.facebook.com/my.profile.name",
-    "lvngRootContactOK": true,
-    "lvngRootHasInsurance": true,
-    "lvngRootHasInsuranceOther": "2",
-    "lvngRootAnimalsCount": "2",
-    "lvngCmpnAnimalType": "Dog",
-    "lvngCmpnBreed": "Boxer",
-    "lvngCmpnAgeYears": 5,
-    "lvngCmpnAgeMonths": 2,
-    "lvngCmpnGender": true,
-    "lvngCmpnWeight": 50,
-    "lvngCmpnWeightUnits": true,
-    "lvngCmpnDemeanor": 5,
-    "lvngInfoPriorInfo": false,
-    "lvngInfoLevel": 3,
-    "lvngInfoContradictory": "4",
-    "lvngInfoHardAnswers": "3",
-    "dcsdUserContact": "example@example.com",
-    "dcsdCmpnYears": 12,
-    "dcsdCmpnMonths": 2,
-    "lvngInfoSources": [
-      "Private websites",
-      "Facebook groups",
-      "Veterinary specialists"
-    ],
-    "completedAt": "2025-12-26T19:27:13.262Z"
-  },
-  {
     "CmpnName": "Miss B",
     "LifeStatusCrossedOver": "LIVING",
     "UserInfoFirstName": "Jane",
@@ -111,6 +10,18 @@
     "UserInfoContactType": false,
     "UserInfoContactTypeEmail": "example@example.com",
     "UserInfoContactOK": true,
+    "CmpnInfoAnimalType": "CANINE",
+    "CmpnInfoBreed": "Boxer",
+    "CmpnInfoGender": 5,
+    "lvngCmpnInfoAgeYears": 12,
+    "lvngCmpnInfoAgeMonths": 2,
+    "CmpnInfoWeight": 50,
+    "CmpnInfoWeightUnits": false,
+    "CmpnInfoDemeanor": 5,
+    "CmpnInfoAnxiety": 3,
+    "CmpnInfoAnimalsCount": "TWO",
+    "lvngCmpnInfoHasInsurance": true,
+    "CmpnInfoHasInsuranceOther": "2",
     "InfoSourcesPriorKnowledge": false,
     "InfoSourcesTypes": [
       "WEBSITES",
@@ -125,12 +36,7 @@
       "TEETH_CLEANING",
       "DIAGNOSTIC"
     ],
-    "IntubationHistoryConcerns": true,
-    "IntubationHistorySymptoms": [
-      "COUGHING",
-      "PANTING",
-      "GAGGING"
-    ],
+    "IntubationHistoryConcerns": "YES",
     "BreathingCrisisDidHave": "YES",
     "BreathingCrisisCount": "TWO",
     "BreathingCrisisCost": "1000_3000",
@@ -145,48 +51,39 @@
       "STERIOD"
     ],
     "BreathingCrisisSubstanceForm": [
-      "Injectible"
+      "LIQUID"
     ],
-    "lvngCmpnInfoAnimalType": "CANINE",
-    "lvngCmpnInfoBreed": "Boxer",
-    "lvngCmpnInfoGender": 5,
-    "lvngCmpnInfoAgeYears": 12,
-    "lvngCmpnInfoAgeMonths": 2,
-    "lvngCmpnInfoWeight": 50,
-    "lvngCmpnInfoWeightUnits": false,
-    "lvngCmpnInfoDemeanor": 5,
-    "lvngCmpnInfoAnimalsCount": "2",
-    "lvngCmpnInfoHasInsurance": true,
-    "lvngCmpnInfoHasInsuranceOther": "2",
-    "lvngEarlySymptomsAgeYears": 11,
-    "lvngEarlySymptomsAgeMonths": "2",
-    "lvngEarlySymptomsType": [
+    "EarlySymptomsAgeYears": "11",
+    "EarlySymptomsAgeMonths": "2",
+    "EarlySymptomsType": [
       "PANTING",
       "BARK_CHANGES",
       "EXERCISE_INTOLERANCE"
     ],
-    "lvngEarlySymtomsSeverity": "1",
-    "lvngEarlySymptomsHindEndWeakness": "DONT_KNOW",
-    "lvngErlyOtherConditions": [
+    "EarlySymtomsSeverity": "1",
+    "EarlySymptomsHindEndWeakness": "DONT_KNOW",
+    "EarlyOtherConditions": [
       "GERD",
       "PERIODONTAL"
     ],
-    "lvngChangedVets": "ONCE",
-    "lvngChangedVetsReason": [
+    "ChangedVetsDidChange": "ONCE",
+    "ChangedVetsReason": [
       "AGE_ONLY",
       "NO_VALUE"
     ],
-    "lvngChangedVetsAdvice": "NOTHING_CAN_BE_DONE",
-    "lvngChangeVetsConfidence": "2",
-    "lvngPrimaryDurationFirstConsultYears": 13,
-    "lvngPrimaryDurationFirstConsultMonths": 2,
-    "lvngPrimaryDurationVisitsNumber": "MORE_THAN_TWO",
-    "lvngPrimaryDurationCost": "OVER_5000",
-    "lvngPrimaryVetDiagnosis": "YES_UNCONFIRMED",
-    "lvngPrimaryVetDiagnosticType": "SEDATED_VISUAL",
-    "lvngPrimaryVetInflammation": "YES",
-    "lvngPrimaryVetPrescriptions": "YES",
-    "lvngPrimaryVetPrescriptionType": [
+    "ChangedVetsAdvice": [
+      "RECOMMENDED_SPECIALIST"
+    ],
+    "ChangeVetsConfidence": "2",
+    "PrimaryDurationFirstConsultYears": 13,
+    "PrimaryDurationFirstConsultMonths": 1,
+    "PrimaryDurationVisitsNumber": "MORE_THAN_TWO",
+    "PrimaryDurationCost": "OVER_5000",
+    "PrimaryHandlingInflammation": "YES",
+    "PrimaryHandlingDiagnosis": "YES_UNCONFIRMED",
+    "PrimaryHandlingDiagnosticType": "SEDATED_VISUAL",
+    "PrimaryHandlingPrescriptions": "YES",
+    "PrimaryHandlingPrescriptionType": [
       {
         "value": "DOXEPIN",
         "text": "Doxepin"
@@ -200,17 +97,14 @@
         "text": "Gabapentin"
       }
     ],
-    "lvngPrimaryVetPrescriptionEffectiveness": "3",
-    "lvngPrimaryVetNonPrescription": "YES",
-    "lvngPrimaryVetNonPrescriptionType": [
+    "PrimaryHandlingPrescriptionEffectiveness": "3",
+    "PrimaryHandlingNonPrescription": "YES",
+    "PrimaryHandlingNonPrescriptionType": [
       "ACUPUNCTURE",
       "PHYSICAL_THERAPY"
     ],
-    "lvngPrimaryVetNonPrescriptionEffectiveness": "2",
-    "BreathingCrisisSubstanceForm-Comment": [
-      "Injectible"
-    ],
-    "consent": "Yes",
-    "completedAt": "2026-01-09T16:03:50.643Z"
+    "PrimaryHandlingNonPrescriptionEffectiveness": "2",
+    "LandingConsent": "Yes",
+    "completedAt": "2026-01-12T10:37:45.208Z"
   }
 ]

@@ -10,11 +10,11 @@ const pageFiles = [
   "04_INFO_SOURCES-page.json",
   "05_INTUBATION_HISTORY-page.json",
   "06_BREATHING_CRISIS-page.json",
-  "07L_EARLY_SYMPTOMS-page.json",
-  "08L_CHANGED_VETS-page.json",
+  "07_EARLY_SYMPTOMS-page.json",
+  "08_CHANGED_VETS-page.json",
   "09_VET_PROCEDURE.json",
-  "10L_PRIMARY_DURATION-page.json",
-  "11L_PRIMARY_HANDLING-page.json",
+  "10_PRIMARY_DURATION-page.json",
+  "11_PRIMARY_HANDLING-page.json",
   "12_PRIMARY_RECOMMENDATION-page.json"
 ];
 

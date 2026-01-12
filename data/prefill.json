@@ -76,16 +76,16 @@
 
  
 
-  "lvngEarlySymptomsAgeYears": "11",
-  "lvngEarlySymptomsAgeMonths": "2",
-  "lvngEarlySymptomsType": [
+  "EarlySymptomsAgeYears": "11",
+  "EarlySymptomsAgeMonths": "2",
+  "EarlySymptomsType": [
     "PANTING",
     "BARK_CHANGES",
     "EXERCISE_INTOLERANCE"
   ],
-  "lvngEarlySymtomsSeverity": "1",
-  "lvngEarlySymptomsHindEndWeakness": "DONT_KNOW",
-  "lvngErlyOtherConditions": [
+  "EarlySymtomsSeverity": "1",
+  "EarlySymptomsHindEndWeakness": "DONT_KNOW",
+  "EarlyOtherConditions": [
     "GERD",
     "PERIODONTAL"
   ],
@@ -102,17 +102,17 @@
   "ChangeVetsConfidence": "2",
 
 
-  "lvngPrimaryDurationFirstConsultYears": 13,
-  "lvngPrimaryDurationFirstConsultMonths": 1,
-  "lvngPrimaryDurationVisitsNumber": "MORE_THAN_TWO",
-  "lvngPrimaryDurationCost": "OVER_5000",
+  "PrimaryDurationFirstConsultYears": 13,
+  "PrimaryDurationFirstConsultMonths": 1,
+  "PrimaryDurationVisitsNumber": "MORE_THAN_TWO",
+  "PrimaryDurationCost": "OVER_5000",
 
-
-  "lvngPrimaryVetDiagnosis": "YES_UNCONFIRMED",
-  "lvngPrimaryVetDiagnosticType": "SEDATED_VISUAL",
-  "lvngPrimaryVetInflammation": "YES",
-  "lvngPrimaryVetPrescriptions": "YES",
-  "lvngPrimaryVetPrescriptionType": [
+  
+  "PrimaryHandlingInflammation": "YES",
+  "PrimaryHandlingDiagnosis": "YES_UNCONFIRMED",
+  "PrimaryHandlingDiagnosticType": "SEDATED_VISUAL",
+  "PrimaryHandlingPrescriptions": "YES",
+  "PrimaryHandlingPrescriptionType": [
     {
       "value": "DOXEPIN",
       "text": "Doxepin"
@@ -126,12 +126,12 @@
       "text": "Gabapentin"
     }
   ],
-  "lvngPrimaryVetPrescriptionEffectiveness": "3",
-  "lvngPrimaryVetNonPrescription": "YES",
-  "lvngPrimaryVetNonPrescriptionType": [
+  "PrimaryHandlingPrescriptionEffectiveness": "3",
+  "PrimaryHandlingNonPrescription": "YES",
+  "PrimaryHandlingNonPrescriptionType": [
     "ACUPUNCTURE",
     "PHYSICAL_THERAPY"
   ],
-  "lvngPrimaryVetNonPrescriptionEffectiveness": "2"
+  "PrimaryHandlingNonPrescriptionEffectiveness": "2"
 
 }

@@ -3,27 +3,27 @@
   "elements": [
     {
       "type": "panel",
-      "name": "lvngEarlySymptomsPanel",
+      "name": "EarlySymptomsPanel",
       "elements": [
         {
           "type": "html",
-          "name": "lvngEarlySymptomsHeading",
+          "name": "EarlySymptomsHeading",
           "html": "<h3>Your early encounters with LP/GOLPP</h3>"
         },
         {
           "type": "html",
-          "name": "lvngEarlySymptomsText",
+          "name": "EarlySymptomsText",
           "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP journey and how you came to accept that {CmpnName} might have it.</p>"
         },
         {
           "type": "panel",
-          "name": "lvngEarlySymptomsFirstSignsPanel",
+          "name": "EarlySymptomsFirstSignsPanel",
           "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of what you later learned was LP?",
           "elements": [
             {
               "type": "text",
               "inputType": "number",
-              "name": "lvngEarlySymptomsAgeYears",
+              "name": "EarlySymptomsAgeYears",
               "title": "Years",
               "isRequired": true,
               "min": "1",
@@ -40,7 +40,7 @@
             {
               "type": "text",
               "inputType": "number",
-              "name": "lvngEarlySymptomsAgeMonths",
+              "name": "EarlySymptomsAgeMonths",
               "title": "Months (number 1 - 12)",
               "isRequired": true,
               "min": 1,
@@ -58,11 +58,11 @@
         },
         {
           "type": "panel",
-          "name": "lvngErlySymptomsDetailsPanel",
+          "name": "EarlySymptomsDetailsPanel",
           "elements": [
             {
               "type": "checkbox",
-              "name": "lvngEarlySymptomsType",
+              "name": "EarlySymptomsType",
               "title": "What symptoms did {CmpnName} have at that time?",
               "choices": [
                 {
@@ -109,14 +109,14 @@
             },
             {
               "type": "rating",
-              "name": "lvngEarlySymtomsSeverity",
+              "name": "EarlySymtomsSeverity",
               "title": "How severe did you think {CmpnName}'s early symptoms were?",
               "description": "1 = mild, 5 = severe",
               "isRequired": true
             },
             {
               "type": "radiogroup",
-              "name": "lvngEarlySymptomsHindEndWeakness",
+              "name": "EarlySymptomsHindEndWeakness",
               "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
               "choices": [
                 {
@@ -137,11 +137,11 @@
         },
         {
           "type": "panel",
-          "name": "lvngErlyOtherConditions",
+          "name": "EarlyOtherConditionsPanel",
           "elements": [
             {
             "type": "checkbox",
-            "name": "lvngErlyOtherConditions",
+            "name": "EarlyOtherConditions",
             "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
             "required": true,
             "choices": [

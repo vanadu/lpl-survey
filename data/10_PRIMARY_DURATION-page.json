@@ -1,29 +1,29 @@
 {
-  "name": "L_PRIMARY_DURATION-page",
+  "name": "PRIMARY_DURATION-page",
   "elements": [
     {
       "type": "panel",
-      "name": "lvngPrimaryDurationPanel",
+      "name": "PrimaryDurationPanel",
       "elements": [
         {
           "type": "html",
-          "name": "lvngPrimaryDurationHeading",
-          "html": "<h3>Duration of care by primary veterinarian for LP/GOLPP symptoms</h3>"
+          "name": "PrimaryDurationHeading",
+          "html": "<h3>Duration of care by primary veterinarians for LP/GOLPP symptoms</h3>"
         },
         {
           "type": "html",
-          "name": "lvngPrimaryDurationText",
-          "html": "<p>This section asks questions about how long {CmpnName} has been in the care of primary veterinarians for LP/GOLPP symptoms and how {CmpnName}'s condition changed over this time period. This includes your current primary veterinarian and any prior vets who examined {CmpnName} with LP/GOLPP symptoms.</p>"
+          "name": "PrimaryDurationText",
+          "html": "<p>This section asks questions about the duration of {CmpnName}'s care by primary veterinarians for LP/GOLPP symptoms and how {CmpnName}'s condition changed over this time period. This includes your current primary veterinarian and any prior vets who examined {CmpnName} since the LP/GOLPP symptoms first appeared.</p>"
         },
         {
           "type": "panel",
-          "name": "lvngPrimaryDurationFirstConsult",
+          "name": "PrimaryDurationFirstConsult",
           "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
           "elements": [
             {
               "type": "text",
               "inputType": "number",
-              "name": "lvngPrimaryDurationFirstConsultYears",
+              "name": "PrimaryDurationFirstConsultYears",
               "title": "Age in years (number):",
               "isRequired": true,
               "min": "1",
@@ -40,7 +40,7 @@
             {
               "type": "text",
               "inputType": "number",
-              "name": "lvngPrimaryDurationFirstConsultMonths",
+              "name": "PrimaryDurationFirstConsultMonths",
               "title": "Months (number 0 - 12)",
               "isRequired": true,
               "min": 0,
@@ -59,11 +59,11 @@
 
         {
           "type": "panel",
-          "name": "lvngPrimaryDurationVisitsNumberPanel",
+          "name": "PrimaryDurationVisitsNumberPanel",
           "elements": [
             {
               "type": "radiogroup",
-              "name": "lvngPrimaryDurationVisitsNumber",
+              "name": "PrimaryDurationVisitsNumber",
               "title": "About how many times have you visited a primary veterinarian (including your current one) about {CmpnName}'s LP/GOLPP symptoms?",
               "isRequired": true,
               "choices": [
@@ -88,8 +88,8 @@
             },
             {
               "type": "radiogroup",
-              "name": "lvngPrimaryDurationCost",
-              "title": "About what was the total pre-insurance cost of these visits to primary veterinarians about dogname's LP/GOLPP symptoms?",
+              "name": "PrimaryDurationCost",
+              "title": "About what was the total pre-insurance cost of these visits to primary veterinarians about {CmpnName}'s LP/GOLPP symptoms?",
               "isRequired": true,
               "choices": [
                 {

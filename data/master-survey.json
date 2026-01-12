@@ -527,8 +527,8 @@
                 {
                   "type": "rating",
                   "name": "CmpnInfoDemeanor",
-                  "title": "How energetic, excitable, or anxious would you describe {CmpnName}?",
-                  "description": "1 = very calm, 5 = very excitable",
+                  "title": "How would you describe {CmpnName}'s demeanor?",
+                  "description": "1 = very calm, 5 = very energetic",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -566,7 +566,7 @@
               "elements": [
                 {
                   "type": "rating",
-                  "name": "CmpnInfoDemeanor",
+                  "name": "CmpnInfoAnxiety",
                   "title": "How would you describe {CmpnName}'s anxiety level?",
                   "description": "1 = not at all anxious, 5 = very anxious",
                   "isRequired": true,
@@ -1207,31 +1207,31 @@
       ]
     },
     {
-      "name": "L_EARLY_SYMPTOMS-page",
+      "name": "EARLY_SYMPTOMS-page",
       "elements": [
         {
           "type": "panel",
-          "name": "lvngEarlySymptomsPanel",
+          "name": "EarlySymptomsPanel",
           "elements": [
             {
               "type": "html",
-              "name": "lvngEarlySymptomsHeading",
+              "name": "EarlySymptomsHeading",
               "html": "<h3>Your early encounters with LP/GOLPP</h3>"
             },
             {
               "type": "html",
-              "name": "lvngEarlySymptomsText",
+              "name": "EarlySymptomsText",
               "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP journey and how you came to accept that {CmpnName} might have it.</p>"
             },
             {
               "type": "panel",
-              "name": "lvngEarlySymptomsFirstSignsPanel",
+              "name": "EarlySymptomsFirstSignsPanel",
               "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of what you later learned was LP?",
               "elements": [
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "lvngEarlySymptomsAgeYears",
+                  "name": "EarlySymptomsAgeYears",
                   "title": "Years",
                   "isRequired": true,
                   "min": "1",
@@ -1248,7 +1248,7 @@
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "lvngEarlySymptomsAgeMonths",
+                  "name": "EarlySymptomsAgeMonths",
                   "title": "Months (number 1 - 12)",
                   "isRequired": true,
                   "min": 1,
@@ -1266,11 +1266,11 @@
             },
             {
               "type": "panel",
-              "name": "lvngErlySymptomsDetailsPanel",
+              "name": "EarlySymptomsDetailsPanel",
               "elements": [
                 {
                   "type": "checkbox",
-                  "name": "lvngEarlySymptomsType",
+                  "name": "EarlySymptomsType",
                   "title": "What symptoms did {CmpnName} have at that time?",
                   "choices": [
                     {
@@ -1317,14 +1317,14 @@
                 },
                 {
                   "type": "rating",
-                  "name": "lvngEarlySymtomsSeverity",
+                  "name": "EarlySymtomsSeverity",
                   "title": "How severe did you think {CmpnName}'s early symptoms were?",
                   "description": "1 = mild, 5 = severe",
                   "isRequired": true
                 },
                 {
                   "type": "radiogroup",
-                  "name": "lvngEarlySymptomsHindEndWeakness",
+                  "name": "EarlySymptomsHindEndWeakness",
                   "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
                   "choices": [
                     {
@@ -1345,11 +1345,11 @@
             },
             {
               "type": "panel",
-              "name": "lvngErlyOtherConditions",
+              "name": "EarlyOtherConditionsPanel",
               "elements": [
                 {
                   "type": "checkbox",
-                  "name": "lvngErlyOtherConditions",
+                  "name": "EarlyOtherConditions",
                   "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
                   "required": true,
                   "choices": [
@@ -1378,30 +1378,30 @@
       ]
     },
     {
-      "name": "L_CHANGED_VETS-page",
+      "name": "CHANGED_VETS-page",
       "elements": [
         {
           "type": "panel",
-          "name": "lvngChangedVetsPanel",
+          "name": "ChangedVetsPanel",
           "elements": [
             {
               "type": "html",
-              "name": "lvngChangedVetsHeading",
+              "name": "ChangedVetsHeading",
               "html": "<h3>Change of veterinarians due to LP/GOLPP</h3>"
             },
             {
               "type": "html",
-              "name": "lvngChangedVetsText",
+              "name": "ChangedVetsText",
               "html": "<p>This section asks whether you changed primary veterinarians because of how {CmpnName}'s LP/GOLPP symptoms were handled and why you made that decision. This doesn't include specialists like surgeons or neurologists, only whether you moved {CmpnName}'s care from one primary veterinarian to another because of how {CmpnName}'s LP/GOLPP was handled.</p>"
             },
             {
               "type": "panel",
-              "name": "lvngChangedVetsDetailsPanel",
+              "name": "ChangedVetsDetailsPanel",
               "title": "",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "lvngChangedVets",
+                  "name": "ChangedVetsDidChange",
                   "title": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
                   "isRequired": true,
                   "choices": [
@@ -1421,18 +1421,14 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "lvngChangedVetsReason",
+                  "name": "ChangedVetsReason",
                   "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP (please check all that apply)?",
                   "isRequired": true,
-                  "visibleIf": "{lvngChangedVets} != NO",
+                  "visibleIf": "{ChangedVets} != NO",
                   "choices": [
                     {
                       "value": "NO_KNOWLEDGE",
                       "text": "The previous vet couldn't give possible causes for {CmpnName}'s symptoms."
-                    },
-                    {
-                      "value": "NOT_SERIOUS",
-                      "text": "The previous vet didn't take {CmpnName}'s symptoms seriously."
                     },
                     {
                       "value": "AGE_ONLY",
@@ -1455,11 +1451,11 @@
                 },
                 {
                   "type": "rating",
-                  "name": "lvngChangeVetsConfidence",
+                  "name": "ChangeVetsConfidence",
                   "title": "How confident were you in your previous primary vet's knowledge level about LP/GOLPP?",
                   "description": "1 = no confident at all, 5 = very confident",
                   "isRequired": true,
-                  "visibleIf": "{lvngChangedVets} != NO",
+                  "visibleIf": "{ChangedVets} != NO",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1485,14 +1481,14 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "lvngChangedVetsAdvice",
+                  "name": "ChangedVetsAdvice",
                   "title": "What advice or recommendation did your previous primary vet's give you advice about dogname's LP/GOLPP symptoms?",
                   "isRequired": true,
-                  "visibleIf": "{lvngChangedVets} != NO",
+                  "visibleIf": "{ChangedVets} != NO",
                   "choices": [
                     {
                       "value": "NOTHING_CAN_BE_DONE",
-                      "text": "Said nothing can be done about {CmpnName}'s symptoms"
+                      "text": "Gave no advice and said nothing can be done about {CmpnName}'s symptoms"
                     },
                     {
                       "value": "RECOMMENDED_SPECIALIST",
@@ -1508,10 +1504,10 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "lvngChangedVetsSpecialistRecommendation",
+                  "name": "ChangedVetsSpecialistRecommendation",
                   "title": "What kind of specialist did your previous vet recommend or refer?",
                   "isRequired": true,
-                  "visibleIf": "{lvngChangedVetsAdvice} = 'RECOMMENDED_SPECIALIST'",
+                  "visibleIf": "{ChangedVetsAdvice} = 'RECOMMENDED_SPECIALIST'",
                   "choices": [
                     {
                       "value": "AIRWAY_SURGEON",
@@ -1556,31 +1552,31 @@
       ]
     },
     {
-      "name": "L_PRIMARY_DURATION-page",
+      "name": "PRIMARY_DURATION-page",
       "elements": [
         {
           "type": "panel",
-          "name": "lvngPrimaryDurationPanel",
+          "name": "PrimaryDurationPanel",
           "elements": [
             {
               "type": "html",
-              "name": "lvngPrimaryDurationHeading",
-              "html": "<h3>Duration of care by primary veterinarian for LP/GOLPP symptoms</h3>"
+              "name": "PrimaryDurationHeading",
+              "html": "<h3>Duration of care by primary veterinarians for LP/GOLPP symptoms</h3>"
             },
             {
               "type": "html",
-              "name": "lvngPrimaryDurationText",
-              "html": "<p>This section asks questions about how long {CmpnName} has been in the care of primary veterinarians for LP/GOLPP symptoms and how {CmpnName}'s condition changed over this time period. This includes your current primary veterinarian and any prior vets who examined {CmpnName} with LP/GOLPP symptoms.</p>"
+              "name": "PrimaryDurationText",
+              "html": "<p>This section asks questions about the duration of {CmpnName}'s care by primary veterinarians for LP/GOLPP symptoms and how {CmpnName}'s condition changed over this time period. This includes your current primary veterinarian and any prior vets who examined {CmpnName} since the LP/GOLPP symptoms first appeared.</p>"
             },
             {
               "type": "panel",
-              "name": "lvngPrimaryDurationFirstConsult",
+              "name": "PrimaryDurationFirstConsult",
               "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
               "elements": [
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "lvngPrimaryDurationFirstConsultYears",
+                  "name": "PrimaryDurationFirstConsultYears",
                   "title": "Age in years (number):",
                   "isRequired": true,
                   "min": "1",
@@ -1597,10 +1593,10 @@
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "lvngPrimaryDurationFirstConsultMonths",
-                  "title": "Months (number 1 - 12)",
+                  "name": "PrimaryDurationFirstConsultMonths",
+                  "title": "Months (number 0 - 12)",
                   "isRequired": true,
-                  "min": 1,
+                  "min": 0,
                   "max": 12,
                   "validators": [
                     {
@@ -1615,11 +1611,11 @@
             },
             {
               "type": "panel",
-              "name": "lvngPrimaryDurationVisitsNumberPanel",
+              "name": "PrimaryDurationVisitsNumberPanel",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryDurationVisitsNumber",
+                  "name": "PrimaryDurationVisitsNumber",
                   "title": "About how many times have you visited a primary veterinarian (including your current one) about {CmpnName}'s LP/GOLPP symptoms?",
                   "isRequired": true,
                   "choices": [
@@ -1644,8 +1640,8 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryDurationCost",
-                  "title": "About what was the total pre-insurance cost of these visits to primary veterinarians about dogname's LP/GOLPP symptoms?",
+                  "name": "PrimaryDurationCost",
+                  "title": "About what was the total pre-insurance cost of these visits to primary veterinarians about {CmpnName}'s LP/GOLPP symptoms?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1678,31 +1674,31 @@
       ]
     },
     {
-      "name": "L_PRIMARY_HANDLING-page",
+      "name": "PRIMARY_HANDLING-page",
       "elements": [
         {
           "type": "panel",
-          "name": "lvngPrimaryHandlingPanel",
+          "name": "PrimaryHandlingPanel",
           "elements": [
             {
               "type": "html",
-              "name": "lvngPrimaryHandlingHeading",
-              "html": "<h3>Your current primary veterinarians and {CmpnName}'s LP/GOLPP</h3>"
+              "name": "PrimaryHandlingHeading",
+              "html": "<h3>Your preferred primary veterinarian and {CmpnName}'s LP/GOLPP</h3>"
             },
             {
               "type": "html",
-              "name": "lvngPrimaryHandlingText",
-              "html": "<p>This section asks questions about how your current primary veterinarian has handled {CmpnName}'s LP/GOLPP journey.</p>"
+              "name": "PrimaryHandlingText",
+              "html": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p>"
             },
             {
               "type": "panel",
-              "name": "lvngPrimaryHandlingInflammationPanel",
+              "name": "PrimaryHandlingInflammationPanel",
               "title": "",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryHandlingInflammation",
-                  "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
+                  "name": "PrimaryHandlingInflammation",
+                  "title": "Did your primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1724,12 +1720,12 @@
             },
             {
               "type": "panel",
-              "name": "lvngPrimaryHandlingDiagnosisPanel",
+              "name": "PrimaryHandlingDiagnosisPanel",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryHandlingDiagnosis",
-                  "title": "Did your current primary vet give you a diagnosis of LP for {CmpnName}? ",
+                  "name": "PrimaryHandlingDiagnosis",
+                  "title": "Did your primary vet give you a diagnosis of LP for {CmpnName}? ",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1757,10 +1753,10 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryHandlingDiagnosticType",
-                  "title": "What diagnostic procedure did your current primary veterinarian use to arrive at their conclusion?",
+                  "name": "PrimaryHandlingDiagnosticType",
+                  "title": "What diagnostic procedure did your primary veterinarian use to arrive at their conclusion?",
                   "isRequired": true,
-                  "visibleIf": "{lvngPrimaryHandlingDiagnosis} = 'NO_SUGGESTED' || {lvngPrimaryHandlingDiagnosis} = 'YES_UNCONFIRMED' || {lvngPrimaryHandlingDiagnosis} = 'YES_CONFIRMED' ",
+                  "visibleIf": "{PrimaryHandlingDiagnosis} = 'NO_SUGGESTED' || {PrimaryHandlingDiagnosis} = 'YES_UNCONFIRMED' || {PrimaryHandlingDiagnosis} = 'YES_CONFIRMED' ",
                   "choices": [
                     {
                       "value": "ROUTINE_EXAM",
@@ -1797,8 +1793,8 @@
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryHandlingPrescriptions",
-                  "title": "Did your current primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
+                  "name": "PrimaryHandlingPrescriptions",
+                  "title": "Did your primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1818,10 +1814,10 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "lvngPrimaryHandlingPrescriptionType",
+                  "name": "PrimaryHandlingPrescriptionType",
                   "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
                   "isRequired": true,
-                  "visibleIf": "{lvngPrimaryHandlingPrescriptions} = YES",
+                  "visibleIf": "{PrimaryHandlingPrescriptions} = YES",
                   "choices": [
                     {
                       "value": "DOXEPIN",
@@ -1873,11 +1869,11 @@
                 },
                 {
                   "type": "rating",
-                  "name": "lvngPrimaryHandlingPrescriptionEffectiveness",
+                  "name": "PrimaryHandlingPrescriptionEffectiveness",
                   "title": "How effective were these prescription medications for {CmpnName}'s LP/GOLPP?",
                   "description": "1 = not at all effective, 5 = very effective",
                   "isRequired": true,
-                  "visibleIf": "{lvngPrimaryHandlingPrescriptions} = YES",
+                  "visibleIf": "{PrimaryHandlingPrescriptions} = YES",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1909,11 +1905,11 @@
             },
             {
               "type": "panel",
-              "name": "lvngPrimaryHandlingNonPrescriptionPanel",
+              "name": "PrimaryHandlingNonPrescriptionPanel",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "lvngPrimaryHandlingNonPrescription",
+                  "name": "PrimaryHandlingNonPrescription",
                   "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
                   "isRequired": true,
                   "choices": [
@@ -1934,10 +1930,10 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "lvngPrimaryHandlingNonPrescriptionType",
+                  "name": "PrimaryHandlingNonPrescriptionType",
                   "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
                   "isRequired": true,
-                  "visibleIf": "{lvngPrimaryHandlingNonPrescription} = YES",
+                  "visibleIf": "{PrimaryHandlingNonPrescription} = YES",
                   "choices": [
                     {
                       "value": "ACUPUNCTURE",
@@ -1956,11 +1952,11 @@
                 },
                 {
                   "type": "rating",
-                  "name": "lvngPrimaryHandlingNonPrescriptionEffectiveness",
+                  "name": "PrimaryHandlingNonPrescriptionEffectiveness",
                   "title": "How effective were these treatments?",
                   "description": "1 = not at all effective, 5 = very effective",
                   "isRequired": true,
-                  "visibleIf": "{lvngPrimaryHandlingNonPrescription} = YES",
+                  "visibleIf": "{PrimaryHandlingNonPrescription} = YES",
                   "rateValues": [
                     {
                       "value": 1,
