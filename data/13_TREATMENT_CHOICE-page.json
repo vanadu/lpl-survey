@@ -1,0 +1,189 @@
+{
+  "name": "TREATMENT_CHOICE-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "TreatmentChoiceSurgeryPanel",
+      "visibleIf": "{VetProcedureDidHave} = 'SURGERY'",
+      "elements": [
+        {
+          "type": "html",
+          "name": "TreatmentChoiceSurgeryHeading",
+          "html": "<h3>About your choice of surgery for {CmpnName}</h3>"
+        },
+        {
+          "type": "html",
+          "name": "TreatmentChoiceSurgeryText",
+          "html": "<p>This section asks questions about your decision to pursue surgery for {CmpnName} and what kind of surgery you chose.</p>"
+        },
+
+        {
+          "type": "panel",
+          "name": "TreatmentChoiceSurgeryDetailsPanel",
+          "elements": [
+            {
+              "type": "dropdown",
+              "name": "TreatmenChoiceSurgeryType",
+              "title": "What type of surgery did {CmpnName} have?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "TIEBACK",
+                  "text": "Tieback (Unilateral Arytenoid Lateralization)"
+                },
+                {
+                  "value": "BVEAP",
+                  "text": "BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)"
+                },
+                {
+                  "value": "ARYTENOIDECTOMY",
+                  "text": "Arytenoidectomy (partial or complete)"
+                },
+                {
+                  "value": "VOCAL_FOLD_EXCISION",
+                  "text": "Vocal fold excision (debarking)"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "required": true
+            },
+            {
+            "type": "dropdown",
+            "name": "TreatmentChoiceSurgeryCost",
+            "title": "About what was the total pre-insurance cost of the surgery, not including any post-operative complications?",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "UNDER_2000",
+                "text": "Under $2000"
+              },
+              {
+                "value": "2000_3500",
+                "text": "$2000-$3500"
+              },
+              {
+                "value": "3501_5000",
+                "text": "$3001-$5000"
+              },
+              {
+                "value": "5001_6500",
+                "text": "$5001 - $6500"
+              },
+              {
+                "value": "6501_8000",
+                "text": "$6501 - $8000"
+              },
+              {
+                "value": "OVER_8000",
+                "text": "Over $8000"
+              },
+              {
+                "value": "NOT_SAY",
+                "text": "Don't know or prefer not to say"
+              }
+            ],
+            "showOtherItem": false
+            }
+    
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "TreatmentChoiceStentPanel",
+      "visibleIf": "{VetProcedureDidHave} = 'STENT'",
+      "elements": [
+        {
+          "type": "html",
+          "name": "TreatmentChoiceStentHeading",
+          "html": "<h3>About your choice of stent for {CmpnName}</h3>"
+        },
+        {
+          "type": "html",
+          "name": "TreatmentChoiceSurgeryText",
+          "html": "<p>This section asks questions about your decision to pursue a stent implant for {CmpnName} and what kind of stent {CmpnName} received.</p>"
+        },
+
+        {
+          "type": "panel",
+          "name": "TreatmentChoiceStentDetailsPanel",
+          "elements": [
+            {
+              "type": "dropdown",
+              "name": "TreatmentChoiceStentType",
+              "title": "What type of stent implant did {CmpnName} receive?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "SILICONE",
+                  "text": "Silicone stent (silicone tube with studs)"
+                },
+                {
+                  "value": "NITINOL_WIRE",
+                  "text": "Dextronix Nitinol wire stent"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "required": true
+            },
+            {
+            "type": "dropdown",
+            "name": "TreatmentChoiceSurgeryCost",
+            "title": "About what was the total pre-insurance cost of the stent implant, not including any post-operative complications?",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "UNDER_1500",
+                "text": "Under $1500"
+              },
+              {
+                "value": "1500_2500",
+                "text": "$1500-$2500"
+              },
+              {
+                "value": "2501_3500",
+                "text": "$2501-$3500"
+              },
+              {
+                "value": "3501_5000",
+                "text": "$3501 - $5000"
+              },
+              {
+                "value": "OVER_5000",
+                "text": "Over $5000"
+              },
+              {
+                "value": "NOT_SAY",
+                "text": "Don't know or prefer not to say"
+              }
+            ],
+            "showOtherItem": false
+            }
+    
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "TreatmentChoiceManagePanel",
+      "visibleIf": "{VetProcedureDidHave} = 'NONE'",
+      "elements": [
+        {
+          "type": "html",
+          "name": "TreatmentChoiceManageHeading",
+          "html": "<h3>I CHOSE MANAGEMENT.</h3>"
+        }
+      ]
+    }
+  ]
+}

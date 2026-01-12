@@ -68,7 +68,7 @@
           "type": "panel",
           "name": "dcsdCmpnInfoAgePanel",
           "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
-          "visibleIf": "{LifeStatusCrossedOver} = 'DECEASED'",
+          "visibleIf": "{LifeStatus} = 'DECEASED'",
           "elements": [
             {
               "type": "text",
@@ -110,7 +110,7 @@
           "type": "panel",
           "name": "lvngCmpnInfoAgePanel",
           "title": "What is {CmpnName}'s approximate age (in years and months)?",
-          "visibleIf": "{LifeStatusCrossedOver} = 'LIVING'",
+          "visibleIf": "{LifeStatus} = 'LIVING'",
           "elements": [
             {
               "type": "text",
@@ -259,14 +259,14 @@
               "name": "lvngCmpnInfoHasInsurance",
               "required": true,
               "title": "Do you have pet insurance for {CmpnName}?",
-              "visibleIf": "{LifeStatusCrossedOver} = 'LIVING'"
+              "visibleIf": "{LifeStatus} = 'LIVING'"
             },
             {
               "type": "boolean",
               "name": "dcsdCmpnInfoHasInsurance",
               "required": true,
               "title": "Did you have pet insurance for {CmpnName}?",
-              "visibleIf": "{LifeStatusCrossedOver} = 'DECEASED'"
+              "visibleIf": "{LifeStatus} = 'DECEASED'"
             },
             {
             "type": "radiogroup",

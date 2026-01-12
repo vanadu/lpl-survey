@@ -1,0 +1,41 @@
+{
+  "name": "TREATMENT_CHOICE-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "TreatmenChoiceSurgeryPanel",
+      "visibleIf": "{VetProcedureDidHave} = true && {VetProcedureType} = 'SURGERY'",
+      "elements": [
+        {
+          "type": "html",
+          "name": "TreatmentChoiceSurgeryHeading",
+          "html": "<h3>I CHOSE SURGERY.</h3>"
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "TreatmenChoiceStentPanel",
+      "visibleIf": "{VetProcedureDidHave} = true && {VetProcedureType} = 'STENT'",
+      "elements": [
+        {
+          "type": "html",
+          "name": "TreatmentChoiceStentHeading",
+          "html": "<h3>I CHOSE STENT.</h3>"
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "TreatmenChoiceManagePanel",
+      "visibleIf": "{VetProcedureDidHave} = false",
+      "elements": [
+        {
+          "type": "html",
+          "name": "TreatmentChoiceManageHeading",
+          "html": "<h3>I CHOSE MANAGEMENT.</h3>"
+        }
+      ]
+    }
+  ]
+}

@@ -12,10 +12,11 @@ const pageFiles = [
   "06_BREATHING_CRISIS-page.json",
   "07_EARLY_SYMPTOMS-page.json",
   "08_CHANGED_VETS-page.json",
-  "09_VET_PROCEDURE.json",
+  "09_VET_PROCEDURE-page.json",
   "10_PRIMARY_DURATION-page.json",
   "11_PRIMARY_HANDLING-page.json",
-  "12_PRIMARY_RECOMMENDATION-page.json"
+  "12_PRIMARY_RECOMMENDATION-page.json",
+  "13_TREATMENT_CHOICE-page.json"
 ];
 
 const pages = pageFiles.map(filename => {

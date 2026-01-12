@@ -313,7 +313,7 @@
                 },
                 {
                   "type": "imagepicker",
-                  "name": "LifeStatusCrossedOver",
+                  "name": "LifeStatus",
                   "title": "Has your companion crossed over the Rainbow Bridge?",
                   "isRequired": true,
                   "choices": [
@@ -407,7 +407,7 @@
               "type": "panel",
               "name": "dcsdCmpnInfoAgePanel",
               "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
-              "visibleIf": "{LifeStatusCrossedOver} = 'DECEASED'",
+              "visibleIf": "{LifeStatus} = 'DECEASED'",
               "elements": [
                 {
                   "type": "text",
@@ -449,7 +449,7 @@
               "type": "panel",
               "name": "lvngCmpnInfoAgePanel",
               "title": "What is {CmpnName}'s approximate age (in years and months)?",
-              "visibleIf": "{LifeStatusCrossedOver} = 'LIVING'",
+              "visibleIf": "{LifeStatus} = 'LIVING'",
               "elements": [
                 {
                   "type": "text",
@@ -634,14 +634,14 @@
                   "name": "lvngCmpnInfoHasInsurance",
                   "required": true,
                   "title": "Do you have pet insurance for {CmpnName}?",
-                  "visibleIf": "{LifeStatusCrossedOver} = 'LIVING'"
+                  "visibleIf": "{LifeStatus} = 'LIVING'"
                 },
                 {
                   "type": "boolean",
                   "name": "dcsdCmpnInfoHasInsurance",
                   "required": true,
                   "title": "Did you have pet insurance for {CmpnName}?",
-                  "visibleIf": "{LifeStatusCrossedOver} = 'DECEASED'"
+                  "visibleIf": "{LifeStatus} = 'DECEASED'"
                 },
                 {
                   "type": "radiogroup",
@@ -1545,7 +1545,39 @@
             {
               "type": "html",
               "name": "VetProcedureHeading",
-              "html": "<h3>This section if {CmpnName} underwent any veterinary-medical procedure such as surgery or stent implant for LP/GOLPP and if so, which procedure.</h3>"
+              "html": "<h3>This section asks if {CmpnName} underwent any veterinary-medical procedure such as surgery or stent implant for LP/GOLPP and if so, which procedure.</h3>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "panelName",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "VetProcedureDidHave",
+              "title": "Did undergo {CmpnName} a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "SURGERY",
+                  "text": "Surgery"
+                },
+                {
+                  "value": "STENT",
+                  "text": "Stent"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Other option"
             }
           ]
         }
@@ -2001,6 +2033,45 @@
               "type": "html",
               "name": "PrimaryRecommendationHeading",
               "html": "<h3>This section asks about specific recommendations your primary made about {CmpnName}'s LP/GOLPP symptoms.</h3>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TREATMENT_CHOICE-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "TreatmenChoiceSurgeryPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "TreatmentChoiceSurgeryHeading",
+              "html": "<h3>I CHOSE SURGERY.</h3>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmenChoiceStentPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "TreatmentChoiceStentHeading",
+              "html": "<h3>I CHOSE STENT.</h3>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmenChoiceManagePanel",
+          "visibleIf": "{VetProcedureDidHave} = false",
+          "elements": [
+            {
+              "type": "html",
+              "name": "TreatmentChoiceManageHeading",
+              "html": "<h3>I CHOSE MANAGEMENT.</h3>"
             }
           ]
         }

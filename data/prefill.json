@@ -1,6 +1,6 @@
 {
   "CmpnName": "Miss B",
-  "LifeStatusCrossedOver": "DECEASED",
+  "LifeStatus": "LIVING",
 
 
   "UserInfoFirstName": "Jane",
@@ -100,6 +100,18 @@
   ],
   "ChangedVetsSpecialistRecommendation": "NEUROLOGIST",
   "ChangeVetsConfidence": "2",
+
+  "VetProcedureDidHave": "SURGERY",
+  "VetProcedureAgeYears": "13",
+  "VetProcedureAgeMonths": "6",
+
+
+
+
+
+  "TreatmenChoiceSurgeryType": "TIEBACK",
+  "TreatmentChoiceSurgeryCost": "6501_8000",
+
 
 
   "PrimaryDurationFirstConsultYears": 13,

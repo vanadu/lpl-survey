@@ -28,7 +28,7 @@
             },
             {
               "type": "imagepicker",
-              "name": "LifeStatusCrossedOver",
+              "name": "LifeStatus",
               "title": "Has your companion crossed over the Rainbow Bridge?",
               "isRequired": true,
               "choices": [
