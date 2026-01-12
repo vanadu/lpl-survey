@@ -1,30 +1,30 @@
 {
-  "name": "L_CHANGED_VETS-page",
+  "name": "CHANGED_VETS-page",
   "elements": [
     {
       "type": "panel",
-      "name": "lvngChangedVetsPanel",
+      "name": "ChangedVetsPanel",
       "elements": [
         {
           "type": "html",
-          "name": "lvngChangedVetsHeading",
+          "name": "ChangedVetsHeading",
           "html": "<h3>Change of veterinarians due to LP/GOLPP</h3>"
         },
         {
           "type": "html",
-          "name": "lvngChangedVetsText",
+          "name": "ChangedVetsText",
           "html": "<p>This section asks whether you changed primary veterinarians because of how {CmpnName}'s LP/GOLPP symptoms were handled and why you made that decision. This doesn't include specialists like surgeons or neurologists, only whether you moved {CmpnName}'s care from one primary veterinarian to another because of how {CmpnName}'s LP/GOLPP was handled.</p>"
         },
         {
           "type": "panel",
-          "name": "lvngChangedVetsDetailsPanel",
+          "name": "ChangedVetsDetailsPanel",
           "title": "",
           "elements": [
 
 
             {
               "type": "radiogroup",
-              "name": "lvngChangedVets",
+              "name": "ChangedVetsDidChange",
               "title": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
               "isRequired": true,
               "choices": [
@@ -45,18 +45,14 @@
 
             {
               "type": "checkbox",
-              "name": "lvngChangedVetsReason",
+              "name": "ChangedVetsReason",
               "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP (please check all that apply)?",
               "isRequired": true,
-              "visibleIf": "{lvngChangedVets} != NO",
+              "visibleIf": "{ChangedVets} != NO",
               "choices": [
                 {
                   "value": "NO_KNOWLEDGE",
                   "text": "The previous vet couldn't give possible causes for {CmpnName}'s symptoms."
-                },
-                {
-                  "value": "NOT_SERIOUS",
-                  "text": "The previous vet didn't take {CmpnName}'s symptoms seriously."
                 },
                 {
                   "value": "AGE_ONLY",
@@ -79,11 +75,11 @@
             },
             {
               "type": "rating",
-              "name": "lvngChangeVetsConfidence",
+              "name": "ChangeVetsConfidence",
               "title": "How confident were you in your previous primary vet's knowledge level about LP/GOLPP?",
               "description": "1 = no confident at all, 5 = very confident",
               "isRequired": true,
-              "visibleIf": "{lvngChangedVets} != NO",
+              "visibleIf": "{ChangedVets} != NO",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -96,14 +92,14 @@
 
             {
               "type": "radiogroup",
-              "name": "lvngChangedVetsAdvice",
+              "name": "ChangedVetsAdvice",
               "title": "What advice or recommendation did your previous primary vet's give you advice about dogname's LP/GOLPP symptoms?",
               "isRequired": true,
-              "visibleIf": "{lvngChangedVets} != NO",
+              "visibleIf": "{ChangedVets} != NO",
               "choices": [
                 {
                   "value": "NOTHING_CAN_BE_DONE",
-                  "text": "Said nothing can be done about {CmpnName}'s symptoms"
+                  "text": "Gave no advice and said nothing can be done about {CmpnName}'s symptoms"
                 },
                 {
                   "value": "RECOMMENDED_SPECIALIST",
@@ -120,10 +116,10 @@
 
             {
               "type": "radiogroup",
-              "name": "lvngChangedVetsSpecialistRecommendation",
+              "name": "ChangedVetsSpecialistRecommendation",
               "title": "What kind of specialist did your previous vet recommend or refer?",
               "isRequired": true,
-              "visibleIf": "{lvngChangedVetsAdvice} = 'RECOMMENDED_SPECIALIST'",
+              "visibleIf": "{ChangedVetsAdvice} = 'RECOMMENDED_SPECIALIST'",
               "choices": [
                 {
                   "value": "AIRWAY_SURGEON",

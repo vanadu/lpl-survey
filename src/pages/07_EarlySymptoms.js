@@ -3,16 +3,14 @@ import Link from 'next/link';
 import SurveyComponent from '@/components/SurveyComponent'
 import SurveyMenu from '@/components/SurveyMenu'
 
-const lvngChangedVets = () => {
+const EARLY_SYMPTOMS = () => {
   return (
       <section className="section">
         <div className="section_content">
-
-
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'L_CHANGED_VETS-page' />
+            <SurveyComponent startPageName = 'EARLY_SYMPTOMS-page' />
           </div>
 
         </div>
@@ -20,4 +18,4 @@ const lvngChangedVets = () => {
   )
 }
 
-export default lvngChangedVets
+export default EARLY_SYMPTOMS

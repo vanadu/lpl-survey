@@ -90,16 +90,16 @@
     "PERIODONTAL"
   ],
 
-  "lvngChangedVets": "ONCE",
-  "lvngChangedVetsReason": [
+  "ChangedVetsDidChange": "ONCE",
+  "ChangedVetsReason": [
     "AGE_ONLY",
     "NO_VALUE"
   ],
-  "lvngChangedVetsAdvice": [
+  "ChangedVetsAdvice": [
     "RECOMMENDED_SPECIALIST"
   ],
-  "lvngChangedVetsSpecialistRecommendation": "NEUROLOGIST",
-  "lvngChangeVetsConfidence": "2",
+  "ChangedVetsSpecialistRecommendation": "NEUROLOGIST",
+  "ChangeVetsConfidence": "2",
 
 
   "lvngPrimaryDurationFirstConsultYears": 13,

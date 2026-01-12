@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "lvngPrimaryHandlingHeading",
-          "html": "<h3>Your current primary veterinarians and {CmpnName}'s LP/GOLPP</h3>"
+          "html": "<h3>Your preferred primary veterinarian and {CmpnName}'s LP/GOLPP</h3>"
         },
         {
           "type": "html",
