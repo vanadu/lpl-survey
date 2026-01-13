@@ -5,8 +5,8 @@ const DATA_DIR = path.join(__dirname, "../data");
 const pageFiles = [
   "00_LANDING-page.json",
   "01_USER_INFO-page.json",
-  "02_CMPN_NAME_LIFE_STATUS-page.json",
-  "03_CMPN_INFO-page.json",
+  "02_CMPN_INFO-page.json",
+  "03_SCRAP-page.json",
   "04_INFO_SOURCES-page.json",
   "05_INTUBATION_HISTORY-page.json",
   "06_BREATHING_CRISIS-page.json",

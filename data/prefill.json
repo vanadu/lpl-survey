@@ -1,8 +1,4 @@
 {
-  "CmpnName": "Miss B",
-  "LifeStatus": "LIVING",
-
-
   "UserInfoFirstName": "Jane",
   "UserInfoCountry": "US",
   "UserInfoStateRegion": "MD",
@@ -12,6 +8,9 @@
   "UserInfoContactTypeEmail": "example@example.com",
   "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "UserInfoContactOK": true,
+
+  "CmpnName": "Miss B",
+  "LifeStatus": "LIVING",
 
   "CmpnInfoAnimalType": "CANINE",
   "CmpnInfoBreed": "Boxer",
@@ -27,7 +26,7 @@
   "CmpnInfoAnimalsCount": "TWO",
   "lvngCmpnInfoHasInsurance": true,
   "dcsdCmpnInfoHasInsurance": true,
-    "CmpnInfoHasInsuranceOther": "2",
+  "CmpnInfoHasInsuranceOther": "2",
 
 
   "InfoSourcesPriorKnowledge": false,

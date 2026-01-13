@@ -9,8 +9,8 @@ import prefillData from "../../data/prefill.json";
 
 import LANDING from "../../data/00_LANDING-page.json";
 import USER_INFO from "../../data/01_USER_INFO-page.json";
-import CMPN_NAME_LIFE_STATUS from "../../data/02_CMPN_NAME_LIFE_STATUS-page.json";
-import CMPN_INFO from "../../data/03_CMPN_INFO-page.json";
+import CMPN_INFO from "../../data/02_CMPN_INFO-page.json";
+import SCRAP from "../../data/03_SCRAP-page.json";
 import INFO_SOURCES from "../../data/04_INFO_SOURCES-page.json";
 import INTUBATION_HISTORY from "../../data/05_INTUBATION_HISTORY-page.json";
 import BREATHING_CRISIS from "../../data/06_BREATHING_CRISIS-page.json";
@@ -26,8 +26,8 @@ const surveyJson = {
   pages: [
     LANDING,
     USER_INFO,
-    CMPN_NAME_LIFE_STATUS,
     CMPN_INFO,
+    SCRAP,
     INFO_SOURCES,
     INTUBATION_HISTORY,
     BREATHING_CRISIS,
