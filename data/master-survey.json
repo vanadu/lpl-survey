@@ -88,7 +88,7 @@
             {
               "type": "html",
               "name": "UserInfoText",
-              "html": "<p>We're asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and  </p>"
+              "html": "<p>We're asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and verifiable.</p>"
             },
             {
               "type": "html",
@@ -294,7 +294,7 @@
             {
               "type": "html",
               "name": "CmpnNameLifeStatusHeading",
-              "html": "<h2>About Your Companion Animal</h2>"
+              "html": "<h2>Before We Begin</h2>"
             },
             {
               "type": "html",
@@ -348,17 +348,21 @@
             {
               "type": "html",
               "name": "CmpnInfoHeading",
-              "html": "<h3>About your LP/GOLPP companion!<h3>"
+              "html": "<h3>About your LP/GOLPP companion<h3>"
             },
             {
               "type": "html",
               "name": "CmpnInfoText",
-              "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to complete the survey. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances.</p>"
+              "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to continue with the survey. </p>"
+            },
+            {
+              "type": "html",
+              "name": "CmpnInfoPleaseTell",
+              "html": "<p>Please tell us about {CmpnName} below. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances."
             },
             {
               "type": "panel",
               "name": "CmpnInfoAnimalTypePanel",
-              "title": "Please tell us about {CmpnName}",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -550,10 +554,6 @@
                     {
                       "value": 5,
                       "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
                     }
                   ]
                 }
@@ -590,10 +590,6 @@
                     {
                       "value": 5,
                       "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
                     }
                   ]
                 }
@@ -681,12 +677,12 @@
             {
               "type": "html",
               "name": "InfoSourcesHeading",
-              "html": "<h3>How did you learn about laryngeal paralysis (LP)?</h3>"
+              "html": "<h3>How did you learn about LP/GOLPP?</h3>"
             },
             {
               "type": "html",
               "name": "InfoSourcesText",
-              "html": "<p>This section asks some questions about how you learned about LP and whether the information you found helped you make decisions for {CmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
+              "html": "<p>This section asks some questions about how you learned about laryngeal paralysis and geriatric-onset laryngeal paralysis (LP) and polyneuropathy (GOLPP) and whether the information you found helped you make decisions for {CmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
             },
             {
               "type": "panel",
@@ -873,7 +869,7 @@
             {
               "type": "html",
               "name": "IntubationHistoryText",
-              "html": "Some research has indicated that improper intubation techniques may result in damage to laryngeal tissue and under certain circumstances may play a role in some cases of acquired laryngeal paralysis. This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms."
+              "html": "<p>This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>"
             },
             {
               "type": "panel",
@@ -1221,7 +1217,7 @@
             {
               "type": "html",
               "name": "EarlySymptomsText",
-              "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP journey and how you came to accept that {CmpnName} might have it.</p>"
+              "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
             },
             {
               "type": "panel",
@@ -1422,10 +1418,14 @@
                 {
                   "type": "checkbox",
                   "name": "ChangedVetsReason",
-                  "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP (please check all that apply)?",
+                  "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP? Please check all that apply.",
                   "isRequired": true,
-                  "visibleIf": "{ChangedVets} != NO",
+                  "visibleIf": "{ChangedVetsDidChange} != 'NO'",
                   "choices": [
+                    {
+                      "value": "NOTHING_CAN_BE_DONE",
+                      "text": "The previous vet said nothing could be done about {CmpnName}'s symptoms."
+                    },
                     {
                       "value": "NO_KNOWLEDGE",
                       "text": "The previous vet couldn't give possible causes for {CmpnName}'s symptoms."
@@ -1455,7 +1455,7 @@
                   "title": "How confident were you in your previous primary vet's knowledge level about LP/GOLPP?",
                   "description": "1 = no confident at all, 5 = very confident",
                   "isRequired": true,
-                  "visibleIf": "{ChangedVets} != NO",
+                  "visibleIf": "{ChangedVetsDidChange} != 'NO'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1478,56 +1478,6 @@
                       "text": "5"
                     }
                   ]
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "ChangedVetsAdvice",
-                  "title": "What advice or recommendation did your previous primary vet's give you advice about dogname's LP/GOLPP symptoms?",
-                  "isRequired": true,
-                  "visibleIf": "{ChangedVets} != NO",
-                  "choices": [
-                    {
-                      "value": "NOTHING_CAN_BE_DONE",
-                      "text": "Gave no advice and said nothing can be done about {CmpnName}'s symptoms"
-                    },
-                    {
-                      "value": "RECOMMENDED_SPECIALIST",
-                      "text": "Recommended consulting a specialist"
-                    },
-                    {
-                      "value": "RECOMMENDED_EUTHANASIA",
-                      "text": "Recommended euthanasia"
-                    }
-                  ],
-                  "showOtherItem": true,
-                  "showNoneItem": false
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "ChangedVetsSpecialistRecommendation",
-                  "title": "What kind of specialist did your previous vet recommend or refer?",
-                  "isRequired": true,
-                  "visibleIf": "{ChangedVetsAdvice} = 'RECOMMENDED_SPECIALIST'",
-                  "choices": [
-                    {
-                      "value": "AIRWAY_SURGEON",
-                      "text": "Surgeon experienced in tieback or other LP surgery"
-                    },
-                    {
-                      "value": "ORTHOPEDIC_SURGEON",
-                      "text": "General or orthopedic surgeon"
-                    },
-                    {
-                      "value": "NEUROLOGIST",
-                      "text": "Neurologist"
-                    },
-                    {
-                      "value": "STENT_PROVIDER",
-                      "text": "Stent provider"
-                    }
-                  ],
-                  "showOtherItem": true,
-                  "otherText": "Other"
                 }
               ]
             }
@@ -1555,7 +1505,7 @@
             {
               "type": "html",
               "name": "VetProcedureText",
-              "html": "<p><b>IMPORTANT:</b> This only includes surgeries or procedures that act directly on the larynx. It doesn't include acupuncture, physical therapy or other therapies your vet may have prescribed that aren't designed to improve airflow by modifying the structure of the larynx.</p>"
+              "html": "<p><b>IMPORTANT:</b> This only includes surgeries or procedures that act directly on the larynx. It doesn't include acupuncture, physical therapy or other therapies your vet may have prescribed.</p>"
             },
             {
               "type": "panel",
@@ -1741,12 +1691,12 @@
             {
               "type": "html",
               "name": "PrimaryHandlingHeading",
-              "html": "<h3>Your preferred primary veterinarian and {CmpnName}'s LP/GOLPP</h3>"
+              "html": "<h3>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h3>"
             },
             {
               "type": "html",
               "name": "PrimaryHandlingText",
-              "html": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p>"
+              "html": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p><p>If you changed primary vets since {CmpnName}'s LP/GOLPP symptoms first appeared   , please answer the question about your preferred or most recent primary veterinarian."
             },
             {
               "type": "panel",
@@ -2059,6 +2009,168 @@
               "type": "html",
               "name": "PrimaryRecommendationHeading",
               "html": "<h3>This section asks about specific recommendations your primary made about {CmpnName}'s LP/GOLPP symptoms.</h3>"
+            },
+            {
+              "type": "panel",
+              "name": "PrimaryRecommendationInfoPanel",
+              "title": "",
+              "elements": [
+                {
+                  "type": "boolean",
+                  "name": "PrimaryRecommendInfoDidGive",
+                  "title": "Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect {CmpnName}?",
+                  "isRequired": true
+                },
+                {
+                  "type": "checkbox",
+                  "name": "PrimaryRecommendInfoDetails",
+                  "title": "What did they tell you about the how LP/GOLPP might affect {CmpnName}?",
+                  "isRequired": true,
+                  "visibleIf": "{PrimaryRecommendInfoDidGive} = true",
+                  "choices": [
+                    {
+                      "value": "BARK_LOSS",
+                      "text": "Loss or weakening of bark"
+                    },
+                    {
+                      "value": "PROGRESSIVE",
+                      "text": "LP/GOLPP is a progressive disease"
+                    },
+                    {
+                      "value": "HOT_HUMID",
+                      "text": "Hot, humid weather exacerbates symptoms"
+                    },
+                    {
+                      "value": "BREATHING_CRISIS",
+                      "text": "Potential for life-threatening breathing crisis"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "PrimaryRecommendationSurgeryPanel",
+              "title": "",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "PrimaryRecommendSurgery",
+                  "title": "Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for {CmpnName}'s LP/GOLPP?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "NO_RECOMMENDATION",
+                      "text": "Made no recommendation"
+                    },
+                    {
+                      "value": "ADVISED_FOR",
+                      "text": "Encouraged me to talk to a surgeon"
+                    },
+                    {
+                      "value": "ADVISED_AGAINST",
+                      "text": "Advised against surgery"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "PrimaryRecommendSurgeryPerception",
+                  "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
+                  "isRequired": true,
+                  "visibleIf": "{PrimaryRecommendSurgery} = 'ADVISED_AGAINST'",
+                  "choices": [
+                    {
+                      "value": "SPECIFIC_CONDITION",
+                      "text": "{CmpnName}'s specific condition"
+                    },
+                    {
+                      "value": "GENERAL_PERCEPTION",
+                      "text": "General negative perception"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "PrimaryRecommendationConfidencePanel",
+              "title": "",
+              "elements": [
+                {
+                  "type": "rating",
+                  "name": "PrimaryRecommendConfidence",
+                  "title": "How confident have you been you in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
+                  "description": "1 = not at all confident, 5 = very confident",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "PrimaryRecommendCSatisfaction",
+                  "title": "How satisfied have you been with your current primary veterinarian's handling of {CmpnName}'s LP/GOLPP?",
+                  "description": "1 = not at all satisfied, 5 = very satisfied",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "tex  !expectt": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -2074,12 +2186,12 @@
             {
               "type": "html",
               "name": "TreatmentFactorsHeading",
-              "html": "<h3>Treatment Factors</h3>"
+              "html": "<h3>Factors that have influenced your LP/GOLPP decisions</h3>"
             },
             {
               "type": "html",
               "name": "TreatmentFactorsText",
-              "html": "<p>This sections asks what factors you considered..</p>"
+              "html": "<p>This sections asks what factors you considered when deciding what kind of treatment to pursue for {CmpnName}'s LP/GOLPP.</p>"
             },
             {
               "type": "panel",
@@ -2089,7 +2201,7 @@
                 {
                   "type": "dropdown",
                   "name": "TreatmentFactorsDecision",
-                  "title": "Have you made a decision about whether to pursue LP surgery such as tieback for {CmpnName}?",
+                  "title": "Have you made a decision about whether or not to pursue LP surgery such as tieback for {CmpnName}?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -2137,7 +2249,7 @@
                 {
                   "type": "html",
                   "name": "TreatmentFactorsDetailsText",
-                  "html": "<p>This section asks to rate the factors that played a role in your decision to pursue LP/GOLPP surgery such as tieback based on their importance.</p>"
+                  "html": "<p>This section asks to rate the factors that played a role in your decision whether or not to pursue LP/GOLPP surgery such as tieback based on their importance.</p>"
                 },
                 {
                   "type": "rating",
@@ -2200,7 +2312,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsRisks",
-                  "title": "Risks of surgical procedure with extended anesthesia:",
+                  "title": "Risks for {CmpnName} of surgical procedure with extended anesthesia:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -2229,7 +2341,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsRisksComplications",
-                  "title": "Risks of post-op complications for {CmpnName}'s quality of life:",
+                  "title": "Risks for {CmpnName} of post-op complications:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -2259,6 +2371,35 @@
                   "type": "rating",
                   "name": "TreatmentFactorsAge",
                   "title": "{CmpnName}'s age:",
+                  "description": "1 = not a factor, 5 = deciding factor",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsGeneralHealth",
+                  "title": "{CmpnName}'s overall health and prospects for quality of life moving forward:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -2345,7 +2486,7 @@
                 {
                   "type": "text",
                   "name": "TreatmentFactorsOther",
-                  "title": "What other factors influenced your decision to pursue surgery?",
+                  "title": "What other factors influenced your decision whether or not to pursue surgery?",
                   "isRequired": true
                 }
               ]

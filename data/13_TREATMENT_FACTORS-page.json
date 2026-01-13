@@ -72,7 +72,7 @@
             {
               "type": "html",
               "name": "TreatmentFactorsDetailsText",
-              "html": "<p>This section asks to rate the factors that played a role in your decision whether or not to pursue LP/GOLPP surgery such as tieback based on their importance.</p>"
+              "html": "<p>Please the factors that played a role in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>"
             },
 
             {
@@ -92,7 +92,7 @@
             {
               "type": "rating",
               "name": "TreatmentFactorsCostComplications",
-              "title": "Cost of possible post-op complications:",
+              "title": "Cost of possible post-op complications such as aspiration pneumonia:",
               "description": "1 = not important, 5 = very important",
               "isRequired": true,
               "rateValues": [
@@ -120,7 +120,7 @@
             {
               "type": "rating",
               "name": "TreatmentFactorsRisksComplications",
-              "title": "Risks for {CmpnName} of post-op complications:",
+              "title": "Risks for {CmpnName} of post-op complications such as aspiration pneumonia:",
               "description": "1 = not a factor, 5 = deciding factor",
               "isRequired": true,
               "rateValues": [

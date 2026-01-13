@@ -99,7 +99,7 @@
   "ChangedVetsSpecialistRecommendation": "NEUROLOGIST",
   "ChangeVetsConfidence": "2",
 
-  "VetProcedureDidHave": "SURGERY",
+  "VetProcedureDidHave": "NO",
   "VetProcedureAgeYears": "13",
   "VetProcedureAgeMonths": "6",
 
