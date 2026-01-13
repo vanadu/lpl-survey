@@ -1545,39 +1545,65 @@
             {
               "type": "html",
               "name": "VetProcedureHeading",
-              "html": "<h3>This section asks if {CmpnName} underwent any veterinary-medical procedure such as surgery or stent implant for LP/GOLPP and if so, which procedure.</h3>"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "panelName",
-          "elements": [
+              "html": "<h3>Veterinary-Medical Procedures</h3>"
+            },
             {
-              "type": "radiogroup",
-              "name": "VetProcedureDidHave",
-              "title": "Did undergo {CmpnName} a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
-              "isRequired": true,
-              "choices": [
+              "type": "html",
+              "name": "VetProcedureText",
+              "html": "<p>This section asks if {CmpnName} underwent any veterinary-medical procedure such as surgery or stent implant for LP/GOLPP and if so, which procedure.</p>"
+            },
+            {
+              "type": "html",
+              "name": "VetProcedureText",
+              "html": "<p><b>IMPORTANT:</b> This only includes surgeries or procedures that act directly on the larynx. It doesn't include acupuncture, physical therapy or other therapies your vet may have prescribed that aren't designed to improve airflow by modifying the structure of the larynx.</p>"
+            },
+            {
+              "type": "panel",
+              "name": "VetProcedureDidHavePanel",
+              "elements": [
                 {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "SURGERY",
-                  "text": "Surgery"
-                },
-                {
-                  "value": "STENT",
-                  "text": "Stent"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
+                  "type": "radiogroup",
+                  "name": "VetProcedureDidHave",
+                  "title": "Did undergo {CmpnName} a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "NONE",
+                      "text": "No"
+                    },
+                    {
+                      "value": "SURGERY",
+                      "text": "Yes, surgery"
+                    },
+                    {
+                      "value": "STENT",
+                      "text": "Yes, stent implant"
+                    }
+                  ],
+                  "showOtherItem": false
                 }
-              ],
-              "showOtherItem": true,
-              "otherText": "Other option"
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "VetProcedureAgePanel",
+              "title": "About how old was {CmpnName} when she had the surgery or stent procedure?",
+              "description": "If you can't remember exactly, it's OK to guesstimate.",
+              "visibleIf": "{VetProcedureDidHave} != 'NONE'",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "VetProcedureAgeYears",
+                  "title": "Age (years)",
+                  "isRequired": true
+                },
+                {
+                  "type": "text",
+                  "name": "VetProcedureAgeMonths",
+                  "title": "Age (months)",
+                  "isRequired": true
+                }
+              ]
             }
           ]
         }
@@ -2039,39 +2065,290 @@
       ]
     },
     {
-      "name": "TREATMENT_CHOICE-page",
+      "name": "TREATMENT_FACTORS-page",
       "elements": [
         {
           "type": "panel",
-          "name": "TreatmenChoiceSurgeryPanel",
+          "name": "TreatmentFactorsPanel",
           "elements": [
             {
               "type": "html",
-              "name": "TreatmentChoiceSurgeryHeading",
-              "html": "<h3>I CHOSE SURGERY.</h3>"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "TreatmenChoiceStentPanel",
-          "elements": [
+              "name": "TreatmentFactorsHeading",
+              "html": "<h3>Treatment Factors</h3>"
+            },
             {
               "type": "html",
-              "name": "TreatmentChoiceStentHeading",
-              "html": "<h3>I CHOSE STENT.</h3>"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "TreatmenChoiceManagePanel",
-          "visibleIf": "{VetProcedureDidHave} = false",
-          "elements": [
+              "name": "TreatmentFactorsText",
+              "html": "<p>This sections asks what factors you considered..</p>"
+            },
             {
-              "type": "html",
-              "name": "TreatmentChoiceManageHeading",
-              "html": "<h3>I CHOSE MANAGEMENT.</h3>"
+              "type": "panel",
+              "name": "TreatmentFactorsDecisionPanel",
+              "visibleIf": "{VetProcedureDidHave} = 'NO' && {LifeStatus} = 'LIVING'",
+              "elements": [
+                {
+                  "type": "dropdown",
+                  "name": "TreatmentFactorsDecision",
+                  "title": "Have you made a decision about whether to pursue LP surgery such as tieback for {CmpnName}?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "WILL_PURSUE",
+                      "text": "Yes, we will pursue LP surgery such as tieback."
+                    },
+                    {
+                      "value": "WILL_NOT_PURSUE",
+                      "text": "No, we've decided not to pursue LP surgery."
+                    },
+                    {
+                      "value": "UNDECIDED",
+                      "text": "We are still considering options and haven't yet made a decision."
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "dropdown",
+                  "name": "TreatmentFactorsDecisionStent",
+                  "title": "If a veterinarian were to offer a stent implant for LP/GOLPP in your area, would you explore that as a surgery alternative?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes, we would pursue that as an alternative to surgery."
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No, we would not pursue a stent implant as alternative to surgery."
+                    },
+                    {
+                      "value": "NOT_INFORMED",
+                      "text": "We don't have enough information about the stent implant to answer at this time."
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "TreatmentFactorsDetailsPanel",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "TreatmentFactorsDetailsText",
+                  "html": "<p>This section asks to rate the factors that played a role in your decision to pursue LP/GOLPP surgery such as tieback based on their importance.</p>"
+                },
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsCost",
+                  "title": "Cost of procedure:",
+                  "description": "1 = not important, 5 = very important",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsCostComplications",
+                  "title": "Cost of possible post-op complications:",
+                  "description": "1 = not important, 5 = very important",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsRisks",
+                  "title": "Risks of surgical procedure with extended anesthesia:",
+                  "description": "1 = not a factor, 5 = deciding factor",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsRisksComplications",
+                  "title": "Risks of post-op complications for {CmpnName}'s quality of life:",
+                  "description": "1 = not a factor, 5 = deciding factor",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsAge",
+                  "title": "{CmpnName}'s age:",
+                  "description": "1 = not a factor, 5 = deciding factor",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsCoexisting",
+                  "title": "{CmpnName}'s coexisting conditions:",
+                  "description": "1 = not a factor, 5 = deciding factor",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsAccess",
+                  "title": "Distance to or access to a qualified specialist:",
+                  "description": "1 = not a factor, 5 = deciding factor",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "name": "TreatmentFactorsOther",
+                  "title": "What other factors influenced your decision to pursue surgery?",
+                  "isRequired": true
+                }
+              ]
             }
           ]
         }

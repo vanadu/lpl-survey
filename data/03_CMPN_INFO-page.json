@@ -8,18 +8,22 @@
         {
           "type": "html",
           "name": "CmpnInfoHeading",
-          "html": "<h3>About your LP/GOLPP companion!<h3>"
+          "html": "<h3>About your LP/GOLPP companion<h3>"
         },
         {
           "type": "html",
           "name": "CmpnInfoText",
-          "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to complete the survey. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances.</p>"
+          "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to continue with the survey. </p>"
+        },
+        {
+          "type": "html",
+          "name": "CmpnInfoPleaseTell",
+          "html": "<p>Please tell us about {CmpnName} below. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances."
         },
 
         {
           "type": "panel",
           "name": "CmpnInfoAnimalTypePanel",
-          "title": "Please tell us about {CmpnName}",
           "elements": [
             {
               "type": "radiogroup",
@@ -196,8 +200,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             }
           ]
@@ -218,8 +221,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             }
           ]

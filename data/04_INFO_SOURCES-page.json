@@ -8,12 +8,12 @@
         {
           "type": "html",
           "name": "InfoSourcesHeading",
-          "html": "<h3>How did you learn about laryngeal paralysis (LP)?</h3>"
+          "html": "<h3>How did you learn about LP/GOLPP?</h3>"
         },
         {
           "type": "html",
           "name": "InfoSourcesText",
-          "html": "<p>This section asks some questions about how you learned about LP and whether the information you found helped you make decisions for {CmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
+          "html": "<p>This section asks some questions about how you learned about laryngeal paralysis and geriatric-onset laryngeal paralysis (LP) and polyneuropathy (GOLPP) and whether the information you found helped you make decisions for {CmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
         },
         {
           "type": "panel",

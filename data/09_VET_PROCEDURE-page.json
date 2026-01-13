@@ -18,7 +18,7 @@
         {
           "type": "html",
           "name": "VetProcedureText",
-          "html": "<p><b>IMPORTANT:</b> This only includes surgeries or procedures that act directly on the larynx. It doesn't include acupuncture, physical therapy or other therapies your vet may have prescribed that aren't designed to improve airflow by modifying the structure of the larynx.</p>"
+          "html": "<p><b>IMPORTANT:</b> This only includes surgeries or procedures that act directly on the larynx. It doesn't include acupuncture, physical therapy or other therapies your vet may have prescribed.</p>"
         },
 
         {

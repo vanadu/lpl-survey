@@ -20,7 +20,7 @@ import VET_PROCEDURE from "../../data/09_VET_PROCEDURE-page.json";
 import PRIMARY_DURATION from "../../data/10_PRIMARY_DURATION-page.json";
 import PRIMARY_HANDLING from "../../data/11_PRIMARY_HANDLING-page.json";
 import PRIMARY_RECOMMENDATION from "../../data/12_PRIMARY_RECOMMENDATION-page.json";
-import TREATMENT_CHOICE from "../../data/13_TREATMENT_CHOICE-page.json";
+import TREATMENT_FACTORS from "../../data/13_TREATMENT_FACTORS-page.json";
 
 const surveyJson = {
   pages: [
@@ -37,7 +37,7 @@ const surveyJson = {
     PRIMARY_DURATION,
     PRIMARY_HANDLING,
     PRIMARY_RECOMMENDATION,
-    TREATMENT_CHOICE
+    TREATMENT_FACTORS
   ]
 };
 

@@ -3,14 +3,14 @@ import Link from 'next/link';
 import SurveyComponent from '@/components/SurveyComponent'
 import SurveyMenu from '@/components/SurveyMenu'
 
-const TREATMENT_CHOICE = () => {
+const TREATMENT_FACTORS = () => {
   return (
       <section className="section">
         <div className="section_content">
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'TREATMENT_CHOICE-page' />
+            <SurveyComponent startPageName = 'TREATMENT_FACTORS-page' />
           </div>
 
         </div>
@@ -18,4 +18,4 @@ const TREATMENT_CHOICE = () => {
   )
 }
 
-export default TREATMENT_CHOICE
+export default TREATMENT_FACTORS

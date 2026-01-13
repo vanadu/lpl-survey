@@ -47,8 +47,8 @@ const SurveyHeader = () => {
         <li className="survey-dropdown__item"><Link href="/12_PrimaryRecommendation">
           12_PrimaryRecommendation
         </Link></li>
-        <li className="survey-dropdown__item"><Link href="/13_TreatmentChoice">
-          13_TreatmentChoice
+        <li className="survey-dropdown__item"><Link href="/13_TreatmentFactors">
+          13_TreatmentFactors
         </Link></li>
 
       </ul>

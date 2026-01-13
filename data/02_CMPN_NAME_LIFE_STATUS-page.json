@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "CmpnNameLifeStatusHeading",
-          "html": "<h2>About Your Companion Animal</h2>"
+          "html": "<h2>Before We Begin</h2>"
         },
         {
         "type": "html",

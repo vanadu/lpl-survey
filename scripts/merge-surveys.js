@@ -16,7 +16,7 @@ const pageFiles = [
   "10_PRIMARY_DURATION-page.json",
   "11_PRIMARY_HANDLING-page.json",
   "12_PRIMARY_RECOMMENDATION-page.json",
-  "13_TREATMENT_CHOICE-page.json"
+  "13_TREATMENT_FACTORS-page.json"
 ];
 
 const pages = pageFiles.map(filename => {

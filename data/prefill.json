@@ -69,9 +69,7 @@
   "BreathingCrisisProvidedSubstanceType": [
     "STERIOD"
   ],
-  "BreathingCrisisSubstanceForm": [
-    "LIQUID"
-  ],
+  "BreathingCrisisSubstanceForm": "LIQUID",
 
 
  
@@ -105,15 +103,6 @@
   "VetProcedureAgeYears": "13",
   "VetProcedureAgeMonths": "6",
 
-
-
-
-
-  "TreatmenChoiceSurgeryType": "TIEBACK",
-  "TreatmentChoiceSurgeryCost": "6501_8000",
-
-
-
   "PrimaryDurationFirstConsultYears": 13,
   "PrimaryDurationFirstConsultMonths": 1,
   "PrimaryDurationVisitsNumber": "MORE_THAN_TWO",
@@ -144,6 +133,27 @@
     "ACUPUNCTURE",
     "PHYSICAL_THERAPY"
   ],
-  "PrimaryHandlingNonPrescriptionEffectiveness": "2"
+  "PrimaryHandlingNonPrescriptionEffectiveness": "2",
+
+
+
+
+
+
+
+
+
+  "TreatmentFactorsDecision": "UNDECIDED",
+  "TreatmentFactorsDecisionStent": "NOT_INFORMED",
+  "TreatmentFactorsCost": 4,
+  "TreatmentFactorsCostComplications": 4,
+  "TreatmentFactorsRisks": 4,
+  "TreatmentFactorsRisksComplications": 4,
+  "TreatmentFactorsAge": 3,
+  "TreatmentFactorsCoexisting": 2,
+  "TreatmentFactorsAccess": 1,
+  "TreatmentFactorsOther": "Hind end weakness"
+
+
 
 }

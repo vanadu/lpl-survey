@@ -8,12 +8,12 @@
         {
           "type": "html",
           "name": "PrimaryHandlingHeading",
-          "html": "<h3>Your preferred primary veterinarian and {CmpnName}'s LP/GOLPP</h3>"
+          "html": "<h3>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h3>"
         },
         {
           "type": "html",
           "name": "PrimaryHandlingText",
-          "html": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p>"
+          "html": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p><p>If you changed primary vets since {CmpnName}'s LP/GOLPP symptoms first appeared   , please answer the question about your preferred or most recent primary veterinarian."
         },
         {
           "type": "panel",
