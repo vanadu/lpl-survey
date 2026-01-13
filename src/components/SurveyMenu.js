@@ -17,9 +17,7 @@ const SurveyHeader = () => {
         <li className="survey-dropdown__item"><Link href="/02_CmpnInfo">
           02_CmpnInfo 
         </Link></li>
-        <li className="survey-dropdown__item"><Link href="/03_Scrap">
-          03_Scrap 
-        </Link></li>
+
         <li className="survey-dropdown__item"><Link href="/04_InfoSources">
           04_InfoSources
         </Link></li>
@@ -32,9 +30,7 @@ const SurveyHeader = () => {
         <li className="survey-dropdown__item"><Link href="/07_EarlySymptoms">
           07_EarlySymptoms 
         </Link></li>
-        <li className="survey-dropdown__item"><Link href="/08_Scrap2">
-          08_Scrap2 
-        </Link></li>
+
         <li className="survey-dropdown__item"><Link href="/09_VetProcedure">
           09_VetProcedure 
         </Link></li>

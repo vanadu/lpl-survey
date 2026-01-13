@@ -135,9 +135,15 @@
 
 
 
-
-
-
+  "PrimaryRecommendInfoDidGive": true,
+  "PrimaryRecommendInfoDetails": [
+    "BARK_LOSS",
+    "PROGRESSIVE"
+  ],
+  "PrimaryRecommendSurgery": "ADVISED_AGAINST",
+  "PrimaryRecommendSurgeryPerception": "GENERAL_PERCEPTION",
+  "PrimaryRecommendConfidence": 3,
+  "PrimaryRecommendCSatisfaction": 3,
 
 
 

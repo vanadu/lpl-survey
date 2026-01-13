@@ -29,15 +29,15 @@
               "choices": [
                 {
                   "value": "WILL_PURSUE",
-                  "text": "Yes, we will pursue LP surgery such as tieback."
+                  "text": "We will pursue LP surgery such as tieback."
                 },
                 {
                   "value": "WILL_NOT_PURSUE",
-                  "text": "No, we've decided not to pursue LP surgery."
+                  "text": "We've decided not to pursue LP surgery."
                 },
                 {
                   "value": "UNDECIDED",
-                  "text": "We are still considering options and haven't yet made a decision."
+                  "text": "We haven't decided yet."
                 }
               ],
               "showOtherItem": false
@@ -50,15 +50,15 @@
               "choices": [
                 {
                   "value": "YES",
-                  "text": "Yes, we would pursue that as an alternative to surgery."
+                  "text": "Yes, we would consider a stent implant."
                 },
                 {
                   "value": "NO",
-                  "text": "No, we would not pursue a stent implant as alternative to surgery."
+                  "text": "No, we would not consider a stent implant."
                 },
                 {
                   "value": "NOT_INFORMED",
-                  "text": "We don't have enough information about the stent implant to answer at this time."
+                  "text": "We need more information."
                 }
               ],
               "showOtherItem": false
