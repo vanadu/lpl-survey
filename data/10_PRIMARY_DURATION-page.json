@@ -116,7 +116,73 @@
               "showOtherItem": false
             }
           ]
+        },
+
+        {
+          "type": "panel",
+          "name": "PrimaryDurationChangedVetsPanel",
+          "title": "",
+          "elements": [
+
+
+            {
+              "type": "radiogroup",
+              "name": "PrimaryDurationChangedVets",
+              "title": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "ONCE",
+                  "text": "Once"
+                },
+                {
+                  "value": "MORE_THAN_ONCE",
+                  "text": "More than once"
+                }
+              ]
+            },
+
+            {
+              "type": "checkbox",
+              "name": "PrimaryDurationChangedVetsReason",
+              "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?",
+              "description": "Please check all that apply.",
+              "isRequired": true,
+              "visibleIf": "{ChangedVetsDidChange} != 'NO'",
+              "choices": [
+                {
+                  "value": "NOTHING_CAN_BE_DONE",
+                  "text": "The previous vet said nothing could be done about {CmpnName}'s symptoms."
+                },
+                {
+                  "value": "NO_KNOWLEDGE",
+                  "text": "The previous vet couldn't give possible causes for {CmpnName}'s symptoms."
+                },
+                {
+                  "value": "AGE_ONLY",
+                  "text": "The previous vet said {CmpnName}'s symptoms were just due to age."
+                },
+                {
+                  "value": "BAD_TESTS",
+                  "text": "The previous vet ordered tests that I didn't think were relevant to {CmpnName}'s symptoms."
+                },
+                {
+                  "value": "MISDIAGNOSED",
+                  "text": "The previous vet misdiagnosed {CmpnName}'s symptoms."
+                }
+              ],
+              "showOtherItem": true
+            }
+
+
+          ]
         }
+
+
       ]
     }
   ]

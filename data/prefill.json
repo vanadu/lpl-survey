@@ -87,16 +87,8 @@
     "PERIODONTAL"
   ],
 
-  "ChangedVetsDidChange": "ONCE",
-  "ChangedVetsReason": [
-    "AGE_ONLY",
-    "NO_VALUE"
-  ],
-  "ChangedVetsAdvice": [
-    "RECOMMENDED_SPECIALIST"
-  ],
-  "ChangedVetsSpecialistRecommendation": "NEUROLOGIST",
-  "ChangeVetsConfidence": "2",
+
+
 
   "VetProcedureDidHave": "NO",
   "VetProcedureAgeYears": "13",
@@ -106,6 +98,13 @@
   "PrimaryDurationFirstConsultMonths": 1,
   "PrimaryDurationVisitsNumber": "MORE_THAN_TWO",
   "PrimaryDurationCost": "OVER_5000",
+  "PrimaryDurationChangedVets": "ONCE",
+  "PrimaryDurationChangedVetsReason": [
+    "AGE_ONLY",
+    "MISDIAGNOSED"
+  ],
+
+  
 
   
   "PrimaryHandlingInflammation": "YES",

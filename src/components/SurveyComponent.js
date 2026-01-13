@@ -15,7 +15,7 @@ import INFO_SOURCES from "../../data/04_INFO_SOURCES-page.json";
 import INTUBATION_HISTORY from "../../data/05_INTUBATION_HISTORY-page.json";
 import BREATHING_CRISIS from "../../data/06_BREATHING_CRISIS-page.json";
 import EARLY_SYMPTOMS from "../../data/07_EARLY_SYMPTOMS-page.json";
-import CHANGED_VETS from "../../data/08_CHANGED_VETS-page.json";
+import SCRAP2 from "../../data/08_Scrap2-page.json";
 import VET_PROCEDURE from "../../data/09_VET_PROCEDURE-page.json";
 import PRIMARY_DURATION from "../../data/10_PRIMARY_DURATION-page.json";
 import PRIMARY_HANDLING from "../../data/11_PRIMARY_HANDLING-page.json";
@@ -32,7 +32,7 @@ const surveyJson = {
     INTUBATION_HISTORY,
     BREATHING_CRISIS,
     EARLY_SYMPTOMS,
-    CHANGED_VETS,
+    SCRAP2,
     VET_PROCEDURE,
     PRIMARY_DURATION,
     PRIMARY_HANDLING,
