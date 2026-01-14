@@ -72,7 +72,7 @@
             {
               "type": "html",
               "name": "TreatmentFactorsDetailsText",
-              "html": "<p>Please the factors that played a role in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>"
+              "html": "<p>Please rate the relevant factors in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>"
             },
 
             {

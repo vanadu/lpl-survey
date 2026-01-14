@@ -16,6 +16,174 @@
           "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
         }
       ]
-    }
+    },
+
+        {
+          "type": "panel",
+          "name": "ManagementPrescriptions",
+          "elements": [
+
+            {
+              "type": "radiogroup",
+              "name": "ManagementPrescriptions",
+              "title": "Did your primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "ManagementPrescriptionType",
+              "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = YES",
+              "choices": [
+                {
+                  "value": "DOXEPIN",
+                  "text": "Doxepin"
+                },
+                {
+                  "value": "TRAZODONE",
+                  "text": "Trazodone"
+                },
+                {
+                  "value": "GABAPENTIN",
+                  "text": "Gabapentin"
+                },
+                {
+                  "value": "STERIOD",
+                  "text": "Prednisone or other steriod"
+                },
+                {
+                  "value": "NSAID",
+                  "text": "Carprofen or other NSAID"
+                },
+                {
+                  "value": "LIBRELA",
+                  "text": "Librela/Beransa"
+                },
+                {
+                  "value": "CERENIA",
+                  "text": "Cerenia (maripotant citrate)"
+                },
+                {
+                  "value": "MELOXICAM",
+                  "text": "Meloxicam"
+                },
+                {
+                  "value": "ACEPROMAZINE",
+                  "text": "Acepromazine (Atravet, ACP)"
+                },
+                {
+                  "value": "ALBUTEROL",
+                  "text": "Albuterol or other inhaler"
+                },
+                {
+                  "value": "TEMARIL P",
+                  "text": "Temaril P"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionEffectiveness",
+              "title": "How effective were these prescription medications for {CmpnName}'s LP/GOLPP?",
+              "description": "1 = not at all effective, 5 = very effective",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = YES",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ManagementNonPrescriptionPanel",
+          "elements": [
+
+            {
+              "type": "radiogroup",
+              "name": "ManagementNonPrescription",
+              "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "ManagementNonPrescriptionType",
+              "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = YES",
+              "choices": [
+                {
+                  "value": "ACUPUNCTURE",
+                  "text": "Acupuncture"
+                },
+                {
+                  "value": "PHYSICAL_THERAPY",
+                  "text": "Physical or hydro therapy"
+                },
+                {
+                  "value": "LLLT",
+                  "text": "Cold laser or red light therapy"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionEffectiveness",
+              "title": "How effective were these treatments?",
+              "description": "1 = not at all effective, 5 = very effective",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = YES",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
+        }
+
+
   ]
 }

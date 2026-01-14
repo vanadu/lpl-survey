@@ -13,7 +13,17 @@
         {
           "type": "html",
           "name": "LandingText",
-          "html": "<p>The goal of this survey is to collect information about your beloved animal companion's experience with the disease of laryngeal paralysis (LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP). </p> <p>The LP/GOLPP journey is a learning process, and at the beginning people often have more questions than answers. The survey asks you to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, it's best to discontinue the survey and return later when you have more information.</p> <p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
+          "html": "<p>The goal of this survey is to collect information about your beloved animal companion's experience with the disease of laryngeal paralysis (LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP). </p><p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
+        },
+        {
+          "type": "html",
+          "name": "LandingJourneyHeading",
+          "html": "<h3>Your LP/GOLPP Journey</h3>"
+        },
+        {
+          "type": "html",
+          "name": "LandingJourneyText",
+          "html": "<p>The LP/GOLPP journey is a learning process, and at the beginning people often have more questions than answers. The survey asks you to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, it's best to discontinue the survey and return later when you have more information.</p>"
         },
         {
           "type": "html",

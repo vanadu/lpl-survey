@@ -1,0 +1,21 @@
+{
+  "name": "COMPLICATIONS-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "ComplicationsPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "ComplicationsHeading",
+          "html": "<h3>OTC Products for LP/GOLPP</h3>"
+        },
+        {
+          "type": "html",
+          "name": "ComplicationsText",
+          "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+        }
+      ]
+    }
+  ]
+}

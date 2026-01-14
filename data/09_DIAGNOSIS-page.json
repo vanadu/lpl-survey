@@ -8,12 +8,133 @@
         {
           "type": "html",
           "name": "DiagnosisHeading",
-          "html": "<h3>Diagnosing LP/GOLPP</h3>"
+          "html": "<h3>{CmpnName}'s LP/GOLPP diagnosis</h3>"
         },
         {
           "type": "html",
           "name": "DiagnosisText",
-          "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+          "html": "<p>This section asks who provided {CmpnName}'s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p><p>You may have seen multiple vets about {CmpnName}'s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about {CmpnName}'s LP/GOLPP.</p>"
+        }
+      ]
+    },
+
+    {
+      "type": "panel",
+      "name": "DiagnosisDetailsPanel",
+      "elements": [
+        {
+          "type": "dropdown",
+          "name": "DiagnosisWho",
+          "title": "Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "PRIMARY",
+              "text": "Primary veterinarian"
+            },
+            {
+              "value": "INTERNIST",
+              "text": "Internal medicine specialist"
+            },
+            {
+              "value": "NEUROLOGIST",
+              "text": "Neurologist"
+            },
+            {
+              "value": "SOFT_TISSUE",
+              "text": "Soft tissue specialist or surgeon"
+            },
+            {
+              "value": "GENERAL",
+              "text": "General or orthopedic surgeon"
+            }
+          ],
+          "showOtherItem": true,
+          "showNoneItem": false
+        },
+
+        {
+          "type": "dropdown",
+          "name": "PrimaryVetDiagnosticType",
+          "title": "What diagnostic procedure ws used to arrive at the definitive diagnosis?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "ROUTINE_EXAM",
+              "text": "Visual/auditory exam only"
+            },
+            {
+              "value": "SEDATED_VISUAL",
+              "text": "Sedated visual exam of larynx"
+            },
+            {
+              "value": "XRAY",
+              "text": "X-Ray or other imaging"
+            },
+            {
+              "value": "ULTRASOUND",
+              "text": "Ultrasound"
+            },
+            {
+              "value": "SCOPE",
+              "text": "Video endoscope or laryngoscope under anesthesia"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "DiagnosisCost",
+          "title": "What was the pre-insurance cost of the diagnosis?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "UNDER_500",
+              "text": "Under $500"
+            },
+            {
+              "value": "500_1500",
+              "text": "$501-$1500"
+            },
+            {
+              "value": "1501_3000",
+              "text": "$1500-$3000"
+            },
+            {
+              "value": "OVER_3000",
+              "text": "Over $3000"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know or prefer not to say"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "DiagnosisSurgeonContingent",
+          "title": "Did the surgeon make the definitive diagnosis by laryngoscope or video endoscope contingent on proceeding with the LP surgery?",
+          "isRequired": true,
+          "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes, required surgery consent before diagnosis"
+            },
+            {
+              "value": "NO",
+              "text": "No, did not require surgery consent for diagnosis"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
         }
       ]
     }

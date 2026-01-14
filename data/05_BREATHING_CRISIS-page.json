@@ -112,8 +112,8 @@
                   "text": "No"
                 },
                 {
-                  "value": "Don't know",
-                  "text": "DONT_KNOW"
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
                 }
               ]
             },

@@ -69,13 +69,9 @@
         {
           "type": "html",
           "name": "CmpnInfoText",
-          "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. </p>"
+          "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
         },
-        {
-          "type": "html",
-          "name": "CmpnInfoPleaseTell",
-          "html": "<p>Please tell us about {CmpnName} below. If you don't know exact information, it's OK to guesstimate. "
-        },
+
 
         {
           "type": "panel",
@@ -84,7 +80,7 @@
             {
               "type": "radiogroup",
               "name": "CmpnInfoAnimalType",
-              "title": "Species:",
+              "title": "{CmpnName}'s species:",
               "isRequired": true,
               "choices": [
                 {
@@ -106,7 +102,7 @@
         {
         "type": "panel",
         "name": "CmpnInfoBreedGenderPanel",
-        "title": "Breed or breed mix and gender:",
+        "title": "{CmpnName}'s breed/breed mix and gender:",
         "elements": [
           {
             "type": "text",
