@@ -13,7 +13,7 @@
         {
           "type": "html",
           "name": "LandingText",
-          "html": "<p>The goal of this survey is to collect information about you and your beloved animal companion's experience with the disease of laryngeal paralysis or GOLPP (Geriatric-Onset Laryngeal Paralysis and Polyneuropathy). To take the survey, you'll be required to remember details about your LP/GOLPP journey.</p> <p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p><p>First, we'll explain what information we'll collect and how we'll ensure your privacy and data security. Then we'll ask for your consent to continue the survey. If at that point, you feel like talking about it would open too many wounds, we encourage you to stop and come back later when when you're ready.</p>"
+          "html": "<p>The goal of this survey is to collect information about your beloved animal companion's experience with the disease of laryngeal paralysis (LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP). </p> <p>The LP/GOLPP journey is a learning process, and at the beginning people often have more questions than answers. The survey asks you to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, it's best to discontinue the survey and return later when you have more information.</p> <p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
         },
         {
           "type": "html",
@@ -23,7 +23,7 @@
         {
           "type": "html",
           "name": "LandingAboutPrivacyText01",
-          "html": "<p>We're not asking for your last name, so we have no way to connect you with any of your private data. We need only four pieces of information to ensure that we can verify survey results:</p>"
+          "html": "<p>We're not asking for your last name, so we have no way to connect you with any of your private data. We need only four pieces of information to verify survey results:</p>"
         },
         {
           "type": "html",

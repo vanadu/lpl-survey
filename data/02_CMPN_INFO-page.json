@@ -69,12 +69,12 @@
         {
           "type": "html",
           "name": "CmpnInfoText",
-          "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to continue with the survey. </p>"
+          "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. </p>"
         },
         {
           "type": "html",
           "name": "CmpnInfoPleaseTell",
-          "html": "<p>Please tell us about {CmpnName} below. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances."
+          "html": "<p>Please tell us about {CmpnName} below. If you don't know exact information, it's OK to guesstimate. "
         },
 
         {
