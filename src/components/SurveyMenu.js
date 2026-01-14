@@ -17,35 +17,36 @@ const SurveyHeader = () => {
         <li className="survey-dropdown__item"><Link href="/02_CmpnInfo">
           02_CmpnInfo 
         </Link></li>
+        <li className="survey-dropdown__item"><Link href="/03_InfoSources">
+          03_InfoSources
+        </Link></li>
+        <li className="survey-dropdown__item"><Link href="/04_IntubationHistory">
+          04_IntubationHistory 
+        </Link></li>
+        <li className="survey-dropdown__item"><Link href="/05_BreathingCrisis">
+          05_BreathingCrisis 
+        </Link></li>
+        <li className="survey-dropdown__item"><Link href="/06_EarlySymptoms">
+          06_EarlySymptoms 
+        </Link></li>
+        <li className="survey-dropdown__item"><Link href="/07_PrimaryDuration">
+          07_PrimaryDuration 
+        </Link></li>
+        <li className="survey-dropdown__item"><Link href="/08_PrimaryVet">
+          08_PrimaryVet
+        </Link></li>
+        <li className="survey-dropdown__item"><Link href="/09_Diagnosis">
+          09_Diagnosis
+        </Link></li>
+        <li className="survey-dropdown__item"><Link href="/10_TreatmentStatus">
+          10_TreatmentStatus 
+        </Link></li>
+        <li className="survey-dropdown__item"><Link href="/11_TreatmentFactors">
+          11_TreatmentFactors
+        </Link></li>
 
-        <li className="survey-dropdown__item"><Link href="/04_InfoSources">
-          04_InfoSources
-        </Link></li>
-        <li className="survey-dropdown__item"><Link href="/05_IntubationHistory">
-          05_IntubationHistory 
-        </Link></li>
-        <li className="survey-dropdown__item"><Link href="/06_BreathingCrisis">
-          06_BreathingCrisis 
-        </Link></li>
-        <li className="survey-dropdown__item"><Link href="/07_EarlySymptoms">
-          07_EarlySymptoms 
-        </Link></li>
 
-        <li className="survey-dropdown__item"><Link href="/09_VetProcedure">
-          09_VetProcedure 
-        </Link></li>
-        <li className="survey-dropdown__item"><Link href="/10_PrimaryDuration">
-          10_PrimaryDuration 
-        </Link></li>
-        <li className="survey-dropdown__item"><Link href="/11_PrimaryHandling">
-          11_PrimaryHandling
-        </Link></li>
-        <li className="survey-dropdown__item"><Link href="/12_PrimaryRecommendation">
-          12_PrimaryRecommendation
-        </Link></li>
-        <li className="survey-dropdown__item"><Link href="/13_TreatmentFactors">
-          13_TreatmentFactors
-        </Link></li>
+
 
       </ul>
     </div>

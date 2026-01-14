@@ -6,15 +6,16 @@ const pageFiles = [
   "00_LANDING-page.json",
   "01_USER_INFO-page.json",
   "02_CMPN_INFO-page.json",
-  "04_INFO_SOURCES-page.json",
-  "05_INTUBATION_HISTORY-page.json",
-  "06_BREATHING_CRISIS-page.json",
-  "07_EARLY_SYMPTOMS-page.json",
-  "09_VET_PROCEDURE-page.json",
-  "10_PRIMARY_DURATION-page.json",
-  "11_PRIMARY_HANDLING-page.json",
-  "12_PRIMARY_RECOMMENDATION-page.json",
-  "13_TREATMENT_FACTORS-page.json"
+  "03_INFO_SOURCES-page.json",
+  "04_INTUBATION_HISTORY-page.json",
+  "05_BREATHING_CRISIS-page.json",
+  "06_EARLY_SYMPTOMS-page.json",
+  "07_PRIMARY_DURATION-page.json",
+  "08_PRIMARY_VET-page.json",
+  "09_DIAGNOSIS-page.json",
+  "10_TREATMENT_STATUS-page.json",
+  "11_TREATMENT_FACTORS-page.json"
+
 ];
 
 const pages = pageFiles.map(filename => {

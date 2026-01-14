@@ -1,33 +1,33 @@
 {
-  "name": "VET_PROCEDURE-page",
+  "name": "TREATMENT_STATUS-page",
   "elements": [
     {
       "type": "panel",
-      "name": "VetProcedurePanel",
+      "name": "TreatmentStatusPanel",
       "elements": [
         {
           "type": "html",
-          "name": "VetProcedureHeading",
+          "name": "TreatmentStatusHeading",
           "html": "<h3>Veterinary-Medical Procedures</h3>"
         },
         {
           "type": "html",
-          "name": "VetProcedureText",
+          "name": "TreatmentStatusText",
           "html": "<p>This section asks if {CmpnName} underwent any veterinary-medical procedure such as surgery or stent implant for LP/GOLPP and if so, which procedure.</p>"
         },
         {
           "type": "html",
-          "name": "VetProcedureText",
+          "name": "TreatmentStatusText",
           "html": "<p><b>IMPORTANT:</b> This only includes surgeries or procedures that act directly on the larynx. It doesn't include acupuncture, physical therapy or other therapies your vet may have prescribed.</p>"
         },
 
         {
           "type": "panel",
-          "name": "VetProcedureDidHavePanel",
+          "name": "TreatmentStatusDidHavePanel",
           "elements": [
             {
               "type": "radiogroup",
-              "name": "VetProcedureDidHave",
+              "name": "TreatmentStatusDidHave",
               "title": "Did undergo {CmpnName} a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
               "isRequired": true,
               "choices": [
@@ -51,20 +51,20 @@
         },
         {
           "type": "panel",
-          "name": "VetProcedureAgePanel",
+          "name": "TreatmentStatusAgePanel",
           "title": "About how old was {CmpnName} when she had the surgery or stent procedure?",
           "description": "If you can't remember exactly, it's OK to guesstimate.",
-          "visibleIf": "{VetProcedureDidHave} != 'NONE'",
+          "visibleIf": "{TreatmentStatusDidHave} != 'NONE'",
           "elements": [
             {
               "type": "text",
-              "name": "VetProcedureAgeYears",
+              "name": "TreatmentStatusAgeYears",
               "title": "Age (years)",
               "isRequired": true
             },
             {
               "type": "text",
-              "name": "VetProcedureAgeMonths",
+              "name": "TreatmentStatusAgeMonths",
               "title": "Age (months)",
               "isRequired": true
             }

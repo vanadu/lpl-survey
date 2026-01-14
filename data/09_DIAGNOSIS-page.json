@@ -1,0 +1,21 @@
+{
+  "name": "DIAGNOSIS-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "DiagnosisPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "DiagnosisHeading",
+          "html": "<h3>Diagnosing LP/GOLPP</h3>"
+        },
+        {
+          "type": "html",
+          "name": "DiagnosisText",
+          "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+        }
+      ]
+    }
+  ]
+}

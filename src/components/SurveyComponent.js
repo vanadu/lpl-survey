@@ -10,15 +10,15 @@ import prefillData from "../../data/prefill.json";
 import LANDING from "../../data/00_LANDING-page.json";
 import USER_INFO from "../../data/01_USER_INFO-page.json";
 import CMPN_INFO from "../../data/02_CMPN_INFO-page.json";
-import INFO_SOURCES from "../../data/04_INFO_SOURCES-page.json";
-import INTUBATION_HISTORY from "../../data/05_INTUBATION_HISTORY-page.json";
-import BREATHING_CRISIS from "../../data/06_BREATHING_CRISIS-page.json";
-import EARLY_SYMPTOMS from "../../data/07_EARLY_SYMPTOMS-page.json";
-import VET_PROCEDURE from "../../data/09_VET_PROCEDURE-page.json";
-import PRIMARY_DURATION from "../../data/10_PRIMARY_DURATION-page.json";
-import PRIMARY_HANDLING from "../../data/11_PRIMARY_HANDLING-page.json";
-import PRIMARY_RECOMMENDATION from "../../data/12_PRIMARY_RECOMMENDATION-page.json";
-import TREATMENT_FACTORS from "../../data/13_TREATMENT_FACTORS-page.json";
+import INFO_SOURCES from "../../data/03_INFO_SOURCES-page.json";
+import INTUBATION_HISTORY from "../../data/04_INTUBATION_HISTORY-page.json";
+import BREATHING_CRISIS from "../../data/05_BREATHING_CRISIS-page.json";
+import EARLY_SYMPTOMS from "../../data/06_EARLY_SYMPTOMS-page.json";
+import PRIMARY_DURATION from "../../data/07_PRIMARY_DURATION-page.json";
+import PRIMARY_VET from "../../data/08_PRIMARY_VET-page.json";
+import DIAGNOSIS from "../../data/09_DIAGNOSIS-page.json";
+import TREATMENT_STATUS from "../../data/10_TREATMENT_STATUS-page.json";
+import TREATMENT_FACTORS from "../../data/11_TREATMENT_FACTORS-page.json";
 
 const surveyJson = {
   pages: [
@@ -29,10 +29,10 @@ const surveyJson = {
     INTUBATION_HISTORY,
     BREATHING_CRISIS,
     EARLY_SYMPTOMS,
-    VET_PROCEDURE,
     PRIMARY_DURATION,
-    PRIMARY_HANDLING,
-    PRIMARY_RECOMMENDATION,
+    PRIMARY_VET,
+    DIAGNOSIS,
+    TREATMENT_STATUS,
     TREATMENT_FACTORS
   ]
 };

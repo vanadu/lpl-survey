@@ -17,7 +17,7 @@
             {
               "type": "html",
               "name": "LandingText",
-              "html": "<p>The goal of this survey is to collect information about you and your beloved animal companion's experience with the disease of laryngeal paralysis or GOLPP (Geriatric-Onset Laryngeal Paralysis and Polyneuropathy). To take the survey, you'll be required to remember details about your LP/GOLPP journey.</p> <p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p><p>First, we'll explain what information we'll collect and how we'll ensure your privacy and data security. Then we'll ask for your consent to continue the survey. If at that point, you feel like talking about it would open too many wounds, we encourage you to stop and come back later when when you're ready.</p>"
+              "html": "<p>The goal of this survey is to collect information about your beloved animal companion's experience with the disease of laryngeal paralysis (LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP). </p> <p>The LP/GOLPP journey is a learning process, and at the beginning people often have more questions than answers. The survey asks you to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, it's best to discontinue the survey and return later when you have more information.</p> <p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
             },
             {
               "type": "html",
@@ -27,7 +27,7 @@
             {
               "type": "html",
               "name": "LandingAboutPrivacyText01",
-              "html": "<p>We're not asking for your last name, so we have no way to connect you with any of your private data. We need only four pieces of information to ensure that we can verify survey results:</p>"
+              "html": "<p>We're not asking for your last name, so we have no way to connect you with any of your private data. We need only four pieces of information to verify survey results:</p>"
             },
             {
               "type": "html",
@@ -349,12 +349,12 @@
             {
               "type": "html",
               "name": "CmpnInfoText",
-              "html": "<p>This section asks basic questions about your companion's age, breed, weight, and demeanor. The answers are required to continue with the survey. </p>"
+              "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. </p>"
             },
             {
               "type": "html",
               "name": "CmpnInfoPleaseTell",
-              "html": "<p>Please tell us about {CmpnName} below. If you don't know exact information, it's OK to guesstimate. If you can't answer the questions at all, it's probably best to abort the survey and try again at a later date when you know more about your companion's circumstances."
+              "html": "<p>Please tell us about {CmpnName} below. If you don't know exact information, it's OK to guesstimate. "
             },
             {
               "type": "panel",
@@ -1370,80 +1370,6 @@
       ]
     },
     {
-      "name": "VET_PROCEDURE-page",
-      "elements": [
-        {
-          "type": "panel",
-          "name": "VetProcedurePanel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "VetProcedureHeading",
-              "html": "<h3>Veterinary-Medical Procedures</h3>"
-            },
-            {
-              "type": "html",
-              "name": "VetProcedureText",
-              "html": "<p>This section asks if {CmpnName} underwent any veterinary-medical procedure such as surgery or stent implant for LP/GOLPP and if so, which procedure.</p>"
-            },
-            {
-              "type": "html",
-              "name": "VetProcedureText",
-              "html": "<p><b>IMPORTANT:</b> This only includes surgeries or procedures that act directly on the larynx. It doesn't include acupuncture, physical therapy or other therapies your vet may have prescribed.</p>"
-            },
-            {
-              "type": "panel",
-              "name": "VetProcedureDidHavePanel",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "VetProcedureDidHave",
-                  "title": "Did undergo {CmpnName} a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "NONE",
-                      "text": "No"
-                    },
-                    {
-                      "value": "SURGERY",
-                      "text": "Yes, surgery"
-                    },
-                    {
-                      "value": "STENT",
-                      "text": "Yes, stent implant"
-                    }
-                  ],
-                  "showOtherItem": false
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "VetProcedureAgePanel",
-              "title": "About how old was {CmpnName} when she had the surgery or stent procedure?",
-              "description": "If you can't remember exactly, it's OK to guesstimate.",
-              "visibleIf": "{VetProcedureDidHave} != 'NONE'",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "VetProcedureAgeYears",
-                  "title": "Age (years)",
-                  "isRequired": true
-                },
-                {
-                  "type": "text",
-                  "name": "VetProcedureAgeMonths",
-                  "title": "Age (months)",
-                  "isRequired": true
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "PRIMARY_DURATION-page",
       "elements": [
         {
@@ -1624,30 +1550,30 @@
       ]
     },
     {
-      "name": "PRIMARY_HANDLING-page",
+      "name": "PRIMARY_VET-page",
       "elements": [
         {
           "type": "panel",
-          "name": "PrimaryHandlingPanel",
+          "name": "PrimaryVetPanel",
           "elements": [
             {
               "type": "html",
-              "name": "PrimaryHandlingHeading",
+              "name": "PrimaryVetHeading",
               "html": "<h3>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h3>"
             },
             {
               "type": "html",
-              "name": "PrimaryHandlingText",
+              "name": "PrimaryVetText",
               "html": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p><p>If you changed primary vets since {CmpnName}'s LP/GOLPP symptoms first appeared   , please answer the question about your preferred or most recent primary veterinarian."
             },
             {
               "type": "panel",
-              "name": "PrimaryHandlingInflammationPanel",
+              "name": "PrimaryVetInflammationPanel",
               "title": "",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "PrimaryHandlingInflammation",
+                  "name": "PrimaryVetInflammation",
                   "title": "Did your primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
                   "isRequired": true,
                   "choices": [
@@ -1670,11 +1596,11 @@
             },
             {
               "type": "panel",
-              "name": "PrimaryHandlingDiagnosisPanel",
+              "name": "PrimaryVetDiagnosisPanel",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "PrimaryHandlingDiagnosis",
+                  "name": "PrimaryVetDiagnosis",
                   "title": "Did your primary vet give you a diagnosis of LP for {CmpnName}? ",
                   "isRequired": true,
                   "choices": [
@@ -1703,10 +1629,10 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "PrimaryHandlingDiagnosticType",
+                  "name": "PrimaryVetDiagnosticType",
                   "title": "What diagnostic procedure did your primary veterinarian use to arrive at their conclusion?",
                   "isRequired": true,
-                  "visibleIf": "{PrimaryHandlingDiagnosis} = 'NO_SUGGESTED' || {PrimaryHandlingDiagnosis} = 'YES_UNCONFIRMED' || {PrimaryHandlingDiagnosis} = 'YES_CONFIRMED' ",
+                  "visibleIf": "{PrimaryVetDiagnosis} = 'NO_SUGGESTED' || {PrimaryVetDiagnosis} = 'YES_UNCONFIRMED' || {PrimaryVetDiagnosis} = 'YES_CONFIRMED' ",
                   "choices": [
                     {
                       "value": "ROUTINE_EXAM",
@@ -1743,7 +1669,7 @@
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "PrimaryHandlingPrescriptions",
+                  "name": "PrimaryVetPrescriptions",
                   "title": "Did your primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
                   "isRequired": true,
                   "choices": [
@@ -1764,10 +1690,10 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "PrimaryHandlingPrescriptionType",
+                  "name": "PrimaryVetPrescriptionType",
                   "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
                   "isRequired": true,
-                  "visibleIf": "{PrimaryHandlingPrescriptions} = YES",
+                  "visibleIf": "{PrimaryVetPrescriptions} = YES",
                   "choices": [
                     {
                       "value": "DOXEPIN",
@@ -1819,11 +1745,11 @@
                 },
                 {
                   "type": "rating",
-                  "name": "PrimaryHandlingPrescriptionEffectiveness",
+                  "name": "PrimaryVetPrescriptionEffectiveness",
                   "title": "How effective were these prescription medications for {CmpnName}'s LP/GOLPP?",
                   "description": "1 = not at all effective, 5 = very effective",
                   "isRequired": true,
-                  "visibleIf": "{PrimaryHandlingPrescriptions} = YES",
+                  "visibleIf": "{PrimaryVetPrescriptions} = YES",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1855,11 +1781,11 @@
             },
             {
               "type": "panel",
-              "name": "PrimaryHandlingNonPrescriptionPanel",
+              "name": "PrimaryVetNonPrescriptionPanel",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "PrimaryHandlingNonPrescription",
+                  "name": "PrimaryVetNonPrescription",
                   "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
                   "isRequired": true,
                   "choices": [
@@ -1880,10 +1806,10 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "PrimaryHandlingNonPrescriptionType",
+                  "name": "PrimaryVetNonPrescriptionType",
                   "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
                   "isRequired": true,
-                  "visibleIf": "{PrimaryHandlingNonPrescription} = YES",
+                  "visibleIf": "{PrimaryVetNonPrescription} = YES",
                   "choices": [
                     {
                       "value": "ACUPUNCTURE",
@@ -1902,11 +1828,11 @@
                 },
                 {
                   "type": "rating",
-                  "name": "PrimaryHandlingNonPrescriptionEffectiveness",
+                  "name": "PrimaryVetNonPrescriptionEffectiveness",
                   "title": "How effective were these treatments?",
                   "description": "1 = not at all effective, 5 = very effective",
                   "isRequired": true,
-                  "visibleIf": "{PrimaryHandlingNonPrescription} = YES",
+                  "visibleIf": "{PrimaryVetNonPrescription} = YES",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1941,176 +1867,93 @@
       ]
     },
     {
-      "name": "PRIMARY_RECOMMENDATION-page",
+      "name": "DIAGNOSIS-page",
       "elements": [
         {
           "type": "panel",
-          "name": "PrimaryRecommendationPanel",
+          "name": "DiagnosisPanel",
           "elements": [
             {
               "type": "html",
-              "name": "PrimaryRecommendationHeading",
-              "html": "<h3>This section asks about specific recommendations your primary made about {CmpnName}'s LP/GOLPP symptoms.</h3>"
+              "name": "DiagnosisHeading",
+              "html": "<h3>Diagnosing LP/GOLPP</h3>"
+            },
+            {
+              "type": "html",
+              "name": "DiagnosisText",
+              "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TREATMENT_STATUS-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "TreatmentStatusPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "TreatmentStatusHeading",
+              "html": "<h3>Veterinary-Medical Procedures</h3>"
+            },
+            {
+              "type": "html",
+              "name": "TreatmentStatusText",
+              "html": "<p>This section asks if {CmpnName} underwent any veterinary-medical procedure such as surgery or stent implant for LP/GOLPP and if so, which procedure.</p>"
+            },
+            {
+              "type": "html",
+              "name": "TreatmentStatusText",
+              "html": "<p><b>IMPORTANT:</b> This only includes surgeries or procedures that act directly on the larynx. It doesn't include acupuncture, physical therapy or other therapies your vet may have prescribed.</p>"
             },
             {
               "type": "panel",
-              "name": "PrimaryRecommendationInfoPanel",
-              "title": "",
+              "name": "TreatmentStatusDidHavePanel",
               "elements": [
                 {
-                  "type": "boolean",
-                  "name": "PrimaryRecommendInfoDidGive",
-                  "title": "Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect {CmpnName}?",
+                  "type": "radiogroup",
+                  "name": "TreatmentStatusDidHave",
+                  "title": "Did undergo {CmpnName} a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "NONE",
+                      "text": "No"
+                    },
+                    {
+                      "value": "SURGERY",
+                      "text": "Yes, surgery"
+                    },
+                    {
+                      "value": "STENT",
+                      "text": "Yes, stent implant"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "TreatmentStatusAgePanel",
+              "title": "About how old was {CmpnName} when she had the surgery or stent procedure?",
+              "description": "If you can't remember exactly, it's OK to guesstimate.",
+              "visibleIf": "{TreatmentStatusDidHave} != 'NONE'",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "TreatmentStatusAgeYears",
+                  "title": "Age (years)",
                   "isRequired": true
                 },
                 {
-                  "type": "checkbox",
-                  "name": "PrimaryRecommendInfoDetails",
-                  "title": "What did they tell you about the how LP/GOLPP might affect {CmpnName}?",
-                  "isRequired": true,
-                  "visibleIf": "{PrimaryRecommendInfoDidGive} = true",
-                  "choices": [
-                    {
-                      "value": "BARK_LOSS",
-                      "text": "Loss or weakening of bark"
-                    },
-                    {
-                      "value": "PROGRESSIVE",
-                      "text": "LP/GOLPP is a progressive disease"
-                    },
-                    {
-                      "value": "HOT_HUMID",
-                      "text": "Hot, humid weather exacerbates symptoms"
-                    },
-                    {
-                      "value": "BREATHING_CRISIS",
-                      "text": "Potential for life-threatening breathing crisis"
-                    }
-                  ],
-                  "showOtherItem": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "PrimaryRecommendationSurgeryPanel",
-              "title": "",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "PrimaryRecommendSurgery",
-                  "title": "Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for {CmpnName}'s LP/GOLPP?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "NO_RECOMMENDATION",
-                      "text": "Made no recommendation"
-                    },
-                    {
-                      "value": "ADVISED_FOR",
-                      "text": "Encouraged me to talk to a surgeon"
-                    },
-                    {
-                      "value": "ADVISED_AGAINST",
-                      "text": "Advised against surgery"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "PrimaryRecommendSurgeryPerception",
-                  "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
-                  "isRequired": true,
-                  "visibleIf": "{PrimaryRecommendSurgery} = 'ADVISED_AGAINST'",
-                  "choices": [
-                    {
-                      "value": "SPECIFIC_CONDITION",
-                      "text": "{CmpnName}'s specific condition"
-                    },
-                    {
-                      "value": "GENERAL_PERCEPTION",
-                      "text": "General negative perception"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "PrimaryRecommendationConfidencePanel",
-              "title": "",
-              "elements": [
-                {
-                  "type": "rating",
-                  "name": "PrimaryRecommendConfidence",
-                  "title": "How confident have you been you in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
-                  "description": "1 = not at all confident, 5 = very confident",
-                  "isRequired": true,
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
-                },
-                {
-                  "type": "rating",
-                  "name": "PrimaryRecommendCSatisfaction",
-                  "title": "How satisfied have you been with your current primary veterinarian's handling of {CmpnName}'s LP/GOLPP?",
-                  "description": "1 = not at all satisfied, 5 = very satisfied",
-                  "isRequired": true,
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "tex  !expectt": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
+                  "type": "text",
+                  "name": "TreatmentStatusAgeMonths",
+                  "title": "Age (months)",
+                  "isRequired": true
                 }
               ]
             }
@@ -2148,15 +1991,15 @@
                   "choices": [
                     {
                       "value": "WILL_PURSUE",
-                      "text": "Yes, we will pursue LP surgery such as tieback."
+                      "text": "We will pursue LP surgery such as tieback."
                     },
                     {
                       "value": "WILL_NOT_PURSUE",
-                      "text": "No, we've decided not to pursue LP surgery."
+                      "text": "We've decided not to pursue LP surgery."
                     },
                     {
                       "value": "UNDECIDED",
-                      "text": "We are still considering options and haven't yet made a decision."
+                      "text": "We haven't decided yet."
                     }
                   ],
                   "showOtherItem": false
@@ -2169,15 +2012,15 @@
                   "choices": [
                     {
                       "value": "YES",
-                      "text": "Yes, we would pursue that as an alternative to surgery."
+                      "text": "Yes, we would consider a stent implant."
                     },
                     {
                       "value": "NO",
-                      "text": "No, we would not pursue a stent implant as alternative to surgery."
+                      "text": "No, we would not consider a stent implant."
                     },
                     {
                       "value": "NOT_INFORMED",
-                      "text": "We don't have enough information about the stent implant to answer at this time."
+                      "text": "We need more information."
                     }
                   ],
                   "showOtherItem": false

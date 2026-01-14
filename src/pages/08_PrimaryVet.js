@@ -3,16 +3,14 @@ import Link from 'next/link';
 import SurveyComponent from '@/components/SurveyComponent'
 import SurveyMenu from '@/components/SurveyMenu'
 
-const SCRAP2 = () => {
+const PRIMARY_VET = () => {
   return (
       <section className="section">
         <div className="section_content">
-
-
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'SCRAP2-page' />
+            <SurveyComponent startPageName = 'PRIMARY_VET-page' />
           </div>
 
         </div>
@@ -20,4 +18,4 @@ const SCRAP2 = () => {
   )
 }
 
-export default SCRAP2
+export default PRIMARY_VET

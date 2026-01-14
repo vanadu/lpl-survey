@@ -1,0 +1,21 @@
+{
+  "name": "MANAGEMENT-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "ManagementPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "ManagementHeading",
+          "html": "<h3>Medical managment of LP/GOLPP</h3>"
+        },
+        {
+          "type": "html",
+          "name": "ManagementText",
+          "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+        }
+      ]
+    }
+  ]
+}
