@@ -53,9 +53,16 @@
                   "text": "Months must be between 1 and 12"
                 }
               ]
+            },
+            {
+              "type": "html",
+              "name": "symptomDurationDisplay",
+              "visibleIf": "{EarlySymptomsAgeYears} notempty && {EarlySymptomsAgeMonths} notempty",
+              "html": "{CmpnName} has had symptoms for {lengthOfSymptomsinMonths} months."
             }
           ]
         },
+
         {
           "type": "panel",
           "name": "EarlySymptomsDetailsPanel",
@@ -107,6 +114,7 @@
               "noneText": "Don't know",
               "otherText": "Other (max 250 characters)"
             },
+            
             {
               "type": "rating",
               "name": "EarlySymtomsSeverity",
@@ -154,14 +162,33 @@
                   "text": "Megaesophagus"
                 },
                 {
-                  "value": "PERIODONTAL",
-                  "text": "Periodontal disease"
+                  "value": "DM",
+                  "text": "Degenerative Myelopathy"
+                },
+                {
+                  "value": "ARTHRITIS",
+                  "text": "Arthritis"
+                },
+                {
+                  "value": "CUSHINGS",
+                  "text": "Cushings"
+                },
+                {
+                  "value": "CT",
+                  "text": "Collapsing Trachea"
+                },
+                {
+                  "value": "HYPOTHYROID",
+                  "text": "Hypothyroidism"
+                },
+                {
+                  "value": "HEMANGIOSARCOMA",
+                  "text": "Hemangiosarcoma"
                 }
               ],
               "choicesOrder": "none",
               "otherText": "Other (max. 250 characters)",
-              "showOtherItem": true,
-              "showNoneItem": true
+              "showOtherItem": true
             }
           ]
         }

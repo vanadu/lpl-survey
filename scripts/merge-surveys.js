@@ -14,7 +14,8 @@ const pageFiles = [
   "08_PRIMARY_VET-page.json",
   "09_DIAGNOSIS-page.json",
   "10_TREATMENT_STATUS-page.json",
-  "11_TREATMENT_FACTORS-page.json"
+  "11_TREATMENT_FACTORS-page.json",
+  "12_MANAGEMENT-page.json"
 
 ];
 
@@ -45,6 +46,23 @@ const pages = pageFiles.map(filename => {
 });
 
 const masterSurvey = {
+    "calculatedValues": [
+    {
+      "name": "ageInMonths",
+      "expression":
+        "{lvngCmpnInfoAgeYears} * 12 + {lvngCmpnInfoAgeMonths}"
+    },
+    {
+      "name": "ageInMonthsAtSymptomOnset",
+      "expression":
+        "{EarlySymptomsAgeYears} * 12 + {EarlySymptomsAgeMonths}"
+    },
+    {
+      "name": "lengthOfSymptomsInMonths",
+      "expression":
+        "{ageInMonths} - {ageInMonthsAtSymptomOnset}"
+    }
+  ],
   title: "Master Survey Build",
   showProgressBar: "top",
   pages

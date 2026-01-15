@@ -1,4 +1,18 @@
 {
+  "calculatedValues": [
+    {
+      "name": "ageInMonths",
+      "expression": "{lvngCmpnInfoAgeYears} * 12 + {lvngCmpnInfoAgeMonths}"
+    },
+    {
+      "name": "ageInMonthsAtSymptomOnset",
+      "expression": "{EarlySymptomsAgeYears} * 12 + {EarlySymptomsAgeMonths}"
+    },
+    {
+      "name": "lengthOfSymptomsInMonths",
+      "expression": "{ageInMonths} - {ageInMonthsAtSymptomOnset}"
+    }
+  ],
   "title": "Master Survey Build",
   "showProgressBar": "top",
   "pages": [
@@ -17,7 +31,17 @@
             {
               "type": "html",
               "name": "LandingText",
-              "html": "<p>The goal of this survey is to collect information about your beloved animal companion's experience with the disease of laryngeal paralysis (LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP). </p> <p>The LP/GOLPP journey is a learning process, and at the beginning people often have more questions than answers. The survey asks you to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, it's best to discontinue the survey and return later when you have more information.</p> <p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
+              "html": "<p>The goal of this survey is to collect information about your beloved animal companion's experience with the disease of laryngeal paralysis (LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP). </p><p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
+            },
+            {
+              "type": "html",
+              "name": "LandingJourneyHeading",
+              "html": "<h3>Your LP/GOLPP Journey</h3>"
+            },
+            {
+              "type": "html",
+              "name": "LandingJourneyText",
+              "html": "<p>The LP/GOLPP journey is a learning process, and at the beginning people often have more questions than answers. The survey asks you to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, it's best to discontinue the survey and return later when you have more information.</p>"
             },
             {
               "type": "html",
@@ -349,12 +373,7 @@
             {
               "type": "html",
               "name": "CmpnInfoText",
-              "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. </p>"
-            },
-            {
-              "type": "html",
-              "name": "CmpnInfoPleaseTell",
-              "html": "<p>Please tell us about {CmpnName} below. If you don't know exact information, it's OK to guesstimate. "
+              "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
             },
             {
               "type": "panel",
@@ -363,7 +382,7 @@
                 {
                   "type": "radiogroup",
                   "name": "CmpnInfoAnimalType",
-                  "title": "Species:",
+                  "title": "{CmpnName}'s species:",
                   "isRequired": true,
                   "choices": [
                     {
@@ -385,7 +404,7 @@
             {
               "type": "panel",
               "name": "CmpnInfoBreedGenderPanel",
-              "title": "Breed or breed mix and gender:",
+              "title": "{CmpnName}'s breed/breed mix and gender:",
               "elements": [
                 {
                   "type": "text",
@@ -1075,8 +1094,8 @@
                       "text": "No"
                     },
                     {
-                      "value": "Don't know",
-                      "text": "DONT_KNOW"
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
                     }
                   ]
                 },
@@ -1253,6 +1272,12 @@
                       "text": "Months must be between 1 and 12"
                     }
                   ]
+                },
+                {
+                  "type": "html",
+                  "name": "symptomDurationDisplay",
+                  "visibleIf": "{EarlySymptomsAgeYears} notempty && {EarlySymptomsAgeMonths} notempty",
+                  "html": "{CmpnName} has had symptoms for {lengthOfSymptomsinMonths} months."
                 }
               ]
             },
@@ -1384,7 +1409,7 @@
             {
               "type": "html",
               "name": "PrimaryDurationText",
-              "html": "<p>This section asks questions about the duration of {CmpnName}'s care by primary veterinarians for LP/GOLPP symptoms and how {CmpnName}'s condition changed over this time period. This includes your current primary veterinarian and any prior vets who examined {CmpnName} since the LP/GOLPP symptoms first appeared.</p>"
+              "html": "<p>This section asks questions about the duration of {CmpnName}'s care by primary veterinarians for LP/GOLPP symptoms. This includes any primary veterinarians who saw {CmpnName} since the LP/GOLPP symptoms first appeared. It also asks whether you switched primary vets because of how {CmpnName}'s symptoms were being handled. </p>"
             },
             {
               "type": "panel",
@@ -1434,7 +1459,7 @@
                 {
                   "type": "radiogroup",
                   "name": "PrimaryDurationVisitsNumber",
-                  "title": "About how many times have you visited a primary veterinarian (including your current one) about {CmpnName}'s LP/GOLPP symptoms?",
+                  "title": "About how many times did a primary veterinarian see {CmpnName} about LP/GOLPP symptoms?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1518,7 +1543,7 @@
                   "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?",
                   "description": "Please check all that apply.",
                   "isRequired": true,
-                  "visibleIf": "{ChangedVetsDidChange} != 'NO'",
+                  "visibleIf": "{PrimaryDurationChangedVets} != 'NO'",
                   "choices": [
                     {
                       "value": "NOTHING_CAN_BE_DONE",
@@ -1786,205 +1811,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "type": "panel",
-              "name": "panelName",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "PrimaryVetPrescriptions",
-                  "title": "Did your primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "checkbox",
-                  "name": "PrimaryVetPrescriptionType",
-                  "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
-                  "isRequired": true,
-                  "visibleIf": "{PrimaryVetPrescriptions} = YES",
-                  "choices": [
-                    {
-                      "value": "DOXEPIN",
-                      "text": "Doxepin"
-                    },
-                    {
-                      "value": "TRAZODONE",
-                      "text": "Trazodone"
-                    },
-                    {
-                      "value": "GABAPENTIN",
-                      "text": "Gabapentin"
-                    },
-                    {
-                      "value": "STERIOD",
-                      "text": "Prednisone or other steriod"
-                    },
-                    {
-                      "value": "NSAID",
-                      "text": "Carprofen or other NSAID"
-                    },
-                    {
-                      "value": "LIBRELA",
-                      "text": "Librela/Beransa"
-                    },
-                    {
-                      "value": "CERENIA",
-                      "text": "Cerenia (maripotant citrate)"
-                    },
-                    {
-                      "value": "MELOXICAM",
-                      "text": "Meloxicam"
-                    },
-                    {
-                      "value": "ACEPROMAZINE",
-                      "text": "Acepromazine (Atravet, ACP)"
-                    },
-                    {
-                      "value": "ALBUTEROL",
-                      "text": "Albuterol or other inhaler"
-                    },
-                    {
-                      "value": "TEMARIL P",
-                      "text": "Temaril P"
-                    }
-                  ],
-                  "showOtherItem": true,
-                  "showNoneItem": true
-                },
-                {
-                  "type": "rating",
-                  "name": "PrimaryVetPrescriptionEffectiveness",
-                  "title": "How effective were these prescription medications for {CmpnName}'s LP/GOLPP?",
-                  "description": "1 = not at all effective, 5 = very effective",
-                  "isRequired": true,
-                  "visibleIf": "{PrimaryVetPrescriptions} = YES",
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "PrimaryVetNonPrescriptionPanel",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "PrimaryVetNonPrescription",
-                  "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "checkbox",
-                  "name": "PrimaryVetNonPrescriptionType",
-                  "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
-                  "isRequired": true,
-                  "visibleIf": "{PrimaryVetNonPrescription} = YES",
-                  "choices": [
-                    {
-                      "value": "ACUPUNCTURE",
-                      "text": "Acupuncture"
-                    },
-                    {
-                      "value": "PHYSICAL_THERAPY",
-                      "text": "Physical or hydro therapy"
-                    },
-                    {
-                      "value": "LLLT",
-                      "text": "Cold laser or red light therapy"
-                    }
-                  ],
-                  "showOtherItem": true
-                },
-                {
-                  "type": "rating",
-                  "name": "PrimaryVetNonPrescriptionEffectiveness",
-                  "title": "How effective were these treatments?",
-                  "description": "1 = not at all effective, 5 = very effective",
-                  "isRequired": true,
-                  "visibleIf": "{PrimaryVetNonPrescription} = YES",
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
-                }
-              ]
             }
           ]
         }
@@ -2000,12 +1826,12 @@
             {
               "type": "html",
               "name": "DiagnosisHeading",
-              "html": "<h3>Diagnosing LP/GOLPP</h3>"
+              "html": "<h3>{CmpnName}'s LP/GOLPP diagnosis</h3>"
             },
             {
               "type": "html",
               "name": "DiagnosisText",
-              "html": "<p>Blob Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+              "html": "<p>This section asks who provided {CmpnName}'s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p><p>You may have seen multiple vets about {CmpnName}'s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about {CmpnName}'s LP/GOLPP.</p>"
             }
           ]
         },
@@ -2014,18 +1840,48 @@
           "name": "DiagnosisDetailsPanel",
           "elements": [
             {
-              "type": "radiogroup",
+              "type": "dropdown",
+              "name": "DiagnosisWho",
+              "title": "Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "PRIMARY",
+                  "text": "Primary veterinarian"
+                },
+                {
+                  "value": "INTERNIST",
+                  "text": "Internal medicine specialist"
+                },
+                {
+                  "value": "NEUROLOGIST",
+                  "text": "Neurologist"
+                },
+                {
+                  "value": "SOFT_TISSUE",
+                  "text": "Soft tissue specialist or surgeon"
+                },
+                {
+                  "value": "GENERAL",
+                  "text": "General or orthopedic surgeon"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": false
+            },
+            {
+              "type": "dropdown",
               "name": "PrimaryVetDiagnosticType",
-              "title": "What diagnostic procedure did your primary veterinarian use to arrive at their conclusion?",
+              "title": "What diagnostic procedure ws used to arrive at the definitive diagnosis?",
               "isRequired": true,
               "choices": [
                 {
                   "value": "ROUTINE_EXAM",
-                  "text": "Routine exam"
+                  "text": "Visual/auditory exam only"
                 },
                 {
                   "value": "SEDATED_VISUAL",
-                  "text": "Visual exam under sedation"
+                  "text": "Sedated visual exam of larynx"
                 },
                 {
                   "value": "XRAY",
@@ -2045,6 +1901,56 @@
                 }
               ],
               "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "DiagnosisCost",
+              "title": "What was the pre-insurance cost of the diagnosis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "UNDER_500",
+                  "text": "Under $500"
+                },
+                {
+                  "value": "500_1500",
+                  "text": "$501-$1500"
+                },
+                {
+                  "value": "1501_3000",
+                  "text": "$1500-$3000"
+                },
+                {
+                  "value": "OVER_3000",
+                  "text": "Over $3000"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or prefer not to say"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "DiagnosisSurgeonContingent",
+              "title": "Did the surgeon make the definitive diagnosis by laryngoscope or video endoscope contingent on proceeding with the LP surgery?",
+              "isRequired": true,
+              "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes, required surgery consent before diagnosis"
+                },
+                {
+                  "value": "NO",
+                  "text": "No, did not require surgery consent for diagnosis"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
             }
           ]
         }
@@ -2197,7 +2103,7 @@
                 {
                   "type": "html",
                   "name": "TreatmentFactorsDetailsText",
-                  "html": "<p>Please the factors that played a role in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>"
+                  "html": "<p>Please rate the relevant factors in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>"
                 },
                 {
                   "type": "rating",
@@ -2436,6 +2342,226 @@
                   "name": "TreatmentFactorsOther",
                   "title": "What other factors influenced your decision whether or not to pursue surgery?",
                   "isRequired": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MANAGEMENT-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "ManagementPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ManagementHeading",
+              "html": "<h3>Medical managment of LP/GOLPP</h3>"
+            },
+            {
+              "type": "html",
+              "name": "ManagementText",
+              "html": "<p>Attempting to manage LP/GOLPP symptoms with medications is controversial. While no medication can restore movement to paralyzed laryneal tissue, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP patient's quality of life. </p>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ManagementPrescriptions",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "ManagementPrescriptions",
+              "title": "Did your primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "ManagementPrescriptionType",
+              "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = YES",
+              "choices": [
+                {
+                  "value": "DOXEPIN",
+                  "text": "Doxepin"
+                },
+                {
+                  "value": "TRAZODONE",
+                  "text": "Trazodone"
+                },
+                {
+                  "value": "GABAPENTIN",
+                  "text": "Gabapentin"
+                },
+                {
+                  "value": "STERIOD",
+                  "text": "Prednisone or other steriod"
+                },
+                {
+                  "value": "NSAID",
+                  "text": "Carprofen or other NSAID"
+                },
+                {
+                  "value": "LIBRELA",
+                  "text": "Librela/Beransa"
+                },
+                {
+                  "value": "CERENIA",
+                  "text": "Cerenia (maripotant citrate)"
+                },
+                {
+                  "value": "MELOXICAM",
+                  "text": "Meloxicam"
+                },
+                {
+                  "value": "ACEPROMAZINE",
+                  "text": "Acepromazine (Atravet, ACP)"
+                },
+                {
+                  "value": "ALBUTEROL",
+                  "text": "Albuterol or other inhaler"
+                },
+                {
+                  "value": "TEMARIL P",
+                  "text": "Temaril P"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionEffectiveness",
+              "title": "How effective were these prescription medications for {CmpnName}'s LP/GOLPP?",
+              "description": "1 = not at all effective, 5 = very effective",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = YES",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "1"
+                },
+                {
+                  "value": 2,
+                  "text": "2"
+                },
+                {
+                  "value": 3,
+                  "text": "3"
+                },
+                {
+                  "value": 4,
+                  "text": "4"
+                },
+                {
+                  "value": 5,
+                  "text": "5"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ManagementNonPrescriptionPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "ManagementNonPrescription",
+              "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "ManagementNonPrescriptionType",
+              "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = YES",
+              "choices": [
+                {
+                  "value": "ACUPUNCTURE",
+                  "text": "Acupuncture"
+                },
+                {
+                  "value": "PHYSICAL_THERAPY",
+                  "text": "Physical or hydro therapy"
+                },
+                {
+                  "value": "LLLT",
+                  "text": "Cold laser or red light therapy"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionEffectiveness",
+              "title": "How effective were these treatments?",
+              "description": "1 = not at all effective, 5 = very effective",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = YES",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "1"
+                },
+                {
+                  "value": 2,
+                  "text": "2"
+                },
+                {
+                  "value": 3,
+                  "text": "3"
+                },
+                {
+                  "value": 4,
+                  "text": "4"
+                },
+                {
+                  "value": 5,
+                  "text": "5"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
                 }
               ]
             }

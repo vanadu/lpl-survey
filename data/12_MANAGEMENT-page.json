@@ -13,136 +13,295 @@
         {
           "type": "html",
           "name": "ManagementText",
-          "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
-        }
-      ]
-    },
-
+          "html": "<p>Attempting to manage LP/GOLPP symptoms with medications is controversial. While no medication can restore movement to paralyzed laryneal tissue, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP patient's quality of life. </p>"
+        },
         {
-          "type": "panel",
+          "type": "radiogroup",
           "name": "ManagementPrescriptions",
-          "elements": [
-
+          "title": "Did your primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP symptoms?",
+          "isRequired": true,
+          "choices": [
             {
-              "type": "radiogroup",
-              "name": "ManagementPrescriptions",
-              "title": "Did your primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
+              "value": "YES",
+              "text": "Yes"
             },
             {
-              "type": "checkbox",
-              "name": "ManagementPrescriptionType",
-              "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP?",
-              "isRequired": true,
-              "visibleIf": "{ManagementPrescriptions} = YES",
-              "choices": [
-                {
-                  "value": "DOXEPIN",
-                  "text": "Doxepin"
-                },
-                {
-                  "value": "TRAZODONE",
-                  "text": "Trazodone"
-                },
-                {
-                  "value": "GABAPENTIN",
-                  "text": "Gabapentin"
-                },
-                {
-                  "value": "STERIOD",
-                  "text": "Prednisone or other steriod"
-                },
-                {
-                  "value": "NSAID",
-                  "text": "Carprofen or other NSAID"
-                },
-                {
-                  "value": "LIBRELA",
-                  "text": "Librela/Beransa"
-                },
-                {
-                  "value": "CERENIA",
-                  "text": "Cerenia (maripotant citrate)"
-                },
-                {
-                  "value": "MELOXICAM",
-                  "text": "Meloxicam"
-                },
-                {
-                  "value": "ACEPROMAZINE",
-                  "text": "Acepromazine (Atravet, ACP)"
-                },
-                {
-                  "value": "ALBUTEROL",
-                  "text": "Albuterol or other inhaler"
-                },
-                {
-                  "value": "TEMARIL P",
-                  "text": "Temaril P"
-                }
-              ],
-              "showOtherItem": true,
-              "showNoneItem": true
+              "value": "NO",
+              "text": "No"
             },
             {
-              "type": "rating",
-              "name": "ManagementPrescriptionEffectiveness",
-              "title": "How effective were these prescription medications for {CmpnName}'s LP/GOLPP?",
-              "description": "1 = not at all effective, 5 = very effective",
-              "isRequired": true,
-              "visibleIf": "{ManagementPrescriptions} = YES",
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
+              "value": "DONT_KNOW",
+              "text": "Don't know"
             }
-          ]
+          ],
+          "showOtherItem": false
+        },
+        {
+              "type": "panel",
+              "name": "ManagementPrescriptionTypePanel",
+              "visibleIf": "{ManagementPrescriptions} = YES",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "ManagementPrescriptionType",
+                  "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP symptoms?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "DOXEPIN",
+                      "text": "Doxepin"
+                    },
+                    {
+                      "value": "TRAZODONE",
+                      "text": "Trazodone"
+                    },
+                    {
+                      "value": "GABAPENTIN",
+                      "text": "Gabapentin"
+                    },
+                    {
+                      "value": "GALLIPRANT",
+                      "text": "Galliprant"
+                    },
+                    {
+                      "value": "STEROID",
+                      "text": "Prednisone or other steriod"
+                    },
+                    {
+                      "value": "FAMOTADINE",
+                      "text": "Pepcid (famotadine)"
+                    },
+                    {
+                      "value": "OMEPRAZOLE",
+                      "text": "Prilosec"
+                    },                                
+                    {
+                      "value": "CERENIA",
+                      "text": "Cerenia (maripotant citrate)"
+                    },
+                    {
+                      "value": "MELOXICAM",
+                      "text": "Meloxicam"
+                    },
+                    {
+                      "value": "ACEPROMINE",
+                      "text": "Acepromazine (Atravet, ACP, Acepromine)"
+                    },
+                    {
+                      "value": "ALBUTEROL",
+                      "text": "Albuterol or other inhaler"
+                    },
+                    {
+                      "value": "TEMARIL_P",
+                      "text": "Temaril P"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionDoxepinRating",
+                  "title": "How did doxepin affect {CmpnName}?",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'DOXEPIN'",
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionTrazodoneRating",
+                  "title": "How did Trazodone affect {CmpnName}?",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'TRAZODONE'",
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionGabapentinRating",
+                  "title": "How did Gabapentin affect {CmpnName}?",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'GABAPENTIN'",
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionGalliprantRating",
+                  "title": "How did Galliprant affect {CmpnName}?",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'GALLIPRANT'",
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
+                },    
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionPrednisoneRating",
+                  "title": "How did Prednisone affect {CmpnName}?",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'STEROID'",
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
+                },   
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionCereniaRating",
+                  "title": "How did Cerenia affect {CmpnName}?",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'CERENIA'",
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
+                },   
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionMeloxicamRating",
+                  "title": "How did Meloxicam affect {CmpnName}?",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'MELOXICAM'",
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
+                },   
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionAcepromineRating",
+                  "title": "How did Acepromine affect {CmpnName}?",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'ACEPROMINE'",
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
+                },   
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionAlbuterolRating",
+                  "title": "How did Albuterol or other inhaler affect {CmpnName}?",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'ALBUTEROL'",
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
+                },   
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionTemaril PRating",
+                  "title": "How did Temaril P affect {CmpnName}?",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'TEMARIL_P'",
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
+                },   
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionXXXRating",
+                  "title": "How did XXX affect {CmpnName}?",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'XXX'",
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" },
+                    { "value": "DONT_KNOW", "text": "Don't know" }
+                  ]
+                }                                                                    
+              ]
+
+        },
+        {
+          "type": "radiogroup",
+          "name": "ManagementNonPrescription",
+          "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
         },
         {
           "type": "panel",
           "name": "ManagementNonPrescriptionPanel",
           "elements": [
-
-            {
-              "type": "radiogroup",
-              "name": "ManagementNonPrescription",
-              "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
-            },
             {
               "type": "checkbox",
               "name": "ManagementNonPrescriptionType",
@@ -155,23 +314,75 @@
                   "text": "Acupuncture"
                 },
                 {
-                  "value": "PHYSICAL_THERAPY",
+                  "value": "THERAPY",
                   "text": "Physical or hydro therapy"
                 },
                 {
                   "value": "LLLT",
                   "text": "Cold laser or red light therapy"
+                },
+                {
+                  "value": "CHIRO",
+                  "text": "Chiropractic"
                 }
               ],
               "showOtherItem": true
             },
             {
               "type": "rating",
-              "name": "ManagementNonPrescriptionEffectiveness",
-              "title": "How effective were these treatments?",
+              "name": "ManagementNonPrescriptionAcupunctureRating",
+              "title": "How effective was acupuncture?",
               "description": "1 = not at all effective, 5 = very effective",
               "isRequired": true,
-              "visibleIf": "{ManagementNonPrescription} = YES",
+              "visibleIf": "{ManagementNonPrescriptionType} contains 'ACUPUNCTURE'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionTherapyRating",
+              "title": "How effective was physical or hydro therapy?",
+              "description": "1 = not at all effective, 5 = very effective",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescriptionType} contains 'THERAPY'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionColdLaserRating",
+              "title": "How effective was cold laser or red light therapy?",
+              "description": "1 = not at all effective, 5 = very effective",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescriptionType} contains 'LLLT'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionChiropracticRating",
+              "title": "How effective was chiropractic?",
+              "description": "1 = not at all effective, 5 = very effective",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescriptionType} contains 'CHIRO'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -181,9 +392,11 @@
                 { "value": "DONT_KNOW", "text": "Don't know" }
               ]
             }
+            
+
           ]
         }
-
-
+      ]
+    }
   ]
 }

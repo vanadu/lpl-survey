@@ -19,6 +19,7 @@ import PRIMARY_VET from "../../data/08_PRIMARY_VET-page.json";
 import DIAGNOSIS from "../../data/09_DIAGNOSIS-page.json";
 import TREATMENT_STATUS from "../../data/10_TREATMENT_STATUS-page.json";
 import TREATMENT_FACTORS from "../../data/11_TREATMENT_FACTORS-page.json";
+import MANAGEMENT from "../../data/12_MANAGEMENT-page.json";
 
 const surveyJson = {
   pages: [
@@ -33,7 +34,8 @@ const surveyJson = {
     PRIMARY_VET,
     DIAGNOSIS,
     TREATMENT_STATUS,
-    TREATMENT_FACTORS
+    TREATMENT_FACTORS,
+    MANAGEMENT
   ]
 };
 
