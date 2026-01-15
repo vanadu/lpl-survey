@@ -28,7 +28,7 @@
             {
               "type": "radiogroup",
               "name": "TreatmentStatusDidHave",
-              "title": "Did undergo {CmpnName} a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
+              "title": "Did {CmpnName} undergo a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
               "isRequired": true,
               "choices": [
                 {

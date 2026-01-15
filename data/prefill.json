@@ -90,9 +90,9 @@
 
 
 
-  "VetProcedureDidHave": "NO",
-  "VetProcedureAgeYears": "13",
-  "VetProcedureAgeMonths": "6",
+  "TreatmentStatusDidHave": "STENT",
+  "TreatmentStatusAgeYears": "13",
+  "TreatmentStatusAgeMonths": "6",
 
   "PrimaryDurationFirstConsultYears": 13,
   "PrimaryDurationFirstConsultMonths": 1,

@@ -14,6 +14,45 @@
           "type": "html",
           "name": "ComplicationsText",
           "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+        },
+        {
+          "type": "panel",
+          "name": "ComplicationsNoTreatment",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ComplicationsNoTreatmentText",
+              "visibleIf": "{TreatmentStatusDidHave} = 'NONE'",
+              "html": "This will be displayed if {CmpnName} had neither surgery nor stent"
+            }
+    
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ComplicationsSurgery",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ComplicationsSurgeryText",
+              "visibleIf": "{TreatmentStatusDidHave} = 'SURGERY'",
+              "html": "This will be displayed if {CmpnName} had SURGERY"
+            }
+    
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ComplicationsStent",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ComplicationsStentText",
+              "visibleIf": "{TreatmentStatusDidHave} = 'STENT'",
+              "html": "This will be displayed if {CmpnName} had a STENT"
+            }
+    
+          ]
         }
       ]
     }
