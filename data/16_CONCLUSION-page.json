@@ -1,0 +1,21 @@
+{
+  "name": "CONCLUSION-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "ConclusionPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "ConclusionHeading",
+          "html": "<h3>Conclusion Page</h3>"
+        },
+        {
+          "type": "html",
+          "name": "ConclusionText",
+          "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+        }
+      ]
+    }
+  ]
+}

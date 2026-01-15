@@ -1,0 +1,21 @@
+{
+  "name": "NEUROPATHY-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "NeuropathyPanel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "NeuropathyHeading",
+          "html": "<h3>The Polyneuropathy of GOLPP</h3>"
+        },
+        {
+          "type": "html",
+          "name": "NeuropathyText",
+          "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+        }
+      ]
+    }
+  ]
+}
