@@ -43,6 +43,57 @@
             }
           ]
         },
+
+        {
+          "type": "panel",
+          "name": "PrimaryVetRefluxPanel",
+          "title": "",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "PrimaryVetReflux",
+              "title": "Did your primary veterinarian mention reflux (GERD) or esophageal dysfunction as a possible cause of {CmpnName}'s symptoms?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "PrimaryVetRefluxMeds",
+              "title": "Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotadine) or Prilosec (omeprazole) for reflux?",
+              "isRequired": true,
+              "visibleIf": "{PrimaryVetReflux} = 'YES'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
         {
           "type": "panel",
           "name": "PrimaryVetDiagnosisPanel",

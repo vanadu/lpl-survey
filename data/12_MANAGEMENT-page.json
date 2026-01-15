@@ -280,7 +280,7 @@
         {
           "type": "radiogroup",
           "name": "ManagementNonPrescription",
-          "title": "Not including over-the-counter (OTC) supplements, did your current primary veterinarian provide or recommend any non-prescription treatments or therapies for {CmpnName}'s LP/GOLPP?:",
+          "title": "Did {CmpnName} recieve acupuncture or other therapies to help with LP/GOLPP symptoms?",
           "isRequired": true,
           "choices": [
             {
@@ -305,7 +305,7 @@
             {
               "type": "checkbox",
               "name": "ManagementNonPrescriptionType",
-              "title": "What non-prescription treatments (not including OTC supplements) did your current primary veterinarian recommend?",
+              "title": "What therapies or treatments did {CmpnName} receive?",
               "isRequired": true,
               "visibleIf": "{ManagementNonPrescription} = YES",
               "choices": [
