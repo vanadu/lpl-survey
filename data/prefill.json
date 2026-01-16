@@ -70,9 +70,6 @@
   ],
   "BreathingCrisisSubstanceForm": "LIQUID",
 
-
- 
-
   "EarlySymptomsAgeYears": "11",
   "EarlySymptomsAgeMonths": "2",
   "EarlySymptomsType": [
@@ -84,15 +81,8 @@
   "EarlySymptomsHindEndWeakness": "DONT_KNOW",
   "EarlyOtherConditions": [
     "GERD",
-    "PERIODONTAL"
+    "ARTHRITIS"
   ],
-
-
-
-
-  "TreatmentStatusDidHave": "NO",
-  "TreatmentStatusAgeYears": "13",
-  "TreatmentStatusAgeMonths": "6",
 
   "PrimaryDurationFirstConsultYears": 13,
   "PrimaryDurationFirstConsultMonths": 1,
@@ -103,15 +93,44 @@
     "AGE_ONLY",
     "MISDIAGNOSED"
   ],
-
   
+  "PrimaryVetInflammation": "YES",
+  "PrimaryVetReflux": "YES",
+  "PrimaryVetRefluxMeds": "NO",
+  "PrimaryVetRefluxInitiative": true,
+  "PrimaryVetDiagnosis": "POSSIBLY",
+  "PrimaryVetInfoDidGive": true,
+  "PrimaryVetInfoDetails": [
+    "BARK_LOSS",
+    "PROGRESSIVE"
+  ],
+  "PrimaryVetSurgery": "ADVISED_AGAINST",
+  "PrimaryVetSurgeryPerception": "GENERAL_PERCEPTION",
+  "PrimaryVetConfidence": 3,
+  "PrimaryVetSatisfaction": 3,
 
-  
-  "PrimaryHandlingInflammation": "YES",
-  "PrimaryHandlingDiagnosis": "YES_UNCONFIRMED",
-  "PrimaryHandlingDiagnosticType": "SEDATED_VISUAL",
-  "PrimaryHandlingPrescriptions": "YES",
-  "PrimaryHandlingPrescriptionType": [
+  "DiagnosisWho": "SOFT_TISSUE",
+  "PrimaryVetDiagnosticType": "SCOPE",
+  "DiagnosisCost": "500_1500",
+  "DiagnosisSurgeonContingent": "YES",
+
+  "TreatmentStatusDidHave": "SURGERY",
+  "TreatmentStatusAgeYears": "13",
+  "TreatmentStatusAgeMonths": "6",
+
+  "TreatmentFactorsDecision": "UNDECIDED",
+  "TreatmentFactorsDecisionStent": "NOT_INFORMED",
+  "TreatmentFactorsCost": 4,
+  "TreatmentFactorsCostComplications": 4,
+  "TreatmentFactorsRisks": 4,
+  "TreatmentFactorsRisksComplications": 4,
+  "TreatmentFactorsAge": 3,
+  "TreatmentFactorsCoexisting": 2,
+  "TreatmentPrimaryVetFactorsAccess": 1,
+  "TreatmentFactorsOther": "Hind end weakness",
+
+  "ManagementPrescriptions": "YES",
+  "ManagementPrescriptionType": [
     {
       "value": "DOXEPIN",
       "text": "Doxepin"
@@ -125,39 +144,29 @@
       "text": "Gabapentin"
     }
   ],
-  "PrimaryHandlingPrescriptionEffectiveness": "3",
-  "PrimaryHandlingNonPrescription": "YES",
-  "PrimaryHandlingNonPrescriptionType": [
+
+  "ManagementPrescriptionDoxepinRating": 4,
+  "ManagementPrescriptionTrazodoneRating": 2,
+  "ManagementPrescriptionGabapentinRating": 2,
+  "ManagementPrescriptionGalliprantRating": 3,
+  "ManagementPrescriptionSteroidRating": 2,
+  "ManagementPrescriptionFamotadineRating": 5,
+  "ManagementPrescriptionOmeprazoleRating": 5,
+  "ManagementPrescriptionCereniaRating": 3,
+  "ManagementPrescriptionMeloxicamRating": 4,
+  "ManagementPrescriptionAcepromineRating": 4,
+  "ManagementPrescriptionAlbuterolRating": 1,
+  "ManagementPrescriptionTemarilPRating": 3,
+  
+  "ManagementNonPrescription": "YES",
+  "ManagementNonPrescriptionType": [
     "ACUPUNCTURE",
-    "PHYSICAL_THERAPY"
+    "THERAPY"
   ],
-  "PrimaryHandlingNonPrescriptionEffectiveness": "2",
 
-
-
-  "PrimaryRecommendInfoDidGive": true,
-  "PrimaryRecommendInfoDetails": [
-    "BARK_LOSS",
-    "PROGRESSIVE"
-  ],
-  "PrimaryRecommendSurgery": "ADVISED_AGAINST",
-  "PrimaryRecommendSurgeryPerception": "GENERAL_PERCEPTION",
-  "PrimaryRecommendConfidence": 3,
-  "PrimaryRecommendCSatisfaction": 3,
-
-
-
-  "TreatmentFactorsDecision": "UNDECIDED",
-  "TreatmentFactorsDecisionStent": "NOT_INFORMED",
-  "TreatmentFactorsCost": 4,
-  "TreatmentFactorsCostComplications": 4,
-  "TreatmentFactorsRisks": 4,
-  "TreatmentFactorsRisksComplications": 4,
-  "TreatmentFactorsAge": 3,
-  "TreatmentFactorsCoexisting": 2,
-  "TreatmentFactorsAccess": 1,
-  "TreatmentFactorsOther": "Hind end weakness"
-
-
+  "ManagementNonPrescriptionAcupunctureRating": 4,
+  "ManagementNonPrescriptionTherapyRating": 4,
+  "ManagementNonPrescriptionColdLaserRating": 1,
+  "ManagementNonPrescriptionChiropracticRating": 4
 
 }

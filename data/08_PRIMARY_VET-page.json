@@ -94,17 +94,17 @@
             },
             {
               "type": "boolean",
-              "name": "PrimaryVetRefluxMeds",
+              "name": "PrimaryVetRefluxInitiative",
               "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotadine) or Prilosec (omeprazole) on your own intiative without a prescription or recommendation from your primary vet?",
               "isRequired": true,
               "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
               "choices": [
                 {
-                  "value": "YES",
+                  "value": true,
                   "text": "Yes"
                 },
                 {
-                  "value": "NO",
+                  "value": false,
                   "text": "No"
                 }
               ],
@@ -146,22 +146,22 @@
 
         {
           "type": "panel",
-          "name": "PrimaryRecommendationInfoPanel",
+          "name": "PrimaryVetInfoPanel",
           "title": "",
           "elements": [
           {
             "type": "boolean",
-            "name": "PrimaryRecommendInfoDidGive",
+            "name": "PrimaryVetInfoDidGive",
             "title": "Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect {CmpnName}?",
             "isRequired": true
           },
 
           {
             "type": "checkbox",
-            "name": "PrimaryRecommendInfoDetails",
+            "name": "PrimaryVetInfoDetails",
             "title": "What did they tell you about the how LP/GOLPP might affect {CmpnName}?",
             "isRequired": true,
-            "visibleIf": "{PrimaryRecommendInfoDidGive} = true",
+            "visibleIf": "{PrimaryVetInfoDidGive} = true",
             "choices": [
               {
                 "value": "BARK_LOSS",
@@ -186,13 +186,13 @@
         },
         {
           "type": "panel",
-          "name": "PrimaryRecommendationSurgeryPanel",
+          "name": "PrimaryVetSurgeryPanel",
           "title": "",
           "elements": [
 
             {
               "type": "radiogroup",
-              "name": "PrimaryRecommendSurgery",
+              "name": "PrimaryVetSurgery",
               "title": "Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for {CmpnName}'s LP/GOLPP?",
               "isRequired": true,
               "choices": [
@@ -213,10 +213,10 @@
             },
             {
               "type": "radiogroup",
-              "name": "PrimaryRecommendSurgeryPerception",
+              "name": "PrimaryVetSurgeryPerception",
               "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
               "isRequired": true,
-              "visibleIf": "{PrimaryRecommendSurgery} = 'ADVISED_AGAINST'",
+              "visibleIf": "{PrimaryVetSurgery} = 'ADVISED_AGAINST'",
               "choices": [
                 {
                   "value": "SPECIFIC_CONDITION",
@@ -237,14 +237,14 @@
         },
         {
           "type": "panel",
-          "name": "PrimaryRecommendationConfidencePanel",
+          "name": "PrimaryVetConfidencePanel",
           "title": "",
           "elements": [
 
 
             {
               "type": "rating",
-              "name": "PrimaryRecommendConfidence",
+              "name": "PrimaryVetConfidence",
               "title": "How confident have you been you in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
               "description": "1 = not at all confident, 5 = very confident",
               "isRequired": true,
@@ -259,7 +259,7 @@
             },
             {
               "type": "rating",
-              "name": "PrimaryRecommendCSatisfaction",
+              "name": "PrimaryVetSatisfaction",
               "title": "How satisfied have you been with your current primary veterinarian's handling of {CmpnName}'s LP/GOLPP?",
               "description": "1 = not at all satisfied, 5 = very satisfied",
               "isRequired": true,
