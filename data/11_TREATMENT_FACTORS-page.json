@@ -19,7 +19,7 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsDecisionPanel",
-          "visibleIf": "{VetProcedureDidHave} = 'NO' && {LifeStatus} = 'LIVING'",
+          "visibleIf": "{TreatmentStatusDidHave} = 'NO' && {LifeStatus} = 'LIVING'",
           "elements": [
             {
               "type": "dropdown",
@@ -65,20 +65,22 @@
             }
           ]
         },
+
+        {
+          "type": "html",
+          "name": "TreatmentFactorsDetailsText",
+          "html": "<p>Please rate the relevant factors in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>"
+        },
+
         {
           "type": "panel",
-          "name": "TreatmentFactorsDetailsPanel",
+          "name": "TreatmentFactorsCostPanel",
+          "title": "Financial considerations", 
           "elements": [
-            {
-              "type": "html",
-              "name": "TreatmentFactorsDetailsText",
-              "html": "<p>Please rate the relevant factors in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>"
-            },
-
             {
               "type": "rating",
               "name": "TreatmentFactorsCost",
-              "title": "Cost of procedure:",
+              "title": "Cost of surgical/stent procedure:",
               "description": "1 = not important, 5 = very important",
               "isRequired": true,
               "rateValues": [
@@ -102,11 +104,57 @@
                 { "value": 4, "text": "4" },
                 { "value": 5, "text": "5" }
               ]
+            }
+          ]
+        },
+
+
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsStagePanel",
+          "title": "Progression of {CmpnName}'s LP/GOLPP",
+          "elements": [
+          {
+            "type": "rating",
+            "name": "TreatmentFactorsStageLP",
+            "title": "Stage of {CmpnName}'s laryngeal paralysis and ability to breathe:",
+            "description": "1 = not a factor, 5 = deciding factor",
+            "isRequired": true,
+            "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" }
+            ]
             },
+
             {
               "type": "rating",
+              "name": "TreatmentFactorsStageNeuropathy",
+              "title": "Progression of {CmpnName}'s polyneuropathy and hind-end weakness:",
+              "description": "1 = not a factor, 5 = deciding factor",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsSurgeryRisksPanel",
+          "title": "Risks factors of surgery for {CmpnName}'s quality of life",
+          "elements": [
+			      {
+              "type": "rating",
               "name": "TreatmentFactorsRisks",
-              "title": "Risks for {CmpnName} of surgical procedure with extended anesthesia:",
+              "title": "Risks of surgical procedure with extended anesthesia:",
               "description": "1 = not a factor, 5 = deciding factor",
               "isRequired": true,
               "rateValues": [
@@ -120,7 +168,7 @@
             {
               "type": "rating",
               "name": "TreatmentFactorsRisksComplications",
-              "title": "Risks for {CmpnName} of post-op complications such as aspiration pneumonia:",
+              "title": "Risks of post-op complications such as aspiration pneumonia or suture failure:",
               "description": "1 = not a factor, 5 = deciding factor",
               "isRequired": true,
               "rateValues": [
@@ -130,7 +178,17 @@
                 { "value": 4, "text": "4" },
                 { "value": 5, "text": "5" }
               ]
-            },
+            }
+
+          ]
+        },
+
+
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsGeneral",
+          "title": "Age and general health considerations",
+          "elements": [
             {
               "type": "rating",
               "name": "TreatmentFactorsAge",
@@ -172,10 +230,19 @@
                 { "value": 4, "text": "4" },
                 { "value": 5, "text": "5" }
               ]
-            },
+            }
+          ]
+        },
+
+
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsCircumstances",
+          "title": "Personal circumstances",
+          "elements": [
             {
               "type": "rating",
-              "name": "TreatmentFactorsAccess",
+              "name": "TreatmentFactorsCircumstancesAccess",
               "title": "Distance to or access to a qualified specialist:",
               "description": "1 = not a factor, 5 = deciding factor",
               "isRequired": true,
@@ -187,6 +254,29 @@
                 { "value": 5, "text": "5" }
               ]
             },
+
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsCircumstancesCare",
+              "title": "Ability to provide adequate post-operative care:",
+              "description": "1 = not a factor, 5 = deciding factor",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsOther",
+          "title": "Other considerations",
+          "elements": [
             {
               "type": "text",
               "name": "TreatmentFactorsOther",
