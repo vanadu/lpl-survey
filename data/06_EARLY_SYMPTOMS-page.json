@@ -150,7 +150,7 @@
             {
             "type": "checkbox",
             "name": "EarlyOtherConditions",
-            "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
+            "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared at the age of {EarlySymptomsAgeYears} years and {EarlySymptomsAgeMonths} months?",
             "required": true,
             "choices": [
                 {

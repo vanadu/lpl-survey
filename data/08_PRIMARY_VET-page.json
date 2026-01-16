@@ -91,6 +91,24 @@
                 }
               ],
               "showOtherItem": false
+            },
+            {
+              "type": "boolean",
+              "name": "PrimaryVetRefluxMeds",
+              "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotadine) or Prilosec (omeprazole) on your own intiative without a prescription or recommendation from your primary vet?",
+              "isRequired": true,
+              "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                }
+              ],
+              "showOtherItem": false
             }
           ]
         },
