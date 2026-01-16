@@ -511,6 +511,23 @@
   }
 }
 
+.sd-question[data-name="ManagementPrescriptionType"] {
+  .sd-selectbase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-top: 10px;
+  }
+}
 
+.sd-question[data-name="ManagementNonPrescription"], .sd-question[data-name="ManagementPrescriptions"]  {
 
-
+  .sd-selectbase {
+    padding-left: 20px;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-top: 10px;
+  }
+}
