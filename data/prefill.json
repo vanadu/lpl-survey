@@ -145,18 +145,26 @@
     }
   ],
 
-  "ManagementPrescriptionDoxepinRating": 4,
-  "ManagementPrescriptionTrazodoneRating": 2,
-  "ManagementPrescriptionGabapentinRating": 2,
-  "ManagementPrescriptionGalliprantRating": 3,
-  "ManagementPrescriptionSteroidRating": 2,
-  "ManagementPrescriptionFamotadineRating": 5,
-  "ManagementPrescriptionOmeprazoleRating": 5,
-  "ManagementPrescriptionCereniaRating": 3,
-  "ManagementPrescriptionMeloxicamRating": 4,
-  "ManagementPrescriptionAcepromineRating": 4,
-  "ManagementPrescriptionAlbuterolRating": 1,
-  "ManagementPrescriptionTemarilPRating": 3,
+  "ManagementPrescriptionDoxepinRatingBreathing": 4,
+  "ManagementPrescriptionDoxepinRatingMobility": 4,
+  "ManagementPrescriptionTrazodoneRatingBreathing": 2,
+  "ManagementPrescriptionTrazodoneRatingMobility": 2,
+  "ManagementPrescriptionGabapentinRatingBreathing": 2,
+  "ManagementPrescriptionGabapentinRatingMobility": 2,
+  "ManagementPrescriptionGalliprantRatingBreathing": 3,
+  "ManagementPrescriptionGalliprantRatingMobility": 3,
+  "ManagementPrescriptionSteroidRatingBreathing": 2,
+  "ManagementPrescriptionSteroidRatingMobility": 2,
+  "ManagementPrescriptionCereniaRatingBreathing": 3,
+  "ManagementPrescriptionCereniaRatingMobility": 3,
+  "ManagementPrescriptionMeloxicamRatingBreathing": 4,
+  "ManagementPrescriptionMeloxicamRatingMobility": 4,
+  "ManagementPrescriptionAcepromineRatingBreathing": 4,
+  "ManagementPrescriptionAcepromineRatingMobility": 4,
+  "ManagementPrescriptionAlbuterolRatingBreathing": 1,
+  "ManagementPrescriptionAlbuterolRatingMobility": 1,
+  "ManagementPrescriptionTemarilPRatingBreathing": 3,
+  "ManagementPrescriptionTemarilPRatingMobility": 3,
   
   "ManagementNonPrescription": "YES",
   "ManagementNonPrescriptionType": [
@@ -164,9 +172,13 @@
     "THERAPY"
   ],
 
-  "ManagementNonPrescriptionAcupunctureRating": 4,
-  "ManagementNonPrescriptionTherapyRating": 4,
-  "ManagementNonPrescriptionColdLaserRating": 1,
-  "ManagementNonPrescriptionChiropracticRating": 4
+  "ManagementNonPrescriptionAcupunctureRatingBreathing": 3,
+  "ManagementNonPrescriptionAcupunctureRatingMobility": 4,
+  "ManagementNonPrescriptionTherapyRatingBreathing": 3,
+  "ManagementNonPrescriptionTherapyRatingMobility": 4,
+  "ManagementNonPrescriptionColdLaserRatingBreathing": 3,
+  "ManagementNonPrescriptionColdLaserRatingMobility": 4,
+  "ManagementNonPrescriptionChiroRatingBreathing": 3,
+  "ManagementNonPrescriptionChiroRatingMobility": 4
 
 }

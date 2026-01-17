@@ -7,18 +7,23 @@
       "elements": [
         {
           "type": "html",
-          "name": "LandingHeading",
+          "name": "LandingIntroHeading",
           "html": "<h2>LP/GOLPP Survey 2026</h2>"
         },
         {
           "type": "html",
-          "name": "LandingText",
-          "html": "<p>The goal of this survey is to collect information about your beloved animal companion's experience with the disease of laryngeal paralysis (LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP). </p><p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
+          "name": "LandingIntroText01",
+          "html": "<p>You're here because the disease of laryngeal paralysis (LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. The questions on these pages are designed both:</p>"
         },
         {
           "type": "html",
-          "name": "LandingJourneyHeading",
-          "html": "<h3>Your LP/GOLPP Journey</h3>"
+          "name": "LandingIntroText02",
+          "html": "<ul><li>As a <b>Survey</b> to collect information about people's experience with LP/GOLPP.</li><li>As a <b>Workbook</b> to help people learn about LP/GOLPP so they can make  informed  choices moving forward. </li></ul>"
+        },
+        {
+          "type": "html",
+          "name": "LandingIntroText",
+          "html": "<p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
         },
         {
           "type": "html",

@@ -13,7 +13,12 @@
         {
           "type": "html",
           "name": "ManagementText",
-          "html": "<p>Attempting to manage LP/GOLPP symptoms with medications is controversial. While no medication can restore movement to paralyzed laryneal tissue, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP patient's quality of life. </p>"
+          "html": "<p>Attempting to manage LP/GOLPP symptoms with medications is controversial. While no medication can restore movement to paralyzed laryneal tissue, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life. </p>"
+        },
+        {
+          "type": "html",
+          "name": "ManagementText",
+          "html": "<p><b>IMPORTANT</b>: Medications for arthritis/osteoarthritis pain such as NSAIDS (Rimadyl, carprofen) and NGF blockers (Librela, Beransa) may improve mobility by reducing pain, but they aren't specifically prescribed for LP/GOLPP and therefore and aren't included in the 'Medical management' section of the survey.</p>"
         },
         {
           "type": "radiogroup",
@@ -45,6 +50,7 @@
               "type": "checkbox",
               "name": "ManagementPrescriptionType",
               "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP symptoms?",
+              "description": "Please also include discontinued medications.",
               "isRequired": true,
               "choices": [
                 {
@@ -66,15 +72,7 @@
                 {
                   "value": "STEROID",
                   "text": "Prednisone or other steriod"
-                },
-                {
-                  "value": "FAMOTADINE",
-                  "text": "Pepcid (famotadine)"
-                },
-                {
-                  "value": "OMEPRAZOLE",
-                  "text": "Prilosec"
-                },                                
+                },                             
                 {
                   "value": "CERENIA",
                   "text": "Cerenia (maripotant citrate)"
@@ -99,10 +97,37 @@
               "showOtherItem": true
             },
             {
+            "type": "dropdown",
+            "name": "ManagementPrescriptionCost",
+            "title": "About how much do you spend monthly on {CmpnName}'s prescriptions?",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "UNDER_50",
+                "text": "Under $50"
+              },
+              {
+                "value": "51_100",
+                "text": "$51-$100"
+              },
+              {
+                "value": "101_200",
+                "text": "$101-$200"
+              },
+              {
+                "value": "OVER_200",
+                "text": "Over $200"
+              }
+            ],
+            "showOtherItem": true,
+            "showNoneItem": true,
+            "required": true
+            },
+            {
               "type": "rating",
-              "name": "ManagementPrescriptionDoxepinRating",
-              "title": "How did doxepin affect {CmpnName}?",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "name": "ManagementPrescriptionDoxepinRatingBreathing",
+              "title": "Please rate the effect of doxepin on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementPrescriptionType} contains 'DOXEPIN'",
               "rateValues": [
@@ -116,9 +141,25 @@
             },
             {
               "type": "rating",
-              "name": "ManagementPrescriptionTrazodoneRating",
-              "title": "How did Trazodone affect {CmpnName}?",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "name": "ManagementPrescriptionDoxepinRatingMobility",
+              "title": "Please rate the effect of doxepin on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'DOXEPIN'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionTrazodoneRatingBreathing",
+              "title": "Please rate the effect of Trazodone on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementPrescriptionType} contains 'TRAZODONE'",
               "rateValues": [
@@ -132,9 +173,25 @@
             },
             {
               "type": "rating",
-              "name": "ManagementPrescriptionGabapentinRating",
-              "title": "How did Gabapentin affect {CmpnName}?",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "name": "ManagementPrescriptionTrazodoneRatingMobility",
+              "title": "Please rate the effect of Trazodone on {CmpnName} mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'TRAZODONE'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionGabapentinRatingBreathing",
+              "title": "Please rate the effect of Gabapentin on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementPrescriptionType} contains 'GABAPENTIN'",
               "rateValues": [
@@ -148,9 +205,25 @@
             },
             {
               "type": "rating",
-              "name": "ManagementPrescriptionGalliprantRating",
-              "title": "How did Galliprant affect {CmpnName}?",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "name": "ManagementPrescriptionGabapentinRatingMobility",
+              "title": "Please rate the effect of Gabapentin on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'GABAPENTIN'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionGalliprantRatingBreathing",
+              "title": "Please rate the effect of Galliprant on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementPrescriptionType} contains 'GALLIPRANT'",
               "rateValues": [
@@ -164,9 +237,25 @@
             },    
             {
               "type": "rating",
-              "name": "ManagementPrescriptionSteroidRating",
-              "title": "How did Prednisone affect {CmpnName}?",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "name": "ManagementPrescriptionGalliprantRatingMobility",
+              "title": "Please rate the effect of Galliprant on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'GALLIPRANT'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },    
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionSteroidRatingBreathing",
+              "title": "Please rate the effect of Prednisone on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementPrescriptionType} contains 'STEROID'",
               "rateValues": [
@@ -180,9 +269,25 @@
             },   
             {
               "type": "rating",
-              "name": "ManagementPrescriptionCereniaRating",
-              "title": "How did Cerenia affect {CmpnName}?",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "name": "ManagementPrescriptionSteroidRatingMobility",
+              "title": "Please rate the effect of Prednisone on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'STEROID'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },   
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionCereniaRatingBreathing",
+              "title": "Please rate the effect of Cerenia on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementPrescriptionType} contains 'CERENIA'",
               "rateValues": [
@@ -196,11 +301,11 @@
             },   
             {
               "type": "rating",
-              "name": "ManagementPrescriptionMeloxicamRating",
-              "title": "How did Meloxicam affect {CmpnName}?",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "name": "ManagementPrescriptionCereniaRatingMobility",
+              "title": "Please rate the effect of Cerenia on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
-              "visibleIf": "{ManagementPrescriptionType} contains 'MELOXICAM'",
+              "visibleIf": "{ManagementPrescriptionType} contains 'CERENIA'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -212,9 +317,41 @@
             },   
             {
               "type": "rating",
-              "name": "ManagementPrescriptionAcepromineRating",
-              "title": "How did Acepromine affect {CmpnName}?",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "name": "ManagementPrescriptionMeloxicamRatingBreathing",
+              "title": "Please rate the effect of Meloxicam on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'MELOXICAM'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionMeloxicamRatingMobility",
+              "title": "Please rate the effect of Meloxicam on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'MELOXICAM'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },      
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionAcepromineRatingBreathing",
+              "title": "Please rate the effect of Acepromine on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementPrescriptionType} contains 'ACEPROMINE'",
               "rateValues": [
@@ -228,11 +365,11 @@
             },   
             {
               "type": "rating",
-              "name": "ManagementPrescriptionAlbuterolRating",
-              "title": "How did Albuterol or other inhaler affect {CmpnName}?",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "name": "ManagementPrescriptionAcepromineRatingMobility",
+              "title": "Please rate the effect of Acepromine on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
-              "visibleIf": "{ManagementPrescriptionType} contains 'ALBUTEROL'",
+              "visibleIf": "{ManagementPrescriptionType} contains 'ACEPROMINE'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -244,9 +381,41 @@
             },   
             {
               "type": "rating",
-              "name": "ManagementPrescriptionTemaril PRating",
-              "title": "How did Temaril P affect {CmpnName}?",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "name": "ManagementPrescriptionAlbuterolRatingBreathing",
+              "title": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'ALBUTEROL'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionAlbuterolRatingMobility",
+              "title": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'ALBUTEROL'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },     
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionTemarilPRatingBreathing",
+              "title": "Please rate the effect of Temaril P on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementPrescriptionType} contains 'TEMARIL_P'",
               "rateValues": [
@@ -260,9 +429,25 @@
             },   
             {
               "type": "rating",
-              "name": "ManagementPrescriptionXXXRating",
-              "title": "How did XXX affect {CmpnName}?",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "name": "ManagementPrescriptionTemarilPRatingMobility",
+              "title": "Please rate the effect of Temaril P on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'TEMARIL_P'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },   
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionXXXRatingBreathing",
+              "title": "Please rate the effect of XXX on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementPrescriptionType} contains 'XXX'",
               "rateValues": [
@@ -300,15 +485,43 @@
           
         },
         {
+            "type": "dropdown",
+            "name": "ManagementNonPrescriptionCost",
+            "title": "About how much do you spend monthly on {CmpnName}'s acupuncture or other therapies?",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "UNDER_100",
+                "text": "Under $100"
+              },
+              {
+                "value": "101_150",
+                "text": "$101-150"
+              },
+              {
+                "value": "151_250",
+                "text": "$151-$250"
+              },
+              {
+                "value": "OVER_250",
+                "text": "Over $250"
+              }
+            ],
+            "showOtherItem": true,
+            "showNoneItem": true,
+            "required": true
+            },
+        {
           "type": "panel",
-          "name": "ManagementNonPrescriptionPanel",
+          "name": "ManagementNonPrescriptionTypePanel",
+          "visibleIf": "{ManagementNonPrescription} = YES",
           "elements": [
             {
               "type": "checkbox",
               "name": "ManagementNonPrescriptionType",
               "title": "What therapies or treatments did {CmpnName} receive?",
               "isRequired": true,
-              "visibleIf": "{ManagementNonPrescription} = YES",
+
               "choices": [
                 {
                   "value": "ACUPUNCTURE",
@@ -331,9 +544,9 @@
             },
             {
               "type": "rating",
-              "name": "ManagementNonPrescriptionAcupunctureRating",
-              "title": "How effective was acupuncture?",
-              "description": "1 = not at all effective, 5 = very effective",
+              "name": "ManagementNonPrescriptionAcupunctureRatingBreathing",
+              "title": "Please rate the effect of acupuncture on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementNonPrescriptionType} contains 'ACUPUNCTURE'",
               "rateValues": [
@@ -347,9 +560,25 @@
             },
             {
               "type": "rating",
-              "name": "ManagementNonPrescriptionTherapyRating",
-              "title": "How effective was physical or hydro therapy?",
-              "description": "1 = not at all effective, 5 = very effective",
+              "name": "ManagementNonPrescriptionAcupunctureRatingMobility",
+              "title": "Please rate the effect of acupuncture on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescriptionType} contains 'ACUPUNCTURE'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionTherapyRatingBreathing",
+              "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementNonPrescriptionType} contains 'THERAPY'",
               "rateValues": [
@@ -363,9 +592,25 @@
             },
             {
               "type": "rating",
-              "name": "ManagementNonPrescriptionColdLaserRating",
-              "title": "How effective was cold laser or red light therapy?",
-              "description": "1 = not at all effective, 5 = very effective",
+              "name": "ManagementNonPrescriptionTherapyRatingMobility",
+              "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescriptionType} contains 'THERAPY'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionColdLaserRatingBreathing",
+              "title": "How effective was cold laser or red light therapy on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementNonPrescriptionType} contains 'LLLT'",
               "rateValues": [
@@ -379,9 +624,41 @@
             },
             {
               "type": "rating",
-              "name": "ManagementNonPrescriptionChiroRating",
-              "title": "How effective was chiropractic?",
-              "description": "1 = not at all effective, 5 = very effective",
+              "name": "ManagementNonPrescriptionColdLaserRatingMobility",
+              "title": "Please rate the effect of cold laser or red light therapy on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescriptionType} contains 'LLLT'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionChiroRatingBreathing",
+              "title": "Please rate the effect of chiropractic on {CmpnName}'s breathing on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescriptionType} contains 'CHIRO'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionChiroRatingMobility",
+              "title": "Please rate the effect of chiropractic on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{ManagementNonPrescriptionType} contains 'CHIRO'",
               "rateValues": [
@@ -393,8 +670,6 @@
                 { "value": "DONT_KNOW", "text": "Don't know" }
               ]
             }
-            
-
           ]
         }
       ]

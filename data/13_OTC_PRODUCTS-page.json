@@ -8,12 +8,234 @@
         {
           "type": "html",
           "name": "OtcProductsHeading",
-          "html": "<h3>OTC Products for LP/GOLPP</h3>"
+          "html": "<h3>OTC (Over-The-Counter) Products for LP/GOLPP</h3>"
         },
         {
           "type": "html",
           "name": "OtcProductsText",
-          "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+          "html": "<p>This section asks questions about non-prescription supplements and remedies that may have a positive effect for some LP/GOLPP symptoms. The questions pertain to the main ingredient of a product. </p>"
+        },
+        {
+          "type": "html",
+          "name": "OtcProductsTextImportant",
+          "html": "<p><b>IMPORTANT</b>: This survey isn't intended to advertise for, recommend, or be used marketing vehicle for any specific product. </p>"
+        },
+
+        {
+          "type": "panel",
+          "name": "OTCProductsTypePanel",
+
+          "elements": [
+
+
+
+              {
+                "type": "radiogroup",
+                "name": "OTCProductsDidPurchase",
+                "title": "Have you purchased OTC products based on a particular ingredient {CmpnName}'s LP/GOLPP symptoms?",
+                "description": "Please only include products you've used regularly for over 60 days",
+                "isRequired": true,
+                "choices": [
+                  {
+                    "value": "YES",
+                    "text": "Yes"
+                  },
+                  {
+                    "value": "NO",
+                    "text": "No"
+                  },
+                  {
+                    "value": "DONT_KNOW",
+                    "text": "Don't know"
+                  }
+                ],
+                "showOtherItem": false
+              },
+
+
+
+            {
+              "type": "checkbox",
+              "name": "OTCProductsTypePanel",
+              "title": "Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:",
+              "isRequired": true,
+              "visibleIf": "{OTCProductsDidPurchase} = YES",
+              "choices": [
+                {
+                  "value": "TUMERIC",
+                  "text": "Tumeric"
+                },
+                {
+                  "value": "CBD",
+                  "text": "CBD"
+                },
+                {
+                  "value": "LIONS_MANE",
+                  "text": "Lion's mane"
+                },
+                {
+                  "value": "MYELIN_SHEATH",
+                  "text": "Myelin sheath"
+                },
+                {
+                  "value": "EGG_SHELL",
+                  "text": "Egg-shell membrane"
+                },                             
+                {
+                  "value": "URSOLIC",
+                  "text": "Ursolic acid"
+                },
+                {
+                  "value": "PRIMROSE",
+                  "text": "Evening Primrose Oil"
+                },
+                {
+                  "value": "FISH_OIL",
+                  "text": "Fish or salmon oil"
+                },
+                {
+                  "value": "GLUCOSAMINE",
+                  "text": "Glucosamine/Chrondroitin/MSM"
+                },
+                {
+                  "value": "COLLAGEN",
+                  "text": "Hyaluronic acid/Collagen"
+                },
+                {
+                  "value": "TEMARIL_P",
+                  "text": "Temaril P"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+            "type": "dropdown",
+            "name": "OtcProductsCost",
+            "title": "What was the average monthly cost of these OTC products?",
+            "isRequired": true,
+            "visibleIf": "{OTCProductsDidPurchase} = YES",
+            "choices": [
+              {
+                "value": "UNDER_50",
+                "text": "Under $50"
+              },
+              {
+                "value": "51_100",
+                "text": "$51-$100"
+              },
+              {
+                "value": "101_150",
+                "text": "$101-$150"
+              },
+              {
+                "value": "OVER_150",
+                "text": "Over $150"
+              }
+            ],
+            "showOtherItem": false,
+            "showNoneItem": false
+            },
+
+
+
+          {
+            "type": "rating",
+            "name": "OtcProductsEffectiveness",
+            "title": "Please rate the overall effectiveness of the OTC products you selected above:",
+            "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+            "isRequired": true,
+            "visibleIf": "{OTCProductsDidPurchase} = YES",
+            "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" },
+              { "value": "DONT_KNOW", "text": "Don't know" }
+            ]
+          }
+                                                                 
+          ]
+          },
+
+
+
+        {
+          "type": "panel",
+          "name": "OTCProtocolPanel",
+          "elements": [
+
+            {
+              "type": "radiogroup",
+              "name": "OTCProtocolDidPurchase",
+              "title": "Have you purchased products that are advertised as a blend or 'protocol' of OTC ingredients created for a specific illness or condition? ",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+
+            {
+              "type": "dropdown",
+              "name": "OtcProtocolCost",
+              "title": "What was the average monthly cost of these blends or 'protocols'?",
+              "isRequired": true,
+              "visibleIf": "{OTCProtocolDidPurchase} = YES",
+              "choices": [
+                {
+                  "value": "UNDER_50",
+                  "text": "Under $50"
+                },
+                {
+                  "value": "51_100",
+                  "text": "$51-$100"
+                },
+                {
+                  "value": "101_150",
+                  "text": "$101-$150"
+                },
+                {
+                  "value": "OVER_150",
+                  "text": "Over $150"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+
+            {
+              "type": "rating",
+              "name": "OtcProductsEffectiveness",
+              "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
+              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "isRequired": true,
+              "visibleIf": "{OTCProtocolDidPurchase} = YES",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+
+
+
+          ]
         }
       ]
     }
