@@ -21,7 +21,7 @@ import TREATMENT_STATUS from "../../data/10_TREATMENT_STATUS-page.json";
 import TREATMENT_FACTORS from "../../data/11_TREATMENT_FACTORS-page.json";
 import MANAGEMENT from "../../data/12_MANAGEMENT-page.json";
 import OTC_PRODUCTS from "../../data/13_OTC_PRODUCTS-page.json";
-import COMPLICATIONS from "../../data/14_COMPLICATIONS-page.json";
+import ASPIRATION from "../../data/14_ASPIRATION-page.json";
 import NEUROPATHY from "../../data/15_NEUROPATHY-page.json";
 import CONCLUSION from "../../data/16_CONCLUSION-page.json";
 
@@ -41,7 +41,7 @@ const surveyJson = {
     TREATMENT_FACTORS,
     MANAGEMENT,
     OTC_PRODUCTS,
-    COMPLICATIONS,
+    ASPIRATION,
     NEUROPATHY,
     CONCLUSION
   ]

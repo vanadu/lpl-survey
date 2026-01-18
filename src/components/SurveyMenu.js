@@ -50,8 +50,8 @@ const SurveyHeader = () => {
         <li className="survey-dropdown__item"><Link href="/13_OTCProducts">
           13_OTCProducts
         </Link></li>
-        <li className="survey-dropdown__item"><Link href="/14_Complications">
-          14_Complications
+        <li className="survey-dropdown__item"><Link href="/14_Aspiration">
+          14_Aspiration
         </Link></li>
         <li className="survey-dropdown__item"><Link href="/15_Neuropathy">
           15_Neuropathy

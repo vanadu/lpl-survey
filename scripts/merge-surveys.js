@@ -15,8 +15,12 @@ const pageFiles = [
   "09_DIAGNOSIS-page.json",
   "10_TREATMENT_STATUS-page.json",
   "11_TREATMENT_FACTORS-page.json",
-  "12_MANAGEMENT-page.json"
-
+  "12_MANAGEMENT-page.json",
+  "13_OTC_PRODUCTS-page.json",
+  "14_ASPIRATION-page.json",
+  "15_NEUROPATHY-page.json",
+  "16_CONCLUSION-page.json",
+  
 ];
 
 const pages = pageFiles.map(filename => {

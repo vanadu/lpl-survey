@@ -25,28 +25,33 @@
           "elements": [
             {
               "type": "html",
-              "name": "LandingIntroHeading",
-              "html": "<h2>LP/GOLPP Survey 2026</h2>"
+              "name": "LandingVersion",
+              "html": "<div class='landing-survey-version-container'><p class='landing-survey-version'>LarParLife.org LP/GOLPP Survey<br/>Beta 0.9/26.01.18.01</p></div>"
+            },
+            {
+              "type": "html",
+              "name": "LandingTitleHead",
+              "html": "<h2 class='landing-title-head'>LP/GOLPP Survey 2026</h2><p class='landing-title-subhead'>Presented by LarParLife.org</p>"
             },
             {
               "type": "html",
               "name": "LandingIntroText01",
-              "html": "<p>You're here because the disease of laryngeal paralysis (LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. The questions on these pages are designed both:</p>"
-            },
-            {
-              "type": "html",
-              "name": "LandingIntroText02",
-              "html": "<ul><li>As a <b>Survey</b> to collect information about people's experience with LP/GOLPP.</li><li>As a <b>Workbook</b> to help people learn about LP/GOLPP so they can make  informed  choices moving forward. </li></ul>"
+              "html": "<p>You're here because the disease of laryngeal paralysis (LarPar, LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
             },
             {
               "type": "html",
               "name": "LandingIntroText",
-              "html": "<p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
+              "html": "<p>The LP/GOLPP journey is a learning process, and at the beginning people often have more questions than answers. This survey has two modes. Which mode you chose depends on how far long on your LP/GOLPP journey you are:</p>"
+            },
+            {
+              "type": "html",
+              "name": "LandingIntroText02",
+              "html": "<ul><li><b>Survey Mode</b> is designed to collect information from people who are not new to the LP/GOLPP journey. If you've already been faced with making choices for your beloved LarPar companion and would like to share your experience, select <b>Survey Mode</b>. </li><li><b>Workbook Mode</b> presents people with a framework of choices they'll need to make as they move forward on their LP/GOLPP journey. If you're new to the LP/GOLPP journey and want to inform yourself about how to proceed, select <b>Workbook Mode</b> </li></ul>"
             },
             {
               "type": "html",
               "name": "LandingJourneyText",
-              "html": "<p>The LP/GOLPP journey is a learning process, and at the beginning people often have more questions than answers. The survey asks you to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, it's best to discontinue the survey and return later when you have more information.</p>"
+              "html": "<p>In <b>Survey Mode</b> you'll be asked to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, you can switch to <b>Workbook Mode</b> to refresh your memory and continue later.</p>"
             },
             {
               "type": "html",
@@ -806,7 +811,7 @@
                   "type": "rating",
                   "name": "InfoSourcesContradictory",
                   "title": "Do you feel like a lot of the information you got about LP was contradictory?",
-                  "description": "1 = not at all contridictory, 5 = very contradictory",
+                  "description": "1 = not at all contradictory, 5 = very contradictory",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -3756,6 +3761,367 @@
                   ]
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OTC_PRODUCTS-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "OtcProductsPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "OtcProductsHeading",
+              "html": "<h3>OTC (Over-The-Counter) Products for LP/GOLPP</h3>"
+            },
+            {
+              "type": "html",
+              "name": "OtcProductsText",
+              "html": "<p>This section asks questions about non-prescription supplements and remedies that may have a positive effect for some LP/GOLPP symptoms. The questions pertain to the main ingredient of a product. </p>"
+            },
+            {
+              "type": "html",
+              "name": "OtcProductsTextImportant",
+              "html": "<p><b>IMPORTANT</b>: This survey isn't intended to advertise for, recommend, or be used marketing vehicle for any specific product. </p>"
+            },
+            {
+              "type": "panel",
+              "name": "OTCProductsTypePanel",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "OTCProductsDidPurchase",
+                  "title": "Have you purchased OTC products based on a particular ingredient {CmpnName}'s LP/GOLPP symptoms?",
+                  "description": "Please only include products you've used regularly for over 60 days",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "checkbox",
+                  "name": "OTCProductsTypePanel",
+                  "title": "Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:",
+                  "isRequired": true,
+                  "visibleIf": "{OTCProductsDidPurchase} = YES",
+                  "choices": [
+                    {
+                      "value": "TUMERIC",
+                      "text": "Tumeric"
+                    },
+                    {
+                      "value": "CBD",
+                      "text": "CBD"
+                    },
+                    {
+                      "value": "LIONS_MANE",
+                      "text": "Lion's mane"
+                    },
+                    {
+                      "value": "MYELIN_SHEATH",
+                      "text": "Myelin sheath"
+                    },
+                    {
+                      "value": "EGG_SHELL",
+                      "text": "Egg-shell membrane"
+                    },
+                    {
+                      "value": "URSOLIC",
+                      "text": "Ursolic acid"
+                    },
+                    {
+                      "value": "PRIMROSE",
+                      "text": "Evening Primrose Oil"
+                    },
+                    {
+                      "value": "FISH_OIL",
+                      "text": "Fish or salmon oil"
+                    },
+                    {
+                      "value": "GLUCOSAMINE",
+                      "text": "Glucosamine/Chrondroitin/MSM"
+                    },
+                    {
+                      "value": "COLLAGEN",
+                      "text": "Hyaluronic acid/Collagen"
+                    },
+                    {
+                      "value": "TEMARIL_P",
+                      "text": "Temaril P"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "dropdown",
+                  "name": "OtcProductsCost",
+                  "title": "What was the average monthly cost of these OTC products?",
+                  "isRequired": true,
+                  "visibleIf": "{OTCProductsDidPurchase} = YES",
+                  "choices": [
+                    {
+                      "value": "UNDER_50",
+                      "text": "Under $50"
+                    },
+                    {
+                      "value": "51_100",
+                      "text": "$51-$100"
+                    },
+                    {
+                      "value": "101_150",
+                      "text": "$101-$150"
+                    },
+                    {
+                      "value": "OVER_150",
+                      "text": "Over $150"
+                    }
+                  ],
+                  "showOtherItem": false,
+                  "showNoneItem": false
+                },
+                {
+                  "type": "rating",
+                  "name": "OtcProductsEffectiveness",
+                  "title": "Please rate the overall effectiveness of the OTC products you selected above:",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{OTCProductsDidPurchase} = YES",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "OTCProtocolPanel",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "OTCProtocolDidPurchase",
+                  "title": "Have you purchased products that are advertised as a blend or 'protocol' of OTC ingredients created for a specific illness or condition? ",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "dropdown",
+                  "name": "OtcProtocolCost",
+                  "title": "What was the average monthly cost of these blends or 'protocols'?",
+                  "isRequired": true,
+                  "visibleIf": "{OTCProtocolDidPurchase} = YES",
+                  "choices": [
+                    {
+                      "value": "UNDER_50",
+                      "text": "Under $50"
+                    },
+                    {
+                      "value": "51_100",
+                      "text": "$51-$100"
+                    },
+                    {
+                      "value": "101_150",
+                      "text": "$101-$150"
+                    },
+                    {
+                      "value": "OVER_150",
+                      "text": "Over $150"
+                    }
+                  ],
+                  "showOtherItem": false,
+                  "showNoneItem": false
+                },
+                {
+                  "type": "rating",
+                  "name": "OtcProductsEffectiveness",
+                  "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
+                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "isRequired": true,
+                  "visibleIf": "{OTCProtocolDidPurchase} = YES",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ASPIRATION-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "AspirationPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "AspirationHeading",
+              "html": "<h3>Aspiration pneumonia and other complications</h3>"
+            },
+            {
+              "type": "html",
+              "name": "AspirationText",
+              "html": "<p>Aspiration pneumonia is the most common complication of LP/GOLPP. </p>"
+            },
+            {
+              "type": "html",
+              "name": "LandingData",
+              "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
+            },
+            {
+              "type": "panel",
+              "name": "AspirationNoTreatment",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "AspirationNoTreatmentText",
+                  "visibleIf": "{TreatmentStatusDidHave} = 'NONE'",
+                  "html": "This will be displayed if {CmpnName} had neither surgery nor stent"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "AspirationSurgery",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "AspirationSurgeryText",
+                  "visibleIf": "{TreatmentStatusDidHave} = 'SURGERY'",
+                  "html": "This will be displayed if {CmpnName} had SURGERY"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "AspirationStent",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "AspirationStentText",
+                  "visibleIf": "{TreatmentStatusDidHave} = 'STENT'",
+                  "html": "This will be displayed if {CmpnName} had a STENT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NEUROPATHY-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "NeuropathyPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "NeuropathyHeading",
+              "html": "<h3>The Polyneuropathy of GOLPP</h3>"
+            },
+            {
+              "type": "html",
+              "name": "NeuropathyText",
+              "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CONCLUSION-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "ConclusionPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ConclusionHeading",
+              "html": "<h3>Conclusion Page</h3>"
+            },
+            {
+              "type": "html",
+              "name": "ConclusionText",
+              "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
             }
           ]
         }

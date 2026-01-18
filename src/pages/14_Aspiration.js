@@ -3,14 +3,14 @@ import Link from 'next/link';
 import SurveyComponent from '@/components/SurveyComponent'
 import SurveyMenu from '@/components/SurveyMenu'
 
-const COMPLICATIONS = () => {
+const ASPIRATION = () => {
   return (
       <section className="section">
         <div className="section_content">
           <SurveyMenu />
 
           <div className="survey-wrapper">
-            <SurveyComponent startPageName = 'COMPLICATIONS-page' />
+            <SurveyComponent startPageName = 'ASPIRATION-page' />
           </div>
 
         </div>
@@ -18,4 +18,4 @@ const COMPLICATIONS = () => {
   )
 }
 
-export default COMPLICATIONS
+export default ASPIRATION
