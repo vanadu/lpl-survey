@@ -1,5 +1,31 @@
 @import './variables.scss';
 
+// !VA Landing Page
+// !VA Version info
+.landing-survey-version-container {
+  display: flex;
+  justify-content: right;
+  margin-right: 40px;
+}
+
+.landing-survey-version {
+  font-family: $secondary_font!important;
+  color: #353535!important;
+  font-size: .913rem!important;
+  line-height: 1.25rem!important;
+}
+
+// !VA Landing Intro subhead
+.landing-title-subhead {
+  font-family: $primary_font!important;
+  padding: 0!important;
+  margin: .25rem 0 0 0!important;
+  color: #6b6b6b!important;
+  font-size: 1.313rem!important;
+  line-height: 1.75rem!important;
+  font-weight: 600!important;
+}
+
 
 .survey-dropdown {
   position: relative;

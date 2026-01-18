@@ -7,28 +7,34 @@
       "elements": [
         {
           "type": "html",
-          "name": "LandingIntroHeading",
-          "html": "<h2>LP/GOLPP Survey 2026</h2>"
+          "name": "LandingVersion",
+          "html": "<div class='landing-survey-version-container'><p class='landing-survey-version'>LarParLife.org LP/GOLPP Survey<br/>Beta 0.9/26.01.18.01</p></div>"
+        },
+        {
+          "type": "html",
+          "name": "LandingTitleHead",
+          "html": "<h2 class='landing-title-head'>LP/GOLPP Survey 2026</h2><p class='landing-title-subhead'>Presented by LarParLife.org</p>"
         },
         {
           "type": "html",
           "name": "LandingIntroText01",
-          "html": "<p>You're here because the disease of laryngeal paralysis (LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. The questions on these pages are designed both:</p>"
-        },
-        {
-          "type": "html",
-          "name": "LandingIntroText02",
-          "html": "<ul><li>As a <b>Survey</b> to collect information about people's experience with LP/GOLPP.</li><li>As a <b>Workbook</b> to help people learn about LP/GOLPP so they can make  informed  choices moving forward. </li></ul>"
+          "html": "<p>You're here because the disease of laryngeal paralysis (LarPar, LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
         },
         {
           "type": "html",
           "name": "LandingIntroText",
-          "html": "<p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
+          "html": "<p>The LP/GOLPP journey is a learning process, and at the beginning people often have more questions than answers. This survey has two modes. Which mode you chose depends on how far long on your LP/GOLPP journey you are:</p>"
         },
         {
           "type": "html",
+          "name": "LandingIntroText02",
+          "html": "<ul><li><b>Survey Mode</b> is designed to collect information from people who are not new to the LP/GOLPP journey. If you've already been faced with making choices for your beloved LarPar companion and would like to share your experience, select <b>Survey Mode</b>. </li><li><b>Workbook Mode</b> presents people with a framework of choices they'll need to make as they move forward on their LP/GOLPP journey. If you're new to the LP/GOLPP journey and want to inform yourself about how to proceed, select <b>Workbook Mode</b> </li></ul>"
+        },
+
+        {
+          "type": "html",
           "name": "LandingJourneyText",
-          "html": "<p>The LP/GOLPP journey is a learning process, and at the beginning people often have more questions than answers. The survey asks you to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, it's best to discontinue the survey and return later when you have more information.</p>"
+          "html": "<p>In <b>Survey Mode</b> you'll be asked to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, you can switch to <b>Workbook Mode</b> to refresh your memory and continue later.</p>"
         },
         {
           "type": "html",
