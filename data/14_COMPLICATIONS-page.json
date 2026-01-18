@@ -13,7 +13,12 @@
         {
           "type": "html",
           "name": "ComplicationsText",
-          "html": "<p>Aspiration pnLP/GOLPP dogs are at increased risk of Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+          "html": "<p>Aspiration pneumonia is the most common complication of LP/GOLPP.</p>"
+        },
+        {
+          "type": "html",
+          "name": "LandingData",
+          "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
         },
         {
           "type": "panel",

@@ -99,7 +99,7 @@
               "type": "rating",
               "name": "InfoSourcesContradictory",
               "title": "Do you feel like a lot of the information you got about LP was contradictory?",
-              "description": "1 = not at all contridictory, 5 = very contradictory",
+              "description": "1 = not at all contradictory, 5 = very contradictory",
               "isRequired": true,
               "rateValues": [
                 { "value": 1, "text": "1" },
