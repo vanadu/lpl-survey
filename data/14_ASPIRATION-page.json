@@ -43,9 +43,6 @@
           ],
           "showOtherItem": false
         },
-
-
-
         {
           "type": "panel",
           "name": "AspirationGeneralPanel",
@@ -183,8 +180,6 @@
     
           ]
         },
-
-
         {
           "type": "panel",
           "name": "AspirationStentPanel",
@@ -243,9 +238,6 @@
           ]
         },
         
-
-
-
         {
           "type": "panel",
           "name": "AspirationCostPanel",
@@ -285,10 +277,7 @@
                 "value": "OVER_8001",
                 "text": "Over $8001"
               }
-            ],
-            "showOtherItem": true,
-            "showNoneItem": true,
-            "required": true
+            ]
           }
 
 
