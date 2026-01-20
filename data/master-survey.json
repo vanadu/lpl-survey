@@ -2138,11 +2138,11 @@
               "isRequired": true,
               "choices": [
                 {
-                  "value": true,
+                  "value": "YES",
                   "text": "Yes"
                 },
                 {
-                  "value": false,
+                  "value": "NO",
                   "text": "No"
                 }
               ],
@@ -2242,15 +2242,15 @@
                       "text": "Under $2500"
                     },
                     {
-                      "value": "2501-4000",
+                      "value": "2501_4000",
                       "text": "$2501-$4000"
                     },
                     {
-                      "value": "4001-5500",
+                      "value": "4001_5500",
                       "text": "$4000-$5500"
                     },
                     {
-                      "value": "5500-7000",
+                      "value": "5500_7000",
                       "text": "$5500-$7000"
                     },
                     {
@@ -2262,7 +2262,7 @@
                 },
                 {
                   "type": "dropdown",
-                  "name": "TreatmentStatusTiebackOnceCost",
+                  "name": "TreatmentStatusTiebackMultipleCost",
                   "title": "Approximate total cost of surgeries (not including post-op complications):",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
@@ -2273,15 +2273,15 @@
                       "text": "Under $4000"
                     },
                     {
-                      "value": "4001-5500",
+                      "value": "4001_5500",
                       "text": "$4001-$5500"
                     },
                     {
-                      "value": "5501-7000",
+                      "value": "5501_7000",
                       "text": "$5501-$7000"
                     },
                     {
-                      "value": "7001-9000",
+                      "value": "7001_9000",
                       "text": "$7001-$9000"
                     },
                     {
@@ -2310,7 +2310,7 @@
                 },
                 {
                   "type": "dropdown",
-                  "name": "TreatmentStatusTiebackOnceCost",
+                  "name": "TreatmentStatusTiebackComplicationsCost",
                   "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
@@ -2321,15 +2321,15 @@
                       "text": "Under $1000"
                     },
                     {
-                      "value": "1001-2000",
+                      "value": "1001_2000",
                       "text": "$1001-$2000"
                     },
                     {
-                      "value": "2001-3000",
+                      "value": "2001_3000",
                       "text": "$2001-$3000"
                     },
                     {
-                      "value": "3001-5000",
+                      "value": "3001_5000",
                       "text": "$3001-$5000"
                     },
                     {
@@ -2385,11 +2385,11 @@
                       "text": "Under $4000"
                     },
                     {
-                      "value": "4001-5500",
+                      "value": "4001_5500",
                       "text": "$4001-$5500"
                     },
                     {
-                      "value": "5501-7000",
+                      "value": "5501_7000",
                       "text": "$5501-$7000"
                     },
                     {
@@ -2429,15 +2429,15 @@
                       "text": "Under $1000"
                     },
                     {
-                      "value": "1001-2000",
+                      "value": "1001_2000",
                       "text": "$1001-$2000"
                     },
                     {
-                      "value": "2001-3000",
+                      "value": "2001_3000",
                       "text": "$2001-$3000"
                     },
                     {
-                      "value": "3001-5000",
+                      "value": "3001_5000",
                       "text": "$3001-$5000"
                     },
                     {
@@ -2540,16 +2540,16 @@
                       "text": "Under $1500"
                     },
                     {
-                      "value": "1501-2500",
+                      "value": "1501_2500",
                       "text": "$1501-$2000"
                     },
                     {
-                      "value": "2001-3000",
+                      "value": "2001_3000",
                       "text": "$2001-$3000"
                     },
                     {
-                      "value": "3001-4000",
-                      "text": "$5500-$7000"
+                      "value": "3001_4000",
+                      "text": "$3001-$4000"
                     },
                     {
                       "value": "OVER_4000",
@@ -2571,15 +2571,15 @@
                       "text": "Under $1500"
                     },
                     {
-                      "value": "1501-2500",
+                      "value": "1501_2500",
                       "text": "$1501-$2000"
                     },
                     {
-                      "value": "2001-3000",
+                      "value": "2001_3000",
                       "text": "$2001-$3000"
                     },
                     {
-                      "value": "3001-4000",
+                      "value": "3001_4000",
                       "text": "$5500-$7000"
                     },
                     {
@@ -2619,15 +2619,15 @@
                       "text": "Under $1000"
                     },
                     {
-                      "value": "1001-2000",
+                      "value": "1001_2000",
                       "text": "$1001-$2000"
                     },
                     {
-                      "value": "2001-3000",
+                      "value": "2001_3000",
                       "text": "$2001-$3000"
                     },
                     {
-                      "value": "3001-5000",
+                      "value": "3001_5000",
                       "text": "$3001-$5000"
                     },
                     {
@@ -2733,11 +2733,11 @@
                       "text": "Under $2000"
                     },
                     {
-                      "value": "2001-4000",
+                      "value": "2001_4000",
                       "text": "$2001-$4000"
                     },
                     {
-                      "value": "4001-5500",
+                      "value": "4001_5500",
                       "text": "$4001-$5500"
                     },
                     {
@@ -2777,15 +2777,15 @@
                       "text": "Under $1000"
                     },
                     {
-                      "value": "1001-2000",
+                      "value": "1001_2000",
                       "text": "$1001-$2000"
                     },
                     {
-                      "value": "2001-3000",
+                      "value": "2001_3000",
                       "text": "$2001-$3000"
                     },
                     {
-                      "value": "3001-5000",
+                      "value": "3001_5000",
                       "text": "$3001-$5000"
                     },
                     {
@@ -2884,11 +2884,11 @@
                       "text": "Under $2000"
                     },
                     {
-                      "value": "2001-4000",
+                      "value": "2001_4000",
                       "text": "$2001-$4000"
                     },
                     {
-                      "value": "4001-5500",
+                      "value": "4001_5500",
                       "text": "$4001-$5500"
                     },
                     {
@@ -2928,15 +2928,15 @@
                       "text": "Under $1000"
                     },
                     {
-                      "value": "1001-2000",
+                      "value": "1001_2000",
                       "text": "$1001-$2000"
                     },
                     {
-                      "value": "2001-3000",
-                      "text": "$2001-$3000"
+                      "value": "2001_3000",
+                      "text": "$2001_$3000"
                     },
                     {
-                      "value": "3001-5000",
+                      "value": "3001_5000",
                       "text": "$3001-$5000"
                     },
                     {
@@ -5151,7 +5151,7 @@
             {
               "type": "radiogroup",
               "name": "NeuropathySymptomsDidHave",
-              "title": "After the first appearance of LP/GOLPP symptoms, did {CmpnName} ever show signs of polyneuropathy, i.e. hind-end weakness?",
+              "title": "In the {durationOfSymptomsInMonths} months since LP/GOLPP symptoms appeared, did {CmpnName} ever show signs of polyneuropathy, i.e. hind-end weakness or incontinence?",
               "isRequired": true,
               "choices": [
                 {
@@ -5168,81 +5168,6 @@
                 }
               ],
               "showOtherItem": false
-            },
-            {
-              "type": "panel",
-              "name": "NeuropathySymptomsAgePanel",
-              "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of hind-end weakness or polyneuropathy?",
-              "visibleIf": "{NeuropathySymptomsDidHave} = 'YES'",
-              "elements": [
-                {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "NeuropathySymptomsAgeYears",
-                  "title": "Years",
-                  "isRequired": true,
-                  "min": "1",
-                  "max": "40",
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 40,
-                      "text": "Age must be between 1 and 40"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "NeuropathySymptomsAgeMonths",
-                  "title": "Months (number 1 - 12)",
-                  "isRequired": true,
-                  "min": 1,
-                  "max": 12,
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 12,
-                      "text": "Months must be between 1 and 12"
-                    }
-                  ]
-                },
-                {
-                  "type": "rating",
-                  "name": "NeuropathySymptomsSeverity",
-                  "title": "How would you rate the severity of {CmpnName}'s hind end weakness is now?",
-                  "description": "1 = no, not at all, 5 = yes, very",
-                  "isRequired": true,
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
-                }
-              ]
             }
           ]
         }

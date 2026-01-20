@@ -27,11 +27,11 @@
           "isRequired": true,
           "choices": [
             {
-              "value": true,
+              "value": "YES",
               "text": "Yes"
             },
             {
-              "value": false,
+              "value": "NO",
               "text": "No"
             }
           ],
@@ -130,15 +130,15 @@
                   "text": "Under $2500"
                 },
                 {
-                  "value": "2501-4000",
+                  "value": "2501_4000",
                   "text": "$2501-$4000"
                 },
                 {
-                  "value": "4001-5500",
+                  "value": "4001_5500",
                   "text": "$4000-$5500"
                 },
                 {
-                  "value": "5500-7000",
+                  "value": "5500_7000",
                   "text": "$5500-$7000"
                 },
                 {
@@ -151,7 +151,7 @@
 
             {
               "type": "dropdown",
-              "name": "TreatmentStatusTiebackOnceCost",
+              "name": "TreatmentStatusTiebackMultipleCost",
               "title": "Approximate total cost of surgeries (not including post-op complications):",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
@@ -162,15 +162,15 @@
                   "text": "Under $4000"
                 },
                 {
-                  "value": "4001-5500",
+                  "value": "4001_5500",
                   "text": "$4001-$5500"
                 },
                 {
-                  "value": "5501-7000",
+                  "value": "5501_7000",
                   "text": "$5501-$7000"
                 },
                 {
-                  "value": "7001-9000",
+                  "value": "7001_9000",
                   "text": "$7001-$9000"
                 },
                 {
@@ -203,7 +203,7 @@
 
             {
               "type": "dropdown",
-              "name": "TreatmentStatusTiebackOnceCost",
+              "name": "TreatmentStatusTiebackComplicationsCost",
               "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
@@ -214,15 +214,15 @@
                   "text": "Under $1000"
                 },
                 {
-                  "value": "1001-2000",
+                  "value": "1001_2000",
                   "text": "$1001-$2000"
                 },
                 {
-                  "value": "2001-3000",
+                  "value": "2001_3000",
                   "text": "$2001-$3000"
                 },
                 {
-                  "value": "3001-5000",
+                  "value": "3001_5000",
                   "text": "$3001-$5000"
                 },
                 {
@@ -281,11 +281,11 @@
                   "text": "Under $4000"
                 },
                 {
-                  "value": "4001-5500",
+                  "value": "4001_5500",
                   "text": "$4001-$5500"
                 },
                 {
-                  "value": "5501-7000",
+                  "value": "5501_7000",
                   "text": "$5501-$7000"
                 },
                 {
@@ -327,15 +327,15 @@
                   "text": "Under $1000"
                 },
                 {
-                  "value": "1001-2000",
+                  "value": "1001_2000",
                   "text": "$1001-$2000"
                 },
                 {
-                  "value": "2001-3000",
+                  "value": "2001_3000",
                   "text": "$2001-$3000"
                 },
                 {
-                  "value": "3001-5000",
+                  "value": "3001_5000",
                   "text": "$3001-$5000"
                 },
                 {
@@ -443,16 +443,16 @@
                   "text": "Under $1500"
                 },
                 {
-                  "value": "1501-2500",
+                  "value": "1501_2500",
                   "text": "$1501-$2000"
                 },
                 {
-                  "value": "2001-3000",
+                  "value": "2001_3000",
                   "text": "$2001-$3000"
                 },
                 {
-                  "value": "3001-4000",
-                  "text": "$5500-$7000"
+                  "value": "3001_4000",
+                  "text": "$3001-$4000"
                 },
                 {
                   "value": "OVER_4000",
@@ -476,15 +476,15 @@
                   "text": "Under $1500"
                 },
                 {
-                  "value": "1501-2500",
+                  "value": "1501_2500",
                   "text": "$1501-$2000"
                 },
                 {
-                  "value": "2001-3000",
+                  "value": "2001_3000",
                   "text": "$2001-$3000"
                 },
                 {
-                  "value": "3001-4000",
+                  "value": "3001_4000",
                   "text": "$5500-$7000"
                 },
                 {
@@ -530,15 +530,15 @@
                   "text": "Under $1000"
                 },
                 {
-                  "value": "1001-2000",
+                  "value": "1001_2000",
                   "text": "$1001-$2000"
                 },
                 {
-                  "value": "2001-3000",
+                  "value": "2001_3000",
                   "text": "$2001-$3000"
                 },
                 {
-                  "value": "3001-5000",
+                  "value": "3001_5000",
                   "text": "$3001-$5000"
                 },
                 {
@@ -645,11 +645,11 @@
                   "text": "Under $2000"
                 },
                 {
-                  "value": "2001-4000",
+                  "value": "2001_4000",
                   "text": "$2001-$4000"
                 },
                 {
-                  "value": "4001-5500",
+                  "value": "4001_5500",
                   "text": "$4001-$5500"
                 },
                 {
@@ -691,15 +691,15 @@
                   "text": "Under $1000"
                 },
                 {
-                  "value": "1001-2000",
+                  "value": "1001_2000",
                   "text": "$1001-$2000"
                 },
                 {
-                  "value": "2001-3000",
+                  "value": "2001_3000",
                   "text": "$2001-$3000"
                 },
                 {
-                  "value": "3001-5000",
+                  "value": "3001_5000",
                   "text": "$3001-$5000"
                 },
                 {
@@ -803,11 +803,11 @@
                   "text": "Under $2000"
                 },
                 {
-                  "value": "2001-4000",
+                  "value": "2001_4000",
                   "text": "$2001-$4000"
                 },
                 {
-                  "value": "4001-5500",
+                  "value": "4001_5500",
                   "text": "$4001-$5500"
                 },
                 {
@@ -847,15 +847,15 @@
                   "text": "Under $1000"
                 },
                 {
-                  "value": "1001-2000",
+                  "value": "1001_2000",
                   "text": "$1001-$2000"
                 },
                 {
-                  "value": "2001-3000",
-                  "text": "$2001-$3000"
+                  "value": "2001_3000",
+                  "text": "$2001_$3000"
                 },
                 {
-                  "value": "3001-5000",
+                  "value": "3001_5000",
                   "text": "$3001-$5000"
                 },
                 {

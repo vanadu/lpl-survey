@@ -115,12 +115,52 @@
   "DiagnosisSurgeonContingent": "YES",
 
   "TreatmentStatusDidHave": "YES",
+  "TreatmentStatusAgeYears": "13",
+  "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [
     "TIEBACK",
     "STENT"
   ],
-  "TreatmentStatusAgeYears": "13",
-  "TreatmentStatusAgeMonths": "6",
+  "TreatmentStatusTiebackCount": "MORE_THAN_ONCE",
+  "TreatmentStatusTiebackOnceCost": "4001_5500",
+  "TreatmentStatusTiebackMultipleCost": "5501_7000",
+  "TreatmentStatusTiebackComplications": true,
+  "TreatmentStatusTiebackComplicationsCost": "3001_5000",
+  "TreatmentStatusBveapReasons": [
+    "AP_RISK",
+    "PERMANENCE",
+    "REPUTATION"
+  ],
+  "TreatmentStatusBveapCost": "5501_7000",
+  "TreatmentStatusBveapComplications": "true",
+  "TreatmentStatusBveapComplicationsCost": "OVER_5001",
+  "TreatmentStatusStentType": "SILICONE",
+  "TreatmentStatusStentDidMigrate": true,
+  "TreatmentStatusStentReplaced": true,
+  "TreatmentStatusStentCostOnce": "3001_4000",
+  "TreatmentStatusStentCostRepeat": "3001_4000",
+  "TreatmentStatusStentComplications": true,
+  "TreatmentStatusStentComplicationsCost": "1001_2000",
+  "TreatmentStatusArtyenoidectomyReasons": [
+    "COST",
+    "AVAILABILITY"
+  ],
+  "TreatmentStatusArtyenoidectomyLaser": true,
+  "TreatmentStatusArtyenoidectomyDidExplain": "YES",
+  "TreatmentStatusArtyenoidectomyChoice": "YES",
+  "TreatmentStatusArtyenoidectomyCost": "UNDER_2000",
+  "TreatmentStatusArtyenoidectomyComplications": true,
+  "TreatmentStatusArtyenoidectomyComplicationsCost": "UNDER_1000",
+  "TreatmentStatusVentrilocordectomyReasons": [
+    "COST",
+    "AVAILABILITY"
+  ],
+  "TreatmentStatusVentrilocordectomyDidExplain": "YES",
+  "TreatmentStatusVentrilocordectomyChoice": "YES",
+  "TreatmentStatusVentrilocordectomyCost": "UNDER_2000",
+  "TreatmentStatusVentrilocordectomyComplications": true,
+  "TreatmentStatusVentrilocordectomyComplicationsCost": "UNDER_1000",
+
 
   "TreatmentFactorsDecision": "UNDECIDED",
   "TreatmentFactorsDecisionStent": "NOT_INFORMED",
