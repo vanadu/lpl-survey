@@ -18,7 +18,7 @@
         {
           "type": "html",
           "name": "LandingIntroText01",
-          "html": "<p>You're here because the disease of laryngeal paralysis (LarPar, LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
+          "html": "<p>You're here because the disease of laryngeal paralysis (LarPar, LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. </p>"
         },
         {
           "type": "html",
@@ -35,6 +35,11 @@
           "type": "html",
           "name": "LandingJourneyText",
           "html": "<p>In <b>Survey Mode</b> you'll be asked to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, you can switch to <b>Workbook Mode</b> to refresh your memory and continue later.</p>"
+        },
+        {
+          "type": "html",
+          "name": "LandingLosingCompanion",
+          "html": "<p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
         },
         {
           "type": "html",

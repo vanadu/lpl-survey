@@ -437,10 +437,15 @@
 }
 
 // !VA OVERRIDES default p for sd-html elements
-.survey-wrapper .sd-html p {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    padding-bottom: .5rem !important;
+.survey-wrapper .sd-html {
+  p, li {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      padding-bottom: .5rem !important;
+  }
+  li {
+    margin-left: 1.5rem;
+  }
 }
 
 // !VA INFO icons and links
