@@ -8,13 +8,110 @@
         {
           "type": "html",
           "name": "NeuropathyHeading",
-          "html": "<h3>The Polyneuropathy of GOLPP</h3>"
+          "html": "<h3>Hind-end weakness and polyneuropathy</h3>"
         },
         {
           "type": "html",
           "name": "NeuropathyText",
-          "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+          "html": "<p>Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly the weakening and loss of control over the hind-end. </p>"
+        },
+        {
+          "type": "html",
+          "name": "NeuropathyText",
+          "html": "<p>Younger dogs with idiopathic LP often don't have show signs of hind-end weakness.</p>"
+        },
+
+
+        {
+          "type": "radiogroup",
+          "name": "NeuropathySymptomsDidHave",
+          "title": "After the first appearance of LP/GOLPP symptoms, did {CmpnName} ever show signs of polyneuropathy, i.e. hind-end weakness?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
+        },
+
+        {
+          "type": "panel",
+          "name": "NeuropathySymptomsAgePanel",
+          "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of hind-end weakness or polyneuropathy?",
+          "visibleIf": "{NeuropathySymptomsDidHave} = 'YES'",
+          "elements": [
+
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "NeuropathySymptomsAgeYears",
+              "title": "Years",
+              "isRequired": true,
+              "min": "1",
+              "max": "40",
+                "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 40,
+                  "text": "Age must be between 1 and 40"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "NeuropathySymptomsAgeMonths",
+              "title": "Months (number 1 - 12)",
+              "isRequired": true,
+              "min": 1,
+              "max": 12,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 12,
+                  "text": "Months must be between 1 and 12"
+                }
+              ]
+            },
+
+            {
+              "type": "rating",
+              "name": "NeuropathySymptomsSeverity",
+              "title": "How would you rate the severity of {CmpnName}'s hind end weakness is now?",
+              "description": "1 = no, not at all, 5 = yes, very",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+
+
+          ]
         }
+
+
+
+
+
+
+
       ]
     }
   ]

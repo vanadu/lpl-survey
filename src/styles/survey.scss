@@ -2,6 +2,28 @@
 
 // !VA Landing Page
 // !VA Version info
+
+.landing-survey-test-container {
+  display: flex;
+  justify-content: right;
+  padding: 0!important;
+  margin: 0 40px 0 0!important;
+  // display: none;
+}
+
+.landing-survey-test {
+  padding: 0!important;
+  margin: 0!important;
+  font-family: $secondary_font!important;
+  color: #353535!important;
+  font-size: .913rem!important;
+  line-height: 1.25rem!important;
+  // display: none;
+}
+
+
+
+
 .landing-survey-version-container {
   display: flex;
   justify-content: right;

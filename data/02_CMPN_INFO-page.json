@@ -34,12 +34,12 @@
               "isRequired": true,
               "choices": [
               {
-                  "value": "DECEASED",
+                  "value": false,
                   "imageLink": "./img-companions-rainbow.png",
                   "text": "Over the Rainbow Bridge"
                 },
                 {
-                  "value": "LIVING",
+                  "value": true,
                   "imageLink": "./img-companions.png",
                   "text": "Still here on Earth"
                 }
@@ -124,7 +124,7 @@
           "type": "panel",
           "name": "dcsdCmpnInfoAgePanel",
           "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
-          "visibleIf": "{LifeStatus} = 'DECEASED'",
+          "visibleIf": "{LifeStatus} = false",
           "elements": [
             {
               "type": "text",
@@ -166,7 +166,7 @@
           "type": "panel",
           "name": "lvngCmpnInfoAgePanel",
           "title": "What is {CmpnName}'s approximate age (in years and months)?",
-          "visibleIf": "{LifeStatus} = 'LIVING'",
+          "visibleIf": "{LifeStatus} = true",
           "elements": [
             {
               "type": "text",
@@ -313,14 +313,14 @@
               "name": "lvngCmpnInfoHasInsurance",
               "required": true,
               "title": "Do you have pet insurance for {CmpnName}?",
-              "visibleIf": "{LifeStatus} = 'LIVING'"
+              "visibleIf": "{LifeStatus} = true"
             },
             {
               "type": "boolean",
               "name": "dcsdCmpnInfoHasInsurance",
               "required": true,
               "title": "Did you have pet insurance for {CmpnName}?",
-              "visibleIf": "{LifeStatus} = 'DECEASED'"
+              "visibleIf": "{LifeStatus} = false"
             },
             {
             "type": "radiogroup",

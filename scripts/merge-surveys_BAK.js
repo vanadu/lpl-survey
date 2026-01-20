@@ -52,39 +52,10 @@ const pages = pageFiles.map(filename => {
 const masterSurvey = {
     "calculatedValues": [
     {
-      "type": "calculatedvalue",
-      "name": "lvngCmpnInfoAgeYearsAsMonths",
-      "expression": "{lvngCmpnInfoAgeYears} * 12",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "lvngCmpnInfoAgeTotalMonths",
-      "expression": "{lvngCmpnInfoAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
-      "includeIntoResult": true
-    },    
-    {
-      "type": "calculatedvalue",
-      "name": "dcsdCmpnInfoAgeYearsAsMonths",
-      "expression": "{dcsdCmpnInfoAgeYears} * 12",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "dcsdCmpnInfoAgeTotalMonths",
-      "expression": "{dcsdCmpnInfoAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
-      "includeIntoResult": true
-    }, 
-    {
-      "type": "calculatedvalue",
       "name": "ageInMonths",
-      "expression": "iif({LifeStatus} = true, {lvngCmpnInfoAgeTotalMonths}, {dcsdCmpnInfoAgeTotalMonths})",
-      "includeIntoResult": true
+      "expression":
+        "{lvngCmpnInfoAgeYears} * 12 + {lvngCmpnInfoAgeMonths}"
     },
-
-
-
-
     {
       "name": "ageInMonthsAtSymptomOnset",
       "expression":

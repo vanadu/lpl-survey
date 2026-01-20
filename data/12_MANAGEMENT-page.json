@@ -465,7 +465,7 @@
         {
           "type": "radiogroup",
           "name": "ManagementNonPrescription",
-          "title": "Did {CmpnName} recieve acupuncture or other therapies to help with LP/GOLPP symptoms?",
+          "title": "Did {CmpnName} receive acupuncture or other therapies to help with LP/GOLPP symptoms?",
           "isRequired": true,
           "choices": [
             {

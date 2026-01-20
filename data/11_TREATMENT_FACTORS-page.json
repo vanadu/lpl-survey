@@ -19,7 +19,7 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsDecisionPanel",
-          "visibleIf": "{TreatmentStatusDidHave} = 'NO' && {LifeStatus} = 'LIVING'",
+          "visibleIf": "{TreatmentStatusDidHave} = 'NO' && {LifeStatus} = true",
           "elements": [
             {
               "type": "dropdown",

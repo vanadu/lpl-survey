@@ -77,7 +77,7 @@
             {
               "type": "radiogroup",
               "name": "AspirationInpatient",
-              "title": "Did {CmpnName} ever require inpatient, overnight, or emergency care for any of these occurrences of AP?",
+              "title": "Did {CmpnName} ever need inpatient, overnight, or emergency care for AP?",
               "isRequired": true,
               "choices": [
                 {
@@ -126,13 +126,13 @@
         {
           "type": "panel",
           "name": "AspirationSurgeryPanel",
-          "visibleIf": "{TreatmentStatusDidHave} = 'SURGERY' && {AspirationDidHave} = YES",
+          "visibleIf": "{TreatmentStatusType} != 'STENT' && {AspirationDidHave} = YES",
           "elements": [
 
             {
               "type": "radiogroup",
               "name": "AspirationSurgeryPost",
-              "title": "Did {CmpnName} ever have AP after the LP surgery (i.e., tieback, BVEAP)?",
+              "title": "Did {CmpnName} ever have AP after the surgery (i.e., tieback, BVEAP)?",
               "isRequired": true,
               "choices": [
                 {
@@ -154,7 +154,7 @@
             {
               "type": "dropdown",
               "name": "AspirationSurgeryPostCount",
-              "title": "In the course of {CmpnName}'s life post-op, how many times did {CmpnName} get AP?",
+              "title": "How many times did {CmpnName} get AP after the surgery?",
               "isRequired": true,
               "visibleIf": "{AspirationSurgeryPost} = YES",
               "choices": [
@@ -183,7 +183,7 @@
         {
           "type": "panel",
           "name": "AspirationStentPanel",
-          "visibleIf": "{TreatmentStatusDidHave} = 'STENT' && {AspirationDidHave} = YES",
+          "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = YES",
           "elements": [
 
             {
@@ -211,9 +211,9 @@
             {
               "type": "dropdown",
               "name": "AspirationStentPostCount",
-              "title": "In the course of {CmpnName}'s life after the stent implant, how many times did {CmpnName} get AP?",
+              "title": "How many times did {CmpnName} get AP after the stent implant?",
               "isRequired": true,
-              "visibleIf": "{AspirationSurgeryPost} = YES",
+              "visibleIf": "{AspirationStentPost} = YES",
               "choices": [
                 {
                   "value": "ONE",
@@ -237,52 +237,47 @@
     
           ]
         },
-        
         {
           "type": "panel",
           "name": "AspirationCostPanel",
           "visibleIf": "{AspirationDidHave} = YES",
           "elements": [
             {
-            "type": "dropdown",
-            "name": "AspirationCost",
-            "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
-            "isRequired": true,
-            "choices": [
-              {
-                "value": "UNDER_500",
-                "text": "Under $500"
-              },
-              {
-                "value": "501-1000",
-                "text": "$501-$1000"
-              },
-              {
-                "value": "1001-2000",
-                "text": "$1001-$2000"
-              },
-              {
-                "value": "2001-3000",
-                "text": "$2001-$3000"
-              },
-              {
-                "value": "3001-5000",
-                "text": "$3001-$5000"
-              },
-              {
-                "value": "5001-8000",
-                "text": "$5001-$8000"
-              },
-              {
-                "value": "OVER_8001",
-                "text": "Over $8001"
-              }
-            ]
-          }
-
-
-
-    
+              "type": "dropdown",
+              "name": "AspirationCost",
+              "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "UNDER_500",
+                  "text": "Under $500"
+                },
+                {
+                  "value": "501-1000",
+                  "text": "$501-$1000"
+                },
+                {
+                  "value": "1001-2000",
+                  "text": "$1001-$2000"
+                },
+                {
+                  "value": "2001-3000",
+                  "text": "$2001-$3000"
+                },
+                {
+                  "value": "3001-5000",
+                  "text": "$3001-$5000"
+                },
+                {
+                  "value": "5001-8000",
+                  "text": "$5001-$8000"
+                },
+                {
+                  "value": "OVER_8001",
+                  "text": "Over $8001"
+                }
+              ]
+            }
           ]
         }
       ]

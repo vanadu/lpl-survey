@@ -10,15 +10,15 @@
   "UserInfoContactOK": true,
 
   "CmpnName": "Miss B",
-  "LifeStatus": "LIVING",
+  "LifeStatus": true,
 
   "CmpnInfoAnimalType": "CANINE",
   "CmpnInfoBreed": "Boxer",
   "CmpnInfoGender": 5,
   "lvngCmpnInfoAgeYears": 12,
-  "lvngCmpnInfoAgeMonths": 2,
+  "lvngCmpnInfoAgeMonths": 8,
   "dcsdCmpnInfoAgeYears": 14,
-  "dcsdCmpnInfoAgeMonths": 6,
+  "dcsdCmpnInfoAgeMonths": 5,
   "CmpnInfoWeight": 50,
   "CmpnInfoWeightUnits": false,
   "CmpnInfoDemeanor": 5,
@@ -114,7 +114,11 @@
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
 
-  "TreatmentStatusDidHave": "SURGERY",
+  "TreatmentStatusDidHave": "YES",
+  "TreatmentStatusType":  [
+    "TIEBACK",
+    "STENT"
+  ],
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
 
@@ -131,18 +135,9 @@
 
   "ManagementPrescriptions": "YES",
   "ManagementPrescriptionType": [
-    {
-      "value": "DOXEPIN",
-      "text": "Doxepin"
-    },
-    {
-      "value": "CERENIA",
-      "text": "Cerenia (maripotant citrate)"
-    },
-    {
-      "value": "GABAPENTIN",
-      "text": "Gabapentin"
-    }
+    "DOXEPIN",
+    "CERENIA",
+    "GABAPENTIN"
   ],
 
   "ManagementPrescriptionDoxepinRatingBreathing": 4,
@@ -179,6 +174,28 @@
   "ManagementNonPrescriptionColdLaserRatingBreathing": 3,
   "ManagementNonPrescriptionColdLaserRatingMobility": 4,
   "ManagementNonPrescriptionChiroRatingBreathing": 3,
-  "ManagementNonPrescriptionChiroRatingMobility": 4
+  "ManagementNonPrescriptionChiroRatingMobility": 4,
+
+  "OTCProductsDidPurchase": "YES",
+  "OTCProductsType": [
+    "TUMERIC",
+    "CBD",
+    "URSOLIC"
+  ],
+  "OtcProductsCost": "101_150",
+  "OtcProductsEffectiveness": 4,
+  "OTCProtocolDidPurchase": "YES",
+  "OtcProtocolCost": "51_100",
+  "OtcProtocolEffectiveness": 3,
+
+  "AspirationDidHave": "YES",
+  "AspirationCount": "TWO",
+  "AspirationInpatient": "YES",
+  "AspirationInpatientCount": "ONE",
+  "AspirationSurgeryPost": "YES",
+  "AspirationSurgeryPostCount": "ONE",
+  "AspirationStentPost": "YES",
+  "AspirationStentPostCount": "ONE",
+  "AspirationCost": "1001-2000"
 
 }

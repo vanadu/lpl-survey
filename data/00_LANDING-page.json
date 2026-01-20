@@ -7,6 +7,35 @@
       "elements": [
         {
           "type": "html",
+          "name": "ageInMonths",
+          "html": "<p class='landing-survey-test'>lvngCmpnInfoAgeTotalMonths = {lvngCmpnInfoAgeTotalMonths}"
+        },
+        {
+          "type": "html",
+          "name": "ageInMonths",
+          "html": "<p class='landing-survey-test'>dcsdCmpnInfoAgeTotalMonths = {dcsdCmpnInfoAgeTotalMonths}"
+        },
+        {
+          "type": "html",
+          "name": "ageInMonths",
+          "html": "<p class='landing-survey-test'>ageInMonths = {ageInMonths}"
+        },
+
+
+        {
+          "type": "html",
+          "name": "ageInMonthsAtSymptomOnset",
+          "html": "<p class='landing-survey-test'>ageInMonthsAtSymptomOnset = {ageInMonthsAtSymptomOnset}</p>"
+        },
+
+        {
+          "type": "html",
+          "name": "ageInMonthsAtSymptomOnset",
+          "html": "<p class='landing-survey-test'>durationOfSymptomsInMonths = {durationOfSymptomsInMonths}</p>"
+        },
+
+        {
+          "type": "html",
           "name": "LandingVersion",
           "html": "<div class='landing-survey-version-container'><p class='landing-survey-version'>LarParLife.org LP/GOLPP Survey<br/>Beta 0.9/26.01.18.01</p></div>"
         },
