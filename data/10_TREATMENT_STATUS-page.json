@@ -81,10 +81,10 @@
               },
               {
                 "value": "STENT",
-                "text": "Laryngeal Stent"
+                "text": "Laryngeal stent"
               },
               { "value": "ARYTENOIDECTOMY",
-                "text": "Arytenoidectomy"  
+                "text": "Partial arytenoidectomy"  
               },
               { "value": "VENTRILOCORDECTOMY",
                 "text": "Ventrilocordectomy"  
@@ -243,7 +243,6 @@
           "title": "Questions about BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)",
           "visibleIf": "{TreatmentStatusType} contains 'BVEAP'",
           "elements": [
-
             {
               "type": "checkbox",
               "name": "TreatmentStatusBveapReasons",
@@ -296,9 +295,6 @@
               ],
               "showOtherItem": false
             },
-
-
-
             {
               "type": "radiogroup",
               "name": "TreatmentStatusBveapComplications",
@@ -386,7 +382,6 @@
               ],
               "showOtherItem": true
             },
-
             {
               "type": "panel",
               "name": "TreatmentStatusDexstentPanel",
@@ -399,9 +394,6 @@
                 }
               ]
             },
-
-
-
             {
               "type": "radiogroup",
               "name": "TreatmentStatusStentDidMigrate",
@@ -426,7 +418,7 @@
               "title": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
               "description": "NOTE: Don't need to ask if tieback was done after it was coughed out because that's already answered in the checkbox questions.",
               "isRequired": true,
-              "visibleIf": "{TreatmentStatusStentDidMigrate} = true",
+              "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW'",
               "choices": [
                 {
                   "value": true,
@@ -557,13 +549,324 @@
               "showOtherItem": false
             }
           ]
+        },
+
+        {
+          "type": "panel",
+          "name": "TreatmentStatusArytenoidectomyPanel",
+          "title": "Questions about partial arytenoidectomy surgery",
+          "description": "Partial arytenoidectomy is the surgical removal of a section of one of the arytenoid (laryngeal) cartilages.",
+          "visibleIf": "{TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "TreatmentStatusArtyenoidectomyReasons",
+              "title": "Why did you choose partial arytenoidectomy over other surgery types?",
+              "description": "Please choose all that apply.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "COST",
+                  "text": "Cost of this surgery compared to other surgery types"
+                },
+                {
+                  "value": "RECOMMEND_PRIMARY",
+                  "text": "Recommended by primary veterinarian"
+                },
+                {
+                  "value": "RECOMMENDED_SPECIALIST",
+                  "text": "Recommended by specialist"
+                },
+                {
+                  "value": "AVAILABILITY",
+                  "text": "Availablility"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusArtyenoidectomyLaser",
+              "title": "Was the partial arytenoidectomy performed with a laser?",
+              "description": "This technique is called 'ablation'.",
+              "isRequired": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "TreatmentStatusArtyenoidectomyDidExplain",
+              "title": "Did the surgeon explain the pros and cons of this surgery type vs standard tieback surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "TreatmentStatusArtyenoidectomyChoice",
+              "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusArtyenoidectomyCost",
+              "title": "Approximate cost of the partial arytenoidectomy (not including post-op complications):",
+              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "UNDER_2000",
+                  "text": "Under $2000"
+                },
+                {
+                  "value": "2001-4000",
+                  "text": "$2001-$4000"
+                },
+                {
+                  "value": "4001-5500",
+                  "text": "$4001-$5500"
+                },
+                {
+                  "value": "OVER_5500",
+                  "text": "Over $5500"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+
+            {
+              "type": "radiogroup",
+              "name": "TreatmentStatusArtyenoidectomyComplications",
+              "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": true,
+                  "text": "Yes"
+                },
+                {
+                  "value": false,
+                  "text": "No"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusArtyenoidectomyComplicationsCost",
+              "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusArtyenoidectomyComplications} = true",
+              "choices": [
+                {
+                  "value": "UNDER_1000",
+                  "text": "Under $1000"
+                },
+                {
+                  "value": "1001-2000",
+                  "text": "$1001-$2000"
+                },
+                {
+                  "value": "2001-3000",
+                  "text": "$2001-$3000"
+                },
+                {
+                  "value": "3001-5000",
+                  "text": "$3001-$5000"
+                },
+                {
+                  "value": "OVER_5001",
+                  "text": "Over $5001"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+
+
+
+        {
+          "type": "panel",
+          "name": "TreatmentStatusVentrilocordectomyPanel",
+          "title": "Questions about ventrilocordectomy surgery",
+          "description": "Ventrilocordectomy is the surgical removal of the vocal folds (vocal cords) that dogs use to bark.",
+          "visibleIf": "{TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "TreatmentStatusArtyenoidectomyReasons",
+              "title": "Why did you choose ventrilocordectomy over other surgery types?",
+              "description": "Please choose all that apply.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "COST",
+                  "text": "Cost of this surgery compared to other surgery types"
+                },
+                {
+                  "value": "RECOMMEND_PRIMARY",
+                  "text": "Recommended by primary veterinarian"
+                },
+                {
+                  "value": "RECOMMENDED_SPECIALIST",
+                  "text": "Recommended by specialist"
+                },
+                {
+                  "value": "AVAILABILITY",
+                  "text": "Availablility"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "TreatmentStatusVentrilocordectomyDidExplain",
+              "title": "Did the surgeon explain the pros and cons of this surgery type vs tieback surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+            {
+              "type": "radiogroup",
+              "name": "TreatmentStatusArtyenoidectomyChoice",
+              "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusVentrilocordectomyCost",
+              "title": "Approximate cost of the ventrilocordectomy (not including post-op complications):",
+              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "UNDER_2000",
+                  "text": "Under $2000"
+                },
+                {
+                  "value": "2001-4000",
+                  "text": "$2001-$4000"
+                },
+                {
+                  "value": "4001-5500",
+                  "text": "$4001-$5500"
+                },
+                {
+                  "value": "OVER_5500",
+                  "text": "Over $5500"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "TreatmentStatusVentrilocordectomyComplications",
+              "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": true,
+                  "text": "Yes"
+                },
+                {
+                  "value": false,
+                  "text": "No"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusVentrilocordectomyComplicationsCost",
+              "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusVentrilocordectomyComplications} = true",
+              "choices": [
+                {
+                  "value": "UNDER_1000",
+                  "text": "Under $1000"
+                },
+                {
+                  "value": "1001-2000",
+                  "text": "$1001-$2000"
+                },
+                {
+                  "value": "2001-3000",
+                  "text": "$2001-$3000"
+                },
+                {
+                  "value": "3001-5000",
+                  "text": "$3001-$5000"
+                },
+                {
+                  "value": "OVER_5001",
+                  "text": "Over $5001"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
         }
-
-
-
-
-
-
 
 
 
