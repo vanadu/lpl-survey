@@ -43,6 +43,24 @@
       "name": "observeTense",
       "expression": "iif({LifeStatus} = 'true', 'did you observe', 'have you observed')",
       "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "genderSubjectPronoun",
+      "expression": "iif({LifeStatus} = 'true', 'she', 'he')",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "genderObjectPronoun",
+      "expression": "iif({LifeStatus} = 'true', 'her', 'his')",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "stateAdjective",
+      "expression": "iif({LifeStatus} = 'true', 'last', 'current')",
+      "includeIntoResult": true
     }
   ],
   "title": "Master Survey Build",
@@ -5152,30 +5170,8 @@
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "NeuropathySymptomsFirst",
-                  "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
-                  "isRequired": true,
-                  "visibleIf": "{EarlySymptomsType} contains 'HIND_END'",
-                  "choices": [
-                    {
-                      "value": "HIND_END",
-                      "text": "Hind-end weakness appeared first"
-                    },
-                    {
-                      "value": "BREATHING",
-                      "text": "Breathing issues appeared first"
-                    },
-                    {
-                      "value": "SAME_TIME",
-                      "text": "They both appeared at about the same time"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "radiogroup",
                   "name": "NeuropathySymptomsDoesHave",
-                  "title": "Over the course of {CmpnName}'s LP/GOLPP journey, {observeTense} signs of persistent hind-end weakness?",
+                  "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
                   "isRequired": true,
                   "visibleIf": "{EarlySymptomsType} notcontains 'HIND_END'",
                   "choices": [
@@ -5193,19 +5189,90 @@
                     }
                   ],
                   "showOtherItem": false
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "NeuropathyHindEndDetailsPanel",
-              "title": "SHOW PANEL IF EarlySymptomsType contains 'HIND_END' or NeuropathySymptomsDoesHave = true",
-              "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
-              "elements": [
+                },
                 {
-                  "type": "html",
-                  "name": "NeuropathyHindEndDetails",
-                  "html": "NeuropathyHindEndDetails HERE"
+                  "type": "radiogroup",
+                  "name": "NeuropathySymptomsFirst",
+                  "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
+                  "isRequired": true,
+                  "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
+                  "choices": [
+                    {
+                      "value": "HIND_END",
+                      "text": "Hind-end weakness appeared first"
+                    },
+                    {
+                      "value": "BREATHING",
+                      "text": "Breathing issues appeared first"
+                    },
+                    {
+                      "value": "SAME_TIME",
+                      "text": "They both appeared at about the same time"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "NeuropathySymptomsBreathingOnset",
+                  "title": "About how many months after the hind-end weakness began did the breathing issues begin?",
+                  "isRequired": true,
+                  "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
+                  "min": 1,
+                  "max": 12,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 12,
+                      "text": "Months must be between 1 and 12"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "NeuropathySymptomsHindEndOnset",
+                  "title": "About how many months after the breathing issues began did the hind-end weakness begin?",
+                  "isRequired": true,
+                  "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
+                  "min": 1,
+                  "max": 12,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 12,
+                      "text": "Months must be between 1 and 12"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "NeuropathySymptomsTypeProgression",
+                  "title": "Over the course of {CmpnName}'s LP/GOLPP journey, which progressed faster: the breathing issues or the hind-end weakness?",
+                  "isRequired": true,
+                  "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
+                  "choices": [
+                    {
+                      "value": "BREATHING",
+                      "text": "The breathing issues progressed faster"
+                    },
+                    {
+                      "value": "HIND_END",
+                      "text": "The hind-end weakness progressed faster"
+                    },
+                    {
+                      "value": "SAME",
+                      "text": "They both progressed at about the same rate"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
                 }
               ]
             },
@@ -5258,12 +5325,38 @@
             {
               "type": "html",
               "name": "ConclusionHeading",
-              "html": "<h3>Conclusion Page</h3>"
+              "html": "<h3>Conclusions</h3>"
             },
             {
               "type": "html",
               "name": "ConclusionText",
-              "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+              "html": "<p>The last survey section deals with the last station of {CmpnName}'s LP/GOLPP journey &mdash; either {genderObjectPronoun} current state of health or {genderObjectPronoun} state of health when {genderSubjectPronoun} crossed over the Rainbow Bridge.</p><p>These are difficult questions to answer, but they're also the most important ones. This section references many of the questions you answered earlier in the survey to help draw conclusions about the progression of {CmpnName}'s LP/GOLPP. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later if you choose to do so.</p>"
+            },
+            {
+              "type": "checkbox",
+              "name": "CheckboxName",
+              "title": "Please describe the state of {stateAdjective} {CmpnName}'s polyneuropathy:",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "HIND_END",
+                  "text": "ITEM_1"
+                },
+                {
+                  "value": "FALLING",
+                  "text": "ITEM_2"
+                },
+                {
+                  "value": "URINARY",
+                  "text": "ITEM_3"
+                },
+                {
+                  "value": "FECAL",
+                  "text": "OTHER"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
             }
           ]
         }

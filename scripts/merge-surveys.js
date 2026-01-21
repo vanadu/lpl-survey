@@ -96,6 +96,24 @@ const masterSurvey = {
       "name": "observeTense",
       "expression": "iif({LifeStatus} = 'true', 'did you observe', 'have you observed')",
       "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "genderSubjectPronoun",
+      "expression": "iif({LifeStatus} = 'true', 'she', 'he')",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "genderObjectPronoun",
+      "expression": "iif({LifeStatus} = 'true', 'her', 'his')",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "stateAdjective",
+      "expression": "iif({LifeStatus} = 'true', 'last', 'current')",
+      "includeIntoResult": true
     }
 
   ],

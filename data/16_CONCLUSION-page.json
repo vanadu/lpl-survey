@@ -8,13 +8,63 @@
         {
           "type": "html",
           "name": "ConclusionHeading",
-          "html": "<h3>Conclusion Page</h3>"
+          "html": "<h3>Conclusions</h3>"
         },
         {
           "type": "html",
           "name": "ConclusionText",
-          "html": "<p>Cupidatat dolore amet ex ea sit dolore. Qui quis sint cillum laboris non. Nostrud amet culpa do incididunt commodo occaecat pariatur..</p>"
+          "html": "<p>The last survey section deals with the last station of {CmpnName}'s LP/GOLPP journey &mdash; either {genderObjectPronoun} current state of health or {genderObjectPronoun} state of health when {genderSubjectPronoun} crossed over the Rainbow Bridge.</p><p>These are difficult questions to answer, but they're also the most important ones. This section references many of the questions you answered earlier in the survey to help draw conclusions about the progression of {CmpnName}'s LP/GOLPP. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later if you choose to do so.</p>"
+        },
+        {
+          "type": "html",
+          "name": "ConclusionIntro",
+          "html": "These questions pertain to {CmpnName} {blobText}:"
+        },  
+
+
+        {
+          "type": "checkbox",
+          "name": "CheckboxName",
+          "title": "Please describe {CmpnName}'s polyneuropathy:",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "NO_SYMPTOMS",
+              "text": "No noticeable symptoms"
+            },
+            {
+              "value": "HIND_END",
+              "text": "Significant hind-end weakness"
+            },
+            {
+              "value": "FALLING",
+              "text": "Frequent falling"
+            },
+            {
+              "value": "GET_UP",
+              "text": "Difficulty getting up or standing"
+            },
+            {
+              "value": "URINARY",
+              "text": "Urinary incontinence"
+            },
+            {
+              "value": "FECAL",
+              "text": "Fecal incontinence"
+            }
+          ],
+          "showOtherItem": true,
+          "showNoneItem": true
         }
+
+
+
+
+
+
+
+
+
       ]
     }
   ]

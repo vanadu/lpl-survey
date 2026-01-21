@@ -112,6 +112,8 @@
 
   "DiagnosisWho": "SOFT_TISSUE",
   "PrimaryVetDiagnosticType": "SCOPE",
+  "DiagnosisTimeElapsed": 6,
+  "DiagnosisStage": "UNILATERAL",
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
 
@@ -241,6 +243,19 @@
   "AspirationSurgeryPostCount": "ONE",
   "AspirationStentPost": "YES",
   "AspirationStentPostCount": "ONE",
-  "AspirationCost": "1001-2000"
+  "AspirationCost": "1001-2000",
+
+
+  "NeuropathySymptomsDoesHave": "YES",
+  "NeuropathySymptomsFirst": "BREATHING",
+  "NeuropathySymptomsBreathingOnset": 3,
+  "NeuropathySymptomsHindEndOnset": 8,
+  "NeuropathySymptomsTypeProgression": "HIND_END",
+  "NeuropathyOtherIssues": [
+    "ANXIETY"
+  ]
+
+
+
 
 }

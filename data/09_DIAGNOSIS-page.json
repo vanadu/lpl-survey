@@ -14,9 +14,10 @@
           "type": "html",
           "name": "DiagnosisText",
           "html": "<p>This section asks who provided {CmpnName}'s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p><p>You may have seen multiple vets about {CmpnName}'s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about {CmpnName}'s LP/GOLPP.</p>"
-        }
-      ]
-    },
+        },
+
+
+
 
     {
       "type": "panel",
@@ -56,7 +57,7 @@
         {
           "type": "dropdown",
           "name": "PrimaryVetDiagnosticType",
-          "title": "What diagnostic procedure ws used to arrive at the definitive diagnosis?",
+          "title": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
           "isRequired": true,
           "choices": [
             {
@@ -85,6 +86,46 @@
             }
           ],
           "showOtherItem": true
+        },
+
+        {
+          "type": "radiogroup",
+          "name": "DiagnosisStage",
+          "title": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "UNILATERAL",
+              "text": "Unilateral (one-side)"
+            },
+            {
+              "value": "BILATERAL",
+              "text": "Bilateral (both sides)"
+            },
+            {
+              "value": "WASNT_TOLD",
+              "text": "I wasn't told which stage {CmpnName}'s LP was in"
+            }
+          ],
+          "showOtherItem": false
+        },
+
+        {
+          "type": "text",
+          "inputType": "number",
+          "name": "DiagnosisTimeElapsed",
+          "title": "About how many months after {CmpnName}'s first symptoms appeared did you get the diagnosis?",
+            "isRequired": true,
+            "min": 1,
+            "max": 12,
+            "validators": [
+              {
+                "type": "numeric",
+                "minValue": 1,
+                "maxValue": 12,
+                "text": "Months must be between 1 and 12"
+              }
+            ]
         },
         {
           "type": "radiogroup",
@@ -117,7 +158,7 @@
         {
           "type": "radiogroup",
           "name": "DiagnosisSurgeonContingent",
-          "title": "Did the surgeon make the definitive diagnosis by laryngoscope or video endoscope contingent on proceeding with the LP surgery?",
+          "title": "Did the surgeon require content to proceed with the surgery before doing the diagnosis?",
           "isRequired": true,
           "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
           "choices": [
@@ -138,5 +179,16 @@
         }
       ]
     }
+
+
+
+
+
+
+
+      ]
+    }
+
+
   ]
 }
