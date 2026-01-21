@@ -37,6 +37,12 @@
     {
       "name": "durationOfSymptomsInMonths",
       "expression": "{ageInMonths} - {ageInMonthsAtSymptomOnset}"
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "observeTense",
+      "expression": "iif({LifeStatus} = 'true', 'did you observe', 'have you observed')",
+      "includeIntoResult": true
     }
   ],
   "title": "Master Survey Build",
@@ -408,12 +414,12 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": false,
+                      "value": true,
                       "imageLink": "./img-companions-rainbow.png",
                       "text": "Over the Rainbow Bridge"
                     },
                     {
-                      "value": true,
+                      "value": false,
                       "imageLink": "./img-companions.png",
                       "text": "Still here on Earth"
                     }
@@ -1370,11 +1376,11 @@
                     },
                     {
                       "value": "COUGHING",
-                      "text": "Coughing or hacking"
+                      "text": "Coughing or gagging"
                     },
                     {
-                      "value": "GAGGING",
-                      "text": "Gagging or retching"
+                      "value": "HIND_END",
+                      "text": "Hind-end weakness"
                     },
                     {
                       "value": "LABORED_BREATHING",
@@ -1383,14 +1389,6 @@
                     {
                       "value": "EXERCISE_INTOLERANCE",
                       "text": "Exercise and heat intolerance"
-                    },
-                    {
-                      "value": "CYANOSIS",
-                      "text": "Tongue or gums turning blue"
-                    },
-                    {
-                      "value": "SYNCOPE",
-                      "text": "Syncope (passing out)"
                     }
                   ],
                   "showOtherItem": true,
@@ -5141,33 +5139,110 @@
             {
               "type": "html",
               "name": "NeuropathyText",
-              "html": "<p>Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly the weakening and loss of control over the hind-end. </p>"
+              "html": "<p>This section asks questions about whether {CmpnName} showed symptoms of polyneuropathy and how these symptoms progressed over time. </p>"
             },
             {
               "type": "html",
               "name": "NeuropathyText",
-              "html": "<p>Younger dogs with idiopathic LP often don't have show signs of hind-end weakness.</p>"
+              "html": "<p><b>NOTE:</b> Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly in the hind end. Symptoms can include hind-end weakness and incontinence. Younger dogs with idiopathic LP often don't suffer from LP-related polyneuropathy.</p>"
             },
             {
-              "type": "radiogroup",
-              "name": "NeuropathySymptomsDidHave",
-              "title": "In the {durationOfSymptomsInMonths} months since LP/GOLPP symptoms appeared, did {CmpnName} ever show signs of polyneuropathy, i.e. hind-end weakness or incontinence?",
-              "isRequired": true,
-              "choices": [
+              "type": "panel",
+              "name": "NeuropathyHindEndDoesHavePanel",
+              "elements": [
                 {
-                  "value": "YES",
-                  "text": "Yes"
+                  "type": "radiogroup",
+                  "name": "NeuropathySymptomsFirst",
+                  "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
+                  "isRequired": true,
+                  "visibleIf": "{EarlySymptomsType} contains 'HIND_END'",
+                  "choices": [
+                    {
+                      "value": "HIND_END",
+                      "text": "Hind-end weakness appeared first"
+                    },
+                    {
+                      "value": "BREATHING",
+                      "text": "Breathing issues appeared first"
+                    },
+                    {
+                      "value": "SAME_TIME",
+                      "text": "They both appeared at about the same time"
+                    }
+                  ],
+                  "showOtherItem": false
                 },
                 {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
+                  "type": "radiogroup",
+                  "name": "NeuropathySymptomsDoesHave",
+                  "title": "Over the course of {CmpnName}'s LP/GOLPP journey, {observeTense} signs of persistent hind-end weakness?",
+                  "isRequired": true,
+                  "visibleIf": "{EarlySymptomsType} notcontains 'HIND_END'",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "NOT_SURE",
+                      "text": "Not sure"
+                    }
+                  ],
+                  "showOtherItem": false
                 }
-              ],
-              "showOtherItem": false
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "NeuropathyHindEndDetailsPanel",
+              "title": "SHOW PANEL IF EarlySymptomsType contains 'HIND_END' or NeuropathySymptomsDoesHave = true",
+              "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "NeuropathyHindEndDetails",
+                  "html": "NeuropathyHindEndDetails HERE"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "NeuropathyOtherIssuesPanel",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "NeuropathyOtherIssues",
+                  "title": "During this time period, did any of these issues also appear?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ANXIETY",
+                      "text": "Increased anxiety"
+                    },
+                    {
+                      "value": "COGNITIVE",
+                      "text": "Cognitive changes"
+                    },
+                    {
+                      "value": "BEHAVIOR",
+                      "text": "Changes in behavior or personality"
+                    },
+                    {
+                      "value": "APPETITE",
+                      "text": "Changes in appetite"
+                    },
+                    {
+                      "value": "NONE",
+                      "text": "No, {CmpnName} never had any of these issues"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
             }
           ]
         }

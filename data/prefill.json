@@ -1,4 +1,6 @@
 {
+  "LandingConsent": "Yes",
+
   "UserInfoFirstName": "Jane",
   "UserInfoCountry": "US",
   "UserInfoStateRegion": "MD",
@@ -78,7 +80,6 @@
     "EXERCISE_INTOLERANCE"
   ],
   "EarlySymtomsSeverity": "1",
-  "EarlySymptomsHindEndWeakness": "DONT_KNOW",
   "EarlyOtherConditions": [
     "GERD",
     "ARTHRITIS"
@@ -166,11 +167,15 @@
   "TreatmentFactorsDecisionStent": "NOT_INFORMED",
   "TreatmentFactorsCost": 4,
   "TreatmentFactorsCostComplications": 4,
+  "TreatmentFactorsStageLP": 3,
+  "TreatmentFactorsStageNeuropathy": 3,
   "TreatmentFactorsRisks": 4,
   "TreatmentFactorsRisksComplications": 4,
   "TreatmentFactorsAge": 3,
+  "TreatmentFactorsGeneralHealth": 3,
   "TreatmentFactorsCoexisting": 2,
-  "TreatmentPrimaryVetFactorsAccess": 1,
+  "TreatmentFactorsCircumstancesAccess": 1,
+  "TreatmentFactorsCircumstancesCare": 3,
   "TreatmentFactorsOther": "Hind end weakness",
 
   "ManagementPrescriptions": "YES",
@@ -179,7 +184,7 @@
     "CERENIA",
     "GABAPENTIN"
   ],
-
+  "ManagementPrescriptionCost": "51_100",
   "ManagementPrescriptionDoxepinRatingBreathing": 4,
   "ManagementPrescriptionDoxepinRatingMobility": 4,
   "ManagementPrescriptionTrazodoneRatingBreathing": 2,
@@ -206,7 +211,7 @@
     "ACUPUNCTURE",
     "THERAPY"
   ],
-
+  "ManagementNonPrescriptionCost": "151_250",
   "ManagementNonPrescriptionAcupunctureRatingBreathing": 3,
   "ManagementNonPrescriptionAcupunctureRatingMobility": 4,
   "ManagementNonPrescriptionTherapyRatingBreathing": 3,

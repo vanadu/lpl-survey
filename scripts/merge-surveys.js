@@ -81,10 +81,6 @@ const masterSurvey = {
       "expression": "iif({LifeStatus} = true, {lvngCmpnInfoAgeTotalMonths}, {dcsdCmpnInfoAgeTotalMonths})",
       "includeIntoResult": true
     },
-
-
-
-
     {
       "name": "ageInMonthsAtSymptomOnset",
       "expression":
@@ -94,7 +90,14 @@ const masterSurvey = {
       "name": "durationOfSymptomsInMonths",
       "expression":
         "{ageInMonths} - {ageInMonthsAtSymptomOnset}"
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "observeTense",
+      "expression": "iif({LifeStatus} = 'true', 'did you observe', 'have you observed')",
+      "includeIntoResult": true
     }
+
   ],
   title: "Master Survey Build",
   showProgressBar: "top",

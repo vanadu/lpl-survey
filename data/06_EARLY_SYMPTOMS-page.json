@@ -86,11 +86,11 @@
                 },
                 {
                   "value": "COUGHING",
-                  "text": "Coughing or hacking"
+                  "text": "Coughing or gagging"
                 },
                 {
-                  "value": "GAGGING",
-                  "text": "Gagging or retching"
+                  "value": "HIND_END",
+                  "text": "Hind-end weakness"
                 },
                 {
                   "value": "LABORED_BREATHING",
@@ -99,15 +99,9 @@
                 {
                   "value": "EXERCISE_INTOLERANCE",
                   "text": "Exercise and heat intolerance"
-                },
-                {
-                  "value": "CYANOSIS",
-                  "text": "Tongue or gums turning blue"
-                },
-                {
-                  "value": "SYNCOPE",
-                  "text": "Syncope (passing out)"
                 }
+                
+
               ],
               "showOtherItem": true,
               "showNoneItem": true,

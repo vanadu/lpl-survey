@@ -34,12 +34,12 @@
               "isRequired": true,
               "choices": [
               {
-                  "value": false,
+                  "value": true,
                   "imageLink": "./img-companions-rainbow.png",
                   "text": "Over the Rainbow Bridge"
                 },
                 {
-                  "value": true,
+                  "value": false,
                   "imageLink": "./img-companions.png",
                   "text": "Still here on Earth"
                 }
