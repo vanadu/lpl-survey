@@ -148,6 +148,10 @@
             "required": true,
             "choices": [
                 {
+                  "value": "NONE",
+                  "text": "None that I was aware of"
+                },
+                {
                   "value": "GERD",
                   "text": "Acid reflux (GERD)"
                 },

@@ -46,6 +46,12 @@
     },
     {
       "type": "calculatedvalue",
+      "name": "doTense",
+      "expression": "iif({LifeStatus} = 'true', 'did', 'does')",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
       "name": "genderSubjectPronoun",
       "expression": "iif({LifeStatus} = 'true', 'she', 'he')",
       "includeIntoResult": true
@@ -60,6 +66,12 @@
       "type": "calculatedvalue",
       "name": "stateAdjective",
       "expression": "iif({LifeStatus} = 'true', 'last', 'current')",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "blobText",
+      "expression": "iif({LifeStatus} = 'true', 'towards the end of {genderObjectPronoun} life', 'in {genderObjectPronoun} current state of health')",
       "includeIntoResult": true
     }
   ],
@@ -2001,125 +2013,163 @@
               "type": "html",
               "name": "DiagnosisText",
               "html": "<p>This section asks who provided {CmpnName}'s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p><p>You may have seen multiple vets about {CmpnName}'s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about {CmpnName}'s LP/GOLPP.</p>"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "DiagnosisDetailsPanel",
-          "elements": [
-            {
-              "type": "dropdown",
-              "name": "DiagnosisWho",
-              "title": "Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "PRIMARY",
-                  "text": "Primary veterinarian"
-                },
-                {
-                  "value": "INTERNIST",
-                  "text": "Internal medicine specialist"
-                },
-                {
-                  "value": "NEUROLOGIST",
-                  "text": "Neurologist"
-                },
-                {
-                  "value": "SOFT_TISSUE",
-                  "text": "Soft tissue specialist or surgeon"
-                },
-                {
-                  "value": "GENERAL",
-                  "text": "General or orthopedic surgeon"
-                }
-              ],
-              "showOtherItem": true,
-              "showNoneItem": false
             },
             {
-              "type": "dropdown",
-              "name": "PrimaryVetDiagnosticType",
-              "title": "What diagnostic procedure ws used to arrive at the definitive diagnosis?",
-              "isRequired": true,
-              "choices": [
+              "type": "panel",
+              "name": "DiagnosisDetailsPanel",
+              "elements": [
                 {
-                  "value": "ROUTINE_EXAM",
-                  "text": "Visual/auditory exam only"
+                  "type": "dropdown",
+                  "name": "DiagnosisWho",
+                  "title": "Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "PRIMARY",
+                      "text": "Primary veterinarian"
+                    },
+                    {
+                      "value": "INTERNIST",
+                      "text": "Internal medicine specialist"
+                    },
+                    {
+                      "value": "NEUROLOGIST",
+                      "text": "Neurologist"
+                    },
+                    {
+                      "value": "SOFT_TISSUE",
+                      "text": "Soft tissue specialist or surgeon"
+                    },
+                    {
+                      "value": "GENERAL",
+                      "text": "General or orthopedic surgeon"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": false
                 },
                 {
-                  "value": "SEDATED_VISUAL",
-                  "text": "Sedated visual exam of larynx"
+                  "type": "dropdown",
+                  "name": "PrimaryVetDiagnosticType",
+                  "title": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ROUTINE_EXAM",
+                      "text": "Visual/auditory exam only"
+                    },
+                    {
+                      "value": "SEDATED_VISUAL",
+                      "text": "Sedated visual exam of larynx"
+                    },
+                    {
+                      "value": "XRAY",
+                      "text": "X-Ray or other imaging"
+                    },
+                    {
+                      "value": "ULTRASOUND",
+                      "text": "Ultrasound"
+                    },
+                    {
+                      "value": "SCOPE",
+                      "text": "Video endoscope or laryngoscope under anesthesia"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": true
                 },
                 {
-                  "value": "XRAY",
-                  "text": "X-Ray or other imaging"
+                  "type": "radiogroup",
+                  "name": "DiagnosisStage",
+                  "title": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "UNILATERAL",
+                      "text": "Unilateral (one-side)"
+                    },
+                    {
+                      "value": "BILATERAL",
+                      "text": "Bilateral (both sides)"
+                    },
+                    {
+                      "value": "WASNT_TOLD",
+                      "text": "I wasn't told which stage {CmpnName}'s LP was in"
+                    }
+                  ],
+                  "showOtherItem": false
                 },
                 {
-                  "value": "ULTRASOUND",
-                  "text": "Ultrasound"
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "DiagnosisTimeElapsed",
+                  "title": "About how many months after {CmpnName}'s first symptoms appeared did you get the diagnosis?",
+                  "isRequired": true,
+                  "min": 1,
+                  "max": 12,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 12,
+                      "text": "Months must be between 1 and 12"
+                    }
+                  ]
                 },
                 {
-                  "value": "SCOPE",
-                  "text": "Video endoscope or laryngoscope under anesthesia"
+                  "type": "radiogroup",
+                  "name": "DiagnosisCost",
+                  "title": "What was the pre-insurance cost of the diagnosis?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "UNDER_500",
+                      "text": "Under $500"
+                    },
+                    {
+                      "value": "500_1500",
+                      "text": "$501-$1500"
+                    },
+                    {
+                      "value": "1501_3000",
+                      "text": "$1500-$3000"
+                    },
+                    {
+                      "value": "OVER_3000",
+                      "text": "Over $3000"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know or prefer not to say"
+                    }
+                  ]
                 },
                 {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": true
-            },
-            {
-              "type": "radiogroup",
-              "name": "DiagnosisCost",
-              "title": "What was the pre-insurance cost of the diagnosis?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "UNDER_500",
-                  "text": "Under $500"
-                },
-                {
-                  "value": "500_1500",
-                  "text": "$501-$1500"
-                },
-                {
-                  "value": "1501_3000",
-                  "text": "$1500-$3000"
-                },
-                {
-                  "value": "OVER_3000",
-                  "text": "Over $3000"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know or prefer not to say"
+                  "type": "radiogroup",
+                  "name": "DiagnosisSurgeonContingent",
+                  "title": "Did the surgeon require content to proceed with the surgery before doing the diagnosis?",
+                  "isRequired": true,
+                  "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes, required surgery consent before diagnosis"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No, did not require surgery consent for diagnosis"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
                 }
               ]
-            },
-            {
-              "type": "radiogroup",
-              "name": "DiagnosisSurgeonContingent",
-              "title": "Did the surgeon make the definitive diagnosis by laryngoscope or video endoscope contingent on proceeding with the LP surgery?",
-              "isRequired": true,
-              "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes, required surgery consent before diagnosis"
-                },
-                {
-                  "value": "NO",
-                  "text": "No, did not require surgery consent for diagnosis"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
             }
           ]
         }
@@ -5330,33 +5380,205 @@
             {
               "type": "html",
               "name": "ConclusionText",
-              "html": "<p>The last survey section deals with the last station of {CmpnName}'s LP/GOLPP journey &mdash; either {genderObjectPronoun} current state of health or {genderObjectPronoun} state of health when {genderSubjectPronoun} crossed over the Rainbow Bridge.</p><p>These are difficult questions to answer, but they're also the most important ones. This section references many of the questions you answered earlier in the survey to help draw conclusions about the progression of {CmpnName}'s LP/GOLPP. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later if you choose to do so.</p>"
+              "html": "<p>The last survey section deals with the last station of {CmpnName}'s LP/GOLPP journey &mdash; either {genderObjectPronoun} current state of health or {genderObjectPronoun} state of health when {genderSubjectPronoun} crossed over the Rainbow Bridge.</p><p>These are difficult questions to answer, but they're also the most important ones. This section references the questions you answered earlier to help draw conclusions about the progression of {CmpnName}'s LP/GOLPP since {genderSubjectPronoun} first showed symptoms. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later if you choose to do so.</p>"
             },
             {
-              "type": "checkbox",
-              "name": "CheckboxName",
-              "title": "Please describe the state of {stateAdjective} {CmpnName}'s polyneuropathy:",
-              "isRequired": true,
-              "choices": [
+              "type": "html",
+              "name": "ConclusionIntro",
+              "html": "<p><b>NOTE:</b> The questions in this final section pertain to {CmpnName} {blobText}:</p>"
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionDetailsPanel",
+              "elements": [
                 {
-                  "value": "HIND_END",
-                  "text": "ITEM_1"
+                  "type": "checkbox",
+                  "name": "ConclusionsLimitations",
+                  "title": "Please describe any special considerations in place for {CmpnName} due to LP-related breathing issues:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "EXERCISE",
+                      "text": "Exercise limitations"
+                    },
+                    {
+                      "value": "FOOD",
+                      "text": "Type, amount or frequency of feeding"
+                    },
+                    {
+                      "value": "TRAVEL",
+                      "text": "Travel restrictions"
+                    },
+                    {
+                      "value": "EXCITEMENT",
+                      "text": "Limit activities that cause excitement"
+                    }
+                  ],
+                  "showOtherItem": true
                 },
                 {
-                  "value": "FALLING",
-                  "text": "ITEM_2"
+                  "type": "checkbox",
+                  "name": "ConclusionsPolyneuropathy",
+                  "title": "Please describe {CmpnName}'s polyneuropathy:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "NO_SYMPTOMS",
+                      "text": "No noticeable symptoms"
+                    },
+                    {
+                      "value": "HIND_END",
+                      "text": "Significant hind-end weakness"
+                    },
+                    {
+                      "value": "FALLING",
+                      "text": "Frequent falling"
+                    },
+                    {
+                      "value": "GET_UP",
+                      "text": "Difficulty getting up or standing"
+                    },
+                    {
+                      "value": "URINARY",
+                      "text": "Urinary incontinence"
+                    },
+                    {
+                      "value": "FECAL",
+                      "text": "Fecal incontinence"
+                    }
+                  ],
+                  "showOtherItem": false
                 },
                 {
-                  "value": "URINARY",
-                  "text": "ITEM_3"
-                },
-                {
-                  "value": "FECAL",
-                  "text": "OTHER"
+                  "type": "rating",
+                  "name": "ConclusionsQOL",
+                  "title": "How would you rate {CmpnName}'s quality of life at this stage?",
+                  "description": "1 = very poor, 3 = fair, 5 = very good",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
                 }
-              ],
-              "showOtherItem": true,
-              "showNoneItem": true
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionOtherConditionsPanel",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "EarlyOtherConditions",
+                  "title": "What other conditions {doTense} {CmpnName} have at this stage?",
+                  "required": true,
+                  "choices": [
+                    {
+                      "value": "GERD",
+                      "text": "Acid reflux (GERD)"
+                    },
+                    {
+                      "value": "ME",
+                      "text": "Megaesophagus"
+                    },
+                    {
+                      "value": "DM",
+                      "text": "Degenerative Myelopathy"
+                    },
+                    {
+                      "value": "ARTHRITIS",
+                      "text": "Arthritis"
+                    },
+                    {
+                      "value": "CUSHINGS",
+                      "text": "Cushings"
+                    },
+                    {
+                      "value": "CT",
+                      "text": "Collapsing Trachea"
+                    },
+                    {
+                      "value": "HYPOTHYROID",
+                      "text": "Hypothyroidism"
+                    },
+                    {
+                      "value": "HEMANGIOSARCOMA",
+                      "text": "Hemangiosarcoma"
+                    }
+                  ],
+                  "choicesOrder": "none",
+                  "otherText": "Other (max. 250 characters)",
+                  "showOtherItem": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionCauseOfDeathPanel",
+              "title": "The Last Question",
+              "visibleIf": "{LifeStatus} = true",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "ConclusionCauseOfDeathHeading",
+                  "html": "Humane euthanasia is how most people choose to say goodbye to their beloved companions when their quality of life reaches a point where letting them go is in their best interest. This last question asks about why {CmpnName}'s quality of life reached that point. "
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionCauseOfDeath",
+                  "title": "What was the ultimate reason why {CmpnName} crossed over the Rainbow Bridge?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "CANCER",
+                      "text": "Cancer"
+                    },
+                    {
+                      "value": "INFECTION",
+                      "text": "Bacterial/viral infection"
+                    },
+                    {
+                      "value": "BREATHING_CRISIS",
+                      "text": "Breathing crisis"
+                    },
+                    {
+                      "value": "ADVANCED_POLYNEUROPATHY",
+                      "text": "Polyneuropathy/cognitive decline"
+                    },
+                    {
+                      "value": "COMPLICATIONS",
+                      "text": "Direct post-operative complications of LP surgery or stent implant"
+                    },
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Other issues"
+                }
+              ]
             }
           ]
         }

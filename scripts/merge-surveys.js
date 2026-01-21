@@ -99,6 +99,12 @@ const masterSurvey = {
     },
     {
       "type": "calculatedvalue",
+      "name": "doTense",
+      "expression": "iif({LifeStatus} = 'true', 'did', 'does')",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
       "name": "genderSubjectPronoun",
       "expression": "iif({LifeStatus} = 'true', 'she', 'he')",
       "includeIntoResult": true
@@ -114,7 +120,14 @@ const masterSurvey = {
       "name": "stateAdjective",
       "expression": "iif({LifeStatus} = 'true', 'last', 'current')",
       "includeIntoResult": true
-    }
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "blobText",
+      "expression": "iif({LifeStatus} = 'true', 'towards the end of {genderObjectPronoun} life', 'in {genderObjectPronoun} current state of health')",
+      "includeIntoResult": true
+    },
+
 
   ],
   title: "Master Survey Build",

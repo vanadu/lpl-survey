@@ -27,11 +27,11 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "YES",
+              "value": true,
               "text": "Yes"
             },
             {
-              "value": "NO",
+              "value": false,
               "text": "No"
             }
           ],
@@ -42,7 +42,7 @@
           "name": "TreatmentStatusAgePanel",
           "title": "At about what age did {CmpnName} have the first surgery or stent procedure?",
           "description": "If you can't remember exactly, it's OK to guesstimate.",
-          "visibleIf": "{TreatmentStatusDidHave} = true",
+          "visibleIf": "{TreatmentStatusDidHave} = YES",
           "elements": [
             {
               "type": "text",
@@ -98,7 +98,7 @@
           "type": "panel",
           "name": "TreatmentStatusTiebackPanel",
           "title": "Questions about Unilateral Arytenoid Lateralization (Tieback)",
-          "visibleIf": "{TreatmentStatusType} contains 'TIEBACK'",
+          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
           "elements": [
             {
               "type": "radiogroup",
@@ -418,7 +418,7 @@
               "title": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
               "description": "NOTE: Don't need to ask if tieback was done after it was coughed out because that's already answered in the checkbox questions.",
               "isRequired": true,
-              "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW'",
+              "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
               "choices": [
                 {
                   "value": true,
