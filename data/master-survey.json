@@ -208,6 +208,50 @@
           "elements": [
             {
               "type": "html",
+              "name": "UserInfoLifeStatusHeading",
+              "html": "<h2>Before We Begin</h2>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoLifeStatusText",
+              "html": "<p>We know how hard it is to lose one's beloved companion animal. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge. This will help us avoid questions that are inappropriate for your situation.</p>"
+            },
+            {
+              "type": "panel",
+              "name": "UserInfoLifeStatusDetailsPanel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "CmpnName",
+                  "title": "Please tell us your companion's name:",
+                  "isRequired": true
+                },
+                {
+                  "type": "imagepicker",
+                  "name": "LifeStatus",
+                  "title": "Has {CmpnName} crossed over the Rainbow Bridge?",
+                  "isRequired": true,
+                  "visibleIf": "{CmpnName} notempty",
+                  "choices": [
+                    {
+                      "value": true,
+                      "imageLink": "./img-companions-rainbow.png",
+                      "text": "Over the Rainbow Bridge"
+                    },
+                    {
+                      "value": false,
+                      "imageLink": "./img-companions.png",
+                      "text": "Still here on Earth"
+                    }
+                  ],
+                  "imageWidth": 120,
+                  "imageHeight": 120,
+                  "showLabel": true
+                }
+              ]
+            },
+            {
+              "type": "html",
               "name": "UserInfoHeading",
               "html": "<h2>About You</h2>"
             },
@@ -1465,6 +1509,10 @@
                   "required": true,
                   "choices": [
                     {
+                      "value": "NONE",
+                      "text": "None that I was aware of"
+                    },
+                    {
                       "value": "GERD",
                       "text": "Acid reflux (GERD)"
                     },
@@ -2106,7 +2154,8 @@
                   "type": "text",
                   "inputType": "number",
                   "name": "DiagnosisTimeElapsed",
-                  "title": "About how many months after {CmpnName}'s first symptoms appeared did you get the diagnosis?",
+                  "title": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?",
+                  "description": "Please enter the number of months after the first symptoms appeared.",
                   "isRequired": true,
                   "min": 1,
                   "max": 12,
@@ -2204,11 +2253,11 @@
               "isRequired": true,
               "choices": [
                 {
-                  "value": "YES",
+                  "value": true,
                   "text": "Yes"
                 },
                 {
-                  "value": "NO",
+                  "value": false,
                   "text": "No"
                 }
               ],
@@ -2219,7 +2268,7 @@
               "name": "TreatmentStatusAgePanel",
               "title": "At about what age did {CmpnName} have the first surgery or stent procedure?",
               "description": "If you can't remember exactly, it's OK to guesstimate.",
-              "visibleIf": "{TreatmentStatusDidHave} = true",
+              "visibleIf": "{TreatmentStatusDidHave} = YES",
               "elements": [
                 {
                   "type": "text",
@@ -2276,7 +2325,7 @@
               "type": "panel",
               "name": "TreatmentStatusTiebackPanel",
               "title": "Questions about Unilateral Arytenoid Lateralization (Tieback)",
-              "visibleIf": "{TreatmentStatusType} contains 'TIEBACK'",
+              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -2581,7 +2630,7 @@
                   "title": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
                   "description": "NOTE: Don't need to ask if tieback was done after it was coughed out because that's already answered in the checkbox questions.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW'",
+                  "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
                   "choices": [
                     {
                       "value": true,
@@ -4327,6 +4376,7 @@
               "name": "ManagementNonPrescriptionCost",
               "title": "About how much do you spend monthly on {CmpnName}'s acupuncture or other therapies?",
               "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = YES",
               "choices": [
                 {
                   "value": "UNDER_100",
