@@ -489,6 +489,7 @@
             "name": "ManagementNonPrescriptionCost",
             "title": "About how much do you spend monthly on {CmpnName}'s acupuncture or other therapies?",
             "isRequired": true,
+            "visibleIf": "{ManagementNonPrescription} = YES",
             "choices": [
               {
                 "value": "UNDER_100",
