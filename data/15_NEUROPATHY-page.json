@@ -72,52 +72,75 @@
               "showOtherItem": false
             },
 
-
-
             {
-              "type": "text",
-              "inputType": "number",
+              "type": "dropdown",
               "name": "NeuropathySymptomsBreathingOnset",
-              "title": "About how many months after the hind-end weakness began did the breathing issues begin?",
+              "title": "About now long after you first noticed hind-end weakness did the breathing issues begin?",
               "isRequired": true,
               "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
-              "min": 1,
-              "max": 12,
-              "validators": [
+              "choices": [
                 {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 12,
-                  "text": "Months must be between 1 and 12"
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                },
+                {
+                  "value": "IMMEDIATELY",
+                  "text": "Almost immediately"
+                },
+                {
+                  "value": "WEEKS",
+                  "text": "Several weeks"
+                },
+                {
+                  "value": "MONTHS",
+                  "text": "Several months"
+                },
+                {
+                  "value": "HALF_YEAR",
+                  "text": "Six months or longer"
                 }
-              ]
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "required": true
             },
 
-
             {
-              "type": "text",
-              "inputType": "number",
+              "type": "dropdown",
               "name": "NeuropathySymptomsHindEndOnset",
-              "title": "About how many months after the breathing issues began did the hind-end weakness begin?",
+              "title": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
               "isRequired": true,
               "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
-              "min": 1,
-              "max": 12,
-              "validators": [
+              "choices": [
                 {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 12,
-                  "text": "Months must be between 1 and 12"
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                },
+                {
+                  "value": "IMMEDIATELY",
+                  "text": "Almost immediately"
+                },
+                {
+                  "value": "WEEKS",
+                  "text": "Several weeks"
+                },
+                {
+                  "value": "MONTHS",
+                  "text": "Several months"
+                },
+                {
+                  "value": "HALF_YEAR",
+                  "text": "Six months or longer"
                 }
-              ]
+              ],
+              "showOtherItem": false
             },
 
 
             {
               "type": "radiogroup",
               "name": "NeuropathySymptomsTypeProgression",
-              "title": "Over the course of {CmpnName}'s LP/GOLPP journey, which progressed faster: the breathing issues or the hind-end weakness?",
+              "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
               "isRequired": true,
               "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
               "choices": [
@@ -140,47 +163,43 @@
               ],
               "showOtherItem": false
             }
-
-
-
-
           ]
         },
 
         {
-              "type": "panel",
-              "name": "NeuropathyOtherIssuesPanel",
-              "elements": [
+          "type": "panel",
+          "name": "NeuropathyOtherIssuesPanel",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "NeuropathyOtherIssues",
+              "title": "During this time period, did any of these issues also appear?",
+              "isRequired": true,
+              "choices": [
                 {
-                  "type": "checkbox",
-                  "name": "NeuropathyOtherIssues",
-                  "title": "During this time period, did any of these issues also appear?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "ANXIETY",
-                      "text": "Increased anxiety"
-                    },
-                    {
-                      "value": "COGNITIVE",
-                      "text": "Cognitive changes"
-                    },
-                    {
-                      "value": "BEHAVIOR",
-                      "text": "Changes in behavior or personality"
-                    },
-                    {
-                      "value": "APPETITE",
-                      "text": "Changes in appetite"
-                    },
-                    {
-                      "value": "NONE",
-                      "text": "No, {CmpnName} never had any of these issues"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "value": "ANXIETY",
+                  "text": "Increased anxiety"
+                },
+                {
+                  "value": "COGNITIVE",
+                  "text": "Cognitive changes"
+                },
+                {
+                  "value": "BEHAVIOR",
+                  "text": "Changes in behavior or personality"
+                },
+                {
+                  "value": "APPETITE",
+                  "text": "Changes in appetite"
+                },
+                {
+                  "value": "NONE",
+                  "text": "No, {CmpnName} never had any of these issues"
                 }
-              ]
+              ],
+              "showOtherItem": false
+            }
+          ]
         }
 
 

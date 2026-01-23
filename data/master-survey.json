@@ -46,12 +46,6 @@
     },
     {
       "type": "calculatedvalue",
-      "name": "beFactorsTense",
-      "expression": "iif({TreatmentStatusDidHave} = 'NO' && {TreatmentFactorsDecision} = 'UNDECIDED', 'is', 'was')",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
       "name": "doTense",
       "expression": "iif({LifeStatus} = 'true', 'did', 'does')",
       "includeIntoResult": true
@@ -3144,12 +3138,12 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsCostPanel",
-              "title": "Financial considerations",
+              "title": "How have financial considerations factored into your decision?",
               "elements": [
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsCost",
-                  "title": "How much of a factor {beFactorsTense}} the cost of surgical/stent procedure:",
+                  "title": "Cost of surgical/stent procedure:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3178,7 +3172,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsCostComplications",
-                  "title": "How much of a factor {beFactorsTense} the added cost of possible post-op complications such as aspiration pneumonia?",
+                  "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3209,12 +3203,12 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsStagePanel",
-              "title": "Progression of {CmpnName}'s LP/GOLPP",
+              "title": "How has the state of {CmpnName}'s LP/GOLPP factored into your decision?",
               "elements": [
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsStageLP",
-                  "title": "How much of a factor {beFactorsTense} fear of a breathing crisis?",
+                  "title": "Fear of a breathing emergency:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3243,7 +3237,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsStageNeuropathy",
-                  "title": "How much of a factor {beFactorsTense} the current state of {CmpnName}'s hind-end weakness and polyneuropathy?",
+                  "title": "{CmpnName}'s hind-end weakness and polyneuropathy:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3274,12 +3268,12 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsSurgeryRisksPanel",
-              "title": "Risks factors of surgery for {CmpnName}'s quality of life",
+              "title": "How have the risks of surgery factored into your decision?",
               "elements": [
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsRisks",
-                  "title": "How much of a factor {beFactorsTense} the risk of a surgical procedure with extended anesthesia?",
+                  "title": "Risks of a surgical procedure with extended anesthesia:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3308,7 +3302,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsRisksComplications",
-                  "title": "How much of a factor {beFactorsTense} is the risk of post-op complications such as aspiration pneumonia or suture failure?",
+                  "title": "Risks of post-op complications such as aspiration pneumonia or suture failure:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3339,12 +3333,12 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsGeneral",
-              "title": "Age and general health considerations",
+              "title": "How have {CmpnName}'s age and general health considerations factored into your decision?",
               "elements": [
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsAge",
-                  "title": "How much of a factor {beFactorsTense} {CmpnName}'s age?",
+                  "title": "{CmpnName}'s age:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3373,7 +3367,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsGeneralHealth",
-                  "title": "How much of a factor {beFactorsTense} {CmpnName}'s overall health and prospects for quality of life moving forward?",
+                  "title": "{CmpnName}'s overall health and prospects for quality of life moving forward:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3402,7 +3396,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsCoexisting",
-                  "title": "How much of a factor {beFactorsTense} {CmpnName}'s preexisting conditions other than LP/GOLPP?",
+                  "title": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3433,12 +3427,12 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsCircumstances",
-              "title": "Personal circumstances",
+              "title": "How have your personal circumstances factored into your decision?",
               "elements": [
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsCircumstancesAccess",
-                  "title": "How much of a factor {beFactorsTense} distance to or access to a qualified specialist?",
+                  "title": "Distance to or access to a qualified specialist:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3467,7 +3461,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsCircumstancesCare",
-                  "title": "How much of a factor {beFactorsTense} your ability to provide adequate post-operative care?",
+                  "title": "Ability to provide adequate post-operative care:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3498,12 +3492,13 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsOther",
-              "title": "Other considerations",
+              "title": "What other considerations have factored into your decision?",
               "elements": [
                 {
                   "type": "text",
                   "name": "TreatmentFactorsOther",
-                  "title": "Please let us know about other considerations in your decision?",
+                  "title": "Other considerations:",
+                  "description": "Maximum 250 characters.",
                   "isRequired": true
                 }
               ]
@@ -4804,10 +4799,6 @@
                     {
                       "value": "COLLAGEN",
                       "text": "Hyaluronic acid/Collagen"
-                    },
-                    {
-                      "value": "TEMARIL_P",
-                      "text": "Temaril P"
                     }
                   ],
                   "showOtherItem": true
@@ -5316,45 +5307,71 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "text",
-                  "inputType": "number",
+                  "type": "dropdown",
                   "name": "NeuropathySymptomsBreathingOnset",
-                  "title": "About how many months after the hind-end weakness began did the breathing issues begin?",
+                  "title": "About now long after you first noticed hind-end weakness did the breathing issues begin?",
                   "isRequired": true,
                   "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
-                  "min": 1,
-                  "max": 12,
-                  "validators": [
+                  "choices": [
                     {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 12,
-                      "text": "Months must be between 1 and 12"
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    },
+                    {
+                      "value": "IMMEDIATELY",
+                      "text": "Almost immediately"
+                    },
+                    {
+                      "value": "WEEKS",
+                      "text": "Several weeks"
+                    },
+                    {
+                      "value": "MONTHS",
+                      "text": "Several months"
+                    },
+                    {
+                      "value": "HALF_YEAR",
+                      "text": "Six months or longer"
                     }
-                  ]
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true,
+                  "required": true
                 },
                 {
-                  "type": "text",
-                  "inputType": "number",
+                  "type": "dropdown",
                   "name": "NeuropathySymptomsHindEndOnset",
-                  "title": "About how many months after the breathing issues began did the hind-end weakness begin?",
+                  "title": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
                   "isRequired": true,
                   "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
-                  "min": 1,
-                  "max": 12,
-                  "validators": [
+                  "choices": [
                     {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 12,
-                      "text": "Months must be between 1 and 12"
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    },
+                    {
+                      "value": "IMMEDIATELY",
+                      "text": "Almost immediately"
+                    },
+                    {
+                      "value": "WEEKS",
+                      "text": "Several weeks"
+                    },
+                    {
+                      "value": "MONTHS",
+                      "text": "Several months"
+                    },
+                    {
+                      "value": "HALF_YEAR",
+                      "text": "Six months or longer"
                     }
-                  ]
+                  ],
+                  "showOtherItem": false
                 },
                 {
                   "type": "radiogroup",
                   "name": "NeuropathySymptomsTypeProgression",
-                  "title": "Over the course of {CmpnName}'s LP/GOLPP journey, which progressed faster: the breathing issues or the hind-end weakness?",
+                  "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
                   "isRequired": true,
                   "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
                   "choices": [

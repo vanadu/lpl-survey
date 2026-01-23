@@ -10,12 +10,12 @@
   "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "UserInfoContactOK": true,
 
-  "CmpnName": "Miss B",
-  "LifeStatus": false,
+  "CmpnName": "Ralph",
+  "LifeStatus": true,
 
   "CmpnInfoAnimalType": "CANINE",
   "CmpnInfoBreed": "Boxer",
-  "CmpnInfoGender": 5,
+  "CmpnInfoGender": true,
   "lvngCmpnInfoAgeYears": 12,
   "lvngCmpnInfoAgeMonths": 8,
   "dcsdCmpnInfoAgeYears": 14,
@@ -249,8 +249,8 @@
 
   "NeuropathySymptomsDoesHave": "YES",
   "NeuropathySymptomsFirst": "BREATHING",
-  "NeuropathySymptomsBreathingOnset": 3,
-  "NeuropathySymptomsHindEndOnset": 8,
+  "NeuropathySymptomsBreathingOnset": "WEEKS",
+  "NeuropathySymptomsHindEndOnset": "MONTHS",
   "NeuropathySymptomsTypeProgression": "HIND_END",
   "NeuropathyOtherIssues": [
     "ANXIETY"
