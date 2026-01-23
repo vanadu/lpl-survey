@@ -11,7 +11,7 @@
   "UserInfoContactOK": true,
 
   "CmpnName": "Miss B",
-  "LifeStatus": true,
+  "LifeStatus": false,
 
   "CmpnInfoAnimalType": "CANINE",
   "CmpnInfoBreed": "Boxer",
@@ -32,8 +32,6 @@
 
   "InfoSourcesPriorKnowledge": false,
   "InfoSourcesTypes": [
-    "WEBSITES",
-    "FACEBOOK_GROUPS",
     "VETERINARIANS"
   ],
   "InfoSourcesBestSource": [
@@ -78,7 +76,8 @@
     "BARK_CHANGES",
     "EXERCISE_INTOLERANCE"
   ],
-  "EarlySymtomsSeverity": "1",
+  "EarlySymtomsSeverity": 1,
+  "EarlySymptomsHindEndWeakness": "YES",
   "EarlyOtherConditions": [
     "GERD",
     "ARTHRITIS"
@@ -111,18 +110,21 @@
 
   "DiagnosisWho": "SOFT_TISSUE",
   "PrimaryVetDiagnosticType": "SCOPE",
-  "DiagnosisTimeElapsed": 6,
+  "DiagnosisTimeAfterSymptoms": "ONE_TO_THREE",
   "DiagnosisStage": "UNILATERAL",
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
 
-  "TreatmentStatusDidHave": "YES",
+  "TreatmentStatusDidHave": false,
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [
     "TIEBACK",
     "STENT"
   ],
+
+  "TreatmentStatusTiebackEmergency": false,
+  "TreatmentStatusTiebackWait": "THREE_SIX",
   "TreatmentStatusTiebackCount": "MORE_THAN_ONCE",
   "TreatmentStatusTiebackOnceCost": "4001_5500",
   "TreatmentStatusTiebackMultipleCost": "5501_7000",

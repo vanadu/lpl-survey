@@ -2,59 +2,6 @@
   "name": "CMPN_INFO-page",
   "elements": [
 
-    {
-      "type": "panel",
-      "name": "CmpnNameLifeStatusPanel",
-      "elements": [
-        {
-          "type": "html",
-          "name": "CmpnNameLifeStatusHeading",
-          "html": "<h2>Before We Begin</h2>"
-        },
-        {
-        "type": "html",
-          "name": "CmpnNameLifeStatusText",
-          "html": "<p>We know how hard it is to lose one's beloved companion animal. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge. This will help us avoid questions that are inappropriate for your situation.</p>"
-        },
-
-        {
-          "type": "panel",
-          "name": "CmpnNameLifeStatusDetailsPanel",
-          "elements": [
-            {
-            "type": "text",
-            "name": "CmpnName",
-            "title": "Please tell us your companion's name:",
-            "isRequired": true
-            },
-            {
-              "type": "imagepicker",
-              "name": "LifeStatus",
-              "title": "Has your companion crossed over the Rainbow Bridge?",
-              "isRequired": true,
-              "choices": [
-              {
-                  "value": true,
-                  "imageLink": "./img-companions-rainbow.png",
-                  "text": "Over the Rainbow Bridge"
-                },
-                {
-                  "value": false,
-                  "imageLink": "./img-companions.png",
-                  "text": "Still here on Earth"
-                }
-
-              ],
-              "imageWidth": 120,
-              "imageHeight": 120,
-              "showLabel": true
-            }
-
-          ]
-        }
-      ]
-    },
-
 
     {
       "type": "panel",

@@ -97,9 +97,46 @@
         {
           "type": "panel",
           "name": "TreatmentStatusTiebackPanel",
-          "title": "Questions about Unilateral Arytenoid Lateralization (Tieback)",
+          "title": "Questions about tieback (Unilateral Arytenoid Lateralization) surgery",
           "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
           "elements": [
+
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusTiebackEmergency",
+              "title": "Was emergency tieback performed on {CmpnName} after a life-threatening breathing emergency?",
+              "isRequired": true
+            },
+
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusTiebackWait",
+              "title": "How long did you have to wait for non-emergency tieback surgery for {CmpnName}:",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusTiebackEmergency} = false",
+              "choices": [
+                {
+                  "value": "UNDER_ONE",
+                  "text": "Less than one month"
+                },
+                {
+                  "value": "ONE_TWO",
+                  "text": "Between one and two months"
+                },
+                {
+                  "value": "THREE_SIX",
+                  "text": "Between three and six months"
+                },
+                {
+                  "value": "MORE_THAN_SIX",
+                  "text": "Longer than six months"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "required": true
+            },
+
             {
               "type": "radiogroup",
               "name": "TreatmentStatusTiebackCount",
@@ -181,6 +218,7 @@
               "showOtherItem": false
             },
 
+            
 
             {
               "type": "radiogroup",
@@ -416,7 +454,6 @@
               "type": "radiogroup",
               "name": "TreatmentStatusStentReplaced",
               "title": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
-              "description": "NOTE: Don't need to ask if tieback was done after it was coughed out because that's already answered in the checkbox questions.",
               "isRequired": true,
               "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
               "choices": [

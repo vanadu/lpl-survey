@@ -75,13 +75,13 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsCostPanel",
-          "title": "Financial considerations", 
+          "title": "How have financial considerations factored into your decision?", 
           "elements": [
             {
               "type": "rating",
               "name": "TreatmentFactorsCost",
               "title": "Cost of surgical/stent procedure:",
-              "description": "1 = not important, 5 = very important",
+              "description": "1 = not a factor, 5 = deciding factor",
               "isRequired": true,
               "rateValues": [
                 { "value": 1, "text": "1" },
@@ -94,8 +94,8 @@
             {
               "type": "rating",
               "name": "TreatmentFactorsCostComplications",
-              "title": "Cost of possible post-op complications such as aspiration pneumonia:",
-              "description": "1 = not important, 5 = very important",
+              "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
+              "description": "1 = not a factor, 5 = deciding factor",
               "isRequired": true,
               "rateValues": [
                 { "value": 1, "text": "1" },
@@ -112,12 +112,12 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsStagePanel",
-          "title": "Progression of {CmpnName}'s LP/GOLPP",
+          "title": "How has the state of {CmpnName}'s LP/GOLPP factored into your decision?",
           "elements": [
           {
             "type": "rating",
             "name": "TreatmentFactorsStageLP",
-            "title": "Stage of {CmpnName}'s laryngeal paralysis and ability to breathe:",
+            "title": "Fear of a breathing emergency:",
             "description": "1 = not a factor, 5 = deciding factor",
             "isRequired": true,
             "rateValues": [
@@ -127,20 +127,20 @@
               { "value": 4, "text": "4" },
               { "value": 5, "text": "5" }
             ]
-            },
+          },
 
-            {
-              "type": "rating",
-              "name": "TreatmentFactorsStageNeuropathy",
-              "title": "Progression of {CmpnName}'s polyneuropathy and hind-end weakness:",
-              "description": "1 = not a factor, 5 = deciding factor",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" }
+          {
+            "type": "rating",
+            "name": "TreatmentFactorsStageNeuropathy",
+            "title": "{CmpnName}'s hind-end weakness and polyneuropathy:",
+            "description": "1 = not a factor, 5 = deciding factor",
+            "isRequired": true,
+            "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" }
               ]
             }
           ]
@@ -149,12 +149,12 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsSurgeryRisksPanel",
-          "title": "Risks factors of surgery for {CmpnName}'s quality of life",
+          "title": "How have the risks of surgery factored into your decision?",
           "elements": [
 			      {
               "type": "rating",
               "name": "TreatmentFactorsRisks",
-              "title": "Risks of surgical procedure with extended anesthesia:",
+              "title": "Risks of a surgical procedure with extended anesthesia:",
               "description": "1 = not a factor, 5 = deciding factor",
               "isRequired": true,
               "rateValues": [
@@ -187,7 +187,7 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsGeneral",
-          "title": "Age and general health considerations",
+          "title": "How have {CmpnName}'s age and general health considerations factored into your decision?",
           "elements": [
             {
               "type": "rating",
@@ -220,7 +220,7 @@
             {
               "type": "rating",
               "name": "TreatmentFactorsCoexisting",
-              "title": "{CmpnName}'s coexisting conditions:",
+              "title": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
               "description": "1 = not a factor, 5 = deciding factor",
               "isRequired": true,
               "rateValues": [
@@ -238,7 +238,7 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsCircumstances",
-          "title": "Personal circumstances",
+          "title": "How have your personal circumstances factored into your decision?",
           "elements": [
             {
               "type": "rating",
@@ -275,12 +275,13 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsOther",
-          "title": "Other considerations",
+          "title": "What other considerations have factored into your decision?",
           "elements": [
             {
               "type": "text",
               "name": "TreatmentFactorsOther",
-              "title": "What other factors influenced your decision whether or not to pursue surgery?",
+              "title": "Other considerations:",
+              "description": "Maximum 250 characters.",
               "isRequired": true
             }
           ]

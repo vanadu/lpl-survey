@@ -46,6 +46,12 @@
     },
     {
       "type": "calculatedvalue",
+      "name": "beFactorsTense",
+      "expression": "iif({TreatmentStatusDidHave} = 'NO' && {TreatmentFactorsDecision} = 'UNDECIDED', 'is', 'was')",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
       "name": "doTense",
       "expression": "iif({LifeStatus} = 'true', 'did', 'does')",
       "includeIntoResult": true
@@ -457,55 +463,6 @@
     {
       "name": "CMPN_INFO-page",
       "elements": [
-        {
-          "type": "panel",
-          "name": "CmpnNameLifeStatusPanel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "CmpnNameLifeStatusHeading",
-              "html": "<h2>Before We Begin</h2>"
-            },
-            {
-              "type": "html",
-              "name": "CmpnNameLifeStatusText",
-              "html": "<p>We know how hard it is to lose one's beloved companion animal. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge. This will help us avoid questions that are inappropriate for your situation.</p>"
-            },
-            {
-              "type": "panel",
-              "name": "CmpnNameLifeStatusDetailsPanel",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "CmpnName",
-                  "title": "Please tell us your companion's name:",
-                  "isRequired": true
-                },
-                {
-                  "type": "imagepicker",
-                  "name": "LifeStatus",
-                  "title": "Has your companion crossed over the Rainbow Bridge?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": true,
-                      "imageLink": "./img-companions-rainbow.png",
-                      "text": "Over the Rainbow Bridge"
-                    },
-                    {
-                      "value": false,
-                      "imageLink": "./img-companions.png",
-                      "text": "Still here on Earth"
-                    }
-                  ],
-                  "imageWidth": 120,
-                  "imageHeight": 120,
-                  "showLabel": true
-                }
-              ]
-            }
-          ]
-        },
         {
           "type": "panel",
           "name": "CmpnInfoPanel",
@@ -2151,22 +2108,34 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "DiagnosisTimeElapsed",
-                  "title": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?",
-                  "description": "Please enter the number of months after the first symptoms appeared.",
+                  "type": "dropdown",
+                  "name": "DiagnosisTimeAfterSymptoms",
+                  "title": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?:",
                   "isRequired": true,
-                  "min": 1,
-                  "max": 12,
-                  "validators": [
+                  "choices": [
                     {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 12,
-                      "text": "Months must be between 1 and 12"
+                      "value": "LESS_THAN_ONE",
+                      "text": "Less than one month"
+                    },
+                    {
+                      "value": "ONE_TO_THREE",
+                      "text": "Between one and three months"
+                    },
+                    {
+                      "value": "FOUR_TO_SIX",
+                      "text": "Between four and six months"
+                    },
+                    {
+                      "value": "SIX_TO_TWELVE",
+                      "text": "Between six months and a year"
+                    },
+                    {
+                      "value": "MORE_THAN_TWELVE",
+                      "text": "Longer than a year"
                     }
-                  ]
+                  ],
+                  "showOtherItem": false,
+                  "required": true
                 },
                 {
                   "type": "radiogroup",
@@ -2199,7 +2168,8 @@
                 {
                   "type": "radiogroup",
                   "name": "DiagnosisSurgeonContingent",
-                  "title": "Did the surgeon require content to proceed with the surgery before doing the diagnosis?",
+                  "title": "Did the surgeon require consent to proceed with the surgery before doing the diagnosis?",
+                  "description": "In other words, did the surgeon refuse to do the diagnosis unless you agreed to go straight to surgery if the results were positive?",
                   "isRequired": true,
                   "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
                   "choices": [
@@ -2324,9 +2294,43 @@
             {
               "type": "panel",
               "name": "TreatmentStatusTiebackPanel",
-              "title": "Questions about Unilateral Arytenoid Lateralization (Tieback)",
+              "title": "Questions about tieback (Unilateral Arytenoid Lateralization) surgery",
               "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
               "elements": [
+                {
+                  "type": "boolean",
+                  "name": "TreatmentStatusTiebackEmergency",
+                  "title": "Was emergency tieback performed on {CmpnName} after a life-threatening breathing emergency?",
+                  "isRequired": true
+                },
+                {
+                  "type": "dropdown",
+                  "name": "TreatmentStatusTiebackWait",
+                  "title": "How long did you have to wait for non-emergency tieback surgery for {CmpnName}:",
+                  "isRequired": true,
+                  "visibleIf": "{TreatmentStatusTiebackEmergency} = false",
+                  "choices": [
+                    {
+                      "value": "UNDER_ONE",
+                      "text": "Less than one month"
+                    },
+                    {
+                      "value": "ONE_TWO",
+                      "text": "Between one and two months"
+                    },
+                    {
+                      "value": "THREE_SIX",
+                      "text": "Between three and six months"
+                    },
+                    {
+                      "value": "MORE_THAN_SIX",
+                      "text": "Longer than six months"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true,
+                  "required": true
+                },
                 {
                   "type": "radiogroup",
                   "name": "TreatmentStatusTiebackCount",
@@ -2628,7 +2632,6 @@
                   "type": "radiogroup",
                   "name": "TreatmentStatusStentReplaced",
                   "title": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
-                  "description": "NOTE: Don't need to ask if tieback was done after it was coughed out because that's already answered in the checkbox questions.",
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
                   "choices": [
@@ -3146,8 +3149,8 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsCost",
-                  "title": "Cost of surgical/stent procedure:",
-                  "description": "1 = not important, 5 = very important",
+                  "title": "How much of a factor {beFactorsTense}} the cost of surgical/stent procedure:",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -3175,8 +3178,8 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsCostComplications",
-                  "title": "Cost of possible post-op complications such as aspiration pneumonia:",
-                  "description": "1 = not important, 5 = very important",
+                  "title": "How much of a factor {beFactorsTense} the added cost of possible post-op complications such as aspiration pneumonia?",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -3211,7 +3214,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsStageLP",
-                  "title": "Stage of {CmpnName}'s laryngeal paralysis and ability to breathe:",
+                  "title": "How much of a factor {beFactorsTense} fear of a breathing crisis?",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3240,7 +3243,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsStageNeuropathy",
-                  "title": "Progression of {CmpnName}'s polyneuropathy and hind-end weakness:",
+                  "title": "How much of a factor {beFactorsTense} the current state of {CmpnName}'s hind-end weakness and polyneuropathy?",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3276,7 +3279,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsRisks",
-                  "title": "Risks of surgical procedure with extended anesthesia:",
+                  "title": "How much of a factor {beFactorsTense} the risk of a surgical procedure with extended anesthesia?",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3305,7 +3308,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsRisksComplications",
-                  "title": "Risks of post-op complications such as aspiration pneumonia or suture failure:",
+                  "title": "How much of a factor {beFactorsTense} is the risk of post-op complications such as aspiration pneumonia or suture failure?",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3341,7 +3344,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsAge",
-                  "title": "{CmpnName}'s age:",
+                  "title": "How much of a factor {beFactorsTense} {CmpnName}'s age?",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3370,7 +3373,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsGeneralHealth",
-                  "title": "{CmpnName}'s overall health and prospects for quality of life moving forward:",
+                  "title": "How much of a factor {beFactorsTense} {CmpnName}'s overall health and prospects for quality of life moving forward?",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3399,7 +3402,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsCoexisting",
-                  "title": "{CmpnName}'s coexisting conditions:",
+                  "title": "How much of a factor {beFactorsTense} {CmpnName}'s preexisting conditions other than LP/GOLPP?",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3435,7 +3438,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsCircumstancesAccess",
-                  "title": "Distance to or access to a qualified specialist:",
+                  "title": "How much of a factor {beFactorsTense} distance to or access to a qualified specialist?",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3464,7 +3467,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsCircumstancesCare",
-                  "title": "Ability to provide adequate post-operative care:",
+                  "title": "How much of a factor {beFactorsTense} your ability to provide adequate post-operative care?",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3500,7 +3503,7 @@
                 {
                   "type": "text",
                   "name": "TreatmentFactorsOther",
-                  "title": "What other factors influenced your decision whether or not to pursue surgery?",
+                  "title": "Please let us know about other considerations in your decision?",
                   "isRequired": true
                 }
               ]
