@@ -72,7 +72,11 @@
                 {
                   "value": "STEROID",
                   "text": "Prednisone or other steriod"
-                },                             
+                },      
+                {
+                  "value": "ANTIHISTAMINE",
+                  "text": "Benadryl or other antihistamine"
+                },                            
                 {
                   "value": "CERENIA",
                   "text": "Cerenia (maripotant citrate)"
@@ -283,6 +287,41 @@
                 { "value": "DONT_KNOW", "text": "Don't know" }
               ]
             },   
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionAntihistamineRatingBreathing",
+              "title": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s breathing:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },   
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionAntihistamineRatingMobility",
+              "title": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s mobility or behavior:",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },  
+
+
+
             {
               "type": "rating",
               "name": "ManagementPrescriptionCereniaRatingBreathing",

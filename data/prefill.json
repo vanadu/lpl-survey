@@ -185,7 +185,8 @@
   "ManagementPrescriptionType": [
     "DOXEPIN",
     "CERENIA",
-    "GABAPENTIN"
+    "GABAPENTIN",
+    "ANTIHISTAMINE"
   ],
   "ManagementPrescriptionCost": "51_100",
   "ManagementPrescriptionDoxepinRatingBreathing": 4,
@@ -198,6 +199,8 @@
   "ManagementPrescriptionGalliprantRatingMobility": 3,
   "ManagementPrescriptionSteroidRatingBreathing": 2,
   "ManagementPrescriptionSteroidRatingMobility": 2,
+  "ManagementPrescriptionAntihistamineRatingBreathing": 2,
+  "ManagementPrescriptionAntihistamineRatingMobility": 2,
   "ManagementPrescriptionCereniaRatingBreathing": 3,
   "ManagementPrescriptionCereniaRatingMobility": 3,
   "ManagementPrescriptionMeloxicamRatingBreathing": 4,
