@@ -257,7 +257,28 @@
   "NeuropathySymptomsTypeProgression": "HIND_END",
   "NeuropathyOtherIssues": [
     "ANXIETY"
-  ]
+  ],
+
+  "ConclusionSpecialConsiderations": [
+   "EXERCISE",
+   "FOOD"
+  ],
+  "ConclusionPolyneuropathy": [
+    "HIND_END",
+    "FALLING"
+  ],
+  "ConclusionsQOL": 2,
+  "ConclusionOtherConditions": [
+    "GERD",
+    "ARTHRITIS",
+    "CUSHINGS"
+  ],
+
+  "ConclusionCauseOfDeath": "COMPLICATIONS"
+
+
+  
+    
 
 
 

@@ -56,7 +56,7 @@
 
             {
               "type": "checkbox",
-              "name": "ConclusionsLimitations",
+              "name": "ConclusionSpecialConsiderations",
               "title": "Please describe any special considerations in place for {CmpnName} due to LP-related breathing issues:",
               "isRequired": true,
               "choices": [
@@ -139,7 +139,8 @@
             "type": "checkbox",
             "name": "EarlyOtherConditions",
             "title": "What other conditions {doTense} {CmpnName} have at this stage?",
-            "required": true,
+            "description": "Your selections here will be compared to earlier answers to deterimine which of these conditions developed during {CmpnName}'s LP/GOLPP journey.",
+            "isRequired": true,
             "choices": [
                 {
                   "value": "GERD",
@@ -202,6 +203,10 @@
                     "text": "Direct post-operative complications of LP surgery or stent implant"
                   },
                   {
+                    "value": "BREATHING_CRISIS",
+                    "text": "LP-related breathing crisis"
+                  },
+                  {
                     "value": "CANCER",
                     "text": "Cancer"
                   },
@@ -210,18 +215,17 @@
                     "text": "Bacterial/viral infection"
                   },
                   {
-                    "value": "BREATHING_CRISIS",
-                    "text": "Breathing crisis"
-                  },
-                  {
                     "value": "ADVANCED_POLYNEUROPATHY",
                     "text": "Polyneuropathy/cognitive decline"
                   },
                   {
-                    "value": "NOT_SAY",
-                    "text": "Prefer not to say"
+                    "value": "SEIZURE",
+                    "text": "Seizure or stroke"
+                  },
+                  {
+                    "value": "STOPPED_EATING",
+                    "text": "Stopped eating"
                   }
-
                 ],
                 "showOtherItem": true,
                 "otherText": "Other issues"
@@ -229,21 +233,18 @@
           ]
         },
 
+        {
+          "type": "panel",
+          "name": "ConclusionLastQuestion",
+          "title": "Survey Conclusion",
+          "elements": [
             {
-              "type": "panel",
-              "name": "ConclusionLastQuestion",
-              "title": "Survey Conclusion",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "ConclusionLastQuestionIntro",
-                  "html": "The last question of the survey is the most difficult. We'd like to know if, knowing what you know now, you would have chosen a different path or done anything differently along your LP/GOLPP journey. "
-                }
-
-
-        
-              ]
+              "type": "html",
+              "name": "ConclusionLastQuestionIntro",
+              "html": "The last question of the survey is the most difficult. We'd like to know if, knowing what you know now, you would have chosen a different path or done anything differently along your LP/GOLPP journey. "
             }
+          ]
+        }
 
 
 
