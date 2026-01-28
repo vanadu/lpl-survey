@@ -81,7 +81,7 @@
             },
             {
               "type": "checkbox",
-              "name": "ConclusionsPolyneuropathy",
+              "name": "ConclusionPolyneuropathy",
               "title": "Please describe {CmpnName}'s polyneuropathy:",
               "isRequired": true,
               "choices": [
@@ -137,7 +137,7 @@
           "elements": [
             {
             "type": "checkbox",
-            "name": "EarlyOtherConditions",
+            "name": "ConclusionOtherConditions",
             "title": "What other conditions {doTense} {CmpnName} have at this stage?",
             "description": "Your selections here will be compared to earlier answers to deterimine which of these conditions developed during {CmpnName}'s LP/GOLPP journey.",
             "isRequired": true,
@@ -190,7 +190,7 @@
               {
                 "type": "html",
                 "name": "ConclusionCauseOfDeathHeading",
-                "html": "Humane euthanasia is how most people choose to say goodbye when it's their time to cross over. This questions asks about the primary cause of {CmpnName}'s passing, not whether or not humane euthanasia played a role."
+                "html": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This questions asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over."
               },
               {
                 "type": "radiogroup",
@@ -241,7 +241,12 @@
             {
               "type": "html",
               "name": "ConclusionLastQuestionIntro",
-              "html": "The last question of the survey is the most difficult. We'd like to know if, knowing what you know now, you would have chosen a different path or done anything differently along your LP/GOLPP journey. "
+              "html": "The last question of the survey is the most difficult. LP/GOLPP is a merciless, ruthless disease that forces us to make impossible decisions for our beloved companions.  "
+            },
+            {
+              "type": "html",
+              "name": "ConclusionLastQuestionRegret",
+              "html": "LP/GOLPP is a merciless disease diseaseThe last question of the survey is the most difficult. It asks if, knowing what you know now, you would have chosen a different path or done anything differently along your LP/GOLPP journey. "
             }
           ]
         }

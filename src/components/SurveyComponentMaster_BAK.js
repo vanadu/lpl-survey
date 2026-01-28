@@ -82,11 +82,8 @@ export default function MasterSurveyComponent() {
     completedAt: new Date().toISOString(), // Add ISO-8601 formatted date-time
   };
     console.log("Survey results:", timestampedResult);
-
-
     try {
-      // 1️⃣ Save survey data
-      const saveResponse = await fetch('/api/save-survey', {
+      const response = await fetch('/api/save-survey', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -94,42 +91,16 @@ export default function MasterSurveyComponent() {
         body: JSON.stringify(timestampedResult),
       });
 
-      const saveData = await saveResponse.json();
-
-      if (!saveResponse.ok) {
-        alert(`Error saving survey: ${saveData.message}`);
-        return; // stop if saving failed
+      const data = await response.json();
+      if (response.ok) {
+        setIsCompleted(true);
+      } else {
+        alert(`Error: ${data.message}`);
       }
-
-      // 2️⃣ Send survey via Brevo
-      const emailResponse = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(timestampedResult), // same data to send via email
-      });
-
-      const emailData = await emailResponse.json();
-
-      if (!emailResponse.ok) {
-        alert(`Survey saved, but failed to send email: ${emailData.error}`);
-        console.error('Email send error:', emailData.error);
-        setIsCompleted(true); // still mark completed if save worked
-        return;
-      }
-
-      // ✅ Everything succeeded
-      setIsCompleted(true);
-
     } catch (error) {
-      console.error('Failed to save/send survey data:', error);
-      alert('Failed to save/send survey data. See console for details.');
+      console.error('Failed to save survey data:', error);
+      alert('Failed to save survey data. See console for details.');
     }
-
-
-
-
   }, []);
 
   // !VA Load the custom classes from panelClassHandlers.js
