@@ -5,7 +5,7 @@ import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
 import { addCustomClasses } from "./panelClassHandlers";
-import prefillData from "../../data/prefill.json";
+import prefillData from "../../helpers/prefill.json";
 
 import LANDING from "../../data/00_LANDING-page.json";
 import USER_INFO from "../../data/01_USER_INFO-page.json";

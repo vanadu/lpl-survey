@@ -1,0 +1,287 @@
+{
+
+  "UserInfoFirstName": "Jane",
+  "UserInfoCountry": "US",
+  "UserInfoStateRegion": "MD",
+  "UserInfoAgeGroup": "OVER_65",
+  "UserInfoGender": "NOT_SAY",
+  "UserInfoContactType": false,
+  "UserInfoContactTypeEmail": "example@example.com",
+  "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
+  "UserInfoContactOK": true,
+
+  "CmpnName": "Ralph",
+  "LifeStatus": true,
+
+  "CmpnInfoAnimalType": "CANINE",
+  "CmpnInfoBreed": "Boxer",
+  "CmpnInfoGender": true,
+  "lvngCmpnInfoAgeYears": 12,
+  "lvngCmpnInfoAgeMonths": 8,
+  "dcsdCmpnInfoAgeYears": 14,
+  "dcsdCmpnInfoAgeMonths": 5,
+  "CmpnInfoWeight": 50,
+  "CmpnInfoWeightUnits": false,
+  "CmpnInfoDemeanor": 5,
+  "CmpnInfoAnxiety": 3,
+  "CmpnInfoAnimalsCount": "TWO",
+  "lvngCmpnInfoHasInsurance": true,
+  "dcsdCmpnInfoHasInsurance": true,
+  "CmpnInfoHasInsuranceOther": "2",
+
+
+  "InfoSourcesPriorKnowledge": false,
+  "InfoSourcesTypes": [
+    "VETERINARIANS"
+  ],
+  "InfoSourcesBestSource": [
+    "FACEBOOK_GROUPS"
+  ],
+  "InfoSourcesHardToUnderstand": "4",
+  "InfoSourcesContradictory": "4",
+  "InfoSourcesClearAnswers": "3",
+
+  "IntubationHistoryWasIntubated": "YES",
+  "IntubationHistoryReason": [
+    "TEETH_CLEANING",
+    "DIAGNOSTIC"
+  ],
+  "IntubationHistoryConcerns": "YES",
+  "IntubationHistorySymptoms": [
+    "COUGHING",
+    "PANTING",
+    "GAGGING"
+  ],
+
+
+  "BreathingCrisisDidHave": "YES",
+  "BreathingCrisisCount": "TWO",
+  "BreathingCrisisCost": "1000_3000",
+  "BreathingCrisisAdvice": "YES",
+  "BreathingCrisisAdviceType": [
+    "COOL_PLACE",
+    "COOLING_AGENT",
+    "EMERGENCY_FACILITY"
+  ],
+  "BreathingCrisisProvidedSubstance": "YES",
+  "BreathingCrisisProvidedSubstanceType": [
+    "STERIOD"
+  ],
+  "BreathingCrisisSubstanceForm": "LIQUID",
+
+  "EarlySymptomsAgeYears": "11",
+  "EarlySymptomsAgeMonths": "2",
+  "EarlySymptomsType": [
+    "PANTING",
+    "BARK_CHANGES",
+    "EXERCISE_INTOLERANCE"
+  ],
+  "EarlySymtomsSeverity": 1,
+  "EarlySymptomsHindEndWeakness": "YES",
+  "EarlySymptomsIncontinence": "NO",
+  "EarlyOtherConditions": "YES",
+  "EarlyOtherConditionsType": [
+    "GERD",
+    "ARTHRITIS"
+  ],
+
+  "PrimaryDurationFirstConsultYears": 13,
+  "PrimaryDurationFirstConsultMonths": 1,
+  "PrimaryDurationVisitsNumber": "MORE_THAN_TWO",
+  "PrimaryDurationCost": "OVER_5000",
+  "PrimaryDurationChangedVets": "ONCE",
+  "PrimaryDurationChangedVetsReason": [
+    "AGE_ONLY",
+    "MISDIAGNOSED"
+  ],
+  
+  "PrimaryVetInflammation": "YES",
+  "PrimaryVetReflux": "YES",
+  "PrimaryVetRefluxMeds": "NO",
+  "PrimaryVetRefluxInitiative": true,
+  "PrimaryVetDiagnosis": "POSSIBLY",
+  "PrimaryVetInfoDidGive": true,
+  "PrimaryVetInfoDetails": [
+    "BARK_LOSS",
+    "PROGRESSIVE"
+  ],
+  "PrimaryVetSurgery": "ADVISED_AGAINST",
+  "PrimaryVetSurgeryPerception": "GENERAL_PERCEPTION",
+  "PrimaryVetConfidence": 3,
+  "PrimaryVetSatisfaction": 3,
+
+  "DiagnosisWho": "SOFT_TISSUE",
+  "PrimaryVetDiagnosticType": "SCOPE",
+  "DiagnosisTimeAfterSymptoms": "ONE_TO_THREE",
+  "DiagnosisStage": "UNILATERAL",
+  "DiagnosisCost": "500_1500",
+  "DiagnosisSurgeonContingent": "YES",
+
+  "TreatmentStatusDidHave": false,
+  "TreatmentStatusAgeYears": "13",
+  "TreatmentStatusAgeMonths": "6",
+  "TreatmentStatusType":  [
+    "TIEBACK",
+    "STENT"
+  ],
+
+  "TreatmentStatusTiebackEmergency": false,
+  "TreatmentStatusTiebackWait": "THREE_SIX",
+  "TreatmentStatusTiebackCount": "MORE_THAN_ONCE",
+  "TreatmentStatusTiebackOnceCost": "4001_5500",
+  "TreatmentStatusTiebackMultipleCost": "5501_7000",
+  "TreatmentStatusTiebackComplications": true,
+  "TreatmentStatusTiebackComplicationsCost": "3001_5000",
+  "TreatmentStatusBveapReasons": [
+    "AP_RISK",
+    "PERMANENCE",
+    "REPUTATION"
+  ],
+  "TreatmentStatusBveapCost": "5501_7000",
+  "TreatmentStatusBveapComplications": "true",
+  "TreatmentStatusBveapComplicationsCost": "OVER_5001",
+  "TreatmentStatusStentType": "SILICONE",
+  "TreatmentStatusStentDidMigrate": true,
+  "TreatmentStatusStentReplaced": true,
+  "TreatmentStatusStentCostOnce": "3001_4000",
+  "TreatmentStatusStentCostRepeat": "3001_4000",
+  "TreatmentStatusStentComplications": true,
+  "TreatmentStatusStentComplicationsCost": "1001_2000",
+  "TreatmentStatusArtyenoidectomyReasons": [
+    "COST",
+    "AVAILABILITY"
+  ],
+  "TreatmentStatusArtyenoidectomyLaser": true,
+  "TreatmentStatusArtyenoidectomyDidExplain": "YES",
+  "TreatmentStatusArtyenoidectomyChoice": "YES",
+  "TreatmentStatusArtyenoidectomyCost": "UNDER_2000",
+  "TreatmentStatusArtyenoidectomyComplications": true,
+  "TreatmentStatusArtyenoidectomyComplicationsCost": "UNDER_1000",
+  "TreatmentStatusVentrilocordectomyReasons": [
+    "COST",
+    "AVAILABILITY"
+  ],
+  "TreatmentStatusVentrilocordectomyDidExplain": "YES",
+  "TreatmentStatusVentrilocordectomyChoice": "YES",
+  "TreatmentStatusVentrilocordectomyCost": "UNDER_2000",
+  "TreatmentStatusVentrilocordectomyComplications": true,
+  "TreatmentStatusVentrilocordectomyComplicationsCost": "UNDER_1000",
+
+
+  "TreatmentFactorsDecision": "UNDECIDED",
+  "TreatmentFactorsDecisionStent": "NOT_INFORMED",
+  "TreatmentFactorsCost": 4,
+  "TreatmentFactorsCostComplications": 4,
+  "TreatmentFactorsStageLP": 3,
+  "TreatmentFactorsStageNeuropathy": 3,
+  "TreatmentFactorsRisks": 4,
+  "TreatmentFactorsRisksComplications": 4,
+  "TreatmentFactorsAge": 3,
+  "TreatmentFactorsGeneralHealth": 3,
+  "TreatmentFactorsCoexisting": 2,
+  "TreatmentFactorsCircumstancesAccess": 1,
+  "TreatmentFactorsCircumstancesCare": 3,
+  "TreatmentFactorsOther": "Hind end weakness",
+
+  "ManagementPrescriptions": "YES",
+  "ManagementPrescriptionType": [
+    "DOXEPIN",
+    "CERENIA",
+    "GABAPENTIN",
+    "ANTIHISTAMINE"
+  ],
+  "ManagementPrescriptionCost": "51_100",
+  "ManagementPrescriptionDoxepinRatingBreathing": 4,
+  "ManagementPrescriptionDoxepinRatingMobility": 4,
+  "ManagementPrescriptionTrazodoneRatingBreathing": 2,
+  "ManagementPrescriptionTrazodoneRatingMobility": 2,
+  "ManagementPrescriptionGabapentinRatingBreathing": 2,
+  "ManagementPrescriptionGabapentinRatingMobility": 2,
+  "ManagementPrescriptionGalliprantRatingBreathing": 3,
+  "ManagementPrescriptionGalliprantRatingMobility": 3,
+  "ManagementPrescriptionSteroidRatingBreathing": 2,
+  "ManagementPrescriptionSteroidRatingMobility": 2,
+  "ManagementPrescriptionAntihistamineRatingBreathing": 2,
+  "ManagementPrescriptionAntihistamineRatingMobility": 2,
+  "ManagementPrescriptionCereniaRatingBreathing": 3,
+  "ManagementPrescriptionCereniaRatingMobility": 3,
+  "ManagementPrescriptionMeloxicamRatingBreathing": 4,
+  "ManagementPrescriptionMeloxicamRatingMobility": 4,
+  "ManagementPrescriptionAcepromineRatingBreathing": 4,
+  "ManagementPrescriptionAcepromineRatingMobility": 4,
+  "ManagementPrescriptionAlbuterolRatingBreathing": 1,
+  "ManagementPrescriptionAlbuterolRatingMobility": 1,
+  "ManagementPrescriptionTemarilPRatingBreathing": 3,
+  "ManagementPrescriptionTemarilPRatingMobility": 3,
+  
+  "ManagementNonPrescription": "YES",
+  "ManagementNonPrescriptionType": [
+    "ACUPUNCTURE",
+    "THERAPY"
+  ],
+  "ManagementNonPrescriptionCost": "151_250",
+  "ManagementNonPrescriptionAcupunctureRatingBreathing": 3,
+  "ManagementNonPrescriptionAcupunctureRatingMobility": 4,
+  "ManagementNonPrescriptionTherapyRatingBreathing": 3,
+  "ManagementNonPrescriptionTherapyRatingMobility": 4,
+  "ManagementNonPrescriptionColdLaserRatingBreathing": 3,
+  "ManagementNonPrescriptionColdLaserRatingMobility": 4,
+  "ManagementNonPrescriptionChiroRatingBreathing": 3,
+  "ManagementNonPrescriptionChiroRatingMobility": 4,
+
+  "OTCProductsDidPurchase": "YES",
+  "OTCProductsType": [
+    "TUMERIC",
+    "CBD",
+    "URSOLIC"
+  ],
+  "OtcProductsCost": "101_150",
+  "OtcProductsEffectiveness": 4,
+  "OTCProtocolDidPurchase": "YES",
+  "OtcProtocolCost": "51_100",
+  "OtcProtocolEffectiveness": 3,
+
+  "AspirationDidHave": "YES",
+  "AspirationCount": "TWO",
+  "AspirationInpatient": "YES",
+  "AspirationInpatientCount": "ONE",
+  "AspirationSurgeryPost": "YES",
+  "AspirationSurgeryPostCount": "ONE",
+  "AspirationStentPost": "YES",
+  "AspirationStentPostCount": "ONE",
+  "AspirationCost": "1001-2000",
+
+  "NeuropathySymptomsDoesHave": "YES",
+  "NeuropathySymptomsFirst": "BREATHING",
+  "NeuropathySymptomsBreathingOnset": "WEEKS",
+  "NeuropathySymptomsHindEndOnset": "MONTHS",
+  "NeuropathySymptomsTypeProgression": "HIND_END",
+  "NeuropathyOtherIssues": [
+    "ANXIETY"
+  ],
+
+  "ConclusionSpecialConsiderations": [
+   "EXERCISE",
+   "FOOD"
+  ],
+  "ConclusionPolyneuropathy": [
+    "HIND_END",
+    "FALLING"
+  ],
+  "ConclusionQOL": 2,
+  "ConclusionOtherConditions": [
+    "GERD",
+    "ARTHRITIS",
+    "CUSHINGS"
+  ],
+
+  "ConclusionCauseOfDeath": "COMPLICATIONS"
+
+
+  
+    
+
+
+
+
+}

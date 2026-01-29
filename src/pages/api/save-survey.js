@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
   try {
     const surveyData = req.body;
-    const resultsPath = path.join(process.cwd(), "data", "survey_results.json");
+    const resultsPath = path.join(process.cwd(), "data/survey-results", "survey_results.json");
     // Read existing results (array), or initialize new
     let results = [];
     try {

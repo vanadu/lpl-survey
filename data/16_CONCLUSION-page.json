@@ -114,7 +114,7 @@
             },
             {
               "type": "rating",
-              "name": "ConclusionsQOL",
+              "name": "ConclusionQOL",
               "title": "How would you rate {CmpnName}'s quality of life at this stage?",
               "description": "1 = very poor, 3 = fair, 5 = very good",
               "isRequired": true,

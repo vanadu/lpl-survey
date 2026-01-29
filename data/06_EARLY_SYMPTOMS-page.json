@@ -132,7 +132,7 @@
             },
             {
               "type": "radiogroup",
-              "name": "EarlySymptomsInccontinence",
+              "name": "EarlySymptomsIncontinence",
               "title": "Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?",
               "isRequired": true,
               "choices": [

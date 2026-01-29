@@ -1369,12 +1369,6 @@
                       "text": "Months must be between 1 and 12"
                     }
                   ]
-                },
-                {
-                  "type": "html",
-                  "name": "symptomDurationDisplay",
-                  "visibleIf": "{EarlySymptomsAgeYears} notempty && {EarlySymptomsAgeMonths} notempty",
-                  "html": "{CmpnName} has had symptoms for {lengthOfSymptomsinMonths} months."
                 }
               ]
             },
@@ -1432,6 +1426,27 @@
                   "type": "radiogroup",
                   "name": "EarlySymptomsHindEndWeakness",
                   "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't remember"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "EarlySymptomsIncontinence",
+                  "title": "Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?",
+                  "isRequired": true,
                   "choices": [
                     {
                       "value": "YES",
@@ -1454,15 +1469,33 @@
               "name": "EarlyOtherConditionsPanel",
               "elements": [
                 {
-                  "type": "checkbox",
+                  "type": "radiogroup",
                   "name": "EarlyOtherConditions",
-                  "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared at the age of {EarlySymptomsAgeYears} years and {EarlySymptomsAgeMonths} months?",
-                  "required": true,
+                  "title": "When {CmpnName} first started showing symptoms of LP, did he have any other health conditions?",
+                  "isRequired": true,
                   "choices": [
                     {
-                      "value": "NONE",
-                      "text": "None that I was aware of"
+                      "value": "YES",
+                      "text": "Yes"
                     },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "checkbox",
+                  "name": "EarlyOtherConditionsType",
+                  "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared at the age of {EarlySymptomsAgeYears} years and {EarlySymptomsAgeMonths} months?",
+                  "isRequred": true,
+                  "visibleIf": "{EarlyOtherConditions} = YES",
+                  "choices": [
                     {
                       "value": "GERD",
                       "text": "Acid reflux (GERD)"
@@ -3532,7 +3565,7 @@
             {
               "type": "radiogroup",
               "name": "ManagementPrescriptions",
-              "title": "Did your primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP symptoms?",
+              "title": "Did your primary veterinarian provide or prescribe any prescription medications for {CmpnName}'s LP/GOLPP symptoms?",
               "isRequired": true,
               "choices": [
                 {
@@ -3581,6 +3614,10 @@
                     {
                       "value": "STEROID",
                       "text": "Prednisone or other steriod"
+                    },
+                    {
+                      "value": "ANTIHISTAMINE",
+                      "text": "Benadryl or other antihistamine"
                     },
                     {
                       "value": "CERENIA",
@@ -3945,6 +3982,74 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{ManagementPrescriptionType} contains 'STEROID'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionAntihistamineRatingBreathing",
+                  "title": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s breathing:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "ManagementPrescriptionAntihistamineRatingMobility",
+                  "title": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s mobility or behavior:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -5448,9 +5553,33 @@
               "html": "<h3>Conclusions</h3>"
             },
             {
-              "type": "html",
-              "name": "ConclusionText",
-              "html": "<p>The last survey section deals with the last station of {CmpnName}'s LP/GOLPP journey &mdash; either {genderObjectPronoun} current state of health or {genderObjectPronoun} state of health when {genderSubjectPronoun} crossed over the Rainbow Bridge.</p><p>These are difficult questions to answer, but they're also the most important ones. This section references the questions you answered earlier to help draw conclusions about the progression of {CmpnName}'s LP/GOLPP since {genderSubjectPronoun} first showed symptoms. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later if you choose to do so.</p>"
+              "type": "panel",
+              "name": "ConclusionsPanelLifeStatusTrue",
+              "visibleIf": "{LifeStatus} = true",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "Conclusion",
+                  "html": "<p>The final section of this survey asks questions about the last station of {CmpnName}'s LP/GOLPP journey before {genderSubjectPronoun} crossed over the Rainbow Bridge. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later. </p>"
+                },
+                {
+                  "type": "html",
+                  "name": "Conclusion",
+                  "html": "<p>This section references questions you asked earlier in the survey to get a picture of how {CmpnName}'s LP/GOLPP changed over time in relation to other factors that played a role in {CmpnName}'s LP/GOLPP journey. </p>"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionsPanelLifeStatusFalse",
+              "visibleIf": "{LifeStatus} = false",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "Conclusion",
+                  "html": "<p>The last survey section asks questions about the current state of {CmpnName}'s LP/GOLPP. By comparing your answers here to answers you provided earlier, we hope to get a picture of how {genderObjectPronoun} condition changed over time and what factors may have played a role in the LP/GOLPP progression</p>"
+                }
+              ]
             },
             {
               "type": "html",
@@ -5463,7 +5592,7 @@
               "elements": [
                 {
                   "type": "checkbox",
-                  "name": "ConclusionsLimitations",
+                  "name": "ConclusionSpecialConsiderations",
                   "title": "Please describe any special considerations in place for {CmpnName} due to LP-related breathing issues:",
                   "isRequired": true,
                   "choices": [
@@ -5481,14 +5610,14 @@
                     },
                     {
                       "value": "EXCITEMENT",
-                      "text": "Limit activities that cause excitement"
+                      "text": "Other behavior restrictions i.e., anxiety, excitement"
                     }
                   ],
                   "showOtherItem": true
                 },
                 {
                   "type": "checkbox",
-                  "name": "ConclusionsPolyneuropathy",
+                  "name": "ConclusionPolyneuropathy",
                   "title": "Please describe {CmpnName}'s polyneuropathy:",
                   "isRequired": true,
                   "choices": [
@@ -5521,7 +5650,7 @@
                 },
                 {
                   "type": "rating",
-                  "name": "ConclusionsQOL",
+                  "name": "ConclusionQOL",
                   "title": "How would you rate {CmpnName}'s quality of life at this stage?",
                   "description": "1 = very poor, 3 = fair, 5 = very good",
                   "isRequired": true,
@@ -5560,9 +5689,10 @@
               "elements": [
                 {
                   "type": "checkbox",
-                  "name": "EarlyOtherConditions",
+                  "name": "ConclusionOtherConditions",
                   "title": "What other conditions {doTense} {CmpnName} have at this stage?",
-                  "required": true,
+                  "description": "Your selections here will be compared to earlier answers to deterimine which of these conditions developed during {CmpnName}'s LP/GOLPP journey.",
+                  "isRequired": true,
                   "choices": [
                     {
                       "value": "GERD",
@@ -5606,13 +5736,12 @@
             {
               "type": "panel",
               "name": "ConclusionCauseOfDeathPanel",
-              "title": "The Last Question",
               "visibleIf": "{LifeStatus} = true",
               "elements": [
                 {
                   "type": "html",
                   "name": "ConclusionCauseOfDeathHeading",
-                  "html": "Humane euthanasia is how most people choose to say goodbye to their beloved companions when their quality of life reaches a point where letting them go is in their best interest. This last question asks about why {CmpnName}'s quality of life reached that point. "
+                  "html": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This questions asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over."
                 },
                 {
                   "type": "radiogroup",
@@ -5620,6 +5749,14 @@
                   "title": "What was the ultimate reason why {CmpnName} crossed over the Rainbow Bridge?",
                   "isRequired": true,
                   "choices": [
+                    {
+                      "value": "COMPLICATIONS",
+                      "text": "Direct post-operative complications of LP surgery or stent implant"
+                    },
+                    {
+                      "value": "BREATHING_CRISIS",
+                      "text": "LP-related breathing crisis"
+                    },
                     {
                       "value": "CANCER",
                       "text": "Cancer"
@@ -5629,24 +5766,37 @@
                       "text": "Bacterial/viral infection"
                     },
                     {
-                      "value": "BREATHING_CRISIS",
-                      "text": "Breathing crisis"
-                    },
-                    {
                       "value": "ADVANCED_POLYNEUROPATHY",
                       "text": "Polyneuropathy/cognitive decline"
                     },
                     {
-                      "value": "COMPLICATIONS",
-                      "text": "Direct post-operative complications of LP surgery or stent implant"
+                      "value": "SEIZURE",
+                      "text": "Seizure or stroke"
                     },
                     {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
+                      "value": "STOPPED_EATING",
+                      "text": "Stopped eating"
                     }
                   ],
                   "showOtherItem": true,
                   "otherText": "Other issues"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionLastQuestion",
+              "title": "Survey Conclusion",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "ConclusionLastQuestionIntro",
+                  "html": "The last question of the survey is the most difficult. LP/GOLPP is a merciless, ruthless disease that forces us to make impossible decisions for our beloved companions.  "
+                },
+                {
+                  "type": "html",
+                  "name": "ConclusionLastQuestionRegret",
+                  "html": "LP/GOLPP is a merciless disease diseaseThe last question of the survey is the most difficult. It asks if, knowing what you know now, you would have chosen a different path or done anything differently along your LP/GOLPP journey. "
                 }
               ]
             }
