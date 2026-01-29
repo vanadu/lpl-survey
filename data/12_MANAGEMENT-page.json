@@ -23,7 +23,7 @@
         {
           "type": "radiogroup",
           "name": "ManagementPrescriptions",
-          "title": "Did your primary veterinarian provide any prescription medications for {CmpnName}'s LP/GOLPP symptoms?",
+          "title": "Did your primary veterinarian provide or prescribe any prescription medications for {CmpnName}'s LP/GOLPP symptoms?",
           "isRequired": true,
           "choices": [
             {

@@ -53,12 +53,6 @@
                   "text": "Months must be between 1 and 12"
                 }
               ]
-            },
-            {
-              "type": "html",
-              "name": "symptomDurationDisplay",
-              "visibleIf": "{EarlySymptomsAgeYears} notempty && {EarlySymptomsAgeMonths} notempty",
-              "html": "{CmpnName} has had symptoms for {lengthOfSymptomsinMonths} months."
             }
           ]
         },
@@ -120,6 +114,27 @@
               "type": "radiogroup",
               "name": "EarlySymptomsHindEndWeakness",
               "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't remember"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "EarlySymptomsInccontinence",
+              "title": "Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?",
+              "isRequired": true,
               "choices": [
                 {
                   "value": "YES",
@@ -142,15 +157,33 @@
           "name": "EarlyOtherConditionsPanel",
           "elements": [
             {
-            "type": "checkbox",
-            "name": "EarlyOtherConditions",
-            "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared at the age of {EarlySymptomsAgeYears} years and {EarlySymptomsAgeMonths} months?",
-            "required": true,
-            "choices": [
+              "type": "radiogroup",
+              "name": "EarlyOtherConditions",
+              "title": "When {CmpnName} first started showing symptoms of LP, did he have any other health conditions?",
+              "isRequired": true,
+              "choices": [
                 {
-                  "value": "NONE",
-                  "text": "None that I was aware of"
+                  "value": "YES",
+                  "text": "Yes"
                 },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+            "type": "checkbox",
+            "name": "EarlyOtherConditionsType",
+            "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared at the age of {EarlySymptomsAgeYears} years and {EarlySymptomsAgeMonths} months?",
+            "isRequred": true,
+            "visibleIf": "{EarlyOtherConditions} = YES",
+            "choices": [
                 {
                   "value": "GERD",
                   "text": "Acid reflux (GERD)"
