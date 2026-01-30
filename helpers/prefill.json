@@ -5,7 +5,7 @@
   "UserInfoStateRegion": "MD",
   "UserInfoAgeGroup": "OVER_65",
   "UserInfoGender": "NOT_SAY",
-  "UserInfoContactType": false,
+  "UserInfoContactType": true,
   "UserInfoContactTypeEmail": "example@example.com",
   "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "UserInfoContactOK": true,
