@@ -1,9 +1,11 @@
-import excludeConfig from "./excludeCalculatedValues.json";
+import surveySchema from "./surveySchema.json";
 
 /**
  * Transforms SurveyJS result JSON prior to submission
+ * Enforces schema order and null-fills missing fields.
+ *
  * @param {object} surveyData - Raw SurveyJS data object
- * @returns {object} Transformed payload with metadata + cleaned data
+ * @returns {object} Transformed payload with metadata + schema-aligned data
  */
 export function preSubmitTransform(surveyData) {
   if (!surveyData || typeof surveyData !== "object") {
@@ -60,38 +62,39 @@ export function preSubmitTransform(surveyData) {
   )}_${sanitize(CmpnName)}.json`;
 
   /* -----------------------------
-     Strip excluded calculated values
+     Schema hydration
+     (single source of truth)
   ----------------------------- */
-  const excludeKeys =
-    excludeConfig?.excludeCalculatedValues || [];
-
-  const cleanedData = Object.fromEntries(
-    Object.entries(rest).filter(
-      ([key]) => !excludeKeys.includes(key)
-    )
+  const data = Object.fromEntries(
+    surveySchema.map((name) => [name, null])
   );
 
   /* -----------------------------
-    Normalize contact info
-    (stable schema: always write both fields, unselected = null)
+     Overlay actual survey values
+  ----------------------------- */
+  for (const [key, value] of Object.entries(rest)) {
+    if (key in data) {
+      data[key] = value;
+    }
+  }
+
+  /* -----------------------------
+     Normalize contact fields
+     (written in schema position)
   ----------------------------- */
   const contactType = Boolean(UserInfoContactType);
 
-  cleanedData.UserInfoContactType = contactType;
+  data.UserInfoContactType = contactType;
 
-  cleanedData.UserInfoContactTypeEmail =
+  data.UserInfoContactTypeEmail =
     contactType === false && typeof UserInfoContactTypeEmail === "string"
       ? UserInfoContactTypeEmail
       : null;
 
-  cleanedData.UserInfoContactTypeFacebook =
+  data.UserInfoContactTypeFacebook =
     contactType === true && typeof UserInfoContactTypeFacebook === "string"
       ? UserInfoContactTypeFacebook
       : null;
-
-  console.log('cleanedData :>> ');
-  console.log(cleanedData);
-
 
   /* -----------------------------
      Final payload
@@ -100,8 +103,8 @@ export function preSubmitTransform(surveyData) {
     metadata: {
       filename,
       completedAt: completedDate.toISOString(),
-      surveyVersion: "Beta 2026.01.29.01",
+      surveyVersion: "Beta 2026.01.31.02",
     },
-    data: cleanedData,
+    data,
   };
 }
