@@ -43,35 +43,55 @@
                   "text": "Horse"
                 }
               ]
-            }
-          ]
-        },
-        {
-        "type": "panel",
-        "name": "CmpnInfoBreedGenderPanel",
-        "title": "{CmpnName}'s breed/breed mix and gender:",
-        "elements": [
-          {
+            },
+            {
             "type": "text",
             "name": "CmpnInfoBreed",
-            "title": "Breed or mix (if unknown, type 'Don't know'):",
+            "title": "{CmpnName}'s breed or mix (if unknown, type 'Don't know'):",
             "isRequired": true
-          },
-          {
-            "type": "boolean",
-            "name": "CmpnInfoGender",
-            "title": "Gender:",
-            "isRequired": true,
-            "labelTrue": "Female",
-            "labelFalse": "Male"
-          }
-        ]
+            },
+            {
+              "type": "boolean",
+              "name": "CmpnInfoGender",
+              "title": "{CmpnName}'s gender:",
+              "isRequired": true,
+              "labelTrue": "Female",
+              "labelFalse": "Male"
+            },
+            {
+              "type": "text",
+              "name": "CmpnInfoWeight",
+              "title": "{CmpnName}'s last known weight (in lbs or kg):",
+              "description": "Please enter a number",
+              "isRequired": true,
+              "inputType": "number",
+              "min": 1,
+              "max": 2200,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 2200,
+                  "text": "Weight must be between 1 and 2200"
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "CmpnInfoWeightUnits",
+              "title": "Please choose pounds or kilos:",
+              "isRequired": true,
+              "labelTrue": "Kg",
+              "labelFalse": "Lbs"
+            }
+          ]
         },
         {
           "type": "panel",
           "name": "dcsdCmpnInfoAgePanel",
           "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
-          "visibleIf": "{LifeStatus} = false",
+          "description": "Please enter years and months",
+          "visibleIf": "{LifeStatus} = true",
           "elements": [
             {
               "type": "text",
@@ -113,7 +133,7 @@
           "type": "panel",
           "name": "lvngCmpnInfoAgePanel",
           "title": "What is {CmpnName}'s approximate age (in years and months)?",
-          "visibleIf": "{LifeStatus} = true",
+          "visibleIf": "{LifeStatus} = false",
           "elements": [
             {
               "type": "text",
@@ -151,38 +171,7 @@
             }
           ]
         },
-        {
-          "type": "panel",
-          "name": "CmpnInfoWeightPanel",
-          "title": "{CmpnName}'s last known weight in pounds or kilos:",
-          "elements": [
-            {
-              "type": "text",
-              "name": "CmpnInfoWeight",
-              "title": "Weight (number):",
-              "isRequired": true,
-              "inputType": "number",
-              "min": 1,
-              "max": 2200,
-              "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 2200,
-                  "text": "Weight must be between 1 and 2200"
-                }
-              ]
-            },
-            {
-              "type": "boolean",
-              "name": "CmpnInfoWeightUnits",
-              "title": "Please choose pounds or kilos:",
-              "isRequired": true,
-              "labelTrue": "Kg",
-              "labelFalse": "Lbs"
-            }
-          ]
-        },
+
         {
           "type": "panel",
           "name": "CmpnInfoDemeanorPanel",
@@ -201,14 +190,7 @@
                 { "value": 4, "text": "4" },
                 { "value": 5, "text": "5" }
               ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "CmpnInfoAnxietyPanel",
-          "title": "",
-          "elements": [
+            },
             {
               "type": "rating",
               "name": "CmpnInfoAnxiety",
@@ -222,74 +204,12 @@
                 { "value": 4, "text": "4" },
                 { "value": 5, "text": "5" }
               ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "CmpnInfoAnimalsPanel",
-          "elements": [
-            {
-            "type": "dropdown",
-            "name": "CmpnInfoAnimalsCount",
-            "title": "How many animals do you have in your care?",
-            "required": true,
-            "choices": [
-              {
-                "value": "ONE",
-                "text": "One"
-              },
-              {
-                "value": "TWO",
-                "text": "Two"
-              },
-              {
-                "value": "THREE",
-                "text": "Three"
-              },
-              {
-                "value": "MORE_THAN_THREE",
-                "text": "More than three"
-              }
-            ],
-            "choicesOrder": "none",
-            "choicesMin": 1
             },
             {
               "type": "boolean",
               "name": "lvngCmpnInfoHasInsurance",
               "required": true,
-              "title": "Do you have pet insurance for {CmpnName}?",
-              "visibleIf": "{LifeStatus} = true"
-            },
-            {
-              "type": "boolean",
-              "name": "dcsdCmpnInfoHasInsurance",
-              "required": true,
-              "title": "Did you have pet insurance for {CmpnName}?",
-              "visibleIf": "{LifeStatus} = false"
-            },
-            {
-            "type": "radiogroup",
-            "name": "CmpnInfoHasInsuranceOther",
-            "title": "Do you have pet insurance for your other animals?",
-            "visibleIf": "{lvngCmpnInfoHasInsurance} = true || {dcsdCmpnInfoHasInsurance} = true",
-            "required": true,
-            "choices": [
-              {
-                "value": "1",
-                "text": "No"
-              },
-              {
-                "value": "2",
-                "text": "Some, but not all"
-              },
-              {
-                "value": "3",
-                "text": "All"
-              }
-              ],
-              "choicesOrder": "none"
+              "title": "{doFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?"
             }
           ]
         }

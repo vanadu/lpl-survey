@@ -105,6 +105,12 @@ const masterSurvey = {
     },
     {
       "type": "calculatedvalue",
+      "name": "doFirstPersonSingularInitialCap",
+      "expression": "iif({LifeStatus} = 'true', 'Did', 'Do')",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
       "name": "genderSubjectPronoun",
       "expression": "iif({LifeStatus} = 'true', 'she', 'he')",
       "includeIntoResult": true

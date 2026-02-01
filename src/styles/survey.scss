@@ -584,3 +584,59 @@
     padding-top: 10px;
   }
 }
+
+
+
+/* Root wrapper */
+[data-name="dynamicPanelTest"] {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Kill nested border modifier */
+[data-name="dynamicPanelTest"].sd-element--nested-with-borders {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Also in case it's applied to a child */
+[data-name="dynamicPanelTest"] .sd-element--nested-with-borders {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* 1) Remove "Add new" buttons */
+[data-name="dynamicPanelTest"] .sd-question__footer,
+[data-name="dynamicPanelTest"] .sd-paneldynamic__actions,
+[data-name="dynamicPanelTest"] .sd-paneldynamic__btn {
+  display: none !important;
+}
+
+/* 2) Remove placeholder text */
+[data-name="dynamicPanelTest"] .sd-paneldynamic__placeholder {
+  display: none !important;
+}
+
+/* 3) Nuke any remaining panel visuals */
+[data-name="dynamicPanelTest"] .sd-panel,
+[data-name="dynamicPanelTest"] .sd-panel__content,
+[data-name="dynamicPanelTest"] .sd-question__content {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* 4) Remove whitespace around the title */
+[data-name="dynamicPanelTest"] .sd-question__title {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove wrapper spacing */
+[data-name="dynamicPanelTest"] .sd-question__content,
+[data-name="dynamicPanelTest"] .sd-panel {
+  padding: 0 !important;
+  margin: 0 !important;
+}
