@@ -197,6 +197,8 @@
               "type": "dropdown",
               "name": "UserInfoAgeGroup",
               "title": "Approximately what is your age?",
+               "width": "70%",
+              "minWidth": "260px",
               "choices": [
                 {
                   "value": "UNDER_20",
@@ -222,6 +224,7 @@
               "name": "UserInfoGender",
               "title": "Gender information:",
               "isRequired": false,
+              "colCount": 3,
               "choices": [
                 {
                 "value": "WOMAN",
