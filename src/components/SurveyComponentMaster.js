@@ -67,34 +67,38 @@ export default function MasterSurveyComponent() {
 
 const handleComplete = useCallback(async (sender) => {
   try {
-    // Build transformed, storage-ready payload
-    const transformedPayload = preSubmitTransform({
+    const payload = {
       ...sender.data,
       completedAt: sender.completedAt ?? new Date().toISOString(),
-    });
+    };
 
-    console.log("Presubmission payload:", transformedPayload);
+    // In .env.local:
+    // NEXT_PUBLIC_SURVEY_ENDPOINT=/api/save-survey   (testing)
+    // NEXT_PUBLIC_SURVEY_ENDPOINT=/api/submit-survey (production)
+    const endpoint =
+      process.env.NEXT_PUBLIC_SURVEY_ENDPOINT || "/api/submit-survey";
 
-    // Send JSON to server-side API route
-    const response = await fetch("/api/save-presubmission", {
+    // !VA Log the endpoint to the console to show whether we're sending or saving the submission
+    const response = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(transformedPayload),
+      body: JSON.stringify(payload),
     });
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.error || "Unknown error");
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.error || result.message || "Unknown error");
     }
 
-    console.log("Presubmission JSON saved via API successfully");
+    console.log("Submission succeeded:", { endpoint, result });
     setIsCompleted(true);
-
   } catch (err) {
-    console.error("Failed to save presubmission JSON:", err);
-    alert("Failed to save presubmission JSON. See console for details.");
+    console.error("Submission failed:", err);
+    alert("Submission failed. See console for details.");
   }
 }, []);
+
 
 
 

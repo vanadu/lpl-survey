@@ -103,7 +103,7 @@ export function preSubmitTransform(surveyData) {
     metadata: {
       filename,
       completedAt: completedDate.toISOString(),
-      surveyVersion: "Beta 2026.01.31.02",
+      surveyVersion: "Beta 2026.02.01.01",
     },
     data,
   };
