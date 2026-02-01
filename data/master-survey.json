@@ -726,20 +726,14 @@
             },
             {
               "type": "panel",
-              "name": "InfoSourcesPriorKnowledgePanel",
+              "name": "InfoSourcesTypesPanel",
               "elements": [
                 {
                   "type": "boolean",
                   "name": "InfoSourcesPriorKnowledge",
                   "title": "Had you ever heard of LP before {CmpnName} got it?",
                   "isRequired": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "InfoSourcesTypesPanel",
-              "elements": [
+                },
                 {
                   "type": "checkbox",
                   "name": "InfoSourcesTypes",
@@ -778,10 +772,7 @@
                 {
                   "type": "dropdown",
                   "name": "InfoSourcesBestSource",
-                  "title": "Which of those information sources did you find MOST useful (please select one)?",
-                  "choices": [
-                    "Facebook groups"
-                  ]
+                  "title": "Which of those information sources did you find MOST useful (please select one)?"
                 }
               ]
             },
