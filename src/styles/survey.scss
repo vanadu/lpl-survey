@@ -368,3 +368,11 @@
 [data-name="IntubationHistoryReason"] > .sd-element__content.sd-question__content > fieldset > .sd-row:nth-child(1) {
   grid-column: 1 / -1; /* full width */
 }
+
+
+// !VA
+.survey-grid-1fr-1fr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}

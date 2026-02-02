@@ -77,7 +77,8 @@
             {
               "type": "boolean",
               "name": "CmpnInfoWeightUnits",
-              "title": "Please choose pounds or kilos:",
+              "title": "Weight units:",
+              "description": "Please choose pounds or kilos.",
               "isRequired": true,
               "labelTrue": "Kg",
               "labelFalse": "Lbs"
