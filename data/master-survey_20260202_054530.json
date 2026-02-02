@@ -2872,7 +2872,7 @@
               "elements": [
                 {
                   "type": "checkbox",
-                  "name": "TreatmentStatusVentrilocordectomyReasons",
+                  "name": "TreatmentStatusArtyenoidectomyReasons",
                   "title": "Why did you choose ventrilocordectomy over other surgery types?",
                   "description": "Please choose all that apply.",
                   "isRequired": true,
@@ -2919,7 +2919,7 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "TreatmentStatusVentrilocordectomyChoice",
+                  "name": "TreatmentStatusArtyenoidectomyChoice",
                   "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
                   "isRequired": true,
                   "choices": [
@@ -3445,7 +3445,7 @@
             },
             {
               "type": "panel",
-              "name": "TreatmentFactorsOtherPanel",
+              "name": "TreatmentFactorsOther",
               "title": "What other considerations have factored into your decision?",
               "elements": [
                 {

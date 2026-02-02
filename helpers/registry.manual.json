@@ -1,0 +1,792 @@
+{
+  "meta": {
+    "manualVersion": "1.0.0",
+    "updatedAt": "2026-02-02T14:58:17.581Z",
+    "builtFromGenerated": "helpers/registry.generated.json"
+  },
+  "elements": {
+    "LandingPanel": {
+      "styles": []
+    },
+    "LandingPrivacyAndData": {
+      "styles": []
+    },
+    "LandingConsent": {
+      "styles": []
+    },
+    "UserInfoPanel": {
+      "styles": []
+    },
+    "UserInfoLifeStatusDetailsPanel": {
+      "styles": []
+    },
+    "CmpnName": {
+      "styles": []
+    },
+    "LifeStatus": {
+      "styles": []
+    },
+    "UserInfoVerificationPanel": {
+      "styles": []
+    },
+    "UserInfoContactType": {
+      "styles": []
+    },
+    "UserInfoContactTypeEmail": {
+      "styles": []
+    },
+    "UserInfoContactTypeFacebook": {
+      "styles": []
+    },
+    "UserInfoContactOK": {
+      "styles": []
+    },
+    "UserInfoAboutPanel": {
+      "styles": []
+    },
+    "UserInfoFirstName": {
+      "styles": []
+    },
+    "UserInfoCountry": {
+      "styles": []
+    },
+    "UserInfoStateRegion": {
+      "styles": []
+    },
+    "UserInfoAgeGenderPanel": {
+      "styles": []
+    },
+    "UserInfoAgeGroup": {
+      "styles": []
+    },
+    "UserInfoGender": {
+      "styles": []
+    },
+    "CmpnInfoPanel": {
+      "styles": []
+    },
+    "CmpnInfoDetailsPanel": {
+      "styles": []
+    },
+    "CmpnInfoAnimalType": {
+      "styles": []
+    },
+    "CmpnInfoBreed": {
+      "styles": []
+    },
+    "CmpnInfoGender": {
+      "styles": []
+    },
+    "CmpnInfoWeight": {
+      "styles": []
+    },
+    "CmpnInfoWeightUnits": {
+      "styles": []
+    },
+    "dcsdCmpnInfoAgePanel": {
+      "styles": []
+    },
+    "dcsdCmpnInfoAgeYears": {
+      "styles": []
+    },
+    "dcsdCmpnInfoAgeMonths": {
+      "styles": []
+    },
+    "lvngCmpnInfoAgePanel": {
+      "styles": []
+    },
+    "lvngCmpnInfoAgeYears": {
+      "styles": []
+    },
+    "lvngCmpnInfoAgeMonths": {
+      "styles": []
+    },
+    "CmpnInfoDemeanorPanel": {
+      "styles": []
+    },
+    "CmpnInfoDemeanor": {
+      "styles": []
+    },
+    "CmpnInfoAnxiety": {
+      "styles": []
+    },
+    "lvngCmpnInfoHasInsurance": {
+      "styles": []
+    },
+    "InfoSourcesPanel": {
+      "styles": []
+    },
+    "InfoSourcesTypesPanel": {
+      "styles": []
+    },
+    "InfoSourcesPriorKnowledge": {
+      "styles": []
+    },
+    "InfoSourcesTypes": {
+      "styles": []
+    },
+    "InfoSourcesBestSource": {
+      "styles": []
+    },
+    "InfoSourcesQualityPanel": {
+      "styles": []
+    },
+    "InfoSourcesHardToUnderstand": {
+      "styles": []
+    },
+    "InfoSourcesContradictory": {
+      "styles": []
+    },
+    "InfoSourcesClearAnswers": {
+      "styles": []
+    },
+    "IntubationHistoryPanel": {
+      "styles": []
+    },
+    "IntubationHistorySubpanel": {
+      "styles": []
+    },
+    "IntubationHistoryWasIntubated": {
+      "styles": []
+    },
+    "IntubationHistoryReason": {
+      "styles": []
+    },
+    "IntubationHistoryConcerns": {
+      "styles": []
+    },
+    "IntubationHistorySymptoms": {
+      "styles": []
+    },
+    "BreathingCrisisPanel": {
+      "styles": []
+    },
+    "BreathingCrisisDidHavePanel": {
+      "styles": []
+    },
+    "BreathingCrisisDidHave": {
+      "styles": []
+    },
+    "BreathingCrisisDetailsPanel": {
+      "styles": []
+    },
+    "BreathingCrisisCount": {
+      "styles": []
+    },
+    "BreathingCrisisCost": {
+      "styles": []
+    },
+    "BreathingCrisisAdvice": {
+      "styles": []
+    },
+    "BreathingCrisisAdviceType": {
+      "styles": []
+    },
+    "BreathingCrisisProvidedSubstance": {
+      "styles": []
+    },
+    "BreathingCrisisProvidedSubstanceType": {
+      "styles": []
+    },
+    "BreathingCrisisSubstanceForm": {
+      "styles": []
+    },
+    "EarlySymptomsPanel": {
+      "styles": []
+    },
+    "EarlySymptomsFirstSignsPanel": {
+      "styles": []
+    },
+    "EarlySymptomsAgeYears": {
+      "styles": []
+    },
+    "EarlySymptomsAgeMonths": {
+      "styles": []
+    },
+    "EarlySymptomsDetailsPanel": {
+      "styles": []
+    },
+    "EarlySymptomsType": {
+      "styles": []
+    },
+    "EarlySymtomsSeverity": {
+      "styles": []
+    },
+    "EarlySymptomsHindEndWeakness": {
+      "styles": []
+    },
+    "EarlySymptomsIncontinence": {
+      "styles": []
+    },
+    "EarlyOtherConditionsPanel": {
+      "styles": []
+    },
+    "EarlyOtherConditions": {
+      "styles": []
+    },
+    "EarlyOtherConditionsType": {
+      "styles": []
+    },
+    "PrimaryDurationPanel": {
+      "styles": []
+    },
+    "PrimaryDurationFirstConsult": {
+      "styles": []
+    },
+    "PrimaryDurationFirstConsultYears": {
+      "styles": []
+    },
+    "PrimaryDurationFirstConsultMonths": {
+      "styles": []
+    },
+    "PrimaryDurationVisitsNumberPanel": {
+      "styles": []
+    },
+    "PrimaryDurationVisitsNumber": {
+      "styles": []
+    },
+    "PrimaryDurationCost": {
+      "styles": []
+    },
+    "PrimaryDurationChangedVetsPanel": {
+      "styles": []
+    },
+    "PrimaryDurationChangedVets": {
+      "styles": []
+    },
+    "PrimaryDurationChangedVetsReason": {
+      "styles": []
+    },
+    "PrimaryVetPanel": {
+      "styles": []
+    },
+    "PrimaryVetInflammationPanel": {
+      "styles": []
+    },
+    "PrimaryVetInflammation": {
+      "styles": []
+    },
+    "PrimaryVetRefluxPanel": {
+      "styles": []
+    },
+    "PrimaryVetReflux": {
+      "styles": []
+    },
+    "PrimaryVetRefluxMeds": {
+      "styles": []
+    },
+    "PrimaryVetRefluxInitiative": {
+      "styles": []
+    },
+    "PrimaryVetDiagnosisPanel": {
+      "styles": []
+    },
+    "PrimaryVetDiagnosis": {
+      "styles": []
+    },
+    "PrimaryVetInfoPanel": {
+      "styles": []
+    },
+    "PrimaryVetInfoDidGive": {
+      "styles": []
+    },
+    "PrimaryVetInfoDetails": {
+      "styles": []
+    },
+    "PrimaryVetSurgeryPanel": {
+      "styles": []
+    },
+    "PrimaryVetSurgery": {
+      "styles": []
+    },
+    "PrimaryVetSurgeryPerception": {
+      "styles": []
+    },
+    "PrimaryVetConfidencePanel": {
+      "styles": []
+    },
+    "PrimaryVetConfidence": {
+      "styles": []
+    },
+    "PrimaryVetSatisfaction": {
+      "styles": []
+    },
+    "DiagnosisPanel": {
+      "styles": []
+    },
+    "DiagnosisDetailsPanel": {
+      "styles": []
+    },
+    "DiagnosisWho": {
+      "styles": []
+    },
+    "PrimaryVetDiagnosticType": {
+      "styles": []
+    },
+    "DiagnosisStage": {
+      "styles": []
+    },
+    "DiagnosisTimeAfterSymptoms": {
+      "styles": []
+    },
+    "DiagnosisCost": {
+      "styles": []
+    },
+    "DiagnosisSurgeonContingent": {
+      "styles": []
+    },
+    "TreatmentStatusPanel": {
+      "styles": []
+    },
+    "TreatmentStatusDidHave": {
+      "styles": []
+    },
+    "TreatmentStatusAgePanel": {
+      "styles": []
+    },
+    "TreatmentStatusAgeYears": {
+      "styles": []
+    },
+    "TreatmentStatusAgeMonths": {
+      "styles": []
+    },
+    "TreatmentStatusTypePanel": {
+      "styles": []
+    },
+    "TreatmentStatusType": {
+      "styles": []
+    },
+    "TreatmentStatusTiebackPanel": {
+      "styles": []
+    },
+    "TreatmentStatusTiebackEmergency": {
+      "styles": []
+    },
+    "TreatmentStatusTiebackWait": {
+      "styles": []
+    },
+    "TreatmentStatusTiebackCount": {
+      "styles": []
+    },
+    "TreatmentStatusTiebackOnceCost": {
+      "styles": []
+    },
+    "TreatmentStatusTiebackMultipleCost": {
+      "styles": []
+    },
+    "TreatmentStatusTiebackComplications": {
+      "styles": []
+    },
+    "TreatmentStatusTiebackComplicationsCost": {
+      "styles": []
+    },
+    "TreatmentStatusBveapPanel": {
+      "styles": []
+    },
+    "TreatmentStatusBveapReasons": {
+      "styles": []
+    },
+    "TreatmentStatusBveapCost": {
+      "styles": []
+    },
+    "TreatmentStatusBveapComplications": {
+      "styles": []
+    },
+    "TreatmentStatusBveapComplicationsCost": {
+      "styles": []
+    },
+    "TreatmentStatusStentPanel": {
+      "styles": []
+    },
+    "TreatmentStatusStentType": {
+      "styles": []
+    },
+    "TreatmentStatusDexstentPanel": {
+      "styles": []
+    },
+    "TreatmentStatusStentDidMigrate": {
+      "styles": []
+    },
+    "TreatmentStatusStentReplaced": {
+      "styles": []
+    },
+    "TreatmentStatusStentCostOnce": {
+      "styles": []
+    },
+    "TreatmentStatusStentCostRepeat": {
+      "styles": []
+    },
+    "TreatmentStatusStentComplications": {
+      "styles": []
+    },
+    "TreatmentStatusStentComplicationsCost": {
+      "styles": []
+    },
+    "TreatmentStatusArytenoidectomyPanel": {
+      "styles": []
+    },
+    "TreatmentStatusArtyenoidectomyReasons": {
+      "styles": []
+    },
+    "TreatmentStatusArtyenoidectomyLaser": {
+      "styles": []
+    },
+    "TreatmentStatusArtyenoidectomyDidExplain": {
+      "styles": []
+    },
+    "TreatmentStatusArtyenoidectomyChoice": {
+      "styles": []
+    },
+    "TreatmentStatusArtyenoidectomyCost": {
+      "styles": []
+    },
+    "TreatmentStatusArtyenoidectomyComplications": {
+      "styles": []
+    },
+    "TreatmentStatusArtyenoidectomyComplicationsCost": {
+      "styles": []
+    },
+    "TreatmentStatusVentrilocordectomyPanel": {
+      "styles": []
+    },
+    "TreatmentStatusVentrilocordectomyReasons": {
+      "styles": []
+    },
+    "TreatmentStatusVentrilocordectomyDidExplain": {
+      "styles": []
+    },
+    "TreatmentStatusVentrilocordectomyChoice": {
+      "styles": []
+    },
+    "TreatmentStatusVentrilocordectomyCost": {
+      "styles": []
+    },
+    "TreatmentStatusVentrilocordectomyComplications": {
+      "styles": []
+    },
+    "TreatmentStatusVentrilocordectomyComplicationsCost": {
+      "styles": []
+    },
+    "TreatmentFactorsPanel": {
+      "styles": []
+    },
+    "TreatmentFactorsDecisionPanel": {
+      "styles": []
+    },
+    "TreatmentFactorsDecision": {
+      "styles": []
+    },
+    "TreatmentFactorsDecisionStent": {
+      "styles": []
+    },
+    "TreatmentFactorsCostPanel": {
+      "styles": []
+    },
+    "TreatmentFactorsCost": {
+      "styles": []
+    },
+    "TreatmentFactorsCostComplications": {
+      "styles": []
+    },
+    "TreatmentFactorsStagePanel": {
+      "styles": []
+    },
+    "TreatmentFactorsStageLP": {
+      "styles": []
+    },
+    "TreatmentFactorsStageNeuropathy": {
+      "styles": []
+    },
+    "TreatmentFactorsSurgeryRisksPanel": {
+      "styles": []
+    },
+    "TreatmentFactorsRisks": {
+      "styles": []
+    },
+    "TreatmentFactorsRisksComplications": {
+      "styles": []
+    },
+    "TreatmentFactorsGeneral": {
+      "styles": []
+    },
+    "TreatmentFactorsAge": {
+      "styles": []
+    },
+    "TreatmentFactorsGeneralHealth": {
+      "styles": []
+    },
+    "TreatmentFactorsCoexisting": {
+      "styles": []
+    },
+    "TreatmentFactorsCircumstances": {
+      "styles": []
+    },
+    "TreatmentFactorsCircumstancesAccess": {
+      "styles": []
+    },
+    "TreatmentFactorsCircumstancesCare": {
+      "styles": []
+    },
+    "TreatmentFactorsOtherPanel": {
+      "styles": []
+    },
+    "TreatmentFactorsOther": {
+      "styles": []
+    },
+    "ManagementPanel": {
+      "styles": []
+    },
+    "ManagementPrescriptions": {
+      "styles": []
+    },
+    "ManagementPrescriptionTypePanel": {
+      "styles": []
+    },
+    "ManagementPrescriptionType": {
+      "styles": []
+    },
+    "ManagementPrescriptionCost": {
+      "styles": []
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing": {
+      "styles": []
+    },
+    "ManagementPrescriptionDoxepinRatingMobility": {
+      "styles": []
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing": {
+      "styles": []
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility": {
+      "styles": []
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing": {
+      "styles": []
+    },
+    "ManagementPrescriptionGabapentinRatingMobility": {
+      "styles": []
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing": {
+      "styles": []
+    },
+    "ManagementPrescriptionGalliprantRatingMobility": {
+      "styles": []
+    },
+    "ManagementPrescriptionSteroidRatingBreathing": {
+      "styles": []
+    },
+    "ManagementPrescriptionSteroidRatingMobility": {
+      "styles": []
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing": {
+      "styles": []
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility": {
+      "styles": []
+    },
+    "ManagementPrescriptionCereniaRatingBreathing": {
+      "styles": []
+    },
+    "ManagementPrescriptionCereniaRatingMobility": {
+      "styles": []
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing": {
+      "styles": []
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility": {
+      "styles": []
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing": {
+      "styles": []
+    },
+    "ManagementPrescriptionAcepromineRatingMobility": {
+      "styles": []
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing": {
+      "styles": []
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility": {
+      "styles": []
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing": {
+      "styles": []
+    },
+    "ManagementPrescriptionTemarilPRatingMobility": {
+      "styles": []
+    },
+    "ManagementPrescriptionXXXRatingBreathing": {
+      "styles": []
+    },
+    "ManagementNonPrescription": {
+      "styles": []
+    },
+    "ManagementNonPrescriptionCost": {
+      "styles": []
+    },
+    "ManagementNonPrescriptionTypePanel": {
+      "styles": []
+    },
+    "ManagementNonPrescriptionType": {
+      "styles": []
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing": {
+      "styles": []
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility": {
+      "styles": []
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing": {
+      "styles": []
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility": {
+      "styles": []
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing": {
+      "styles": []
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility": {
+      "styles": []
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing": {
+      "styles": []
+    },
+    "ManagementNonPrescriptionChiroRatingMobility": {
+      "styles": []
+    },
+    "OtcProductsPanel": {
+      "styles": []
+    },
+    "OTCProductsTypePanel": {
+      "styles": []
+    },
+    "OTCProductsDidPurchase": {
+      "styles": []
+    },
+    "OTCProductsType": {
+      "styles": []
+    },
+    "OtcProductsCost": {
+      "styles": []
+    },
+    "OtcProductsEffectiveness": {
+      "styles": []
+    },
+    "OTCProtocolPanel": {
+      "styles": []
+    },
+    "OTCProtocolDidPurchase": {
+      "styles": []
+    },
+    "OtcProtocolCost": {
+      "styles": []
+    },
+    "OtcProtocolEffectiveness": {
+      "styles": []
+    },
+    "AspirationPanel": {
+      "styles": []
+    },
+    "AspirationDidHave": {
+      "styles": []
+    },
+    "AspirationGeneralPanel": {
+      "styles": []
+    },
+    "AspirationCount": {
+      "styles": []
+    },
+    "AspirationInpatient": {
+      "styles": []
+    },
+    "AspirationInpatientCount": {
+      "styles": []
+    },
+    "AspirationSurgeryPanel": {
+      "styles": []
+    },
+    "AspirationSurgeryPost": {
+      "styles": []
+    },
+    "AspirationSurgeryPostCount": {
+      "styles": []
+    },
+    "AspirationStentPanel": {
+      "styles": []
+    },
+    "AspirationStentPost": {
+      "styles": []
+    },
+    "AspirationStentPostCount": {
+      "styles": []
+    },
+    "AspirationCostPanel": {
+      "styles": []
+    },
+    "AspirationCost": {
+      "styles": []
+    },
+    "NeuropathyPanel": {
+      "styles": []
+    },
+    "NeuropathyHindEndDoesHavePanel": {
+      "styles": []
+    },
+    "NeuropathySymptomsDoesHave": {
+      "styles": []
+    },
+    "NeuropathySymptomsFirst": {
+      "styles": []
+    },
+    "NeuropathySymptomsBreathingOnset": {
+      "styles": []
+    },
+    "NeuropathySymptomsHindEndOnset": {
+      "styles": []
+    },
+    "NeuropathySymptomsTypeProgression": {
+      "styles": []
+    },
+    "NeuropathyOtherIssuesPanel": {
+      "styles": []
+    },
+    "NeuropathyOtherIssues": {
+      "styles": []
+    },
+    "ConclusionPanel": {
+      "styles": []
+    },
+    "ConclusionsPanelLifeStatusTrue": {
+      "styles": []
+    },
+    "ConclusionsPanelLifeStatusFalse": {
+      "styles": []
+    },
+    "ConclusionDetailsPanel": {
+      "styles": []
+    },
+    "ConclusionSpecialConsiderations": {
+      "styles": []
+    },
+    "ConclusionPolyneuropathy": {
+      "styles": []
+    },
+    "ConclusionQOL": {
+      "styles": []
+    },
+    "ConclusionOtherConditionsPanel": {
+      "styles": []
+    },
+    "ConclusionOtherConditions": {
+      "styles": []
+    },
+    "ConclusionCauseOfDeathPanel": {
+      "styles": []
+    },
+    "ConclusionCauseOfDeath": {
+      "styles": []
+    },
+    "ConclusionLastQuestion": {
+      "styles": []
+    }
+  }
+}

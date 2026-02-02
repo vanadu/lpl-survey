@@ -274,7 +274,7 @@
 
         {
           "type": "panel",
-          "name": "TreatmentFactorsOther",
+          "name": "TreatmentFactorsOtherPanel",
           "title": "What other considerations have factored into your decision?",
           "elements": [
             {
