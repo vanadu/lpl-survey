@@ -16,9 +16,11 @@ import prefillData from '../../helpers/prefill.json';
 // VA! import the single, fully merged survey json in the production build.
 import masterSurvey from "../../data/master-survey.json";
 
-
-
+// !VA Import the presubmission transform script 
 import { preSubmitTransform } from "../..//helpers/preSubmitTransform";
+
+// !VA Import the helper for assigning the data-name attribute to panel elements
+import { attachPanelDataNameStamper } from "../../helpers/panelDataName";
 
 
 
@@ -35,6 +37,14 @@ export default function MasterSurveyComponent() {
   });
 
   const [isCompleted, setIsCompleted] = useState(false);
+
+  // !VA Attach the data-name property to the panelNames as per /helpers/panelDataName
+  useEffect(() => {
+    const detach = attachPanelDataNameStamper(survey, {
+      panelNames: ["CmpnInfoDetailsPanel"],
+    });
+    return detach; // important if hot-reloading / remounting
+  }, [survey]);
 
   useEffect(() => {
     function handleValidatePage(sender, options) {

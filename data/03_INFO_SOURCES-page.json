@@ -63,8 +63,10 @@
             {
               "type": "dropdown",
               "name": "InfoSourcesBestSource",
-              "title": "Which of those information sources did you find MOST useful (please select one)?"
+              "title": "Which of those information sources did you find MOST useful (please select one)?",
+              "choices": [
 
+              ]
             }
           ]
         },

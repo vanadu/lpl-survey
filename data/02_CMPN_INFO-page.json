@@ -18,11 +18,9 @@
           "name": "CmpnInfoText",
           "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
         },
-
-
         {
           "type": "panel",
-          "name": "CmpnInfoAnimalTypePanel",
+          "name": "CmpnInfoDetailsPanel",
           "elements": [
             {
               "type": "radiogroup",

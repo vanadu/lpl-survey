@@ -21,9 +21,6 @@
   // display: none;
 }
 
-
-
-
 .landing-survey-version-container {
   display: flex;
   justify-content: right;
@@ -47,6 +44,11 @@
   line-height: 1.75rem!important;
   font-weight: 600!important;
 }
+
+
+
+
+
 
 
 .survey-dropdown {
@@ -102,37 +104,6 @@
   background: #e1e6f0;
 }
 
-.sd-container-modern__title {
-  padding: 0!important;
-  margin: 0!important;
-  .sd-header__text {
-    height: 20px !important;
-  }
-  .sd-title {
-    font-size: 1rem !important;
-    line-height: 1.25rem !important;
-    text-align: center;
-    background: rgba(0, 0, 255, .3) !important; //devblue
-  }
-}
-
-
-
-
-// !VA Survey wrapper s
-.survey-wrapper {
-  // !VA Nothing here
-}
-
-
-// !VA Survey container - background color is inherited from survey-wrapper
-// ----------------------------------------------------------
-.sd-container-modern {
-    background: $home_bg_color;
-}
-
-
-
 
 // !VA Survey body
 // -------------------------------------------------------------------------
@@ -152,19 +123,25 @@
   }
 }
 
-
-// !VA Survey page
-// -------------------------------------------------------------------------
-// Left/right padding between page and wrapper
-.survey-wrapper .sd-page {
-  // !VA Nothing yet
+// !VA This is the actual survey title property at the top of the master-survey JSON
+.sd-container-modern__title {
+  padding: 0!important;
+  margin: 0!important;
+  .sd-header__text {
+    height: 20px !important;
+  }
+  .sd-title {
+    font-size: 1rem !important;
+    line-height: 1.25rem !important;
+    text-align: center;
+    background: rgba(0, 0, 255, .3) !important; //devblue
+  }
 }
-  
-// !VA Survey panel
+
+// !VA Survey container - background color is inherited from survey-wrapper
 // ----------------------------------------------------------
-// !VA Horiz padding within panel between panel and page
-.survey-wrapper .sd-panel {
-  // !VA Nothing yet
+.sd-container-modern {
+    background: $home_bg_color;
 }
 
 // !VA 2025.12.19 This applies to ALL panels, not just the top-level
@@ -174,38 +151,12 @@
   --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)));
 }
 
-
 // !VA 2025.12.19 OK for now
 // !VA sets row top margins, does not set padding, bottom margins
 .survey-wrapper .sd-row {
   // --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)));
   --sd-base-vertical-padding: calc(2* var(--sjs-base-unit, var(--base-unit, 8px)));
 }
-
-// !VA Survey content
-// ----------------------------------------------------------
-// !VA Default overrides
-// ---------------------
-
-// !VA 2025.12.19 OK
-// !VA es-question: Default vertical padding between question ITEMS, not between questions
-.survey-wrapper .sd-question {
-  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)));
-}
-
-// !VA Panel title font
-.sd-panel[data-name="lvngRootVerificationPanel"],
-.sd-panel[data-name="lvngRootAboutUserPanel"] {
-  .sd-panel__title span {
-    font-family: $secondary_font;
-    font-size: 1.25rem!important;
-  }
-
-}
-
-
-
 
 
 // !VA 2025.12.19 OK
@@ -222,50 +173,8 @@
     padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
 }
 
-// !VA 2025.12.19 ???
-.sd-question[data-name="animalType"]
-{
-  fieldset.sd-selectbase {
-  position: relative;
-  margin-left: -50px;
-  display: flex;
-  justify-content: space-around;
-  padding-top: 10px;
-  }
-}
-
-.sd-question[data-name="lvngRootUserGender"],
-.sd-question[data-name="lvngRootUserAge"],
-
-{
-  fieldset.sd-selectbase {
- display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  padding-top: 10px;
-  }
-}
-
-
-
-
-
-// !VA 2025.12.19 ???
-// !VA Remove outer border around ...CompDetailsPanel
-.lvng-cmpn-details-panel.sd-element--nested-with-borders,
-.dcsd-cmpn-details-panel.sd-element--nested-with-borders
- {
-  border: none !important;
-  /* Optional: remove box-shadow or outline if visible */
-  box-shadow: none !important;
-  outline: none !important;
-  // !VA Horizontal padding around subpanels. 0 makes it basically as if the parent panel weren't there, so the outer panel exists only for organization, not for layout.
-  // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  --sd-base-padding: calc(0 * var(--sjs-base-unit, var(--base-unit, 8px)));
-}
-
-
 // !VA Adjust the top and bottom paddings on ALL panel headers. That's going to be a problem later, probably.
+// !VA ONLY APPLIES TO PANELS WITH TITLE PROPERTIES!
 .sd-panel__header {
     // padding: 0!important;
     // margin: 0!important;
@@ -274,128 +183,10 @@
 }
 
 
+// !VA Selects all element headers but doesn't appear to do anything
 .sd-element__header--location-top {
-    padding-bottom: calc(0 * var(--sd-base-vertical-padding));
-    // background: rgba(0, 0, 255, .3) !important; //devblue
-
-  }
-
-// !VA It doesn't appear to be possible to get rid of the bottom border on the subpanel header
-// !VA This is actually in the ::after pseudoelement.
-// .lvng-cmpn-details-subpanel-1 .sd-panel__header {
-
-// }
-
-// !VA Special styling for the companion panel on the landing page;
-.lndg-cmpn-details-panel {
-  padding: 0!important;
-  margin: 0!important;
-  input {
-    width: 320px;
-  }
-  .sd-panel__content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    // margin: 0 auto;
-    margin-left: 20px;
-    .sd-question {
-      margin: 0 auto; 
-    }
-    .sd-question__header {
-    padding-bottom: 10px;
-    }
-    .sd-imagepicker {
-      width: 300px;
-      justify-content: space-around;
-      margin-left: 50px;
-    }
-  }
-}
-
-.srvy-flex-row {
-  // !VA Sets margin on the subpanel's children, otherwise they appear wonky with flex
-  .sd-clearfix {
-    margin: 10px !important;
-  }
-  // !VA Sets the padding between the switch and the outer border
-  .sd-boolean {
-    // padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-    padding: calc(0.25 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  }
-  // !VA Sets the height of the boolean element
-  .sd-boolean__label, .sd-boolean__thumb {
-    // line-height: calc(.5 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
-    line-height: calc(1 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
-  }
-}
-
-.srvy-flex-row {
-  .sd-panel__content, .sd-selectbase {
-    padding: 0!important;
-    margin: 0!important;
-    display: flex;
- }
-}
-
-.sd-question[data-name="lvngInfoSources"] {
-  .sd-selectbase {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 equal columns */
-    grid-template-rows: 1fr 1fr;    /* 2 equal rows */
-    gap: 1rem;       
-  }
-}
-
-// !VA This is how you remove the panel border, but I like it better with the border
-// .sd-element--nested-with-borders {
-//   border: none !important;
-//   /* Optional: remove box-shadow or outline if visible */
-//   box-shadow: none !important;
-//   outline: none !important;
-// }
-
-// !VA CUSTOM INPUT WIDTHS
-// ---------------------------
-// !VA 200px
-.sd-question[data-name="lvngCmpnAgeYears"], 
-.sd-question[data-name="lvngCmpnAgeMonths"], 
-.sd-question[data-name="lvngCmpnWeight"] {
-  input {
-    width: 200px!important;
-  }
-}
-
-// !VA 320px
-.sd-question[data-name="lvngRootUserName"],
-.sd-question[data-name="lvngRootUserContactTypeEmail"],
-{
-  input {
-    width: 320px;
-  }
-} 
-
-// !VA 500px
-.sd-question[data-name="lvngRootUserContactTypeEmail"],
-.sd-question[data-name="lvngRootUserContactTypeFacebook"]
-{
-  input {
-    width: 500px;
-  }
-} 
-
-
-// !VA Hide the Excitable rating title, if you leave it out it displays the element name
-.sd-question[data-name="lvngCmpnDemeanor"] .sd-title {
-  display: none;
-}
-
-// !VA Reduce top padding on Ratings numbers
-.lvng-cmpn-details-subpanel-4 {
-    .sd-panel__content {
-      padding-top: 10px; 
-    }
+  // padding-bottom: calc(0 * var(--sd-base-vertical-padding));
+  // background: rgba(0, 0, 255, .3) !important; //devblue
 }
 
 // !VA Clear the bottom border in the subpanel title 
@@ -408,37 +199,16 @@
   margin: 0 !important;
 }
 
-
-// !VA 2025.12.19 Changes as of today
-// =====================================
-
-// !VA Global JSSurvey style overrides
-// -----------------------------------
-
-// !VA Boolean switch: global size mods
 // !VA Sets the padding between the switch and the outer border
 .survey-wrapper .sd-boolean {
   // padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   padding: calc(0.25 * (var(--sjs-base-unit, var(--base-unit, 8px))));
 }
+
 // !VA Sets the height of the boolean element
 .survey-wrapper .sd-boolean__label, .survey-wrapper .sd-boolean__thumb {
   // line-height: calc(.5 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
   line-height: calc(1 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
-}
-
-
-// !VA 
-.sd-panel[data-name="lvngRootAboutSurveyPanel"] {
-  .sd-panel__content {
-    display: flex;
-    justify-content: space-between;
-    // !VA This only applies to top padding, bottom is determined by vertical-padding
-    --sd-base-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)));
-    .sd-row {
-        margin: 0!important;
-    }
-  }
 }
 
 // !VA 2025.12.19 
@@ -448,10 +218,9 @@
   font-family: $secondary_font;
   font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
   line-height: calc(2.125 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-
 }
 
-// !VA OVERRIDES default h2 for sd-html elements.
+// !VA OVERRIDES default h3 for sd-html elements.
 .survey-wrapper .sd-html h3 {
   font-family: $secondary_font;
   font-size: var(--sjs-article-font-x-large-fontSize, calc(1.5 * (var(--sjs-font-size, 16px))));
@@ -511,132 +280,91 @@
 }
 
 
-// !VA This grid layout looks terrible because the element titles are too long and wrap strangely. Just use default column display, but reduce the text field width 
-// .sd-panel[data-name="lvngRootAboutUserPanel"] {
-// .sd-panel__content {
+// !VA WORKING...
+
+[data-name="CmpnInfoAnimalType"] fieldset {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+[data-name="CmpnInfoWeightUnits"] .sd-title {
+  width: 60%;
+}
+
+[data-name="CmpnInfoBreed"] .sd-input, [data-name="CmpnInfoWeight"] .sd-input {
+  width: 60%;
+}
+  
+
+
+/* 
+  WARNING:
+  Some of these layouts rely on .sd-row:nth-child() ordering.
+  SurveyJS may insert extra rows in future versions,
+  which would break this grid mapping.
+
+  If layout breaks:
+  - Inspect .sd-panel__content children
+  - Update nth-child indices accordingly
+
+  We intentionally avoid :has() and JS stamping
+  because this is used in only 2–3 panels.
+*/
+
+
+[data-name="CmpnInfoDetailsPanel"] > .sd-element__content.sd-panel__content {
+  display: grid;
+  grid-template-columns: 6fr auto 4fr;
+  grid-template-areas:
+    "one one one"
+    "two . three"
+    "four . five";
+  gap: 1rem;
+}
+
+[data-name="CmpnInfoDetailsPanel"] > .sd-element__content.sd-panel__content > .sd-row:nth-child(1) { grid-area: one; }
+[data-name="CmpnInfoDetailsPanel"] > .sd-element__content.sd-panel__content > .sd-row:nth-child(2) { grid-area: two; }
+[data-name="CmpnInfoDetailsPanel"] > .sd-element__content.sd-panel__content > .sd-row:nth-child(3) { grid-area: three; }
+[data-name="CmpnInfoDetailsPanel"] > .sd-element__content.sd-panel__content > .sd-row:nth-child(4) { grid-area: four; }
+[data-name="CmpnInfoDetailsPanel"] > .sd-element__content.sd-panel__content > .sd-row:nth-child(5) { grid-area: five; }
+
+
+[data-name="dcsdCmpnInfoAgePanel"] > .sd-element__content.sd-panel__content {
+  display: flex;
+}
+
+[data-name="dcsdCmpnInfoAgePanel"] .sd-input, [data-name="CmpnInfoWeight"] .sd-input {
+  width: 60%;
+}
+
+// [data-name="IntubationHistoryReason"]  > .sd-element__content.sd-question__content > fieldset {
 //   display: grid;
-//   grid-template-columns: 1fr 1fr; /* 2 equal columns */
-//   grid-template-rows: 1fr 1fr;    /* 2 equal rows */
-//   gap: 1rem;                      /* optional spacing between items */
-//   }
-//     .sd-row {
-//     padding: 0!important;
-//     margin: 0!important;
-//   }
+//   grid-template-columns: 3fr 4fr 3fr;
+//   grid-template-areas:
+//     "one one one";
+//   gap: 1rem;
+
 // }
 
-              
+// [data-name="IntubationHistoryReason"] > .sd-element__content.sd-question__content > .sd-row:nth-child(1) { grid-area: one; }
+// [data-name="IntubationHistoryReason"] > .sd-element__content.sd-question__content > .sd-row:nth-child(2) { grid-area: two; }
+// [data-name="IntubationHistoryReason"] > .sd-element__content.sd-question__content > .sd-row:nth-child(3) { grid-area: three; }
+// [data-name="IntubationHistoryReason"] > .sd-element__content.sd-question__content > .sd-row:nth-child(4) { grid-area: four; }
+// [data-name="IntubationHistoryReason"] > .sd-element__content.sd-question__content > .sd-row:nth-child(5) { grid-area: five; }
+// [data-name="IntubationHistoryReason"] > .sd-element__content.sd-question__content > .sd-row:nth-child(6) { grid-area: six; }
 
 
+[data-name="IntubationHistoryReason"] > .sd-element__content.sd-question__content > fieldset {
+  display: grid;
+  grid-template-columns: 3fr 4fr 3fr;
 
-
-// !VA Panels that have two elements two-up in the top row and a third element full-width in the bottom row.
-// !VA Currently: lvngRootUserAnimalsPanel, lvngRootAboutUserPanel
-.sd-panel[data-name="lvngRootUserAnimalsPanel"] {
-  .sd-panel__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 1rem; /* Optional */
-  }
+  /* control spacing */
+  column-gap: 1rem;
+  row-gap: 0.5rem;   /* vertical spacing */
 }
 
-.sd-panel[data-name="lvngRootUserAnimalsPanel"]  {
-  .sd-panel__content {
-     > :nth-child(3) {
-        grid-column: 1 / -1;
-     }
-     .sd-row {
-        padding: 0!important;
-        margin: 0!important;
-     }
-     .sd-input {
-      width: 90%!important;
-     }
-  }
-}
-
-.sd-question[data-name="lvngRootHasInsuranceOther"], .sd-question[data-name="lvngCmpnAnimalType"] {
-  .sd-selectbase {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-  }
-}
-
-.sd-question[data-name="ManagementPrescriptionType"] {
-  .sd-selectbase {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding-top: 10px;
-  }
-}
-
-.sd-question[data-name="ManagementNonPrescription"], .sd-question[data-name="ManagementPrescriptions"]  {
-
-  .sd-selectbase {
-    padding-left: 20px;
-    width: 60%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding-top: 10px;
-  }
-}
-
-
-
-/* Root wrapper */
-[data-name="dynamicPanelTest"] {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Kill nested border modifier */
-[data-name="dynamicPanelTest"].sd-element--nested-with-borders {
-  border: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
-}
-
-/* Also in case it's applied to a child */
-[data-name="dynamicPanelTest"] .sd-element--nested-with-borders {
-  border: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
-}
-
-/* 1) Remove "Add new" buttons */
-[data-name="dynamicPanelTest"] .sd-question__footer,
-[data-name="dynamicPanelTest"] .sd-paneldynamic__actions,
-[data-name="dynamicPanelTest"] .sd-paneldynamic__btn {
-  display: none !important;
-}
-
-/* 2) Remove placeholder text */
-[data-name="dynamicPanelTest"] .sd-paneldynamic__placeholder {
-  display: none !important;
-}
-
-/* 3) Nuke any remaining panel visuals */
-[data-name="dynamicPanelTest"] .sd-panel,
-[data-name="dynamicPanelTest"] .sd-panel__content,
-[data-name="dynamicPanelTest"] .sd-question__content {
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-/* 4) Remove whitespace around the title */
-[data-name="dynamicPanelTest"] .sd-question__title {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Remove wrapper spacing */
-[data-name="dynamicPanelTest"] .sd-question__content,
-[data-name="dynamicPanelTest"] .sd-panel {
-  padding: 0 !important;
-  margin: 0 !important;
+[data-name="IntubationHistoryReason"] > .sd-element__content.sd-question__content > fieldset > .sd-row:nth-child(1) {
+  grid-column: 1 / -1; /* full width */
 }
