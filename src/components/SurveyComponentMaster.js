@@ -19,7 +19,13 @@ import masterSurvey from "../../data/master-survey.json";
 // !VA Import the presubmission transform script 
 import { preSubmitTransform } from "../..//helpers/preSubmitTransform";
 
+
+// add this import near the top with the other helper imports
+// import registry from "../../helpers/registry.generated.json";
+import registry from "../../helpers/registry.generated.json";
+
 // !VA Import the helper for assigning the data-name attribute to panel elements
+// keep your existing import (same file), but now we’re using registry mode
 import { attachPanelDataNameStamper } from "../../helpers/panelDataName";
 
 
@@ -38,13 +44,30 @@ export default function MasterSurveyComponent() {
 
   const [isCompleted, setIsCompleted] = useState(false);
 
-  // !VA Attach the data-name property to the panelNames as per /helpers/panelDataName
-  useEffect(() => {
-    const detach = attachPanelDataNameStamper(survey, {
-      panelNames: ["CmpnInfoDetailsPanel"],
-    });
-    return detach; // important if hot-reloading / remounting
-  }, [survey]);
+  // !VA Attach the data-name property to the panelNames as per /helpers/panelDataName'
+  // !VA Replace
+  // useEffect(() => {
+  //   const detach = attachPanelDataNameStamper(survey, {
+  //     panelNames: ["CmpnInfoDetailsPanel"],
+  //   });
+  //   return detach; // important if hot-reloading / remounting
+  // }, [survey]);
+
+  // !VA With
+  // Stamp data-name on ALL panels found in registry.generated.json
+    useEffect(() => {
+      const detach = attachPanelDataNameStamper(survey, {
+        registry,
+        // optional overrides if you ever want them:
+        // attr: "data-name",
+        // map: { SomePanelName: "SomeOtherValue" },
+      });
+
+      return detach;
+    }, [survey]);
+
+
+
 
   useEffect(() => {
     function handleValidatePage(sender, options) {
@@ -175,11 +198,6 @@ const handleComplete = useCallback(async (sender) => {
     survey.onValueChanged.remove(handleValueChanged);
   };
 }, [survey]);
-
-
-
-
-
 
   useEffect(() => {
     if (prefillData) {

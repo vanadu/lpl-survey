@@ -184,8 +184,6 @@ function collectElementNamesFromPage(pageObj) {
   return names;
 }
 
-
-
 // !VA Replace
 // function extractBraceRefsFromPage(pageObj) {
 //   const refs = new Set();
@@ -213,8 +211,6 @@ function collectElementNamesFromPage(pageObj) {
 
 //   return refs;
 // }
-
-
 
 // !VA With
 function extractBraceRefsWithContext(pageObj) {
@@ -268,11 +264,6 @@ function extractBraceRefsWithContext(pageObj) {
   walk(pageObj, []);
   return hits;
 }
-
-
-
-
-
 
 function isInteractive() {
   return Boolean(process.stdin.isTTY && process.stdout.isTTY);
@@ -493,11 +484,6 @@ async function main() {
       if (unknownHits.length) {
         unknownRefsByFile.push({ filename, unknownHits });
       }
-
-
-
-
-
     }
 
     if (unknownRefsByFile.length) {
@@ -530,11 +516,6 @@ async function main() {
           console.error(`      "${snippet.replace(/\s+/g, " ").trim()}"`);
         }
       }
-
-
-
-
-
       console.error(
         "\nThese tokens are referenced in a page but are not a question/panel/page name and not a calculatedValue name."
       );
