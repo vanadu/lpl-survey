@@ -13,47 +13,40 @@
         {
           "type": "html",
           "name": "OtcProductsText",
-          "html": "<p>This section asks questions about non-prescription supplements and remedies that may have a positive effect for some LP/GOLPP symptoms. The questions pertain to the main ingredient of a product. </p>"
+          "html": "<p>This section asks questions about non-prescription, over-the-counter (OTC) supplements and remedies that may have a positive effect for some LP/GOLPP symptoms. The questions pertain to the main ingredient of a product. There is no OTC product that can restore movement to paralyzed laryneal tissue. There is no evidence that any OTC product will reduce the risk of breathing crises and a potentially fatal suffocation event. For questions about the effectiveness or safety of any OTC product, consult with a licensed veterinarian. </p>"
         },
         {
           "type": "html",
           "name": "OtcProductsTextImportant",
-          "html": "<p><b>IMPORTANT</b>: This survey isn't intended to advertise for, recommend, or be used marketing vehicle for any specific product. </p>"
+          "html": "<p><b>IMPORTANT</b>: This survey isn't intended to advertise for, recommend, or be used as a marketing vehicle for any specific product.</p>"
         },
 
         {
           "type": "panel",
           "name": "OTCProductsTypePanel",
-
           "elements": [
-
-
-
-              {
-                "type": "radiogroup",
-                "name": "OTCProductsDidPurchase",
-                "title": "Have you purchased OTC products based on a particular ingredient {CmpnName}'s LP/GOLPP symptoms?",
-                "description": "Please only include products you've used regularly for over 60 days",
-                "isRequired": true,
-                "choices": [
-                  {
-                    "value": "YES",
-                    "text": "Yes"
-                  },
-                  {
-                    "value": "NO",
-                    "text": "No"
-                  },
-                  {
-                    "value": "DONT_KNOW",
-                    "text": "Don't know"
-                  }
-                ],
-                "showOtherItem": false
-              },
-
-
-
+            {
+              "type": "radiogroup",
+              "name": "OTCProductsDidPurchase",
+              "title": "Have you purchased OTC products based on a particular ingredient {CmpnName}'s LP/GOLPP symptoms?",
+              "description": "Please only include products you've used regularly for over 60 days",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
             {
               "type": "checkbox",
               "name": "OTCProductsType",
@@ -131,36 +124,28 @@
             "showOtherItem": false,
             "showNoneItem": false
             },
-
-
-
-          {
-            "type": "rating",
-            "name": "OtcProductsEffectiveness",
-            "title": "Please rate the overall effectiveness of the OTC products you selected above:",
-            "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
-            "isRequired": true,
-            "visibleIf": "{OTCProductsDidPurchase} = YES",
-            "rateValues": [
-              { "value": 1, "text": "1" },
-              { "value": 2, "text": "2" },
-              { "value": 3, "text": "3" },
-              { "value": 4, "text": "4" },
-              { "value": 5, "text": "5" },
-              { "value": "DONT_KNOW", "text": "Don't know" }
-            ]
-          }
-                                                                 
+            {
+              "type": "rating",
+              "name": "OtcProductsEffectiveness",
+              "title": "Please rate the overall effectiveness of the OTC products you selected above:",
+              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "isRequired": true,
+              "visibleIf": "{OTCProductsDidPurchase} = YES",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
           ]
-          },
-
-
-
+        },
         {
           "type": "panel",
           "name": "OTCProtocolPanel",
           "elements": [
-
             {
               "type": "radiogroup",
               "name": "OTCProtocolDidPurchase",

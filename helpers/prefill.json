@@ -116,15 +116,14 @@
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
 
-  "TreatmentStatusDidHave": false,
+  "TreatmentStatusDidHave": true,
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [
-    "TIEBACK",
     "STENT"
   ],
 
-  "TreatmentStatusTiebackEmergency": false,
+  "TreatmentStatusTiebackEmergency": true,
   "TreatmentStatusTiebackWait": "THREE_SIX",
   "TreatmentStatusTiebackCount": "MORE_THAN_ONCE",
   "TreatmentStatusTiebackOnceCost": "4001_5500",

@@ -13,13 +13,9 @@
         {
           "type": "html",
           "name": "TreatmentStatusText",
-          "html": "<p>This section asks questions about any surgery or implant procedure {CmpnName} underwent to treat LP/GOLPP symptoms.</p>"
+          "html": "<p>This section asks questions about any surgery or implant procedure {CmpnName} underwent to treat LP/GOLPP symptoms. This only includes surgeries or procedures that diriectly modify the structure of the larynx.</p>"
         },
-        {
-          "type": "html",
-          "name": "TreatmentStatusText",
-          "html": "<p><b>IMPORTANT:</b> This only includes surgeries or procedures that act directly on the larynx. It doesn't include acupuncture, physical therapy or other therapies that do not directly modify the structure of the larynx.</p>"
-        },
+
         {
           "type": "radiogroup",
           "name": "TreatmentStatusDidHave",
@@ -42,7 +38,7 @@
           "name": "TreatmentStatusAgePanel",
           "title": "At about what age did {CmpnName} have the first surgery or stent procedure?",
           "description": "If you can't remember exactly, it's OK to guesstimate.",
-          "visibleIf": "{TreatmentStatusDidHave} = YES",
+          "visibleIf": "{TreatmentStatusDidHave} = true",
           "elements": [
             {
               "type": "text",
@@ -113,7 +109,7 @@
               "name": "TreatmentStatusTiebackWait",
               "title": "How long did you have to wait for non-emergency tieback surgery for {CmpnName}:",
               "isRequired": true,
-              "visibleIf": "{TreatmentStatusTiebackEmergency} = false",
+              "visibleIf": "{TreatmentStatusTiebackEmergency} = true",
               "choices": [
                 {
                   "value": "UNDER_ONE",
@@ -163,6 +159,10 @@
               "visibleIf": "{TreatmentStatusTiebackCount} = 'ONCE'",
               "choices": [
                 {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
+                {
                   "value": "UNDER_2500",
                   "text": "Under $2500"
                 },
@@ -194,6 +194,10 @@
               "isRequired": true,
               "visibleIf": "{TreatmentStatusTiebackCount} = 'MORE_THAN_ONCE'",
               "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
                 {
                   "value": "UNDER_4000",
                   "text": "Under $4000"
@@ -247,6 +251,10 @@
               "isRequired": true,
               "visibleIf": "{TreatmentStatusTiebackComplications} = true",
               "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
                 {
                   "value": "UNDER_4000",
                   "text": "Under $1000"
@@ -315,6 +323,10 @@
               "isRequired": true,
               "choices": [
                 {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
+                {
                   "value": "UNDER_4000",
                   "text": "Under $4000"
                 },
@@ -361,6 +373,10 @@
               "visibleIf": "{TreatmentStatusBveapComplications} = true",
               "choices": [
                 {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
+                {
                   "value": "UNDER_1000",
                   "text": "Under $1000"
                 },
@@ -392,11 +408,11 @@
         {
           "type": "panel",
           "name": "TreatmentStatusStentPanel",
-          "visibleIf": "{TreatmentStatusType} contains 'STENT'",
+          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
           "elements": [
 
             {
-              "type": "radiogroup",
+              "type": "dropdown",
               "name": "TreatmentStatusStentType",
               "title": "What type of stent implant did {CmpnName} receive?",
               "isRequired": true,
@@ -476,6 +492,10 @@
               "visibleIf": "{TreatmentStatusStentDidMigrate} = false || {TreatmentStatusStentReplaced} = false",
               "choices": [
                 {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
+                {
                   "value": "UNDER_1500",
                   "text": "Under $1500"
                 },
@@ -508,6 +528,10 @@
               "isRequired": true,
               "visibleIf": "{TreatmentStatusStentDidMigrate} = true &&{TreatmentStatusStentReplaced} = true",
               "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
                 {
                   "value": "UNDER_1500",
                   "text": "Under $1500"
@@ -563,6 +587,10 @@
               "visibleIf": "{TreatmentStatusStentComplications} = true",
               "choices": [
                 {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
+                {
                   "value": "UNDER_1000",
                   "text": "Under $1000"
                 },
@@ -593,7 +621,7 @@
           "name": "TreatmentStatusArytenoidectomyPanel",
           "title": "Questions about partial arytenoidectomy surgery",
           "description": "Partial arytenoidectomy is the surgical removal of a section of one of the arytenoid (laryngeal) cartilages.",
-          "visibleIf": "{TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
           "elements": [
             {
               "type": "checkbox",
@@ -678,6 +706,10 @@
               "isRequired": true,
               "choices": [
                 {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
+                {
                   "value": "UNDER_2000",
                   "text": "Under $2000"
                 },
@@ -724,6 +756,10 @@
               "visibleIf": "{TreatmentStatusArtyenoidectomyComplications} = true",
               "choices": [
                 {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
+                {
                   "value": "UNDER_1000",
                   "text": "Under $1000"
                 },
@@ -756,7 +792,7 @@
           "name": "TreatmentStatusVentrilocordectomyPanel",
           "title": "Questions about ventrilocordectomy surgery",
           "description": "Ventrilocordectomy is the surgical removal of the vocal folds (vocal cords) that dogs use to bark.",
-          "visibleIf": "{TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
           "elements": [
             {
               "type": "checkbox",
@@ -836,6 +872,10 @@
               "isRequired": true,
               "choices": [
                 {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
+                {
                   "value": "UNDER_2000",
                   "text": "Under $2000"
                 },
@@ -879,6 +919,10 @@
               "isRequired": true,
               "visibleIf": "{TreatmentStatusVentrilocordectomyComplications} = true",
               "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
                 {
                   "value": "UNDER_1000",
                   "text": "Under $1000"

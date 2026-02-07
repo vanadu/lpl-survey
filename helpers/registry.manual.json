@@ -433,22 +433,30 @@
       "styles": []
     },
     "TreatmentStatusDidHave": {
-      "styles": []
+			"styles": ["two-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two radios"
     },
     "TreatmentStatusAgePanel": {
-      "styles": []
+			"styles": ["two-across-wrap"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two age inputs"
     },
     "TreatmentStatusAgeYears": {
-      "styles": []
+			"styles": ["width-200px"],
+			"note": "age input years"
     },
     "TreatmentStatusAgeMonths": {
-      "styles": []
+			"styles": ["width-200px"],
+			"note": "age input months"
     },
     "TreatmentStatusTypePanel": {
       "styles": []
     },
     "TreatmentStatusType": {
-      "styles": []
+			"styles": ["two-across-wrap"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "six multi-select checkboxes with long text"
     },
     "TreatmentStatusTiebackPanel": {
       "styles": []
@@ -460,106 +468,162 @@
       "styles": []
     },
     "TreatmentStatusTiebackCount": {
-      "styles": []
+			"styles": ["two-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two radios"
     },
     "TreatmentStatusTiebackOnceCost": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusTiebackMultipleCost": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusTiebackComplications": {
-      "styles": []
+			"styles": ["two-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two radios"
     },
     "TreatmentStatusTiebackComplicationsCost": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusBveapPanel": {
       "styles": []
     },
     "TreatmentStatusBveapReasons": {
-      "styles": []
+			"styles": ["two-across-wrap"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "five checkboxes"
     },
     "TreatmentStatusBveapCost": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusBveapComplications": {
-      "styles": []
+			"styles": ["two-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two radios"
     },
     "TreatmentStatusBveapComplicationsCost": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusStentPanel": {
       "styles": []
     },
     "TreatmentStatusStentType": {
-      "styles": []
+			"styles": ["width-500px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusDexstentPanel": {
       "styles": []
     },
     "TreatmentStatusStentDidMigrate": {
-      "styles": []
+			"styles": ["two-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two radios"
     },
     "TreatmentStatusStentReplaced": {
-      "styles": []
+			"styles": ["two-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two radios"
     },
     "TreatmentStatusStentCostOnce": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusStentCostRepeat": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusStentComplications": {
-      "styles": []
+			"styles": ["two-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two radios"
     },
     "TreatmentStatusStentComplicationsCost": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusArytenoidectomyPanel": {
       "styles": []
     },
     "TreatmentStatusArtyenoidectomyReasons": {
-      "styles": []
+			"styles": ["two-across-wrap"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two column checkbox"
     },
     "TreatmentStatusArtyenoidectomyLaser": {
       "styles": []
     },
     "TreatmentStatusArtyenoidectomyDidExplain": {
-      "styles": []
+			"styles": ["three-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "three radios yes no don't know"
     },
     "TreatmentStatusArtyenoidectomyChoice": {
-      "styles": []
+			"styles": ["three-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "three radios yes no don't know"
     },
     "TreatmentStatusArtyenoidectomyCost": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusArtyenoidectomyComplications": {
-      "styles": []
+			"styles": ["two-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two radios"
     },
     "TreatmentStatusArtyenoidectomyComplicationsCost": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusVentrilocordectomyPanel": {
       "styles": []
     },
     "TreatmentStatusVentrilocordectomyReasons": {
-      "styles": []
+			"styles": ["two-across-wrap"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two column checkbox"
     },
     "TreatmentStatusVentrilocordectomyDidExplain": {
-      "styles": []
+			"styles": ["three-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "three radios yes no don't know"
     },
     "TreatmentStatusVentrilocordectomyChoice": {
-      "styles": []
+			"styles": ["three-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "three radios yes no don't know"
     },
     "TreatmentStatusVentrilocordectomyCost": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentStatusVentrilocordectomyComplications": {
-      "styles": []
+			"styles": ["two-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two radios"
     },
     "TreatmentStatusVentrilocordectomyComplicationsCost": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "TreatmentFactorsPanel": {
       "styles": []
@@ -631,16 +695,22 @@
       "styles": []
     },
     "ManagementPrescriptions": {
-      "styles": []
+			"styles": ["three-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "three radios yes no don't know"
     },
     "ManagementPrescriptionTypePanel": {
       "styles": []
     },
     "ManagementPrescriptionType": {
-      "styles": []
+			"styles": ["two-across-wrap"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two column checkbox"
     },
     "ManagementPrescriptionCost": {
-      "styles": []
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "ManagementPrescriptionDoxepinRatingBreathing": {
       "styles": []
@@ -712,13 +782,18 @@
       "styles": []
     },
     "ManagementNonPrescription": {
-      "styles": []
+			"styles": ["three-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "three radios yes no don't know"
     },
     "ManagementNonPrescriptionCost": {
-      "styles": []
+			"styles": ["width-200px"],
+			"note": "input"	
     },
     "ManagementNonPrescriptionTypePanel": {
-      "styles": []
+			"styles": ["two-across-wrap"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two column checkbox"
     },
     "ManagementNonPrescriptionType": {
       "styles": []
@@ -754,10 +829,14 @@
       "styles": []
     },
     "OTCProductsDidPurchase": {
-      "styles": []
+			"styles": ["three-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "three radios yes no don't know"
     },
     "OTCProductsType": {
-      "styles": []
+			"styles": ["two-across-wrap"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "Two column checkbox"
     },
     "OtcProductsCost": {
       "styles": []
