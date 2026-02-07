@@ -9,7 +9,8 @@
       "styles": []
     },
     "LandingPrivacyAndData": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "note": "These are the two red links"
     },
     "LandingConsent": {
       "styles": []
@@ -21,7 +22,8 @@
       "styles": []
     },
     "CmpnName": {
-      "styles": []
+      "styles": ["width-300px"],
+      "note": "input "
     },
     "LifeStatus": {
       "styles": []
@@ -42,64 +44,84 @@
       "styles": []
     },
     "UserInfoAboutPanel": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "note": "Three 200px wide children",
+      "grid-container": "sd-element__content.sd-panel__content"
     },
     "UserInfoFirstName": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "input"
     },
     "UserInfoCountry": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "dropdown"
     },
     "UserInfoStateRegion": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "input"
     },
     "UserInfoAgeGenderPanel": {
       "styles": []
     },
     "UserInfoAgeGroup": {
-      "styles": []
+      "styles": ["width-200"],
+      "note": "dropdown. This needs to be renamed to UserInfoAge"
     },
     "UserInfoGender": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "note": "five radio buttons",
+      "grid-container": "sd-element__content.sd-question__content"
+
     },
     "CmpnInfoPanel": {
       "styles": []
     },
     "CmpnInfoDetailsPanel": {
-      "styles": []
+      "styles": ["grid-1-2-2"],
+      "grid-container": "sd-element__content sd-panel__content",
+      "note": "This grid pattern probably only applies to this element"
     },
     "CmpnInfoAnimalType": {
-      "styles": []
+      "styles": ["width-60percent"],
+      "grid-container": "sd-element__content.sd-question__content"
     },
     "CmpnInfoBreed": {
-      "styles": []
+      "styles": ["width-300px"],
+      "note": "input"
     },
     "CmpnInfoGender": {
       "styles": []
     },
     "CmpnInfoWeight": {
-      "styles": []
+      "styles": ["width-300px"],
+      "note": "input"
     },
     "CmpnInfoWeightUnits": {
       "styles": []
     },
     "dcsdCmpnInfoAgePanel": {
-      "styles": []
+      "styles": ["two-across"],
+      "grid-container": "sd-element__content sd-panel__content"
     },
     "dcsdCmpnInfoAgeYears": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "input"
     },
     "dcsdCmpnInfoAgeMonths": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "input"
     },
     "lvngCmpnInfoAgePanel": {
-      "styles": []
+      "styles": ["two-across"],
+      "grid-container": "sd-element__content sd-panel__content"
     },
     "lvngCmpnInfoAgeYears": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "input"
     },
     "lvngCmpnInfoAgeMonths": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "input"
     },
     "CmpnInfoDemeanorPanel": {
       "styles": []
@@ -123,13 +145,16 @@
       "styles": []
     },
     "InfoSourcesTypes": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content"
     },
     "InfoSourcesBestSource": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "dropdown - move Please select one to description"
     },
     "InfoSourcesQualityPanel": {
-      "styles": []
+      "styles": [],
+      "note": "don't forget to resize the ratings elements"
     },
     "InfoSourcesHardToUnderstand": {
       "styles": []
@@ -147,16 +172,20 @@
       "styles": []
     },
     "IntubationHistoryWasIntubated": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content"
     },
     "IntubationHistoryReason": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "six checkboxes"
     },
     "IntubationHistoryConcerns": {
       "styles": []
     },
     "IntubationHistorySymptoms": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content"
     },
     "BreathingCrisisPanel": {
       "styles": []
@@ -165,67 +194,97 @@
       "styles": []
     },
     "BreathingCrisisDidHave": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "Three radios"
     },
     "BreathingCrisisDetailsPanel": {
       "styles": []
     },
     "BreathingCrisisCount": {
-      "styles": []
+      "styles": ["three-across-wrap, width-60percent"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "three radios"
     },
     "BreathingCrisisCost": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "grid-container":"sd-element__content.sd-question__content",
+      "note": "Now six radios, Maybe needs to be a dropdown instead of radios"
     },
     "BreathingCrisisAdvice": {
-      "styles": []
+      "styles": ["three-across-wrap, width-60percent"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "three radios"
     },
     "BreathingCrisisAdviceType": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "grid-container":"sd-element__content.sd-question__content",
+      "note": "Six checkboxes"
     },
     "BreathingCrisisProvidedSubstance": {
-      "styles": []
+      "styles": ["three-across-wrap, width-60percent"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "three radios"
     },
     "BreathingCrisisProvidedSubstanceType": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "grid-container":"sd-element__content.sd-question__content",
+      "note": "Five checkboxes"
     },
     "BreathingCrisisSubstanceForm": {
-      "styles": []
+      "styles": ["width-300px"],
+      "grid-container": "sd-element__content sd-question__content",
+      "note": "dropdown"
     },
     "EarlySymptomsPanel": {
       "styles": []
     },
     "EarlySymptomsFirstSignsPanel": {
-      "styles": []
+      "styles": ["panel-title"],
+      "note": "Need to figure out styling for panel titles"
     },
     "EarlySymptomsAgeYears": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "input"
     },
     "EarlySymptomsAgeMonths": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "input"
     },
     "EarlySymptomsDetailsPanel": {
       "styles": []
     },
     "EarlySymptomsType": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "nine checkboxes"
     },
     "EarlySymtomsSeverity": {
-      "styles": []
+      "styles": [],
+      "note": "rating"
     },
     "EarlySymptomsHindEndWeakness": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "grid-container":"sd-element__content.sd-panel__content",
+      "note": "Three radios"
     },
     "EarlySymptomsIncontinence": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "grid-container":"sd-element__content.sd-panel__content",
+      "note": "Three radios"
     },
     "EarlyOtherConditionsPanel": {
       "styles": []
     },
     "EarlyOtherConditions": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "grid-container":"sd-element__content.sd-panel__content",
+      "note": "Three radios"
     },
     "EarlyOtherConditionsType": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "nine checkboxes"
     },
     "PrimaryDurationPanel": {
       "styles": []
@@ -234,28 +293,40 @@
       "styles": []
     },
     "PrimaryDurationFirstConsultYears": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "input"
     },
     "PrimaryDurationFirstConsultMonths": {
-      "styles": []
+      "styles": ["width-200px"],
+      "note": "input"
     },
     "PrimaryDurationVisitsNumberPanel": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "Four radios"
     },
     "PrimaryDurationVisitsNumber": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "Five radios, maybe change to dropdown"
     },
     "PrimaryDurationCost": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "Five radios, maybe change to dropdown"
     },
     "PrimaryDurationChangedVetsPanel": {
       "styles": []
     },
     "PrimaryDurationChangedVets": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "grid-container":"sd-element__content.sd-panel__content",
+      "note": "Three radios"
     },
     "PrimaryDurationChangedVetsReason": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "nine checkboxes"
     },
     "PrimaryVetPanel": {
       "styles": []
@@ -264,25 +335,33 @@
       "styles": []
     },
     "PrimaryVetInflammation": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "grid-container":"sd-element__content.sd-panel__content",
+      "note": "Three radios"
     },
     "PrimaryVetRefluxPanel": {
       "styles": []
     },
     "PrimaryVetReflux": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "grid-container":"sd-element__content.sd-panel__content",
+      "note": "Three radios"
     },
     "PrimaryVetRefluxMeds": {
-      "styles": []
+      "styles": ["three-across-wrap"],
+      "grid-container":"sd-element__content.sd-panel__content",
+      "note": "Three radios"
     },
     "PrimaryVetRefluxInitiative": {
       "styles": []
     },
     "PrimaryVetDiagnosisPanel": {
-      "styles": []
+      "styles": [],
+      "note": "DEPRECATED"
     },
     "PrimaryVetDiagnosis": {
-      "styles": []
+      "styles": [],
+      "note": "DEPRECATED"
     },
     "PrimaryVetInfoPanel": {
       "styles": []
@@ -291,16 +370,22 @@
       "styles": []
     },
     "PrimaryVetInfoDetails": {
-      "styles": []
+      "styles": ["two-across-wrap"],
+      "grid-container": "sd-element__content.sd-question__content",
+      "note": "nine checkboxes"
     },
     "PrimaryVetSurgeryPanel": {
       "styles": []
     },
     "PrimaryVetSurgery": {
-      "styles": []
+			"styles": ["three-across-wrap"],
+			"grid-container":"sd-element__content.sd-panel__content",
+			"note": "Three radios"
     },
     "PrimaryVetSurgeryPerception": {
-      "styles": []
+			"styles": ["three-across-wrap"],
+			"grid-container":"sd-element__content.sd-panel__content",
+			"note": "Three radios"
     },
     "PrimaryVetConfidencePanel": {
       "styles": []
@@ -318,22 +403,31 @@
       "styles": []
     },
     "DiagnosisWho": {
-      "styles": []
+			"styles": ["width-500px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "PrimaryVetDiagnosticType": {
-      "styles": []
+			"styles": ["width-500px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "DiagnosisStage": {
       "styles": []
     },
     "DiagnosisTimeAfterSymptoms": {
-      "styles": []
+			"styles": ["width-500px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
     "DiagnosisCost": {
-      "styles": []
+			"styles": ["three-across-wrap"],
+			"grid-container":"sd-element__content.sd-panel__content",
+			"note": "Five radios - change to dropdown?"
     },
     "DiagnosisSurgeonContingent": {
-      "styles": []
+      "styles": [],
+      "note": "Remove 'In other words'"
     },
     "TreatmentStatusPanel": {
       "styles": []
