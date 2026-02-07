@@ -233,11 +233,11 @@
     "CBD",
     "URSOLIC"
   ],
-  "OtcProductsCost": "101_150",
-  "OtcProductsEffectiveness": 4,
+  "OTCProductsCost": "101_150",
+  "OTCProductsEffectiveness": 4,
   "OTCProtocolDidPurchase": "YES",
-  "OtcProtocolCost": "51_100",
-  "OtcProtocolEffectiveness": 3,
+  "OTCProtocolCost": "51_100",
+  "OTCProtocolEffectiveness": 3,
 
   "AspirationDidHave": "YES",
   "AspirationCount": "TWO",

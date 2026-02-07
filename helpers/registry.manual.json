@@ -822,7 +822,7 @@
     "ManagementNonPrescriptionChiroRatingMobility": {
       "styles": []
     },
-    "OtcProductsPanel": {
+    "OTCProductsPanel": {
       "styles": []
     },
     "OTCProductsTypePanel": {
@@ -838,22 +838,28 @@
 			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two column checkbox"
     },
-    "OtcProductsCost": {
-      "styles": []
+    "OTCProductsCost": {
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
-    "OtcProductsEffectiveness": {
+    "OTCProductsEffectiveness": {
       "styles": []
     },
     "OTCProtocolPanel": {
       "styles": []
     },
     "OTCProtocolDidPurchase": {
-      "styles": []
+			"styles": ["three-across-wrap, width-60percent"],
+			"grid-container": "sd-element__content.sd-question__content",
+			"note": "three radios yes no don't know"
     },
-    "OtcProtocolCost": {
-      "styles": []
+    "OTCProtocolCost": {
+			"styles": ["width-300px"],
+			"grid-container": "sd-element__content sd-question__content",
+			"note": "dropdown"
     },
-    "OtcProtocolEffectiveness": {
+    "OTCProtocolEffectiveness": {
       "styles": []
     },
     "AspirationPanel": {

@@ -3,21 +3,21 @@
   "elements": [
     {
       "type": "panel",
-      "name": "OtcProductsPanel",
+      "name": "OTCProductsPanel",
       "elements": [
         {
           "type": "html",
-          "name": "OtcProductsHeading",
+          "name": "OTCProductsHeading",
           "html": "<h3>OTC (Over-The-Counter) Products for LP/GOLPP</h3>"
         },
         {
           "type": "html",
-          "name": "OtcProductsText",
+          "name": "OTCProductsText",
           "html": "<p>This section asks questions about non-prescription, over-the-counter (OTC) supplements and remedies that may have a positive effect for some LP/GOLPP symptoms. The questions pertain to the main ingredient of a product. There is no OTC product that can restore movement to paralyzed laryneal tissue. There is no evidence that any OTC product will reduce the risk of breathing crises and a potentially fatal suffocation event. For questions about the effectiveness or safety of any OTC product, consult with a licensed veterinarian. </p>"
         },
         {
           "type": "html",
-          "name": "OtcProductsTextImportant",
+          "name": "OTCProductsTextImportant",
           "html": "<p><b>IMPORTANT</b>: This survey isn't intended to advertise for, recommend, or be used as a marketing vehicle for any specific product.</p>"
         },
 
@@ -99,7 +99,7 @@
             },
             {
             "type": "dropdown",
-            "name": "OtcProductsCost",
+            "name": "OTCProductsCost",
             "title": "What was the average monthly cost of these OTC products?",
             "isRequired": true,
             "visibleIf": "{OTCProductsDidPurchase} = YES",
@@ -126,7 +126,7 @@
             },
             {
               "type": "rating",
-              "name": "OtcProductsEffectiveness",
+              "name": "OTCProductsEffectiveness",
               "title": "Please rate the overall effectiveness of the OTC products you selected above:",
               "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
               "isRequired": true,
@@ -171,7 +171,7 @@
 
             {
               "type": "dropdown",
-              "name": "OtcProtocolCost",
+              "name": "OTCProtocolCost",
               "title": "What was the average monthly cost of the blends or protocols?",
               "isRequired": true,
               "visibleIf": "{OTCProtocolDidPurchase} = YES",
@@ -199,7 +199,7 @@
 
             {
               "type": "rating",
-              "name": "OtcProtocolEffectiveness",
+              "name": "OTCProtocolEffectiveness",
               "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
               "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
               "isRequired": true,
