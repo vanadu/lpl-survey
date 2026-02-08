@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-07T13:13:50.698Z",
+    "builtAt": "2026-02-07T15:53:52.962Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "ageInMonths",
@@ -3407,7 +3407,7 @@
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{TreatmentStatusType} != 'STENT' && {AspirationDidHave} = YES"
+      "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = YES"
     },
     "AspirationSurgeryPost": {
       "name": "AspirationSurgeryPost",
@@ -3702,7 +3702,7 @@
         "ConclusionDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Please describe any special considerations in place for {CmpnName} due to LP-related breathing issues:",
+      "title": "Please describe any special considerations for {CmpnName} due to LP-related breathing issues:",
       "hasVisibleIf": false,
       "isRequired": true
     },

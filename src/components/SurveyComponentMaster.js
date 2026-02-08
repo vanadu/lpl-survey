@@ -133,11 +133,12 @@ const handleComplete = useCallback(async (sender) => {
 }, []);
 
 
-
-
-
   survey.onAfterRenderPanel.add(function(sender, options) {
     addCustomClasses(options.panel, options.htmlElement);
+  });
+
+  survey.onAfterRenderQuestion.add(function(sender, options) {
+    addCustomClasses(options.question, options.htmlElement);
   });
 
 

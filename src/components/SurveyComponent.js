@@ -128,10 +128,12 @@ export default function SurveyComponent({ startPageName }) {
   }, []);
 
 
-  // !VA This adds custom classes to the data-name property...not sure where it came from or if it works
-  survey.onAfterRenderPanel.add((sender, options) => {
+  survey.onAfterRenderPanel.add(function(sender, options) {
     addCustomClasses(options.panel, options.htmlElement);
-    options.htmlElement.setAttribute("data-name", options.panel.name);
+  });
+
+  survey.onAfterRenderQuestion.add(function(sender, options) {
+    addCustomClasses(options.question, options.htmlElement);
   });
 
 

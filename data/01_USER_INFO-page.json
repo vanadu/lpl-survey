@@ -224,7 +224,6 @@
               "name": "UserInfoGender",
               "title": "Gender information:",
               "isRequired": false,
-              "colCount": 3,
               "choices": [
                 {
                 "value": "WOMAN",

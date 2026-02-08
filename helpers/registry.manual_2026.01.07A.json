@@ -46,7 +46,7 @@
     "UserInfoAboutPanel": {
       "styles": ["three-across-wrap"],
       "note": "Three 200px wide children",
-      "container": "sd-element__content.sd-panel__content"
+      "grid-container": "sd-element__content.sd-panel__content"
     },
     "UserInfoFirstName": {
       "styles": ["width-200px"],
@@ -70,7 +70,7 @@
     "UserInfoGender": {
       "styles": ["three-across-wrap"],
       "note": "five radio buttons",
-      "container": "sd-element__content.sd-question__content"
+      "grid-container": "sd-element__content.sd-question__content"
 
     },
     "CmpnInfoPanel": {
@@ -78,12 +78,12 @@
     },
     "CmpnInfoDetailsPanel": {
       "styles": ["grid-1-2-2"],
-      "container": "sd-element__content sd-panel__content",
+      "grid-container": "sd-element__content sd-panel__content",
       "note": "This grid pattern probably only applies to this element"
     },
     "CmpnInfoAnimalType": {
       "styles": ["width-60percent"],
-      "container": "sd-element__content.sd-question__content"
+      "grid-container": "sd-element__content.sd-question__content"
     },
     "CmpnInfoBreed": {
       "styles": ["width-300px"],
@@ -101,7 +101,7 @@
     },
     "dcsdCmpnInfoAgePanel": {
       "styles": ["two-across"],
-      "container": "sd-element__content sd-panel__content"
+      "grid-container": "sd-element__content sd-panel__content"
     },
     "dcsdCmpnInfoAgeYears": {
       "styles": ["width-200px"],
@@ -113,7 +113,7 @@
     },
     "lvngCmpnInfoAgePanel": {
       "styles": ["two-across"],
-      "container": "sd-element__content sd-panel__content"
+      "grid-container": "sd-element__content sd-panel__content"
     },
     "lvngCmpnInfoAgeYears": {
       "styles": ["width-200px"],
@@ -146,7 +146,7 @@
     },
     "InfoSourcesTypes": {
       "styles": ["two-across-wrap"],
-      "container": "sd-element__content.sd-question__content"
+      "grid-container": "sd-element__content.sd-question__content"
     },
     "InfoSourcesBestSource": {
       "styles": ["width-200px"],
@@ -173,11 +173,11 @@
     },
     "IntubationHistoryWasIntubated": {
       "styles": ["three-across-wrap"],
-      "container": "sd-element__content.sd-question__content"
+      "grid-container": "sd-element__content.sd-question__content"
     },
     "IntubationHistoryReason": {
       "styles": ["three-across-wrap"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "six checkboxes"
     },
     "IntubationHistoryConcerns": {
@@ -185,7 +185,7 @@
     },
     "IntubationHistorySymptoms": {
       "styles": ["three-across-wrap"],
-      "container": "sd-element__content.sd-question__content"
+      "grid-container": "sd-element__content.sd-question__content"
     },
     "BreathingCrisisPanel": {
       "styles": []
@@ -195,7 +195,7 @@
     },
     "BreathingCrisisDidHave": {
       "styles": ["three-across-wrap"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "Three radios"
     },
     "BreathingCrisisDetailsPanel": {
@@ -203,37 +203,37 @@
     },
     "BreathingCrisisCount": {
       "styles": ["three-across-wrap, width-60percent"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "three radios"
     },
     "BreathingCrisisCost": {
       "styles": ["two-across-wrap"],
-      "container":"sd-element__content.sd-question__content",
+      "grid-container":"sd-element__content.sd-question__content",
       "note": "Now six radios, Maybe needs to be a dropdown instead of radios"
     },
     "BreathingCrisisAdvice": {
       "styles": ["three-across-wrap, width-60percent"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "three radios"
     },
     "BreathingCrisisAdviceType": {
       "styles": ["two-across-wrap"],
-      "container":"sd-element__content.sd-question__content",
+      "grid-container":"sd-element__content.sd-question__content",
       "note": "Six checkboxes"
     },
     "BreathingCrisisProvidedSubstance": {
       "styles": ["three-across-wrap, width-60percent"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "three radios"
     },
     "BreathingCrisisProvidedSubstanceType": {
       "styles": ["two-across-wrap"],
-      "container":"sd-element__content.sd-question__content",
+      "grid-container":"sd-element__content.sd-question__content",
       "note": "Five checkboxes"
     },
     "BreathingCrisisSubstanceForm": {
       "styles": ["width-300px"],
-      "container": "sd-element__content sd-question__content",
+      "grid-container": "sd-element__content sd-question__content",
       "note": "dropdown"
     },
     "EarlySymptomsPanel": {
@@ -256,7 +256,7 @@
     },
     "EarlySymptomsType": {
       "styles": ["two-across-wrap"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "nine checkboxes"
     },
     "EarlySymtomsSeverity": {
@@ -265,12 +265,12 @@
     },
     "EarlySymptomsHindEndWeakness": {
       "styles": ["three-across-wrap"],
-      "container":"sd-element__content.sd-panel__content",
+      "grid-container":"sd-element__content.sd-panel__content",
       "note": "Three radios"
     },
     "EarlySymptomsIncontinence": {
       "styles": ["three-across-wrap"],
-      "container":"sd-element__content.sd-panel__content",
+      "grid-container":"sd-element__content.sd-panel__content",
       "note": "Three radios"
     },
     "EarlyOtherConditionsPanel": {
@@ -278,12 +278,12 @@
     },
     "EarlyOtherConditions": {
       "styles": ["three-across-wrap"],
-      "container":"sd-element__content.sd-panel__content",
+      "grid-container":"sd-element__content.sd-panel__content",
       "note": "Three radios"
     },
     "EarlyOtherConditionsType": {
       "styles": ["two-across-wrap"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "nine checkboxes"
     },
     "PrimaryDurationPanel": {
@@ -302,17 +302,17 @@
     },
     "PrimaryDurationVisitsNumberPanel": {
       "styles": ["two-across-wrap"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "Four radios"
     },
     "PrimaryDurationVisitsNumber": {
       "styles": ["two-across-wrap"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "Five radios, maybe change to dropdown"
     },
     "PrimaryDurationCost": {
       "styles": ["two-across-wrap"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "Five radios, maybe change to dropdown"
     },
     "PrimaryDurationChangedVetsPanel": {
@@ -320,12 +320,12 @@
     },
     "PrimaryDurationChangedVets": {
       "styles": ["three-across-wrap"],
-      "container":"sd-element__content.sd-panel__content",
+      "grid-container":"sd-element__content.sd-panel__content",
       "note": "Three radios"
     },
     "PrimaryDurationChangedVetsReason": {
       "styles": ["two-across-wrap"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "nine checkboxes"
     },
     "PrimaryVetPanel": {
@@ -336,7 +336,7 @@
     },
     "PrimaryVetInflammation": {
       "styles": ["three-across-wrap"],
-      "container":"sd-element__content.sd-panel__content",
+      "grid-container":"sd-element__content.sd-panel__content",
       "note": "Three radios"
     },
     "PrimaryVetRefluxPanel": {
@@ -344,12 +344,12 @@
     },
     "PrimaryVetReflux": {
       "styles": ["three-across-wrap"],
-      "container":"sd-element__content.sd-panel__content",
+      "grid-container":"sd-element__content.sd-panel__content",
       "note": "Three radios"
     },
     "PrimaryVetRefluxMeds": {
       "styles": ["three-across-wrap"],
-      "container":"sd-element__content.sd-panel__content",
+      "grid-container":"sd-element__content.sd-panel__content",
       "note": "Three radios"
     },
     "PrimaryVetRefluxInitiative": {
@@ -361,7 +361,7 @@
     },
     "PrimaryVetDiagnosis": {
       "styles": [],
-      "note": "This is misnamed...should be 'PrimaryVetDiscussed'"
+      "note": "DEPRECATED"
     },
     "PrimaryVetInfoPanel": {
       "styles": []
@@ -371,7 +371,7 @@
     },
     "PrimaryVetInfoDetails": {
       "styles": ["two-across-wrap"],
-      "container": "sd-element__content.sd-question__content",
+      "grid-container": "sd-element__content.sd-question__content",
       "note": "nine checkboxes"
     },
     "PrimaryVetSurgeryPanel": {
@@ -379,12 +379,12 @@
     },
     "PrimaryVetSurgery": {
 			"styles": ["three-across-wrap"],
-			"container":"sd-element__content.sd-panel__content",
+			"grid-container":"sd-element__content.sd-panel__content",
 			"note": "Three radios"
     },
     "PrimaryVetSurgeryPerception": {
 			"styles": ["three-across-wrap"],
-			"container":"sd-element__content.sd-panel__content",
+			"grid-container":"sd-element__content.sd-panel__content",
 			"note": "Three radios"
     },
     "PrimaryVetConfidencePanel": {
@@ -404,12 +404,12 @@
     },
     "DiagnosisWho": {
 			"styles": ["width-500px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "PrimaryVetDiagnosticType": {
 			"styles": ["width-500px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "DiagnosisStage": {
@@ -417,12 +417,12 @@
     },
     "DiagnosisTimeAfterSymptoms": {
 			"styles": ["width-500px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "DiagnosisCost": {
 			"styles": ["three-across-wrap"],
-			"container":"sd-element__content.sd-panel__content",
+			"grid-container":"sd-element__content.sd-panel__content",
 			"note": "Five radios - change to dropdown?"
     },
     "DiagnosisSurgeonContingent": {
@@ -434,12 +434,12 @@
     },
     "TreatmentStatusDidHave": {
 			"styles": ["two-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two radios"
     },
     "TreatmentStatusAgePanel": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two age inputs"
     },
     "TreatmentStatusAgeYears": {
@@ -455,7 +455,7 @@
     },
     "TreatmentStatusType": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "six multi-select checkboxes with long text"
     },
     "TreatmentStatusTiebackPanel": {
@@ -469,27 +469,27 @@
     },
     "TreatmentStatusTiebackCount": {
 			"styles": ["two-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two radios"
     },
     "TreatmentStatusTiebackOnceCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusTiebackMultipleCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusTiebackComplications": {
 			"styles": ["two-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two radios"
     },
     "TreatmentStatusTiebackComplicationsCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusBveapPanel": {
@@ -497,22 +497,22 @@
     },
     "TreatmentStatusBveapReasons": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "five checkboxes"
     },
     "TreatmentStatusBveapCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusBveapComplications": {
 			"styles": ["two-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two radios"
     },
     "TreatmentStatusBveapComplicationsCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusStentPanel": {
@@ -520,7 +520,7 @@
     },
     "TreatmentStatusStentType": {
 			"styles": ["width-500px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusDexstentPanel": {
@@ -528,32 +528,32 @@
     },
     "TreatmentStatusStentDidMigrate": {
 			"styles": ["two-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two radios"
     },
     "TreatmentStatusStentReplaced": {
 			"styles": ["two-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two radios"
     },
     "TreatmentStatusStentCostOnce": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusStentCostRepeat": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusStentComplications": {
 			"styles": ["two-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two radios"
     },
     "TreatmentStatusStentComplicationsCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusArytenoidectomyPanel": {
@@ -561,7 +561,7 @@
     },
     "TreatmentStatusArtyenoidectomyReasons": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two column checkbox"
     },
     "TreatmentStatusArtyenoidectomyLaser": {
@@ -569,27 +569,27 @@
     },
     "TreatmentStatusArtyenoidectomyDidExplain": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "TreatmentStatusArtyenoidectomyChoice": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "TreatmentStatusArtyenoidectomyCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusArtyenoidectomyComplications": {
 			"styles": ["two-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two radios"
     },
     "TreatmentStatusArtyenoidectomyComplicationsCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusVentrilocordectomyPanel": {
@@ -597,32 +597,32 @@
     },
     "TreatmentStatusVentrilocordectomyReasons": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two column checkbox"
     },
     "TreatmentStatusVentrilocordectomyDidExplain": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "TreatmentStatusVentrilocordectomyChoice": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "TreatmentStatusVentrilocordectomyCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentStatusVentrilocordectomyComplications": {
 			"styles": ["two-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two radios"
     },
     "TreatmentStatusVentrilocordectomyComplicationsCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "TreatmentFactorsPanel": {
@@ -696,7 +696,7 @@
     },
     "ManagementPrescriptions": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "ManagementPrescriptionTypePanel": {
@@ -704,12 +704,12 @@
     },
     "ManagementPrescriptionType": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two column checkbox"
     },
     "ManagementPrescriptionCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "ManagementPrescriptionDoxepinRatingBreathing": {
@@ -783,7 +783,7 @@
     },
     "ManagementNonPrescription": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "ManagementNonPrescriptionCost": {
@@ -792,7 +792,7 @@
     },
     "ManagementNonPrescriptionTypePanel": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two column checkbox"
     },
     "ManagementNonPrescriptionType": {
@@ -830,17 +830,17 @@
     },
     "OTCProductsDidPurchase": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "OTCProductsType": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two column checkbox"
     },
     "OTCProductsCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "OTCProductsEffectiveness": {
@@ -851,12 +851,12 @@
     },
     "OTCProtocolDidPurchase": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "OTCProtocolCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "OTCProtocolEffectiveness": {
@@ -867,7 +867,7 @@
     },
     "AspirationDidHave": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "AspirationGeneralPanel": {
@@ -878,7 +878,7 @@
     },
     "AspirationInpatient": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "AspirationInpatientCount": {
@@ -889,12 +889,12 @@
     },
     "AspirationSurgeryPost": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "AspirationSurgeryPostCount": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "AspirationStentPanel": {
@@ -902,12 +902,12 @@
     },
     "AspirationStentPost": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "AspirationStentPostCount": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "AspirationCostPanel": {
@@ -915,7 +915,7 @@
     },
     "AspirationCost": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "NeuropathyPanel": {
@@ -926,27 +926,27 @@
     },
     "NeuropathySymptomsDoesHave": {
 			"styles": ["three-across-wrap, width-60percent"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "three radios yes no don't know"
     },
     "NeuropathySymptomsFirst": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Five radios, maybe change to dropdown"
     },
     "NeuropathySymptomsBreathingOnset": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "NeuropathySymptomsHindEndOnset": {
 			"styles": ["width-300px"],
-			"container": "sd-element__content sd-question__content",
+			"grid-container": "sd-element__content sd-question__content",
 			"note": "dropdown"
     },
     "NeuropathySymptomsTypeProgression": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Five radios, maybe change to dropdown"
     },
     "NeuropathyOtherIssuesPanel": {
@@ -954,7 +954,7 @@
     },
     "NeuropathyOtherIssues": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two column checkbox"
     },
     "ConclusionPanel": {
@@ -973,12 +973,12 @@
     },
     "ConclusionSpecialConsiderations": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two column checkbox"
     },
     "ConclusionPolyneuropathy": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two column checkbox"
     },
     "ConclusionQOL": {
@@ -989,7 +989,7 @@
     },
     "ConclusionOtherConditions": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Two column checkbox"
     },
     "ConclusionCauseOfDeathPanel": {
@@ -997,7 +997,7 @@
     },
     "ConclusionCauseOfDeath": {
 			"styles": ["two-across-wrap"],
-			"container": "sd-element__content.sd-question__content",
+			"grid-container": "sd-element__content.sd-question__content",
 			"note": "Five radios, maybe change to dropdown"
     },
     "ConclusionLastQuestion": {

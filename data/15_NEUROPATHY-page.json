@@ -67,6 +67,10 @@
                 {
                   "value": "SAME_TIME",
                   "text": "They both appeared at about the same time"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't Know"
                 }
               ],
               "showOtherItem": false

@@ -1,47 +1,294 @@
-export function addCustomClasses(panel, htmlElement) {
-    // lvngCmpn Details Panel and Subpanel
-    if (panel.name === 'lndgCmpnDetailsPanel') {
-      htmlElement.classList.add("lndg-cmpn-details-panel");
-    }
-    if (panel.name === 'lvngCmpnDetailsPanel') {
-      htmlElement.classList.add("lvng-cmpn-details-panel");
-    }
-    if (panel.name === 'lvngCmpnDetailsAnimalType') {
-      htmlElement.classList.add("srvy-flex-row");
-    }
-    if (panel.name === 'lvngCmpnDetailsBreedGender') {
-      htmlElement.classList.add("srvy-flex-row");
-    }
-    if (panel.name === 'lvngCmpnDetailsAge') {
-      htmlElement.classList.add("srvy-flex-row");
-    }
-    if (panel.name === 'lvngCmpnDetailsWeight') {
-      htmlElement.classList.add("srvy-flex-row");
-    }
-    if (panel.name === 'lvngCmpnDetailsAge') {
-      htmlElement.classList.add("srvy-flex-row");
-    }
-    if (panel.name === 'lvngInfoSources') {
-      htmlElement.classList.add("srvy-flex-row");
-    }
-    // Deceased cmpnanion Details Panel and Subpanel
-    if (panel.name === 'dcsdCmpnDetailsPanel') {
-      htmlElement.classList.add("dcsd-cmpn-details-panel");
-    }
-    if (panel.name === 'dcsdCmpnDetailsSubpanel1') {
-      htmlElement.classList.add("dcsd-cmpn-details-subpanel-1");
-    }
-    if (panel.name === 'dcsdCmpnDetailsSubpanel2') {
-      htmlElement.classList.add("dcsd-cmpn-details-subpanel-2");
-    }
-    if (panel.name === 'dcsdCmpnDetailsSubpanel3') {
-      htmlElement.classList.add("dcsd-cmpn-details-subpanel-3");
-    }
-    if (panel.name === 'dcsdCmpnDetailsSubpanel4') {
-      htmlElement.classList.add("dcsd-cmpn-details-subpanel-4");
-    }
+export function addCustomClasses(item, htmlElement) {
+  if (!item || !htmlElement) return;
+
+  const name = item.name;
+  console.log('name :>> ');
+  console.log(name);
+
+ 
 
 
 
-    // Add as many rules as you need here
+
+  // !VA Two column layout - checkboxes and radios
+
+  if (name === "BreathingCrisisAdviceType") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "BreathingCrisisProvidedSubstanceType") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "EarlySymptomsType") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "EarlyOtherConditionsType") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "PrimaryDurationVisitsNumberPanel") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "PrimaryDurationCost") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "PrimaryDurationChangedVetsReason") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "PrimaryVetInfoDetails") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "DiagnosisCost") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusDidHave") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusType") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusTiebackCount") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusTiebackComplications") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusBveapReasons") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusBveapComplications") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusStentDidMigrate") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusStentReplaced") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusStentComplications") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusArtyenoidectomyReasons") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusArtyenoidectomyComplications") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusVentrilocordectomyReasons") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "TreatmentStatusVentrilocordectomyComplications") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "ManagementPrescriptionType") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "ManagementNonPrescriptionType") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "OTCProductsType") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "NeuropathyOtherIssues") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "ConclusionPolyneuropathy") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "ConclusionSpecialConsiderations") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "ConclusionPolyneuropathy") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "ConclusionPolyneuropathy") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "ConclusionOtherConditions") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "ConclusionCauseOfDeath") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+
+
+
+
+
+
+
+
+
+  
+
+ // !VA Three column Y N Don't know
+  if (name === "UserInfoGender") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "CmpnInfoAnimalType") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "InfoSourcesTypes") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "IntubationHistoryWasIntubated") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "IntubationHistoryReason") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "IntubationHistorySymptoms") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-two-col");
+  }
+  if (name === "BreathingCrisisDidHavePanel") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "BreathingCrisisCount") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "BreathingCrisisAdvice") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  
+  if (name === "BreathingCrisisProvidedSubstance") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "EarlySymptomsHindEndWeakness") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "EarlySymptomsIncontinence") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "EarlyOtherConditions") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "PrimaryDurationChangedVets") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "PrimaryVetInflammation") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "PrimaryVetRefluxPanel") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "PrimaryVetRefluxMeds") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "TreatmentStatusArtyenoidectomyDidExplain") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "TreatmentStatusArtyenoidectomyChoice") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "TreatmentStatusVentrilocordectomyDidExplain") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "TreatmentStatusVentrilocordectomyChoice") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "ManagementPrescriptions") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "ManagementPrescriptions") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "ManagementNonPrescription") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "OTCProductsDidPurchase") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "OTCProtocolDidPurchase") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "AspirationDidHave") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "AspirationInpatient") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "AspirationSurgeryPost") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "AspirationStentPost") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+  if (name === "NeuropathySymptomsDoesHave") {
+    const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
+    (selectbase ?? htmlElement).classList.add("survey-three-col");
+  }
+
+
+
+
+
+  // !VA Two column...
+  
+  
+
+  
+
+
+
+  // ...existing rules...
 }
