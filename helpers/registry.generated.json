@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-07T15:53:52.962Z",
+    "builtAt": "2026-02-09T13:33:14.646Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "ageInMonths",
@@ -809,7 +809,7 @@
     },
     "BreathingCrisisCost": {
       "name": "BreathingCrisisCost",
-      "type": "radiogroup",
+      "type": "dropdown",
       "role": "question",
       "collect": true,
       "path": [

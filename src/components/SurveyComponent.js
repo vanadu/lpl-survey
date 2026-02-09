@@ -47,6 +47,64 @@ const surveyJson = {
   ]
 };
 
+import { getStyleDirectives } from "./panelClassHandlers";
+
+function applyDirective(htmlElement, { target, className }) {
+  if (!htmlElement || !className) return;
+
+  if (target === "items") {
+    // checkbox/radiogroup items live here
+    const node =
+      htmlElement.querySelector("fieldset.sd-selectbase") ||
+      htmlElement.querySelector(".sd-selectbase") ||
+      htmlElement;
+    node.classList.add(className);
+    console.log('ITEMS');
+    return;
+  }
+
+  if (target === "control") {
+    // 1) Prefer the dropdown wrapper explicitly
+    const dropdownWrapper = htmlElement.querySelector(".sd-input.sd-dropdown");
+    console.log('dropdownWrapper', dropdownWrapper)
+    if (dropdownWrapper) {
+
+      dropdownWrapper.classList.add(className);
+
+      // Ensure the class is NOT on any descendants (e.g., the child input)
+      dropdownWrapper
+        .querySelectorAll(`.${className}`)
+        .forEach((n) => n !== dropdownWrapper && n.classList.remove(className));
+      return;
+    }
+
+    // 2) Otherwise, always attach to the nearest .sd-input wrapper (not the raw control)
+    const raw = htmlElement.querySelector("input, textarea, select");
+    const wrapper = raw?.closest(".sd-input") || htmlElement.querySelector(".sd-input") || htmlElement;
+
+    wrapper.classList.add(className);
+
+    // Ensure class doesn't end up on children
+    wrapper
+      .querySelectorAll(`.${className}`)
+      .forEach((n) => n !== wrapper && n.classList.remove(className));
+
+    return;
+  }
+
+
+  // default/root
+  htmlElement.classList.add(className);
+}
+
+function applyDirectives(htmlElement, directives) {
+  directives.forEach((d) => applyDirective(htmlElement, d));
+}
+
+
+
+
+
 export default function SurveyComponent({ startPageName }) {
   
   // !VA Constant for show/hide Next button depending on consent question 
@@ -128,14 +186,23 @@ export default function SurveyComponent({ startPageName }) {
   }, []);
 
 
-  survey.onAfterRenderPanel.add(function(sender, options) {
-    addCustomClasses(options.panel, options.htmlElement);
+  // survey.onAfterRenderPanel.add(function(sender, options) {
+  //   addCustomClasses(options.panel, options.htmlElement);
+  // });
+
+  // survey.onAfterRenderQuestion.add(function(sender, options) {
+  //   addCustomClasses(options.question, options.htmlElement);
+  // });
+  survey.onAfterRenderPanel.add((sender, options) => {
+    applyDirectives(options.htmlElement, getStyleDirectives(options.panel));
   });
 
-  survey.onAfterRenderQuestion.add(function(sender, options) {
-    addCustomClasses(options.question, options.htmlElement);
+  survey.onAfterRenderQuestion.add((sender, options) => {
+    applyDirectives(options.htmlElement, getStyleDirectives(options.question));
   });
 
+
+  
 
   // !VA Prefill data based on prefill.json
   useEffect(() => {

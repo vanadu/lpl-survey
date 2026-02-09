@@ -399,23 +399,18 @@
 }
 .survey-fieldset-w-300 { width: 300px; }
 
-// .survey-control-w-300 { 
-//   width: 300px !important;
-//   background: rgba(255, 0, 0, .3) !important; //devred
-// }
 
-// !VA Override the default SurveyJS width: 100% since we're only styling the control element and not the parent question element.
-.survey-control-w-300,
-.survey-control-w-300 input,
-.survey-control-w-300 select,
-.survey-control-w-300 textarea {
-  width: 300px !important;
-  background: rgba(255, 0, 0, .3) !important; //devred
+
+
+.survey-control-w-300 { 
+  width: 300px !important; 
+  background: rgba(0, 128, 0, .3) !important; //devgreen
 }
 
-
-
-
+.survey-control-w-600 { 
+  width: 600px !important; 
+  background: rgba(255, 0, 255, .3) !important; //devmag
+}
 
 .survey-control-w-200 { width: 200px; }
 .survey-control-w-6ch { width: 6ch; } // great for 3-digit-ish fields
