@@ -2,6 +2,11 @@
 // Minimal + working: exports getStyleDirectives() using two layout lists for "items" questions (checkbox/radiogroup).
 
 const ITEMS_TWO_COL = new Set([
+
+
+
+
+
   "BreathingCrisisAdviceType",
   "BreathingCrisisProvidedSubstanceType",
   "EarlySymptomsType",
@@ -81,6 +86,7 @@ const CONTROL_WIDTH_300 = new Set([
   "lvngCmpnInfoAgeYears",
   "InfoSourcesBestSource",
   "BreathingCrisisSubstanceForm",
+  "BreathingCrisisCost",
   "EarlySymptomsAgeYears",
   "EarlySymptomsAgeMonths",
   "PrimaryDurationFirstConsultYears",
@@ -119,6 +125,7 @@ const CONTROL_WIDTH_300 = new Set([
 ]);
 
 const CONTROL_WIDTH_600 = new Set([
+
   "DiagnosisWho",
   "PrimaryVetDiagnosticType",
   "DiagnosisTimeAfterSymptoms",

@@ -327,9 +327,13 @@
               ]
             },
             {
+              "type": "html",
+              "name": "UserInfoNameCountryHeading",
+              "html": "<h3>Your First Name and Country</h3>"
+            },
+            {
               "type": "panel",
               "name": "UserInfoAboutPanel",
-              "title": "Your First Name and Country",
               "elements": [
                 {
                   "type": "text",
@@ -392,15 +396,14 @@
               "html": "<h3>Age and Gender (optional)</h3>"
             },
             {
+              "type": "html",
+              "name": "UserInfoAgeGenderText",
+              "html": "<p>We're asking for basic demographic information to help understand how different people manage the animals in their care.</p>"
+            },
+            {
               "type": "panel",
               "name": "UserInfoAgeGenderPanel",
-              "title": "Age and Gender (optional)",
               "elements": [
-                {
-                  "type": "html",
-                  "name": "UserInfoAgeGenderText",
-                  "html": "<p>We're asking for basic demographic information to help understand how different people manage the animals in their care.</p>"
-                },
                 {
                   "type": "dropdown",
                   "name": "UserInfoAgeGroup",

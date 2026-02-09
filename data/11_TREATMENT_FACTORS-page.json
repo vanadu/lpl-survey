@@ -11,12 +11,6 @@
           "html": "<h3>Factors that have influenced your LP/GOLPP decisions</h3>"
         },
         {
-          "type": "html",
-          "name": "TreatmentFactorsText",
-          "html": "<p>This sections asks what factors you considered when deciding what kind of treatment to pursue for {CmpnName}'s LP/GOLPP.</p>"
-        },
-
-        {
           "type": "panel",
           "name": "TreatmentFactorsDecisionPanel",
           "visibleIf": "{TreatmentStatusDidHave} = 'NO' && {LifeStatus} = true",

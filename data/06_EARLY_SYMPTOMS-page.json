@@ -18,7 +18,7 @@
         {
           "type": "panel",
           "name": "EarlySymptomsFirstSignsPanel",
-          "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of what you later learned was LP?",
+          "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of was LP?",
           "elements": [
             {
               "type": "text",
@@ -180,7 +180,7 @@
             {
             "type": "checkbox",
             "name": "EarlyOtherConditionsType",
-            "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared at the age of {EarlySymptomsAgeYears} years and {EarlySymptomsAgeMonths} months?",
+            "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
             "isRequred": true,
             "visibleIf": "{EarlyOtherConditions} = YES",
             "choices": [

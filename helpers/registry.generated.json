@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-09T13:33:14.646Z",
+    "builtAt": "2026-02-09T15:06:34.300Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "ageInMonths",
@@ -200,7 +200,8 @@
         "USER_INFO-page",
         "UserInfoPanel"
       ],
-      "hasTitle": false,
+      "hasTitle": true,
+      "title": "Your First Name and Country",
       "hasVisibleIf": false
     },
     "UserInfoFirstName": {
@@ -257,7 +258,8 @@
         "USER_INFO-page",
         "UserInfoPanel"
       ],
-      "hasTitle": false,
+      "hasTitle": true,
+      "title": "Age and Gender (optional)",
       "hasVisibleIf": false
     },
     "UserInfoAgeGroup": {

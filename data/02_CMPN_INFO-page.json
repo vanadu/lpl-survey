@@ -45,7 +45,7 @@
             {
             "type": "text",
             "name": "CmpnInfoBreed",
-            "title": "{CmpnName}'s breed or mix (if unknown, type 'Don't know'):",
+            "title": "{CmpnName}'s breed or mix:",
             "isRequired": true
             },
             {

@@ -7,6 +7,18 @@ import { SharpLight } from "survey-core/themes";
 import { addCustomClasses } from "./panelClassHandlers";
 import prefillData from "../../helpers/prefill.json";
 
+// add this import near the top with the other helper imports
+// import registry from "../../helpers/registry.generated.json";
+import registry from "../../helpers/registry.generated.json";
+
+// !VA Import the helper for assigning the data-name attribute to panel elements
+// keep your existing import (same file), but now we’re using registry mode
+import { attachPanelDataNameStamper } from "../../helpers/panelDataName";
+
+// !VA  getStyleDirectives returns a list of all the style assignments for elements that have custom styling. 
+import { getStyleDirectives } from "./panelClassHandlers";
+
+
 import LANDING from "../../data/00_LANDING-page.json";
 import USER_INFO from "../../data/01_USER_INFO-page.json";
 import CMPN_INFO from "../../data/02_CMPN_INFO-page.json";
@@ -47,7 +59,7 @@ const surveyJson = {
   ]
 };
 
-import { getStyleDirectives } from "./panelClassHandlers";
+
 
 function applyDirective(htmlElement, { target, className }) {
   if (!htmlElement || !className) return;
@@ -122,6 +134,23 @@ export default function SurveyComponent({ startPageName }) {
   });
 
   const [isCompleted, setIsCompleted] = useState(false);
+
+
+
+  useEffect(() => {
+    const detach = attachPanelDataNameStamper(survey, {
+      registry,
+      // optional overrides if you ever want them:
+      // attr: "data-name",
+      // map: { SomePanelName: "SomeOtherValue" },
+    });
+
+    return detach;
+  }, [survey]);
+
+
+
+
 
   /** VA! This was added by ChatGPT for show/hide Next button depending on consent question
    * 🛡 Safety net: block navigation if consent not Yes

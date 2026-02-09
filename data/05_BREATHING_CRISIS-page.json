@@ -71,7 +71,7 @@
             {
               "type": "dropdown",
               "name": "BreathingCrisisCost",
-              "title": "About what was the total pre-insurance cost of these visits to veterinary professionals due to LP/GOLPP-induced breathing crises/emergencies?",
+              "title": "About what was the total pre-insurance cost of these visits?",
               "choices": [
                 {
                   "value": "LESS_THAN_1000",
