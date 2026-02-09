@@ -44,6 +44,9 @@ const ITEMS_TWO_COL = new Set([
 ]);
 
 const ITEMS_THREE_COL = new Set([
+
+
+
   "CmpnInfoAnimalType",
   "IntubationHistoryWasIntubated",
   "BreathingCrisisDidHavePanel",

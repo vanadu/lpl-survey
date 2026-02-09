@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-09T15:06:34.300Z",
+    "builtAt": "2026-02-09T16:21:25.547Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "ageInMonths",
@@ -341,7 +341,7 @@
         "CmpnInfoDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "{CmpnName}'s breed or mix (if unknown, type 'Don't know'):",
+      "title": "{CmpnName}'s breed or mix:",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -820,7 +820,7 @@
         "BreathingCrisisDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "About what was the total pre-insurance cost of these visits to veterinary professionals due to LP/GOLPP-induced breathing crises/emergencies?",
+      "title": "About what was the total pre-insurance cost of these visits?",
       "hasVisibleIf": false
     },
     "BreathingCrisisAdvice": {
@@ -922,7 +922,7 @@
         "EarlySymptomsPanel"
       ],
       "hasTitle": true,
-      "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of what you later learned was LP?",
+      "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of was LP?",
       "hasVisibleIf": false
     },
     "EarlySymptomsAgeYears": {
@@ -1066,7 +1066,7 @@
         "EarlyOtherConditionsPanel"
       ],
       "hasTitle": true,
-      "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared at the age of {EarlySymptomsAgeYears} years and {EarlySymptomsAgeMonths} months?",
+      "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
       "hasVisibleIf": true,
       "visibleIf": "{EarlyOtherConditions} = YES"
     },

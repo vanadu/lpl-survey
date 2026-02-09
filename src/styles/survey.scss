@@ -283,62 +283,64 @@
 // survey-formatting.scss
 
 // --- Layout tokens ---
-.survey-two-across,
-.survey-two-across-wrap,
-.survey-three-across-wrap,
-.survey-grid-1-2-2 {
-  display: grid;
-  gap: 0.75rem 1rem;
-  align-items: start;
-}
+// .survey-two-across,
+// .survey-two-across-wrap,
+// .survey-three-across-wrap,
+// .survey-grid-1-2-2 {
+//   display: grid;
+//   gap: 0.75rem 1rem;
+//   align-items: start;
+// }
 
 // fixed 2-col
-.survey-two-across {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
+// .survey-two-across {
+//   grid-template-columns: repeat(2, minmax(0, 1fr));
+// }
 
 // responsive 2-col
-.survey-two-across-wrap {
-  grid-template-columns: repeat(2, minmax(16rem, 1fr));
-}
+// .survey-two-across-wrap {
+//   grid-template-columns: repeat(2, minmax(16rem, 1fr));
+// }
 
 // responsive 3-col
-.survey-three-across-wrap {
-  grid-template-columns: repeat(3, minmax(14rem, 1fr));
-}
+// .survey-three-across-wrap {
+//   grid-template-columns: repeat(3, minmax(14rem, 1fr));
+// }
 
 // example “1-2-2” pattern (you used this for CmpnInfoDetailsPanel :contentReference[oaicite:5]{index=5})
-.survey-grid-1-2-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-flow: row;
+// !VA This is the 1-2-2 layout used only once
+// .survey-grid-1-2-2 {
+//   grid-template-columns: repeat(2, minmax(0, 1fr));
+//   grid-auto-flow: row;
 
-  // make first child span both columns
-  > :first-child {
-    grid-column: 1 / -1;
-  }
-}
+//   // make first child span both columns
+//   > :first-child {
+//     grid-column: 1 / -1;
+//   }
+// }
 
 // --- Width tokens ---
 // Apply to the question root and target common SurveyJS inputs inside.
-.survey-width-200px { max-width: 200px; }
-.survey-width-300px { max-width: 300px; }
-.survey-width-500px { max-width: 500px; }
-.survey-width-60percent { width: 60%; }
+// .survey-width-200px { max-width: 200px; }
+// .survey-width-300px { max-width: 300px; }
+// .survey-width-500px { max-width: 500px; }
+// .survey-width-60percent { width: 60%; }
 
 // Make width tokens actually constrain inputs reasonably
-.survey-width-200px,
-.survey-width-300px,
-.survey-width-500px {
-  .sd-input,
-  input,
-  select,
-  textarea {
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
+// .survey-width-200px,
+// .survey-width-300px,
+// .survey-width-500px {
+//   .sd-input,
+//   input,
+//   select,
+//   textarea {
+//     width: 100%;
+//     box-sizing: border-box;
+//   }
+// }
 
 // --- Typography tokens ---
+// !VA I don't know what this does or where it came from 
 .survey-panel-title {
   .sd-panel__title,
   .sd-title {
@@ -359,27 +361,16 @@
   padding: 0;
   margin: 0;
   min-width: 0;
-  // background: rgba(0, 0, 255, .3) !important; //devblue
-  // background: rgba(255, 255, 0, .3) !important; //devyel
+  background: rgba(0, 0, 255, .3) !important; //devblue
 }
 
-fieldset.survey-two-col {
-  box-sizing: border-box;
-  // max-width: 50%;
-  // background: rgba(255, 0, 255, .3) !important; //devmag
-  .sd-item.sd-checkbox {
-    // max-width: 45%!important;
-    background: rgba(255, 0, 0, .3) !important; //devred
-  }
-}
-
-/* Each item is exactly half the container width (minus gap) */
+// !VA Two column checkboxes
 .survey-two-col > .sd-item {
   // !VA Width of the boolean radios
   flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
   box-sizing: border-box;
 }
-
+// !VA Two column boolean radio buttons, creates a 60% width element
 .survey-two-col .sd-item.sd-radio {
   // !VA Width of the boolean radios
   flex: 0 0 calc(30% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
@@ -388,6 +379,7 @@ fieldset.survey-two-col {
 }
 
 // Apply to fieldset.sd-selectbase so titles/headers are unaffected
+// !VA This only applies to three-button radio groups, i.e. Yes No Don't know
 .survey-three-col {
   display: flex;
   flex-wrap: wrap;
@@ -399,53 +391,60 @@ fieldset.survey-two-col {
   margin: 0;
   min-width: 0;
   background: rgba(255, 0, 0, .3) !important; //devred
+  // !VA Creates a 480px element with three equal button widths
   .sd-radio {
     max-width: 160px!important;
-    // background: rgba(0, 128, 0, .3) !important; //devgreen
   }
 }
-
+// !VA I'm not sure what this does
 .survey-three-col > .sd-item {
   flex: 1 1 14rem; // ~3 columns depending on available width
 }
 
 
 
-
+// !VA NOT USED
 .survey-fieldset-w-60pct { 
   width: 60%; 
   background: rgba(0, 128, 0, .3) !important; //devgreen
 }
+// !VA 
 .survey-fieldset-w-300 { width: 300px; }
 
+ 
 
-
-
+// !VA Medium width text boxes and dropdown, i.e. CmpnName, UserInfoAgeGroup. 
 .survey-control-w-300 { 
   width: 300px !important; 
   background: rgba(0, 128, 0, .3) !important; //devgreen
 }
 
+// !VA Wide text boxes and dropdowns
 .survey-control-w-600 { 
   width: 600px !important; 
   background: rgba(255, 0, 255, .3) !important; //devmag
 }
 
+// !VA Unused as yet
 .survey-control-w-200 { width: 200px; }
+// !VA Unused as yet
 .survey-control-w-6ch { width: 6ch; } // great for 3-digit-ish fields
 
 
-
+// !VA Apply border-box to all control elements
 .survey-control-w-200,
 .survey-control-w-300,
+.survey-control-w-600,
 .survey-control-w-6ch { box-sizing: border-box; }
 
 
 
 // !VA Custom Panel Layouts
+// =============================
+
 [data-name="UserInfoAboutPanel"] .sd-element__content.sd-panel__content {
   display: grid;
-  // gap: 0.75rem 1rem;
+  gap: 0.75rem 1rem;
   align-items: start;
   grid-template-columns: 1fr 1fr;
   .sd-row {
