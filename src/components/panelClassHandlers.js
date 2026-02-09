@@ -1,16 +1,84 @@
+  function getName(item) {
+    return item?.name || "";
+  }
+
+  function findSelectbase(htmlElement) {
+    return htmlElement?.querySelector("fieldset.sd-selectbase") || null;
+  }
+
+  // function findControl(htmlElement) {
+  //   return (
+  //     htmlElement?.querySelector(".sd-input") ||
+  //     htmlElement?.querySelector("select") ||
+  //     htmlElement?.querySelector("input, textarea") ||
+  //     null
+  //   );
+  // }
+
+  // function findControl(htmlElement) {
+  //   return htmlElement.querySelector("input, textarea, select");
+  // }
+
+  // function findControl(htmlElement) {
+  //   return (
+  //     htmlElement.querySelector(".sd-input.sd-dropdown") || // dropdown container
+  //     htmlElement.querySelector(".sd-input") ||             // text/number wrapper
+  //     htmlElement.querySelector("input, textarea, select")  // fallback
+  //   );
+  // }
+
+
+  function findControl(htmlElement) {
+  // Prefer dropdown wrapper, else any sd-input wrapper, else closest wrapper of a raw control
+    return (
+      htmlElement.querySelector(".sd-input.sd-dropdown") ||
+      htmlElement.querySelector(".sd-input") ||
+      htmlElement.querySelector("input, textarea, select")?.closest(".sd-input") ||
+      null
+    );
+  }
+
+
+
 export function addCustomClasses(item, htmlElement) {
   if (!item || !htmlElement) return;
 
   const name = item.name;
-  console.log('name :>> ');
-  console.log(name);
+  // console.log('name :>> ');
+  // console.log(name);
 
- 
+  const control = findControl(htmlElement);
+  console.log('name :>> ' + name);
+  console.log('control :>> ');
+  console.log(control);
+
+
+
+  // !VA CONTROL (element width = 300px)
+  if (name === "CmpnName") {
+    const control = findControl(htmlElement);
+    (control ?? htmlElement).classList.add("survey-control-w-300");
+  }
+  if (name === "UserInfoFirstName") {
+    const control = findControl(htmlElement);
+    (control ?? htmlElement).classList.add("survey-control-w-300");
+  }
+  if (name === "UserInfoCountry") {
+    const control = findControl(htmlElement);
+    (control ?? htmlElement).classList.add("survey-control-w-300");
+  }
+  if (name === "UserInfoStateRegion") {
+    const control = findControl(htmlElement);
+    (control ?? htmlElement).classList.add("survey-control-w-300");
+  }
 
 
 
 
+
+  // !VA LAYOUT
   // !VA Two column layout - checkboxes and radios
+
 
   if (name === "BreathingCrisisAdviceType") {
     const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
@@ -141,16 +209,6 @@ export function addCustomClasses(item, htmlElement) {
     (selectbase ?? htmlElement).classList.add("survey-two-col");
   }
 
-
-
-
-
-
-
-
-
-  
-
  // !VA Three column Y N Don't know
   if (name === "UserInfoGender") {
     const selectbase = htmlElement.querySelector("fieldset.sd-selectbase");
@@ -279,16 +337,7 @@ export function addCustomClasses(item, htmlElement) {
   }
 
 
-
-
-
-  // !VA Two column...
   
   
 
-  
-
-
-
-  // ...existing rules...
 }
