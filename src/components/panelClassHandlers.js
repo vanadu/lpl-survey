@@ -3,7 +3,7 @@
 
 const ITEMS_TWO_COL = new Set([
 
-
+  "LandingPrivacyConsentLinksPanel",
 
 
 
