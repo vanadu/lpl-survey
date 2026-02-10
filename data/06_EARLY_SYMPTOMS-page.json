@@ -43,14 +43,14 @@
               "name": "EarlySymptomsAgeMonths",
               "title": "Months (number 1 - 12)",
               "isRequired": true,
-              "min": 1,
+              "min": 0,
               "max": 12,
               "validators": [
                 {
                   "type": "numeric",
-                  "minValue": 1,
+                  "minValue": 0,
                   "maxValue": 12,
-                  "text": "Months must be between 1 and 12"
+                  "text": "Months must be between 0 and 12"
                 }
               ]
             }

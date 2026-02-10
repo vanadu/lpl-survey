@@ -1,48 +1,100 @@
 /**
  * merge-surveys.js
  *
- * Merges SurveyJS page JSON files into a single master-survey.json,
- * writes a timestamped snapshot, and validates calculatedValue / {token}
- * references to prevent drift.
+ * ----------------------------------------------------------------------------
+ * PURPOSE
+ * ----------------------------------------------------------------------------
+ * Merge multiple SurveyJS per-page JSON files into a single master survey JSON,
+ * write both a stable “latest” output and a timestamped snapshot, and perform
+ * validations to prevent silent drift.
  *
  * Outputs:
- *  - /data/master-survey.json               (authoritative “latest”)
- *  - /data/master-survey_YYYYMMDD_HHMMSS.json  (snapshot)
+ *  - /data/master-survey.json                     (authoritative “latest”)
+ *  - /data/master-survey_YYYYMMDD_HHMMSS.json     (snapshot for diff/history)
+ *  - /helpers/registry.generated.json             (generated registry layer)
+ *
+ * ----------------------------------------------------------------------------
+ * ARCHITECTURE OVERVIEW
+ * ----------------------------------------------------------------------------
+ * This script has four conceptual layers:
+ *
+ * LAYER 0 — Configuration
+ *   - Which page JSON files are merged, output paths, CI behavior, registry flags
+ *
+ * LAYER 1 — Merge (Build Master Survey)
+ *   - Loads page files and constructs the master survey object
+ *   - Defines calculatedValues centrally (single source of truth for these)
+ *
+ * LAYER 2 — Validation (Drift Prevention)
+ *   - Validation #1: Compare calc names in this script vs existing master-survey.json
+ *   - Validation #2: Scan page JSONs for {token} references that don’t resolve
+ *
+ * LAYER 3 — Write Outputs & Post-Processing
+ *   - Write latest + snapshot master survey JSON files
+ *   - Generate registry.generated.json from the freshly written master survey
+ *
+ * ----------------------------------------------------------------------------
+ * GOTCHAS / NOTES
+ * ----------------------------------------------------------------------------
+ * - CI / Non-interactive runs:
+ *   When CI=true (or stdin/stdout are not TTY), validations should hard fail
+ *   instead of prompting. See IS_CI + isInteractive().
+ *
+ * - Brace tokens vs regex quantifiers:
+ *   Some strings (rarely) can include patterns like {5} or {5,10} (regex quantifiers).
+ *   Validation #2 ignores tokens that look purely numeric or numeric ranges.
+ *
+ * - Registry generation:
+ *   generate-registry.js runs AFTER master-survey.json is written, so the registry
+ *   reflects the exact “latest” master survey output.
  */
-
 
 const fs = require("fs");
 const path = require("path");
 const readline = require("readline");
 
-
-// !VA Consts for generating registry.generated.json
+// Registry generator subprocess
 const { spawnSync } = require("child_process");
 
-// ------------------------------
-// REGISTRY BUILD (generated layer)
-// ------------------------------
+// -----------------------------------------------------------------------------
+// LAYER 0 — CONFIGURATION
+// -----------------------------------------------------------------------------
+
+/**
+ * REGISTRY BUILD (generated layer)
+ *
+ * If true, we run generate-registry.js at the end to produce helpers/registry.generated.json.
+ */
 const BUILD_REGISTRY_GENERATED = true;
 
-// Toggle these based on your preferences:
-const REGISTRY_INCLUDE_PRESENTATION = false;   // include html/expression/image/etc.
-const REGISTRY_INCLUDE_VISIBLEIF_EXPR = true;  // include visibleIf string, not just boolean
+/**
+ * Registry generator toggles (passed as CLI args to generate-registry.js)
+ * - include presentation content (html/expression/image/etc.)?
+ * - include visibleIf expression strings?
+ */
+const REGISTRY_INCLUDE_PRESENTATION = false; // include html/expression/image/etc.
+const REGISTRY_INCLUDE_VISIBLEIF_EXPR = true; // include visibleIf string, not just boolean
 
-// Where to write registry.generated.json (keeps /data only for page JSONs)
-const REGISTRY_OUT_PATH = path.resolve(__dirname, "../helpers/registry.generated.json");
-
-// Where master-survey.json lives (already in /data per your script)
+/**
+ * Output paths
+ * - registry.generated.json lives in /helpers (so /data stays only page JSONs + master)
+ * - master-survey.json lives in /data
+ */
+const REGISTRY_OUT_PATH = path.resolve(
+  __dirname,
+  "../helpers/registry.generated.json"
+);
 const MASTER_SURVEY_PATH = path.resolve(__dirname, "../data/master-survey.json");
 
-
-
-
+/**
+ * Source pages directory
+ */
 const DATA_DIR = path.resolve(__dirname, "../data");
-// console.log("DATA_DIR =", DATA_DIR);
 
-// ------------------------------
-// CONFIG
-// ------------------------------
+/**
+ * Ordered list of page files to merge.
+ * NOTE: Order matters (defines page order in master survey).
+ */
 const pageFiles = [
   "00_LANDING-page.json",
   "01_USER_INFO-page.json",
@@ -63,16 +115,22 @@ const pageFiles = [
   "16_CONCLUSION-page.json",
 ];
 
-// In CI/non-interactive contexts, you usually want hard fail
+/**
+ * CI / prompt behavior
+ *
+ * In CI/non-interactive contexts you usually want hard fail.
+ * Setting CI=true in env forces hard fail (no prompts).
+ */
 const IS_CI = String(process.env.CI).toLowerCase() === "true";
 
 // If true, mismatches trigger the Abort prompt (or hard-fail in CI)
 const PROMPT_ON_CALC_MISMATCH = true;
 const PROMPT_ON_UNKNOWN_REFERENCES = true;
 
-// ------------------------------
-// UTIL
-// ------------------------------
+// -----------------------------------------------------------------------------
+// LAYER 0 — UTILITIES
+// -----------------------------------------------------------------------------
+
 function pad2(n) {
   return String(n).padStart(2, "0");
 }
@@ -93,24 +151,20 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
-// !VA Added for creating registry.generated.json
+/**
+ * Runs generate-registry.js as a Node subprocess to build registry.generated.json.
+ * This is run AFTER master-survey.json is written so the registry is aligned.
+ */
 function runGenerateRegistry() {
   const generatorPath = path.resolve(__dirname, "./generate-registry.js");
 
-  const args = [
-    generatorPath,
-    "--in",
-    MASTER_SURVEY_PATH,
-    "--out",
-    REGISTRY_OUT_PATH,
-  ];
+  const args = [generatorPath, "--in", MASTER_SURVEY_PATH, "--out", REGISTRY_OUT_PATH];
 
+  // Insert feature flags into args (kept compatible with your existing generator CLI)
   if (REGISTRY_INCLUDE_PRESENTATION) args.splice(1, 0, "--include-presentation");
   if (REGISTRY_INCLUDE_VISIBLEIF_EXPR) args.splice(1, 0, "--include-visibleif-expr");
 
-  const result = spawnSync(process.execPath, args, {
-    stdio: "inherit",
-  });
+  const result = spawnSync(process.execPath, args, { stdio: "inherit" });
 
   if (result.error) {
     console.error("❌ Failed to run generate-registry.js:", result.error);
@@ -125,9 +179,10 @@ function runGenerateRegistry() {
   console.log("✅ Registry generated at helpers/registry.generated.json");
 }
 
-
-
-// Traverse any JS value and call visitor(obj) on objects
+/**
+ * Generic tree traversal helper.
+ * Calls visitor(obj) for every object found in an arbitrarily nested structure.
+ */
 function traverse(value, visitor) {
   if (value === null || value === undefined) return;
 
@@ -139,10 +194,12 @@ function traverse(value, visitor) {
   if (typeof value === "object") {
     visitor(value);
     for (const k of Object.keys(value)) traverse(value[k], visitor);
-    return;
   }
 }
 
+/**
+ * Extracts a Set of calculatedValue names from a calculatedValues array.
+ */
 function setFromCalculatedValues(calculatedValuesArray) {
   const s = new Set();
   for (const cv of calculatedValuesArray || []) {
@@ -153,13 +210,21 @@ function setFromCalculatedValues(calculatedValuesArray) {
   return s;
 }
 
+/**
+ * Returns sorted array of (a \ b).
+ */
 function setDiff(a, b) {
-  // a \ b
   const out = [];
   for (const x of a) if (!b.has(x)) out.push(x);
   return out.sort();
 }
 
+/**
+ * Collects all element names (questions/panels/etc.) from a page object.
+ * We treat any object with both `name` and `type` as an “element”.
+ *
+ * Also adds the page's own name (so {PageName} is considered resolvable).
+ */
 function collectElementNamesFromPage(pageObj) {
   const names = new Set();
 
@@ -176,7 +241,6 @@ function collectElementNamesFromPage(pageObj) {
     }
   });
 
-  // Add page name too (handy if you ever reference {PageName})
   if (typeof pageObj?.name === "string" && pageObj.name.trim()) {
     names.add(pageObj.name.trim());
   }
@@ -184,35 +248,17 @@ function collectElementNamesFromPage(pageObj) {
   return names;
 }
 
-// !VA Replace
-// function extractBraceRefsFromPage(pageObj) {
-//   const refs = new Set();
-
-//   traverse(pageObj, (obj) => {
-//     if (!obj || typeof obj !== "object") return;
-
-//     for (const v of Object.values(obj)) {
-//       if (typeof v !== "string") continue;
-
-//       // Match {token} occurrences
-//       const re = /\{([^}]+)\}/g;
-//       let m;
-//       while ((m = re.exec(v)) !== null) {
-//         const raw = (m[1] || "").trim();
-//         if (!raw) continue;
-
-//         // Normalize: take left side before '.' (e.g. {panel.question} -> panel)
-//         // Also strip anything after whitespace
-//         const base = raw.split(".")[0].trim().split(/\s+/)[0].trim();
-//         if (base) refs.add(base);
-//       }
-//     }
-//   });
-
-//   return refs;
-// }
-
-// !VA With
+/**
+ * Extracts {token} references from any string values in the page object,
+ * but keeps context (object path and full string value) so errors are actionable.
+ *
+ * Normalization:
+ * - token base is the substring before '.' (e.g. {panel.question} -> panel)
+ * - also strips anything after whitespace
+ *
+ * Gotcha handling:
+ * - Ignore regex quantifiers like {5}, {5,}, {5,10} which may appear in strings
+ */
 function extractBraceRefsWithContext(pageObj) {
   const hits = [];
 
@@ -238,17 +284,6 @@ function extractBraceRefsWithContext(pageObj) {
         const raw = (m[1] || "").trim();
         if (!raw) continue;
 
-
-        // !VA Replace
-        // const base = raw.split(".")[0].trim().split(/\s+/)[0].trim();
-        // if (!base) continue;
-        // hits.push({
-        //   token: base,
-        //   path: pathParts.join("."),
-        //   value,
-        // });
-
-        // !VA With
         const base = raw.split(".")[0].trim().split(/\s+/)[0].trim();
         if (!base) continue;
 
@@ -256,8 +291,7 @@ function extractBraceRefsWithContext(pageObj) {
         if (/^\d+(,\d*)?$/.test(base)) continue;
 
         hits.push({ token: base, path: pathParts.join("."), value });
-
-      } 
+      }
     }
   }
 
@@ -269,15 +303,15 @@ function isInteractive() {
   return Boolean(process.stdin.isTTY && process.stdout.isTTY);
 }
 
+/**
+ * Prompt user whether to abort on validation failure.
+ * - In CI or non-interactive, always abort (true).
+ */
 async function promptAbort(reasonLine) {
-  // CI / non-interactive: hard abort
   if (IS_CI || !isInteractive()) return true;
 
   return new Promise((resolve) => {
-    const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout,
-    });
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 
     rl.question(`${reasonLine}\nAbort? [Y/N]: `, (answer) => {
       rl.close();
@@ -287,13 +321,13 @@ async function promptAbort(reasonLine) {
   });
 }
 
-// ------------------------------
+// -----------------------------------------------------------------------------
 // MAIN
-// ------------------------------
+// -----------------------------------------------------------------------------
 async function main() {
-  // ------------------------------
-  // LOAD PAGES
-  // ------------------------------
+  // ---------------------------------------------------------------------------
+  // LAYER 1 — MERGE: Load pages
+  // ---------------------------------------------------------------------------
   const pages = pageFiles.map((filename) => {
     const filePath = path.join(DATA_DIR, filename);
     if (!fs.existsSync(filePath)) {
@@ -303,9 +337,14 @@ async function main() {
     return readJson(filePath);
   });
 
-  // ------------------------------
-  // BUILD MASTER SURVEY
-  // ------------------------------
+  // ---------------------------------------------------------------------------
+  // LAYER 1 — MERGE: Build master survey
+  // ---------------------------------------------------------------------------
+
+  /**
+   * Calculated values are centralized here.
+   * Validation #1 ensures these do not drift from existing master-survey.json.
+   */
   const calculatedValues = [
     {
       type: "calculatedvalue",
@@ -349,8 +388,7 @@ async function main() {
     {
       type: "calculatedvalue",
       name: "observeTense",
-      expression:
-        "iif({LifeStatus} = 'true', 'did you observe', 'have you observed')",
+      expression: "iif({LifeStatus} = 'true', 'did you observe', 'have you observed')",
       includeIntoResult: true,
     },
     {
@@ -399,18 +437,16 @@ async function main() {
     pages,
   };
 
-  // ------------------------------
-  // VALIDATION 1:
+  // ---------------------------------------------------------------------------
+  // LAYER 2 — VALIDATION #1:
   // Compare calc names in THIS script vs existing data/master-survey.json
-  // ------------------------------
+  // ---------------------------------------------------------------------------
   {
     const scriptCalcs = setFromCalculatedValues(calculatedValues);
     const masterPath = path.join(DATA_DIR, "master-survey.json");
 
     if (!fs.existsSync(masterPath)) {
-      console.warn(
-        "⚠️  Validation skipped: data/master-survey.json not found (first run?)"
-      );
+      console.warn("⚠️  Validation skipped: data/master-survey.json not found (first run?)");
     } else {
       const existing = readJson(masterPath);
       const existingCalcs = setFromCalculatedValues(existing.calculatedValues);
@@ -438,9 +474,7 @@ async function main() {
         }
 
         if (PROMPT_ON_CALC_MISMATCH) {
-          const abort = await promptAbort(
-            "CalculatedValues mismatch detected."
-          );
+          const abort = await promptAbort("CalculatedValues mismatch detected.");
           if (abort) process.exit(1);
         }
       } else {
@@ -449,33 +483,30 @@ async function main() {
     }
   }
 
-  // ------------------------------
-  // VALIDATION 2:
+  // ---------------------------------------------------------------------------
+  // LAYER 2 — VALIDATION #2:
   // Flag any {token} references in page JSONs that are not:
   //  - an element/page name found in the pages, OR
   //  - a calculatedValue name from THIS script
-  // ------------------------------
+  // ---------------------------------------------------------------------------
   {
+    // Known element/page names across all pages
     const elementNames = new Set();
     for (const page of pages) {
       const pageNames = collectElementNamesFromPage(page);
       for (const n of pageNames) elementNames.add(n);
     }
 
+    // Known calculatedValue names (from this script)
     const calcNames = setFromCalculatedValues(calculatedValues);
+
+    // Combined known token set
     const known = new Set([...elementNames, ...calcNames]);
 
     const unknownRefsByFile = [];
 
     for (const filename of pageFiles) {
       const page = readJson(path.join(DATA_DIR, filename));
-
-      // !VA Replace
-      // const refs = extractBraceRefsFromPage(page);
-      // const unknown = [...refs].filter((r) => !known.has(r)).sort();
-      // if (unknown.length) unknownRefsByFile.push({ filename, unknown });
-
-      // !VA With 
       const hits = extractBraceRefsWithContext(page);
 
       // Only keep hits whose token isn't known
@@ -487,16 +518,6 @@ async function main() {
     }
 
     if (unknownRefsByFile.length) {
-
-
-      // !VA Replace
-      // console.error("❌ Unknown {token} references found in page JSONs:");
-      // for (const item of unknownRefsByFile) {
-      //   console.error(`  ${item.filename}`);
-      //   for (const u of item.unknown) console.error(`    - {${u}}`);
-      // }
-
-      // !VA With
       console.error("❌ Unknown {token} references found in page JSONs:");
       for (const item of unknownRefsByFile) {
         console.error(`  ${item.filename}`);
@@ -509,33 +530,30 @@ async function main() {
           if (seen.has(key)) continue;
           seen.add(key);
 
-          const snippet =
-            h.value.length > 160 ? h.value.slice(0, 160) + "…" : h.value;
+          // Trim long strings for readability
+          const snippet = h.value.length > 160 ? h.value.slice(0, 160) + "…" : h.value;
 
           console.error(`    - {${h.token}} at ${h.path}`);
           console.error(`      "${snippet.replace(/\s+/g, " ").trim()}"`);
         }
       }
+
       console.error(
         "\nThese tokens are referenced in a page but are not a question/panel/page name and not a calculatedValue name."
       );
 
       if (PROMPT_ON_UNKNOWN_REFERENCES) {
-        const abort = await promptAbort(
-          "Unknown {token} references detected."
-        );
+        const abort = await promptAbort("Unknown {token} references detected.");
         if (abort) process.exit(1);
       }
     } else {
-      console.log(
-        "✅ All {token} references in pages resolve to known element names or calculatedValues"
-      );
+      console.log("✅ All {token} references in pages resolve to known element names or calculatedValues");
     }
   }
 
-  // ------------------------------
-  // WRITE OUTPUTS
-  // ------------------------------
+  // ---------------------------------------------------------------------------
+  // LAYER 3 — WRITE OUTPUTS
+  // ---------------------------------------------------------------------------
 
   // 1) Authoritative “latest” file
   const latestPath = path.join(DATA_DIR, "master-survey.json");
@@ -549,17 +567,11 @@ async function main() {
   fs.writeFileSync(snapshotPath, JSON.stringify(masterSurvey, null, 2));
   console.log(`🗂️  Snapshot written to data/${snapshotName}`);
 
-
   // 3) Generate registry.generated.json from the freshly-written master-survey.json
   if (BUILD_REGISTRY_GENERATED) {
     runGenerateRegistry();
   }
-
-
-
 }
-
-
 
 main().catch((err) => {
   console.error("❌ merge-surveys.js failed:", err);

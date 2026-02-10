@@ -4,10 +4,20 @@ import React, { useState, useCallback, useEffect } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
+import { addCustomClasses } from "./panelClassHandlers";
 import prefillData from "../../helpers/prefill.json";
+
+// add this import near the top with the other helper imports
+// import registry from "../../helpers/registry.generated.json";
 import registry from "../../helpers/registry.generated.json";
+
+// !VA Import the helper for assigning the data-name attribute to panel elements
+// keep your existing import (same file), but now we’re using registry mode
 import { attachPanelDataNameStamper } from "../../helpers/panelDataName";
+
+// !VA  getStyleDirectives returns a list of all the style assignments for elements that have custom styling. 
 import { getStyleDirectives } from "./panelClassHandlers";
+
 
 import LANDING from "../../data/00_LANDING-page.json";
 import USER_INFO from "../../data/01_USER_INFO-page.json";
@@ -45,43 +55,48 @@ const surveyJson = {
     OTC_PRODUCTS,
     ASPIRATION,
     NEUROPATHY,
-    CONCLUSION,
-  ],
+    CONCLUSION
+  ]
 };
+
+
 
 function applyDirective(htmlElement, { target, className }) {
   if (!htmlElement || !className) return;
 
   if (target === "items") {
+    // checkbox/radiogroup items live here
     const node =
       htmlElement.querySelector("fieldset.sd-selectbase") ||
       htmlElement.querySelector(".sd-selectbase") ||
       htmlElement;
     node.classList.add(className);
-    console.log("ITEMS");
+    console.log('ITEMS');
     return;
   }
 
   if (target === "control") {
+    // 1) Prefer the dropdown wrapper explicitly
     const dropdownWrapper = htmlElement.querySelector(".sd-input.sd-dropdown");
-    console.log("dropdownWrapper", dropdownWrapper);
+    console.log('dropdownWrapper', dropdownWrapper)
     if (dropdownWrapper) {
+
       dropdownWrapper.classList.add(className);
 
+      // Ensure the class is NOT on any descendants (e.g., the child input)
       dropdownWrapper
         .querySelectorAll(`.${className}`)
         .forEach((n) => n !== dropdownWrapper && n.classList.remove(className));
       return;
     }
 
+    // 2) Otherwise, always attach to the nearest .sd-input wrapper (not the raw control)
     const raw = htmlElement.querySelector("input, textarea, select");
-    const wrapper =
-      raw?.closest(".sd-input") ||
-      htmlElement.querySelector(".sd-input") ||
-      htmlElement;
+    const wrapper = raw?.closest(".sd-input") || htmlElement.querySelector(".sd-input") || htmlElement;
 
     wrapper.classList.add(className);
 
+    // Ensure class doesn't end up on children
     wrapper
       .querySelectorAll(`.${className}`)
       .forEach((n) => n !== wrapper && n.classList.remove(className));
@@ -89,6 +104,8 @@ function applyDirective(htmlElement, { target, className }) {
     return;
   }
 
+
+  // default/root
   htmlElement.classList.add(className);
 }
 
@@ -96,7 +113,13 @@ function applyDirectives(htmlElement, directives) {
   directives.forEach((d) => applyDirective(htmlElement, d));
 }
 
+
+
+
+
 export default function SurveyComponent({ startPageName }) {
+  
+  // !VA Constant for show/hide Next button depending on consent question 
   const CONSENT_QUESTION = "LandingConsent";
   const CONSENT_PAGE_INDEX = 0;
 
@@ -104,27 +127,32 @@ export default function SurveyComponent({ startPageName }) {
     const surveyModel = new Model(surveyJson);
     surveyModel.applyTheme(SharpLight);
 
-    // Hide navigation on initial load (LANDING)
+    // !VA  Hide navigation on initial load (LANDING). To show/hide Next button on landing page depending on consent question
     surveyModel.showNavigationButtons = false;
-
-    // ✅ Attach BEFORE first render so first-render panels get stamped
-    attachPanelDataNameStamper(surveyModel, { registry });
-
-    // ✅ Also attach style directives BEFORE first render (and only once)
-    surveyModel.onAfterRenderPanel.add((sender, options) => {
-      applyDirectives(options.htmlElement, getStyleDirectives(options.panel));
-    });
-
-    surveyModel.onAfterRenderQuestion.add((sender, options) => {
-      applyDirectives(options.htmlElement, getStyleDirectives(options.question));
-    });
 
     return surveyModel;
   });
 
   const [isCompleted, setIsCompleted] = useState(false);
 
-  /**
+
+
+  useEffect(() => {
+    const detach = attachPanelDataNameStamper(survey, {
+      registry,
+      // optional overrides if you ever want them:
+      // attr: "data-name",
+      // map: { SomePanelName: "SomeOtherValue" },
+    });
+
+    return detach;
+  }, [survey]);
+
+
+
+
+
+  /** VA! This was added by ChatGPT for show/hide Next button depending on consent question
    * 🛡 Safety net: block navigation if consent not Yes
    */
   useEffect(() => {
@@ -133,7 +161,7 @@ export default function SurveyComponent({ startPageName }) {
 
       if (sender.getValue(CONSENT_QUESTION) !== "Yes") {
         options.errors.push({
-          text: "You must agree to the terms to continue.",
+          text: "You must agree to the terms to continue."
         });
       }
     }
@@ -142,8 +170,8 @@ export default function SurveyComponent({ startPageName }) {
     return () => survey.onValidatePage.remove(handleValidatePage);
   }, [survey]);
 
-  /**
-   * Auto-advance immediately when Yes is selected
+  /** VA! Added by ChatGTP for show/hide Next button depending on answer to consent question
+   *  Auto-advance immediately when Yes is selected
    */
   useEffect(() => {
     function handleConsentChange(sender, options) {
@@ -152,7 +180,10 @@ export default function SurveyComponent({ startPageName }) {
         options.name === CONSENT_QUESTION &&
         options.value === "Yes"
       ) {
+        // Re-enable navigation for the rest of the survey
         sender.showNavigationButtons = true;
+
+        // Advance immediately
         sender.nextPage();
       }
     }
@@ -161,12 +192,14 @@ export default function SurveyComponent({ startPageName }) {
     return () => survey.onValueChanged.remove(handleConsentChange);
   }, [survey]);
 
+
+
   const handleComplete = useCallback(async (sender) => {
     try {
       const response = await fetch("/api/save-survey", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(sender.data),
+        body: JSON.stringify(sender.data)
       });
 
       if (response.ok) {
@@ -181,75 +214,119 @@ export default function SurveyComponent({ startPageName }) {
     }
   }, []);
 
-  useEffect(() => {
-    if (!survey) return;
 
+  // survey.onAfterRenderPanel.add(function(sender, options) {
+  //   addCustomClasses(options.panel, options.htmlElement);
+  // });
+
+  // survey.onAfterRenderQuestion.add(function(sender, options) {
+  //   addCustomClasses(options.question, options.htmlElement);
+  // });
+  survey.onAfterRenderPanel.add((sender, options) => {
+    applyDirectives(options.htmlElement, getStyleDirectives(options.panel));
+  });
+
+  survey.onAfterRenderQuestion.add((sender, options) => {
+    applyDirectives(options.htmlElement, getStyleDirectives(options.question));
+  });
+
+  
+    useEffect(() => {
+    if (!survey) return;
+  
     const SOURCE_Q = "InfoSourcesTypes";
     const TARGET_Q = "InfoSourcesBestSource";
-
+  
     const syncDropdownFromCheckbox = (sender) => {
       const source = sender.getQuestionByName(SOURCE_Q);
       const target = sender.getQuestionByName(TARGET_Q);
       if (!source || !target) return;
-
+  
+      // Checkbox value is an array of selected "value" entries
       const selectedValues = Array.isArray(source.value) ? source.value : [];
+  
+      // Use visibleChoices when available (covers choicesByUrl, etc.)
       const allChoices = source.visibleChoices || source.choices || [];
-
+  
+      // Build dropdown choice objects { value, text } for only the selected ones
       const nextChoices = allChoices
         .filter((c) => selectedValues.includes(c.value ?? c))
         .map((c) => {
+          // c can be a string OR a SurveyJS choice item
           const value = c.value ?? c;
           const text = c.text ?? String(value);
           return { value, text };
         });
-
+  
+      // Update dropdown choices
       target.choices = nextChoices;
-
-      if (
-        target.value &&
-        !nextChoices.some((c) => (c.value ?? c) === target.value)
-      ) {
-        target.value = null;
+  
+      // Clear dropdown value if it is no longer valid
+      const validValues = new Set(nextChoices.map((c) => c.value));
+      if (target.value != null && !validValues.has(target.value)) {
+        target.clearValue();
+      }
+  
+      // Optional: lock dropdown until there are options
+      target.readOnly = nextChoices.length === 0;
+      // Optional: nicer placeholder
+      target.placeholder = nextChoices.length === 0 ? "Select info sources above first" : "Select one";
+    };
+  
+    const handleValueChanged = (sender, options) => {
+      // Only react when the checkbox changes
+      if (options.name === SOURCE_Q) {
+        syncDropdownFromCheckbox(sender);
       }
     };
-
-    const onValueChanged = (sender, options) => {
-      if (options.name !== SOURCE_Q) return;
-      syncDropdownFromCheckbox(sender);
-    };
-
-    const onCurrentPageChanged = (sender) => {
-      syncDropdownFromCheckbox(sender);
-    };
-
-    survey.onValueChanged.add(onValueChanged);
-    survey.onCurrentPageChanged.add(onCurrentPageChanged);
-
-    // initialize once
+  
+    // Also run once on mount (covers prefilled data)
     syncDropdownFromCheckbox(survey);
-
+  
+    survey.onValueChanged.add(handleValueChanged);
     return () => {
-      survey.onValueChanged.remove(onValueChanged);
-      survey.onCurrentPageChanged.remove(onCurrentPageChanged);
+      survey.onValueChanged.remove(handleValueChanged);
     };
   }, [survey]);
+  
 
-  // Optional: jump to a start page (your existing behavior)
+  // !VA Prefill data based on prefill.json
   useEffect(() => {
-    if (!startPageName) return;
-
-    survey.data = prefillData;
-
-    const page = survey.getPageByName(startPageName);
-    if (page) {
-      survey.currentPage = page;
-      survey.showNavigationButtons = true;
+    if (startPageName) {
+      console.log('startPageName :>> ' + startPageName);
+      survey.data = prefillData;
+      const activePage = survey.pages.find(p => p.name === startPageName);
+      if (activePage) {
+        survey.currentPage = activePage;
+      }
     }
   }, [startPageName, survey]);
 
+
+
+  useEffect(() => {
+    survey.onComplete.add(handleComplete);
+    return () => survey.onComplete.remove(handleComplete);
+  }, [survey, handleComplete]);
+
+
+  // !VA This was added a long time ago...not sure if it works or is useful
+  const handleReset = () => {
+    survey.clear(true, true);
+    survey.showNavigationButtons = false;
+    setIsCompleted(false);
+  };
+
   if (isCompleted) {
-    return <h2>✅ Survey submitted successfully!</h2>;
+    return (
+      <div className="response-container text-center p-8">
+        <h2 className="response-text">Thank you for completing the survey!</h2>
+        <button onClick={handleReset} className="reset-button">
+          Reset Survey
+        </button>
+      </div>
+    );
   }
 
-  return <Survey model={survey} onComplete={handleComplete} />;
+  return <Survey model={survey} />;
 }

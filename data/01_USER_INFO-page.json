@@ -170,7 +170,7 @@
             {
               "type": "text",
               "name": "UserInfoStateRegion",
-              "title": "What state, province or region do you live in (optional)",
+              "title": "State, province or region (optional):",
               "isRequired": false
             }
           ]

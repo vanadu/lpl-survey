@@ -13,12 +13,12 @@
         {
           "type": "html",
           "name": "ManagementText",
-          "html": "<p>Attempting to manage LP/GOLPP symptoms with medications is controversial. There is no medication that can restore movement to paralyzed laryneal tissue. That means that even with medication, the risk of breathing crises and a potentially fatal suffocation event is very real. So while medications can't prevent a breathing emergency, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life. </p>"
+          "html": "<p><b>IMPORTANT</b>: Attempting to manage LP/GOLPP symptoms with medications is controversial. There is no medication that can restore movement to paralyzed laryneal tissue. That means that even with medication, the risk of breathing crises and a potentially fatal suffocation event is very real. So while medications can't prevent a breathing emergency, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life. </p>"
         },
         {
           "type": "html",
           "name": "ManagementText",
-          "html": "<p><b>IMPORTANT</b>: Medications for arthritis/osteoarthritis pain such as NSAIDS (Rimadyl, carprofen) and NGF blockers (Librela, Beransa) may improve mobility by reducing pain, but they aren't specifically prescribed for LP/GOLPP and therefore and aren't included in the 'Medical management' section of the survey.</p>"
+          "html": "<p>Medications for arthritis/osteoarthritis pain such as NSAIDS (Rimadyl, carprofen) and NGF blockers (Librela, Beransa) may improve mobility by reducing pain, but they aren't specifically prescribed for LP/GOLPP and therefore and aren't included in the 'Medical management' section of the survey.</p>"
         },
         {
           "type": "radiogroup",
@@ -103,7 +103,8 @@
             {
             "type": "dropdown",
             "name": "ManagementPrescriptionCost",
-            "title": "About how much do you spend monthly on {CmpnName}'s prescriptions?",
+            "title": "Average monthly cost of {CmpnName}'s prescriptions:",
+            "description": "If you don't know exactly, it's OK to guesstimate.",
             "isRequired": true,
             "choices": [
               {
@@ -523,34 +524,7 @@
           "showOtherItem": false
           
         },
-        {
-            "type": "dropdown",
-            "name": "ManagementNonPrescriptionCost",
-            "title": "About how much do you spend monthly on {CmpnName}'s acupuncture or other therapies?",
-            "isRequired": true,
-            "visibleIf": "{ManagementNonPrescription} = YES",
-            "choices": [
-              {
-                "value": "UNDER_100",
-                "text": "Under $100"
-              },
-              {
-                "value": "101_150",
-                "text": "$101-150"
-              },
-              {
-                "value": "151_250",
-                "text": "$151-$250"
-              },
-              {
-                "value": "OVER_250",
-                "text": "Over $250"
-              }
-            ],
-            "showOtherItem": true,
-            "showNoneItem": true,
-            "required": true
-            },
+
         {
           "type": "panel",
           "name": "ManagementNonPrescriptionTypePanel",
@@ -581,6 +555,35 @@
                 }
               ],
               "showOtherItem": true
+            },
+            {
+              "type": "dropdown",
+              "name": "ManagementNonPrescriptionCost",
+              "title": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
+              "description": "If you don't know exactly, it's OK to guesstimate.",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = YES",
+              "choices": [
+                {
+                  "value": "UNDER_100",
+                  "text": "Under $100"
+                },
+                {
+                  "value": "101_150",
+                  "text": "$101-150"
+                },
+                {
+                  "value": "151_250",
+                  "text": "$151-$250"
+                },
+                {
+                  "value": "OVER_250",
+                  "text": "Over $250"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "required": true
             },
             {
               "type": "rating",

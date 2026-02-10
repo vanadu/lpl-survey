@@ -5,7 +5,8 @@ const ITEMS_TWO_COL = new Set([
 
   "LandingPrivacyConsentLinksPanel",
 
-
+  "lvngCmpnInfoAgePanel",
+  "dcsdCmpnInfoAgePanel",
 
   "BreathingCrisisAdviceType",
   "BreathingCrisisProvidedSubstanceType",
@@ -44,9 +45,6 @@ const ITEMS_TWO_COL = new Set([
 ]);
 
 const ITEMS_THREE_COL = new Set([
-
-
-
   "CmpnInfoAnimalType",
   "IntubationHistoryWasIntubated",
   "BreathingCrisisDidHavePanel",
@@ -75,6 +73,24 @@ const ITEMS_THREE_COL = new Set([
   "NeuropathySymptomsDoesHave",
 ]);
 
+// !VA CONTROL Elements
+const CONTROL_WIDTH_150 = new Set ([
+  "CmpnInfoWeight",
+  "dcsdCmpnInfoAgeYears",
+  "dcsdCmpnInfoAgeMonths",
+  "lvngCmpnInfoAgeYears",
+  "lvngCmpnInfoAgeMonths",
+  "EarlySymptomsAgeYears",
+  "EarlySymptomsAgeMonths",
+  "PrimaryDurationFirstConsultYears",
+  "PrimaryDurationFirstConsultMonths",
+  "TreatmentStatusAgeYears",
+  "TreatmentStatusAgeMonths",
+
+
+])
+
+
 const CONTROL_WIDTH_300 = new Set([
   "CmpnName",
   "UserInfoFirstName",
@@ -82,20 +98,16 @@ const CONTROL_WIDTH_300 = new Set([
   "UserInfoStateRegion",
   "UserInfoAgeGroup",
   "CmpnInfoBreed",
-  "CmpnInfoWeight",
-  "dcsdCmpnInfoAgeYears",
-  "dcsdCmpnInfoAgeMonths",
-  "lvngCmpnInfoAgePanel",
-  "lvngCmpnInfoAgeYears",
+
+
+
+
   "InfoSourcesBestSource",
   "BreathingCrisisSubstanceForm",
   "BreathingCrisisCost",
-  "EarlySymptomsAgeYears",
-  "EarlySymptomsAgeMonths",
-  "PrimaryDurationFirstConsultYears",
-  "PrimaryDurationFirstConsultMonths",
-  "TreatmentStatusAgeYears",
-  "TreatmentStatusAgeMonths",
+
+
+
   "TreatmentStatusTiebackOnceCost",
   "TreatmentStatusTiebackMultipleCost",
   "TreatmentStatusTiebackComplicationsCost",
@@ -121,9 +133,6 @@ const CONTROL_WIDTH_300 = new Set([
   "AspirationCost",
   "NeuropathySymptomsBreathingOnset",
   "NeuropathySymptomsHindEndOnset"
-
-
-
 
 ]);
 
@@ -153,6 +162,10 @@ export function getStyleDirectives(item) {
     return [{ target: "items", className: "survey-three-col" }];
   }
 
+
+  if (CONTROL_WIDTH_150.has(name)) {
+    return [{ target: "control", className: "survey-control-w-150" }];
+  }
   if (CONTROL_WIDTH_300.has(name)) {
     return [{ target: "control", className: "survey-control-w-300" }];
   }

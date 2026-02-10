@@ -119,7 +119,7 @@
             {
               "type": "html",
               "name": "LandingVersion",
-              "html": "<div class='landing-survey-version-container'><p class='landing-survey-version'>LarParLife.org LP/GOLPP Survey<br/>Beta 0.9/26.01.18.01</p></div>"
+              "html": "<div class='landing-survey-version-container'><p class='landing-survey-version'>LarParLife.org LP/GOLPP Survey<br/>Beta 0.9/26.02.10.01</p></div>"
             },
             {
               "type": "html",
@@ -134,12 +134,12 @@
             {
               "type": "html",
               "name": "LandingIntroText",
-              "html": "<p>The LP/GOLPP journey is a learning process, and at the beginning people often have more questions than answers. This survey has two modes. Which mode you chose depends on how far long on your LP/GOLPP journey you are:</p>"
+              "html": "<p>At the beginning of their LP/GOLPP journey, people often have more questions than answers. This survey has two modes: Survey Mode and Workbook Mode. Which mode you choose depends on how far long on your LP/GOLPP journey you are:</p>"
             },
             {
               "type": "html",
               "name": "LandingIntroText02",
-              "html": "<ul><li><b>Survey Mode</b> is designed to collect information from people who are not new to the LP/GOLPP journey. If you've already been faced with making choices for your beloved LarPar companion and would like to share your experience, select <b>Survey Mode</b>. </li><li><b>Workbook Mode</b> presents people with a framework of choices they'll need to make as they move forward on their LP/GOLPP journey. If you're new to the LP/GOLPP journey and want to inform yourself about how to proceed, select <b>Workbook Mode</b> </li></ul>"
+              "html": "<ul><li><b>Survey Mode</b> collects information from people who are not new to the LP/GOLPP journey. If you want to share your experience, select <b>Survey Mode</b>. </li><li>In <b>Workbook Mode</b> you can browse the survey questions without making selections to help you learn about the choices you'll need to make as you move forward on your LP/GOLPP journey. If you're new to LP/GOLPP, select <b>Workbook Mode</b> </li></ul>"
             },
             {
               "type": "html",
@@ -169,21 +169,21 @@
             {
               "type": "html",
               "name": "LandingAboutPrivacyText02",
-              "html": "<p>With this info, we can ensure that all the survey respondents are unique and verifiable without having to collect any information that makes you identifiable outside the context of the survey. For details about how we'll use the data we collect and further steps we'll take to anonymize your contact information, select the 'About your privacy' and 'Consent information' links.</p>"
+              "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey. For details about how we'll use the data we collect and further steps we'll take to anonymize your contact information, select the 'About your privacy' and 'Consent information' links.</p>"
             },
             {
               "type": "panel",
-              "name": "LandingPrivacyAndData",
+              "name": "LandingPrivacyConsentLinksPanel",
               "elements": [
                 {
                   "type": "html",
                   "name": "LandingPrivacy",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About your privacy</a></div>"
+                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Privacy</a></div>"
                 },
                 {
                   "type": "html",
                   "name": "LandingData",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>How will we be using your information?</a></div>"
+                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Consent?</a></div>"
                 }
               ]
             },
@@ -327,13 +327,9 @@
               ]
             },
             {
-              "type": "html",
-              "name": "UserInfoNameCountryHeading",
-              "html": "<h3>Your First Name and Country</h3>"
-            },
-            {
               "type": "panel",
               "name": "UserInfoAboutPanel",
+              "title": "Your First Name and Country",
               "elements": [
                 {
                   "type": "text",
@@ -391,19 +387,15 @@
               ]
             },
             {
-              "type": "html",
-              "name": "UserInfoAgeGenderHeading",
-              "html": "<h3>Age and Gender (optional)</h3>"
-            },
-            {
-              "type": "html",
-              "name": "UserInfoAgeGenderText",
-              "html": "<p>We're asking for basic demographic information to help understand how different people manage the animals in their care.</p>"
-            },
-            {
               "type": "panel",
               "name": "UserInfoAgeGenderPanel",
+              "title": "Age and Gender (optional)",
               "elements": [
+                {
+                  "type": "html",
+                  "name": "UserInfoAgeGenderText",
+                  "html": "<p>We're asking for basic demographic information to help understand how different people manage the animals in their care.</p>"
+                },
                 {
                   "type": "dropdown",
                   "name": "UserInfoAgeGroup",
@@ -435,7 +427,6 @@
                   "name": "UserInfoGender",
                   "title": "Gender information:",
                   "isRequired": false,
-                  "colCount": 3,
                   "choices": [
                     {
                       "value": "WOMAN",
@@ -508,7 +499,7 @@
                 {
                   "type": "text",
                   "name": "CmpnInfoBreed",
-                  "title": "{CmpnName}'s breed or mix (if unknown, type 'Don't know'):",
+                  "title": "{CmpnName}'s breed or mix:",
                   "isRequired": true
                 },
                 {
@@ -1069,9 +1060,9 @@
                   "showNoneItem": false
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "dropdown",
                   "name": "BreathingCrisisCost",
-                  "title": "About what was the total pre-insurance cost of these visits to veterinary professionals due to LP/GOLPP-induced breathing crises/emergencies?",
+                  "title": "About what was the total pre-insurance cost of these visits?",
                   "choices": [
                     {
                       "value": "LESS_THAN_1000",
@@ -1255,7 +1246,7 @@
             {
               "type": "panel",
               "name": "EarlySymptomsFirstSignsPanel",
-              "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of what you later learned was LP?",
+              "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of was LP?",
               "elements": [
                 {
                   "type": "text",
@@ -1413,7 +1404,7 @@
                 {
                   "type": "checkbox",
                   "name": "EarlyOtherConditionsType",
-                  "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared at the age of {EarlySymptomsAgeYears} years and {EarlySymptomsAgeMonths} months?",
+                  "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
                   "isRequred": true,
                   "visibleIf": "{EarlyOtherConditions} = YES",
                   "choices": [
@@ -2157,12 +2148,7 @@
             {
               "type": "html",
               "name": "TreatmentStatusText",
-              "html": "<p>This section asks questions about any surgery or implant procedure {CmpnName} underwent to treat LP/GOLPP symptoms.</p>"
-            },
-            {
-              "type": "html",
-              "name": "TreatmentStatusText",
-              "html": "<p><b>IMPORTANT:</b> This only includes surgeries or procedures that act directly on the larynx. It doesn't include acupuncture, physical therapy or other therapies that do not directly modify the structure of the larynx.</p>"
+              "html": "<p>This section asks questions about any surgery or implant procedure {CmpnName} underwent to treat LP/GOLPP symptoms. This only includes surgeries or procedures that diriectly modify the structure of the larynx.</p>"
             },
             {
               "type": "radiogroup",
@@ -2186,7 +2172,7 @@
               "name": "TreatmentStatusAgePanel",
               "title": "At about what age did {CmpnName} have the first surgery or stent procedure?",
               "description": "If you can't remember exactly, it's OK to guesstimate.",
-              "visibleIf": "{TreatmentStatusDidHave} = YES",
+              "visibleIf": "{TreatmentStatusDidHave} = true",
               "elements": [
                 {
                   "type": "text",
@@ -2256,7 +2242,7 @@
                   "name": "TreatmentStatusTiebackWait",
                   "title": "How long did you have to wait for non-emergency tieback surgery for {CmpnName}:",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusTiebackEmergency} = false",
+                  "visibleIf": "{TreatmentStatusTiebackEmergency} = true",
                   "choices": [
                     {
                       "value": "UNDER_ONE",
@@ -2305,6 +2291,10 @@
                   "visibleIf": "{TreatmentStatusTiebackCount} = 'ONCE'",
                   "choices": [
                     {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
                       "value": "UNDER_2500",
                       "text": "Under $2500"
                     },
@@ -2335,6 +2325,10 @@
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusTiebackCount} = 'MORE_THAN_ONCE'",
                   "choices": [
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
                     {
                       "value": "UNDER_4000",
                       "text": "Under $4000"
@@ -2383,6 +2377,10 @@
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusTiebackComplications} = true",
                   "choices": [
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
                     {
                       "value": "UNDER_4000",
                       "text": "Under $1000"
@@ -2448,6 +2446,10 @@
                   "isRequired": true,
                   "choices": [
                     {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
                       "value": "UNDER_4000",
                       "text": "Under $4000"
                     },
@@ -2492,6 +2494,10 @@
                   "visibleIf": "{TreatmentStatusBveapComplications} = true",
                   "choices": [
                     {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
                       "value": "UNDER_1000",
                       "text": "Under $1000"
                     },
@@ -2519,10 +2525,10 @@
             {
               "type": "panel",
               "name": "TreatmentStatusStentPanel",
-              "visibleIf": "{TreatmentStatusType} contains 'STENT'",
+              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
               "elements": [
                 {
-                  "type": "radiogroup",
+                  "type": "dropdown",
                   "name": "TreatmentStatusStentType",
                   "title": "What type of stent implant did {CmpnName} receive?",
                   "isRequired": true,
@@ -2602,6 +2608,10 @@
                   "visibleIf": "{TreatmentStatusStentDidMigrate} = false || {TreatmentStatusStentReplaced} = false",
                   "choices": [
                     {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
                       "value": "UNDER_1500",
                       "text": "Under $1500"
                     },
@@ -2632,6 +2642,10 @@
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusStentDidMigrate} = true &&{TreatmentStatusStentReplaced} = true",
                   "choices": [
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
                     {
                       "value": "UNDER_1500",
                       "text": "Under $1500"
@@ -2681,6 +2695,10 @@
                   "visibleIf": "{TreatmentStatusStentComplications} = true",
                   "choices": [
                     {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
                       "value": "UNDER_1000",
                       "text": "Under $1000"
                     },
@@ -2710,7 +2728,7 @@
               "name": "TreatmentStatusArytenoidectomyPanel",
               "title": "Questions about partial arytenoidectomy surgery",
               "description": "Partial arytenoidectomy is the surgical removal of a section of one of the arytenoid (laryngeal) cartilages.",
-              "visibleIf": "{TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
               "elements": [
                 {
                   "type": "checkbox",
@@ -2795,6 +2813,10 @@
                   "isRequired": true,
                   "choices": [
                     {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
                       "value": "UNDER_2000",
                       "text": "Under $2000"
                     },
@@ -2839,6 +2861,10 @@
                   "visibleIf": "{TreatmentStatusArtyenoidectomyComplications} = true",
                   "choices": [
                     {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
                       "value": "UNDER_1000",
                       "text": "Under $1000"
                     },
@@ -2868,11 +2894,11 @@
               "name": "TreatmentStatusVentrilocordectomyPanel",
               "title": "Questions about ventrilocordectomy surgery",
               "description": "Ventrilocordectomy is the surgical removal of the vocal folds (vocal cords) that dogs use to bark.",
-              "visibleIf": "{TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
               "elements": [
                 {
                   "type": "checkbox",
-                  "name": "TreatmentStatusArtyenoidectomyReasons",
+                  "name": "TreatmentStatusVentrilocordectomyReasons",
                   "title": "Why did you choose ventrilocordectomy over other surgery types?",
                   "description": "Please choose all that apply.",
                   "isRequired": true,
@@ -2919,7 +2945,7 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "TreatmentStatusArtyenoidectomyChoice",
+                  "name": "TreatmentStatusVentrilocordectomyChoice",
                   "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
                   "isRequired": true,
                   "choices": [
@@ -2945,6 +2971,10 @@
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
                   "choices": [
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
                     {
                       "value": "UNDER_2000",
                       "text": "Under $2000"
@@ -2990,6 +3020,10 @@
                   "visibleIf": "{TreatmentStatusVentrilocordectomyComplications} = true",
                   "choices": [
                     {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
                       "value": "UNDER_1000",
                       "text": "Under $1000"
                     },
@@ -3029,11 +3063,6 @@
               "type": "html",
               "name": "TreatmentFactorsHeading",
               "html": "<h3>Factors that have influenced your LP/GOLPP decisions</h3>"
-            },
-            {
-              "type": "html",
-              "name": "TreatmentFactorsText",
-              "html": "<p>This sections asks what factors you considered when deciding what kind of treatment to pursue for {CmpnName}'s LP/GOLPP.</p>"
             },
             {
               "type": "panel",
@@ -3445,7 +3474,7 @@
             },
             {
               "type": "panel",
-              "name": "TreatmentFactorsOther",
+              "name": "TreatmentFactorsOtherPanel",
               "title": "What other considerations have factored into your decision?",
               "elements": [
                 {
@@ -3476,7 +3505,7 @@
             {
               "type": "html",
               "name": "ManagementText",
-              "html": "<p>Attempting to manage LP/GOLPP symptoms with medications is controversial. While no medication can restore movement to paralyzed laryneal tissue, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life. </p>"
+              "html": "<p>Attempting to manage LP/GOLPP symptoms with medications is controversial. There is no medication that can restore movement to paralyzed laryneal tissue. That means that even with medication, the risk of breathing crises and a potentially fatal suffocation event is very real. So while medications can't prevent a breathing emergency, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life. </p>"
             },
             {
               "type": "html",
@@ -4736,22 +4765,22 @@
       "elements": [
         {
           "type": "panel",
-          "name": "OtcProductsPanel",
+          "name": "OTCProductsPanel",
           "elements": [
             {
               "type": "html",
-              "name": "OtcProductsHeading",
+              "name": "OTCProductsHeading",
               "html": "<h3>OTC (Over-The-Counter) Products for LP/GOLPP</h3>"
             },
             {
               "type": "html",
-              "name": "OtcProductsText",
-              "html": "<p>This section asks questions about non-prescription supplements and remedies that may have a positive effect for some LP/GOLPP symptoms. The questions pertain to the main ingredient of a product. </p>"
+              "name": "OTCProductsText",
+              "html": "<p>This section asks questions about non-prescription, over-the-counter (OTC) supplements and remedies that may have a positive effect for some LP/GOLPP symptoms. The questions pertain to the main ingredient of a product. There is no OTC product that can restore movement to paralyzed laryneal tissue. There is no evidence that any OTC product will reduce the risk of breathing crises and a potentially fatal suffocation event. For questions about the effectiveness or safety of any OTC product, consult with a licensed veterinarian. </p>"
             },
             {
               "type": "html",
-              "name": "OtcProductsTextImportant",
-              "html": "<p><b>IMPORTANT</b>: This survey isn't intended to advertise for, recommend, or be used marketing vehicle for any specific product. </p>"
+              "name": "OTCProductsTextImportant",
+              "html": "<p><b>IMPORTANT</b>: This survey isn't intended to advertise for, recommend, or be used as a marketing vehicle for any specific product.</p>"
             },
             {
               "type": "panel",
@@ -4831,7 +4860,7 @@
                 },
                 {
                   "type": "dropdown",
-                  "name": "OtcProductsCost",
+                  "name": "OTCProductsCost",
                   "title": "What was the average monthly cost of these OTC products?",
                   "isRequired": true,
                   "visibleIf": "{OTCProductsDidPurchase} = YES",
@@ -4858,7 +4887,7 @@
                 },
                 {
                   "type": "rating",
-                  "name": "OtcProductsEffectiveness",
+                  "name": "OTCProductsEffectiveness",
                   "title": "Please rate the overall effectiveness of the OTC products you selected above:",
                   "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
                   "isRequired": true,
@@ -4919,7 +4948,7 @@
                 },
                 {
                   "type": "dropdown",
-                  "name": "OtcProtocolCost",
+                  "name": "OTCProtocolCost",
                   "title": "What was the average monthly cost of the blends or protocols?",
                   "isRequired": true,
                   "visibleIf": "{OTCProtocolDidPurchase} = YES",
@@ -4946,7 +4975,7 @@
                 },
                 {
                   "type": "rating",
-                  "name": "OtcProtocolEffectiveness",
+                  "name": "OTCProtocolEffectiveness",
                   "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
                   "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
                   "isRequired": true,
@@ -5110,12 +5139,13 @@
             {
               "type": "panel",
               "name": "AspirationSurgeryPanel",
-              "visibleIf": "{TreatmentStatusType} != 'STENT' && {AspirationDidHave} = YES",
+              "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = YES",
               "elements": [
                 {
                   "type": "radiogroup",
                   "name": "AspirationSurgeryPost",
                   "title": "Did {CmpnName} ever have AP after the surgery (i.e., tieback, BVEAP)?",
+                  "description": "Includes tieback, BVEAP, ventrilocordectomy, arytenoidectomy and other invasive surgery procedures.",
                   "isRequired": true,
                   "choices": [
                     {
@@ -5227,6 +5257,10 @@
                   "isRequired": true,
                   "choices": [
                     {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
                       "value": "UNDER_500",
                       "text": "Under $500"
                     },
@@ -5328,6 +5362,10 @@
                     {
                       "value": "SAME_TIME",
                       "text": "They both appeared at about the same time"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't Know"
                     }
                   ],
                   "showOtherItem": false
@@ -5514,9 +5552,13 @@
                 {
                   "type": "checkbox",
                   "name": "ConclusionSpecialConsiderations",
-                  "title": "Please describe any special considerations in place for {CmpnName} due to LP-related breathing issues:",
+                  "title": "Please describe any special considerations for {CmpnName} due to LP-related breathing issues:",
                   "isRequired": true,
                   "choices": [
+                    {
+                      "value": "NO_CONSIDERATIONS",
+                      "text": "No special considerations"
+                    },
                     {
                       "value": "EXERCISE",
                       "text": "Exercise limitations"
@@ -5712,12 +5754,7 @@
                 {
                   "type": "html",
                   "name": "ConclusionLastQuestionIntro",
-                  "html": "The last question of the survey is the most difficult. LP/GOLPP is a merciless, ruthless disease that forces us to make impossible decisions for our beloved companions.  "
-                },
-                {
-                  "type": "html",
-                  "name": "ConclusionLastQuestionRegret",
-                  "html": "LP/GOLPP is a merciless disease diseaseThe last question of the survey is the most difficult. It asks if, knowing what you know now, you would have chosen a different path or done anything differently along your LP/GOLPP journey. "
+                  "html": "LP/GOLPP is a merciless, ruthless disease that forces us to make impossible decisions for our beloved companions. The last question of this survey is speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?"
                 }
               ]
             }

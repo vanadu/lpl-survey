@@ -426,9 +426,21 @@
 }
 
 // !VA Unused as yet
-.survey-control-w-200 { width: 200px; }
+.survey-control-w-200 { 
+  width: 200px!important;
+
+}
+
 // !VA Unused as yet
-.survey-control-w-6ch { width: 6ch; } // great for 3-digit-ish fields
+.survey-control-w-150 { 
+  width: 150px!important;
+
+}
+// !VA Unused as yet
+// great for 3-digit-ish fields
+.survey-control-w-6ch { 
+  width: 6ch!important; 
+}
 
 
 // !VA Apply border-box to all control elements
@@ -442,12 +454,37 @@
 // !VA Custom Panel Layouts
 // =============================
 
+// !VA INFO ICONSThis is probably going to have to be where all the info icon links are styled because I have no idea how to get that into the formatting helper. 
 [data-name="LandingPrivacyConsentLinksPanel"] .sd-element__content.sd-panel__content {
-  background: rgba(255, 255, 0, .3) !important; //devyel
-
-
-
+  display: flex;
+  width: 80%;
+  padding: 0!important;
+  margin: 0!important;
+  .sd-row {
+    padding: 0!important;
+    margin: 0!important;
+  }
 }
+
+// !VA AGE PANELS
+[data-name="dcsdCmpnInfoAgePanel"],
+[data-name="EarlySymptomsFirstSignsPanel"],
+[data-name="PrimaryDurationFirstConsult"],
+[data-name="TreatmentStatusAgePanel"],
+
+
+ {
+  .sd-element__content.sd-panel__content {
+    .sd-row {
+      width: 250px!important;
+        padding: 0!important;
+        margin: 0!important;
+      background: rgba(255, 255, 0, .3) !important; //devyel
+    }
+  }
+}
+
+
 
 [data-name="UserInfoAboutPanel"] .sd-element__content.sd-panel__content {
   display: grid;
@@ -485,3 +522,12 @@
     margin: 0!important;
   }
 }
+
+// !VA This is to force two-column radiogroups to two columns
+[data-name="ConclusionCauseOfDeath"] .sd-selectbase.survey-two-col {
+  .sd-item.sd-radio {
+    flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
+    box-sizing: border-box;
+  }
+}
+

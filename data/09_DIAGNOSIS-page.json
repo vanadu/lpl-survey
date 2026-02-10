@@ -99,7 +99,7 @@
                 },
                 {
                   "value": "WASNT_TOLD",
-                  "text": "I wasn't told which stage {CmpnName}'s LP was in"
+                  "text": "I wasn't told what stage {CmpnName}'s LP was in"
                 }
               ],
               "showOtherItem": false
