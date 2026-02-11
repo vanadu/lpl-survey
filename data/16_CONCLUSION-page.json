@@ -236,29 +236,29 @@
             }
           ]
         },
-
+        {
+          "type": "html",
+          "name": "ConclusionLastQuestionHeading",
+          "html": "<h2>Survey Conclusion</h2>"
+        },
+        {
+          "type": "html",
+          "name": "ConclusionLastQuestionText",
+          "html": "LP/GOLPP is a merciless, ruthless disease that forces us to make impossible decisions for our beloved companions. The last question of this survey is speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?"
+        },
         {
           "type": "panel",
-          "name": "ConclusionLastQuestion",
-          "title": "Survey Conclusion",
+          "name": "ConclusionOtherPathTieback",
+          "visibleIf": "{TreatmentStatusType} contains 'TIEBACK'",
           "elements": [
             {
               "type": "html",
-              "name": "ConclusionLastQuestionIntro",
-              "html": "LP/GOLPP is a merciless, ruthless disease that forces us to make impossible decisions for our beloved companions. The last question of this survey is speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?"
+              "name": "ConclusionOtherPathTiebackPlaceholder",
+              "title": "ConclusionOtherPathTiebackPlaceholder",
+              "html": "ConclusionOtherPathTiebackPlaceholder"
             }
-            
           ]
         }
-
-
-
-
-
-
-
-
-
       ]
     }
   ]

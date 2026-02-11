@@ -120,7 +120,7 @@
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [
-    "STENT"
+    "TIEBACK"
   ],
 
   "TreatmentStatusTiebackEmergency": true,
@@ -130,6 +130,13 @@
   "TreatmentStatusTiebackMultipleCost": "5501_7000",
   "TreatmentStatusTiebackComplications": true,
   "TreatmentStatusTiebackComplicationsCost": "3001_5000",
+  "TreatmentStatusTiebackSurgeonInformLevel": 3,
+  "TreatmentStatusTiebackSatisfactionLevel": 3,
+
+
+
+
+
   "TreatmentStatusBveapReasons": [
     "AP_RISK",
     "PERMANENCE",

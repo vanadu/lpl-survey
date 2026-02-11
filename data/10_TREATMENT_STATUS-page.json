@@ -221,9 +221,6 @@
               ],
               "showOtherItem": false
             },
-
-            
-
             {
               "type": "radiogroup",
               "name": "TreatmentStatusTiebackComplications",
@@ -241,8 +238,6 @@
               ],
               "showOtherItem": false
             },
-
-
             {
               "type": "dropdown",
               "name": "TreatmentStatusTiebackComplicationsCost",
@@ -277,8 +272,37 @@
                 }
               ],
               "showOtherItem": false
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentStatusTiebackSurgeonInformLevel",
+              "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
+              "description": "1 = very unsatisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentStatusTiebackSatisfactionLevel",
+              "title": "How satisfied were you with the results of the procedure?",
+              "description": "1 = very unsatisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
             }
-
           ]
         },
 
@@ -362,8 +386,6 @@
               ],
               "showOtherItem": false
             },
-
-
             {
               "type": "dropdown",
               "name": "TreatmentStatusBveapComplicationsCost",
@@ -398,8 +420,37 @@
                 }
               ],
               "showOtherItem": false
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentStatusBVEAPSurgeonInformLevel",
+              "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
+              "description": "1 = very unsatisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentStatusBVEAPSatisfactionLevel",
+              "title": "How satisfied were you with the results of the procedure?",
+              "description": "1 = very unsatisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
             }
-
           ]
         },
 
@@ -518,8 +569,6 @@
               ],
               "showOtherItem": false
             },
-
-
             {
               "type": "dropdown",
               "name": "TreatmentStatusStentCostRepeat",
@@ -555,10 +604,6 @@
               ],
               "showOtherItem": false
             },
-
-
-
-
             {
               "type": "radiogroup",
               "name": "TreatmentStatusStentComplications",
@@ -577,8 +622,6 @@
               ],
               "showOtherItem": false
             },
-
-
             {
               "type": "dropdown",
               "name": "TreatmentStatusStentComplicationsCost",
@@ -612,9 +655,48 @@
                 }
               ],
               "showOtherItem": false
+            },
+                        {
+              "type": "rating",
+              "name": "TreatmentStatusStentSurgeonInformLevel",
+              "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure?",
+              "description": "1 = very unsatisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentStatusStentSatisfactionLevel",
+              "title": "How satisfied were you with the results of the procedure?",
+              "description": "1 = very unsatisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
             }
           ]
         },
+
+
+
+
+
+
+
+
+
 
         {
           "type": "panel",
