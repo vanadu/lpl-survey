@@ -311,7 +311,7 @@
           "type": "panel",
           "name": "TreatmentStatusBveapPanel",
           "title": "Questions about BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)",
-          "visibleIf": "{TreatmentStatusType} contains 'BVEAP'",
+          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
           "elements": [
             {
               "type": "checkbox",

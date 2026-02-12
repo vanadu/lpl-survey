@@ -116,11 +116,11 @@
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
 
-  "TreatmentStatusDidHave": true,
+  "TreatmentStatusDidHave": false,
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [
-    "TIEBACK"
+    "BVEAP"
   ],
 
   "TreatmentStatusTiebackEmergency": true,
