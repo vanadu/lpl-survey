@@ -11,7 +11,7 @@ import masterSurvey from "../../data/master-survey.json";
 import { preSubmitTransform } from "../..//helpers/preSubmitTransform";
 
 import registry from "../../helpers/registry.generated.json";
-import { attachPanelDataNameStamper } from "../../helpers/panelDataName";
+import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 import { getStyleDirectives } from "./panelClassHandlers";
 
 /**

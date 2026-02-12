@@ -6,7 +6,7 @@ import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
 import prefillData from "../../helpers/prefill.json";
 import registry from "../../helpers/registry.generated.json";
-import { attachPanelDataNameStamper } from "../../helpers/panelDataName";
+import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 import { getStyleDirectives } from "./panelClassHandlers";
 
 import LANDING from "../../data/00_LANDING-page.json";

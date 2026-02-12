@@ -26,7 +26,7 @@ import registry from "../../helpers/registry.generated.json";
 
 // !VA Import the helper for assigning the data-name attribute to panel elements
 // keep your existing import (same file), but now we’re using registry mode
-import { attachPanelDataNameStamper } from "../../helpers/panelDataName";
+import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 
 
 
