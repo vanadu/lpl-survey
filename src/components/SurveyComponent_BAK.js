@@ -52,13 +52,6 @@ const surveyJson = {
 function applyDirective(htmlElement, { target, className }) {
   if (!htmlElement || !className) return;
 
-  // ✅ NEW: question-level styles must attach to a non-replaced element
-  // so ::after can render. Do NOT crawl to input/select here.
-  if (target === "question") {
-    htmlElement.classList.add(className);
-    return;
-  }
-
   if (target === "items") {
     const node =
       htmlElement.querySelector("fieldset.sd-selectbase") ||
@@ -98,7 +91,6 @@ function applyDirective(htmlElement, { target, className }) {
 
   htmlElement.classList.add(className);
 }
-
 
 function applyDirectives(htmlElement, directives) {
   directives.forEach((d) => applyDirective(htmlElement, d));

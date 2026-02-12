@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-12T12:08:17.282Z",
+    "builtAt": "2026-02-12T13:59:14.312Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "ageInMonths",
@@ -33,6 +33,18 @@
       "collect": false,
       "path": [
         "LANDING-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "LandingTestPanel": {
+      "name": "LandingTestPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "LANDING-page",
+        "LandingPanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false

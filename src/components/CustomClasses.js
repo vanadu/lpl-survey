@@ -143,11 +143,43 @@ const CONTROL_WIDTH_600 = new Set([
 
   "DiagnosisWho",
   "PrimaryVetDiagnosticType",
-  "DiagnosisTimeAfterSymptoms",
+  "DiagnosisTimeAfterSympto",
   "TreatmentStatusAgeYears",
   "TreatmentStatusAgeMonths",
   "TreatmentStatusTiebackWait"
 ]);
+
+// !VA QUESTION SEPARATOR
+
+// Add near the other Sets
+
+// !VA Works for 
+const QUESTION_SEPARATOR_BELOW = new Set([
+  // put question names here (same .name values you already use)
+  "UserInfoContactType",
+  "CmpnInfoAnimalType", //checkbox, no workie
+  "CmpnInfoAnxiety",
+  "InfoSourcesPriorKnowledge", 
+  "InfoSourcesTypes", //checkbox, no workie
+  "IntubationHistoryWasIntubated", //no workie
+  "IntubationHistoryReason",
+  "BreathingCrisisCount", //radio, no workie
+  "BreathingCrisisCost" //dropdown, no workie
+
+
+  
+]);
+
+
+const QUESTION_SPACE_BELOW = new Set([
+  // put question names here (same .name values you already use)
+  "UserInfoContactTypeFacebook",
+  "UserInfoAgeGroup", //dropdown, no workie
+  "IntubationHistoryConcerns"
+
+]);
+
+
 
 /**
  * Returns an array of directives like:
@@ -175,6 +207,15 @@ export function getStyleDirectives(item) {
   if (CONTROL_WIDTH_600.has(name)) {
     return [{ target: "control", className: "survey-control-w-600" }];
   }
+
+
+  if (QUESTION_SEPARATOR_BELOW.has(name)) {
+    return [{ target: "question", className: "survey-q-separator-below" }];
+  }
+  if (QUESTION_SPACE_BELOW.has(name)) {
+    return [{ target: "question", className: "survey-q-space-below" }];
+  }
+
 
   return [];
 }

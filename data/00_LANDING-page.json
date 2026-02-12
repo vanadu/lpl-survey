@@ -6,43 +6,50 @@
       "name": "LandingPanel",
       "elements": [
         {
-          "type": "html",
-          "name": "foo",
-          "html": "<p class='landing-survey-test'>foo = {foo}"
-        },
-        {
-          "type": "html",
-          "name": "ageInMonths",
-          "html": "<p class='landing-survey-test'>lvngCmpnInfoAgeTotalMonths = {lvngCmpnInfoAgeTotalMonths}"
-        },
-        {
-          "type": "html",
-          "name": "ageInMonths",
-          "html": "<p class='landing-survey-test'>dcsdCmpnInfoAgeTotalMonths = {dcsdCmpnInfoAgeTotalMonths}"
-        },
-        {
-          "type": "html",
-          "name": "ageInMonths",
-          "html": "<p class='landing-survey-test'>ageInMonths = {ageInMonths}"
-        },
+          "type": "panel",
+          "name": "LandingTestPanel",
+          "elements": [
+          {
+            "type": "html",
+            "name": "foo",
+            "html": "<p class='landing-survey-test'>foo = {foo}"
+          },
+          {
+            "type": "html",
+            "name": "ageInMonths",
+            "html": "<p class='landing-survey-test'>lvngCmpnInfoAgeTotalMonths = {lvngCmpnInfoAgeTotalMonths}"
+          },
+          {
+            "type": "html",
+            "name": "ageInMonths",
+            "html": "<p class='landing-survey-test'>dcsdCmpnInfoAgeTotalMonths = {dcsdCmpnInfoAgeTotalMonths}"
+          },
+          {
+            "type": "html",
+            "name": "ageInMonths",
+            "html": "<p class='landing-survey-test'>ageInMonths = {ageInMonths}"
+          },
 
 
-        {
-          "type": "html",
-          "name": "ageInMonthsAtSymptomOnset",
-          "html": "<p class='landing-survey-test'>ageInMonthsAtSymptomOnset = {ageInMonthsAtSymptomOnset}</p>"
-        },
+          {
+            "type": "html",
+            "name": "ageInMonthsAtSymptomOnset",
+            "html": "<p class='landing-survey-test'>ageInMonthsAtSymptomOnset = {ageInMonthsAtSymptomOnset}</p>"
+          },
 
-        {
-          "type": "html",
-          "name": "ageInMonthsAtSymptomOnset",
-          "html": "<p class='landing-survey-test'>durationOfSymptomsInMonths = {durationOfSymptomsInMonths}</p>"
+          {
+            "type": "html",
+            "name": "ageInMonthsAtSymptomOnset",
+            "html": "<p class='landing-survey-test'>durationOfSymptomsInMonths = {durationOfSymptomsInMonths}</p>"
+          }
+    
+          ]
         },
 
         {
           "type": "html",
           "name": "LandingVersion",
-          "html": "<div class='landing-survey-version-container'><p class='landing-survey-version'>LarParLife.org LP/GOLPP Survey<br/>Beta 0.9/26.02.10.01</p></div>"
+          "html": "<div class='landing-survey-version-container'><p class='landing-survey-version'>LarParLife.org LP/GOLPP Survey<br/>Beta 0.9/26.02.12.01</p></div>"
         },
         {
           "type": "html",
