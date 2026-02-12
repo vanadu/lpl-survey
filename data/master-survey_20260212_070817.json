@@ -2,6 +2,12 @@
   "calculatedValues": [
     {
       "type": "calculatedvalue",
+      "name": "foo",
+      "expression": "iif({TreatmentStatusType} contains 'TIEBACK', 'The color is TIEBACK', iif({TreatmentStatusType} contains 'BVEAP', 'The color is BVEAP', iif({TreatmentStatusType} contains 'STENT', 'The color is STENT', iif({TreatmentStatusType} contains 'ARYTENOIDECTOMY', 'The color is ARYTENOIDECTOMY', iif({TreatmentStatusType} contains 'VENTRILOCORDECTOMY', 'The color is VENTRILOCORDECTOMY', ''))",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
       "name": "lvngCmpnInfoAgeYearsAsMonths",
       "expression": "{lvngCmpnInfoAgeYears} * 12",
       "includeIntoResult": true
@@ -41,43 +47,43 @@
     {
       "type": "calculatedvalue",
       "name": "observeTense",
-      "expression": "iif({LifeStatus} = 'true', 'did you observe', 'have you observed')",
+      "expression": "iif({LifeStatus} = true, 'did you observe', 'have you observed')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
       "name": "doTense",
-      "expression": "iif({LifeStatus} = 'true', 'did', 'does')",
+      "expression": "iif({LifeStatus} = true, 'did', 'does')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
       "name": "doFirstPersonSingularInitialCap",
-      "expression": "iif({LifeStatus} = 'true', 'Did', 'Do')",
+      "expression": "iif({LifeStatus} = true, 'Did', 'Do')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
       "name": "genderSubjectPronoun",
-      "expression": "iif({LifeStatus} = 'true', 'she', 'he')",
+      "expression": "iif({CmpnInfoGender} = true, 'she', 'he')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
       "name": "genderObjectPronoun",
-      "expression": "iif({LifeStatus} = 'true', 'her', 'his')",
+      "expression": "iif({CmpnInfoGender} = true, 'her', 'his')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
       "name": "stateAdjective",
-      "expression": "iif({LifeStatus} = 'true', 'last', 'current')",
+      "expression": "iif({LifeStatus} = true, 'last', 'current')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
       "name": "blobText",
-      "expression": "iif({LifeStatus} = 'true', 'towards the end of {genderObjectPronoun} life', 'in {genderObjectPronoun} current state of health')",
+      "expression": "iif({LifeStatus} = true, 'towards the end of {genderObjectPronoun} life', 'in {genderObjectPronoun} current state of health')",
       "includeIntoResult": true
     }
   ],
@@ -91,6 +97,11 @@
           "type": "panel",
           "name": "LandingPanel",
           "elements": [
+            {
+              "type": "html",
+              "name": "foo",
+              "html": "<p class='landing-survey-test'>foo = {foo}"
+            },
             {
               "type": "html",
               "name": "ageInMonths",
@@ -5588,258 +5599,6 @@
             },
             {
               "type": "panel",
-              "name": "ConclusionOtherPathTieback",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
-              "elements": [
-                {
-                  "type": "checkbox",
-                  "name": "ConclusionOtherPathTieback",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "TIEBACK_SAME",
-                      "text": "I would pursue the same surgery path as with {CmpnName}"
-                    },
-                    {
-                      "value": "TIEBACK_NO",
-                      "text": "I would not do tieback surgery"
-                    },
-                    {
-                      "value": "TIEBACK_SOONER",
-                      "text": "I would do tieback surgery sooner"
-                    },
-                    {
-                      "value": "TIEBACK_LATER",
-                      "text": "I would do tieback surgery later"
-                    },
-                    {
-                      "value": "TIEBACK_ALTERNATIVES",
-                      "text": "I would actively pursure alternatives to tieback surgery, i.e., BVEAP or laryngeal stent"
-                    }
-                  ],
-                  "showOtherItem": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "ConclusionOtherPathBVEAP",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
-              "elements": [
-                {
-                  "type": "checkbox",
-                  "name": "ConclusionOtherPathBVEAP",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "BVEAP_SAME",
-                      "text": "I would pursue the same surgery path as with {CmpnName}"
-                    },
-                    {
-                      "value": "BVEAP_NO",
-                      "text": "I would not do BVEAP surgery"
-                    },
-                    {
-                      "value": "BVEAP_SOONER",
-                      "text": "I would do BVEAP surgery sooner"
-                    },
-                    {
-                      "value": "BVEAP_LATER",
-                      "text": "I would do BVEAP surgery later"
-                    },
-                    {
-                      "value": "BVEAP_ALTERNATIVES",
-                      "text": "I would actively pursure alternatives to BVEAP surgery, i.e., tieback or laryngeal stent"
-                    }
-                  ],
-                  "showOtherItem": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "ConclusionOtherPathStent",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
-              "elements": [
-                {
-                  "type": "checkbox",
-                  "name": "ConclusionOtherPathStent",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "STENT_SAME",
-                      "text": "I would pursue the same treatment path as with {CmpnName}"
-                    },
-                    {
-                      "value": "STENT_NO",
-                      "text": "I would not do the laryngeal stent implant"
-                    },
-                    {
-                      "value": "STENT_SOONER",
-                      "text": "I would do laryngeal stent implant surgery sooner"
-                    },
-                    {
-                      "value": "STENT_LATER",
-                      "text": "I would do laryngeal stent implant surgery later"
-                    },
-                    {
-                      "value": "STENT_ALTERNATIVES",
-                      "text": "I would actively pursure alternatives to the laryngeal stent implant, i.e., tieback or BVEAP"
-                    }
-                  ],
-                  "showOtherItem": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "ConclusionOtherPathArytenoidectomy",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
-              "elements": [
-                {
-                  "type": "checkbox",
-                  "name": "ConclusionOtherPathArytenoidectomy",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "ARYTENOIDECTOMY_SAME",
-                      "text": "I would pursue the same surgery path as with {CmpnName}"
-                    },
-                    {
-                      "value": "ARYTENOIDECTOMY_NO",
-                      "text": "I would not do the arytenoidectomy surgery"
-                    },
-                    {
-                      "value": "ARYTENOIDECTOMY_SOONER",
-                      "text": "I would do the arytenoidectomy surgery sooner"
-                    },
-                    {
-                      "value": "ARYTENOIDECTOMY_LATER",
-                      "text": "I would do the arytenoidectomy surgery later"
-                    },
-                    {
-                      "value": "ARYTENOIDECTOMY_ALTERNATIVES",
-                      "text": "I would actively pursure alternatives to arytenoidectomy surgery, i.e., tieback, BVEAP, or laryngeal stent"
-                    }
-                  ],
-                  "showOtherItem": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "ConclusionOtherPathArytenoidectomy",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
-              "elements": [
-                {
-                  "type": "checkbox",
-                  "name": "ConclusionOtherPathArytenoidectomy",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "ARYTENOIDECTOMY_SAME",
-                      "text": "I would pursue the same surgery path as with {CmpnName}"
-                    },
-                    {
-                      "value": "ARYTENOIDECTOMY_NO",
-                      "text": "I would not do the arytenoidectomy surgery"
-                    },
-                    {
-                      "value": "ARYTENOIDECTOMY_SOONER",
-                      "text": "I would do the arytenoidectomy surgery sooner"
-                    },
-                    {
-                      "value": "ARYTENOIDECTOMY_LATER",
-                      "text": "I would do the arytenoidectomy surgery later"
-                    },
-                    {
-                      "value": "ARYTENOIDECTOMY_ALTERNATIVES",
-                      "text": "I would actively pursure alternatives to arytenoidectomy surgery, i.e., tieback, BVEAP, or laryngeal stent"
-                    }
-                  ],
-                  "showOtherItem": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "ConclusionOtherPathVentrilocordectomy",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
-              "elements": [
-                {
-                  "type": "checkbox",
-                  "name": "ConclusionOtherPathVentrilocordectomy",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "VENTRILOCORDECTOMY_SAME",
-                      "text": "I would pursue the same surgery path as with {CmpnName}"
-                    },
-                    {
-                      "value": "VENTRILOCORDECTOMY_NO",
-                      "text": "I would not do the ventrilocordectomy surgery"
-                    },
-                    {
-                      "value": "VENTRILOCORDECTOMY_SOONER",
-                      "text": "I would do the ventrilocordectomy surgery sooner"
-                    },
-                    {
-                      "value": "VENTRILOCORDECTOMY_LATER",
-                      "text": "I would do the ventrilocordectomy surgery later"
-                    },
-                    {
-                      "value": "VENTRILOCORDECTOMY_ALTERNATIVES",
-                      "text": "I would actively pursure alternatives to ventrilocordectomy surgery, i.e., tieback, BVEAP, or laryngeal stent"
-                    }
-                  ],
-                  "showOtherItem": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "ConclusionOtherPathNoSurgery",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusDidHave} = false",
-              "elements": [
-                {
-                  "type": "checkbox",
-                  "name": "ConclusionOtherPathVentrilocordectomy",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "VENTRILOCORDECTOMY_SAME",
-                      "text": "I would pursue the same surgery path as with {CmpnName}"
-                    },
-                    {
-                      "value": "VENTRILOCORDECTOMY_NO",
-                      "text": "I would not do the ventrilocordectomy surgery"
-                    },
-                    {
-                      "value": "VENTRILOCORDECTOMY_SOONER",
-                      "text": "I would do the ventrilocordectomy surgery sooner"
-                    },
-                    {
-                      "value": "VENTRILOCORDECTOMY_LATER",
-                      "text": "I would do the ventrilocordectomy surgery later"
-                    },
-                    {
-                      "value": "VENTRILOCORDECTOMY_ALTERNATIVES",
-                      "text": "I would actively pursure alternatives to ventrilocordectomy surgery, i.e., tieback, BVEAP, or laryngeal stent"
-                    }
-                  ],
-                  "showOtherItem": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
               "name": "ConclusionsPanelLifeStatusTrue",
               "visibleIf": "{LifeStatus} = true",
               "elements": [
@@ -5864,13 +5623,13 @@
                   "type": "html",
                   "name": "Conclusion",
                   "html": "<p>The last survey section asks questions about the current state of {CmpnName}'s LP/GOLPP. By comparing your answers here to answers you provided earlier, we hope to get a picture of how {genderObjectPronoun} condition changed over time and what factors may have played a role in the LP/GOLPP progression</p>"
+                },
+                {
+                  "type": "html",
+                  "name": "ConclusionIntro",
+                  "html": "<p><b>IMPORTANT:</b> Please answer the questions about {CmpnName} in his current state of health:</p>"
                 }
               ]
-            },
-            {
-              "type": "html",
-              "name": "ConclusionIntro",
-              "html": "<p><b>NOTE:</b> The questions in this final section pertain to {CmpnName} {blobText}:</p>"
             },
             {
               "type": "panel",
@@ -5903,7 +5662,7 @@
                       "text": "Other behavior restrictions i.e., anxiety, excitement"
                     }
                   ],
-                  "showOtherItem": true
+                  "showOtherItem": false
                 },
                 {
                   "type": "checkbox",
@@ -6019,7 +5778,7 @@
                   ],
                   "choicesOrder": "none",
                   "otherText": "Other (max. 250 characters)",
-                  "showOtherItem": true
+                  "showOtherItem": false
                 }
               ]
             },
@@ -6081,7 +5840,183 @@
             {
               "type": "html",
               "name": "ConclusionLastQuestionText",
-              "html": "LP/GOLPP is a merciless, ruthless disease that forces us to make impossible decisions for our beloved companions. The last question of this survey is speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?"
+              "html": "<p>LP/GOLPP is a merciless, ruthless disease that forces us to make impossible decisions for our beloved companions. The last question of this survey is speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?</p>"
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionOtherPathTieback",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionOtherPathTieback",
+                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "TIEBACK_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "TIEBACK_NO",
+                      "text": "I would not do tieback surgery again"
+                    },
+                    {
+                      "value": "TIEBACK_SOONER",
+                      "text": "I would do tieback surgery sooner than I did with {CmpnName}"
+                    },
+                    {
+                      "value": "TIEBACK_LATER",
+                      "text": "I would wait to do tieback surgery longer than I did with {CmpnName}"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionOtherPathBVEAP",
+                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would if anything you differently?",
+                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "BVEAP_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "BVEAP_NO",
+                      "text": "I would not do BVEAP surgery again"
+                    },
+                    {
+                      "value": "BVEAP_SOONER",
+                      "text": "I would do BVEAP surgery sooner than I did with {CmpnName}"
+                    },
+                    {
+                      "value": "BVEAP_LATER",
+                      "text": "I would wait to do BVEAP surgery longer than I did with {CmpnName}"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionOtherPathStent",
+                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+                  "isRequired": true,
+                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
+                  "choices": [
+                    {
+                      "value": "STENT_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "STENT_NO",
+                      "text": "I would not do the laryngeal stent implant again"
+                    },
+                    {
+                      "value": "STENT_SOONER",
+                      "text": "I would do laryngeal stent implant surgery sooner than I did with {CmpnName}"
+                    },
+                    {
+                      "value": "STENT_LATER",
+                      "text": "I would wait to do a laryngeal stent implant longer than I did with {CmpnName}"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionOtherPathArytenoidectomy",
+                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ARYTENOIDECTOMY_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "ARYTENOIDECTOMY_NO",
+                      "text": "I would not do the arytenoidectomy surgery again"
+                    },
+                    {
+                      "value": "ARYTENOIDECTOMY_SOONER",
+                      "text": "I would do the arytenoidectomy surgery sooner than I did with {CmpnName}"
+                    },
+                    {
+                      "value": "ARYTENOIDECTOMY_LATER",
+                      "text": "I would wait to do the arytenoidectomy longer than I did with {CmpnName}"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionOtherPathVentrilocordectomy",
+                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "VENTRILOCORDECTOMY_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "VENTRILOCORDECTOMY_NO",
+                      "text": "I would not do the ventrilocordectomy surgery again"
+                    },
+                    {
+                      "value": "VENTRILOCORDECTOMY_SOONER",
+                      "text": "I would do the ventrilocordectomy surgery sooner than I did with {CmpnName}"
+                    },
+                    {
+                      "value": "VENTRILOCORDECTOMY_LATER",
+                      "text": "I would wait to do the ventrilocordectomy longer than I did with {CmpnName}"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ConclusionOtherPathNoSurgery",
+                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName}, what if anything would you differently?",
+                  "isRequired": true,
+                  "visibleIf": "{TreatmentStatusDidHave} = false",
+                  "choices": [
+                    {
+                      "value": "NO_SURGERY_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "NO_SURGERY_WOULD_DO",
+                      "text": "I would pursue tieback, laryngeal stent, or other veterinary procedure"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionStentAlternative",
+                  "title": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
+                  "visibleIf": "{TreatmentStatusType} notcontains 'STENT'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
             }
           ]
         }

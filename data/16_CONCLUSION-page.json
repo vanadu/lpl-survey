@@ -42,16 +42,14 @@
               "type": "html",
               "name": "Conclusion",
               "html": "<p>The last survey section asks questions about the current state of {CmpnName}'s LP/GOLPP. By comparing your answers here to answers you provided earlier, we hope to get a picture of how {genderObjectPronoun} condition changed over time and what factors may have played a role in the LP/GOLPP progression</p>"
+            },
+            {
+              "type": "html",
+              "name": "ConclusionIntro",
+              "html": "<p><b>IMPORTANT:</b> Please answer the questions about {CmpnName} in his current state of health:</p>"
             }
-    
           ]
         },
-        {
-          "type": "html",
-          "name": "ConclusionIntro",
-          "html": "<p><b>NOTE:</b> The questions in this final section pertain to {CmpnName} {blobText}:</p>"
-        },  
-
         {
           "type": "panel",
           "name": "ConclusionDetailsPanel",

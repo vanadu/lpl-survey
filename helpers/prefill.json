@@ -11,7 +11,7 @@
   "UserInfoContactOK": true,
 
   "CmpnName": "Ralph",
-  "LifeStatus": false,
+  "LifeStatus": true,
 
   "CmpnInfoAnimalType": "CANINE",
   "CmpnInfoBreed": "Boxer",
@@ -121,7 +121,7 @@
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [
-    "VENTRILOCORDECTOMY"
+    "BVEAP"
   ],
 
   "TreatmentStatusTiebackEmergency": true,

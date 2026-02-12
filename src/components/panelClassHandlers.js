@@ -1,4 +1,4 @@
-// helpers/panelClassHandlers.js
+// components/panelClassHandlers.js
 // Minimal + working: exports getStyleDirectives() using two layout lists for "items" questions (checkbox/radiogroup).
 
 const ITEMS_TWO_COL = new Set([

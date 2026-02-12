@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-12T08:21:18.782Z",
+    "builtAt": "2026-02-12T12:08:17.282Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "ageInMonths",
@@ -3700,109 +3700,6 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "ConclusionOtherPathTieback": {
-      "name": "ConclusionOtherPathTieback",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionPanel",
-        "ConclusionOtherPathTieback"
-      ],
-      "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ConclusionOtherPathBVEAP": {
-      "name": "ConclusionOtherPathBVEAP",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionPanel",
-        "ConclusionOtherPathBVEAP"
-      ],
-      "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would if anything you differently?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ConclusionOtherPathStent": {
-      "name": "ConclusionOtherPathStent",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionPanel",
-        "ConclusionOtherPathStent"
-      ],
-      "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ConclusionOtherPathArytenoidectomy": {
-      "name": "ConclusionOtherPathArytenoidectomy",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionPanel",
-        "ConclusionOtherPathArytenoidectomy"
-      ],
-      "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ConclusionOtherPathVentrilocordectomy": {
-      "name": "ConclusionOtherPathVentrilocordectomy",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionPanel",
-        "ConclusionOtherPathVentrilocordectomy"
-      ],
-      "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ConclusionOtherPathNoSurgeryPanel": {
-      "name": "ConclusionOtherPathNoSurgeryPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionPanel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": true,
-      "visibleIf": "{TreatmentStatusDidHave} = false"
-    },
-    "ConclusionOtherPathNoSurgery": {
-      "name": "ConclusionOtherPathNoSurgery",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionPanel",
-        "ConclusionOtherPathNoSurgeryPanel"
-      ],
-      "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName}, what if anything would you differently?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
     "ConclusionsPanelLifeStatusTrue": {
       "name": "ConclusionsPanelLifeStatusTrue",
       "type": "panel",
@@ -3939,6 +3836,118 @@
       "hasTitle": true,
       "title": "What was the ultimate reason why {CmpnName} crossed over the Rainbow Bridge?",
       "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherPathTieback": {
+      "name": "ConclusionOtherPathTieback",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathTieback"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathBVEAP": {
+      "name": "ConclusionOtherPathBVEAP",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathTieback"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would if anything you differently?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathStent": {
+      "name": "ConclusionOtherPathStent",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathTieback"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathArytenoidectomy": {
+      "name": "ConclusionOtherPathArytenoidectomy",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathTieback"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathVentrilocordectomy": {
+      "name": "ConclusionOtherPathVentrilocordectomy",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathTieback"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathNoSurgery": {
+      "name": "ConclusionOtherPathNoSurgery",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathTieback"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName}, what if anything would you differently?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = false",
+      "isRequired": true
+    },
+    "ConclusionStentAlternative": {
+      "name": "ConclusionStentAlternative",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathTieback"
+      ],
+      "hasTitle": true,
+      "title": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusType} notcontains 'STENT'",
       "isRequired": true
     }
   }

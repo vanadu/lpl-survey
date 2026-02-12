@@ -1,7 +1,11 @@
 [
+
+
   {
-  "name": "foo",
-  "expression": "iif({TreatmentStatusType} contains 'BVEAP', 'The color is BVEAP', iif({TreatmentStatusType} = 'TIEBACK', 'The color is TIEBACK', ''))"
+    "type": "calculatedvalue",
+    "name": "foo",
+    "expression": "iif({TreatmentStatusType} contains 'TIEBACK', 'The color is TIEBACK', iif({TreatmentStatusType} contains 'BVEAP', 'The color is BVEAP', iif({TreatmentStatusType} contains 'STENT', 'The color is STENT', iif({TreatmentStatusType} contains 'ARYTENOIDECTOMY', 'The color is ARYTENOIDECTOMY', iif({TreatmentStatusType} contains 'VENTRILOCORDECTOMY', 'The color is VENTRILOCORDECTOMY', ''))",
+    "includeIntoResult": true
   },
 
   {
