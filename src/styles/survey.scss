@@ -395,18 +395,19 @@
 .survey-q-separator-below::after {
   content: "";
   display: block;
-  width: 100px;
+  width: 600px;
   height: 1px;
-  margin: .5rem auto 0; // centers horizontally
-  background: rgba(0, 0, 0, 0.2);
+  margin: .75rem auto 0; // centers horizontally
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .survey-q-space-below::after {
   content: "";
   display: block;
-  width: 100px;
-  height: 20px;
-  margin: .5rem auto 0; // centers horizontally
+  width: 600px;
+  height: 1px;
+  margin: .75rem auto 0; // centers horizontally
+  // background: rgba(0, 0, 0, 0.05);
   background: rgba(255, 0, 0, .3) !important; //devred
 }
 
@@ -493,12 +494,12 @@
 
 
 // !VA Testing...
-[data-name="ManagementPrescriptionCost"]::after {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 1px;
-  margin: .5rem auto 0; // centers horizontally
-  background: rgba(0, 0, 0, 0.2);
-}
+// [data-name="ManagementPrescriptionCost"]::after {
+//   content: "";
+//   display: block;
+//   width: 100px;
+//   height: 1px;
+//   margin: .5rem auto 0; // centers horizontally
+//   background: rgba(0, 0, 0, 0.2);
+// }
 

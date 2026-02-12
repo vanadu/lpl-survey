@@ -159,11 +159,18 @@ const CONTROL_WIDTH_600 = new Set([
 // !VA Works for 
 const QUESTION_SEPARATOR_BELOW = new Set([
   // put question names here (same .name values you already use)
+
   "UserInfoContactType",
-  "CmpnInfoAnimalType", //checkbox, no workie
-  "CmpnInfoAnxiety",
+  // "CmpnInfoAnimalType", //checkbox, no workie
+
+
+
   "InfoSourcesPriorKnowledge", 
-  "InfoSourcesTypes", //checkbox, no workie
+
+  "InfoSourcesTypes",
+  "InfoSourcesHardToUnderstand",
+
+
   "IntubationHistoryWasIntubated", //no workie
   "IntubationHistoryReason",
   "BreathingCrisisCount", //radio, no workie
@@ -183,13 +190,18 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
   const QUESTION_SPACE_BELOW = new Set([
     // put question names here (same .name values you already use)
+    "CmpnName",
     "UserInfoContactTypeFacebook",
-    "UserInfoAgeGroup", //dropdown, no workie
+    "UserInfoAgeGroup", 
+    "CmpnInfoBreed",
+    "CmpnInfoGender",
+
+    "CmpnInfoAnxiety",
+
+
     "IntubationHistoryConcerns"
 
   ]);
-
-
 
 
   if (ITEMS_TWO_COL.has(name)) {
