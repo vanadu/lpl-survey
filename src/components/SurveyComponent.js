@@ -56,6 +56,8 @@ function applyDirective(htmlElement, { target, className }) {
   // so ::after can render. Do NOT crawl to input/select here.
   if (target === "question") {
     htmlElement.classList.add(className);
+    console.log('htmlElement :>> ');
+    console.log(htmlElement);
     return;
   }
 
@@ -66,6 +68,10 @@ function applyDirective(htmlElement, { target, className }) {
       htmlElement;
     node.classList.add(className);
     console.log("ITEMS");
+    console.log('htmlElement :>> ');
+    console.log(htmlElement);
+    console.log('className :>> ');
+    console.log(className);
     return;
   }
 

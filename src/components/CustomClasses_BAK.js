@@ -1,8 +1,5 @@
-export function getStyleDirectives(item) {
-  const name = item?.name;
-  if (!name) return [];
-
-  const directives = [];
+// components/panelClassHandlers.js
+// Minimal + working: exports getStyleDirectives() using two layout lists for "items" questions (checkbox/radiogroup).
 
 const ITEMS_TWO_COL = new Set([
 
@@ -178,43 +175,59 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "TreatmentFactorsOther",
   "ManagementPrescriptionType",
   "ManagementPrescriptionCost"
+
+
+
   
-  ]);
-
-  const QUESTION_SPACE_BELOW = new Set([
-    // put question names here (same .name values you already use)
-    "UserInfoContactTypeFacebook",
-    "UserInfoAgeGroup", //dropdown, no workie
-    "IntubationHistoryConcerns"
-
-  ]);
+]);
 
 
+const QUESTION_SPACE_BELOW = new Set([
+  // put question names here (same .name values you already use)
+  "UserInfoContactTypeFacebook",
+  "UserInfoAgeGroup", //dropdown, no workie
+  "IntubationHistoryConcerns"
 
+]);
+
+
+
+/**
+ * Returns an array of directives like:
+ *   [{ target: "items", className: "survey-two-col" }]
+ */
+export function getStyleDirectives(item) {
+  const name = item?.name;
+
+  if (!name) return [];
 
   if (ITEMS_TWO_COL.has(name)) {
-    directives.push({ target: "items", className: "survey-two-col" });
+    return [{ target: "items", className: "survey-two-col" }];
   }
+
   if (ITEMS_THREE_COL.has(name)) {
-    directives.push({ target: "items", className: "survey-three-col" });
+    return [{ target: "items", className: "survey-three-col" }];
   }
+
 
   if (CONTROL_WIDTH_150.has(name)) {
-    directives.push({ target: "control", className: "survey-control-w-150" });
+    return [{ target: "control", className: "survey-control-w-150" }];
   }
   if (CONTROL_WIDTH_300.has(name)) {
-    directives.push({ target: "control", className: "survey-control-w-300" });
+    return [{ target: "control", className: "survey-control-w-300" }];
   }
   if (CONTROL_WIDTH_600.has(name)) {
-    directives.push({ target: "control", className: "survey-control-w-600" });
+    return [{ target: "control", className: "survey-control-w-600" }];
   }
-
+  
+  
   if (QUESTION_SEPARATOR_BELOW.has(name)) {
-    directives.push({ target: "question", className: "survey-q-separator-below" });
+    return [{ target: "question", className: "survey-q-separator-below" }];
+
   }
   if (QUESTION_SPACE_BELOW.has(name)) {
-    directives.push({ target: "question", className: "survey-q-space-below" });
+    return [{ target: "question", className: "survey-q-space-below" }];
   }
 
-  return directives;
+  return [];
 }
