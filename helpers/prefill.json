@@ -11,11 +11,11 @@
   "UserInfoContactOK": true,
 
   "CmpnName": "Ralph",
-  "LifeStatus": true,
+  "LifeStatus": false,
 
   "CmpnInfoAnimalType": "CANINE",
   "CmpnInfoBreed": "Boxer",
-  "CmpnInfoGender": true,
+  "CmpnInfoGender": false,
   "lvngCmpnInfoAgeYears": 12,
   "lvngCmpnInfoAgeMonths": 8,
   "dcsdCmpnInfoAgeYears": 14,
@@ -51,6 +51,7 @@
     "PANTING",
     "GAGGING"
   ],
+
 
 
   "BreathingCrisisDidHave": "YES",
@@ -120,7 +121,7 @@
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [
-    "BVEAP"
+    "VENTRILOCORDECTOMY"
   ],
 
   "TreatmentStatusTiebackEmergency": true,

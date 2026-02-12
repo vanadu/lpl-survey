@@ -7,6 +7,11 @@
       "elements": [
         {
           "type": "html",
+          "name": "foo",
+          "html": "<p class='landing-survey-test'>foo = {foo}"
+        },
+        {
+          "type": "html",
           "name": "ageInMonths",
           "html": "<p class='landing-survey-test'>lvngCmpnInfoAgeTotalMonths = {lvngCmpnInfoAgeTotalMonths}"
         },

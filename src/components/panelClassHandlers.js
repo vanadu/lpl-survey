@@ -71,6 +71,9 @@ const ITEMS_THREE_COL = new Set([
   "AspirationSurgeryPost",
   "AspirationStentPost",
   "NeuropathySymptomsDoesHave",
+
+  "ConclusionStentAlternative"
+
 ]);
 
 // !VA CONTROL Elements

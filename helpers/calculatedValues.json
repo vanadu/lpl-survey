@@ -1,5 +1,10 @@
 [
   {
+  "name": "foo",
+  "expression": "iif({TreatmentStatusType} contains 'BVEAP', 'The color is BVEAP', iif({TreatmentStatusType} = 'TIEBACK', 'The color is TIEBACK', ''))"
+  },
+
+  {
     "type": "calculatedvalue",
     "name": "lvngCmpnInfoAgeYearsAsMonths",
     "expression": "{lvngCmpnInfoAgeYears} * 12",
@@ -40,43 +45,43 @@
   {
     "type": "calculatedvalue",
     "name": "observeTense",
-    "expression": "iif({LifeStatus} = 'true', 'did you observe', 'have you observed')",
+    "expression": "iif({LifeStatus} = true, 'did you observe', 'have you observed')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
     "name": "doTense",
-    "expression": "iif({LifeStatus} = 'true', 'did', 'does')",
+    "expression": "iif({LifeStatus} = true, 'did', 'does')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
     "name": "doFirstPersonSingularInitialCap",
-    "expression": "iif({LifeStatus} = 'true', 'Did', 'Do')",
+    "expression": "iif({LifeStatus} = true, 'Did', 'Do')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
     "name": "genderSubjectPronoun",
-    "expression": "iif({LifeStatus} = 'true', 'she', 'he')",
+    "expression": "iif({CmpnInfoGender} = true, 'she', 'he')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
     "name": "genderObjectPronoun",
-    "expression": "iif({LifeStatus} = 'true', 'her', 'his')",
+    "expression": "iif({CmpnInfoGender} = true, 'her', 'his')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
     "name": "stateAdjective",
-    "expression": "iif({LifeStatus} = 'true', 'last', 'current')",
+    "expression": "iif({LifeStatus} = true, 'last', 'current')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
     "name": "blobText",
-    "expression": "iif({LifeStatus} = 'true', 'towards the end of {genderObjectPronoun} life', 'in {genderObjectPronoun} current state of health')",
+    "expression": "iif({LifeStatus} = true, 'towards the end of {genderObjectPronoun} life', 'in {genderObjectPronoun} current state of health')",
     "includeIntoResult": true
   }
 ]

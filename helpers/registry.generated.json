@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-12T05:59:47.928Z",
+    "builtAt": "2026-02-12T08:21:18.782Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "ageInMonths",
@@ -12,6 +12,7 @@
       "doFirstPersonSingularInitialCap",
       "doTense",
       "durationOfSymptomsInMonths",
+      "foo",
       "genderObjectPronoun",
       "genderSubjectPronoun",
       "lvngCmpnInfoAgeTotalMonths",
@@ -3710,7 +3711,7 @@
         "ConclusionOtherPathTieback"
       ],
       "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -3725,7 +3726,7 @@
         "ConclusionOtherPathBVEAP"
       ],
       "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would if anything you differently?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -3740,7 +3741,7 @@
         "ConclusionOtherPathStent"
       ],
       "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -3755,22 +3756,9 @@
         "ConclusionOtherPathArytenoidectomy"
       ],
       "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
       "hasVisibleIf": false,
       "isRequired": true
-    },
-    "ConclusionOtherPathNoSurgery": {
-      "name": "ConclusionOtherPathNoSurgery",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionPanel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": true,
-      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusDidHave} = false"
     },
     "ConclusionOtherPathVentrilocordectomy": {
       "name": "ConclusionOtherPathVentrilocordectomy",
@@ -3780,10 +3768,38 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathNoSurgery"
+        "ConclusionOtherPathVentrilocordectomy"
       ],
       "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherPathNoSurgeryPanel": {
+      "name": "ConclusionOtherPathNoSurgeryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = false"
+    },
+    "ConclusionOtherPathNoSurgery": {
+      "name": "ConclusionOtherPathNoSurgery",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathNoSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName}, what if anything would you differently?",
       "hasVisibleIf": false,
       "isRequired": true
     },
