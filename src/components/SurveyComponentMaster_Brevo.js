@@ -6,7 +6,7 @@ import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
 // VA! Import the classes to add to the SurveyJS elements here:
-import { addCustomClasses } from "./panelClassHandlers";
+import { addCustomClasses } from "./CustomClasses";
 
 // !VA Prefill the survey question responses with this data
 // !VA IMPORTANT! I don't know how to implement this in the master survey component. Ask the AI bot!

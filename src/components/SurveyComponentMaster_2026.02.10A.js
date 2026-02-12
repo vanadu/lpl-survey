@@ -8,7 +8,7 @@ import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
 // VA! Import the classes to add to the SurveyJS elements here:
-import { addCustomClasses } from "./panelClassHandlers";
+import { addCustomClasses } from "./CustomClasses";
 
 // !VA Prefill the survey question responses with this data
 import prefillData from '../../helpers/prefill.json';
@@ -31,7 +31,7 @@ import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 
 
 // !VA  getStyleDirectives returns a list of all the style assignments for elements that have custom styling. 
-import { getStyleDirectives } from "./panelClassHandlers";
+import { getStyleDirectives } from "./CustomClasses";
 
 function applyDirective(htmlElement, { target, className }) {
   if (!htmlElement || !className) return;

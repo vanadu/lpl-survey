@@ -4,7 +4,7 @@ import React, { useState, useCallback, useEffect } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
-import { addCustomClasses } from "./panelClassHandlers";
+// import { addCustomClasses } from "./panelClassHandlers";
 import prefillData from "../../helpers/prefill.json";
 
 // add this import near the top with the other helper imports
@@ -16,7 +16,7 @@ import registry from "../../helpers/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 
 // !VA  getStyleDirectives returns a list of all the style assignments for elements that have custom styling. 
-import { getStyleDirectives } from "./panelClassHandlers";
+import { getStyleDirectives } from "./CustomClasses";
 
 
 import LANDING from "../../data/00_LANDING-page.json";

@@ -7,7 +7,7 @@ import { SharpLight } from "survey-core/themes";
 import prefillData from "../../helpers/prefill.json";
 import registry from "../../helpers/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
-import { getStyleDirectives } from "./panelClassHandlers";
+import { getStyleDirectives } from "./CustomClasses";
 
 import LANDING from "../../data/00_LANDING-page.json";
 import USER_INFO from "../../data/01_USER_INFO-page.json";

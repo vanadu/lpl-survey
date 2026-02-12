@@ -12,7 +12,7 @@ import { preSubmitTransform } from "../..//helpers/preSubmitTransform";
 
 import registry from "../../helpers/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
-import { getStyleDirectives } from "./panelClassHandlers";
+import { getStyleDirectives } from "./CustomClasses";
 
 /**
  * ============================================================================
