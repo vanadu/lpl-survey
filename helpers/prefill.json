@@ -116,7 +116,7 @@
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
 
-  "TreatmentStatusDidHave": false,
+  "TreatmentStatusDidHave": true,
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [
@@ -130,11 +130,9 @@
   "TreatmentStatusTiebackMultipleCost": "5501_7000",
   "TreatmentStatusTiebackComplications": true,
   "TreatmentStatusTiebackComplicationsCost": "3001_5000",
-  "TreatmentStatusTiebackSurgeonInformLevel": 3,
-  "TreatmentStatusTiebackSatisfactionLevel": 3,
 
-
-
+  "TreatmentStatusSurgeonInformLevel": 4,
+  "TreatmentStatusTreatmentSatisfactionLevel": 2,
 
 
   "TreatmentStatusBveapReasons": [

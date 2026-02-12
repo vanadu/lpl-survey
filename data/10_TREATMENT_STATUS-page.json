@@ -272,36 +272,6 @@
                 }
               ],
               "showOtherItem": false
-            },
-            {
-              "type": "rating",
-              "name": "TreatmentStatusTiebackSurgeonInformLevel",
-              "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
-              "description": "1 = very unsatisfied, 5 = very satisfied",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
-            },
-            {
-              "type": "rating",
-              "name": "TreatmentStatusTiebackSatisfactionLevel",
-              "title": "How satisfied were you with the results of the procedure?",
-              "description": "1 = very unsatisfied, 5 = very satisfied",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
             }
           ]
         },
@@ -420,37 +390,8 @@
                 }
               ],
               "showOtherItem": false
-            },
-            {
-              "type": "rating",
-              "name": "TreatmentStatusBVEAPSurgeonInformLevel",
-              "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
-              "description": "1 = very unsatisfied, 5 = very satisfied",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
-            },
-            {
-              "type": "rating",
-              "name": "TreatmentStatusBVEAPSatisfactionLevel",
-              "title": "How satisfied were you with the results of the procedure?",
-              "description": "1 = very unsatisfied, 5 = very satisfied",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
             }
+
           ]
         },
 
@@ -655,46 +596,9 @@
                 }
               ],
               "showOtherItem": false
-            },
-                        {
-              "type": "rating",
-              "name": "TreatmentStatusStentSurgeonInformLevel",
-              "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure?",
-              "description": "1 = very unsatisfied, 5 = very satisfied",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
-            },
-            {
-              "type": "rating",
-              "name": "TreatmentStatusStentSatisfactionLevel",
-              "title": "How satisfied were you with the results of the procedure?",
-              "description": "1 = very unsatisfied, 5 = very satisfied",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
             }
           ]
         },
-
-
-
-
-
-
-
 
 
 
@@ -1029,9 +933,46 @@
               "showOtherItem": false
             }
           ]
+        },
+
+        {
+          "type": "panel",
+          "name": "TreatmentStatusRatingPanel",
+          "visibleIf": "{TreatmentStatusDidHave} = true",
+          "elements": [
+
+            {
+              "type": "rating",
+              "name": "TreatmentStatusSurgeonInformLevel",
+              "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
+              "description": "1 = very unsatisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentStatusTreatmentSatisfactionLevel",
+              "title": "How satisfied were you with the results of the procedure?",
+              "description": "1 = very unsatisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
         }
-
-
 
       ]
     }

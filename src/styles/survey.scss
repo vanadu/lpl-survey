@@ -361,7 +361,7 @@
   padding: 0;
   margin: 0;
   min-width: 0;
-  background: rgba(0, 0, 255, .3) !important; //devblue
+  // background: rgba(0, 0, 255, .3) !important; //devblue
 }
 
 // !VA Two column checkboxes
@@ -375,7 +375,7 @@
   // !VA Width of the boolean radios
   flex: 0 0 calc(30% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
   box-sizing: border-box;
-  background: rgba(255, 255, 0, .3) !important; //devyel
+  // background: rgba(255, 255, 0, .3) !important; //devyel
 }
 
 // Apply to fieldset.sd-selectbase so titles/headers are unaffected
@@ -390,7 +390,7 @@
   padding: 0;
   margin: 0;
   min-width: 0;
-  background: rgba(255, 0, 0, .3) !important; //devred
+  // background: rgba(255, 0, 0, .3) !important; //devred
   // !VA Creates a 480px element with three equal button widths
   .sd-radio {
     max-width: 160px!important;
@@ -406,7 +406,7 @@
 // !VA NOT USED
 .survey-fieldset-w-60pct { 
   width: 60%; 
-  background: rgba(0, 128, 0, .3) !important; //devgreen
+  // background: rgba(0, 128, 0, .3) !important; //devgreen
 }
 // !VA 
 .survey-fieldset-w-300 { width: 300px; }
@@ -416,13 +416,13 @@
 // !VA Medium width text boxes and dropdown, i.e. CmpnName, UserInfoAgeGroup. 
 .survey-control-w-300 { 
   width: 300px !important; 
-  background: rgba(0, 128, 0, .3) !important; //devgreen
+  // background: rgba(0, 128, 0, .3) !important; //devgreen
 }
 
 // !VA Wide text boxes and dropdowns
 .survey-control-w-600 { 
   width: 600px !important; 
-  background: rgba(255, 0, 255, .3) !important; //devmag
+  // background: rgba(255, 0, 255, .3) !important; //devmag
 }
 
 // !VA Unused as yet
@@ -479,7 +479,7 @@
       width: 250px!important;
         padding: 0!important;
         margin: 0!important;
-      background: rgba(255, 255, 0, .3) !important; //devyel
+      // background: rgba(255, 255, 0, .3) !important; //devyel
     }
   }
 }
