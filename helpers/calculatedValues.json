@@ -1,0 +1,82 @@
+[
+  {
+    "type": "calculatedvalue",
+    "name": "lvngCmpnInfoAgeYearsAsMonths",
+    "expression": "{lvngCmpnInfoAgeYears} * 12",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "lvngCmpnInfoAgeTotalMonths",
+    "expression": "{lvngCmpnInfoAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "dcsdCmpnInfoAgeYearsAsMonths",
+    "expression": "{dcsdCmpnInfoAgeYears} * 12",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "dcsdCmpnInfoAgeTotalMonths",
+    "expression": "{dcsdCmpnInfoAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "ageInMonths",
+    "expression": "iif({LifeStatus} = true, {lvngCmpnInfoAgeTotalMonths}, {dcsdCmpnInfoAgeTotalMonths})",
+    "includeIntoResult": true
+  },
+  {
+    "name": "ageInMonthsAtSymptomOnset",
+    "expression": "{EarlySymptomsAgeYears} * 12 + {EarlySymptomsAgeMonths}"
+  },
+  {
+    "name": "durationOfSymptomsInMonths",
+    "expression": "{ageInMonths} - {ageInMonthsAtSymptomOnset}"
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "observeTense",
+    "expression": "iif({LifeStatus} = 'true', 'did you observe', 'have you observed')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "doTense",
+    "expression": "iif({LifeStatus} = 'true', 'did', 'does')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "doFirstPersonSingularInitialCap",
+    "expression": "iif({LifeStatus} = 'true', 'Did', 'Do')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "genderSubjectPronoun",
+    "expression": "iif({LifeStatus} = 'true', 'she', 'he')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "genderObjectPronoun",
+    "expression": "iif({LifeStatus} = 'true', 'her', 'his')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "stateAdjective",
+    "expression": "iif({LifeStatus} = 'true', 'last', 'current')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "blobText",
+    "expression": "iif({LifeStatus} = 'true', 'towards the end of {genderObjectPronoun} life', 'in {genderObjectPronoun} current state of health')",
+    "includeIntoResult": true
+  }
+]

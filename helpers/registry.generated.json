@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-10T15:45:27.029Z",
+    "builtAt": "2026-02-12T05:59:47.928Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "ageInMonths",
@@ -245,7 +245,7 @@
         "UserInfoAboutPanel"
       ],
       "hasTitle": true,
-      "title": "What state, province or region do you live in (optional)",
+      "title": "State, province or region (optional):",
       "hasVisibleIf": false,
       "isRequired": false
     },
@@ -1809,7 +1809,7 @@
       "hasTitle": true,
       "title": "Questions about BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)",
       "hasVisibleIf": true,
-      "visibleIf": "{TreatmentStatusType} contains 'BVEAP'"
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'"
     },
     "TreatmentStatusBveapReasons": {
       "name": "TreatmentStatusBveapReasons",
@@ -2235,6 +2235,49 @@
       "visibleIf": "{TreatmentStatusVentrilocordectomyComplications} = true",
       "isRequired": true
     },
+    "TreatmentStatusRatingPanel": {
+      "name": "TreatmentStatusRatingPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true"
+    },
+    "TreatmentStatusSurgeonInformLevel": {
+      "name": "TreatmentStatusSurgeonInformLevel",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusPanel",
+        "TreatmentStatusRatingPanel"
+      ],
+      "hasTitle": true,
+      "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusTreatmentSatisfactionLevel": {
+      "name": "TreatmentStatusTreatmentSatisfactionLevel",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusPanel",
+        "TreatmentStatusRatingPanel"
+      ],
+      "hasTitle": true,
+      "title": "How satisfied were you with the results of the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "TreatmentFactorsPanel": {
       "name": "TreatmentFactorsPanel",
       "type": "panel",
@@ -2611,7 +2654,7 @@
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
-      "title": "About how much do you spend monthly on {CmpnName}'s prescriptions?",
+      "title": "Average monthly cost of {CmpnName}'s prescriptions:",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -2997,21 +3040,6 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ManagementNonPrescriptionCost": {
-      "name": "ManagementNonPrescriptionCost",
-      "type": "dropdown",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "MANAGEMENT-page",
-        "ManagementPanel"
-      ],
-      "hasTitle": true,
-      "title": "About how much do you spend monthly on {CmpnName}'s acupuncture or other therapies?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescription} = YES",
-      "isRequired": true
-    },
     "ManagementNonPrescriptionTypePanel": {
       "name": "ManagementNonPrescriptionTypePanel",
       "type": "panel",
@@ -3038,6 +3066,22 @@
       "hasTitle": true,
       "title": "What therapies or treatments did {CmpnName} receive?",
       "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ManagementNonPrescriptionCost": {
+      "name": "ManagementNonPrescriptionCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementPanel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementNonPrescription} = YES",
       "isRequired": true
     },
     "ManagementNonPrescriptionAcupunctureRatingBreathing": {
@@ -3655,6 +3699,94 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "ConclusionOtherPathTieback": {
+      "name": "ConclusionOtherPathTieback",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathTieback"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherPathBVEAP": {
+      "name": "ConclusionOtherPathBVEAP",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathBVEAP"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherPathStent": {
+      "name": "ConclusionOtherPathStent",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathStent"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherPathArytenoidectomy": {
+      "name": "ConclusionOtherPathArytenoidectomy",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathArytenoidectomy"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherPathNoSurgery": {
+      "name": "ConclusionOtherPathNoSurgery",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusDidHave} = false"
+    },
+    "ConclusionOtherPathVentrilocordectomy": {
+      "name": "ConclusionOtherPathVentrilocordectomy",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathNoSurgery"
+      ],
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what would you differently?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "ConclusionsPanelLifeStatusTrue": {
       "name": "ConclusionsPanelLifeStatusTrue",
       "type": "panel",
@@ -3792,19 +3924,6 @@
       "title": "What was the ultimate reason why {CmpnName} crossed over the Rainbow Bridge?",
       "hasVisibleIf": false,
       "isRequired": true
-    },
-    "ConclusionLastQuestion": {
-      "name": "ConclusionLastQuestion",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionPanel"
-      ],
-      "hasTitle": true,
-      "title": "Survey Conclusion",
-      "hasVisibleIf": false
     }
   }
 }
