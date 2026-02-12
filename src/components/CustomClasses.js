@@ -15,7 +15,7 @@ const ITEMS_TWO_COL = new Set([
   "BreathingCrisisProvidedSubstanceType",
   "EarlySymptomsType",
   "EarlyOtherConditionsType",
-  "PrimaryDurationVisitsNumberPanel",
+
   "PrimaryDurationCost",
   "PrimaryDurationChangedVetsReason",
   "PrimaryVetInfoDetails",
@@ -75,7 +75,9 @@ const ITEMS_THREE_COL = new Set([
   "AspirationStentPost",
   "NeuropathySymptomsDoesHave",
 
-  "ConclusionStentAlternative"
+  "ConclusionStentAlternative",
+
+    "PrimaryDurationVisitsNumberPanel",
 
 ]);
 
@@ -144,6 +146,9 @@ const CONTROL_WIDTH_300 = new Set([
 
 const CONTROL_WIDTH_600 = new Set([
 
+  "PrimaryDurationVisitsNumber",
+
+
   "DiagnosisWho",
   "PrimaryVetDiagnosticType",
   "DiagnosisTimeAfterSympto",
@@ -162,26 +167,98 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
   "UserInfoContactType",
   // "CmpnInfoAnimalType", //checkbox, no workie
-
-
+  "UserInfoAgeGroup",
+  "UserInfoContactTypeFacebook",
+  "CmpnInfoAnimalType",
+  "CmpnInfoDemeanor",
+  "CmpnInfoAnxiety",
 
   "InfoSourcesPriorKnowledge", 
 
   "InfoSourcesTypes",
   "InfoSourcesHardToUnderstand",
+  "InfoSourcesContradictory",
 
 
   "IntubationHistoryWasIntubated", //no workie
   "IntubationHistoryReason",
   "BreathingCrisisCount", //radio, no workie
   "BreathingCrisisCost", //dropdown, no workie,
+
+  "BreathingCrisisAdvice",
+  "BreathingCrisisAdviceType",
+  "BreathingCrisisProvidedSubstance",
+  "BreathingCrisisProvidedSubstanceType",
+
+  "EarlySymptomsType",
+  "EarlySymtomsSeverity",
+  "EarlySymptomsHindEndWeakness",
+  "EarlyOtherConditions",
+
+  "PrimaryDurationVisitsNumber",
+
+  "PrimaryDurationChangedVets",
+  "PrimaryDurationChangedVetsReason",
+
+  "PrimaryVetReflux",
+  "PrimaryVetRefluxMeds",
+
+  "PrimaryVetConfidence",
+
+  "DiagnosisWho",
+  "DiagnosticType",
+  "DiagnosisStage",
+  "DiagnosisTimeAfterSymptoms",
+  "DiagnosisCost",
+
+  "TreatmentStatusTiebackEmergency",
+  "TreatmentStatusTiebackWait",
+  "TreatmentStatusTiebackCount",
+  "TreatmentStatusTiebackOnceCost",
+  "TreatmentStatusTiebackMultipleCost",
+  "TreatmentStatusTiebackComplications",
+
+  "TreatmentStatusBveapReasons",
+  "TreatmentStatusBveapCost",
+
+  "TreatmentStatusStentType",
+  "TreatmentStatusStentDidMigrate",
+  "TreatmentStatusStentReplaced",
+  "TreatmentStatusStentCostOnce",
+  "TreatmentStatusStentCostRepeat",
+
+  "TreatmentStatusArytenoidectomyReasons",
+  "TreatmentStatusArytenoidectomyLaser",
+  "TreatmentStatusArytenoidectomyDidExplain",
+  "TreatmentStatusArytenoidectomyChoice",
+  "TreatmentStatusArytenoidectomyCost",
+
+  "TreatmentStatusVentrilocordectomyReasons",
+  "TreatmentStatusVentrilocordectomyDidExplain",
+  "TreatmentStatusVentrilocordectomyChoice",
+  "TreatmentStatusVentrilocordectomyDidExplain",
+  "TreatmentStatusVentrilocordectomyCost",
+
+
+
+
+  "TreatmentStatusSurgeonInformLevel",
+
+
+
+
   "TreatmentFactorsCost",
-  "TreatmentFactorsCostComplications",
+
   "TreatmentFactorsStageLP",
-  "TreatmentFactorsStageNeuropathy",
+
   "TreatmentFactorsRisks",
-  "TreatmentFactorsRisksComplications",
+
   "TreatmentFactorsAge",
+  "TreatmentFactorsGeneralHealth",
+
+  "TreatmentFactorsCircumstancesAccess",
+
+
   "TreatmentFactorsOther",
   "ManagementPrescriptionType",
   "ManagementPrescriptionCost"
@@ -191,15 +268,21 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   const QUESTION_SPACE_BELOW = new Set([
     // put question names here (same .name values you already use)
     "CmpnName",
-    "UserInfoContactTypeFacebook",
-    "UserInfoAgeGroup", 
+ 
     "CmpnInfoBreed",
     "CmpnInfoGender",
 
-    "CmpnInfoAnxiety",
+    "IntubationHistoryConcerns",
 
+    "PrimaryVetSurgery",
+    "PrimaryVetInfoDidGive",
 
-    "IntubationHistoryConcerns"
+    "TreatmentStatusBveapComplications",
+
+    "TreatmentStatusArtyenoidectomyComplicationsCost",
+
+    "TreatmentStatusVentrilocordectomyComplications",
+
 
   ]);
 

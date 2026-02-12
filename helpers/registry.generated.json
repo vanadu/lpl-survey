@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-12T15:41:34.691Z",
+    "builtAt": "2026-02-12T20:24:48.308Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "ageInMonths",
@@ -935,7 +935,7 @@
         "EarlySymptomsPanel"
       ],
       "hasTitle": true,
-      "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of was LP?",
+      "title": "About how old was {CmpnName} (in years and months) when you first noticed symptoms of LP/GOLPP?",
       "hasVisibleIf": false
     },
     "EarlySymptomsAgeYears": {
@@ -1514,8 +1514,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "PrimaryVetDiagnosticType": {
-      "name": "PrimaryVetDiagnosticType",
+    "DiagnosticType": {
+      "name": "DiagnosticType",
       "type": "dropdown",
       "role": "question",
       "collect": true,

@@ -1263,7 +1263,7 @@
             {
               "type": "panel",
               "name": "EarlySymptomsFirstSignsPanel",
-              "title": "About how old was {CmpnName} (in years and months) when you first noticed symptoms of LP/GOLPP?",
+              "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of was LP?",
               "elements": [
                 {
                   "type": "text",
@@ -1633,7 +1633,7 @@
                     },
                     {
                       "value": "BAD_TESTS",
-                      "text": "The previous vet ordered tests that I didn't think were relevant."
+                      "text": "The previous vet ordered tests that I didn't think were relevant to {CmpnName}'s symptoms."
                     },
                     {
                       "value": "MISDIAGNOSED",
@@ -2011,7 +2011,7 @@
                 },
                 {
                   "type": "dropdown",
-                  "name": "DiagnosticType",
+                  "name": "PrimaryVetDiagnosticType",
                   "title": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
                   "isRequired": true,
                   "choices": [
@@ -5662,10 +5662,6 @@
                     {
                       "value": "TRAVEL",
                       "text": "Travel restrictions"
-                    },
-                    {
-                      "value": "EXCITEMENT",
-                      "text": "Other behavior restrictions i.e., anxiety, excitement"
                     },
                     {
                       "value": "EXCITEMENT",

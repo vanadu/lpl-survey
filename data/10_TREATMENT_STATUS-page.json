@@ -611,7 +611,7 @@
           "elements": [
             {
               "type": "checkbox",
-              "name": "TreatmentStatusArtyenoidectomyReasons",
+              "name": "TreatmentStatusArytenoidectomyReasons",
               "title": "Why did you choose partial arytenoidectomy over other surgery types?",
               "description": "Please choose all that apply.",
               "isRequired": true,
@@ -637,14 +637,14 @@
             },
             {
               "type": "boolean",
-              "name": "TreatmentStatusArtyenoidectomyLaser",
+              "name": "TreatmentStatusArytenoidectomyLaser",
               "title": "Was the partial arytenoidectomy performed with a laser?",
               "description": "This technique is called 'ablation'.",
               "isRequired": true
             },
             {
               "type": "radiogroup",
-              "name": "TreatmentStatusArtyenoidectomyDidExplain",
+              "name": "TreatmentStatusArytenoidectomyDidExplain",
               "title": "Did the surgeon explain the pros and cons of this surgery type vs standard tieback surgery?",
               "isRequired": true,
               "choices": [
@@ -665,7 +665,7 @@
             },
             {
               "type": "radiogroup",
-              "name": "TreatmentStatusArtyenoidectomyChoice",
+              "name": "TreatmentStatusArytenoidectomyChoice",
               "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
               "isRequired": true,
               "choices": [
@@ -686,7 +686,7 @@
             },
             {
               "type": "dropdown",
-              "name": "TreatmentStatusArtyenoidectomyCost",
+              "name": "TreatmentStatusArytenoidectomyCost",
               "title": "Approximate cost of the partial arytenoidectomy (not including post-op complications):",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
@@ -718,7 +718,7 @@
 
             {
               "type": "radiogroup",
-              "name": "TreatmentStatusArtyenoidectomyComplications",
+              "name": "TreatmentStatusArytenoidectomyComplications",
               "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
               "isRequired": true,
               "choices": [
@@ -735,11 +735,11 @@
             },
             {
               "type": "dropdown",
-              "name": "TreatmentStatusArtyenoidectomyComplicationsCost",
+              "name": "TreatmentStatusArytenoidectomyComplicationsCost",
               "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
-              "visibleIf": "{TreatmentStatusArtyenoidectomyComplications} = true",
+              "visibleIf": "{TreatmentStatusArytenoidectomyComplications} = true",
               "choices": [
                 {
                   "value": "NOT_SAY",

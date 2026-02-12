@@ -56,8 +56,8 @@ function applyDirective(htmlElement, { target, className }) {
   // so ::after can render. Do NOT crawl to input/select here.
   if (target === "question") {
     htmlElement.classList.add(className);
-    console.log('htmlElement :>> ');
-    console.log(htmlElement);
+    // console.log('htmlElement :>> ');
+    // console.log(htmlElement);
     return;
   }
 

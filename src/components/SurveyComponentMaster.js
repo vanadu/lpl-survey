@@ -57,7 +57,15 @@ import { getStyleDirectives } from "./CustomClasses";
 function applyDirective(htmlElement, { target, className }) {
   if (!htmlElement || !className) return;
 
-  // "items" = the container holding multiple choice items (radio/checkbox groups)
+  // ✅ NEW: question-level styles must attach to a non-replaced element
+  // so ::after can render. Do NOT crawl to input/select here.
+  if (target === "question") {
+    htmlElement.classList.add(className);
+    // console.log('htmlElement :>> ');
+    // console.log(htmlElement);
+    return;
+  }
+
   if (target === "items") {
     const node =
       htmlElement.querySelector("fieldset.sd-selectbase") ||
@@ -65,26 +73,25 @@ function applyDirective(htmlElement, { target, className }) {
       htmlElement;
     node.classList.add(className);
     console.log("ITEMS");
+    console.log('htmlElement :>> ');
+    console.log(htmlElement);
+    console.log('className :>> ');
+    console.log(className);
     return;
   }
 
-  // "control" = the wrapper around the actual input/select/textarea
-  // We prefer applying classes to SurveyJS's wrapper nodes so CSS hooks are stable.
   if (target === "control") {
-    // Special-case dropdowns because SurveyJS nests dropdowns differently.
     const dropdownWrapper = htmlElement.querySelector(".sd-input.sd-dropdown");
     console.log("dropdownWrapper", dropdownWrapper);
     if (dropdownWrapper) {
       dropdownWrapper.classList.add(className);
 
-      // Defensive cleanup: ensure the class lands on the wrapper, not inner nodes.
       dropdownWrapper
         .querySelectorAll(`.${className}`)
         .forEach((n) => n !== dropdownWrapper && n.classList.remove(className));
       return;
     }
 
-    // Generic input controls: find the actual input, then locate its nearest wrapper.
     const raw = htmlElement.querySelector("input, textarea, select");
     const wrapper =
       raw?.closest(".sd-input") ||
@@ -93,7 +100,6 @@ function applyDirective(htmlElement, { target, className }) {
 
     wrapper.classList.add(className);
 
-    // Defensive cleanup: ensure class doesn't end up duplicated on children.
     wrapper
       .querySelectorAll(`.${className}`)
       .forEach((n) => n !== wrapper && n.classList.remove(className));
@@ -101,7 +107,6 @@ function applyDirective(htmlElement, { target, className }) {
     return;
   }
 
-  // Default behavior: apply class to the root element SurveyJS gave us.
   htmlElement.classList.add(className);
 }
 

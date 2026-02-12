@@ -31,8 +31,6 @@
           ]
         },
 
-
-
         {
           "type": "panel",
           "name": "ConclusionsPanelLifeStatusFalse",
@@ -77,6 +75,10 @@
                 {
                   "value": "TRAVEL",
                   "text": "Travel restrictions"
+                },
+                {
+                  "value": "EXCITEMENT",
+                  "text": "Other behavior restrictions i.e., anxiety, excitement"
                 },
                 {
                   "value": "EXCITEMENT",

@@ -168,7 +168,7 @@
                 },
                 {
                   "value": "BAD_TESTS",
-                  "text": "The previous vet ordered tests that I didn't think were relevant to {CmpnName}'s symptoms."
+                  "text": "The previous vet ordered tests that I didn't think were relevant."
                 },
                 {
                   "value": "MISDIAGNOSED",

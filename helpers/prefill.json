@@ -52,8 +52,6 @@
     "GAGGING"
   ],
 
-
-
   "BreathingCrisisDidHave": "YES",
   "BreathingCrisisCount": "TWO",
   "BreathingCrisisCost": "1000_3000",
@@ -111,9 +109,9 @@
   "PrimaryVetSatisfaction": 3,
 
   "DiagnosisWho": "SOFT_TISSUE",
-  "PrimaryVetDiagnosticType": "SCOPE",
-  "DiagnosisTimeAfterSymptoms": "ONE_TO_THREE",
+  "DiagnosticType": "SCOPE",
   "DiagnosisStage": "UNILATERAL",
+  "DiagnosisTimeAfterSymptoms": "ONE_TO_THREE",
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
 
@@ -151,16 +149,16 @@
   "TreatmentStatusStentCostRepeat": "3001_4000",
   "TreatmentStatusStentComplications": true,
   "TreatmentStatusStentComplicationsCost": "1001_2000",
-  "TreatmentStatusArtyenoidectomyReasons": [
+  "TreatmentStatusArytenoidectomyReasons": [
     "COST",
     "AVAILABILITY"
   ],
-  "TreatmentStatusArtyenoidectomyLaser": true,
-  "TreatmentStatusArtyenoidectomyDidExplain": "YES",
-  "TreatmentStatusArtyenoidectomyChoice": "YES",
-  "TreatmentStatusArtyenoidectomyCost": "UNDER_2000",
-  "TreatmentStatusArtyenoidectomyComplications": true,
-  "TreatmentStatusArtyenoidectomyComplicationsCost": "UNDER_1000",
+  "TreatmentStatusArytenoidectomyLaser": true,
+  "TreatmentStatusArytenoidectomyDidExplain": "YES",
+  "TreatmentStatusArytenoidectomyChoice": "YES",
+  "TreatmentStatusArytenoidectomyCost": "UNDER_2000",
+  "TreatmentStatusArytenoidectomyComplications": true,
+  "TreatmentStatusArytenoidectomyComplicationsCost": "UNDER_1000",
   "TreatmentStatusVentrilocordectomyReasons": [
     "COST",
     "AVAILABILITY"

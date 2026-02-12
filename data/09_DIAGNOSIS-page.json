@@ -52,7 +52,7 @@
             },
             {
               "type": "dropdown",
-              "name": "PrimaryVetDiagnosticType",
+              "name": "DiagnosticType",
               "title": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
               "isRequired": true,
               "choices": [

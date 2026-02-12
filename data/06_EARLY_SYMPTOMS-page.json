@@ -18,7 +18,7 @@
         {
           "type": "panel",
           "name": "EarlySymptomsFirstSignsPanel",
-          "title": "About how old was {CmpnName} (in years and months) when you first noticed signs of was LP?",
+          "title": "About how old was {CmpnName} (in years and months) when you first noticed symptoms of LP/GOLPP?",
           "elements": [
             {
               "type": "text",
