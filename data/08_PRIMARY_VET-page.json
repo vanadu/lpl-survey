@@ -119,7 +119,7 @@
             {
               "type": "radiogroup",
               "name": "PrimaryVetDiagnosis",
-              "title": "Did your primary vet discuss LP/GOLPP {CmpnName}'s as a possible cause of {CmpnName}'s symptoms? ",
+              "title": "Did your primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms? ",
               "isRequired": true,
               "choices": [
                 {

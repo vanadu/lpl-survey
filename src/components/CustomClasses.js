@@ -184,25 +184,22 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "InfoSourcesContradictory",
 
 
-  "IntubationHistoryWasIntubated", //no workie
   "IntubationHistoryReason",
-  "BreathingCrisisCount", //radio, no workie
-  "BreathingCrisisCost", //dropdown, no workie,
+  "BreathingCrisisCount", 
+  "BreathingCrisisCost", 
 
   "BreathingCrisisAdvice",
   "BreathingCrisisAdviceType",
-  "BreathingCrisisProvidedSubstance",
   "BreathingCrisisProvidedSubstanceType",
 
   "EarlySymptomsType",
   "EarlySymtomsSeverity",
   "EarlySymptomsHindEndWeakness",
-  "EarlyOtherConditions",
 
   "PrimaryDurationVisitsNumber",
 
-  "PrimaryDurationChangedVets",
-  "PrimaryDurationChangedVetsReason",
+
+
 
   "PrimaryVetReflux",
   "PrimaryVetRefluxMeds",
@@ -284,10 +281,8 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "ManagementNonPrescriptionColdLaserRatingBreathing",
   "ManagementNonPrescriptionChiroRatingBreathing",
 
-  "OTCProductsDidPurchase",
   "OTCProductsType",
   "OTCProductsCost",
-  "OTCProtocolDidPurchase",
   "OTCProtocolCost",
 
   "AspirationCount",
@@ -319,6 +314,8 @@ const QUESTION_SEPARATOR_BELOW = new Set([
     "CmpnInfoGender",
 
     "IntubationHistoryConcerns",
+
+    "PrimaryDurationChangedVets",
 
     "PrimaryVetSurgery",
     "PrimaryVetInfoDidGive",

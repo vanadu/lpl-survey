@@ -17,7 +17,7 @@
         },
         {
           "type": "panel",
-          "name": "IntubationHistorySubpanel",
+          "name": "IntubationHistoryPanel",
           "elements": [
             {
               "type": "radiogroup",
@@ -37,7 +37,15 @@
                   "text": "Not sure"
                 }
               ]
-            },
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "IntubationHistoryDetails",
+          "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
+          "elements": [
             {
               "type": "checkbox",
               "name": "IntubationHistoryReason",
@@ -66,15 +74,14 @@
                 ],
                 "choicesOrder": "none",
                 "otherText": "Other",
-                "showOtherItem": true,
-                "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'"
+                "showOtherItem": true
+
             },
             {
               "type": "boolean",
               "name": "IntubationHistoryConcerns",
               "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
-              "isRequired": true,
-              "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'"
+              "isRequired": true
             },
             {
               "type": "checkbox",

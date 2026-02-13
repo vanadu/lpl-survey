@@ -1,91 +1,95 @@
 [
-
-
   {
     "type": "calculatedvalue",
-    "name": "foo",
-    "expression": "iif({TreatmentStatusType} contains 'TIEBACK', 'The color is TIEBACK', iif({TreatmentStatusType} contains 'BVEAP', 'The color is BVEAP', iif({TreatmentStatusType} contains 'STENT', 'The color is STENT', iif({TreatmentStatusType} contains 'ARYTENOIDECTOMY', 'The color is ARYTENOIDECTOMY', iif({TreatmentStatusType} contains 'VENTRILOCORDECTOMY', 'The color is VENTRILOCORDECTOMY', ''))",
+    "name": "cvTreatmentType",
+    "expression": "iif({TreatmentStatusType} contains 'TIEBACK', 'Treatment: TIEBACK', iif({TreatmentStatusType} contains 'BVEAP', 'Treatment: BVEAP', iif({TreatmentStatusType} contains 'STENT', 'Treatment: STENT', iif({TreatmentStatusType} contains 'ARYTENOIDECTOMY', 'Treatment: ARYTENOIDECTOMY', iif({TreatmentStatusType} contains 'VENTRILOCORDECTOMY', 'Treatment: VENTRILOCORDECTOMY', ''))",
     "includeIntoResult": true
   },
 
   {
     "type": "calculatedvalue",
-    "name": "lvngCmpnInfoAgeYearsAsMonths",
+    "name": "cvLvngCmpnInfoAgeYearsAsMonths",
     "expression": "{lvngCmpnInfoAgeYears} * 12",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "lvngCmpnInfoAgeTotalMonths",
+    "name": "cvLvngCmpnInfoAgeTotalMonths",
     "expression": "{lvngCmpnInfoAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "dcsdCmpnInfoAgeYearsAsMonths",
+    "name": "cvDcsdCmpnInfoAgeYearsAsMonths",
     "expression": "{dcsdCmpnInfoAgeYears} * 12",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "dcsdCmpnInfoAgeTotalMonths",
+    "name": "cvDcsdCmpnInfoAgeTotalMonths",
     "expression": "{dcsdCmpnInfoAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "ageInMonths",
+    "name": "cvAgeInMonths",
     "expression": "iif({LifeStatus} = true, {lvngCmpnInfoAgeTotalMonths}, {dcsdCmpnInfoAgeTotalMonths})",
     "includeIntoResult": true
   },
   {
-    "name": "ageInMonthsAtSymptomOnset",
+    "name": "cvAgeInMonthsAtSymptomOnset",
     "expression": "{EarlySymptomsAgeYears} * 12 + {EarlySymptomsAgeMonths}"
   },
   {
-    "name": "durationOfSymptomsInMonths",
+    "name": "cvDurationOfSymptomsInMonths",
     "expression": "{ageInMonths} - {ageInMonthsAtSymptomOnset}"
   },
   {
     "type": "calculatedvalue",
-    "name": "observeTense",
+    "name": "cvObserveFirstPersonPast",
     "expression": "iif({LifeStatus} = true, 'did you observe', 'have you observed')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "doTense",
+    "name": "cvDoThirdPersonSingular",
     "expression": "iif({LifeStatus} = true, 'did', 'does')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "doFirstPersonSingularInitialCap",
+    "name": "cvDoFirstPersonSingularInitialCap",
     "expression": "iif({LifeStatus} = true, 'Did', 'Do')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "genderSubjectPronoun",
+    "name": "cvGenderSubjectPronoun",
     "expression": "iif({CmpnInfoGender} = true, 'she', 'he')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "genderObjectPronoun",
+    "name": "cvGenderObjectPronoun",
     "expression": "iif({CmpnInfoGender} = true, 'her', 'his')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "stateAdjective",
+    "name": "cvStateAdjective",
     "expression": "iif({LifeStatus} = true, 'last', 'current')",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "blobText",
+    "name": "cvEndOfLife",
     "expression": "iif({LifeStatus} = true, 'towards the end of {genderObjectPronoun} life', 'in {genderObjectPronoun} current state of health')",
+    "includeIntoResult": true
+  },
+    {
+    "type": "calculatedvalue",
+    "name": "cvThatThis",
+    "expression": "iif({LifeStatus} = true, 'that', 'this')",
     "includeIntoResult": true
   }
 ]

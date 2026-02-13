@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-13T04:11:56.772Z",
+    "builtAt": "2026-02-13T11:21:26.001Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "ageInMonths",
@@ -16,6 +16,7 @@
       "genderObjectPronoun",
       "genderSubjectPronoun",
       "lvngCmpnInfoAgeTotalMonths",
+      "lvngCmpnInfoAgeYearsAsMonths",
       "lvngCmpnInfoAgeYearsAsMonths",
       "observeTense",
       "stateAdjective"
@@ -681,17 +682,6 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "INTUBATION_HISTORY-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
-    "IntubationHistorySubpanel": {
-      "name": "IntubationHistorySubpanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
         "INTUBATION_HISTORY-page",
         "IntubationHistoryPanel"
       ],
@@ -706,11 +696,24 @@
       "path": [
         "INTUBATION_HISTORY-page",
         "IntubationHistoryPanel",
-        "IntubationHistorySubpanel"
+        "IntubationHistoryPanel"
       ],
       "hasTitle": true,
       "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
       "hasVisibleIf": false
+    },
+    "IntubationHistoryDetails": {
+      "name": "IntubationHistoryDetails",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "INTUBATION_HISTORY-page",
+        "IntubationHistoryPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'"
     },
     "IntubationHistoryReason": {
       "name": "IntubationHistoryReason",
@@ -720,12 +723,11 @@
       "path": [
         "INTUBATION_HISTORY-page",
         "IntubationHistoryPanel",
-        "IntubationHistorySubpanel"
+        "IntubationHistoryDetails"
       ],
       "hasTitle": true,
       "title": "For what reason or reasons was {CmpnName} intubated prior to the first LP symptoms appearing?",
-      "hasVisibleIf": true,
-      "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'"
+      "hasVisibleIf": false
     },
     "IntubationHistoryConcerns": {
       "name": "IntubationHistoryConcerns",
@@ -735,12 +737,11 @@
       "path": [
         "INTUBATION_HISTORY-page",
         "IntubationHistoryPanel",
-        "IntubationHistorySubpanel"
+        "IntubationHistoryDetails"
       ],
       "hasTitle": true,
       "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
-      "hasVisibleIf": true,
-      "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
+      "hasVisibleIf": false,
       "isRequired": true
     },
     "IntubationHistorySymptoms": {
@@ -751,7 +752,7 @@
       "path": [
         "INTUBATION_HISTORY-page",
         "IntubationHistoryPanel",
-        "IntubationHistorySubpanel"
+        "IntubationHistoryDetails"
       ],
       "hasTitle": true,
       "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
@@ -1344,7 +1345,7 @@
         "PrimaryVetDiagnosisPanel"
       ],
       "hasTitle": true,
-      "title": "Did your primary vet discuss LP/GOLPP {CmpnName}'s as a possible cause of {CmpnName}'s symptoms?",
+      "title": "Did your primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -3822,8 +3823,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ConclusionOtherPathTiebackPanel": {
-      "name": "ConclusionOtherPathTiebackPanel",
+    "ConclusionOtherPathPanel": {
+      "name": "ConclusionOtherPathPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -3842,7 +3843,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTiebackPanel"
+        "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
@@ -3858,7 +3859,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTiebackPanel"
+        "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would if anything you differently?",
@@ -3874,7 +3875,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTiebackPanel"
+        "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
@@ -3890,7 +3891,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTiebackPanel"
+        "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
@@ -3906,7 +3907,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTiebackPanel"
+        "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
@@ -3922,7 +3923,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTiebackPanel"
+        "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName}, what if anything would you differently?",
@@ -3938,13 +3939,28 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTiebackPanel"
+        "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
       "title": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
       "hasVisibleIf": true,
       "visibleIf": "{TreatmentStatusType} notcontains 'STENT'",
       "isRequired": true
+    },
+    "ConclusionDifferentChoices": {
+      "name": "ConclusionDifferentChoices",
+      "type": "comment",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).",
+      "hasVisibleIf": false,
+      "isRequired": false
     }
   }
 }
