@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-12T20:24:48.308Z",
+    "builtAt": "2026-02-13T04:11:56.772Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "ageInMonths",
@@ -2037,8 +2037,8 @@
       "hasVisibleIf": true,
       "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'"
     },
-    "TreatmentStatusArtyenoidectomyReasons": {
-      "name": "TreatmentStatusArtyenoidectomyReasons",
+    "TreatmentStatusArytenoidectomyReasons": {
+      "name": "TreatmentStatusArytenoidectomyReasons",
       "type": "checkbox",
       "role": "question",
       "collect": true,
@@ -2052,8 +2052,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentStatusArtyenoidectomyLaser": {
-      "name": "TreatmentStatusArtyenoidectomyLaser",
+    "TreatmentStatusArytenoidectomyLaser": {
+      "name": "TreatmentStatusArytenoidectomyLaser",
       "type": "boolean",
       "role": "question",
       "collect": true,
@@ -2067,8 +2067,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentStatusArtyenoidectomyDidExplain": {
-      "name": "TreatmentStatusArtyenoidectomyDidExplain",
+    "TreatmentStatusArytenoidectomyDidExplain": {
+      "name": "TreatmentStatusArytenoidectomyDidExplain",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
@@ -2082,8 +2082,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentStatusArtyenoidectomyChoice": {
-      "name": "TreatmentStatusArtyenoidectomyChoice",
+    "TreatmentStatusArytenoidectomyChoice": {
+      "name": "TreatmentStatusArytenoidectomyChoice",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
@@ -2097,8 +2097,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentStatusArtyenoidectomyCost": {
-      "name": "TreatmentStatusArtyenoidectomyCost",
+    "TreatmentStatusArytenoidectomyCost": {
+      "name": "TreatmentStatusArytenoidectomyCost",
       "type": "dropdown",
       "role": "question",
       "collect": true,
@@ -2112,8 +2112,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentStatusArtyenoidectomyComplications": {
-      "name": "TreatmentStatusArtyenoidectomyComplications",
+    "TreatmentStatusArytenoidectomyComplications": {
+      "name": "TreatmentStatusArytenoidectomyComplications",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
@@ -2127,8 +2127,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentStatusArtyenoidectomyComplicationsCost": {
-      "name": "TreatmentStatusArtyenoidectomyComplicationsCost",
+    "TreatmentStatusArytenoidectomyComplicationsCost": {
+      "name": "TreatmentStatusArytenoidectomyComplicationsCost",
       "type": "dropdown",
       "role": "question",
       "collect": true,
@@ -2140,7 +2140,7 @@
       "hasTitle": true,
       "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
       "hasVisibleIf": true,
-      "visibleIf": "{TreatmentStatusArtyenoidectomyComplications} = true",
+      "visibleIf": "{TreatmentStatusArytenoidectomyComplications} = true",
       "isRequired": true
     },
     "TreatmentStatusVentrilocordectomyPanel": {
@@ -2614,20 +2614,6 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "ManagementPrescriptions": {
-      "name": "ManagementPrescriptions",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "MANAGEMENT-page",
-        "ManagementPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did your primary veterinarian provide or prescribe any prescription medications for {CmpnName}'s LP/GOLPP symptoms?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
     "ManagementPrescriptionTypePanel": {
       "name": "ManagementPrescriptionTypePanel",
       "type": "panel",
@@ -2640,6 +2626,21 @@
       "hasTitle": false,
       "hasVisibleIf": true,
       "visibleIf": "{ManagementPrescriptions} = YES"
+    },
+    "ManagementPrescriptions": {
+      "name": "ManagementPrescriptions",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementPanel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Did your primary veterinarian provide or prescribe any prescription medications for {CmpnName}'s LP/GOLPP symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
     },
     "ManagementPrescriptionType": {
       "name": "ManagementPrescriptionType",
@@ -2682,7 +2683,7 @@
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
-      "title": "Please rate the effect of doxepin on {CmpnName}'s breathing:",
+      "title": "Please rate the effect of Doxepin on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
       "visibleIf": "{ManagementPrescriptionType} contains 'DOXEPIN'",
       "isRequired": true
@@ -2698,7 +2699,7 @@
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
-      "title": "Please rate the effect of doxepin on {CmpnName}'s mobility or behavior:",
+      "title": "Please rate the effect of Doxepin on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
       "visibleIf": "{ManagementPrescriptionType} contains 'DOXEPIN'",
       "isRequired": true
@@ -3023,36 +3024,6 @@
       "visibleIf": "{ManagementPrescriptionType} contains 'TEMARIL_P'",
       "isRequired": true
     },
-    "ManagementPrescriptionXXXRatingBreathing": {
-      "name": "ManagementPrescriptionXXXRatingBreathing",
-      "type": "rating",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "MANAGEMENT-page",
-        "ManagementPanel",
-        "ManagementPrescriptionTypePanel"
-      ],
-      "hasTitle": true,
-      "title": "Please rate the effect of XXX on {CmpnName}'s breathing:",
-      "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'XXX'",
-      "isRequired": true
-    },
-    "ManagementNonPrescription": {
-      "name": "ManagementNonPrescription",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "MANAGEMENT-page",
-        "ManagementPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did {CmpnName} receive acupuncture or other therapies to help with LP/GOLPP symptoms?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
     "ManagementNonPrescriptionTypePanel": {
       "name": "ManagementNonPrescriptionTypePanel",
       "type": "panel",
@@ -3065,6 +3036,21 @@
       "hasTitle": false,
       "hasVisibleIf": true,
       "visibleIf": "{ManagementNonPrescription} = YES"
+    },
+    "ManagementNonPrescription": {
+      "name": "ManagementNonPrescription",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementPanel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} receive acupuncture or other therapies to help with LP/GOLPP symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
     },
     "ManagementNonPrescriptionType": {
       "name": "ManagementNonPrescriptionType",
@@ -3582,6 +3568,20 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "NeuropathySymptomsDoesHave": {
+      "name": "NeuropathySymptomsDoesHave",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "NeuropathyHindEndDoesHavePanel": {
       "name": "NeuropathyHindEndDoesHavePanel",
       "type": "panel",
@@ -3592,23 +3592,8 @@
         "NeuropathyPanel"
       ],
       "hasTitle": false,
-      "hasVisibleIf": false
-    },
-    "NeuropathySymptomsDoesHave": {
-      "name": "NeuropathySymptomsDoesHave",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "NEUROPATHY-page",
-        "NeuropathyPanel",
-        "NeuropathyHindEndDoesHavePanel"
-      ],
-      "hasTitle": true,
-      "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
       "hasVisibleIf": true,
-      "visibleIf": "{EarlySymptomsType} notcontains 'HIND_END'",
-      "isRequired": true
+      "visibleIf": "{NeuropathySymptomsDoesHave} = YES"
     },
     "NeuropathySymptomsFirst": {
       "name": "NeuropathySymptomsFirst",
@@ -3622,8 +3607,7 @@
       ],
       "hasTitle": true,
       "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
-      "hasVisibleIf": true,
-      "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
+      "hasVisibleIf": false,
       "isRequired": true
     },
     "NeuropathySymptomsBreathingOnset": {
@@ -3637,7 +3621,7 @@
         "NeuropathyHindEndDoesHavePanel"
       ],
       "hasTitle": true,
-      "title": "About now long after you first noticed hind-end weakness did the breathing issues begin?",
+      "title": "About how long after you first noticed hind-end weakness did the breathing issues begin?",
       "hasVisibleIf": true,
       "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
       "isRequired": true
@@ -3674,18 +3658,6 @@
       "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
       "isRequired": true
     },
-    "NeuropathyOtherIssuesPanel": {
-      "name": "NeuropathyOtherIssuesPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "NEUROPATHY-page",
-        "NeuropathyPanel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
     "NeuropathyOtherIssues": {
       "name": "NeuropathyOtherIssues",
       "type": "checkbox",
@@ -3694,7 +3666,7 @@
       "path": [
         "NEUROPATHY-page",
         "NeuropathyPanel",
-        "NeuropathyOtherIssuesPanel"
+        "NeuropathyHindEndDoesHavePanel"
       ],
       "hasTitle": true,
       "title": "During this time period, did any of these issues also appear?",
@@ -3765,8 +3737,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ConclusionPolyneuropathy": {
-      "name": "ConclusionPolyneuropathy",
+    "ConclusionGeneralCondition": {
+      "name": "ConclusionGeneralCondition",
       "type": "checkbox",
       "role": "question",
       "collect": true,
@@ -3776,7 +3748,7 @@
         "ConclusionDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Please describe {CmpnName}'s polyneuropathy:",
+      "title": "Please describe {CmpnName}'s general physical condition:",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -3850,6 +3822,18 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "ConclusionOtherPathTiebackPanel": {
+      "name": "ConclusionOtherPathTiebackPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ConclusionOtherPathTieback": {
       "name": "ConclusionOtherPathTieback",
       "type": "radiogroup",
@@ -3858,7 +3842,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTieback"
+        "ConclusionOtherPathTiebackPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
@@ -3874,7 +3858,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTieback"
+        "ConclusionOtherPathTiebackPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would if anything you differently?",
@@ -3890,7 +3874,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTieback"
+        "ConclusionOtherPathTiebackPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
@@ -3906,7 +3890,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTieback"
+        "ConclusionOtherPathTiebackPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
@@ -3922,7 +3906,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTieback"
+        "ConclusionOtherPathTiebackPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
@@ -3938,7 +3922,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTieback"
+        "ConclusionOtherPathTiebackPanel"
       ],
       "hasTitle": true,
       "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName}, what if anything would you differently?",
@@ -3954,7 +3938,7 @@
       "path": [
         "CONCLUSION-page",
         "ConclusionPanel",
-        "ConclusionOtherPathTieback"
+        "ConclusionOtherPathTiebackPanel"
       ],
       "hasTitle": true,
       "title": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",

@@ -119,7 +119,7 @@
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [
-    "BVEAP"
+    "VENTRILOCORDECTOMY"
   ],
 
   "TreatmentStatusTiebackEmergency": true,
@@ -266,7 +266,7 @@
    "EXERCISE",
    "FOOD"
   ],
-  "ConclusionPolyneuropathy": [
+  "ConclusionGeneralCondition": [
     "HIND_END",
     "FALLING"
   ],
@@ -277,8 +277,18 @@
     "CUSHINGS"
   ],
 
-  "ConclusionCauseOfDeath": "COMPLICATIONS"
+  "ConclusionCauseOfDeath": "COMPLICATIONS",
 
+
+  "ConclusionOtherPathTieback": "TIEBACK_NO",
+  "ConclusionOtherPathBVEAP": "BVEAP_SOONER",
+  "ConclusionOtherPathStent": "STENT_SAME",
+  "ConclusionOtherPathArytenoidectomy": "ARYTENOIDECTOMY_NO",
+  "ConclusionOtherPathVentrilocordectomy": "VENTRILOCORDECTOMY_NO",
+
+
+  
+  "ConclusionStentAlternative": "YES"
 
   
     

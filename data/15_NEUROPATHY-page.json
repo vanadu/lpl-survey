@@ -22,39 +22,42 @@
         },
 
         {
+          "type": "radiogroup",
+          "name": "NeuropathySymptomsDoesHave",
+          "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "NOT_SURE",
+              "text": "Not sure"
+            }
+          ],
+          "showOtherItem": false
+        },
+
+
+        {
           "type": "panel",
           "name": "NeuropathyHindEndDoesHavePanel",
+          "visibleIf": "{NeuropathySymptomsDoesHave} = YES",
           "elements": [
 
 
-            {
-              "type": "radiogroup",
-              "name": "NeuropathySymptomsDoesHave",
-              "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
-              "isRequired": true,
-              "visibleIf": "{EarlySymptomsType} notcontains 'HIND_END'",
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "NOT_SURE",
-                  "text": "Not sure"
-                }
-              ],
-              "showOtherItem": false
-            },
+
             {
               "type": "radiogroup",
               "name": "NeuropathySymptomsFirst",
               "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
               "isRequired": true,
-              "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
+
               "choices": [
                 {
                   "value": "HIND_END",
@@ -79,7 +82,7 @@
             {
               "type": "dropdown",
               "name": "NeuropathySymptomsBreathingOnset",
-              "title": "About now long after you first noticed hind-end weakness did the breathing issues begin?",
+              "title": "About how long after you first noticed hind-end weakness did the breathing issues begin?",
               "isRequired": true,
               "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
               "choices": [
@@ -166,14 +169,8 @@
                 }
               ],
               "showOtherItem": false
-            }
-          ]
-        },
+            },
 
-        {
-          "type": "panel",
-          "name": "NeuropathyOtherIssuesPanel",
-          "elements": [
             {
               "type": "checkbox",
               "name": "NeuropathyOtherIssues",
@@ -203,15 +200,11 @@
               ],
               "showOtherItem": false
             }
+
+
+
           ]
         }
-
-
-
-
-
-
-
 
       ]
     }

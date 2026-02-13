@@ -29,15 +29,15 @@ const ITEMS_TWO_COL = new Set([
   "TreatmentStatusStentDidMigrate",
   "TreatmentStatusStentReplaced",
   "TreatmentStatusStentComplications",
-  "TreatmentStatusArtyenoidectomyReasons",
-  "TreatmentStatusArtyenoidectomyComplications",
+  "TreatmentStatusArytenoidectomyReasons",
+  "TreatmentStatusArytenoidectomyComplications",
   "TreatmentStatusVentrilocordectomyReasons",
   "TreatmentStatusVentrilocordectomyComplications",
   "ManagementPrescriptionType",
   "ManagementNonPrescriptionType",
   "OTCProductsType",
   "NeuropathyOtherIssues",
-  "ConclusionPolyneuropathy",
+  "ConclusionGeneralCondition",
   "ConclusionSpecialConsiderations",
   "ConclusionOtherConditions",
   "ConclusionCauseOfDeath",
@@ -61,8 +61,8 @@ const ITEMS_THREE_COL = new Set([
   "PrimaryVetInflammation",
   "PrimaryVetRefluxPanel",
   "PrimaryVetRefluxMeds",
-  "TreatmentStatusArtyenoidectomyDidExplain",
-  "TreatmentStatusArtyenoidectomyChoice",
+  "TreatmentStatusArytenoidectomyDidExplain",
+  "TreatmentStatusArytenoidectomyChoice",
   "TreatmentStatusVentrilocordectomyDidExplain",
   "TreatmentStatusVentrilocordectomyChoice",
   "ManagementPrescriptions",
@@ -124,10 +124,10 @@ const CONTROL_WIDTH_300 = new Set([
   "TreatmentStatusStentType",
   "TreatmentStatusStentCostOnce",
   "TreatmentStatusStentCostRepeat",
-  "TreatmentStatusStentComplications",
+
   "TreatmentStatusStentComplicationsCost",
-  "TreatmentStatusArtyenoidectomyCost",
-  "TreatmentStatusArtyenoidectomyComplicationsCost",
+  "TreatmentStatusArytenoidectomyCost",
+  "TreatmentStatusArytenoidectomyComplicationsCost",
   "TreatmentStatusVentrilocordectomyCost",
   "TreatmentStatusVentrilocordectomyComplicationsCost",
   "ManagementPrescriptionCost",
@@ -154,7 +154,11 @@ const CONTROL_WIDTH_600 = new Set([
   "DiagnosisTimeAfterSympto",
   "TreatmentStatusAgeYears",
   "TreatmentStatusAgeMonths",
-  "TreatmentStatusTiebackWait"
+  "TreatmentStatusTiebackWait",
+
+
+
+
 ]);
 
 // !VA QUESTION SEPARATOR
@@ -261,7 +265,49 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
   "TreatmentFactorsOther",
   "ManagementPrescriptionType",
-  "ManagementPrescriptionCost"
+  "ManagementPrescriptionCost",
+
+  "ManagementPrescriptionDoxepinRatingBreathing",
+  "ManagementPrescriptionTrazodoneGabapentinRatingBreathing",
+  "ManagementPrescriptionGabapentinRatingBreathing",
+  "ManagementPrescriptionGalliprantRatingBreathing",
+  "ManagementPrescriptionSteroidRatingBreathing",
+  "ManagementPrescriptionAntihistamineRatingBreathing",
+  "ManagementPrescriptionCereniaRatingBreathing",
+  "ManagementPrescriptionMeloxicamRatingBreathing",
+  "ManagementPrescriptionAcepromazineRatingBreathing",
+  "ManagementPrescriptionAlbuterolRatingBreathing",
+  "ManagementPrescriptionTemarilPRatingBreathing",
+
+  "ManagementNonPrescriptionAcupunctureRatingBreathing",
+  "ManagementNonPrescriptionTherapyRatingBreathing",
+  "ManagementNonPrescriptionColdLaserRatingBreathing",
+  "ManagementNonPrescriptionChiroRatingBreathing",
+
+  "OTCProductsDidPurchase",
+  "OTCProductsType",
+  "OTCProductsCost",
+  "OTCProtocolDidPurchase",
+  "OTCProtocolCost",
+
+  "AspirationCount",
+  "AspirationInpatient",
+  "AspirationSurgeryPost",
+  "AspirationStentPost",
+
+  "NeuropathySymptomsFirst",
+
+  "NeuropathySymptomsTypeProgression",
+  "ConclusionSpecialConsiderations",
+  "ConclusionGeneralCondition",
+
+  "ConclusionOtherPathTieback",
+  "ConclusionOtherPathBVEAP",
+  "ConclusionOtherPathStent",
+  "ConclusionOtherPathArytenoidectomy",
+  "ConclusionOtherPathVentrilocordectomy",
+
+  "ConclusionStentAlternative"
   
   ]);
 
@@ -279,10 +325,29 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
     "TreatmentStatusBveapComplications",
 
-    "TreatmentStatusArtyenoidectomyComplicationsCost",
+    "TreatmentStatusArytenoidectomyComplicationsCost",
 
     "TreatmentStatusVentrilocordectomyComplications",
 
+    "ManagementPrescriptionDoxepinRatingMobility",
+    "ManagementPrescriptionTrazodoneRatingMobility",
+    "ManagementPrescriptionGabapentinRatingMobility",
+    "ManagementPrescriptionGalliprantRatingMobility",
+    "ManagementPrescriptionSteroidRatingMobility",
+    "ManagementPrescriptionAntihistamineRatingMobility",
+    "ManagementPrescriptionCereniaRatingMobility",
+    "ManagementPrescriptionMeloxicamRatingMobility",
+    "ManagementPrescriptionAcepromazineRatingMobility",
+    "ManagementPrescriptionAlbuterolRatingMobility",
+    "ManagementPrescriptionTemarilPRatingMobility",
+
+    "ManagementNonPrescriptionAcupunctureRatingMobility",
+    "ManagementNonPrescriptionTherapyRatingMobility",
+    "ManagementNonPrescriptionColdLaserRatingMobility",
+    "ManagementNonPrescriptionChiroRatingMobility",
+
+    "NeuropathySymptomsBreathingOnset",
+    "NeuropathySymptomsHindEndOnset",
 
   ]);
 

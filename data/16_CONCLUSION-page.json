@@ -79,18 +79,14 @@
                 {
                   "value": "EXCITEMENT",
                   "text": "Other behavior restrictions i.e., anxiety, excitement"
-                },
-                {
-                  "value": "EXCITEMENT",
-                  "text": "Other behavior restrictions i.e., anxiety, excitement"
                 }
               ],
-              "showOtherItem": false
+              "showOtherItem": true
             },
             {
               "type": "checkbox",
-              "name": "ConclusionPolyneuropathy",
-              "title": "Please describe {CmpnName}'s polyneuropathy:",
+              "name": "ConclusionGeneralCondition",
+              "title": "Please describe {CmpnName}'s general physical condition:",
               "isRequired": true,
               "choices": [
                 {
@@ -256,7 +252,7 @@
 
         {
           "type": "panel",
-          "name": "ConclusionOtherPathTieback",
+          "name": "ConclusionOtherPathPanel",
           "elements": [
             {
               "type": "radiogroup",
@@ -439,9 +435,14 @@
                   "text": "Don't know"
                 }              ],
               "showOtherItem": false
+            },
+  
+            {
+              "type": "comment",
+              "name": "ConclusionDifferentChoices",
+              "title": "Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).",
+              "isRequired": false
             }
-            
-
 
 
           ]
