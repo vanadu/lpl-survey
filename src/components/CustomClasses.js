@@ -100,6 +100,8 @@ const CONTROL_WIDTH_150 = new Set ([
 
 
 const CONTROL_WIDTH_300 = new Set([
+
+
   "CmpnName",
   "UserInfoFirstName",
   "UserInfoCountry",
@@ -170,7 +172,6 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   // put question names here (same .name values you already use)
 
   "UserInfoContactType",
-  // "CmpnInfoAnimalType", //checkbox, no workie
   "UserInfoAgeGroup",
   "UserInfoContactTypeFacebook",
   "CmpnInfoAnimalType",

@@ -21,7 +21,7 @@
             {
               "type": "html",
               "name": "Conclusion",
-              "html": "<p>The final section of this survey asks questions about the last station of {CmpnName}'s LP/GOLPP journey before {genderSubjectPronoun} crossed over the Rainbow Bridge. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later. </p>"
+              "html": "<p>The final section of this survey asks questions about the last station of {CmpnName}'s LP/GOLPP journey before {cvGenderSubjectPronoun} crossed over the Rainbow Bridge. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later. </p>"
             },
             {
               "type": "html",
@@ -39,7 +39,7 @@
             {
               "type": "html",
               "name": "Conclusion",
-              "html": "<p>The last survey section asks questions about the current state of {CmpnName}'s LP/GOLPP. By comparing your answers here to answers you provided earlier, we hope to get a picture of how {genderObjectPronoun} condition changed over time and what factors may have played a role in the LP/GOLPP progression</p>"
+              "html": "<p>The last survey section asks questions about the current state of {CmpnName}'s LP/GOLPP. By comparing your answers here to answers you provided earlier, we hope to get a picture of how {cvGenderObjectPronoun} condition changed over time and what factors may have played a role in the LP/GOLPP progression</p>"
             },
             {
               "type": "html",
@@ -142,7 +142,7 @@
             {
             "type": "checkbox",
             "name": "ConclusionOtherConditions",
-            "title": "What other conditions {doTense} {CmpnName} have at this stage?",
+            "title": "What other conditions {cvDoThirdPersonSingular} {CmpnName} have at this stage?",
             "description": "Your selections here will be compared to earlier answers to deterimine which of these conditions developed during {CmpnName}'s LP/GOLPP journey.",
             "isRequired": true,
             "choices": [

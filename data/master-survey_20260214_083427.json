@@ -8,32 +8,32 @@
     },
     {
       "type": "calculatedvalue",
-      "name": "cvLvngCmpnAgeYearsAsMonths",
+      "name": "cvLvngCmpnInfoAgeYearsAsMonths",
       "expression": "{lvngCmpnInfoAgeYears} * 12",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "cvLvngCmpnAgeTotalMonths",
-      "expression": "{cvLvngCmpnAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
+      "name": "cvLvngCmpnInfoAgeTotalMonths",
+      "expression": "{lvngCmpnInfoAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "cvDcsdCmpnAgeYearsAsMonths",
+      "name": "cvDcsdCmpnInfoAgeYearsAsMonths",
       "expression": "{dcsdCmpnInfoAgeYears} * 12",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "cvDcsdCmpnAgeTotalMonths",
-      "expression": "{cvDcsdCmpnAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
+      "name": "cvDcsdCmpnInfoAgeTotalMonths",
+      "expression": "{dcsdCmpnInfoAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
       "name": "cvAgeInMonths",
-      "expression": "iif({LifeStatus} = true, {cvLvngCmpnAgeTotalMonths}, {cvDcsdCmpnAgeTotalMonths})",
+      "expression": "iif({LifeStatus} = true, {lvngCmpnInfoAgeTotalMonths}, {dcsdCmpnInfoAgeTotalMonths})",
       "includeIntoResult": true
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "name": "cvDurationOfSymptomsInMonths",
-      "expression": "{cvAgeInMonths} - {cvAgeInMonthsAtSymptomOnset}"
+      "expression": "{ageInMonths} - {ageInMonthsAtSymptomOnset}"
     },
     {
       "type": "calculatedvalue",
@@ -114,13 +114,13 @@
                 },
                 {
                   "type": "html",
-                  "name": "cvLvngCmpnAgeTotalMonths",
-                  "html": "<p class='landing-survey-test'>cvLvngCmpnAgeTotalMonths = {cvLvngCmpnAgeTotalMonths}"
+                  "name": "cvLvngCmpnInfoAgeTotalMonths",
+                  "html": "<p class='landing-survey-test'>cvLvngCmpnInfoAgeTotalMonths = {cvLvngCmpnInfoAgeTotalMonths}"
                 },
                 {
                   "type": "html",
-                  "name": "cvDcsdCmpnAgeTotalMonths",
-                  "html": "<p class='landing-survey-test'>cvDcsdCmpnAgeTotalMonths = {cvDcsdCmpnAgeTotalMonths}"
+                  "name": "cvDcsdCmpnInfoAgeTotalMonths",
+                  "html": "<p class='landing-survey-test'>cvDcsdCmpnInfoAgeTotalMonths = {cvDcsdCmpnInfoAgeTotalMonths}"
                 },
                 {
                   "type": "html",

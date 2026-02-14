@@ -11,36 +11,36 @@
           "elements": [
           {
             "type": "html",
-            "name": "foo",
-            "html": "<p class='landing-survey-test'>foo = {foo}"
+            "name": "cvTreatmentType",
+            "html": "<p class='landing-survey-test'>Treatment type = {cvTreatmentType}"
           },
           {
             "type": "html",
-            "name": "ageInMonths",
-            "html": "<p class='landing-survey-test'>lvngCmpnInfoAgeTotalMonths = {lvngCmpnInfoAgeTotalMonths}"
+            "name": "cvLvngCmpnAgeTotalMonths",
+            "html": "<p class='landing-survey-test'>cvLvngCmpnAgeTotalMonths = {cvLvngCmpnAgeTotalMonths}"
           },
           {
             "type": "html",
-            "name": "ageInMonths",
-            "html": "<p class='landing-survey-test'>dcsdCmpnInfoAgeTotalMonths = {dcsdCmpnInfoAgeTotalMonths}"
+            "name": "cvDcsdCmpnAgeTotalMonths",
+            "html": "<p class='landing-survey-test'>cvDcsdCmpnAgeTotalMonths = {cvDcsdCmpnAgeTotalMonths}"
           },
           {
             "type": "html",
-            "name": "ageInMonths",
-            "html": "<p class='landing-survey-test'>ageInMonths = {ageInMonths}"
+            "name": "cvAgeInMonths",
+            "html": "<p class='landing-survey-test'>cvAgeInMonths = {cvAgeInMonths}"
           },
 
-
-          {
-            "type": "html",
-            "name": "ageInMonthsAtSymptomOnset",
-            "html": "<p class='landing-survey-test'>ageInMonthsAtSymptomOnset = {ageInMonthsAtSymptomOnset}</p>"
-          },
 
           {
             "type": "html",
-            "name": "ageInMonthsAtSymptomOnset",
-            "html": "<p class='landing-survey-test'>durationOfSymptomsInMonths = {durationOfSymptomsInMonths}</p>"
+            "name": "cvAgeInMonthsAtSymptomOnset",
+            "html": "<p class='landing-survey-test'>cvAgeInMonthsAtSymptomOnset = {cvAgeInMonthsAtSymptomOnset}</p>"
+          },
+
+          {
+            "type": "html",
+            "name": "cvDurationOfSymptomsInMonths",
+            "html": "<p class='landing-survey-test'>cvDurationOfSymptomsInMonths = {cvDurationOfSymptomsInMonths}</p>"
           }
     
           ]

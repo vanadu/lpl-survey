@@ -33,7 +33,7 @@
     {
       "type": "calculatedvalue",
       "name": "cvAgeInMonths",
-      "expression": "iif({LifeStatus} = true, {cvLvngCmpnAgeTotalMonths}, {cvDcsdCmpnAgeTotalMonths})",
+      "expression": "iif({LifeStatus} = true, {lvngCmpnAgeTotalMonths}, {dcsdCmpnAgeTotalMonths})",
       "includeIntoResult": true
     },
     {

@@ -56,6 +56,11 @@ function applyDirectives(root, directives) {
   // getStyleDirectives() returns a normalized list in your CustomClasses.js contract,
   // so this helper just applies them.
 
+  console.log('root :>> ');
+  console.log(root);
+  console.log('directives :>> ');
+  console.log(directives);
+
   if (directives.className) {
     root.classList.add(directives.className);
   }
@@ -201,20 +206,21 @@ export default function SurveyComponentMaster() {
    */
   useEffect(() => {
     if (!survey) return;
-    console.log("ATTACHING SYNC HANDLERS", !!survey);
+    // !VA Debugging...
+    // console.log("ATTACHING SYNC HANDLERS", !!survey);
 
 
-    console.log("SYNC CHECK source exists?",
-      !!survey.getQuestionByName("InfoSourcesTypes"),
-      "target exists?",
-      !!survey.getQuestionByName("InfoSourcesBestSource")
-    );
+    // console.log("SYNC CHECK source exists?",
+    //   !!survey.getQuestionByName("InfoSourcesTypes"),
+    //   "target exists?",
+    //   !!survey.getQuestionByName("InfoSourcesBestSource")
+    // );
 
-    console.log("SYNC CHECK source2 exists?",
-      !!survey.getQuestionByName("EarlyOtherConditionsType"),
-      "target2 exists?",
-      !!survey.getQuestionByName("ConclusionOtherConditions")
-    );
+    // console.log("SYNC CHECK source2 exists?",
+    //   !!survey.getQuestionByName("EarlyOtherConditionsType"),
+    //   "target2 exists?",
+    //   !!survey.getQuestionByName("ConclusionOtherConditions")
+    // );
 
 
     return attachSurveySyncHandlers(survey, {
@@ -234,7 +240,6 @@ export default function SurveyComponentMaster() {
       ],
     }
   );
-
   }, [survey]);
 
   useEffect(() => {
@@ -242,7 +247,8 @@ export default function SurveyComponentMaster() {
 
     const dbg = (sender, opt) => {
       if (opt?.name === "InfoSourcesTypes" || opt?.name === "EarlyOtherConditionsType") {
-        console.log("VALUE CHANGED:", opt.name, "=>", opt.value);
+        // !VA Debugging...
+        // console.log("VALUE CHANGED:", opt.name, "=>", opt.value);
       }
     };
 
@@ -295,7 +301,8 @@ export default function SurveyComponentMaster() {
       }
 
       // 2) Send via Brevo (best-effort notification)
-      console.log("About to call email endpoint…");
+      // !VA Debugging
+      // console.log("About to call email endpoint…");
 
       const emailResponse = await fetch("/api/submit-survey", {
         method: "POST",

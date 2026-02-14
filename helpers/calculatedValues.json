@@ -8,32 +8,32 @@
 
   {
     "type": "calculatedvalue",
-    "name": "cvLvngCmpnInfoAgeYearsAsMonths",
+    "name": "cvLvngCmpnAgeYearsAsMonths",
     "expression": "{lvngCmpnInfoAgeYears} * 12",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "cvLvngCmpnInfoAgeTotalMonths",
-    "expression": "{lvngCmpnInfoAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
+    "name": "cvLvngCmpnAgeTotalMonths",
+    "expression": "{cvLvngCmpnAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "cvDcsdCmpnInfoAgeYearsAsMonths",
+    "name": "cvDcsdCmpnAgeYearsAsMonths",
     "expression": "{dcsdCmpnInfoAgeYears} * 12",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
-    "name": "cvDcsdCmpnInfoAgeTotalMonths",
-    "expression": "{dcsdCmpnInfoAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
+    "name": "cvDcsdCmpnAgeTotalMonths",
+    "expression": "{cvDcsdCmpnAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
     "includeIntoResult": true
   },
   {
     "type": "calculatedvalue",
     "name": "cvAgeInMonths",
-    "expression": "iif({LifeStatus} = true, {lvngCmpnInfoAgeTotalMonths}, {dcsdCmpnInfoAgeTotalMonths})",
+    "expression": "iif({LifeStatus} = true, {cvLvngCmpnAgeTotalMonths}, {cvDcsdCmpnAgeTotalMonths})",
     "includeIntoResult": true
   },
   {
@@ -42,7 +42,7 @@
   },
   {
     "name": "cvDurationOfSymptomsInMonths",
-    "expression": "{ageInMonths} - {ageInMonthsAtSymptomOnset}"
+    "expression": "{cvAgeInMonths} - {cvAgeInMonthsAtSymptomOnset}"
   },
   {
     "type": "calculatedvalue",

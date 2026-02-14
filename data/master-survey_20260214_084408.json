@@ -15,7 +15,7 @@
     {
       "type": "calculatedvalue",
       "name": "cvLvngCmpnAgeTotalMonths",
-      "expression": "{cvLvngCmpnAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
+      "expression": "{lvngCmpnAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
       "includeIntoResult": true
     },
     {
@@ -27,13 +27,13 @@
     {
       "type": "calculatedvalue",
       "name": "cvDcsdCmpnAgeTotalMonths",
-      "expression": "{cvDcsdCmpnAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
+      "expression": "{dcsdCmpnAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
       "name": "cvAgeInMonths",
-      "expression": "iif({LifeStatus} = true, {cvLvngCmpnAgeTotalMonths}, {cvDcsdCmpnAgeTotalMonths})",
+      "expression": "iif({LifeStatus} = true, {lvngCmpnAgeTotalMonths}, {dcsdCmpnAgeTotalMonths})",
       "includeIntoResult": true
     },
     {

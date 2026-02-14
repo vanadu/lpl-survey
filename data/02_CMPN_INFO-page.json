@@ -208,7 +208,7 @@
               "type": "boolean",
               "name": "lvngCmpnInfoHasInsurance",
               "required": true,
-              "title": "{doFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?"
+              "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?"
             }
           ]
         }

@@ -1,21 +1,21 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-14T10:47:48.552Z",
+    "builtAt": "2026-02-14T13:47:44.307Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
       "cvAgeInMonthsAtSymptomOnset",
-      "cvDcsdCmpnInfoAgeTotalMonths",
-      "cvDcsdCmpnInfoAgeYearsAsMonths",
+      "cvDcsdCmpnAgeTotalMonths",
+      "cvDcsdCmpnAgeYearsAsMonths",
       "cvDoFirstPersonSingularInitialCap",
       "cvDoThirdPersonSingular",
       "cvDurationOfSymptomsInMonths",
       "cvEndOfLife",
       "cvGenderObjectPronoun",
       "cvGenderSubjectPronoun",
-      "cvLvngCmpnInfoAgeTotalMonths",
-      "cvLvngCmpnInfoAgeYearsAsMonths",
+      "cvLvngCmpnAgeTotalMonths",
+      "cvLvngCmpnAgeYearsAsMonths",
       "cvObserveFirstPersonPast",
       "cvStateAdjective",
       "cvThatThis",
@@ -550,7 +550,7 @@
         "CmpnInfoDemeanorPanel"
       ],
       "hasTitle": true,
-      "title": "{doFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
+      "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
       "hasVisibleIf": false
     },
     "InfoSourcesPanel": {
@@ -3791,7 +3791,7 @@
         "ConclusionOtherConditionsPanel"
       ],
       "hasTitle": true,
-      "title": "What other conditions {doTense} {CmpnName} have at this stage?",
+      "title": "What other conditions {cvDoThirdPersonSingular} {CmpnName} have at this stage?",
       "hasVisibleIf": false,
       "isRequired": true
     },
