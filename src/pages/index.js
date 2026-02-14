@@ -4,7 +4,7 @@ import { useRouter} from 'next/router'
 import Link from 'next/link';
 
 import SurveyComponentMaster from '@/components/SurveyComponentMaster'
-// import SurveyComponent from '@/components/SurveyComponent_BAK'
+import SurveyComponent from '@/components/SurveyComponent'
 import SurveyMenu from '@/components/SurveyMenu'
 
 import { NextSeo } from 'next-seo'

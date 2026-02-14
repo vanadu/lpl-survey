@@ -6,47 +6,6 @@
       "name": "LandingPanel",
       "elements": [
         {
-          "type": "panel",
-          "name": "LandingTestPanel",
-          "elements": [
-          {
-            "type": "html",
-            "name": "cvTreatmentType",
-            "html": "<p class='landing-survey-test'>Treatment type = {cvTreatmentType}"
-          },
-          {
-            "type": "html",
-            "name": "cvLvngCmpnAgeTotalMonths",
-            "html": "<p class='landing-survey-test'>cvLvngCmpnAgeTotalMonths = {cvLvngCmpnAgeTotalMonths}"
-          },
-          {
-            "type": "html",
-            "name": "cvDcsdCmpnAgeTotalMonths",
-            "html": "<p class='landing-survey-test'>cvDcsdCmpnAgeTotalMonths = {cvDcsdCmpnAgeTotalMonths}"
-          },
-          {
-            "type": "html",
-            "name": "cvAgeInMonths",
-            "html": "<p class='landing-survey-test'>cvAgeInMonths = {cvAgeInMonths}"
-          },
-
-
-          {
-            "type": "html",
-            "name": "cvAgeInMonthsAtSymptomOnset",
-            "html": "<p class='landing-survey-test'>cvAgeInMonthsAtSymptomOnset = {cvAgeInMonthsAtSymptomOnset}</p>"
-          },
-
-          {
-            "type": "html",
-            "name": "cvDurationOfSymptomsInMonths",
-            "html": "<p class='landing-survey-test'>cvDurationOfSymptomsInMonths = {cvDurationOfSymptomsInMonths}</p>"
-          }
-    
-          ]
-        },
-
-        {
           "type": "html",
           "name": "LandingVersion",
           "html": "<div class='landing-survey-version-container'><p class='landing-survey-version'>LarParLife.org LP/GOLPP Survey<br/>Beta 0.9/26.02.12.01</p></div>"
@@ -134,6 +93,47 @@
           "isRequired": true
         }
       ]
+    },
+    {
+      "type": "panel",
+      "name": "LandingTestPanel",
+      "elements": [
+      {
+        "type": "html",
+        "name": "cvTreatmentType",
+        "html": "<p class='landing-survey-test'>Treatment type = {cvTreatmentType}"
+      },
+      {
+        "type": "html",
+        "name": "cvLvngCmpnAgeTotalMonths",
+        "html": "<p class='landing-survey-test'>cvLvngCmpnAgeTotalMonths = {cvLvngCmpnAgeTotalMonths}"
+      },
+      {
+        "type": "html",
+        "name": "cvDcsdCmpnAgeTotalMonths",
+        "html": "<p class='landing-survey-test'>cvDcsdCmpnAgeTotalMonths = {cvDcsdCmpnAgeTotalMonths}"
+      },
+      {
+        "type": "html",
+        "name": "cvAgeInMonths",
+        "html": "<p class='landing-survey-test'>cvAgeInMonths = {cvAgeInMonths}"
+      },
+
+
+      {
+        "type": "html",
+        "name": "cvAgeInMonthsAtSymptomOnset",
+        "html": "<p class='landing-survey-test'>cvAgeInMonthsAtSymptomOnset = {cvAgeInMonthsAtSymptomOnset}</p>"
+      },
+
+      {
+        "type": "html",
+        "name": "cvDurationOfSymptomsInMonths",
+        "html": "<p class='landing-survey-test'>cvDurationOfSymptomsInMonths = {cvDurationOfSymptomsInMonths}</p>"
+      }
+
+      ]
     }
+
   ]
 }

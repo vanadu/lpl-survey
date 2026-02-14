@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-14T13:47:44.307Z",
+    "builtAt": "2026-02-14T15:10:00.113Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -38,18 +38,6 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "LandingTestPanel": {
-      "name": "LandingTestPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "LANDING-page",
-        "LandingPanel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
     "LandingPrivacyConsentLinksPanel": {
       "name": "LandingPrivacyConsentLinksPanel",
       "type": "panel",
@@ -75,6 +63,17 @@
       "title": "Do you agree to the terms and conditions?",
       "hasVisibleIf": false,
       "isRequired": true
+    },
+    "LandingTestPanel": {
+      "name": "LandingTestPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "LANDING-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "UserInfoPanel": {
       "name": "UserInfoPanel",
