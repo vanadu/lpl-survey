@@ -202,7 +202,7 @@ export function attachSurveySyncHandlers(survey, config) {
 
     if (!sources.has(options.name)) return;
     // !VA Debugging...
-    console.log("SYNC RULE HIT:", options.name, "=>", options.value);
+    // console.log("SYNC RULE HIT:", options.name, "=>", options.value);
     runAll(sender, "value");
   };
 
