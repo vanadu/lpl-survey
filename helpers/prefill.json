@@ -271,11 +271,7 @@
     "FALLING"
   ],
   "ConclusionQOL": 2,
-  "ConclusionOtherConditions": [
-    "GERD",
-    "ARTHRITIS",
-    "CUSHINGS"
-  ],
+
 
   "ConclusionCauseOfDeath": "COMPLICATIONS",
 

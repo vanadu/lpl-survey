@@ -1,5 +1,5 @@
 import React from 'react'
-import SurveyComponent from '@/components/SurveyComponent'
+import SurveyComponent from '@/components/SurveyComponent_BAK'
 import SurveyMenu from '@/components/SurveyMenu'
 import Link from 'next/link';
 

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import SurveyComponent from '@/components/SurveyComponent'
+import SurveyComponent from '@/components/SurveyComponent_BAK'
 import SurveyMenu from '@/components/SurveyMenu'
 
 

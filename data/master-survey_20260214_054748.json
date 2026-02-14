@@ -2,88 +2,94 @@
   "calculatedValues": [
     {
       "type": "calculatedvalue",
-      "name": "foo",
-      "expression": "iif({TreatmentStatusType} contains 'TIEBACK', 'The color is TIEBACK', iif({TreatmentStatusType} contains 'BVEAP', 'The color is BVEAP', iif({TreatmentStatusType} contains 'STENT', 'The color is STENT', iif({TreatmentStatusType} contains 'ARYTENOIDECTOMY', 'The color is ARYTENOIDECTOMY', iif({TreatmentStatusType} contains 'VENTRILOCORDECTOMY', 'The color is VENTRILOCORDECTOMY', ''))",
+      "name": "cvTreatmentType",
+      "expression": "iif({TreatmentStatusType} contains 'TIEBACK', 'Treatment: TIEBACK', iif({TreatmentStatusType} contains 'BVEAP', 'Treatment: BVEAP', iif({TreatmentStatusType} contains 'STENT', 'Treatment: STENT', iif({TreatmentStatusType} contains 'ARYTENOIDECTOMY', 'Treatment: ARYTENOIDECTOMY', iif({TreatmentStatusType} contains 'VENTRILOCORDECTOMY', 'Treatment: VENTRILOCORDECTOMY', ''))",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "lvngCmpnInfoAgeYearsAsMonths",
+      "name": "cvLvngCmpnInfoAgeYearsAsMonths",
       "expression": "{lvngCmpnInfoAgeYears} * 12",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "lvngCmpnInfoAgeTotalMonths",
+      "name": "cvLvngCmpnInfoAgeTotalMonths",
       "expression": "{lvngCmpnInfoAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "dcsdCmpnInfoAgeYearsAsMonths",
+      "name": "cvDcsdCmpnInfoAgeYearsAsMonths",
       "expression": "{dcsdCmpnInfoAgeYears} * 12",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "dcsdCmpnInfoAgeTotalMonths",
+      "name": "cvDcsdCmpnInfoAgeTotalMonths",
       "expression": "{dcsdCmpnInfoAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "ageInMonths",
+      "name": "cvAgeInMonths",
       "expression": "iif({LifeStatus} = true, {lvngCmpnInfoAgeTotalMonths}, {dcsdCmpnInfoAgeTotalMonths})",
       "includeIntoResult": true
     },
     {
-      "name": "ageInMonthsAtSymptomOnset",
+      "name": "cvAgeInMonthsAtSymptomOnset",
       "expression": "{EarlySymptomsAgeYears} * 12 + {EarlySymptomsAgeMonths}"
     },
     {
-      "name": "durationOfSymptomsInMonths",
+      "name": "cvDurationOfSymptomsInMonths",
       "expression": "{ageInMonths} - {ageInMonthsAtSymptomOnset}"
     },
     {
       "type": "calculatedvalue",
-      "name": "observeTense",
+      "name": "cvObserveFirstPersonPast",
       "expression": "iif({LifeStatus} = true, 'did you observe', 'have you observed')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "doTense",
+      "name": "cvDoThirdPersonSingular",
       "expression": "iif({LifeStatus} = true, 'did', 'does')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "doFirstPersonSingularInitialCap",
+      "name": "cvDoFirstPersonSingularInitialCap",
       "expression": "iif({LifeStatus} = true, 'Did', 'Do')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "genderSubjectPronoun",
+      "name": "cvGenderSubjectPronoun",
       "expression": "iif({CmpnInfoGender} = true, 'she', 'he')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "genderObjectPronoun",
+      "name": "cvGenderObjectPronoun",
       "expression": "iif({CmpnInfoGender} = true, 'her', 'his')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "stateAdjective",
+      "name": "cvStateAdjective",
       "expression": "iif({LifeStatus} = true, 'last', 'current')",
       "includeIntoResult": true
     },
     {
       "type": "calculatedvalue",
-      "name": "blobText",
+      "name": "cvEndOfLife",
       "expression": "iif({LifeStatus} = true, 'towards the end of {genderObjectPronoun} life', 'in {genderObjectPronoun} current state of health')",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "cvThatThis",
+      "expression": "iif({LifeStatus} = true, 'that', 'this')",
       "includeIntoResult": true
     }
   ],
@@ -1773,7 +1779,7 @@
                 {
                   "type": "radiogroup",
                   "name": "PrimaryVetDiagnosis",
-                  "title": "Did your primary vet discuss LP/GOLPP {CmpnName}'s as a possible cause of {CmpnName}'s symptoms? ",
+                  "title": "Did your primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms? ",
                   "isRequired": true,
                   "choices": [
                     {
@@ -4838,12 +4844,7 @@
             {
               "type": "html",
               "name": "OTCProductsText",
-              "html": "<p><b>IMPORTANT</b>: Attempting to manage LP/GOLPP symptoms with supplements and OTC products is controversial. There are no supplements or OTC products that will restore movement to paralyzed laryneal tissue. That means that even with such products, the risk of breathing crises and a potentially fatal suffocation event is very real. While supplements and OTC products can't prevent a breathing emergency, some veterinary professionals believe some supplements and OTC products may have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life. </p><p>This section asks questions about non-prescription, over-the-counter (OTC) supplements and remedies that may have a positive effect for some LP/GOLPP symptoms. The questions pertain to the main ingredient of a product. There is no OTC product that can restore movement to paralyzed laryneal tissue. There is no evidence that any OTC product will reduce the risk of breathing crises and a potentially fatal suffocation event. For questions about the effectiveness or safety of any OTC product, consult with a licensed veterinarian. </p>"
-            },
-            {
-              "type": "html",
-              "name": "OTCProductsTextImportant",
-              "html": "<p><b>IMPORTANT</b>: This survey isn't intended to advertise for, recommend, or be used as a marketing vehicle for any specific product.</p>"
+              "html": "<p><b>IMPORTANT</b>: Attempting to manage LP/GOLPP symptoms with supplements and OTC products is controversial. There are no supplements or OTC products that will restore movement to paralyzed laryneal tissue. That means that even with such products, the risk of breathing crises and a potentially fatal suffocation event is very real. While supplements and OTC products can't prevent a breathing emergency, some veterinary professionals believe some supplements and OTC products may have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life.  </p><p>The questions in this section pertain to the main ingredient of a product, not any specific product. This survey isn't intended to advertise for, recommend, or be used as a marketing vehicle for any specific product. For questions about the effectiveness or safety of any product, consult with a licensed veterinarian.</p>"
             },
             {
               "type": "panel",

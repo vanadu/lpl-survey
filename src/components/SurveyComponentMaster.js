@@ -1,5 +1,5 @@
 "use client";
-// Production SurveyComponent that uses the merged JSON file created by merge-surveys.js.
+// Production SurveyComponentMaster_Brevo that uses the merged JSON file created by merge-surveys.js.
 
 import React, { useState, useCallback, useEffect } from "react";
 import { Model } from "survey-core";
@@ -8,11 +8,11 @@ import { SharpLight } from "survey-core/themes";
 
 import prefillData from "../../helpers/prefill.json";
 import masterSurvey from "../../data/master-survey.json";
-import { preSubmitTransform } from "../..//helpers/preSubmitTransform";
 
 import registry from "../../helpers/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 import { getStyleDirectives } from "./CustomClasses";
+import { attachSurveySyncHandlers } from "../../helpers/syncSelectionValues";
 
 /**
  * ============================================================================
@@ -23,130 +23,69 @@ import { getStyleDirectives } from "./CustomClasses";
  *
  * 1. Survey Model Lifecycle
  *    - Creates and owns the SurveyJS Model instance
- *    - Attaches DOM stamping + styling handlers before first render
- *    - Applies theme and baseline configuration
+ *    - Applies theme and default submit-survey settings
  *
  * 2. UI Behavior Rules
- *    - Enforces consent gating
- *    - Controls navigation behavior
- *    - Prefills survey data
- *    - Handles submission
+ *    - Consent enforcement & auto-advance
  *
- * 3. Styling & DOM Instrumentation Layer
- *    - Adds stable data-name attributes to panels
- *    - Applies layout/style directives to panels and questions
- *    - Provides CSS and testing hooks
+ * 2.5 Prefill Sync Rules (IMPORTANT)
+ *    - Uses attachSurveySyncHandlers from helpers/syncSelectionValues.js
+ *    - Syncs select answers based on prior selections
  *
- * These layers are intentionally separated so that:
- * - Survey rendering remains deterministic
- * - UI logic is easy to reason about
- * - Styling behavior is centralized and predictable
+ * 3. Styling & DOM Instrumentation
+ *    - data-name stamping on panels
+ *    - class/style directives based on registry
  *
- * ============================================================================
+ * Submission:
+ *  - Sends RAW SurveyJS answers to /api/save-survey (server runs preSubmitTransform using surveySchema.json)
+ *  - Sends RAW SurveyJS answers to /api/submit-survey (Brevo)
  */
 
-/**
- * Applies a single style directive to a SurveyJS-rendered element.
- * Directives are produced by getStyleDirectives(questionOrPanel).
- *
- * The "target" concept lets you attach a class to:
- *  - a question’s overall root element ("default")
- *  - the input/control wrapper ("control") so styles hit the actual widget
- *  - the choice list container ("items") for checkbox/radio sets, etc.
- */
-function applyDirective(htmlElement, { target, className }) {
-  if (!htmlElement || !className) return;
+// Consent enforcement constants
+const CONSENT_PAGE_INDEX = 0;
+const CONSENT_QUESTION = "LandingConsent";
 
-  // ✅ NEW: question-level styles must attach to a non-replaced element
-  // so ::after can render. Do NOT crawl to input/select here.
-  if (target === "question") {
-    htmlElement.classList.add(className);
-    // console.log('htmlElement :>> ');
-    // console.log(htmlElement);
-    return;
+function applyDirectives(root, directives) {
+  if (!root || !directives) return;
+
+  // Directives can be:
+  // - { className: "..." }
+  // - { items: [ { selector: "...", className: "..." }, ... ] }
+  // - { items: [ { addClass: "...", selector: "..." } ] } etc.
+  //
+  // getStyleDirectives() returns a normalized list in your CustomClasses.js contract,
+  // so this helper just applies them.
+
+  if (directives.className) {
+    root.classList.add(directives.className);
   }
 
-  if (target === "items") {
-    const node =
-      htmlElement.querySelector("fieldset.sd-selectbase") ||
-      htmlElement.querySelector(".sd-selectbase") ||
-      htmlElement;
-    node.classList.add(className);
-    console.log("ITEMS");
-    console.log('htmlElement :>> ');
-    console.log(htmlElement);
-    console.log('className :>> ');
-    console.log(className);
-    return;
+  if (Array.isArray(directives.items)) {
+    directives.items.forEach((item) => {
+      if (!item) return;
+
+      const selector = item.selector;
+      const className = item.className || item.addClass;
+
+      if (!selector || !className) return;
+
+      // Apply to all matching descendants
+      root.querySelectorAll(selector).forEach((el) => {
+        el.classList.add(className);
+      });
+    });
   }
-
-  if (target === "control") {
-    const dropdownWrapper = htmlElement.querySelector(".sd-input.sd-dropdown");
-    console.log("dropdownWrapper", dropdownWrapper);
-    if (dropdownWrapper) {
-      dropdownWrapper.classList.add(className);
-
-      dropdownWrapper
-        .querySelectorAll(`.${className}`)
-        .forEach((n) => n !== dropdownWrapper && n.classList.remove(className));
-      return;
-    }
-
-    const raw = htmlElement.querySelector("input, textarea, select");
-    const wrapper =
-      raw?.closest(".sd-input") ||
-      htmlElement.querySelector(".sd-input") ||
-      htmlElement;
-
-    wrapper.classList.add(className);
-
-    wrapper
-      .querySelectorAll(`.${className}`)
-      .forEach((n) => n !== wrapper && n.classList.remove(className));
-
-    return;
-  }
-
-  htmlElement.classList.add(className);
 }
 
-/**
- * Applies an array of directives to a given DOM element.
- */
-function applyDirectives(htmlElement, directives) {
-  directives.forEach((d) => applyDirective(htmlElement, d));
-}
-
-export default function MasterSurveyComponent() {
-  /**
-   * Consent gating constants:
-   * - CONSENT_QUESTION is the question name used to capture consent.
-   * - CONSENT_PAGE_INDEX is the 0-based index of the page that contains it.
-   */
-  const CONSENT_QUESTION = "LandingConsent";
-  const CONSENT_PAGE_INDEX = 0;
-
+export default function SurveyComponentMaster() {
   /**
    * ==========================================================================
    * LAYER 1 — Survey Model Lifecycle
    * ==========================================================================
    *
-   * This initializer creates the SurveyJS model and attaches all render-time
-   * handlers BEFORE the first <Survey /> render.
-   *
-   * Why this matters:
-   * SurveyJS fires onAfterRenderPanel/onAfterRenderQuestion during initial
-   * render. If handlers are registered later (e.g., in useEffect), early
-   * panels/questions may never be stamped or styled.
-   *
-   * ⚠️ React Strict Mode gotcha (development only)
-   * ---------------------------------------------
-   * In React Strict Mode, React intentionally mounts → unmounts → remounts
-   * components in development to detect side effects.
-   *
-   * This is safe here because:
-   *   - Each mount creates a fresh Survey model instance
-   *   - Handlers are attached only during model creation
+   * Ownership rules:
+   * - Survey Model is created once per component instance
+   * - Handlers are attached only during model creation
    *
    * IMPORTANT:
    * If you ever reuse a shared Survey model instance or attach handlers
@@ -179,49 +118,26 @@ export default function MasterSurveyComponent() {
      * Responsibilities:
      *   • Stamp panels with stable data-name attributes
      *   • Apply layout/style directives from the registry
-     *
-     * This layer provides:
-     *   - CSS hooks
-     *   - Automated test selectors
-     *   - DOM inspection stability
      */
 
-    /**
-     * Handler: Panel data-name stamper
-     *
-     * Purpose: Adds a stable `data-name="<PanelName>"` attribute to panel DOM nodes.
-     * This is used for:
-     *  - CSS hooks
-     *  - automated test selectors
-     *  - debug/inspection in the DOM
-     *
-     * Must be attached before first render, or early panels can be missed.
-     */
+    // Stable `data-name="<PanelName>"` on panels
     attachPanelDataNameStamper(surveyModel, { registry });
 
-    /**
-     * Handler: onAfterRenderPanel
-     *
-     * Purpose: After SurveyJS renders a panel, apply any style directives defined
-     * for that panel (layout helpers, wrappers, etc.).
-     *
-     * Note: options.panel is the SurveyJS panel model; options.htmlElement is the DOM root.
-     */
+    // Apply style directives for panels
     surveyModel.onAfterRenderPanel.add((sender, options) => {
       applyDirectives(options.htmlElement, getStyleDirectives(options.panel));
     });
 
-    /**
-     * Handler: onAfterRenderQuestion
-     *
-     * Purpose: After SurveyJS renders a question, apply any style directives defined
-     * for that question (control wrappers, item containers, etc.).
-     *
-     * Note: options.question is the SurveyJS question model; options.htmlElement is the DOM root.
-     */
+    // Apply style directives for questions
     surveyModel.onAfterRenderQuestion.add((sender, options) => {
       applyDirectives(options.htmlElement, getStyleDirectives(options.question));
     });
+
+    // Prefill (if you still use it)
+    // NOTE: If prefill.json contains keys that aren't in the survey, SurveyJS ignores them.
+    if (prefillData && typeof prefillData === "object") {
+      surveyModel.data = { ...prefillData };
+    }
 
     return surveyModel;
   });
@@ -237,15 +153,7 @@ export default function MasterSurveyComponent() {
    * Blocks navigation away from the landing page unless the user agrees.
    */
 
-  /**
-   * Handler: onValidatePage (consent enforcement)
-   *
-   * Purpose: Prevent leaving the Landing/Consent page unless LandingConsent === "Yes".
-   * This is a hard gate; it blocks navigation by pushing a validation error.
-   *
-   * Why onValidatePage: It’s the canonical SurveyJS hook for stopping navigation
-   * due to business rules. It catches Next clicks, programmatic navigation, etc.
-   */
+  // Prevent leaving landing page without consent
   useEffect(() => {
     function handleValidatePage(sender, options) {
       if (sender.currentPageNo !== CONSENT_PAGE_INDEX) return;
@@ -261,11 +169,7 @@ export default function MasterSurveyComponent() {
     return () => survey.onValidatePage.remove(handleValidatePage);
   }, [survey]);
 
-  /**
-   * Consent auto-advance behavior:
-   * When consent is accepted, enable navigation and move forward
-   * without requiring an extra click.
-   */
+  // Auto-advance when consent is accepted
   useEffect(() => {
     function handleConsentChange(sender, options) {
       if (
@@ -283,41 +187,135 @@ export default function MasterSurveyComponent() {
   }, [survey]);
 
   /**
-   * Prefill behavior:
-   * Hydrates the survey with saved/seeded data.
+   * ==========================================================================
+   * LAYER 2.5 — Prefill Sync Rules
+   * ==========================================================================
    *
-   * This can influence visibility rules and conditional logic.
+   * Purpose:
+   * Keep certain downstream answers automatically in sync with upstream selections,
+   * so users don't have to re-enter the same information in multiple places.
    *
-   * Note: Keeping it in an effect avoids doing it during component render.
+   * Implementation:
+   * attachSurveySyncHandlers (helpers/syncSelectionValues.js) listens for changes
+   * and propagates values according to the mapping below.
    */
   useEffect(() => {
-    if (prefillData) {
-      survey.data = prefillData;
+    if (!survey) return;
+    console.log("ATTACHING SYNC HANDLERS", !!survey);
+
+
+    console.log("SYNC CHECK source exists?",
+      !!survey.getQuestionByName("InfoSourcesTypes"),
+      "target exists?",
+      !!survey.getQuestionByName("InfoSourcesBestSource")
+    );
+
+    console.log("SYNC CHECK source2 exists?",
+      !!survey.getQuestionByName("EarlyOtherConditionsType"),
+      "target2 exists?",
+      !!survey.getQuestionByName("ConclusionOtherConditions")
+    );
+
+
+    return attachSurveySyncHandlers(survey, {
+      
+      checkboxToDropdown: [
+        { source: "InfoSourcesTypes", target: "InfoSourcesBestSource" },
+      ],
+      checkboxToCheckbox: [
+        {
+          source: "EarlyOtherConditionsType",
+          target: "ConclusionOtherConditions",
+          options: {
+            onlyIfEmpty: true,
+            copyOther: true,
+          },
+        },
+      ],
     }
+  );
+
   }, [survey]);
+
+  useEffect(() => {
+    if (!survey) return;
+
+    const dbg = (sender, opt) => {
+      if (opt?.name === "InfoSourcesTypes" || opt?.name === "EarlyOtherConditionsType") {
+        console.log("VALUE CHANGED:", opt.name, "=>", opt.value);
+      }
+    };
+
+    survey.onValueChanged.add(dbg);
+    return () => survey.onValueChanged.remove(dbg);
+  }, [survey]);
+
+
+
+
+
+
 
   /**
    * Submission pipeline:
-   * Transforms survey data and sends it to the backend.
+   * - Send RAW survey answers to /api/save-survey (server applies preSubmitTransform using surveySchema.json)
+   * - Send RAW survey answers to /api/submit-survey (Brevo)
    *
-   * preSubmitTransform is the final normalization step.
+   * IMPORTANT:
+   * Do NOT run preSubmitTransform in the browser. It relies on the curated build-schema output
+   * (surveySchema.json) and should remain server-side to avoid drift and duplication.
    */
   const handleComplete = useCallback(async (sender) => {
     try {
-      const finalData = preSubmitTransform(sender.data);
+      // Use a single timestamp for save + email correlation
+      const completedAt = new Date().toISOString();
 
-      const response = await fetch("/api/save-survey", {
+      const payload = {
+        ...sender.data,
+        // Server-side preSubmitTransform expects completedAt for filename stamping
+        completedAt,
+        // Keep submittedAt for any legacy/other consumers (harmless)
+        submittedAt: completedAt,
+        source: "master-brevo",
+      };
+
+      // 1) Save to local disk (authoritative archive)
+      const saveResponse = await fetch("/api/save-survey", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(finalData),
+        body: JSON.stringify(payload),
       });
 
-      if (response.ok) {
-        setIsCompleted(true);
-      } else {
-        const data = await response.json();
-        alert(`Error: ${data.message}`);
+      if (!saveResponse.ok) {
+        const data = await saveResponse.json().catch(() => ({}));
+        alert(
+          `Error saving survey: ${data.message || data.error || "Unknown error"}`
+        );
+        return;
       }
+
+      // 2) Send via Brevo (best-effort notification)
+      console.log("About to call email endpoint…");
+
+      const emailResponse = await fetch("/api/submit-survey", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!emailResponse.ok) {
+        const emailData = await emailResponse.json().catch(() => ({}));
+        alert(
+          `Survey saved, but failed to send email: ${
+            emailData.error || emailData.message || "Unknown error"
+          }`
+        );
+        setIsCompleted(true); // still mark completed if save worked
+        return;
+      }
+
+      // ✅ Everything succeeded
+      setIsCompleted(true);
     } catch (err) {
       console.error("Submission failed:", err);
       alert("Submission failed. See console for details.");

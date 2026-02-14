@@ -28,6 +28,7 @@
 //     });
 //   }, [survey]);
 
+
 /** Normalize a SurveyJS value into an array. */
 function asArray(v) {
   if (Array.isArray(v)) return v;
@@ -198,7 +199,10 @@ export function attachSurveySyncHandlers(survey, config) {
   };
 
   const onValueChanged = (sender, options) => {
+
     if (!sources.has(options.name)) return;
+    // !VA Debugging...
+    console.log("SYNC RULE HIT:", options.name, "=>", options.value);
     runAll(sender, "value");
   };
 

@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "data"
+		},
+		{
+			"path": "helpers"
+		},
+		{
+			"path": "scripts"
+		},
+		{
+			"path": "src/styles"
+		},
+		{
+			"path": "src/components"
+		}
+	],
+	"settings": {}
+}
