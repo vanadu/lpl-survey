@@ -1,4 +1,4 @@
-import { Oswald, Inter, Boogaloo, Open_Sans, Inconsolata } from 'next/font/google'
+import { Oswald, Open_Sans } from 'next/font/google'
 import { useEffect } from 'react'
 // !VA Date: 2024.03.29 Still using the Head component for the viewport property
 import Head from 'next/head'
@@ -22,27 +22,21 @@ import '../styles/globals.scss'
 import "survey-core/survey-core.css"; // import the SurveyJS stylesheet
 
 // !VA If loading a variable font, you don't need to specify the font weight
-const oswald = Oswald({ 
-  subsets: ['latin'], 
-  variable: '--oswald-font'
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['200','300','400','500','600','700'],
+  variable: '--oswald-font',
+  display: 'swap',
 })
-const boogaloo = Boogaloo({ 
-  subsets: ['latin'], 
-  variable: '--boogaloo-font',
-  weight: ["400"],
+
+const opensans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['300','400','600','700'],
+  variable: '--opensans-font',
+  display: 'swap',
 })
-const inter = Inter({ 
-  subsets: ['latin'], 
-  variable: '--inter-font'
-})
-const opensans = Open_Sans(
-  { subsets: ['latin'],
-    variable: '--opensans-font'
-})
-const inconsolata = Inconsolata(
-  { subsets: ['latin'],
-    variable: '--inconsolata-font'
-})
+
+
 
 function MyApp({ Component, pageProps }) {
   
@@ -88,10 +82,7 @@ function MyApp({ Component, pageProps }) {
       <style jsx global>{`
         :root {
           --oswald-font: ${oswald.style.fontFamily};
-          --inter-font: ${inter.style.fontFamily};
-
           --opensans-font: ${opensans.style.fontFamily};
-          --inconsolata-font: ${inconsolata.style.fontFamily};
         }'
       `}</style>
       <Head>

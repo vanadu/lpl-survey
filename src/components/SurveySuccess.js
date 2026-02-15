@@ -2,6 +2,8 @@ import React from 'react'
 // !VA Next.js imports
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from "next/router";
+
 
 // !VA Images
 import logo from '../../public/img-lpl-logo.png'

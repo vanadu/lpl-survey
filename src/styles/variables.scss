@@ -41,12 +41,12 @@ $dark_text_color: #212121;
 $gray_text_color: #252525;
 $guide_menu_text_color: #161616; //guide_menu_item_block
 $showmore_text_color: #8E000B;
-$primary_font: 'Open Sans', sans-serif;
-$secondary_font: 'Oswald', 'Arial Narrow', sans-serif;
-$boogaloo_font: 'Boogaloo', 'Oswald', sans-serif;
-$inter_font: 'Inter', sans-serif;
+$primary_font: var(--opensans-font), sans-serif;
+$secondary_font: var(--oswald-font), "Arial Narrow", sans-serif;
+
+
 // $condensed_font: 'Roboto Condensed', sans-serif;
-$monospace_font: 'Inconsolata', monospace;
+// $monospace_font: 'Inconsolata', monospace;
 
 // ACCENTS
 // -------

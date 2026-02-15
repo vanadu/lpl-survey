@@ -391,26 +391,26 @@ const handleComplete = useCallback(
       // !VA Deleting above here...
 
 
-const resp = await fetch("/api/submit-survey", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(payload),
-});
+      const resp = await fetch("/api/submit-survey", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-const data = await resp.json().catch(() => ({}));
+      const data = await resp.json().catch(() => ({}));
 
-if (!resp.ok) {
-  // message matches server meaning
-  alert(`Submission failed: ${data.error || data.message || "Unknown error"}`);
-  return;
-}
+      if (!resp.ok) {
+        // message matches server meaning
+        alert(`Submission failed: ${data.error || data.message || "Unknown error"}`);
+        return;
+      }
 
-// Optional: if you want to surface suspect flags during beta
-if (data.disposition === "suspect") {
-  console.warn("Suspect submission:", data.flags);
-}
+      // Optional: if you want to surface suspect flags during beta
+      if (data.disposition === "suspect") {
+        console.warn("Suspect submission:", data.flags);
+      }
 
-router.push("/submit-success");
+      router.push("/submit-success");
 
 
 
