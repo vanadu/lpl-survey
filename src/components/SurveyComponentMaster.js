@@ -355,37 +355,68 @@ const handleComplete = useCallback(
         source: "master-brevo",
       };
 
+
+      // !VA Deleting from here..
       // 1) Save to local disk (authoritative archive)
-      const saveResponse = await fetch("/api/save-survey", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      // const saveResponse = await fetch("/api/save-survey", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(payload),
+      // });
 
-      if (!saveResponse.ok) {
-        const data = await saveResponse.json().catch(() => ({}));
-        alert(`Error saving survey: ${data.message || data.error || "Unknown error"}`);
-        return;
-      }
+      // if (!saveResponse.ok) {
+      //   const data = await saveResponse.json().catch(() => ({}));
+      //   alert(`Error saving survey: ${data.message || data.error || "Unknown error"}`);
+      //   return;
+      // }
 
-      // 2) Brevo email POST DISABLED (intentionally bypassed during redirect testing)
-      //    This keeps UX consistent: redirect occurs whether or not email is enabled.
-      const emailResponse = await fetch("/api/submit-survey", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      if (!emailResponse.ok) {
-        const emailData = await emailResponse.json().catch(() => ({}));
-        alert(
-          `Survey saved, but failed to send email: ${
-            emailData.error || emailData.message || "Unknown error"
-          }`
-        );
-      }
+      // // 2) Brevo email POST DISABLED (intentionally bypassed during redirect testing)
+      // //    This keeps UX consistent: redirect occurs whether or not email is enabled.
+      // const emailResponse = await fetch("/api/submit-survey", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(payload),
+      // });
+      // if (!emailResponse.ok) {
+      //   const emailData = await emailResponse.json().catch(() => ({}));
+      //   alert(
+      //     `Survey saved, but failed to send email: ${
+      //       emailData.error || emailData.message || "Unknown error"
+      //     }`
+      //   );
+      // }
 
-      // 3) Redirect to dedicated success page after local save succeeds
-      router.push("/submit-success");
+      // // 3) Redirect to dedicated success page after local save succeeds
+      // router.push("/submit-success");
+      // !VA Deleting above here...
+
+
+const resp = await fetch("/api/submit-survey", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(payload),
+});
+
+const data = await resp.json().catch(() => ({}));
+
+if (!resp.ok) {
+  // message matches server meaning
+  alert(`Submission failed: ${data.error || data.message || "Unknown error"}`);
+  return;
+}
+
+// Optional: if you want to surface suspect flags during beta
+if (data.disposition === "suspect") {
+  console.warn("Suspect submission:", data.flags);
+}
+
+router.push("/submit-success");
+
+
+
+
+
+
     } catch (err) {
       console.error("Submission failed:", err);
       alert("Submission failed. See console for details.");

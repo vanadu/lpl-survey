@@ -1,34 +1,156 @@
-// pages/api/submit-survey.js
 import fs from "fs";
 import path from "path";
+import crypto from "crypto";
 import { preSubmitTransform } from "../../../helpers/preSubmitTransform";
-
 import { TransactionalEmailsApi, SendSmtpEmail } from "@getbrevo/brevo";
 
-/**
- * Submit endpoint:
- * - transforms raw SurveyJS data
- * - saves ONE FILE per submission in /data/survey-results/
- * - sends Brevo email
- */
+/*
+  Beta safeguards:
+  - rate limit
+  - duplicate suppression
+  - scoring & flags
+  - respondent fingerprint
+*/
+
+const RATE_WINDOW_MS = 60_000;
+const RATE_MAX_PER_WINDOW = 12;
+const DUPE_WINDOW_MS = 10 * 60_000;
+
+const rateStore = new Map();
+const dupeStore = new Map();
+
+const sha256 = (x) =>
+  crypto.createHash("sha256").update(String(x)).digest("hex");
+
+function getClientIp(req) {
+  const xff = req.headers["x-forwarded-for"];
+  if (typeof xff === "string") return xff.split(",")[0].trim();
+  return req.socket?.remoteAddress || "unknown";
+}
+
+function cleanupOldEntries() {
+  const t = Date.now();
+  for (const [k, v] of dupeStore.entries()) {
+    if (t - v > DUPE_WINDOW_MS) dupeStore.delete(k);
+  }
+}
+
+function rateLimitOrThrow(ipHash) {
+  const now = Date.now();
+  const entry = rateStore.get(ipHash);
+
+  if (!entry || now - entry.windowStart > RATE_WINDOW_MS) {
+    rateStore.set(ipHash, { windowStart: now, count: 1 });
+    return;
+  }
+
+  entry.count++;
+
+  if (entry.count > RATE_MAX_PER_WINDOW) {
+    const err = new Error("rate_limited");
+    err.statusCode = 429;
+    throw err;
+  }
+}
+
+/* ======================================================
+   RESPONDENT IDENTITY (YOUR SURVEY FIELDS)
+====================================================== */
+
+function getRespondentIdentifier(raw) {
+  const firstName = raw.UserInfoFirstName?.trim();
+  const dogName = raw.CmpnName?.trim();
+
+  const fb = raw.UserInfoContactTypeFacebook?.trim();
+  const email = raw.UserInfoContactTypeEmail?.trim();
+
+  const contact = fb || email || null;
+
+  const missing = !firstName || !dogName || !contact;
+
+const rawId = `${firstName || "unknown"}_${dogName || "unknown"}_${contact || "unknown"}`;
+
+const id = rawId
+  .toLowerCase()
+  .replace(/^https?:\/\//, "")   // remove protocol
+  .replace(/[^\w]+/g, "_")       // replace illegal chars
+  .replace(/_+/g, "_")           // collapse repeats
+  .replace(/^_|_$/g, "");        // trim underscores
+
+  return { id, missing };
+}
+
+/* ======================================================
+   SCORING
+====================================================== */
+
+function scoreSubmission(raw, rateCount) {
+  const flags = [];
+
+  if (raw.__hp) flags.push("honeypot");
+
+  const durationMs = Number(raw?.__meta?.durationMs);
+  if (durationMs && durationMs < 25000) flags.push("too_fast");
+
+  if (rateCount >= RATE_MAX_PER_WINDOW * 0.8) flags.push("ip_burst");
+
+  const score = flags.length;
+
+  const disposition =
+    score >= 4 ? "block" :
+    score >= 2 ? "suspect" :
+    "accept";
+
+  return { score, flags, disposition, durationMs };
+}
+
+/* ======================================================
+   HANDLER
+====================================================== */
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ success: false, error: "Method Not Allowed" });
+    return res.status(405).json({ success: false });
   }
 
   try {
-    const raw = req.body;
+    cleanupOldEntries();
 
-    if (!raw || Object.keys(raw).length === 0) {
-      return res.status(400).json({ success: false, error: "No survey data provided" });
+    const raw = req.body;
+    if (!raw) {
+      return res.status(400).json({ success: false, error: "No data" });
     }
 
-    // 1️⃣ Transform submission
+    const ipHash = sha256(getClientIp(req));
+    rateLimitOrThrow(ipHash);
+
+    const rateCount = rateStore.get(ipHash)?.count || 0;
+
+    const payloadHash = sha256(JSON.stringify(raw));
+    if (dupeStore.has(payloadHash)) {
+      return res.status(409).json({ success: false, error: "Duplicate submission" });
+    }
+    dupeStore.set(payloadHash, Date.now());
+
+    const respondent = getRespondentIdentifier(raw);
+
+    const scored = scoreSubmission(raw, rateCount);
+
+    if (respondent.missing) {
+      scored.flags.push("missing_identifier");
+      scored.score++;
+      if (scored.score >= 2 && scored.disposition === "accept") {
+        scored.disposition = "suspect";
+      }
+    }
+
+    if (scored.disposition === "block") {
+      return res.status(403).json({ success: false, error: "Blocked" });
+    }
+
     const submission = preSubmitTransform(raw);
 
-    // 2️⃣ Build timestamp + filename (matches email metadata format)
     const now = new Date();
-
     const stamp =
       now.getFullYear().toString() +
       String(now.getMonth() + 1).padStart(2, "0") +
@@ -38,86 +160,62 @@ export default async function handler(req, res) {
       String(now.getMinutes()).padStart(2, "0") +
       String(now.getSeconds()).padStart(2, "0");
 
-    // Build safe descriptor portion (profile / respondent info if available)
-    const descriptorSource =
-      submission.profileUrl ||
-      submission.profile ||
-      submission.name ||
-      submission.respondent ||
-      "submission";
 
-    const descriptor = String(descriptorSource)
-      .replace(/^https?:\/\//, "")
-      .replace(/[^\w]/g, "_")
-      .replace(/_+/g, "_")
-      .replace(/^_+|_+$/g, "");
 
-    const filename = `${stamp}_${descriptor}.json`;
 
-    const resultsDir = path.join(process.cwd(), "data", "survey-results");
-    const outputPath = path.join(resultsDir, filename);
 
-    if (!fs.existsSync(resultsDir)) {
-      fs.mkdirSync(resultsDir, { recursive: true });
-    }
+    const filename = `${stamp}_${respondent.id}.json`;
 
-    // record saved to disk
+    const dir = path.join(process.cwd(), "data", "survey-results");
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
     const record = {
       submittedAt: now.toISOString(),
-      filename,
-      ...submission,
+      respondentId: respondent.id,
+      meta: {
+        ipHash,
+        score: scored.score,
+        flags: scored.flags,
+        disposition: scored.disposition,
+        durationMs: scored.durationMs
+      },
+      submission
     };
 
-    fs.writeFileSync(outputPath, JSON.stringify(record, null, 2), "utf8");
+    fs.writeFileSync(
+      path.join(dir, filename),
+      JSON.stringify(record, null, 2)
+    );
 
-    // 3️⃣ Send email via Brevo
-    if (!process.env.BREVO_API_KEY) {
-      return res.status(500).json({ success: false, error: "Missing BREVO_API_KEY" });
-    }
-
-    const toEmail = process.env.SURVEY_TO_EMAIL || "van@vanalbert.com";
-    const fromEmail = process.env.SURVEY_FROM_EMAIL || "survey@larparlife.org";
-    const fromName = process.env.SURVEY_FROM_NAME || "Survey";
+    /* ===== BREVO EMAIL ===== */
 
     const client = new TransactionalEmailsApi();
     client.authentications.apiKey.apiKey = process.env.BREVO_API_KEY;
 
     const email = new SendSmtpEmail();
-    email.sender = { email: fromEmail, name: fromName };
-    email.to = [{ email: toEmail }];
-    email.subject = "New Survey Submission";
+    email.sender = {
+      email: process.env.SURVEY_FROM_EMAIL,
+      name: process.env.SURVEY_FROM_NAME
+    };
+    email.to = [{ email: process.env.SURVEY_TO_EMAIL }];
+    email.subject = `Survey Submission${scored.disposition === "suspect" ? " (SUSPECT)" : ""}`;
 
-    email.htmlContent = `<h3>Survey Response</h3>
-<p><strong>Filename:</strong> ${filename}</p>
-<pre>${escapeHtml(JSON.stringify(record, null, 2))}</pre>`;
-
-    if (!email.sender?.email) {
-      throw new Error("Brevo payload invalid: sender missing");
-    }
+    email.htmlContent = `<pre>${JSON.stringify(record, null, 2)}</pre>`;
 
     await client.sendTransacEmail(email);
 
     return res.status(200).json({
       success: true,
-      message: "Saved and emailed survey submission.",
-      filename,
-      record,
+      disposition: scored.disposition,
+      flags: scored.flags
     });
 
   } catch (err) {
-    console.error("submit-survey error:", err);
-    console.error("brevo details:", err?.response?.body || err?.body || err);
+    if (err.statusCode === 429) {
+      return res.status(429).json({ success: false, error: "Rate limited" });
+    }
 
-    return res.status(500).json({
-      success: false,
-      error: err?.response?.body || err?.body || String(err?.message || err),
-    });
+    console.error(err);
+    return res.status(500).json({ success: false, error: "Server error" });
   }
-}
-
-function escapeHtml(str) {
-  return String(str)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;");
 }
