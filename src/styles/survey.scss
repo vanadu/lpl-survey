@@ -43,12 +43,6 @@
   font-weight: 600!important;
 }
 
-
-
-
-
-
-
 .survey-dropdown {
   position: relative;
   display: inline-flex;
@@ -494,6 +488,121 @@
 [data-name="ConclusionDifferentChoices"]  {
   width: 700px!important;
 }
+
+
+// !VA SUCCESS page
+
+.container-flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// !VA Content styles
+// !VA This is the H1 that matches with the title tag
+.main-head {
+  @include mphone {
+    padding-bottom: .25rem;
+    font-size: $mphoneXXLFontSize;
+    line-height: $mphoneXLLineHeight; 
+  }
+  @include lphone {
+    padding: 1rem 0 .313rem;
+    font-size: $lphoneXXLFontSize;
+    line-height: $lphoneXLLineHeight; 
+  }
+  @include tablet {
+    padding: 1rem 0 .25rem;
+    font-size: $tabletXXLFontSize;
+    line-height: $tabletXLLineHeight
+  }
+  @include desktop {
+    padding: 1.25rem 0 .25rem;
+    font-size: $desktopXXLFontSize;
+    line-height: $desktopXLLineHeight
+  }
+  @include ldesktop {
+    padding: 1.25rem 0 .5rem;
+    font-size: $ldesktopXXLFontSize;
+    line-height: $ldesktopXLLineHeight
+  }
+  margin: 0 0 .25rem;
+  color: $dark_text_color;
+  font-family: $secondary_font;
+  font-size: $rootXXLFontSize;
+  line-height: $rootXLLineHeight; 
+  font-weight: 500;
+  text-align: center;
+}
+
+.success-icon {
+  @include lphone {
+    width: 100px;
+    margin-bottom: .5rem;
+  }
+  @include tablet {
+    width: 110px;
+    margin-bottom: .75rem;
+  }
+  @include desktop {
+    width: 110px;
+    margin-bottom: .75rem;
+  }
+  @include ldesktop {
+    width: 136px;
+    margin-bottom: 1.25rem;
+  }
+  position: relative;
+  width: 80px;
+  height: auto;
+  margin-bottom: .25rem;
+  // !VA 2024
+  z-index: 100;
+}
+
+
+.content-text {
+  @include mphone {
+    margin: .188rem 0 .313rem;
+    font-size: $mphoneLargeFontSize;
+    line-height: $mphoneLargeLineHeight;
+  }
+  @include lphone {
+    margin: .25rem 0 .375rem;
+    font-size: $lphoneLargeFontSize;
+    line-height: $lphoneLargeLineHeight;
+  }
+  @include tablet {
+    margin: .313rem 0 .375rem;
+    font-size: $tabletLargeFontSize;
+    line-height: $tabletLargeLineHeight;
+  }
+  @include desktop {
+    font-size: $desktopLargeFontSize;
+    line-height: $desktopLargeLineHeight;
+  }
+  @include ldesktop {
+    font-size: $ldesktopLargeFontSize;
+    line-height: $ldesktopLargeLineHeight;
+  }
+  // padding: .5rem 0 0 0;
+  margin: .125rem 0 .25rem;
+  font-family: $primary_font;
+  color: $dark_text_color;
+  font-size: $rootLargeFontSize;
+  line-height: $rootLargeLineHeight;
+  font-weight: 400;
+  text-align: left;
+}
+
+.survey-spacer {
+  height: 300px;
+}
+
+
+
+
 
 
 // !VA Testing...

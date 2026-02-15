@@ -5,7 +5,10 @@ import React, { useState, useCallback, useEffect } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
+// !VA Is this necessary here
+import { useRouter } from "next/router";
 
+// !VA Survey imports
 import prefillData from "../../helpers/prefill.json";
 import masterSurvey from "../../data/master-survey.json";
 
@@ -23,7 +26,7 @@ import { attachSurveySyncHandlers } from "../../helpers/syncSelectionValues";
  *
  * 1. Survey Model Lifecycle
  *    - Creates and owns the SurveyJS Model instance
- *    - Applies theme and default submit-survey settings
+ *    - Applies theme and default settings
  *
  * 2. UI Behavior Rules
  *    - Consent enforcement & auto-advance
@@ -45,17 +48,85 @@ import { attachSurveySyncHandlers } from "../../helpers/syncSelectionValues";
 const CONSENT_PAGE_INDEX = 0;
 const CONSENT_QUESTION = "LandingConsent";
 
+/**
+ * Apply ONE directive using the BACKUP contract:
+ *   { target: "question" | "control" | "items" | "root", className: "..." }
+ *
+ * This function is the critical piece for SurveyJS DOM targeting:
+ * - dropdowns need .sd-input.sd-dropdown
+ * - text inputs need the closest .sd-input wrapper
+ * - checkbox/radiogroup containers need .sd-selectbase / fieldset.sd-selectbase
+ * - separators / ::after effects often need the question root
+ */
+function applyDirective(htmlElement, directive) {
+  if (!htmlElement || !directive) return;
+
+  const className = directive.className || directive.addClass;
+  if (!className) return;
+
+  const target = directive.target || "root";
+
+  // Apply to question root (needed for ::after separators because inputs are replaced elements)
+  if (target === "question") {
+    htmlElement.classList.add(className);
+    return;
+  }
+
+  // Apply to checkbox/radiogroup container
+  if (target === "items") {
+    const itemsEl =
+      htmlElement.querySelector(".sd-selectbase") ||
+      htmlElement.querySelector("fieldset.sd-selectbase");
+    if (itemsEl) itemsEl.classList.add(className);
+    return;
+  }
+
+  // Apply to control wrapper (dropdown/input wrapper)
+  if (target === "control") {
+    // Dropdown wrapper
+    const dropdownWrapper = htmlElement.querySelector(".sd-input.sd-dropdown");
+    if (dropdownWrapper) {
+      dropdownWrapper.classList.add(className);
+      return;
+    }
+
+    // Other inputs: find input/textarea/select then climb to the .sd-input wrapper
+    const inputEl = htmlElement.querySelector("input, textarea, select");
+    if (inputEl) {
+      const wrapper = inputEl.closest(".sd-input");
+      if (wrapper) wrapper.classList.add(className);
+      return;
+    }
+
+    // Fallback
+    htmlElement.classList.add(className);
+    return;
+  }
+
+  // Default: apply to root
+  htmlElement.classList.add(className);
+}
+
+/**
+ * Apply MANY directives. Supports BOTH contracts:
+ *
+ * A) BACKUP contract (array):
+ *    [ { target, className }, ... ]
+ *
+ * B) Current contract (object):
+ *    { className?: "...", items?: [ { selector, className/addClass }, ... ] }
+ *    (and also supports embedded target-based items)
+ */
 function applyDirectives(root, directives) {
   if (!root || !directives) return;
 
-  // Directives can be:
-  // - { className: "..." }
-  // - { items: [ { selector: "...", className: "..." }, ... ] }
-  // - { items: [ { addClass: "...", selector: "..." } ] } etc.
-  //
-  // getStyleDirectives() returns a normalized list in your CustomClasses.js contract,
-  // so this helper just applies them.
+  // A) BACKUP-style: array of directives
+  if (Array.isArray(directives)) {
+    directives.forEach((d) => applyDirective(root, d));
+    return;
+  }
 
+  // B) Current-style: object directives
   if (directives.className) {
     root.classList.add(directives.className);
   }
@@ -64,48 +135,35 @@ function applyDirectives(root, directives) {
     directives.items.forEach((item) => {
       if (!item) return;
 
-      const selector = item.selector;
-      const className = item.className || item.addClass;
+      // Selector-based items
+      if (item.selector && (item.className || item.addClass)) {
+        const cls = item.className || item.addClass;
+        root.querySelectorAll(item.selector).forEach((el) => el.classList.add(cls));
+        return;
+      }
 
-      if (!selector || !className) return;
-
-      // Apply to all matching descendants
-      root.querySelectorAll(selector).forEach((el) => {
-        el.classList.add(className);
-      });
+      // Target-based items (BACKUP-style embedded)
+      if (item.target && (item.className || item.addClass)) {
+        applyDirective(root, item);
+      }
     });
   }
 }
 
-
-
-
-
-
 export default function SurveyComponentMaster() {
+
+  const router = useRouter();
+
   /**
    * ==========================================================================
    * LAYER 1 — Survey Model Lifecycle
    * ==========================================================================
-   *
-   * Ownership rules:
-   * - Survey Model is created once per component instance
-   * - Handlers are attached only during model creation
-   *
-   * IMPORTANT:
-   * If you ever reuse a shared Survey model instance or attach handlers
-   * outside this initializer, you can accidentally duplicate handlers.
-   *
-   * Symptoms of duplicated handlers:
-   *   - Classes applied twice
-   *   - Console logs firing twice
-   *   - Navigation or validation running multiple times
-   *
-   * Rule of thumb:
-   * Treat the Survey model as component-owned state.
    */
   const [survey] = useState(() => {
     const surveyModel = new Model(masterSurvey);
+    // !VA Turn off the default success page after submit
+    surveyModel.showCompletedPage = false;
+
 
     // Theme setup
     surveyModel.applyTheme(SharpLight);
@@ -117,12 +175,6 @@ export default function SurveyComponentMaster() {
      * ----------------------------------------------------------------------
      * LAYER 3 — Styling & DOM Instrumentation
      * ----------------------------------------------------------------------
-     *
-     * These handlers run after SurveyJS renders panels/questions.
-     *
-     * Responsibilities:
-     *   • Stamp panels with stable data-name attributes
-     *   • Apply layout/style directives from the registry
      */
 
     // Stable `data-name="<PanelName>"` on panels
@@ -138,8 +190,7 @@ export default function SurveyComponentMaster() {
       applyDirectives(options.htmlElement, getStyleDirectives(options.question));
     });
 
-    // Prefill (if you still use it)
-    // NOTE: If prefill.json contains keys that aren't in the survey, SurveyJS ignores them.
+    // Prefill
     if (prefillData && typeof prefillData === "object") {
       surveyModel.data = { ...prefillData };
     }
@@ -153,9 +204,6 @@ export default function SurveyComponentMaster() {
    * ==========================================================================
    * LAYER 2 — UI Behavior Rules
    * ==========================================================================
-   *
-   * Consent enforcement:
-   * Blocks navigation away from the landing page unless the user agrees.
    */
 
   // Prevent leaving landing page without consent
@@ -195,36 +243,26 @@ export default function SurveyComponentMaster() {
    * ==========================================================================
    * LAYER 2.5 — Prefill Sync Rules
    * ==========================================================================
-   *
-   * Purpose:
-   * Keep certain downstream answers automatically in sync with upstream selections,
-   * so users don't have to re-enter the same information in multiple places.
-   *
-   * Implementation:
-   * attachSurveySyncHandlers (helpers/syncSelectionValues.js) listens for changes
-   * and propagates values according to the mapping below.
    */
   useEffect(() => {
     if (!survey) return;
-    // !VA Debugging...
-    // console.log("ATTACHING SYNC HANDLERS", !!survey);
+    console.log("ATTACHING SYNC HANDLERS", !!survey);
 
+    console.log(
+      "SYNC CHECK source exists?",
+      !!survey.getQuestionByName("InfoSourcesTypes"),
+      "target exists?",
+      !!survey.getQuestionByName("InfoSourcesBestSource")
+    );
 
-    // console.log("SYNC CHECK source exists?",
-    //   !!survey.getQuestionByName("InfoSourcesTypes"),
-    //   "target exists?",
-    //   !!survey.getQuestionByName("InfoSourcesBestSource")
-    // );
-
-    // console.log("SYNC CHECK source2 exists?",
-    //   !!survey.getQuestionByName("EarlyOtherConditionsType"),
-    //   "target2 exists?",
-    //   !!survey.getQuestionByName("ConclusionOtherConditions")
-    // );
-
+    console.log(
+      "SYNC CHECK source2 exists?",
+      !!survey.getQuestionByName("EarlyOtherConditionsType"),
+      "target2 exists?",
+      !!survey.getQuestionByName("ConclusionOtherConditions")
+    );
 
     return attachSurveySyncHandlers(survey, {
-      
       checkboxToDropdown: [
         { source: "InfoSourcesTypes", target: "InfoSourcesBestSource" },
       ],
@@ -238,38 +276,13 @@ export default function SurveyComponentMaster() {
           },
         },
       ],
-    }
-  );
+    });
   }, [survey]);
-
-  useEffect(() => {
-    if (!survey) return;
-
-    const dbg = (sender, opt) => {
-      if (opt?.name === "InfoSourcesTypes" || opt?.name === "EarlyOtherConditionsType") {
-        // !VA Debugging...
-        // console.log("VALUE CHANGED:", opt.name, "=>", opt.value);
-      }
-    };
-
-    survey.onValueChanged.add(dbg);
-    return () => survey.onValueChanged.remove(dbg);
-  }, [survey]);
-
-
-
-
-
-
 
   /**
    * Submission pipeline:
    * - Send RAW survey answers to /api/save-survey (server applies preSubmitTransform using surveySchema.json)
    * - Send RAW survey answers to /api/submit-survey (Brevo)
-   *
-   * IMPORTANT:
-   * Do NOT run preSubmitTransform in the browser. It relies on the curated build-schema output
-   * (surveySchema.json) and should remain server-side to avoid drift and duplication.
    */
   const handleComplete = useCallback(async (sender) => {
     try {
@@ -301,7 +314,7 @@ export default function SurveyComponentMaster() {
       }
 
       // 2) Send via Brevo (best-effort notification)
-      // !VA Debugging
+      // !VA Testing...
       // console.log("About to call email endpoint…");
 
       const emailResponse = await fetch("/api/submit-survey", {

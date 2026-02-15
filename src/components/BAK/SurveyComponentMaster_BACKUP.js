@@ -1,5 +1,6 @@
 "use client";
-// Production SurveyComponent that uses the merged JSON file created by merge-surveys.js.
+// Production SurveyComponentMaster_Brevo: saves to local disk AND sends via Brevo.
+// Uses the merged JSON file created by merge-surveys.js.
 
 import React, { useState, useCallback, useEffect } from "react";
 import { Model } from "survey-core";
@@ -8,11 +9,11 @@ import { SharpLight } from "survey-core/themes";
 
 import prefillData from "../../helpers/prefill.json";
 import masterSurvey from "../../data/master-survey.json";
-import { preSubmitTransform } from "../../helpers/preSubmitTransform";
 
 import registry from "../../helpers/registry.generated.json";
-import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
-import { getStyleDirectives } from "./CustomClasses";
+import { attachPanelDataNameStamper } from "../../../helpers/panelDataNameStamper";
+import { getStyleDirectives } from "../CustomClasses";
+import { attachSurveySyncHandlers } from "../../../helpers/syncSelectionValues";
 
 /**
  * ============================================================================
@@ -117,7 +118,7 @@ function applyDirectives(htmlElement, directives) {
   directives.forEach((d) => applyDirective(htmlElement, d));
 }
 
-export default function MasterSurveyComponent() {
+export default function SurveyComponentMaster_Brevo() {
   /**
    * Consent gating constants:
    * - CONSENT_QUESTION is the question name used to capture consent.
@@ -282,6 +283,32 @@ export default function MasterSurveyComponent() {
     return () => survey.onValueChanged.remove(handleConsentChange);
   }, [survey]);
 
+
+  useEffect(() => {
+    if (!survey) return;
+
+    return attachSurveySyncHandlers(survey, {
+      checkboxToDropdown: [
+        { source: "InfoSourcesTypes", target: "InfoSourcesBestSource" },
+      ],
+      checkboxToCheckbox: [
+        {
+          source: "EarlyOtherConditionsType",
+          target: "ConclusionOtherConditions",
+          options: {
+            onlyIfEmpty: true,
+            copyOther: true,
+          },
+        },
+      ],
+    });
+    
+  }, [survey]);
+
+
+
+
+
   /**
    * Prefill behavior:
    * Hydrates the survey with saved/seeded data.
@@ -300,29 +327,57 @@ export default function MasterSurveyComponent() {
    * Submission pipeline:
    * Transforms survey data and sends it to the backend.
    *
-   * preSubmitTransform is the final normalization step.
+   * Server-side preSubmitTransform performs the final normalization step.
    */
   const handleComplete = useCallback(async (sender) => {
     try {
-      const finalData = preSubmitTransform(sender.data);
+      const submittedAt = new Date().toISOString();
 
-      const response = await fetch("/api/save-survey", {
+      const payload = {
+        ...sender.data,
+        submittedAt,
+        source: "master-brevo",
+      };
+
+      // 1) Save to local disk (authoritative archive)
+      const saveResponse = await fetch("/api/save-survey", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(finalData),
+        body: JSON.stringify(payload),
       });
 
-      if (response.ok) {
-        setIsCompleted(true);
-      } else {
-        const data = await response.json();
-        alert(`Error: ${data.message}`);
+      if (!saveResponse.ok) {
+        const data = await saveResponse.json().catch(() => ({}));
+        alert(`Error saving survey: ${data.message || "Unknown error"}`);
+        return;
       }
+
+      // 2) Send via Brevo (best-effort notification)
+      const emailResponse = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!emailResponse.ok) {
+        const emailData = await emailResponse.json().catch(() => ({}));
+        alert(
+          `Survey saved, but failed to send email: ${
+            emailData.error || emailData.message || "Unknown error"
+          }`
+        );
+        setIsCompleted(true); // still mark completed if save worked
+        return;
+      }
+
+      // ✅ Everything succeeded
+      setIsCompleted(true);
     } catch (err) {
       console.error("Submission failed:", err);
       alert("Submission failed. See console for details.");
     }
   }, []);
+
 
   // Completion UX
   if (isCompleted) {

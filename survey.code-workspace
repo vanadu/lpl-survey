@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "src/components"
+		},
+		{
+			"path": "src/pages"
 		}
 	],
 	"settings": {}

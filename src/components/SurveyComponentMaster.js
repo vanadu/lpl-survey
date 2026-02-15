@@ -5,7 +5,10 @@ import React, { useState, useCallback, useEffect } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
+// !VA Is this necessary here
+import { useRouter } from "next/router";
 
+// !VA Survey imports
 import prefillData from "../../helpers/prefill.json";
 import masterSurvey from "../../data/master-survey.json";
 
@@ -148,6 +151,9 @@ function applyDirectives(root, directives) {
 }
 
 export default function SurveyComponentMaster() {
+
+  const router = useRouter();
+
   /**
    * ==========================================================================
    * LAYER 1 — Survey Model Lifecycle
@@ -155,6 +161,9 @@ export default function SurveyComponentMaster() {
    */
   const [survey] = useState(() => {
     const surveyModel = new Model(masterSurvey);
+    // !VA Turn off the default success page after submit
+    surveyModel.showCompletedPage = false;
+
 
     // Theme setup
     surveyModel.applyTheme(SharpLight);
@@ -275,16 +284,73 @@ export default function SurveyComponentMaster() {
    * - Send RAW survey answers to /api/save-survey (server applies preSubmitTransform using surveySchema.json)
    * - Send RAW survey answers to /api/submit-survey (Brevo)
    */
-  const handleComplete = useCallback(async (sender) => {
+  // const handleComplete = useCallback(async (sender) => {
+  //   try {
+  //     // Use a single timestamp for save + email correlation
+  //     const completedAt = new Date().toISOString();
+
+  //     const payload = {
+  //       ...sender.data,
+  //       // Server-side preSubmitTransform expects completedAt for filename stamping
+  //       completedAt,
+  //       // Keep submittedAt for any legacy/other consumers (harmless)
+  //       submittedAt: completedAt,
+  //       source: "master-brevo",
+  //     };
+
+  //     // 1) Save to local disk (authoritative archive)
+  //     const saveResponse = await fetch("/api/save-survey", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(payload),
+  //     });
+
+  //     if (!saveResponse.ok) {
+  //       const data = await saveResponse.json().catch(() => ({}));
+  //       alert(
+  //         `Error saving survey: ${data.message || data.error || "Unknown error"}`
+  //       );
+  //       return;
+  //     }
+
+  //     // 2) Send via Brevo (best-effort notification)
+  //     // !VA Testing...
+  //     // console.log("About to call email endpoint…");
+
+  //     const emailResponse = await fetch("/api/submit-survey", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(payload),
+  //     });
+
+  //     if (!emailResponse.ok) {
+  //       const emailData = await emailResponse.json().catch(() => ({}));
+  //       alert(
+  //         `Survey saved, but failed to send email: ${
+  //           emailData.error || emailData.message || "Unknown error"
+  //         }`
+  //       );
+  //       setIsCompleted(true); // still mark completed if save worked
+  //       return;
+  //     }
+
+  //     // ✅ Everything succeeded
+  //     setIsCompleted(true);
+  //   } catch (err) {
+  //     console.error("Submission failed:", err);
+  //     alert("Submission failed. See console for details.");
+  //   }
+  // }, []);
+
+const handleComplete = useCallback(
+  async (sender) => {
     try {
-      // Use a single timestamp for save + email correlation
+      // Use a single timestamp for save + correlation
       const completedAt = new Date().toISOString();
 
       const payload = {
         ...sender.data,
-        // Server-side preSubmitTransform expects completedAt for filename stamping
         completedAt,
-        // Keep submittedAt for any legacy/other consumers (harmless)
         submittedAt: completedAt,
         source: "master-brevo",
       };
@@ -298,44 +364,45 @@ export default function SurveyComponentMaster() {
 
       if (!saveResponse.ok) {
         const data = await saveResponse.json().catch(() => ({}));
-        alert(
-          `Error saving survey: ${data.message || data.error || "Unknown error"}`
-        );
+        alert(`Error saving survey: ${data.message || data.error || "Unknown error"}`);
         return;
       }
 
-      // 2) Send via Brevo (best-effort notification)
-      console.log("About to call email endpoint…");
+      // 2) Brevo email POST DISABLED (intentionally bypassed during redirect testing)
+      //    This keeps UX consistent: redirect occurs whether or not email is enabled.
+      // const emailResponse = await fetch("/api/submit-survey", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(payload),
+      // });
+      // if (!emailResponse.ok) {
+      //   const emailData = await emailResponse.json().catch(() => ({}));
+      //   alert(
+      //     `Survey saved, but failed to send email: ${
+      //       emailData.error || emailData.message || "Unknown error"
+      //     }`
+      //   );
+      // }
 
-      const emailResponse = await fetch("/api/submit-survey", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      if (!emailResponse.ok) {
-        const emailData = await emailResponse.json().catch(() => ({}));
-        alert(
-          `Survey saved, but failed to send email: ${
-            emailData.error || emailData.message || "Unknown error"
-          }`
-        );
-        setIsCompleted(true); // still mark completed if save worked
-        return;
-      }
-
-      // ✅ Everything succeeded
-      setIsCompleted(true);
+      // 3) Redirect to dedicated success page after local save succeeds
+      router.push("/submit-success");
     } catch (err) {
       console.error("Submission failed:", err);
       alert("Submission failed. See console for details.");
     }
-  }, []);
+  },
+  [router]
+);
+
+
+
+
 
   // Completion UX
-  if (isCompleted) {
-    return <h2>✅ Survey submitted successfully!</h2>;
-  }
+  // !VA Disabled because now redirects to submit-success.js
+  // if (isCompleted) {
+  //   return <h2>✅ Survey submitted successfully!</h2>;
+  // }
 
   return <Survey model={survey} onComplete={handleComplete} />;
 }
