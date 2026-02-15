@@ -1,9 +1,0 @@
- { "excludeCalculatedValues": [ 
-      "observeTense",
-      "doTense",
-      "genderSubjectPronoun",
-      "genderObjectPronoun",
-      "stateAdjective",
-      "blobText"
-    ] 
-  } 

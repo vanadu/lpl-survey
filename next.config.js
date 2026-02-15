@@ -52,47 +52,8 @@ module.exports = {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin'
           }
-        ],
-      },
-    ]
-  },
-  async redirects() {
-    return [
-      {
-        source: '/saga',
-        destination: '/stories',
-        permanent: true,
-      },
-      {
-        source: '/larpar',
-        destination: '/patients',
-        permanent: true,
-      },
-      {
-        source: '/stent',
-        destination: '/whystent',
-        permanent: true,
-      },
-      {
-        source: '/faqs',
-        destination: '/patients/aboutlarpar',
-        permanent: true,
-      },
-      {
-        source: '/roadmap',
-        destination: '/whystent',
-        permanent: true,
-      },
-      {
-        source: '/you',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/patients/treatment/patients/aboutlarpar/cost',
-        destination: '/patients/aboutlarpar/cost',
-        permanent: true,
+        ]
       }
     ]
-  },
+  }
 }
