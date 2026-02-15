@@ -9,7 +9,7 @@
  * validations to prevent silent drift.
  *
  * Outputs:
- *  - /data/master-survey.json                     (authoritative “latest”)
+ *  - /data/master-survey/master-survey.json                     (authoritative “latest”)
  *  - /data/master-survey_YYYYMMDD_HHMMSS.json     (snapshot for diff/history)
  *  - /helpers/registry.generated.json             (generated registry layer)
  *
@@ -84,12 +84,35 @@ const REGISTRY_OUT_PATH = path.resolve(
   __dirname,
   "../helpers/registry.generated.json"
 );
-const MASTER_SURVEY_PATH = path.resolve(__dirname, "../data/master-survey.json");
 
-/**
- * Source pages directory
- */
-const DATA_DIR = path.resolve(__dirname, "../data");
+
+// !VA Replacing...
+// const MASTER_SURVEY_PATH = path.resolve(__dirname, "../data/master-survey/master-survey.json");
+
+// /**
+//  * Source pages directory
+//  */
+// const DATA_DIR = path.resolve(__dirname, "../data");
+// !VA Replacing ...
+
+
+
+// ===============================
+// DATA DIRECTORY STRUCTURE
+// ===============================
+
+const DATA_ROOT_DIR = path.resolve(__dirname, "../data");
+const PAGE_CONTENT_DIR = path.join(DATA_ROOT_DIR, "page-content");
+const MASTER_SURVEY_DIR = path.join(DATA_ROOT_DIR, "master-survey");
+
+// latest merged survey location
+const MASTER_SURVEY_PATH = path.join(MASTER_SURVEY_DIR, "master-survey.json");
+
+
+
+
+
+
 
 /**
  * Ordered list of page files to merge.
@@ -329,9 +352,9 @@ async function main() {
   // LAYER 1 — MERGE: Load pages
   // ---------------------------------------------------------------------------
   const pages = pageFiles.map((filename) => {
-    const filePath = path.join(DATA_DIR, filename);
+    const filePath = path.join(PAGE_CONTENT_DIR, filename);
     if (!fs.existsSync(filePath)) {
-      console.error(`❌ Missing page file: data/${filename}`);
+      console.error(`❌ Missing page file: data/page-content/${filename}`);
       process.exit(1);
     }
     return readJson(filePath);
@@ -360,14 +383,14 @@ const calculatedValues = readJson(path.resolve(__dirname, "../helpers/calculated
 
   // ---------------------------------------------------------------------------
   // LAYER 2 — VALIDATION #1:
-  // Compare calc names in THIS script vs existing data/master-survey.json
+  // Compare calc names in THIS script vs existing data/master-survey/master-survey.json
   // ---------------------------------------------------------------------------
   {
     const scriptCalcs = setFromCalculatedValues(calculatedValues);
-    const masterPath = path.join(DATA_DIR, "master-survey.json");
+    const masterPath = MASTER_SURVEY_PATH;
 
     if (!fs.existsSync(masterPath)) {
-      console.warn("⚠️  Validation skipped: data/master-survey.json not found (first run?)");
+      console.warn("⚠️  Validation skipped: data/master-survey/master-survey.json not found (first run?)");
     } else {
       const existing = readJson(masterPath);
       const existingCalcs = setFromCalculatedValues(existing.calculatedValues);
@@ -377,19 +400,19 @@ const calculatedValues = readJson(path.resolve(__dirname, "../helpers/calculated
 
       if (missingInExisting.length || extraInExisting.length) {
         console.error(
-          "❌ CalculatedValues mismatch between merge-surveys.js and data/master-survey.json"
+          "❌ CalculatedValues mismatch between merge-surveys.js and data/master-survey/master-survey.json"
         );
 
         if (missingInExisting.length) {
           console.error(
-            "  Names present in merge-surveys.js but missing in data/master-survey.json:"
+            "  Names present in merge-surveys.js but missing in data/master-survey/master-survey.json:"
           );
           for (const n of missingInExisting) console.error(`    - ${n}`);
         }
 
         if (extraInExisting.length) {
           console.error(
-            "  Names present in data/master-survey.json but not in merge-surveys.js:"
+            "  Names present in data/master-survey/master-survey.json but not in merge-surveys.js:"
           );
           for (const n of extraInExisting) console.error(`    - ${n}`);
         }
@@ -399,7 +422,7 @@ const calculatedValues = readJson(path.resolve(__dirname, "../helpers/calculated
           if (abort) process.exit(1);
         }
       } else {
-        console.log("✅ CalculatedValues match existing data/master-survey.json");
+        console.log("✅ CalculatedValues match existing data/master-survey/master-survey.json");
       }
     }
   }
@@ -427,7 +450,7 @@ const calculatedValues = readJson(path.resolve(__dirname, "../helpers/calculated
     const unknownRefsByFile = [];
 
     for (const filename of pageFiles) {
-      const page = readJson(path.join(DATA_DIR, filename));
+      const page = readJson(path.join(PAGE_CONTENT_DIR, filename));
       const hits = extractBraceRefsWithContext(page);
 
       // Only keep hits whose token isn't known
@@ -476,19 +499,23 @@ const calculatedValues = readJson(path.resolve(__dirname, "../helpers/calculated
   // LAYER 3 — WRITE OUTPUTS
   // ---------------------------------------------------------------------------
 
+  // Ensure output dir exists
+  if (!fs.existsSync(MASTER_SURVEY_DIR)) {
+    fs.mkdirSync(MASTER_SURVEY_DIR, { recursive: true });
+  }
+
   // 1) Authoritative “latest” file
-  const latestPath = path.join(DATA_DIR, "master-survey.json");
-  fs.writeFileSync(latestPath, JSON.stringify(masterSurvey, null, 2));
-  console.log("✅ Merged survey written to data/master-survey.json");
+  fs.writeFileSync(MASTER_SURVEY_PATH, JSON.stringify(masterSurvey, null, 2));
+  console.log("✅ Merged survey written to data/master-survey/master-survey.json");
 
   // 2) Timestamped snapshot for diffing/history
   const stamp = buildTimestamp();
   const snapshotName = `master-survey_${stamp}.json`;
-  const snapshotPath = path.join(DATA_DIR, snapshotName);
+  const snapshotPath = path.join(MASTER_SURVEY_DIR, snapshotName);
   fs.writeFileSync(snapshotPath, JSON.stringify(masterSurvey, null, 2));
-  console.log(`🗂️  Snapshot written to data/${snapshotName}`);
+  console.log(`🗂️  Snapshot written to data/master-survey/${snapshotName}`);
 
-  // 3) Generate registry.generated.json from the freshly-written master-survey.json
+  // 3) Generate registry.generated.json from the freshly-written master survey
   if (BUILD_REGISTRY_GENERATED) {
     runGenerateRegistry();
   }

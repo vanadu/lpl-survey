@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 // !VA Survey imports
 import prefillData from "../../helpers/prefill.json";
-import masterSurvey from "../../data/master-survey.json";
+import masterSurvey from "../../data//master-survey/master-survey.json";
 
 import registry from "../../helpers/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
@@ -370,19 +370,19 @@ const handleComplete = useCallback(
 
       // 2) Brevo email POST DISABLED (intentionally bypassed during redirect testing)
       //    This keeps UX consistent: redirect occurs whether or not email is enabled.
-      // const emailResponse = await fetch("/api/submit-survey", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(payload),
-      // });
-      // if (!emailResponse.ok) {
-      //   const emailData = await emailResponse.json().catch(() => ({}));
-      //   alert(
-      //     `Survey saved, but failed to send email: ${
-      //       emailData.error || emailData.message || "Unknown error"
-      //     }`
-      //   );
-      // }
+      const emailResponse = await fetch("/api/submit-survey", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!emailResponse.ok) {
+        const emailData = await emailResponse.json().catch(() => ({}));
+        alert(
+          `Survey saved, but failed to send email: ${
+            emailData.error || emailData.message || "Unknown error"
+          }`
+        );
+      }
 
       // 3) Redirect to dedicated success page after local save succeeds
       router.push("/submit-success");

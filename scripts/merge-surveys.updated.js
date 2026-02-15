@@ -84,12 +84,35 @@ const REGISTRY_OUT_PATH = path.resolve(
   __dirname,
   "../helpers/registry.generated.json"
 );
-const MASTER_SURVEY_PATH = path.resolve(__dirname, "../data/master-survey/master-survey.json");
 
-/**
- * Source pages directory
- */
-const DATA_DIR = path.resolve(__dirname, "../data");
+
+// !VA Replacing...
+// const MASTER_SURVEY_PATH = path.resolve(__dirname, "../data/master-survey/master-survey.json");
+
+// /**
+//  * Source pages directory
+//  */
+// const DATA_DIR = path.resolve(__dirname, "../data");
+// !VA Replacing ...
+
+
+
+// ===============================
+// DATA DIRECTORY STRUCTURE
+// ===============================
+
+const DATA_ROOT_DIR = path.resolve(__dirname, "../data");
+const PAGE_CONTENT_DIR = path.join(DATA_ROOT_DIR, "page-content");
+const MASTER_SURVEY_DIR = path.join(DATA_ROOT_DIR, "master-survey");
+
+// latest merged survey location
+const MASTER_SURVEY_PATH = path.join(MASTER_SURVEY_DIR, "master-survey.json");
+
+
+
+
+
+
 
 /**
  * Ordered list of page files to merge.

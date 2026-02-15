@@ -8,26 +8,26 @@ import prefillData from "../../helpers/prefill.json";
 import registry from "../../helpers/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 import { getStyleDirectives } from "./CustomClasses";
-import { attachSurveySyncHandlers } from "../..//helpers/syncSelectionValues";
+import { attachSurveySyncHandlers } from "../../helpers/syncSelectionValues";
 
 
-import LANDING from "../../data/00_LANDING-page.json";
-import USER_INFO from "../../data/01_USER_INFO-page.json";
-import CMPN_INFO from "../../data/02_CMPN_INFO-page.json";
-import INFO_SOURCES from "../../data/03_INFO_SOURCES-page.json";
-import INTUBATION_HISTORY from "../../data/04_INTUBATION_HISTORY-page.json";
-import BREATHING_CRISIS from "../../data/05_BREATHING_CRISIS-page.json";
-import EARLY_SYMPTOMS from "../../data/06_EARLY_SYMPTOMS-page.json";
-import PRIMARY_DURATION from "../../data/07_PRIMARY_DURATION-page.json";
-import PRIMARY_VET from "../../data/08_PRIMARY_VET-page.json";
-import DIAGNOSIS from "../../data/09_DIAGNOSIS-page.json";
-import TREATMENT_STATUS from "../../data/10_TREATMENT_STATUS-page.json";
-import TREATMENT_FACTORS from "../../data/11_TREATMENT_FACTORS-page.json";
-import MANAGEMENT from "../../data/12_MANAGEMENT-page.json";
-import OTC_PRODUCTS from "../../data/13_OTC_PRODUCTS-page.json";
-import ASPIRATION from "../../data/14_ASPIRATION-page.json";
-import NEUROPATHY from "../../data/15_NEUROPATHY-page.json";
-import CONCLUSION from "../../data/16_CONCLUSION-page.json";
+import LANDING from "../../data/page-content/00_LANDING-page.json";
+import USER_INFO from "../../data/page-content/01_USER_INFO-page.json";
+import CMPN_INFO from "../../data/page-content/02_CMPN_INFO-page.json";
+import INFO_SOURCES from "../../data/page-content/03_INFO_SOURCES-page.json";
+import INTUBATION_HISTORY from "../../data/page-content/04_INTUBATION_HISTORY-page.json";
+import BREATHING_CRISIS from "../../data/page-content/05_BREATHING_CRISIS-page.json";
+import EARLY_SYMPTOMS from "../../data/page-content/06_EARLY_SYMPTOMS-page.json";
+import PRIMARY_DURATION from "../../data/page-content/07_PRIMARY_DURATION-page.json";
+import PRIMARY_VET from "../../data/page-content/08_PRIMARY_VET-page.json";
+import DIAGNOSIS from "../../data/page-content/09_DIAGNOSIS-page.json";
+import TREATMENT_STATUS from "../../data/page-content/10_TREATMENT_STATUS-page.json";
+import TREATMENT_FACTORS from "../../data/page-content/11_TREATMENT_FACTORS-page.json";
+import MANAGEMENT from "../../data/page-content/12_MANAGEMENT-page.json";
+import OTC_PRODUCTS from "../../data/page-content/13_OTC_PRODUCTS-page.json";
+import ASPIRATION from "../../data/page-content/14_ASPIRATION-page.json";
+import NEUROPATHY from "../../data/page-content/15_NEUROPATHY-page.json";
+import CONCLUSION from "../../data/page-content/16_CONCLUSION-page.json";
 
 const surveyJson = {
   pages: [
