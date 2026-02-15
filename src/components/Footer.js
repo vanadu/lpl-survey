@@ -69,7 +69,7 @@ const Footer = () => {
 
             <div className={styles.copyright}>
               <p className={styles.copyright_text}>
-              Copyright &copy; 2025 LarParLife.com
+              Copyright &copy; 2026 LarParLife.com
               All&nbsp;rights&nbsp;reserved.<br />
               LarPar? Life!, LarParLife and the LarParLife logo are trademarks of LarParLife.com
               </p>

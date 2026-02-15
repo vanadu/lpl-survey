@@ -55,5 +55,27 @@ module.exports = {
         ]
       }
     ]
+  },
+
+  async redirects() {
+    return [
+      { source: "/00_Landing", destination: "/", permanent: false },
+      { source: "/01_UserInfo", destination: "/", permanent: false },
+      { source: "/02_CmpnInfo", destination: "/", permanent: false },
+      { source: "/03_InfoSources", destination: "/", permanent: false },
+      { source: "/04_IntubationHistory", destination: "/", permanent: false },
+      { source: "/05_BreathingCrisis", destination: "/", permanent: false },
+      { source: "/06_EarlySymptoms", destination: "/", permanent: false },
+      { source: "/07_PrimaryDuration", destination: "/", permanent: false },
+      { source: "/08_PrimaryVet", destination: "/", permanent: false },
+      { source: "/09_Diagnosis", destination: "/", permanent: false },
+      { source: "/10_TreatmentStatus", destination: "/", permanent: false },
+      { source: "/11_TreatmentFactors", destination: "/", permanent: false },
+      { source: "/12_Management", destination: "/", permanent: false },
+      { source: "/13_OTCProducts", destination: "/", permanent: false },
+      { source: "/14_Aspiration", destination: "/", permanent: false },
+      { source: "/15_Neuropathy", destination: "/", permanent: false },
+      { source: "/16_Conclusion", destination: "/", permanent: false },
+    ];
   }
 }

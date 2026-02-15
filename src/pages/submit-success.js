@@ -17,7 +17,7 @@ const SuccessPage = () => {
     <>  
       <section className="section">
         <div className="section_content">
-          <SurveyMenu />
+          {/* <SurveyMenu /> */}
 
           <SurveySuccess />
 
