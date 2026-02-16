@@ -601,8 +601,79 @@
 }
 
 
+// !VA Survey Submission Spinner
+
+.success-stage {
+  position: relative;
+}
 
 
+
+.success-spinnerWrap,
+.success-contentWrap {
+  transition: opacity 260ms ease, transform 260ms ease;
+  will-change: opacity, transform;
+}
+
+/* Spinner starts visible */
+.success-spinnerWrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* When done, fade spinner out + make it non-interactive */
+.success-spinnerWrap.isHidden {
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  position: absolute; /* prevents layout jump during crossfade */
+  background: rgba(255, 0, 0, .3) !important; //devred
+
+}
+
+/* Content starts hidden */
+.success-contentWrap {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* When done, fade content in */
+.success-contentWrap.isVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* REMOVE this version */
+// .survey-spinner {
+//   width: 42px;
+//   height: 42px;
+//   border: 4px solid #ddd;
+//   border-top-color: #333;
+//   border-radius: 50%;
+//   animation: spin 0.7s linear infinite;
+// }
+
+.survey-spinner {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.survey-spinner::after {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border: 4px solid #ddd;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
 
 
 // !VA Testing...

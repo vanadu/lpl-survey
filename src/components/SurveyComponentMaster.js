@@ -154,6 +154,9 @@ export default function SurveyComponentMaster() {
 
   const router = useRouter();
 
+    // !VA State for tracking the submission spinner 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   /**
    * ==========================================================================
    * LAYER 1 — Survey Model Lifecycle
@@ -342,88 +345,58 @@ export default function SurveyComponentMaster() {
   //   }
   // }, []);
 
-const handleComplete = useCallback(
-  async (sender) => {
-    try {
-      // Use a single timestamp for save + correlation
-      const completedAt = new Date().toISOString();
+  const handleComplete = useCallback(
+    async (sender) => {
+      // Guard against double-submit (double click / double fire)
+      if (isSubmitting) return;
 
-      const payload = {
-        ...sender.data,
-        completedAt,
-        submittedAt: completedAt,
-        source: "master-brevo",
-      };
+      setIsSubmitting(true);
 
+      try {
+        const completedAt = new Date().toISOString();
 
-      // !VA Deleting from here..
-      // 1) Save to local disk (authoritative archive)
-      // const saveResponse = await fetch("/api/save-survey", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(payload),
-      // });
+        const payload = {
+          ...sender.data,
+          completedAt,
+          submittedAt: completedAt,
+          source: "master-brevo",
+        };
 
-      // if (!saveResponse.ok) {
-      //   const data = await saveResponse.json().catch(() => ({}));
-      //   alert(`Error saving survey: ${data.message || data.error || "Unknown error"}`);
-      //   return;
-      // }
+        const resp = await fetch("/api/submit-survey", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
 
-      // // 2) Brevo email POST DISABLED (intentionally bypassed during redirect testing)
-      // //    This keeps UX consistent: redirect occurs whether or not email is enabled.
-      // const emailResponse = await fetch("/api/submit-survey", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(payload),
-      // });
-      // if (!emailResponse.ok) {
-      //   const emailData = await emailResponse.json().catch(() => ({}));
-      //   alert(
-      //     `Survey saved, but failed to send email: ${
-      //       emailData.error || emailData.message || "Unknown error"
-      //     }`
-      //   );
-      // }
+        const data = await resp.json().catch(() => ({}));
 
-      // // 3) Redirect to dedicated success page after local save succeeds
-      // router.push("/submit-success");
-      // !VA Deleting above here...
+        if (!resp.ok) {
+          alert(`Submission failed: ${data.error || data.message || "Unknown error"}`);
+          setIsSubmitting(false); // allow retry
+          return;
+        }
+
+        if (data.disposition === "suspect") {
+          console.warn("Suspect submission:", data.flags);
+        }
+
+        // Keep spinner ON during navigation
+        // router.push("/submit-success");
+
+        // !VA Send the completedAt token to show the spinner
+        router.push(`/submit-success?ok=1&t=${encodeURIComponent(completedAt)}`);
 
 
-      const resp = await fetch("/api/submit-survey", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
 
-      const data = await resp.json().catch(() => ({}));
-
-      if (!resp.ok) {
-        // message matches server meaning
-        alert(`Submission failed: ${data.error || data.message || "Unknown error"}`);
-        return;
+      } catch (err) {
+        console.error("Submission failed:", err);
+        alert("Submission failed. See console for details.");
+        setIsSubmitting(false);
       }
+    },
+    [router, isSubmitting]
+  );
 
-      // Optional: if you want to surface suspect flags during beta
-      if (data.disposition === "suspect") {
-        console.warn("Suspect submission:", data.flags);
-      }
-
-      router.push("/submit-success");
-
-
-
-
-
-
-    } catch (err) {
-      console.error("Submission failed:", err);
-      alert("Submission failed. See console for details.");
-    }
-  },
-  [router]
-);
 
 
 
@@ -431,9 +404,21 @@ const handleComplete = useCallback(
 
   // Completion UX
   // !VA Disabled because now redirects to submit-success.js
-  // if (isCompleted) {
+    // if (isCompleted) {
   //   return <h2>✅ Survey submitted successfully!</h2>;
   // }
 
-  return <Survey model={survey} onComplete={handleComplete} />;
+  return  <>
+  
+            {isSubmitting && (
+              <div className="survey-spinner-overlay" role="status" aria-live="polite">
+                <div className="survey-spinner" />
+                <p>Submitting…</p>
+              </div>
+            )}
+
+
+  
+            <Survey model={survey} onComplete={handleComplete} />
+          </>;
 }
