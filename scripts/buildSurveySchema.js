@@ -24,7 +24,7 @@ import path from "path";
 // ---------------------------
 // Paths
 // ---------------------------
-const surveyPath = path.join(process.cwd(), "data", "master-survey.json");
+const surveyPath = path.join(process.cwd(), "data", "master-survey", "master-survey.json");
 const outputPath = path.join(process.cwd(), "helpers", "surveySchema.json");
 const exclusionsPath = path.join(
   process.cwd(),
