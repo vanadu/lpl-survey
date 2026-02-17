@@ -492,16 +492,90 @@
 
 // !VA SUCCESS page
 
-.container-flex-center {
+.success-container-wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.success-container {
+  position: relative; // important for overlay positioning
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 600px;
+  margin: 40px;
+  padding-bottom: 150px;
+
+}
+
+// .success-container::before {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+
+//   background:
+//     radial-gradient(circle at center,
+//       transparent 55%,
+//       rgba(0,0,0,0.45) 100%
+//     ),
+//     url("/img-miss-b-kitchen-cropped.jpg") center / cover no-repeat;
+
+//   opacity: .2;
+//   filter: grayscale(100%) contrast(1.2);
+// }
+
+
+.success-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0,0,0,0) 55%,
+      rgba(0,0,0,0.35) 100%
+    ),
+     linear-gradient(
+      rgba(196,196,196,0.8),
+      rgba(196,196,196,0.8)
+    ),
+    url("/img-miss-b-kitchen-cropped.jpg") center / cover no-repeat;
+
+  filter: grayscale(100%) contrast(1.2);
+}
+
+
+// !VA Long form of above
+// .success-container::before {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+
+//   background-image:
+//     radial-gradient(circle at center,
+//       transparent 55%,
+//       rgba(0,0,0,0.45) 100%
+//     ),
+//     url("/img-miss-b-kitchen-cropped.jpg");
+
+//   background-size: cover, cover;
+//   background-position: center, center;
+//   background-repeat: no-repeat, no-repeat;
+
+//   opacity: .2;
+//   filter: grayscale(100%) contrast(1.2);
+// }
+
+
+
 // !VA Content styles
 // !VA This is the H1 that matches with the title tag
-.main-head {
+.success-head {
   @include mphone {
     padding-bottom: .25rem;
     font-size: $mphoneXXLFontSize;
@@ -533,7 +607,12 @@
   font-size: $rootXXLFontSize;
   line-height: $rootXLLineHeight; 
   font-weight: 500;
-  text-align: center;
+  // text-align: center;
+}
+
+.success-logo {
+  width: 200px;
+  height: auto;
 }
 
 .success-icon {
@@ -562,7 +641,7 @@
 }
 
 
-.content-text {
+.success-text {
   @include mphone {
     margin: .188rem 0 .313rem;
     font-size: $mphoneLargeFontSize;
@@ -593,7 +672,7 @@
   font-size: $rootLargeFontSize;
   line-height: $rootLargeLineHeight;
   font-weight: 400;
-  text-align: left;
+  text-align: center;
 }
 
 .survey-spacer {
@@ -603,33 +682,85 @@
 
 // !VA Survey Submission Spinner
 
+
+
+.success-spinnerWrap {
+  position: relative;
+  // position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+  z-index: 10;
+
+  transition: opacity 0.5s ease;
+}
+
+.success-spinnerWrap.isHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.success-spinnerWrap.isShown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.survey-fade {
+  transition: opacity 0.5s ease;
+}
+
+.survey-fade.isSubmitting {
+  opacity: 0.35;
+}
+
+// !VA Success page spinner
+
+
 .success-stage {
   position: relative;
 }
 
-
-
-.success-spinnerWrap,
-.success-contentWrap {
-  transition: opacity 260ms ease, transform 260ms ease;
-  will-change: opacity, transform;
+/* spinner stays centered */
+// !VA Deprecated
+.success-spinner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
 }
 
-/* Spinner starts visible */
-.success-spinnerWrap {
+
+.success-spinner.fadeOut {
+  opacity: 0;
+}
+
+/* content fades in */
+.success-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding-bottom: 150px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.success-content.fadeIn {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* When done, fade spinner out + make it non-interactive */
-.success-spinnerWrap.isHidden {
-  opacity: 0;
-  transform: translateY(-6px);
-  pointer-events: none;
-  position: absolute; /* prevents layout jump during crossfade */
-  background: rgba(255, 0, 0, .3) !important; //devred
 
-}
+
 
 /* Content starts hidden */
 .success-contentWrap {
@@ -643,17 +774,8 @@
   transform: translateY(0);
 }
 
-/* REMOVE this version */
-// .survey-spinner {
-//   width: 42px;
-//   height: 42px;
-//   border: 4px solid #ddd;
-//   border-top-color: #333;
-//   border-radius: 50%;
-//   animation: spin 0.7s linear infinite;
-// }
 
-.survey-spinner {
+.spinner-object {
   width: 42px;
   height: 42px;
   display: flex;
@@ -661,7 +783,7 @@
   justify-content: center;
 }
 
-.survey-spinner::after {
+.spinner-object::after {
   content: "";
   width: 42px;
   height: 42px;
@@ -669,6 +791,7 @@
   border-top-color: #333;
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
+  aspect-ratio: 1 / 1;   // modern browsers
 }
 
 @keyframes spin {

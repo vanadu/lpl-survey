@@ -13,7 +13,7 @@ import { TransactionalEmailsApi, SendSmtpEmail } from "@getbrevo/brevo";
 */
 
 
-console.log("ENV SEND_EMAIL =", process.env.SEND_EMAIL);
+// console.log("ENV SEND_EMAIL =", process.env.SEND_EMAIL);
 
 
 const RATE_WINDOW_MS = 60_000;

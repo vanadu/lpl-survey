@@ -155,7 +155,9 @@ export default function SurveyComponentMaster() {
   const router = useRouter();
 
     // !VA State for tracking the submission spinner 
+  const MIN_SPINNER_MS = 2000; // debug; set to ~900 later
   const [isSubmitting, setIsSubmitting] = useState(false);
+
 
   /**
    * ==========================================================================
@@ -345,57 +347,70 @@ export default function SurveyComponentMaster() {
   //   }
   // }, []);
 
-  const handleComplete = useCallback(
-    async (sender) => {
-      // Guard against double-submit (double click / double fire)
-      if (isSubmitting) return;
+const handleComplete = useCallback(
+  async (sender) => {
+    if (isSubmitting) return;
 
-      setIsSubmitting(true);
+    setIsSubmitting(true);
 
+    const startedAt = performance.now();
+    const completedAt = new Date().toISOString();
+
+    const payload = {
+      ...sender.data,
+      completedAt,
+      submittedAt: completedAt,
+      source: "master-brevo",
+    };
+
+    try {
+      // Start submit + min spinner timer at the same time
+      const submitPromise = fetch("/api/submit-survey", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const minSpinnerPromise = new Promise((resolve) =>
+        setTimeout(resolve, MIN_SPINNER_MS)
+      );
+
+      // Wait for BOTH: the request to finish and the minimum time to pass
+      const [resp] = await Promise.all([submitPromise, minSpinnerPromise]);
+
+      // Parse response safely (works even if body is empty or not JSON)
+      const raw = await resp.text();
+      let submitResult = {};
       try {
-        const completedAt = new Date().toISOString();
-
-        const payload = {
-          ...sender.data,
-          completedAt,
-          submittedAt: completedAt,
-          source: "master-brevo",
-        };
-
-        const resp = await fetch("/api/submit-survey", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-
-        const data = await resp.json().catch(() => ({}));
-
-        if (!resp.ok) {
-          alert(`Submission failed: ${data.error || data.message || "Unknown error"}`);
-          setIsSubmitting(false); // allow retry
-          return;
-        }
-
-        if (data.disposition === "suspect") {
-          console.warn("Suspect submission:", data.flags);
-        }
-
-        // Keep spinner ON during navigation
-        // router.push("/submit-success");
-
-        // !VA Send the completedAt token to show the spinner
-        router.push(`/submit-success?ok=1&t=${encodeURIComponent(completedAt)}`);
-
-
-
-      } catch (err) {
-        console.error("Submission failed:", err);
-        alert("Submission failed. See console for details.");
-        setIsSubmitting(false);
+        submitResult = raw ? JSON.parse(raw) : {};
+      } catch {
+        submitResult = { message: raw };
       }
-    },
-    [router, isSubmitting]
-  );
+
+      if (!resp.ok) {
+        throw new Error(
+          submitResult.error || submitResult.message || "Unknown error"
+        );
+      }
+
+      // Optional: if you want to surface suspect flags during beta
+      if (submitResult.disposition === "suspect") {
+        console.warn("Suspect submission:", submitResult.flags);
+      }
+
+      // Navigate after success + min spinner time
+      router.push("/submit-success");
+    } 
+    catch (err) {
+      console.error("Submission failed:", err);
+      alert(`Submission failed: ${err.message || "Unknown error"}`);
+      setIsSubmitting(false); // allow retry
+    }
+  },
+  [router, isSubmitting]
+);
+
+
 
 
 
@@ -408,17 +423,23 @@ export default function SurveyComponentMaster() {
   //   return <h2>✅ Survey submitted successfully!</h2>;
   // }
 
-  return  <>
-  
-            {isSubmitting && (
-              <div className="survey-spinner-overlay" role="status" aria-live="polite">
-                <div className="survey-spinner" />
-                <p>Submitting…</p>
-              </div>
-            )}
+return (
+  <>
+      {isSubmitting && (
+        <div className="success-container-wrap">  
+          <div className="success-container isVisible">
+            <div className={`success-spinnerWrap ${isSubmitting ? "isShown" : "isHidden"}`}>
+              <div className="spinner-object" aria-label="Loading" />
+              <p className="success-text">Submitting…</p>
+              <p className="survey-spacer">&nbsp;</p>
+            </div>
+          </div>
+        </div>
+      )}
 
 
-  
-            <Survey model={survey} onComplete={handleComplete} />
-          </>;
+    <Survey model={survey} onComplete={handleComplete} />
+  </>
+);
+
 }
