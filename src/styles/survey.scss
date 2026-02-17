@@ -509,8 +509,24 @@
   height: 600px;
   margin: 40px;
   padding-bottom: 150px;
-
+  opacity: 0;
+  animation: fadeInContainer 0.25s ease forwards;
 }
+
+@keyframes fadeInContainer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
 
 // .success-container::before {
 //   content: "";

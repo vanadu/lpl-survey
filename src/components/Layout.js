@@ -6,11 +6,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header />
-      <div className="content">
-        { children }
+      <div className="site-wrapper">
+        <Header />
+        <div className="content">
+          { children }
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

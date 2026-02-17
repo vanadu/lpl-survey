@@ -155,8 +155,22 @@ export default function SurveyComponentMaster() {
   const router = useRouter();
 
     // !VA State for tracking the submission spinner 
-  const MIN_SPINNER_MS = 2000; // debug; set to ~900 later
+  const MIN_SPINNER_MS = 30000; // debug; set to ~900 later
+
+
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+
+  const scrollPageToTop = () => {
+    if (typeof window === "undefined") return; // SSR safety
+
+    const el = document.scrollingElement || document.documentElement;
+    el.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  };
+
+
+
 
 
   /**
@@ -351,7 +365,10 @@ const handleComplete = useCallback(
   async (sender) => {
     if (isSubmitting) return;
 
+    scrollPageToTop();
     setIsSubmitting(true);
+
+
 
     const startedAt = performance.now();
     const completedAt = new Date().toISOString();
