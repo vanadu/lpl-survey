@@ -12,6 +12,10 @@ import { TransactionalEmailsApi, SendSmtpEmail } from "@getbrevo/brevo";
   - respondent fingerprint
 */
 
+
+console.log("ENV SEND_EMAIL =", process.env.SEND_EMAIL);
+
+
 const RATE_WINDOW_MS = 60_000;
 const RATE_MAX_PER_WINDOW = 12;
 const DUPE_WINDOW_MS = 10 * 60_000;
@@ -202,7 +206,22 @@ export default async function handler(req, res) {
 
     email.htmlContent = `<pre>${JSON.stringify(record, null, 2)}</pre>`;
 
-    await client.sendTransacEmail(email);
+    // await client.sendTransacEmail(email);
+
+    // !VA Only send mail in production - see variable in .env.local
+    const SEND_EMAIL = process.env.SEND_EMAIL === "true";
+
+    if (SEND_EMAIL) {
+      try {
+        await client.sendTransacEmail(email);
+        console.log("Email sent");
+      } catch (err) {
+        console.error("Email send failed:", err.message);
+      }
+    } else {
+      console.log("Email disabled (SEND_EMAIL=false)");
+    }
+
 
     return res.status(200).json({
       success: true,

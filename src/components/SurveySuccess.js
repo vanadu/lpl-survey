@@ -7,7 +7,7 @@ import logo from "../../public/img-lpl-logo.png"; // keep your existing import
 const SurveySuccess = () => {
   
   // !VA Set minimum the spinner time before submit. 
-  const MIN_SPINNER_MS = 20000; // ← DEBUG (change to 800–1200 later)
+  const MIN_SPINNER_MS = 5000; // ← DEBUG (change to 800–1200 later)
 
 
   const searchParams = useSearchParams();
