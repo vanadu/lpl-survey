@@ -1,6 +1,6 @@
 {
 
-  "UserInfoFirstName": "Jane",
+  "UserInfoFirstName": "Van",
   "UserInfoCountry": "US",
   "UserInfoStateRegion": "MD",
   "UserInfoAgeGroup": "OVER_65",
@@ -10,11 +10,11 @@
   "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "UserInfoContactOK": true,
 
-  "CmpnName": "Ralph",
+  "CmpnName": "Bo",
   "LifeStatus": true,
 
   "CmpnInfoAnimalType": "CANINE",
-  "CmpnInfoBreed": "Boxer",
+  "CmpnInfoBreed": "Lab",
   "CmpnInfoGender": false,
   "lvngCmpnInfoAgeYears": 12,
   "lvngCmpnInfoAgeMonths": 8,

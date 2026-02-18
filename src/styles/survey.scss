@@ -421,26 +421,24 @@
   }
 }
 
-// !VA AGE PANELS
+// !VA Force age panels to 
 [data-name="dcsdCmpnInfoAgePanel"],
 [data-name="EarlySymptomsFirstSignsPanel"],
 [data-name="PrimaryDurationFirstConsult"],
 [data-name="TreatmentStatusAgePanel"],
-
-
  {
   .sd-element__content.sd-panel__content {
     .sd-row {
       width: 250px!important;
         padding: 0!important;
         margin: 0!important;
-      // background: rgba(255, 255, 0, .3) !important; //devyel
+
+      background: rgba(255, 255, 0, .3) !important; //devyel
     }
   }
 }
 
-
-
+// !VA Force the User Name and Country to 2-1 layout
 [data-name="UserInfoAboutPanel"] .sd-element__content.sd-panel__content {
   display: grid;
   gap: 0.75rem 1rem;
@@ -452,6 +450,7 @@
   }
 }
 
+// !VA Force CmpnInfoDetailsPanel into 1-2-2 grid layout
 [data-name="CmpnInfoDetailsPanel"] .sd-element__content.sd-panel__content {
   display: grid;
   gap: 0.25rem 1rem;
@@ -465,6 +464,7 @@
   }
 }
 
+// !VA Force age/date panels to two-column layout
 [data-name="dcsdCmpnInfoAgePanel"] .sd-element__content.sd-panel__content,
 [data-name="lvngCmpnInfoAgePanel"] .sd-element__content.sd-panel__content,
 [data-name="EarlySymptomsFirstSignsPanel"] .sd-element__content.sd-panel__content,
@@ -486,10 +486,10 @@
   }
 }
 
-[data-name="ConclusionDifferentChoices"]  {
-  width: 700px!important;
-}
 
+[data-name="ConclusionDifferentChoices"]  {
+  width: 720px!important;
+}
 
 // !VA SUCCESS page
 
@@ -500,6 +500,7 @@
   align-items: center;
 }
 
+// !VA IMPORTANT! Apply background to container without affecting the container content
 .success-container {
   position: relative; // important for overlay positioning
   display: flex;
@@ -527,7 +528,6 @@
   content: "";
   position: absolute;
   inset: 0;
-
   background:
     radial-gradient(
       circle at center,
@@ -542,30 +542,6 @@
 
   filter: grayscale(100%) contrast(1.2);
 }
-
-
-// !VA Long form of above
-// .success-container::before {
-//   content: "";
-//   position: absolute;
-//   inset: 0;
-
-//   background-image:
-//     radial-gradient(circle at center,
-//       transparent 55%,
-//       rgba(0,0,0,0.45) 100%
-//     ),
-//     url("/img-miss-b-kitchen-cropped.jpg");
-
-//   background-size: cover, cover;
-//   background-position: center, center;
-//   background-repeat: no-repeat, no-repeat;
-
-//   opacity: .2;
-//   filter: grayscale(100%) contrast(1.2);
-// }
-
-
 
 // !VA Content styles
 // !VA This is the H1 that matches with the title tag
@@ -634,7 +610,6 @@
   z-index: 100;
 }
 
-
 .success-text {
   @include mphone {
     margin: .188rem 0 .313rem;
@@ -673,11 +648,7 @@
   height: 300px;
 }
 
-
 // !VA Survey Submission Spinner
-
-
-
 .success-spinnerWrap {
   position: relative;
   // position: absolute;
@@ -712,8 +683,8 @@
   opacity: 0.35;
 }
 
-// !VA Success page spinner
-
+// !VA Spinner and Fades
+// ------------------------
 
 .success-stage {
   position: relative;
@@ -729,7 +700,6 @@
   align-items: center;
   transition: opacity 0.5s ease;
 }
-
 
 .success-spinner.fadeOut {
   opacity: 0;
@@ -753,9 +723,6 @@
   transform: translateY(0);
 }
 
-
-
-
 /* Content starts hidden */
 .success-contentWrap {
   opacity: 0;
@@ -767,7 +734,6 @@
   opacity: 1;
   transform: translateY(0);
 }
-
 
 .spinner-object {
   width: 42px;
@@ -805,12 +771,9 @@
   pointer-events: auto;
 }
 
-
-
 /* Animate ONLY the page content when SurveyJS swaps pages */
 .sd-page.sd-body__page .sd-row {
   animation: sjPageFadeIn 300ms ease;
-  // background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 @keyframes sjPageFadeIn {
@@ -819,14 +782,4 @@
 }
 
 
-
-// !VA Testing...
-// [data-name="ManagementPrescriptionCost"]::after {
-//   content: "";
-//   display: block;
-//   width: 100px;
-//   height: 1px;
-//   margin: .5rem auto 0; // centers horizontally
-//   background: rgba(0, 0, 0, 0.2);
-// }
 

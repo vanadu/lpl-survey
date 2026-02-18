@@ -195,6 +195,8 @@ export default function SurveyComponentMaster() {
     // !VA Prefill the survey with the selections in /helpers/prefill.json
     if (prefillData && typeof prefillData === "object") {
       surveyModel.data = { ...prefillData };
+      console.log('prefillData :>> ');
+      console.log(prefillData);
     }
 
     return surveyModel;
