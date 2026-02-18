@@ -192,15 +192,27 @@ export default function SurveyComponentMaster() {
       applyDirectives(options.htmlElement, getStyleDirectives(options.question));
     });
 
-    // !VA Prefill the survey with the selections in /helpers/prefill.json
-    if (prefillData && typeof prefillData === "object") {
-      surveyModel.data = { ...prefillData };
-      console.log('prefillData :>> ');
-      console.log(prefillData);
-    }
 
+    // if (prefillData && typeof prefillData === "object") {
+    //   surveyModel.data = { ...prefillData };
+    //   console.log('prefillData :>> ');
+    //   console.log(prefillData);
+    // }
     return surveyModel;
   });
+
+
+  // !VA Prefill the survey with the selections in /helpers/prefill.json
+  useEffect(() => {
+    if (!survey) return;
+    if (!prefillData || typeof prefillData !== "object") return;
+
+    // Re-apply prefills after Fast Refresh
+    survey.data = { ...prefillData };
+    survey.render();
+  }, [survey]);
+
+
 
   // FADE-IN: show only after SurveyJS render + directives + fonts are settled. Only applies to the initial page load.
   useEffect(() => {
