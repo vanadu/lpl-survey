@@ -6,8 +6,9 @@
 // 
 
 [data-name="LandingTestPanel"] {
-  // display: none;t
+  display: none;
 }
+
 
 
 .landing-survey-test {
@@ -522,29 +523,6 @@
   }
 }
 
-
-
-
-
-
-
-// .success-container::before {
-//   content: "";
-//   position: absolute;
-//   inset: 0;
-
-//   background:
-//     radial-gradient(circle at center,
-//       transparent 55%,
-//       rgba(0,0,0,0.45) 100%
-//     ),
-//     url("/img-miss-b-kitchen-cropped.jpg") center / cover no-repeat;
-
-//   opacity: .2;
-//   filter: grayscale(100%) contrast(1.2);
-// }
-
-
 .success-container::before {
   content: "";
   position: absolute;
@@ -813,6 +791,36 @@
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+
+// !VA FOUC Fix and Survey Page Fade-in
+.surveyFadeWrap {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 240ms ease;
+}
+
+.surveyFadeWrap.isReady {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+/* Animate ONLY the page content when SurveyJS swaps pages */
+.sd-page.sd-body__page .sd-row {
+  animation: sjPageFadeIn 300ms ease;
+  // background: rgba(255, 0, 0, .3) !important; //devred
+}
+
+@keyframes sjPageFadeIn {
+  from { opacity: 0; transform: translateY(2px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+// .sd-row.sd-clearfix {
+//   background: rgba(0, 0, 255, .3) !important; //devblue
+// } 
 
 
 // !VA Testing...
