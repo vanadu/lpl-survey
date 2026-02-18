@@ -169,7 +169,7 @@ export default function SurveyComponentMaster() {
   const router = useRouter();
 
   // !VA Spinner duration and state declaration
-  const MIN_SPINNER_MS = 1500;
+  const MIN_SPINNER_MS = 1200;
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // FADE-IN: controls when Survey is allowed to be visible
@@ -181,9 +181,9 @@ export default function SurveyComponentMaster() {
     surveyModel.showCompletedPage = false;
     surveyModel.applyTheme(SharpLight);
     surveyModel.showNavigationButtons = false;
-
+    // !VA Assign data-name attribute to all SurveyJS panels, otherwise they'll be arbitrarily assigned and not targetable as selectors
     attachPanelDataNameStamper(surveyModel, { registry });
-
+    // !VA Apply the directives for SurveyJS DOM targeting that allow applying styles to panels, dropdowns, checkboxes and other elements separately: 
     surveyModel.onAfterRenderPanel.add((sender, options) => {
       applyDirectives(options.htmlElement, getStyleDirectives(options.panel));
     });
@@ -192,6 +192,7 @@ export default function SurveyComponentMaster() {
       applyDirectives(options.htmlElement, getStyleDirectives(options.question));
     });
 
+    // !VA Prefill the survey with the selections in /helpers/prefill.json
     if (prefillData && typeof prefillData === "object") {
       surveyModel.data = { ...prefillData };
     }
@@ -199,33 +200,31 @@ export default function SurveyComponentMaster() {
     return surveyModel;
   });
 
-  // FADE-IN: show only after SurveyJS render + directives + fonts are settled
-useEffect(() => {
-  if (!survey) return;
+  // FADE-IN: show only after SurveyJS render + directives + fonts are settled. Only applies to the initial page load.
+  useEffect(() => {
+    if (!survey) return;
 
-  let cancelled = false;
+    let cancelled = false;
 
-  const showOnce = async () => {
-    await waitForFonts();
-    await wait2Frames();
-    if (!cancelled) setIsSurveyReady(true);
-  };
+    const showOnce = async () => {
+      await waitForFonts();
+      await wait2Frames();
+      if (!cancelled) setIsSurveyReady(true);
+    };
 
-  setIsSurveyReady(false);
+    setIsSurveyReady(false);
 
-  // We still attach this in case we catch it, but we also do fallback.
-  survey.onAfterRenderSurvey.add(showOnce);
+    // We still attach this in case we catch it, but we also do fallback.
+    survey.onAfterRenderSurvey.add(showOnce);
 
-  // Fallback in case first render already happened
-  Promise.resolve().then(() => showOnce());
+    // Fallback in case first render already happened
+    Promise.resolve().then(() => showOnce());
 
-  return () => {
-    cancelled = true;
-    survey.onAfterRenderSurvey.remove(showOnce);
-  };
-}, [survey]);
-
-
+    return () => {
+      cancelled = true;
+      survey.onAfterRenderSurvey.remove(showOnce);
+    };
+  }, [survey]);
 
   // Consent enforcement
   useEffect(() => {
@@ -255,7 +254,7 @@ useEffect(() => {
     return () => survey.onValueChanged.remove(handleConsentChange);
   }, [survey]);
 
-  // Prefill Sync Rules
+  // Apply selections from one question to questions that come later. There are currently only two of these, so we'll do it here. Ideally, we would pull the element names out and put them in a separate file in /helpers
   useEffect(() => {
     if (!survey) return;
     return attachSurveySyncHandlers(survey, {
@@ -324,6 +323,7 @@ useEffect(() => {
     [router, isSubmitting]
   );
 
+  // !VA I don't like that the isSubmitting container doesn't scroll to the top of the page. It would probably be better just to have the spinner appear rather than the entire success-container, but for now it will have to do. The only way to scrollToTop is to put a ref on the element you want to scroll in the Layout component and then pass that ref as props down the page hierarchy to this component. Maybe later...
   return (
     <>
       {isSubmitting && (
