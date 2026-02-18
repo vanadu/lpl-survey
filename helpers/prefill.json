@@ -11,7 +11,7 @@
   "UserInfoContactOK": true,
 
   "CmpnName": "Bo",
-  "LifeStatus": false,
+  "LifeStatus": true,
 
   "CmpnInfoAnimalType": "CANINE",
   "CmpnInfoBreed": "Lab",

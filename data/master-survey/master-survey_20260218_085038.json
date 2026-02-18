@@ -93,7 +93,6 @@
       "includeIntoResult": true
     }
   ],
-  "title": "Master Survey Build",
   "showProgressBar": "top",
   "pages": [
     {
@@ -106,7 +105,7 @@
             {
               "type": "html",
               "name": "LandingVersion",
-              "html": "<div class='landing-survey-version-container'><p class='landing-survey-version'>LarParLife.org LP/GOLPP Survey<br/>Beta 0.9/26.02.12.01</p></div>"
+              "html": "<div class='landing-survey-version-container'><p class='landing-survey-version'>LarParLife.org LP/GOLPP Survey<br/>Beta 0.9/26.02.16.01</p></div>"
             },
             {
               "type": "html",

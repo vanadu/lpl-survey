@@ -168,6 +168,9 @@ const waitForFonts = async () => {
 export default function SurveyComponentMaster() {
   const router = useRouter();
 
+  // !VA Question prefills set in .env.local
+  const PREFILL_ENABLED = process.env.NEXT_PUBLIC_PREFILL_ENABLED === "true";
+
   // !VA Spinner duration and state declaration
   const MIN_SPINNER_MS = 1200;
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -193,24 +196,43 @@ export default function SurveyComponentMaster() {
     });
 
 
-    // if (prefillData && typeof prefillData === "object") {
-    //   surveyModel.data = { ...prefillData };
-    //   console.log('prefillData :>> ');
-    //   console.log(prefillData);
-    // }
     return surveyModel;
   });
 
 
   // !VA Prefill the survey with the selections in /helpers/prefill.json
+  // useEffect(() => {
+    // if (!survey) return;
+  //   if (!PREFILL_ENABLED) return;
+  //   if (!prefillData || typeof prefillData !== "object") return;
+
+  //   // Re-apply prefills after Fast Refresh
+  //   survey.data = { ...prefillData };
+  //   survey.render();
+  // }, [survey]);
+
   useEffect(() => {
     if (!survey) return;
-    if (!prefillData || typeof prefillData !== "object") return;
+    if (!PREFILL_ENABLED) return;
 
-    // Re-apply prefills after Fast Refresh
-    survey.data = { ...prefillData };
-    survey.render();
-  }, [survey]);
+    let cancelled = false;
+
+    (async () => {
+      const mod = await import("../../helpers/prefill.json");
+      if (cancelled) return;
+
+      const data = mod.default ?? mod;
+
+      survey.data = { ...data };
+      survey.render();
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [survey, PREFILL_ENABLED]);
+
+
 
 
 
