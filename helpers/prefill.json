@@ -86,7 +86,7 @@
   "PrimaryDurationFirstConsultYears": 13,
   "PrimaryDurationFirstConsultMonths": 1,
   "PrimaryDurationVisitsNumber": "MORE_THAN_TWO",
-  "PrimaryDurationCost": "OVER_5000",
+  "PrimaryDurationCost": "UNDER_200",
   "PrimaryDurationChangedVets": "ONCE",
   "PrimaryDurationChangedVetsReason": [
     "AGE_ONLY",
@@ -251,7 +251,7 @@
   "AspirationSurgeryPostCount": "ONE",
   "AspirationStentPost": "YES",
   "AspirationStentPostCount": "ONE",
-  "AspirationCost": "1001-2000",
+  "AspirationCost": "UNDER_100",
 
   "NeuropathySymptomsDoesHave": "YES",
   "NeuropathySymptomsFirst": "BREATHING",
@@ -273,7 +273,7 @@
   "ConclusionQOL": 2,
 
 
-  "ConclusionCauseOfDeath": "COMPLICATIONS",
+  "ConclusionCauseOfDeath": "BREATHING_DIFFICULTIES",
 
 
   "ConclusionOtherPathTieback": "TIEBACK_NO",

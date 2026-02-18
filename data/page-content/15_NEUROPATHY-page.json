@@ -174,7 +174,7 @@
             {
               "type": "checkbox",
               "name": "NeuropathyOtherIssues",
-              "title": "During this time period, did any of these issues also appear?",
+              "title": "Over the course of {CmpnName}'s LP/GOLPP, did any of these issues also appear?",
               "isRequired": true,
               "choices": [
                 {

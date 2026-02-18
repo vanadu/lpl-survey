@@ -269,14 +269,14 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsOtherPanel",
-          "title": "What other considerations have factored into your decision?",
+          "title": "What other considerations, if any, have factored into your decision?",
           "elements": [
             {
               "type": "text",
               "name": "TreatmentFactorsOther",
               "title": "Other considerations:",
               "description": "Maximum 250 characters.",
-              "isRequired": true
+              "isRequired": false
             }
           ]
         }

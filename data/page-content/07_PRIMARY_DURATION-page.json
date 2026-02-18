@@ -93,20 +93,20 @@
               "isRequired": true,
               "choices": [
                 {
-                  "value": "UNDER_1000",
-                  "text": "Under $1000"
+                  "value": "UNDER_200",
+                  "text": "Under $200"
                 },
                 {
-                  "value": "1000_3000",
-                  "text": "$1000-$3000"
+                  "value": "200_500",
+                  "text": "$200-$500"
                 },
                 {
-                  "value": "3000_5000",
-                  "text": "$3000-$5000"
+                  "value": "500_1000",
+                  "text": "$500-$1000"
                 },
                 {
-                  "value": "OVER_5000",
-                  "text": "Over $5000"
+                  "value": "OVER_1000",
+                  "text": "Over $1000"
                 },
                 {
                   "value": "DONT_KNOW",

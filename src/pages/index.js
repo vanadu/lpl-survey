@@ -28,7 +28,7 @@ const Home = () => {
         />
       <section className="section">
         <div className="section_content">
-          {/* <SurveyMenu /> */}
+          <SurveyMenu />
 
 
 

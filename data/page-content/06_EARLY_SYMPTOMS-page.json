@@ -159,7 +159,7 @@
             {
               "type": "radiogroup",
               "name": "EarlyOtherConditions",
-              "title": "When {CmpnName} first started showing symptoms of LP, did he have any other health conditions?",
+              "title": "When {CmpnName} first started showing symptoms of LP, did {cvGenderSubjectPronoun} have any other health conditions?",
               "isRequired": true,
               "choices": [
                 {

@@ -207,8 +207,8 @@
                     "text": "Direct post-operative complications of LP surgery or stent implant"
                   },
                   {
-                    "value": "BREATHING_CRISIS",
-                    "text": "LP-related breathing crisis"
+                    "value": "BREATHING_DIFFICULTIES",
+                    "text": "LP-related breathing difficulties"
                   },
                   {
                     "value": "CANCER",
