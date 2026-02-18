@@ -155,7 +155,7 @@ export default function SurveyComponentMaster() {
   const router = useRouter();
 
     // !VA State for tracking the submission spinner 
-  const MIN_SPINNER_MS = 30000; // debug; set to ~900 later
+  const MIN_SPINNER_MS = 1500; // debug; set to ~900 later
 
 
   
