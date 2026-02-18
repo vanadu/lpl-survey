@@ -1,25 +1,63 @@
 "use client";
-// Production SurveyComponentMaster that uses the merged JSON file created by merge-surveys.js and 1) sends results as email via Brevo and 2) writes the survey results to a datestamped file via 
+// Production SurveyComponentMaster that uses the merged JSON file created by merge-surveys.js. 
 
+// !VA React/Next imports
 import React, { useState, useCallback, useEffect } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
 import { useRouter } from "next/router";
 
+// !VA Survey imports
 import prefillData from "../../helpers/prefill.json";
 import masterSurvey from "../../data//master-survey/master-survey.json";
-
 import registry from "../../helpers/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 import { getStyleDirectives } from "./CustomClasses";
 import { attachSurveySyncHandlers } from "../../helpers/syncSelectionValues";
 
-// ... your applyDirective/applyDirectives stay as-is ...
+/**
+ * ============================================================================
+ * SurveyComponentMaster — Architecture Overview
+ * ============================================================================
+ *
+ * This component has three clearly separated layers:
+ *
+ * 1. Survey Model Lifecycle
+ *    - Creates and owns the SurveyJS Model instance
+ *    - Applies theme and default settings
+ *
+ * 2. UI Behavior Rules
+ *    - Consent enforcement & auto-advance
+ *
+ * 2.5 Prefill Sync Rules (IMPORTANT)
+ *    - Uses attachSurveySyncHandlers from helpers/syncSelectionValues.js
+ *    - Syncs select answers based on prior selections
+ *
+ * 3. Styling & DOM Instrumentation
+ *    - data-name stamping on panels
+ *    - class/style directives based on registry
+ *
+ * Submission:
+ *  - Sends RAW SurveyJS answers to /api/submit-survey and sends email/writes file OR only writes to file based on SEND_EMAIL in .env.local. Both local dev AND server droplet have this variable. 
+ *     - SEND_EMAIL=true: Production, sends email via Brevo and writes to local file in survey-results
+ *     - SEND_EMAIL=false: Dev, only writes results to local file in survey-results
+ */
 
 const CONSENT_PAGE_INDEX = 0;
 const CONSENT_QUESTION = "LandingConsent";
 
+
+/**
+ * Apply ONE directive using the BACKUP contract:
+ *   { target: "question" | "control" | "items" | "root", className: "..." }
+ *
+ * This function is the critical piece for SurveyJS DOM targeting:
+ * - dropdowns need .sd-input.sd-dropdown
+ * - text inputs need the closest .sd-input wrapper
+ * - checkbox/radiogroup containers need .sd-selectbase / fieldset.sd-selectbase
+ * - separators / ::after effects often need the question root
+ */
 function applyDirective(htmlElement, directive) {
   if (!htmlElement || !directive) return;
 
@@ -130,17 +168,13 @@ const waitForFonts = async () => {
 export default function SurveyComponentMaster() {
   const router = useRouter();
 
-  const MIN_SPINNER_MS = 3000;
+  // !VA Spinner duration and state declaration
+  const MIN_SPINNER_MS = 1500;
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // FADE-IN: controls when Survey is allowed to be visible
   const [isSurveyReady, setIsSurveyReady] = useState(false);
 
-  const scrollPageToTop = () => {
-    if (typeof window === "undefined") return;
-    const el = document.scrollingElement || document.documentElement;
-    el.scrollTo({ top: 0, left: 0, behavior: "auto" });
-  };
 
   const [survey] = useState(() => {
     const surveyModel = new Model(masterSurvey);
@@ -236,13 +270,16 @@ useEffect(() => {
     });
   }, [survey]);
 
+  
   const handleComplete = useCallback(
     async (sender) => {
+      // !VA If the survey is being submitted, exit
       if (isSubmitting) return;
 
-      scrollPageToTop();
+      // !VA Set the isSubmitting flag to true
       setIsSubmitting(true);
 
+      // !VA Set the date for the timestamp
       const completedAt = new Date().toISOString();
       const payload = {
         ...sender.data,
@@ -258,6 +295,7 @@ useEffect(() => {
           body: JSON.stringify(payload),
         });
 
+        // !VA Set the spinner timeout to the spinner duration
         const minSpinnerPromise = new Promise((resolve) =>
           setTimeout(resolve, MIN_SPINNER_MS)
         );
@@ -275,7 +313,7 @@ useEffect(() => {
         if (!resp.ok) {
           throw new Error(submitResult.error || submitResult.message || "Unknown error");
         }
-
+        // !VA When the submission is complete, display the submit-success page
         router.push("/submit-success");
       } catch (err) {
         console.error("Submission failed:", err);
@@ -300,7 +338,7 @@ useEffect(() => {
         </div>
       )}
 
-      {/* FADE-IN WRAPPER */}
+      {/* FADE-IN WRAPPER for the initial page load, to prevent FOUC and inconsistent element rendering*/}
       <div className={`surveyFadeWrap ${isSurveyReady ? "isReady" : ""}`}>
         <Survey model={survey} onComplete={handleComplete} />
       </div>
