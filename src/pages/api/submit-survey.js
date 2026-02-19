@@ -163,27 +163,27 @@ export default async function handler(req, res) {
     const submission = preSubmitTransform(raw);
 
 
-   const now = new Date();
+  //  const now = new Date();
 
-    function nyStamp(date = new Date()) {
-      const fmt = new Intl.DateTimeFormat("en-CA", {
-        timeZone: "America/New_York",
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-      });
+  //   function nyStamp(date = new Date()) {
+  //     const fmt = new Intl.DateTimeFormat("en-CA", {
+  //       timeZone: "America/New_York",
+  //       year: "numeric",
+  //       month: "2-digit",
+  //       day: "2-digit",
+  //       hour: "2-digit",
+  //       minute: "2-digit",
+  //       second: "2-digit",
+  //       hour12: false,
+  //     });
 
-      const parts = {};
-      for (const p of fmt.formatToParts(date)) parts[p.type] = p.value;
+  //     const parts = {};
+  //     for (const p of fmt.formatToParts(date)) parts[p.type] = p.value;
 
-      return `${parts.year}${parts.month}${parts.day}_${parts.hour}${parts.minute}${parts.second}`;
-    }
+  //     return `${parts.year}${parts.month}${parts.day}_${parts.hour}${parts.minute}${parts.second}`;
+  //   }
 
-    const stamp = nyStamp(now);
+  //   const stamp = nyStamp(now);
 
     console.log('stamp :>> ' + stamp);
 
