@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 // !VA Survey imports
 // !VA This can be deleted once we get toggling it in ENV worked out. 
-import prefillData from "../../helpers/prefill.json";
+// import prefillData from "../../helpers/prefill.json";
 import masterSurvey from "../../data//master-survey/master-survey.json";
 import registry from "../../helpers/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
@@ -318,13 +318,12 @@ export default function SurveyComponentMaster() {
       // !VA Set the date for the timestamp
       const completedAt = new Date().toISOString();
       const payload = {
-        ...sender.data,
-        completedAt,
-        submittedAt: completedAt,
-        source: "master-brevo",
+        ...sender.data
       };
 
       try {
+        // !VA 
+        console.log('Trying submitPromise');
         const submitPromise = fetch("/api/submit-survey", {
           method: "POST",
           headers: { "Content-Type": "application/json" },

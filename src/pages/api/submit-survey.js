@@ -3,6 +3,14 @@ import path from "path";
 import crypto from "crypto";
 import { preSubmitTransform } from "../../../helpers/preSubmitTransform";
 import { TransactionalEmailsApi, SendSmtpEmail } from "@getbrevo/brevo";
+import { nyDateTimeWithZone, nyDateTime, nyStamp } from "../../../helpers/UTC2NYT.js";
+
+
+const now = new Date();
+const stamp = nyStamp(now);
+const submittedAtNY = nyDateTimeWithZone(now); // optional but useful
+
+
 
 /*
   Beta safeguards:
@@ -154,18 +162,30 @@ export default async function handler(req, res) {
 
     const submission = preSubmitTransform(raw);
 
-    const now = new Date();
-    const stamp =
-      now.getFullYear().toString() +
-      String(now.getMonth() + 1).padStart(2, "0") +
-      String(now.getDate()).padStart(2, "0") +
-      "_" +
-      String(now.getHours()).padStart(2, "0") +
-      String(now.getMinutes()).padStart(2, "0") +
-      String(now.getSeconds()).padStart(2, "0");
 
+   const now = new Date();
 
+    function nyStamp(date = new Date()) {
+      const fmt = new Intl.DateTimeFormat("en-CA", {
+        timeZone: "America/New_York",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      });
 
+      const parts = {};
+      for (const p of fmt.formatToParts(date)) parts[p.type] = p.value;
+
+      return `${parts.year}${parts.month}${parts.day}_${parts.hour}${parts.minute}${parts.second}`;
+    }
+
+    const stamp = nyStamp(now);
+
+    console.log('stamp :>> ' + stamp);
 
 
     const filename = `${stamp}_${respondent.id}.json`;
@@ -174,7 +194,8 @@ export default async function handler(req, res) {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
     const record = {
-      submittedAt: now.toISOString(),
+      // submittedAt: now.toISOString(),
+      submittedAtNY,
       respondentId: respondent.id,
       meta: {
         ipHash,
@@ -199,7 +220,8 @@ export default async function handler(req, res) {
     const email = new SendSmtpEmail();
     email.sender = {
       email: process.env.SURVEY_FROM_EMAIL,
-      name: process.env.SURVEY_FROM_NAME
+      name: `${process.env.SURVEY_FROM_NAME} ${stamp}`,
+
     };
     email.to = [{ email: process.env.SURVEY_TO_EMAIL }];
     email.subject = `Survey Submission${scored.disposition === "suspect" ? " (SUSPECT)" : ""}`;
