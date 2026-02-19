@@ -13,7 +13,7 @@ import { TransactionalEmailsApi, SendSmtpEmail } from "@getbrevo/brevo";
 */
 
 
-// console.log("ENV SEND_EMAIL =", process.env.SEND_EMAIL);
+console.log("Top of file SEND_EMAIL =", process.env.SEND_EMAIL);
 
 
 const RATE_WINDOW_MS = 60_000;
@@ -210,6 +210,7 @@ export default async function handler(req, res) {
 
     // !VA Only send mail in production - see variable in .env.local
     const SEND_EMAIL = process.env.SEND_EMAIL === "true";
+    console.log("Before if SEND_EMAIL =", process.env.SEND_EMAIL);
 
     if (SEND_EMAIL) {
       try {
