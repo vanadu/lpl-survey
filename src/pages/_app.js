@@ -52,12 +52,13 @@ function MyApp({ Component, pageProps }) {
     const useEffect_host = window.location.hostname
     if (useEffect_host !== 'localhost') {
 
-
-      analytics.page() 
+      // !VA DISABLED FOR TESTING
+      // analytics.page() 
       
       // !VA Console log confirmation that handleRouteChange is running
       const handleRouteChange = (url) => {
-        gtag.pageview(url);
+        // !VA DISABLED FOR TESTING
+        // gtag.pageview(url);
       };
       router.events.on("routeChangeComplete", handleRouteChange);
       return () => {

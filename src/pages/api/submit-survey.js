@@ -206,13 +206,13 @@ export default async function handler(req, res) {
 
     email.htmlContent = `<pre>${JSON.stringify(record, null, 2)}</pre>`;
 
-    // await client.sendTransacEmail(email);
 
     // !VA Only send mail in production - see variable in .env.local
     const SEND_EMAIL = process.env.SEND_EMAIL === "true";
     console.log("Before if SEND_EMAIL =", process.env.SEND_EMAIL);
 
     if (SEND_EMAIL) {
+      console.log('Trying SEND_EMAIL');
       try {
         await client.sendTransacEmail(email);
         console.log("Email sent");

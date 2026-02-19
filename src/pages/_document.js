@@ -2,11 +2,13 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import Script from 'next/script'
 
+// !VA Google Analytics and Tag Manager commented out for testing
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <Script  strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-P8C8X6FG72" />
+        
+        {/* <Script  strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-P8C8X6FG72" />
         <Script
           id='google-analytics'
           strategy="afterInteractive"
@@ -26,7 +28,7 @@ export default function Document() {
 
             `,
           }}
-      />
+        /> */}
 
       </Head> 
       <body>
