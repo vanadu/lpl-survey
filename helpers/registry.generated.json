@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-18T23:41:25.800Z",
+    "builtAt": "2026-02-20T17:56:18.926Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -445,7 +445,7 @@
         "dcsdCmpnInfoAgePanel"
       ],
       "hasTitle": true,
-      "title": "Months (number 1 - 12)",
+      "title": "Months (number 0 - 11)",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
@@ -491,7 +491,7 @@
         "lvngCmpnInfoAgePanel"
       ],
       "hasTitle": true,
-      "title": "Months (number 1 - 12)",
+      "title": "Months (number 0 - 11)",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
@@ -538,8 +538,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "lvngCmpnInfoHasInsurance": {
-      "name": "lvngCmpnInfoHasInsurance",
+    "CmpnInfoHasInsurance": {
+      "name": "CmpnInfoHasInsurance",
       "type": "boolean",
       "role": "question",
       "collect": true,
@@ -965,7 +965,7 @@
         "EarlySymptomsFirstSignsPanel"
       ],
       "hasTitle": true,
-      "title": "Months (number 1 - 12)",
+      "title": "Months (number 0 - 11)",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
@@ -1134,7 +1134,7 @@
         "PrimaryDurationFirstConsult"
       ],
       "hasTitle": true,
-      "title": "Months (number 0 - 12)",
+      "title": "Months (number 0 - 11)",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
@@ -1321,8 +1321,8 @@
       "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
       "isRequired": true
     },
-    "PrimaryVetDiagnosisPanel": {
-      "name": "PrimaryVetDiagnosisPanel",
+    "PrimaryVetDiscussPanel": {
+      "name": "PrimaryVetDiscussPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -1333,15 +1333,15 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "PrimaryVetDiagnosis": {
-      "name": "PrimaryVetDiagnosis",
+    "PrimaryVetDidDiscuss": {
+      "name": "PrimaryVetDidDiscuss",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
         "PrimaryVetPanel",
-        "PrimaryVetDiagnosisPanel"
+        "PrimaryVetDiscussPanel"
       ],
       "hasTitle": true,
       "title": "Did your primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms?",
@@ -1360,8 +1360,8 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "PrimaryVetInfoDidGive": {
-      "name": "PrimaryVetInfoDidGive",
+    "PrimaryVetInfo": {
+      "name": "PrimaryVetInfo",
       "type": "boolean",
       "role": "question",
       "collect": true,
@@ -1388,7 +1388,7 @@
       "hasTitle": true,
       "title": "What did they tell you about the how LP/GOLPP might affect {CmpnName}?",
       "hasVisibleIf": true,
-      "visibleIf": "{PrimaryVetInfoDidGive} = true",
+      "visibleIf": "{PrimaryVetInfo} = true",
       "isRequired": true
     },
     "PrimaryVetSurgeryPanel": {
@@ -1585,7 +1585,7 @@
         "DiagnosisDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Did the surgeon require consent to proceed with the surgery before doing the diagnosis?",
+      "title": "Did the surgeon perform the diagnosis without requiring surgery afterwards?",
       "hasVisibleIf": true,
       "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
       "isRequired": true
@@ -1640,9 +1640,10 @@
         "TreatmentStatusAgePanel"
       ],
       "hasTitle": true,
-      "title": "Age (years)",
+      "title": "Years",
       "hasVisibleIf": false,
-      "isRequired": true
+      "isRequired": true,
+      "hasValidators": true
     },
     "TreatmentStatusAgeMonths": {
       "name": "TreatmentStatusAgeMonths",
@@ -1655,9 +1656,10 @@
         "TreatmentStatusAgePanel"
       ],
       "hasTitle": true,
-      "title": "Age (months)",
+      "title": "Months (number 0 - 11)",
       "hasVisibleIf": false,
-      "isRequired": true
+      "isRequired": true,
+      "hasValidators": true
     },
     "TreatmentStatusTypePanel": {
       "name": "TreatmentStatusTypePanel",
@@ -2313,7 +2315,7 @@
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{TreatmentStatusDidHave} = 'NO' && {LifeStatus} = true"
+      "visibleIf": "{TreatmentStatusDidHave} = false && {LifeStatus} = false"
     },
     "TreatmentFactorsDecision": {
       "name": "TreatmentFactorsDecision",
@@ -2686,7 +2688,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Doxepin on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'DOXEPIN'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'DOXEPIN'",
       "isRequired": true
     },
     "ManagementPrescriptionDoxepinRatingMobility": {
@@ -2702,7 +2704,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Doxepin on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'DOXEPIN'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'DOXEPIN'",
       "isRequired": true
     },
     "ManagementPrescriptionTrazodoneRatingBreathing": {
@@ -2718,7 +2720,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Trazodone on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'TRAZODONE'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TRAZODONE'",
       "isRequired": true
     },
     "ManagementPrescriptionTrazodoneRatingMobility": {
@@ -2734,7 +2736,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Trazodone on {CmpnName} mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'TRAZODONE'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TRAZODONE'",
       "isRequired": true
     },
     "ManagementPrescriptionGabapentinRatingBreathing": {
@@ -2750,7 +2752,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Gabapentin on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'GABAPENTIN'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GABAPENTIN'",
       "isRequired": true
     },
     "ManagementPrescriptionGabapentinRatingMobility": {
@@ -2766,7 +2768,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Gabapentin on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'GABAPENTIN'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GABAPENTIN'",
       "isRequired": true
     },
     "ManagementPrescriptionGalliprantRatingBreathing": {
@@ -2782,7 +2784,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Galliprant on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'GALLIPRANT'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GALLIPRANT'",
       "isRequired": true
     },
     "ManagementPrescriptionGalliprantRatingMobility": {
@@ -2798,7 +2800,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Galliprant on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'GALLIPRANT'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GALLIPRANT'",
       "isRequired": true
     },
     "ManagementPrescriptionSteroidRatingBreathing": {
@@ -2814,7 +2816,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Prednisone on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'STEROID'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'STEROID'",
       "isRequired": true
     },
     "ManagementPrescriptionSteroidRatingMobility": {
@@ -2830,7 +2832,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Prednisone on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'STEROID'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'STEROID'",
       "isRequired": true
     },
     "ManagementPrescriptionAntihistamineRatingBreathing": {
@@ -2846,7 +2848,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
       "isRequired": true
     },
     "ManagementPrescriptionAntihistamineRatingMobility": {
@@ -2862,7 +2864,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
       "isRequired": true
     },
     "ManagementPrescriptionCereniaRatingBreathing": {
@@ -2878,7 +2880,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Cerenia on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'CERENIA'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'CERENIA'",
       "isRequired": true
     },
     "ManagementPrescriptionCereniaRatingMobility": {
@@ -2894,7 +2896,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Cerenia on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'CERENIA'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'CERENIA'",
       "isRequired": true
     },
     "ManagementPrescriptionMeloxicamRatingBreathing": {
@@ -2910,7 +2912,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Meloxicam on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'MELOXICAM'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'MELOXICAM'",
       "isRequired": true
     },
     "ManagementPrescriptionMeloxicamRatingMobility": {
@@ -2926,7 +2928,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Meloxicam on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'MELOXICAM'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'MELOXICAM'",
       "isRequired": true
     },
     "ManagementPrescriptionAcepromineRatingBreathing": {
@@ -2942,7 +2944,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Acepromine on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'ACEPROMINE'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ACEPROMINE'",
       "isRequired": true
     },
     "ManagementPrescriptionAcepromineRatingMobility": {
@@ -2958,7 +2960,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Acepromine on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'ACEPROMINE'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ACEPROMINE'",
       "isRequired": true
     },
     "ManagementPrescriptionAlbuterolRatingBreathing": {
@@ -2974,7 +2976,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'ALBUTEROL'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ALBUTEROL'",
       "isRequired": true
     },
     "ManagementPrescriptionAlbuterolRatingMobility": {
@@ -2990,7 +2992,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'ALBUTEROL'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ALBUTEROL'",
       "isRequired": true
     },
     "ManagementPrescriptionTemarilPRatingBreathing": {
@@ -3006,7 +3008,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Temaril P on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'TEMARIL_P'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TEMARIL_P'",
       "isRequired": true
     },
     "ManagementPrescriptionTemarilPRatingMobility": {
@@ -3022,7 +3024,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of Temaril P on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptionType} contains 'TEMARIL_P'",
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TEMARIL_P'",
       "isRequired": true
     },
     "ManagementNonPrescriptionTypePanel": {
@@ -3081,7 +3083,7 @@
       "hasTitle": true,
       "title": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescription} = YES",
+      "visibleIf": "{ManagementNonPrescription} = 'YES'",
       "isRequired": true
     },
     "ManagementNonPrescriptionAcupunctureRatingBreathing": {
@@ -3097,7 +3099,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of acupuncture on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescriptionType} contains 'ACUPUNCTURE'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
       "isRequired": true
     },
     "ManagementNonPrescriptionAcupunctureRatingMobility": {
@@ -3113,7 +3115,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of acupuncture on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescriptionType} contains 'ACUPUNCTURE'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
       "isRequired": true
     },
     "ManagementNonPrescriptionTherapyRatingBreathing": {
@@ -3129,7 +3131,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescriptionType} contains 'THERAPY'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
       "isRequired": true
     },
     "ManagementNonPrescriptionTherapyRatingMobility": {
@@ -3145,7 +3147,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescriptionType} contains 'THERAPY'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
       "isRequired": true
     },
     "ManagementNonPrescriptionColdLaserRatingBreathing": {
@@ -3161,7 +3163,7 @@
       "hasTitle": true,
       "title": "How effective was cold laser or red light therapy on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescriptionType} contains 'LLLT'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
       "isRequired": true
     },
     "ManagementNonPrescriptionColdLaserRatingMobility": {
@@ -3177,7 +3179,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of cold laser or red light therapy on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescriptionType} contains 'LLLT'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
       "isRequired": true
     },
     "ManagementNonPrescriptionChiroRatingBreathing": {
@@ -3193,7 +3195,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of chiropractic on {CmpnName}'s breathing on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescriptionType} contains 'CHIRO'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
       "isRequired": true
     },
     "ManagementNonPrescriptionChiroRatingMobility": {
@@ -3209,7 +3211,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of chiropractic on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescriptionType} contains 'CHIRO'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
       "isRequired": true
     },
     "OTCProductsPanel": {
@@ -3915,8 +3917,8 @@
       "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
       "isRequired": true
     },
-    "ConclusionOtherPathNoSurgery": {
-      "name": "ConclusionOtherPathNoSurgery",
+    "ConclusionOtherPathNoTreatment": {
+      "name": "ConclusionOtherPathNoTreatment",
       "type": "checkbox",
       "role": "question",
       "collect": true,

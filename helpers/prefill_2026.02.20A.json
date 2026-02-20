@@ -1,6 +1,6 @@
 {
 
-  "UserInfoFirstName": "Test01",
+  "UserInfoFirstName": "Van",
   "UserInfoCountry": "US",
   "UserInfoStateRegion": "MD",
   "UserInfoAgeGroup": "OVER_65",
@@ -10,21 +10,24 @@
   "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "UserInfoContactOK": true,
 
-  "CmpnName": "Testdog07",
+  "CmpnName": "Bo",
   "LifeStatus": true,
 
   "CmpnInfoAnimalType": "CANINE",
   "CmpnInfoBreed": "Lab",
   "CmpnInfoGender": false,
-  "lvngCmpnInfoAgeYears": 14,
-  "lvngCmpnInfoAgeMonths": 0,
+  "lvngCmpnInfoAgeYears": 12,
+  "lvngCmpnInfoAgeMonths": 8,
   "dcsdCmpnInfoAgeYears": 14,
-  "dcsdCmpnInfoAgeMonths": 0,
+  "dcsdCmpnInfoAgeMonths": 5,
   "CmpnInfoWeight": 50,
   "CmpnInfoWeightUnits": false,
-  "CmpnInfoDemeanor": 3,
+  "CmpnInfoDemeanor": 5,
   "CmpnInfoAnxiety": 3,
-  "CmpnInfoHasInsurance": true,
+  "CmpnInfoAnimalsCount": "TWO",
+  "lvngCmpnInfoHasInsurance": true,
+  "dcsdCmpnInfoHasInsurance": true,
+  "CmpnInfoHasInsuranceOther": "2",
 
 
   "InfoSourcesPriorKnowledge": false,
@@ -42,7 +45,7 @@
     "TEETH_CLEANING",
     "DIAGNOSTIC"
   ],
-  "IntubationHistoryConcerns": true,
+  "IntubationHistoryConcerns": "YES",
   "IntubationHistorySymptoms": [
     "COUGHING",
     "PANTING",
@@ -51,7 +54,7 @@
 
   "BreathingCrisisDidHave": "YES",
   "BreathingCrisisCount": "TWO",
-  "BreathingCrisisCost": "500_1000",
+  "BreathingCrisisCost": "1000_3000",
   "BreathingCrisisAdvice": "YES",
   "BreathingCrisisAdviceType": [
     "COOL_PLACE",
@@ -94,8 +97,8 @@
   "PrimaryVetReflux": "YES",
   "PrimaryVetRefluxMeds": "NO",
   "PrimaryVetRefluxInitiative": true,
-  "PrimaryVetDidDiscuss": "POSSIBLY",
-  "PrimaryVetInfo": true,
+  "PrimaryVetDiagnosis": "POSSIBLY",
+  "PrimaryVetInfoDidGive": true,
   "PrimaryVetInfoDetails": [
     "BARK_LOSS",
     "PROGRESSIVE"
@@ -112,7 +115,7 @@
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
 
-  "TreatmentStatusDidHave": false,
+  "TreatmentStatusDidHave": true,
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [

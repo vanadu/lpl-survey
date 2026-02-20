@@ -165,7 +165,7 @@
             {
               "type": "radiogroup",
               "name": "DiagnosisSurgeonContingent",
-              "title": "Did the surgeon require consent to proceed with the surgery before doing the diagnosis?",
+              "title": "Did the surgeon perform the diagnosis without requiring surgery afterwards?",
               "description": "In other words, did the surgeon refuse to do the diagnosis unless you agreed to go straight to surgery if the results were positive?",
               "isRequired": true,
               "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",

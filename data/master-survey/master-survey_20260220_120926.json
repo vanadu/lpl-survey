@@ -1819,7 +1819,7 @@
                   "name": "PrimaryVetInfoDetails",
                   "title": "What did they tell you about the how LP/GOLPP might affect {CmpnName}?",
                   "isRequired": true,
-                  "visibleIf": "{PrimaryVetInfo} = true",
+                  "visibleIf": "{PrimaryVetInfoDidGive} = true",
                   "choices": [
                     {
                       "value": "BARK_LOSS",
@@ -3190,7 +3190,7 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsDecisionPanel",
-              "visibleIf": "{TreatmentStatusDidHave} = false && {LifeStatus} = false",
+              "visibleIf": "{TreatmentStatusDidHave} = 'NO' && {LifeStatus} = true",
               "elements": [
                 {
                   "type": "dropdown",
@@ -5842,32 +5842,6 @@
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "ConclusionOtherPathNoTreatment",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "TIEBACK_SAME",
-                      "text": "I would pursue the same treatment path as with {CmpnName}"
-                    },
-                    {
-                      "value": "TIEBACK_NO",
-                      "text": "I would not do tieback surgery again"
-                    },
-                    {
-                      "value": "TIEBACK_SOONER",
-                      "text": "I would do tieback surgery sooner than I did with {CmpnName}"
-                    },
-                    {
-                      "value": "TIEBACK_LATER",
-                      "text": "I would wait to do tieback surgery longer than I did with {CmpnName}"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "radiogroup",
                   "name": "ConclusionOtherPathTieback",
                   "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
                   "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
@@ -5998,7 +5972,7 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "ConclusionOtherPathNoTreatment",
+                  "name": "ConclusionOtherPathNoSurgery",
                   "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName}, what if anything would you differently?",
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusDidHave} = false",

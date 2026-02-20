@@ -711,12 +711,9 @@
                 },
                 {
                   "type": "boolean",
-                  "name": "CmpnInfoHasInsurance",
+                  "name": "lvngCmpnInfoHasInsurance",
                   "required": true,
-                  "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "swapOrder": true
+                  "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?"
                 }
               ]
             }
@@ -984,9 +981,6 @@
                   "type": "boolean",
                   "name": "IntubationHistoryConcerns",
                   "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "swapOrder": true,
                   "isRequired": true
                 },
                 {
@@ -1098,20 +1092,20 @@
                   "title": "About what was the total pre-insurance cost of these visits?",
                   "choices": [
                     {
-                      "value": "LESS_THAN_250",
-                      "text": "Less than $250"
+                      "value": "LESS_THAN_1000",
+                      "text": "Less than $1000"
                     },
                     {
-                      "value": "250_500",
-                      "text": "$250 - $500"
+                      "value": "1000_3000",
+                      "text": "$1000 - $3000"
                     },
                     {
-                      "value": "500_1000",
-                      "text": "$500 - $1000"
+                      "value": "3000 - 5000",
+                      "text": "$3000 - $5000"
                     },
                     {
-                      "value": "MORE_THAN_1000",
-                      "text": "More than $1000"
+                      "value": "MORE_THAN_5000",
+                      "text": "More than $5000"
                     },
                     {
                       "value": "DONT_KNOW",
@@ -1761,21 +1755,29 @@
                   "type": "boolean",
                   "name": "PrimaryVetRefluxInitiative",
                   "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotadine) or Prilosec (omeprazole) on your own intiative without a prescription or recommendation from your primary vet?",
-                  "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
                   "isRequired": true,
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "swapOrder": true
+                  "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
+                  "choices": [
+                    {
+                      "value": true,
+                      "text": "Yes"
+                    },
+                    {
+                      "value": false,
+                      "text": "No"
+                    }
+                  ],
+                  "showOtherItem": false
                 }
               ]
             },
             {
               "type": "panel",
-              "name": "PrimaryVetDiscussPanel",
+              "name": "PrimaryVetDiagnosisPanel",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "PrimaryVetDidDiscuss",
+                  "name": "PrimaryVetDiagnosis",
                   "title": "Did your primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms? ",
                   "isRequired": true,
                   "choices": [
@@ -1807,11 +1809,8 @@
               "elements": [
                 {
                   "type": "boolean",
-                  "name": "PrimaryVetInfo",
+                  "name": "PrimaryVetInfoDidGive",
                   "title": "Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect {CmpnName}?",
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "swapOrder": true,
                   "isRequired": true
                 },
                 {
@@ -1819,7 +1818,7 @@
                   "name": "PrimaryVetInfoDetails",
                   "title": "What did they tell you about the how LP/GOLPP might affect {CmpnName}?",
                   "isRequired": true,
-                  "visibleIf": "{PrimaryVetInfo} = true",
+                  "visibleIf": "{PrimaryVetInfoDidGive} = true",
                   "choices": [
                     {
                       "value": "BARK_LOSS",
@@ -2135,7 +2134,7 @@
                 {
                   "type": "radiogroup",
                   "name": "DiagnosisSurgeonContingent",
-                  "title": "Did the surgeon perform the diagnosis without requiring surgery afterwards?",
+                  "title": "Did the surgeon require consent to proceed with the surgery before doing the diagnosis?",
                   "description": "In other words, did the surgeon refuse to do the diagnosis unless you agreed to go straight to surgery if the results were positive?",
                   "isRequired": true,
                   "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
@@ -3190,7 +3189,7 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsDecisionPanel",
-              "visibleIf": "{TreatmentStatusDidHave} = false && {LifeStatus} = false",
+              "visibleIf": "{TreatmentStatusDidHave} = 'NO' && {LifeStatus} = true",
               "elements": [
                 {
                   "type": "dropdown",
@@ -3750,7 +3749,7 @@
                   "title": "Please rate the effect of Doxepin on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'DOXEPIN'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'DOXEPIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3784,7 +3783,7 @@
                   "title": "Please rate the effect of Doxepin on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'DOXEPIN'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'DOXEPIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3818,7 +3817,7 @@
                   "title": "Please rate the effect of Trazodone on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TRAZODONE'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'TRAZODONE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3852,7 +3851,7 @@
                   "title": "Please rate the effect of Trazodone on {CmpnName} mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TRAZODONE'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'TRAZODONE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3886,7 +3885,7 @@
                   "title": "Please rate the effect of Gabapentin on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GABAPENTIN'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'GABAPENTIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3920,7 +3919,7 @@
                   "title": "Please rate the effect of Gabapentin on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GABAPENTIN'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'GABAPENTIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3954,7 +3953,7 @@
                   "title": "Please rate the effect of Galliprant on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GALLIPRANT'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'GALLIPRANT'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3988,7 +3987,7 @@
                   "title": "Please rate the effect of Galliprant on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GALLIPRANT'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'GALLIPRANT'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4022,7 +4021,7 @@
                   "title": "Please rate the effect of Prednisone on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'STEROID'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'STEROID'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4056,7 +4055,7 @@
                   "title": "Please rate the effect of Prednisone on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'STEROID'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'STEROID'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4090,7 +4089,7 @@
                   "title": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4124,7 +4123,7 @@
                   "title": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4158,7 +4157,7 @@
                   "title": "Please rate the effect of Cerenia on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'CERENIA'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'CERENIA'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4192,7 +4191,7 @@
                   "title": "Please rate the effect of Cerenia on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'CERENIA'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'CERENIA'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4226,7 +4225,7 @@
                   "title": "Please rate the effect of Meloxicam on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'MELOXICAM'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'MELOXICAM'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4260,7 +4259,7 @@
                   "title": "Please rate the effect of Meloxicam on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'MELOXICAM'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'MELOXICAM'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4294,7 +4293,7 @@
                   "title": "Please rate the effect of Acepromine on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ACEPROMINE'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'ACEPROMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4328,7 +4327,7 @@
                   "title": "Please rate the effect of Acepromine on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ACEPROMINE'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'ACEPROMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4362,7 +4361,7 @@
                   "title": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ALBUTEROL'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'ALBUTEROL'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4396,7 +4395,7 @@
                   "title": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ALBUTEROL'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'ALBUTEROL'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4430,7 +4429,7 @@
                   "title": "Please rate the effect of Temaril P on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TEMARIL_P'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'TEMARIL_P'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4464,7 +4463,7 @@
                   "title": "Please rate the effect of Temaril P on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TEMARIL_P'",
+                  "visibleIf": "{ManagementPrescriptionType} contains 'TEMARIL_P'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4551,7 +4550,7 @@
                   "title": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
                   "description": "If you don't know exactly, it's OK to guesstimate.",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES'",
+                  "visibleIf": "{ManagementNonPrescription} = YES",
                   "choices": [
                     {
                       "value": "UNDER_100",
@@ -4580,7 +4579,7 @@
                   "title": "Please rate the effect of acupuncture on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
+                  "visibleIf": "{ManagementNonPrescriptionType} contains 'ACUPUNCTURE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4614,7 +4613,7 @@
                   "title": "Please rate the effect of acupuncture on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
+                  "visibleIf": "{ManagementNonPrescriptionType} contains 'ACUPUNCTURE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4648,7 +4647,7 @@
                   "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
+                  "visibleIf": "{ManagementNonPrescriptionType} contains 'THERAPY'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4682,7 +4681,7 @@
                   "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
+                  "visibleIf": "{ManagementNonPrescriptionType} contains 'THERAPY'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4716,7 +4715,7 @@
                   "title": "How effective was cold laser or red light therapy on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
+                  "visibleIf": "{ManagementNonPrescriptionType} contains 'LLLT'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4750,7 +4749,7 @@
                   "title": "Please rate the effect of cold laser or red light therapy on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
+                  "visibleIf": "{ManagementNonPrescriptionType} contains 'LLLT'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4784,7 +4783,7 @@
                   "title": "Please rate the effect of chiropractic on {CmpnName}'s breathing on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
+                  "visibleIf": "{ManagementNonPrescriptionType} contains 'CHIRO'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4818,7 +4817,7 @@
                   "title": "Please rate the effect of chiropractic on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
+                  "visibleIf": "{ManagementNonPrescriptionType} contains 'CHIRO'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -5834,38 +5833,12 @@
             {
               "type": "html",
               "name": "ConclusionLastQuestionText",
-              "html": "<p>The last question of this survey is speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?</p>"
+              "html": "<p>LP/GOLPP is a merciless, ruthless disease that forces us to make impossible decisions for our beloved companions. The last question of this survey is speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?</p>"
             },
             {
               "type": "panel",
               "name": "ConclusionOtherPathPanel",
               "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "ConclusionOtherPathNoTreatment",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "TIEBACK_SAME",
-                      "text": "I would pursue the same treatment path as with {CmpnName}"
-                    },
-                    {
-                      "value": "TIEBACK_NO",
-                      "text": "I would not do tieback surgery again"
-                    },
-                    {
-                      "value": "TIEBACK_SOONER",
-                      "text": "I would do tieback surgery sooner than I did with {CmpnName}"
-                    },
-                    {
-                      "value": "TIEBACK_LATER",
-                      "text": "I would wait to do tieback surgery longer than I did with {CmpnName}"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
                 {
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathTieback",
@@ -5998,7 +5971,7 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "ConclusionOtherPathNoTreatment",
+                  "name": "ConclusionOtherPathNoSurgery",
                   "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName}, what if anything would you differently?",
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusDidHave} = false",

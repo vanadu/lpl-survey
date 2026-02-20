@@ -41,16 +41,16 @@
               "type": "text",
               "inputType": "number",
               "name": "PrimaryDurationFirstConsultMonths",
-              "title": "Months (number 0 - 12)",
+              "title": "Months (number 0 - 11)",
               "isRequired": true,
               "min": 0,
-              "max": 12,
+              "max": 11,
               "validators": [
                 {
                   "type": "numeric",
                   "minValue": 0,
-                  "maxValue": 12,
-                  "text": "Months must be between 1 and 12"
+                  "maxValue": 11,
+                  "text": "Months must be between 0 and 11"
                 }
               ]
             }

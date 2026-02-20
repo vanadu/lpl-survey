@@ -21,16 +21,34 @@
 }
 
 .landing-survey-version-container {
+  position: absolute;
+  top: 8px;
+  right: 0;
   display: flex;
-  justify-content: right;
+  flex-direction: row;
+  justify-content: space-between;
   margin-right: 40px;
 }
 
 .landing-survey-version {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-survey-version-text {
+  width: 100%;
   font-family: $secondary_font!important;
   color: #353535!important;
-  font-size: .913rem!important;
-  line-height: 1.25rem!important;
+  font-size: 1rem!important;
+  line-height: 1.125rem!important;
+  text-align: left;
+}
+
+.survey-version-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 // !VA Landing Intro subhead
@@ -44,6 +62,12 @@
   font-weight: 600!important;
 }
 
+
+
+
+
+/* === Survey Dropdown (click-controlled) === */
+
 .survey-dropdown {
   position: relative;
   display: inline-flex;
@@ -52,6 +76,7 @@
   font-family: inherit;
 }
 
+/* Button */
 .survey-dropdown__button {
   padding: 10px 16px;
   background: #f5f6fa;
@@ -60,42 +85,83 @@
   border-radius: 4px;
   text-align: left;
   transition: background 0.2s;
+  user-select: none;
 }
 
-.survey-dropdown__button:hover {
+.survey-dropdown__button:hover,
+.survey-dropdown__button:focus {
   background: #e1e6f0;
+  outline: none;
 }
 
+/* List container */
 .survey-dropdown__list {
-  display: none;
+  /* positioning */
   position: absolute;
-  top: 100%;
+  top: calc(100% + 4px);
   left: 0;
-  flex-direction: column;
   width: 100%;
-  margin: 4px 0 0 0;
-  padding: 0;
+
+  /* box model */
+  margin: 0;
+  padding: 4px 0;
   list-style: none;
+
+  /* visuals */
   background: #fff;
   border: 1px solid #dcdde1;
   border-radius: 4px;
   box-shadow: 0 8px 16px rgba(44, 62, 80, 0.06);
-  z-index: 10;
-}
 
-.survey-dropdown:hover .survey-dropdown__list {
+  /* stacking */
+  z-index: 9999;
+
+  /* hidden by default (BUT still animatable) */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  pointer-events: none;
+
+  /* layout */
   display: flex;
+  flex-direction: column;
+
+  /* animation */
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
 }
 
+/* OPEN state (set by React className) */
+.survey-dropdown.open .survey-dropdown__list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Items */
 .survey-dropdown__item {
+  padding: 0; /* let the Link carry padding */
+}
+
+/* Make the Link fill the row so the whole row is clickable */
+.survey-dropdown__item a {
+  display: block;
   padding: 10px 16px;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
   transition: background 0.18s;
 }
 
-.survey-dropdown__item:hover {
+.survey-dropdown__item a:hover,
+.survey-dropdown__item a:focus {
   background: #e1e6f0;
+  outline: none;
 }
+
+/* IMPORTANT: remove hover-to-open behavior (unreliable) */
+/* .survey-dropdown:hover .survey-dropdown__list { display: flex; } */
+
 
 
 // !VA Survey body

@@ -113,16 +113,16 @@
               "type": "text",
               "inputType": "number",
               "name": "dcsdCmpnInfoAgeMonths",
-              "title": "Months (number 1 - 12)",
+              "title": "Months (number 0 - 11)",
               "isRequired": true,
-              "min": 1,
-              "max": 12,
+              "min": 0,
+              "max": 11,
               "validators": [
                 {
                   "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 12,
-                  "text": "Months must be between 1 and 12"
+                  "minValue": 0,
+                  "maxValue": 11,
+                  "text": "Months must be between 0 and 11"
                 }
               ]
             }
@@ -155,16 +155,16 @@
               "type": "text",
               "inputType": "number",
               "name": "lvngCmpnInfoAgeMonths",
-              "title": "Months (number 1 - 12)",
+              "title": "Months (number 0 - 11)",
               "isRequired": true,
-              "min": 1,
-              "max": 12,
+              "min": 0,
+              "max": 11,
               "validators": [
                 {
                   "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 12,
-                  "text": "Months must be between 1 and 12"
+                  "minValue": 0,
+                  "maxValue": 11,
+                  "text": "Months must be between 0 and 11"
                 }
               ]
             }
@@ -206,9 +206,12 @@
             },
             {
               "type": "boolean",
-              "name": "lvngCmpnInfoHasInsurance",
+              "name": "CmpnInfoHasInsurance",
               "required": true,
-              "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?"
+              "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "swapOrder": true
             }
           ]
         }

@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "LandingVersion",
-          "html": "<div class='landing-survey-version-container'><p class='landing-survey-version'>LarParLife.org LP/GOLPP Survey<br/>Beta 0.9/26.02.16.01</p></div>"
+          "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.20.01</p></div></div>"
         },
         {
           "type": "html",

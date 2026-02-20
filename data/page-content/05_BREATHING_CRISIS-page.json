@@ -74,20 +74,20 @@
               "title": "About what was the total pre-insurance cost of these visits?",
               "choices": [
                 {
-                  "value": "LESS_THAN_1000",
-                  "text": "Less than $1000"
+                  "value": "LESS_THAN_250",
+                  "text": "Less than $250"
                 },
                 {
-                  "value": "1000_3000",
-                  "text": "$1000 - $3000"
+                  "value": "250_500",
+                  "text": "$250 - $500"
                 },
                 {
-                  "value": "3000 - 5000",
-                  "text": "$3000 - $5000"
+                  "value": "500_1000",
+                  "text": "$500 - $1000"
                 },
                 {
-                  "value": "MORE_THAN_5000",
-                  "text": "More than $5000"
+                  "value": "MORE_THAN_1000",
+                  "text": "More than $1000"
                 },
                 {
                   "value": "DONT_KNOW",

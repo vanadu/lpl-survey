@@ -40,17 +40,39 @@
           "description": "If you can't remember exactly, it's OK to guesstimate.",
           "visibleIf": "{TreatmentStatusDidHave} = true",
           "elements": [
-            {
+                        {
               "type": "text",
+              "inputType": "number",
               "name": "TreatmentStatusAgeYears",
-              "title": "Age (years)",
-              "isRequired": true
+              "title": "Years",
+              "isRequired": true,
+              "min": "1",
+              "max": "40",
+                "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 40,
+                  "text": "Age must be between 1 and 40"
+                }
+              ]
             },
             {
               "type": "text",
+              "inputType": "number",
               "name": "TreatmentStatusAgeMonths",
-              "title": "Age (months)",
-              "isRequired": true
+              "title": "Months (number 0 - 11)",
+              "isRequired": true,
+              "min": 0,
+              "max": 11,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 0,
+                  "maxValue": 11,
+                  "text": "Months must be between 0 and 11"
+                }
+              ]
             }
           ]
         },

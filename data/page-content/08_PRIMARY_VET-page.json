@@ -96,29 +96,21 @@
               "type": "boolean",
               "name": "PrimaryVetRefluxInitiative",
               "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotadine) or Prilosec (omeprazole) on your own intiative without a prescription or recommendation from your primary vet?",
-              "isRequired": true,
               "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
-              "choices": [
-                {
-                  "value": true,
-                  "text": "Yes"
-                },
-                {
-                  "value": false,
-                  "text": "No"
-                }
-              ],
-              "showOtherItem": false
+              "isRequired": true,
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "swapOrder": true
             }
           ]
         },
         {
           "type": "panel",
-          "name": "PrimaryVetDiagnosisPanel",
+          "name": "PrimaryVetDiscussPanel",
           "elements": [
             {
               "type": "radiogroup",
-              "name": "PrimaryVetDiagnosis",
+              "name": "PrimaryVetDidDiscuss",
               "title": "Did your primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms? ",
               "isRequired": true,
               "choices": [
@@ -151,9 +143,12 @@
           "elements": [
           {
             "type": "boolean",
-            "name": "PrimaryVetInfoDidGive",
+            "name": "PrimaryVetInfo",
             "title": "Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect {CmpnName}?",
-            "isRequired": true
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "swapOrder": true,
+              "isRequired": true
           },
 
           {
@@ -161,7 +156,7 @@
             "name": "PrimaryVetInfoDetails",
             "title": "What did they tell you about the how LP/GOLPP might affect {CmpnName}?",
             "isRequired": true,
-            "visibleIf": "{PrimaryVetInfoDidGive} = true",
+            "visibleIf": "{PrimaryVetInfo} = true",
             "choices": [
               {
                 "value": "BARK_LOSS",
