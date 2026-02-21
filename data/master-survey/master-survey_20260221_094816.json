@@ -164,12 +164,12 @@
                 {
                   "type": "html",
                   "name": "LandingPrivacy",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Privacy</a></div>"
+                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Privacy</a></div>"
                 },
                 {
                   "type": "html",
                   "name": "LandingData",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Consent?</a></div>"
+                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Consent?</a></div>"
                 }
               ]
             },
@@ -323,7 +323,7 @@
                   "name": "UserInfoContactTypeFacebookInstructions",
                   "title": "z",
                   "visibleIf": "{UserInfoContactType} = true",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
+                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Info icon' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
                 },
                 {
                   "type": "text",
@@ -5118,8 +5118,8 @@
             },
             {
               "type": "html",
-              "name": "LandingData",
-              "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
+              "name": "AspirationInfoLink",
+              "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
             },
             {
               "type": "radiogroup",
@@ -5739,7 +5739,8 @@
                 {
                   "type": "checkbox",
                   "name": "ConclusionOtherConditions",
-                  "title": "What other conditions {cvDoThirdPersonSingular} did {CmpnName} develop during {cvGenderSubjectPronoun} LP/GOLPP journey?",
+                  "title": "What other conditions did {CmpnName} develop during {cvGenderObjectPronoun} LP/GOLPP journey?",
+                  "description": "The selections you made about the beginning of {CmpnName}'s LP/GOLPP journey are preselected.",
                   "visibleIf": "{ConclusionOtherConditionsNew} = true",
                   "isRequired": true,
                   "choices": [
@@ -5774,11 +5775,15 @@
                     {
                       "value": "HEMANGIOSARCOMA",
                       "text": "Hemangiosarcoma"
+                    },
+                    {
+                      "value": "NONE",
+                      "text": "No new conditions"
                     }
                   ],
                   "choicesOrder": "none",
                   "otherText": "Other (max. 250 characters)",
-                  "showOtherItem": false
+                  "showOtherItem": true
                 }
               ]
             },
@@ -5848,7 +5853,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathTieback",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
                   "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
                   "isRequired": true,
                   "choices": [
@@ -5874,7 +5879,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathBVEAP",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would if anything you differently?",
+                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
                   "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
                   "isRequired": true,
                   "choices": [
@@ -5900,7 +5905,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathStent",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??",
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
                   "choices": [
@@ -5926,7 +5931,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathArytenoidectomy",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
                   "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
                   "isRequired": true,
                   "choices": [
@@ -5952,7 +5957,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathVentrilocordectomy",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
                   "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
                   "isRequired": true,
                   "choices": [
@@ -5978,7 +5983,7 @@
                 {
                   "type": "checkbox",
                   "name": "ConclusionOtherPathNoTreatment",
-                  "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName}, what if anything would you differently?",
+                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusDidHave} = false",
                   "choices": [

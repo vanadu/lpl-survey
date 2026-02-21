@@ -1,6 +1,6 @@
 {
-  "submittedAtNY": "2026-02-21 06:45:51 EST",
-  "respondentId": "test01_testdog12_https_www_facebook_com_my_profile_name",
+  "submittedAtNY": "2026-02-21 08:17:20 EST",
+  "respondentId": "test01_testdog14_https_www_facebook_com_my_profile_name",
   "meta": {
     "ipHash": "3e48ef9d22e096da6838540fb846999890462c8a32730a4f7a5eaee6945315f7",
     "score": 0,
@@ -10,8 +10,8 @@
   },
   "submission": {
     "metadata": {
-      "filename": "20260221_064551_https___www.facebook.com_my.profile.name_Test01_Testdog12.json",
-      "completedAt": "2026-02-21T11:45:51.764Z",
+      "filename": "20260221_081720_https___www.facebook.com_my.profile.name_Test01_Testdog14.json",
+      "completedAt": "2026-02-21T13:17:20.317Z",
       "surveyVersion": "Beta 2026.02.01.01"
     },
     "data": {
@@ -45,7 +45,7 @@
         "WEBSITES",
         "FACEBOOK_GROUPS"
       ],
-      "InfoSourcesBestSource": "FACEBOOK_GROUPS",
+      "InfoSourcesBestSource": null,
       "InfoSourcesHardToUnderstand": "4",
       "InfoSourcesContradictory": "4",
       "InfoSourcesClearAnswers": "3",
@@ -118,19 +118,17 @@
       "DiagnosisTimeAfterSymptoms": "ONE_TO_THREE",
       "DiagnosisCost": "500_1500",
       "DiagnosisSurgeonContingent": "YES",
-      "TreatmentStatusDidHave": true,
-      "TreatmentStatusAgeYears": "13",
-      "TreatmentStatusAgeMonths": "6",
-      "TreatmentStatusType": [
-        "TIEBACK"
-      ],
-      "TreatmentStatusTiebackEmergency": true,
-      "TreatmentStatusTiebackWait": "THREE_SIX",
-      "TreatmentStatusTiebackCount": "MORE_THAN_ONCE",
+      "TreatmentStatusDidHave": false,
+      "TreatmentStatusAgeYears": null,
+      "TreatmentStatusAgeMonths": null,
+      "TreatmentStatusType": null,
+      "TreatmentStatusTiebackEmergency": null,
+      "TreatmentStatusTiebackWait": null,
+      "TreatmentStatusTiebackCount": null,
       "TreatmentStatusTiebackOnceCost": null,
-      "TreatmentStatusTiebackMultipleCost": "5501_7000",
-      "TreatmentStatusTiebackComplications": true,
-      "TreatmentStatusTiebackComplicationsCost": "3001_5000",
+      "TreatmentStatusTiebackMultipleCost": null,
+      "TreatmentStatusTiebackComplications": null,
+      "TreatmentStatusTiebackComplicationsCost": null,
       "TreatmentStatusBveapReasons": null,
       "TreatmentStatusBveapCost": null,
       "TreatmentStatusBveapComplications": null,
@@ -155,8 +153,8 @@
       "TreatmentStatusVentrilocordectomyCost": null,
       "TreatmentStatusVentrilocordectomyComplications": null,
       "TreatmentStatusVentrilocordectomyComplicationsCost": null,
-      "TreatmentStatusSurgeonInformLevel": 4,
-      "TreatmentStatusTreatmentSatisfactionLevel": 2,
+      "TreatmentStatusSurgeonInformLevel": null,
+      "TreatmentStatusTreatmentSatisfactionLevel": null,
       "TreatmentFactorsDecision": null,
       "TreatmentFactorsDecisionStent": null,
       "TreatmentFactorsCost": 4,
@@ -256,13 +254,13 @@
         "GERD",
         "ARTHRITIS"
       ],
-      "ConclusionCauseOfDeath": "BREATHING_DIFFICULTIES",
-      "ConclusionOtherPathTieback": "TIEBACK_NO",
+      "ConclusionCauseOfDeath": "QOL_POLYNEUROPATHY",
+      "ConclusionOtherPathNoTreatment": "NO_TREATMENT_WOULD_DO",
+      "ConclusionOtherPathTieback": null,
       "ConclusionOtherPathBVEAP": null,
       "ConclusionOtherPathStent": null,
       "ConclusionOtherPathArytenoidectomy": null,
       "ConclusionOtherPathVentrilocordectomy": null,
-      "ConclusionOtherPathNoTreatment": "NO_SURGERY_WOULD_DO",
       "ConclusionStentAlternative": "YES",
       "ConclusionDifferentChoices": null
     }

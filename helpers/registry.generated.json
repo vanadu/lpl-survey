@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-21T12:46:53.403Z",
+    "builtAt": "2026-02-21T14:48:17.041Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -3809,7 +3809,7 @@
         "ConclusionOtherConditionsPanel"
       ],
       "hasTitle": true,
-      "title": "What other conditions {cvDoThirdPersonSingular} did {CmpnName} develop during {cvGenderSubjectPronoun} LP/GOLPP journey?",
+      "title": "What other conditions did {CmpnName} develop during {cvGenderObjectPronoun} LP/GOLPP journey?",
       "hasVisibleIf": true,
       "visibleIf": "{ConclusionOtherConditionsNew} = true",
       "isRequired": true
@@ -3866,7 +3866,7 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
       "hasVisibleIf": true,
       "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
       "isRequired": true
@@ -3882,7 +3882,7 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would if anything you differently?",
+      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
       "hasVisibleIf": true,
       "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
       "isRequired": true
@@ -3898,7 +3898,7 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??",
       "hasVisibleIf": true,
       "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
       "isRequired": true
@@ -3914,7 +3914,7 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
       "hasVisibleIf": true,
       "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
       "isRequired": true
@@ -3930,7 +3930,7 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName} what if anything would you differently?",
+      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
       "hasVisibleIf": true,
       "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
       "isRequired": true
@@ -3946,7 +3946,7 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "If you were to have another dog with LP/GOLPP under similar circumstances as {CmpnName}, what if anything would you differently?",
+      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
       "hasVisibleIf": true,
       "visibleIf": "{TreatmentStatusDidHave} = false",
       "isRequired": true

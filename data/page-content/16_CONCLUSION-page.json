@@ -10,9 +10,6 @@
           "name": "ConclusionHeading",
           "html": "<h3>Conclusions</h3>"
         },
-
-
-
         {
           "type": "panel",
           "name": "ConclusionsPanelLifeStatusTrue",
@@ -149,7 +146,8 @@
             {
             "type": "checkbox",
             "name": "ConclusionOtherConditions",
-            "title": "What other conditions {cvDoThirdPersonSingular} did {CmpnName} develop during {cvGenderSubjectPronoun} LP/GOLPP journey?",
+            "title": "What other conditions did {CmpnName} develop during {cvGenderObjectPronoun} LP/GOLPP journey?",
+            "description": "The selections you made about the beginning of {CmpnName}'s LP/GOLPP journey are preselected.",
             "visibleIf": "{ConclusionOtherConditionsNew} = true",
             "isRequired": true,
             "choices": [
@@ -184,11 +182,15 @@
                 {
                   "value": "HEMANGIOSARCOMA",
                   "text": "Hemangiosarcoma"
+                },
+                {
+                  "value": "NONE",
+                  "text": "No new conditions"
                 }
               ],
               "choicesOrder": "none",
               "otherText": "Other (max. 250 characters)",
-              "showOtherItem": false
+              "showOtherItem": true
             }
           ]
         },

@@ -18,8 +18,8 @@
         },
         {
           "type": "html",
-          "name": "LandingData",
-          "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
+          "name": "AspirationInfoLink",
+          "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
         },
 
         {

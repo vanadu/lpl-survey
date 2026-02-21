@@ -69,12 +69,12 @@
               {
                 "type": "html",
                 "name": "LandingPrivacy",
-                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Privacy</a></div>"
+                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Privacy</a></div>"
               },
               {
                 "type": "html",
                 "name": "LandingData",
-                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='https://example.com' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Consent?</a></div>"
+                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Consent?</a></div>"
               }
           ]
         },

@@ -449,7 +449,6 @@
 .survey-q-separator {
   position: relative;
   padding: 0; // no padding, spacing goes around the ::after
-  // background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 .survey-q-separator-below::after {
@@ -554,7 +553,37 @@
   width: 720px!important;
 }
 
-// !VA SUCCESS page
+// !VA PROGRESS BAR
+
+// !VA Progress text color
+.sd-progress-buttons__footer .sd-progress-buttons__page-title {
+  color: $content_bg_color!important;
+}
+
+// !VA Progress button color
+.sd-progress-buttons__button-content {
+  border: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) solid $secondary_color !important;
+}
+
+
+
+
+
+
+// !VA SUCCESS/INPROGRESS page
+
+.in-progress {
+  position: relative; // important for overlay positioning
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 600px;
+  margin: 40px;
+  padding-bottom: 150px;
+}
+
 
 .success-container-wrap {
   display: flex;

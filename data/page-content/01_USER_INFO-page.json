@@ -98,7 +98,7 @@
               "name": "UserInfoContactTypeFacebookInstructions",
               "title": "z",
               "visibleIf":"{UserInfoContactType} = true",
-              "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
+              "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Info icon' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
             },
             {
               "type": "text",
