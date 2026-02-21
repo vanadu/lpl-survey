@@ -123,6 +123,7 @@
               "type": "boolean",
               "name": "TreatmentStatusTiebackEmergency",
               "title": "Was emergency tieback performed on {CmpnName} after a life-threatening breathing emergency?",
+              "swapOrder": true,
               "isRequired": true
             },
 
@@ -662,6 +663,7 @@
               "name": "TreatmentStatusArytenoidectomyLaser",
               "title": "Was the partial arytenoidectomy performed with a laser?",
               "description": "This technique is called 'ablation'.",
+              "swapOrder": true,
               "isRequired": true
             },
             {

@@ -119,6 +119,7 @@
               "type": "boolean",
               "name": "UserInfoContactOK",
               "title": "May we contact you to talk more about your LP experience?",
+              "swapOrder": true,
               "isRequired": true
             }
           ]

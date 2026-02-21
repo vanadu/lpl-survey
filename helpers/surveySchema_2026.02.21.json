@@ -186,12 +186,12 @@
   "ConclusionQOL",
   "ConclusionOtherConditions",
   "ConclusionCauseOfDeath",
-  "ConclusionOtherPathNoTreatment",
   "ConclusionOtherPathTieback",
   "ConclusionOtherPathBVEAP",
   "ConclusionOtherPathStent",
   "ConclusionOtherPathArytenoidectomy",
   "ConclusionOtherPathVentrilocordectomy",
+  "ConclusionOtherPathNoTreatment",
   "ConclusionStentAlternative",
   "ConclusionDifferentChoices"
 ]

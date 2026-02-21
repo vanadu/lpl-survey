@@ -105,7 +105,7 @@
             {
               "type": "html",
               "name": "LandingVersion",
-              "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.20.01</p></div></div>"
+              "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.21.01</p></div></div>"
             },
             {
               "type": "html",
@@ -344,6 +344,7 @@
                   "type": "boolean",
                   "name": "UserInfoContactOK",
                   "title": "May we contact you to talk more about your LP experience?",
+                  "swapOrder": true,
                   "isRequired": true
                 }
               ]
@@ -714,8 +715,6 @@
                   "name": "CmpnInfoHasInsurance",
                   "required": true,
                   "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
                   "swapOrder": true
                 }
               ]
@@ -749,6 +748,7 @@
                   "type": "boolean",
                   "name": "InfoSourcesPriorKnowledge",
                   "title": "Had you ever heard of LP before {CmpnName} got it?",
+                  "swapOrder": true,
                   "isRequired": true
                 },
                 {
@@ -779,17 +779,20 @@
                     {
                       "value": "AI_MODELS",
                       "text": "AI models like ChatGPT"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
                     }
                   ],
                   "showOtherItem": true,
-                  "showNoneItem": true,
-                  "noneText": "Don't know",
-                  "otherText": "Other (please describe)"
+                  "otherText": "Other Sources"
                 },
                 {
                   "type": "dropdown",
                   "name": "InfoSourcesBestSource",
                   "title": "Which of those information sources did you find MOST useful (please select one)?",
+                  "visibleIf": "{InfoSourcesTypes.length} > 1 && {InfoSourcesTypes} notcontains 'DONT_KNOW'",
                   "choices": []
                 }
               ]
@@ -984,8 +987,6 @@
                   "type": "boolean",
                   "name": "IntubationHistoryConcerns",
                   "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
                   "swapOrder": true,
                   "isRequired": true
                 },
@@ -1763,8 +1764,6 @@
                   "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotadine) or Prilosec (omeprazole) on your own intiative without a prescription or recommendation from your primary vet?",
                   "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
                   "isRequired": true,
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
                   "swapOrder": true
                 }
               ]
@@ -1809,8 +1808,6 @@
                   "type": "boolean",
                   "name": "PrimaryVetInfo",
                   "title": "Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect {CmpnName}?",
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
                   "swapOrder": true,
                   "isRequired": true
                 },
@@ -2285,6 +2282,7 @@
                   "type": "boolean",
                   "name": "TreatmentStatusTiebackEmergency",
                   "title": "Was emergency tieback performed on {CmpnName} after a life-threatening breathing emergency?",
+                  "swapOrder": true,
                   "isRequired": true
                 },
                 {
@@ -2811,6 +2809,7 @@
                   "name": "TreatmentStatusArytenoidectomyLaser",
                   "title": "Was the partial arytenoidectomy performed with a laser?",
                   "description": "This technique is called 'ablation'.",
+                  "swapOrder": true,
                   "isRequired": true
                 },
                 {

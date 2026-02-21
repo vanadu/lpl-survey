@@ -23,6 +23,7 @@
               "type": "boolean",
               "name": "InfoSourcesPriorKnowledge",
               "title": "Had you ever heard of LP before {CmpnName} got it?",
+              "swapOrder": true,
               "isRequired": true
             },
             {
@@ -53,17 +54,19 @@
                 {
                   "value": "AI_MODELS",
                   "text": "AI models like ChatGPT"
+                },
+                { "value": "DONT_KNOW",
+                  "text": "Don't know"
                 }
               ],
               "showOtherItem": true,
-              "showNoneItem": true,
-              "noneText": "Don't know",
-              "otherText": "Other (please describe)"
+              "otherText": "Other Sources"
             },
             {
               "type": "dropdown",
               "name": "InfoSourcesBestSource",
               "title": "Which of those information sources did you find MOST useful (please select one)?",
+              "visibleIf": "{InfoSourcesTypes.length} > 1 && {InfoSourcesTypes} notcontains 'DONT_KNOW'",
               "choices": [
 
               ]

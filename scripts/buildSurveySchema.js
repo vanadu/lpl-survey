@@ -35,7 +35,9 @@ const exclusionsPath = path.join(
 // ---------------------------
 // Presentation-only types
 // ---------------------------
-const nonDataTypes = ["html", "expression", "page", "image"];
+// !VA 2026.02.21 Adding panels to non-data types. It's not relevant whether they have a visibleIf or not. The visibleIf only references a question type and doesn't reflect any user-defined data at all. If it's necessary to include any panels, then you need to do that with schemaExclusions.json by removing panels from nonDataTypes below and adding ALL the panels that should NOT be included. OR, change schemaExclusions to schemaInclusions and only add those panels to include. 
+// const nonDataTypes = ["html", "expression", "page", "image"];
+const nonDataTypes = ["html", "expression", "page", "image", "panel"];
 
 // ---------------------------
 // Load schema exclusions
@@ -92,9 +94,10 @@ function collectQuestionNames(items, orderedList, seen) {
   } = items;
 
   // Panels with visibleIf are schema-relevant
-  if (type === "panel" && name && visibleIf) {
-    addName(name, orderedList, seen);
-  }
+  // !VA 2026.02.21 They are not relevant. Commenting this out and adding 'panel' to non-data type.
+  // if (type === "panel" && name && visibleIf) {
+  //   addName(name, orderedList, seen);
+  // }
 
   // Regular questions
   if (

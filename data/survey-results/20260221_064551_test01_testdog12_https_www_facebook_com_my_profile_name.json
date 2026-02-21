@@ -1,8 +1,8 @@
 {
-  "submittedAtNY": "2026-02-20 12:57:06 EST",
-  "respondentId": "test01_testdog08_https_www_facebook_com_my_profile_name",
+  "submittedAtNY": "2026-02-21 06:45:51 EST",
+  "respondentId": "test01_testdog12_https_www_facebook_com_my_profile_name",
   "meta": {
-    "ipHash": "eff8e7ca506627fe15dda5e0e512fcaad70b6d520f37cc76597fdb4f2d83a1a3",
+    "ipHash": "3e48ef9d22e096da6838540fb846999890462c8a32730a4f7a5eaee6945315f7",
     "score": 0,
     "flags": [],
     "disposition": "accept",
@@ -10,8 +10,8 @@
   },
   "submission": {
     "metadata": {
-      "filename": "20260220_125706_https___www.facebook.com_my.profile.name_Test01_Testdog08.json",
-      "completedAt": "2026-02-20T17:57:06.902Z",
+      "filename": "20260221_064551_https___www.facebook.com_my.profile.name_Test01_Testdog12.json",
+      "completedAt": "2026-02-21T11:45:51.764Z",
       "surveyVersion": "Beta 2026.02.01.01"
     },
     "data": {
@@ -45,7 +45,7 @@
         "WEBSITES",
         "FACEBOOK_GROUPS"
       ],
-      "InfoSourcesBestSource": null,
+      "InfoSourcesBestSource": "FACEBOOK_GROUPS",
       "InfoSourcesHardToUnderstand": "4",
       "InfoSourcesContradictory": "4",
       "InfoSourcesClearAnswers": "3",
@@ -118,33 +118,30 @@
       "DiagnosisTimeAfterSymptoms": "ONE_TO_THREE",
       "DiagnosisCost": "500_1500",
       "DiagnosisSurgeonContingent": "YES",
-      "TreatmentStatusDidHave": false,
-      "TreatmentStatusAgeYears": null,
-      "TreatmentStatusAgeMonths": null,
-      "TreatmentStatusType": null,
-      "TreatmentStatusTiebackPanel": null,
-      "TreatmentStatusTiebackEmergency": null,
-      "TreatmentStatusTiebackWait": null,
-      "TreatmentStatusTiebackCount": null,
+      "TreatmentStatusDidHave": true,
+      "TreatmentStatusAgeYears": "13",
+      "TreatmentStatusAgeMonths": "6",
+      "TreatmentStatusType": [
+        "TIEBACK"
+      ],
+      "TreatmentStatusTiebackEmergency": true,
+      "TreatmentStatusTiebackWait": "THREE_SIX",
+      "TreatmentStatusTiebackCount": "MORE_THAN_ONCE",
       "TreatmentStatusTiebackOnceCost": null,
-      "TreatmentStatusTiebackMultipleCost": null,
-      "TreatmentStatusTiebackComplications": null,
-      "TreatmentStatusTiebackComplicationsCost": null,
-      "TreatmentStatusBveapPanel": null,
+      "TreatmentStatusTiebackMultipleCost": "5501_7000",
+      "TreatmentStatusTiebackComplications": true,
+      "TreatmentStatusTiebackComplicationsCost": "3001_5000",
       "TreatmentStatusBveapReasons": null,
       "TreatmentStatusBveapCost": null,
       "TreatmentStatusBveapComplications": null,
       "TreatmentStatusBveapComplicationsCost": null,
-      "TreatmentStatusStentPanel": null,
       "TreatmentStatusStentType": null,
-      "TreatmentStatusDexstentPanel": null,
       "TreatmentStatusStentDidMigrate": null,
       "TreatmentStatusStentReplaced": null,
       "TreatmentStatusStentCostOnce": null,
       "TreatmentStatusStentCostRepeat": null,
       "TreatmentStatusStentComplications": null,
       "TreatmentStatusStentComplicationsCost": null,
-      "TreatmentStatusArytenoidectomyPanel": null,
       "TreatmentStatusArytenoidectomyReasons": null,
       "TreatmentStatusArytenoidectomyLaser": null,
       "TreatmentStatusArytenoidectomyDidExplain": null,
@@ -152,15 +149,14 @@
       "TreatmentStatusArytenoidectomyCost": null,
       "TreatmentStatusArytenoidectomyComplications": null,
       "TreatmentStatusArytenoidectomyComplicationsCost": null,
-      "TreatmentStatusVentrilocordectomyPanel": null,
       "TreatmentStatusVentrilocordectomyReasons": null,
       "TreatmentStatusVentrilocordectomyDidExplain": null,
       "TreatmentStatusVentrilocordectomyChoice": null,
       "TreatmentStatusVentrilocordectomyCost": null,
       "TreatmentStatusVentrilocordectomyComplications": null,
       "TreatmentStatusVentrilocordectomyComplicationsCost": null,
-      "TreatmentStatusSurgeonInformLevel": null,
-      "TreatmentStatusTreatmentSatisfactionLevel": null,
+      "TreatmentStatusSurgeonInformLevel": 4,
+      "TreatmentStatusTreatmentSatisfactionLevel": 2,
       "TreatmentFactorsDecision": null,
       "TreatmentFactorsDecisionStent": null,
       "TreatmentFactorsCost": 4,
@@ -175,7 +171,6 @@
       "TreatmentFactorsCircumstancesAccess": 1,
       "TreatmentFactorsCircumstancesCare": 3,
       "TreatmentFactorsOther": "Hind end weakness",
-      "ManagementPrescriptionTypePanel": null,
       "ManagementPrescriptions": "YES",
       "ManagementPrescriptionType": [
         "DOXEPIN",
@@ -206,7 +201,6 @@
       "ManagementPrescriptionAlbuterolRatingMobility": null,
       "ManagementPrescriptionTemarilPRatingBreathing": null,
       "ManagementPrescriptionTemarilPRatingMobility": null,
-      "ManagementNonPrescriptionTypePanel": null,
       "ManagementNonPrescription": "YES",
       "ManagementNonPrescriptionType": [
         "ACUPUNCTURE",
@@ -233,7 +227,6 @@
       "OTCProtocolCost": "51_100",
       "OTCProtocolEffectiveness": 3,
       "AspirationDidHave": "YES",
-      "AspirationGeneralPanel": null,
       "AspirationCount": "TWO",
       "AspirationInpatient": "YES",
       "AspirationInpatientCount": "ONE",
@@ -250,8 +243,6 @@
       "NeuropathyOtherIssues": [
         "ANXIETY"
       ],
-      "ConclusionsPanelLifeStatusTrue": null,
-      "ConclusionsPanelLifeStatusFalse": null,
       "ConclusionSpecialConsiderations": [
         "EXERCISE",
         "FOOD"
@@ -266,14 +257,12 @@
         "ARTHRITIS"
       ],
       "ConclusionCauseOfDeath": "BREATHING_DIFFICULTIES",
-      "ConclusionOtherPathTieback": null,
+      "ConclusionOtherPathTieback": "TIEBACK_NO",
       "ConclusionOtherPathBVEAP": null,
       "ConclusionOtherPathStent": null,
       "ConclusionOtherPathArytenoidectomy": null,
       "ConclusionOtherPathVentrilocordectomy": null,
-      "ConclusionOtherPathNoTreatment": [
-        "NO_SURGERY_SAME"
-      ],
+      "ConclusionOtherPathNoTreatment": "NO_SURGERY_WOULD_DO",
       "ConclusionStentAlternative": "YES",
       "ConclusionDifferentChoices": null
     }

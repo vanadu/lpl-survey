@@ -10,7 +10,7 @@
   "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "UserInfoContactOK": true,
 
-  "CmpnName": "Testdog07",
+  "CmpnName": "Testdog12",
   "LifeStatus": true,
 
   "CmpnInfoAnimalType": "CANINE",
@@ -34,6 +34,7 @@
     "FACEBOOK_GROUPS"
   ],
   "InfoSourcesHardToUnderstand": "4",
+  
   "InfoSourcesContradictory": "4",
   "InfoSourcesClearAnswers": "3",
 
@@ -112,11 +113,11 @@
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
 
-  "TreatmentStatusDidHave": false,
+  "TreatmentStatusDidHave": true,
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [
-    "VENTRILOCORDECTOMY"
+    "TIEBACK"
   ],
 
   "TreatmentStatusTiebackEmergency": true,
@@ -272,7 +273,7 @@
 
   "ConclusionCauseOfDeath": "BREATHING_DIFFICULTIES",
 
-
+  "ConclusionOtherPathNoTreatment": "NO_SURGERY_WOULD_DO",
   "ConclusionOtherPathTieback": "TIEBACK_NO",
   "ConclusionOtherPathBVEAP": "BVEAP_SOONER",
   "ConclusionOtherPathStent": "STENT_SAME",

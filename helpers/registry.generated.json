@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-20T17:56:18.926Z",
+    "builtAt": "2026-02-21T11:42:33.541Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -616,7 +616,8 @@
       ],
       "hasTitle": true,
       "title": "Which of those information sources did you find MOST useful (please select one)?",
-      "hasVisibleIf": false
+      "hasVisibleIf": true,
+      "visibleIf": "{InfoSourcesTypes.length} > 1 && {InfoSourcesTypes} notcontains 'DONT_KNOW'"
     },
     "InfoSourcesQualityPanel": {
       "name": "InfoSourcesQualityPanel",
