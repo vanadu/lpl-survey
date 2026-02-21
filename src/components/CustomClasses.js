@@ -40,7 +40,7 @@ const ITEMS_TWO_COL = new Set([
   "ConclusionGeneralCondition",
   "ConclusionSpecialConsiderations",
   "ConclusionOtherConditions",
-  "ConclusionCauseOfDeath",
+  // "ConclusionCauseOfDeath" // This looks terrible two-col
   "UserInfoGender",
   "InfoSourcesTypes",
   "IntubationHistoryReason",
@@ -346,7 +346,8 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
     "NeuropathySymptomsBreathingOnset",
     "NeuropathySymptomsHindEndOnset",
-
+    
+    "ConclusionOtherConditionsNew"
   ]);
 
 

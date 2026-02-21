@@ -10,7 +10,7 @@
   "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "UserInfoContactOK": true,
 
-  "CmpnName": "Testdog12",
+  "CmpnName": "Testdog14",
   "LifeStatus": true,
 
   "CmpnInfoAnimalType": "CANINE",
@@ -113,7 +113,7 @@
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
 
-  "TreatmentStatusDidHave": true,
+  "TreatmentStatusDidHave": false,
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [
@@ -269,11 +269,11 @@
     "FALLING"
   ],
   "ConclusionQOL": 2,
+  "ConclusionOtherConditionsNew": true,
 
+  "ConclusionCauseOfDeath": "QOL_POLYNEUROPATHY",
 
-  "ConclusionCauseOfDeath": "BREATHING_DIFFICULTIES",
-
-  "ConclusionOtherPathNoTreatment": "NO_SURGERY_WOULD_DO",
+  "ConclusionOtherPathNoTreatment": "NO_TREATMENT_WOULD_DO",
   "ConclusionOtherPathTieback": "TIEBACK_NO",
   "ConclusionOtherPathBVEAP": "BVEAP_SOONER",
   "ConclusionOtherPathStent": "STENT_SAME",
