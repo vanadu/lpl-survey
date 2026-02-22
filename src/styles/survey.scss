@@ -44,7 +44,7 @@
 
 
 // !VA Landing Title 
-.landing-title {
+.sd-container-modern .landing-title-subhead {
   width: 100%;
   padding: 0!important;
   margin: 0!important;
@@ -65,8 +65,10 @@
   }
 }
 
-.sd-container-modern .landing-title-head {
-  font-family: $secondary_font;
+
+
+.sd-container-modern .landing-title-head, .sd-container-modern h2 {
+  font-family: $secondary_font!important;
   padding: 0!important;
   margin: 0!important;
   // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
@@ -86,7 +88,7 @@
   
   }
   @include ldesktop {
-    --sjs-font-size: 12px;
+    --sjs-font-size: 11px;
     line-height: calc(3 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
     text-align: left;
   }
@@ -240,7 +242,7 @@
     }
     @include ldesktop {
       --sjs-base-unit: 6px;
-      --sjs-font-size: 20px;
+      --sjs-font-size: 18px;
       --sjs-article-font-default-lineHeight: 30px;
     }
 
@@ -264,7 +266,7 @@
   
   }
   @include ldesktop {
-    --sjs-font-size: 14px;
+    --sjs-font-size: 12px;
   }
 }
 
@@ -1050,6 +1052,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
     }
     @include ldesktop {
       display: inline-flex;
+      display: none;
     }
 }
 

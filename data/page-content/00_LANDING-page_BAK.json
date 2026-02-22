@@ -32,7 +32,22 @@
           "name": "LandingIntroText01",
           "html": "<p>You're here because the disease of laryngeal paralysis (LarPar, LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. </p>"
         },
+        {
+          "type": "html",
+          "name": "LandingIntroText",
+          "html": "<p>At the beginning of their LP/GOLPP journey, people often have more questions than answers. This survey has two modes: Survey Mode and Workbook Mode. Which mode you choose depends on how far long on your LP/GOLPP journey you are:</p>"
+        },
+        {
+          "type": "html",
+          "name": "LandingIntroText02",
+          "html": "<ul><li><b>Survey Mode</b> collects information from people who are not new to the LP/GOLPP journey. If you want to share your experience, select <b>Survey Mode</b>. </li><li>In <b>Workbook Mode</b> you can browse the survey questions without making selections to help you learn about the choices you'll need to make as you move forward on your LP/GOLPP journey. If you're new to LP/GOLPP, select <b>Workbook Mode</b> </li></ul>"
+        },
 
+        {
+          "type": "html",
+          "name": "LandingJourneyText",
+          "html": "<p>In <b>Survey Mode</b> you'll be asked to remember details about your LP/GOLPP journey. If you find yourself answering 'Don't know' to many of the questions, you can switch to <b>Workbook Mode</b> to refresh your memory and continue later.</p>"
+        },
         {
           "type": "html",
           "name": "LandingLosingCompanion",
