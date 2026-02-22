@@ -5,16 +5,28 @@
       "type": "panel",
       "name": "LandingPanel",
       "elements": [
+
         {
-          "type": "html",
-          "name": "LandingVersion",
-          "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.21.01</p></div></div>"
+          "type": "panel",
+          "name": "LandingHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingTitleHead",
+              "html": "<div class='landing-title'><h2 class='landing-title-head'>LP/GOLPP Survey 2026</h2><p class='landing-title-subhead'>Powered by LarParLife.org</p></div>"
+            },
+            {
+              "type": "html",
+              "name": "LandingVersion",
+              "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.21.01</p></div></div>"
+            }
+          ]
         },
-        {
-          "type": "html",
-          "name": "LandingTitleHead",
-          "html": "<h2 class='landing-title-head'>LP/GOLPP Survey 2026</h2><p class='landing-title-subhead'>Presented by LarParLife.org</p>"
-        },
+
+
+
+
+
         {
           "type": "html",
           "name": "LandingIntroText01",

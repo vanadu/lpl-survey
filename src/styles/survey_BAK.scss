@@ -3,270 +3,180 @@
 // !VA Landing Page
 // !VA Version info
 
+// 
 
-[data-name="LandingHeadPanel"]
-  .sd-panel__content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0!important;
-    margin: 0!important;
-    @include mphone {
-    
-    }
-    @include lphone {
-    
-    }
-    @include tablet {
-      flex-direction: row;
-    }
-    @include desktop {
-      flex-direction: row;
-    }
-    @include ldesktop {
-      flex-direction: row;
-    }
-    .sd-row {
-      padding: 0!important;
-      margin: 0!important;
-    }
-
-  }
-  .sd-element--nested-with-borders {
-    border: none!important;
-    padding: 0!important;
-    margin: 0!important;
-  }
+[data-name="LandingTestPanel"] {
+  display: none;
+}
 
 
-
-
-
-// !VA Landing Title 
-.landing-title {
-  width: 100%;
+.landing-survey-test {
   padding: 0!important;
   margin: 0!important;
-  @include mphone {
-  
-  }
-  @include lphone {
-  
-  }
-  @include tablet {
-    padding: 1.5rem 0!important;
-  }
-  @include desktop {
-    padding: 1.5rem 0!important;
-  }
-  @include ldesktop {
-    padding: 1.5rem 0!important;
-  }
+  font-family: $secondary_font!important;
+  color: #353535!important;
+  font-size: .913rem!important;
+  line-height: 1.25rem!important;
 }
-
-.sd-container-modern .landing-title-head {
-  font-family: $secondary_font;
-  padding: 0!important;
-  margin: 0!important;
-  // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
-  --sjs-font-size: 7px;
-  line-height: calc(5 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 7px))));
-  text-align: center;
-  @include mphone {
-  
-  }
-  @include lphone {
-  
-  }
-  @include tablet {
-  
-  }
-  @include desktop {
-  
-  }
-  @include ldesktop {
-    --sjs-font-size: 12px;
-    line-height: calc(3 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-    text-align: left;
-  }
-
-}
-
-// !VA Landing Intro subhead
-.sd-container-modern .landing-title-subhead {
-  font-family: $primary_font!important;
-  padding: 0!important;
-  // margin: .5rem 0 0 0!important;
-  color: #6b6b6b!important;
-  // font-size: 1.313rem!important;
-  // line-height: 1.75rem!important;
-  font-weight: 600!important;
-  --sjs-font-size: 15px;
-  line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-  text-align: center;
-  @include mphone {
-    
-  }
-  @include lphone {
-    
-  }
-  @include tablet {
-    
-  }
-  @include desktop {
-    
-  }
-  @include ldesktop {
-    // margin: .5rem 0 0 0!important;
-    --sjs-font-size: 18px;
-    line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-    text-align: left;
-  }
-}
-
 
 .landing-survey-version-container {
-  position: relative;
+  position: absolute;
+  top: 8px;
+  right: 0;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100%;
-  // height: 100px;
-  // margin-right: 40px;
-  padding: 0!important;
-  margin: 0!important;
-  @include mphone {
-  
-  }
-  @include lphone {
-  
-  }
-  @include tablet {
-    justify-content: flex-end;
-    margin-right: 40px;
-  }
-  @include desktop {
-    justify-content: flex-end;
-    margin-right: 40px;
-  }
-  @include ldesktop {
-    justify-content: flex-end;
-    margin-top: -30px!important;
-    margin-right: 40px!important;
-  }
+  justify-content: space-between;
+  margin-right: 40px;
 }
 
-// .landing-survey-version {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
+.landing-survey-version {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .landing-survey-version-text {
   width: 100%;
   font-family: $secondary_font!important;
   color: #353535!important;
-  --sjs-font-size: 15px;
-  line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  font-size: 1rem!important;
+  line-height: 1.125rem!important;
   text-align: left;
-  padding: 0!important;
-  margin: 0!important;
-  @include mphone {
-    
-  }
-  @include lphone {
-    
-  }
-  @include tablet {
-    
-  }
-  @include desktop {
-    
-  }
-  @include ldesktop {
-    
-    font-size: 1rem!important;
-    line-height: 1.125rem!important;
-  }
 }
 
 .survey-version-logo {
-  display: block;
   width: 80px;
-  margin: 0 auto;
   height: auto;
-  @include mphone {
-  
-  }
-  @include lphone {
-  
-  }
-  @include tablet {
-    display: block;
-    width: 120px
-  }
-  @include desktop {
-    display: block;
-    width: 120px
-  }
-  @include ldesktop {
-    display: block; 
-    width: 120px;
-    --sjs-font-size: 15px;
-    line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-  }
+  margin-bottom: 10px;
+}
+
+// !VA Landing Intro subhead
+.landing-title-subhead {
+  font-family: $primary_font!important;
+  padding: 0!important;
+  margin: .25rem 0 0 0!important;
+  color: #6b6b6b!important;
+  font-size: 1.313rem!important;
+  line-height: 1.75rem!important;
+  font-weight: 600!important;
 }
 
 
-// !VA Font Size
-.sd-container-modern {
-    --sjs-font-size: 16px;
-    --sjs-base-unit: 6px;
-    --sjs-article-font-default-lineHeight: 24px;
 
+
+
+/* === Survey Dropdown (click-controlled) === */
+
+.survey-dev-menu {
+  position: relative;
+  display: inline-flex;
+  // display: none;
+  flex-direction: column;
+  width: 200px;
+  font-family: inherit;
+  background: rgba(255, 0, 0, .3) !important; //devred
     @include mphone {
-      --sjs-font-size: 16px;
+    
     }
     @include lphone {
-      --sjs-font-size: 17px;
+    
     }
     @include tablet {
-      --sjs-font-size: 18px;
+    
     }
     @include desktop {
-      --sjs-font-size: 19px;
+    
     }
     @include ldesktop {
-      --sjs-base-unit: 6px;
-      --sjs-font-size: 20px;
-      --sjs-article-font-default-lineHeight: 30px;
+      display: inline-flex;
     }
-
 }
 
-.sd-container-modern .sd-element__content .sd-html h3 {
-  font-family: $secondary_font;
-  // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.5 * (var(--sjs-font-size, 16px))));
-  --sjs-font-size: 11px;
-  line-height: calc(2.5 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-  @include mphone {
-  
-  }
-  @include lphone {
-  
-  }
-  @include tablet {
-  
-  }
-  @include desktop {
-  
-  }
-  @include ldesktop {
-    --sjs-font-size: 14px;
-  }
+/* Button */
+.survey-dev-menu__button {
+  padding: 10px 16px;
+  background: #f5f6fa;
+  border: 1px solid #dcdde1;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: left;
+  transition: background 0.2s;
+  user-select: none;
 }
+
+.survey-dev-menu__button:hover,
+.survey-dev-menu__button:focus {
+  background: #e1e6f0;
+  outline: none;
+}
+
+/* List container */
+.survey-dev-menu__list {
+  /* positioning */
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+
+  /* box model */
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+
+  /* visuals */
+  background: #fff;
+  border: 1px solid #dcdde1;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(44, 62, 80, 0.06);
+
+  /* stacking */
+  z-index: 9999;
+
+  /* hidden by default (BUT still animatable) */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  pointer-events: none;
+
+  /* layout */
+  display: flex;
+  flex-direction: column;
+
+  /* animation */
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+}
+
+/* OPEN state (set by React className) */
+.survey-dev-menu.open .survey-dev-menu__list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Items */
+.survey-dev-menu__item {
+  padding: 0; /* let the Link carry padding */
+}
+
+/* Make the Link fill the row so the whole row is clickable */
+.survey-dev-menu__item a {
+  display: block;
+  padding: 10px 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.18s;
+}
+
+.survey-dev-menu__item a:hover,
+.survey-dev-menu__item a:focus {
+  background: #e1e6f0;
+  outline: none;
+}
+
+/* IMPORTANT: remove hover-to-open behavior (unreliable) */
+/* .survey-dropdown:hover .survey-dropdown__list { display: flex; } */
 
 
 
@@ -278,7 +188,6 @@
   // width: 1000px!important;
   // !VA 720 by default, probably for tablets
   max-width: 1000px;
-  // !VA Distance from bottom of progress bar to top of survey page
   // !VA Mod 6->3, 10 -> 6
   padding-top: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-bottom: calc(6 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
@@ -286,23 +195,21 @@
   @include sphone {
     padding: 4px 0 10px !important;
     margin-top: -6px !important;
-    // padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    // padding-bottom: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   }
 }
 
 // !VA This is the actual survey title property at the top of the master-survey JSON
 .sd-container-modern__title {
-  // padding: 0!important;
-  // margin: 0!important;
-  // .sd-header__text {
-  //   height: 20px !important;
-  // }
-  // .sd-title {
-  //   font-size: 1rem !important;
-  //   line-height: 1.25rem !important;
-  //   text-align: center;
-  // }
+  padding: 0!important;
+  margin: 0!important;
+  .sd-header__text {
+    height: 20px !important;
+  }
+  .sd-title {
+    font-size: 1rem !important;
+    line-height: 1.25rem !important;
+    text-align: center;
+  }
 }
 
 // !VA Survey container - background color is inherited from survey-wrapper
@@ -314,19 +221,15 @@
 // !VA 2025.12.19 This applies to ALL panels, not just the top-level
 // !VA Top panel margin, i.e. directly above the introHeading
 .survey-wrapper .sd-panel__content {
-  // !VA default
   // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // !VA Adjusted
-  // --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)));
 }
 
 // !VA 2025.12.19 OK for now
 // !VA sets row top margins, does not set padding, bottom margins
 .survey-wrapper .sd-row {
-  // !VA default
   // --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // !VA adjusted
-  // --sd-base-vertical-padding: calc(2* var(--sjs-base-unit, var(--base-unit, 8px)));
+  --sd-base-vertical-padding: calc(2* var(--sjs-base-unit, var(--base-unit, 8px)));
 }
 
 
@@ -386,28 +289,28 @@
 // !VA sd-html element overrides.
 // -------------------------------
 .survey-wrapper .sd-html h2 {
-  // font-family: $secondary_font;
-  // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
-  // line-height: calc(2.125 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+  font-family: $secondary_font;
+  font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
+  line-height: calc(2.125 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
 }
 
 // !VA OVERRIDES default h3 for sd-html elements.
 .survey-wrapper .sd-html h3 {
-  // font-family: $secondary_font;
-  // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.5 * (var(--sjs-font-size, 16px))));
-  // line-height: calc(1.75 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+  font-family: $secondary_font;
+  font-size: var(--sjs-article-font-x-large-fontSize, calc(1.5 * (var(--sjs-font-size, 16px))));
+  line-height: calc(1.75 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
 }
 
 // !VA OVERRIDES default p for sd-html elements
 .survey-wrapper .sd-html {
-  // p, li {
-  //     font-size: 1.125rem;
-  //     line-height: 1.613rem;
-  //     padding-bottom: .5rem !important;
-  // }
-  // li {
-  //   margin-left: 1.5rem;
-  // }
+  p, li {
+      font-size: 1.125rem;
+      line-height: 1.613rem;
+      padding-bottom: .5rem !important;
+  }
+  li {
+    margin-left: 1.5rem;
+  }
 }
 
 // !VA INFO icons and links
@@ -679,7 +582,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   color: $content_bg_color!important;
   // !VA Small phone overrides
   margin-top: 0!important;
-  // font-size: calc(0.5 * (var(--sjs-font-size, 16px)));
+  font-size: calc(0.5 * (var(--sjs-font-size, 16px)));
   @include mphone {
   
   }
@@ -1006,138 +909,6 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 //   from { opacity: 0; transform: translateY(2px); }
 //   to   { opacity: 1; transform: translateY(0); }
 // }
-
-
-// !VA  DEV ONLY
-
-// !VA Survey Text Panel for computedValues
-
-[data-name="LandingTestPanel"] {
-  display: none;
-}
-
-
-.landing-survey-test {
-  padding: 0!important;
-  margin: 0!important;
-  font-family: $secondary_font!important;
-  color: #353535!important;
-  font-size: .913rem!important;
-  line-height: 1.25rem!important;
-}
-
-
-/* === Survey Dropdown (click-controlled) === */
-
-.survey-dev-menu {
-  position: relative;
-  display: inline-flex;
-  display: none;
-  flex-direction: column;
-  width: 200px;
-  font-family: inherit;
-    @include mphone {
-    
-    }
-    @include lphone {
-    
-    }
-    @include tablet {
-    
-    }
-    @include desktop {
-    
-    }
-    @include ldesktop {
-      display: inline-flex;
-    }
-}
-
-/* Button */
-.survey-dev-menu__button {
-  padding: 10px 16px;
-  background: #f5f6fa;
-  border: 1px solid #dcdde1;
-  cursor: pointer;
-  border-radius: 4px;
-  text-align: left;
-  transition: background 0.2s;
-  user-select: none;
-}
-
-.survey-dev-menu__button:hover,
-.survey-dev-menu__button:focus {
-  background: #e1e6f0;
-  outline: none;
-}
-
-/* List container */
-.survey-dev-menu__list {
-  /* positioning */
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
-  width: 100%;
-
-  /* box model */
-  margin: 0;
-  padding: 4px 0;
-  list-style: none;
-
-  /* visuals */
-  background: #fff;
-  border: 1px solid #dcdde1;
-  border-radius: 4px;
-  box-shadow: 0 8px 16px rgba(44, 62, 80, 0.06);
-
-  /* stacking */
-  z-index: 9999;
-
-  /* hidden by default (BUT still animatable) */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4px);
-  pointer-events: none;
-
-  /* layout */
-  display: flex;
-  flex-direction: column;
-
-  /* animation */
-  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
-}
-
-/* OPEN state (set by React className) */
-.survey-dev-menu.open .survey-dev-menu__list {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-/* Items */
-.survey-dev-menu__item {
-  padding: 0; /* let the Link carry padding */
-}
-
-/* Make the Link fill the row so the whole row is clickable */
-.survey-dev-menu__item a {
-  display: block;
-  padding: 10px 16px;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  transition: background 0.18s;
-}
-
-.survey-dev-menu__item a:hover,
-.survey-dev-menu__item a:focus {
-  background: #e1e6f0;
-  outline: none;
-}
-
-/* IMPORTANT: remove hover-to-open behavior (unreliable) */
-/* .survey-dropdown:hover .survey-dropdown__list { display: flex; } */
 
 
 
