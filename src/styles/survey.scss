@@ -10,7 +10,6 @@
 }
 
 
-
 .landing-survey-test {
   padding: 0!important;
   margin: 0!important;
@@ -68,16 +67,33 @@
 
 /* === Survey Dropdown (click-controlled) === */
 
-.survey-dropdown {
+.survey-dev-menu {
   position: relative;
   display: inline-flex;
+  // display: none;
   flex-direction: column;
   width: 200px;
   font-family: inherit;
+  background: rgba(255, 0, 0, .3) !important; //devred
+    @include mphone {
+    
+    }
+    @include lphone {
+    
+    }
+    @include tablet {
+    
+    }
+    @include desktop {
+    
+    }
+    @include ldesktop {
+      display: inline-flex;
+    }
 }
 
 /* Button */
-.survey-dropdown__button {
+.survey-dev-menu__button {
   padding: 10px 16px;
   background: #f5f6fa;
   border: 1px solid #dcdde1;
@@ -88,14 +104,14 @@
   user-select: none;
 }
 
-.survey-dropdown__button:hover,
-.survey-dropdown__button:focus {
+.survey-dev-menu__button:hover,
+.survey-dev-menu__button:focus {
   background: #e1e6f0;
   outline: none;
 }
 
 /* List container */
-.survey-dropdown__list {
+.survey-dev-menu__list {
   /* positioning */
   position: absolute;
   top: calc(100% + 4px);
@@ -131,7 +147,7 @@
 }
 
 /* OPEN state (set by React className) */
-.survey-dropdown.open .survey-dropdown__list {
+.survey-dev-menu.open .survey-dev-menu__list {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -139,12 +155,12 @@
 }
 
 /* Items */
-.survey-dropdown__item {
+.survey-dev-menu__item {
   padding: 0; /* let the Link carry padding */
 }
 
 /* Make the Link fill the row so the whole row is clickable */
-.survey-dropdown__item a {
+.survey-dev-menu__item a {
   display: block;
   padding: 10px 16px;
   cursor: pointer;
@@ -153,8 +169,8 @@
   transition: background 0.18s;
 }
 
-.survey-dropdown__item a:hover,
-.survey-dropdown__item a:focus {
+.survey-dev-menu__item a:hover,
+.survey-dev-menu__item a:focus {
   background: #e1e6f0;
   outline: none;
 }
@@ -554,20 +570,41 @@
 }
 
 // !VA PROGRESS BAR
+.sd-root-modern--mobile.sd-progress-buttons {
+  background: rgba(255, 0, 0, .3) !important; //devred
+padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+}
+
 
 // !VA Progress text color
 .sd-progress-buttons__footer .sd-progress-buttons__page-title {
+  // !VA General overrides
   color: $content_bg_color!important;
+  // !VA Small phone overrides
+  margin-top: 0!important;
+  font-size: calc(0.5 * (var(--sjs-font-size, 16px)));
+  @include mphone {
+  
+  }
+  @include lphone {
+    
+  }
+  @include tablet {
+    
+  }
+  @include desktop {
+    
+  }
+  @include ldesktop {
+    font-size: calc(0.75 * (var(--sjs-font-size, 16px)));
+    margin-top: var(--sjs-base-unit, var(--base-unit, 8px));
+  }
 }
 
 // !VA Progress button color
 .sd-progress-buttons__button-content {
   border: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) solid $secondary_color !important;
 }
-
-
-
-
 
 
 // !VA SUCCESS/INPROGRESS page
