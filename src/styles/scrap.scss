@@ -1,0 +1,18 @@
+.sd-container-modern {
+  // !VA H2
+  --sjs-article-font-x-large-fontSize: 24px;
+    // !VA H3
+  --sjs-article-font-large-fontSize: 21px;
+  // !VA Body text
+  --sjs-article-font-default-fontSize: 18px;
+  // !VA Question titles
+  --sjs-font-questiontitle-size: 17px;
+  // !VA Panel Titles
+  .sd-panel__title {
+    // font-family: $secondary_font!important;
+    --sjs-font-questiontitle-size: 17px;
+  }
+  --sjs-article-font-default-lineHeight: 24px;
+
+
+}

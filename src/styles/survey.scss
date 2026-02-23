@@ -17,73 +17,28 @@
     --sjs-font-size: 18px
 }
 
-
-// !VA Font Size
-// .sd-container-modern {
-//   --sjs-font-size: 16px;
-//   @include mphone {
-//     --sjs-font-size: 16px;
-//   }
-//   @include lphone {
-//     --sjs-font-size: 17px;
-//   }
-//   @include tablet {
-//     --sjs-font-size: 18px;
-//   }
-//   @include desktop {
-//     --sjs-font-size: 19px;
-//   }
-//   @include ldesktop {
-//     --sjs-font-size: 18px;
-//   }
-// }
-
-
+// !VA FONT SIZE FOR NATIVE ELEMENTS
 .sd-container-modern {
   // !VA H2
-  --sjs-article-font-x-large-fontSize: 20px;
-  @include mphone {
-    
-  }
-  @include lphone {
-    
-  }
-  @include tablet {
-    
-  }
-  @include desktop {
-    
-  }
-  @include ldesktop {
-    --sjs-article-font-x-large-fontSize: 28px;
-  }
-  // !VA H3
+  --sjs-article-font-x-large-fontSize: 24px;
+    // !VA H3
   --sjs-article-font-large-fontSize: 21px;
   // !VA Body text
   --sjs-article-font-default-fontSize: 18px;
   // !VA Question titles
   --sjs-font-questiontitle-size: 17px;
   // !VA Panel Titles
+
   .sd-panel__title {
     // !VA Panel titles
     // font-family: $secondary_font!important;
     --sjs-font-questiontitle-size: 17px;
-
-    
   }
 }
 
-// !VA Line height
+// !VA LINE HEIGHT FOR 
 .sd-container-modern {
   --sjs-article-font-default-lineHeight: 24px;
-  @include mphone {
-  }
-  @include lphone {
-  }
-  @include tablet {
-  }
-  @include desktop {
-  }
   @include ldesktop {
     --sjs-article-font-default-lineHeight: 26px;
   }
@@ -108,8 +63,27 @@
   --sd-page-vertical-padding: calc(3* var(--sjs-base-unit, var(--base-unit, 8px)))!important;
 }
 
-// !VA ADD LEFT AND RIGHT PADDING TO
+// !VA Survey body
+// -------------------------------------------------------------------------
+// !VA  -- background, top and bottom padding, margins, max-width, centered with margin: 0 by default
+.sd-container-modern .sd-body.sd-body--static {
+  // !VA 720 by default, probably for tablets
+  max-width: 1000px;
+  // !VA Mod 6->3, 10 -> 6
+  padding-top: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-bottom: calc(6 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  
+  @include sphone {
+    padding: 4px 0 10px !important;
+    margin-top: -6px !important;
+  }
+}
+
+
+// !VA ADD LEFT AND RIGHT PADDING TO PAGES
 .sd-container-modern .sd-page .sd-element--with-frame {
+  // padding-top: 40px calc(var(--sd-base-padding) + var(--sv-element-add-padding-left, 20px));
+  padding-top: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-left: calc(var(--sd-base-padding) + var(--sv-element-add-padding-left, 10px));
   padding-right: calc(var(--sd-base-padding) + var(--sv-element-add-padding-right, 10px));
 }
@@ -150,13 +124,20 @@
   padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
 }
 
+
+
+
+
+
+
 .sd-container-modern .sd-element__content .sd-html h2 {
   font-family: $secondary_font;
   // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
   // line-height: calc(2.125 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+  // background: rgba(255, 0, 0, .3) !important; //devred
 }
 
-// !VA HTML h3
+// !VA HTML TAGS 
 .sd-container-modern .sd-element__content .sd-html h3 {
   font-family: $secondary_font;
   padding: 0!important;
@@ -237,49 +218,14 @@
     }
   }
 
-
-  // .sd-element--nested-with-borders {
-  // border: none!important;
-  // // padding: 0!important;
-  // // margin: 0!important;
-  // background: rgba(255, 0, 0, .3) !important; //devred
-  // }
-
-
-
-
-
-// !VA Landing Title 
-// .sd-container-modern .landing-title-subhead {
-//   width: 100%;
-//   padding: 0!important;
-//   margin: 0!important;
-//   @include mphone {
-  
-//   }
-//   @include lphone {
-  
-//   }
-//   @include tablet {
-//     padding: 1rem!important;
-//   }
-//   @include desktop {
-//     padding: 1.5rem 0!important;
-//   }
-//   @include ldesktop {
-//     padding: 1.5rem 0!important;
-//   }
-// }
-
-
-
-.sd-container-modern .landing-title-head, .sd-container-modern h2 {
+.sd-container-modern .landing-title-head {
   font-family: $secondary_font!important;
-  // padding: 0!important;
-  // margin: 0!important;
-  font-size: var(--sjs-article-font-x-large-fontSize, calc(3 * (var(--sjs-font-size, 16px))))!important;
-  line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+  // font-size: var(--sjs-article-font-x-large-fontSize, calc(10 * (var(--sjs-font-size, 16px))))!important;
+  // font-size: var(--sjs-article-font-x-large-fontSize)!important;
+  // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+  font-size: calc(1.75 * (var(--sjs-font-size, 16px)));
   text-align: center;
+  background: rgba(255, 255, 0, .3) !important; //devyel
   @include mphone {
   
   }
@@ -293,8 +239,8 @@
   
   }
   @include ldesktop {
-    // --sjs-font-size: 11px;
-    // line-height: calc(3 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    // font-size: var(--sjs-article-font-x-large-fontSize, calc(3 * (var(--sjs-font-size, 48px))))!important;
+    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
     text-align: left;
   }
 }
@@ -430,66 +376,7 @@
 
 
 
-// !VA Survey body
-// -------------------------------------------------------------------------
-// !VA  -- background, top and bottom padding, margins, max-width, centered with margin: 0 by default
-.survey-wrapper .sd-body.sd-body--static {
-  // !VA Width does nothing.
-  // width: 1000px!important;
-  // !VA 720 by default, probably for tablets
-  max-width: 1000px;
-  // !VA Distance from bottom of progress bar to top of survey page
-  // !VA Mod 6->3, 10 -> 6
-  padding-top: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  padding-bottom: calc(6 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  
-  @include sphone {
-    padding: 4px 0 10px !important;
-    margin-top: -6px !important;
-    // padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    // padding-bottom: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  }
-}
 
-
-// !VA Survey container - background color is inherited from survey-wrapper
-// ----------------------------------------------------------
-.sd-container-modern {
-
-}
-
-// !VA 2025.12.19 This applies to ALL panels, not just the top-level
-// !VA Top panel margin, i.e. directly above the introHeading
-.survey-wrapper .sd-panel__content {
-  // !VA default
-  // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // !VA Adjusted
-  // --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)));
-}
-
-// !VA 2025.12.19 OK for now
-// !VA sets row top margins, does not set padding, bottom margins
-.survey-wrapper .sd-row {
-  // !VA default
-  // --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // !VA adjusted
-  // --sd-base-vertical-padding: calc(2* var(--sjs-base-unit, var(--base-unit, 8px)));
-}
-
-
-// !VA 2025.12.19 OK
-// !VA Input and dropdown height
-// ------------------------------
-// !VA Height of input fields: this makes input fields shorter than the default
-.survey-wrapper .sd-input {
-  // padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  // padding: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-}
-
-// !VA Set top and bottom padding on dropdowns 0 to match the shorter input height. Leave the horizontal padding base units.
-.survey-wrapper .sd-dropdown {
-    // padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-}
 
 // !VA Adjust the top and bottom paddings on ALL panel headers. That's going to be a problem later, probably.
 // !VA ONLY APPLIES TO PANELS WITH TITLE PROPERTIES!
@@ -498,6 +385,7 @@
     // margin: 0!important;
     // padding-top: 16px!important;
     // padding-bottom: 0!important;
+    // background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 

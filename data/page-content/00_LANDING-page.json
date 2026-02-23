@@ -45,7 +45,7 @@
             {
               "type": "html",
               "name": "LandingAboutPrivacyText01",
-              "html": "<p>We're not asking for your last name, so we have no way to connect you with any of your private data. We need only four pieces of information to verify survey results:</p>"
+              "html": "<p>We only need four pieces of information to verify survey results:</p>"
             },
             {
               "type": "html",
