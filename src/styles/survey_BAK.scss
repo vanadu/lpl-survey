@@ -273,33 +273,22 @@
   margin: 0 !important;
 }
 
-// !VA Sets the padding between the switch and the outer border
-.survey-wrapper .sd-boolean {
-  // padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  padding: calc(0.25 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-}
-
-// !VA Sets the height of the boolean element
-.survey-wrapper .sd-boolean__label, .survey-wrapper .sd-boolean__thumb {
-  // line-height: calc(.5 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
-  line-height: calc(1 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
-}
 
 // !VA 2025.12.19 
 // !VA sd-html element overrides.
 // -------------------------------
-.survey-wrapper .sd-html h2 {
-  font-family: $secondary_font;
-  font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
-  line-height: calc(2.125 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-}
+// .survey-wrapper .sd-html h2 {
+//   font-family: $secondary_font;
+//   font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
+//   line-height: calc(2.125 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+// }
 
 // !VA OVERRIDES default h3 for sd-html elements.
-.survey-wrapper .sd-html h3 {
-  font-family: $secondary_font;
-  font-size: var(--sjs-article-font-x-large-fontSize, calc(1.5 * (var(--sjs-font-size, 16px))));
-  line-height: calc(1.75 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-}
+// .survey-wrapper .sd-html h3 {
+//   font-family: $secondary_font;
+//   font-size: var(--sjs-article-font-x-large-fontSize, calc(1.5 * (var(--sjs-font-size, 16px))));
+//   line-height: calc(1.75 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+// }
 
 // !VA OVERRIDES default p for sd-html elements
 .survey-wrapper .sd-html {

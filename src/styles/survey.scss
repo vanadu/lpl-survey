@@ -1,9 +1,196 @@
 @import './variables.scss';
 
-// !VA Landing Page
+// !VA GLOBAL DEFINITIONS
+
+// !VA Base unit
+.sd-container-modern {
+  --sjs-base-unit: 8px;
+}
+
+// !VA Base font size (desktop)
+.sd-container-modern {
+    --sjs-font-size: 18px
+}
+
+// !VA Font Size
+// .sd-container-modern {
+//   --sjs-font-size: 16px;
+//   @include mphone {
+//     --sjs-font-size: 16px;
+//   }
+//   @include lphone {
+//     --sjs-font-size: 17px;
+//   }
+//   @include tablet {
+//     --sjs-font-size: 18px;
+//   }
+//   @include desktop {
+//     --sjs-font-size: 19px;
+//   }
+//   @include ldesktop {
+//     --sjs-font-size: 18px;
+//   }
+// }
+
+
+.sd-container-modern {
+  // !VA H2
+  --sjs-article-font-x-large-fontSize: 20px;
+  @include mphone {
+    
+  }
+  @include lphone {
+    
+  }
+  @include tablet {
+    
+  }
+  @include desktop {
+    
+  }
+  @include ldesktop {
+    --sjs-article-font-x-large-fontSize: 28px;
+  }
+  // !VA H3
+  --sjs-article-font-large-fontSize: 21px;
+  // !VA Body text
+  --sjs-article-font-default-fontSize: 18px;
+  // !VA Question titles
+  --sjs-font-questiontitle-size: 17px;
+  // !VA Panel Titles
+  .sd-panel__title {
+    // !VA Panel titles
+    // font-family: $secondary_font!important;
+    --sjs-font-questiontitle-size: 17px;
+
+    
+  }
+}
+
+// !VA Line height
+.sd-container-modern {
+  --sjs-article-font-default-lineHeight: 24px;
+  @include mphone {
+  }
+  @include lphone {
+  }
+  @include tablet {
+  }
+  @include desktop {
+  }
+  @include ldesktop {
+    --sjs-article-font-default-lineHeight: 26px;
+  }
+}
+
+// !VA GLOBAL PADDING
+.sd-container-modern {
+  // !VA BASE PADDING
+  // !VA Default
+  // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  // !VA Global override
+  --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
+  // !VA BASE VERTICAL PADDING
+  // !VA Default
+  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  // !VA Global override
+  --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
+  // !VA BASEPAGE PADDING
+  // !VA  Default
+  // --sd-page-vertical-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  // !VA Global override
+  --sd-page-vertical-padding: calc(3* var(--sjs-base-unit, var(--base-unit, 8px)))!important;
+}
+
+// !VA ADD LEFT AND RIGHT PADDING TO
+.sd-container-modern .sd-page .sd-element--with-frame {
+  padding-left: calc(var(--sd-base-padding) + var(--sv-element-add-padding-left, 10px));
+  padding-right: calc(var(--sd-base-padding) + var(--sv-element-add-padding-right, 10px));
+}
+
+
+// !VA GLOBAL INPUT STYES
+.sd-container-modern .sd-input {
+  padding: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+}
+
+// !VA GLOBAL BOOLEAN STYLES
+// !VA Sets the padding between the switch and the outer border
+.sd-container-modern .sd-boolean {
+  // padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  padding: calc(0.25 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+}
+
+// !VA Sets the height of the boolean element
+.sd-container-modern .sd-boolean__label, .survey-wrapper .sd-boolean__thumb {
+  // line-height: calc(.5 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
+  line-height: calc(1 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
+}
+
+// !VA Ratings element button spacing
+.sd-container-modern .sd-rating .sd-rating__item {
+  margin: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+}
+
+.sd-container-modern .sd-input.sd-dropdown {
+  padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+}
+
+.sd-container-modern .sd-element__content .sd-html h2 {
+  font-family: $secondary_font;
+  // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
+  // line-height: calc(2.125 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+}
+
+// !VA HTML h3
+.sd-container-modern .sd-element__content .sd-html h3 {
+  font-family: $secondary_font;
+}
+
+
+// !VA HTML p, li
+.sd-container-modern .sd-element__content .sd-html {
+  p, li {
+      font-size: 1.125rem;
+      line-height: 1.613rem;
+      padding: calc(.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+  }
+  li {
+    margin-left: 1.5rem;
+  }
+}
+
+
+
+// !VA Landing Page - LandingPanel & LandingHeadPanel
 // !VA Version info
 
+// !VA This is how you remove the panel borders AND the padding for those panels responsively for specific panels. Or globally for that matter. 
+[data-name="LandingPanel"] .sd-element--nested-with-borders {
+    border: 1px transparent var(--sjs-border-light, var(--border-light, #eaeaea))!important;
+    padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
 
+    @include mphone {
+    
+    }
+    @include lphone {
+    
+    }
+    @include tablet {
+    
+    }
+    @include desktop {
+    
+    }
+    @include ldesktop {
+      border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea))!important;
+      --sd-base-padding: 1.5rem !important;
+      padding: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+    }
+
+}
+
+// !VA Flex row on desktop, flex column on phones, 
 [data-name="LandingHeadPanel"]
   .sd-panel__content {
     position: relative;
@@ -25,55 +212,58 @@
       flex-direction: row;
     }
     @include ldesktop {
+      // !VA Padding 
       flex-direction: row;
+      // padding: 1rem 0!important;
     }
     .sd-row {
-      padding: 0!important;
-      margin: 0!important;
+      // padding: 0!important;
+      // margin: 0!important;
     }
+  }
 
-  }
-  .sd-element--nested-with-borders {
-    border: none!important;
-    padding: 0!important;
-    margin: 0!important;
-  }
+
+  // .sd-element--nested-with-borders {
+  // border: none!important;
+  // // padding: 0!important;
+  // // margin: 0!important;
+  // background: rgba(255, 0, 0, .3) !important; //devred
+  // }
 
 
 
 
 
 // !VA Landing Title 
-.sd-container-modern .landing-title-subhead {
-  width: 100%;
-  padding: 0!important;
-  margin: 0!important;
-  @include mphone {
+// .sd-container-modern .landing-title-subhead {
+//   width: 100%;
+//   padding: 0!important;
+//   margin: 0!important;
+//   @include mphone {
   
-  }
-  @include lphone {
+//   }
+//   @include lphone {
   
-  }
-  @include tablet {
-    padding: 1.5rem 0!important;
-  }
-  @include desktop {
-    padding: 1.5rem 0!important;
-  }
-  @include ldesktop {
-    padding: 1.5rem 0!important;
-  }
-}
+//   }
+//   @include tablet {
+//     padding: 1rem!important;
+//   }
+//   @include desktop {
+//     padding: 1.5rem 0!important;
+//   }
+//   @include ldesktop {
+//     padding: 1.5rem 0!important;
+//   }
+// }
 
 
 
 .sd-container-modern .landing-title-head, .sd-container-modern h2 {
   font-family: $secondary_font!important;
-  padding: 0!important;
-  margin: 0!important;
-  // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
-  --sjs-font-size: 7px;
-  line-height: calc(5 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 7px))));
+  // padding: 0!important;
+  // margin: 0!important;
+  font-size: var(--sjs-article-font-x-large-fontSize, calc(3 * (var(--sjs-font-size, 16px))))!important;
+  line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
   text-align: center;
   @include mphone {
   
@@ -88,24 +278,23 @@
   
   }
   @include ldesktop {
-    --sjs-font-size: 11px;
-    line-height: calc(3 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    // --sjs-font-size: 11px;
+    // line-height: calc(3 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
     text-align: left;
   }
-
 }
 
 // !VA Landing Intro subhead
 .sd-container-modern .landing-title-subhead {
   font-family: $primary_font!important;
-  padding: 0!important;
+  // padding: 0!important;
   // margin: .5rem 0 0 0!important;
   color: #6b6b6b!important;
   // font-size: 1.313rem!important;
   // line-height: 1.75rem!important;
-  font-weight: 600!important;
-  --sjs-font-size: 15px;
-  line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  // font-weight: 600!important;
+  // --sjs-font-size: 15px;
+  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
   text-align: center;
   @include mphone {
     
@@ -121,8 +310,8 @@
   }
   @include ldesktop {
     // margin: .5rem 0 0 0!important;
-    --sjs-font-size: 18px;
-    line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    // --sjs-font-size: 18px;
+    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
     text-align: left;
   }
 }
@@ -137,8 +326,8 @@
   height: 100%;
   // height: 100px;
   // margin-right: 40px;
-  padding: 0!important;
-  margin: 0!important;
+  // padding: 0!important;
+  // margin: 0!important;
   @include mphone {
   
   }
@@ -155,8 +344,8 @@
   }
   @include ldesktop {
     justify-content: flex-end;
-    margin-top: -30px!important;
     margin-right: 40px!important;
+    margin-top: -10px!important;
   }
 }
 
@@ -170,8 +359,8 @@
   width: 100%;
   font-family: $secondary_font!important;
   color: #353535!important;
-  --sjs-font-size: 15px;
-  line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  // --sjs-font-size: 15px;
+  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
   text-align: left;
   padding: 0!important;
   margin: 0!important;
@@ -189,13 +378,13 @@
   }
   @include ldesktop {
     
-    font-size: 1rem!important;
-    line-height: 1.125rem!important;
+    // font-size: 1rem!important;
+    // line-height: 1.125rem!important;
   }
 }
 
 .survey-version-logo {
-  display: block;
+  display: none;
   width: 80px;
   margin: 0 auto;
   height: auto;
@@ -215,60 +404,14 @@
   }
   @include ldesktop {
     display: block; 
-    width: 120px;
-    --sjs-font-size: 15px;
-    line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+    width: 100px;
+    // --sjs-font-size: 15px;
+    // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
   }
 }
 
 
-// !VA Font Size
-.sd-container-modern {
-    --sjs-font-size: 16px;
-    --sjs-base-unit: 6px;
-    --sjs-article-font-default-lineHeight: 24px;
 
-    @include mphone {
-      --sjs-font-size: 16px;
-    }
-    @include lphone {
-      --sjs-font-size: 17px;
-    }
-    @include tablet {
-      --sjs-font-size: 18px;
-    }
-    @include desktop {
-      --sjs-font-size: 19px;
-    }
-    @include ldesktop {
-      --sjs-base-unit: 6px;
-      --sjs-font-size: 18px;
-      --sjs-article-font-default-lineHeight: 30px;
-    }
-
-}
-
-.sd-container-modern .sd-element__content .sd-html h3 {
-  font-family: $secondary_font;
-  // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.5 * (var(--sjs-font-size, 16px))));
-  --sjs-font-size: 11px;
-  line-height: calc(2.5 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-  @include mphone {
-  
-  }
-  @include lphone {
-  
-  }
-  @include tablet {
-  
-  }
-  @include desktop {
-  
-  }
-  @include ldesktop {
-    --sjs-font-size: 12px;
-  }
-}
 
 
 
@@ -338,12 +481,12 @@
 // !VA Height of input fields: this makes input fields shorter than the default
 .survey-wrapper .sd-input {
   // padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  padding: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  // padding: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
 }
 
 // !VA Set top and bottom padding on dropdowns 0 to match the shorter input height. Leave the horizontal padding base units.
 .survey-wrapper .sd-dropdown {
-    padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    // padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
 }
 
 // !VA Adjust the top and bottom paddings on ALL panel headers. That's going to be a problem later, probably.
@@ -351,8 +494,8 @@
 .sd-panel__header {
     // padding: 0!important;
     // margin: 0!important;
-    padding-top: 16px!important;
-    padding-bottom: 0!important;
+    // padding-top: 16px!important;
+    // padding-bottom: 0!important;
 }
 
 
@@ -381,7 +524,7 @@
 // !VA Sets the height of the boolean element
 .survey-wrapper .sd-boolean__label, .survey-wrapper .sd-boolean__thumb {
   // line-height: calc(.5 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
-  line-height: calc(1 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
+  // line-height: calc(1 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
 }
 
 // !VA 2025.12.19 
@@ -417,6 +560,8 @@
 // !VA .srvy-general-info is the div wrapper that lives inside the HTML element for general info, i.e. info that's not attached to a question label.
 .survey-wrapper .srvy-general-info {
   // !VA Defaults
+  padding-left: 1.25rem;
+  text-indent: -1.25rem;
 }
 
 .survey-wrapper .srvy-info-icon {
@@ -426,7 +571,10 @@
 }
 
 .survey-wrapper .srvy-info-link {
-  font-size: 1rem;
+  // --sjs-font-size: 16px!important;
+  // !VA Font size override, renders to 16px
+  // font-size: calc(1 * (var(--sjs-font-size, 16px)));
+  // line-height: calc(1.5 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
   color: #B70B0C;
   font-weight: 600;
   text-decoration: none;
@@ -454,16 +602,6 @@
 
 
 // --- Typography tokens ---
-// !VA I don't know what this does or where it came from 
-.survey-panel-title {
-  .sd-panel__title,
-  .sd-title {
-    font-weight: 600;
-    font-size: 1.05rem;
-    margin-bottom: 0.25rem;
-  }
-}
-
 
 /* Apply to fieldset.sd-selectbase */
 .survey-two-col {
@@ -670,7 +808,6 @@
 
 // !VA PROGRESS BAR
 .sd-root-modern--mobile.sd-progress-buttons {
-  background: rgba(255, 0, 0, .3) !important; //devred
 padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))));
 }
 
@@ -1033,8 +1170,8 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 .survey-dev-menu {
   position: relative;
-  display: inline-flex;
   display: none;
+  display: inline-flex;
   flex-direction: column;
   width: 200px;
   font-family: inherit;
@@ -1052,7 +1189,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
     }
     @include ldesktop {
       display: inline-flex;
-      display: none;
+      // display: none;
     }
 }
 

@@ -34,35 +34,41 @@
           "html": "<p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
         },
         {
-          "type": "html",
-          "name": "LandingAboutPrivacyHeading",
-          "html": "<h3>About your privacy and personal information</h3>"
+          "type": "panel",
+          "name": "panelName",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyHeading",
+              "html": "<h3>About your privacy and personal information</h3>"
+            },
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyText01",
+              "html": "<p>We're not asking for your last name, so we have no way to connect you with any of your private data. We need only four pieces of information to verify survey results:</p>"
+            },
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyText02",
+              "html": "<ul><li class='survey-privacy-bullet-list'>Your first name</li><li class='survey-privacy-bullet-list'>Your companion animal's name</li><li class='survey-privacy-bullet-list'>The country in which you live</li><li class='survey-privacy-bullet-list'>Your email address or Facebook account name</li></ul>"
+            },
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyText02",
+              "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>"
+            },
+            {
+              "type": "html",
+              "name": "LandingPrivacy",
+              "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>"
+            }
+          ]
         },
-        {
-          "type": "html",
-          "name": "LandingAboutPrivacyText01",
-          "html": "<p>We're not asking for your last name, so we have no way to connect you with any of your private data. We need only four pieces of information to verify survey results:</p>"
-        },
-        {
-          "type": "html",
-          "name": "LandingAboutPrivacyText02",
-          "html": "<ul><li class='survey-privacy-bullet-list'>Your first name</li><li class='survey-privacy-bullet-list'>Your companion animal's name</li><li class='survey-privacy-bullet-list'>The country in which you live</li><li class='survey-privacy-bullet-list'>Your email address or Facebook account name</li></ul>"
-        },
-        {
-          "type": "html",
-          "name": "LandingAboutPrivacyText02",
-          "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey. For details about how we'll use the data we collect and further steps we'll take to anonymize your contact information, select the 'About your privacy' and 'Consent information' links.</p>"
-        },
-
         {
           "type": "panel",
           "name": "LandingPrivacyConsentLinksPanel",
           "elements": [
-              {
-                "type": "html",
-                "name": "LandingPrivacy",
-                "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Privacy</a></div>"
-              },
+
               {
                 "type": "html",
                 "name": "LandingData",
