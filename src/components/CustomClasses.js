@@ -5,7 +5,7 @@ export function getStyleDirectives(item) {
   const directives = [];
 
 const ITEMS_TWO_COL = new Set([
-
+  "LandingConsent",
   "LandingPrivacyConsentLinksPanel",
 
   "lvngCmpnInfoAgePanel",
@@ -83,6 +83,7 @@ const ITEMS_THREE_COL = new Set([
 
 // !VA CONTROL Elements
 const CONTROL_WIDTH_150 = new Set ([
+  "LandingConsent",
   "CmpnInfoWeight",
   "dcsdCmpnInfoAgeYears",
   "dcsdCmpnInfoAgeMonths",
@@ -94,7 +95,7 @@ const CONTROL_WIDTH_150 = new Set ([
   "PrimaryDurationFirstConsultMonths",
   "TreatmentStatusAgeYears",
   "TreatmentStatusAgeMonths",
-
+  
 
 ])
 

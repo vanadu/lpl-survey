@@ -2,6 +2,11 @@
 
 // !VA GLOBAL DEFINITIONS
 
+// !VA Background color
+.sd-container-modern {
+  background: $home_bg_color;
+}
+
 // !VA Base unit
 .sd-container-modern {
   --sjs-base-unit: 8px;
@@ -11,6 +16,7 @@
 .sd-container-modern {
     --sjs-font-size: 18px
 }
+
 
 // !VA Font Size
 // .sd-container-modern {
@@ -108,6 +114,14 @@
   padding-right: calc(var(--sd-base-padding) + var(--sv-element-add-padding-right, 10px));
 }
 
+.sd-container-modern .sd-panel__content {
+    // padding: 0!important;
+    // margin-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+    padding-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+    padding-bottom: calc(3* (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+
+  // background: rgba(0, 0, 255, .3) !important; //devblue
+}
 
 // !VA GLOBAL INPUT STYES
 .sd-container-modern .sd-input {
@@ -145,6 +159,8 @@
 // !VA HTML h3
 .sd-container-modern .sd-element__content .sd-html h3 {
   font-family: $secondary_font;
+  padding: 0!important;
+  margin: 0!important;
 }
 
 
@@ -166,10 +182,9 @@
 // !VA Version info
 
 // !VA This is how you remove the panel borders AND the padding for those panels responsively for specific panels. Or globally for that matter. 
-[data-name="LandingPanel"] .sd-element--nested-with-borders {
+[data-name="LandingHeadPanel"].sd-element--nested-with-borders {
     border: 1px transparent var(--sjs-border-light, var(--border-light, #eaeaea))!important;
     padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
-
     @include mphone {
     
     }
@@ -436,24 +451,11 @@
   }
 }
 
-// !VA This is the actual survey title property at the top of the master-survey JSON
-.sd-container-modern__title {
-  // padding: 0!important;
-  // margin: 0!important;
-  // .sd-header__text {
-  //   height: 20px !important;
-  // }
-  // .sd-title {
-  //   font-size: 1rem !important;
-  //   line-height: 1.25rem !important;
-  //   text-align: center;
-  // }
-}
 
 // !VA Survey container - background color is inherited from survey-wrapper
 // ----------------------------------------------------------
 .sd-container-modern {
-    background: $home_bg_color;
+
 }
 
 // !VA 2025.12.19 This applies to ALL panels, not just the top-level

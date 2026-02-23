@@ -130,7 +130,7 @@
             },
             {
               "type": "panel",
-              "name": "LandingPrivacyPanel",
+              "name": "panelName",
               "elements": [
                 {
                   "type": "html",
@@ -161,34 +161,28 @@
             },
             {
               "type": "panel",
-              "name": "LandingConsentPanel",
+              "name": "LandingPrivacyConsentLinksPanel",
               "elements": [
                 {
                   "type": "html",
-                  "name": "LandingAboutConsentHeading",
-                  "html": "<h3>About our Consent Policy</h3>"
-                },
-                {
-                  "type": "html",
-                  "name": "LandingConsentText",
-                  "html": "<p>By selecting 'Yes' below, you confirm that you agree to the terms of our Consent Policy.</p>"
-                },
-                {
-                  "type": "html",
                   "name": "LandingData",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "LandingConsent",
-                  "title": "Do you want to proceed with the survey in accordance with our Consent Policy?",
-                  "choices": [
-                    "Yes",
-                    "No"
-                  ],
-                  "isRequired": true
+                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>About Your Consent?</a></div>"
                 }
               ]
+            },
+            {
+              "type": "html",
+              "name": "LandingConsentHeading",
+              "html": "<p>By clicking the checkbox below, you confirm that you're ready to answer questions about your LP companion and consent to the terms of our privacy and consent statements.</p>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "LandingConsent",
+              "title": "Do you agree to the terms and conditions?",
+              "choices": [
+                "Yes"
+              ],
+              "isRequired": true
             }
           ]
         },

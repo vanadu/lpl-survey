@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-22T23:32:55.483Z",
+    "builtAt": "2026-02-23T17:24:46.375Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -50,8 +50,20 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "LandingPrivacyConsentLinksPanel": {
-      "name": "LandingPrivacyConsentLinksPanel",
+    "LandingPrivacyPanel": {
+      "name": "LandingPrivacyPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "LANDING-page",
+        "LandingPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "LandingConsentPanel": {
+      "name": "LandingConsentPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -69,10 +81,11 @@
       "collect": true,
       "path": [
         "LANDING-page",
-        "LandingPanel"
+        "LandingPanel",
+        "LandingConsentPanel"
       ],
       "hasTitle": true,
-      "title": "Do you agree to the terms and conditions?",
+      "title": "Do you want to proceed with the survey in accordance with our Consent Policy?",
       "hasVisibleIf": false,
       "isRequired": true
     },
