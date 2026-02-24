@@ -88,7 +88,7 @@
         {
           "type": "panel",
           "name": "dcsdCmpnInfoAgePanel",
-          "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+          "title": "<p>At about what age did {CmpnName} cross over the Rainbow Bridge?</p>",
           "description": "Please enter years and months",
           "visibleIf": "{LifeStatus} = true",
           "elements": [

@@ -101,15 +101,22 @@
 
 // !VA DEFAULT PANEL CONTENT PADDING - Whitespace above and below the panel content
 .sd-container-modern .sd-panel__content {
-  padding-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   padding-bottom: calc(3* (var(--sjs-base-unit, var(--base-unit, 8px))));
-  // background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 // !VA DEFAULT PANEL MARGIN BETWEEN PANELS - This is set with the top-margin only. Do not use margin-bottom.
 .sd-container-modern .sd-element--nested-with-borders {
   margin-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
 }
+
+.sd-container-modern .sd-panel__title {
+  // font-family: $secondary_font!important;
+  padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+}
+
+
+
 
 // !VA GLOBAL INPUT STYES
 .sd-container-modern .sd-input {
@@ -181,7 +188,7 @@
 [data-name="LandingHeadPanel"].sd-element--nested-with-borders {
     border: 1px transparent var(--sjs-border-light, var(--border-light, #eaeaea))!important;
     padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
-
+    background: rgba(0, 0, 0, .08) !important; //devgry
     @include mphone {
     
     }
@@ -197,13 +204,20 @@
     @include ldesktop {
       border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea))!important;
       --sd-base-padding: 1.5rem !important;
-      padding: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+      padding: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
     }
 
 }
 
 // !VA Flex row on desktop, flex column on phones, 
-[data-name="LandingHeadPanel"]
+[data-name="LandingHeadPanel"] {
+  // margin-bottom: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+
+
+
+
+
+
   .sd-panel__content {
     position: relative;
     display: flex;
@@ -227,12 +241,14 @@
       // !VA Padding 
       flex-direction: row;
       // padding: 1rem 0!important;
+      margin-bottom: calc(0 * (var(--sjs-fbase-unit, var(--base-unit, 8px))))!important;
     }
     .sd-row {
       // padding: 0!important;
       // margin: 0!important;
     }
   }
+}
 
 .sd-container-modern .landing-title-head {
   font-family: $secondary_font!important;
@@ -405,7 +421,6 @@
 // !VA Selects all element headers but doesn't appear to do anything
 .sd-element__header--location-top {
   // padding-bottom: calc(0 * var(--sd-base-vertical-padding));
-  // background: rgba(0, 0, 255, .3) !important; //devblue
 }
 
 // !VA Clear the bottom border in the subpanel title 
@@ -516,7 +531,6 @@
   padding: 0;
   margin: 0;
   min-width: 0;
-  // background: rgba(0, 0, 255, .3) !important; //devblue
 }
 
 // !VA Two column checkboxes
@@ -532,13 +546,14 @@
   box-sizing: border-box;
 }
 
+// !VA THREE-BUTTON RADIO GROUPS i.e. Yes No Don't know
+// !VA IMPORTANT: 
 // Apply to fieldset.sd-selectbase so titles/headers are unaffected
-// !VA This only applies to three-button radio groups, i.e. Yes No Don't know
 .survey-three-col {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem 1rem;
-
+  width: 600px;
   // fieldset reset (since target is a fieldset)
   border: 0;
   padding: 0;
@@ -546,7 +561,7 @@
   min-width: 0;
   // !VA Creates a 480px element with three equal button widths
   .sd-radio {
-    max-width: 160px!important;
+    max-width: 180px!important;
   }
 }
 // !VA I'm not sure what this does
@@ -557,7 +572,6 @@
 // !VA NOT USED
 .survey-fieldset-w-60pct { 
   width: 60%; 
-  // background: rgba(0, 128, 0, .3) !important; //devgreen
 }
 
 // !VA 
@@ -568,13 +582,11 @@
 // !VA Medium width text boxes and dropdown, i.e. CmpnName, UserInfoAgeGroup. 
 .survey-control-w-300 { 
   width: 300px !important; 
-  // background: rgba(0, 128, 0, .3) !important; //devgreen
 }
 
 // !VA Wide text boxes and dropdowns
 .survey-control-w-600 { 
   width: 600px !important; 
-  // background: rgba(255, 0, 255, .3) !important; //devmag
 }
 
 // !VA Unused as yet
@@ -602,32 +614,84 @@
 .survey-control-w-6ch { box-sizing: border-box; }
 
 
-.survey-q-separator {
+.survey-q-separator-below, .survey-q-separator-above, .survey-q-space-below, .survey-q-separator-above  {
   position: relative;
   padding: 0; // no padding, spacing goes around the ::after
 }
 
-// !VA WHITESPACE ABOVE and BELOW THE SEPARATOR - the row has   
+// !VA SEPARATOR ABOVE ELEMENT - WHITESPACE ABOVE and BELOW THE SEPARATOR - the row has   
+.survey-q-separator-above::before {
+  content: "";
+  display: block;
+  width: 600px;
+  height: 1px;
+  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
+  marg: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  background: rgba(0, 0, 0, 0.05);
+}
+
+// !VA SEPARATOR BELOW ELEMENT - WHITESPACE ABOVE and BELOW THE SEPARATOR - the row has   
 .survey-q-separator-below::after {
   content: "";
   display: block;
   width: 600px;
   height: 1px;
-  margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
-
+  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
+  marg: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
   background: rgba(0, 0, 0, 0.05);
 }
 
+
+
+// !VA SPACE ABOVE ELEMENT -   
+.survey-q-space-above::before {
+  content: "";
+  display: block;
+  width: 600px;
+  height: 1px;
+  margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  // background: rgba(0, 0, 0, 0.05);
+  // background: rgba(0, 128, 0, .3) !important; //devgreen
+}
+
+// !VA SPACE BELOW ELEMENT    
 .survey-q-space-below::after {
   content: "";
   display: block;
   width: 600px;
   height: 1px;
+  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
+  margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+
 }
 
 
 // !VA Custom Panel Layouts
 // =============================
+
+[data-name="LandingWelcomePanel"] {
+  &.sd-element--nested-with-borders {
+    padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    margin-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    border: none;
+  }
+  .sd-panel__content {
+    padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    margin-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
 
 // !VA INFO ICONSThis is probably going to have to be where all the info icon links are styled because I have no idea how to get that into the formatting helper. 
 [data-name="LandingPrivacyConsentLinksPanel"] .sd-element__content.sd-panel__content {

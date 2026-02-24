@@ -23,16 +23,29 @@
           ]
         },
         {
-          "type": "html",
-          "name": "LandingIntroText01",
-          "html": "<p>You're here because the disease of laryngeal paralysis (LarPar, LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. </p>"
+          "type": "panel",
+          "name": "LandingWelcomePanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingWelcomeText",
+              "html": "<h3>Welcome to the LP/GOLPP Survey 2026</h3>"
+            },
+            {
+              "type": "html",
+              "name": "LandingIntroText01",
+              "html": "<p>You're here because the disease of laryngeal paralysis (LarPar, LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. </p>"
+            },
+
+            {
+              "type": "html",
+              "name": "LandingLosingCompanion",
+              "html": "<p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
+            }
+    
+          ]
         },
 
-        {
-          "type": "html",
-          "name": "LandingLosingCompanion",
-          "html": "<p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
-        },
         {
           "type": "panel",
           "name": "LandingPrivacyPanel",

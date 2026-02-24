@@ -181,7 +181,7 @@
                 "text": "Sedative"
               },
               {
-                "value": "STERIOD",
+                "value": "STEROID",
                 "text": "Steroid, i.e., prednisone"
               },
               {
@@ -198,7 +198,7 @@
             {
             "type": "dropdown",
             "name": "BreathingCrisisSubstanceForm",
-            "title": "In what form was the sedative or steriod provided?",
+            "title": "In what form was the sedative or steroid provided?",
             "isRequired": true,
             "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
             "choices": [

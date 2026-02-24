@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "AspirationHeading",
-          "html": "<h3>{CmpnName}'s experience with aspiration pneumonia</h3>"
+          "html": "<h2>{CmpnName}'s experience with aspiration pneumonia</h2>"
         },
         {
           "type": "html",
@@ -21,28 +21,34 @@
           "name": "AspirationInfoLink",
           "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
         },
-
         {
-          "type": "radiogroup",
-          "name": "AspirationDidHave",
-          "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
-          "isRequired": true,
-          "choices": [
+          "type": "panel",
+          "name": "AspirationDidHavePanel",
+          "elements": [
             {
-              "value": "YES",
-              "text": "Yes"
-            },
-            {
-              "value": "NO",
-              "text": "No"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
+              "type": "radiogroup",
+              "name": "AspirationDidHave",
+              "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
             }
-          ],
-          "showOtherItem": false
+          ]
         },
+
         {
           "type": "panel",
           "name": "AspirationGeneralPanel",

@@ -9,7 +9,7 @@
         {
           "type": "html",
           "name": "UserInfoHead",
-          "html": "<h2>Before you start</h2>"
+          "html": "<h2>Before You Begin</h2>"
         },
         {
         "type": "html",
@@ -70,12 +70,8 @@
         {
           "type": "panel",
           "name": "UserInfoVerificationPanel", 
+          "title": "Verification Contact",
           "elements": [
-            {
-              "type": "html",
-              "name": "UserInfoVerificationHeading",
-              "html": "<h3>Verification Contact</h3>"
-            },
             {
               "type": "html",
               "name": "UserInfoVerificationPanelText",
@@ -131,12 +127,9 @@
         {
           "type": "panel",
           "name": "UserInfoAboutPanel", 
+          "title": "Your First Name and Country",
           "elements": [
-            {
-              "type": "html",
-              "name": "UserInfoNameCountryHeading",
-              "html": "<h3>Your First Name and Country</h3>"
-            },
+
             {
               "type": "text",
               "title": "First Name:",

@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "NeuropathyHeading",
-          "html": "<h3>Hind-end weakness and polyneuropathy</h3>"
+          "html": "<h2>Hind-end weakness and polyneuropathy</h2>"
         },
         {
           "type": "html",
@@ -22,25 +22,32 @@
         },
 
         {
-          "type": "radiogroup",
-          "name": "NeuropathySymptomsDoesHave",
-          "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
-          "isRequired": true,
-          "choices": [
+          "type": "panel",
+          "name": "NeuropathySymptomsDoesHavePanel",
+          "elements": [
+
             {
-              "value": "YES",
-              "text": "Yes"
-            },
-            {
-              "value": "NO",
-              "text": "No"
-            },
-            {
-              "value": "NOT_SURE",
-              "text": "Not sure"
+              "type": "radiogroup",
+              "name": "NeuropathySymptomsDoesHave",
+              "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "NOT_SURE",
+                  "text": "Not sure"
+                }
+              ],
+              "showOtherItem": false
             }
-          ],
-          "showOtherItem": false
+          ]
         },
 
 
@@ -49,9 +56,6 @@
           "name": "NeuropathyHindEndDoesHavePanel",
           "visibleIf": "{NeuropathySymptomsDoesHave} = YES",
           "elements": [
-
-
-
             {
               "type": "radiogroup",
               "name": "NeuropathySymptomsFirst",

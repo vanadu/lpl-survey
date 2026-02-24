@@ -8,22 +8,23 @@
         {
           "type": "html",
           "name": "ConclusionHeading",
-          "html": "<h3>Conclusions</h3>"
+          "html": "<h2>Conclusion</h2>"
+        },
+        {
+          "type": "html",
+          "name": "Conclusion",
+          "html": "<p>The last section of this survey references your earlier responses to determine how {CmpnName}'s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression. </p>"
         },
         {
           "type": "panel",
           "name": "ConclusionsPanelLifeStatusTrue",
           "visibleIf": "{LifeStatus} = true",
           "elements": [
-          {
-              "type": "html",
-              "name": "Conclusion",
-              "html": "<p>The last section of this survey references your earlier responses to determine how {CmpnName}'s LP/GOLPP developed over time. </p>"
-            },
+
             {
               "type": "html",
               "name": "Conclusion",
-              "html": "<p><b>NOTE:</b>These questions ask about the last station of {CmpnName}'s LP/GOLPP journey before {cvGenderSubjectPronoun} crossed over the Rainbow Bridge. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later. </p>"
+              "html": "<p><b>NOTE: </b>These questions ask about the last station of {CmpnName}'s LP/GOLPP journey before {cvGenderSubjectPronoun} crossed over the Rainbow Bridge. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later. </p>"
             }
           ]
         },
@@ -35,13 +36,8 @@
           "elements": [
             {
               "type": "html",
-              "name": "Conclusion",
-              "html": "<p>The last survey section asks questions about the current state of {CmpnName}'s LP/GOLPP. By comparing your answers here to answers you provided earlier, we hope to get a picture of how {cvGenderObjectPronoun} condition changed over time and what factors may have played a role in the LP/GOLPP progression</p>"
-            },
-            {
-              "type": "html",
               "name": "ConclusionIntro",
-              "html": "<p><b>IMPORTANT:</b> Please answer the questions about {CmpnName} in his current state of health:</p>"
+              "html": "<p><b>IMPORTANT:</b> Please answer the questions about {CmpnName} in {cvGenderObjectPronoun} current state of health:</p>"
             }
           ]
         },
@@ -263,7 +259,7 @@
             {
               "type": "radiogroup",
               "name": "ConclusionOtherPathTieback",
-              "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+              "title": "What if anything would you differently?",
               "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
               "isRequired": true,
               "choices": [
@@ -438,7 +434,7 @@
                 },
                 {
                   "value": "DONT_KNOW",
-                  "text": "I don't know enough about it"
+                  "text": "Don't know"
                 }              
               ],
               "showOtherItem": false

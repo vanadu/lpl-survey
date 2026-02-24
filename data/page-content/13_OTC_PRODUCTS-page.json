@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "OTCProductsHeading",
-          "html": "<h3>OTC (Over-The-Counter) Products for LP/GOLPP</h3>"
+          "html": "<h2>2OTC (Over-The-Counter) Products for LP/GOLPP</h2>"
         },
         {
           "type": "html",

@@ -10,8 +10,8 @@
   "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "UserInfoContactOK": true,
 
-  "CmpnName": "Testdog14",
-  "LifeStatus": true,
+  "CmpnName": "Happy",
+  "LifeStatus": false,
 
   "CmpnInfoAnimalType": "CANINE",
   "CmpnInfoBreed": "Lab",
@@ -61,7 +61,7 @@
   ],
   "BreathingCrisisProvidedSubstance": "YES",
   "BreathingCrisisProvidedSubstanceType": [
-    "STERIOD"
+    "STEROID"
   ],
   "BreathingCrisisSubstanceForm": "LIQUID",
 
@@ -113,7 +113,7 @@
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
 
-  "TreatmentStatusDidHave": false,
+  "TreatmentStatusDidHave": true,
   "TreatmentStatusAgeYears": "13",
   "TreatmentStatusAgeMonths": "6",
   "TreatmentStatusType":  [

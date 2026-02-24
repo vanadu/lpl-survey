@@ -149,15 +149,17 @@ const CONTROL_WIDTH_300 = new Set([
 
 const CONTROL_WIDTH_600 = new Set([
 
+  "BreathingCrisisCount",
+
   "PrimaryDurationVisitsNumber",
 
 
   "DiagnosisWho",
-  "PrimaryVetDiagnosticType",
-  "DiagnosisTimeAfterSympto",
+  "DiagnosticType",
+  "DiagnosisTimeAfterSymptoms",
   "TreatmentStatusAgeYears",
   "TreatmentStatusAgeMonths",
-  "TreatmentStatusTiebackWait",
+  "TreatmentStatusTiebackWait"
 
 
 
@@ -169,6 +171,52 @@ const CONTROL_WIDTH_600 = new Set([
 // Add near the other Sets
 
 // !VA Works for 
+const QUESTION_SEPARATOR_ABOVE = new Set([
+  // put question names here (same .name values you already use)
+  "UserInfoContactType",
+  "UserInfoAgeGroup",
+  "IntubationHistorySymptoms",
+  "BreathingCrisisProvidedSubstanceType",
+  "EarlyOtherConditionsType",
+  "PrimaryDurationChangedVetsReason",
+  "PrimaryVetInfoDetails",
+  "PrimaryVetSurgeryPerception",
+
+  "TreatmentStatusTiebackComplications",
+
+  "TreatmentStatusTiebackComplicationsCost",
+
+  "ManagementPrescriptionType",
+
+  "ManagementNonPrescriptionType",
+
+  "ManagementNonPrescriptionCost",
+
+  "OTCProductsType",
+  "OTCProtocolCost",
+
+  "AspirationInpatientCount",
+
+  "AspirationSurgeryPostCount",
+  "AspirationStentPostCount",
+
+  "NeuropathySymptomsTypeProgression",
+
+  "ConclusionOtherConditions"
+
+
+
+  ]);
+
+const QUESTION_SPACE_ABOVE = new Set([
+// put question names here (same .name values you already use)
+
+  
+]);
+
+
+
+
 const QUESTION_SEPARATOR_BELOW = new Set([
   // put question names here (same .name values you already use)
   "CmpnName",
@@ -217,9 +265,8 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "TreatmentStatusTiebackEmergency",
   "TreatmentStatusTiebackWait",
   "TreatmentStatusTiebackCount",
-  "TreatmentStatusTiebackOnceCost",
-  "TreatmentStatusTiebackMultipleCost",
-  "TreatmentStatusTiebackComplications",
+
+
 
   "TreatmentStatusBveapReasons",
   "TreatmentStatusBveapCost",
@@ -288,9 +335,8 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "OTCProtocolCost",
 
   "AspirationCount",
-  "AspirationInpatient",
-  "AspirationSurgeryPost",
-  "AspirationStentPost",
+
+
 
   "NeuropathySymptomsFirst",
 
@@ -315,12 +361,10 @@ const QUESTION_SEPARATOR_BELOW = new Set([
     "CmpnInfoBreed",
     "CmpnInfoGender",
 
-    "IntubationHistoryConcerns",
 
-    "PrimaryDurationChangedVets",
 
-    "PrimaryVetSurgery",
-    "PrimaryVetInfoDidGive",
+
+
 
     "TreatmentStatusBveapComplications",
 
@@ -367,6 +411,13 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   }
   if (CONTROL_WIDTH_600.has(name)) {
     directives.push({ target: "control", className: "survey-control-w-600" });
+  }
+
+  if (QUESTION_SEPARATOR_ABOVE.has(name)) {
+    directives.push({ target: "question", className: "survey-q-separator-above" });
+  }
+  if (QUESTION_SPACE_ABOVE.has(name)) {
+    directives.push({ target: "question", className: "survey-q-space-above" });
   }
 
   if (QUESTION_SEPARATOR_BELOW.has(name)) {

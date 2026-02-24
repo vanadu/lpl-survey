@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-23T17:24:46.375Z",
+    "builtAt": "2026-02-24T16:47:23.043Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -40,6 +40,18 @@
     },
     "LandingHeadPanel": {
       "name": "LandingHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "LANDING-page",
+        "LandingPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "LandingWelcomePanel": {
+      "name": "LandingWelcomePanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -163,7 +175,8 @@
         "USER_INFO-page",
         "UserInfoPanel"
       ],
-      "hasTitle": false,
+      "hasTitle": true,
+      "title": "Verification Contact",
       "hasVisibleIf": false
     },
     "UserInfoContactType": {
@@ -439,7 +452,7 @@
         "CmpnInfoPanel"
       ],
       "hasTitle": true,
-      "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+      "title": "<p>At about what age did {CmpnName} cross over the Rainbow Bridge?</p>",
       "hasVisibleIf": true,
       "visibleIf": "{LifeStatus} = true"
     },
@@ -935,7 +948,7 @@
         "BreathingCrisisDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "In what form was the sedative or steriod provided?",
+      "title": "In what form was the sedative or steroid provided?",
       "hasVisibleIf": true,
       "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
       "isRequired": true
@@ -3396,6 +3409,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "AspirationDidHavePanel": {
+      "name": "AspirationDidHavePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "AspirationDidHave": {
       "name": "AspirationDidHave",
       "type": "radiogroup",
@@ -3403,7 +3428,8 @@
       "collect": true,
       "path": [
         "ASPIRATION-page",
-        "AspirationPanel"
+        "AspirationPanel",
+        "AspirationDidHavePanel"
       ],
       "hasTitle": true,
       "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
@@ -3597,6 +3623,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "NeuropathySymptomsDoesHavePanel": {
+      "name": "NeuropathySymptomsDoesHavePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "NeuropathySymptomsDoesHave": {
       "name": "NeuropathySymptomsDoesHave",
       "type": "radiogroup",
@@ -3604,7 +3642,8 @@
       "collect": true,
       "path": [
         "NEUROPATHY-page",
-        "NeuropathyPanel"
+        "NeuropathyPanel",
+        "NeuropathySymptomsDoesHavePanel"
       ],
       "hasTitle": true,
       "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
@@ -3891,7 +3930,7 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "title": "What if anything would you differently?",
       "hasVisibleIf": true,
       "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
       "isRequired": true

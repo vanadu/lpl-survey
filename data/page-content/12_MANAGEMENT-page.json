@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "ManagementHeading",
-          "html": "<h3>Medical managment of LP/GOLPP</h3>"
+          "html": "<h2>Medical managment of LP/GOLPP</h2>"
         },
         {
           "type": "html",
