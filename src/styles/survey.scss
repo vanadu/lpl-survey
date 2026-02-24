@@ -88,13 +88,27 @@
   padding-right: calc(var(--sd-base-padding) + var(--sv-element-add-padding-right, 10px));
 }
 
-.sd-container-modern .sd-panel__content {
-    // padding: 0!important;
-    // margin-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
-    padding-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
-    padding-bottom: calc(3* (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+// !VA DEFAULT ROW PADDING, NO OVERRIDE - NOTE: This is part of the bottom whitespace on the separator and spacer elements. Also note that the first row in a panel has no top margin as per :first-of-type. 
+.sd-container-modern .sd-row {
+  // !VA Default
+  margin-top: var(--sd-base-vertical-padding);
+  &:first-of-type {
+    // !VA No margin-top on first child element in sd-row
+    margin-top: 0;
+  }
+}
 
-  // background: rgba(0, 0, 255, .3) !important; //devblue
+
+// !VA DEFAULT PANEL CONTENT PADDING - Whitespace above and below the panel content
+.sd-container-modern .sd-panel__content {
+  padding-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  padding-bottom: calc(3* (var(--sjs-base-unit, var(--base-unit, 8px))));
+  // background: rgba(255, 0, 0, .3) !important; //devred
+}
+
+// !VA DEFAULT PANEL MARGIN BETWEEN PANELS - This is set with the top-margin only. Do not use margin-bottom.
+.sd-container-modern .sd-element--nested-with-borders {
+  margin-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
 }
 
 // !VA GLOBAL INPUT STYES
@@ -129,28 +143,31 @@
 
 
 
-
+// !VA H2 DEFAULT: NO PADDING OR MARGIN ON THE H2. Line-height determines whitespace. 
 .sd-container-modern .sd-element__content .sd-html h2 {
   font-family: $secondary_font;
-  // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
-  // line-height: calc(2.125 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-  // background: rgba(255, 0, 0, .3) !important; //devred
+  // !VA Reduced line height
+  line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+  // !VA Added top padding
+  padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
 
-// !VA HTML TAGS 
+// !VA H3 DEFAULT: NO PADDING OR MARGIN ON THE H2. Line-height determines whitespace. 
 .sd-container-modern .sd-element__content .sd-html h3 {
   font-family: $secondary_font;
-  padding: 0!important;
-  margin: 0!important;
+  // !VA Reduced line height
+  line-height: calc(1.5 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+  // !VA Added top padding
+  padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
 
 
-// !VA HTML p, li
+// !VA HTML p, li DEFAULT: NO PADDING ON THESE ELEMENTS
 .sd-container-modern .sd-element__content .sd-html {
   p, li {
       font-size: 1.125rem;
       line-height: 1.613rem;
-      padding: calc(.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+      // padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
   }
   li {
     margin-left: 1.5rem;
@@ -160,12 +177,11 @@
 
 
 // !VA Landing Page - LandingPanel & LandingHeadPanel
-// !VA Version info
-
 // !VA This is how you remove the panel borders AND the padding for those panels responsively for specific panels. Or globally for that matter. 
 [data-name="LandingHeadPanel"].sd-element--nested-with-borders {
     border: 1px transparent var(--sjs-border-light, var(--border-light, #eaeaea))!important;
     padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+
     @include mphone {
     
     }
@@ -220,12 +236,9 @@
 
 .sd-container-modern .landing-title-head {
   font-family: $secondary_font!important;
-  // font-size: var(--sjs-article-font-x-large-fontSize, calc(10 * (var(--sjs-font-size, 16px))))!important;
-  // font-size: var(--sjs-article-font-x-large-fontSize)!important;
-  // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+  // !VA Override the default 
   font-size: calc(1.75 * (var(--sjs-font-size, 16px)));
   text-align: center;
-  background: rgba(255, 255, 0, .3) !important; //devyel
   @include mphone {
   
   }
@@ -594,12 +607,14 @@
   padding: 0; // no padding, spacing goes around the ::after
 }
 
+// !VA WHITESPACE ABOVE and BELOW THE SEPARATOR - the row has   
 .survey-q-separator-below::after {
   content: "";
   display: block;
   width: 600px;
   height: 1px;
-  margin: 1.25rem auto 0; // centers horizontally
+  margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -608,8 +623,6 @@
   display: block;
   width: 600px;
   height: 1px;
-  margin: .75rem auto 0; // centers horizontally
-  // background: rgba(0, 0, 0, 0.05);
 }
 
 

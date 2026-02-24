@@ -171,7 +171,7 @@ const CONTROL_WIDTH_600 = new Set([
 // !VA Works for 
 const QUESTION_SEPARATOR_BELOW = new Set([
   // put question names here (same .name values you already use)
-
+  "CmpnName",
   "UserInfoContactType",
   "UserInfoAgeGroup",
   "UserInfoContactTypeFacebook",

@@ -8,13 +8,18 @@
       "elements": [
         {
           "type": "html",
-          "name": "UserInfoLifeStatusHeading",
+          "name": "UserInfoHead",
           "html": "<h2>Before you start</h2>"
         },
         {
         "type": "html",
-          "name": "UserInfoLifeStatusText",
-          "html": "<p>We know how hard it is to lose one's beloved companion animal. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge. This will help us avoid questions that are inappropriate for your situation.</p>"
+          "name": "UserInfoText1",
+          "html": "<p>If you're still grieving from the loss of your Lar Par companion, maybe it's best to do the survey later when you've had time to heal. </p>"
+        },
+        {
+          "type": "html",
+          "name": "UserInfoText2",
+          "html": "<p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>"
         },
         {
           "type": "panel",
@@ -63,20 +68,19 @@
           "html": "<p>We're asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and verifiable.</p>"
         },
         {
-          "type": "html",
-          "name": "UserInfoVerificationHeading",
-          "html": "<h3>Verification Contact</h3>"
-        },
-        {
-          "type": "html",
-          "name": "UserInfoVerificationPanelText",
-          "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
-        },
-        {
           "type": "panel",
           "name": "UserInfoVerificationPanel", 
           "elements": [
-
+            {
+              "type": "html",
+              "name": "UserInfoVerificationHeading",
+              "html": "<h3>Verification Contact</h3>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoVerificationPanelText",
+              "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
+            },
             {
               "type": "boolean",
               "name": "UserInfoContactType",
@@ -127,8 +131,12 @@
         {
           "type": "panel",
           "name": "UserInfoAboutPanel", 
-          "title": "Your First Name and Country",
           "elements": [
+            {
+              "type": "html",
+              "name": "UserInfoNameCountryHeading",
+              "html": "<h3>Your First Name and Country</h3>"
+            },
             {
               "type": "text",
               "title": "First Name:",
