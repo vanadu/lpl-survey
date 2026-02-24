@@ -14,13 +14,20 @@
 
 // !VA Base font size (desktop)
 .sd-container-modern {
-    --sjs-font-size: 18px
+  --sjs-font-size: 15px;
+  
+  
+  @include ldesktop {
+    --sjs-font-size: 18px;
+  }
+
 }
 
 // !VA FONT SIZE FOR NATIVE ELEMENTS
 .sd-container-modern {
+
   // !VA H2
-  --sjs-article-font-x-large-fontSize: 24px;
+  --sjs-article-font-x-large-fontSize: 18px!important;
     // !VA H3
   --sjs-article-font-large-fontSize: 21px;
   // !VA Body text
@@ -34,6 +41,10 @@
     // font-family: $secondary_font!important;
     --sjs-font-questiontitle-size: 17px;
   }
+
+
+
+
 }
 
 // !VA LINE HEIGHT FOR 
