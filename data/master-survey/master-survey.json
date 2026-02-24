@@ -155,18 +155,18 @@
                 },
                 {
                   "type": "html",
-                  "name": "LandingAboutPrivacyText02",
+                  "name": "LandingAboutPrivacyOrderedList",
                   "html": "<ul><li class='survey-privacy-bullet-list'>Your first name</li><li class='survey-privacy-bullet-list'>Your companion animal's name</li><li class='survey-privacy-bullet-list'>The country in which you live</li><li class='survey-privacy-bullet-list'>Your email address or Facebook account name</li></ul>"
+                },
+                {
+                  "type": "html",
+                  "name": "LandingPrivacyLink",
+                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>"
                 },
                 {
                   "type": "html",
                   "name": "LandingAboutPrivacyText02",
                   "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>"
-                },
-                {
-                  "type": "html",
-                  "name": "LandingPrivacy",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>"
                 }
               ]
             },
@@ -186,8 +186,8 @@
                 },
                 {
                   "type": "html",
-                  "name": "LandingData",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
+                  "name": "LandingConsentLink",
+                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
                 },
                 {
                   "type": "radiogroup",
@@ -338,7 +338,7 @@
                   "name": "UserInfoContactTypeFacebookInstructions",
                   "title": "z",
                   "visibleIf": "{UserInfoContactType} = true",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Info icon' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
+                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Info icon' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
                 },
                 {
                   "type": "text",
@@ -5134,7 +5134,7 @@
             {
               "type": "html",
               "name": "AspirationInfoLink",
-              "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
+              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
             },
             {
               "type": "panel",

@@ -25,9 +25,8 @@
 
 // !VA FONT SIZE FOR NATIVE ELEMENTS
 .sd-container-modern {
-
   // !VA H2
-  --sjs-article-font-x-large-fontSize: 18px!important;
+  --sjs-article-font-x-large-fontSize: 24px!important;
     // !VA H3
   --sjs-article-font-large-fontSize: 21px;
   // !VA Body text
@@ -35,15 +34,6 @@
   // !VA Question titles
   --sjs-font-questiontitle-size: 17px;
   // !VA Panel Titles
-
-  .sd-panel__title {
-    // !VA Panel titles
-    // font-family: $secondary_font!important;
-    --sjs-font-questiontitle-size: 17px;
-  }
-
-
-
 
 }
 
@@ -121,18 +111,29 @@
   margin-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
 }
 
+// !VA DEFAULT PANEL TITLES
 .sd-container-modern .sd-panel__title {
   // font-family: $secondary_font!important;
+  --sjs-font-questiontitle-size: 17px;
   padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
 
-
-
-
-// !VA GLOBAL INPUT STYES
-.sd-container-modern .sd-input {
-  padding: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+// !VA DEFAULT QUESTION STYLES
+// !VA Sets the padding below the question header, i.e. title & description
+.sd-container-modern .sd-question__header--location-top {
+  padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
+
+// !VA GLOBAL INPUT STYlES
+.sd-container-modern .sd-input {
+  padding: calc(.575 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+}
+
+// !VA GLOBAL DROPDOWN STYLES
+.sd-container-modern .sd-dropdown {
+  padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+}
+
 
 // !VA GLOBAL BOOLEAN STYLES
 // !VA Sets the padding between the switch and the outer border
@@ -140,6 +141,8 @@
   // padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   padding: calc(0.25 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
 }
+
+
 
 // !VA Sets the height of the boolean element
 .sd-container-modern .sd-boolean__label, .survey-wrapper .sd-boolean__thumb {
@@ -152,9 +155,6 @@
   margin: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
 }
 
-.sd-container-modern .sd-input.sd-dropdown {
-  padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
-}
 
 
 
@@ -183,8 +183,8 @@
 // !VA HTML p, li DEFAULT: NO PADDING ON THESE ELEMENTS
 .sd-container-modern .sd-element__content .sd-html {
   p, li {
-      font-size: 1.125rem;
-      line-height: 1.613rem;
+      // font-size: 1.125rem;
+      // line-height: 1.613rem;
       // padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
   }
   li {
@@ -456,50 +456,27 @@
   // line-height: calc(1 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
 }
 
-// !VA 2025.12.19 
-// !VA sd-html element overrides.
-// -------------------------------
-.survey-wrapper .sd-html h2 {
-  // font-family: $secondary_font;
-  // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.875 * (var(--sjs-font-size, 16px))));
-  // line-height: calc(2.125 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-}
-
-// !VA OVERRIDES default h3 for sd-html elements.
-.survey-wrapper .sd-html h3 {
-  // font-family: $secondary_font;
-  // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.5 * (var(--sjs-font-size, 16px))));
-  // line-height: calc(1.75 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-}
-
-// !VA OVERRIDES default p for sd-html elements
-.survey-wrapper .sd-html {
-  // p, li {
-  //     font-size: 1.125rem;
-  //     line-height: 1.613rem;
-  //     padding-bottom: .5rem !important;
-  // }
-  // li {
-  //   margin-left: 1.5rem;
-  // }
-}
-
 // !VA INFO icons and links
 // --------------------------
-// !VA .srvy-general-info is the div wrapper that lives inside the HTML element for general info, i.e. info that's not attached to a question label.
-.survey-wrapper .srvy-general-info {
+// !VA .survey-general-info is the div wrapper that lives inside the HTML element for general info, i.e. info that's not attached to a question label.
+.survey-wrapper .survey-general-info {
   // !VA Defaults
+  position: relative;
+  display: block;
+  height: 40px;
   padding-left: 1.25rem;
   text-indent: -1.25rem;
+  padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  // margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
 
-.survey-wrapper .srvy-info-icon {
+.survey-wrapper .survey-info-icon {
   width: 16px;
   height: 16px;
   vertical-align: -2px;
 }
 
-.survey-wrapper .srvy-info-link {
+.survey-wrapper .survey-info-link {
   // --sjs-font-size: 16px!important;
   // !VA Font size override, renders to 16px
   // font-size: calc(1 * (var(--sjs-font-size, 16px)));
@@ -509,20 +486,20 @@
   text-decoration: none;
 }
 
-// !VA Position info label on inputs or other question elements absolutely and move it down 18px. .srvy-input-info is the div wrapper that lives inside the HTML element.
+// !VA Position info label on inputs or other question elements absolutely and move it down 18px. .survey-input-info is the div wrapper that lives inside the HTML element.
 // !VA IMPORTANT -- not sure if this is doing to work.
-.survey-wrapper .srvy-question-info {
+.survey-wrapper .survey-question-info {
   position: absolute;
   bottom: -16px;
 }
 
-.survey-wrapper .srvy-question-info .srvy-info-icon {
+.survey-wrapper .survey-question-info .survey-info-icon {
   width: 14px;
   height: 14px;
   vertical-align: -3px;
 }
 
-.survey-wrapper .srvy-question-info .srvy-info-link {
+.survey-wrapper .survey-question-info .survey-info-link {
   font-size: .813rem;
   color: #B70B0C;
   font-weight: bold;
@@ -637,8 +614,8 @@
   width: 600px;
   height: 1px;
   // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
-  marg: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
-  background: rgba(0, 0, 0, 0.05);
+  margin: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  background: rgba(0, 0, 0, 0.08);
 }
 
 // !VA SEPARATOR BELOW ELEMENT - WHITESPACE ABOVE and BELOW THE SEPARATOR - the row has   
@@ -648,8 +625,8 @@
   width: 600px;
   height: 1px;
   // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
-  marg: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
-  background: rgba(0, 0, 0, 0.05);
+  margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  background: rgba(0, 0, 0, 0.08);
 }
 
 

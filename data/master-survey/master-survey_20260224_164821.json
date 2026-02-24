@@ -114,19 +114,30 @@
                 {
                   "type": "html",
                   "name": "LandingVersion",
-                  "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.21.01</p></div></div>"
+                  "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.24.01</p></div></div>"
                 }
               ]
             },
             {
-              "type": "html",
-              "name": "LandingIntroText01",
-              "html": "<p>You're here because the disease of laryngeal paralysis (LarPar, LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. </p>"
-            },
-            {
-              "type": "html",
-              "name": "LandingLosingCompanion",
-              "html": "<p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
+              "type": "panel",
+              "name": "LandingWelcomePanel",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "LandingWelcomeText",
+                  "html": "<h3>Welcome to the LP/GOLPP Survey 2026</h3>"
+                },
+                {
+                  "type": "html",
+                  "name": "LandingIntroText01",
+                  "html": "<p>You're here because the disease of laryngeal paralysis (LarPar, LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. </p>"
+                },
+                {
+                  "type": "html",
+                  "name": "LandingLosingCompanion",
+                  "html": "<p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
+                }
+              ]
             },
             {
               "type": "panel",
@@ -140,22 +151,22 @@
                 {
                   "type": "html",
                   "name": "LandingAboutPrivacyText01",
-                  "html": "<p>We're not asking for your last name, so we have no way to connect you with any of your private data. We need only four pieces of information to verify survey results:</p>"
+                  "html": "<p>We only need four pieces of information to verify survey results:</p>"
                 },
                 {
                   "type": "html",
-                  "name": "LandingAboutPrivacyText02",
+                  "name": "LandingAboutPrivacyOrderedList",
                   "html": "<ul><li class='survey-privacy-bullet-list'>Your first name</li><li class='survey-privacy-bullet-list'>Your companion animal's name</li><li class='survey-privacy-bullet-list'>The country in which you live</li><li class='survey-privacy-bullet-list'>Your email address or Facebook account name</li></ul>"
+                },
+                {
+                  "type": "html",
+                  "name": "LandingPrivacyLink",
+                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>"
                 },
                 {
                   "type": "html",
                   "name": "LandingAboutPrivacyText02",
                   "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>"
-                },
-                {
-                  "type": "html",
-                  "name": "LandingPrivacy",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>"
                 }
               ]
             },
@@ -175,8 +186,8 @@
                 },
                 {
                   "type": "html",
-                  "name": "LandingData",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
+                  "name": "LandingConsentLink",
+                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
                 },
                 {
                   "type": "radiogroup",
@@ -239,13 +250,18 @@
           "elements": [
             {
               "type": "html",
-              "name": "UserInfoLifeStatusHeading",
-              "html": "<h2>Before We Begin</h2>"
+              "name": "UserInfoHead",
+              "html": "<h2>Before You Begin</h2>"
             },
             {
               "type": "html",
-              "name": "UserInfoLifeStatusText",
-              "html": "<p>We know how hard it is to lose one's beloved companion animal. If you're still grieving from the loss, maybe it's best to do the survey later when you've had time to heal. </p><p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge. This will help us avoid questions that are inappropriate for your situation.</p>"
+              "name": "UserInfoText1",
+              "html": "<p>If you're still grieving from the loss of your Lar Par companion, maybe it's best to do the survey later when you've had time to heal. </p>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoText2",
+              "html": "<p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>"
             },
             {
               "type": "panel",
@@ -292,19 +308,15 @@
               "html": "<p>We're asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and verifiable.</p>"
             },
             {
-              "type": "html",
-              "name": "UserInfoVerificationHeading",
-              "html": "<h3>Verification Contact</h3>"
-            },
-            {
-              "type": "html",
-              "name": "UserInfoVerificationPanelText",
-              "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
-            },
-            {
               "type": "panel",
               "name": "UserInfoVerificationPanel",
+              "title": "Verification Contact",
               "elements": [
+                {
+                  "type": "html",
+                  "name": "UserInfoVerificationPanelText",
+                  "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
+                },
                 {
                   "type": "boolean",
                   "name": "UserInfoContactType",
@@ -326,7 +338,7 @@
                   "name": "UserInfoContactTypeFacebookInstructions",
                   "title": "z",
                   "visibleIf": "{UserInfoContactType} = true",
-                  "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Info icon' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
+                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Info icon' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
                 },
                 {
                   "type": "text",
@@ -568,7 +580,7 @@
             {
               "type": "panel",
               "name": "dcsdCmpnInfoAgePanel",
-              "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+              "title": "<p>At about what age did {CmpnName} cross over the Rainbow Bridge?</p>",
               "description": "Please enter years and months",
               "visibleIf": "{LifeStatus} = true",
               "elements": [
@@ -1208,7 +1220,7 @@
                       "text": "Sedative"
                     },
                     {
-                      "value": "STERIOD",
+                      "value": "STEROID",
                       "text": "Steroid, i.e., prednisone"
                     },
                     {
@@ -1225,7 +1237,7 @@
                 {
                   "type": "dropdown",
                   "name": "BreathingCrisisSubstanceForm",
-                  "title": "In what form was the sedative or steriod provided?",
+                  "title": "In what form was the sedative or steroid provided?",
                   "isRequired": true,
                   "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
                   "choices": [
@@ -2128,7 +2140,7 @@
                     },
                     {
                       "value": "DONT_KNOW",
-                      "text": "Don't know or prefer not to say"
+                      "text": "Don't know"
                     }
                   ]
                 },
@@ -3625,7 +3637,7 @@
             {
               "type": "html",
               "name": "ManagementHeading",
-              "html": "<h3>Medical managment of LP/GOLPP</h3>"
+              "html": "<h2>Medical managment of LP/GOLPP</h2>"
             },
             {
               "type": "html",
@@ -4864,7 +4876,7 @@
             {
               "type": "html",
               "name": "OTCProductsHeading",
-              "html": "<h3>OTC (Over-The-Counter) Products for LP/GOLPP</h3>"
+              "html": "<h2>2OTC (Over-The-Counter) Products for LP/GOLPP</h2>"
             },
             {
               "type": "html",
@@ -5112,7 +5124,7 @@
             {
               "type": "html",
               "name": "AspirationHeading",
-              "html": "<h3>{CmpnName}'s experience with aspiration pneumonia</h3>"
+              "html": "<h2>{CmpnName}'s experience with aspiration pneumonia</h2>"
             },
             {
               "type": "html",
@@ -5122,28 +5134,34 @@
             {
               "type": "html",
               "name": "AspirationInfoLink",
-              "html": "<div class='srvy-general-info'><img src='/img-info-icon.png' class='srvy-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='srvy-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
+              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
             },
             {
-              "type": "radiogroup",
-              "name": "AspirationDidHave",
-              "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
-              "isRequired": true,
-              "choices": [
+              "type": "panel",
+              "name": "AspirationDidHavePanel",
+              "elements": [
                 {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
+                  "type": "radiogroup",
+                  "name": "AspirationDidHave",
+                  "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
                 }
-              ],
-              "showOtherItem": false
+              ]
             },
             {
               "type": "panel",
@@ -5395,7 +5413,7 @@
             {
               "type": "html",
               "name": "NeuropathyHeading",
-              "html": "<h3>Hind-end weakness and polyneuropathy</h3>"
+              "html": "<h2>Hind-end weakness and polyneuropathy</h2>"
             },
             {
               "type": "html",
@@ -5408,25 +5426,31 @@
               "html": "<p><b>NOTE:</b> Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly in the hind end. Symptoms can include hind-end weakness and incontinence. Younger dogs with idiopathic LP often don't suffer from LP-related polyneuropathy.</p>"
             },
             {
-              "type": "radiogroup",
-              "name": "NeuropathySymptomsDoesHave",
-              "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
-              "isRequired": true,
-              "choices": [
+              "type": "panel",
+              "name": "NeuropathySymptomsDoesHavePanel",
+              "elements": [
                 {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "NOT_SURE",
-                  "text": "Not sure"
+                  "type": "radiogroup",
+                  "name": "NeuropathySymptomsDoesHave",
+                  "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "NOT_SURE",
+                      "text": "Not sure"
+                    }
+                  ],
+                  "showOtherItem": false
                 }
-              ],
-              "showOtherItem": false
+              ]
             },
             {
               "type": "panel",
@@ -5591,7 +5615,12 @@
             {
               "type": "html",
               "name": "ConclusionHeading",
-              "html": "<h3>Conclusions</h3>"
+              "html": "<h2>Conclusion</h2>"
+            },
+            {
+              "type": "html",
+              "name": "Conclusion",
+              "html": "<p>The last section of this survey references your earlier responses to determine how {CmpnName}'s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression. </p>"
             },
             {
               "type": "panel",
@@ -5601,12 +5630,7 @@
                 {
                   "type": "html",
                   "name": "Conclusion",
-                  "html": "<p>The last section of this survey references your earlier responses to determine how {CmpnName}'s LP/GOLPP developed over time. </p>"
-                },
-                {
-                  "type": "html",
-                  "name": "Conclusion",
-                  "html": "<p><b>NOTE:</b>These questions ask about the last station of {CmpnName}'s LP/GOLPP journey before {cvGenderSubjectPronoun} crossed over the Rainbow Bridge. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later. </p>"
+                  "html": "<p><b>NOTE: </b>These questions ask about the last station of {CmpnName}'s LP/GOLPP journey before {cvGenderSubjectPronoun} crossed over the Rainbow Bridge. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later. </p>"
                 }
               ]
             },
@@ -5617,13 +5641,8 @@
               "elements": [
                 {
                   "type": "html",
-                  "name": "Conclusion",
-                  "html": "<p>The last survey section asks questions about the current state of {CmpnName}'s LP/GOLPP. By comparing your answers here to answers you provided earlier, we hope to get a picture of how {cvGenderObjectPronoun} condition changed over time and what factors may have played a role in the LP/GOLPP progression</p>"
-                },
-                {
-                  "type": "html",
                   "name": "ConclusionIntro",
-                  "html": "<p><b>IMPORTANT:</b> Please answer the questions about {CmpnName} in his current state of health:</p>"
+                  "html": "<p><b>IMPORTANT:</b> Please answer the questions about {CmpnName} in {cvGenderObjectPronoun} current state of health:</p>"
                 }
               ]
             },
@@ -5856,7 +5875,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathTieback",
-                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+                  "title": "What if anything would you differently?",
                   "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
                   "isRequired": true,
                   "choices": [
@@ -6018,7 +6037,7 @@
                     },
                     {
                       "value": "DONT_KNOW",
-                      "text": "I don't know enough about it"
+                      "text": "Don't know"
                     }
                   ],
                   "showOtherItem": false
