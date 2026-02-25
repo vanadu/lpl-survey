@@ -182,6 +182,7 @@
               "title": "How would you describe {CmpnName}'s demeanor?",
               "description": "1 = very calm, 5 = very energetic",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

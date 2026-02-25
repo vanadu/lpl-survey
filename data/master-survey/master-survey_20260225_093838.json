@@ -94,7 +94,6 @@
     }
   ],
   "showProgressBar": "top",
-  "questionsOnPageMode": "questionPerPage",
   "pages": [
     {
       "name": "LANDING-page",

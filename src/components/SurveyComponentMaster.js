@@ -182,9 +182,15 @@ export default function SurveyComponentMaster() {
 
   const [survey] = useState(() => {
     const surveyModel = new Model(masterSurvey);
+
+
+
+    console.log("questionsOnPageMode:", surveyModel.questionsOnPageMode);
     surveyModel.showCompletedPage = false;
     surveyModel.applyTheme(SharpLight);
-    surveyModel.showNavigationButtons = false;
+    // !VA Flip showNavigationButtons on to test Card View
+    // surveyModel.showNavigationButtons = false;
+    surveyModel.showNavigationButtons = true;
     // !VA Assign data-name attribute to all SurveyJS panels, otherwise they'll be arbitrarily assigned and not targetable as selectors
     attachPanelDataNameStamper(surveyModel, { registry });
     // !VA Apply the directives for SurveyJS DOM targeting that allow applying styles to panels, dropdowns, checkboxes and other elements separately: 
@@ -200,17 +206,6 @@ export default function SurveyComponentMaster() {
     return surveyModel;
   });
 
-
-  // !VA Prefill the survey with the selections in /helpers/prefill.json
-  // useEffect(() => {
-    // if (!survey) return;
-  //   if (!PREFILL_ENABLED) return;
-  //   if (!prefillData || typeof prefillData !== "object") return;
-
-  //   // Re-apply prefills after Fast Refresh
-  //   survey.data = { ...prefillData };
-  //   survey.render();
-  // }, [survey]);
 
   useEffect(() => {
     if (!survey) return;
@@ -232,10 +227,6 @@ export default function SurveyComponentMaster() {
       cancelled = true;
     };
   }, [survey, PREFILL_ENABLED]);
-
-
-
-
 
   // FADE-IN: show only after SurveyJS render + directives + fonts are settled. Only applies to the initial page load.
   useEffect(() => {
@@ -276,20 +267,20 @@ export default function SurveyComponentMaster() {
   }, [survey]);
 
   // Auto-advance consent
-  useEffect(() => {
-    function handleConsentChange(sender, options) {
-      if (
-        sender.currentPageNo === CONSENT_PAGE_INDEX &&
-        options.name === CONSENT_QUESTION &&
-        options.value === "Yes"
-      ) {
-        sender.showNavigationButtons = true;
-        sender.nextPage();
-      }
-    }
-    survey.onValueChanged.add(handleConsentChange);
-    return () => survey.onValueChanged.remove(handleConsentChange);
-  }, [survey]);
+  // useEffect(() => {
+  //   function handleConsentChange(sender, options) {
+  //     if (
+  //       sender.currentPageNo === CONSENT_PAGE_INDEX &&
+  //       options.name === CONSENT_QUESTION &&
+  //       options.value === "Yes"
+  //     ) {
+  //       sender.showNavigationButtons = true;
+  //       sender.nextPage();
+  //     }
+  //   }
+  //   survey.onValueChanged.add(handleConsentChange);
+  //   return () => survey.onValueChanged.remove(handleConsentChange);
+  // }, [survey]);
 
   // Apply selections from one question to questions that come later. There are currently only two of these, so we'll do it here. Ideally, we would pull the element names out and put them in a separate file in /helpers
   useEffect(() => {

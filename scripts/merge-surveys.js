@@ -378,6 +378,7 @@ const calculatedValues = readJson(path.resolve(__dirname, "../helpers/calculated
     calculatedValues,
     // title: "Master Survey Build",
     showProgressBar: "top",
+    questionsOnPageMode: "questionPerPage",
     pages,
   };
 
