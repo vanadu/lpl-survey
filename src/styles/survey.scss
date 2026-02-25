@@ -7,28 +7,23 @@
   background: $home_bg_color;
 }
 
-// !VA Base unit
+// !VA Base unit and font size
 .sd-container-modern {
   --sjs-base-unit: 8px;
-}
-
-// !VA Base font size (desktop)
-.sd-container-modern {
   --sjs-font-size: 15px;
-  
-  
+
   @include ldesktop {
     --sjs-font-size: 18px;
   }
-
 }
+
 
 // !VA FONT SIZE FOR NATIVE ELEMENTS
 .sd-container-modern {
-  // !VA H2
-  --sjs-article-font-x-large-fontSize: 24px!important;
+
+  --sjs-article-font-x-large-fontSize: 24px!important;  // !VA H2
     // !VA H3
-  --sjs-article-font-large-fontSize: 21px;
+  --sjs-article-font-large-fontSize: 21px; // !VA H3
   // !VA Body text
   --sjs-article-font-default-fontSize: 18px;
   // !VA Question titles
