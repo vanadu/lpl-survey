@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import SurveyComponentMaster from '@/components/SurveyComponentMaster'
 import SurveyComponent from '@/components/SurveyComponent'
-import SurveyMenu from '@/components/SurveyMenu'
+import SurveyDevMenu from '@/components/SurveyDevMenu'
 
 import { NextSeo } from 'next-seo'
 
@@ -28,7 +28,7 @@ const Home = () => {
         />
       <section className="section">
         <div className="section_content">
-          <SurveyMenu />
+          <SurveyDevMenu />
 
 
 

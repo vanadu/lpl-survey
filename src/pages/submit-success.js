@@ -8,7 +8,7 @@ import { NextSeo } from 'next-seo'
 // !VA Survey Components
 // import SurveyComponentMaster from '@/components/SurveyComponentMaster'
 // import SurveyComponent from '@/components/SurveyComponent'
-import SurveyMenu from '@/components/SurveyMenu'
+import SurveyDevMenu from '@/components/SurveyDevMenu'
 import SurveySuccess from '@/components/SurveySuccess'
 
 
@@ -17,7 +17,7 @@ const SuccessPage = () => {
     <>  
       <section className="section">
         <div className="section_content">
-          {/* <SurveyMenu /> */}
+          {/* <SurveyDevMenu /> */}
 
           <SurveySuccess />
 

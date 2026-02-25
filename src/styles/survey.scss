@@ -1,5 +1,17 @@
 @import './variables.scss';
 
+// !VA NAV MODS
+/* Hide the default bottom navigation buttons */
+.sd-navigation,
+.sd-body__navigation,
+.sd-footer,
+.sd-action-bar {
+  display: none !important;
+}
+
+
+
+
 // !VA GLOBAL DEFINITIONS
 
 // !VA Background color

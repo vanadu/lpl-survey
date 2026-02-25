@@ -11,7 +11,7 @@ import { NextSeo } from 'next-seo'
 // !VA Survey Components
 // import SurveyComponentMaster from '@/components/SurveyComponentMaster'
 // import SurveyComponent from '@/components/SurveyComponent'
-import SurveyMenu from '@/components/SurveyMenu'
+import SurveyDevMenu from '@/components/SurveyDevMenu'
 import InProgressComponent from '@/components/InProgressComponent';
 
 

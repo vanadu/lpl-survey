@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
-const SurveyHeader = () => {
+const SurveyDevMenu = () => {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
   const buttonRef = useRef(null);
@@ -161,4 +161,4 @@ const SurveyHeader = () => {
   );
 };
 
-export default SurveyHeader;
+export default SurveyDevMenu;

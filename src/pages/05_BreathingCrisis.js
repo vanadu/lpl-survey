@@ -1,6 +1,6 @@
 import React from 'react'
 import SurveyComponent from '@/components/SurveyComponent'
-import SurveyMenu from '@/components/SurveyMenu'
+import SurveyDevMenu from '@/components/SurveyDevMenu'
 import Link from 'next/link';
 
 const BreathingCrisis = () => {
@@ -8,7 +8,7 @@ const BreathingCrisis = () => {
       <section className="section">
         <div className="section_content">
 
-          <SurveyMenu />
+          <SurveyDevMenu />
 
           <div className="survey-wrapper">
             <SurveyComponent startPageName = 'BREATHING_CRISIS-page' />
