@@ -1,10 +1,7 @@
 {
   "name": "CONCLUSION-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "ConclusionPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "ConclusionHeading",
@@ -447,8 +444,7 @@
               "isRequired": false
             }
           ]
-        }
-      ]
+
     }
   ]
 }

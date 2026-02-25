@@ -1,10 +1,7 @@
 {
   "name": "INTUBATION_HISTORY-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "IntubationHistoryPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "IntubationHistoryHeading",
@@ -112,8 +109,7 @@
               "showOtherItem": true
             }
           ]
-        }
-      ]
+
     }
   ]
 }

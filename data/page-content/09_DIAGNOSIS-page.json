@@ -1,10 +1,7 @@
 {
   "name": "DIAGNOSIS-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "DiagnosisPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "DiagnosisHeading",
@@ -188,8 +185,6 @@
           ]
         }
 
-      ]
-    }
 
 
   ]

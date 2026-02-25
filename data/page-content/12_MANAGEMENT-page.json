@@ -1,10 +1,7 @@
 {
   "name": "MANAGEMENT-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "ManagementPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "ManagementHeading",
@@ -704,7 +701,6 @@
             }
           ]
         }
-      ]
-    }
+
   ]
 }

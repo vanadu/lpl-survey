@@ -1,10 +1,7 @@
 {
   "name": "PRIMARY_VET-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "PrimaryVetPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "PrimaryVetHeading",
@@ -265,7 +262,6 @@
             }
           ]
         }
-      ]
-    }
+
   ]
 }

@@ -3,24 +3,17 @@
   "elements": [
     {
       "type": "panel",
-      "name": "LandingPanel",
+      "name": "LandingHeadPanel",
       "elements": [
-
         {
-          "type": "panel",
-          "name": "LandingHeadPanel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "LandingTitleHead",
-              "html": "<div class='landing-title'><h2 class='landing-title-head'>LP/GOLPP Survey 2026</h2><p class='landing-title-subhead'>Powered by LarParLife.org</p></div>"
-            },
-            {
-              "type": "html",
-              "name": "LandingVersion",
-              "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.24.01</p></div></div>"
-            }
-          ]
+          "type": "html",
+          "name": "LandingTitleHead",
+          "html": "<div class='landing-title'><h2 class='landing-title-head'>LP/GOLPP Survey 2026</h2><p class='landing-title-subhead'>Powered by LarParLife.org</p></div>"
+        },
+        {
+          "type": "html",
+          "name": "LandingVersion",
+          "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.24.01</p></div></div>"
         },
         {
           "type": "panel",
@@ -35,122 +28,72 @@
               "type": "html",
               "name": "LandingIntroText01",
               "html": "<p>You're here because the disease of laryngeal paralysis (LarPar, LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. </p>"
-            },
-
-            {
-              "type": "html",
-              "name": "LandingLosingCompanion",
-              "html": "<p>We know how hard it is to lose one's beloved companion. If your companion has recently crossed over the Rainbow Bridge, maybe it's best to do the survey later when you've had time to heal.</p>"
             }
-    
-          ]
-        },
-
-        {
-          "type": "panel",
-          "name": "LandingPrivacyPanel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "LandingAboutPrivacyHeading",
-              "html": "<h3>About your privacy and personal information</h3>"
-            },
-            {
-              "type": "html",
-              "name": "LandingAboutPrivacyText01",
-              "html": "<p>We only need four pieces of information to verify survey results:</p>"
-            },
-            {
-              "type": "html",
-              "name": "LandingAboutPrivacyOrderedList",
-              "html": "<ul><li class='survey-privacy-bullet-list'>Your first name</li><li class='survey-privacy-bullet-list'>Your companion animal's name</li><li class='survey-privacy-bullet-list'>The country in which you live</li><li class='survey-privacy-bullet-list'>Your email address or Facebook account name</li></ul>"
-            },
-            {
-              "type": "html",
-              "name": "LandingPrivacyLink",
-              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>"
-            },
-            {
-              "type": "html",
-              "name": "LandingAboutPrivacyText02",
-              "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "LandingConsentPanel",
-          "elements": [
-              {
-              "type": "html",
-              "name": "LandingAboutConsentHeading",
-              "html": "<h3>About our Consent Policy</h3>"
-              },
-              {
-                "type": "html",
-                "name": "LandingConsentText",
-                "html": "<p>By selecting 'Yes' below, you confirm that you agree to the terms of our Consent Policy.</p>"
-              },
-              {
-                "type": "html",
-                "name": "LandingConsentLink",
-                "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
-              },
-              {
-                "type": "radiogroup",
-                "name": "LandingConsent",
-                "title": "Do you want to proceed with the survey in accordance with our Consent Policy?",
-                "choices": [
-                  "Yes",
-                  "No"
-                ],
-                "isRequired": true
-              }
           ]
         }
-
       ]
     },
     {
       "type": "panel",
-      "name": "LandingTestPanel",
+      "name": "LandingPrivacyPanel",
       "elements": [
-      {
-        "type": "html",
-        "name": "cvTreatmentType",
-        "html": "<p class='landing-survey-test'>Treatment type = {cvTreatmentType}"
-      },
-      {
-        "type": "html",
-        "name": "cvLvngCmpnAgeTotalMonths",
-        "html": "<p class='landing-survey-test'>cvLvngCmpnAgeTotalMonths = {cvLvngCmpnAgeTotalMonths}"
-      },
-      {
-        "type": "html",
-        "name": "cvDcsdCmpnAgeTotalMonths",
-        "html": "<p class='landing-survey-test'>cvDcsdCmpnAgeTotalMonths = {cvDcsdCmpnAgeTotalMonths}"
-      },
-      {
-        "type": "html",
-        "name": "cvAgeInMonths",
-        "html": "<p class='landing-survey-test'>cvAgeInMonths = {cvAgeInMonths}"
-      },
-
-
-      {
-        "type": "html",
-        "name": "cvAgeInMonthsAtSymptomOnset",
-        "html": "<p class='landing-survey-test'>cvAgeInMonthsAtSymptomOnset = {cvAgeInMonthsAtSymptomOnset}</p>"
-      },
-
-      {
-        "type": "html",
-        "name": "cvDurationOfSymptomsInMonths",
-        "html": "<p class='landing-survey-test'>cvDurationOfSymptomsInMonths = {cvDurationOfSymptomsInMonths}</p>"
-      }
-
+        {
+          "type": "html",
+          "name": "LandingAboutPrivacyHeading",
+          "html": "<h3>About your privacy and personal information</h3>"
+        },
+        {
+          "type": "html",
+          "name": "LandingAboutPrivacyText01",
+          "html": "<p>We only need four pieces of information to verify survey results:</p>"
+        },
+        {
+          "type": "html",
+          "name": "LandingAboutPrivacyOrderedList",
+          "html": "<ul><li class='survey-privacy-bullet-list'>Your first name</li><li class='survey-privacy-bullet-list'>Your companion animal's name</li><li class='survey-privacy-bullet-list'>The country in which you live</li><li class='survey-privacy-bullet-list'>Your email address or Facebook account name</li></ul>"
+        },
+        {
+          "type": "html",
+          "name": "LandingPrivacyLink",
+          "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>"
+        },
+        {
+          "type": "html",
+          "name": "LandingAboutPrivacyText02",
+          "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>"
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "LandingConsentPanel",
+      "elements": [
+          {
+          "type": "html",
+          "name": "LandingAboutConsentHeading",
+          "html": "<h3>About our Consent Policy</h3>"
+          },
+          {
+            "type": "html",
+            "name": "LandingConsentText",
+            "html": "<p>By selecting 'Yes' below, you confirm that you agree to the terms of our Consent Policy.</p>"
+          },
+          {
+            "type": "html",
+            "name": "LandingConsentLink",
+            "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
+          },
+          {
+            "type": "radiogroup",
+            "name": "LandingConsent",
+            "title": "Do you want to proceed with the survey in accordance with our Consent Policy?",
+            "choices": [
+              "Yes",
+              "No"
+            ],
+            "isRequired": true
+          }
       ]
     }
-
   ]
 }

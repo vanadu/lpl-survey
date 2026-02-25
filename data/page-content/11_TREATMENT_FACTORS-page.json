@@ -1,10 +1,7 @@
 {
   "name": "TREATMENT_FACTORS-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "TreatmentFactorsPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "TreatmentFactorsHeading",
@@ -280,7 +277,6 @@
             }
           ]
         }
-      ]
-    }
+
   ]
 }

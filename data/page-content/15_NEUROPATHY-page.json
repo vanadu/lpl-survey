@@ -1,10 +1,7 @@
 {
   "name": "NEUROPATHY-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "NeuropathyPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "NeuropathyHeading",
@@ -210,7 +207,6 @@
           ]
         }
 
-      ]
-    }
+
   ]
 }

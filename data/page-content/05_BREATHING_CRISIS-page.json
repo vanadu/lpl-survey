@@ -1,10 +1,7 @@
 {
   "name": "BREATHING_CRISIS-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "BreathingCrisisPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "BreathingCrisis",
@@ -231,8 +228,7 @@
             "showNoneItem": true
             }
           ]
-        }
-      ]
+
     }
   ]
 }

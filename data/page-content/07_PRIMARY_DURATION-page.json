@@ -1,10 +1,6 @@
 {
   "name": "PRIMARY_DURATION-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "PrimaryDurationPanel",
-      "elements": [
         {
           "type": "html",
           "name": "PrimaryDurationHeading",
@@ -183,7 +179,5 @@
         }
 
 
-      ]
-    }
   ]
 }

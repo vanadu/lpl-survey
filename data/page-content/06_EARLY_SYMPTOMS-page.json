@@ -1,10 +1,7 @@
 {
   "name": "EARLY_SYMPTOMS-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "EarlySymptomsPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "EarlySymptomsHeading",
@@ -222,8 +219,7 @@
               "showOtherItem": true
             }
           ]
-        }
-      ]
+
     }
   ]
 }

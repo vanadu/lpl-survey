@@ -1,10 +1,7 @@
 {
   "name": "ASPIRATION-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "AspirationPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "AspirationHeading",
@@ -290,8 +287,7 @@
               ]
             }
           ]
-        }
-      ]
+
     }
   ]
 }

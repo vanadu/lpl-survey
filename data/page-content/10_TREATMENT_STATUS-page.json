@@ -1,10 +1,7 @@
 {
   "name": "TREATMENT_STATUS-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "TreatmentStatusPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "TreatmentStatusHeading",
@@ -998,8 +995,7 @@
           ]
         }
 
-      ]
-    }
+
 
   ]
 }

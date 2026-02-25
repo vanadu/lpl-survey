@@ -1,10 +1,7 @@
 {
   "name": "INFO_SOURCES-page",
   "elements": [
-    {
-      "type": "panel",
-      "name": "InfoSourcesPanel",
-      "elements": [
+
         {
           "type": "html",
           "name": "InfoSourcesHeading",
@@ -123,8 +120,7 @@
               ]
             }
           ]
-        }
-      ]
+
     }
   ]
 }

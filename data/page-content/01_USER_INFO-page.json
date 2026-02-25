@@ -2,29 +2,25 @@
   "name": "USER_INFO-page",
   "elements": [
 
-    {
-      "type": "panel",
-      "name": "UserInfoPanel",
-      "elements": [
-        {
-          "type": "html",
-          "name": "UserInfoHead",
-          "html": "<h2>Before You Begin</h2>"
-        },
-        {
-        "type": "html",
-          "name": "UserInfoText1",
-          "html": "<p>If you're still grieving from the loss of your Lar Par companion, maybe it's best to do the survey later when you've had time to heal. </p>"
-        },
-        {
-          "type": "html",
-          "name": "UserInfoText2",
-          "html": "<p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>"
-        },
         {
           "type": "panel",
-          "name": "UserInfoLifeStatusDetailsPanel",
+          "name": "UserInfoHeadPanel",
           "elements": [
+            {
+              "type": "html",
+              "name": "UserInfoHead",
+              "html": "<h2>Before You Begin</h2>"
+            },
+            {
+            "type": "html",
+              "name": "UserInfoText1",
+              "html": "<p>If you're still grieving from the loss of your Lar Par companion, maybe it's best to do the survey later when you've had time to heal. </p>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoText2",
+              "html": "<p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>"
+            },
             {
             "type": "text",
             "name": "CmpnName",
@@ -54,9 +50,10 @@
               "imageHeight": 120,
               "showLabel": true
             }
-
+    
           ]
         },
+
         {
           "type": "html",
           "name": "UserInfoHeading",
@@ -242,7 +239,6 @@
           ]
         }
 
-      ]
-    }
+ 
   ]
 }

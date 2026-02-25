@@ -3,11 +3,6 @@
   "elements": [
 
 
-    {
-      "type": "panel",
-      "name": "CmpnInfoPanel",
-      "visibleIf": "{LifeStatus} notempty",
-      "elements": [
         {
           "type": "html",
           "name": "CmpnInfoHeading",
@@ -215,7 +210,6 @@
           ]
         }
     
-      ]
-    }
+
   ]
 }
