@@ -1,7 +1,10 @@
 {
   "name": "ASPIRATION-page",
   "elements": [
-
+    {
+      "type": "panel",
+      "name": "AspirationHeadPanel",
+      "elements": [
         {
           "type": "html",
           "name": "AspirationHeading",
@@ -11,237 +14,238 @@
           "type": "html",
           "name": "AspirationText",
           "html": "<p>Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This sections asks questions about {CmpnName}'s experience with AP. </p>"
-          
         },
         {
           "type": "html",
           "name": "AspirationInfoLink",
           "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
-        },
-        {
-          "type": "panel",
-          "name": "AspirationDidHavePanel",
-          "elements": [
-            {
-              "type": "radiogroup",
-              "name": "AspirationDidHave",
-              "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
-            }
-          ]
-        },
+        }
+      ]
+    },
 
+    {
+      "type": "panel",
+      "name": "AspirationDidHavePanel",
+      "elements": [
         {
-          "type": "panel",
-          "name": "AspirationGeneralPanel",
-          "visibleIf": "{AspirationDidHave} = 'YES'",
-          "elements": [
+          "type": "radiogroup",
+          "name": "AspirationDidHave",
+          "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
+          "isRequired": true,
+          "choices": [
             {
-            "type": "dropdown",
-            "name": "AspirationCount",
-            "title": "How many times did {CmpnName} get AP?",
-            "isRequired": true,
-            "visibleIf": "{AspirationDidHave} = 'YES'",
-            "choices": [
-              {
-                "value": "ONE",
-                "text": "Once"
-              },
-              {
-                "value": "TWO",
-                "text": "Twice"
-              },
-              {
-                "value": "THREE",
-                "text": "Three times"
-              },
-              {
-                "value": "MORE_THAN_THREE",
-                "text": "More than three times"
-              }
-            ],
-            "showOtherItem": false
+              "value": "YES",
+              "text": "Yes"
             },
             {
-              "type": "radiogroup",
-              "name": "AspirationInpatient",
-              "title": "Did {CmpnName} ever need inpatient, overnight, or emergency care for AP?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
+              "value": "NO",
+              "text": "No"
             },
             {
-              "type": "dropdown",
-              "name": "AspirationInpatientCount",
-              "visibleIf": "{AspirationInpatient} = 'YES'",
-              "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "ONE",
-                  "text": "Once"
-                },
-                {
-                  "value": "TWO",
-                  "text": "Twice"
-                },
-                {
-                  "value": "THREE",
-                  "text": "Three times"
-                },
-                {
-                  "value": "MORE_THAN_THREE",
-                  "text": "More than three times"
-                }
-              ],
-              "showOtherItem": false
+              "value": "DONT_KNOW",
+              "text": "Don't know"
             }
-          ]
+          ],
+          "showOtherItem": false
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "AspirationGeneralPanel",
+      "visibleIf": "{AspirationDidHave} = 'YES'",
+      "elements": [
+        {
+        "type": "dropdown",
+        "name": "AspirationCount",
+        "title": "How many times did {CmpnName} get AP?",
+        "isRequired": true,
+        "visibleIf": "{AspirationDidHave} = 'YES'",
+        "choices": [
+          {
+            "value": "ONE",
+            "text": "Once"
+          },
+          {
+            "value": "TWO",
+            "text": "Twice"
+          },
+          {
+            "value": "THREE",
+            "text": "Three times"
+          },
+          {
+            "value": "MORE_THAN_THREE",
+            "text": "More than three times"
+          }
+        ],
+        "showOtherItem": false
         },
         {
-          "type": "panel",
-          "name": "AspirationSurgeryPanel",
-          "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = YES",
-          "elements": [
-
+          "type": "radiogroup",
+          "name": "AspirationInpatient",
+          "title": "Did {CmpnName} ever need inpatient, overnight, or emergency care for AP?",
+          "isRequired": true,
+          "choices": [
             {
-              "type": "radiogroup",
-              "name": "AspirationSurgeryPost",
-              "title": "Did {CmpnName} ever have AP after the surgery (i.e., tieback, BVEAP)?",
-              "description": "Includes tieback, BVEAP, ventrilocordectomy, arytenoidectomy and other invasive surgery procedures.",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
+              "value": "YES",
+              "text": "Yes"
             },
-
             {
-              "type": "dropdown",
-              "name": "AspirationSurgeryPostCount",
-              "title": "How many times did {CmpnName} get AP after the surgery?",
-              "isRequired": true,
-              "visibleIf": "{AspirationSurgeryPost} = YES",
-              "choices": [
-                {
-                  "value": "ONE",
-                  "text": "Once"
-                },
-                {
-                  "value": "TWO",
-                  "text": "Twice"
-                },
-                {
-                  "value": "THREE",
-                  "text": "Three times"
-                },
-                {
-                  "value": "MORE_THAN_THREE",
-                  "text": "More than three times"
-                }
-              ],
-              "showOtherItem": false
-            }
-    
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "AspirationStentPanel",
-          "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = YES",
-          "elements": [
-
-            {
-              "type": "radiogroup",
-              "name": "AspirationStentPost",
-              "title": "Did {CmpnName} ever have AP after the stent implant procedure?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
+              "value": "NO",
+              "text": "No"
             },
-
             {
-              "type": "dropdown",
-              "name": "AspirationStentPostCount",
-              "title": "How many times did {CmpnName} get AP after the stent implant?",
-              "isRequired": true,
-              "visibleIf": "{AspirationStentPost} = YES",
-              "choices": [
-                {
-                  "value": "ONE",
-                  "text": "Once"
-                },
-                {
-                  "value": "TWO",
-                  "text": "Twice"
-                },
-                {
-                  "value": "THREE",
-                  "text": "Three times"
-                },
-                {
-                  "value": "MORE_THAN_THREE",
-                  "text": "More than three times"
-                }
-              ],
-              "showOtherItem": false
+              "value": "DONT_KNOW",
+              "text": "Don't know"
             }
-    
-          ]
+          ],
+          "showOtherItem": false
         },
         {
+          "type": "dropdown",
+          "name": "AspirationInpatientCount",
+          "visibleIf": "{AspirationInpatient} = 'YES'",
+          "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "ONE",
+              "text": "Once"
+            },
+            {
+              "value": "TWO",
+              "text": "Twice"
+            },
+            {
+              "value": "THREE",
+              "text": "Three times"
+            },
+            {
+              "value": "MORE_THAN_THREE",
+              "text": "More than three times"
+            }
+          ],
+          "showOtherItem": false
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "AspirationSurgeryPanel",
+      "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = YES",
+      "elements": [
+
+        {
+          "type": "radiogroup",
+          "name": "AspirationSurgeryPost",
+          "title": "Did {CmpnName} ever have AP after the surgery (i.e., tieback, BVEAP)?",
+          "description": "Includes tieback, BVEAP, ventrilocordectomy, arytenoidectomy and other invasive surgery procedures.",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
+        },
+
+        {
+          "type": "dropdown",
+          "name": "AspirationSurgeryPostCount",
+          "title": "How many times did {CmpnName} get AP after the surgery?",
+          "isRequired": true,
+          "visibleIf": "{AspirationSurgeryPost} = YES",
+          "choices": [
+            {
+              "value": "ONE",
+              "text": "Once"
+            },
+            {
+              "value": "TWO",
+              "text": "Twice"
+            },
+            {
+              "value": "THREE",
+              "text": "Three times"
+            },
+            {
+              "value": "MORE_THAN_THREE",
+              "text": "More than three times"
+            }
+          ],
+          "showOtherItem": false
+        }
+
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "AspirationStentPanel",
+      "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = YES",
+      "elements": [
+
+        {
+          "type": "radiogroup",
+          "name": "AspirationStentPost",
+          "title": "Did {CmpnName} ever have AP after the stent implant procedure?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
+        },
+
+        {
+          "type": "dropdown",
+          "name": "AspirationStentPostCount",
+          "title": "How many times did {CmpnName} get AP after the stent implant?",
+          "isRequired": true,
+          "visibleIf": "{AspirationStentPost} = YES",
+          "choices": [
+            {
+              "value": "ONE",
+              "text": "Once"
+            },
+            {
+              "value": "TWO",
+              "text": "Twice"
+            },
+            {
+              "value": "THREE",
+              "text": "Three times"
+            },
+            {
+              "value": "MORE_THAN_THREE",
+              "text": "More than three times"
+            }
+          ],
+          "showOtherItem": false
+        }
+
+      ]
+    },
+    {
           "type": "panel",
           "name": "AspirationCostPanel",
           "visibleIf": "{AspirationDidHave} = YES",

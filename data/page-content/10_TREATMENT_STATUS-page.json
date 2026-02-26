@@ -1,7 +1,10 @@
 {
   "name": "TREATMENT_STATUS-page",
   "elements": [
-
+    {
+      "type": "panel",
+      "name": "TreatmentStatusHeadPanel",
+      "elements": [
         {
           "type": "html",
           "name": "TreatmentStatusHeading",
@@ -11,12 +14,241 @@
           "type": "html",
           "name": "TreatmentStatusText",
           "html": "<p>This section asks questions about any surgery or implant procedure {CmpnName} underwent to treat LP/GOLPP symptoms. This only includes surgeries or procedures that diriectly modify the structure of the larynx.</p>"
+        }
+      ]
+    },
+    {
+      "type": "radiogroup",
+      "name": "TreatmentStatusDidHave",
+      "title": "Did {CmpnName} undergo a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
+      "isRequired": true,
+      "choices": [
+        {
+          "value": true,
+          "text": "Yes"
+        },
+        {
+          "value": false,
+          "text": "No"
+        }
+      ],
+      "showOtherItem": false
+    },
+    {
+      "type": "panel",
+      "name": "TreatmentStatusAgePanel",
+      "title": "At about what age did {CmpnName} have the first surgery or stent procedure?",
+      "description": "If you can't remember exactly, it's OK to guesstimate.",
+      "visibleIf": "{TreatmentStatusDidHave} = true",
+      "elements": [
+                    {
+          "type": "text",
+          "inputType": "number",
+          "name": "TreatmentStatusAgeYears",
+          "title": "Years",
+          "isRequired": true,
+          "min": "1",
+          "max": "40",
+            "validators": [
+            {
+              "type": "numeric",
+              "minValue": 1,
+              "maxValue": 40,
+              "text": "Age must be between 1 and 40"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "inputType": "number",
+          "name": "TreatmentStatusAgeMonths",
+          "title": "Months (number 0 - 11)",
+          "isRequired": true,
+          "min": 0,
+          "max": 11,
+          "validators": [
+            {
+              "type": "numeric",
+              "minValue": 0,
+              "maxValue": 11,
+              "text": "Months must be between 0 and 11"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "panel",
+      "name": "TreatmentStatusTypePanel",
+      "elements": [
+        {
+        "type": "checkbox",
+        "name": "TreatmentStatusType",
+        "title": "What kind procedure or procedures did {CmpnName} have?",
+        "description": "Please check all that apply.",
+        "isRequired": true,
+        "visibleIf": "{TreatmentStatusDidHave} = true",
+        "choices": [
+          {
+            "value": "TIEBACK",
+            "text": "Tieback (Unilateral Arytenoid Lateralization)"
+          },
+          {
+            "value": "BVEAP",
+            "text": "BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)"
+          },
+          {
+            "value": "STENT",
+            "text": "Laryngeal stent"
+          },
+          { "value": "ARYTENOIDECTOMY",
+            "text": "Partial arytenoidectomy"  
+          },
+          { "value": "VENTRILOCORDECTOMY",
+            "text": "Ventrilocordectomy"  
+          }
+        ],
+        "showOtherItem": true
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "TreatmentStatusTiebackPanel",
+      "title": "Questions about tieback (Unilateral Arytenoid Lateralization) surgery",
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
+      "elements": [
+
+        {
+          "type": "boolean",
+          "name": "TreatmentStatusTiebackEmergency",
+          "title": "Was emergency tieback performed on {CmpnName} after a life-threatening breathing emergency?",
+          "swapOrder": true,
+          "isRequired": true
+        },
+
+        {
+          "type": "dropdown",
+          "name": "TreatmentStatusTiebackWait",
+          "title": "How long did you have to wait for non-emergency tieback surgery for {CmpnName}:",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusTiebackEmergency} = true",
+          "choices": [
+            {
+              "value": "UNDER_ONE",
+              "text": "Less than one month"
+            },
+            {
+              "value": "ONE_TWO",
+              "text": "Between one and two months"
+            },
+            {
+              "value": "THREE_SIX",
+              "text": "Between three and six months"
+            },
+            {
+              "value": "MORE_THAN_SIX",
+              "text": "Longer than six months"
+            }
+          ],
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "required": true
         },
 
         {
           "type": "radiogroup",
-          "name": "TreatmentStatusDidHave",
-          "title": "Did {CmpnName} undergo a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
+          "name": "TreatmentStatusTiebackCount",
+          "title": "How many times did {CmpnName} undergo tieback (UAL) surgery?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "ONCE",
+              "text": "Once"
+            },
+            {
+              "value": "MORE_THAN_ONCE",
+              "text": "More than once"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "dropdown",
+          "name": "TreatmentStatusTiebackOnceCost",
+          "title": "Approximate cost of surgery (not including post-op complications):",
+          "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusTiebackCount} = 'ONCE'",
+          "choices": [
+            {
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
+            },
+            {
+              "value": "UNDER_2500",
+              "text": "Under $2500"
+            },
+            {
+              "value": "2501_4000",
+              "text": "$2501-$4000"
+            },
+            {
+              "value": "4001_5500",
+              "text": "$4000-$5500"
+            },
+            {
+              "value": "5500_7000",
+              "text": "$5500-$7000"
+            },
+            {
+              "value": "OVER_7000",
+              "text": "Over $7000"
+            }
+          ],
+          "showOtherItem": false
+        },
+
+        {
+          "type": "dropdown",
+          "name": "TreatmentStatusTiebackMultipleCost",
+          "title": "Approximate total cost of surgeries (not including post-op complications):",
+          "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusTiebackCount} = 'MORE_THAN_ONCE'",
+          "choices": [
+            {
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
+            },
+            {
+              "value": "UNDER_4000",
+              "text": "Under $4000"
+            },
+            {
+              "value": "4001_5500",
+              "text": "$4001-$5500"
+            },
+            {
+              "value": "5501_7000",
+              "text": "$5501-$7000"
+            },
+            {
+              "value": "7001_9000",
+              "text": "$7001-$9000"
+            },
+            {
+              "value": "OVER_9000",
+              "text": "Over $9000"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "radiogroup",
+          "name": "TreatmentStatusTiebackComplications",
+          "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
           "isRequired": true,
           "choices": [
             {
@@ -31,971 +263,733 @@
           "showOtherItem": false
         },
         {
-          "type": "panel",
-          "name": "TreatmentStatusAgePanel",
-          "title": "At about what age did {CmpnName} have the first surgery or stent procedure?",
-          "description": "If you can't remember exactly, it's OK to guesstimate.",
-          "visibleIf": "{TreatmentStatusDidHave} = true",
-          "elements": [
-                        {
-              "type": "text",
-              "inputType": "number",
-              "name": "TreatmentStatusAgeYears",
-              "title": "Years",
-              "isRequired": true,
-              "min": "1",
-              "max": "40",
-                "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 40,
-                  "text": "Age must be between 1 and 40"
-                }
-              ]
+          "type": "dropdown",
+          "name": "TreatmentStatusTiebackComplicationsCost",
+          "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+          "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusTiebackComplications} = true",
+          "choices": [
+            {
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
             },
             {
-              "type": "text",
-              "inputType": "number",
-              "name": "TreatmentStatusAgeMonths",
-              "title": "Months (number 0 - 11)",
-              "isRequired": true,
-              "min": 0,
-              "max": 11,
-              "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 0,
-                  "maxValue": 11,
-                  "text": "Months must be between 0 and 11"
-                }
-              ]
-            }
-          ]
-        },
-
-        {
-          "type": "panel",
-          "name": "TreatmentStatusTypePanel",
-          "elements": [
+              "value": "UNDER_4000",
+              "text": "Under $1000"
+            },
             {
-            "type": "checkbox",
-            "name": "TreatmentStatusType",
-            "title": "What kind procedure or procedures did {CmpnName} have?",
-            "description": "Please check all that apply.",
-            "isRequired": true,
-            "visibleIf": "{TreatmentStatusDidHave} = true",
-            "choices": [
-              {
-                "value": "TIEBACK",
-                "text": "Tieback (Unilateral Arytenoid Lateralization)"
-              },
-              {
-                "value": "BVEAP",
-                "text": "BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)"
-              },
-              {
-                "value": "STENT",
-                "text": "Laryngeal stent"
-              },
-              { "value": "ARYTENOIDECTOMY",
-                "text": "Partial arytenoidectomy"  
-              },
-              { "value": "VENTRILOCORDECTOMY",
-                "text": "Ventrilocordectomy"  
-              }
-            ],
-            "showOtherItem": true
+              "value": "1001_2000",
+              "text": "$1001-$2000"
+            },
+            {
+              "value": "2001_3000",
+              "text": "$2001-$3000"
+            },
+            {
+              "value": "3001_5000",
+              "text": "$3001-$5000"
+            },
+            {
+              "value": "OVER_5001",
+              "text": "Over $5001"
             }
-          ]
+          ],
+          "showOtherItem": false
+        }
+      ]
+    },
+
+    {
+      "type": "panel",
+      "name": "TreatmentStatusBveapPanel",
+      "title": "Questions about BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)",
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "TreatmentStatusBveapReasons",
+          "title": "Why did you choose BVEAP over other surgery types?",
+          "description": "Please choose all that apply.",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "AP_RISK",
+              "text": "Reduced risk of aspiration pneumonia"
+            },
+            {
+              "value": "SWIM",
+              "text": "Ability to swim post-op"
+            },
+            {
+              "value": "PERMANENCE",
+              "text": "No risk of suture failure as with tieback surgery"
+            },
+            {
+              "value": "REPUTATION",
+              "text": "Reputation of surgeon"
+            }
+          ],
+          "showOtherItem": true
         },
         {
-          "type": "panel",
-          "name": "TreatmentStatusTiebackPanel",
-          "title": "Questions about tieback (Unilateral Arytenoid Lateralization) surgery",
-          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
-          "elements": [
-
+          "type": "dropdown",
+          "name": "TreatmentStatusBveapCost",
+          "title": "Approximate cost of BVEAP surgery (not including post-op complications):",
+          "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+          "isRequired": true,
+          "choices": [
             {
-              "type": "boolean",
-              "name": "TreatmentStatusTiebackEmergency",
-              "title": "Was emergency tieback performed on {CmpnName} after a life-threatening breathing emergency?",
-              "swapOrder": true,
-              "isRequired": true
-            },
-
-            {
-              "type": "dropdown",
-              "name": "TreatmentStatusTiebackWait",
-              "title": "How long did you have to wait for non-emergency tieback surgery for {CmpnName}:",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusTiebackEmergency} = true",
-              "choices": [
-                {
-                  "value": "UNDER_ONE",
-                  "text": "Less than one month"
-                },
-                {
-                  "value": "ONE_TWO",
-                  "text": "Between one and two months"
-                },
-                {
-                  "value": "THREE_SIX",
-                  "text": "Between three and six months"
-                },
-                {
-                  "value": "MORE_THAN_SIX",
-                  "text": "Longer than six months"
-                }
-              ],
-              "showOtherItem": true,
-              "showNoneItem": true,
-              "required": true
-            },
-
-            {
-              "type": "radiogroup",
-              "name": "TreatmentStatusTiebackCount",
-              "title": "How many times did {CmpnName} undergo tieback (UAL) surgery?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "ONCE",
-                  "text": "Once"
-                },
-                {
-                  "value": "MORE_THAN_ONCE",
-                  "text": "More than once"
-                }
-              ],
-              "showOtherItem": false
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
             },
             {
-              "type": "dropdown",
-              "name": "TreatmentStatusTiebackOnceCost",
-              "title": "Approximate cost of surgery (not including post-op complications):",
-              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusTiebackCount} = 'ONCE'",
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_2500",
-                  "text": "Under $2500"
-                },
-                {
-                  "value": "2501_4000",
-                  "text": "$2501-$4000"
-                },
-                {
-                  "value": "4001_5500",
-                  "text": "$4000-$5500"
-                },
-                {
-                  "value": "5500_7000",
-                  "text": "$5500-$7000"
-                },
-                {
-                  "value": "OVER_7000",
-                  "text": "Over $7000"
-                }
-              ],
-              "showOtherItem": false
-            },
-
-            {
-              "type": "dropdown",
-              "name": "TreatmentStatusTiebackMultipleCost",
-              "title": "Approximate total cost of surgeries (not including post-op complications):",
-              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusTiebackCount} = 'MORE_THAN_ONCE'",
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_4000",
-                  "text": "Under $4000"
-                },
-                {
-                  "value": "4001_5500",
-                  "text": "$4001-$5500"
-                },
-                {
-                  "value": "5501_7000",
-                  "text": "$5501-$7000"
-                },
-                {
-                  "value": "7001_9000",
-                  "text": "$7001-$9000"
-                },
-                {
-                  "value": "OVER_9000",
-                  "text": "Over $9000"
-                }
-              ],
-              "showOtherItem": false
+              "value": "UNDER_4000",
+              "text": "Under $4000"
             },
             {
-              "type": "radiogroup",
-              "name": "TreatmentStatusTiebackComplications",
-              "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": true,
-                  "text": "Yes"
-                },
-                {
-                  "value": false,
-                  "text": "No"
-                }
-              ],
-              "showOtherItem": false
+              "value": "4001_5500",
+              "text": "$4001-$5500"
             },
             {
-              "type": "dropdown",
-              "name": "TreatmentStatusTiebackComplicationsCost",
-              "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
-              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusTiebackComplications} = true",
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_4000",
-                  "text": "Under $1000"
-                },
-                {
-                  "value": "1001_2000",
-                  "text": "$1001-$2000"
-                },
-                {
-                  "value": "2001_3000",
-                  "text": "$2001-$3000"
-                },
-                {
-                  "value": "3001_5000",
-                  "text": "$3001-$5000"
-                },
-                {
-                  "value": "OVER_5001",
-                  "text": "Over $5001"
-                }
-              ],
-              "showOtherItem": false
+              "value": "5501_7000",
+              "text": "$5501-$7000"
+            },
+            {
+              "value": "OVER_7000",
+              "text": "Over $7000"
             }
-          ]
+          ],
+          "showOtherItem": false
         },
-
-
         {
-          "type": "panel",
-          "name": "TreatmentStatusBveapPanel",
-          "title": "Questions about BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)",
-          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
-          "elements": [
+          "type": "radiogroup",
+          "name": "TreatmentStatusBveapComplications",
+          "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+          "isRequired": true,
+          "choices": [
             {
-              "type": "checkbox",
-              "name": "TreatmentStatusBveapReasons",
-              "title": "Why did you choose BVEAP over other surgery types?",
-              "description": "Please choose all that apply.",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "AP_RISK",
-                  "text": "Reduced risk of aspiration pneumonia"
-                },
-                {
-                  "value": "SWIM",
-                  "text": "Ability to swim post-op"
-                },
-                {
-                  "value": "PERMANENCE",
-                  "text": "No risk of suture failure as with tieback surgery"
-                },
-                {
-                  "value": "REPUTATION",
-                  "text": "Reputation of surgeon"
-                }
-              ],
-              "showOtherItem": true
+              "value": true,
+              "text": "Yes"
             },
             {
-              "type": "dropdown",
-              "name": "TreatmentStatusBveapCost",
-              "title": "Approximate cost of BVEAP surgery (not including post-op complications):",
-              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_4000",
-                  "text": "Under $4000"
-                },
-                {
-                  "value": "4001_5500",
-                  "text": "$4001-$5500"
-                },
-                {
-                  "value": "5501_7000",
-                  "text": "$5501-$7000"
-                },
-                {
-                  "value": "OVER_7000",
-                  "text": "Over $7000"
-                }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "radiogroup",
-              "name": "TreatmentStatusBveapComplications",
-              "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": true,
-                  "text": "Yes"
-                },
-                {
-                  "value": false,
-                  "text": "No"
-                }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "dropdown",
-              "name": "TreatmentStatusBveapComplicationsCost",
-              "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
-              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusBveapComplications} = true",
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_1000",
-                  "text": "Under $1000"
-                },
-                {
-                  "value": "1001_2000",
-                  "text": "$1001-$2000"
-                },
-                {
-                  "value": "2001_3000",
-                  "text": "$2001-$3000"
-                },
-                {
-                  "value": "3001_5000",
-                  "text": "$3001-$5000"
-                },
-                {
-                  "value": "OVER_5001",
-                  "text": "Over $5001"
-                }
-              ],
-              "showOtherItem": false
+              "value": false,
+              "text": "No"
             }
-
-          ]
+          ],
+          "showOtherItem": false
         },
-
-
-
         {
-          "type": "panel",
-          "name": "TreatmentStatusStentPanel",
-          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
-          "elements": [
-
+          "type": "dropdown",
+          "name": "TreatmentStatusBveapComplicationsCost",
+          "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+          "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusBveapComplications} = true",
+          "choices": [
             {
-              "type": "dropdown",
-              "name": "TreatmentStatusStentType",
-              "title": "What type of stent implant did {CmpnName} receive?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "SILICONE",
-                  "text": "Silicone"
-                },
-                {
-                  "value": "DEXSTENT",
-                  "text": "Dextronix DexStent LE Nitinol wire"
-                },
-                {
-                  "value": "NITINOL_MESH",
-                  "text": "Nitinol mesh"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": true
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
             },
             {
-              "type": "panel",
-              "name": "TreatmentStatusDexstentPanel",
-              "visibleIf": "{TreatmentStatusStentType} contains 'DEXSTENT'",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "TreatmentStatusDexstentText",
-                  "html": "<b>IMPORTANT</b>: The Dextronix DexStent LE Nitinol wire stent device has been discontinued by the manufacturer. Report parties involved in the sale or use of this device to your local veterinary regulatory agency."
-                }
-              ]
+              "value": "UNDER_1000",
+              "text": "Under $1000"
             },
             {
-              "type": "radiogroup",
-              "name": "TreatmentStatusStentDidMigrate",
-              "title": "After the initial implant procedure, did {CmpnName} cough out the stent or did it migrate out of position?",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusStentType} = 'SILICONE' || {TreatmentStatusStentType} = 'NITINOL_MESH'",
-              "choices": [
-                {
-                  "value": true,
-                  "text": "Yes"
-                },
-                {
-                  "value": false,
-                  "text": "No"
-                }
-              ],
-              "showOtherItem": false
+              "value": "1001_2000",
+              "text": "$1001-$2000"
             },
             {
-              "type": "radiogroup",
-              "name": "TreatmentStatusStentReplaced",
-              "title": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
-              "choices": [
-                {
-                  "value": true,
-                  "text": "Yes"
-                },
-                {
-                  "value": false,
-                  "text": "No"
-                }
-              ]
+              "value": "2001_3000",
+              "text": "$2001-$3000"
             },
             {
-              "type": "dropdown",
-              "name": "TreatmentStatusStentCostOnce",
-              "title": "Approximate cost of stent implant procedure, not including complications:",
-              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusStentDidMigrate} = false || {TreatmentStatusStentReplaced} = false",
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_1500",
-                  "text": "Under $1500"
-                },
-                {
-                  "value": "1501_2500",
-                  "text": "$1501-$2000"
-                },
-                {
-                  "value": "2001_3000",
-                  "text": "$2001-$3000"
-                },
-                {
-                  "value": "3001_4000",
-                  "text": "$3001-$4000"
-                },
-                {
-                  "value": "OVER_4000",
-                  "text": "Over $4000"
-                }
-              ],
-              "showOtherItem": false
+              "value": "3001_5000",
+              "text": "$3001-$5000"
             },
             {
-              "type": "dropdown",
-              "name": "TreatmentStatusStentCostRepeat",
-              "title": "Approximate cost of the stent procedures, not including complications:",
-              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusStentDidMigrate} = true &&{TreatmentStatusStentReplaced} = true",
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_1500",
-                  "text": "Under $1500"
-                },
-                {
-                  "value": "1501_2500",
-                  "text": "$1501-$2000"
-                },
-                {
-                  "value": "2001_3000",
-                  "text": "$2001-$3000"
-                },
-                {
-                  "value": "3001_4000",
-                  "text": "$5500-$7000"
-                },
-                {
-                  "value": "OVER_4000",
-                  "text": "Over $4000"
-                }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "radiogroup",
-              "name": "TreatmentStatusStentComplications",
-              "title": "Were there post-operative complications that required overnight inpatient care for {CmpnName}?",
-              "visibleIf": "{TreatmentStatusStentType} notempty",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": true,
-                  "text": "Yes"
-                },
-                {
-                  "value": false,
-                  "text": "No"
-                }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "dropdown",
-              "name": "TreatmentStatusStentComplicationsCost",
-              "title": "Approximate cost of post-procedure complications, not including the cost of the stent implant procedure:",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusStentComplications} = true",
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_1000",
-                  "text": "Under $1000"
-                },
-                {
-                  "value": "1001_2000",
-                  "text": "$1001-$2000"
-                },
-                {
-                  "value": "2001_3000",
-                  "text": "$2001-$3000"
-                },
-                {
-                  "value": "3001_5000",
-                  "text": "$3001-$5000"
-                },
-                {
-                  "value": "OVER_5001",
-                  "text": "Over $5001"
-                }
-              ],
-              "showOtherItem": false
+              "value": "OVER_5001",
+              "text": "Over $5001"
             }
-          ]
-        },
-
-
-
-        {
-          "type": "panel",
-          "name": "TreatmentStatusArytenoidectomyPanel",
-          "title": "Questions about partial arytenoidectomy surgery",
-          "description": "Partial arytenoidectomy is the surgical removal of a section of one of the arytenoid (laryngeal) cartilages.",
-          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
-          "elements": [
-            {
-              "type": "checkbox",
-              "name": "TreatmentStatusArytenoidectomyReasons",
-              "title": "Why did you choose partial arytenoidectomy over other surgery types?",
-              "description": "Please choose all that apply.",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "COST",
-                  "text": "Cost of this surgery compared to other surgery types"
-                },
-                {
-                  "value": "RECOMMEND_PRIMARY",
-                  "text": "Recommended by primary veterinarian"
-                },
-                {
-                  "value": "RECOMMENDED_SPECIALIST",
-                  "text": "Recommended by specialist"
-                },
-                {
-                  "value": "AVAILABILITY",
-                  "text": "Availablility"
-                }
-              ],
-              "showOtherItem": true
-            },
-            {
-              "type": "boolean",
-              "name": "TreatmentStatusArytenoidectomyLaser",
-              "title": "Was the partial arytenoidectomy performed with a laser?",
-              "description": "This technique is called 'ablation'.",
-              "swapOrder": true,
-              "isRequired": true
-            },
-            {
-              "type": "radiogroup",
-              "name": "TreatmentStatusArytenoidectomyDidExplain",
-              "title": "Did the surgeon explain the pros and cons of this surgery type vs standard tieback surgery?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "radiogroup",
-              "name": "TreatmentStatusArytenoidectomyChoice",
-              "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "dropdown",
-              "name": "TreatmentStatusArytenoidectomyCost",
-              "title": "Approximate cost of the partial arytenoidectomy (not including post-op complications):",
-              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_2000",
-                  "text": "Under $2000"
-                },
-                {
-                  "value": "2001_4000",
-                  "text": "$2001-$4000"
-                },
-                {
-                  "value": "4001_5500",
-                  "text": "$4001-$5500"
-                },
-                {
-                  "value": "OVER_5500",
-                  "text": "Over $5500"
-                }
-              ],
-              "showOtherItem": false
-            },
-
-
-            {
-              "type": "radiogroup",
-              "name": "TreatmentStatusArytenoidectomyComplications",
-              "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": true,
-                  "text": "Yes"
-                },
-                {
-                  "value": false,
-                  "text": "No"
-                }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "dropdown",
-              "name": "TreatmentStatusArytenoidectomyComplicationsCost",
-              "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
-              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusArytenoidectomyComplications} = true",
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_1000",
-                  "text": "Under $1000"
-                },
-                {
-                  "value": "1001_2000",
-                  "text": "$1001-$2000"
-                },
-                {
-                  "value": "2001_3000",
-                  "text": "$2001-$3000"
-                },
-                {
-                  "value": "3001_5000",
-                  "text": "$3001-$5000"
-                },
-                {
-                  "value": "OVER_5001",
-                  "text": "Over $5001"
-                }
-              ],
-              "showOtherItem": false
-            }
-          ]
-        },
-
-
-
-        {
-          "type": "panel",
-          "name": "TreatmentStatusVentrilocordectomyPanel",
-          "title": "Questions about ventrilocordectomy surgery",
-          "description": "Ventrilocordectomy is the surgical removal of the vocal folds (vocal cords) that dogs use to bark.",
-          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
-          "elements": [
-            {
-              "type": "checkbox",
-              "name": "TreatmentStatusVentrilocordectomyReasons",
-              "title": "Why did you choose ventrilocordectomy over other surgery types?",
-              "description": "Please choose all that apply.",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "COST",
-                  "text": "Cost of this surgery compared to other surgery types"
-                },
-                {
-                  "value": "RECOMMEND_PRIMARY",
-                  "text": "Recommended by primary veterinarian"
-                },
-                {
-                  "value": "RECOMMENDED_SPECIALIST",
-                  "text": "Recommended by specialist"
-                },
-                {
-                  "value": "AVAILABILITY",
-                  "text": "Availablility"
-                }
-              ],
-              "showOtherItem": true
-            },
-            {
-              "type": "radiogroup",
-              "name": "TreatmentStatusVentrilocordectomyDidExplain",
-              "title": "Did the surgeon explain the pros and cons of this surgery type vs tieback surgery?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
-            },
-
-            {
-              "type": "radiogroup",
-              "name": "TreatmentStatusVentrilocordectomyChoice",
-              "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
-            },
-
-            {
-              "type": "dropdown",
-              "name": "TreatmentStatusVentrilocordectomyCost",
-              "title": "Approximate cost of the ventrilocordectomy (not including post-op complications):",
-              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_2000",
-                  "text": "Under $2000"
-                },
-                {
-                  "value": "2001_4000",
-                  "text": "$2001-$4000"
-                },
-                {
-                  "value": "4001_5500",
-                  "text": "$4001-$5500"
-                },
-                {
-                  "value": "OVER_5500",
-                  "text": "Over $5500"
-                }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "radiogroup",
-              "name": "TreatmentStatusVentrilocordectomyComplications",
-              "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": true,
-                  "text": "Yes"
-                },
-                {
-                  "value": false,
-                  "text": "No"
-                }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "dropdown",
-              "name": "TreatmentStatusVentrilocordectomyComplicationsCost",
-              "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
-              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-              "isRequired": true,
-              "visibleIf": "{TreatmentStatusVentrilocordectomyComplications} = true",
-              "choices": [
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
-                },
-                {
-                  "value": "UNDER_1000",
-                  "text": "Under $1000"
-                },
-                {
-                  "value": "1001_2000",
-                  "text": "$1001-$2000"
-                },
-                {
-                  "value": "2001_3000",
-                  "text": "$2001_$3000"
-                },
-                {
-                  "value": "3001_5000",
-                  "text": "$3001-$5000"
-                },
-                {
-                  "value": "OVER_5001",
-                  "text": "Over $5001"
-                }
-              ],
-              "showOtherItem": false
-            }
-          ]
-        },
-
-        {
-          "type": "panel",
-          "name": "TreatmentStatusRatingPanel",
-          "visibleIf": "{TreatmentStatusDidHave} = true",
-          "elements": [
-
-            {
-              "type": "rating",
-              "name": "TreatmentStatusSurgeonInformLevel",
-              "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
-              "description": "1 = very unsatisfied, 5 = very satisfied",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
-            },
-            {
-              "type": "rating",
-              "name": "TreatmentStatusTreatmentSatisfactionLevel",
-              "title": "How satisfied were you with the results of the procedure?",
-              "description": "1 = very unsatisfied, 5 = very satisfied",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
-            }
-          ]
+          ],
+          "showOtherItem": false
         }
 
+      ]
+    },
+
+    {
+      "type": "panel",
+      "name": "TreatmentStatusStentPanel",
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
+      "elements": [
+
+        {
+          "type": "dropdown",
+          "name": "TreatmentStatusStentType",
+          "title": "What type of stent implant did {CmpnName} receive?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "SILICONE",
+              "text": "Silicone"
+            },
+            {
+              "value": "DEXSTENT",
+              "text": "Dextronix DexStent LE Nitinol wire"
+            },
+            {
+              "value": "NITINOL_MESH",
+              "text": "Nitinol mesh"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentStatusDexstentPanel",
+          "visibleIf": "{TreatmentStatusStentType} contains 'DEXSTENT'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "TreatmentStatusDexstentText",
+              "html": "<b>IMPORTANT</b>: The Dextronix DexStent LE Nitinol wire stent device has been discontinued by the manufacturer. Report parties involved in the sale or use of this device to your local veterinary regulatory agency."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "TreatmentStatusStentDidMigrate",
+          "title": "After the initial implant procedure, did {CmpnName} cough out the stent or did it migrate out of position?",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusStentType} = 'SILICONE' || {TreatmentStatusStentType} = 'NITINOL_MESH'",
+          "choices": [
+            {
+              "value": true,
+              "text": "Yes"
+            },
+            {
+              "value": false,
+              "text": "No"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "radiogroup",
+          "name": "TreatmentStatusStentReplaced",
+          "title": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
+          "choices": [
+            {
+              "value": true,
+              "text": "Yes"
+            },
+            {
+              "value": false,
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "TreatmentStatusStentCostOnce",
+          "title": "Approximate cost of stent implant procedure, not including complications:",
+          "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusStentDidMigrate} = false || {TreatmentStatusStentReplaced} = false",
+          "choices": [
+            {
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
+            },
+            {
+              "value": "UNDER_1500",
+              "text": "Under $1500"
+            },
+            {
+              "value": "1501_2500",
+              "text": "$1501-$2000"
+            },
+            {
+              "value": "2001_3000",
+              "text": "$2001-$3000"
+            },
+            {
+              "value": "3001_4000",
+              "text": "$3001-$4000"
+            },
+            {
+              "value": "OVER_4000",
+              "text": "Over $4000"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "dropdown",
+          "name": "TreatmentStatusStentCostRepeat",
+          "title": "Approximate cost of the stent procedures, not including complications:",
+          "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusStentDidMigrate} = true &&{TreatmentStatusStentReplaced} = true",
+          "choices": [
+            {
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
+            },
+            {
+              "value": "UNDER_1500",
+              "text": "Under $1500"
+            },
+            {
+              "value": "1501_2500",
+              "text": "$1501-$2000"
+            },
+            {
+              "value": "2001_3000",
+              "text": "$2001-$3000"
+            },
+            {
+              "value": "3001_4000",
+              "text": "$5500-$7000"
+            },
+            {
+              "value": "OVER_4000",
+              "text": "Over $4000"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "radiogroup",
+          "name": "TreatmentStatusStentComplications",
+          "title": "Were there post-operative complications that required overnight inpatient care for {CmpnName}?",
+          "visibleIf": "{TreatmentStatusStentType} notempty",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": true,
+              "text": "Yes"
+            },
+            {
+              "value": false,
+              "text": "No"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "dropdown",
+          "name": "TreatmentStatusStentComplicationsCost",
+          "title": "Approximate cost of post-procedure complications, not including the cost of the stent implant procedure:",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusStentComplications} = true",
+          "choices": [
+            {
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
+            },
+            {
+              "value": "UNDER_1000",
+              "text": "Under $1000"
+            },
+            {
+              "value": "1001_2000",
+              "text": "$1001-$2000"
+            },
+            {
+              "value": "2001_3000",
+              "text": "$2001-$3000"
+            },
+            {
+              "value": "3001_5000",
+              "text": "$3001-$5000"
+            },
+            {
+              "value": "OVER_5001",
+              "text": "Over $5001"
+            }
+          ],
+          "showOtherItem": false
+        }
+      ]
+    },
+
+    {
+      "type": "panel",
+      "name": "TreatmentStatusArytenoidectomyPanel",
+      "title": "Questions about partial arytenoidectomy surgery",
+      "description": "Partial arytenoidectomy is the surgical removal of a section of one of the arytenoid (laryngeal) cartilages.",
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "TreatmentStatusArytenoidectomyReasons",
+          "title": "Why did you choose partial arytenoidectomy over other surgery types?",
+          "description": "Please choose all that apply.",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "COST",
+              "text": "Cost of this surgery compared to other surgery types"
+            },
+            {
+              "value": "RECOMMEND_PRIMARY",
+              "text": "Recommended by primary veterinarian"
+            },
+            {
+              "value": "RECOMMENDED_SPECIALIST",
+              "text": "Recommended by specialist"
+            },
+            {
+              "value": "AVAILABILITY",
+              "text": "Availablility"
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "boolean",
+          "name": "TreatmentStatusArytenoidectomyLaser",
+          "title": "Was the partial arytenoidectomy performed with a laser?",
+          "description": "This technique is called 'ablation'.",
+          "swapOrder": true,
+          "isRequired": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "TreatmentStatusArytenoidectomyDidExplain",
+          "title": "Did the surgeon explain the pros and cons of this surgery type vs standard tieback surgery?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "radiogroup",
+          "name": "TreatmentStatusArytenoidectomyChoice",
+          "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "dropdown",
+          "name": "TreatmentStatusArytenoidectomyCost",
+          "title": "Approximate cost of the partial arytenoidectomy (not including post-op complications):",
+          "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
+            },
+            {
+              "value": "UNDER_2000",
+              "text": "Under $2000"
+            },
+            {
+              "value": "2001_4000",
+              "text": "$2001-$4000"
+            },
+            {
+              "value": "4001_5500",
+              "text": "$4001-$5500"
+            },
+            {
+              "value": "OVER_5500",
+              "text": "Over $5500"
+            }
+          ],
+          "showOtherItem": false
+        },
 
 
+        {
+          "type": "radiogroup",
+          "name": "TreatmentStatusArytenoidectomyComplications",
+          "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": true,
+              "text": "Yes"
+            },
+            {
+              "value": false,
+              "text": "No"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "dropdown",
+          "name": "TreatmentStatusArytenoidectomyComplicationsCost",
+          "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+          "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusArytenoidectomyComplications} = true",
+          "choices": [
+            {
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
+            },
+            {
+              "value": "UNDER_1000",
+              "text": "Under $1000"
+            },
+            {
+              "value": "1001_2000",
+              "text": "$1001-$2000"
+            },
+            {
+              "value": "2001_3000",
+              "text": "$2001-$3000"
+            },
+            {
+              "value": "3001_5000",
+              "text": "$3001-$5000"
+            },
+            {
+              "value": "OVER_5001",
+              "text": "Over $5001"
+            }
+          ],
+          "showOtherItem": false
+        }
+      ]
+    },
+
+    {
+      "type": "panel",
+      "name": "TreatmentStatusVentrilocordectomyPanel",
+      "title": "Questions about ventrilocordectomy surgery",
+      "description": "Ventrilocordectomy is the surgical removal of the vocal folds (vocal cords) that dogs use to bark.",
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "TreatmentStatusVentrilocordectomyReasons",
+          "title": "Why did you choose ventrilocordectomy over other surgery types?",
+          "description": "Please choose all that apply.",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "COST",
+              "text": "Cost of this surgery compared to other surgery types"
+            },
+            {
+              "value": "RECOMMEND_PRIMARY",
+              "text": "Recommended by primary veterinarian"
+            },
+            {
+              "value": "RECOMMENDED_SPECIALIST",
+              "text": "Recommended by specialist"
+            },
+            {
+              "value": "AVAILABILITY",
+              "text": "Availablility"
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "TreatmentStatusVentrilocordectomyDidExplain",
+          "title": "Did the surgeon explain the pros and cons of this surgery type vs tieback surgery?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
+        },
+
+        {
+          "type": "radiogroup",
+          "name": "TreatmentStatusVentrilocordectomyChoice",
+          "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
+        },
+
+        {
+          "type": "dropdown",
+          "name": "TreatmentStatusVentrilocordectomyCost",
+          "title": "Approximate cost of the ventrilocordectomy (not including post-op complications):",
+          "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
+            },
+            {
+              "value": "UNDER_2000",
+              "text": "Under $2000"
+            },
+            {
+              "value": "2001_4000",
+              "text": "$2001-$4000"
+            },
+            {
+              "value": "4001_5500",
+              "text": "$4001-$5500"
+            },
+            {
+              "value": "OVER_5500",
+              "text": "Over $5500"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "radiogroup",
+          "name": "TreatmentStatusVentrilocordectomyComplications",
+          "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": true,
+              "text": "Yes"
+            },
+            {
+              "value": false,
+              "text": "No"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "dropdown",
+          "name": "TreatmentStatusVentrilocordectomyComplicationsCost",
+          "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+          "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+          "isRequired": true,
+          "visibleIf": "{TreatmentStatusVentrilocordectomyComplications} = true",
+          "choices": [
+            {
+              "value": "NOT_SAY",
+              "text": "Prefer not to say"
+            },
+            {
+              "value": "UNDER_1000",
+              "text": "Under $1000"
+            },
+            {
+              "value": "1001_2000",
+              "text": "$1001-$2000"
+            },
+            {
+              "value": "2001_3000",
+              "text": "$2001_$3000"
+            },
+            {
+              "value": "3001_5000",
+              "text": "$3001-$5000"
+            },
+            {
+              "value": "OVER_5001",
+              "text": "Over $5001"
+            }
+          ],
+          "showOtherItem": false
+        }
+      ]
+    },
+
+    {
+      "type": "panel",
+      "name": "TreatmentStatusRatingPanel",
+      "visibleIf": "{TreatmentStatusDidHave} = true",
+      "elements": [
+
+        {
+          "type": "rating",
+          "name": "TreatmentStatusSurgeonInformLevel",
+          "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
+          "description": "1 = very unsatisfied, 5 = very satisfied",
+          "isRequired": true,
+          "rateValues": [
+            { "value": 1, "text": "1" },
+            { "value": 2, "text": "2" },
+            { "value": 3, "text": "3" },
+            { "value": 4, "text": "4" },
+            { "value": 5, "text": "5" },
+            { "value": "DONT_KNOW", "text": "Don't know" }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "TreatmentStatusTreatmentSatisfactionLevel",
+          "title": "How satisfied were you with the results of the procedure?",
+          "description": "1 = very unsatisfied, 5 = very satisfied",
+          "isRequired": true,
+          "rateValues": [
+            { "value": 1, "text": "1" },
+            { "value": 2, "text": "2" },
+            { "value": 3, "text": "3" },
+            { "value": 4, "text": "4" },
+            { "value": 5, "text": "5" },
+            { "value": "DONT_KNOW", "text": "Don't know" }
+          ]
+        }
+      ]
+    }
   ]
 }

@@ -1,17 +1,23 @@
 {
   "name": "BREATHING_CRISIS-page",
   "elements": [
+        {
+          "type": "panel",
+          "name": "BreathingCrisisHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "BreathingCrisisHeading",
+              "html": "<h3>LP Breathing Crisis</h3>"
+            },
+            {
+              "type": "html",
+              "name": "BreathingCrisisText",
+              "html": "<p>In a breathing crisis, the paralyzed arytenoid cartilages block the airway and cut off airflow to the lungs. In extreme cases, the crisis escalates into a breathing emergency that requires care at a veterinary facility to restore breathing. These questions are about breathing emergencies that required care from a licensed veterinarian. </p>"
+            }
+          ]
+        },
 
-        {
-          "type": "html",
-          "name": "BreathingCrisis",
-          "html": "<h3>LP Breathing Crisis</h3>"
-        },
-        {
-          "type": "html",
-          "name": "BreathingCrisisText",
-          "html": "<p>In a breathing crisis, the paralyzed arytenoid cartilages block the airway and cut off airflow to the lungs. In extreme cases, the crisis escalates into a breathing emergency that requires care at a veterinary facility to restore breathing. These questions are about breathing emergencies that required care from a licensed veterinarian. </p>"
-        },
         {
           "type": "panel",
           "name": "BreathingCrisisDidHavePanel",

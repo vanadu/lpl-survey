@@ -2,21 +2,28 @@
   "name": "CMPN_INFO-page",
   "elements": [
 
+        {
+          "type": "panel",
+          "name": "CmpnInfoHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "CmpnInfoHeading",
+              "html": "<h3>About your LP/GOLPP companion<h3>"
+            },
+            {
+              "type": "html",
+              "name": "CmpnInfoText",
+              "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
+            }
+          ]
+        },
 
-        {
-          "type": "html",
-          "name": "CmpnInfoHeading",
-          "html": "<h3>About your LP/GOLPP companion<h3>"
-        },
-        {
-          "type": "html",
-          "name": "CmpnInfoText",
-          "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
-        },
         {
           "type": "panel",
           "name": "CmpnInfoDetailsPanel",
           "elements": [
+
             {
               "type": "radiogroup",
               "name": "CmpnInfoAnimalType",

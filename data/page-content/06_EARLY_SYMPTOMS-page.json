@@ -1,7 +1,10 @@
 {
   "name": "EARLY_SYMPTOMS-page",
   "elements": [
-
+    {
+      "type": "panel",
+      "name": "EarlySymptomsHeadPanel",
+      "elements": [
         {
           "type": "html",
           "name": "EarlySymptomsHeading",
@@ -11,145 +14,147 @@
           "type": "html",
           "name": "EarlySymptomsText",
           "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
-        },
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "EarlySymptomsFirstSignsPanel",
+      "title": "About how old was {CmpnName} (in years and months) when you first noticed symptoms of LP/GOLPP?",
+      "elements": [
         {
-          "type": "panel",
-          "name": "EarlySymptomsFirstSignsPanel",
-          "title": "About how old was {CmpnName} (in years and months) when you first noticed symptoms of LP/GOLPP?",
-          "elements": [
+          "type": "text",
+          "inputType": "number",
+          "name": "EarlySymptomsAgeYears",
+          "title": "Years",
+          "isRequired": true,
+          "min": "1",
+          "max": "40",
+            "validators": [
             {
-              "type": "text",
-              "inputType": "number",
-              "name": "EarlySymptomsAgeYears",
-              "title": "Years",
-              "isRequired": true,
-              "min": "1",
-              "max": "40",
-                "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 40,
-                  "text": "Age must be between 1 and 40"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "inputType": "number",
-              "name": "EarlySymptomsAgeMonths",
-              "title": "Months (number 0 - 11)",
-              "isRequired": true,
-              "min": 0,
-              "max": 11,
-              "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 0,
-                  "maxValue": 11,
-                  "text": "Months must be between 0 and 11"
-                }
-              ]
+              "type": "numeric",
+              "minValue": 1,
+              "maxValue": 40,
+              "text": "Age must be between 1 and 40"
             }
           ]
         },
-
         {
-          "type": "panel",
-          "name": "EarlySymptomsDetailsPanel",
-          "elements": [
+          "type": "text",
+          "inputType": "number",
+          "name": "EarlySymptomsAgeMonths",
+          "title": "Months (number 0 - 11)",
+          "isRequired": true,
+          "min": 0,
+          "max": 11,
+          "validators": [
             {
-              "type": "checkbox",
-              "name": "EarlySymptomsType",
-              "title": "What symptoms did {CmpnName} have at that time?",
-              "choices": [
-                {
-                  "value": "STRIDOR",
-                  "text": "Noisy or raspy breathing"
-                },
-                {
-                  "value": "PANTING",
-                  "text": "Excess panting"
-                },
-                {
-                  "value": "BARK_CHANGES",
-                  "text": "Changes in bark"
-                },
-                {
-                  "value": "COUGHING",
-                  "text": "Coughing or gagging"
-                },
-                {
-                  "value": "HIND_END",
-                  "text": "Hind-end weakness"
-                },
-                {
-                  "value": "LABORED_BREATHING",
-                  "text": "Labored breathing"
-                },
-                {
-                  "value": "EXERCISE_INTOLERANCE",
-                  "text": "Exercise and heat intolerance"
-                }
-                
+              "type": "numeric",
+              "minValue": 0,
+              "maxValue": 11,
+              "text": "Months must be between 0 and 11"
+            }
+          ]
+        }
+      ]
+    },
 
-              ],
-              "showOtherItem": true,
-              "showNoneItem": true,
-              "noneText": "Don't know",
-              "otherText": "Other (max 250 characters)"
+    {
+      "type": "panel",
+      "name": "EarlySymptomsDetailsPanel",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "EarlySymptomsType",
+          "title": "What symptoms did {CmpnName} have at that time?",
+          "choices": [
+            {
+              "value": "STRIDOR",
+              "text": "Noisy or raspy breathing"
             },
+            {
+              "value": "PANTING",
+              "text": "Excess panting"
+            },
+            {
+              "value": "BARK_CHANGES",
+              "text": "Changes in bark"
+            },
+            {
+              "value": "COUGHING",
+              "text": "Coughing or gagging"
+            },
+            {
+              "value": "HIND_END",
+              "text": "Hind-end weakness"
+            },
+            {
+              "value": "LABORED_BREATHING",
+              "text": "Labored breathing"
+            },
+            {
+              "value": "EXERCISE_INTOLERANCE",
+              "text": "Exercise and heat intolerance"
+            }
             
+
+          ],
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": "Don't know",
+          "otherText": "Other (max 250 characters)"
+        },
+        
+        {
+          "type": "rating",
+          "name": "EarlySymtomsSeverity",
+          "title": "How severe did you think {CmpnName}'s early symptoms were?",
+          "description": "1 = mild, 5 = severe",
+          "isRequired": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "EarlySymptomsHindEndWeakness",
+          "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
+          "isRequired": true,
+          "choices": [
             {
-              "type": "rating",
-              "name": "EarlySymtomsSeverity",
-              "title": "How severe did you think {CmpnName}'s early symptoms were?",
-              "description": "1 = mild, 5 = severe",
-              "isRequired": true
+              "value": "YES",
+              "text": "Yes"
             },
             {
-              "type": "radiogroup",
-              "name": "EarlySymptomsHindEndWeakness",
-              "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't remember"
-                }
-              ]
+              "value": "NO",
+              "text": "No"
             },
             {
-              "type": "radiogroup",
-              "name": "EarlySymptomsIncontinence",
-              "title": "Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't remember"
-                }
-              ]
+              "value": "DONT_KNOW",
+              "text": "Don't remember"
             }
           ]
         },
         {
+          "type": "radiogroup",
+          "name": "EarlySymptomsIncontinence",
+          "title": "Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't remember"
+            }
+          ]
+        }
+      ]
+    },
+    {
           "type": "panel",
           "name": "EarlyOtherConditionsPanel",
           "elements": [

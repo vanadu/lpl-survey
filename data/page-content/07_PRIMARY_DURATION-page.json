@@ -1,6 +1,10 @@
 {
   "name": "PRIMARY_DURATION-page",
   "elements": [
+    {
+      "type": "panel",
+      "name": "panelName",
+      "elements": [
         {
           "type": "html",
           "name": "PrimaryDurationHeading",
@@ -10,174 +14,172 @@
           "type": "html",
           "name": "PrimaryDurationText",
           "html": "<p>This section asks about the duration of {CmpnName}'s care by primary veterinarians for LP/GOLPP symptoms. This includes any primary veterinarians who saw {CmpnName} since the LP/GOLPP symptoms first appeared. It also asks whether you switched primary vets because of how {CmpnName}'s symptoms were being handled. </p>"
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "PrimaryDurationFirstConsult",
+      "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
+      "elements": [
+        {
+          "type": "text",
+          "inputType": "number",
+          "name": "PrimaryDurationFirstConsultYears",
+          "title": "Age in years (number):",
+          "isRequired": true,
+          "min": "1",
+          "max": "40",
+          "validators": [
+            {
+              "type": "numeric",
+              "minValue": 0,
+              "maxValue": 40,
+              "text": "Age must be between 1 and 40"
+            }
+          ]
         },
         {
-          "type": "panel",
-          "name": "PrimaryDurationFirstConsult",
-          "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
-          "elements": [
+          "type": "text",
+          "inputType": "number",
+          "name": "PrimaryDurationFirstConsultMonths",
+          "title": "Months (number 0 - 11)",
+          "isRequired": true,
+          "min": 0,
+          "max": 11,
+          "validators": [
             {
-              "type": "text",
-              "inputType": "number",
-              "name": "PrimaryDurationFirstConsultYears",
-              "title": "Age in years (number):",
-              "isRequired": true,
-              "min": "1",
-              "max": "40",
-              "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 0,
-                  "maxValue": 40,
-                  "text": "Age must be between 1 and 40"
-                }
-              ]
+              "type": "numeric",
+              "minValue": 0,
+              "maxValue": 11,
+              "text": "Months must be between 0 and 11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "PrimaryDurationVisitsNumberPanel",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "PrimaryDurationVisitsNumber",
+          "title": "About how many times did a primary veterinarian see {CmpnName} about LP/GOLPP symptoms?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "ONE",
+              "text": "Once"
             },
             {
-              "type": "text",
-              "inputType": "number",
-              "name": "PrimaryDurationFirstConsultMonths",
-              "title": "Months (number 0 - 11)",
-              "isRequired": true,
-              "min": 0,
-              "max": 11,
-              "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 0,
-                  "maxValue": 11,
-                  "text": "Months must be between 0 and 11"
-                }
-              ]
+              "value": "TWO",
+              "text": "Twice"
+            },
+            {
+              "value": "MORE_THAN_TWO",
+              "text": "More than twice"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "radiogroup",
+          "name": "PrimaryDurationCost",
+          "title": "About what was the total pre-insurance cost of these visits to primary veterinarians about {CmpnName}'s LP/GOLPP symptoms?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "UNDER_200",
+              "text": "Under $200"
+            },
+            {
+              "value": "200_500",
+              "text": "$200-$500"
+            },
+            {
+              "value": "500_1000",
+              "text": "$500-$1000"
+            },
+            {
+              "value": "OVER_1000",
+              "text": "Over $1000"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know or prefer not to say"
+            }
+          ],
+          "showOtherItem": false
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "PrimaryDurationChangedVetsPanel",
+      "title": "",
+      "elements": [
+
+
+        {
+          "type": "radiogroup",
+          "name": "PrimaryDurationChangedVets",
+          "title": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "ONCE",
+              "text": "Once"
+            },
+            {
+              "value": "MORE_THAN_ONCE",
+              "text": "More than once"
             }
           ]
         },
 
         {
-          "type": "panel",
-          "name": "PrimaryDurationVisitsNumberPanel",
-          "elements": [
+          "type": "checkbox",
+          "name": "PrimaryDurationChangedVetsReason",
+          "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?",
+          "description": "Please check all that apply.",
+          "isRequired": true,
+          "visibleIf": "{PrimaryDurationChangedVets} != 'NO'",
+          "choices": [
             {
-              "type": "radiogroup",
-              "name": "PrimaryDurationVisitsNumber",
-              "title": "About how many times did a primary veterinarian see {CmpnName} about LP/GOLPP symptoms?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "ONE",
-                  "text": "Once"
-                },
-                {
-                  "value": "TWO",
-                  "text": "Twice"
-                },
-                {
-                  "value": "MORE_THAN_TWO",
-                  "text": "More than twice"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
+              "value": "NOTHING_CAN_BE_DONE",
+              "text": "The previous vet said nothing could be done about {CmpnName}'s symptoms."
             },
             {
-              "type": "radiogroup",
-              "name": "PrimaryDurationCost",
-              "title": "About what was the total pre-insurance cost of these visits to primary veterinarians about {CmpnName}'s LP/GOLPP symptoms?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "UNDER_200",
-                  "text": "Under $200"
-                },
-                {
-                  "value": "200_500",
-                  "text": "$200-$500"
-                },
-                {
-                  "value": "500_1000",
-                  "text": "$500-$1000"
-                },
-                {
-                  "value": "OVER_1000",
-                  "text": "Over $1000"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know or prefer not to say"
-                }
-              ],
-              "showOtherItem": false
-            }
-          ]
-        },
-
-        {
-          "type": "panel",
-          "name": "PrimaryDurationChangedVetsPanel",
-          "title": "",
-          "elements": [
-
-
-            {
-              "type": "radiogroup",
-              "name": "PrimaryDurationChangedVets",
-              "title": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "ONCE",
-                  "text": "Once"
-                },
-                {
-                  "value": "MORE_THAN_ONCE",
-                  "text": "More than once"
-                }
-              ]
+              "value": "NO_KNOWLEDGE",
+              "text": "The previous vet couldn't give possible causes for {CmpnName}'s symptoms."
             },
-
             {
-              "type": "checkbox",
-              "name": "PrimaryDurationChangedVetsReason",
-              "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?",
-              "description": "Please check all that apply.",
-              "isRequired": true,
-              "visibleIf": "{PrimaryDurationChangedVets} != 'NO'",
-              "choices": [
-                {
-                  "value": "NOTHING_CAN_BE_DONE",
-                  "text": "The previous vet said nothing could be done about {CmpnName}'s symptoms."
-                },
-                {
-                  "value": "NO_KNOWLEDGE",
-                  "text": "The previous vet couldn't give possible causes for {CmpnName}'s symptoms."
-                },
-                {
-                  "value": "AGE_ONLY",
-                  "text": "The previous vet said {CmpnName}'s symptoms were just due to age."
-                },
-                {
-                  "value": "BAD_TESTS",
-                  "text": "The previous vet ordered tests that I didn't think were relevant."
-                },
-                {
-                  "value": "MISDIAGNOSED",
-                  "text": "The previous vet misdiagnosed {CmpnName}'s symptoms."
-                }
-              ],
-              "showOtherItem": true
+              "value": "AGE_ONLY",
+              "text": "The previous vet said {CmpnName}'s symptoms were just due to age."
+            },
+            {
+              "value": "BAD_TESTS",
+              "text": "The previous vet ordered tests that I didn't think were relevant."
+            },
+            {
+              "value": "MISDIAGNOSED",
+              "text": "The previous vet misdiagnosed {CmpnName}'s symptoms."
             }
-
-
-          ]
+          ],
+          "showOtherItem": true
         }
 
 
+      ]
+    }
   ]
 }

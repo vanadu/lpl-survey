@@ -4,7 +4,7 @@
 
         {
           "type": "panel",
-          "name": "UserInfoHeadPanel",
+          "name": "UserInfoLifeStatusPanel",
           "elements": [
             {
               "type": "html",
@@ -53,27 +53,32 @@
     
           ]
         },
-
         {
-          "type": "html",
-          "name": "UserInfoHeading",
-          "html": "<h2>About You</h2>"
-        },
-        {
-          "type": "html",
-          "name": "UserInfoText",
-          "html": "<p>We're asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and verifiable.</p>"
+          "type": "panel",
+          "name": "UserInfoHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "UserInfoHeading",
+              "html": "<h2>About You</h2>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoText",
+              "html": "<p>We're asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and verifiable.</p>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoVerificationText",
+              "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
+            }
+          ]
         },
         {
           "type": "panel",
           "name": "UserInfoVerificationPanel", 
           "title": "Verification Contact",
           "elements": [
-            {
-              "type": "html",
-              "name": "UserInfoVerificationPanelText",
-              "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
-            },
             {
               "type": "boolean",
               "name": "UserInfoContactType",

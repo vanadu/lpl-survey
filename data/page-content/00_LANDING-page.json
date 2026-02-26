@@ -6,14 +6,20 @@
       "name": "LandingHeadPanel",
       "elements": [
         {
-          "type": "html",
-          "name": "LandingTitleHead",
-          "html": "<div class='landing-title'><h2 class='landing-title-head'>LP/GOLPP Survey 2026</h2><p class='landing-title-subhead'>Powered by LarParLife.org</p></div>"
-        },
-        {
-          "type": "html",
-          "name": "LandingVersion",
-          "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.24.01</p></div></div>"
+          "type": "panel",
+          "name": "LandingHeaderPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingTitleHead",
+              "html": "<div class='landing-title'><h2 class='landing-title-head'>LP/GOLPP Survey 2026</h2><p class='landing-title-subhead'>Powered by LarParLife.org</p></div>"
+            },
+            {
+              "type": "html",
+              "name": "LandingVersion",
+              "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.24.01</p></div></div>"
+            }
+          ]
         },
         {
           "type": "panel",
@@ -21,14 +27,15 @@
           "elements": [
             {
               "type": "html",
-              "name": "LandingWelcomeText",
-              "html": "<h3>Welcome to the LP/GOLPP Survey 2026</h3>"
+              "name": "LandingWelcomeHeading",
+              "html": "<h2>Welcome to the LP/GOLPP Survey 2026</h2>"
             },
             {
               "type": "html",
-              "name": "LandingIntroText01",
-              "html": "<p>You're here because the disease of laryngeal paralysis (LarPar, LP) or Geriatric-Onset Laryngeal Paralysis and Polyneuropathy (GOLPP) has touched your life. </p>"
+              "name": "LandingWelcomeText",
+              "html": "This survey, the first of its kind, is designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis."
             }
+
           ]
         }
       ]

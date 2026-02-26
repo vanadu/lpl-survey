@@ -1,16 +1,21 @@
 {
   "name": "INTUBATION_HISTORY-page",
   "elements": [
-
         {
-          "type": "html",
-          "name": "IntubationHistoryHeading",
-          "html": "<h3>Intubation History</h3>"
-        },
-        {
-          "type": "html",
-          "name": "IntubationHistoryText",
-          "html": "<p>This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>"
+          "type": "panel",
+          "name": "IntubationHistoryHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "IntubationHistoryHeading",
+              "html": "<h3>Intubation History</h3>"
+            },
+            {
+              "type": "html",
+              "name": "IntubationHistoryText",
+              "html": "<p>This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>"
+            }
+          ]
         },
         {
           "type": "panel",

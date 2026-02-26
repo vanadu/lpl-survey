@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-25T17:11:20.382Z",
+    "builtAt": "2026-02-26T07:24:41.992Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -34,6 +34,18 @@
       "collect": false,
       "path": [
         "LANDING-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "LandingHeaderPanel": {
+      "name": "LandingHeaderPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "LANDING-page",
+        "LandingHeadPanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -86,8 +98,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "UserInfoHeadPanel": {
-      "name": "UserInfoHeadPanel",
+    "UserInfoLifeStatusPanel": {
+      "name": "UserInfoLifeStatusPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -104,7 +116,7 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoHeadPanel"
+        "UserInfoLifeStatusPanel"
       ],
       "hasTitle": true,
       "title": "Please tell us your companion's name:",
@@ -118,13 +130,24 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoHeadPanel"
+        "UserInfoLifeStatusPanel"
       ],
       "hasTitle": true,
       "title": "Has {CmpnName} crossed over the Rainbow Bridge?",
       "hasVisibleIf": true,
       "visibleIf": "{CmpnName} notempty",
       "isRequired": true
+    },
+    "UserInfoHeadPanel": {
+      "name": "UserInfoHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "UserInfoVerificationPanel": {
       "name": "UserInfoVerificationPanel",
@@ -289,6 +312,17 @@
       "title": "Gender information:",
       "hasVisibleIf": false,
       "isRequired": false
+    },
+    "CmpnInfoHeadPanel": {
+      "name": "CmpnInfoHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "CmpnInfoDetailsPanel": {
       "name": "CmpnInfoDetailsPanel",
@@ -510,6 +544,17 @@
       "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
       "hasVisibleIf": false
     },
+    "paneInfoSourcesHeadPanel": {
+      "name": "paneInfoSourcesHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "INFO_SOURCES-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "InfoSourcesTypesPanel": {
       "name": "InfoSourcesTypesPanel",
       "type": "panel",
@@ -615,6 +660,17 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "IntubationHistoryHeadPanel": {
+      "name": "IntubationHistoryHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "INTUBATION_HISTORY-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "IntubationHistoryPanel": {
       "name": "IntubationHistoryPanel",
       "type": "panel",
@@ -691,6 +747,17 @@
       "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
       "hasVisibleIf": true,
       "visibleIf": "{IntubationHistoryConcerns} = true"
+    },
+    "BreathingCrisisHeadPanel": {
+      "name": "BreathingCrisisHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING_CRISIS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "BreathingCrisisDidHavePanel": {
       "name": "BreathingCrisisDidHavePanel",
@@ -826,6 +893,17 @@
       "hasVisibleIf": true,
       "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
       "isRequired": true
+    },
+    "EarlySymptomsHeadPanel": {
+      "name": "EarlySymptomsHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "EARLY_SYMPTOMS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "EarlySymptomsFirstSignsPanel": {
       "name": "EarlySymptomsFirstSignsPanel",
@@ -974,6 +1052,17 @@
       "hasVisibleIf": true,
       "visibleIf": "{EarlyOtherConditions} = YES"
     },
+    "panelName": {
+      "name": "panelName",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_DURATION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "PrimaryDurationFirstConsult": {
       "name": "PrimaryDurationFirstConsult",
       "type": "panel",
@@ -1094,6 +1183,17 @@
       "hasVisibleIf": true,
       "visibleIf": "{PrimaryDurationChangedVets} != 'NO'",
       "isRequired": true
+    },
+    "PrimaryVetHeadPanel": {
+      "name": "PrimaryVetHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_VET-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "PrimaryVetInflammationPanel": {
       "name": "PrimaryVetInflammationPanel",
@@ -1319,6 +1419,17 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "DiagnosisHeadPanel": {
+      "name": "DiagnosisHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "DIAGNOSIS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "DiagnosisDetailsPanel": {
       "name": "DiagnosisDetailsPanel",
       "type": "panel",
@@ -1414,6 +1525,17 @@
       "hasVisibleIf": true,
       "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
       "isRequired": true
+    },
+    "TreatmentStatusHeadPanel": {
+      "name": "TreatmentStatusHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "TreatmentStatusDidHave": {
       "name": "TreatmentStatusDidHave",
@@ -2061,6 +2183,17 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "TreatmentFactorsHeadPanel": {
+      "name": "TreatmentFactorsHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "TreatmentFactorsDecisionPanel": {
       "name": "TreatmentFactorsDecisionPanel",
       "type": "panel",
@@ -2340,6 +2473,17 @@
       "title": "Other considerations:",
       "hasVisibleIf": false,
       "isRequired": false
+    },
+    "ManagementHeadPanel": {
+      "name": "ManagementHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "MANAGEMENT-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "ManagementPrescriptionTypePanel": {
       "name": "ManagementPrescriptionTypePanel",
@@ -2901,6 +3045,17 @@
       "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
       "isRequired": true
     },
+    "OTCProductsHeadPanel": {
+      "name": "OTCProductsHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "OTC_PRODUCTS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "OTCProductsTypePanel": {
       "name": "OTCProductsTypePanel",
       "type": "panel",
@@ -3025,6 +3180,17 @@
       "hasVisibleIf": true,
       "visibleIf": "{OTCProtocolDidPurchase} = YES",
       "isRequired": true
+    },
+    "AspirationHeadPanel": {
+      "name": "AspirationHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "ASPIRATION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "AspirationDidHavePanel": {
       "name": "AspirationDidHavePanel",
@@ -3215,6 +3381,17 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "NeuropathyHeadPanel": {
+      "name": "NeuropathyHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "NeuropathySymptomsDoesHavePanel": {
       "name": "NeuropathySymptomsDoesHavePanel",
       "type": "panel",
@@ -3325,13 +3502,25 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "ConclusionHeadPanel": {
+      "name": "ConclusionHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ConclusionsPanelLifeStatusTrue": {
       "name": "ConclusionsPanelLifeStatusTrue",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "CONCLUSION-page"
+        "CONCLUSION-page",
+        "ConclusionHeadPanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -3343,7 +3532,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "CONCLUSION-page"
+        "CONCLUSION-page",
+        "ConclusionHeadPanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,

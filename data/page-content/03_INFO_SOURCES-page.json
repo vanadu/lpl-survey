@@ -1,7 +1,10 @@
 {
   "name": "INFO_SOURCES-page",
   "elements": [
-
+    {
+      "type": "panel",
+      "name": "paneInfoSourcesHeadPanel",
+      "elements": [
         {
           "type": "html",
           "name": "InfoSourcesHeading",
@@ -11,66 +14,68 @@
           "type": "html",
           "name": "InfoSourcesText",
           "html": "<p>This section asks some questions about how you learned about laryngeal paralysis and geriatric-onset laryngeal paralysis (LP) and polyneuropathy (GOLPP) and whether the information you found helped you make decisions for {CmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "InfoSourcesTypesPanel",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "InfoSourcesPriorKnowledge",
+          "title": "Had you ever heard of LP before {CmpnName} got it?",
+          "swapOrder": true,
+          "isRequired": true
         },
         {
-          "type": "panel",
-          "name": "InfoSourcesTypesPanel",
-          "elements": [
+          "type": "checkbox",
+          "name": "InfoSourcesTypes",
+          "title": "Which sources of information have you accessed to learn about LP?",
+          "choices": [
             {
-              "type": "boolean",
-              "name": "InfoSourcesPriorKnowledge",
-              "title": "Had you ever heard of LP before {CmpnName} got it?",
-              "swapOrder": true,
-              "isRequired": true
+              "value": "VETERINARIANS",
+              "text": "Veterinarians"
             },
             {
-              "type": "checkbox",
-              "name": "InfoSourcesTypes",
-              "title": "Which sources of information have you accessed to learn about LP?",
-              "choices": [
-                {
-                  "value": "VETERINARIANS",
-                  "text": "Veterinarians"
-                },
-                {
-                  "value": "WEBSITES",
-                  "text": "Websites"
-                },
-                {
-                  "value": "FACEBOOK_GROUPS",
-                  "text": "Facebook groups"
-                },
-                {
-                  "value": "SOCIAL_VIDEO",
-                  "text": "Youtube, Instagram or other video"
-                },
-                {
-                  "value": "SOCIAL_CHAT",
-                  "text": "Reddit, X (Twitter), or other social media"
-                },
-                {
-                  "value": "AI_MODELS",
-                  "text": "AI models like ChatGPT"
-                },
-                { "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": true,
-              "otherText": "Other Sources"
+              "value": "WEBSITES",
+              "text": "Websites"
             },
             {
-              "type": "dropdown",
-              "name": "InfoSourcesBestSource",
-              "title": "Which of those information sources did you find MOST useful (please select one)?",
-              "visibleIf": "{InfoSourcesTypes.length} > 1 && {InfoSourcesTypes} notcontains 'DONT_KNOW'",
-              "choices": [
-
-              ]
+              "value": "FACEBOOK_GROUPS",
+              "text": "Facebook groups"
+            },
+            {
+              "value": "SOCIAL_VIDEO",
+              "text": "Youtube, Instagram or other video"
+            },
+            {
+              "value": "SOCIAL_CHAT",
+              "text": "Reddit, X (Twitter), or other social media"
+            },
+            {
+              "value": "AI_MODELS",
+              "text": "AI models like ChatGPT"
+            },
+            { "value": "DONT_KNOW",
+              "text": "Don't know"
             }
-          ]
+          ],
+          "showOtherItem": true,
+          "otherText": "Other Sources"
         },
         {
+          "type": "dropdown",
+          "name": "InfoSourcesBestSource",
+          "title": "Which of those information sources did you find MOST useful (please select one)?",
+          "visibleIf": "{InfoSourcesTypes.length} > 1 && {InfoSourcesTypes} notcontains 'DONT_KNOW'",
+          "choices": [
+
+          ]
+        }
+      ]
+    },
+    {
           "type": "panel",
           "name": "InfoSourcesQualityPanel",
           "elements": [
