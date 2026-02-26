@@ -2,13 +2,113 @@
 
 // !VA NAV MODS
 /* Hide the default bottom navigation buttons */
-.sd-navigation,
-.sd-body__navigation,
-.sd-footer,
-.sd-action-bar {
-  display: none !important;
+@media (max-width: 639px) {
+  .sd-navigation,
+  .sd-body__navigation,
+  .sd-footer,
+  .sd-action-bar {
+    display: none !important;
+  }
 }
 
+@media (min-width: 640px) {
+  .sj-surveynav {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   PAGE OVERLAY CONTAINER
+======================================== */
+
+/* Make the SurveyJS page the positioning context */
+.sj-page-has-nav {
+  position: relative;
+}
+
+/* Nav overlay inside page */
+.sj-page-has-nav .sj-surveynav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20px;                 /* adjust as needed */
+  pointer-events: none;      /* allow page interaction */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  z-index: 10;
+}
+
+/* Re-enable clicks only on buttons */
+.sj-page-has-nav .sj-surveynav button {
+  pointer-events: auto;
+}
+
+
+/* ========================================
+   BUTTON BASE
+======================================== */
+
+.sj-surveynav__btn {
+  /* remove default button styles */
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+
+  /* touch target */
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* disabled state */
+.sj-surveynav__btn:disabled {
+  opacity: .35;
+  cursor: default;
+}
+
+
+/* ========================================
+   CHEVRON ICON CONTROL
+======================================== */
+
+/* control icon size here */
+.sj-surveynav__btn svg {
+  width: 22px;   /* ← change this to resize chevron */
+  height: 22px;
+}
+
+/* optional: slightly softer color */
+.sj-surveynav__btn svg {
+  stroke: currentColor;
+  color: #444;
+}
+
+
+/* ========================================
+   ACCESSIBILITY TEXT
+======================================== */
+
+/* hidden but readable by screen readers */
+.sj-surveynav__btn .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* if you truly want it invisible everywhere */
+.sj-surveynav__btn .sr-only.hide {
+  display: none;
+}
 
 
 
@@ -152,6 +252,7 @@
 
 // !VA DEFAULT ROW PADDING, NO OVERRIDE - NOTE: This is part of the bottom whitespace on the separator and spacer elements. Also note that the first row in a panel has no top margin as per :first-of-type. 
 .sd-container-modern .sd-row {
+  flex-direction: column!important;
   // !VA Default
   margin-top: var(--sd-base-vertical-padding);
   &:first-of-type {

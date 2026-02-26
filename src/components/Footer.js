@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Logo from '../../public/img-lpl-logo-white-text.png'
 // !VA React Icons
 import { FaFacebookSquare } from 'react-icons/fa'
-import { FaTwitterSquare } from 'react-icons/fa'
+// import { FaTwitterSquare } from 'react-icons/fa'
 import { TfiYoutube } from 'react-icons/tfi'
 import { MdMail } from 'react-icons/md'
 

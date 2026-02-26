@@ -16,6 +16,7 @@ import registry from "../../helpers/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 import { getStyleDirectives } from "./CustomClasses";
 import { attachSurveySyncHandlers } from "../../helpers/syncSelectionValues";
+import SurveyNav from "./SurveyNav";
 
 /**
  * ============================================================================
@@ -180,32 +181,57 @@ export default function SurveyComponentMaster() {
   const [isSurveyReady, setIsSurveyReady] = useState(false);
 
 
-  const [survey] = useState(() => {
-    const surveyModel = new Model(masterSurvey);
+  const mq = () => window.matchMedia("(max-width: 639px)").matches;
 
+  // !VA Start new
 
+  function buildSurvey(isMobile, prev) {
+    const s = new Model(masterSurvey);
 
-    console.log("questionsOnPageMode:", surveyModel.questionsOnPageMode);
-    surveyModel.showCompletedPage = false;
-    surveyModel.applyTheme(SharpLight);
-    // !VA Flip showNavigationButtons on to test Card View
-    // surveyModel.showNavigationButtons = false;
-    surveyModel.showNavigationButtons = true;
-    // !VA Assign data-name attribute to all SurveyJS panels, otherwise they'll be arbitrarily assigned and not targetable as selectors
-    attachPanelDataNameStamper(surveyModel, { registry });
-    // !VA Apply the directives for SurveyJS DOM targeting that allow applying styles to panels, dropdowns, checkboxes and other elements separately: 
-    surveyModel.onAfterRenderPanel.add((sender, options) => {
+    s.showCompletedPage = false;
+    s.applyTheme(SharpLight);
+
+    // ✅ Card View vs Standard View
+    s.questionsOnPageMode = isMobile ? "questionPerPage" : "standard";
+
+    // ✅ Mobile: custom chevrons, Desktop: default buttons
+    s.showNavigationButtons = !isMobile;
+
+    attachPanelDataNameStamper(s, { registry });
+
+    s.onAfterRenderPanel.add((sender, options) => {
       applyDirectives(options.htmlElement, getStyleDirectives(options.panel));
     });
-
-    surveyModel.onAfterRenderQuestion.add((sender, options) => {
+    s.onAfterRenderQuestion.add((sender, options) => {
       applyDirectives(options.htmlElement, getStyleDirectives(options.question));
     });
 
+    // preserve state when rebuilding
+    if (prev) {
+      s.data = prev.data;
+      s.currentPageNo = prev.currentPageNo;
+    }
 
-    return surveyModel;
-  });
+    return s;
+  }
 
+  const [survey, setSurvey] = useState(null);
+
+  useEffect(() => {
+    setSurvey(buildSurvey(mq(), null));
+  }, []);
+
+  useEffect(() => {
+    if (!survey) return;
+
+    const mql = window.matchMedia("(max-width: 639px)");
+    const onChange = () => setSurvey(buildSurvey(mql.matches, survey));
+
+    mql.addEventListener("change", onChange);
+    return () => mql.removeEventListener("change", onChange);
+  }, [survey]);
+
+  // !VA End new
 
   useEffect(() => {
     if (!survey) return;
@@ -255,32 +281,36 @@ export default function SurveyComponentMaster() {
   }, [survey]);
 
   // Consent enforcement
-  useEffect(() => {
-    function handleValidatePage(sender, options) {
-      if (sender.currentPageNo !== CONSENT_PAGE_INDEX) return;
-      if (sender.getValue(CONSENT_QUESTION) !== "Yes") {
-        options.errors.push({ text: "You must agree to the terms to continue." });
-      }
-    }
-    survey.onValidatePage.add(handleValidatePage);
-    return () => survey.onValidatePage.remove(handleValidatePage);
-  }, [survey]);
+    useEffect(() => {
+      if (!survey) return;
 
-  // Auto-advance consent
-  // useEffect(() => {
-  //   function handleConsentChange(sender, options) {
-  //     if (
-  //       sender.currentPageNo === CONSENT_PAGE_INDEX &&
-  //       options.name === CONSENT_QUESTION &&
-  //       options.value === "Yes"
-  //     ) {
-  //       sender.showNavigationButtons = true;
-  //       sender.nextPage();
-  //     }
-  //   }
-  //   survey.onValueChanged.add(handleConsentChange);
-  //   return () => survey.onValueChanged.remove(handleConsentChange);
-  // }, [survey]);
+      function handleValidatePage(sender, options) {
+        if (sender.currentPageNo !== CONSENT_PAGE_INDEX) return;
+        if (sender.getValue(CONSENT_QUESTION) !== "Yes") {
+          options.errors.push({ text: "You must agree to the terms to continue." });
+        }
+      }
+
+      survey.onValidatePage.add(handleValidatePage);
+      return () => survey.onValidatePage.remove(handleValidatePage);
+    }, [survey]);
+
+    // !VA Let's leave this out, it's fragile enough.
+    // Auto-advance consent
+    // useEffect(() => {
+    //   function handleConsentChange(sender, options) {
+    //     if (
+    //       sender.currentPageNo === CONSENT_PAGE_INDEX &&
+    //       options.name === CONSENT_QUESTION &&
+    //       options.value === "Yes"
+    //     ) {
+    //       sender.showNavigationButtons = true;
+    //       sender.nextPage();
+    //     }
+    //   }
+    //   survey.onValueChanged.add(handleConsentChange);
+    //   return () => survey.onValueChanged.remove(handleConsentChange);
+    // }, [survey]);
 
   // Apply selections from one question to questions that come later. There are currently only two of these, so we'll do it here. Ideally, we would pull the element names out and put them in a separate file in /helpers
   useEffect(() => {
@@ -367,7 +397,12 @@ export default function SurveyComponentMaster() {
 
       {/* FADE-IN WRAPPER for the initial page load, to prevent FOUC and inconsistent element rendering*/}
       <div className={`surveyFadeWrap ${isSurveyReady ? "isReady" : ""}`}>
-        <Survey model={survey} onComplete={handleComplete} />
+        {!survey ? null : (
+          <>
+            <Survey model={survey} onComplete={handleComplete} />
+            <SurveyNav survey={survey} />
+          </>
+        )}
       </div>
     </>
   );
