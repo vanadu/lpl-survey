@@ -1,5 +1,17 @@
 @import './variables.scss';
 
+.site-wrap,
+#__next {
+  min-width: 0;
+  width: 100%;
+}
+
+.sj-body-flex {
+  width: 100%;
+  min-width: 0;
+}
+
+
 // !VA NAV MODS
 /* Hide the default bottom navigation buttons */
 @media (max-width: 639px) {

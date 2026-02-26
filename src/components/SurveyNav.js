@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 // import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
 import { PiCaretDoubleRightFill } from "react-icons/pi";
 import { PiCaretDoubleLeftFill } from "react-icons/pi";
+import { BsClipboard2Check } from "react-icons/bs";
 
 const SurveyNav = ({survey}) => {
   
@@ -62,17 +63,20 @@ const SurveyNav = ({survey}) => {
   // !VA End new
 
 
-  if (!survey) return null;
+if (!survey) return null;
 
-    const canPrev = survey.currentPageNo > 0;
-    const isLast = survey.isLastPage;
-    const nextText = isLast ? "Submit" : "Next";
+// ✅ works across versions; works in Card View too
+const isFirst = survey.isFirstPage;
+const isLast = survey.isLastPage;
 
-    const handlePrev = () => survey.prevPage();
-    const handleNext = () => {
-      if (isLast) survey.completeLastPage();
-      else survey.nextPage();
-  };
+const handlePrev = () => {
+  if (!isFirst) survey.prevPage();
+};
+
+const handleNext = () => {
+  if (isLast) survey.completeLastPage();
+  else survey.nextPage();
+};
 
   
 
@@ -88,17 +92,26 @@ const SurveyNav = ({survey}) => {
   return (
     <>
       <div className="sj-surveynav">
-        <button type="button" className="sj-surveynav__btn" onClick={handlePrev} disabled={!canPrev}>
+
+        <button
+          className="sj-surveynav__btn"
+          onClick={handlePrev}
+          disabled={isFirst}
+          type="button"
+        >
           <PiCaretDoubleLeftFill aria-hidden="true" />
-          <span className="sr-only">Back</span>
+          <span className="sr-only">Previous</span>
         </button>
 
-        <div className="sj-surveynav__spacer" />
-
-        <button type="button" className="sj-surveynav__btn sj-surveynav__btn--primary" onClick={handleNext}>
+        <button
+          className="sj-surveynav__btn"
+          onClick={handleNext}
+          type="button"
+        >
+          {isLast ? <BsClipboard2Check aria-hidden="true" /> : <PiCaretDoubleRightFill aria-hidden="true" />}
           <span className="sr-only">{isLast ? "Submit" : "Next"}</span>
-          <PiCaretDoubleRightFill aria-hidden="true" />
         </button>
+
       </div>
 
     </>
