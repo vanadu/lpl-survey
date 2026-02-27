@@ -12,8 +12,13 @@
 }
 
 
+.sd-page.sd-body__page {
+  position: relative;
+}
+
+
 // !VA NAV MODS
-/* Hide the default bottom navigation buttons */
+// Mobile-only: hide SurveyJS default navigation UI
 @media (max-width: 639px) {
   .sd-navigation,
   .sd-body__navigation,
@@ -23,6 +28,7 @@
   }
 }
 
+// Desktop: never show the custom nav
 @media (min-width: 640px) {
   .sj-surveynav {
     display: none !important;
@@ -30,39 +36,68 @@
 }
 
 /* ========================================
-   PAGE OVERLAY CONTAINER
+   PAGE-SCOPED NAV SYSTEM (TOP + CONDITIONAL BOTTOM)
+   - page-scoped (nav elements are appended into .sd-page)
+   - aligns to page width at breakpoints
+   - bottom nav only becomes visible via .isVisible (JS)
+   - no overlay styling (transparent container; only icons visible)
 ======================================== */
 
-/* Make the SurveyJS page the positioning context */
 .sj-page-has-nav {
-  position: relative;
+  position: relative; // positioning context for TOP nav
 }
 
-/* Nav overlay inside page */
-.sj-page-has-nav .sj-surveynav {
+/* shared nav container (transparent; no blur, no bg, no opacity overlay) */
+.sj-surveynav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  border: 0;
+
+  pointer-events: none; // allow page interaction; buttons re-enable below
+  z-index: 50;
+}
+
+/* TOP: pinned visually to top of the card (page-scoped) */
+.sj-surveynav--top {
   position: absolute;
   left: 0;
   right: 0;
-  top: 20px;                 /* adjust as needed */
-  pointer-events: none;      /* allow page interaction */
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-  z-index: 10;
+  top: 20px;
+}
+
+/* BOTTOM: fixed to viewport, but width/left are synced to the page via JS */
+.sj-surveynav--bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 0;   // overwritten by JS to match page rect
+  width: auto; // overwritten by JS
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 120ms ease, transform 120ms ease, visibility 120ms ease;
+
+  // when hidden, ensure it doesn't intercept taps
+  pointer-events: none;
+}
+
+.sj-surveynav--bottom.isVisible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  // container stays pointer-events:none; buttons enable pointer events individually
 }
 
 /* Re-enable clicks only on buttons */
-.sj-page-has-nav .sj-surveynav button {
-  pointer-events: auto;
-}
-
-
-/* ========================================
-   BUTTON BASE
-======================================== */
-
 .sj-surveynav__btn {
-  /* remove default button styles */
+  pointer-events: auto;
+
   appearance: none;
   border: none;
   background: transparent;
@@ -70,7 +105,6 @@
   margin: 0;
   cursor: pointer;
 
-  /* touch target */
   width: 48px;
   height: 48px;
 
@@ -79,35 +113,19 @@
   justify-content: center;
 }
 
-/* disabled state */
 .sj-surveynav__btn:disabled {
-  opacity: .35;
+  opacity: 0.35;
   cursor: default;
 }
 
-
-/* ========================================
-   CHEVRON ICON CONTROL
-======================================== */
-
-/* control icon size here */
 .sj-surveynav__btn svg {
-  width: 22px;   /* ← change this to resize chevron */
+  width: 22px;
   height: 22px;
-}
-
-/* optional: slightly softer color */
-.sj-surveynav__btn svg {
   stroke: currentColor;
   color: #444;
 }
 
-
-/* ========================================
-   ACCESSIBILITY TEXT
-======================================== */
-
-/* hidden but readable by screen readers */
+/* screen-reader-only */
 .sj-surveynav__btn .sr-only {
   position: absolute;
   width: 1px;
@@ -117,10 +135,20 @@
   white-space: nowrap;
 }
 
-/* if you truly want it invisible everywhere */
-.sj-surveynav__btn .sr-only.hide {
-  display: none;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
