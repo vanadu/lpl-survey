@@ -20,6 +20,17 @@ const Footer = () => {
       <footer className={styles.footer}>
         <div className={styles.two_column_content}>
           <div className={styles.column_left}>
+
+
+            <div className={styles.copyright}>
+              <p className={styles.copyright_text}>
+              Copyright &copy; 2026 LarParLife.com
+              All&nbsp;rights&nbsp;reserved.<br />
+              LarPar? Life!, LarParLife and the LarParLife logo are trademarks of LarParLife.com
+              </p>
+            </div>
+          </div>
+
             <div className={styles.head}>
               <div className={styles.logo}>
                 <Link 
@@ -67,14 +78,6 @@ const Footer = () => {
 
             </div>
 
-            <div className={styles.copyright}>
-              <p className={styles.copyright_text}>
-              Copyright &copy; 2026 LarParLife.com
-              All&nbsp;rights&nbsp;reserved.<br />
-              LarPar? Life!, LarParLife and the LarParLife logo are trademarks of LarParLife.com
-              </p>
-            </div>
-          </div>
 
           <div className={styles.column_right}>
             <div className={styles.disclaimer}>

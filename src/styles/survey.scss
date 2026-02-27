@@ -11,147 +11,6 @@
   min-width: 0;
 }
 
-
-.sd-page.sd-body__page {
-  position: relative;
-}
-
-
-// !VA NAV MODS
-// Mobile-only: hide SurveyJS default navigation UI
-@media (max-width: 639px) {
-  .sd-navigation,
-  .sd-body__navigation,
-  .sd-footer,
-  .sd-action-bar {
-    display: none !important;
-  }
-}
-
-// Desktop: never show the custom nav
-@media (min-width: 640px) {
-  .sj-surveynav {
-    display: none !important;
-  }
-}
-
-/* ========================================
-   PAGE-SCOPED NAV SYSTEM (TOP + CONDITIONAL BOTTOM)
-   - page-scoped (nav elements are appended into .sd-page)
-   - aligns to page width at breakpoints
-   - bottom nav only becomes visible via .isVisible (JS)
-   - no overlay styling (transparent container; only icons visible)
-======================================== */
-
-.sj-page-has-nav {
-  position: relative; // positioning context for TOP nav
-}
-
-/* shared nav container (transparent; no blur, no bg, no opacity overlay) */
-.sj-surveynav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-
-  background: transparent;
-  backdrop-filter: none;
-  box-shadow: none;
-  border: 0;
-
-  pointer-events: none; // allow page interaction; buttons re-enable below
-  z-index: 50;
-}
-
-/* TOP: pinned visually to top of the card (page-scoped) */
-.sj-surveynav--top {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 20px;
-}
-
-/* BOTTOM: fixed to viewport, but width/left are synced to the page via JS */
-.sj-surveynav--bottom {
-  position: absolute;
-  bottom: 20px;
-  left: 0;   // overwritten by JS to match page rect
-  width: auto; // overwritten by JS
-
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(6px);
-  transition: opacity 120ms ease, transform 120ms ease, visibility 120ms ease;
-
-  // when hidden, ensure it doesn't intercept taps
-  pointer-events: none;
-}
-
-.sj-surveynav--bottom.isVisible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  // container stays pointer-events:none; buttons enable pointer events individually
-}
-
-/* Re-enable clicks only on buttons */
-.sj-surveynav__btn {
-  pointer-events: auto;
-
-  appearance: none;
-  border: none;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-
-  width: 48px;
-  height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sj-surveynav__btn:disabled {
-  opacity: 0.35;
-  cursor: default;
-}
-
-.sj-surveynav__btn svg {
-  width: 22px;
-  height: 22px;
-  stroke: currentColor;
-  color: #444;
-}
-
-/* screen-reader-only */
-.sj-surveynav__btn .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // !VA GLOBAL DEFINITIONS
 
 // !VA Background color
@@ -162,12 +21,16 @@
 .sd-container-modern .sd-page  {
   background: #FFFFFF;
   border-radius: 10px;
-  padding: 30px;
+  padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-bottom: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+
 }
 
 // !VA Base unit and font size
 .sd-container-modern {
-  --sjs-base-unit: 8px;
+  --sjs-base-unit: 6.5px;
   --sjs-font-size: 16px!important;
 
 
@@ -177,22 +40,25 @@
   --sjs-article-font-default-lineHeight: calc(1.3 * (var(--sjs-font-size, 16px)));
   // !VA Caluclate h3 font size and height based on base font
   --sjs-article-font-large-fontSize: calc(1.1 * (var(--sjs-font-size, 16px)));
-  --sjs-article-font-large-lineHeight: calc(1.4 * (var(--sjs-font-size, 16px)));
+  --sjs-article-font-large-lineHeight: calc(1.3 * (var(--sjs-font-size, 16px)));
   // !VA Caluclate h2 font size and height based on base font
   --sjs-article-font-x-large-fontSize: calc(1.3 * (var(--sjs-font-size, 16px)));
-  --sjs-article-font-x-large-lineHeight: calc(1.8 * (var(--sjs-font-size, 16px)));
-  // !VA Make the question titles the same size as the base font.
+  --sjs-article-font-x-large-lineHeight: calc(1.3 * (var(--sjs-font-size, 16px)));
+  // !VA Base the question titles on the base font but a little smaller.
   // !VA NOTE: SOME OF THESE ELEMENTS LINE HEIGHT MUST BE SET IN THE ELEMENT CSS!
-  --sjs-font-questiontitle-size: calc(.925 * (var(--sjs-font-size)));
+  --sjs-font-questiontitle-size: calc(.9 * (var(--sjs-font-size)));
 
   --sjs-font-editorfont-size: calc(.925 * (var(--sjs-font-size)));
 
   @include mphone {
-    --sjs-base-unit: 8px;
-    --sjs-font-size: 17px!important;
+    --sjs-base-unit: 7px!important;
+    --sjs-font-size: 18px!important;
+  }
+  @include desktop {
+
   }
 
-  
+
   @include ldesktop {
     --sjs-base-unit: 8px;
     --sjs-font-size: 19px!important;
@@ -284,12 +150,13 @@
 
 // !VA ADD LEFT AND RIGHT PADDING TO PAGES
 .sd-container-modern .sd-page .sd-element--with-frame {
-  // padding-top: 40px calc(var(--sd-base-padding) + var(--sv-element-add-padding-left, 20px));
-  padding-top: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  // !VA Compensate for mobile nav
+  padding-top: calc(4 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   padding-left: calc(var(--sd-base-padding) + var(--sv-element-add-padding-left, 10px));
   padding-right: calc(var(--sd-base-padding) + var(--sv-element-add-padding-right, 10px));
   box-shadow: none;
   @include ldesktop {
+    padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
     box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
   }
 }
@@ -308,6 +175,7 @@
 
 // !VA DEFAULT PANEL CONTENT PADDING - Whitespace above and below the panel content
 .sd-container-modern .sd-panel__content {
+
   padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   padding-bottom: calc(3* (var(--sjs-base-unit, var(--base-unit, 8px))));
 }
@@ -398,7 +266,15 @@
   line-height: calc(1.4 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
 }
 
+.sd-container-modern .sd-panel__title  {
+  // background: rgba(255, 255, 0, .3) !important; //devyel
+}
 
+// !VA PANEL TITLES - SET TO SAME AS QUESTION TITLES
+.sd-container-modern .sd-title.sd-element__title {
+  --sjs-font-questiontitle-size: calc(.9 * (var(--sjs-font-size)));
+
+}
 
 
 // !VA HTML p, li DEFAULT: NO PADDING ON THESE ELEMENTS
@@ -418,8 +294,16 @@
 // !VA IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 [data-name="LandingHeadPanel"]  {
   &.sd-element--with-frame  {
-    padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+    padding-top: calc(5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+
+
+
     box-shadow: none!important;
+
+    margin: 0 !important;
   }
   // margin-bottom: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
   &.sd-panel__content {
@@ -429,10 +313,6 @@
     align-items: center;
     padding: 0!important;
     margin: 0!important;
-    .sd-row {
-      // padding: 0!important;
-      // margin: 0!important;
-    }
     h2 {
       text-align:center;
     }
@@ -441,9 +321,17 @@
 
 // !VA IMPORTANT: bordre is the panel border on sd-element--nested-with-borders!
 [data-name="LandingHeaderPanel"] {
+
   &.sd-element--nested-with-borders {
-    padding: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+    padding-top: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+
     border: none;
+    // !VA overrides .sd-container-modern.sd-element--nested-with-borders
+    margin: 0!important;
+    
     @include tablet { 
       border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
       padding: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
@@ -460,6 +348,10 @@
   .sd-panel__content {
     display: flex;
     flex-direction: column;
+    padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     @include tablet { flex-direction: row; }
     @include desktop { flex-direction: row; }
     @include ldesktop { flex-direction: row; }
@@ -485,7 +377,14 @@
     // font-weight: 600!important;
     // --sjs-font-size: 15px;
     // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+    padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+
+    font-size: var(--sjs-article-font-default-fontSize, calc(3 * (var(--sjs-font-size, 16px))))!important;
+    font-weight: 600;
     text-align: center;
+    @include tablet {
+
+    }
     @include ldesktop {
       // margin: .5rem 0 0 0!important;
       // --sjs-font-size: 18px;
@@ -500,6 +399,12 @@
     justify-content: center;
     align-items: flex-start;
     height: 100%;
+
+    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    // margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     @include tablet {
       justify-content: flex-end;
       margin-right: 40px;
@@ -525,7 +430,7 @@
     margin: 0!important;
   }
   .survey-version-logo {
-    display: none;
+    display: block;
     width: 80px;
     margin: 0 auto;
     height: auto;
@@ -553,7 +458,22 @@
   }
 }
 
-
+[data-name="LifeStatus"] {
+  .sd-imagepicker--static {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .sd-imagepicker__item  {
+    width: 40%;
+    img {
+      background: none;
+    }
+  }
+  .sd-imagepicker__text {
+    // display: none;
+  }
+}
 
 
 
@@ -601,11 +521,11 @@
   // !VA Defaults
   position: relative;
   display: block;
-  height: 40px;
-  padding-left: 1.25rem;
   text-indent: -1.25rem;
   padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  // margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
 
 .survey-wrapper .survey-info-icon {
@@ -617,7 +537,7 @@
 .survey-wrapper .survey-info-link {
   // --sjs-font-size: 16px!important;
   // !VA Font size override, renders to 16px
-  // font-size: calc(1 * (var(--sjs-font-size, 16px)));
+  font-size: calc(.9 * (var(--sjs-font-size, 16px)));
   // line-height: calc(1.5 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
   color: #B70B0C;
   font-weight: 600;
@@ -650,13 +570,20 @@
 /* Apply to fieldset.sd-selectbase */
 .survey-two-col {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1rem;
+  flex-direction: column;
+
+
   /* fieldset reset */
   border: 0;
   padding: 0;
   margin: 0;
   min-width: 0;
+
+  @include ldesktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
 }
 
 // !VA Two column checkboxes
@@ -667,9 +594,20 @@
 }
 // !VA Two column boolean radio buttons, creates a 60% width element
 .survey-two-col .sd-item.sd-radio {
-  // !VA Width of the boolean radios
-  flex: 0 0 calc(30% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  // flex: 0 0 calc(50% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
+
+
+
+  @include ldesktop {
+    // !VA Width of the boolean radios
+    flex: 0 0 calc(30% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
+    box-sizing: border-box;
+    background: rgba(255, 0, 0, .3) !important; //devred
+  }
+
+
 }
 
 // !VA THREE-BUTTON RADIO GROUPS i.e. Yes No Don't know
@@ -677,18 +615,25 @@
 // Apply to fieldset.sd-selectbase so titles/headers are unaffected
 .survey-three-col {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1rem;
-  width: 600px;
-  // fieldset reset (since target is a fieldset)
-  border: 0;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
-  // !VA Creates a 480px element with three equal button widths
-  .sd-radio {
-    max-width: 180px!important;
+  flex-direction: row;
+
+
+  @include ldesktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    width: 600px;
+    // fieldset reset (since target is a fieldset)
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    // !VA Creates a 480px element with three equal button widths
+    .sd-radio {
+      max-width: 180px!important;
+    }
   }
+
 }
 // !VA I'm not sure what this does
 .survey-three-col > .sd-item {
@@ -707,7 +652,13 @@
 
 // !VA Medium width text boxes and dropdown, i.e. CmpnName, UserInfoAgeGroup. 
 .survey-control-w-300 { 
-  width: 300px !important; 
+  width: 100%!important;
+  @include mphone { }
+  @include lphone { }
+  @include tablet { width: 300px !important; }
+  @include desktop { width: 300px !important; }
+  @include ldesktop { width: 300px !important; }
+
 }
 
 // !VA Wide text boxes and dropdowns
@@ -846,29 +797,79 @@
   }
 }
 
+
+[data-name="UserInfoAboutPanel"],
+[data-name="CmpnInfoAgeBehaviorPanel"]
+{
+  padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+}
+
+
+
+
 // !VA Force the User Name and Country to 2-1 layout
-[data-name="UserInfoAboutPanel"] .sd-element__content.sd-panel__content {
-  display: grid;
-  gap: 0.75rem 1rem;
-  align-items: start;
-  grid-template-columns: 1fr 1fr;
-  .sd-row {
+[data-name="UserInfoNameCountryPanel"],
+[data-name="UserInfoAgeGenderPanel"],
+[data-name="dcsdCmpnInfoAgePanel"],
+[data-name="lvngCmpnInfoAgePanel"]
+[data-name="CmpnInfoDemeanor"]
+
+
+{
+  // display: grid;
+  // gap: 0.75rem 1rem;
+  // align-items: start;
+  // grid-template-columns: 1fr 1fr;
+  
+  &.sd-element--nested-with-borders   {
+    border: none;
+    padding: 0!important;
     padding: 0!important;
     margin: 0!important;
+    padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  }
+  // !VA NOT PRESENT IN NESTED PANELS
+  // &.sd-element--with-frame  {
+  //   padding-top: calc(5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  //   padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  //   padding-bottom: calc(5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  //   padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  //   border: none;
+  //   box-shadow: none!important;
+  //   margin: 0 !important;
+  //   padding: 0!important;
+  //   margin: 0!important;
+  // }
+  .sd-panel__content {
+    padding: 0!important;
+    margin: 0!important;
+  }
+
+  .sd-row {
+    // padding: 0!important;
+    // margin: 0!important;
   }
 }
 
 // !VA Force CmpnInfoDetailsPanel into 1-2-2 grid layout
 [data-name="CmpnInfoDetailsPanel"] .sd-element__content.sd-panel__content {
-  display: grid;
-  gap: 0.25rem 1rem;
-  align-items: start;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-flow: row;
+  display: flex;
+  flex-direction: column;
 
-  // make first child span both columns
-  > :first-child {
-    grid-column: 1 / -1;
+
+  @include ldesktop {
+    display: grid;
+    gap: 0.25rem 1rem;
+    align-items: start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row;
+    // make first three children hild span both columns
+    > :first-child, :nth-child(2), :nth-child(3) {
+      grid-column: 1 / -1;
+    }
   }
 }
 
@@ -1240,6 +1241,136 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 }
 
 
+// !VA NAV MODS
+// Mobile-only: hide SurveyJS default navigation UI
+@media (max-width: 639px) {
+  .sd-navigation,
+  .sd-body__navigation,
+  .sd-footer,
+  .sd-action-bar {
+    display: none !important;
+  }
+}
+
+// Desktop: never show the custom nav
+@media (min-width: 640px) {
+  .sj-surveynav {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   PAGE-SCOPED NAV SYSTEM (TOP + CONDITIONAL BOTTOM)
+   - page-scoped (nav elements are appended into .sd-page)
+   - aligns to page width at breakpoints
+   - bottom nav only becomes visible via .isVisible (JS)
+   - no overlay styling (transparent container; only icons visible)
+======================================== */
+
+.sj-page-has-nav {
+  position: relative; // positioning context for TOP nav
+}
+
+/* shared nav container (transparent; no blur, no bg, no opacity overlay) */
+.sj-surveynav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  border: 0;
+
+  pointer-events: none; // allow page interaction; buttons re-enable below
+  z-index: 50;
+}
+
+/* TOP: pinned visually to top of the card (page-scoped) */
+.sj-surveynav--top {
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: 0;
+}
+
+/* BOTTOM: fixed to viewport, but width/left are synced to the page via JS */
+.sj-surveynav--bottom {
+  position: absolute;
+  bottom: 4px;
+  left: 0;   // overwritten by JS to match page rect
+  width: auto; // overwritten by JS
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 120ms ease, transform 120ms ease, visibility 120ms ease;
+
+  // when hidden, ensure it doesn't intercept taps
+  pointer-events: none;
+}
+
+.sj-surveynav--bottom.isVisible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  // container stays pointer-events:none; buttons enable pointer events individually
+}
+
+/* Re-enable clicks only on buttons */
+.sj-surveynav__btn {
+  pointer-events: auto;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  opacity: .7;
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sj-surveynav__btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.sj-surveynav__btn svg {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  color: $secondary_color;
+}
+
+/* screen-reader-only */
+.sj-surveynav__btn .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // !VA  DEV ONLY
 
 // !VA Survey Text Panel for computedValues
@@ -1263,8 +1394,8 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 .survey-dev-menu {
   position: relative;
-  display: none;
   display: inline-flex;
+  display: none;
   flex-direction: column;
   width: 200px;
   font-family: inherit;

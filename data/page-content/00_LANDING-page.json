@@ -28,7 +28,7 @@
             {
               "type": "html",
               "name": "LandingWelcomeHeading",
-              "html": "<h2>Welcome to the LP/GOLPP Survey 2026</h2>"
+              "html": "<h2>Welcome to the LP/GOLPP&nbsp;Survey&nbsp;2026</h2>"
             },
             {
               "type": "html",
@@ -42,7 +42,7 @@
     },
     {
       "type": "panel",
-      "name": "LandingPrivacyPanel",
+      "name": "LandingPrivacyConsentPanel",
       "elements": [
         {
           "type": "html",
@@ -68,14 +68,8 @@
           "type": "html",
           "name": "LandingAboutPrivacyText02",
           "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>"
-        }
-      ]
-    },
-    {
-      "type": "panel",
-      "name": "LandingConsentPanel",
-      "elements": [
-          {
+        },
+                  {
           "type": "html",
           "name": "LandingAboutConsentHeading",
           "html": "<h3>About our Consent Policy</h3>"
@@ -88,7 +82,7 @@
           {
             "type": "html",
             "name": "LandingConsentLink",
-            "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
+            "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent&nbsp;Policy</a></div>"
           },
           {
             "type": "radiogroup",

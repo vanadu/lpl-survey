@@ -37,26 +37,19 @@
               {
                   "value": true,
                   "imageLink": "/img-companions-rainbow.png",
-                  "text": "Over the Rainbow Bridge"
+                  "text": "Yes"
                 },
                 {
                   "value": false,
                   "imageLink": "/img-companions.png",
-                  "text": "Still here on Earth"
+                  "text": "No"
                 }
 
               ],
               "imageWidth": 120,
               "imageHeight": 120,
               "showLabel": true
-            }
-    
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "UserInfoHeadPanel",
-          "elements": [
+            },
             {
               "type": "html",
               "name": "UserInfoHeading",
@@ -71,15 +64,8 @@
               "type": "html",
               "name": "UserInfoVerificationText",
               "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "UserInfoVerificationPanel", 
-          "title": "Verification Contact",
-          "elements": [
-            {
+            },
+                        {
               "type": "boolean",
               "name": "UserInfoContactType",
               "title": "Would you like to use email or Facebook Messenger for verification?",
@@ -129,120 +115,129 @@
         {
           "type": "panel",
           "name": "UserInfoAboutPanel", 
-          "title": "Your First Name and Country",
-          "elements": [
-
-            {
-              "type": "text",
-              "title": "First Name:",
-              "name": "UserInfoFirstName",
-              "isRequired": true
-            },
-            {
-              "type": "dropdown",
-              "name": "UserInfoCountry",
-              "title": "Country:",
-              "isRequired": true,
-              "choices": [
-                { "value": "US",
-                  "text": "United States"
-                },
-                { "value": "UK",
-                  "text": "United Kingdom"
-                },
-                { "value": "CA",
-                  "text": "Canada"
-                },
-                { "value": "DE",
-                  "text": "Germany"
-                },
-                { "value": "AU/NZ",
-                  "text": "Australia/New Zealand"
-                },
-                { "value": "FR",
-                  "text": "France"
-                },
-                { "value": "ES",
-                  "text": "Spain"
-                },
-                { "value": "PT",
-                  "text": "Portugal"
-                }
-              ],
-              "showOtherItem": true
-            },
-            {
-              "type": "text",
-              "name": "UserInfoStateRegion",
-              "title": "State, province or region (optional):",
-              "isRequired": false
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "UserInfoAgeGenderPanel",
-          "title": "Age and Gender (optional)",
           "elements": [
             {
-              "type": "html",
-              "name": "UserInfoAgeGenderText",
-              "html": "<p>We're asking for basic demographic information to help understand how different people manage the animals in their care.</p>"
-            },
-            {
-              "type": "dropdown",
-              "name": "UserInfoAgeGroup",
-              "title": "Approximately what is your age?",
-               "width": "70%",
-              "minWidth": "260px",
-              "choices": [
+              "type": "panel",
+              "name": "UserInfoNameCountryPanel",
+              "title": "Your First Name and Country",
+              "elements": [
                 {
-                  "value": "UNDER_20",
-                  "text": "Under 20"
+                  "type": "text",
+                  "title": "First Name:",
+                  "name": "UserInfoFirstName",
+                  "isRequired": true
                 },
                 {
-                  "value": "20_34",
-                  "text": "20-34"
+                  "type": "dropdown",
+                  "name": "UserInfoCountry",
+                  "title": "Country:",
+                  "isRequired": true,
+                  "choices": [
+                    { "value": "US",
+                      "text": "United States"
+                    },
+                    { "value": "UK",
+                      "text": "United Kingdom"
+                    },
+                    { "value": "CA",
+                      "text": "Canada"
+                    },
+                    { "value": "DE",
+                      "text": "Germany"
+                    },
+                    { "value": "AU/NZ",
+                      "text": "Australia/New Zealand"
+                    },
+                    { "value": "FR",
+                      "text": "France"
+                    },
+                    { "value": "ES",
+                      "text": "Spain"
+                    },
+                    { "value": "PT",
+                      "text": "Portugal"
+                    }
+                  ],
+                  "showOtherItem": true
                 },
                 {
-                  "value": "35_49",
-                  "text": "35-49"
-                },
-                "50-64",
-                {
-                  "value": "OVER_65",
-                  "text": "Over 65"
+                  "type": "text",
+                  "name": "UserInfoStateRegion",
+                  "title": "State, province or region (optional):",
+                  "isRequired": false
                 }
               ]
             },
+
             {
-              "type": "radiogroup",
-              "name": "UserInfoGender",
-              "title": "Gender information:",
-              "isRequired": false,
-              "choices": [
+              "type": "panel",
+              "name": "UserInfoAgeGenderPanel",
+              "title": "Age and Gender (optional)",
+              "elements": [
                 {
-                "value": "WOMAN",
-                "text": "Woman"
+                  "type": "html",
+                  "name": "UserInfoAgeGenderText",
+                  "html": "<p>We're asking for basic demographic information to help understand how different people manage the animals in their care.</p>"
                 },
                 {
-                  "value": "MAN",
-                  "text": "Man"
+                  "type": "dropdown",
+                  "name": "UserInfoAgeGroup",
+                  "title": "Approximately what is your age?",
+                  "width": "70%",
+                  "minWidth": "260px",
+                  "choices": [
+                    {
+                      "value": "UNDER_20",
+                      "text": "Under 20"
+                    },
+                    {
+                      "value": "20_34",
+                      "text": "20-34"
+                    },
+                    {
+                      "value": "35_49",
+                      "text": "35-49"
+                    },
+                    "50-64",
+                    {
+                      "value": "OVER_65",
+                      "text": "Over 65"
+                    }
+                  ]
                 },
                 {
-                  "value": "NON_BINARY",
-                  "text": "Non-binary"
-                },
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
+                  "type": "radiogroup",
+                  "name": "UserInfoGender",
+                  "title": "Gender information:",
+                  "isRequired": false,
+                  "choices": [
+                    {
+                    "value": "WOMAN",
+                    "text": "Woman"
+                    },
+                    {
+                      "value": "MAN",
+                      "text": "Man"
+                    },
+                    {
+                      "value": "NON_BINARY",
+                      "text": "Non-binary"
+                    },
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Prefer to self-describe"
                 }
-              ],
-              "showOtherItem": true,
-              "otherText": "Prefer to self-describe"
+              ]
             }
+
+
           ]
         }
+
 
  
   ]

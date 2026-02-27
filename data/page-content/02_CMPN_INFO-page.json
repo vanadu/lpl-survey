@@ -2,95 +2,96 @@
   "name": "CMPN_INFO-page",
   "elements": [
 
-        {
-          "type": "panel",
-          "name": "CmpnInfoHeadPanel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "CmpnInfoHeading",
-              "html": "<h3>About your LP/GOLPP companion<h3>"
-            },
-            {
-              "type": "html",
-              "name": "CmpnInfoText",
-              "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
-            }
-          ]
-        },
-
-        {
-          "type": "panel",
-          "name": "CmpnInfoDetailsPanel",
-          "elements": [
-
-            {
-              "type": "radiogroup",
-              "name": "CmpnInfoAnimalType",
-              "title": "{CmpnName}'s species:",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "CANINE",
-                  "text": "Dog"
-                },
-                {
-                  "value": "FELINE",
-                  "text": "Cat"
-                },
-                {
-                  "value": "EQUINE",
-                  "text": "Horse"
-                }
-              ]
-            },
-            {
+      {
+        "type": "panel",
+        "name": "CmpnInfoDetailsPanel",
+        "elements": [
+          {
+            "type": "html",
+            "name": "CmpnInfoHeading",
+            "html": "<h3>About your LP/GOLPP companion<h3>"
+          },
+          {
+            "type": "html",
+            "name": "CmpnInfoText",
+            "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
+          },
+          
+          {
+            "type": "radiogroup",
+            "name": "CmpnInfoAnimalType",
+            "title": "{CmpnName}'s species:",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "CANINE",
+                "text": "Dog"
+              },
+              {
+                "value": "FELINE",
+                "text": "Cat"
+              },
+              {
+                "value": "EQUINE",
+                "text": "Horse"
+              }
+            ]
+          },
+          {
+          "type": "text",
+          "name": "CmpnInfoBreed",
+          "title": "{CmpnName}'s breed or mix:",
+          "isRequired": true
+          },
+          {
+            "type": "boolean",
+            "name": "CmpnInfoGender",
+            "title": "{CmpnName}'s gender:",
+            "isRequired": true,
+            "labelTrue": "Female",
+            "labelFalse": "Male"
+          },
+          {
             "type": "text",
-            "name": "CmpnInfoBreed",
-            "title": "{CmpnName}'s breed or mix:",
-            "isRequired": true
-            },
-            {
-              "type": "boolean",
-              "name": "CmpnInfoGender",
-              "title": "{CmpnName}'s gender:",
-              "isRequired": true,
-              "labelTrue": "Female",
-              "labelFalse": "Male"
-            },
-            {
-              "type": "text",
-              "name": "CmpnInfoWeight",
-              "title": "{CmpnName}'s last known weight (in lbs or kg):",
-              "description": "Please enter a number",
-              "isRequired": true,
-              "inputType": "number",
-              "min": 1,
-              "max": 2200,
-              "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 2200,
-                  "text": "Weight must be between 1 and 2200"
-                }
-              ]
-            },
-            {
-              "type": "boolean",
-              "name": "CmpnInfoWeightUnits",
-              "title": "Weight units:",
-              "description": "Please choose pounds or kilos.",
-              "isRequired": true,
-              "labelTrue": "Kg",
-              "labelFalse": "Lbs"
-            }
-          ]
-        },
+            "name": "CmpnInfoWeight",
+            "title": "{CmpnName}'s last known weight (in lbs or kg):",
+            "description": "Please enter a number",
+            "isRequired": true,
+            "inputType": "number",
+            "min": 1,
+            "max": 2200,
+            "validators": [
+              {
+                "type": "numeric",
+                "minValue": 1,
+                "maxValue": 2200,
+                "text": "Weight must be between 1 and 2200"
+              }
+            ]
+          },
+          {
+            "type": "boolean",
+            "name": "CmpnInfoWeightUnits",
+            "title": "Weight units:",
+            "description": "Please choose pounds or kilos.",
+            "isRequired": true,
+            "labelTrue": "Kg",
+            "labelFalse": "Lbs"
+          }
+        ]
+      },
+
+
+
+      {
+        "type": "panel",
+        "name": "CmpnInfoAgeBehaviorPanel",
+        "elements": [
+
         {
           "type": "panel",
           "name": "dcsdCmpnInfoAgePanel",
-          "title": "<p>At about what age did {CmpnName} cross over the Rainbow Bridge?</p>",
+          "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
           "description": "Please enter years and months",
           "visibleIf": "{LifeStatus} = true",
           "elements": [
@@ -130,6 +131,7 @@
             }
           ]
         },
+
         {
           "type": "panel",
           "name": "lvngCmpnInfoAgePanel",
@@ -174,49 +176,42 @@
         },
 
         {
-          "type": "panel",
-          "name": "CmpnInfoDemeanorPanel",
-          "title": "",
-          "elements": [
-            {
-              "type": "rating",
-              "name": "CmpnInfoDemeanor",
-              "title": "How would you describe {CmpnName}'s demeanor?",
-              "description": "1 = very calm, 5 = very energetic",
-              "isRequired": true,
-              "displayMode": "buttons",
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" }
-              ]
-            },
-            {
-              "type": "rating",
-              "name": "CmpnInfoAnxiety",
-              "title": "How would you describe {CmpnName}'s anxiety level?",
-              "description": "1 = not at all anxious, 5 = very anxious",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" }
-              ]
-            },
-            {
-              "type": "boolean",
-              "name": "CmpnInfoHasInsurance",
-              "required": true,
-              "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
-              "swapOrder": true
-            }
+          "type": "rating",
+          "name": "CmpnInfoDemeanor",
+          "title": "How would you describe {CmpnName}'s demeanor?",
+          "description": "1 = very calm, 5 = very energetic",
+          "isRequired": true,
+          "displayMode": "buttons",
+          "rateValues": [
+            { "value": 1, "text": "1" },
+            { "value": 2, "text": "2" },
+            { "value": 3, "text": "3" },
+            { "value": 4, "text": "4" },
+            { "value": 5, "text": "5" }
           ]
+        },
+        {
+          "type": "rating",
+          "name": "CmpnInfoAnxiety",
+          "title": "How would you describe {CmpnName}'s anxiety level?",
+          "description": "1 = not at all anxious, 5 = very anxious",
+          "isRequired": true,
+          "rateValues": [
+            { "value": 1, "text": "1" },
+            { "value": 2, "text": "2" },
+            { "value": 3, "text": "3" },
+            { "value": 4, "text": "4" },
+            { "value": 5, "text": "5" }
+          ]
+        },
+        {
+          "type": "boolean",
+          "name": "CmpnInfoHasInsurance",
+          "required": true,
+          "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
+          "swapOrder": true
         }
-    
-
+      ]
+    }
   ]
 }

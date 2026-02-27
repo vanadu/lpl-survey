@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-26T07:24:41.992Z",
+    "builtAt": "2026-02-27T15:54:11.347Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -62,19 +62,8 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "LandingPrivacyPanel": {
-      "name": "LandingPrivacyPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "LANDING-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
-    "LandingConsentPanel": {
-      "name": "LandingConsentPanel",
+    "LandingPrivacyConsentPanel": {
+      "name": "LandingPrivacyConsentPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -91,7 +80,7 @@
       "collect": true,
       "path": [
         "LANDING-page",
-        "LandingConsentPanel"
+        "LandingPrivacyConsentPanel"
       ],
       "hasTitle": true,
       "title": "Do you want to proceed with the survey in accordance with our Consent Policy?",
@@ -138,29 +127,6 @@
       "visibleIf": "{CmpnName} notempty",
       "isRequired": true
     },
-    "UserInfoHeadPanel": {
-      "name": "UserInfoHeadPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "USER_INFO-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
-    "UserInfoVerificationPanel": {
-      "name": "UserInfoVerificationPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "USER_INFO-page"
-      ],
-      "hasTitle": true,
-      "title": "Verification Contact",
-      "hasVisibleIf": false
-    },
     "UserInfoContactType": {
       "name": "UserInfoContactType",
       "type": "boolean",
@@ -168,7 +134,7 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoVerificationPanel"
+        "UserInfoLifeStatusPanel"
       ],
       "hasTitle": true,
       "title": "Would you like to use email or Facebook Messenger for verification?",
@@ -182,7 +148,7 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoVerificationPanel"
+        "UserInfoLifeStatusPanel"
       ],
       "hasTitle": true,
       "title": "Email address:",
@@ -197,7 +163,7 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoVerificationPanel"
+        "UserInfoLifeStatusPanel"
       ],
       "hasTitle": true,
       "title": "Facebook account:",
@@ -213,7 +179,7 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoVerificationPanel"
+        "UserInfoLifeStatusPanel"
       ],
       "hasTitle": true,
       "title": "May we contact you to talk more about your LP experience?",
@@ -228,6 +194,18 @@
       "path": [
         "USER_INFO-page"
       ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "UserInfoNameCountryPanel": {
+      "name": "UserInfoNameCountryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoAboutPanel"
+      ],
       "hasTitle": true,
       "title": "Your First Name and Country",
       "hasVisibleIf": false
@@ -239,7 +217,8 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoAboutPanel"
+        "UserInfoAboutPanel",
+        "UserInfoNameCountryPanel"
       ],
       "hasTitle": true,
       "title": "First Name:",
@@ -253,7 +232,8 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoAboutPanel"
+        "UserInfoAboutPanel",
+        "UserInfoNameCountryPanel"
       ],
       "hasTitle": true,
       "title": "Country:",
@@ -267,7 +247,8 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoAboutPanel"
+        "UserInfoAboutPanel",
+        "UserInfoNameCountryPanel"
       ],
       "hasTitle": true,
       "title": "State, province or region (optional):",
@@ -280,7 +261,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "USER_INFO-page"
+        "USER_INFO-page",
+        "UserInfoAboutPanel"
       ],
       "hasTitle": true,
       "title": "Age and Gender (optional)",
@@ -293,6 +275,7 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
+        "UserInfoAboutPanel",
         "UserInfoAgeGenderPanel"
       ],
       "hasTitle": true,
@@ -306,23 +289,13 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
+        "UserInfoAboutPanel",
         "UserInfoAgeGenderPanel"
       ],
       "hasTitle": true,
       "title": "Gender information:",
       "hasVisibleIf": false,
       "isRequired": false
-    },
-    "CmpnInfoHeadPanel": {
-      "name": "CmpnInfoHeadPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "CMPN_INFO-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
     },
     "CmpnInfoDetailsPanel": {
       "name": "CmpnInfoDetailsPanel",
@@ -406,16 +379,28 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "dcsdCmpnInfoAgePanel": {
-      "name": "dcsdCmpnInfoAgePanel",
+    "CmpnInfoAgeBehaviorPanel": {
+      "name": "CmpnInfoAgeBehaviorPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
         "CMPN_INFO-page"
       ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "dcsdCmpnInfoAgePanel": {
+      "name": "dcsdCmpnInfoAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoAgeBehaviorPanel"
+      ],
       "hasTitle": true,
-      "title": "<p>At about what age did {CmpnName} cross over the Rainbow Bridge?</p>",
+      "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
       "hasVisibleIf": true,
       "visibleIf": "{LifeStatus} = true"
     },
@@ -426,6 +411,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
+        "CmpnInfoAgeBehaviorPanel",
         "dcsdCmpnInfoAgePanel"
       ],
       "hasTitle": true,
@@ -441,6 +427,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
+        "CmpnInfoAgeBehaviorPanel",
         "dcsdCmpnInfoAgePanel"
       ],
       "hasTitle": true,
@@ -455,7 +442,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "CMPN_INFO-page"
+        "CMPN_INFO-page",
+        "CmpnInfoAgeBehaviorPanel"
       ],
       "hasTitle": true,
       "title": "What is {CmpnName}'s approximate age (in years and months)?",
@@ -469,6 +457,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
+        "CmpnInfoAgeBehaviorPanel",
         "lvngCmpnInfoAgePanel"
       ],
       "hasTitle": true,
@@ -484,6 +473,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
+        "CmpnInfoAgeBehaviorPanel",
         "lvngCmpnInfoAgePanel"
       ],
       "hasTitle": true,
@@ -492,17 +482,6 @@
       "isRequired": true,
       "hasValidators": true
     },
-    "CmpnInfoDemeanorPanel": {
-      "name": "CmpnInfoDemeanorPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "CMPN_INFO-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
     "CmpnInfoDemeanor": {
       "name": "CmpnInfoDemeanor",
       "type": "rating",
@@ -510,7 +489,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoDemeanorPanel"
+        "CmpnInfoAgeBehaviorPanel"
       ],
       "hasTitle": true,
       "title": "How would you describe {CmpnName}'s demeanor?",
@@ -524,7 +503,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoDemeanorPanel"
+        "CmpnInfoAgeBehaviorPanel"
       ],
       "hasTitle": true,
       "title": "How would you describe {CmpnName}'s anxiety level?",
@@ -538,7 +517,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoDemeanorPanel"
+        "CmpnInfoAgeBehaviorPanel"
       ],
       "hasTitle": true,
       "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
@@ -555,17 +534,6 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "InfoSourcesTypesPanel": {
-      "name": "InfoSourcesTypesPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "INFO_SOURCES-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
     "InfoSourcesPriorKnowledge": {
       "name": "InfoSourcesPriorKnowledge",
       "type": "boolean",
@@ -573,7 +541,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
-        "InfoSourcesTypesPanel"
+        "paneInfoSourcesHeadPanel"
       ],
       "hasTitle": true,
       "title": "Had you ever heard of LP before {CmpnName} got it?",
@@ -587,7 +555,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
-        "InfoSourcesTypesPanel"
+        "paneInfoSourcesHeadPanel"
       ],
       "hasTitle": true,
       "title": "Which sources of information have you accessed to learn about LP?",
@@ -600,7 +568,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
-        "InfoSourcesTypesPanel"
+        "paneInfoSourcesHeadPanel"
       ],
       "hasTitle": true,
       "title": "Which of those information sources did you find MOST useful (please select one)?",

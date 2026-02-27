@@ -126,7 +126,7 @@
                 {
                   "type": "html",
                   "name": "LandingWelcomeHeading",
-                  "html": "<h2>Welcome to the LP/GOLPP Survey 2026</h2>"
+                  "html": "<h2>Welcome to the LP/GOLPP&nbsp;Survey&nbsp;2026</h2>"
                 },
                 {
                   "type": "html",
@@ -139,7 +139,7 @@
         },
         {
           "type": "panel",
-          "name": "LandingPrivacyPanel",
+          "name": "LandingPrivacyConsentPanel",
           "elements": [
             {
               "type": "html",
@@ -165,13 +165,7 @@
               "type": "html",
               "name": "LandingAboutPrivacyText02",
               "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "LandingConsentPanel",
-          "elements": [
+            },
             {
               "type": "html",
               "name": "LandingAboutConsentHeading",
@@ -185,7 +179,7 @@
             {
               "type": "html",
               "name": "LandingConsentLink",
-              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
+              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent&nbsp;Policy</a></div>"
             },
             {
               "type": "radiogroup",
@@ -239,24 +233,18 @@
                 {
                   "value": true,
                   "imageLink": "/img-companions-rainbow.png",
-                  "text": "Over the Rainbow Bridge"
+                  "text": "Yes"
                 },
                 {
                   "value": false,
                   "imageLink": "/img-companions.png",
-                  "text": "Still here on Earth"
+                  "text": "No"
                 }
               ],
               "imageWidth": 120,
               "imageHeight": 120,
               "showLabel": true
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "UserInfoHeadPanel",
-          "elements": [
+            },
             {
               "type": "html",
               "name": "UserInfoHeading",
@@ -271,14 +259,7 @@
               "type": "html",
               "name": "UserInfoVerificationText",
               "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "UserInfoVerificationPanel",
-          "title": "Verification Contact",
-          "elements": [
+            },
             {
               "type": "boolean",
               "name": "UserInfoContactType",
@@ -329,124 +310,130 @@
         {
           "type": "panel",
           "name": "UserInfoAboutPanel",
-          "title": "Your First Name and Country",
           "elements": [
             {
-              "type": "text",
-              "title": "First Name:",
-              "name": "UserInfoFirstName",
-              "isRequired": true
-            },
-            {
-              "type": "dropdown",
-              "name": "UserInfoCountry",
-              "title": "Country:",
-              "isRequired": true,
-              "choices": [
+              "type": "panel",
+              "name": "UserInfoNameCountryPanel",
+              "title": "Your First Name and Country",
+              "elements": [
                 {
-                  "value": "US",
-                  "text": "United States"
+                  "type": "text",
+                  "title": "First Name:",
+                  "name": "UserInfoFirstName",
+                  "isRequired": true
                 },
                 {
-                  "value": "UK",
-                  "text": "United Kingdom"
+                  "type": "dropdown",
+                  "name": "UserInfoCountry",
+                  "title": "Country:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "US",
+                      "text": "United States"
+                    },
+                    {
+                      "value": "UK",
+                      "text": "United Kingdom"
+                    },
+                    {
+                      "value": "CA",
+                      "text": "Canada"
+                    },
+                    {
+                      "value": "DE",
+                      "text": "Germany"
+                    },
+                    {
+                      "value": "AU/NZ",
+                      "text": "Australia/New Zealand"
+                    },
+                    {
+                      "value": "FR",
+                      "text": "France"
+                    },
+                    {
+                      "value": "ES",
+                      "text": "Spain"
+                    },
+                    {
+                      "value": "PT",
+                      "text": "Portugal"
+                    }
+                  ],
+                  "showOtherItem": true
                 },
                 {
-                  "value": "CA",
-                  "text": "Canada"
-                },
-                {
-                  "value": "DE",
-                  "text": "Germany"
-                },
-                {
-                  "value": "AU/NZ",
-                  "text": "Australia/New Zealand"
-                },
-                {
-                  "value": "FR",
-                  "text": "France"
-                },
-                {
-                  "value": "ES",
-                  "text": "Spain"
-                },
-                {
-                  "value": "PT",
-                  "text": "Portugal"
-                }
-              ],
-              "showOtherItem": true
-            },
-            {
-              "type": "text",
-              "name": "UserInfoStateRegion",
-              "title": "State, province or region (optional):",
-              "isRequired": false
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "UserInfoAgeGenderPanel",
-          "title": "Age and Gender (optional)",
-          "elements": [
-            {
-              "type": "html",
-              "name": "UserInfoAgeGenderText",
-              "html": "<p>We're asking for basic demographic information to help understand how different people manage the animals in their care.</p>"
-            },
-            {
-              "type": "dropdown",
-              "name": "UserInfoAgeGroup",
-              "title": "Approximately what is your age?",
-              "width": "70%",
-              "minWidth": "260px",
-              "choices": [
-                {
-                  "value": "UNDER_20",
-                  "text": "Under 20"
-                },
-                {
-                  "value": "20_34",
-                  "text": "20-34"
-                },
-                {
-                  "value": "35_49",
-                  "text": "35-49"
-                },
-                "50-64",
-                {
-                  "value": "OVER_65",
-                  "text": "Over 65"
+                  "type": "text",
+                  "name": "UserInfoStateRegion",
+                  "title": "State, province or region (optional):",
+                  "isRequired": false
                 }
               ]
             },
             {
-              "type": "radiogroup",
-              "name": "UserInfoGender",
-              "title": "Gender information:",
-              "isRequired": false,
-              "choices": [
+              "type": "panel",
+              "name": "UserInfoAgeGenderPanel",
+              "title": "Age and Gender (optional)",
+              "elements": [
                 {
-                  "value": "WOMAN",
-                  "text": "Woman"
+                  "type": "html",
+                  "name": "UserInfoAgeGenderText",
+                  "html": "<p>We're asking for basic demographic information to help understand how different people manage the animals in their care.</p>"
                 },
                 {
-                  "value": "MAN",
-                  "text": "Man"
+                  "type": "dropdown",
+                  "name": "UserInfoAgeGroup",
+                  "title": "Approximately what is your age?",
+                  "width": "70%",
+                  "minWidth": "260px",
+                  "choices": [
+                    {
+                      "value": "UNDER_20",
+                      "text": "Under 20"
+                    },
+                    {
+                      "value": "20_34",
+                      "text": "20-34"
+                    },
+                    {
+                      "value": "35_49",
+                      "text": "35-49"
+                    },
+                    "50-64",
+                    {
+                      "value": "OVER_65",
+                      "text": "Over 65"
+                    }
+                  ]
                 },
                 {
-                  "value": "NON_BINARY",
-                  "text": "Non-binary"
-                },
-                {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
+                  "type": "radiogroup",
+                  "name": "UserInfoGender",
+                  "title": "Gender information:",
+                  "isRequired": false,
+                  "choices": [
+                    {
+                      "value": "WOMAN",
+                      "text": "Woman"
+                    },
+                    {
+                      "value": "MAN",
+                      "text": "Man"
+                    },
+                    {
+                      "value": "NON_BINARY",
+                      "text": "Non-binary"
+                    },
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Prefer to self-describe"
                 }
-              ],
-              "showOtherItem": true,
-              "otherText": "Prefer to self-describe"
+              ]
             }
           ]
         }
@@ -457,7 +444,7 @@
       "elements": [
         {
           "type": "panel",
-          "name": "CmpnInfoHeadPanel",
+          "name": "CmpnInfoDetailsPanel",
           "elements": [
             {
               "type": "html",
@@ -468,13 +455,7 @@
               "type": "html",
               "name": "CmpnInfoText",
               "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "CmpnInfoDetailsPanel",
-          "elements": [
+            },
             {
               "type": "radiogroup",
               "name": "CmpnInfoAnimalType",
@@ -540,94 +521,93 @@
         },
         {
           "type": "panel",
-          "name": "dcsdCmpnInfoAgePanel",
-          "title": "<p>At about what age did {CmpnName} cross over the Rainbow Bridge?</p>",
-          "description": "Please enter years and months",
-          "visibleIf": "{LifeStatus} = true",
+          "name": "CmpnInfoAgeBehaviorPanel",
           "elements": [
             {
-              "type": "text",
-              "inputType": "number",
-              "name": "dcsdCmpnInfoAgeYears",
-              "title": "Age in years (number):",
-              "isRequired": true,
-              "min": "1",
-              "max": "40",
-              "validators": [
+              "type": "panel",
+              "name": "dcsdCmpnInfoAgePanel",
+              "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+              "description": "Please enter years and months",
+              "visibleIf": "{LifeStatus} = true",
+              "elements": [
                 {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 40,
-                  "text": "Age must be between 1 and 40"
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "dcsdCmpnInfoAgeYears",
+                  "title": "Age in years (number):",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "dcsdCmpnInfoAgeMonths",
+                  "title": "Months (number 0 - 11)",
+                  "isRequired": true,
+                  "min": 0,
+                  "max": 11,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 0,
+                      "maxValue": 11,
+                      "text": "Months must be between 0 and 11"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "type": "text",
-              "inputType": "number",
-              "name": "dcsdCmpnInfoAgeMonths",
-              "title": "Months (number 0 - 11)",
-              "isRequired": true,
-              "min": 0,
-              "max": 11,
-              "validators": [
+              "type": "panel",
+              "name": "lvngCmpnInfoAgePanel",
+              "title": "What is {CmpnName}'s approximate age (in years and months)?",
+              "visibleIf": "{LifeStatus} = false",
+              "elements": [
                 {
-                  "type": "numeric",
-                  "minValue": 0,
-                  "maxValue": 11,
-                  "text": "Months must be between 0 and 11"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "lvngCmpnInfoAgePanel",
-          "title": "What is {CmpnName}'s approximate age (in years and months)?",
-          "visibleIf": "{LifeStatus} = false",
-          "elements": [
-            {
-              "type": "text",
-              "inputType": "number",
-              "name": "lvngCmpnInfoAgeYears",
-              "title": "Age in years (number):",
-              "isRequired": true,
-              "min": "1",
-              "max": "40",
-              "validators": [
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnInfoAgeYears",
+                  "title": "Age in years (number):",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
+                },
                 {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 40,
-                  "text": "Age must be between 1 and 40"
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnInfoAgeMonths",
+                  "title": "Months (number 0 - 11)",
+                  "isRequired": true,
+                  "min": 0,
+                  "max": 11,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 0,
+                      "maxValue": 11,
+                      "text": "Months must be between 0 and 11"
+                    }
+                  ]
                 }
               ]
             },
-            {
-              "type": "text",
-              "inputType": "number",
-              "name": "lvngCmpnInfoAgeMonths",
-              "title": "Months (number 0 - 11)",
-              "isRequired": true,
-              "min": 0,
-              "max": 11,
-              "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 0,
-                  "maxValue": 11,
-                  "text": "Months must be between 0 and 11"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "CmpnInfoDemeanorPanel",
-          "title": "",
-          "elements": [
             {
               "type": "rating",
               "name": "CmpnInfoDemeanor",
@@ -714,13 +694,7 @@
               "type": "html",
               "name": "InfoSourcesText",
               "html": "<p>This section asks some questions about how you learned about laryngeal paralysis and geriatric-onset laryngeal paralysis (LP) and polyneuropathy (GOLPP) and whether the information you found helped you make decisions for {CmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "InfoSourcesTypesPanel",
-          "elements": [
+            },
             {
               "type": "boolean",
               "name": "InfoSourcesPriorKnowledge",

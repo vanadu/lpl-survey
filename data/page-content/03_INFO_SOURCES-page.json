@@ -14,14 +14,8 @@
           "type": "html",
           "name": "InfoSourcesText",
           "html": "<p>This section asks some questions about how you learned about laryngeal paralysis and geriatric-onset laryngeal paralysis (LP) and polyneuropathy (GOLPP) and whether the information you found helped you make decisions for {CmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>"
-        }
-      ]
-    },
-    {
-      "type": "panel",
-      "name": "InfoSourcesTypesPanel",
-      "elements": [
-        {
+        },
+                {
           "type": "boolean",
           "name": "InfoSourcesPriorKnowledge",
           "title": "Had you ever heard of LP before {CmpnName} got it?",
@@ -76,56 +70,55 @@
       ]
     },
     {
-          "type": "panel",
-          "name": "InfoSourcesQualityPanel",
-          "elements": [
-            {
-              "type": "rating",
-              "name": "InfoSourcesHardToUnderstand",
-              "title": "Did you find the information you got about LP difficult to understand?",
-              "description": "1 = no, not difficult at all, 5 = very difficult",
-              "isRequired": true,
-              "rateValues": [
-              { "value": 1, "text": "1" },
-              { "value": 2, "text": "2" },
-              { "value": 3, "text": "3" },
-              { "value": 4, "text": "4" },
-              { "value": 5, "text": "5" },
-              { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
-            },
-            {
-              "type": "rating",
-              "name": "InfoSourcesContradictory",
-              "title": "Do you feel like a lot of the information you got about LP was contradictory?",
-              "description": "1 = not at all contradictory, 5 = very contradictory",
-              "isRequired": true,
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
-            },
-            {
-              "type": "rating",
-              "name": "InfoSourcesClearAnswers",
-              "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {CmpnName}?",
-              "description": "1 = No, not hard at all, 5 = yes, very hard",
-              "isRequired": true,
-              "rateValues": [
-              { "value": 1, "text": "1" },
-              { "value": 2, "text": "2" },
-              { "value": 3, "text": "3" },
-              { "value": 4, "text": "4" },
-              { "value": 5, "text": "5" },
-              { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
-            }
+      "type": "panel",
+      "name": "InfoSourcesQualityPanel",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "InfoSourcesHardToUnderstand",
+          "title": "Did you find the information you got about LP difficult to understand?",
+          "description": "1 = no, not difficult at all, 5 = very difficult",
+          "isRequired": true,
+          "rateValues": [
+          { "value": 1, "text": "1" },
+          { "value": 2, "text": "2" },
+          { "value": 3, "text": "3" },
+          { "value": 4, "text": "4" },
+          { "value": 5, "text": "5" },
+          { "value": "DONT_KNOW", "text": "Don't know" }
           ]
-
+        },
+        {
+          "type": "rating",
+          "name": "InfoSourcesContradictory",
+          "title": "Do you feel like a lot of the information you got about LP was contradictory?",
+          "description": "1 = not at all contradictory, 5 = very contradictory",
+          "isRequired": true,
+          "rateValues": [
+            { "value": 1, "text": "1" },
+            { "value": 2, "text": "2" },
+            { "value": 3, "text": "3" },
+            { "value": 4, "text": "4" },
+            { "value": 5, "text": "5" },
+            { "value": "DONT_KNOW", "text": "Don't know" }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "InfoSourcesClearAnswers",
+          "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {CmpnName}?",
+          "description": "1 = No, not hard at all, 5 = yes, very hard",
+          "isRequired": true,
+          "rateValues": [
+          { "value": 1, "text": "1" },
+          { "value": 2, "text": "2" },
+          { "value": 3, "text": "3" },
+          { "value": 4, "text": "4" },
+          { "value": 5, "text": "5" },
+          { "value": "DONT_KNOW", "text": "Don't know" }
+          ]
+        }
+      ]
     }
   ]
 }
