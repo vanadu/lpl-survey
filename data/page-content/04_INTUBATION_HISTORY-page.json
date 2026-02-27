@@ -14,13 +14,7 @@
               "type": "html",
               "name": "IntubationHistoryText",
               "html": "<p>This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>"
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "IntubationHistoryPanel",
-          "elements": [
+            },
             {
               "type": "radiogroup",
               "name": "IntubationHistoryWasIntubated",

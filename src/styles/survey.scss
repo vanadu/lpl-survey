@@ -672,10 +672,13 @@
 
 }
 
-// !VA Unused as yet
+// !VA Unused as yetf
 .survey-control-w-150 { 
+  width: 100px!important;
+  @include ldesktop {
   width: 150px!important;
 
+  }
 }
 // !VA Unused as yet
 // great for 3-digit-ish fields
@@ -784,13 +787,14 @@
 
 // !VA Force age panels to 
 [data-name="dcsdCmpnInfoAgePanel"],
+[data-name="lvngCmpnInfoAgePanel"],
 [data-name="EarlySymptomsFirstSignsPanel"],
 [data-name="PrimaryDurationFirstConsult"],
 [data-name="TreatmentStatusAgePanel"],
- {
+{
   .sd-element__content.sd-panel__content {
     .sd-row {
-      width: 250px!important;
+        width: 250px!important;
         padding: 0!important;
         margin: 0!important;
     }

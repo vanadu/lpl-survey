@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-27T15:54:11.347Z",
+    "builtAt": "2026-02-27T16:38:00.847Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -639,17 +639,6 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "IntubationHistoryPanel": {
-      "name": "IntubationHistoryPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "INTUBATION_HISTORY-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
     "IntubationHistoryWasIntubated": {
       "name": "IntubationHistoryWasIntubated",
       "type": "radiogroup",
@@ -657,7 +646,7 @@
       "collect": true,
       "path": [
         "INTUBATION_HISTORY-page",
-        "IntubationHistoryPanel"
+        "IntubationHistoryHeadPanel"
       ],
       "hasTitle": true,
       "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
@@ -727,17 +716,6 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "BreathingCrisisDidHavePanel": {
-      "name": "BreathingCrisisDidHavePanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "BREATHING_CRISIS-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
     "BreathingCrisisDidHave": {
       "name": "BreathingCrisisDidHave",
       "type": "radiogroup",
@@ -745,7 +723,7 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
-        "BreathingCrisisDidHavePanel"
+        "BreathingCrisisHeadPanel"
       ],
       "hasTitle": true,
       "title": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
@@ -873,18 +851,6 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "EarlySymptomsFirstSignsPanel": {
-      "name": "EarlySymptomsFirstSignsPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "EARLY_SYMPTOMS-page"
-      ],
-      "hasTitle": true,
-      "title": "About how old was {CmpnName} (in years and months) when you first noticed symptoms of LP/GOLPP?",
-      "hasVisibleIf": false
-    },
     "EarlySymptomsAgeYears": {
       "name": "EarlySymptomsAgeYears",
       "type": "text",
@@ -892,7 +858,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
-        "EarlySymptomsFirstSignsPanel"
+        "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
       "title": "Years",
@@ -907,24 +873,13 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
-        "EarlySymptomsFirstSignsPanel"
+        "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
       "title": "Months (number 0 - 11)",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
-    },
-    "EarlySymptomsDetailsPanel": {
-      "name": "EarlySymptomsDetailsPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "EARLY_SYMPTOMS-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
     },
     "EarlySymptomsType": {
       "name": "EarlySymptomsType",
@@ -933,7 +888,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
-        "EarlySymptomsDetailsPanel"
+        "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
       "title": "What symptoms did {CmpnName} have at that time?",
@@ -946,7 +901,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
-        "EarlySymptomsDetailsPanel"
+        "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
       "title": "How severe did you think {CmpnName}'s early symptoms were?",
@@ -960,7 +915,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
-        "EarlySymptomsDetailsPanel"
+        "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
       "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
@@ -974,7 +929,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
-        "EarlySymptomsDetailsPanel"
+        "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
       "title": "Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?",
@@ -1037,7 +992,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PRIMARY_DURATION-page"
+        "PRIMARY_DURATION-page",
+        "panelName"
       ],
       "hasTitle": true,
       "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
@@ -1050,6 +1006,7 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
+        "panelName",
         "PrimaryDurationFirstConsult"
       ],
       "hasTitle": true,
@@ -1065,6 +1022,7 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
+        "panelName",
         "PrimaryDurationFirstConsult"
       ],
       "hasTitle": true,
@@ -1073,17 +1031,6 @@
       "isRequired": true,
       "hasValidators": true
     },
-    "PrimaryDurationVisitsNumberPanel": {
-      "name": "PrimaryDurationVisitsNumberPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PRIMARY_DURATION-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
     "PrimaryDurationVisitsNumber": {
       "name": "PrimaryDurationVisitsNumber",
       "type": "radiogroup",
@@ -1091,7 +1038,7 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
-        "PrimaryDurationVisitsNumberPanel"
+        "panelName"
       ],
       "hasTitle": true,
       "title": "About how many times did a primary veterinarian see {CmpnName} about LP/GOLPP symptoms?",
@@ -1105,23 +1052,12 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
-        "PrimaryDurationVisitsNumberPanel"
+        "panelName"
       ],
       "hasTitle": true,
       "title": "About what was the total pre-insurance cost of these visits to primary veterinarians about {CmpnName}'s LP/GOLPP symptoms?",
       "hasVisibleIf": false,
       "isRequired": true
-    },
-    "PrimaryDurationChangedVetsPanel": {
-      "name": "PrimaryDurationChangedVetsPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PRIMARY_DURATION-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
     },
     "PrimaryDurationChangedVets": {
       "name": "PrimaryDurationChangedVets",
@@ -1130,7 +1066,7 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
-        "PrimaryDurationChangedVetsPanel"
+        "panelName"
       ],
       "hasTitle": true,
       "title": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
@@ -1144,7 +1080,7 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
-        "PrimaryDurationChangedVetsPanel"
+        "panelName"
       ],
       "hasTitle": true,
       "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?",

@@ -14,14 +14,7 @@
           "type": "html",
           "name": "EarlySymptomsText",
           "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
-        }
-      ]
-    },
-    {
-      "type": "panel",
-      "name": "EarlySymptomsFirstSignsPanel",
-      "title": "About how old was {CmpnName} (in years and months) when you first noticed symptoms of LP/GOLPP?",
-      "elements": [
+        },
         {
           "type": "text",
           "inputType": "number",
@@ -55,14 +48,7 @@
               "text": "Months must be between 0 and 11"
             }
           ]
-        }
-      ]
-    },
-
-    {
-      "type": "panel",
-      "name": "EarlySymptomsDetailsPanel",
-      "elements": [
+        },
         {
           "type": "checkbox",
           "name": "EarlySymptomsType",
@@ -104,6 +90,7 @@
           "noneText": "Don't know",
           "otherText": "Other (max 250 characters)"
         },
+
         
         {
           "type": "rating",

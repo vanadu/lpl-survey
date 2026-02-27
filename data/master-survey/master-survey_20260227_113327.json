@@ -1425,48 +1425,54 @@
               "type": "html",
               "name": "PrimaryDurationText",
               "html": "<p>This section asks about the duration of {CmpnName}'s care by primary veterinarians for LP/GOLPP symptoms. This includes any primary veterinarians who saw {CmpnName} since the LP/GOLPP symptoms first appeared. It also asks whether you switched primary vets because of how {CmpnName}'s symptoms were being handled. </p>"
-            },
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryDurationFirstConsult",
+          "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
+          "elements": [
             {
-              "type": "panel",
-              "name": "PrimaryDurationFirstConsult",
-              "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
-              "elements": [
+              "type": "text",
+              "inputType": "number",
+              "name": "PrimaryDurationFirstConsultYears",
+              "title": "Age in years (number):",
+              "isRequired": true,
+              "min": "1",
+              "max": "40",
+              "validators": [
                 {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "PrimaryDurationFirstConsultYears",
-                  "title": "Age in years (number):",
-                  "isRequired": true,
-                  "min": "1",
-                  "max": "40",
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 0,
-                      "maxValue": 40,
-                      "text": "Age must be between 1 and 40"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "PrimaryDurationFirstConsultMonths",
-                  "title": "Months (number 0 - 11)",
-                  "isRequired": true,
-                  "min": 0,
-                  "max": 11,
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 0,
-                      "maxValue": 11,
-                      "text": "Months must be between 0 and 11"
-                    }
-                  ]
+                  "type": "numeric",
+                  "minValue": 0,
+                  "maxValue": 40,
+                  "text": "Age must be between 1 and 40"
                 }
               ]
             },
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "PrimaryDurationFirstConsultMonths",
+              "title": "Months (number 0 - 11)",
+              "isRequired": true,
+              "min": 0,
+              "max": 11,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 0,
+                  "maxValue": 11,
+                  "text": "Months must be between 0 and 11"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryDurationVisitsNumberPanel",
+          "elements": [
             {
               "type": "radiogroup",
               "name": "PrimaryDurationVisitsNumber",
@@ -1520,7 +1526,14 @@
                 }
               ],
               "showOtherItem": false
-            },
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryDurationChangedVetsPanel",
+          "title": "",
+          "elements": [
             {
               "type": "radiogroup",
               "name": "PrimaryDurationChangedVets",
