@@ -34,8 +34,8 @@ const ITEMS_CARD_PANEL = new Set([
   "AspirationCard2Panel",
   "NeuropathyCard1Panel",
   "NeuropathyCard2Panel",
-  "ConclusionCard1Panel",
-  "ConclusionCard2Panel",
+  "AspirationCard1Panel",
+  "AspirationCard2Panel",
 
 ])
 
@@ -122,7 +122,7 @@ const ITEMS_THREE_COL = new Set([
 
   "ConclusionStentAlternative",
 
-    "PrimaryDurationVisitsNumberPanel",
+  "PrimaryDurationVisitsNumberPanel",
 
 ]);
 
@@ -152,10 +152,10 @@ const CONTROL_WIDTH_300 = new Set([
 
 
 
-  "UserInfoFirstName",
-  "UserInfoCountry",
-  "UserInfoStateRegion",
-  "UserInfoAgeGroup",
+  // "UserInfoFirstName",
+  // "UserInfoCountry",
+  // "UserInfoStateRegion",
+  // "UserInfoAgeGroup",
   "CmpnInfoBreed",
 
 

@@ -169,6 +169,11 @@
                   "type": "html",
                   "name": "LandingAboutPrivacyText02",
                   "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>"
+                },
+                {
+                  "type": "html",
+                  "name": "LandingAboutConsentHeading",
+                  "html": "<h3>About our Consent Policy</h3>"
                 }
               ]
             },
@@ -176,11 +181,6 @@
               "type": "panel",
               "name": "LandingConsentPanel",
               "elements": [
-                {
-                  "type": "html",
-                  "name": "LandingAboutConsentHeading",
-                  "html": "<h3>About our Consent Policy</h3>"
-                },
                 {
                   "type": "html",
                   "name": "LandingConsentText",
