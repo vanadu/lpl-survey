@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-28T10:28:07.887Z",
+    "builtAt": "2026-02-28T14:12:50.664Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -327,13 +327,25 @@
       "hasVisibleIf": false,
       "isRequired": false
     },
+    "CmpnInfoCard1Panel": {
+      "name": "CmpnInfoCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "CmpnInfoDetailsPanel": {
       "name": "CmpnInfoDetailsPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "CMPN_INFO-page"
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -345,6 +357,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
         "CmpnInfoDetailsPanel"
       ],
       "hasTitle": true,
@@ -359,6 +372,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
         "CmpnInfoDetailsPanel"
       ],
       "hasTitle": true,
@@ -373,6 +387,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
         "CmpnInfoDetailsPanel"
       ],
       "hasTitle": true,
@@ -387,6 +402,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
         "CmpnInfoDetailsPanel"
       ],
       "hasTitle": true,
@@ -402,6 +418,7 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
         "CmpnInfoDetailsPanel"
       ],
       "hasTitle": true,
@@ -409,13 +426,25 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "CmpnInfoAgeBehaviorPanel": {
-      "name": "CmpnInfoAgeBehaviorPanel",
+    "CmpnInfoCard2Panel": {
+      "name": "CmpnInfoCard2Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
         "CMPN_INFO-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "CmpnInfoAgePanel": {
+      "name": "CmpnInfoAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -427,7 +456,8 @@
       "collect": false,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoAgeBehaviorPanel"
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel"
       ],
       "hasTitle": true,
       "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
@@ -441,7 +471,8 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoAgeBehaviorPanel",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel",
         "dcsdCmpnInfoAgePanel"
       ],
       "hasTitle": true,
@@ -457,7 +488,8 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoAgeBehaviorPanel",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel",
         "dcsdCmpnInfoAgePanel"
       ],
       "hasTitle": true,
@@ -473,7 +505,8 @@
       "collect": false,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoAgeBehaviorPanel"
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel"
       ],
       "hasTitle": true,
       "title": "What is {CmpnName}'s approximate age (in years and months)?",
@@ -487,7 +520,8 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoAgeBehaviorPanel",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel",
         "lvngCmpnInfoAgePanel"
       ],
       "hasTitle": true,
@@ -503,7 +537,8 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoAgeBehaviorPanel",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel",
         "lvngCmpnInfoAgePanel"
       ],
       "hasTitle": true,
@@ -512,6 +547,18 @@
       "isRequired": true,
       "hasValidators": true
     },
+    "CmpnInfoDemeanorPanel": {
+      "name": "CmpnInfoDemeanorPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "CmpnInfoDemeanor": {
       "name": "CmpnInfoDemeanor",
       "type": "rating",
@@ -519,7 +566,8 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoAgeBehaviorPanel"
+        "CmpnInfoCard2Panel",
+        "CmpnInfoDemeanorPanel"
       ],
       "hasTitle": true,
       "title": "How would you describe {CmpnName}'s demeanor?",
@@ -533,7 +581,8 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoAgeBehaviorPanel"
+        "CmpnInfoCard2Panel",
+        "CmpnInfoDemeanorPanel"
       ],
       "hasTitle": true,
       "title": "How would you describe {CmpnName}'s anxiety level?",
@@ -547,10 +596,22 @@
       "collect": true,
       "path": [
         "CMPN_INFO-page",
-        "CmpnInfoAgeBehaviorPanel"
+        "CmpnInfoCard2Panel",
+        "CmpnInfoDemeanorPanel"
       ],
       "hasTitle": true,
       "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
+      "hasVisibleIf": false
+    },
+    "InfoSoucesCard1Panel": {
+      "name": "InfoSoucesCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "INFO_SOURCES-page"
+      ],
+      "hasTitle": false,
       "hasVisibleIf": false
     },
     "paneInfoSourcesHeadPanel": {
@@ -559,7 +620,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "INFO_SOURCES-page"
+        "INFO_SOURCES-page",
+        "InfoSoucesCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -571,6 +633,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
+        "InfoSoucesCard1Panel",
         "paneInfoSourcesHeadPanel"
       ],
       "hasTitle": true,
@@ -585,6 +648,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
+        "InfoSoucesCard1Panel",
         "paneInfoSourcesHeadPanel"
       ],
       "hasTitle": true,
@@ -598,6 +662,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
+        "InfoSoucesCard1Panel",
         "paneInfoSourcesHeadPanel"
       ],
       "hasTitle": true,
@@ -605,13 +670,25 @@
       "hasVisibleIf": true,
       "visibleIf": "{InfoSourcesTypes.length} > 1 && {InfoSourcesTypes} notcontains 'DONT_KNOW'"
     },
+    "InfoSoucesCard2Panel": {
+      "name": "InfoSoucesCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "INFO_SOURCES-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "InfoSourcesQualityPanel": {
       "name": "InfoSourcesQualityPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "INFO_SOURCES-page"
+        "INFO_SOURCES-page",
+        "InfoSoucesCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -623,6 +700,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
+        "InfoSoucesCard2Panel",
         "InfoSourcesQualityPanel"
       ],
       "hasTitle": true,
@@ -637,6 +715,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
+        "InfoSoucesCard2Panel",
         "InfoSourcesQualityPanel"
       ],
       "hasTitle": true,
@@ -651,6 +730,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
+        "InfoSoucesCard2Panel",
         "InfoSourcesQualityPanel"
       ],
       "hasTitle": true,
@@ -658,8 +738,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "IntubationHistoryHeadPanel": {
-      "name": "IntubationHistoryHeadPanel",
+    "IntubationHistoryCard1Panel": {
+      "name": "IntubationHistoryCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -676,7 +756,7 @@
       "collect": true,
       "path": [
         "INTUBATION_HISTORY-page",
-        "IntubationHistoryHeadPanel"
+        "IntubationHistoryCard1Panel"
       ],
       "hasTitle": true,
       "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
@@ -688,7 +768,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "INTUBATION_HISTORY-page"
+        "INTUBATION_HISTORY-page",
+        "IntubationHistoryCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -701,6 +782,7 @@
       "collect": true,
       "path": [
         "INTUBATION_HISTORY-page",
+        "IntubationHistoryCard1Panel",
         "IntubationHistoryDetails"
       ],
       "hasTitle": true,
@@ -714,6 +796,7 @@
       "collect": true,
       "path": [
         "INTUBATION_HISTORY-page",
+        "IntubationHistoryCard1Panel",
         "IntubationHistoryDetails"
       ],
       "hasTitle": true,
@@ -728,6 +811,7 @@
       "collect": true,
       "path": [
         "INTUBATION_HISTORY-page",
+        "IntubationHistoryCard1Panel",
         "IntubationHistoryDetails"
       ],
       "hasTitle": true,
@@ -735,8 +819,8 @@
       "hasVisibleIf": true,
       "visibleIf": "{IntubationHistoryConcerns} = true"
     },
-    "BreathingCrisisHeadPanel": {
-      "name": "BreathingCrisisHeadPanel",
+    "BreathingCrisisCard1Panel": {
+      "name": "BreathingCrisisCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -753,23 +837,11 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
-        "BreathingCrisisHeadPanel"
+        "BreathingCrisisCard1Panel"
       ],
       "hasTitle": true,
       "title": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
       "hasVisibleIf": false
-    },
-    "BreathingCrisisDetailsPanel": {
-      "name": "BreathingCrisisDetailsPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "BREATHING_CRISIS-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": true,
-      "visibleIf": "{BreathingCrisisDidHave} = 'YES'"
     },
     "BreathingCrisisCount": {
       "name": "BreathingCrisisCount",
@@ -778,11 +850,13 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
-        "BreathingCrisisDetailsPanel"
+        "BreathingCrisisCard1Panel"
       ],
       "hasTitle": true,
       "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
-      "hasVisibleIf": false
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+      "isRequired": true
     },
     "BreathingCrisisCost": {
       "name": "BreathingCrisisCost",
@@ -791,11 +865,37 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
-        "BreathingCrisisDetailsPanel"
+        "BreathingCrisisCard1Panel"
       ],
       "hasTitle": true,
       "title": "About what was the total pre-insurance cost of these visits?",
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+      "isRequired": true
+    },
+    "BreathingCrisisCard2Panel": {
+      "name": "BreathingCrisisCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING_CRISIS-page"
+      ],
+      "hasTitle": false,
       "hasVisibleIf": false
+    },
+    "BreathingCrisisDetailsPanel": {
+      "name": "BreathingCrisisDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingCrisisDidHave} = 'YES'"
     },
     "BreathingCrisisAdvice": {
       "name": "BreathingCrisisAdvice",
@@ -804,6 +904,7 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel",
         "BreathingCrisisDetailsPanel"
       ],
       "hasTitle": true,
@@ -818,6 +919,7 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel",
         "BreathingCrisisDetailsPanel"
       ],
       "hasTitle": true,
@@ -833,6 +935,7 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel",
         "BreathingCrisisDetailsPanel"
       ],
       "hasTitle": true,
@@ -847,6 +950,7 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel",
         "BreathingCrisisDetailsPanel"
       ],
       "hasTitle": true,
@@ -862,6 +966,7 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel",
         "BreathingCrisisDetailsPanel"
       ],
       "hasTitle": true,
@@ -870,13 +975,25 @@
       "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
       "isRequired": true
     },
+    "EarlySymptomsCard1Panel": {
+      "name": "EarlySymptomsCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "EARLY_SYMPTOMS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "EarlySymptomsHeadPanel": {
       "name": "EarlySymptomsHeadPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "EARLY_SYMPTOMS-page"
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -888,6 +1005,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
         "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
@@ -903,6 +1021,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
         "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
@@ -918,6 +1037,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
         "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
@@ -931,6 +1051,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
         "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
@@ -945,6 +1066,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
         "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
@@ -959,6 +1081,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
         "EarlySymptomsHeadPanel"
       ],
       "hasTitle": true,
@@ -966,13 +1089,25 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "EarlySymptomsCard2Panel": {
+      "name": "EarlySymptomsCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "EARLY_SYMPTOMS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "EarlyOtherConditionsPanel": {
       "name": "EarlyOtherConditionsPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "EARLY_SYMPTOMS-page"
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -984,6 +1119,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard2Panel",
         "EarlyOtherConditionsPanel"
       ],
       "hasTitle": true,
@@ -998,6 +1134,7 @@
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard2Panel",
         "EarlyOtherConditionsPanel"
       ],
       "hasTitle": true,
@@ -1005,8 +1142,8 @@
       "hasVisibleIf": true,
       "visibleIf": "{EarlyOtherConditions} = YES"
     },
-    "panelName": {
-      "name": "panelName",
+    "PrimaryDurationCard1Panel": {
+      "name": "PrimaryDurationCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -1016,14 +1153,14 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "PrimaryDurationFirstConsult": {
-      "name": "PrimaryDurationFirstConsult",
+    "PrimaryDurationDetailsPanel": {
+      "name": "PrimaryDurationDetailsPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
         "PRIMARY_DURATION-page",
-        "panelName"
+        "PrimaryDurationCard1Panel"
       ],
       "hasTitle": true,
       "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
@@ -1036,8 +1173,8 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
-        "panelName",
-        "PrimaryDurationFirstConsult"
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Age in years (number):",
@@ -1052,8 +1189,8 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
-        "panelName",
-        "PrimaryDurationFirstConsult"
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Months (number 0 - 11)",
@@ -1068,7 +1205,8 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
-        "panelName"
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
       ],
       "hasTitle": true,
       "title": "About how many times did a primary veterinarian see {CmpnName} about LP/GOLPP symptoms?",
@@ -1082,7 +1220,8 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
-        "panelName"
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
       ],
       "hasTitle": true,
       "title": "About what was the total pre-insurance cost of these visits to primary veterinarians about {CmpnName}'s LP/GOLPP symptoms?",
@@ -1096,7 +1235,8 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
-        "panelName"
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
@@ -1110,7 +1250,8 @@
       "collect": true,
       "path": [
         "PRIMARY_DURATION-page",
-        "panelName"
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?",
@@ -1118,8 +1259,8 @@
       "visibleIf": "{PrimaryDurationChangedVets} != 'NO'",
       "isRequired": true
     },
-    "PrimaryVetHeadPanel": {
-      "name": "PrimaryVetHeadPanel",
+    "PrimaryVetCard1Panel": {
+      "name": "PrimaryVetCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -1135,7 +1276,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PRIMARY_VET-page"
+        "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -1147,6 +1289,7 @@
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel",
         "PrimaryVetInflammationPanel"
       ],
       "hasTitle": true,
@@ -1160,7 +1303,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PRIMARY_VET-page"
+        "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -1172,6 +1316,7 @@
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel",
         "PrimaryVetRefluxPanel"
       ],
       "hasTitle": true,
@@ -1186,6 +1331,7 @@
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel",
         "PrimaryVetRefluxPanel"
       ],
       "hasTitle": true,
@@ -1201,6 +1347,7 @@
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel",
         "PrimaryVetRefluxPanel"
       ],
       "hasTitle": true,
@@ -1215,7 +1362,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PRIMARY_VET-page"
+        "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -1227,6 +1375,7 @@
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel",
         "PrimaryVetDiscussPanel"
       ],
       "hasTitle": true,
@@ -1234,13 +1383,25 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "PrimaryVetCard2Panel": {
+      "name": "PrimaryVetCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_VET-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "PrimaryVetInfoPanel": {
       "name": "PrimaryVetInfoPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "PRIMARY_VET-page"
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -1252,6 +1413,7 @@
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
         "PrimaryVetInfoPanel"
       ],
       "hasTitle": true,
@@ -1266,6 +1428,7 @@
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
         "PrimaryVetInfoPanel"
       ],
       "hasTitle": true,
@@ -1280,7 +1443,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PRIMARY_VET-page"
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -1292,6 +1456,7 @@
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
         "PrimaryVetSurgeryPanel"
       ],
       "hasTitle": true,
@@ -1306,6 +1471,7 @@
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
         "PrimaryVetSurgeryPanel"
       ],
       "hasTitle": true,
@@ -1320,7 +1486,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PRIMARY_VET-page"
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -1332,6 +1499,7 @@
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
         "PrimaryVetConfidencePanel"
       ],
       "hasTitle": true,
@@ -1346,6 +1514,7 @@
       "collect": true,
       "path": [
         "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
         "PrimaryVetConfidencePanel"
       ],
       "hasTitle": true,
@@ -1353,8 +1522,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "DiagnosisHeadPanel": {
-      "name": "DiagnosisHeadPanel",
+    "DiagnosisCard1Panel": {
+      "name": "DiagnosisCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -1370,7 +1539,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "DIAGNOSIS-page"
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -1382,6 +1552,7 @@
       "collect": true,
       "path": [
         "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
         "DiagnosisDetailsPanel"
       ],
       "hasTitle": true,
@@ -1396,6 +1567,7 @@
       "collect": true,
       "path": [
         "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
         "DiagnosisDetailsPanel"
       ],
       "hasTitle": true,
@@ -1410,6 +1582,7 @@
       "collect": true,
       "path": [
         "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
         "DiagnosisDetailsPanel"
       ],
       "hasTitle": true,
@@ -1424,6 +1597,7 @@
       "collect": true,
       "path": [
         "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
         "DiagnosisDetailsPanel"
       ],
       "hasTitle": true,
@@ -1438,6 +1612,7 @@
       "collect": true,
       "path": [
         "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
         "DiagnosisDetailsPanel"
       ],
       "hasTitle": true,
@@ -1452,6 +1627,7 @@
       "collect": true,
       "path": [
         "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
         "DiagnosisDetailsPanel"
       ],
       "hasTitle": true,
@@ -1460,8 +1636,8 @@
       "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
       "isRequired": true
     },
-    "TreatmentStatusHeadPanel": {
-      "name": "TreatmentStatusHeadPanel",
+    "TreatmentStatusCard1Panel": {
+      "name": "TreatmentStatusCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -1477,7 +1653,8 @@
       "role": "question",
       "collect": true,
       "path": [
-        "TREATMENT_STATUS-page"
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard1Panel"
       ],
       "hasTitle": true,
       "title": "Did {CmpnName} undergo a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
@@ -1490,7 +1667,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_STATUS-page"
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard1Panel"
       ],
       "hasTitle": true,
       "title": "At about what age did {CmpnName} have the first surgery or stent procedure?",
@@ -1504,6 +1682,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard1Panel",
         "TreatmentStatusAgePanel"
       ],
       "hasTitle": true,
@@ -1519,6 +1698,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard1Panel",
         "TreatmentStatusAgePanel"
       ],
       "hasTitle": true,
@@ -1527,13 +1707,25 @@
       "isRequired": true,
       "hasValidators": true
     },
+    "TreatmentStatusCard2Panel": {
+      "name": "TreatmentStatusCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "TreatmentStatusTypePanel": {
       "name": "TreatmentStatusTypePanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_STATUS-page"
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -1545,6 +1737,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusTypePanel"
       ],
       "hasTitle": true,
@@ -1559,7 +1752,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_STATUS-page"
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
       ],
       "hasTitle": true,
       "title": "Questions about tieback (Unilateral Arytenoid Lateralization) surgery",
@@ -1573,6 +1767,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusTiebackPanel"
       ],
       "hasTitle": true,
@@ -1587,6 +1782,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusTiebackPanel"
       ],
       "hasTitle": true,
@@ -1602,6 +1798,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusTiebackPanel"
       ],
       "hasTitle": true,
@@ -1616,6 +1813,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusTiebackPanel"
       ],
       "hasTitle": true,
@@ -1631,6 +1829,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusTiebackPanel"
       ],
       "hasTitle": true,
@@ -1646,6 +1845,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusTiebackPanel"
       ],
       "hasTitle": true,
@@ -1660,6 +1860,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusTiebackPanel"
       ],
       "hasTitle": true,
@@ -1674,7 +1875,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_STATUS-page"
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
       ],
       "hasTitle": true,
       "title": "Questions about BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)",
@@ -1688,6 +1890,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusBveapPanel"
       ],
       "hasTitle": true,
@@ -1702,6 +1905,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusBveapPanel"
       ],
       "hasTitle": true,
@@ -1716,6 +1920,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusBveapPanel"
       ],
       "hasTitle": true,
@@ -1730,6 +1935,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusBveapPanel"
       ],
       "hasTitle": true,
@@ -1744,7 +1950,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_STATUS-page"
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -1757,6 +1964,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusStentPanel"
       ],
       "hasTitle": true,
@@ -1771,6 +1979,7 @@
       "collect": false,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusStentPanel"
       ],
       "hasTitle": false,
@@ -1784,6 +1993,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusStentPanel"
       ],
       "hasTitle": true,
@@ -1799,6 +2009,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusStentPanel"
       ],
       "hasTitle": true,
@@ -1814,6 +2025,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusStentPanel"
       ],
       "hasTitle": true,
@@ -1829,6 +2041,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusStentPanel"
       ],
       "hasTitle": true,
@@ -1844,6 +2057,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusStentPanel"
       ],
       "hasTitle": true,
@@ -1859,6 +2073,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusStentPanel"
       ],
       "hasTitle": true,
@@ -1873,7 +2088,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_STATUS-page"
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
       ],
       "hasTitle": true,
       "title": "Questions about partial arytenoidectomy surgery",
@@ -1887,6 +2103,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusArytenoidectomyPanel"
       ],
       "hasTitle": true,
@@ -1901,6 +2118,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusArytenoidectomyPanel"
       ],
       "hasTitle": true,
@@ -1915,6 +2133,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusArytenoidectomyPanel"
       ],
       "hasTitle": true,
@@ -1929,6 +2148,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusArytenoidectomyPanel"
       ],
       "hasTitle": true,
@@ -1943,6 +2163,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusArytenoidectomyPanel"
       ],
       "hasTitle": true,
@@ -1957,6 +2178,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusArytenoidectomyPanel"
       ],
       "hasTitle": true,
@@ -1971,6 +2193,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusArytenoidectomyPanel"
       ],
       "hasTitle": true,
@@ -1985,7 +2208,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_STATUS-page"
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
       ],
       "hasTitle": true,
       "title": "Questions about ventrilocordectomy surgery",
@@ -1999,6 +2223,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusVentrilocordectomyPanel"
       ],
       "hasTitle": true,
@@ -2013,6 +2238,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusVentrilocordectomyPanel"
       ],
       "hasTitle": true,
@@ -2027,6 +2253,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusVentrilocordectomyPanel"
       ],
       "hasTitle": true,
@@ -2041,6 +2268,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusVentrilocordectomyPanel"
       ],
       "hasTitle": true,
@@ -2055,6 +2283,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusVentrilocordectomyPanel"
       ],
       "hasTitle": true,
@@ -2069,6 +2298,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusVentrilocordectomyPanel"
       ],
       "hasTitle": true,
@@ -2083,7 +2313,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_STATUS-page"
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -2096,6 +2327,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusRatingPanel"
       ],
       "hasTitle": true,
@@ -2110,6 +2342,7 @@
       "collect": true,
       "path": [
         "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
         "TreatmentStatusRatingPanel"
       ],
       "hasTitle": true,
@@ -2117,8 +2350,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentFactorsHeadPanel": {
-      "name": "TreatmentFactorsHeadPanel",
+    "TreatmentFactorsCard1Panel": {
+      "name": "TreatmentFactorsCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -2134,7 +2367,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_FACTORS-page"
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -2147,6 +2381,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard1Panel",
         "TreatmentFactorsDecisionPanel"
       ],
       "hasTitle": true,
@@ -2161,6 +2396,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard1Panel",
         "TreatmentFactorsDecisionPanel"
       ],
       "hasTitle": true,
@@ -2174,7 +2410,9 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_FACTORS-page"
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard1Panel",
+        "TreatmentFactorsDecisionPanel"
       ],
       "hasTitle": true,
       "title": "How have financial considerations factored into your decision?",
@@ -2187,6 +2425,8 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard1Panel",
+        "TreatmentFactorsDecisionPanel",
         "TreatmentFactorsCostPanel"
       ],
       "hasTitle": true,
@@ -2201,6 +2441,8 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard1Panel",
+        "TreatmentFactorsDecisionPanel",
         "TreatmentFactorsCostPanel"
       ],
       "hasTitle": true,
@@ -2208,13 +2450,25 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "TreatmentFactorsCard2Panel": {
+      "name": "TreatmentFactorsCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "TreatmentFactorsStagePanel": {
       "name": "TreatmentFactorsStagePanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_FACTORS-page"
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
       "title": "How has the state of {CmpnName}'s LP/GOLPP factored into your decision?",
@@ -2227,6 +2481,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsStagePanel"
       ],
       "hasTitle": true,
@@ -2241,6 +2496,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsStagePanel"
       ],
       "hasTitle": true,
@@ -2254,7 +2510,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_FACTORS-page"
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
       "title": "How have the risks of surgery factored into your decision?",
@@ -2267,6 +2524,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsSurgeryRisksPanel"
       ],
       "hasTitle": true,
@@ -2281,6 +2539,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsSurgeryRisksPanel"
       ],
       "hasTitle": true,
@@ -2294,7 +2553,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_FACTORS-page"
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
       "title": "How have {CmpnName}'s age and general health considerations factored into your decision?",
@@ -2307,6 +2567,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsGeneral"
       ],
       "hasTitle": true,
@@ -2321,6 +2582,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsGeneral"
       ],
       "hasTitle": true,
@@ -2335,6 +2597,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsGeneral"
       ],
       "hasTitle": true,
@@ -2348,7 +2611,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_FACTORS-page"
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
       "title": "How have your personal circumstances factored into your decision?",
@@ -2361,6 +2625,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsCircumstances"
       ],
       "hasTitle": true,
@@ -2375,6 +2640,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsCircumstances"
       ],
       "hasTitle": true,
@@ -2388,7 +2654,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "TREATMENT_FACTORS-page"
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
       "title": "What other considerations, if any, have factored into your decision?",
@@ -2401,6 +2668,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsOtherPanel"
       ],
       "hasTitle": true,
@@ -2408,8 +2676,8 @@
       "hasVisibleIf": false,
       "isRequired": false
     },
-    "ManagementHeadPanel": {
-      "name": "ManagementHeadPanel",
+    "ManagementCard1Panel": {
+      "name": "ManagementCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -2425,7 +2693,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "MANAGEMENT-page"
+        "MANAGEMENT-page",
+        "ManagementCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -2437,6 +2706,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2451,6 +2721,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2466,6 +2737,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2481,6 +2753,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2496,6 +2769,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2511,6 +2785,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2526,6 +2801,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2541,6 +2817,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2556,6 +2833,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2571,6 +2849,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2586,6 +2865,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2601,6 +2881,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2616,6 +2897,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2631,6 +2913,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2646,6 +2929,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2661,6 +2945,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2676,6 +2961,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2691,6 +2977,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2706,6 +2993,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2721,6 +3009,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2736,6 +3025,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2751,6 +3041,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2766,6 +3057,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2781,6 +3073,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2796,6 +3089,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard1Panel",
         "ManagementPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2804,13 +3098,25 @@
       "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TEMARIL_P'",
       "isRequired": true
     },
+    "ManagementCard2Panel": {
+      "name": "ManagementCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "MANAGEMENT-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ManagementNonPrescriptionTypePanel": {
       "name": "ManagementNonPrescriptionTypePanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "MANAGEMENT-page"
+        "MANAGEMENT-page",
+        "ManagementCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -2822,6 +3128,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard2Panel",
         "ManagementNonPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2836,6 +3143,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard2Panel",
         "ManagementNonPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2851,6 +3159,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard2Panel",
         "ManagementNonPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2866,6 +3175,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard2Panel",
         "ManagementNonPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2881,6 +3191,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard2Panel",
         "ManagementNonPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2896,6 +3207,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard2Panel",
         "ManagementNonPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2911,6 +3223,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard2Panel",
         "ManagementNonPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2926,6 +3239,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard2Panel",
         "ManagementNonPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2941,6 +3255,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard2Panel",
         "ManagementNonPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2956,6 +3271,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard2Panel",
         "ManagementNonPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2971,6 +3287,7 @@
       "collect": true,
       "path": [
         "MANAGEMENT-page",
+        "ManagementCard2Panel",
         "ManagementNonPrescriptionTypePanel"
       ],
       "hasTitle": true,
@@ -2979,8 +3296,8 @@
       "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
       "isRequired": true
     },
-    "OTCProductsHeadPanel": {
-      "name": "OTCProductsHeadPanel",
+    "OTCProductsCard1Panel": {
+      "name": "OTCProductsCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -2996,7 +3313,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "OTC_PRODUCTS-page"
+        "OTC_PRODUCTS-page",
+        "OTCProductsCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -3008,6 +3326,7 @@
       "collect": true,
       "path": [
         "OTC_PRODUCTS-page",
+        "OTCProductsCard1Panel",
         "OTCProductsTypePanel"
       ],
       "hasTitle": true,
@@ -3022,6 +3341,7 @@
       "collect": true,
       "path": [
         "OTC_PRODUCTS-page",
+        "OTCProductsCard1Panel",
         "OTCProductsTypePanel"
       ],
       "hasTitle": true,
@@ -3037,6 +3357,7 @@
       "collect": true,
       "path": [
         "OTC_PRODUCTS-page",
+        "OTCProductsCard1Panel",
         "OTCProductsTypePanel"
       ],
       "hasTitle": true,
@@ -3052,6 +3373,7 @@
       "collect": true,
       "path": [
         "OTC_PRODUCTS-page",
+        "OTCProductsCard1Panel",
         "OTCProductsTypePanel"
       ],
       "hasTitle": true,
@@ -3060,13 +3382,25 @@
       "visibleIf": "{OTCProductsDidPurchase} = YES",
       "isRequired": true
     },
+    "OTCProductsCard2Panel": {
+      "name": "OTCProductsCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "OTC_PRODUCTS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "OTCProtocolPanel": {
       "name": "OTCProtocolPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "OTC_PRODUCTS-page"
+        "OTC_PRODUCTS-page",
+        "OTCProductsCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -3078,6 +3412,7 @@
       "collect": true,
       "path": [
         "OTC_PRODUCTS-page",
+        "OTCProductsCard2Panel",
         "OTCProtocolPanel"
       ],
       "hasTitle": true,
@@ -3092,6 +3427,7 @@
       "collect": true,
       "path": [
         "OTC_PRODUCTS-page",
+        "OTCProductsCard2Panel",
         "OTCProtocolPanel"
       ],
       "hasTitle": true,
@@ -3107,6 +3443,7 @@
       "collect": true,
       "path": [
         "OTC_PRODUCTS-page",
+        "OTCProductsCard2Panel",
         "OTCProtocolPanel"
       ],
       "hasTitle": true,
@@ -3115,8 +3452,8 @@
       "visibleIf": "{OTCProtocolDidPurchase} = YES",
       "isRequired": true
     },
-    "AspirationHeadPanel": {
-      "name": "AspirationHeadPanel",
+    "AspirationCard1Panel": {
+      "name": "AspirationCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -3132,7 +3469,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "ASPIRATION-page"
+        "ASPIRATION-page",
+        "AspirationCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -3144,6 +3482,7 @@
       "collect": true,
       "path": [
         "ASPIRATION-page",
+        "AspirationCard1Panel",
         "AspirationDidHavePanel"
       ],
       "hasTitle": true,
@@ -3157,7 +3496,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "ASPIRATION-page"
+        "ASPIRATION-page",
+        "AspirationCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -3170,6 +3510,7 @@
       "collect": true,
       "path": [
         "ASPIRATION-page",
+        "AspirationCard1Panel",
         "AspirationGeneralPanel"
       ],
       "hasTitle": true,
@@ -3185,6 +3526,7 @@
       "collect": true,
       "path": [
         "ASPIRATION-page",
+        "AspirationCard1Panel",
         "AspirationGeneralPanel"
       ],
       "hasTitle": true,
@@ -3199,6 +3541,7 @@
       "collect": true,
       "path": [
         "ASPIRATION-page",
+        "AspirationCard1Panel",
         "AspirationGeneralPanel"
       ],
       "hasTitle": true,
@@ -3207,13 +3550,25 @@
       "visibleIf": "{AspirationInpatient} = 'YES'",
       "isRequired": true
     },
+    "AspirationCard2Panel": {
+      "name": "AspirationCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "ASPIRATION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "AspirationSurgeryPanel": {
       "name": "AspirationSurgeryPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "ASPIRATION-page"
+        "ASPIRATION-page",
+        "AspirationCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -3226,6 +3581,7 @@
       "collect": true,
       "path": [
         "ASPIRATION-page",
+        "AspirationCard2Panel",
         "AspirationSurgeryPanel"
       ],
       "hasTitle": true,
@@ -3240,6 +3596,7 @@
       "collect": true,
       "path": [
         "ASPIRATION-page",
+        "AspirationCard2Panel",
         "AspirationSurgeryPanel"
       ],
       "hasTitle": true,
@@ -3254,7 +3611,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "ASPIRATION-page"
+        "ASPIRATION-page",
+        "AspirationCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -3267,6 +3625,7 @@
       "collect": true,
       "path": [
         "ASPIRATION-page",
+        "AspirationCard2Panel",
         "AspirationStentPanel"
       ],
       "hasTitle": true,
@@ -3281,6 +3640,7 @@
       "collect": true,
       "path": [
         "ASPIRATION-page",
+        "AspirationCard2Panel",
         "AspirationStentPanel"
       ],
       "hasTitle": true,
@@ -3295,7 +3655,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "ASPIRATION-page"
+        "ASPIRATION-page",
+        "AspirationCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -3308,6 +3669,7 @@
       "collect": true,
       "path": [
         "ASPIRATION-page",
+        "AspirationCard2Panel",
         "AspirationCostPanel"
       ],
       "hasTitle": true,
@@ -3315,8 +3677,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "NeuropathyHeadPanel": {
-      "name": "NeuropathyHeadPanel",
+    "NeuropathyCard1Panel": {
+      "name": "NeuropathyCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -3332,7 +3694,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "NEUROPATHY-page"
+        "NEUROPATHY-page",
+        "NeuropathyCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -3344,6 +3707,7 @@
       "collect": true,
       "path": [
         "NEUROPATHY-page",
+        "NeuropathyCard1Panel",
         "NeuropathySymptomsDoesHavePanel"
       ],
       "hasTitle": true,
@@ -3351,13 +3715,25 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "NeuropathyCard2Panel": {
+      "name": "NeuropathyCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "NeuropathyHindEndDoesHavePanel": {
       "name": "NeuropathyHindEndDoesHavePanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "NEUROPATHY-page"
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -3370,6 +3746,7 @@
       "collect": true,
       "path": [
         "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
         "NeuropathyHindEndDoesHavePanel"
       ],
       "hasTitle": true,
@@ -3384,6 +3761,7 @@
       "collect": true,
       "path": [
         "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
         "NeuropathyHindEndDoesHavePanel"
       ],
       "hasTitle": true,
@@ -3399,6 +3777,7 @@
       "collect": true,
       "path": [
         "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
         "NeuropathyHindEndDoesHavePanel"
       ],
       "hasTitle": true,
@@ -3414,6 +3793,7 @@
       "collect": true,
       "path": [
         "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
         "NeuropathyHindEndDoesHavePanel"
       ],
       "hasTitle": true,
@@ -3429,6 +3809,7 @@
       "collect": true,
       "path": [
         "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
         "NeuropathyHindEndDoesHavePanel"
       ],
       "hasTitle": true,
@@ -3436,8 +3817,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ConclusionHeadPanel": {
-      "name": "ConclusionHeadPanel",
+    "ConclusionCard1Panel": {
+      "name": "ConclusionCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -3454,7 +3835,7 @@
       "collect": false,
       "path": [
         "CONCLUSION-page",
-        "ConclusionHeadPanel"
+        "ConclusionCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -3467,7 +3848,7 @@
       "collect": false,
       "path": [
         "CONCLUSION-page",
-        "ConclusionHeadPanel"
+        "ConclusionCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -3479,7 +3860,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "CONCLUSION-page"
+        "CONCLUSION-page",
+        "ConclusionCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -3491,6 +3873,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard1Panel",
         "ConclusionDetailsPanel"
       ],
       "hasTitle": true,
@@ -3505,6 +3888,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard1Panel",
         "ConclusionDetailsPanel"
       ],
       "hasTitle": true,
@@ -3519,6 +3903,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard1Panel",
         "ConclusionDetailsPanel"
       ],
       "hasTitle": true,
@@ -3532,7 +3917,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "CONCLUSION-page"
+        "CONCLUSION-page",
+        "ConclusionCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -3544,6 +3930,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard1Panel",
         "ConclusionOtherConditionsPanel"
       ],
       "hasTitle": true,
@@ -3558,6 +3945,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard1Panel",
         "ConclusionOtherConditionsPanel"
       ],
       "hasTitle": true,
@@ -3566,13 +3954,25 @@
       "visibleIf": "{ConclusionOtherConditionsNew} = true",
       "isRequired": true
     },
+    "ConclusionCard2Panel": {
+      "name": "ConclusionCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ConclusionCauseOfDeathPanel": {
       "name": "ConclusionCauseOfDeathPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "CONCLUSION-page"
+        "CONCLUSION-page",
+        "ConclusionCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -3585,6 +3985,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard2Panel",
         "ConclusionCauseOfDeathPanel"
       ],
       "hasTitle": true,
@@ -3598,7 +3999,8 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "CONCLUSION-page"
+        "CONCLUSION-page",
+        "ConclusionCard2Panel"
       ],
       "hasTitle": true,
       "title": "These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?",
@@ -3611,6 +4013,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard2Panel",
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
@@ -3626,6 +4029,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard2Panel",
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
@@ -3641,6 +4045,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard2Panel",
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
@@ -3656,6 +4061,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard2Panel",
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
@@ -3671,6 +4077,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard2Panel",
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
@@ -3686,6 +4093,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard2Panel",
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
@@ -3701,6 +4109,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard2Panel",
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
@@ -3716,6 +4125,7 @@
       "collect": true,
       "path": [
         "CONCLUSION-page",
+        "ConclusionCard2Panel",
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,

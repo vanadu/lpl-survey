@@ -1,10 +1,12 @@
 {
   "name": "NEUROPATHY-page",
   "elements": [
+
     {
       "type": "panel",
-      "name": "NeuropathyHeadPanel",
+      "name": "NeuropathyCard1Panel",
       "elements": [
+
         {
           "type": "html",
           "name": "NeuropathyHeading",
@@ -19,193 +21,202 @@
           "type": "html",
           "name": "NeuropathyText",
           "html": "<p><b>NOTE:</b> Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly in the hind end. Symptoms can include hind-end weakness and incontinence. Younger dogs with idiopathic LP often don't suffer from LP-related polyneuropathy.</p>"
+        },
+        {
+          "type": "panel",
+          "name": "NeuropathySymptomsDoesHavePanel",
+          "elements": [
+
+            {
+              "type": "radiogroup",
+              "name": "NeuropathySymptomsDoesHave",
+              "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "NOT_SURE",
+                  "text": "Not sure"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
         }
       ]
     },
+
+
+
     {
       "type": "panel",
-      "name": "NeuropathySymptomsDoesHavePanel",
-      "elements": [
-
-        {
-          "type": "radiogroup",
-          "name": "NeuropathySymptomsDoesHave",
-          "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "YES",
-              "text": "Yes"
-            },
-            {
-              "value": "NO",
-              "text": "No"
-            },
-            {
-              "value": "NOT_SURE",
-              "text": "Not sure"
-            }
-          ],
-          "showOtherItem": false
-        }
-      ]
-    },
-    {
-      "type": "panel",
-      "name": "NeuropathyHindEndDoesHavePanel",
-      "visibleIf": "{NeuropathySymptomsDoesHave} = YES",
+      "name": "NeuropathyCard2Panel",
       "elements": [
         {
-          "type": "radiogroup",
-          "name": "NeuropathySymptomsFirst",
-          "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
-          "isRequired": true,
+          "type": "panel",
+          "name": "NeuropathyHindEndDoesHavePanel",
+          "visibleIf": "{NeuropathySymptomsDoesHave} = YES",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "NeuropathySymptomsFirst",
+              "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
+              "isRequired": true,
 
-          "choices": [
-            {
-              "value": "HIND_END",
-              "text": "Hind-end weakness appeared first"
+              "choices": [
+                {
+                  "value": "HIND_END",
+                  "text": "Hind-end weakness appeared first"
+                },
+                {
+                  "value": "BREATHING",
+                  "text": "Breathing issues appeared first"
+                },
+                {
+                  "value": "SAME_TIME",
+                  "text": "They both appeared at about the same time"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't Know"
+                }
+              ],
+              "showOtherItem": false
             },
+
             {
-              "value": "BREATHING",
-              "text": "Breathing issues appeared first"
+              "type": "dropdown",
+              "name": "NeuropathySymptomsBreathingOnset",
+              "title": "About how long after you first noticed hind-end weakness did the breathing issues begin?",
+              "isRequired": true,
+              "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
+              "choices": [
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                },
+                {
+                  "value": "IMMEDIATELY",
+                  "text": "Almost immediately"
+                },
+                {
+                  "value": "WEEKS",
+                  "text": "Several weeks"
+                },
+                {
+                  "value": "MONTHS",
+                  "text": "Several months"
+                },
+                {
+                  "value": "HALF_YEAR",
+                  "text": "Six months or longer"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "required": true
             },
+
             {
-              "value": "SAME_TIME",
-              "text": "They both appeared at about the same time"
+              "type": "dropdown",
+              "name": "NeuropathySymptomsHindEndOnset",
+              "title": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
+              "isRequired": true,
+              "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
+              "choices": [
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                },
+                {
+                  "value": "IMMEDIATELY",
+                  "text": "Almost immediately"
+                },
+                {
+                  "value": "WEEKS",
+                  "text": "Several weeks"
+                },
+                {
+                  "value": "MONTHS",
+                  "text": "Several months"
+                },
+                {
+                  "value": "HALF_YEAR",
+                  "text": "Six months or longer"
+                }
+              ],
+              "showOtherItem": false
             },
+
+
             {
-              "value": "DONT_KNOW",
-              "text": "Don't Know"
+              "type": "radiogroup",
+              "name": "NeuropathySymptomsTypeProgression",
+              "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
+              "isRequired": true,
+              "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
+              "choices": [
+                {
+                  "value": "BREATHING",
+                  "text": "The breathing issues progressed faster"
+                },
+                {
+                  "value": "HIND_END",
+                  "text": "The hind-end weakness progressed faster"
+                },
+                {
+                  "value": "SAME",
+                  "text": "They both progressed at about the same rate"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+            {
+              "type": "checkbox",
+              "name": "NeuropathyOtherIssues",
+              "title": "Over the course of {CmpnName}'s LP/GOLPP, did any of these issues also appear?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ANXIETY",
+                  "text": "Increased anxiety"
+                },
+                {
+                  "value": "COGNITIVE",
+                  "text": "Cognitive changes"
+                },
+                {
+                  "value": "BEHAVIOR",
+                  "text": "Changes in behavior or personality"
+                },
+                {
+                  "value": "APPETITE",
+                  "text": "Changes in appetite"
+                },
+                {
+                  "value": "NONE",
+                  "text": "No, {CmpnName} never had any of these issues"
+                }
+              ],
+              "showOtherItem": false
             }
-          ],
-          "showOtherItem": false
-        },
-
-        {
-          "type": "dropdown",
-          "name": "NeuropathySymptomsBreathingOnset",
-          "title": "About how long after you first noticed hind-end weakness did the breathing issues begin?",
-          "isRequired": true,
-          "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
-          "choices": [
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            },
-            {
-              "value": "IMMEDIATELY",
-              "text": "Almost immediately"
-            },
-            {
-              "value": "WEEKS",
-              "text": "Several weeks"
-            },
-            {
-              "value": "MONTHS",
-              "text": "Several months"
-            },
-            {
-              "value": "HALF_YEAR",
-              "text": "Six months or longer"
-            }
-          ],
-          "showOtherItem": true,
-          "showNoneItem": true,
-          "required": true
-        },
-
-        {
-          "type": "dropdown",
-          "name": "NeuropathySymptomsHindEndOnset",
-          "title": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
-          "isRequired": true,
-          "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
-          "choices": [
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            },
-            {
-              "value": "IMMEDIATELY",
-              "text": "Almost immediately"
-            },
-            {
-              "value": "WEEKS",
-              "text": "Several weeks"
-            },
-            {
-              "value": "MONTHS",
-              "text": "Several months"
-            },
-            {
-              "value": "HALF_YEAR",
-              "text": "Six months or longer"
-            }
-          ],
-          "showOtherItem": false
-        },
 
 
-        {
-          "type": "radiogroup",
-          "name": "NeuropathySymptomsTypeProgression",
-          "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
-          "isRequired": true,
-          "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
-          "choices": [
-            {
-              "value": "BREATHING",
-              "text": "The breathing issues progressed faster"
-            },
-            {
-              "value": "HIND_END",
-              "text": "The hind-end weakness progressed faster"
-            },
-            {
-              "value": "SAME",
-              "text": "They both progressed at about the same rate"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            }
-          ],
-          "showOtherItem": false
-        },
 
-        {
-          "type": "checkbox",
-          "name": "NeuropathyOtherIssues",
-          "title": "Over the course of {CmpnName}'s LP/GOLPP, did any of these issues also appear?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "ANXIETY",
-              "text": "Increased anxiety"
-            },
-            {
-              "value": "COGNITIVE",
-              "text": "Cognitive changes"
-            },
-            {
-              "value": "BEHAVIOR",
-              "text": "Changes in behavior or personality"
-            },
-            {
-              "value": "APPETITE",
-              "text": "Changes in appetite"
-            },
-            {
-              "value": "NONE",
-              "text": "No, {CmpnName} never had any of these issues"
-            }
-          ],
-          "showOtherItem": false
+          ]
         }
-
-
-
       ]
     }
   ]

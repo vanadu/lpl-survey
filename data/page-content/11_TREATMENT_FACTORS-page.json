@@ -3,7 +3,7 @@
   "elements": [
     {
       "type": "panel",
-      "name": "TreatmentFactorsHeadPanel",
+      "name": "TreatmentFactorsCard1Panel",
       "elements": [
         {
           "type": "html",
@@ -15,275 +15,279 @@
           "name": "TreatmentFactorsText",
           "html": "<p>Magna ullamco in sint esse exercitation nostrud eiusmod sint excepteur reprehenderit velit sit. Exercitation minim veniam fugiat elit. Nisi eu ipsum pariatur officia qui dolor consectetur Lorem aliquip non. Commodo labore cupidatat culpa ea exercitation aliquip laborum qui in tempor. Adipisicing esse ex est exercitation in laboris nisi eu ut deserunt dolor.</p>"
         },
-        {
+          {
           "type": "html",
           "name": "TreatmentFactorsDetailsText",
           "html": "<p>Please rate the relevant factors in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>"
-        }
-      ]
-    },
-
-    {
-      "type": "panel",
-      "name": "TreatmentFactorsDecisionPanel",
-      "visibleIf": "{TreatmentStatusDidHave} = false && {LifeStatus} = false",
-      "elements": [
+        },
         {
-          "type": "dropdown",
-          "name": "TreatmentFactorsDecision",
-          "title": "Have you made a decision about whether or not to pursue LP surgery such as tieback for {CmpnName}?",
-          "isRequired": true,
-          "choices": [
+          "type": "panel",
+          "name": "TreatmentFactorsDecisionPanel",
+          "visibleIf": "{TreatmentStatusDidHave} = false && {LifeStatus} = false",
+          "elements": [
             {
-              "value": "WILL_PURSUE",
-              "text": "We will pursue LP surgery such as tieback."
+              "type": "dropdown",
+              "name": "TreatmentFactorsDecision",
+              "title": "Have you made a decision about whether or not to pursue LP surgery such as tieback for {CmpnName}?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "WILL_PURSUE",
+                  "text": "We will pursue LP surgery such as tieback."
+                },
+                {
+                  "value": "WILL_NOT_PURSUE",
+                  "text": "We've decided not to pursue LP surgery."
+                },
+                {
+                  "value": "UNDECIDED",
+                  "text": "We haven't decided yet."
+                }
+              ],
+              "showOtherItem": false
             },
             {
-              "value": "WILL_NOT_PURSUE",
-              "text": "We've decided not to pursue LP surgery."
+              "type": "dropdown",
+              "name": "TreatmentFactorsDecisionStent",
+              "title": "If a veterinarian were to offer a stent implant for LP/GOLPP in your area, would you explore that as a surgery alternative?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes, we would consider a stent implant."
+                },
+                {
+                  "value": "NO",
+                  "text": "No, we would not consider a stent implant."
+                },
+                {
+                  "value": "NOT_INFORMED",
+                  "text": "We need more information."
+                }
+              ],
+              "showOtherItem": false
             },
             {
-              "value": "UNDECIDED",
-              "text": "We haven't decided yet."
+              "type": "panel",
+              "name": "TreatmentFactorsCostPanel",
+              "title": "How have financial considerations factored into your decision?", 
+              "elements": [
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsCost",
+                  "title": "Cost of surgical/stent procedure:",
+                  "description": "1 = not a factor, 5 = deciding factor",
+                  "isRequired": true,
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsCostComplications",
+                  "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
+                  "description": "1 = not a factor, 5 = deciding factor",
+                  "isRequired": true,
+                  "rateValues": [
+                    { "value": 1, "text": "1" },
+                    { "value": 2, "text": "2" },
+                    { "value": 3, "text": "3" },
+                    { "value": 4, "text": "4" },
+                    { "value": 5, "text": "5" }
+                  ]
+                }
+              ]
             }
-          ],
-          "showOtherItem": false
-        },
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "panel",
+      "name": "TreatmentFactorsCard2Panel",
+      "elements": [
+
         {
-          "type": "dropdown",
-          "name": "TreatmentFactorsDecisionStent",
-          "title": "If a veterinarian were to offer a stent implant for LP/GOLPP in your area, would you explore that as a surgery alternative?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "YES",
-              "text": "Yes, we would consider a stent implant."
-            },
-            {
-              "value": "NO",
-              "text": "No, we would not consider a stent implant."
-            },
-            {
-              "value": "NOT_INFORMED",
-              "text": "We need more information."
+          "type": "panel",
+          "name": "TreatmentFactorsStagePanel",
+          "title": "How has the state of {CmpnName}'s LP/GOLPP factored into your decision?",
+          "elements": [
+          {
+            "type": "rating",
+            "name": "TreatmentFactorsStageLP",
+            "title": "Fear of a breathing emergency:",
+            "description": "1 = not a factor, 5 = deciding factor",
+            "isRequired": true,
+            "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" }
+            ]
+          },
+
+          {
+            "type": "rating",
+            "name": "TreatmentFactorsStageNeuropathy",
+            "title": "{CmpnName}'s hind-end weakness and polyneuropathy:",
+            "description": "1 = not a factor, 5 = deciding factor",
+            "isRequired": true,
+            "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" }
+              ]
             }
-          ],
-          "showOtherItem": false
-        }
-      ]
-    },
-
-
-
-    {
-      "type": "panel",
-      "name": "TreatmentFactorsCostPanel",
-      "title": "How have financial considerations factored into your decision?", 
-      "elements": [
-        {
-          "type": "rating",
-          "name": "TreatmentFactorsCost",
-          "title": "Cost of surgical/stent procedure:",
-          "description": "1 = not a factor, 5 = deciding factor",
-          "isRequired": true,
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" }
-          ]
-        },
-        {
-          "type": "rating",
-          "name": "TreatmentFactorsCostComplications",
-          "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
-          "description": "1 = not a factor, 5 = deciding factor",
-          "isRequired": true,
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" }
-          ]
-        }
-      ]
-    },
-
-    {
-      "type": "panel",
-      "name": "TreatmentFactorsStagePanel",
-      "title": "How has the state of {CmpnName}'s LP/GOLPP factored into your decision?",
-      "elements": [
-      {
-        "type": "rating",
-        "name": "TreatmentFactorsStageLP",
-        "title": "Fear of a breathing emergency:",
-        "description": "1 = not a factor, 5 = deciding factor",
-        "isRequired": true,
-        "rateValues": [
-          { "value": 1, "text": "1" },
-          { "value": 2, "text": "2" },
-          { "value": 3, "text": "3" },
-          { "value": 4, "text": "4" },
-          { "value": 5, "text": "5" }
-        ]
-      },
-
-      {
-        "type": "rating",
-        "name": "TreatmentFactorsStageNeuropathy",
-        "title": "{CmpnName}'s hind-end weakness and polyneuropathy:",
-        "description": "1 = not a factor, 5 = deciding factor",
-        "isRequired": true,
-        "rateValues": [
-          { "value": 1, "text": "1" },
-          { "value": 2, "text": "2" },
-          { "value": 3, "text": "3" },
-          { "value": 4, "text": "4" },
-          { "value": 5, "text": "5" }
-          ]
-        }
-      ]
-    },
-
-    {
-      "type": "panel",
-      "name": "TreatmentFactorsSurgeryRisksPanel",
-      "title": "How have the risks of surgery factored into your decision?",
-      "elements": [
-        {
-          "type": "rating",
-          "name": "TreatmentFactorsRisks",
-          "title": "Risks of a surgical procedure with extended anesthesia:",
-          "description": "1 = not a factor, 5 = deciding factor",
-          "isRequired": true,
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" }
-          ]
-        },
-        {
-          "type": "rating",
-          "name": "TreatmentFactorsRisksComplications",
-          "title": "Risks of post-op complications such as aspiration pneumonia or suture failure:",
-          "description": "1 = not a factor, 5 = deciding factor",
-          "isRequired": true,
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" }
-          ]
-        }
-
-      ]
-    },
-
-    {
-      "type": "panel",
-      "name": "TreatmentFactorsGeneral",
-      "title": "How have {CmpnName}'s age and general health considerations factored into your decision?",
-      "elements": [
-        {
-          "type": "rating",
-          "name": "TreatmentFactorsAge",
-          "title": "{CmpnName}'s age:",
-          "description": "1 = not a factor, 5 = deciding factor",
-          "isRequired": true,
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" }
-          ]
-        },
-        {
-          "type": "rating",
-          "name": "TreatmentFactorsGeneralHealth",
-          "title": "{CmpnName}'s overall health and prospects for quality of life moving forward:",
-          "description": "1 = not a factor, 5 = deciding factor",
-          "isRequired": true,
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" }
-          ]
-        },
-        {
-          "type": "rating",
-          "name": "TreatmentFactorsCoexisting",
-          "title": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
-          "description": "1 = not a factor, 5 = deciding factor",
-          "isRequired": true,
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" }
-          ]
-        }
-      ]
-    },
-
-    {
-      "type": "panel",
-      "name": "TreatmentFactorsCircumstances",
-      "title": "How have your personal circumstances factored into your decision?",
-      "elements": [
-        {
-          "type": "rating",
-          "name": "TreatmentFactorsCircumstancesAccess",
-          "title": "Distance to or access to a qualified specialist:",
-          "description": "1 = not a factor, 5 = deciding factor",
-          "isRequired": true,
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" }
           ]
         },
 
         {
-          "type": "rating",
-          "name": "TreatmentFactorsCircumstancesCare",
-          "title": "Ability to provide adequate post-operative care:",
-          "description": "1 = not a factor, 5 = deciding factor",
-          "isRequired": true,
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" }
+          "type": "panel",
+          "name": "TreatmentFactorsSurgeryRisksPanel",
+          "title": "How have the risks of surgery factored into your decision?",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsRisks",
+              "title": "Risks of a surgical procedure with extended anesthesia:",
+              "description": "1 = not a factor, 5 = deciding factor",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsRisksComplications",
+              "title": "Risks of post-op complications such as aspiration pneumonia or suture failure:",
+              "description": "1 = not a factor, 5 = deciding factor",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsGeneral",
+          "title": "How have {CmpnName}'s age and general health considerations factored into your decision?",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsAge",
+              "title": "{CmpnName}'s age:",
+              "description": "1 = not a factor, 5 = deciding factor",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsGeneralHealth",
+              "title": "{CmpnName}'s overall health and prospects for quality of life moving forward:",
+              "description": "1 = not a factor, 5 = deciding factor",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsCoexisting",
+              "title": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
+              "description": "1 = not a factor, 5 = deciding factor",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsCircumstances",
+          "title": "How have your personal circumstances factored into your decision?",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsCircumstancesAccess",
+              "title": "Distance to or access to a qualified specialist:",
+              "description": "1 = not a factor, 5 = deciding factor",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsCircumstancesCare",
+              "title": "Ability to provide adequate post-operative care:",
+              "description": "1 = not a factor, 5 = deciding factor",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsOtherPanel",
+          "title": "What other considerations, if any, have factored into your decision?",
+          "elements": [
+            {
+              "type": "text",
+              "name": "TreatmentFactorsOther",
+              "title": "Other considerations:",
+              "description": "Maximum 250 characters.",
+              "isRequired": false
+            }
           ]
         }
-      ]
-    },
 
-    {
-      "type": "panel",
-      "name": "TreatmentFactorsOtherPanel",
-      "title": "What other considerations, if any, have factored into your decision?",
-      "elements": [
-        {
-          "type": "text",
-          "name": "TreatmentFactorsOther",
-          "title": "Other considerations:",
-          "description": "Maximum 250 characters.",
-          "isRequired": false
-        }
       ]
     }
   ]

@@ -1,42 +1,39 @@
 {
   "name": "INTUBATION_HISTORY-page",
   "elements": [
+    {
+      "type": "panel",
+      "name": "IntubationHistoryCard1Panel",
+      "elements": [
         {
-          "type": "panel",
-          "name": "IntubationHistoryHeadPanel",
-          "elements": [
+          "type": "html",
+          "name": "IntubationHistoryHeading",
+          "html": "<h3>Intubation History</h3>"
+        },
+        {
+          "type": "html",
+          "name": "IntubationHistoryText",
+          "html": "<p>This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "IntubationHistoryWasIntubated",
+          "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
+          "choices": [
             {
-              "type": "html",
-              "name": "IntubationHistoryHeading",
-              "html": "<h3>Intubation History</h3>"
+              "value": "YES",
+              "text": "Yes"
             },
             {
-              "type": "html",
-              "name": "IntubationHistoryText",
-              "html": "<p>This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>"
+              "value": "NO",
+              "text": "No"
             },
             {
-              "type": "radiogroup",
-              "name": "IntubationHistoryWasIntubated",
-              "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Not sure"
-                }
-              ]
+              "value": "DONT_KNOW",
+              "text": "Not sure"
             }
           ]
         },
-
         {
           "type": "panel",
           "name": "IntubationHistoryDetails",
@@ -108,7 +105,8 @@
               "showOtherItem": true
             }
           ]
-
+        }
+      ]
     }
   ]
 }

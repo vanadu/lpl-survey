@@ -1,9 +1,10 @@
 {
   "name": "CONCLUSION-page",
   "elements": [
+
     {
       "type": "panel",
-      "name": "ConclusionHeadPanel",
+      "name": "ConclusionCard1Panel",
       "elements": [
         {
           "type": "html",
@@ -40,219 +41,223 @@
               "html": "<p><b>IMPORTANT:</b> Please answer the questions about {CmpnName} in {cvGenderObjectPronoun} current state of health:</p>"
             }
           ]
-        }
-      ]
-    },
-
-    {
-      "type": "panel",
-      "name": "ConclusionDetailsPanel",
-      "elements": [
-        {
-          "type": "checkbox",
-          "name": "ConclusionSpecialConsiderations",
-          "title": "Please describe any special considerations for {CmpnName} due to LP-related breathing issues:",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "NO_CONSIDERATIONS",
-              "text": "No special considerations"
-            },
-            {
-              "value": "EXERCISE",
-              "text": "Exercise limitations"
-            },
-            {
-              "value": "FOOD",
-              "text": "Type, amount or frequency of feeding"
-            },
-            {
-              "value": "TRAVEL",
-              "text": "Travel restrictions"
-            },
-            {
-              "value": "EXCITEMENT",
-              "text": "Other behavior restrictions i.e., anxiety, excitement"
-            }
-          ],
-          "showOtherItem": true
         },
         {
-          "type": "checkbox",
-          "name": "ConclusionGeneralCondition",
-          "title": "Please describe {CmpnName}'s general physical condition:",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "NO_SYMPTOMS",
-              "text": "No noticeable symptoms"
-            },
-            {
-              "value": "HIND_END",
-              "text": "Significant hind-end weakness"
-            },
-            {
-              "value": "FALLING",
-              "text": "Frequent falling"
-            },
-            {
-              "value": "GET_UP",
-              "text": "Difficulty getting up or standing"
-            },
-            {
-              "value": "URINARY",
-              "text": "Urinary incontinence"
-            },
-            {
-              "value": "FECAL",
-              "text": "Fecal incontinence"
-            }
-          ],
-          "showOtherItem": false
-        },
-        {
-          "type": "rating",
-          "name": "ConclusionQOL",
-          "title": "How would you rate {CmpnName}'s quality of life at this stage?",
-          "description": "1 = very poor, 3 = fair, 5 = very good",
-          "isRequired": true,
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" },
-            { "value": "DONT_KNOW", "text": "Don't know" }
-          ]
-        }
-      ]
-    },
-
-    {
-      "type": "panel",
-      "name": "ConclusionOtherConditionsPanel",
-      "elements": [
-        {
-          "type": "boolean",
-          "name": "ConclusionOtherConditionsNew",
-          "title": "Did {CmpnName} develop any new conditions during {cvGenderObjectPronoun} LP/GOLPP journey that {cvGenderSubjectPronoun} didn't have before?",
-          "swapOrder": true,
-          "isRequired": true
-        },
-
-
-        {
-        "type": "checkbox",
-        "name": "ConclusionOtherConditions",
-        "title": "What other conditions did {CmpnName} develop during {cvGenderObjectPronoun} LP/GOLPP journey?",
-        "description": "The selections you made about the beginning of {CmpnName}'s LP/GOLPP journey are preselected.",
-        "visibleIf": "{ConclusionOtherConditionsNew} = true",
-        "isRequired": true,
-        "choices": [
-            {
-              "value": "GERD",
-              "text": "Acid reflux (GERD)"
-            },
-            {
-              "value": "ME",
-              "text": "Megaesophagus"
-            },
-            {
-              "value": "DM",
-              "text": "Degenerative Myelopathy"
-            },
-            {
-              "value": "ARTHRITIS",
-              "text": "Arthritis"
-            },
-            {
-              "value": "CUSHINGS",
-              "text": "Cushings"
-            },
-            {
-              "value": "CT",
-              "text": "Collapsing Trachea"
-            },
-            {
-              "value": "HYPOTHYROID",
-              "text": "Hypothyroidism"
-            },
-            {
-              "value": "HEMANGIOSARCOMA",
-              "text": "Hemangiosarcoma"
-            },
-            {
-              "value": "NONE",
-              "text": "No new conditions"
-            }
-          ],
-          "choicesOrder": "none",
-          "otherText": "Other (max. 250 characters)",
-          "showOtherItem": true
-        }
-      ]
-    },
-
-    {
-      "type": "panel",
-      "name": "ConclusionCauseOfDeathPanel",
-      "visibleIf": "{LifeStatus} = true",
-      "elements": [
+        "type": "panel",
+        "name": "ConclusionDetailsPanel",
+        "elements": [
           {
-            "type": "html",
-            "name": "ConclusionCauseOfDeathHeading",
-            "html": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This questions asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over."
-          },
-          {
-            "type": "radiogroup",
-            "name": "ConclusionCauseOfDeath",
-            "title": "What was the ultimate reason why {CmpnName} crossed over the Rainbow Bridge?",
+            "type": "checkbox",
+            "name": "ConclusionSpecialConsiderations",
+            "title": "Please describe any special considerations for {CmpnName} due to LP-related breathing issues:",
             "isRequired": true,
             "choices": [
               {
-                "value": "COMPLICATIONS",
-                "text": "Post-op complications of LP-related surgical procedure"
+                "value": "NO_CONSIDERATIONS",
+                "text": "No special considerations"
               },
               {
-                "value": "BREATHING_CRISIS",
-                "text": "LP-related breathing crisis"
+                "value": "EXERCISE",
+                "text": "Exercise limitations"
               },
               {
-                "value": "ASPIRATION",
-                "text": "Aspiration pneumonia"
+                "value": "FOOD",
+                "text": "Type, amount or frequency of feeding"
               },
               {
-                "value": "QOL_POLYNEUROPATHY",
-                "text": "Quality of life due to polyneuropathy or hind-end weakness"
+                "value": "TRAVEL",
+                "text": "Travel restrictions"
               },
               {
-                "value": "QOL_BREATHING",
-                "text": "Quality of life due to LP-related breathing problems"
-              },
-              {
-                "value": "CANCER",
-                "text": "Cancer"
-              },
-              {
-                "value": "SEIZURE",
-                "text": "Seizure, stroke, or cardiac event"
-              },
-              {
-                "value": "INFECTION",
-                "text": "Bacterial/viral infection"
-              },
-              {
-                "value": "STOPPED_EATING",
-                "text": "Stopped eating"
+                "value": "EXCITEMENT",
+                "text": "Other behavior restrictions i.e., anxiety, excitement"
               }
             ],
-            "showOtherItem": true,
-            "otherText": "Other reasons"
+            "showOtherItem": true
+          },
+          {
+            "type": "checkbox",
+            "name": "ConclusionGeneralCondition",
+            "title": "Please describe {CmpnName}'s general physical condition:",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "NO_SYMPTOMS",
+                "text": "No noticeable symptoms"
+              },
+              {
+                "value": "HIND_END",
+                "text": "Significant hind-end weakness"
+              },
+              {
+                "value": "FALLING",
+                "text": "Frequent falling"
+              },
+              {
+                "value": "GET_UP",
+                "text": "Difficulty getting up or standing"
+              },
+              {
+                "value": "URINARY",
+                "text": "Urinary incontinence"
+              },
+              {
+                "value": "FECAL",
+                "text": "Fecal incontinence"
+              }
+            ],
+            "showOtherItem": false
+          },
+          {
+            "type": "rating",
+            "name": "ConclusionQOL",
+            "title": "How would you rate {CmpnName}'s quality of life at this stage?",
+            "description": "1 = very poor, 3 = fair, 5 = very good",
+            "isRequired": true,
+            "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" },
+              { "value": "DONT_KNOW", "text": "Don't know" }
+            ]
+          }
+        ]
+        },
+        {
+          "type": "panel",
+          "name": "ConclusionOtherConditionsPanel",
+          "elements": [
+            {
+              "type": "boolean",
+              "name": "ConclusionOtherConditionsNew",
+              "title": "Did {CmpnName} develop any new conditions during {cvGenderObjectPronoun} LP/GOLPP journey that {cvGenderSubjectPronoun} didn't have before?",
+              "swapOrder": true,
+              "isRequired": true
+            },
+
+
+            {
+            "type": "checkbox",
+            "name": "ConclusionOtherConditions",
+            "title": "What other conditions did {CmpnName} develop during {cvGenderObjectPronoun} LP/GOLPP journey?",
+            "description": "The selections you made about the beginning of {CmpnName}'s LP/GOLPP journey are preselected.",
+            "visibleIf": "{ConclusionOtherConditionsNew} = true",
+            "isRequired": true,
+            "choices": [
+                {
+                  "value": "GERD",
+                  "text": "Acid reflux (GERD)"
+                },
+                {
+                  "value": "ME",
+                  "text": "Megaesophagus"
+                },
+                {
+                  "value": "DM",
+                  "text": "Degenerative Myelopathy"
+                },
+                {
+                  "value": "ARTHRITIS",
+                  "text": "Arthritis"
+                },
+                {
+                  "value": "CUSHINGS",
+                  "text": "Cushings"
+                },
+                {
+                  "value": "CT",
+                  "text": "Collapsing Trachea"
+                },
+                {
+                  "value": "HYPOTHYROID",
+                  "text": "Hypothyroidism"
+                },
+                {
+                  "value": "HEMANGIOSARCOMA",
+                  "text": "Hemangiosarcoma"
+                },
+                {
+                  "value": "NONE",
+                  "text": "No new conditions"
+                }
+              ],
+              "choicesOrder": "none",
+              "otherText": "Other (max. 250 characters)",
+              "showOtherItem": true
+            }
+          ]
         }
+
       ]
     },
 
     {
+      "type": "panel",
+      "name": "ConclusionCard2Panel",
+      "elements": [
+
+        {
+          "type": "panel",
+          "name": "ConclusionCauseOfDeathPanel",
+          "visibleIf": "{LifeStatus} = true",
+          "elements": [
+              {
+                "type": "html",
+                "name": "ConclusionCauseOfDeathHeading",
+                "html": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This questions asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over."
+              },
+              {
+                "type": "radiogroup",
+                "name": "ConclusionCauseOfDeath",
+                "title": "What was the ultimate reason why {CmpnName} crossed over the Rainbow Bridge?",
+                "isRequired": true,
+                "choices": [
+                  {
+                    "value": "COMPLICATIONS",
+                    "text": "Post-op complications of LP-related surgical procedure"
+                  },
+                  {
+                    "value": "BREATHING_CRISIS",
+                    "text": "LP-related breathing crisis"
+                  },
+                  {
+                    "value": "ASPIRATION",
+                    "text": "Aspiration pneumonia"
+                  },
+                  {
+                    "value": "QOL_POLYNEUROPATHY",
+                    "text": "Quality of life due to polyneuropathy or hind-end weakness"
+                  },
+                  {
+                    "value": "QOL_BREATHING",
+                    "text": "Quality of life due to LP-related breathing problems"
+                  },
+                  {
+                    "value": "CANCER",
+                    "text": "Cancer"
+                  },
+                  {
+                    "value": "SEIZURE",
+                    "text": "Seizure, stroke, or cardiac event"
+                  },
+                  {
+                    "value": "INFECTION",
+                    "text": "Bacterial/viral infection"
+                  },
+                  {
+                    "value": "STOPPED_EATING",
+                    "text": "Stopped eating"
+                  }
+                ],
+                "showOtherItem": true,
+                "otherText": "Other reasons"
+            }
+          ]
+        },
+
+        {
           "type": "panel",
           "name": "ConclusionOtherPathPanel",
           "title": "These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?",
@@ -450,6 +455,8 @@
             }
           ]
 
+        }
+      ]
     }
   ]
 }

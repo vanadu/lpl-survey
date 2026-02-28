@@ -1,98 +1,107 @@
 {
   "name": "BREATHING_CRISIS-page",
   "elements": [
+    {
+      "type": "panel",
+      "name": "BreathingCrisisCard1Panel",
+      "elements": [
         {
-          "type": "panel",
-          "name": "BreathingCrisisHeadPanel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "BreathingCrisisHeading",
-              "html": "<h3>LP Breathing Crisis</h3>"
-            },
-            {
-              "type": "html",
-              "name": "BreathingCrisisText",
-              "html": "<p>In a breathing crisis, the paralyzed arytenoid cartilages block the airway and cut off airflow to the lungs. In extreme cases, the crisis escalates into a breathing emergency that requires care at a veterinary facility to restore breathing. These questions are about breathing emergencies that required care from a licensed veterinarian. </p>"
-            },
-            {
-              "type": "radiogroup",
-              "name": "BreathingCrisisDidHave",
-              "title": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false,
-              "showNoneItem": false
-            }
-          ]
+          "type": "html",
+          "name": "BreathingCrisisHeading",
+          "html": "<h3>LP Breathing Crisis</h3>"
         },
+        {
+          "type": "html",
+          "name": "BreathingCrisisText",
+          "html": "<p>In a breathing crisis, the paralyzed arytenoid cartilages block the airway and cut off airflow to the lungs. In extreme cases, the crisis escalates into a breathing emergency that requires care at a veterinary facility to restore breathing. These questions are about breathing emergencies that required care from a licensed veterinarian. </p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "BreathingCrisisDidHave",
+          "title": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false,
+          "showNoneItem": false
+        },
+                    {
+          "type": "radiogroup",
+          "name": "BreathingCrisisCount",
+          "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+          "visibleIf": "{BreathingCrisisDidHave} = 'YES'",   
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "ONE",
+              "text": "Once"
+            },
+            {
+              "value": "TWO",
+              "text": "Twice"
+            },
+            {
+              "value": "MORE_THAN_TWO",
+              "text": "More than twice"
+            }
+          ],
+          "showOtherItem": false,
+          "showNoneItem": false
+        },
+        {
+          "type": "dropdown",
+          "name": "BreathingCrisisCost",
+          "title": "About what was the total pre-insurance cost of these visits?",
+          "visibleIf": "{BreathingCrisisDidHave} = 'YES'",   
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "LESS_THAN_250",
+              "text": "Less than $250"
+            },
+            {
+              "value": "250_500",
+              "text": "$250 - $500"
+            },
+            {
+              "value": "500_1000",
+              "text": "$500 - $1000"
+            },
+            {
+              "value": "MORE_THAN_1000",
+              "text": "More than $1000"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know or prefer not to say"
+            }
+          ],
+          "showOtherItem": false,
+          "showNoneItem": false
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "BreathingCrisisCard2Panel",
+      "elements": [
         {
           "type": "panel",
           "name": "BreathingCrisisDetailsPanel",
           "visibleIf": "{BreathingCrisisDidHave} = 'YES'",          
           "elements": [
-            {
-              "type": "radiogroup",
-              "name": "BreathingCrisisCount",
-              "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
-              "choices": [
-                {
-                  "value": "ONE",
-                  "text": "Once"
-                },
-                {
-                  "value": "TWO",
-                  "text": "Twice"
-                },
-                {
-                  "value": "MORE_THAN_TWO",
-                  "text": "More than twice"
-                }
-              ],
-              "showOtherItem": false,
-              "showNoneItem": false
-            },
-            {
-              "type": "dropdown",
-              "name": "BreathingCrisisCost",
-              "title": "About what was the total pre-insurance cost of these visits?",
-              "choices": [
-                {
-                  "value": "LESS_THAN_250",
-                  "text": "Less than $250"
-                },
-                {
-                  "value": "250_500",
-                  "text": "$250 - $500"
-                },
-                {
-                  "value": "500_1000",
-                  "text": "$500 - $1000"
-                },
-                {
-                  "value": "MORE_THAN_1000",
-                  "text": "More than $1000"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know or prefer not to say"
-                }
-              ],
-              "showOtherItem": false,
-              "showNoneItem": false
-            },
+
             {
               "type": "radiogroup",
               "name": "BreathingCrisisAdvice",
@@ -228,6 +237,8 @@
             }
           ]
 
+        }
+      ]
     }
   ]
 }

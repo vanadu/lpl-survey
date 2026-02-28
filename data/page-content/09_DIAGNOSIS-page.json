@@ -1,9 +1,10 @@
 {
   "name": "DIAGNOSIS-page",
   "elements": [
+
     {
       "type": "panel",
-      "name": "DiagnosisHeadPanel",
+      "name": "DiagnosisCard1Panel",
       "elements": [
         {
           "type": "html",
@@ -14,179 +15,180 @@
           "type": "html",
           "name": "DiagnosisText",
           "html": "<p>This section asks who provided {CmpnName}'s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p><p>You may have seen multiple vets about {CmpnName}'s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about {CmpnName}'s LP/GOLPP.</p>"
-        }
-      ]
-    },
-    {
-      "type": "panel",
-      "name": "DiagnosisDetailsPanel",
-      "elements": [
-        {
-          "type": "dropdown",
-          "name": "DiagnosisWho",
-          "title": "Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "PRIMARY",
-              "text": "Primary veterinarian"
-            },
-            {
-              "value": "INTERNIST",
-              "text": "Internal medicine specialist"
-            },
-            {
-              "value": "NEUROLOGIST",
-              "text": "Neurologist"
-            },
-            {
-              "value": "SOFT_TISSUE",
-              "text": "Soft tissue specialist or surgeon"
-            },
-            {
-              "value": "GENERAL",
-              "text": "General or orthopedic surgeon"
-            }
-          ],
-          "showOtherItem": true,
-          "showNoneItem": false
         },
         {
-          "type": "dropdown",
-          "name": "DiagnosticType",
-          "title": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
-          "isRequired": true,
-          "choices": [
+          "type": "panel",
+          "name": "DiagnosisDetailsPanel",
+          "elements": [
             {
-              "value": "ROUTINE_EXAM",
-              "text": "Visual/auditory exam only"
+              "type": "dropdown",
+              "name": "DiagnosisWho",
+              "title": "Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "PRIMARY",
+                  "text": "Primary veterinarian"
+                },
+                {
+                  "value": "INTERNIST",
+                  "text": "Internal medicine specialist"
+                },
+                {
+                  "value": "NEUROLOGIST",
+                  "text": "Neurologist"
+                },
+                {
+                  "value": "SOFT_TISSUE",
+                  "text": "Soft tissue specialist or surgeon"
+                },
+                {
+                  "value": "GENERAL",
+                  "text": "General or orthopedic surgeon"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": false
             },
             {
-              "value": "SEDATED_VISUAL",
-              "text": "Sedated visual exam of larynx"
+              "type": "dropdown",
+              "name": "DiagnosticType",
+              "title": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ROUTINE_EXAM",
+                  "text": "Visual/auditory exam only"
+                },
+                {
+                  "value": "SEDATED_VISUAL",
+                  "text": "Sedated visual exam of larynx"
+                },
+                {
+                  "value": "XRAY",
+                  "text": "X-Ray or other imaging"
+                },
+                {
+                  "value": "ULTRASOUND",
+                  "text": "Ultrasound"
+                },
+                {
+                  "value": "SCOPE",
+                  "text": "Video endoscope or laryngoscope under anesthesia"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true
             },
             {
-              "value": "XRAY",
-              "text": "X-Ray or other imaging"
+              "type": "radiogroup",
+              "name": "DiagnosisStage",
+              "title": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "UNILATERAL",
+                  "text": "Unilateral (one-side)"
+                },
+                {
+                  "value": "BILATERAL",
+                  "text": "Bilateral (both sides)"
+                },
+                {
+                  "value": "WASNT_TOLD",
+                  "text": "I wasn't told what stage {CmpnName}'s LP was in"
+                }
+              ],
+              "showOtherItem": false
             },
             {
-              "value": "ULTRASOUND",
-              "text": "Ultrasound"
+            "type": "dropdown",
+            "name": "DiagnosisTimeAfterSymptoms",
+            "title": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?:",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "LESS_THAN_ONE",
+                "text": "Less than one month"
+              },
+              {
+                "value": "ONE_TO_THREE",
+                "text": "Between one and three months"
+              },
+              {
+                "value": "FOUR_TO_SIX",
+                "text": "Between four and six months"
+              },
+              {
+                "value": "SIX_TO_TWELVE",
+                "text": "Between six months and a year"
+              },
+              {
+                "value": "MORE_THAN_TWELVE",
+                "text": "Longer than a year"
+              }
+            ],
+            "showOtherItem": false,
+            "required": true
             },
             {
-              "value": "SCOPE",
-              "text": "Video endoscope or laryngoscope under anesthesia"
+              "type": "radiogroup",
+              "name": "DiagnosisCost",
+              "title": "What was the pre-insurance cost of the diagnosis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "UNDER_500",
+                  "text": "Under $500"
+                },
+                {
+                  "value": "500_1500",
+                  "text": "$501-$1500"
+                },
+                {
+                  "value": "1501_3000",
+                  "text": "$1500-$3000"
+                },
+                {
+                  "value": "OVER_3000",
+                  "text": "Over $3000"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
             },
             {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            }
-          ],
-          "showOtherItem": true
-        },
-        {
-          "type": "radiogroup",
-          "name": "DiagnosisStage",
-          "title": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "UNILATERAL",
-              "text": "Unilateral (one-side)"
-            },
-            {
-              "value": "BILATERAL",
-              "text": "Bilateral (both sides)"
-            },
-            {
-              "value": "WASNT_TOLD",
-              "text": "I wasn't told what stage {CmpnName}'s LP was in"
-            }
-          ],
-          "showOtherItem": false
-        },
-        {
-        "type": "dropdown",
-        "name": "DiagnosisTimeAfterSymptoms",
-        "title": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?:",
-        "isRequired": true,
-        "choices": [
-          {
-            "value": "LESS_THAN_ONE",
-            "text": "Less than one month"
-          },
-          {
-            "value": "ONE_TO_THREE",
-            "text": "Between one and three months"
-          },
-          {
-            "value": "FOUR_TO_SIX",
-            "text": "Between four and six months"
-          },
-          {
-            "value": "SIX_TO_TWELVE",
-            "text": "Between six months and a year"
-          },
-          {
-            "value": "MORE_THAN_TWELVE",
-            "text": "Longer than a year"
-          }
-        ],
-        "showOtherItem": false,
-        "required": true
-        },
-        {
-          "type": "radiogroup",
-          "name": "DiagnosisCost",
-          "title": "What was the pre-insurance cost of the diagnosis?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "UNDER_500",
-              "text": "Under $500"
-            },
-            {
-              "value": "500_1500",
-              "text": "$501-$1500"
-            },
-            {
-              "value": "1501_3000",
-              "text": "$1500-$3000"
-            },
-            {
-              "value": "OVER_3000",
-              "text": "Over $3000"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
+              "type": "radiogroup",
+              "name": "DiagnosisSurgeonContingent",
+              "title": "Did the surgeon perform the diagnosis without requiring surgery afterwards?",
+              "description": "In other words, did the surgeon refuse to do the diagnosis unless you agreed to go straight to surgery if the results were positive?",
+              "isRequired": true,
+              "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes, required surgery consent before diagnosis"
+                },
+                {
+                  "value": "NO",
+                  "text": "No, did not require surgery consent for diagnosis"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
             }
           ]
-        },
-        {
-          "type": "radiogroup",
-          "name": "DiagnosisSurgeonContingent",
-          "title": "Did the surgeon perform the diagnosis without requiring surgery afterwards?",
-          "description": "In other words, did the surgeon refuse to do the diagnosis unless you agreed to go straight to surgery if the results were positive?",
-          "isRequired": true,
-          "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
-          "choices": [
-            {
-              "value": "YES",
-              "text": "Yes, required surgery consent before diagnosis"
-            },
-            {
-              "value": "NO",
-              "text": "No, did not require surgery consent for diagnosis"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            }
-          ],
-          "showOtherItem": false
         }
       ]
     }
+
   ]
 }

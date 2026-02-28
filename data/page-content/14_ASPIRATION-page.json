@@ -3,7 +3,7 @@
   "elements": [
     {
       "type": "panel",
-      "name": "AspirationHeadPanel",
+      "name": "AspirationCard1Panel",
       "elements": [
         {
           "type": "html",
@@ -19,11 +19,8 @@
           "type": "html",
           "name": "AspirationInfoLink",
           "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
-        }
-      ]
-    },
-
-    {
+        },
+            {
       "type": "panel",
       "name": "AspirationDidHavePanel",
       "elements": [
@@ -129,169 +126,179 @@
           "showOtherItem": false
         }
       ]
-    },
-    {
-      "type": "panel",
-      "name": "AspirationSurgeryPanel",
-      "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = YES",
-      "elements": [
-
-        {
-          "type": "radiogroup",
-          "name": "AspirationSurgeryPost",
-          "title": "Did {CmpnName} ever have AP after the surgery (i.e., tieback, BVEAP)?",
-          "description": "Includes tieback, BVEAP, ventrilocordectomy, arytenoidectomy and other invasive surgery procedures.",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "YES",
-              "text": "Yes"
-            },
-            {
-              "value": "NO",
-              "text": "No"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            }
-          ],
-          "showOtherItem": false
-        },
-
-        {
-          "type": "dropdown",
-          "name": "AspirationSurgeryPostCount",
-          "title": "How many times did {CmpnName} get AP after the surgery?",
-          "isRequired": true,
-          "visibleIf": "{AspirationSurgeryPost} = YES",
-          "choices": [
-            {
-              "value": "ONE",
-              "text": "Once"
-            },
-            {
-              "value": "TWO",
-              "text": "Twice"
-            },
-            {
-              "value": "THREE",
-              "text": "Three times"
-            },
-            {
-              "value": "MORE_THAN_THREE",
-              "text": "More than three times"
-            }
-          ],
-          "showOtherItem": false
-        }
+    }
 
       ]
     },
     {
       "type": "panel",
-      "name": "AspirationStentPanel",
-      "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = YES",
+      "name": "AspirationCard2Panel",
       "elements": [
-
         {
-          "type": "radiogroup",
-          "name": "AspirationStentPost",
-          "title": "Did {CmpnName} ever have AP after the stent implant procedure?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "YES",
-              "text": "Yes"
-            },
-            {
-              "value": "NO",
-              "text": "No"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            }
-          ],
-          "showOtherItem": false
+    "type": "panel",
+    "name": "AspirationSurgeryPanel",
+    "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = YES",
+    "elements": [
+
+      {
+        "type": "radiogroup",
+        "name": "AspirationSurgeryPost",
+        "title": "Did {CmpnName} ever have AP after the surgery (i.e., tieback, BVEAP)?",
+        "description": "Includes tieback, BVEAP, ventrilocordectomy, arytenoidectomy and other invasive surgery procedures.",
+        "isRequired": true,
+        "choices": [
+          {
+            "value": "YES",
+            "text": "Yes"
+          },
+          {
+            "value": "NO",
+            "text": "No"
+          },
+          {
+            "value": "DONT_KNOW",
+            "text": "Don't know"
+          }
+        ],
+        "showOtherItem": false
+      },
+
+      {
+        "type": "dropdown",
+        "name": "AspirationSurgeryPostCount",
+        "title": "How many times did {CmpnName} get AP after the surgery?",
+        "isRequired": true,
+        "visibleIf": "{AspirationSurgeryPost} = YES",
+        "choices": [
+          {
+            "value": "ONE",
+            "text": "Once"
+          },
+          {
+            "value": "TWO",
+            "text": "Twice"
+          },
+          {
+            "value": "THREE",
+            "text": "Three times"
+          },
+          {
+            "value": "MORE_THAN_THREE",
+            "text": "More than three times"
+          }
+        ],
+        "showOtherItem": false
+      }
+
+    ]
         },
-
         {
-          "type": "dropdown",
-          "name": "AspirationStentPostCount",
-          "title": "How many times did {CmpnName} get AP after the stent implant?",
-          "isRequired": true,
-          "visibleIf": "{AspirationStentPost} = YES",
-          "choices": [
-            {
-              "value": "ONE",
-              "text": "Once"
-            },
-            {
-              "value": "TWO",
-              "text": "Twice"
-            },
-            {
-              "value": "THREE",
-              "text": "Three times"
-            },
-            {
-              "value": "MORE_THAN_THREE",
-              "text": "More than three times"
-            }
-          ],
-          "showOtherItem": false
-        }
-
-      ]
-    },
-    {
           "type": "panel",
-          "name": "AspirationCostPanel",
-          "visibleIf": "{AspirationDidHave} = YES",
+          "name": "AspirationStentPanel",
+          "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = YES",
           "elements": [
+
             {
-              "type": "dropdown",
-              "name": "AspirationCost",
-              "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
+              "type": "radiogroup",
+              "name": "AspirationStentPost",
+              "title": "Did {CmpnName} ever have AP after the stent implant procedure?",
               "isRequired": true,
               "choices": [
                 {
-                  "value": "NOT_SAY",
-                  "text": "Prefer not to say"
+                  "value": "YES",
+                  "text": "Yes"
                 },
                 {
-                  "value": "UNDER_100",
-                  "text": "Under $100"
+                  "value": "NO",
+                  "text": "No"
                 },
                 {
-                  "value": "100_300",
-                  "text": "$100-$300"
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+            {
+              "type": "dropdown",
+              "name": "AspirationStentPostCount",
+              "title": "How many times did {CmpnName} get AP after the stent implant?",
+              "isRequired": true,
+              "visibleIf": "{AspirationStentPost} = YES",
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Once"
                 },
                 {
-                  "value": "300_500",
-                  "text": "$300-$500"
+                  "value": "TWO",
+                  "text": "Twice"
                 },
                 {
-                  "value": "500_1000",
-                  "text": "$500-$1000"
+                  "value": "THREE",
+                  "text": "Three times"
                 },
                 {
-                  "value": "1001_3000",
-                  "text": "$1001-$3000"
-                },
+                  "value": "MORE_THAN_THREE",
+                  "text": "More than three times"
+                }
+              ],
+              "showOtherItem": false
+            }
+
+          ]
+        },
+        {
+              "type": "panel",
+              "name": "AspirationCostPanel",
+              "visibleIf": "{AspirationDidHave} = YES",
+              "elements": [
                 {
-                  "value": "3000_5000",
-                  "text": "$3000-$5000"
-                },
-                {
-                  "value": "OVER_5000",
-                  "text": "Over $5000"
+                  "type": "dropdown",
+                  "name": "AspirationCost",
+                  "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
+                      "value": "UNDER_100",
+                      "text": "Under $100"
+                    },
+                    {
+                      "value": "100_300",
+                      "text": "$100-$300"
+                    },
+                    {
+                      "value": "300_500",
+                      "text": "$300-$500"
+                    },
+                    {
+                      "value": "500_1000",
+                      "text": "$500-$1000"
+                    },
+                    {
+                      "value": "1001_3000",
+                      "text": "$1001-$3000"
+                    },
+                    {
+                      "value": "3000_5000",
+                      "text": "$3000-$5000"
+                    },
+                    {
+                      "value": "OVER_5000",
+                      "text": "Over $5000"
+                    }
+                  ]
                 }
               ]
-            }
-          ]
-
+        }
+      ]
     }
   ]
 }
+
+
