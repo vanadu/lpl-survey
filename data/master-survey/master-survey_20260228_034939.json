@@ -101,7 +101,7 @@
       "elements": [
         {
           "type": "panel",
-          "name": "LandingCard1Panel",
+          "name": "LandingHeadPanel",
           "elements": [
             {
               "type": "panel",
@@ -139,7 +139,7 @@
         },
         {
           "type": "panel",
-          "name": "LandingCard2Panel",
+          "name": "LandingPrivacyConsentPanel",
           "elements": [
             {
               "type": "html",
@@ -200,7 +200,7 @@
       "elements": [
         {
           "type": "panel",
-          "name": "UserInfoCard1Panel",
+          "name": "UserInfoLifeStatusPanel",
           "elements": [
             {
               "type": "html",
@@ -218,38 +218,32 @@
               "html": "<p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>"
             },
             {
-              "type": "panel",
-              "name": "UserInfoLifeStatusNamePanel",
-              "elements": [
+              "type": "text",
+              "name": "CmpnName",
+              "title": "Please tell us your companion's name:",
+              "isRequired": true
+            },
+            {
+              "type": "imagepicker",
+              "name": "LifeStatus",
+              "title": "Has {CmpnName} crossed over the Rainbow Bridge?",
+              "isRequired": true,
+              "visibleIf": "{CmpnName} notempty",
+              "choices": [
                 {
-                  "type": "text",
-                  "name": "CmpnName",
-                  "title": "Please tell us your companion's name:",
-                  "isRequired": true
+                  "value": true,
+                  "imageLink": "/img-companions-rainbow.png",
+                  "text": "Yes"
                 },
                 {
-                  "type": "imagepicker",
-                  "name": "LifeStatus",
-                  "title": "Has {CmpnName} crossed over the Rainbow Bridge?",
-                  "isRequired": true,
-                  "visibleIf": "{CmpnName} notempty",
-                  "choices": [
-                    {
-                      "value": true,
-                      "imageLink": "/img-companions-rainbow.png",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "imageLink": "/img-companions.png",
-                      "text": "No"
-                    }
-                  ],
-                  "imageWidth": 120,
-                  "imageHeight": 120,
-                  "showLabel": true
+                  "value": false,
+                  "imageLink": "/img-companions.png",
+                  "text": "No"
                 }
-              ]
+              ],
+              "imageWidth": 120,
+              "imageHeight": 120,
+              "showLabel": true
             },
             {
               "type": "html",
@@ -267,61 +261,55 @@
               "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
             },
             {
-              "type": "panel",
-              "name": "UserInfoVerificationPanel",
-              "elements": [
+              "type": "boolean",
+              "name": "UserInfoContactType",
+              "title": "Would you like to use email or Facebook Messenger for verification?",
+              "isRequired": true,
+              "labelTrue": "Facebook",
+              "labelFalse": "Email"
+            },
+            {
+              "type": "text",
+              "title": "Email address:",
+              "name": "UserInfoContactTypeEmail",
+              "isRequired": true,
+              "visibleIf": "{UserInfoContactType} = false",
+              "inputType": "email"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoContactTypeFacebookInstructions",
+              "title": "z",
+              "visibleIf": "{UserInfoContactType} = true",
+              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Info icon' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
+            },
+            {
+              "type": "text",
+              "title": "Facebook account:",
+              "name": "UserInfoContactTypeFacebook",
+              "isRequired": true,
+              "visibleIf": "{UserInfoContactType} = true",
+              "placeholder": "eg. https://www.facebook.com/my.profile.name",
+              "validators": [
                 {
-                  "type": "boolean",
-                  "name": "UserInfoContactType",
-                  "title": "Would you like to use email or Facebook Messenger for verification?",
-                  "isRequired": true,
-                  "labelTrue": "Facebook",
-                  "labelFalse": "Email"
-                },
-                {
-                  "type": "text",
-                  "title": "Email address:",
-                  "name": "UserInfoContactTypeEmail",
-                  "isRequired": true,
-                  "visibleIf": "{UserInfoContactType} = false",
-                  "inputType": "email"
-                },
-                {
-                  "type": "html",
-                  "name": "UserInfoContactTypeFacebookInstructions",
-                  "title": "z",
-                  "visibleIf": "{UserInfoContactType} = true",
-                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Info icon' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
-                },
-                {
-                  "type": "text",
-                  "title": "Facebook account:",
-                  "name": "UserInfoContactTypeFacebook",
-                  "isRequired": true,
-                  "visibleIf": "{UserInfoContactType} = true",
-                  "placeholder": "eg. https://www.facebook.com/my.profile.name",
-                  "validators": [
-                    {
-                      "type": "regex",
-                      "regex": "^(https?:\\/\\/)?(www\\.)?facebook\\.com\\/[a-zA-Z0-9.]{5,}$",
-                      "text": "Please enter a valid Facebook profile URL, e.g., https://facebook.com/your.username"
-                    }
-                  ]
-                },
-                {
-                  "type": "boolean",
-                  "name": "UserInfoContactOK",
-                  "title": "May we contact you to talk more about your LP experience?",
-                  "swapOrder": true,
-                  "isRequired": true
+                  "type": "regex",
+                  "regex": "^(https?:\\/\\/)?(www\\.)?facebook\\.com\\/[a-zA-Z0-9.]{5,}$",
+                  "text": "Please enter a valid Facebook profile URL, e.g., https://facebook.com/your.username"
                 }
               ]
+            },
+            {
+              "type": "boolean",
+              "name": "UserInfoContactOK",
+              "title": "May we contact you to talk more about your LP experience?",
+              "swapOrder": true,
+              "isRequired": true
             }
           ]
         },
         {
           "type": "panel",
-          "name": "UserInfoCard2Panel",
+          "name": "UserInfoAboutPanel",
           "elements": [
             {
               "type": "panel",
@@ -407,7 +395,7 @@
                       "value": "35_49",
                       "text": "35-49"
                     },
-                    "50-6",
+                    "50-64",
                     {
                       "value": "OVER_65",
                       "text": "Over 65"

@@ -17,6 +17,8 @@ import SurveyNav from "./SurveyNav";
 const CONSENT_PAGE_INDEX = 0;
 const CONSENT_QUESTION = "LandingConsent";
 
+
+
 function applyDirective(htmlElement, directive) {
   if (!htmlElement || !directive) return;
 
@@ -30,6 +32,14 @@ function applyDirective(htmlElement, directive) {
     return;
   }
 
+  // ✅ NEW: strictly apply ONLY to elements that are BOTH sd-panel AND sd-element--with-frame
+  if (target === "panels") {
+    const panelEl = htmlElement.closest(".sd-panel.sd-element--with-frame");
+    if (panelEl) panelEl.classList.add(className);
+    return; // <-- critical: never fall through and accidentally tag fieldsets
+  }
+
+  // ✅ items (pick ONE items handler; keep the one you actually want)
   if (target === "items") {
     const itemsEl =
       htmlElement.querySelector(".sd-selectbase") ||
@@ -59,7 +69,11 @@ function applyDirective(htmlElement, directive) {
   htmlElement.classList.add(className);
 }
 
+
+
+
 function applyDirectives(root, directives) {
+
   if (!root || !directives) return;
 
   if (Array.isArray(directives)) {
@@ -74,8 +88,12 @@ function applyDirectives(root, directives) {
       if (!item) return;
 
       if (item.selector && (item.className || item.addClass)) {
+        // console.log('item :>> ');
+        // console.log(item);
         const cls = item.className || item.addClass;
         root.querySelectorAll(item.selector).forEach((el) => el.classList.add(cls));
+        // console.log('cls :>> ');
+        // console.log(cls);
         return;
       }
 

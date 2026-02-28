@@ -19,13 +19,18 @@
 }
 
 .sd-container-modern .sd-page  {
+  // !VA NO - hides default navheight: 100%;
+
   background: #FFFFFF;
   border-radius: 10px;
   padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-bottom: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-
+  @include ldesktop {
+    padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  }
 }
 
 // !VA Base unit and font size
@@ -341,8 +346,16 @@
       padding: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
     }
     @include ldesktop { 
-      padding: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+      // width: 90% !important;
+      padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+
+
       border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
+
+
     }
   }  
   .sd-panel__content {
@@ -477,21 +490,6 @@
 
 
 
-// !VA Adjust the top and bottom paddings on ALL panel headers. That's going to be a problem later, probably.
-// !VA ONLY APPLIES TO PANELS WITH TITLE PROPERTIES!
-.sd-panel__header {
-    // padding: 0!important;
-    // margin: 0!important;
-    // padding-top: 16px!important;
-    // padding-bottom: 0!important;
-}
-
-
-// !VA Selects all element headers but doesn't appear to do anything
-.sd-element__header--location-top {
-  // padding-bottom: calc(0 * var(--sd-base-vertical-padding));
-}
-
 // !VA Clear the bottom border in the subpanel title 
 .sd-panel__header::after { 
   content: none !important;
@@ -500,6 +498,7 @@
   background: none !important;
   height: 0 !important;
   margin: 0 !important;
+  // background: rgba(255, 0, 255, .3) !important; //devmag
 }
 
 // !VA Sets the padding between the switch and the outer border
@@ -604,7 +603,6 @@
     // !VA Width of the boolean radios
     flex: 0 0 calc(30% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
     box-sizing: border-box;
-    background: rgba(255, 0, 0, .3) !important; //devred
   }
 
 
@@ -696,7 +694,7 @@
 
 .survey-q-separator-below, .survey-q-separator-above, .survey-q-space-below, .survey-q-separator-above  {
   position: relative;
-  padding: 0; // no padding, spacing goes around the ::after
+  padding: 0!important; // no padding, spacing goes around the ::after
 }
 
 // !VA SEPARATOR ABOVE ELEMENT - WHITESPACE ABOVE and BELOW THE SEPARATOR - the row has   
@@ -717,11 +715,13 @@
   width: 600px;
   height: 1px;
   // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
-  margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  margin: calc(2.5* (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+
+  @include ldesktop {
+    margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  }
   background: rgba(0, 0, 0, 0.08);
 }
-
-
 
 // !VA SPACE ABOVE ELEMENT -   
 .survey-q-space-above::before {
@@ -729,9 +729,10 @@
   display: block;
   width: 600px;
   height: 1px;
-  margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
-  // background: rgba(0, 0, 0, 0.05);
-  // background: rgba(0, 128, 0, .3) !important; //devgreen
+  margin: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  @include ldesktop {
+    margin: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  }
 }
 
 // !VA SPACE BELOW ELEMENT    
@@ -741,8 +742,11 @@
   width: 600px;
   height: 1px;
   // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
-  margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  margin: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
 
+  @include ldesktop {
+    margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  }
 }
 
 
@@ -760,13 +764,54 @@
     padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
     margin-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   }
+}
 
 
+// !VA Top-level panels never have any border or whitespace - they are only structural for card distribution on mobile
+// [data-name="LandingCard1Panel"], 
+// [data-name="LandingCard2Panel"],
+// [data-name="UserInfoCard1Panel"],
+// [data-name="UserInfoCard2Panel"]
+//  {
+
+//   &.sd-element--with-frame {
+//   box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
+//     box-shadow: none!important;
+//     background: rgba(0, 128, 0, .3) !important; //devgreen
+//   }
+// }
+
+// [data-name="LandingCard1Panel"], 
+// [data-name="LandingCard2Panel"],
+// [data-name="UserInfoCard1Panel"],
+// [data-name="UserInfoCard2Panel"]
+.survey-card-panel {
+  // box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
+  box-shadow: none!important;
+  background: rgba(255, 0, 255, .3) !important; //devmag
+
+
+
+  @include ldesktop {
+    padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-right: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  }
 
 }
 
 
+.sd-container-modern .sd-element--with-frame {
+  // background: rgba(255, 0, 0, .3) !important; //devred
+}
 
+.sd-container-modern .sd-element--nested-with-borders {
+
+
+
+
+}
 
 
 
@@ -808,6 +853,32 @@
   padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
 
+// !VA Suppress borders on panels 
+[data-name="UserInfoNameCountryPanel"],
+[data-name="UserInfoAgeGenderPanel"] 
+
+{
+  &.sd-element--nested-with-borders   {
+    padding: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+    padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    @include ldesktop {
+
+
+
+
+    }
+  }
+
+
+
+
+
+}
 
 
 
@@ -818,17 +889,21 @@
 [data-name="lvngCmpnInfoAgePanel"]
 [data-name="CmpnInfoDemeanor"]
 
-
 {
-  // display: grid;
-  // gap: 0.75rem 1rem;
-  // align-items: start;
-  // grid-template-columns: 1fr 1fr;
+  .sd-element__content {
+  @include ldesktop {
+    display: grid;
+    gap: 0.75rem 1rem;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+    }
+  }
   
+
+
+  
+
   &.sd-element--nested-with-borders   {
-    border: none;
-    padding: 0!important;
-    padding: 0!important;
     margin: 0!important;
     padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
@@ -1304,8 +1379,8 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   position: absolute;
   bottom: 4px;
   left: 0;   // overwritten by JS to match page rect
-  width: auto; // overwritten by JS
-
+  // width: auto; // overwritten by JS
+  width: 100%; // !VA
   opacity: 0;
   visibility: hidden;
   transform: translateY(6px);

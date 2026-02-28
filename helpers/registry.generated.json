@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-27T16:38:00.847Z",
+    "builtAt": "2026-02-28T10:28:07.887Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -27,8 +27,8 @@
     }
   },
   "elements": {
-    "LandingHeadPanel": {
-      "name": "LandingHeadPanel",
+    "LandingCard1Panel": {
+      "name": "LandingCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -45,7 +45,7 @@
       "collect": false,
       "path": [
         "LANDING-page",
-        "LandingHeadPanel"
+        "LandingCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -57,13 +57,13 @@
       "collect": false,
       "path": [
         "LANDING-page",
-        "LandingHeadPanel"
+        "LandingCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "LandingPrivacyConsentPanel": {
-      "name": "LandingPrivacyConsentPanel",
+    "LandingCard2Panel": {
+      "name": "LandingCard2Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -80,20 +80,32 @@
       "collect": true,
       "path": [
         "LANDING-page",
-        "LandingPrivacyConsentPanel"
+        "LandingCard2Panel"
       ],
       "hasTitle": true,
       "title": "Do you want to proceed with the survey in accordance with our Consent Policy?",
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "UserInfoLifeStatusPanel": {
-      "name": "UserInfoLifeStatusPanel",
+    "UserInfoCard1Panel": {
+      "name": "UserInfoCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
         "USER_INFO-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "UserInfoLifeStatusNamePanel": {
+      "name": "UserInfoLifeStatusNamePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -105,7 +117,8 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoLifeStatusPanel"
+        "UserInfoCard1Panel",
+        "UserInfoLifeStatusNamePanel"
       ],
       "hasTitle": true,
       "title": "Please tell us your companion's name:",
@@ -119,13 +132,26 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoLifeStatusPanel"
+        "UserInfoCard1Panel",
+        "UserInfoLifeStatusNamePanel"
       ],
       "hasTitle": true,
       "title": "Has {CmpnName} crossed over the Rainbow Bridge?",
       "hasVisibleIf": true,
       "visibleIf": "{CmpnName} notempty",
       "isRequired": true
+    },
+    "UserInfoVerificationPanel": {
+      "name": "UserInfoVerificationPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "UserInfoContactType": {
       "name": "UserInfoContactType",
@@ -134,7 +160,8 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoLifeStatusPanel"
+        "UserInfoCard1Panel",
+        "UserInfoVerificationPanel"
       ],
       "hasTitle": true,
       "title": "Would you like to use email or Facebook Messenger for verification?",
@@ -148,7 +175,8 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoLifeStatusPanel"
+        "UserInfoCard1Panel",
+        "UserInfoVerificationPanel"
       ],
       "hasTitle": true,
       "title": "Email address:",
@@ -163,7 +191,8 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoLifeStatusPanel"
+        "UserInfoCard1Panel",
+        "UserInfoVerificationPanel"
       ],
       "hasTitle": true,
       "title": "Facebook account:",
@@ -179,15 +208,16 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoLifeStatusPanel"
+        "UserInfoCard1Panel",
+        "UserInfoVerificationPanel"
       ],
       "hasTitle": true,
       "title": "May we contact you to talk more about your LP experience?",
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "UserInfoAboutPanel": {
-      "name": "UserInfoAboutPanel",
+    "UserInfoCard2Panel": {
+      "name": "UserInfoCard2Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -204,7 +234,7 @@
       "collect": false,
       "path": [
         "USER_INFO-page",
-        "UserInfoAboutPanel"
+        "UserInfoCard2Panel"
       ],
       "hasTitle": true,
       "title": "Your First Name and Country",
@@ -217,7 +247,7 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoAboutPanel",
+        "UserInfoCard2Panel",
         "UserInfoNameCountryPanel"
       ],
       "hasTitle": true,
@@ -232,7 +262,7 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoAboutPanel",
+        "UserInfoCard2Panel",
         "UserInfoNameCountryPanel"
       ],
       "hasTitle": true,
@@ -247,7 +277,7 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoAboutPanel",
+        "UserInfoCard2Panel",
         "UserInfoNameCountryPanel"
       ],
       "hasTitle": true,
@@ -262,7 +292,7 @@
       "collect": false,
       "path": [
         "USER_INFO-page",
-        "UserInfoAboutPanel"
+        "UserInfoCard2Panel"
       ],
       "hasTitle": true,
       "title": "Age and Gender (optional)",
@@ -275,7 +305,7 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoAboutPanel",
+        "UserInfoCard2Panel",
         "UserInfoAgeGenderPanel"
       ],
       "hasTitle": true,
@@ -289,7 +319,7 @@
       "collect": true,
       "path": [
         "USER_INFO-page",
-        "UserInfoAboutPanel",
+        "UserInfoCard2Panel",
         "UserInfoAgeGenderPanel"
       ],
       "hasTitle": true,

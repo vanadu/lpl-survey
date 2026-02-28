@@ -4,7 +4,25 @@ export function getStyleDirectives(item) {
 
   const directives = [];
 
+const ITEMS_CARD_PANEL = new Set([
+  "LandingCard1Panel",
+  "LandingCard2Panel",
+  "UserInfoCard1Panel",
+  "UserInfoCard2Panel"
+
+])
+
+
 const ITEMS_TWO_COL = new Set([
+
+
+  "LandingCard1Panel",
+  "LandingCard2Panel",
+  "UserInfoCard1Panel",
+  "UserInfoCard2Panel",
+
+
+
   "LandingConsent",
   "LandingPrivacyConsentLinksPanel",
 
@@ -104,6 +122,9 @@ const CONTROL_WIDTH_300 = new Set([
 
 
   "CmpnName",
+
+
+
   "UserInfoFirstName",
   "UserInfoCountry",
   "UserInfoStateRegion",
@@ -173,7 +194,7 @@ const CONTROL_WIDTH_600 = new Set([
 // !VA Works for 
 const QUESTION_SEPARATOR_ABOVE = new Set([
   // put question names here (same .name values you already use)
-  "UserInfoAgeGroup",
+
   "IntubationHistorySymptoms",
   "BreathingCrisisProvidedSubstanceType",
   "EarlyOtherConditionsType",
@@ -211,7 +232,10 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
 
 const QUESTION_SPACE_ABOVE = new Set([
 // put question names here (same .name values you already use)
-"UserInfoContactTypeFacebook"
+"CmpnName",
+"UserInfoContactTypeFacebook",
+"UserInfoContactOK",
+
   
 ]);
 
@@ -222,8 +246,10 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   // put question names here (same .name values you already use)
   "CmpnName",
   "UserInfoContactType",
-  "UserInfoAgeGroup",
   "UserInfoContactTypeFacebook",
+
+  "UserInfoStateRegion",
+
   "CmpnInfoAnimalType",
   "CmpnInfoDemeanor",
   "CmpnInfoAnxiety",
@@ -396,6 +422,10 @@ const QUESTION_SEPARATOR_BELOW = new Set([
     "ConclusionOtherConditionsNew"
   ]);
 
+
+  if (ITEMS_CARD_PANEL.has(name)) {
+    directives.push({ target: "panels", className: "survey-card-panel" });
+  }
 
   if (ITEMS_TWO_COL.has(name)) {
     directives.push({ target: "items", className: "survey-two-col" });

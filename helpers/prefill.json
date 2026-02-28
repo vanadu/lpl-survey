@@ -1,11 +1,13 @@
 {
 
+  
+  "LandingConsent": "Yes",
   "UserInfoFirstName": "Test01",
   "UserInfoCountry": "US",
   "UserInfoStateRegion": "MD",
   "UserInfoAgeGroup": "OVER_65",
   "UserInfoGender": "NOT_SAY",
-  "UserInfoContactType": true,
+  "UserInfoContactType": false,
   "UserInfoContactTypeEmail": "example@example.com",
   "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "UserInfoContactOK": true,

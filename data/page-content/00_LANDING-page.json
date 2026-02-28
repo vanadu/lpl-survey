@@ -3,7 +3,7 @@
   "elements": [
     {
       "type": "panel",
-      "name": "LandingHeadPanel",
+      "name": "LandingCard1Panel",
       "elements": [
         {
           "type": "panel",
@@ -42,7 +42,7 @@
     },
     {
       "type": "panel",
-      "name": "LandingPrivacyConsentPanel",
+      "name": "LandingCard2Panel",
       "elements": [
         {
           "type": "html",

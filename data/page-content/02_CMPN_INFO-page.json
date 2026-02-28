@@ -2,216 +2,235 @@
   "name": "CMPN_INFO-page",
   "elements": [
 
-      {
-        "type": "panel",
-        "name": "CmpnInfoDetailsPanel",
-        "elements": [
-          {
-            "type": "html",
-            "name": "CmpnInfoHeading",
-            "html": "<h3>About your LP/GOLPP companion<h3>"
-          },
-          {
-            "type": "html",
-            "name": "CmpnInfoText",
-            "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
-          },
-          
-          {
-            "type": "radiogroup",
-            "name": "CmpnInfoAnimalType",
-            "title": "{CmpnName}'s species:",
-            "isRequired": true,
-            "choices": [
-              {
-                "value": "CANINE",
-                "text": "Dog"
-              },
-              {
-                "value": "FELINE",
-                "text": "Cat"
-              },
-              {
-                "value": "EQUINE",
-                "text": "Horse"
-              }
-            ]
-          },
-          {
-          "type": "text",
-          "name": "CmpnInfoBreed",
-          "title": "{CmpnName}'s breed or mix:",
-          "isRequired": true
-          },
-          {
-            "type": "boolean",
-            "name": "CmpnInfoGender",
-            "title": "{CmpnName}'s gender:",
-            "isRequired": true,
-            "labelTrue": "Female",
-            "labelFalse": "Male"
-          },
-          {
+    {
+      "type": "panel",
+      "name": "CmpnInfoCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "CmpnInfoHeading",
+          "html": "<h3>About your LP/GOLPP companion<h3>"
+        },
+        {
+          "type": "html",
+          "name": "CmpnInfoText",
+          "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
+        },
+
+        {
+          "type": "panel",
+          "name": "CmpnInfoDetailsPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "CmpnInfoAnimalType",
+              "title": "{CmpnName}'s species:",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "CANINE",
+                  "text": "Dog"
+                },
+                {
+                  "value": "FELINE",
+                  "text": "Cat"
+                },
+                {
+                  "value": "EQUINE",
+                  "text": "Horse"
+                }
+              ]
+            },
+            {
             "type": "text",
-            "name": "CmpnInfoWeight",
-            "title": "{CmpnName}'s last known weight (in lbs or kg):",
-            "description": "Please enter a number",
-            "isRequired": true,
-            "inputType": "number",
-            "min": 1,
-            "max": 2200,
-            "validators": [
-              {
-                "type": "numeric",
-                "minValue": 1,
-                "maxValue": 2200,
-                "text": "Weight must be between 1 and 2200"
-              }
-            ]
-          },
-          {
-            "type": "boolean",
-            "name": "CmpnInfoWeightUnits",
-            "title": "Weight units:",
-            "description": "Please choose pounds or kilos.",
-            "isRequired": true,
-            "labelTrue": "Kg",
-            "labelFalse": "Lbs"
-          }
-        ]
-      },
-
-
-
-      {
-        "type": "panel",
-        "name": "CmpnInfoAgeBehaviorPanel",
-        "elements": [
-
-        {
-          "type": "panel",
-          "name": "dcsdCmpnInfoAgePanel",
-          "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
-          "description": "Please enter years and months",
-          "visibleIf": "{LifeStatus} = true",
-          "elements": [
+            "name": "CmpnInfoBreed",
+            "title": "{CmpnName}'s breed or mix:",
+            "isRequired": true
+            },
+            {
+              "type": "boolean",
+              "name": "CmpnInfoGender",
+              "title": "{CmpnName}'s gender:",
+              "isRequired": true,
+              "labelTrue": "Female",
+              "labelFalse": "Male"
+            },
             {
               "type": "text",
-              "inputType": "number",
-              "name": "dcsdCmpnInfoAgeYears",
-              "title": "Age in years (number):",
+              "name": "CmpnInfoWeight",
+              "title": "{CmpnName}'s last known weight (in lbs or kg):",
+              "description": "Please enter a number",
               "isRequired": true,
-              "min": "1",
-              "max": "40",
-                "validators": [
+              "inputType": "number",
+              "min": 1,
+              "max": 2200,
+              "validators": [
                 {
                   "type": "numeric",
                   "minValue": 1,
-                  "maxValue": 40,
-                  "text": "Age must be between 1 and 40"
+                  "maxValue": 2200,
+                  "text": "Weight must be between 1 and 2200"
                 }
               ]
             },
             {
-              "type": "text",
-              "inputType": "number",
-              "name": "dcsdCmpnInfoAgeMonths",
-              "title": "Months (number 0 - 11)",
+              "type": "boolean",
+              "name": "CmpnInfoWeightUnits",
+              "title": "Weight units:",
+              "description": "Please choose pounds or kilos.",
               "isRequired": true,
-              "min": 0,
-              "max": 11,
-              "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 0,
-                  "maxValue": 11,
-                  "text": "Months must be between 0 and 11"
-                }
-              ]
+              "labelTrue": "Kg",
+              "labelFalse": "Lbs"
             }
           ]
-        },
-
-        {
-          "type": "panel",
-          "name": "lvngCmpnInfoAgePanel",
-          "title": "What is {CmpnName}'s approximate age (in years and months)?",
-          "visibleIf": "{LifeStatus} = false",
-          "elements": [
-            {
-              "type": "text",
-              "inputType": "number",
-              "name": "lvngCmpnInfoAgeYears",
-              "title": "Age in years (number):",
-              "isRequired": true,
-              "min": "1",
-              "max": "40",
-                "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 40,
-                  "text": "Age must be between 1 and 40"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "inputType": "number",
-              "name": "lvngCmpnInfoAgeMonths",
-              "title": "Months (number 0 - 11)",
-              "isRequired": true,
-              "min": 0,
-              "max": 11,
-              "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 0,
-                  "maxValue": 11,
-                  "text": "Months must be between 0 and 11"
-                }
-              ]
-            }
-          ]
-        },
-
-        {
-          "type": "rating",
-          "name": "CmpnInfoDemeanor",
-          "title": "How would you describe {CmpnName}'s demeanor?",
-          "description": "1 = very calm, 5 = very energetic",
-          "isRequired": true,
-          "displayMode": "buttons",
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" }
-          ]
-        },
-        {
-          "type": "rating",
-          "name": "CmpnInfoAnxiety",
-          "title": "How would you describe {CmpnName}'s anxiety level?",
-          "description": "1 = not at all anxious, 5 = very anxious",
-          "isRequired": true,
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" }
-          ]
-        },
-        {
-          "type": "boolean",
-          "name": "CmpnInfoHasInsurance",
-          "required": true,
-          "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
-          "swapOrder": true
         }
       ]
+    },
+
+    {
+      "type": "panel",
+      "name": "CmpnInfoCard2Panel",
+      "elements": [
+
+
+        {
+          "type": "panel",
+          "name": "CmpnInfoAgePanel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "dcsdCmpnInfoAgePanel",
+              "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+              "description": "Please enter years and months",
+              "visibleIf": "{LifeStatus} = true",
+              "elements": [
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "dcsdCmpnInfoAgeYears",
+                  "title": "Age in years (number):",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                    "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "dcsdCmpnInfoAgeMonths",
+                  "title": "Months (number 0 - 11)",
+                  "isRequired": true,
+                  "min": 0,
+                  "max": 11,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 0,
+                      "maxValue": 11,
+                      "text": "Months must be between 0 and 11"
+                    }
+                  ]
+                }
+              ]
+            },
+
+            {
+              "type": "panel",
+              "name": "lvngCmpnInfoAgePanel",
+              "title": "What is {CmpnName}'s approximate age (in years and months)?",
+              "visibleIf": "{LifeStatus} = false",
+              "elements": [
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnInfoAgeYears",
+                  "title": "Age in years (number):",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                    "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnInfoAgeMonths",
+                  "title": "Months (number 0 - 11)",
+                  "isRequired": true,
+                  "min": 0,
+                  "max": 11,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 0,
+                      "maxValue": 11,
+                      "text": "Months must be between 0 and 11"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+
+        {
+          "type": "panel",
+          "name": "CmpnInfoDemeanorPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "CmpnInfoDemeanor",
+              "title": "How would you describe {CmpnName}'s demeanor?",
+              "description": "1 = very calm, 5 = very energetic",
+              "isRequired": true,
+              "displayMode": "buttons",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "CmpnInfoAnxiety",
+              "title": "How would you describe {CmpnName}'s anxiety level?",
+              "description": "1 = not at all anxious, 5 = very anxious",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "CmpnInfoHasInsurance",
+              "required": true,
+              "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
+              "swapOrder": true
+            }
+          ]
+        }
+
+    ]
     }
   ]
 }
