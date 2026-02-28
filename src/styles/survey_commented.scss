@@ -23,6 +23,7 @@
 
   background: #FFFFFF;
   border-radius: 10px;
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-bottom: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
@@ -66,6 +67,7 @@
 
   @include ldesktop {
     --sjs-base-unit: 8px;
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
     --sjs-font-size: 20px!important;
     --sjs-article-font-default-lineHeight: calc(1.6 * (var(--sjs-font-size, 16px)));
 
@@ -108,6 +110,7 @@
   // !VA Default
   // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
   // !VA Global override
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
   // !VA BASE VERTICAL PADDING
   // !VA Default
@@ -149,6 +152,7 @@
     calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) // bottom
     calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) // right
     calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) // bottom
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
     calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; 
   }
 }
@@ -190,6 +194,7 @@
 .sd-container-modern .sd-panel__content {
   padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   // !VA Overrides default.scss
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   padding-bottom: calc(1* (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
   
   @include ldesktop {
@@ -242,6 +247,7 @@
 
 // !VA Ratings element button spacing
 .sd-container-modern .sd-rating .sd-rating__item {
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   margin: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
 }
 
@@ -284,6 +290,7 @@
 
 
 .sd-container-modern .sd-panel__title  {
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   // background: rgba(255, 255, 0, .3) !important; //devyel
 }
 
@@ -316,6 +323,7 @@
 
 
 // !VA IMPORTANT: bordre is the panel border on sd-element--nested-with-borders!
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 [data-name="LandingHeaderPanel"] {
 
   &.sd-element--nested-with-borders {
@@ -451,6 +459,7 @@
   }
 }
 
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 [data-name="LifeStatus"] {
   .sd-imagepicker--static {
     display: flex;
@@ -472,6 +481,7 @@
 
 // !VA Clear the bottom border in the subpanel title 
 .sd-panel__header::after { 
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   content: none !important;
   display: none !important;
   border: none !important;
@@ -514,6 +524,7 @@
 }
 
 .survey-wrapper .survey-info-link {
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   // --sjs-font-size: 16px!important;
   // !VA Font size override, renders to 16px
   font-size: calc(.9 * (var(--sjs-font-size, 16px)));
@@ -526,6 +537,7 @@
 // !VA Position info label on inputs or other question elements absolutely and move it down 18px. .survey-input-info is the div wrapper that lives inside the HTML element.
 // !VA IMPORTANT -- not sure if this is doing to work.
 .survey-wrapper .survey-question-info {
+// CONFLICT? position:absolute can escape normal flow. Ensure the parent is the intended containing block (position:relative) and widths don't exceed container.
   position: absolute;
   bottom: -16px;
 }
@@ -608,6 +620,7 @@
     min-width: 0;
     // !VA Creates a 480px element with three equal button widths
     .sd-radio {
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
       max-width: 180px!important;
     }
   }
@@ -652,6 +665,7 @@
 
 // !VA Unused as yetf
 .survey-control-w-150 { 
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   width: 100px!important;
   @include ldesktop {
   width: 150px!important;
@@ -695,6 +709,7 @@
   width: 600px;
   height: 1px;
   // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   margin: calc(2.5* (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
 
   @include ldesktop {
@@ -733,6 +748,7 @@
 // !VA Custom Panel Layouts
 // =============================
 
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 [data-name="LandingWelcomePanel"] {
 
   &.sd-element--nested-with-borders {
@@ -759,6 +775,7 @@
 // [data-name="LandingCard2Panel"],
 // [data-name="UserInfoCard1Panel"],
 // [data-name="UserInfoCard2Panel"]
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 //  {
 
 //   &.sd-element--with-frame {
@@ -772,6 +789,7 @@
 // [data-name="LandingCard2Panel"],
 // [data-name="UserInfoCard1Panel"],
 // [data-name="UserInfoCard2Panel"]
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 .survey-card-panel {
   // box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
   box-shadow: none!important;
@@ -789,6 +807,7 @@
 
 
 .sd-container-modern .sd-element--with-frame {
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   // background: rgba(255, 0, 0, .3) !important; //devred
 }
 
@@ -829,6 +848,7 @@
 
 
 // !VA INFO ICONSThis is probably going to have to be where all the info icon links are styled because I have no idea how to get that into the formatting helper. 
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 [data-name="LandingPrivacyConsentLinksPanel"] .sd-element__content.sd-panel__content {
   display: flex;
   width: 80%;
@@ -849,6 +869,7 @@
 [data-name="EarlySymptomsFirstSignsPanel"],
 [data-name="PrimaryDurationFirstConsult"],
 [data-name="TreatmentStatusAgePanel"],
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 {
   .sd-element__content.sd-panel__content {
     .sd-row {
@@ -862,6 +883,7 @@
 
 [data-name="UserInfoAboutPanel"],
 [data-name="CmpnInfoAgeBehaviorPanel"]
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 {
   padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
@@ -870,6 +892,7 @@
 // [data-name="UserInfoNameCountryPanel"],
 // [data-name="UserInfoAgeGenderPanel"] 
 
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 // {
 //   background: rgba(255, 0, 0, .3) !important; //devred
 //   &.sd-element--nested-with-borders   {
@@ -886,6 +909,7 @@
 //   }
 // }
 
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 [data-name="UserInfoCountry"] {
   // display: none;
 
@@ -898,6 +922,7 @@
 [data-name="lvngCmpnInfoAgePanel"]
 [data-name="CmpnInfoDemeanor"]
 
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 {
 
 
@@ -939,6 +964,7 @@
 }
 
 // !VA Force CmpnInfoDetailsPanel into 1-2-2 grid layout
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 [data-name="CmpnInfoDetailsPanel"] .sd-element__content.sd-panel__content {
   display: flex;
   flex-direction: column;
@@ -964,6 +990,7 @@
 [data-name="EarlySymptomsFirstSignsPanel"] .sd-element__content.sd-panel__content,
 [data-name="PrimaryDurationFirstConsult"] .sd-element__content.sd-panel__content,
 [data-name="TreatmentStatusAgePanel"] .sd-element__content.sd-panel__content
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 {
   display: flex;
   .sd-row {
@@ -973,6 +1000,7 @@
 }
 
 // !VA This is to force two-column radiogroups to two columns
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 [data-name="ConclusionCauseOfDeath"] .sd-selectbase.survey-two-col {
   .sd-item.sd-radio {
     flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
@@ -981,6 +1009,7 @@
 }
 
 
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 [data-name="ConclusionDifferentChoices"]  {
   width: 720px!important;
 }
@@ -994,10 +1023,23 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 // !VA Progress text color
 .sd-progress-buttons__footer .sd-progress-buttons__page-title {
   // !VA General overrides
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   color: $content_bg_color!important;
   // !VA Small phone overrides
   margin-top: 0!important;
   // font-size: calc(0.5 * (var(--sjs-font-size, 16px)));
+  @include mphone {
+  
+  }
+  @include lphone {
+    
+  }
+  @include tablet {
+    
+  }
+  @include desktop {
+    
+  }
   @include ldesktop {
     font-size: calc(0.75 * (var(--sjs-font-size, 16px)));
     margin-top: var(--sjs-base-unit, var(--base-unit, 8px));
@@ -1058,6 +1100,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 .success-container::before {
   content: "";
+// CONFLICT? position:absolute can escape normal flow. Ensure the parent is the intended containing block (position:relative) and widths don't exceed container.
   position: absolute;
   inset: 0;
   background:
@@ -1183,6 +1226,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 // !VA Survey Submission Spinner
 .success-spinnerWrap {
   position: relative;
+// CONFLICT? position:absolute can escape normal flow. Ensure the parent is the intended containing block (position:relative) and widths don't exceed container.
   // position: absolute;
   inset: 0;
   background: rgba(255, 255, 255, 0.85);
@@ -1225,6 +1269,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 /* spinner stays centered */
 // !VA Deprecated
 .success-spinner {
+// CONFLICT? position:absolute can escape normal flow. Ensure the parent is the intended containing block (position:relative) and widths don't exceed container.
   position: absolute;
   inset: 0;
   display: flex;
@@ -1321,6 +1366,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   .sd-body__navigation,
   .sd-footer,
   .sd-action-bar {
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
     display: none !important;
   }
 }
@@ -1362,6 +1408,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 /* TOP: pinned visually to top of the card (page-scoped) */
 .sj-surveynav--top {
+// CONFLICT? position:absolute can escape normal flow. Ensure the parent is the intended containing block (position:relative) and widths don't exceed container.
   position: absolute;
   left: -10px;
   right: -10px;
@@ -1370,6 +1417,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 /* BOTTOM: fixed to viewport, but width/left are synced to the page via JS */
 .sj-surveynav--bottom {
+// CONFLICT? position:absolute can escape normal flow. Ensure the parent is the intended containing block (position:relative) and widths don't exceed container.
   position: absolute;
   bottom: 4px;
   left: 0;   // overwritten by JS to match page rect
@@ -1423,9 +1471,11 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 /* screen-reader-only */
 .sj-surveynav__btn .sr-only {
+// CONFLICT? position:absolute can escape normal flow. Ensure the parent is the intended containing block (position:relative) and widths don't exceed container.
   position: absolute;
   width: 1px;
   height: 1px;
+// CONFLICT? overflow:hidden can clip focus rings, dropdowns, and can hide real overflow bugs. Use only when you truly want clipping.
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
@@ -1448,12 +1498,14 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 // !VA Survey Text Panel for computedValues
 
+// NOTE: data-name override block below left intact. If layout acts weird, review this block carefully.
 [data-name="LandingTestPanel"] {
   display: none;
 }
 
 
 .landing-survey-test {
+// NOTE: lots of !important in this file. It works, but it makes later overrides harder and can hide conflicts. Consider reducing over time.
   padding: 0!important;
   margin: 0!important;
   font-family: $secondary_font!important;
@@ -1511,6 +1563,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 /* List container */
 .survey-dev-menu__list {
   /* positioning */
+// CONFLICT? position:absolute can escape normal flow. Ensure the parent is the intended containing block (position:relative) and widths don't exceed container.
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
@@ -1575,6 +1628,5 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 /* IMPORTANT: remove hover-to-open behavior (unreliable) */
 /* .survey-dropdown:hover .survey-dropdown__list { display: flex; } */
-
 
 
