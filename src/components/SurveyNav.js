@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { PiCaretDoubleRightFill, PiCaretDoubleLeftFill } from "react-icons/pi";
 import { BsClipboard2Check } from "react-icons/bs";
 
@@ -20,7 +20,6 @@ function useIsMobile() {
 }
 
 function getCurrentPageEl() {
-  // SurveyJS "page" root for the active card
   return document.querySelector(".sd-page.sd-body__page");
 }
 
@@ -29,17 +28,35 @@ function attachNavsToPage({ pageEl, topEl, bottomEl }) {
 
   pageEl.classList.add("sj-page-has-nav");
 
-  // Ensure both navs live directly under the page (no nesting)
   if (topEl.parentElement !== pageEl) pageEl.appendChild(topEl);
   if (bottomEl.parentElement !== pageEl) pageEl.appendChild(bottomEl);
 }
 
-function syncBottomNavWidth(bottomEl, pageEl) {
-  if (!bottomEl || !pageEl) return;
+function blurActiveElement() {
+  const el = document.activeElement;
+  if (el && typeof el.blur === "function") el.blur();
+}
 
-  const r = pageEl.getBoundingClientRect();
-  bottomEl.style.left = `${r.left}px`;
-  bottomEl.style.width = `${r.width}px`;
+function getScrollParent(el) {
+  let node = el?.parentElement;
+  while (node) {
+    const style = window.getComputedStyle(node);
+    const overflowY = style.overflowY;
+    if (overflowY === "auto" || overflowY === "scroll") return node;
+    node = node.parentElement;
+  }
+  return null;
+}
+
+function scrollToPageTop({ behavior = "auto" } = {}) {
+  const pageEl = getCurrentPageEl();
+  if (!pageEl) return;
+
+  const scroller = getScrollParent(pageEl);
+  if (scroller) scroller.scrollTop = 0;
+
+  const y = window.scrollY + pageEl.getBoundingClientRect().top;
+  window.scrollTo({ top: Math.max(0, y), behavior });
 }
 
 export default function SurveyNav({ survey }) {
@@ -50,8 +67,12 @@ export default function SurveyNav({ survey }) {
 
   const [showBottom, setShowBottom] = useState(false);
 
+  // Only set true when bottom-nav initiates a page change
+  const pendingScrollToTopRef = useRef(false);
+
   // Force rerender on SurveyJS page changes so icons enable/disable properly
   const [, force] = useState(0);
+
   useEffect(() => {
     if (!survey) return;
 
@@ -68,24 +89,22 @@ export default function SurveyNav({ survey }) {
     };
   }, [survey]);
 
-  // Attach navs to the current page node (page-scoped, not body-scoped)
+  // Attach navs to the current page node (page-scoped). Mobile only.
   useEffect(() => {
-    if (!survey) return;
+    if (!survey || !isMobile) return;
 
     const attach = () => {
-      if (!isMobile) return;
       const pageEl = getCurrentPageEl();
-      attachNavsToPage({ pageEl, topEl: topRef.current, bottomEl: bottomRef.current });
-
-      // Keep bottom aligned to the page width (breakpoints, resize, etc.)
-      syncBottomNavWidth(bottomRef.current, pageEl);
+      attachNavsToPage({
+        pageEl,
+        topEl: topRef.current,
+        bottomEl: bottomRef.current,
+      });
     };
 
-    // initial + after Survey render + on page changes
     survey.onAfterRenderSurvey?.add(attach);
     survey.onCurrentPageChanged?.add(attach);
 
-    // also attach immediately in case render already happened
     attach();
 
     return () => {
@@ -94,7 +113,7 @@ export default function SurveyNav({ survey }) {
     };
   }, [survey, isMobile]);
 
-  // Only show bottom nav when the top nav scrolls off above the fold
+  // Bottom nav visibility (only when top nav scrolls off above fold). Mobile only.
   useEffect(() => {
     if (!isMobile) {
       setShowBottom(false);
@@ -108,9 +127,8 @@ export default function SurveyNav({ survey }) {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // show ONLY when top nav is above viewport (not just "not intersecting")
         const offAbove = !entry.isIntersecting && entry.boundingClientRect.top < 0;
-        // throttle state changes to avoid layout thrash on scroll
+
         cancelAnimationFrame(raf);
         raf = requestAnimationFrame(() => setShowBottom(offAbove));
       },
@@ -125,44 +143,54 @@ export default function SurveyNav({ survey }) {
     };
   }, [isMobile]);
 
-  // Keep bottom nav aligned to page width while scrolling/resizing
+  // After page changes, if bottom-nav initiated it, force scroll-to-top last. Mobile only.
   useEffect(() => {
-    if (!isMobile) return;
+    if (!survey || !isMobile) return;
 
-    const bottomEl = bottomRef.current;
-    if (!bottomEl) return;
+    const onChanged = () => {
+      if (!pendingScrollToTopRef.current) return;
+      pendingScrollToTopRef.current = false;
 
-    const onSync = () => {
-      const pageEl = getCurrentPageEl();
-      if (!pageEl) return;
-      syncBottomNavWidth(bottomEl, pageEl);
+      setTimeout(() => {
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            scrollToPageTop({ behavior: "auto" });
+          });
+        });
+      }, 0);
     };
 
-    const onScroll = () => onSync();
-    const onResize = () => onSync();
+    survey.onCurrentPageChanged?.add(onChanged);
+    return () => survey.onCurrentPageChanged?.remove(onChanged);
+  }, [survey, isMobile]);
 
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onResize);
-
-    // also sync once right away
-    onSync();
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onResize);
-    };
-  }, [isMobile, showBottom]);
-
-  if (!survey) return null;
+  // Safe render gate AFTER hooks
+  if (!survey || !isMobile) return null;
 
   const isFirst = survey.isFirstPage;
   const isLast = survey.isLastPage;
 
-  const handlePrev = () => {
+  // TOP NAV: preserve "stay where you are" behavior (no forced scroll)
+  const handlePrevTop = () => {
     if (!isFirst) survey.prevPage();
   };
 
-  const handleNext = () => {
+  const handleNextTop = () => {
+    if (isLast) survey.completeLastPage();
+    else survey.nextPage();
+  };
+
+  // BOTTOM NAV: schedule scroll-to-top after page change
+  const handlePrevBottom = () => {
+    if (isFirst) return;
+    blurActiveElement();
+    pendingScrollToTopRef.current = true;
+    survey.prevPage();
+  };
+
+  const handleNextBottom = () => {
+    blurActiveElement();
+    pendingScrollToTopRef.current = true;
     if (isLast) survey.completeLastPage();
     else survey.nextPage();
   };
@@ -177,11 +205,14 @@ export default function SurveyNav({ survey }) {
 
   return (
     <>
-      {/* TOP NAV (always present on mobile; bottom nav visibility is conditional) */}
-      <div ref={topRef} className="sj-surveynav sj-surveynav--top" aria-label="Survey navigation">
+      <div
+        ref={topRef}
+        className="sj-surveynav sj-surveynav--top"
+        aria-label="Survey navigation"
+      >
         <button
           className="sj-surveynav__btn"
-          onClick={handlePrev}
+          onClick={handlePrevTop}
           disabled={isFirst}
           type="button"
         >
@@ -189,13 +220,12 @@ export default function SurveyNav({ survey }) {
           <span className="sr-only">Previous</span>
         </button>
 
-        <button className="sj-surveynav__btn" onClick={handleNext} type="button">
+        <button className="sj-surveynav__btn" onClick={handleNextTop} type="button">
           {rightIcon}
           <span className="sr-only">{rightLabel}</span>
         </button>
       </div>
 
-      {/* BOTTOM NAV (same controls; only visible when top nav scrolls off above fold) */}
       <div
         ref={bottomRef}
         className={`sj-surveynav sj-surveynav--bottom ${showBottom ? "isVisible" : ""}`}
@@ -203,7 +233,7 @@ export default function SurveyNav({ survey }) {
       >
         <button
           className="sj-surveynav__btn"
-          onClick={handlePrev}
+          onClick={handlePrevBottom}
           disabled={isFirst}
           type="button"
         >
@@ -211,7 +241,7 @@ export default function SurveyNav({ survey }) {
           <span className="sr-only">Previous</span>
         </button>
 
-        <button className="sj-surveynav__btn" onClick={handleNext} type="button">
+        <button className="sj-surveynav__btn" onClick={handleNextBottom} type="button">
           {rightIcon}
           <span className="sr-only">{rightLabel}</span>
         </button>
