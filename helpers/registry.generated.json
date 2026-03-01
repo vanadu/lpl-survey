@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-02-28T14:39:39.631Z",
+    "builtAt": "2026-03-01T12:51:03.121Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -639,8 +639,8 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "paneInfoSourcesHeadPanel": {
-      "name": "paneInfoSourcesHeadPanel",
+    "InfoSourcesMainPanel": {
+      "name": "InfoSourcesMainPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -659,7 +659,7 @@
       "path": [
         "INFO_SOURCES-page",
         "InfoSoucesCard1Panel",
-        "paneInfoSourcesHeadPanel"
+        "InfoSourcesMainPanel"
       ],
       "hasTitle": true,
       "title": "Had you ever heard of LP before {CmpnName} got it?",
@@ -674,7 +674,7 @@
       "path": [
         "INFO_SOURCES-page",
         "InfoSoucesCard1Panel",
-        "paneInfoSourcesHeadPanel"
+        "InfoSourcesMainPanel"
       ],
       "hasTitle": true,
       "title": "Which sources of information have you accessed to learn about LP?",
@@ -688,7 +688,7 @@
       "path": [
         "INFO_SOURCES-page",
         "InfoSoucesCard1Panel",
-        "paneInfoSourcesHeadPanel"
+        "InfoSourcesMainPanel"
       ],
       "hasTitle": true,
       "title": "Which of those information sources did you find MOST useful (please select one)?",

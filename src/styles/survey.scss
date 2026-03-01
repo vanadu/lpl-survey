@@ -17,6 +17,19 @@
 */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // !VA Background color
 .sd-container-modern {
   background: $home_bg_color;
@@ -24,6 +37,14 @@
 
 // !VA Base unit and font size
 .sd-container-modern {
+  
+  --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, 8px))!important;
+
+  --sd-page-content-padding-left: calc(1 * var(--sjs-base-unit, 8px)) !important;
+  --sd-page-content-padding-right: calc(1 * var(--sjs-base-unit, 8px)) !important;
+
+
+
   --sjs-base-unit: 6.5px;
   --sjs-font-size: 15px!important;
 
@@ -53,7 +74,7 @@
 
 
   @include ldesktop {
-    --sjs-base-unit: 8px;
+    --sjs-base-unit: 9px;
     --sjs-font-size: 20px!important;
     --sjs-article-font-default-lineHeight: calc(1.6 * (var(--sjs-font-size, 16px)));
 
@@ -85,39 +106,45 @@
 // }
 
 // !VA PAGE OVERRIDES - 
-.sd-container-modern .sd-page  {
-  // !VA NO - hides default navheight: 100%;
+.sd-container-modern .sd-page.sd-body__page  {
   background: #FFFFFF;
   // !VA This comes out to 10px;
   border-radius: calc(2.5 * (var(--sjs-corner-radius, 4px)));
   // border-radius: 50px!important;
-  padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  padding-bottom: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-top: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  padding-bottom: calc(6 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   @include ldesktop {
-    padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-top: calc(4 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-right: calc(5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   }
 }
 
 // !VA GLOBAL PADDING
-.sd-container-modern {
+.sd-container-modern .sd-row {
+  // padding: 0!important;
+  // margin: 0!important;
+  // margin-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  // margin-top: var(--sd-base-vertical-padding);
+  // margin-top: var(--sd-base-vertical-padding)!important;
   // !VA BASE PADDING
   // !VA Default
   // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
   // !VA Global override
-  --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
+  // --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
   // !VA BASE VERTICAL PADDING
   // !VA Default
   // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
   // !VA Global override
-  --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
+  // --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
   // !VA BASEPAGE PADDING
   // !VA  Default
   // --sd-page-vertical-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)));
   // !VA Global override
-  --sd-page-vertical-padding: calc(3* var(--sjs-base-unit, var(--base-unit, 8px)))!important;
+  // --sd-page-vertical-padding: calc(3* var(--sjs-base-unit, var(--base-unit, 8px)))!important;
 }
 
 // !VA Survey body
@@ -153,29 +180,6 @@
 }
 
 
-// !VA ADD LEFT AND RIGHT PADDING TO PAGES
-.sd-container-modern .sd-page .sd-element--with-frame {
-  // !VA Compensate for mobile nav
-  padding-top: calc(4 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  padding-left: calc(var(--sd-base-padding) + var(--sv-element-add-padding-left, 10px));
-  padding-right: calc(var(--sd-base-padding) + var(--sv-element-add-padding-right, 10px));
-  box-shadow: none;
-  @include ldesktop {
-    padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-    box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
-  }
-}
-
-// !VA DEFAULT ROW PADDING, NO OVERRIDE - NOTE: This is part of the bottom whitespace on the separator and spacer elements. Also note that the first row in a panel has no top margin as per :first-of-type. 
-.sd-container-modern .sd-row {
-  flex-direction: column!important;
-  // !VA Default
-  margin-top: var(--sd-base-vertical-padding);
-  &:first-of-type {
-    // !VA No margin-top on first child element in sd-row
-    margin-top: 0;
-  }
-}
 
 
 // !VA Overrides default.scss
@@ -206,6 +210,17 @@
   padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
+
+
+.sd-container-modern .sd-question.sd-question--mobile {
+
+
+
+}
+
+
+
+
 
 // !VA DEFAULT QUESTION STYLES
 // !VA Sets the padding below the question header, i.e. title & description
@@ -241,7 +256,14 @@
 
 // !VA Ratings element button spacing
 .sd-container-modern .sd-rating .sd-rating__item {
-  margin: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+  --sjs-base-unit: 6px;   /* default is usually 8px */
+    margin: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+
+
+
+  @include ldesktop {
+    --sjs-base-unit: 8px;   /* default is usually 8px */
+  }
 }
 
 
@@ -300,6 +322,8 @@
 // !VA HTML p, li DEFAULT: NO PADDING ON THESE ELEMENTS
 .sd-container-modern .sd-element__content .sd-html {
   p, li {
+
+
       // !VA Applies --sjs-article-font-large-fontSize, no fallback
   font-size: var(--sjs-article-font-default-fontSize, calc(1 * (var(--sjs-font-size, 16px))));
   }
@@ -477,7 +501,6 @@
   background: none !important;
   height: 0 !important;
   margin: 0 !important;
-  // background: rgba(255, 0, 255, .3) !important; //devmag
 }
 
 // !VA Sets the padding between the switch and the outer border
@@ -547,8 +570,8 @@
 
 /* Apply to fieldset.sd-selectbase */
 .survey-two-col {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 
 
   /* fieldset reset */
@@ -572,8 +595,8 @@
 }
 // !VA Two column boolean radio buttons, creates a 60% width element
 .survey-two-col .sd-item.sd-radio {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   // flex: 0 0 calc(50% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
 
 
@@ -693,13 +716,18 @@
   display: block;
   width: 600px;
   height: 1px;
+  background: rgba(0, 0, 0, 0.08);
   // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
-  margin: calc(2.5* (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  margin-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  margin-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  margin-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  margin-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+
 
   @include ldesktop {
     margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
   }
-  background: rgba(0, 0, 0, 0.08);
+
 }
 
 // !VA SPACE ABOVE ELEMENT -   
@@ -714,17 +742,21 @@
   }
 }
 
-// !VA SPACE BELOW ELEMENT    
+// !VA SPACE BELOW ELEMENT - Margin top defines the spacing. 
 .survey-q-space-below::after {
   content: "";
   display: block;
   width: 600px;
   height: 1px;
   // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
-  margin: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  margin-top: calc(1* (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  margin-right: auto;
+  margin-left: auto;
 
   @include ldesktop {
-    margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+    margin-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -774,21 +806,23 @@
 .survey-card-panel {
   // box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
   box-shadow: none!important;
+  padding: 0!important;
+  margin: 0!important;
+  
 
 
 
   @include ldesktop {
-    padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    padding-right: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    padding-bottom: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    padding-left: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    // padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    // padding-right: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    // padding-bottom: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    // padding-left: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   }
 
 }
 
 
 .sd-container-modern .sd-element--with-frame {
-  // background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 // !VA Default border on .sd-element--nested-with-borders, overrides survey-core
@@ -870,7 +904,6 @@
 // [data-name="UserInfoAgeGenderPanel"] 
 
 // {
-//   background: rgba(255, 0, 0, .3) !important; //devred
 //   &.sd-element--nested-with-borders   {
 //     padding: 0!important;
 //     padding: 0!important;
@@ -885,38 +918,37 @@
 //   }
 // }
 
-[data-name="UserInfoCountry"] {
-  // display: none;
-
-}
 
 // !VA Force the User Name and Country to 2-1 layout
 [data-name="UserInfoNameCountryPanel"],
-[data-name="UserInfoAgeGenderPanel"],
 [data-name="dcsdCmpnInfoAgePanel"],
 [data-name="lvngCmpnInfoAgePanel"]
 [data-name="CmpnInfoDemeanor"]
 
+
+
 {
 
 
+
+
+
   .sd-element__content {
-
-
-
-      @include ldesktop {
-        background: rgba(255, 255, 0, .3) !important; //devyel
-        display: grid;
-        width: 100%;          /* important */
-        grid-template-columns: 1r 1fr;
-        gap: 0.75rem 1rem;
-        align-items: start;
-        width: 80%;
-        max-width: 100%;
-        box-sizing: border-box;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      }
-
+    @include ldesktop {
+      display: grid;
+      width: 100%;          /* important */
+      grid-template-columns: 1r 1fr;
+      gap: 0.75rem 1rem;
+      align-items: start;
+      max-width: 100%;
+      box-sizing: border-box;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      
+    }
+    .sd-row {
+      padding: 0!important;
+      margin: 0!important;
+    }
   }
   
 

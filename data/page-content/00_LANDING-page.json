@@ -32,8 +32,13 @@
             },
             {
               "type": "html",
-              "name": "LandingWelcomeText",
+              "name": "LandingWelcomeText1",
               "html": "This survey, the first of its kind, is designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis."
+            },
+            {
+              "type": "html",
+              "name": "LandingWelcomeText2",
+              "html": "Aliqua aute et est proident fugiat sunt consectetur id ipsum magna nostrud tempor magna consequat. Nostrud in est ad ea exercitation. Consequat mollit consequat quis deserunt mollit laboris exercitation nostrud cillum consequat dolor proident sint. Ex duis nisi ad excepteur cupidatat enim pariatur excepteur. Occaecat sint dolor enim incididunt commodo. Consectetur anim elit et cillum ut excepteur."
             }
 
           ]

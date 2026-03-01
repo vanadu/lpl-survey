@@ -152,10 +152,10 @@ const CONTROL_WIDTH_300 = new Set([
 
 
 
-  // "UserInfoFirstName",
-  // "UserInfoCountry",
-  // "UserInfoStateRegion",
-  // "UserInfoAgeGroup",
+  "UserInfoFirstName",
+  "UserInfoCountry",
+  "UserInfoStateRegion",
+  "UserInfoAgeGroup",
   "CmpnInfoBreed",
 
 
@@ -259,7 +259,6 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
 
 const QUESTION_SPACE_ABOVE = new Set([
 // put question names here (same .name values you already use)
-"CmpnName",
 "UserInfoContactTypeFacebook",
 "UserInfoContactOK",
 
@@ -275,7 +274,7 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "UserInfoContactType",
   "UserInfoContactTypeFacebook",
 
-  "UserInfoStateRegion",
+
 
   "CmpnInfoAnimalType",
   "CmpnInfoDemeanor",
@@ -410,7 +409,10 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
   const QUESTION_SPACE_BELOW = new Set([
     // put question names here (same .name values you already use)
-    "CmpnName",
+
+    "UserInfoFirstName",
+    "UserInfoCountry",
+    "UserInfoStateRegion",
  
     "CmpnInfoBreed",
     "CmpnInfoGender",

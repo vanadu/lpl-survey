@@ -9,7 +9,7 @@
     "lint": "next lint",
     "export": "npm run build && next export -o _static",
     "merge-surveys": "node scripts/merge-surveys.js",
-    "build-survey": "node scripts/merge-surveys.js",
+    "build-survey": "node scripts/merge-surveys.js && npm run dev",
     "build-schema": "node scripts/buildSurveySchema.js",
     "build-format": "node scripts/schema-to-format-map.js",
     "build-registry-generated": "node scripts/generate-registry.js --in data/master-survey.json --out helpers/registry.generated.json",

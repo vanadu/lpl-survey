@@ -17,7 +17,7 @@
         },
                 {
           "type": "panel",
-          "name": "paneInfoSourcesHeadPanel",
+          "name": "InfoSourcesMainPanel",
           "elements": [
 
             {
