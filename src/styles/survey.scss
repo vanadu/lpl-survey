@@ -11,26 +11,15 @@
   min-width: 0;
 }
 
-// !VA GLOBAL DEFINITIONS
+/* !VA  GLOBAL DEFINITIONS
+  -border-radius must be set on the panel
+
+*/
+
 
 // !VA Background color
 .sd-container-modern {
   background: $home_bg_color;
-}
-
-.sd-container-modern .sd-page  {
-  // !VA NO - hides default navheight: 100%;
-
-  background: #FFFFFF;
-  border-radius: 10px;
-  padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  padding-bottom: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  @include ldesktop {
-    padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  }
 }
 
 // !VA Base unit and font size
@@ -38,21 +27,20 @@
   --sjs-base-unit: 6.5px;
   --sjs-font-size: 15px!important;
 
-
-  // !VA GLOBAL CALCS FOR FONT SIZE & LINE HEIGHT
-  // !VA Caluclate default body font and height based on  base font
+  /* !VA GLOBAL CALCS FOR FONT SIZE & LINE HEIGHT - USES BASE FONT SIZE RECALCULATION. You can modify individual element font and line heights, but for mobile sizes will scale organically based on --sjs-font-size   */
+  // !VA Default body font and height 
   --sjs-article-font-default-fontSize: calc(1 * (var(--sjs-font-size, 16px)));
   --sjs-article-font-default-lineHeight: calc(1.4 * (var(--sjs-font-size, 16px)));
-  // !VA Caluclate h3 font size and height based on base font
+  // !VA h3 font size and height
   --sjs-article-font-large-fontSize: calc(1.1 * (var(--sjs-font-size, 16px)));
   --sjs-article-font-large-lineHeight: calc(1.4 * (var(--sjs-font-size, 16px)));
-  // !VA Caluclate h2 font size and height based on base font
+  // !VA h2 font size and height
   --sjs-article-font-x-large-fontSize: calc(1.3 * (var(--sjs-font-size, 16px)));
   --sjs-article-font-x-large-lineHeight: calc(1.4 * (var(--sjs-font-size, 16px)));
-  // !VA Base the question titles on the base font but a little smaller.
+  // !VA Question titles, a little smaller than the base font size.
   // !VA NOTE: SOME OF THESE ELEMENTS LINE HEIGHT MUST BE SET IN THE ELEMENT CSS!
   --sjs-font-questiontitle-size: calc(.9 * (var(--sjs-font-size)));
-
+  // !VA NOTE: Can't remember what this is
   --sjs-font-editorfont-size: calc(.925 * (var(--sjs-font-size)));
 
   @include mphone {
@@ -96,10 +84,21 @@
 
 // }
 
-// !VA LINE HEIGHT FOR 
-.sd-container-modern {
-
-
+// !VA PAGE OVERRIDES - 
+.sd-container-modern .sd-page  {
+  // !VA NO - hides default navheight: 100%;
+  background: #FFFFFF;
+  // !VA This comes out to 10px;
+  border-radius: calc(2.5 * (var(--sjs-corner-radius, 4px)));
+  // border-radius: 50px!important;
+  padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-bottom: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  @include ldesktop {
+    padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  }
 }
 
 // !VA GLOBAL PADDING
