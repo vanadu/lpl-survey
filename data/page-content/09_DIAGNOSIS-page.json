@@ -9,7 +9,7 @@
         {
           "type": "html",
           "name": "DiagnosisHeading",
-          "html": "<h3>{CmpnName}'s LP/GOLPP diagnosis</h3>"
+          "html": "<h2>{CmpnName}'s LP/GOLPP diagnosis</h2>"
         },
         {
           "type": "html",

@@ -48,6 +48,10 @@
   --sjs-base-unit: 6.5px;
   --sjs-font-size: 15px!important;
 
+
+  --sjs-primary-backcolor: #2055DA;
+
+
   /* !VA GLOBAL CALCS FOR FONT SIZE & LINE HEIGHT - USES BASE FONT SIZE RECALCULATION. You can modify individual element font and line heights, but for mobile sizes will scale organically based on --sjs-font-size   */
   // !VA Default body font and height 
   --sjs-article-font-default-fontSize: calc(1 * (var(--sjs-font-size, 16px)));
@@ -68,22 +72,25 @@
     --sjs-base-unit: 7px!important;
     --sjs-font-size: 16.5px!important;
   }
-  @include desktop {
-
+  @include mphone {
+    --sjs-base-unit: 8px!important;
+    --sjs-font-size: 16.5px!important;
+  }
+  @include tablet {
+    --sjs-base-unit: 9px;
+    --sjs-font-size: 20px!important;
+    --sjs-article-font-default-lineHeight: calc(1.6 * (var(--sjs-font-size, 16px)));
   }
 
-
+  @include desktop {
+    --sjs-base-unit: 9px;
+    --sjs-font-size: 20px!important;
+    --sjs-article-font-default-lineHeight: calc(1.6 * (var(--sjs-font-size, 16px)));
+  }
   @include ldesktop {
     --sjs-base-unit: 9px;
     --sjs-font-size: 20px!important;
     --sjs-article-font-default-lineHeight: calc(1.6 * (var(--sjs-font-size, 16px)));
-
-    // --sjs-article-font-x-large-fontSize: 21px;
-
-
-
-    // --sjs-article-font-default-lineHeight: 26px;
-    // --sjs-article-font-x-large-lineHeight: 32px;
   }
 }
 
@@ -313,7 +320,12 @@
   --sjs-font-questiontitle-size: calc(.9 * (var(--sjs-font-size)));
   span {
     // !VA Line heights for question titles
-    line-height: calc(1.4 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    line-height: calc(1.1 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    
+    @include ldesktop {
+      line-height: calc(1.4 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    
+    }
 
   }
   
@@ -379,7 +391,7 @@
     @include desktop { flex-direction: row; }
     @include ldesktop { flex-direction: row; }
   }
-  .landing-title-head {
+  .landing-title-heading,  {
     font-family: $secondary_font!important;
     // !VA Override the default 
     font-size: calc(1.75 * (var(--sjs-font-size, 16px)));
@@ -390,7 +402,7 @@
       text-align: left;
     }
   }
-  .landing-title-subhead {
+  .landing-title-subheading {
     font-family: $primary_font!important;
     // padding: 0!important;
     // margin: .5rem 0 0 0!important;
@@ -422,12 +434,13 @@
     justify-content: center;
     align-items: flex-start;
     height: 100%;
-
+    
     padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     // margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+
     @include tablet {
       justify-content: flex-end;
       margin-right: 40px;
@@ -471,6 +484,40 @@
       // --sjs-font-size: 15px;
       // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
     }
+  }
+}
+
+.conclusion-thanks-head-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 100px;
+    margin: 20px 0;
+    height: auto;
+    @include mphone { }
+    @include lphone { }
+    @include tablet { width: 130px }
+    @include desktop { width: 140px }
+    @include ldesktop {width: 150px }
+
+
+  }
+  p.conclusion-thanks-note {
+    padding: 1rem 0;
+    @include sphone { display: none }
+    @include mphone { display: none }
+    @include lphone { display: none }
+    @include tablet { display: block}
+    @include desktop { display: block }
+    @include ldesktop {display: block }
+  }
+  p.conclusion-thanks-note-mobile {
+    padding: 2rem 0;
+    display: block;
+    @include tablet { display: none }
+    @include desktop { display: none  }
+    @include ldesktop { display: none  }
   }
 }
 
@@ -663,7 +710,10 @@
 
 // !VA Wide text boxes and dropdowns
 .survey-control-w-600 { 
-  width: 600px !important; 
+  width: 100% !important; 
+  @include ldesktop {
+    width: 600px !important; 
+  }
 }
 
 // !VA Unused as yet

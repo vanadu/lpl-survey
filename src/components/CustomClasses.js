@@ -34,19 +34,14 @@ const ITEMS_CARD_PANEL = new Set([
   "AspirationCard2Panel",
   "NeuropathyCard1Panel",
   "NeuropathyCard2Panel",
-  "AspirationCard1Panel",
-  "AspirationCard2Panel",
+  "ConclusionCard1Panel",
+  "ConclusionCard2Panel",
 
 ])
 
 
 const ITEMS_TWO_COL = new Set([
 
-
-  "LandingCard1Panel",
-  "LandingCard2Panel",
-  "UserInfoCard1Panel",
-  "UserInfoCard2Panel",
 
 
 
@@ -58,8 +53,11 @@ const ITEMS_TWO_COL = new Set([
 
   "BreathingCrisisAdviceType",
   "BreathingCrisisProvidedSubstanceType",
+
   "EarlySymptomsType",
-  "EarlyOtherConditionsType",
+  "EarlySymptomsAgePanel",
+
+  "EarlSymptomsOtherConditionsType", 
 
   "PrimaryDurationCost",
   "PrimaryDurationChangedVetsReason",
@@ -95,7 +93,8 @@ const ITEMS_TWO_COL = new Set([
 const ITEMS_THREE_COL = new Set([
   "CmpnInfoAnimalType",
   "IntubationHistoryWasIntubated",
-  "BreathingCrisisDidHavePanel",
+  // "BreathingCrisisDidHavePanel",
+  "BreathingCrisisDidHave",
   "BreathingCrisisCount",
   "BreathingCrisisAdvice",
   "BreathingCrisisProvidedSubstance",
@@ -222,8 +221,14 @@ const CONTROL_WIDTH_600 = new Set([
 const QUESTION_SEPARATOR_ABOVE = new Set([
   // put question names here (same .name values you already use)
 
+  "IntubationHistoryReason",
   "IntubationHistorySymptoms",
+  "IntubationHistoryConcerns",
+
+  "BreathingCrisisCount", 
+  "BreathingCrisisCost", 
   "BreathingCrisisProvidedSubstanceType",
+
   "EarlyOtherConditionsType",
   "PrimaryDurationChangedVetsReason",
   "PrimaryVetInfoDetails",
@@ -287,9 +292,9 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "InfoSourcesContradictory",
 
 
-  "IntubationHistoryReason",
-  "BreathingCrisisCount", 
-  "BreathingCrisisCost", 
+
+
+
 
   "BreathingCrisisAdvice",
   "BreathingCrisisAdviceType",

@@ -110,12 +110,12 @@
                 {
                   "type": "html",
                   "name": "LandingTitleHead",
-                  "html": "<div class='landing-title'><h2 class='landing-title-head'>LP/GOLPP Survey 2026</h2><p class='landing-title-subhead'>Powered by LarParLife.org</p></div>"
+                  "html": "<div class='landing-title-head-container'><h2 class='landing-title-heading'>LP/GOLPP Survey 2026</h2><p class='landing-title-subheading'>Powered by LarParLife.org</p></div>"
                 },
                 {
                   "type": "html",
                   "name": "LandingVersion",
-                  "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.02.24.01</p></div></div>"
+                  "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.03.01.01</p></div></div>"
                 }
               ]
             },
@@ -473,7 +473,7 @@
             {
               "type": "html",
               "name": "CmpnInfoHeading",
-              "html": "<h3>About your LP/GOLPP companion<h3>"
+              "html": "<h2>About your LP/GOLPP companion<h2>"
             },
             {
               "type": "html",
@@ -730,7 +730,7 @@
             {
               "type": "html",
               "name": "InfoSourcesHeading",
-              "html": "<h3>How did you learn about LP/GOLPP?</h3>"
+              "html": "<h2>How did you learn about LP/GOLPP?</h2>"
             },
             {
               "type": "html",
@@ -919,7 +919,7 @@
             {
               "type": "html",
               "name": "IntubationHistoryHeading",
-              "html": "<h3>Intubation History</h3>"
+              "html": "<h2>Intubation History</h2>"
             },
             {
               "type": "html",
@@ -927,33 +927,35 @@
               "html": "<p>This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>"
             },
             {
-              "type": "radiogroup",
-              "name": "IntubationHistoryWasIntubated",
-              "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Not sure"
-                }
-              ]
-            },
-            {
               "type": "panel",
               "name": "IntubationHistoryDetails",
-              "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
               "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "IntubationHistoryWasIntubated",
+                  "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Not sure"
+                    }
+                  ]
+                },
                 {
                   "type": "checkbox",
                   "name": "IntubationHistoryReason",
                   "title": "For what reason or reasons was {CmpnName} intubated prior to the first LP symptoms appearing?",
+                  "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
+                  "isRequired": true,
                   "choices": [
                     {
                       "value": "TEETH_CLEANING",
@@ -984,6 +986,7 @@
                   "type": "boolean",
                   "name": "IntubationHistoryConcerns",
                   "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
+                  "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
                   "swapOrder": true,
                   "isRequired": true
                 },
@@ -991,7 +994,7 @@
                   "type": "checkbox",
                   "name": "IntubationHistorySymptoms",
                   "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
-                  "visibleIf": "{IntubationHistoryConcerns} = true",
+                  "visibleIf": "{IntubationHistoryWasIntubated} = 'YES' && {IntubationHistoryConcerns} = true",
                   "choices": [
                     {
                       "value": "COUGHING",
@@ -1030,7 +1033,7 @@
             {
               "type": "html",
               "name": "BreathingCrisisHeading",
-              "html": "<h3>LP Breathing Crisis</h3>"
+              "html": "<h2>LP Breathing Crisis</h2>"
             },
             {
               "type": "html",
@@ -1038,79 +1041,85 @@
               "html": "<p>In a breathing crisis, the paralyzed arytenoid cartilages block the airway and cut off airflow to the lungs. In extreme cases, the crisis escalates into a breathing emergency that requires care at a veterinary facility to restore breathing. These questions are about breathing emergencies that required care from a licensed veterinarian. </p>"
             },
             {
-              "type": "radiogroup",
-              "name": "BreathingCrisisDidHave",
-              "title": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
-              "choices": [
+              "type": "panel",
+              "name": "BreathingCrisisDidHavePanel",
+              "elements": [
                 {
-                  "value": "YES",
-                  "text": "Yes"
+                  "type": "radiogroup",
+                  "name": "BreathingCrisisDidHave",
+                  "title": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false,
+                  "showNoneItem": false
                 },
                 {
-                  "value": "NO",
-                  "text": "No"
+                  "type": "radiogroup",
+                  "name": "BreathingCrisisCount",
+                  "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+                  "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ONE",
+                      "text": "Once"
+                    },
+                    {
+                      "value": "TWO",
+                      "text": "Twice"
+                    },
+                    {
+                      "value": "MORE_THAN_TWO",
+                      "text": "More than twice"
+                    }
+                  ],
+                  "showOtherItem": false,
+                  "showNoneItem": false
                 },
                 {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
+                  "type": "dropdown",
+                  "name": "BreathingCrisisCost",
+                  "title": "About what was the total pre-insurance cost of these visits?",
+                  "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "LESS_THAN_250",
+                      "text": "Less than $250"
+                    },
+                    {
+                      "value": "250_500",
+                      "text": "$250 - $500"
+                    },
+                    {
+                      "value": "500_1000",
+                      "text": "$500 - $1000"
+                    },
+                    {
+                      "value": "MORE_THAN_1000",
+                      "text": "More than $1000"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know or prefer not to say"
+                    }
+                  ],
+                  "showOtherItem": false,
+                  "showNoneItem": false
                 }
-              ],
-              "showOtherItem": false,
-              "showNoneItem": false
-            },
-            {
-              "type": "radiogroup",
-              "name": "BreathingCrisisCount",
-              "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
-              "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "ONE",
-                  "text": "Once"
-                },
-                {
-                  "value": "TWO",
-                  "text": "Twice"
-                },
-                {
-                  "value": "MORE_THAN_TWO",
-                  "text": "More than twice"
-                }
-              ],
-              "showOtherItem": false,
-              "showNoneItem": false
-            },
-            {
-              "type": "dropdown",
-              "name": "BreathingCrisisCost",
-              "title": "About what was the total pre-insurance cost of these visits?",
-              "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "LESS_THAN_250",
-                  "text": "Less than $250"
-                },
-                {
-                  "value": "250_500",
-                  "text": "$250 - $500"
-                },
-                {
-                  "value": "500_1000",
-                  "text": "$500 - $1000"
-                },
-                {
-                  "value": "MORE_THAN_1000",
-                  "text": "More than $1000"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know or prefer not to say"
-                }
-              ],
-              "showOtherItem": false,
-              "showNoneItem": false
+              ]
             }
           ]
         },
@@ -1269,19 +1278,20 @@
           "name": "EarlySymptomsCard1Panel",
           "elements": [
             {
+              "type": "html",
+              "name": "EarlySymptomsHeading",
+              "html": "<h2>Your early encounters with LP/GOLPP</h2>"
+            },
+            {
+              "type": "html",
+              "name": "EarlySymptomsText",
+              "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
+            },
+            {
               "type": "panel",
-              "name": "EarlySymptomsHeadPanel",
+              "name": "EarlySymptomsAgePanel",
+              "title": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
               "elements": [
-                {
-                  "type": "html",
-                  "name": "EarlySymptomsHeading",
-                  "html": "<h3>Your early encounters with LP/GOLPP</h3>"
-                },
-                {
-                  "type": "html",
-                  "name": "EarlySymptomsText",
-                  "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
-                },
                 {
                   "type": "text",
                   "inputType": "number",
@@ -1315,7 +1325,13 @@
                       "text": "Months must be between 0 and 11"
                     }
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "EarlySymptomsDetailsPanel",
+              "elements": [
                 {
                   "type": "checkbox",
                   "name": "EarlySymptomsType",
@@ -1412,7 +1428,7 @@
           "elements": [
             {
               "type": "panel",
-              "name": "EarlyOtherConditionsPanel",
+              "name": "EarlySymptomsOtherConditionsPanel",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -1437,7 +1453,7 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "EarlyOtherConditionsType",
+                  "name": "EarlSymptomsOtherConditionsType",
                   "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
                   "isRequred": true,
                   "visibleIf": "{EarlyOtherConditions} = YES",
@@ -1495,7 +1511,7 @@
             {
               "type": "html",
               "name": "PrimaryDurationHeading",
-              "html": "<h3>Duration of care by primary veterinarians for LP/GOLPP symptoms</h3>"
+              "html": "<h2>Duration of care by primary veterinarians for LP/GOLPP symptoms</h2>"
             },
             {
               "type": "html",
@@ -1662,7 +1678,7 @@
             {
               "type": "html",
               "name": "PrimaryVetHeading",
-              "html": "<h3>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h3>"
+              "html": "<h2>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h2>"
             },
             {
               "type": "html",
@@ -1969,7 +1985,7 @@
             {
               "type": "html",
               "name": "DiagnosisHeading",
-              "html": "<h3>{CmpnName}'s LP/GOLPP diagnosis</h3>"
+              "html": "<h2>{CmpnName}'s LP/GOLPP diagnosis</h2>"
             },
             {
               "type": "html",
@@ -2161,7 +2177,7 @@
             {
               "type": "html",
               "name": "TreatmentStatusHeading",
-              "html": "<h3>Veterinary-Medical Procedures</h3>"
+              "html": "<h2>Veterinary-Medical Procedures</h2>"
             },
             {
               "type": "html",
@@ -3183,7 +3199,7 @@
             {
               "type": "html",
               "name": "TreatmentFactorsHeading",
-              "html": "<h3>Factors that have influenced your LP/GOLPP decisions</h3>"
+              "html": "<h2>Factors that have influenced your LP/GOLPP decisions</h2>"
             },
             {
               "type": "html",
@@ -3241,71 +3257,6 @@
                     }
                   ],
                   "showOtherItem": false
-                },
-                {
-                  "type": "panel",
-                  "name": "TreatmentFactorsCostPanel",
-                  "title": "How have financial considerations factored into your decision?",
-                  "elements": [
-                    {
-                      "type": "rating",
-                      "name": "TreatmentFactorsCost",
-                      "title": "Cost of surgical/stent procedure:",
-                      "description": "1 = not a factor, 5 = deciding factor",
-                      "isRequired": true,
-                      "rateValues": [
-                        {
-                          "value": 1,
-                          "text": "1"
-                        },
-                        {
-                          "value": 2,
-                          "text": "2"
-                        },
-                        {
-                          "value": 3,
-                          "text": "3"
-                        },
-                        {
-                          "value": 4,
-                          "text": "4"
-                        },
-                        {
-                          "value": 5,
-                          "text": "5"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "rating",
-                      "name": "TreatmentFactorsCostComplications",
-                      "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
-                      "description": "1 = not a factor, 5 = deciding factor",
-                      "isRequired": true,
-                      "rateValues": [
-                        {
-                          "value": 1,
-                          "text": "1"
-                        },
-                        {
-                          "value": 2,
-                          "text": "2"
-                        },
-                        {
-                          "value": 3,
-                          "text": "3"
-                        },
-                        {
-                          "value": 4,
-                          "text": "4"
-                        },
-                        {
-                          "value": 5,
-                          "text": "5"
-                        }
-                      ]
-                    }
-                  ]
                 }
               ]
             }
@@ -3317,8 +3268,73 @@
           "elements": [
             {
               "type": "panel",
+              "name": "TreatmentFactorsCostPanel",
+              "title": "How have financial considerations factored into your decision?",
+              "elements": [
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsCost",
+                  "title": "Cost of surgical/stent procedure:",
+                  "description": "1 = not a factor, 5 = deciding factor",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsCostComplications",
+                  "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
+                  "description": "1 = not a factor, 5 = deciding factor",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
               "name": "TreatmentFactorsStagePanel",
-              "title": "How has the state of {CmpnName}'s LP/GOLPP factored into your decision?",
+              "title": "How has the stage of {CmpnName}'s LP/GOLPP factored into your decision?",
               "elements": [
                 {
                   "type": "rating",
@@ -6072,6 +6088,17 @@
                   "name": "ConclusionDifferentChoices",
                   "title": "Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).",
                   "isRequired": false
+                },
+                {
+                  "type": "panel",
+                  "name": "ConclusionThanksPanel",
+                  "elements": [
+                    {
+                      "type": "html",
+                      "name": "ConclusionThanksHead",
+                      "html": "<div class='conclusion-thanks-head-container'><h2 class='conclusion-thanks-title-heading'>LP/GOLPP Survey 2026</h2><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><h3 class='conclusion-thanks-title-subheading'>Thank You For Taking The Survey!</h3><p class='conclusion-thanks-note-mobile'>Please select the checkbox to complete and submit.</p><p class='conclusion-thanks-note'>Please click the <b>Complete</b> button to submit your responses.</p></div>"
+                    }
+                  ]
                 }
               ]
             }

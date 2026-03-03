@@ -6,19 +6,21 @@
       "name": "EarlySymptomsCard1Panel",
       "elements": [
         {
+          "type": "html",
+          "name": "EarlySymptomsHeading",
+          "html": "<h2>Your early encounters with LP/GOLPP</h2>"
+        },
+        {
+          "type": "html",
+          "name": "EarlySymptomsText",
+          "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
+        },
+        {
           "type": "panel",
-          "name": "EarlySymptomsHeadPanel",
+          "name": "EarlySymptomsAgePanel",
+          "title": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
           "elements": [
-            {
-              "type": "html",
-              "name": "EarlySymptomsHeading",
-              "html": "<h3>Your early encounters with LP/GOLPP</h3>"
-            },
-            {
-              "type": "html",
-              "name": "EarlySymptomsText",
-              "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
-            },
+
             {
               "type": "text",
               "inputType": "number",
@@ -52,7 +54,14 @@
                   "text": "Months must be between 0 and 11"
                 }
               ]
-            },
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "EarlySymptomsDetailsPanel",
+          "elements": [
             {
               "type": "checkbox",
               "name": "EarlySymptomsType",
@@ -143,9 +152,9 @@
                 }
               ]
             }
+    
           ]
         }
-
       ]
     },
     {
@@ -154,7 +163,7 @@
       "elements": [
         {
           "type": "panel",
-          "name": "EarlyOtherConditionsPanel",
+          "name": "EarlySymptomsOtherConditionsPanel",
           "elements": [
             {
               "type": "radiogroup",
@@ -179,7 +188,7 @@
             },
             {
             "type": "checkbox",
-            "name": "EarlyOtherConditionsType",
+            "name": "EarlSymptomsOtherConditionsType",
             "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
             "isRequred": true,
             "visibleIf": "{EarlyOtherConditions} = YES",

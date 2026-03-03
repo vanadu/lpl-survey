@@ -8,13 +8,19 @@
         {
           "type": "html",
           "name": "BreathingCrisisHeading",
-          "html": "<h3>LP Breathing Crisis</h3>"
+          "html": "<h2>LP Breathing Crisis</h2>"
         },
         {
           "type": "html",
           "name": "BreathingCrisisText",
           "html": "<p>In a breathing crisis, the paralyzed arytenoid cartilages block the airway and cut off airflow to the lungs. In extreme cases, the crisis escalates into a breathing emergency that requires care at a veterinary facility to restore breathing. These questions are about breathing emergencies that required care from a licensed veterinarian. </p>"
         },
+
+
+        {
+          "type": "panel",
+          "name": "BreathingCrisisDidHavePanel",
+          "elements": [
         {
           "type": "radiogroup",
           "name": "BreathingCrisisDidHave",
@@ -36,7 +42,7 @@
           "showOtherItem": false,
           "showNoneItem": false
         },
-                    {
+        {
           "type": "radiogroup",
           "name": "BreathingCrisisCount",
           "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
@@ -89,6 +95,8 @@
           ],
           "showOtherItem": false,
           "showNoneItem": false
+        }
+          ]
         }
       ]
     },

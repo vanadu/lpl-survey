@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-03-01T12:51:03.121Z",
+    "builtAt": "2026-03-01T17:10:44.543Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -774,19 +774,6 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "IntubationHistoryWasIntubated": {
-      "name": "IntubationHistoryWasIntubated",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "INTUBATION_HISTORY-page",
-        "IntubationHistoryCard1Panel"
-      ],
-      "hasTitle": true,
-      "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
-      "hasVisibleIf": false
-    },
     "IntubationHistoryDetails": {
       "name": "IntubationHistoryDetails",
       "type": "panel",
@@ -797,8 +784,22 @@
         "IntubationHistoryCard1Panel"
       ],
       "hasTitle": false,
-      "hasVisibleIf": true,
-      "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'"
+      "hasVisibleIf": false
+    },
+    "IntubationHistoryWasIntubated": {
+      "name": "IntubationHistoryWasIntubated",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "INTUBATION_HISTORY-page",
+        "IntubationHistoryCard1Panel",
+        "IntubationHistoryDetails"
+      ],
+      "hasTitle": true,
+      "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
     },
     "IntubationHistoryReason": {
       "name": "IntubationHistoryReason",
@@ -812,7 +813,9 @@
       ],
       "hasTitle": true,
       "title": "For what reason or reasons was {CmpnName} intubated prior to the first LP symptoms appearing?",
-      "hasVisibleIf": false
+      "hasVisibleIf": true,
+      "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
+      "isRequired": true
     },
     "IntubationHistoryConcerns": {
       "name": "IntubationHistoryConcerns",
@@ -826,7 +829,8 @@
       ],
       "hasTitle": true,
       "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
-      "hasVisibleIf": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
       "isRequired": true
     },
     "IntubationHistorySymptoms": {
@@ -842,7 +846,7 @@
       "hasTitle": true,
       "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
       "hasVisibleIf": true,
-      "visibleIf": "{IntubationHistoryConcerns} = true"
+      "visibleIf": "{IntubationHistoryWasIntubated} = 'YES' && {IntubationHistoryConcerns} = true"
     },
     "BreathingCrisisCard1Panel": {
       "name": "BreathingCrisisCard1Panel",
@@ -855,6 +859,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "BreathingCrisisDidHavePanel": {
+      "name": "BreathingCrisisDidHavePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "BreathingCrisisDidHave": {
       "name": "BreathingCrisisDidHave",
       "type": "radiogroup",
@@ -862,7 +878,8 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
-        "BreathingCrisisCard1Panel"
+        "BreathingCrisisCard1Panel",
+        "BreathingCrisisDidHavePanel"
       ],
       "hasTitle": true,
       "title": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
@@ -875,7 +892,8 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
-        "BreathingCrisisCard1Panel"
+        "BreathingCrisisCard1Panel",
+        "BreathingCrisisDidHavePanel"
       ],
       "hasTitle": true,
       "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
@@ -890,7 +908,8 @@
       "collect": true,
       "path": [
         "BREATHING_CRISIS-page",
-        "BreathingCrisisCard1Panel"
+        "BreathingCrisisCard1Panel",
+        "BreathingCrisisDidHavePanel"
       ],
       "hasTitle": true,
       "title": "About what was the total pre-insurance cost of these visits?",
@@ -1011,8 +1030,8 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "EarlySymptomsHeadPanel": {
-      "name": "EarlySymptomsHeadPanel",
+    "EarlySymptomsAgePanel": {
+      "name": "EarlySymptomsAgePanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -1020,7 +1039,8 @@
         "EARLY_SYMPTOMS-page",
         "EarlySymptomsCard1Panel"
       ],
-      "hasTitle": false,
+      "hasTitle": true,
+      "title": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
       "hasVisibleIf": false
     },
     "EarlySymptomsAgeYears": {
@@ -1031,7 +1051,7 @@
       "path": [
         "EARLY_SYMPTOMS-page",
         "EarlySymptomsCard1Panel",
-        "EarlySymptomsHeadPanel"
+        "EarlySymptomsAgePanel"
       ],
       "hasTitle": true,
       "title": "Years",
@@ -1047,13 +1067,25 @@
       "path": [
         "EARLY_SYMPTOMS-page",
         "EarlySymptomsCard1Panel",
-        "EarlySymptomsHeadPanel"
+        "EarlySymptomsAgePanel"
       ],
       "hasTitle": true,
       "title": "Months (number 0 - 11)",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
+    },
+    "EarlySymptomsDetailsPanel": {
+      "name": "EarlySymptomsDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "EarlySymptomsType": {
       "name": "EarlySymptomsType",
@@ -1063,7 +1095,7 @@
       "path": [
         "EARLY_SYMPTOMS-page",
         "EarlySymptomsCard1Panel",
-        "EarlySymptomsHeadPanel"
+        "EarlySymptomsDetailsPanel"
       ],
       "hasTitle": true,
       "title": "What symptoms did {CmpnName} have at that time?",
@@ -1077,7 +1109,7 @@
       "path": [
         "EARLY_SYMPTOMS-page",
         "EarlySymptomsCard1Panel",
-        "EarlySymptomsHeadPanel"
+        "EarlySymptomsDetailsPanel"
       ],
       "hasTitle": true,
       "title": "How severe did you think {CmpnName}'s early symptoms were?",
@@ -1092,7 +1124,7 @@
       "path": [
         "EARLY_SYMPTOMS-page",
         "EarlySymptomsCard1Panel",
-        "EarlySymptomsHeadPanel"
+        "EarlySymptomsDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
@@ -1107,7 +1139,7 @@
       "path": [
         "EARLY_SYMPTOMS-page",
         "EarlySymptomsCard1Panel",
-        "EarlySymptomsHeadPanel"
+        "EarlySymptomsDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?",
@@ -1125,8 +1157,8 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "EarlyOtherConditionsPanel": {
-      "name": "EarlyOtherConditionsPanel",
+    "EarlySymptomsOtherConditionsPanel": {
+      "name": "EarlySymptomsOtherConditionsPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -1145,22 +1177,22 @@
       "path": [
         "EARLY_SYMPTOMS-page",
         "EarlySymptomsCard2Panel",
-        "EarlyOtherConditionsPanel"
+        "EarlySymptomsOtherConditionsPanel"
       ],
       "hasTitle": true,
       "title": "When {CmpnName} first started showing symptoms of LP, did {cvGenderSubjectPronoun} have any other health conditions?",
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "EarlyOtherConditionsType": {
-      "name": "EarlyOtherConditionsType",
+    "EarlSymptomsOtherConditionsType": {
+      "name": "EarlSymptomsOtherConditionsType",
       "type": "checkbox",
       "role": "question",
       "collect": true,
       "path": [
         "EARLY_SYMPTOMS-page",
         "EarlySymptomsCard2Panel",
-        "EarlyOtherConditionsPanel"
+        "EarlySymptomsOtherConditionsPanel"
       ],
       "hasTitle": true,
       "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
@@ -2429,6 +2461,17 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "TreatmentFactorsCard2Panel": {
+      "name": "TreatmentFactorsCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "TreatmentFactorsCostPanel": {
       "name": "TreatmentFactorsCostPanel",
       "type": "panel",
@@ -2436,8 +2479,7 @@
       "collect": false,
       "path": [
         "TREATMENT_FACTORS-page",
-        "TreatmentFactorsCard1Panel",
-        "TreatmentFactorsDecisionPanel"
+        "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
       "title": "How have financial considerations factored into your decision?",
@@ -2450,8 +2492,7 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
-        "TreatmentFactorsCard1Panel",
-        "TreatmentFactorsDecisionPanel",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsCostPanel"
       ],
       "hasTitle": true,
@@ -2466,25 +2507,13 @@
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
-        "TreatmentFactorsCard1Panel",
-        "TreatmentFactorsDecisionPanel",
+        "TreatmentFactorsCard2Panel",
         "TreatmentFactorsCostPanel"
       ],
       "hasTitle": true,
       "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
       "hasVisibleIf": false,
       "isRequired": true
-    },
-    "TreatmentFactorsCard2Panel": {
-      "name": "TreatmentFactorsCard2Panel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "TREATMENT_FACTORS-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
     },
     "TreatmentFactorsStagePanel": {
       "name": "TreatmentFactorsStagePanel",
@@ -2496,7 +2525,7 @@
         "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
-      "title": "How has the state of {CmpnName}'s LP/GOLPP factored into your decision?",
+      "title": "How has the stage of {CmpnName}'s LP/GOLPP factored into your decision?",
       "hasVisibleIf": false
     },
     "TreatmentFactorsStageLP": {
@@ -4157,6 +4186,19 @@
       "title": "Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).",
       "hasVisibleIf": false,
       "isRequired": false
+    },
+    "ConclusionThanksPanel": {
+      "name": "ConclusionThanksPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     }
   }
 }

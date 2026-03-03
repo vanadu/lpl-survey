@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "TreatmentStatusHeading",
-          "html": "<h3>Veterinary-Medical Procedures</h3>"
+          "html": "<h2>Veterinary-Medical Procedures</h2>"
         },
         {
           "type": "html",

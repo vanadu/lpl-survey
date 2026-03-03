@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "PrimaryVetHeading",
-          "html": "<h3>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h3>"
+          "html": "<h2>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h2>"
         },
         {
           "type": "html",

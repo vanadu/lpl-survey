@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "PrimaryDurationHeading",
-          "html": "<h3>Duration of care by primary veterinarians for LP/GOLPP symptoms</h3>"
+          "html": "<h2>Duration of care by primary veterinarians for LP/GOLPP symptoms</h2>"
         },
         {
           "type": "html",

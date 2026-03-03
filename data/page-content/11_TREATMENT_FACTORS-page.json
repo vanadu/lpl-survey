@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "TreatmentFactorsHeading",
-          "html": "<h3>Factors that have influenced your LP/GOLPP decisions</h3>"
+          "html": "<h2>Factors that have influenced your LP/GOLPP decisions</h2>"
         },
         {
           "type": "html",
@@ -66,42 +66,8 @@
                 }
               ],
               "showOtherItem": false
-            },
-            {
-              "type": "panel",
-              "name": "TreatmentFactorsCostPanel",
-              "title": "How have financial considerations factored into your decision?", 
-              "elements": [
-                {
-                  "type": "rating",
-                  "name": "TreatmentFactorsCost",
-                  "title": "Cost of surgical/stent procedure:",
-                  "description": "1 = not a factor, 5 = deciding factor",
-                  "isRequired": true,
-                  "rateValues": [
-                    { "value": 1, "text": "1" },
-                    { "value": 2, "text": "2" },
-                    { "value": 3, "text": "3" },
-                    { "value": 4, "text": "4" },
-                    { "value": 5, "text": "5" }
-                  ]
-                },
-                {
-                  "type": "rating",
-                  "name": "TreatmentFactorsCostComplications",
-                  "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
-                  "description": "1 = not a factor, 5 = deciding factor",
-                  "isRequired": true,
-                  "rateValues": [
-                    { "value": 1, "text": "1" },
-                    { "value": 2, "text": "2" },
-                    { "value": 3, "text": "3" },
-                    { "value": 4, "text": "4" },
-                    { "value": 5, "text": "5" }
-                  ]
-                }
-              ]
             }
+
           ]
         }
       ]
@@ -111,11 +77,46 @@
       "type": "panel",
       "name": "TreatmentFactorsCard2Panel",
       "elements": [
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsCostPanel",
+          "title": "How have financial considerations factored into your decision?", 
+          "elements": [
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsCost",
+              "title": "Cost of surgical/stent procedure:",
+              "description": "1 = not a factor, 5 = deciding factor",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsCostComplications",
+              "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
+              "description": "1 = not a factor, 5 = deciding factor",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
 
         {
           "type": "panel",
           "name": "TreatmentFactorsStagePanel",
-          "title": "How has the state of {CmpnName}'s LP/GOLPP factored into your decision?",
+          "title": "How has the stage of {CmpnName}'s LP/GOLPP factored into your decision?",
           "elements": [
           {
             "type": "rating",

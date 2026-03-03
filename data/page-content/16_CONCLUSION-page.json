@@ -452,9 +452,19 @@
               "name": "ConclusionDifferentChoices",
               "title": "Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).",
               "isRequired": false
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionThanksPanel",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "ConclusionThanksHead",
+                  "html": "<div class='conclusion-thanks-head-container'><h2 class='conclusion-thanks-title-heading'>LP/GOLPP Survey 2026</h2><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><h3 class='conclusion-thanks-title-subheading'>Thank You For Taking The Survey!</h3><p class='conclusion-thanks-note-mobile'>Please select the checkbox to complete and submit.</p><p class='conclusion-thanks-note'>Please click the <b>Complete</b> button to submit your responses.</p></div>"
+                }
+              ]
             }
           ]
-
         }
       ]
     }

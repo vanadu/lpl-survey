@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "IntubationHistoryHeading",
-          "html": "<h3>Intubation History</h3>"
+          "html": "<h2>Intubation History</h2>"
         },
         {
           "type": "html",
@@ -16,33 +16,35 @@
           "html": "<p>This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>"
         },
         {
-          "type": "radiogroup",
-          "name": "IntubationHistoryWasIntubated",
-          "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
-          "choices": [
-            {
-              "value": "YES",
-              "text": "Yes"
-            },
-            {
-              "value": "NO",
-              "text": "No"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Not sure"
-            }
-          ]
-        },
-        {
           "type": "panel",
           "name": "IntubationHistoryDetails",
-          "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
           "elements": [
+            {
+              "type": "radiogroup",
+              "name": "IntubationHistoryWasIntubated",
+              "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Not sure"
+                }
+              ]
+            },
             {
               "type": "checkbox",
               "name": "IntubationHistoryReason",
               "title": "For what reason or reasons was {CmpnName} intubated prior to the first LP symptoms appearing?",
+              "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
+              "isRequired": true,
               "choices": [
                   {
                     "value": "TEETH_CLEANING",
@@ -74,6 +76,7 @@
               "type": "boolean",
               "name": "IntubationHistoryConcerns",
               "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
+              "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
               "swapOrder": true,
               "isRequired": true
             },
@@ -81,7 +84,7 @@
               "type": "checkbox",
               "name": "IntubationHistorySymptoms",
               "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
-              "visibleIf": "{IntubationHistoryConcerns} = true",
+              "visibleIf": "{IntubationHistoryWasIntubated} = 'YES' && {IntubationHistoryConcerns} = true",
               "choices": [
                 {
                   "value": "COUGHING",

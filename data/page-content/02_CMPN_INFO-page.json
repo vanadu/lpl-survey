@@ -9,7 +9,7 @@
         {
           "type": "html",
           "name": "CmpnInfoHeading",
-          "html": "<h3>About your LP/GOLPP companion<h3>"
+          "html": "<h2>About your LP/GOLPP companion<h2>"
         },
         {
           "type": "html",
