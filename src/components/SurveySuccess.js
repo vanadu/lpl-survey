@@ -20,29 +20,53 @@ const SurveySuccess = () => {
     return () => clearTimeout(t);
   }, []);
 
+      // !VA Before CSS retooling
+    // <div className="success-container-wrap">
+    //   <div className="success-container success-stage">
+
+    //     <div className={`success-spinner ${phase === "done" ? "fadeOut" : ""}`}>
+    //       <div className="spinner-object" />
+    //     </div>
+
+    //     <div className={`success-content ${phase === "done" ? "fadeIn" : ""}`}>
+    //       <h1 className="success-head">Your survey was submitted successfully!</h1>
+    //       <Link href='/' className='link-dark'>
+    //           <Image 
+    //           src={logo} 
+    //           className="success-logo" alt="LarParLife Logo" 
+    //         />
+    //       </Link>
+    //       <p className="success-text">Thank you for taking the survey.</p>
+    //     </div>
+
+    //   </div>
+    // </div>
+
+
+
+
 
   return (
     <>
-      <div className="success-container-wrap">
-        <div className="success-container success-stage">
+      <section className="section">
+        <div className="page">
+          <div className="success-container-wrap">
+            <div className="success-container success-stage">
+              <div className={`success-spinner ${phase === "done" ? "fadeOut" : ""}`}>
+                <div className="spinner-object" />
+              </div>
 
-          <div className={`success-spinner ${phase === "done" ? "fadeOut" : ""}`}>
-            <div className="spinner-object" />
+              <div className={`success-content ${phase === "done" ? "fadeIn" : ""}`}>
+                <h1 className="success-head">Your survey was submitted successfully!</h1>
+                <Link href="/" className="link-dark">
+                  <Image src={logo} className="success-logo" alt="LarParLife Logo" />
+                </Link>
+                <p className="success-text">Thank you for taking the survey.</p>
+              </div>
+            </div>
           </div>
-
-          <div className={`success-content ${phase === "done" ? "fadeIn" : ""}`}>
-            <h1 className="success-head">Your survey was submitted successfully!</h1>
-            <Link href='/' className='link-dark'>
-                <Image 
-                src={logo} 
-                className="success-logo" alt="LarParLife Logo" 
-              />
-            </Link>
-            <p className="success-text">Thank you for taking the survey.</p>
-          </div>
-
         </div>
-      </div>
+      </section>
     </>
 
   );

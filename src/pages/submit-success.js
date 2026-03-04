@@ -16,11 +16,8 @@ const SuccessPage = () => {
   return (
     <>  
       <section className="section">
-        <div className="section_content">
-          {/* <SurveyDevMenu /> */}
-
+        <div className="page section__inner">
           <SurveySuccess />
-
         </div>
       </section>
     

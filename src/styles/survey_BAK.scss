@@ -1022,56 +1022,6 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 }
 
 
-.success-container-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-// !VA IMPORTANT! Apply background to container without affecting the container content
-.success-container {
-  position: relative; // important for overlay positioning
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 1000px;
-  height: 600px;
-  margin: 40px;
-  padding-bottom: 150px;
-  opacity: 0;
-  animation: fadeInContainer 0.25s ease forwards;
-}
-
-@keyframes fadeInContainer {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.success-container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(0,0,0,0) 55%,
-      rgba(0,0,0,0.35) 100%
-    ),
-     linear-gradient(
-      rgba(196,196,196,0.8),
-      rgba(196,196,196,0.8)
-    ),
-    url("/img-miss-b-kitchen-cropped.jpg") center / cover no-repeat;
-
-  filter: grayscale(100%) contrast(1.2);
-}
-
 // !VA Content styles
 // !VA This is the H1 that matches with the title tag
 .success-head {
@@ -1177,6 +1127,144 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   height: 300px;
 }
 
+
+
+/* success.scss */
+
+/* Center the stage inside the .page container */
+.success-container-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* The 1000x600 stage (responsive) */
+.success-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* responsive "1000x600" */
+  width: min(1000px, 100%);
+  aspect-ratio: 1000 / 600;      /* keeps the look on smaller screens */
+  height: auto;
+
+  /* spacing inside the stage */
+  padding: clamp(16px, 2vw, 28px);
+  padding-bottom: clamp(72px, 12vw, 150px);
+
+  margin: clamp(16px, 3vw, 40px) 0;
+
+  opacity: 0;
+  animation: fadeInContainer 0.25s ease forwards;
+
+  border-radius: 12px;
+  overflow: hidden;              /* important so bg doesn't spill past radius */
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+@keyframes fadeInContainer {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Background overlay stays behind content */
+.success-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0,0,0,0) 55%,
+      rgba(0,0,0,0.35) 100%
+    ),
+    linear-gradient(
+      rgba(196,196,196,0.8),
+      rgba(196,196,196,0.8)
+    ),
+    url("/img-miss-b-kitchen-cropped.jpg") center / cover no-repeat;
+
+  filter: grayscale(100%) contrast(1.2);
+}
+
+/* Ensure content sits above ::before */
+.success-stage,
+.success-spinner,
+.success-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Spinner overlay fills the stage */
+.success-spinner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+.success-spinner.fadeOut {
+  opacity: 0;
+}
+
+/* Content fades in */
+.success-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  text-align: center;
+}
+
+.success-content.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Spinner */
+.spinner-object {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-object::after {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border: 4px solid #ddd;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  aspect-ratio: 1 / 1;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
 // !VA Survey Submission Spinner
 .success-spinnerWrap {
   position: relative;
@@ -1212,80 +1300,6 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   opacity: 0.35;
 }
 
-// !VA Spinner and Fades
-// ------------------------
-
-.success-stage {
-  position: relative;
-}
-
-/* spinner stays centered */
-// !VA Deprecated
-.success-spinner {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.5s ease;
-}
-
-.success-spinner.fadeOut {
-  opacity: 0;
-}
-
-/* content fades in */
-.success-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // padding-bottom: 150px;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.success-content.fadeIn {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Content starts hidden */
-.success-contentWrap {
-  opacity: 0;
-  transform: translateY(6px);
-}
-
-/* When done, fade content in */
-.success-contentWrap.isVisible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.spinner-object {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.spinner-object::after {
-  content: "";
-  width: 42px;
-  height: 42px;
-  border: 4px solid #ddd;
-  border-top-color: #333;
-  border-radius: 50%;
-  animation: spin 0.7s linear infinite;
-  aspect-ratio: 1 / 1;   // modern browsers
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
 
 
 // !VA FOUC Fix and Survey Page Fade-in

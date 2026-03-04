@@ -19,26 +19,33 @@
 html{scroll-behavior: smooth;}
 
 // !VA Section styles
+// .section {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: flex-start;
+//   width: 100%;
+//   background: $content_bg_color;
+// }
+
+// .section_content {
+//   display: block;
+//   margin: 0 auto;
+//   width: 100%;
+//   background: $content_bg_color;
+// }
+
+
 .section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
-  // padding-bottom: .5rem;
-  background: $content_bg_color;
+  background: var(--content-bg);
 }
 
-// !VA In Home, section_content lives on the $primary_color background set in .section. None of the other pages have this two-toned scheme, at least for now. 
-.section_content {
-  display: block;
-  margin: 0 auto;
-  // !VA On the Home page, we don't want rounded edges or a 'card' for the content sections, so close up all the spaces 
-  width: 100%;
-  // margin-top: .25rem;
-  // padding:  0 0 .5rem;
-  background: $content_bg_color;
+/* optional if you want section-specific tweaks */
+.section__inner {
+  /* inherits max-width/padding from .page */
 }
+
 
 
 
@@ -120,4 +127,60 @@ display: none;
     display: block;
   }
   display: none;
+}
+
+
+/* home.css */
+
+.home-hero h1 {
+  margin: 0 0 var(--s-2) 0;
+  font-size: var(--text-h2);
+  line-height: var(--lh-tight);
+}
+
+.home-hero .slug {
+  margin: 0 0 var(--s-5) 0;
+  color: var(--c-slug);
+  font-size: var(--text-small);
+  letter-spacing: 0.02em;
+}
+
+.start-survey-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+
+.start-survey-button {
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #120c02;
+  border-color: transparent;
+}
+
+.btn.secondary {
+  background: transparent;
+  border-color: rgb(255 255 255 / 0.22);
+  color: var(--fg);
+}
+
+.home-body {
+  display: grid;
+  gap: var(--s-5);
+  margin-top: var(--s-6);
+}
+
+.home-body h2 {
+  margin: 0 0 var(--s-3) 0;
+  font-size: var(--text-h3);
+  line-height: var(--lh-tight);
+}
+
+.home-body p {
+  margin: 0;
+  color: rgb(232 238 246 / 0.92);
 }

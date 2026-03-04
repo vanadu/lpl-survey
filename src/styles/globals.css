@@ -9,37 +9,39 @@
   --secondarycolor: #8DD1FF; */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-    
-    /* Separator */
-    --primary-glow: radial-gradient(rgba(1, 65, 255, .4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+
+:root {
+
+  --page-max: 1100px;
+  --page-x: clamp(16px, 3vw, 48px);
+  --page-y: clamp(24px, 4vw, 64px);
+
+  --content-bg: #E1E1E1;
+  --content-text: #212121;
+
+
+
+  /* From your SCSS palette */
+  --c-primary: #DAA520;
+  --c-secondary: #2055DA;
+  --c-content-bg: #E1E1E1;
+  --c-content-text: #212121;
+  --c-slug: #6B6B6B;
+  --c-showmore: #8E000B;
+  --c-link: #896400;
+
+  /* Map to the semantic tokens used by the base system */
+  --bg: #0b0f14;               /* keep your site bg dark if you want */
+  --fg: #e8eef6;
+
+  --surface-1: rgb(255 255 255 / 0.06);
+  --surface-2: rgb(255 255 255 / 0.09);
+  --border: rgb(255 255 255 / 0.12);
+
+  --accent: var(--c-primary);
+  --accent-2: var(--c-secondary);
 }
+
 
 * {
   box-sizing: border-box;
@@ -64,6 +66,63 @@ body {
 
 
 
+:root {
+  --page-max: 1100px;
+  --page-x: clamp(16px, 3vw, 48px);
+  --page-y: clamp(24px, 4vw, 64px);
+  /* NEW: width tiers */
+  --wrap-max: 1200px;        /* overall layout width (optional) */
+  --content-max: 1100px;     /* your main content width */
+  --prose-max: 72ch;         /* ideal reading width for paragraphs */
+
+
+
+
+
+
+  --content-bg: #E1E1E1;
+  --content-text: #212121;
+}
+
+.site-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* This becomes your universal “page canvas” */
+.content {
+  flex: 1;
+  width: 100%;
+  background: var(--content-bg);
+  color: var(--content-text);
+}
+
+/* The universal inner container */
+.page {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--page-y) var(--page-x);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Wider when you want media-heavy layouts */
+.page--wide {
+  max-width: var(--wrap-max);
+}
+
+/* Narrow for long-form text readability */
+.page--prose {
+  max-width: var(--prose-max);
+}
+
+/* Nice pattern: keep container wide, but constrain text blocks */
+.prose {
+  max-width: var(--prose-max);
+}
+
+
 
 /* VA! Removed, from next.js default */
 
@@ -82,10 +141,5 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
 
 

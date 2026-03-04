@@ -16,20 +16,6 @@
 
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // !VA Background color
 .sd-container-modern {
   background: $home_bg_color;
@@ -1156,6 +1142,93 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   filter: grayscale(100%) contrast(1.2);
 }
 
+
+// !VA Spinner and Fades
+// ------------------------
+
+.success-stage {
+  position: relative;
+}
+
+/* spinner stays centered */
+// !VA Deprecated
+.success-spinner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+.success-spinner.fadeOut {
+  opacity: 0;
+}
+
+/* content fades in */
+.success-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding-bottom: 150px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.success-content.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// !VA I think this is deprecated - contentWrap not found in any component
+// /* Content starts hidden */
+// .success-contentWrap {
+//   opacity: 0;
+//   transform: translateY(6px);
+// }
+
+// /* When done, fade content in */
+// .success-contentWrap.isVisible {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
+
+.spinner-object {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-object::after {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border: 4px solid #ddd;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  aspect-ratio: 1 / 1;   // modern browsers
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
 // !VA Content styles
 // !VA This is the H1 that matches with the title tag
 .success-head {
@@ -1261,6 +1334,12 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   height: 300px;
 }
 
+
+
+
+
+
+
 // !VA Survey Submission Spinner
 .success-spinnerWrap {
   position: relative;
@@ -1296,80 +1375,11 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   opacity: 0.35;
 }
 
-// !VA Spinner and Fades
-// ------------------------
 
-.success-stage {
-  position: relative;
-}
 
-/* spinner stays centered */
-// !VA Deprecated
-.success-spinner {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.5s ease;
-}
 
-.success-spinner.fadeOut {
-  opacity: 0;
-}
 
-/* content fades in */
-.success-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // padding-bottom: 150px;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
 
-.success-content.fadeIn {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Content starts hidden */
-.success-contentWrap {
-  opacity: 0;
-  transform: translateY(6px);
-}
-
-/* When done, fade content in */
-.success-contentWrap.isVisible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.spinner-object {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.spinner-object::after {
-  content: "";
-  width: 42px;
-  height: 42px;
-  border: 4px solid #ddd;
-  border-top-color: #333;
-  border-radius: 50%;
-  animation: spin 0.7s linear infinite;
-  aspect-ratio: 1 / 1;   // modern browsers
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
 
 
 // !VA FOUC Fix and Survey Page Fade-in
