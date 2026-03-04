@@ -12,6 +12,7 @@
 
 :root {
 
+  /* !VA Page/Content size   */ 
   --page-max: 1100px;
   --page-x: clamp(16px, 3vw, 48px);
   --page-y: clamp(24px, 4vw, 64px);
@@ -24,26 +25,39 @@
 
 
 
-
+  /* !VA  Fonts Family */
   --font-primary: var(--opensans-font), "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
   --font-secondary: var(--oswald-font), "Oswald", "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+  /* !VA  Font Size  */
+  /* VA!  Base font*/
+  --font-size-base: 1.125rem;   /* 16px normally */
+  /* VA!  Font size variants*/
+  --font-size-xs: calc(var(--font-size-base) * 0.875);   /* 14px */
+  --font-size-sm: calc(var(--font-size-base) * 0.9375);  /* 15px */
+  --font-size-md: var(--font-size-base);                 /* 16px */
+  --font-size-lg: calc(var(--font-size-base) * 1.125);   /* 18px */
+  --font-size-xl: calc(var(--font-size-base) * 1.25);    /* 20px */
+  --font-size-2xl: calc(var(--font-size-base) * 1.5);    /* 24px */
+  --font-size-3xl: calc(var(--font-size-base) * 2);      /* 32px */
+  --font-size-4xl: calc(var(--font-size-base) * 2.5);    /* 40px */
+
+  /* VA! Line height - unitless*/
+    --line-tight: 1.15;
+    --line-heading: 1.25;
+    --line-body: 1.5;
+    --line-loose: 1.7;
 
 
-
-
+  /* !VA  Backgrounds  */
   --content-bg: #E1E1E1;
   --content-text: #212121;
 
 
 
-  /* From your SCSS palette */
+  /* !VA  Colors  */
   --c-primary: #DAA520;
   --c-secondary: #2055DA;
   --c-content-bg: #E1E1E1;
-  
-
-
   --c-content-text: #212121;
   --c-slug: #6B6B6B;
   --c-showmore: #8E000B;
@@ -52,13 +66,28 @@
   /* Map to the semantic tokens used by the base system */
   --bg: #0b0f14;               /* keep your site bg dark if you want */
   --fg: #e8eef6;
-
+  /* !VA  I don't know what this is  */
   --surface-1: rgb(255 255 255 / 0.06);
   --surface-2: rgb(255 255 255 / 0.09);
   --border: rgb(255 255 255 / 0.12);
 
   --accent: var(--c-primary);
   --accent-2: var(--c-secondary);
+
+  /* !VA base spacing unit */
+  --space-unit: 8px;
+
+  /* !VA spacing scale */
+  --s-1: calc(var(--space-unit) * 0.5);  /* 4px */
+  --s-2: calc(var(--space-unit) * 1);    /* 8px */
+  --s-3: calc(var(--space-unit) * 1.5);  /* 12px */
+  --s-4: calc(var(--space-unit) * 2);    /* 16px */
+  --s-5: calc(var(--space-unit) * 3);    /* 24px */
+  --s-6: calc(var(--space-unit) * 4);    /* 32px */
+  --s-7: calc(var(--space-unit) * 6);    /* 48px */
+  --s-8: calc(var(--space-unit) * 8);    /* 64px */
+
+
 }
 
 
@@ -83,11 +112,6 @@ body {
   /* font-family: Arial, Helvetica, sans-serif; */
 }
 
-
-
-:root {
-
-}
 
 .site-wrap {
   min-height: 100vh;
@@ -127,19 +151,6 @@ body {
   max-width: var(--prose-max);
 }
 
-
-
-/* VA! Removed, from next.js default */
-
-/* body {
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  color: rgb(var(--foreground-rgb));
-} */
 
 a {
   color: inherit;

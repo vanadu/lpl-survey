@@ -18,24 +18,6 @@
 // !VA I can't remember what this is for.
 html{scroll-behavior: smooth;}
 
-// !VA Section styles
-// .section {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: flex-start;
-//   width: 100%;
-//   background: $content_bg_color;
-// }
-
-// .section_content {
-//   display: block;
-//   margin: 0 auto;
-//   width: 100%;
-//   background: $content_bg_color;
-// }
-
-
 .section {
   width: 100%;
   background: var(--content-bg);
@@ -45,6 +27,12 @@ html{scroll-behavior: smooth;}
 .section__inner {
   /* inherits max-width/padding from .page */
 }
+
+
+
+
+
+
 
 
 
@@ -130,18 +118,22 @@ display: none;
 }
 
 
-/* home.css */
 
-.home-hero h1 {
+/* !VA  Home/Browse Content Styling - keep this in globals.scss since it's not survey-specific. Remember that the page layout is in globals.css*/
+
+
+.home-head h1 {
+  font-family: var(--font-secondary);
   margin: 0 0 var(--s-2) 0;
-  font-size: var(--text-h2);
+  // font-size: var(--text-h2);
   line-height: var(--lh-tight);
 }
 
-.home-hero .slug {
+.home-head .slug {
   margin: 0 0 var(--s-5) 0;
   color: var(--c-slug);
-  font-size: var(--text-small);
+  font-size: var(--font-size-2xl);
+  font-variant: small-caps;
   letter-spacing: 0.02em;
 }
 
@@ -149,6 +141,7 @@ display: none;
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-3);
+  background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 .start-survey-button {
@@ -176,11 +169,14 @@ display: none;
 
 .home-body h2 {
   margin: 0 0 var(--s-3) 0;
-  font-size: var(--text-h3);
-  line-height: var(--lh-tight);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-heading);
 }
 
 .home-body p {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-body);
+  color: var(--c-content-text);
   margin: 0;
-  color: rgb(232 238 246 / 0.92);
 }
