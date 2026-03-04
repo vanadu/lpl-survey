@@ -22,8 +22,8 @@ const Home = () => {
   return (
     <>
       <NextSeo 
-        title="Lar Par: 21st Century Guide to Laryngeal Paralysis in Dogs"
-        description="Love your dog? Learn all about laryngeal paralysis symptoms, surgery, stent and treatment alternatives."
+        title="LarPar/GOLPP Survey 2026 - Laryngeal Paralysis in Dogs"
+        description="Survey about laryngeal paralysis symptoms, surgery, stent and treatment alternatives."
         canonical="https://larparlife.com"
         />
       <section className="section">
