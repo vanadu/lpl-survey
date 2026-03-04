@@ -14,7 +14,8 @@
     "build-format": "node scripts/schema-to-format-map.js",
     "build-registry-generated": "node scripts/generate-registry.js --in data/master-survey.json --out helpers/registry.generated.json",
     "build-registry-manual-init": "node scripts/init-registry-manual.js --generated helpers/registry.generated.json --manual helpers/registry.manual.json",
-    "build-registry-all": "npm run build:survey && npm run build:registry:manual:init"
+    "build-registry-all": "npm run build:survey && npm run build:registry:manual:init",
+    "refresh-survey": "node scripts/refresh-survey.mjs"
   },
   "dependencies": {
     "@analytics/google-tag-manager": "^0.5.3",
@@ -54,7 +55,8 @@
     "stylelint-config-standard": "^32.0.0",
     "stylelint-config-standard-scss": "^8.0.0",
     "stylelint-order": "^6.0.3",
-    "stylelint-prettier": "^3.0.0"
+    "stylelint-prettier": "^3.0.0",
+    "tree-kill": "^1.2.2"
   },
   "stylelint": {
     "extends": "@company/stylelint-config"
