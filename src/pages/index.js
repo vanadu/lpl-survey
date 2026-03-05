@@ -44,14 +44,14 @@ const Home = () => {
         <section class="home-body">
           <article class="card">
             <p>
-              Did you know that the suicide rate among veterinarians is four times that of the general population? Veterinarians have an impossible task &mdash; helping patients who can&lsquo;t tell them where it hurts. Euthanasia fatigue, high student debt, high burnout rates, difficult clients, and access to lethal medication are all cited as contributing factors. Trying to meet the unrealistic expectations of clients who are emotionally dependent on their companion animals for support is a Sisyphean task, to put it mildly.
+              Did you know that the suicide rate among veterinarians is four times that of the general population? Veterinarians have an impossible task &mdash; helping patients who can&lsquo;t tell them where it hurts. Euthanasia fatigue, high student debt, high burnout rates, difficult clients with unrealistic expectations, and access to lethal medication are all cited as contributing factors.
             </p>
           </article>
 
           <article class="card">
             <h2>What does that have to do with this survey?</h2>
             <p>
-              Veterinary medicine produces more new research and continuing education than even the most committed vet can keep up with. Canine (or equine or feline) laryngeal paralysis have little in the way of empirical research and established protocols, so veterinarians often have to  &lsquo;wing it&rsquo; based on general veterinary-medical principles and professional judgement.  A well-designed survey can provide useful practical insights about the course of a disease over time based on the experience of people who are on the front lines in the trial-and-error battle against LP/GOLPP &mdash; people like you and me.
+              Veterinary medicine produces more new research than even the most committed vet can keep up with. Canine (or equine or feline) laryngeal paralysis have little in the way of established protocols, so veterinarians often have to make judgement calls based on general veterinary-medical principles. A well-designed survey can provide useful practical insights about the course of a disease over time based on the experience of people who are on the front lines in the trial-and-error battle against LP/GOLPP &mdash; people like you and me.
             </p>
           </article>
 
