@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-03-06T15:46:57.300Z",
+    "builtAt": "2026-03-06T17:08:33.229Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -1850,7 +1850,7 @@
     },
     "TreatmentStatusTiebackCount": {
       "name": "TreatmentStatusTiebackCount",
-      "type": "radiogroup",
+      "type": "boolean",
       "role": "question",
       "collect": true,
       "path": [
@@ -1897,7 +1897,7 @@
     },
     "TreatmentStatusTiebackComplications": {
       "name": "TreatmentStatusTiebackComplications",
-      "type": "radiogroup",
+      "type": "boolean",
       "role": "question",
       "collect": true,
       "path": [
@@ -2045,7 +2045,7 @@
     },
     "TreatmentStatusStentDidMigrate": {
       "name": "TreatmentStatusStentDidMigrate",
-      "type": "radiogroup",
+      "type": "boolean",
       "role": "question",
       "collect": true,
       "path": [
@@ -2061,7 +2061,7 @@
     },
     "TreatmentStatusStentReplaced": {
       "name": "TreatmentStatusStentReplaced",
-      "type": "radiogroup",
+      "type": "boolean",
       "role": "question",
       "collect": true,
       "path": [
@@ -2109,7 +2109,7 @@
     },
     "TreatmentStatusStentComplications": {
       "name": "TreatmentStatusStentComplications",
-      "type": "radiogroup",
+      "type": "boolean",
       "role": "question",
       "collect": true,
       "path": [

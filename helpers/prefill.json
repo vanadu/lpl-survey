@@ -124,7 +124,7 @@
 
   "TreatmentStatusTiebackEmergency": true,
   "TreatmentStatusTiebackWait": "THREE_SIX",
-  "TreatmentStatusTiebackCount": "MORE_THAN_ONCE",
+  "TreatmentStatusTiebackCount": true,
   "TreatmentStatusTiebackOnceCost": "4001_5500",
   "TreatmentStatusTiebackMultipleCost": "5501_7000",
   "TreatmentStatusTiebackComplications": true,

@@ -329,6 +329,8 @@
                   "type": "boolean",
                   "name": "UserInfoContactOK",
                   "title": "May we contact you to talk more about your LP experience?",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
                   "swapOrder": true,
                   "isRequired": true
                 }
@@ -712,6 +714,8 @@
                   "name": "CmpnInfoHasInsurance",
                   "required": true,
                   "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
                   "swapOrder": true
                 }
               ]
@@ -745,6 +749,8 @@
                   "type": "boolean",
                   "name": "InfoSourcesPriorKnowledge",
                   "title": "Had you ever heard of LP before {CmpnName} got it?",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
                   "swapOrder": true,
                   "isRequired": true
                 },
@@ -987,6 +993,8 @@
                   "name": "IntubationHistoryConcerns",
                   "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
                   "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
                   "swapOrder": true,
                   "isRequired": true
                 },
@@ -1432,7 +1440,7 @@
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "EarlyOtherConditions",
+                  "name": "EarlySymptomsOtherConditions",
                   "title": "When {CmpnName} first started showing symptoms of LP, did {cvGenderSubjectPronoun} have any other health conditions?",
                   "isRequired": true,
                   "choices": [
@@ -1456,7 +1464,7 @@
                   "name": "EarlSymptomsOtherConditionsType",
                   "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
                   "isRequred": true,
-                  "visibleIf": "{EarlyOtherConditions} = YES",
+                  "visibleIf": "{EarlySymptomsOtherConditions} = YES",
                   "choices": [
                     {
                       "value": "GERD",
@@ -1766,6 +1774,8 @@
                   "name": "PrimaryVetRefluxInitiative",
                   "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotadine) or Prilosec (omeprazole) on your own intiative without a prescription or recommendation from your primary vet?",
                   "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
                   "isRequired": true,
                   "swapOrder": true
                 }
@@ -1817,6 +1827,8 @@
                   "type": "boolean",
                   "name": "PrimaryVetInfo",
                   "title": "Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect {CmpnName}?",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
                   "swapOrder": true,
                   "isRequired": true
                 },
@@ -2297,6 +2309,8 @@
                   "type": "boolean",
                   "name": "TreatmentStatusTiebackEmergency",
                   "title": "Was emergency tieback performed on {CmpnName} after a life-threatening breathing emergency?",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
                   "swapOrder": true,
                   "isRequired": true
                 },
@@ -2329,21 +2343,12 @@
                   "required": true
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusTiebackCount",
                   "title": "How many times did {CmpnName} undergo tieback (UAL) surgery?",
                   "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "ONCE",
-                      "text": "Once"
-                    },
-                    {
-                      "value": "MORE_THAN_ONCE",
-                      "text": "More than once"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "labelTrue": "More than once",
+                  "labelFalse": "Once"
                 },
                 {
                   "type": "dropdown",
@@ -2416,21 +2421,12 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusTiebackComplications",
                   "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
+                  "isRequired": true
                 },
                 {
                   "type": "dropdown",
@@ -2628,39 +2624,22 @@
                   ]
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusStentDidMigrate",
                   "title": "After the initial implant procedure, did {CmpnName} cough out the stent or did it migrate out of position?",
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusStentType} = 'SILICONE' || {TreatmentStatusStentType} = 'NITINOL_MESH'",
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "labelTrue": "Yes",
+                  "labelFalse": "No"
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusStentReplaced",
                   "title": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ]
+                  "labelTrue": "Yes",
+                  "labelFalse": "No"
                 },
                 {
                   "type": "dropdown",
@@ -2733,22 +2712,13 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusStentComplications",
                   "title": "Were there post-operative complications that required overnight inpatient care for {CmpnName}?",
                   "visibleIf": "{TreatmentStatusStentType} notempty",
                   "isRequired": true,
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "labelTrue": "Yes",
+                  "labelFalse": "No"
                 },
                 {
                   "type": "dropdown",
@@ -2824,6 +2794,8 @@
                   "name": "TreatmentStatusArytenoidectomyLaser",
                   "title": "Was the partial arytenoidectomy performed with a laser?",
                   "description": "This technique is called 'ablation'.",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
                   "swapOrder": true,
                   "isRequired": true
                 },
@@ -2904,17 +2876,8 @@
                   "name": "TreatmentStatusArytenoidectomyComplications",
                   "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
                   "isRequired": true,
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "labelTrue": "Yes",
+                  "labelFalse": "No"
                 },
                 {
                   "type": "dropdown",
@@ -3063,17 +3026,8 @@
                   "name": "TreatmentStatusVentrilocordectomyComplications",
                   "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
                   "isRequired": true,
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "labelTrue": "Yes",
+                  "labelFalse": "No"
                 },
                 {
                   "type": "dropdown",
@@ -5790,6 +5744,8 @@
                   "type": "boolean",
                   "name": "ConclusionOtherConditionsNew",
                   "title": "Did {CmpnName} develop any new conditions during {cvGenderObjectPronoun} LP/GOLPP journey that {cvGenderSubjectPronoun} didn't have before?",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
                   "swapOrder": true,
                   "isRequired": true
                 },
