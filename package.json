@@ -15,7 +15,8 @@
     "build-registry-generated": "node scripts/generate-registry.js --in data/master-survey.json --out helpers/registry.generated.json",
     "build-registry-manual-init": "node scripts/init-registry-manual.js --generated helpers/registry.generated.json --manual helpers/registry.manual.json",
     "build-registry-all": "npm run build:survey && npm run build:registry:manual:init",
-    "refresh-survey": "node scripts/refresh-survey.mjs"
+    "refresh-survey": "node scripts/refresh-survey.mjs",
+    "generate-browse": "node scripts/generate-browse.js"
   },
   "dependencies": {
     "@analytics/google-tag-manager": "^0.5.3",

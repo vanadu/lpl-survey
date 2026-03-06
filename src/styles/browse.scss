@@ -1,0 +1,80 @@
+.browse-title {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-heading);
+  margin-bottom: var(--s-6);
+}
+
+.browse-section {
+  margin-bottom: var(--s-7);
+}
+
+.browse-section__title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--s-5);
+}
+
+.browse-question {
+  margin-bottom: var(--s-6);
+}
+
+.browse-question__title {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-heading);
+  margin-bottom: var(--s-2);
+}
+
+.browse-question__desc {
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--s-3);
+}
+
+.browse-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  opacity: 0.6;
+}
+
+.browse-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.browse-placeholder {
+  opacity: 0.6;
+  border-bottom: 2px solid var(--border);
+  width: 300px;
+  height: 1.5rem;
+}
+
+.browse-icon {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--border);
+}
+
+.browse-icon--radio {
+  border-radius: 50%;
+}
+
+.browse-icon--checkbox {
+  border-radius: 2px;
+}
+
+.browse-icon--star {
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%,
+    68% 57%, 79% 91%, 50% 70%,
+    21% 91%, 32% 57%, 2% 35%,
+    39% 35%
+  );
+}
+
+.browse-icon--text {
+  width: 24px;
+  height: 2px;
+  border: none;
+  background: var(--border);
+}

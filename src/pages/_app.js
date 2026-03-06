@@ -18,7 +18,8 @@ import Layout from '../components/Layout'
 
 // !VA Import default global styles
 import '../styles/globals.css'
-import '../styles/globals.scss'
+import "../styles/globals.scss";
+import "../styles/browse.scss";      // ✅ global, allowed here
 import "survey-core/survey-core.css"; // import the SurveyJS stylesheet
 
 // !VA If loading a variable font, you don't need to specify the font weight
