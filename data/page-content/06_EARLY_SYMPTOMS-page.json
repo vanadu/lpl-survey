@@ -167,7 +167,7 @@
           "elements": [
             {
               "type": "radiogroup",
-              "name": "EarlyOtherConditions",
+              "name": "EarlySymptomsOtherConditions",
               "title": "When {CmpnName} first started showing symptoms of LP, did {cvGenderSubjectPronoun} have any other health conditions?",
               "isRequired": true,
               "choices": [
@@ -191,7 +191,7 @@
             "name": "EarlSymptomsOtherConditionsType",
             "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
             "isRequred": true,
-            "visibleIf": "{EarlyOtherConditions} = YES",
+            "visibleIf": "{EarlySymptomsOtherConditions} = YES",
             "choices": [
                 {
                   "value": "GERD",
