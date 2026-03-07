@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-03-06T17:08:33.229Z",
+    "builtAt": "2026-03-06T17:39:56.422Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -1706,7 +1706,7 @@
     },
     "TreatmentStatusDidHave": {
       "name": "TreatmentStatusDidHave",
-      "type": "radiogroup",
+      "type": "boolean",
       "role": "question",
       "collect": true,
       "path": [
@@ -1972,7 +1972,7 @@
     },
     "TreatmentStatusBveapComplications": {
       "name": "TreatmentStatusBveapComplications",
-      "type": "radiogroup",
+      "type": "boolean",
       "role": "question",
       "collect": true,
       "path": [
@@ -2230,7 +2230,7 @@
     },
     "TreatmentStatusArytenoidectomyComplications": {
       "name": "TreatmentStatusArytenoidectomyComplications",
-      "type": "radiogroup",
+      "type": "boolean",
       "role": "question",
       "collect": true,
       "path": [
@@ -2335,7 +2335,7 @@
     },
     "TreatmentStatusVentrilocordectomyComplications": {
       "name": "TreatmentStatusVentrilocordectomyComplications",
-      "type": "radiogroup",
+      "type": "boolean",
       "role": "question",
       "collect": true,
       "path": [

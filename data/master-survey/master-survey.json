@@ -1,470 +1,7 @@
-{
-  "calculatedValues": [
-    {
-      "type": "calculatedvalue",
-      "name": "cvTreatmentType",
-      "expression": "iif({TreatmentStatusType} contains 'TIEBACK', 'Treatment: TIEBACK', iif({TreatmentStatusType} contains 'BVEAP', 'Treatment: BVEAP', iif({TreatmentStatusType} contains 'STENT', 'Treatment: STENT', iif({TreatmentStatusType} contains 'ARYTENOIDECTOMY', 'Treatment: ARYTENOIDECTOMY', iif({TreatmentStatusType} contains 'VENTRILOCORDECTOMY', 'Treatment: VENTRILOCORDECTOMY', ''))",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvLvngCmpnAgeYearsAsMonths",
-      "expression": "{lvngCmpnInfoAgeYears} * 12",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvLvngCmpnAgeTotalMonths",
-      "expression": "{cvLvngCmpnAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvDcsdCmpnAgeYearsAsMonths",
-      "expression": "{dcsdCmpnInfoAgeYears} * 12",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvDcsdCmpnAgeTotalMonths",
-      "expression": "{cvDcsdCmpnAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvAgeInMonths",
-      "expression": "iif({LifeStatus} = true, {cvLvngCmpnAgeTotalMonths}, {cvDcsdCmpnAgeTotalMonths})",
-      "includeIntoResult": true
-    },
-    {
-      "name": "cvAgeInMonthsAtSymptomOnset",
-      "expression": "{EarlySymptomsAgeYears} * 12 + {EarlySymptomsAgeMonths}"
-    },
-    {
-      "name": "cvDurationOfSymptomsInMonths",
-      "expression": "{cvAgeInMonths} - {cvAgeInMonthsAtSymptomOnset}"
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvObserveFirstPersonPast",
-      "expression": "iif({LifeStatus} = true, 'did you observe', 'have you observed')",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvDoThirdPersonSingular",
-      "expression": "iif({LifeStatus} = true, 'did', 'does')",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvDoFirstPersonSingularInitialCap",
-      "expression": "iif({LifeStatus} = true, 'Did', 'Do')",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvGenderSubjectPronoun",
-      "expression": "iif({CmpnInfoGender} = true, 'she', 'he')",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvGenderObjectPronoun",
-      "expression": "iif({CmpnInfoGender} = true, 'her', 'his')",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvStateAdjective",
-      "expression": "iif({LifeStatus} = true, 'last', 'current')",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvEndOfLife",
-      "expression": "iif({LifeStatus} = true, 'towards the end of {genderObjectPronoun} life', 'in {genderObjectPronoun} current state of health')",
-      "includeIntoResult": true
-    },
-    {
-      "type": "calculatedvalue",
-      "name": "cvThatThis",
-      "expression": "iif({LifeStatus} = true, 'that', 'this')",
-      "includeIntoResult": true
-    }
-  ],
-  "showProgressBar": "top",
+  {
+    "showProgressBar": "top",
   "questionsOnPageMode": "questionPerPage",
   "pages": [
-    {
-      "name": "LANDING-page",
-      "elements": [
-        {
-          "type": "panel",
-          "name": "LandingCard1Panel",
-          "elements": [
-            {
-              "type": "panel",
-              "name": "LandingHeaderPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "LandingTitleHead",
-                  "html": "<div class='landing-title-head-container'><h2 class='landing-title-heading'>LP/GOLPP Survey 2026</h2><p class='landing-title-subheading'>Powered by LarParLife.org</p></div>"
-                },
-                {
-                  "type": "html",
-                  "name": "LandingVersion",
-                  "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.03.01.01</p></div></div>"
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "LandingWelcomePanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "LandingWelcomeHeading",
-                  "html": "<h2>Welcome to the LP/GOLPP&nbsp;Survey&nbsp;2026</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "LandingWelcomeText1",
-                  "html": "This survey, the first of its kind, is designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis."
-                },
-                {
-                  "type": "html",
-                  "name": "LandingWelcomeText2",
-                  "html": "Aliqua aute et est proident fugiat sunt consectetur id ipsum magna nostrud tempor magna consequat. Nostrud in est ad ea exercitation. Consequat mollit consequat quis deserunt mollit laboris exercitation nostrud cillum consequat dolor proident sint. Ex duis nisi ad excepteur cupidatat enim pariatur excepteur. Occaecat sint dolor enim incididunt commodo. Consectetur anim elit et cillum ut excepteur."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "LandingCard2Panel",
-          "elements": [
-            {
-              "type": "panel",
-              "name": "LandingPrivacyPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "LandingAboutPrivacyHeading",
-                  "html": "<h3>About your privacy and personal information</h3>"
-                },
-                {
-                  "type": "html",
-                  "name": "LandingAboutPrivacyText01",
-                  "html": "<p>We only need four pieces of information to verify survey results:</p>"
-                },
-                {
-                  "type": "html",
-                  "name": "LandingAboutPrivacyOrderedList",
-                  "html": "<ul><li class='survey-privacy-bullet-list'>Your first name</li><li class='survey-privacy-bullet-list'>Your companion animal's name</li><li class='survey-privacy-bullet-list'>The country in which you live</li><li class='survey-privacy-bullet-list'>Your email address or Facebook account name</li></ul>"
-                },
-                {
-                  "type": "html",
-                  "name": "LandingPrivacyLink",
-                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>"
-                },
-                {
-                  "type": "html",
-                  "name": "LandingAboutPrivacyText02",
-                  "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>"
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "LandingConsentPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "LandingAboutConsentHeading",
-                  "html": "<h3>About our Consent Policy</h3>"
-                },
-                {
-                  "type": "html",
-                  "name": "LandingConsentText",
-                  "html": "<p>By selecting 'Yes' below, you confirm that you agree to the terms of our Consent Policy.</p>"
-                },
-                {
-                  "type": "html",
-                  "name": "LandingConsentLink",
-                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent&nbsp;Policy</a></div>"
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "LandingConsent",
-                  "title": "Do you want to proceed with the survey in accordance with our Consent Policy?",
-                  "choices": [
-                    "Yes",
-                    "No"
-                  ],
-                  "isRequired": true
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "USER_INFO-page",
-      "elements": [
-        {
-          "type": "panel",
-          "name": "UserInfoCard1Panel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "UserInfoHead",
-              "html": "<h2>Before You Begin</h2>"
-            },
-            {
-              "type": "html",
-              "name": "UserInfoText1",
-              "html": "<p>If you're still grieving from the loss of your Lar Par companion, maybe it's best to do the survey later when you've had time to heal. </p>"
-            },
-            {
-              "type": "html",
-              "name": "UserInfoText2",
-              "html": "<p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>"
-            },
-            {
-              "type": "panel",
-              "name": "UserInfoLifeStatusNamePanel",
-              "elements": [
-                {
-                  "type": "text",
-                  "name": "CmpnName",
-                  "title": "Please tell us your companion's name:",
-                  "isRequired": true
-                },
-                {
-                  "type": "imagepicker",
-                  "name": "LifeStatus",
-                  "title": "Has {CmpnName} crossed over the Rainbow Bridge?",
-                  "isRequired": true,
-                  "visibleIf": "{CmpnName} notempty",
-                  "choices": [
-                    {
-                      "value": true,
-                      "imageLink": "/img-companions-rainbow.png",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "imageLink": "/img-companions.png",
-                      "text": "No"
-                    }
-                  ],
-                  "imageWidth": 120,
-                  "imageHeight": 120,
-                  "showLabel": true
-                }
-              ]
-            },
-            {
-              "type": "html",
-              "name": "UserInfoHeading",
-              "html": "<h2>About You</h2>"
-            },
-            {
-              "type": "html",
-              "name": "UserInfoText",
-              "html": "<p>We're asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and verifiable.</p>"
-            },
-            {
-              "type": "html",
-              "name": "UserInfoVerificationText",
-              "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
-            },
-            {
-              "type": "panel",
-              "name": "UserInfoVerificationPanel",
-              "elements": [
-                {
-                  "type": "boolean",
-                  "name": "UserInfoContactType",
-                  "title": "Would you like to use email or Facebook Messenger for verification?",
-                  "isRequired": true,
-                  "labelTrue": "Facebook",
-                  "labelFalse": "Email"
-                },
-                {
-                  "type": "text",
-                  "title": "Email address:",
-                  "name": "UserInfoContactTypeEmail",
-                  "isRequired": true,
-                  "visibleIf": "{UserInfoContactType} = false",
-                  "inputType": "email"
-                },
-                {
-                  "type": "html",
-                  "name": "UserInfoContactTypeFacebookInstructions",
-                  "title": "z",
-                  "visibleIf": "{UserInfoContactType} = true",
-                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Info icon' />&nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>"
-                },
-                {
-                  "type": "text",
-                  "title": "Facebook account:",
-                  "name": "UserInfoContactTypeFacebook",
-                  "isRequired": true,
-                  "visibleIf": "{UserInfoContactType} = true",
-                  "placeholder": "eg. https://www.facebook.com/my.profile.name",
-                  "validators": [
-                    {
-                      "type": "regex",
-                      "regex": "^(https?:\\/\\/)?(www\\.)?facebook\\.com\\/[a-zA-Z0-9.]{5,}$",
-                      "text": "Please enter a valid Facebook profile URL, e.g., https://facebook.com/your.username"
-                    }
-                  ]
-                },
-                {
-                  "type": "boolean",
-                  "name": "UserInfoContactOK",
-                  "title": "May we contact you to talk more about your LP experience?",
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "swapOrder": true,
-                  "isRequired": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "UserInfoCard2Panel",
-          "elements": [
-            {
-              "type": "panel",
-              "name": "UserInfoNameCountryPanel",
-              "title": "Your First Name and Country",
-              "elements": [
-                {
-                  "type": "text",
-                  "title": "First Name:",
-                  "name": "UserInfoFirstName",
-                  "isRequired": true
-                },
-                {
-                  "type": "dropdown",
-                  "name": "UserInfoCountry",
-                  "title": "Country:",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "US",
-                      "text": "United States"
-                    },
-                    {
-                      "value": "UK",
-                      "text": "United Kingdom"
-                    },
-                    {
-                      "value": "CA",
-                      "text": "Canada"
-                    },
-                    {
-                      "value": "DE",
-                      "text": "Germany"
-                    },
-                    {
-                      "value": "AU/NZ",
-                      "text": "Australia/New Zealand"
-                    },
-                    {
-                      "value": "FR",
-                      "text": "France"
-                    },
-                    {
-                      "value": "ES",
-                      "text": "Spain"
-                    },
-                    {
-                      "value": "PT",
-                      "text": "Portugal"
-                    }
-                  ],
-                  "showOtherItem": true
-                },
-                {
-                  "type": "text",
-                  "name": "UserInfoStateRegion",
-                  "title": "State, province or region (optional):",
-                  "isRequired": false
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "UserInfoAgeGenderPanel",
-              "title": "Age and Gender (optional)",
-              "elements": [
-                {
-                  "type": "dropdown",
-                  "name": "UserInfoAgeGroup",
-                  "title": "Approximately what is your age?",
-                  "width": "70%",
-                  "minWidth": "260px",
-                  "choices": [
-                    {
-                      "value": "UNDER_20",
-                      "text": "Under 20"
-                    },
-                    {
-                      "value": "20_34",
-                      "text": "20-34"
-                    },
-                    {
-                      "value": "35_49",
-                      "text": "35-49"
-                    },
-                    "50-6",
-                    {
-                      "value": "OVER_65",
-                      "text": "Over 65"
-                    }
-                  ]
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "UserInfoGender",
-                  "title": "Gender information:",
-                  "isRequired": false,
-                  "choices": [
-                    {
-                      "value": "WOMAN",
-                      "text": "Woman"
-                    },
-                    {
-                      "value": "MAN",
-                      "text": "Man"
-                    },
-                    {
-                      "value": "NON_BINARY",
-                      "text": "Non-binary"
-                    },
-                    {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
-                    }
-                  ],
-                  "showOtherItem": true,
-                  "otherText": "Prefer to self-describe"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     {
       "name": "CMPN_INFO-page",
       "elements": [
@@ -561,52 +98,8 @@
               "elements": [
                 {
                   "type": "panel",
-                  "name": "dcsdCmpnInfoAgePanel",
-                  "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
-                  "description": "Please enter years and months",
-                  "visibleIf": "{LifeStatus} = true",
-                  "elements": [
-                    {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "dcsdCmpnInfoAgeYears",
-                      "title": "Age in years (number):",
-                      "isRequired": true,
-                      "min": "1",
-                      "max": "40",
-                      "validators": [
-                        {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 40,
-                          "text": "Age must be between 1 and 40"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "dcsdCmpnInfoAgeMonths",
-                      "title": "Months (number 0 - 11)",
-                      "isRequired": true,
-                      "min": 0,
-                      "max": 11,
-                      "validators": [
-                        {
-                          "type": "numeric",
-                          "minValue": 0,
-                          "maxValue": 11,
-                          "text": "Months must be between 0 and 11"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "panel",
                   "name": "lvngCmpnInfoAgePanel",
                   "title": "What is {CmpnName}'s approximate age (in years and months)?",
-                  "visibleIf": "{LifeStatus} = false",
                   "elements": [
                     {
                       "type": "text",
@@ -795,7 +288,6 @@
                   "type": "dropdown",
                   "name": "InfoSourcesBestSource",
                   "title": "Which of those information sources did you find MOST useful (please select one)?",
-                  "visibleIf": "{InfoSourcesTypes.length} > 1 && {InfoSourcesTypes} notcontains 'DONT_KNOW'",
                   "choices": []
                 }
               ]
@@ -960,7 +452,6 @@
                   "type": "checkbox",
                   "name": "IntubationHistoryReason",
                   "title": "For what reason or reasons was {CmpnName} intubated prior to the first LP symptoms appearing?",
-                  "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -992,7 +483,6 @@
                   "type": "boolean",
                   "name": "IntubationHistoryConcerns",
                   "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
-                  "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
                   "swapOrder": true,
@@ -1002,7 +492,6 @@
                   "type": "checkbox",
                   "name": "IntubationHistorySymptoms",
                   "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
-                  "visibleIf": "{IntubationHistoryWasIntubated} = 'YES' && {IntubationHistoryConcerns} = true",
                   "choices": [
                     {
                       "value": "COUGHING",
@@ -1077,7 +566,6 @@
                   "type": "radiogroup",
                   "name": "BreathingCrisisCount",
                   "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
-                  "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1100,7 +588,6 @@
                   "type": "dropdown",
                   "name": "BreathingCrisisCost",
                   "title": "About what was the total pre-insurance cost of these visits?",
-                  "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1138,7 +625,6 @@
             {
               "type": "panel",
               "name": "BreathingCrisisDetailsPanel",
-              "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -1165,7 +651,6 @@
                   "name": "BreathingCrisisAdviceType",
                   "title": "What advice did they give you to help you deal with a breathing crisis?",
                   "isRequired": true,
-                  "visibleIf": "{BreathingCrisisAdvice} = 'YES'",
                   "choices": [
                     {
                       "value": "SEDATIVE",
@@ -1216,7 +701,6 @@
                   "name": "BreathingCrisisProvidedSubstanceType",
                   "title": "What substance or product did they provide?",
                   "isRequired": true,
-                  "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
                   "choices": [
                     {
                       "value": "SEDATIVE",
@@ -1242,7 +726,6 @@
                   "name": "BreathingCrisisSubstanceForm",
                   "title": "In what form was the sedative or steroid provided?",
                   "isRequired": true,
-                  "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
                   "choices": [
                     {
                       "value": "INJECTIBLE",
@@ -1464,7 +947,6 @@
                   "name": "EarlSymptomsOtherConditionsType",
                   "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
                   "isRequred": true,
-                  "visibleIf": "{EarlySymptomsOtherConditions} = YES",
                   "choices": [
                     {
                       "value": "GERD",
@@ -1645,7 +1127,6 @@
                   "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?",
                   "description": "Please check all that apply.",
                   "isRequired": true,
-                  "visibleIf": "{PrimaryDurationChangedVets} != 'NO'",
                   "choices": [
                     {
                       "value": "NOTHING_CAN_BE_DONE",
@@ -1752,7 +1233,6 @@
                   "name": "PrimaryVetRefluxMeds",
                   "title": "Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotadine) or Prilosec (omeprazole) for reflux?",
                   "isRequired": true,
-                  "visibleIf": "{PrimaryVetReflux} = 'YES'",
                   "choices": [
                     {
                       "value": "YES",
@@ -1773,7 +1253,6 @@
                   "type": "boolean",
                   "name": "PrimaryVetRefluxInitiative",
                   "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotadine) or Prilosec (omeprazole) on your own intiative without a prescription or recommendation from your primary vet?",
-                  "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
                   "isRequired": true,
@@ -1837,7 +1316,6 @@
                   "name": "PrimaryVetInfoDetails",
                   "title": "What did they tell you about the how LP/GOLPP might affect {CmpnName}?",
                   "isRequired": true,
-                  "visibleIf": "{PrimaryVetInfo} = true",
                   "choices": [
                     {
                       "value": "BARK_LOSS",
@@ -1891,7 +1369,6 @@
                   "name": "PrimaryVetSurgeryPerception",
                   "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
                   "isRequired": true,
-                  "visibleIf": "{PrimaryVetSurgery} = 'ADVISED_AGAINST'",
                   "choices": [
                     {
                       "value": "SPECIFIC_CONDITION",
@@ -2156,7 +1633,6 @@
                   "title": "Did the surgeon perform the diagnosis without requiring surgery afterwards?",
                   "description": "In other words, did the surgeon refuse to do the diagnosis unless you agreed to go straight to surgery if the results were positive?",
                   "isRequired": true,
-                  "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
                   "choices": [
                     {
                       "value": "YES",
@@ -2197,28 +1673,19 @@
               "html": "<p>This section asks questions about any surgery or implant procedure {CmpnName} underwent to treat LP/GOLPP symptoms. This only includes surgeries or procedures that diriectly modify the structure of the larynx.</p>"
             },
             {
-              "type": "radiogroup",
+              "type": "boolean",
               "name": "TreatmentStatusDidHave",
               "title": "Did {CmpnName} undergo a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
               "isRequired": true,
-              "choices": [
-                {
-                  "value": true,
-                  "text": "Yes"
-                },
-                {
-                  "value": false,
-                  "text": "No"
-                }
-              ],
-              "showOtherItem": false
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "swapOrder": true
             },
             {
               "type": "panel",
               "name": "TreatmentStatusAgePanel",
               "title": "At about what age did {CmpnName} have the first surgery or stent procedure?",
               "description": "If you can't remember exactly, it's OK to guesstimate.",
-              "visibleIf": "{TreatmentStatusDidHave} = true",
               "elements": [
                 {
                   "type": "text",
@@ -2272,7 +1739,6 @@
                   "title": "What kind procedure or procedures did {CmpnName} have?",
                   "description": "Please check all that apply.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusDidHave} = true",
                   "choices": [
                     {
                       "value": "TIEBACK",
@@ -2303,7 +1769,6 @@
               "type": "panel",
               "name": "TreatmentStatusTiebackPanel",
               "title": "Questions about tieback (Unilateral Arytenoid Lateralization) surgery",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
               "elements": [
                 {
                   "type": "boolean",
@@ -2319,7 +1784,6 @@
                   "name": "TreatmentStatusTiebackWait",
                   "title": "How long did you have to wait for non-emergency tieback surgery for {CmpnName}:",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusTiebackEmergency} = true",
                   "choices": [
                     {
                       "value": "UNDER_ONE",
@@ -2348,7 +1812,8 @@
                   "title": "How many times did {CmpnName} undergo tieback (UAL) surgery?",
                   "isRequired": true,
                   "labelTrue": "More than once",
-                  "labelFalse": "Once"
+                  "labelFalse": "Once",
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
@@ -2356,7 +1821,6 @@
                   "title": "Approximate cost of surgery (not including post-op complications):",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusTiebackCount} = 'ONCE'",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -2391,7 +1855,6 @@
                   "title": "Approximate total cost of surgeries (not including post-op complications):",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusTiebackCount} = 'MORE_THAN_ONCE'",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -2426,7 +1889,8 @@
                   "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
-                  "isRequired": true
+                  "isRequired": true,
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
@@ -2434,7 +1898,6 @@
                   "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusTiebackComplications} = true",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -2469,7 +1932,6 @@
               "type": "panel",
               "name": "TreatmentStatusBveapPanel",
               "title": "Questions about BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
               "elements": [
                 {
                   "type": "checkbox",
@@ -2528,21 +1990,13 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusBveapComplications",
                   "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
                   "isRequired": true,
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
@@ -2550,7 +2004,6 @@
                   "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusBveapComplications} = true",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -2584,7 +2037,6 @@
             {
               "type": "panel",
               "name": "TreatmentStatusStentPanel",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
               "elements": [
                 {
                   "type": "dropdown",
@@ -2614,7 +2066,6 @@
                 {
                   "type": "panel",
                   "name": "TreatmentStatusDexstentPanel",
-                  "visibleIf": "{TreatmentStatusStentType} contains 'DEXSTENT'",
                   "elements": [
                     {
                       "type": "html",
@@ -2628,18 +2079,18 @@
                   "name": "TreatmentStatusStentDidMigrate",
                   "title": "After the initial implant procedure, did {CmpnName} cough out the stent or did it migrate out of position?",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentType} = 'SILICONE' || {TreatmentStatusStentType} = 'NITINOL_MESH'",
                   "labelTrue": "Yes",
-                  "labelFalse": "No"
+                  "labelFalse": "No",
+                  "swapOrder": true
                 },
                 {
                   "type": "boolean",
                   "name": "TreatmentStatusStentReplaced",
                   "title": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
                   "labelTrue": "Yes",
-                  "labelFalse": "No"
+                  "labelFalse": "No",
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
@@ -2647,7 +2098,6 @@
                   "title": "Approximate cost of stent implant procedure, not including complications:",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentDidMigrate} = false || {TreatmentStatusStentReplaced} = false",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -2682,7 +2132,6 @@
                   "title": "Approximate cost of the stent procedures, not including complications:",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentDidMigrate} = true &&{TreatmentStatusStentReplaced} = true",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -2715,17 +2164,16 @@
                   "type": "boolean",
                   "name": "TreatmentStatusStentComplications",
                   "title": "Were there post-operative complications that required overnight inpatient care for {CmpnName}?",
-                  "visibleIf": "{TreatmentStatusStentType} notempty",
                   "isRequired": true,
                   "labelTrue": "Yes",
-                  "labelFalse": "No"
+                  "labelFalse": "No",
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
                   "name": "TreatmentStatusStentComplicationsCost",
                   "title": "Approximate cost of post-procedure complications, not including the cost of the stent implant procedure:",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentComplications} = true",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -2761,7 +2209,6 @@
               "name": "TreatmentStatusArytenoidectomyPanel",
               "title": "Questions about partial arytenoidectomy surgery",
               "description": "Partial arytenoidectomy is the surgical removal of a section of one of the arytenoid (laryngeal) cartilages.",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
               "elements": [
                 {
                   "type": "checkbox",
@@ -2796,8 +2243,8 @@
                   "description": "This technique is called 'ablation'.",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
-                  "swapOrder": true,
-                  "isRequired": true
+                  "isRequired": true,
+                  "swapOrder": true
                 },
                 {
                   "type": "radiogroup",
@@ -2872,12 +2319,13 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusArytenoidectomyComplications",
                   "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
                   "isRequired": true,
                   "labelTrue": "Yes",
-                  "labelFalse": "No"
+                  "labelFalse": "No",
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
@@ -2885,7 +2333,6 @@
                   "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusArytenoidectomyComplications} = true",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -2921,7 +2368,6 @@
               "name": "TreatmentStatusVentrilocordectomyPanel",
               "title": "Questions about ventrilocordectomy surgery",
               "description": "Ventrilocordectomy is the surgical removal of the vocal folds (vocal cords) that dogs use to bark.",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
               "elements": [
                 {
                   "type": "checkbox",
@@ -3022,7 +2468,7 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusVentrilocordectomyComplications",
                   "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
                   "isRequired": true,
@@ -3035,7 +2481,6 @@
                   "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusVentrilocordectomyComplications} = true",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -3069,7 +2514,6 @@
             {
               "type": "panel",
               "name": "TreatmentStatusRatingPanel",
-              "visibleIf": "{TreatmentStatusDidHave} = true",
               "elements": [
                 {
                   "type": "rating",
@@ -3168,7 +2612,6 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsDecisionPanel",
-              "visibleIf": "{TreatmentStatusDidHave} = false && {LifeStatus} = false",
               "elements": [
                 {
                   "type": "dropdown",
@@ -3645,7 +3088,6 @@
                   "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP symptoms?",
                   "description": "Please also include discontinued medications.",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = YES",
                   "choices": [
                     {
                       "value": "DOXEPIN",
@@ -3700,7 +3142,6 @@
                   "title": "Average monthly cost of {CmpnName}'s prescriptions:",
                   "description": "If you don't know exactly, it's OK to guesstimate.",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = YES",
                   "choices": [
                     {
                       "value": "UNDER_50",
@@ -3729,7 +3170,6 @@
                   "title": "Please rate the effect of Doxepin on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'DOXEPIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3763,7 +3203,6 @@
                   "title": "Please rate the effect of Doxepin on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'DOXEPIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3797,7 +3236,6 @@
                   "title": "Please rate the effect of Trazodone on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TRAZODONE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3831,7 +3269,6 @@
                   "title": "Please rate the effect of Trazodone on {CmpnName} mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TRAZODONE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3865,7 +3302,6 @@
                   "title": "Please rate the effect of Gabapentin on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GABAPENTIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3899,7 +3335,6 @@
                   "title": "Please rate the effect of Gabapentin on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GABAPENTIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3933,7 +3368,6 @@
                   "title": "Please rate the effect of Galliprant on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GALLIPRANT'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3967,7 +3401,6 @@
                   "title": "Please rate the effect of Galliprant on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GALLIPRANT'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4001,7 +3434,6 @@
                   "title": "Please rate the effect of Prednisone on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'STEROID'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4035,7 +3467,6 @@
                   "title": "Please rate the effect of Prednisone on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'STEROID'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4069,7 +3500,6 @@
                   "title": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4103,7 +3533,6 @@
                   "title": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4137,7 +3566,6 @@
                   "title": "Please rate the effect of Cerenia on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'CERENIA'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4171,7 +3599,6 @@
                   "title": "Please rate the effect of Cerenia on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'CERENIA'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4205,7 +3632,6 @@
                   "title": "Please rate the effect of Meloxicam on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'MELOXICAM'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4239,7 +3665,6 @@
                   "title": "Please rate the effect of Meloxicam on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'MELOXICAM'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4273,7 +3698,6 @@
                   "title": "Please rate the effect of Acepromine on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ACEPROMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4307,7 +3731,6 @@
                   "title": "Please rate the effect of Acepromine on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ACEPROMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4341,7 +3764,6 @@
                   "title": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ALBUTEROL'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4375,7 +3797,6 @@
                   "title": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ALBUTEROL'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4409,7 +3830,6 @@
                   "title": "Please rate the effect of Temaril P on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TEMARIL_P'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4443,7 +3863,6 @@
                   "title": "Please rate the effect of Temaril P on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TEMARIL_P'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4509,7 +3928,6 @@
                   "name": "ManagementNonPrescriptionType",
                   "title": "What therapies or treatments did {CmpnName} receive?",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = YES",
                   "choices": [
                     {
                       "value": "ACUPUNCTURE",
@@ -4536,7 +3954,6 @@
                   "title": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
                   "description": "If you don't know exactly, it's OK to guesstimate.",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES'",
                   "choices": [
                     {
                       "value": "UNDER_100",
@@ -4565,7 +3982,6 @@
                   "title": "Please rate the effect of acupuncture on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4599,7 +4015,6 @@
                   "title": "Please rate the effect of acupuncture on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4633,7 +4048,6 @@
                   "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4667,7 +4081,6 @@
                   "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4701,7 +4114,6 @@
                   "title": "How effective was cold laser or red light therapy on {CmpnName}'s breathing:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4735,7 +4147,6 @@
                   "title": "Please rate the effect of cold laser or red light therapy on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4769,7 +4180,6 @@
                   "title": "Please rate the effect of chiropractic on {CmpnName}'s breathing on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4803,7 +4213,6 @@
                   "title": "Please rate the effect of chiropractic on {CmpnName}'s mobility or behavior:",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4885,7 +4294,6 @@
                   "name": "OTCProductsType",
                   "title": "Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:",
                   "isRequired": true,
-                  "visibleIf": "{OTCProductsDidPurchase} = YES",
                   "choices": [
                     {
                       "value": "TUMERIC",
@@ -4935,7 +4343,6 @@
                   "name": "OTCProductsCost",
                   "title": "What was the average monthly cost of these OTC products?",
                   "isRequired": true,
-                  "visibleIf": "{OTCProductsDidPurchase} = YES",
                   "choices": [
                     {
                       "value": "UNDER_50",
@@ -4963,7 +4370,6 @@
                   "title": "Please rate the overall effectiveness of the OTC products you selected above:",
                   "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
                   "isRequired": true,
-                  "visibleIf": "{OTCProductsDidPurchase} = YES",
                   "rateValues": [
                     {
                       "value": 1,
@@ -5029,7 +4435,6 @@
                   "name": "OTCProtocolCost",
                   "title": "What was the average monthly cost of the blends or protocols?",
                   "isRequired": true,
-                  "visibleIf": "{OTCProtocolDidPurchase} = YES",
                   "choices": [
                     {
                       "value": "UNDER_50",
@@ -5057,7 +4462,6 @@
                   "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
                   "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
                   "isRequired": true,
-                  "visibleIf": "{OTCProtocolDidPurchase} = YES",
                   "rateValues": [
                     {
                       "value": 1,
@@ -5143,14 +4547,12 @@
             {
               "type": "panel",
               "name": "AspirationGeneralPanel",
-              "visibleIf": "{AspirationDidHave} = 'YES'",
               "elements": [
                 {
                   "type": "dropdown",
                   "name": "AspirationCount",
                   "title": "How many times did {CmpnName} get AP?",
                   "isRequired": true,
-                  "visibleIf": "{AspirationDidHave} = 'YES'",
                   "choices": [
                     {
                       "value": "ONE",
@@ -5195,7 +4597,6 @@
                 {
                   "type": "dropdown",
                   "name": "AspirationInpatientCount",
-                  "visibleIf": "{AspirationInpatient} = 'YES'",
                   "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
                   "isRequired": true,
                   "choices": [
@@ -5229,7 +4630,6 @@
             {
               "type": "panel",
               "name": "AspirationSurgeryPanel",
-              "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = YES",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -5258,7 +4658,6 @@
                   "name": "AspirationSurgeryPostCount",
                   "title": "How many times did {CmpnName} get AP after the surgery?",
                   "isRequired": true,
-                  "visibleIf": "{AspirationSurgeryPost} = YES",
                   "choices": [
                     {
                       "value": "ONE",
@@ -5284,7 +4683,6 @@
             {
               "type": "panel",
               "name": "AspirationStentPanel",
-              "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = YES",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -5312,7 +4710,6 @@
                   "name": "AspirationStentPostCount",
                   "title": "How many times did {CmpnName} get AP after the stent implant?",
                   "isRequired": true,
-                  "visibleIf": "{AspirationStentPost} = YES",
                   "choices": [
                     {
                       "value": "ONE",
@@ -5338,7 +4735,6 @@
             {
               "type": "panel",
               "name": "AspirationCostPanel",
-              "visibleIf": "{AspirationDidHave} = YES",
               "elements": [
                 {
                   "type": "dropdown",
@@ -5444,7 +4840,6 @@
             {
               "type": "panel",
               "name": "NeuropathyHindEndDoesHavePanel",
-              "visibleIf": "{NeuropathySymptomsDoesHave} = YES",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -5476,7 +4871,6 @@
                   "name": "NeuropathySymptomsBreathingOnset",
                   "title": "About how long after you first noticed hind-end weakness did the breathing issues begin?",
                   "isRequired": true,
-                  "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
                   "choices": [
                     {
                       "value": "DONT_KNOW",
@@ -5508,7 +4902,6 @@
                   "name": "NeuropathySymptomsHindEndOnset",
                   "title": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
                   "isRequired": true,
-                  "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
                   "choices": [
                     {
                       "value": "DONT_KNOW",
@@ -5538,7 +4931,6 @@
                   "name": "NeuropathySymptomsTypeProgression",
                   "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
                   "isRequired": true,
-                  "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
                   "choices": [
                     {
                       "value": "BREATHING",
@@ -5614,7 +5006,6 @@
             {
               "type": "panel",
               "name": "ConclusionsPanelLifeStatusTrue",
-              "visibleIf": "{LifeStatus} = true",
               "elements": [
                 {
                   "type": "html",
@@ -5626,7 +5017,6 @@
             {
               "type": "panel",
               "name": "ConclusionsPanelLifeStatusFalse",
-              "visibleIf": "{LifeStatus} = false",
               "elements": [
                 {
                   "type": "html",
@@ -5754,7 +5144,6 @@
                   "name": "ConclusionOtherConditions",
                   "title": "What other conditions did {CmpnName} develop during {cvGenderObjectPronoun} LP/GOLPP journey?",
                   "description": "The selections you made about the beginning of {CmpnName}'s LP/GOLPP journey are preselected.",
-                  "visibleIf": "{ConclusionOtherConditionsNew} = true",
                   "isRequired": true,
                   "choices": [
                     {
@@ -5809,7 +5198,6 @@
             {
               "type": "panel",
               "name": "ConclusionCauseOfDeathPanel",
-              "visibleIf": "{LifeStatus} = true",
               "elements": [
                 {
                   "type": "html",
@@ -5873,7 +5261,6 @@
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathTieback",
                   "title": "What if anything would you differently?",
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -5899,7 +5286,6 @@
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathBVEAP",
                   "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -5926,7 +5312,6 @@
                   "name": "ConclusionOtherPathStent",
                   "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
                   "choices": [
                     {
                       "value": "STENT_SAME",
@@ -5951,7 +5336,6 @@
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathArytenoidectomy",
                   "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -5977,7 +5361,6 @@
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathVentrilocordectomy",
                   "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -6004,7 +5387,6 @@
                   "name": "ConclusionOtherPathNoTreatment",
                   "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusDidHave} = false",
                   "choices": [
                     {
                       "value": "NO_TREATMENT_SAME",
@@ -6021,7 +5403,6 @@
                   "type": "radiogroup",
                   "name": "ConclusionStentAlternative",
                   "title": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
-                  "visibleIf": "{TreatmentStatusType} notcontains 'STENT'",
                   "isRequired": true,
                   "choices": [
                     {

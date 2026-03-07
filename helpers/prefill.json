@@ -77,7 +77,7 @@
   "EarlySymtomsSeverity": 1,
   "EarlySymptomsHindEndWeakness": "YES",
   "EarlySymptomsIncontinence": "NO",
-  "EarlyOtherConditions": "YES",
+  "EarlySymptomsOtherConditions": "YES",
   "EarlyOtherConditionsType": [
     "GERD",
     "ARTHRITIS"

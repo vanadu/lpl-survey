@@ -2197,21 +2197,13 @@
               "html": "<p>This section asks questions about any surgery or implant procedure {CmpnName} underwent to treat LP/GOLPP symptoms. This only includes surgeries or procedures that diriectly modify the structure of the larynx.</p>"
             },
             {
-              "type": "radiogroup",
+              "type": "boolean",
               "name": "TreatmentStatusDidHave",
               "title": "Did {CmpnName} undergo a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
               "isRequired": true,
-              "choices": [
-                {
-                  "value": true,
-                  "text": "Yes"
-                },
-                {
-                  "value": false,
-                  "text": "No"
-                }
-              ],
-              "showOtherItem": false
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "swapOrder": true
             },
             {
               "type": "panel",
@@ -2348,7 +2340,8 @@
                   "title": "How many times did {CmpnName} undergo tieback (UAL) surgery?",
                   "isRequired": true,
                   "labelTrue": "More than once",
-                  "labelFalse": "Once"
+                  "labelFalse": "Once",
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
@@ -2426,7 +2419,8 @@
                   "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
-                  "isRequired": true
+                  "isRequired": true,
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
@@ -2528,21 +2522,13 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusBveapComplications",
                   "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
                   "isRequired": true,
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
@@ -2630,24 +2616,18 @@
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusStentType} = 'SILICONE' || {TreatmentStatusStentType} = 'NITINOL_MESH'",
                   "labelTrue": "Yes",
-                  "labelFalse": "No"
+                  "labelFalse": "No",
+                  "swapOrder": true
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusStentReplaced",
                   "title": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ]
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
@@ -2720,22 +2700,14 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusStentComplications",
                   "title": "Were there post-operative complications that required overnight inpatient care for {CmpnName}?",
                   "visibleIf": "{TreatmentStatusStentType} notempty",
                   "isRequired": true,
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
@@ -2813,8 +2785,8 @@
                   "description": "This technique is called 'ablation'.",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
-                  "swapOrder": true,
-                  "isRequired": true
+                  "isRequired": true,
+                  "swapOrder": true
                 },
                 {
                   "type": "radiogroup",
@@ -2889,21 +2861,13 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusArytenoidectomyComplications",
                   "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
                   "isRequired": true,
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
+                  "swapOrder": true
                 },
                 {
                   "type": "dropdown",
@@ -3048,21 +3012,12 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "boolean",
                   "name": "TreatmentStatusVentrilocordectomyComplications",
                   "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
                   "isRequired": true,
-                  "choices": [
-                    {
-                      "value": true,
-                      "text": "Yes"
-                    },
-                    {
-                      "value": false,
-                      "text": "No"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "labelTrue": "Yes",
+                  "labelFalse": "No"
                 },
                 {
                   "type": "dropdown",
