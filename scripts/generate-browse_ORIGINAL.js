@@ -10,7 +10,6 @@ const DATA_ROOT_DIR = path.join(PROJECT_ROOT, "data");
 const PAGE_CONTENT_DIR = path.join(DATA_ROOT_DIR, "page-content");
 const OUTPUT_DIR = path.join(PROJECT_ROOT, "src", "pages", "browse");
 const COMPONENT_IMPORT_PATH = "../../components/ShowAnswerContent";
-const BROWSEMENU_IMPORT_PATH = "../../components/BrowseMenu";
 
 const EXCLUSIONS_PATH = path.join(
   PROJECT_ROOT,
@@ -60,7 +59,6 @@ function ensureDir(dirPath) {
 function escapeJsxText(value = "") {
   return String(value)
     .replace(/&/g, "&amp;")
-    .replace(/'/g, "&lsquo;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/\{/g, "&#123;")
@@ -367,20 +365,14 @@ function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename) {
 
   return `import React, { useState } from "react";
 import ShowAnswerContent from "${COMPONENT_IMPORT_PATH}";
-import BrowseMenu from "${BROWSEMENU_IMPORT_PATH}";
 
 const ${fileInfo.componentName} = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <>
-    <BrowseMenu />
-    <main className='page browse'>
-      <div className="browse-page">
-  ${body}
-      </div>
-    </main>
-    </>
+    <div className="browse-page">
+${body}
+    </div>
   );
 };
 

@@ -87,6 +87,37 @@
   --s-7: calc(var(--space-unit) * 6);    /* 48px */
   --s-8: calc(var(--space-unit) * 8);    /* 64px */
 
+  /* !VA  Accordion and Showmore  */
+  --accordion-text-color: inherit;
+  --accordion-title-color: inherit;
+  --accordion-icon-color: inherit;
+  --accordion-border-color: var(--color-border-subtle, #b9b9b9);
+  --accordion-background: transparent;
+  --accordion-content-background: transparent;
+
+  --showanswer-text-color: #8e000b;
+  --showanswer-link-color: #8e000b;
+  --showanswer-icon-color: #8e000b;
+  --showanswer-border-color: transparent;
+  --showanswer-background: transparent;
+
+  --disclosure-radius: 0.375rem;
+  --disclosure-gap: 0.625rem;
+  --disclosure-gap-tight: 0.375rem;
+
+  --disclosure-padding-y: 0.75rem;
+  --disclosure-padding-x: 0;
+  --disclosure-content-padding-top: 0.375rem;
+  --disclosure-content-padding-bottom: 0.5rem;
+
+  --disclosure-scroll-margin-top: 5.5rem;
+
+  --disclosure-title-font-size: var(--font-size-h4, 1.125rem);
+  --disclosure-title-line-height: var(--line-heading, 1.25);
+  --disclosure-body-font-size: var(--font-size-base, 1rem);
+  --disclosure-body-line-height: var(--line-body, 1.5);
+
+  --disclosure-rule-width: 1px;
 
 }
 

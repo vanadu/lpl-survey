@@ -180,3 +180,287 @@ display: none;
   color: var(--c-content-text);
   margin: 0;
 }
+
+
+
+
+
+
+/* !VA  Accordion and Showmore  */
+
+/* ==========================================================================
+   Shared resets / helpers
+   ========================================================================== */
+
+.accordion,
+.showanswer {
+  scroll-margin-top: var(--disclosure-scroll-margin-top);
+}
+
+.accordion__content[hidden],
+.showanswer__content[hidden] {
+  display: none;
+}
+
+.accordion__trigger,
+.showanswer__trigger {
+  appearance: none;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.accordion__icon,
+.showanswer__icon {
+  flex: 0 0 auto;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion__title,
+.showanswer__title {
+  min-width: 0;
+}
+
+/* ==========================================================================
+   Accordion
+   Heavier, section-level disclosure
+   One-open-at-a-time behavior handled by React state
+   ========================================================================== */
+
+.accordion {
+  background: var(--accordion-background);
+  color: var(--accordion-text-color);
+  border-top: var(--disclosure-rule-width) solid var(--accordion-border-color);
+}
+
+.accordion:last-child {
+  border-bottom: var(--disclosure-rule-width) solid var(--accordion-border-color);
+}
+
+.accordion__heading {
+  margin: 0;
+}
+
+.accordion__trigger {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--disclosure-gap);
+  padding: var(--disclosure-padding-y) var(--disclosure-padding-x);
+  color: var(--accordion-title-color);
+}
+
+.accordion__trigger:hover .accordion__title,
+.accordion__trigger:focus-visible .accordion__title {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.accordion__trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: var(--disclosure-radius);
+}
+
+.accordion__icon {
+  color: var(--accordion-icon-color);
+  margin-top: 0.1em;
+  font-size: 1rem;
+}
+
+.accordion__title {
+  color: var(--accordion-title-color);
+  font-size: var(--disclosure-title-font-size);
+  line-height: var(--disclosure-title-line-height);
+  font-weight: 700;
+}
+
+.accordion__content {
+  background: var(--accordion-content-background);
+  padding: 0 0 var(--disclosure-content-padding-bottom) 1.75rem;
+}
+
+.accordion__content > :first-child {
+  margin-top: var(--disclosure-content-padding-top);
+}
+
+.accordion__content > :last-child {
+  margin-bottom: 0;
+}
+
+/* Optional helper for prose inside accordion bodies */
+.accordion__text {
+  font-size: var(--disclosure-body-font-size);
+  line-height: var(--disclosure-body-line-height);
+  margin: 0 0 1rem;
+}
+
+.accordion__text a,
+.accordion__content a {
+  text-underline-offset: 0.12em;
+}
+
+/* Optional state hook if you want styling beyond icon swap */
+.accordion.is-open .accordion__title {
+  text-decoration-thickness: 0.08em;
+}
+
+/* ==========================================================================
+   ShowMore
+   Lighter, text-flow disclosure
+   Best for compact supporting detail
+   ========================================================================== */
+
+.showanswer-container {
+  scroll-margin-top: var(--disclosure-scroll-margin-top);
+}
+
+.showanswer {
+  background: var(--showanswer-background);
+  color: var(--showanswer-text-color);
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.showanswer__trigger {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--disclosure-gap-tight);
+  color: var(--showanswer-link-color);
+  width: auto;
+  max-width: 100%;
+}
+
+.showanswer__trigger:hover .showanswer__title,
+.showanswer__trigger:focus-visible .showanswer__title {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.showanswer__trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: var(--disclosure-radius);
+}
+
+.showanswer__icon {
+  color: var(--showanswer-icon-color);
+  margin-top: 0.1em;
+  font-size: 0.95rem;
+}
+
+.showanswer__title {
+  color: var(--showanswer-link-color);
+  font-size: var(--disclosure-title-font-size);
+  line-height: var(--disclosure-title-line-height);
+  font-weight: 700;
+}
+
+.showanswer__content {
+  color: var(--showanswer-text-color);
+  padding: 0.375rem 0 0.25rem 1.45rem;
+}
+
+.showanswer__content > :first-child {
+  margin-top: 0;
+}
+
+.showanswer__content > :last-child {
+  margin-bottom: 0;
+}
+
+/* Helpers based on the sample page usage */
+.showanswer__text,
+.showanswer-content-text {
+  font-size: var(--disclosure-body-font-size);
+  line-height: var(--disclosure-body-line-height);
+}
+
+.showanswer__content-space {
+  display: block;
+  height: 0.625rem;
+}
+
+.showanswer__content-inline {
+  display: inline;
+}
+
+.showanswer__content-block {
+  display: block;
+}
+
+.showanswer__content a {
+  color: var(--showanswer-link-color);
+  text-underline-offset: 0.12em;
+}
+
+/* Optional state hook */
+.showanswer.showanswer--open .showanswer__title {
+  text-decoration-thickness: 0.08em;
+}
+
+/* ==========================================================================
+   Embedded authored HTML support
+   For trusted SurveyJS html blocks rendered "as is"
+   ========================================================================== */
+
+.browse-html-block {
+  min-width: 0;
+}
+
+.browse-html-block > :first-child {
+  margin-top: 0;
+}
+
+.browse-html-block > :last-child {
+  margin-bottom: 0;
+}
+
+.browse-html-block a {
+  text-underline-offset: 0.12em;
+}
+
+/* ==========================================================================
+   Responsive tuning
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .accordion__trigger,
+  .showanswer__trigger {
+    gap: 0.5rem;
+  }
+
+  .accordion__icon,
+  .showanswer__icon {
+    font-size: 0.95rem;
+  }
+
+  .accordion__title,
+  .showanswer__title {
+    font-size: var(--font-size-base, 1rem);
+  }
+
+  .accordion__content {
+    padding-left: 1.5rem;
+  }
+
+  .showanswer__content {
+    padding-left: 1.3rem;
+  }
+}
+
+
+/* !VA  Scrap Styles  */
+.scrap {
+  margin: 10px 0;
+  background: rgba(0, 0, 0, .1) !important; //devgry
+}

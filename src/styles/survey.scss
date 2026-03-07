@@ -377,100 +377,7 @@
     @include desktop { flex-direction: row; }
     @include ldesktop { flex-direction: row; }
   }
-  .landing-title-heading,  {
-    font-family: $secondary_font!important;
-    // !VA Override the default 
-    font-size: calc(1.75 * (var(--sjs-font-size, 16px)));
-    text-align: center;
-    @include ldesktop {
-      // font-size: var(--sjs-article-font-x-large-fontSize, calc(3 * (var(--sjs-font-size, 48px))))!important;
-      // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-      text-align: left;
-    }
-  }
-  .landing-title-subheading {
-    font-family: $primary_font!important;
-    // padding: 0!important;
-    // margin: .5rem 0 0 0!important;
-    color: #6b6b6b!important;
-    // font-size: 1.313rem!important;
-    // line-height: 1.75rem!important;
-    // font-weight: 600!important;
-    // --sjs-font-size: 15px;
-    // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-    padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
 
-    font-size: var(--sjs-article-font-default-fontSize, calc(3 * (var(--sjs-font-size, 16px))))!important;
-    font-weight: 600;
-    text-align: center;
-    @include tablet {
-
-    }
-    @include ldesktop {
-      // margin: .5rem 0 0 0!important;
-      // --sjs-font-size: 18px;
-      // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-      text-align: left;
-    }
-  }
-  .landing-survey-version-container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100%;
-    
-    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    // margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-
-    @include tablet {
-      justify-content: flex-end;
-      margin-right: 40px;
-    }
-    @include desktop {
-      justify-content: flex-end;
-      margin-right: 40px;
-    }
-    @include ldesktop {
-      justify-content: flex-end;
-      margin-right: 40px!important;
-      margin-top: -10px!important;
-    }
-  }
-  .landing-survey-version-text {
-    width: 100%;
-    font-family: $secondary_font!important;
-    color: #353535!important;
-    // --sjs-font-size: 15px;
-    // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-    text-align: left;
-    padding: 0!important;
-    margin: 0!important;
-  }
-  .survey-version-logo {
-    display: block;
-    width: 80px;
-    margin: 0 auto;
-    height: auto;
-    @include tablet {
-      display: block;
-      width: 120px
-    }
-    @include desktop {
-      display: block;
-      width: 120px
-    }
-    @include ldesktop {
-      display: block; 
-      width: 100px;
-      // --sjs-font-size: 15px;
-      // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-    }
-  }
 }
 
 .conclusion-thanks-head-container {
@@ -795,6 +702,112 @@
     margin-left: auto;
   }
 }
+
+// !VA PASSTHROUGH STYLES
+
+.landing-title-head-container {
+  background: rgba(255, 0, 0, .3) !important; //devred
+}
+
+.landing-title-heading,  {
+  font-family: $secondary_font!important;
+  // !VA Override the default 
+  font-size: calc(1.75 * (var(--sjs-font-size, 16px)));
+  text-align: center;
+  @include ldesktop {
+    // font-size: var(--sjs-article-font-x-large-fontSize, calc(3 * (var(--sjs-font-size, 48px))))!important;
+    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    text-align: left;
+  }
+}
+
+.landing-title-subheading {
+  font-family: $primary_font!important;
+  // padding: 0!important;
+  // margin: .5rem 0 0 0!important;
+  color: #6b6b6b!important;
+  // font-size: 1.313rem!important;
+  // line-height: 1.75rem!important;
+  // font-weight: 600!important;
+  // --sjs-font-size: 15px;
+  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+
+  font-size: var(--sjs-article-font-default-fontSize, calc(3 * (var(--sjs-font-size, 16px))))!important;
+  font-weight: 600;
+  text-align: center;
+  @include tablet {
+
+  }
+  @include ldesktop {
+    // margin: .5rem 0 0 0!important;
+    // --sjs-font-size: 18px;
+    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    text-align: left;
+  }
+}
+
+.landing-survey-version-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  
+  padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  // margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+
+  @include tablet {
+    justify-content: flex-end;
+    margin-right: 40px;
+  }
+  @include desktop {
+    justify-content: flex-end;
+    margin-right: 40px;
+  }
+  @include ldesktop {
+    justify-content: flex-end;
+    margin-right: 40px!important;
+    margin-top: -10px!important;
+  }
+}
+.landing-survey-version-text {
+  width: 100%;
+  font-family: $secondary_font!important;
+  color: #353535!important;
+  // --sjs-font-size: 15px;
+  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  text-align: left;
+  padding: 0!important;
+  margin: 0!important;
+}
+.survey-version-logo {
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+  height: auto;
+  @include tablet {
+    display: block;
+    width: 120px
+  }
+  @include desktop {
+    display: block;
+    width: 120px
+  }
+  @include ldesktop {
+    display: block; 
+    width: 100px;
+    // --sjs-font-size: 15px;
+    // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  }
+}
+
+
+
 
 
 // !VA Custom Panel Layouts
@@ -1523,10 +1536,109 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 }
 
 
+/* !VA  BROWSE MODE STYLES  */
+
+// !VA Browser Home Page Header - index.js
+
+.browse-home-head-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid gray;
+}
+
+.browse-home-title-head-container, .browse-home-version-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  padding: 20px 0;
+}
 
 
 
+.browse-home-title-heading,  {
+  font-family: $secondary_font!important;
+  // !VA Override the default 
+  font-size: var(--font-size-3xl);
+  text-align: center;
+  @include ldesktop {
+    // font-size: var(--sjs-article-font-x-large-fontSize, calc(3 * (var(--sjs-font-size, 48px))))!important;
+    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    text-align: left;
+  }
+}
 
+.browse-home-title-subheading {
+  font-family: $primary_font!important;
+  // padding: 0!important;
+  // margin: .5rem 0 0 0!important;
+  color: #6b6b6b!important;
+  // font-size: 1.313rem!important;
+  // line-height: 1.75rem!important;
+  // font-weight: 600!important;
+  // --sjs-font-size: 15px;
+  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  text-align: center;
+  @include tablet {
+
+  }
+  @include ldesktop {
+    // margin: .5rem 0 0 0!important;
+    // --sjs-font-size: 18px;
+    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    text-align: left;
+  }
+}
+
+
+.browse-home-version-container {
+
+  
+}
+
+.browse-home-version {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.browse-survey-version-text {
+  width: 100%;
+  font-family: $secondary_font!important;
+  color: #353535!important;
+  // --sjs-font-size: 15px;
+  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  text-align: left;
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.browse-home-version-logo {
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+  height: auto;
+  @include tablet {
+    display: block;
+    width: 120px
+  }
+  @include desktop {
+    display: block;
+    width: 120px
+  }
+  @include ldesktop {
+    display: block; 
+    width: 160px;
+    // --sjs-font-size: 15px;
+    // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  }
+}
 
 
 
@@ -1556,7 +1668,8 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 /* === Survey Dropdown (click-controlled) === */
 
-.survey-dev-menu {
+.survey-dev-menu
+ {
   position: relative;
   display: inline-flex;
   display: none;
@@ -1581,8 +1694,35 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
     }
 }
 
+
+.browse-menu
+ {
+  position: relative;
+  display: inline-flex;
+  // display: none;
+  flex-direction: column;
+  width: 200px;
+  font-family: inherit;
+    @include mphone {
+    
+    }
+    @include lphone {
+    
+    }
+    @include tablet {
+    
+    }
+    @include desktop {
+    
+    }
+    @include ldesktop {
+      display: inline-flex;
+      // display: none;
+    }
+}
+
 /* Button */
-.survey-dev-menu__button {
+.survey-dev-menu__button, .browse-menu__button {
   padding: 10px 16px;
   background: #f5f6fa;
   border: 1px solid #dcdde1;
@@ -1594,13 +1734,18 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 }
 
 .survey-dev-menu__button:hover,
-.survey-dev-menu__button:focus {
+.browse-menu__button:hover,
+.survey-dev-menu__button:focus,
+.browse-menu__button:focus,
+ {
   background: #e1e6f0;
   outline: none;
 }
 
 /* List container */
-.survey-dev-menu__list {
+.survey-dev-menu__list,
+.browse-menu__list
+{
   /* positioning */
   position: absolute;
   top: calc(100% + 4px);
@@ -1636,7 +1781,9 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 }
 
 /* OPEN state (set by React className) */
-.survey-dev-menu.open .survey-dev-menu__list {
+.survey-dev-menu.open .survey-dev-menu__list,
+.browse-menu.open .browse-menu__list
+ {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -1644,12 +1791,15 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 }
 
 /* Items */
-.survey-dev-menu__item {
+.survey-dev-menu__item,
+.browse-menu__item
+{
   padding: 0; /* let the Link carry padding */
 }
 
 /* Make the Link fill the row so the whole row is clickable */
-.survey-dev-menu__item a {
+.survey-dev-menu__item a,
+.browse-menu__item a {
   display: block;
   padding: 10px 16px;
   cursor: pointer;
@@ -1659,7 +1809,10 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 }
 
 .survey-dev-menu__item a:hover,
-.survey-dev-menu__item a:focus {
+.browse-menu__item a:hover,
+.survey-dev-menu__item a:focus,
+.browse-menu__item a:focus 
+{
   background: #e1e6f0;
   outline: none;
 }
