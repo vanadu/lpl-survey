@@ -8,20 +8,17 @@ const index = () => {
   return (
     <>
       <BrowseMenu />
-      <main className='page'>
+      <main className='page browse'>
 
-
-
-
-        <div className="browse-home-head-container">
-
-            <div class="browse-home-title-head-container">
+        <header>
+          <div className="browse-home-header-container">
+            <div class="browse-home-title-container">
               <h2 class="browse-home-title-heading">LP/GOLPP Survey 2026</h2>
               <p class="browse-home-title-subheading">Powered by LarParLife.org</p>
             </div>
 
             <div class="browse-home-version-container">
-              <div class="browse-home-version">
+              <div class="browse-home-version-content">
                 <Image 
                   src={Logo} 
                   className='browse-home-version-logo' 
@@ -30,8 +27,11 @@ const index = () => {
                 <p class="browse-home-version-text">Version 0.9/26.03.01.01</p>
               </div>
             </div>
+          </div>
+        </header>
 
-        </div>
+
+
 
 
 

@@ -1540,14 +1540,14 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 // !VA Browser Home Page Header - index.js
 
-.browse-home-head-container {
+.browse-home-header-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border: 1px solid gray;
 }
 
-.browse-home-title-head-container, .browse-home-version-container {
+.browse-home-title-container, .browse-home-version-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1602,7 +1602,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   
 }
 
-.browse-home-version {
+.browse-home-version-content {
   display: flex;
   flex-direction: column;
 }
