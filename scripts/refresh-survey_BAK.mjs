@@ -4,8 +4,7 @@
  *
  * 1) Kill previous dev server started by this script (PID file)
  * 2) npm run merge-surveys
- * 3) node ./scripts/generate-browse.js
- * 4) npm run dev (same terminal)
+ * 3) npm run dev (same terminal)
  */
 
 import fs from "node:fs";
@@ -15,8 +14,6 @@ import kill from "tree-kill";
 
 const ROOT = process.cwd();
 const PID_FILE = path.join(ROOT, ".devserver.pid");
-const SCRIPTS_DIR = path.join(ROOT, "scripts");
-const GENERATE_BROWSE_SCRIPT = path.join(SCRIPTS_DIR, "generate-browse.js");
 
 function spawnForeground(cmd, args, extraOpts = {}) {
   return spawn(cmd, args, {
@@ -38,23 +35,18 @@ function runChild(cmd, args) {
   });
 }
 
+// On Windows, run npm via cmd.exe so batch/shims work reliably from Git Bash
 function npmRun(scriptName) {
   if (process.platform === "win32") {
-    return runChild("cmd.exe", ["/d", "/s", "/c", "npm", "run", scriptName]);
+    // /d disables AutoRun, /s preserves quoting rules, /c runs and exits
+    return runChild("cmd.exe", ["/d", "/s", "/c", `npm run ${scriptName}`]);
   }
   return runChild("npm", ["run", scriptName]);
 }
 
-function nodeRun(scriptPath) {
-  if (process.platform === "win32") {
-    return runChild("node", [scriptPath]);
-  }
-  return runChild("node", [scriptPath]);
-}
-
 function spawnNpmDev() {
   if (process.platform === "win32") {
-    return spawnForeground("cmd.exe", ["/d", "/s", "/c", "npm", "run", "dev"]);
+    return spawnForeground("cmd.exe", ["/d", "/s", "/c", "npm run dev"]);
   }
   return spawnForeground("npm", ["run", "dev"]);
 }
@@ -70,7 +62,9 @@ function readPidFile() {
 function removePidFile() {
   try {
     fs.unlinkSync(PID_FILE);
-  } catch {}
+  } catch {
+    // ignore
+  }
 }
 
 async function killPreviousDevServer() {
@@ -79,12 +73,15 @@ async function killPreviousDevServer() {
 
   console.log(`Stopping previous dev server (PID ${pid})...`);
 
+  // SIGTERM first
   await new Promise((resolve) => {
     kill(pid, "SIGTERM", () => resolve());
   });
 
+  // small grace period
   await new Promise((r) => setTimeout(r, 250));
 
+  // best-effort SIGKILL
   await new Promise((resolve) => {
     kill(pid, "SIGKILL", () => resolve());
   });
@@ -95,27 +92,31 @@ async function killPreviousDevServer() {
 async function main() {
   console.log("\n=== Refresh Survey ===\n");
 
+  // 1) Stop old server
   await killPreviousDevServer();
 
+  // 2) Merge individual page JSONs and build registry
   console.log("\nRunning merge-surveys...\n");
   await npmRun("merge-surveys");
 
-  console.log("\nRunning generate-browse.js...\n");
-  await nodeRun(GENERATE_BROWSE_SCRIPT);
-
+  // 3) Start dev server in same terminal
   console.log("\nStarting dev server...\n");
   const dev = spawnNpmDev();
 
+  // Write PID so next refresh kills only THIS server tree
   try {
     fs.writeFileSync(PID_FILE, String(dev.pid), "utf8");
   } catch (e) {
     console.warn(`Warning: couldn't write PID file (${PID_FILE}):`, e?.message ?? e);
   }
 
+  // Forward termination signals to the dev process
   const forward = (sig) => {
     try {
       dev.kill(sig);
-    } catch {}
+    } catch {
+      // ignore
+    }
   };
 
   process.on("SIGINT", () => forward("SIGINT"));

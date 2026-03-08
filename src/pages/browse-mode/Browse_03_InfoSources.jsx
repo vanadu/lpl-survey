@@ -10,17 +10,15 @@ const Browse_03_InfoSources = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container"></div>
-
+        <div className="browse-panel-container">
       <h2 className="browse-content-heading">How did you learn about LP/GOLPP?</h2>
 
-      <p className="browse-content-text">This section asks some questions about how you learned about laryngeal paralysis and geriatric-onset laryngeal paralysis (LP) and polyneuropathy (GOLPP) and whether the information you found helped you make decisions for &#123;CmpnName&#125;. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>
+      <p className="browse-content-text">This section asks some questions about how you learned about laryngeal paralysis and geriatric-onset laryngeal paralysis (LP) and polyneuropathy (GOLPP) and whether the information you found helped you make decisions for Bella. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>
 
-      <div className="browse-panel-container"></div>
-
-      <div className="browse-question-container">
+      <div className="browse-panel-container">
+      <div className="browse-question-container" id="InfoSourcesPriorKnowledge">
         <ShowAnswerContent
-          title="Had you ever heard of LP before {CmpnName} got it?"
+          title="Had you ever heard of LP before Bella got it?"
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -40,7 +38,7 @@ const Browse_03_InfoSources = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="InfoSourcesTypes">
         <ShowAnswerContent
           title="Which sources of information have you accessed to learn about LP?"
           index={2}
@@ -82,7 +80,7 @@ const Browse_03_InfoSources = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="InfoSourcesBestSource">
         <ShowAnswerContent
           title="Which of those information sources did you find MOST useful (please select one)?"
           index={3}
@@ -96,12 +94,12 @@ const Browse_03_InfoSources = () => {
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
+      </div>
 
-      <div className="browse-panel-container"></div>
-
-      <div className="browse-panel-container"></div>
-
-      <div className="browse-question-container">
+      <div className="browse-panel-container">
+      <div className="browse-panel-container">
+      <div className="browse-question-container" id="InfoSourcesHardToUnderstand">
         <ShowAnswerContent
           title="Did you find the information you got about LP difficult to understand?"
           index={4}
@@ -114,7 +112,7 @@ const Browse_03_InfoSources = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="InfoSourcesContradictory">
         <ShowAnswerContent
           title="Do you feel like a lot of the information you got about LP was contradictory?"
           index={5}
@@ -127,9 +125,9 @@ const Browse_03_InfoSources = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="InfoSourcesClearAnswers">
         <ShowAnswerContent
-          title="Did you find it hard to get clear answers to your questions so you could make informed choices for {CmpnName}?"
+          title="Did you find it hard to get clear answers to your questions so you could make informed choices for Bella?"
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -138,6 +136,8 @@ const Browse_03_InfoSources = () => {
           <div className="browse-showanswer-generic" aria-hidden="true"></div>
           </div>
         </ShowAnswerContent>
+      </div>
+      </div>
       </div>
       </div>
     </main>

@@ -706,7 +706,6 @@
 // !VA PASSTHROUGH STYLES
 
 .landing-title-head-container {
-  background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 .landing-title-heading,  {
@@ -1536,10 +1535,12 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 }
 
 
-/* !VA  BROWSE MODE STYLES  */
+/* !VA  BROWSE MODE STYLES 
+---------------------------
+*/
 
+// !VA Browse index.js hero/header
 // !VA Browser Home Page Header - index.js
-
 .browse-home-header-container {
   display: flex;
   flex-direction: row;
@@ -1556,35 +1557,36 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   padding: 20px 0;
 }
 
-
+.browse-home-title-container {
+  @include ldesktop {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--s-6);
+  }
+}
 
 .browse-home-title-heading,  {
   font-family: $secondary_font!important;
-  // !VA Override the default 
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-2xl);
   text-align: center;
   @include ldesktop {
-    // font-size: var(--sjs-article-font-x-large-fontSize, calc(3 * (var(--sjs-font-size, 48px))))!important;
-    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
     text-align: left;
   }
 }
 
 .browse-home-title-subheading {
-  font-family: $primary_font!important;
-  // padding: 0!important;
-  // margin: .5rem 0 0 0!important;
-  color: #6b6b6b!important;
+  font-family: $primary_font;
+  color: var(--c-gray-text);
   // font-size: 1.313rem!important;
   // line-height: 1.75rem!important;
   // font-weight: 600!important;
   // --sjs-font-size: 15px;
   // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-  padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
-
+  padding: var(--s-1) 0;
   font-size: var(--font-size-xl);
   font-weight: 600;
   text-align: center;
+  font-variant: small-caps;
   @include tablet {
 
   }
@@ -1634,11 +1636,45 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   }
   @include ldesktop {
     display: block; 
-    width: 160px;
+    width: 120px;
     // --sjs-font-size: 15px;
     // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
   }
 }
+
+
+.page.browse article {
+  background: rgba(0, 0, 255, .3) !important; //devblue
+  margin: var(--s-4);
+  font-family: var(--font-primary);
+  h2 {
+    padding: var(--s-2) 0 var(--s-1);
+    font-size: var(--font-size-xl);
+  }
+  ul {
+    padding-bottom: var(--s-2);
+  }
+  p, li {
+    font-size: var(--font-size-lg);
+  }
+  p {
+    padding: var(--s-1) 0 var(--s-2);
+  }
+  li {
+    margin-left: var(--s-5);
+    padding: var(--s-1) 0 var(--s-1) var(--s-4);
+  }
+}
+
+.browse-panel-container {
+  margin: 20px 20px;
+  border: 1px solid gray;
+  border-radius: 20px;
+
+  background: rgba(255, 0, 0, .3) !important; //devred
+}
+
+
 
 
 

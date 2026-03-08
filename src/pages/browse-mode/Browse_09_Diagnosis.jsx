@@ -10,15 +10,14 @@ const Browse_09_Diagnosis = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container"></div>
+        <div className="browse-panel-container">
+      <h2 className="browse-content-heading">Bella&lsquo;s LP/GOLPP diagnosis</h2>
 
-      <h2 className="browse-content-heading">&#123;CmpnName&#125;&lsquo;s LP/GOLPP diagnosis</h2>
+      <p className="browse-content-text">This section asks who provided Bella&lsquo;s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p>
+      <p className="browse-content-text">You may have seen multiple vets about Bella&lsquo;s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about Bella&lsquo;s LP/GOLPP.</p>
 
-      <p className="browse-content-text">This section asks who provided &#123;CmpnName&#125;&lsquo;s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.&lt;/p&gt;&lt;p&gt;You may have seen multiple vets about &#123;CmpnName&#125;&lsquo;s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about &#123;CmpnName&#125;&lsquo;s LP/GOLPP.</p>
-
-      <div className="browse-panel-container"></div>
-
-      <div className="browse-question-container">
+      <div className="browse-panel-container">
+      <div className="browse-question-container" id="DiagnosisWho">
         <ShowAnswerContent
           title="Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:"
           index={1}
@@ -52,7 +51,7 @@ const Browse_09_Diagnosis = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="DiagnosticType">
         <ShowAnswerContent
           title="What diagnostic procedure was used to arrive at the definitive diagnosis?"
           index={2}
@@ -90,9 +89,9 @@ const Browse_09_Diagnosis = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="DiagnosisStage">
         <ShowAnswerContent
-          title="Was {CmpnName} diagnosed with unilateral or bilateral LP?"
+          title="Was Bella diagnosed with unilateral or bilateral LP?"
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -109,16 +108,16 @@ const Browse_09_Diagnosis = () => {
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I wasn&lsquo;t told what stage &#123;CmpnName&#125;&lsquo;s LP was in</span>
+              <span>I wasn&lsquo;t told what stage Bella&lsquo;s LP was in</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="DiagnosisTimeAfterSymptoms">
         <ShowAnswerContent
-          title="About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?:"
+          title="About how long after Bella's first symptoms appeared did you get the diagnosis?:"
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -150,7 +149,7 @@ const Browse_09_Diagnosis = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="DiagnosisCost">
         <ShowAnswerContent
           title="What was the pre-insurance cost of the diagnosis?"
           index={5}
@@ -184,7 +183,7 @@ const Browse_09_Diagnosis = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="DiagnosisSurgeonContingent">
         <ShowAnswerContent
           title="Did the surgeon perform the diagnosis without requiring surgery afterwards?"
           index={6}
@@ -208,6 +207,8 @@ const Browse_09_Diagnosis = () => {
           </ul>
           </div>
         </ShowAnswerContent>
+      </div>
+      </div>
       </div>
       </div>
     </main>

@@ -6,6 +6,11 @@
   "elements": ["CmpnInfoAnimalType"],
   "panels": [
     "LandingPrivacyPanel",
-    "ConsentPanel"
+    "ConsentPanel",
+    "dcsdCmpnInfoAgePanel",
+    "lvngCmpnInfoAgePanel",
+    "EarlySymptomsAgePanel",
+    "PrimaryDurationDetailsPanel",
+    "TreatmentStatusAgePanel"
   ]
 }

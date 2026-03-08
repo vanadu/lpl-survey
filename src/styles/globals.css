@@ -13,12 +13,12 @@
 :root {
 
   /* !VA Page/Content size   */ 
-  --page-max: 1100px;
+  --page-max: 1000px;
   --page-x: clamp(16px, 3vw, 48px);
   --page-y: clamp(24px, 4vw, 64px);
   /* NEW: width tiers */
   --wrap-max: 1200px;        /* overall layout width (optional) */
-  --content-max: 1100px;     /* your main content width */
+  --content-max: 1000px;     /* your main content width */
   --prose-max: 72ch;         /* ideal reading width for paragraphs */
 
 
@@ -30,14 +30,16 @@
   --font-secondary: var(--oswald-font), "Oswald", "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
   /* !VA  Font Size  */
   /* VA!  Base font*/
-  --font-size-base: 1.125rem;   /* 16px normally */
+  /* VA! Changed from 1.125rem to 1rem base for consistency with SJ base*/
+  /* --font-size-base: 1.125rem;   16px normally */
+  --font-size-base: 1rem;   /* 16px normally */
   /* VA!  Font size variants*/
   --font-size-xs: calc(var(--font-size-base) * 0.875);   /* 14px */
   --font-size-sm: calc(var(--font-size-base) * 0.9375);  /* 15px */
   --font-size-md: var(--font-size-base);                 /* 16px */
   --font-size-lg: calc(var(--font-size-base) * 1.125);   /* 18px */
   --font-size-xl: calc(var(--font-size-base) * 1.25);    /* 20px */
-  --font-size-2xl: calc(var(--font-size-base) * 1.5);    /* 24px */
+  --font-size-2xl: calc(var(--font-size-base) * 1.625);    /* 26px */
   --font-size-3xl: calc(var(--font-size-base) * 2);      /* 32px */
   --font-size-4xl: calc(var(--font-size-base) * 2.5);    /* 40px */
 
@@ -49,16 +51,24 @@
 
 
   /* !VA  Backgrounds  */
-  --content-bg: #E1E1E1;
+  /* !VA  --content-bg is the bg color of the content element, which is the top level element passed as props in Layout.js. It's not the actual content. This is a misnomer. This element   */
+  /* !VA Changed to match the bg of Survey Mode, which I guess is set in the SJ core CSS */
+  /* --content-bg: #E1E1E1; */
+  --content-bg: #353535;
+  /* VA! */
   --content-text: #212121;
+  /* VA! Page bg*/
+  --page-bg: #FFFFFF;
 
 
-
-  /* !VA  Colors  */
+  /* !VA  Colors  Note that --c-content-bg is for the content wrapper, which is defined in Layout.js as 'content'. That should be changed to content-wrap or -site-wrap at some point. It's misleading. */
   --c-primary: #DAA520;
-  --c-secondary: #2055DA;
-  --c-content-bg: #E1E1E1;
+  --c-secondary: #2055DA; 
+  --c-content-bg: #353535; /* VA! this is the content wrap bg, not the actual content BG */
   --c-content-text: #212121;
+  --c-gray-text: #6b6b6b; /* VA! Color of the 'powered by' slug */
+  /* VA! Content page with border radius matches the SJ styling */
+  --c-page-bg: #FFFFFF;
   --c-slug: #6B6B6B;
   --c-showmore: #8E000B;
   --c-link: #896400;
@@ -86,6 +96,11 @@
   --s-6: calc(var(--space-unit) * 4);    /* 32px */
   --s-7: calc(var(--space-unit) * 6);    /* 48px */
   --s-8: calc(var(--space-unit) * 8);    /* 64px */
+
+  /* VA! Border radius based on space-unit */
+  --border-radius: calc(var(--space-unit) * 1.25);    /* 12px */
+
+
 
   /* !VA  Accordion and Showmore  */
   --accordion-text-color: inherit;
@@ -154,16 +169,17 @@ body {
 .content {
   flex: 1;
   width: 100%;
-  background: var(--content-bg);
+  background: var(--c-content-bg);
   color: var(--content-text);
 }
 
 /* The universal inner container */
 .page {
   max-width: var(--content-max);
-  margin: 0 auto;
+  margin: var(--s-6) auto var(--s-8);
   padding: var(--page-y) var(--page-x);
-  width: 100%;
+  background: var(--c-page-bg);
+  border-radius: var(--border-radius);
   box-sizing: border-box;
 }
 

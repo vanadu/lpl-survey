@@ -10,48 +10,16 @@ const Browse_06_EarlySymptoms = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container"></div>
-
+        <div className="browse-panel-container">
       <h2 className="browse-content-heading">Your early encounters with LP/GOLPP</h2>
 
-      <p className="browse-content-text">Most people know something&lsquo;s wrong with their companion before they know it&lsquo;s LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe &#123;CmpnName&#125; might have it.</p>
+      <p className="browse-content-text">Most people know something&lsquo;s wrong with their companion before they know it&lsquo;s LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe Bella might have it.</p>
 
       <div className="browse-panel-container">
-        <h3 className="browse-showanswer-title">At about what age did &#123;CmpnName&#125; start showing symptoms of LP/GOLPP?</h3>
-      </div>
-
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="EarlySymptomsType">
         <ShowAnswerContent
-          title="Years"
+          title="What symptoms did Bella have at that time?"
           index={1}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <div className="showanswer__content-block">
-          <div className="browse-showanswer-input" aria-hidden="true"></div>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container">
-        <ShowAnswerContent
-          title="Months (number 0 - 11)"
-          index={2}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <div className="showanswer__content-block">
-          <div className="browse-showanswer-input" aria-hidden="true"></div>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-panel-container"></div>
-
-      <div className="browse-question-container">
-        <ShowAnswerContent
-          title="What symptoms did {CmpnName} have at that time?"
-          index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -90,10 +58,10 @@ const Browse_06_EarlySymptoms = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="EarlySymtomsSeverity">
         <ShowAnswerContent
-          title="How severe did you think {CmpnName}'s early symptoms were?"
-          index={4}
+          title="How severe did you think Bella's early symptoms were?"
+          index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -103,66 +71,66 @@ const Browse_06_EarlySymptoms = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="EarlySymptomsHindEndWeakness">
         <ShowAnswerContent
-          title="Was {CmpnName} already showing signs of hind-end weakness in this early stage?"
+          title="Was Bella already showing signs of hind-end weakness in this early stage?"
+          index={3}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t remember</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="EarlySymptomsIncontinence">
+        <ShowAnswerContent
+          title="Was Bella already showing signs of urinary or fecal incontinence weakness in this early stage?"
+          index={4}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t remember</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+      </div>
+
+      <div className="browse-panel-container">
+      <div className="browse-panel-container">
+      <div className="browse-question-container" id="EarlySymptomsOtherConditions">
+        <ShowAnswerContent
+          title="When Bella first started showing symptoms of LP, did she have any other health conditions?"
           index={5}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t remember</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container">
-        <ShowAnswerContent
-          title="Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?"
-          index={6}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t remember</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-panel-container"></div>
-
-      <div className="browse-panel-container"></div>
-
-      <div className="browse-question-container">
-        <ShowAnswerContent
-          title="When {CmpnName} first started showing symptoms of LP, did {cvGenderSubjectPronoun} have any other health conditions?"
-          index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -185,10 +153,10 @@ const Browse_06_EarlySymptoms = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="EarlSymptomsOtherConditionsType">
         <ShowAnswerContent
-          title="Which other conditions did {CmpnName} have when the first LP symptoms appeared?"
-          index={8}
+          title="Which other conditions did Bella have when the first LP symptoms appeared?"
+          index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -229,6 +197,8 @@ const Browse_06_EarlySymptoms = () => {
           </ul>
           </div>
         </ShowAnswerContent>
+      </div>
+      </div>
       </div>
       </div>
     </main>

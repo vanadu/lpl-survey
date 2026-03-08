@@ -56,104 +56,111 @@ const BrowseMenu = () => {
         role="menu"
         aria-hidden={!open}
       >
+
+        <li className="browse-menu__item" role="none">
+          <Link href="/browse-mode" onClick={close} role="menuitem">
+            Browse
+          </Link>
+        </li>
+
         {/* <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_00_Landing" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_00_Landing" onClick={close} role="menuitem">
             00_Landing
           </Link>
         </li> */}
 
         {/* <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_01_UserInfo" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_01_UserInfo" onClick={close} role="menuitem">
             01_UserInfo
           </Link>
         </li> */}
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_02_CmpnInfo" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_02_CmpnInfo" onClick={close} role="menuitem">
             02_CmpnInfo
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_03_InfoSources" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_03_InfoSources" onClick={close} role="menuitem">
             03_InfoSources
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_04_IntubationHistory" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_04_IntubationHistory" onClick={close} role="menuitem">
             04_IntubationHistory
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_05_BreathingCrisis" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_05_BreathingCrisis" onClick={close} role="menuitem">
             05_BreathingCrisis
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_06_EarlySymptoms" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_06_EarlySymptoms" onClick={close} role="menuitem">
             06_EarlySymptoms
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_07_PrimaryDuration" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_07_PrimaryDuration" onClick={close} role="menuitem">
             07_PrimaryDuration
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_08_PrimaryVet" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_08_PrimaryVet" onClick={close} role="menuitem">
             08_PrimaryVet
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_09_Diagnosis" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_09_Diagnosis" onClick={close} role="menuitem">
             09_Diagnosis
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_10_TreatmentStatus" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_10_TreatmentStatus" onClick={close} role="menuitem">
             10_TreatmentStatus
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_11_TreatmentFactors" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_11_TreatmentFactors" onClick={close} role="menuitem">
             11_TreatmentFactors
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_12_Management" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_12_Management" onClick={close} role="menuitem">
             12_Management
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_13_OTCProducts" onClick={close} role="menuitem">
-            13_OTCProducts
+          <Link href="/browse-mode/Browse_13_OtcProducts" onClick={close} role="menuitem">
+            13_OtcProducts
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_14_Aspiration" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_14_Aspiration" onClick={close} role="menuitem">
             14_Aspiration
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_15_Neuropathy" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_15_Neuropathy" onClick={close} role="menuitem">
             15_Neuropathy
           </Link>
         </li>
 
         <li className="browse-menu__item" role="none">
-          <Link href="/browse/Browse_16_Conclusion" onClick={close} role="menuitem">
+          <Link href="/browse-mode/Browse_16_Conclusion" onClick={close} role="menuitem">
             16_Conclusion
           </Link>
         </li>

@@ -8,7 +8,7 @@ const path = require("path");
 const PROJECT_ROOT = path.resolve(__dirname, "..");
 const DATA_ROOT_DIR = path.join(PROJECT_ROOT, "data");
 const PAGE_CONTENT_DIR = path.join(DATA_ROOT_DIR, "page-content");
-const OUTPUT_DIR = path.join(PROJECT_ROOT, "src", "pages", "browse");
+const OUTPUT_DIR = path.join(PROJECT_ROOT, "src", "pages", "browse-mode");
 const COMPONENT_IMPORT_PATH = "../../components/ShowAnswerContent";
 const BROWSEMENU_IMPORT_PATH = "../../components/BrowseMenu";
 
@@ -58,6 +58,8 @@ function ensureDir(dirPath) {
 }
 
 function escapeJsxText(value = "") {
+  value = replaceTokens(value);
+
   return String(value)
     .replace(/&/g, "&amp;")
     .replace(/'/g, "&lsquo;")
@@ -74,11 +76,30 @@ function escapeTemplateLiteral(value = "") {
     .replace(/\$\{/g, "\\${");
 }
 
+
 function stripOuterTag(html, tagName) {
-  const re = new RegExp(`^\\s*<${tagName}[^>]*>([\\s\\S]*?)<\\/${tagName}>\\s*$`, "i");
-  const match = String(html).match(re);
-  return match ? match[1].trim() : String(html).trim();
+  let text = String(html || "").trim();
+
+  const openTag = new RegExp(`^\\s*<${tagName}\\b[^>]*>`, "i");
+  const closeTag = new RegExp(`\\s*</${tagName}>\\s*$`, "i");
+  const malformedCloseTag = new RegExp(`\\s*<${tagName}>\\s*$`, "i");
+
+  text = text.replace(openTag, "");
+  text = text.replace(closeTag, "");
+  text = text.replace(malformedCloseTag, "");
+
+  return text.trim();
 }
+
+
+function stripAllTags(html) {
+  return String(html || "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+
 
 function normalizeChoiceText(choice) {
   if (typeof choice === "string") return choice;
@@ -87,6 +108,28 @@ function normalizeChoiceText(choice) {
   }
   return "";
 }
+
+
+// ADD IT RIGHT HERE
+const tokenMap = {
+  "{CmpnName}": "Bella",
+  "{cvObserveFirstPersonPast}": "have you observed",
+  "{cvDoThirdPersonSingular}": "does",
+  "{cvDoFirstPersonSingularInitialCap}": "Do",
+  "{cvGenderSubjectPronoun}": "she",
+  "{cvGenderObjectPronoun}": "her",
+  "{cvStateAdjective}": "current",
+  "{cvEndOfLife}": "in her current state of health",
+  "{cvThatThis}": "this"
+};
+
+function replaceTokens(text) {
+  return String(text).replace(/\{[^}]+\}/g, m => tokenMap[m] ?? m);
+}
+
+
+
+
 
 function loadExclusions() {
   if (!fs.existsSync(EXCLUSIONS_PATH)) {
@@ -147,32 +190,50 @@ function parsePageFileInfo(filename) {
 // HTML BLOCK RENDERING
 // -----------------------------------------------------------------------------
 
+
 function renderHtmlElement(el) {
   const html = String(el.html || "").trim();
 
   if (!html) return "";
 
   if (/^\s*<h2\b/i.test(html)) {
-    const inner = stripOuterTag(html, "h2");
+    const inner = stripAllTags(stripOuterTag(html, "h2"));
     return `      <h2 className="browse-content-heading">${escapeJsxText(inner)}</h2>`;
   }
 
   if (/^\s*<h3\b/i.test(html)) {
-    const inner = stripOuterTag(html, "h3");
+    const inner = stripAllTags(stripOuterTag(html, "h3"));
     return `      <h3 className="browse-content-subheading">${escapeJsxText(inner)}</h3>`;
   }
 
   if (/^\s*<p\b/i.test(html)) {
-    const inner = stripOuterTag(html, "p");
-    return `      <p className="browse-content-text">${escapeJsxText(inner)}</p>`;
+    const paragraphs = html
+      .split(/<\/p>\s*/i)
+      .map((part) => part.trim())
+      .filter(Boolean)
+      .map((part) => {
+        const normalized = /^\s*<p\b/i.test(part) ? part : `<p>${part}</p>`;
+        const inner = stripAllTags(stripOuterTag(normalized, "p"));
+        return inner.trim()
+          ? `      <p className="browse-content-text">${escapeJsxText(inner)}</p>`
+          : "";
+      })
+      .filter(Boolean)
+      .join("\n");
+
+    if (paragraphs) return paragraphs;
   }
 
-  if (/^\s*<div\b/i.test(html)) {
-    return `      <div dangerouslySetInnerHTML={{ __html: \`${escapeTemplateLiteral(html)}\` }} />`;
-  }
+  const plainText = stripAllTags(html).trim();
 
-  return `      <div dangerouslySetInnerHTML={{ __html: \`${escapeTemplateLiteral(html)}\` }} />`;
+  if (!plainText) return "";
+
+  return `      <p className="browse-content-text">${escapeJsxText(plainText)}</p>`;
 }
+
+
+
+
 
 // -----------------------------------------------------------------------------
 // QUESTION BODY RENDERING
@@ -246,9 +307,10 @@ function renderQuestionInner(el, sourceFilename) {
 }
 
 function renderQuestionBlock(el, index, sourceFilename) {
-  const title = el.title || el.name || "Untitled";
+  const title = replaceTokens(el.title || el.name || "Untitled");
+  const id = el.name ? ` id="${escapeTemplateLiteral(el.name)}"` : "";
 
-  return `      <div className="browse-question-container">
+  return `      <div className="browse-question-container"${id}>
         <ShowAnswerContent
           title="${escapeTemplateLiteral(title)}"
           index={${index}}
@@ -265,6 +327,7 @@ ${renderQuestionInner(el, sourceFilename)}
 // -----------------------------------------------------------------------------
 // TREE WALK
 // -----------------------------------------------------------------------------
+
 
 function collectRenderableNodes(elements, exclusions, sourceFilename, bucket = []) {
   if (!Array.isArray(elements)) return bucket;
@@ -290,21 +353,17 @@ function collectRenderableNodes(elements, exclusions, sourceFilename, bucket = [
         continue;
       }
 
-      // ---------------------------------------------------------------------
-      // PANEL CONTAINER HANDLING
-      // For now:
-      // - titled panels with "Card" in the identifier are skipped entirely
-      // - all other panels are transformed to empty browse containers
-      // - panel children are still traversed and rendered after the container
-      //
-      // Remove or change this block later if panels prove unnecessary.
-      // ---------------------------------------------------------------------
       bucket.push({
         kind: "panelContainer",
         title: hasTitle ? String(el.title).trim() : "",
+        children: collectRenderableNodes(
+          el.elements || [],
+          exclusions,
+          sourceFilename,
+          []
+        ),
       });
 
-      collectRenderableNodes(el.elements || [], exclusions, sourceFilename, bucket);
       continue;
     }
 
@@ -323,19 +382,54 @@ function collectRenderableNodes(elements, exclusions, sourceFilename, bucket = [
   return bucket;
 }
 
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
 // PAGE BUILD
 // -----------------------------------------------------------------------------
 
-function renderPanelContainerBlock(title) {
-  if (!title) {
-    return `      <div className="browse-panel-container"></div>`;
+function renderPanelContainerBlock(node, getNextAccordionIndex) {
+  const children = (node.children || [])
+    .map((child) => {
+      if (child.kind === "html") {
+        return renderHtmlElement(child.element);
+      }
+
+      if (child.kind === "panelContainer") {
+        return renderPanelContainerBlock(child, getNextAccordionIndex);
+      }
+
+      if (child.kind === "question") {
+        return renderQuestionBlock(
+          child.element,
+          getNextAccordionIndex(),
+          child.sourceFilename
+        );
+      }
+
+      return "";
+    })
+    .filter(Boolean)
+    .join("\n\n");
+
+  if (!node.title) {
+    return `      <div className="browse-panel-container">
+${children}
+      </div>`;
   }
 
   return `      <div className="browse-panel-container">
-        <h3 className="browse-showanswer-title">${escapeJsxText(title)}</h3>
+        <h3 className="browse-showanswer-title">${escapeJsxText(node.title)}</h3>
+${children}
       </div>`;
 }
+
+
 
 function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename) {
   const nodes = collectRenderableNodes(
@@ -345,6 +439,7 @@ function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename) {
   );
 
   let accordionIndex = 1;
+  const getNextAccordionIndex = () => accordionIndex++;
 
   const body = nodes
     .map((node) => {
@@ -353,17 +448,18 @@ function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename) {
       }
 
       if (node.kind === "panelContainer") {
-        return renderPanelContainerBlock(node.title);
+        return renderPanelContainerBlock(node, getNextAccordionIndex);
       }
 
       if (node.kind === "question") {
-        return renderQuestionBlock(node.element, accordionIndex++, sourceFilename);
+        return renderQuestionBlock(node.element, getNextAccordionIndex(), sourceFilename);
       }
 
       return "";
     })
     .filter(Boolean)
     .join("\n\n");
+
 
   return `import React, { useState } from "react";
 import ShowAnswerContent from "${COMPONENT_IMPORT_PATH}";

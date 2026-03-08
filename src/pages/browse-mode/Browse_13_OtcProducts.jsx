@@ -10,17 +10,16 @@ const Browse_13_OtcProducts = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container"></div>
-
+        <div className="browse-panel-container">
       <h2 className="browse-content-heading">2OTC (Over-The-Counter) Products for LP/GOLPP</h2>
 
-      <p className="browse-content-text">&lt;b&gt;IMPORTANT&lt;/b&gt;: Attempting to manage LP/GOLPP symptoms with supplements and OTC products is controversial. There are no supplements or OTC products that will restore movement to paralyzed laryneal tissue. That means that even with such products, the risk of breathing crises and a potentially fatal suffocation event is very real. While supplements and OTC products can&lsquo;t prevent a breathing emergency, some veterinary professionals believe some supplements and OTC products may have a positive effect on symptoms and improve an LP/GOLPP patient&lsquo;s quality of life.  &lt;/p&gt;&lt;p&gt;The questions in this section pertain to the main ingredient of a product, not any specific product. This survey isn&lsquo;t intended to advertise for, recommend, or be used as a marketing vehicle for any specific product. For questions about the effectiveness or safety of any product, consult with a licensed veterinarian.</p>
+      <p className="browse-content-text">IMPORTANT : Attempting to manage LP/GOLPP symptoms with supplements and OTC products is controversial. There are no supplements or OTC products that will restore movement to paralyzed laryneal tissue. That means that even with such products, the risk of breathing crises and a potentially fatal suffocation event is very real. While supplements and OTC products can&lsquo;t prevent a breathing emergency, some veterinary professionals believe some supplements and OTC products may have a positive effect on symptoms and improve an LP/GOLPP patient&lsquo;s quality of life.</p>
+      <p className="browse-content-text">The questions in this section pertain to the main ingredient of a product, not any specific product. This survey isn&lsquo;t intended to advertise for, recommend, or be used as a marketing vehicle for any specific product. For questions about the effectiveness or safety of any product, consult with a licensed veterinarian.</p>
 
-      <div className="browse-panel-container"></div>
-
-      <div className="browse-question-container">
+      <div className="browse-panel-container">
+      <div className="browse-question-container" id="OTCProductsDidPurchase">
         <ShowAnswerContent
-          title="Have you purchased OTC products based on a particular ingredient {CmpnName}'s LP/GOLPP symptoms?"
+          title="Have you purchased OTC products based on a particular ingredient Bella's LP/GOLPP symptoms?"
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -44,9 +43,9 @@ const Browse_13_OtcProducts = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="OTCProductsType">
         <ShowAnswerContent
-          title="Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:"
+          title="Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for Bella's LP/GOLPP symptoms:"
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -98,7 +97,7 @@ const Browse_13_OtcProducts = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="OTCProductsCost">
         <ShowAnswerContent
           title="What was the average monthly cost of these OTC products?"
           index={3}
@@ -128,7 +127,7 @@ const Browse_13_OtcProducts = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="OTCProductsEffectiveness">
         <ShowAnswerContent
           title="Please rate the overall effectiveness of the OTC products you selected above:"
           index={4}
@@ -140,12 +139,12 @@ const Browse_13_OtcProducts = () => {
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
+      </div>
 
-      <div className="browse-panel-container"></div>
-
-      <div className="browse-panel-container"></div>
-
-      <div className="browse-question-container">
+      <div className="browse-panel-container">
+      <div className="browse-panel-container">
+      <div className="browse-question-container" id="OTCProtocolDidPurchase">
         <ShowAnswerContent
           title="Have you purchased products that are advertised as a blend or protocol of OTC ingredients created for a specific illness or condition? "
           index={5}
@@ -171,7 +170,7 @@ const Browse_13_OtcProducts = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="OTCProtocolCost">
         <ShowAnswerContent
           title="What was the average monthly cost of the blends or protocols?"
           index={6}
@@ -201,9 +200,9 @@ const Browse_13_OtcProducts = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container">
+      <div className="browse-question-container" id="OTCProtocolEffectiveness">
         <ShowAnswerContent
-          title="Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:"
+          title="Please rate the overall effectiveness of the blends or 'protocols' you purchased for Bella:"
           index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -212,6 +211,8 @@ const Browse_13_OtcProducts = () => {
           <div className="browse-showanswer-generic" aria-hidden="true"></div>
           </div>
         </ShowAnswerContent>
+      </div>
+      </div>
       </div>
       </div>
     </main>
