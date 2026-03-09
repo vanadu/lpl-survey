@@ -123,16 +123,72 @@ display: none;
   All styling not directly related to SJ
 ====================================*/
 
+span.italic {
+  font-style: italic;
+}
+
+
+span.emphasis {
+  font-weight: 600;
+}
+
+span.strong-emphasis {
+  font-style: italic;
+  font-weight: 700;
+}
+
+
+
+
+/* !VA  START SURVEY PAGE STYLES 
+---------------------------
+*/
+
+h2.start-survey-heading {
+  text-align: center;
+}
+
+.survey-mode-button-container {
+  width: 55%;
+  margin: var(--s-6) auto;
+}
+
+
+.survey-mode-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &.browse, &.home {
+    justify-content: center;
+  }
+}
+
+
+.survey-mode-btn {
+  text-decoration: none;
+  font-weight: 650;
+  width: 240px;
+  height: auto;
+}
+
+.survey-mode-btn-caption {
+  text-align: center;
+}
+
+
 
 /* !VA  HOME PAGE STYLES 
 ---------------------------
 */
+
 
 .home-head h1 {
   font-family: var(--font-secondary);
   margin: 0 0 var(--s-2) 0;
   // font-size: var(--text-h2);
   line-height: var(--lh-tight);
+  text-align: center;
 }
 
 .home-head .slug {
@@ -147,46 +203,132 @@ display: none;
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-3);
-  background: rgba(255, 0, 0, .3) !important; //devred
 }
 
-.home-start-survey-button {
+// !VA These are more or less identical to .survey-mode button elements
+.home-survey-button-container {
+  display: flex;
+    justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 140px;
+  margin: var(--s-2) auto 0;
+}
+
+
+.home-survey-buttons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 140px;
+  z-index: 100;
+  h2 {
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: var(--font-size-3xl)!important;  }
+}
+
+.home-survey-buttons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 140px;
+  inset: 0;
+  z-index: -1;
+  background:
+
+    radial-gradient(
+      circle at center,
+      rgba(0,0,0,0) 55%,
+      rgba(0,0,0,0.35) 100%
+    ),
+     linear-gradient(
+      rgba(196,196,196,0.8),
+      rgba(196,196,196,0.8)
+    ),
+    url("/img-start-survey-button.png") center / cover no-repeat;
+    filter: grayscale(50%) contrast(1.2);
+}
+
+
+.home-survey-btn {
   text-decoration: none;
   font-weight: 650;
-  width: 200px;
-  height: 80px;
+  width: 240px;
+  height: auto;
 }
 
-.btn--primary {
+.home-survey-btn-caption {
+  text-align: center;
+}
+
+
+
+.home-start-survey-button {
+  width: 300px;
+  height: auto;
+  background: var(--c-content-bg);
+}
+
+
+
+
+
+
+
+
+
+
+.btn-primary {
   background: var(--accent);
   color: #120c02;
-  border-color: transparent;
+  border-color: var(--border); // !VA I don't understand this in :root
+  border-radius: var(--border-radius);
+  cursor: pointer;
 }
 
-.btn.secondary {
-  background: transparent;
-  border-color: rgb(255 255 255 / 0.22);
-  color: var(--fg);
+.btn-secondary {
+  color: #120c02;
+  border-color: var(--border); // !VA I don't understand this in :root
+  border-radius: var(--border-radius);
+  cursor: pointer;
 }
 
-.home-body {
+.content-body {
   display: grid;
   gap: var(--s-5);
   margin-top: var(--s-6);
 }
 
-.home-body h2 {
+.content-body h2 {
   margin: 0 0 var(--s-3) 0;
   font-size: var(--font-size-xl);
   line-height: var(--line-heading);
 }
 
-.home-body p {
-  font-family: var(--font-primary);
-  font-size: var(--font-size-lg);
-  line-height: var(--line-body);
-  color: var(--c-content-text);
-  margin: 0;
+.content-body  {
+  ul {
+    margin-bottom: var(--s-2);
+  }
+  p, li  {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-body);
+    color: var(--c-content-text);
+    margin: 0;
+    padding: var(--s-2) 0 var(--s-1);
+  }
+  li {
+      margin: 0 0 0 var(--s-6);
+      padding-left: var(--s-2);
+  }
 }
 
 
@@ -197,14 +339,15 @@ display: none;
 
 // !VA Browse index.js hero/header
 // !VA Browser Home Page Header - index.js
-.browse-home-header-container {
+.site-header-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border: 1px solid gray;
+  width: 100%;
 }
 
-.browse-home-title-container, .browse-home-version-container {
+.site-header-title-container, .site-header-version-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,7 +356,7 @@ display: none;
   padding: 20px 0;
 }
 
-.browse-home-title-container {
+.site-header-title-container {
   @include ldesktop {
     align-items: flex-start;
     justify-content: flex-start;
@@ -221,7 +364,7 @@ display: none;
   }
 }
 
-.browse-home-title-heading,  {
+.site-header-title-heading,  {
   font-family: $secondary_font!important;
   font-size: var(--font-size-2xl);
   text-align: center;
@@ -230,7 +373,7 @@ display: none;
   }
 }
 
-.browse-home-title-subheading {
+.site-header-title-subheading {
   font-family: $primary_font;
   color: var(--c-gray-text);
   // font-size: 1.313rem!important;
@@ -255,29 +398,29 @@ display: none;
 }
 
 
-.browse-home-version-container {
-
+.site-header-version-container {
   
 }
 
-.browse-home-version-content {
+.site-header-version-content {
   display: flex;
   flex-direction: column;
 }
 
 
-.browse-survey-version-text {
+.site-header-version-text {
   width: 100%;
   font-family: $secondary_font!important;
   color: #353535!important;
   // --sjs-font-size: 15px;
   // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  font-size: var(--font-size-md);
   text-align: left;
   padding: 0!important;
   margin: 0!important;
 }
 
-.browse-home-version-logo {
+.site-header-version-logo {
   display: block;
   width: 80px;
   margin: 0 auto;
@@ -299,10 +442,10 @@ display: none;
 }
 
 
-.page.browse article {
-  background: rgba(0, 0, 255, .3) !important; //devblue
+article {
   margin: var(--s-4);
   font-family: var(--font-primary);
+  background: none;
   h2 {
     padding: var(--s-2) 0 var(--s-1);
     font-size: var(--font-size-xl);
@@ -326,8 +469,6 @@ display: none;
   margin: 20px 20px;
   border: 1px solid gray;
   border-radius: 20px;
-
-  background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import IconBar from './IconBar'
-import logo from '../../public/img-lpl-logo.png'
+import logo from '../../public/img-lpl-org-logo.png'
 import * as styles from '../styles/Header.module.scss'
 
 import { motion } from 'framer-motion'
@@ -89,7 +89,7 @@ const Header = () => {
 
 
       <div className={styles.header_slug}>
-        <h2 className={styles.header_slug_text}>21st Century Guide to Lar<span className='mobile-hide-inline'>yngeal</span> Par<span className='mobile-hide-inline'>alysis in Dogs</span><span className="mobile-show-inline">/GOLPP</span></h2>
+        <h2 className={styles.header_slug_text}>Serving the Lar Par/GOLPP Community</h2>
       </div>
 
 

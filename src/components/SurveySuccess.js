@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/img-lpl-logo.png"; // keep your existing import
+import logo from "../../public/img-lpl-.org-logo.png"; // keep your existing import
 
 const SurveySuccess = () => {
   

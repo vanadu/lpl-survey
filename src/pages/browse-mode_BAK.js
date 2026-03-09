@@ -2,7 +2,7 @@ import React from 'react'
 import BrowseMenu from "../../components/BrowseMenu"
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from "../../../public/img-lpl-org-logo.png"
+import Logo from "../../../public/img-lpl-logo.png"
 import BrowseMode from "../../../public/img-browse-mode.png"
 
 
@@ -34,7 +34,7 @@ const index = () => {
 
 
         <article className="card">
-
+          <h2>/pages/browse-mode.js</h2>
           <div className="survey-mode-button-container">
             <div className="survey-mode-buttons browse">
                   <Link href='/browse-mode' className='link-dark'>
@@ -42,11 +42,12 @@ const index = () => {
                       src={BrowseMode} 
                       className="survey-mode-btn" alt="XXX" 
                     />
-                    <figcaption className="survey-mode-btn-caption"><span className="emphasis">Start Browse Mode</span></figcaption>
+                    <figcaption className="survey-mode-btn-caption"><span className="emphasis">Browse Mode</span></figcaption>
                   </Link>
               </div>
            </div>
-          <h2>Browse Mode</h2>
+
+          <h2>About Browse Mode</h2>
           <p>
             In <span className="emphasis">Browse Mode</span>, you can browse through the questions in the 2026 LP/GOLPP Survey without answering or submitting. This is helpful if:
           </p>

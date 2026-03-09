@@ -1,17 +1,17 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
 
 
+  /* --border-radius: 12px; /* VA! changed to calculated, see below**/
   /* VA! Variables from old LPL */
  
-  /* --primarycolor: #FCB900;
-  --secondarycolor: #8DD1FF; */
 }
 
 
 :root {
 
+  /* VA! Deprecated, I think  
+  --max-width: 1100px */
+  
   /* !VA Page/Content size   */ 
   --page-max: 1000px;
   --page-x: clamp(16px, 3vw, 48px);

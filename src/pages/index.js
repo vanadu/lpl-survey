@@ -4,7 +4,8 @@ import { useRouter} from 'next/router'
 
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from "../../public/img-lpl-logo.png"
+import Logo from "../../public/img-lpl-org-logo.png"
+import StartSurveyButton from "../../public/img-start-survey-button.png"
 
 
 
@@ -33,20 +34,20 @@ const Home = () => {
         />
       <main className="page home">
         <header className="home-head card card--lift">
-          <div className="browse-home-header-container">
-            <div className="browse-home-title-container">
-              <h2 className="browse-home-title-heading">LP/GOLPP Survey 2026</h2>
-              <p className="browse-home-title-subheading">powered by larparlife.org</p>
+          <div className="site-header-container">
+            <div className="site-header-title-container">
+              <h2 className="site-header-title-heading">LP/GOLPP Survey 2026</h2>
+              <p className="site-header-title-subheading">powered by larparlife.org</p>
             </div>
 
-            <div className="browse-home-version-container">
-              <div className="browse-home-version-content">
+            <div className="site-header-version-container">
+              <div className="site-header-version-content">
                 <Image 
                   src={Logo} 
-                  className='browse-home-version-logo' 
+                  className='site-header-version-logo' 
                   alt="LarPar Life Logo" 
                 />
-                <p className="browse-home-version-text">Version 0.9/26.03.01.01</p>
+                <p className="site-header-version-text">Version 0.9/26.03.01.01</p>
               </div>
             </div>
           </div>
@@ -54,16 +55,16 @@ const Home = () => {
 
           
 
-
-        <section className="home-body">
+        <section className="content-body home-head">
           <h1>Welcome to the 2026 LP/GOLPP Survey!</h1>
-          <div className="home-start-survey-container">
-            <Link href='#' className='link-dark'>
-            
-              <button className="home-start-survey-button btn--primary">Start the Survey</button>
-            
-            
-            </Link>
+          <div className="home-survey-button-container">
+              <Link href='/start-survey' className='link-dark'>
+                <div className="home-survey-buttons">
+                  <h2>Take the 2026 Survey</h2>
+                </div>
+              </Link>
+
+
           </div>
           <article className="card">
             <h2>Did you know...</h2>
