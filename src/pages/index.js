@@ -1,7 +1,12 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useRouter} from 'next/router'
-import Link from 'next/link';
+
+import Image from 'next/image'
+import Link from 'next/link'
+import Logo from "../../public/img-lpl-logo.png"
+
+
 
 import SurveyComponentMaster from '@/components/SurveyComponentMaster'
 import SurveyComponent from '@/components/SurveyComponent'
@@ -28,20 +33,38 @@ const Home = () => {
         />
       <main className="page home">
         <header className="home-head card card--lift">
-          <h1>Welcome to the 2026 LP/GOLPP Survey!</h1>
-          <h2 className="slug">powered by larparlife.org</h2>
+          <div className="browse-home-header-container">
+            <div className="browse-home-title-container">
+              <h2 className="browse-home-title-heading">LP/GOLPP Survey 2026</h2>
+              <p className="browse-home-title-subheading">powered by larparlife.org</p>
+            </div>
 
-          <div className="start-survey-button-container">
-            <a className="btn btn--primary start-survey-button" href="/survey">
-              Start the Survey
-            </a>
-            <a className="btn start-survey-button secondary" href="/browse">
-              Browse Questions
-            </a>
+            <div className="browse-home-version-container">
+              <div className="browse-home-version-content">
+                <Image 
+                  src={Logo} 
+                  className='browse-home-version-logo' 
+                  alt="LarPar Life Logo" 
+                />
+                <p className="browse-home-version-text">Version 0.9/26.03.01.01</p>
+              </div>
+            </div>
           </div>
         </header>
 
+          
+
+
         <section className="home-body">
+          <h1>Welcome to the 2026 LP/GOLPP Survey!</h1>
+          <div className="home-start-survey-container">
+            <Link href='#' className='link-dark'>
+            
+              <button className="home-start-survey-button btn--primary">Start the Survey</button>
+            
+            
+            </Link>
+          </div>
           <article className="card">
             <h2>Did you know...</h2>
             <p>
