@@ -9,6 +9,10 @@
 
 :root {
 
+
+  /* VA! BASE UNIT*/
+  --base-unit: 8px;
+
   /* VA! Deprecated, I think  
   --max-width: 1100px */
   
@@ -42,6 +46,7 @@
   --font-size-2xl: calc(var(--font-size-base) * 1.625);    /* 26px */
   --font-size-3xl: calc(var(--font-size-base) * 2);      /* 32px */
   --font-size-4xl: calc(var(--font-size-base) * 2.5);    /* 40px */
+  --font-size-6xl: calc(var(--font-size-base) * 3);    /* 48px */
 
   /* VA! Line height - unitless*/
     --line-tight: 1.15;
@@ -85,8 +90,8 @@
   --accent: var(--c-primary);
   --accent-2: var(--c-secondary);
 
-  /* !VA base spacing unit */
-  --space-unit: 8px;
+  /* !VA base spacing unit based on base-unit */
+  --space-unit: var(--base-unit);
 
   /* !VA spacing scale */
   --s-1: calc(var(--space-unit) * 0.5);  /* 4px */
@@ -176,28 +181,30 @@ body {
 
 /* The universal inner container */
 .page {
-  max-width: var(--content-max);
-  margin: var(--s-6) auto var(--s-8);
-  padding: var(--page-y) var(--page-x);
+  width: 1000px;
+  margin: 48px auto 64px;
+  padding: 24px 40px;
   background: var(--c-page-bg);
   border-radius: var(--border-radius);
   box-sizing: border-box;
 }
 
-/* Wider when you want media-heavy layouts */
-.page--wide {
-  max-width: var(--wrap-max);
+@media (min-width: 768px) and (max-width: 999px) {
+  .page {
+    width: 768px;
+    padding: 20px 24px;
+  }
 }
 
-/* Narrow for long-form text readability */
-.page--prose {
-  max-width: var(--prose-max);
+@media (max-width: 767px) {
+  .page {
+    width: 100%;
+    margin: 24px auto 32px;
+    padding: 16px 12px;
+    border-radius: 0;
+  }
 }
 
-/* Nice pattern: keep container wide, but constrain text blocks */
-.prose {
-  max-width: var(--prose-max);
-}
 
 
 a {

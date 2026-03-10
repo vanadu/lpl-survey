@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from "next/link";
 import HeroImg01 from '../../public/hero/img-hero_01.jpg'
 import HeroImg02 from '../../public/hero/img-hero_02.jpg'
 import HeroImg03 from '../../public/hero/img-hero_03.jpg'
@@ -12,36 +13,65 @@ import HeroImg09 from '../../public/hero/img-hero_09.jpg'
 import HeroImg10 from '../../public/hero/img-hero_10.jpg'
 import HeroImg11 from '../../public/hero/img-hero_11.jpg'
 import HeroImg12 from '../../public/hero/img-hero_12.jpg'
-// import Logo from "../../../public/img-lpl-org-logo.png"
 import Logo from "../../public/img-lpl-org-logo.png"
 
 const SurveyHero = () => {
   return (
     <>
-      <div class="hero">
-        <div class="hero__grid">
+    <div className="hero-wrapper">
+      <div className="blob">
+        <Link href='start-survey' className='link-dark'>
+          <div class="hero">
+            <div class="hero__grid">
 
-          <Image src={HeroImg01} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-          <Image src={HeroImg02} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-          <Image src={HeroImg03} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-          <Image src={HeroImg04} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-          <Image src={HeroImg05} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-          <Image src={HeroImg06} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-          <Image src={HeroImg07} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-          <Image src={HeroImg08} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-          <Image src={HeroImg09} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-          <Image src={HeroImg10} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-          <Image src={HeroImg11} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-          <Image src={HeroImg12} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-        </div>
+              <Image src={HeroImg01} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <Image src={HeroImg02} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <Image src={HeroImg03} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <Image src={HeroImg04} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <Image src={HeroImg05} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <Image src={HeroImg06} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <Image src={HeroImg07} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <Image src={HeroImg08} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <Image src={HeroImg09} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <Image src={HeroImg10} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <Image src={HeroImg11} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <Image src={HeroImg12} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+            </div>
 
-        <div class="hero__overlay"></div>
+            <div class="hero__overlay"></div>
 
-        <div class="hero__content">
-          {/* <!-- logo / heading / text --> */}
-        </div>
+            <div class="hero__content">
+              <div className="hero-title-container">
+                <h2 className="hero-title-heading">LP/GOLPP Survey 2026</h2>
+              </div>
+              {/* <div className="hero-version-container">
+                <div className="hero-version-content">
+                  <Image 
+                    src={Logo} 
+                    className='hero-version-logo' 
+                    alt="LarPar Life Logo" 
+                  />
+                  <p className="hero-version-text">Version 0.9/26.03.01.01</p>
+                </div>
+              </div> */}
+            </div>
+          </div>
+        </Link>
+
       </div>
-    
+        <div className="hero-subtext-container">
+          <div className="hero-subtext">
+            <h3 className="hero-slug">powered by larparlife.org</h3>
+            <p className="hero-version">Version 0.9/26.03.01.01</p>
+          </div>
+          <div className="logo-container">
+            <Image 
+              src={Logo} 
+              className="hero-logo" alt="XXX" 
+            />
+          </div>
+        </div>
+    </div>
     
     
     </>
