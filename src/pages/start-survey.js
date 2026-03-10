@@ -11,20 +11,20 @@ const StartSurvey = () => {
 
       <main className="page home">
         <header className="home-head card card--lift">
-          <div className="site-header-container">
-            <div className="site-header-title-container">
-              <h2 className="site-header-title-heading">LP/GOLPP Survey 2026</h2>
-              <p className="site-header-title-subheading">powered by larparlife.org</p>
+          <div className="hero-container">
+            <div className="hero-title-container">
+              <h2 className="hero-title-heading">LP/GOLPP Survey 2026</h2>
+              <p className="hero-title-subheading">powered by larparlife.org</p>
             </div>
 
-            <div className="site-header-version-container">
-              <div className="site-header-version-content">
+            <div className="hero-version-container">
+              <div className="hero-version-content">
                 <Image 
                   src={Logo} 
-                  className='site-header-version-logo' 
+                  className='hero-version-logo' 
                   alt="LarPar Life Logo" 
                 />
-                <p className="site-header-version-text">Version 0.9/26.03.01.01</p>
+                <p className="hero-version-text">Version 0.9/26.03.01.01</p>
               </div>
             </div>
           </div>

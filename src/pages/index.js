@@ -7,6 +7,8 @@ import Link from 'next/link'
 import Logo from "../../public/img-lpl-org-logo.png"
 import StartSurveyButton from "../../public/img-start-survey-button.png"
 
+import SurveyHero from "../components/SurveyHero"
+
 
 
 import SurveyComponentMaster from '@/components/SurveyComponentMaster'
@@ -34,23 +36,9 @@ const Home = () => {
         />
       <main className="page home">
         <header className="home-head card card--lift">
-          <div className="site-header-container">
-            <div className="site-header-title-container">
-              <h2 className="site-header-title-heading">LP/GOLPP Survey 2026</h2>
-              <p className="site-header-title-subheading">powered by larparlife.org</p>
-            </div>
 
-            <div className="site-header-version-container">
-              <div className="site-header-version-content">
-                <Image 
-                  src={Logo} 
-                  className='site-header-version-logo' 
-                  alt="LarPar Life Logo" 
-                />
-                <p className="site-header-version-text">Version 0.9/26.03.01.01</p>
-              </div>
-            </div>
-          </div>
+          <SurveyHero/>
+
         </header>
 
           
