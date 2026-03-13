@@ -151,6 +151,62 @@ span.strong-emphasis {
   font-weight: 700;
 }
 
+// !VA 
+/* --------------------------------------------------
+   GENERAL CONTENT STYLES
+-------------------------------------------------- */
+
+.btn-primary {
+  background: var(--accent);
+  color: #120c02;
+  border-color: var(--border); // !VA I don't understand this in :root
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.btn-secondary {
+  color: #120c02;
+  border-color: var(--border); // !VA I don't understand this in :root
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.content-body {
+  display: grid;
+  gap: var(--s-5);
+  margin-top: var(--s-2);
+  margin: 0 var(--s-2) var(--s-2);
+}
+
+.content-body h2 {
+  margin: 0 0 var(--s-3) 0;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-heading);
+}
+
+.content-body  {
+  ul {
+    margin-bottom: var(--s-2);
+  }
+  p, li  {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-body);
+    color: var(--c-content-text);
+    margin: 0;
+    padding: var(--s-2) 0 var(--s-1);
+  }
+  li {
+      margin: 0 0 0 var(--s-6);
+      padding-left: var(--s-2);
+  }
+}
+
+
+
+
+
+
 
 /* !VA  SURVEY HERO STYLES 
 ---------------------------
@@ -172,7 +228,6 @@ span.strong-emphasis {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  background: rgba(255, 255, 0, .3) !important; //devyel
 }
 
 .hero {
@@ -306,7 +361,7 @@ span.strong-emphasis {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  margin: var(--s-4) var(--s-2);
+  margin: var(--s-1) var(--s-2) 0;
 }
 
 .hero-slug {
@@ -403,38 +458,56 @@ span.strong-emphasis {
 ---------------------------
 */
 
-h2.start-survey-heading {
-  text-align: center;
-}
-
 .survey-mode-button-container {
-  width: 55%;
   margin: var(--s-6) auto;
+  margin: var(--s-2) var(--s-6) var(--s-6);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 
 .survey-mode-buttons {
-  width: 100%;
+  width: 55%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 var(--s-2);
   &.browse, &.home {
     justify-content: center;
   }
 }
+.survey-mode-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
-.survey-mode-btn {
+.survey-mode-btn-img  {
   text-decoration: none;
   font-weight: 650;
-  width: 240px;
+  width: 180px;
   height: auto;
 }
 
 .survey-mode-btn-caption {
+  font-family: var(--font-secondary);;
+  color: var(--c-text-accent);
   text-align: center;
+  font-size: var(--font-size-2xl);
+  text-decoration: underline;
+  margin: 0 0 var(--s-2) 0 ;
 }
 
+// !VA How long does it take
+.survey-details-container {
+  h2 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-2xl);
+  }
+}
 
 
 /* !VA  HOME PAGE STYLES 
@@ -475,132 +548,6 @@ h2.start-survey-heading {
   letter-spacing: 0.02em;
 }
 
-// !VA These are more or less identical to .survey-mode button elements
-.home-survey-button-container {
-  display: flex;
-    justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  height: 140px;
-  margin: var(--s-2) auto 0;
-}
-
-
-.home-survey-buttons {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  height: 140px;
-  z-index: 100;
-  h2 {
-    display: inline-block;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: var(--font-size-3xl)!important;  }
-}
-
-// .home-survey-buttons::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 400px;
-//   height: 140px;
-//   inset: 0;
-//   z-index: -1;
-//   background:
-
-//     radial-gradient(
-//       circle at center,
-//       rgba(0,0,0,0) 55%,
-//       rgba(0,0,0,0.35) 100%
-//     ),
-//      linear-gradient(
-//       rgba(196,196,196,0.8),
-//       rgba(196,196,196,0.8)
-//     ),
-//     url("/img-start-survey-button.png") center / cover no-repeat;
-//     filter: grayscale(50%) contrast(1.2);
-// }
-
-
-.home-survey-btn {
-  text-decoration: none;
-  font-weight: 650;
-  width: 240px;
-  height: auto;
-}
-
-.home-survey-btn-caption {
-  text-align: center;
-}
-
-
-
-.home-start-survey-button {
-  width: 300px;
-  height: auto;
-  background: var(--c-content-bg);
-}
-
-.new-
-
-
-
-
-
-
-
-
-.btn-primary {
-  background: var(--accent);
-  color: #120c02;
-  border-color: var(--border); // !VA I don't understand this in :root
-  border-radius: var(--border-radius);
-  cursor: pointer;
-}
-
-.btn-secondary {
-  color: #120c02;
-  border-color: var(--border); // !VA I don't understand this in :root
-  border-radius: var(--border-radius);
-  cursor: pointer;
-}
-
-.content-body {
-  display: grid;
-  gap: var(--s-5);
-  margin-top: var(--s-6);
-}
-
-.content-body h2 {
-  margin: 0 0 var(--s-3) 0;
-  font-size: var(--font-size-xl);
-  line-height: var(--line-heading);
-}
-
-.content-body  {
-  ul {
-    margin-bottom: var(--s-2);
-  }
-  p, li  {
-    font-family: var(--font-primary);
-    font-size: var(--font-size-lg);
-    line-height: var(--line-body);
-    color: var(--c-content-text);
-    margin: 0;
-    padding: var(--s-2) 0 var(--s-1);
-  }
-  li {
-      margin: 0 0 0 var(--s-6);
-      padding-left: var(--s-2);
-  }
-}
-
 
 
 /* !VA  BROWSE MODE STYLES 
@@ -614,6 +561,7 @@ h2.start-survey-heading {
 
 article {
   margin: var(--s-4);
+  margin: var(--s-2) var(--s-4) var(--s-4);
   font-family: var(--font-primary);
   background: none;
   h2 {
