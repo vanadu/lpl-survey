@@ -21,8 +21,8 @@ const SurveyHero = () => {
     <div className="hero-wrapper">
       <div className="blob">
         <Link href='start-survey' className='link-dark'>
-          <div class="hero">
-            <div class="hero__grid">
+          <div className="hero">
+            <div className="hero__grid">
 
               <Image src={HeroImg01} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
               <Image src={HeroImg02} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
@@ -38,9 +38,9 @@ const SurveyHero = () => {
               <Image src={HeroImg12} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
             </div>
 
-            <div class="hero__overlay"></div>
+            <div className="hero__overlay"></div>
 
-            <div class="hero__content">
+            <div className="hero__content">
               <div className="hero-title-container">
                 <h2 className="hero-title-heading">LP/GOLPP Survey 2026</h2>
               </div>

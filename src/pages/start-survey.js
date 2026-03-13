@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Logo from "../../public/img-lpl-org-logo.png"
 import BrowseMode from "../../public/img-browse-mode.png"
 import SurveyMode from "../../public/img-survey-mode.png"
+import SurveyHero from "../components/SurveyHero"
 
 const StartSurvey = () => {
   return (
@@ -11,43 +12,30 @@ const StartSurvey = () => {
 
       <main className="page home">
         <header className="home-head card card--lift">
-          <div className="hero-container">
-            <div className="hero-title-container">
-              <h2 className="hero-title-heading">LP/GOLPP Survey 2026</h2>
-              <p className="hero-title-subheading">powered by larparlife.org</p>
-            </div>
 
-            <div className="hero-version-container">
-              <div className="hero-version-content">
-                <Image 
-                  src={Logo} 
-                  className='hero-version-logo' 
-                  alt="LarPar Life Logo" 
-                />
-                <p className="hero-version-text">Version 0.9/26.03.01.01</p>
-              </div>
-            </div>
-          </div>
+          <SurveyHero/>
+
         </header>
 
           <section className="content-body">
             <article className="card">
-              <h2 className="start-survey-heading">Which survey mode should you choose?</h2>
                 <div className="survey-mode-button-container">
                   <div className="survey-mode-buttons">
                   <Link href='survey-mode' className='link-dark'>
+                      <figcaption className="survey-mode-btn-caption"><span className="emphasis">Start the Survey Now!</span></figcaption>
                     <Image 
                       src={SurveyMode} 
                       className="survey-mode-btn" alt="XXX" 
                     />
-                    <figcaption className="survey-mode-btn-caption"><span className="emphasis">Survey Mode</span></figcaption>
+
                   </Link>
                   <Link href='browse-mode' className='link-dark'>
+                    <figcaption className="survey-mode-btn-caption"><span className="emphasis">Browse the Survey Questions</span></figcaption>
                     <Image 
                       src={BrowseMode} 
                       className="survey-mode-btn" alt="XXX" 
                     />
-                    <figcaption className="survey-mode-btn-caption"><span className="emphasis">Browse Mode</span></figcaption>
+
                   </Link>
                 </div>
               </div>
