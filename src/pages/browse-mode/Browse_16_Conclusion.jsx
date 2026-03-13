@@ -1,16 +1,27 @@
 import React, { useState } from "react";
 import ShowAnswerContent from "../../components/ShowAnswerContent";
 import BrowseMenu from "../../components/BrowseMenu";
+import Link from "next/link";
 
 const Browse_16_Conclusion = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <>
-    <BrowseMenu />
-    <main className='page browse'>
-      <div className="browse-page">
-        <div className="browse-panel-container" id="ConclusionCard1Panel">
+      <BrowseMenu />
+      <main className="page browse">
+        <div className="browse-page">
+      <div className="browse-page-nav" aria-label="Browse page navigation">
+        <Link className="browse-page-nav__prev" href="/browse-mode/Browse_15_Neuropathy" aria-label="Previous page">
+          <span aria-hidden="true">‹</span>
+        </Link>
+        <div className="browse-page-marker" id="CONCLUSION-page"></div>
+        <span className="browse-page-nav__next is-disabled" aria-hidden="true">
+          <span>›</span>
+        </span>
+      </div>
+
+      <div className="browse-panel-container" id="ConclusionCard1Panel">
       <div className="browse-content-block" id="ConclusionHeading">
         <h2 className="browse-content-heading">Conclusion</h2>
       </div>
@@ -470,8 +481,8 @@ const Browse_16_Conclusion = () => {
       </div>
       </div>
       </div>
-      </div>
-    </main>
+        </div>
+      </main>
     </>
   );
 };

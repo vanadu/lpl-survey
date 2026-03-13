@@ -1,16 +1,27 @@
 import React, { useState } from "react";
 import ShowAnswerContent from "../../components/ShowAnswerContent";
 import BrowseMenu from "../../components/BrowseMenu";
+import Link from "next/link";
 
 const Browse_11_TreatmentFactors = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <>
-    <BrowseMenu />
-    <main className='page browse'>
-      <div className="browse-page">
-        <div className="browse-panel-container" id="TreatmentFactorsCard1Panel">
+      <BrowseMenu />
+      <main className="page browse">
+        <div className="browse-page">
+      <div className="browse-page-nav" aria-label="Browse page navigation">
+        <Link className="browse-page-nav__prev" href="/browse-mode/Browse_10_TreatmentStatus" aria-label="Previous page">
+          <span aria-hidden="true">‹</span>
+        </Link>
+        <div className="browse-page-marker" id="TREATMENT_FACTORS-page"></div>
+        <Link className="browse-page-nav__next" href="/browse-mode/Browse_12_Management" aria-label="Next page">
+          <span aria-hidden="true">›</span>
+        </Link>
+      </div>
+
+      <div className="browse-panel-container" id="TreatmentFactorsCard1Panel">
       <div className="browse-content-block" id="TreatmentFactorsHeading">
         <h2 className="browse-content-heading">Factors that have influenced your LP/GOLPP decisions</h2>
       </div>
@@ -253,8 +264,8 @@ const Browse_11_TreatmentFactors = () => {
       </div>
       </div>
       </div>
-      </div>
-    </main>
+        </div>
+      </main>
     </>
   );
 };

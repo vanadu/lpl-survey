@@ -1,16 +1,27 @@
 import React, { useState } from "react";
 import ShowAnswerContent from "../../components/ShowAnswerContent";
 import BrowseMenu from "../../components/BrowseMenu";
+import Link from "next/link";
 
 const Browse_00_Landing = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <>
-    <BrowseMenu />
-    <main className='page browse'>
-      <div className="browse-page">
-        <div className="browse-panel-container" id="LandingCard1Panel">
+      <BrowseMenu />
+      <main className="page browse">
+        <div className="browse-page">
+      <div className="browse-page-nav" aria-label="Browse page navigation">
+        <span className="browse-page-nav__prev is-disabled" aria-hidden="true">
+          <span>‹</span>
+        </span>
+        <div className="browse-page-marker" id="LANDING-page"></div>
+        <Link className="browse-page-nav__next" href="/browse-mode/Browse_01_UserInfo" aria-label="Next page">
+          <span aria-hidden="true">›</span>
+        </Link>
+      </div>
+
+      <div className="browse-panel-container" id="LandingCard1Panel">
       <div className="browse-panel-container" id="LandingHeaderPanel">
       <div className="browse-content-block" id="LandingTitleHead">
         <p className="browse-content-text">LP/GOLPP Survey 2026 Powered by LarParLife.org</p>
@@ -95,8 +106,8 @@ const Browse_00_Landing = () => {
       </div>
       </div>
       </div>
-      </div>
-    </main>
+        </div>
+      </main>
     </>
   );
 };

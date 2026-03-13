@@ -557,24 +557,19 @@ span.strong-emphasis {
 // !VA Browse index.js hero/header
 // !VA Browser Home Page Header - index.js
 
-#UserInfoCard1Panel {
-  background: rgba(255, 0, 0, .3) !important; //devred
-  &::before { 
-    content: "Page 1 of 16";
-    position: absolute;
-    display: block;
-    margin: 0 auto;
-  
-  
-  }
-}
+// #UserInfoCard1Panel {
+//   background: rgba(255, 0, 0, .3) !important; //devred
+//   &::before { 
+//     content: "Page 1 of 16";
+//   }
+// }
 
 
-#InfoSourcesCard1Panel {
-  &::before { content: "Page 3 of 16" }
-}
+// #InfoSourcesCard1Panel {
+//   &::before { content: "Page 3 of 16" }
+// }
 
-
+// #LANDING_page { &::before { content: "Page 1 of 16"}}
 
 
 

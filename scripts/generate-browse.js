@@ -76,7 +76,6 @@ function escapeTemplateLiteral(value = "") {
     .replace(/\$\{/g, "\\${");
 }
 
-
 function stripOuterTag(html, tagName) {
   let text = String(html || "").trim();
 
@@ -91,15 +90,12 @@ function stripOuterTag(html, tagName) {
   return text.trim();
 }
 
-
 function stripAllTags(html) {
   return String(html || "")
     .replace(/<[^>]+>/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
-
-
 
 function normalizeChoiceText(choice) {
   if (typeof choice === "string") return choice;
@@ -109,8 +105,10 @@ function normalizeChoiceText(choice) {
   return "";
 }
 
+// -----------------------------------------------------------------------------
+// TOKEN REPLACEMENTS
+// -----------------------------------------------------------------------------
 
-// ADD IT RIGHT HERE
 const tokenMap = {
   "{CmpnName}": "Bella",
   "{cvObserveFirstPersonPast}": "have you observed",
@@ -120,16 +118,16 @@ const tokenMap = {
   "{cvGenderObjectPronoun}": "her",
   "{cvStateAdjective}": "current",
   "{cvEndOfLife}": "in her current state of health",
-  "{cvThatThis}": "this"
+  "{cvThatThis}": "this",
 };
 
 function replaceTokens(text) {
-  return String(text).replace(/\{[^}]+\}/g, m => tokenMap[m] ?? m);
+  return String(text).replace(/\{[^}]+\}/g, (m) => tokenMap[m] ?? m);
 }
 
-
-
-
+// -----------------------------------------------------------------------------
+// EXCLUSIONS / PAGE METADATA
+// -----------------------------------------------------------------------------
 
 function loadExclusions() {
   if (!fs.existsSync(EXCLUSIONS_PATH)) {
@@ -183,13 +181,35 @@ function parsePageFileInfo(filename) {
     rawPageName,
     componentName: `Browse_${num}_${normalizedPageName}`,
     outputFilename: `Browse_${num}_${normalizedPageName}.jsx`,
+    routePath: `/browse-mode/Browse_${num}_${normalizedPageName}`,
   };
+}
+
+function buildPageEntries(exclusions) {
+  return pageFiles.map((filename) => {
+    const inputPath = path.join(PAGE_CONTENT_DIR, filename);
+
+    if (!fs.existsSync(inputPath)) {
+      throw new Error(`Missing page file: data/page-content/${filename}`);
+    }
+
+    const pageObj = readJson(inputPath);
+    const fileInfo = parsePageFileInfo(filename);
+    const excluded = isExcludedPage(pageObj, exclusions, filename);
+
+    return {
+      filename,
+      inputPath,
+      pageObj,
+      fileInfo,
+      excluded,
+    };
+  });
 }
 
 // -----------------------------------------------------------------------------
 // HTML BLOCK RENDERING
 // -----------------------------------------------------------------------------
-
 
 function renderHtmlElement(el) {
   const html = String(el.html || "").trim();
@@ -240,10 +260,6 @@ ${paragraphs}
         <p className="browse-content-text">${escapeJsxText(plainText)}</p>
       </div>`;
 }
-
-
-
-
 
 // -----------------------------------------------------------------------------
 // QUESTION BODY RENDERING
@@ -338,7 +354,6 @@ ${renderQuestionInner(el, sourceFilename)}
 // TREE WALK
 // -----------------------------------------------------------------------------
 
-
 function collectRenderableNodes(elements, exclusions, sourceFilename, bucket = []) {
   if (!Array.isArray(elements)) return bucket;
 
@@ -354,29 +369,29 @@ function collectRenderableNodes(elements, exclusions, sourceFilename, bucket = [
       continue;
     }
 
-if (el.type === "panel") {
-  const panelName = String(el.name || "");
-  const hasTitle = Boolean(String(el.title || "").trim());
-  const hasCardIdentifier = /Card/i.test(panelName);
+    if (el.type === "panel") {
+      const panelName = String(el.name || "");
+      const hasTitle = Boolean(String(el.title || "").trim());
+      const hasCardIdentifier = /Card/i.test(panelName);
 
-  if (hasTitle && hasCardIdentifier) {
-    continue;
-  }
+      if (hasTitle && hasCardIdentifier) {
+        continue;
+      }
 
-  bucket.push({
-    kind: "panelContainer",
-    name: panelName,
-    title: hasTitle ? String(el.title).trim() : "",
-    children: collectRenderableNodes(
-      el.elements || [],
-      exclusions,
-      sourceFilename,
-      []
-    ),
-  });
+      bucket.push({
+        kind: "panelContainer",
+        name: panelName,
+        title: hasTitle ? String(el.title).trim() : "",
+        children: collectRenderableNodes(
+          el.elements || [],
+          exclusions,
+          sourceFilename,
+          []
+        ),
+      });
 
-  continue;
-}
+      continue;
+    }
 
     if (el.type === "paneldynamic") {
       collectRenderableNodes(el.elements || [], exclusions, sourceFilename, bucket);
@@ -392,13 +407,6 @@ if (el.type === "panel") {
 
   return bucket;
 }
-
-
-
-
-
-
-
 
 // -----------------------------------------------------------------------------
 // PAGE BUILD
@@ -442,8 +450,39 @@ ${children}
       </div>`;
 }
 
+function renderNavControl(direction, targetEntry) {
+  const baseClass =
+    direction === "prev" ? "browse-page-nav__prev" : "browse-page-nav__next";
+  const icon = direction === "prev" ? "‹" : "›";
+  const label = direction === "prev" ? "Previous page" : "Next page";
 
-function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename) {
+  if (!targetEntry) {
+    return `        <span className="${baseClass} is-disabled" aria-hidden="true">
+          <span>${icon}</span>
+        </span>`;
+  }
+
+  return `        <Link className="${baseClass}" href="${targetEntry.fileInfo.routePath}" aria-label="${label}">
+          <span aria-hidden="true">${icon}</span>
+        </Link>`;
+}
+
+function renderPageNav(pageObj, navContext) {
+  const markerId = pageObj?.name
+    ? ` id="${escapeTemplateLiteral(pageObj.name)}"`
+    : "";
+
+  const prevControl = renderNavControl("prev", navContext.prevEntry);
+  const nextControl = renderNavControl("next", navContext.nextEntry);
+
+  return `      <div className="browse-page-nav" aria-label="Browse page navigation">
+${prevControl}
+        <div className="browse-page-marker"${markerId}></div>
+${nextControl}
+      </div>`;
+}
+
+function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename, navContext) {
   const nodes = collectRenderableNodes(
     pageObj.elements || [],
     exclusions,
@@ -452,6 +491,8 @@ function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename) {
 
   let accordionIndex = 1;
   const getNextAccordionIndex = () => accordionIndex++;
+
+  const pageNav = renderPageNav(pageObj, navContext);
 
   const body = nodes
     .map((node) => {
@@ -464,7 +505,11 @@ function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename) {
       }
 
       if (node.kind === "question") {
-        return renderQuestionBlock(node.element, getNextAccordionIndex(), sourceFilename);
+        return renderQuestionBlock(
+          node.element,
+          getNextAccordionIndex(),
+          sourceFilename
+        );
       }
 
       return "";
@@ -472,22 +517,24 @@ function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename) {
     .filter(Boolean)
     .join("\n\n");
 
-
   return `import React, { useState } from "react";
 import ShowAnswerContent from "${COMPONENT_IMPORT_PATH}";
 import BrowseMenu from "${BROWSEMENU_IMPORT_PATH}";
+import Link from "next/link";
 
 const ${fileInfo.componentName} = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <>
-    <BrowseMenu />
-    <main className='page browse'>
-      <div className="browse-page">
-  ${body}
-      </div>
-    </main>
+      <BrowseMenu />
+      <main className="page browse">
+        <div className="browse-page">
+${pageNav}
+
+${body}
+        </div>
+      </main>
     </>
   );
 };
@@ -504,28 +551,32 @@ function main() {
   ensureDir(OUTPUT_DIR);
 
   const exclusions = loadExclusions();
+  const pageEntries = buildPageEntries(exclusions);
+  const includedEntries = pageEntries.filter((entry) => !entry.excluded);
 
-  for (const filename of pageFiles) {
-    const inputPath = path.join(PAGE_CONTENT_DIR, filename);
+  for (const excludedEntry of pageEntries.filter((entry) => entry.excluded)) {
+    console.log(`↷ Skipped excluded page: ${excludedEntry.filename}`);
+  }
 
-    if (!fs.existsSync(inputPath)) {
-      throw new Error(`Missing page file: data/page-content/${filename}`);
-    }
+  includedEntries.forEach((entry, index) => {
+    const navContext = {
+      prevEntry: index > 0 ? includedEntries[index - 1] : null,
+      nextEntry: index < includedEntries.length - 1 ? includedEntries[index + 1] : null,
+    };
 
-    const pageObj = readJson(inputPath);
+    const jsx = buildPageComponent(
+      entry.pageObj,
+      entry.fileInfo,
+      exclusions,
+      entry.filename,
+      navContext
+    );
 
-    if (isExcludedPage(pageObj, exclusions, filename)) {
-      console.log(`↷ Skipped excluded page: ${filename}`);
-      continue;
-    }
-
-    const fileInfo = parsePageFileInfo(filename);
-    const jsx = buildPageComponent(pageObj, fileInfo, exclusions, filename);
-    const outputPath = path.join(OUTPUT_DIR, fileInfo.outputFilename);
+    const outputPath = path.join(OUTPUT_DIR, entry.fileInfo.outputFilename);
 
     fs.writeFileSync(outputPath, jsx, "utf8");
-    console.log(`✅ Generated src/pages/browse/${fileInfo.outputFilename}`);
-  }
+    console.log(`✅ Generated src/pages/browse-mode/${entry.fileInfo.outputFilename}`);
+  });
 
   console.log("✅ Browse JSX generation complete");
 }

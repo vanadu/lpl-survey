@@ -1,16 +1,27 @@
 import React, { useState } from "react";
 import ShowAnswerContent from "../../components/ShowAnswerContent";
 import BrowseMenu from "../../components/BrowseMenu";
+import Link from "next/link";
 
 const Browse_12_Management = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <>
-    <BrowseMenu />
-    <main className='page browse'>
-      <div className="browse-page">
-        <div className="browse-panel-container" id="ManagementCard1Panel">
+      <BrowseMenu />
+      <main className="page browse">
+        <div className="browse-page">
+      <div className="browse-page-nav" aria-label="Browse page navigation">
+        <Link className="browse-page-nav__prev" href="/browse-mode/Browse_11_TreatmentFactors" aria-label="Previous page">
+          <span aria-hidden="true">‹</span>
+        </Link>
+        <div className="browse-page-marker" id="MANAGEMENT-page"></div>
+        <Link className="browse-page-nav__next" href="/browse-mode/Browse_13_OtcProducts" aria-label="Next page">
+          <span aria-hidden="true">›</span>
+        </Link>
+      </div>
+
+      <div className="browse-panel-container" id="ManagementCard1Panel">
       <div className="browse-content-block" id="ManagementHeading">
         <h2 className="browse-content-heading">Medical managment of LP/GOLPP</h2>
       </div>
@@ -619,8 +630,8 @@ const Browse_12_Management = () => {
       </div>
       </div>
       </div>
-      </div>
-    </main>
+        </div>
+      </main>
     </>
   );
 };

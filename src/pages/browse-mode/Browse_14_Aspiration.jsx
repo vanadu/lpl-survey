@@ -1,16 +1,27 @@
 import React, { useState } from "react";
 import ShowAnswerContent from "../../components/ShowAnswerContent";
 import BrowseMenu from "../../components/BrowseMenu";
+import Link from "next/link";
 
 const Browse_14_Aspiration = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <>
-    <BrowseMenu />
-    <main className='page browse'>
-      <div className="browse-page">
-        <div className="browse-panel-container" id="AspirationCard1Panel">
+      <BrowseMenu />
+      <main className="page browse">
+        <div className="browse-page">
+      <div className="browse-page-nav" aria-label="Browse page navigation">
+        <Link className="browse-page-nav__prev" href="/browse-mode/Browse_13_OtcProducts" aria-label="Previous page">
+          <span aria-hidden="true">‹</span>
+        </Link>
+        <div className="browse-page-marker" id="ASPIRATION-page"></div>
+        <Link className="browse-page-nav__next" href="/browse-mode/Browse_15_Neuropathy" aria-label="Next page">
+          <span aria-hidden="true">›</span>
+        </Link>
+      </div>
+
+      <div className="browse-panel-container" id="AspirationCard1Panel">
       <div className="browse-content-block" id="AspirationHeading">
         <h2 className="browse-content-heading">Bella&lsquo;s experience with aspiration pneumonia</h2>
       </div>
@@ -305,8 +316,8 @@ const Browse_14_Aspiration = () => {
       </div>
       </div>
       </div>
-      </div>
-    </main>
+        </div>
+      </main>
     </>
   );
 };
