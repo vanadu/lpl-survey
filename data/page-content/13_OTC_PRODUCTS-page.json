@@ -49,7 +49,7 @@
               "name": "OTCProductsType",
               "title": "Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:",
               "isRequired": true,
-              "visibleIf": "{OTCProductsDidPurchase} = YES",
+              "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
               "choices": [
                 {
                   "value": "TUMERIC",
@@ -76,7 +76,7 @@
                   "text": "Ursolic acid"
                 },
                 {
-                  "value": "PRIMROSE",
+                  "valuinitiative= 'YES'e": "PRIMROSE",
                   "text": "Evening Primrose Oil"
                 },
                 {
@@ -99,7 +99,7 @@
             "name": "OTCProductsCost",
             "title": "What was the average monthly cost of these OTC products?",
             "isRequired": true,
-            "visibleIf": "{OTCProductsDidPurchase} = YES",
+            "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
             "choices": [
               {
                 "value": "UNDER_50",
@@ -127,7 +127,7 @@
               "title": "Please rate the overall effectiveness of the OTC products you selected above:",
               "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
               "isRequired": true,
-              "visibleIf": "{OTCProductsDidPurchase} = YES",
+              "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -177,7 +177,7 @@
               "name": "OTCProtocolCost",
               "title": "What was the average monthly cost of the blends or protocols?",
               "isRequired": true,
-              "visibleIf": "{OTCProtocolDidPurchase} = YES",
+              "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
               "choices": [
                 {
                   "value": "UNDER_50",
@@ -206,7 +206,7 @@
               "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
               "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
               "isRequired": true,
-              "visibleIf": "{OTCProtocolDidPurchase} = YES",
+              "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

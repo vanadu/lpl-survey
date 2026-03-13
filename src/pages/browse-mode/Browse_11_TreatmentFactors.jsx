@@ -10,14 +10,20 @@ const Browse_11_TreatmentFactors = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">Factors that have influenced your LP/GOLPP decisions</h2>
+        <div className="browse-panel-container" id="TreatmentFactorsCard1Panel">
+      <div className="browse-content-block" id="TreatmentFactorsHeading">
+        <h2 className="browse-content-heading">Factors that have influenced your LP/GOLPP decisions</h2>
+      </div>
 
-      <p className="browse-content-text">Magna ullamco in sint esse exercitation nostrud eiusmod sint excepteur reprehenderit velit sit. Exercitation minim veniam fugiat elit. Nisi eu ipsum pariatur officia qui dolor consectetur Lorem aliquip non. Commodo labore cupidatat culpa ea exercitation aliquip laborum qui in tempor. Adipisicing esse ex est exercitation in laboris nisi eu ut deserunt dolor.</p>
+      <div className="browse-content-block" id="TreatmentFactorsText">
+        <p className="browse-content-text">Magna ullamco in sint esse exercitation nostrud eiusmod sint excepteur reprehenderit velit sit. Exercitation minim veniam fugiat elit. Nisi eu ipsum pariatur officia qui dolor consectetur Lorem aliquip non. Commodo labore cupidatat culpa ea exercitation aliquip laborum qui in tempor. Adipisicing esse ex est exercitation in laboris nisi eu ut deserunt dolor.</p>
+      </div>
 
-      <p className="browse-content-text">Please rate the relevant factors in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>
+      <div className="browse-content-block" id="TreatmentFactorsDetailsText">
+        <p className="browse-content-text">Please rate the relevant factors in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>
+      </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentFactorsDecisionPanel">
       <div className="browse-question-container" id="TreatmentFactorsDecision">
         <ShowAnswerContent
           title="Have you made a decision about whether or not to pursue LP surgery such as tieback for Bella?"
@@ -72,8 +78,8 @@ const Browse_11_TreatmentFactors = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentFactorsCard2Panel">
+      <div className="browse-panel-container" id="TreatmentFactorsCostPanel">
         <h3 className="browse-showanswer-title">How have financial considerations factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsCost">
         <ShowAnswerContent
@@ -102,7 +108,7 @@ const Browse_11_TreatmentFactors = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentFactorsStagePanel">
         <h3 className="browse-showanswer-title">How has the stage of Bella&lsquo;s LP/GOLPP factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsStageLP">
         <ShowAnswerContent
@@ -131,7 +137,7 @@ const Browse_11_TreatmentFactors = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentFactorsSurgeryRisksPanel">
         <h3 className="browse-showanswer-title">How have the risks of surgery factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsRisks">
         <ShowAnswerContent
@@ -160,7 +166,7 @@ const Browse_11_TreatmentFactors = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentFactorsGeneral">
         <h3 className="browse-showanswer-title">How have Bella&lsquo;s age and general health considerations factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsAge">
         <ShowAnswerContent
@@ -202,7 +208,7 @@ const Browse_11_TreatmentFactors = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentFactorsCircumstances">
         <h3 className="browse-showanswer-title">How have your personal circumstances factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsCircumstancesAccess">
         <ShowAnswerContent
@@ -231,7 +237,7 @@ const Browse_11_TreatmentFactors = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentFactorsOtherPanel">
         <h3 className="browse-showanswer-title">What other considerations, if any, have factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsOther">
         <ShowAnswerContent

@@ -10,10 +10,14 @@ const Browse_10_TreatmentStatus = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">Veterinary-Medical Procedures</h2>
+        <div className="browse-panel-container" id="TreatmentStatusCard1Panel">
+      <div className="browse-content-block" id="TreatmentStatusHeading">
+        <h2 className="browse-content-heading">Veterinary-Medical Procedures</h2>
+      </div>
 
-      <p className="browse-content-text">This section asks questions about any surgery or implant procedure Bella underwent to treat LP/GOLPP symptoms. This only includes surgeries or procedures that diriectly modify the structure of the larynx.</p>
+      <div className="browse-content-block" id="TreatmentStatusText">
+        <p className="browse-content-text">This section asks questions about any surgery or implant procedure Bella underwent to treat LP/GOLPP symptoms. This only includes surgeries or procedures that diriectly modify the structure of the larynx.</p>
+      </div>
 
       <div className="browse-question-container" id="TreatmentStatusDidHave">
         <ShowAnswerContent
@@ -36,14 +40,43 @@ const Browse_10_TreatmentStatus = () => {
           </div>
         </ShowAnswerContent>
       </div>
+
+      <div className="browse-panel-container" id="TreatmentStatusAgePanel">
+        <h3 className="browse-showanswer-title">At about what age did Bella have the first surgery or stent procedure?</h3>
+      <div className="browse-question-container" id="TreatmentStatusAgeYears">
+        <ShowAnswerContent
+          title="Years"
+          index={2}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
       </div>
 
-      <div className="browse-panel-container">
-      <div className="browse-panel-container">
+      <div className="browse-question-container" id="TreatmentStatusAgeMonths">
+        <ShowAnswerContent
+          title="Months (number 0 - 11)"
+          index={3}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="TreatmentStatusCard2Panel">
+      <div className="browse-panel-container" id="TreatmentStatusTypePanel">
       <div className="browse-question-container" id="TreatmentStatusType">
         <ShowAnswerContent
-          title="What kind procedure or procedures did Bella have?"
-          index={2}
+          title="What kind of procedure or procedures did Bella have?"
+          index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -75,12 +108,12 @@ const Browse_10_TreatmentStatus = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentStatusTiebackPanel">
         <h3 className="browse-showanswer-title">Questions about tieback (Unilateral Arytenoid Lateralization) surgery</h3>
       <div className="browse-question-container" id="TreatmentStatusTiebackEmergency">
         <ShowAnswerContent
           title="Was emergency tieback performed on Bella after a life-threatening breathing emergency?"
-          index={3}
+          index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -102,7 +135,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusTiebackWait">
         <ShowAnswerContent
           title="How long did you have to wait for non-emergency tieback surgery for Bella:"
-          index={4}
+          index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -132,7 +165,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusTiebackCount">
         <ShowAnswerContent
           title="How many times did Bella undergo tieback (UAL) surgery?"
-          index={5}
+          index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -154,7 +187,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusTiebackOnceCost">
         <ShowAnswerContent
           title="Approximate cost of surgery (not including post-op complications):"
-          index={6}
+          index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -192,7 +225,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusTiebackMultipleCost">
         <ShowAnswerContent
           title="Approximate total cost of surgeries (not including post-op complications):"
-          index={7}
+          index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -230,7 +263,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusTiebackComplications">
         <ShowAnswerContent
           title="Were there unexpected post-operative complications that required at least one extra night of inpatient care?"
-          index={8}
+          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -252,7 +285,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusTiebackComplicationsCost">
         <ShowAnswerContent
           title="Approximate cost of post-operative complications, not including the cost of the surgery:"
-          index={9}
+          index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -288,12 +321,12 @@ const Browse_10_TreatmentStatus = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentStatusBveapPanel">
         <h3 className="browse-showanswer-title">Questions about BVEAP (Bilateral Vocal Fold Excision &amp; Arytenoid Pexy)</h3>
       <div className="browse-question-container" id="TreatmentStatusBveapReasons">
         <ShowAnswerContent
           title="Why did you choose BVEAP over other surgery types?"
-          index={10}
+          index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -323,7 +356,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusBveapCost">
         <ShowAnswerContent
           title="Approximate cost of BVEAP surgery (not including post-op complications):"
-          index={11}
+          index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -357,7 +390,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusBveapComplications">
         <ShowAnswerContent
           title="Were there unexpected post-operative complications that required at least one extra night of inpatient care?"
-          index={12}
+          index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -379,7 +412,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusBveapComplicationsCost">
         <ShowAnswerContent
           title="Approximate cost of post-operative complications, not including the cost of the surgery:"
-          index={13}
+          index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -415,11 +448,11 @@ const Browse_10_TreatmentStatus = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentStatusStentPanel">
       <div className="browse-question-container" id="TreatmentStatusStentType">
         <ShowAnswerContent
           title="What type of stent implant did Bella receive?"
-          index={14}
+          index={16}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -446,14 +479,16 @@ const Browse_10_TreatmentStatus = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-panel-container">
-      <p className="browse-content-text">IMPORTANT : The Dextronix DexStent LE Nitinol wire stent device has been discontinued by the manufacturer. Report parties involved in the sale or use of this device to your local veterinary regulatory agency.</p>
+      <div className="browse-panel-container" id="TreatmentStatusDexstentPanel">
+      <div className="browse-content-block" id="TreatmentStatusDexstentText">
+        <p className="browse-content-text">IMPORTANT : The Dextronix DexStent LE Nitinol wire stent device has been discontinued by the manufacturer. Report parties involved in the sale or use of this device to your local veterinary regulatory agency.</p>
+      </div>
       </div>
 
       <div className="browse-question-container" id="TreatmentStatusStentDidMigrate">
         <ShowAnswerContent
           title="After the initial implant procedure, did Bella cough out the stent or did it migrate out of position?"
-          index={15}
+          index={17}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -475,7 +510,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusStentReplaced">
         <ShowAnswerContent
           title="After the first stent implant migrated or was coughed out, did you have it replaced with another stent?"
-          index={16}
+          index={18}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -497,7 +532,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusStentCostOnce">
         <ShowAnswerContent
           title="Approximate cost of stent implant procedure, not including complications:"
-          index={17}
+          index={19}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -535,7 +570,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusStentCostRepeat">
         <ShowAnswerContent
           title="Approximate cost of the stent procedures, not including complications:"
-          index={18}
+          index={20}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -573,7 +608,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusStentComplications">
         <ShowAnswerContent
           title="Were there post-operative complications that required overnight inpatient care for Bella?"
-          index={19}
+          index={21}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -595,7 +630,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusStentComplicationsCost">
         <ShowAnswerContent
           title="Approximate cost of post-procedure complications, not including the cost of the stent implant procedure:"
-          index={20}
+          index={22}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -631,12 +666,12 @@ const Browse_10_TreatmentStatus = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentStatusArytenoidectomyPanel">
         <h3 className="browse-showanswer-title">Questions about partial arytenoidectomy surgery</h3>
       <div className="browse-question-container" id="TreatmentStatusArytenoidectomyReasons">
         <ShowAnswerContent
           title="Why did you choose partial arytenoidectomy over other surgery types?"
-          index={21}
+          index={23}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -666,7 +701,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusArytenoidectomyLaser">
         <ShowAnswerContent
           title="Was the partial arytenoidectomy performed with a laser?"
-          index={22}
+          index={24}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -688,7 +723,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusArytenoidectomyDidExplain">
         <ShowAnswerContent
           title="Did the surgeon explain the pros and cons of this surgery type vs standard tieback surgery?"
-          index={23}
+          index={25}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -714,7 +749,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusArytenoidectomyChoice">
         <ShowAnswerContent
           title="Did the surgeon offer you the choice between this surgery type and standard tieback surgery?"
-          index={24}
+          index={26}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -740,7 +775,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusArytenoidectomyCost">
         <ShowAnswerContent
           title="Approximate cost of the partial arytenoidectomy (not including post-op complications):"
-          index={25}
+          index={27}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -774,7 +809,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusArytenoidectomyComplications">
         <ShowAnswerContent
           title="Were there unexpected post-operative complications that required at least one extra night of inpatient care?"
-          index={26}
+          index={28}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -796,7 +831,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusArytenoidectomyComplicationsCost">
         <ShowAnswerContent
           title="Approximate cost of post-operative complications, not including the cost of the surgery:"
-          index={27}
+          index={29}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -832,12 +867,12 @@ const Browse_10_TreatmentStatus = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentStatusVentrilocordectomyPanel">
         <h3 className="browse-showanswer-title">Questions about ventrilocordectomy surgery</h3>
       <div className="browse-question-container" id="TreatmentStatusVentrilocordectomyReasons">
         <ShowAnswerContent
           title="Why did you choose ventrilocordectomy over other surgery types?"
-          index={28}
+          index={30}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -867,7 +902,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusVentrilocordectomyDidExplain">
         <ShowAnswerContent
           title="Did the surgeon explain the pros and cons of this surgery type vs tieback surgery?"
-          index={29}
+          index={31}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -893,7 +928,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusVentrilocordectomyChoice">
         <ShowAnswerContent
           title="Did the surgeon offer you the choice between this surgery type and standard tieback surgery?"
-          index={30}
+          index={32}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -919,7 +954,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusVentrilocordectomyCost">
         <ShowAnswerContent
           title="Approximate cost of the ventrilocordectomy (not including post-op complications):"
-          index={31}
+          index={33}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -953,7 +988,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusVentrilocordectomyComplications">
         <ShowAnswerContent
           title="Were there unexpected post-operative complications that required at least one extra night of inpatient care?"
-          index={32}
+          index={34}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -975,7 +1010,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusVentrilocordectomyComplicationsCost">
         <ShowAnswerContent
           title="Approximate cost of post-operative complications, not including the cost of the surgery:"
-          index={33}
+          index={35}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1011,11 +1046,11 @@ const Browse_10_TreatmentStatus = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="TreatmentStatusRatingPanel">
       <div className="browse-question-container" id="TreatmentStatusSurgeonInformLevel">
         <ShowAnswerContent
           title="How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??"
-          index={34}
+          index={36}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1028,7 +1063,7 @@ const Browse_10_TreatmentStatus = () => {
       <div className="browse-question-container" id="TreatmentStatusTreatmentSatisfactionLevel">
         <ShowAnswerContent
           title="How satisfied were you with the results of the procedure?"
-          index={35}
+          index={37}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

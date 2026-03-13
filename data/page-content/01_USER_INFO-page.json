@@ -19,7 +19,7 @@
         {
           "type": "html",
           "name": "UserInfoText2",
-          "html": "<p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>"
+          "html": "<p>If you'd like to continue now, please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>"
         },
         {
           "type": "panel",

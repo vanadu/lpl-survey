@@ -13,7 +13,7 @@
         {
           "type": "html",
           "name": "PrimaryVetText",
-          "html": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p><p>If you changed primary vets since {CmpnName}'s LP/GOLPP symptoms first appeared   , please answer the question about your preferred or most recent primary veterinarian."
+          "html": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p><p>If you changed primary vets since {CmpnName}'s LP/GOLPP symptoms first appeared, please answer the question about your preferred or most recent primary veterinarian.</p>"
         },
         {
           "type": "panel",
@@ -72,7 +72,7 @@
             {
               "type": "radiogroup",
               "name": "PrimaryVetRefluxMeds",
-              "title": "Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotadine) or Prilosec (omeprazole) for reflux?",
+              "title": "Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotidine) or Prilosec (omeprazole) for reflux?",
               "isRequired": true,
               "visibleIf": "{PrimaryVetReflux} = 'YES'",
               "choices": [
@@ -94,7 +94,7 @@
             {
               "type": "boolean",
               "name": "PrimaryVetRefluxInitiative",
-              "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotadine) or Prilosec (omeprazole) on your own intiative without a prescription or recommendation from your primary vet?",
+              "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotidine) or Prilosec (omeprazole) on your own initiative without a prescription or recommendation from your primary vet?",
               "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
               "labelTrue": "Yes",
               "labelFalse": "No",
@@ -158,7 +158,7 @@
           {
             "type": "checkbox",
             "name": "PrimaryVetInfoDetails",
-            "title": "What did they tell you about the how LP/GOLPP might affect {CmpnName}?",
+            "title": "What did they tell you about how LP/GOLPP might affect {CmpnName}?",
             "isRequired": true,
             "visibleIf": "{PrimaryVetInfo} = true",
             "choices": [
@@ -244,7 +244,7 @@
             {
               "type": "rating",
               "name": "PrimaryVetConfidence",
-              "title": "How confident have you been you in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
+              "title": "How confident have you been in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
               "description": "1 = not at all confident, 5 = very confident",
               "isRequired": true,
               "rateValues": [
@@ -265,7 +265,7 @@
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
-                { "value": 3, "tex  !expectt": "3" },
+                { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
                 { "value": 5, "text": "5" },
                 { "value": "DONT_KNOW", "text": "Don't know" }

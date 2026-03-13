@@ -82,7 +82,7 @@
             {
             "type": "checkbox",
             "name": "TreatmentStatusType",
-            "title": "What kind procedure or procedures did {CmpnName} have?",
+            "title": "What kind of procedure or procedures did {CmpnName} have?",
             "description": "Please check all that apply.",
             "isRequired": true,
             "visibleIf": "{TreatmentStatusDidHave} = true",
@@ -497,7 +497,7 @@
               "title": "Approximate cost of the stent procedures, not including complications:",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
-              "visibleIf": "{TreatmentStatusStentDidMigrate} = true &&{TreatmentStatusStentReplaced} = true",
+              "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentReplaced} = true",
               "choices": [
                 {
                   "value": "NOT_SAY",

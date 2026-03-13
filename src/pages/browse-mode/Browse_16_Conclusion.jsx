@@ -10,20 +10,28 @@ const Browse_16_Conclusion = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">Conclusion</h2>
-
-      <p className="browse-content-text">The last section of this survey references your earlier responses to determine how Bella&lsquo;s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression.</p>
-
-      <div className="browse-panel-container">
-      <p className="browse-content-text">NOTE: These questions ask about the last station of Bella&lsquo;s LP/GOLPP journey before she crossed over the Rainbow Bridge. If it&lsquo;s too painful to revisit this stage of Bella&lsquo;s life, it might be best to discontinue the survey and return to it later.</p>
+        <div className="browse-panel-container" id="ConclusionCard1Panel">
+      <div className="browse-content-block" id="ConclusionHeading">
+        <h2 className="browse-content-heading">Conclusion</h2>
       </div>
 
-      <div className="browse-panel-container">
-      <p className="browse-content-text">IMPORTANT: Please answer the questions about Bella in her current state of health:</p>
+      <div className="browse-content-block" id="Conclusion">
+        <p className="browse-content-text">The last section of this survey references your earlier responses to determine how Bella&lsquo;s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression.</p>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="ConclusionsPanelLifeStatusTrue">
+      <div className="browse-content-block" id="ConclusionsPanelLifeStatusTrueText">
+        <p className="browse-content-text">NOTE: These questions ask about the last station of Bella&lsquo;s LP/GOLPP journey before she crossed over the Rainbow Bridge. If it&lsquo;s too painful to revisit this stage of Bella&lsquo;s life, it might be best to discontinue the survey and return to it later.</p>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="ConclusionsPanelLifeStatusFalse">
+      <div className="browse-content-block" id="ConclusionsPanelLifeStatusFalseText">
+        <p className="browse-content-text">IMPORTANT: Please answer the questions about Bella in her current state of health:</p>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="ConclusionDetailsPanel">
       <div className="browse-question-container" id="ConclusionSpecialConsiderations">
         <ShowAnswerContent
           title="Please describe any special considerations for Bella due to LP-related breathing issues:"
@@ -110,7 +118,7 @@ const Browse_16_Conclusion = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="ConclusionOtherConditionsPanel">
       <div className="browse-question-container" id="ConclusionOtherConditionsNew">
         <ShowAnswerContent
           title="Did Bella develop any new conditions during her LP/GOLPP journey that she didn't have before?"
@@ -185,9 +193,11 @@ const Browse_16_Conclusion = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
-      <div className="browse-panel-container">
-      <p className="browse-content-text">Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This questions asks about the primary cause of Bella&lsquo;s passing, not whether humane euthanasia was chosen to help them cross over.</p>
+      <div className="browse-panel-container" id="ConclusionCard2Panel">
+      <div className="browse-panel-container" id="ConclusionCauseOfDeathPanel">
+      <div className="browse-content-block" id="ConclusionCauseOfDeathHeading">
+        <p className="browse-content-text">Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This question asks about the primary cause of Bella&lsquo;s passing, not whether humane euthanasia was chosen to help them cross over.</p>
+      </div>
 
       <div className="browse-question-container" id="ConclusionCauseOfDeath">
         <ShowAnswerContent
@@ -240,7 +250,7 @@ const Browse_16_Conclusion = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="ConclusionOtherPathPanel">
         <h3 className="browse-showanswer-title">These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?</h3>
       <div className="browse-question-container" id="ConclusionOtherPathTieback">
         <ShowAnswerContent
@@ -453,8 +463,10 @@ const Browse_16_Conclusion = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-panel-container">
-      <p className="browse-content-text">LP/GOLPP Survey 2026 Thank You For Taking The Survey! Please select the checkbox to complete and submit. Please click the Complete button to submit your responses.</p>
+      <div className="browse-panel-container" id="ConclusionThanksPanel">
+      <div className="browse-content-block" id="ConclusionThanksHead">
+        <p className="browse-content-text">LP/GOLPP Survey 2026 Thank You For Taking The Survey! Please select the checkbox to complete and submit. Please click the Complete button to submit your responses.</p>
+      </div>
       </div>
       </div>
       </div>

@@ -10,16 +10,49 @@ const Browse_06_EarlySymptoms = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">Your early encounters with LP/GOLPP</h2>
+        <div className="browse-panel-container" id="EarlySymptomsCard1Panel">
+      <div className="browse-content-block" id="EarlySymptomsHeading">
+        <h2 className="browse-content-heading">Your early encounters with LP/GOLPP</h2>
+      </div>
 
-      <p className="browse-content-text">Most people know something&lsquo;s wrong with their companion before they know it&lsquo;s LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe Bella might have it.</p>
+      <div className="browse-content-block" id="EarlySymptomsText">
+        <p className="browse-content-text">Most people know something&lsquo;s wrong with their companion before they know it&lsquo;s LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe Bella might have it.</p>
+      </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="EarlySymptomsAgePanel">
+        <h3 className="browse-showanswer-title">At about what age did Bella start showing symptoms of LP/GOLPP?</h3>
+      <div className="browse-question-container" id="EarlySymptomsAgeYears">
+        <ShowAnswerContent
+          title="Years"
+          index={1}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="EarlySymptomsAgeMonths">
+        <ShowAnswerContent
+          title="Months (number 0 - 11)"
+          index={2}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="EarlySymptomsDetailsPanel">
       <div className="browse-question-container" id="EarlySymptomsType">
         <ShowAnswerContent
           title="What symptoms did Bella have at that time?"
-          index={1}
+          index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -58,10 +91,10 @@ const Browse_06_EarlySymptoms = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="EarlySymtomsSeverity">
+      <div className="browse-question-container" id="EarlySymptomsSeverity">
         <ShowAnswerContent
           title="How severe did you think Bella's early symptoms were?"
-          index={2}
+          index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -74,7 +107,7 @@ const Browse_06_EarlySymptoms = () => {
       <div className="browse-question-container" id="EarlySymptomsHindEndWeakness">
         <ShowAnswerContent
           title="Was Bella already showing signs of hind-end weakness in this early stage?"
-          index={3}
+          index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -100,7 +133,7 @@ const Browse_06_EarlySymptoms = () => {
       <div className="browse-question-container" id="EarlySymptomsIncontinence">
         <ShowAnswerContent
           title="Was Bella already showing signs of urinary or fecal incontinence weakness in this early stage?"
-          index={4}
+          index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -125,12 +158,12 @@ const Browse_06_EarlySymptoms = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="EarlySymptomsCard2Panel">
+      <div className="browse-panel-container" id="EarlySymptomsOtherConditionsPanel">
       <div className="browse-question-container" id="EarlySymptomsOtherConditions">
         <ShowAnswerContent
           title="When Bella first started showing symptoms of LP, did she have any other health conditions?"
-          index={5}
+          index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -153,10 +186,10 @@ const Browse_06_EarlySymptoms = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="EarlSymptomsOtherConditionsType">
+      <div className="browse-question-container" id="EarlySymptomsOtherConditionsType">
         <ShowAnswerContent
           title="Which other conditions did Bella have when the first LP symptoms appeared?"
-          index={6}
+          index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

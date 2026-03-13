@@ -63,17 +63,17 @@ const BrowseMenu = () => {
           </Link>
         </li>
 
-        {/* <li className="browse-menu__item" role="none">
+        <li className="browse-menu__item" role="none">
           <Link href="/browse-mode/Browse_00_Landing" onClick={close} role="menuitem">
             00_Landing
           </Link>
-        </li> */}
+        </li>
 
-        {/* <li className="browse-menu__item" role="none">
+        <li className="browse-menu__item" role="none">
           <Link href="/browse-mode/Browse_01_UserInfo" onClick={close} role="menuitem">
             01_UserInfo
           </Link>
-        </li> */}
+        </li>
 
         <li className="browse-menu__item" role="none">
           <Link href="/browse-mode/Browse_02_CmpnInfo" onClick={close} role="menuitem">

@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-03-09T13:43:12.360Z",
+    "builtAt": "2026-03-13T16:26:32.713Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -628,8 +628,8 @@
       "title": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
       "hasVisibleIf": false
     },
-    "InfoSoucesCard1Panel": {
-      "name": "InfoSoucesCard1Panel",
+    "InfoSourcesCard1Panel": {
+      "name": "InfoSourcesCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -646,7 +646,7 @@
       "collect": false,
       "path": [
         "INFO_SOURCES-page",
-        "InfoSoucesCard1Panel"
+        "InfoSourcesCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -658,7 +658,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
-        "InfoSoucesCard1Panel",
+        "InfoSourcesCard1Panel",
         "InfoSourcesMainPanel"
       ],
       "hasTitle": true,
@@ -673,7 +673,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
-        "InfoSoucesCard1Panel",
+        "InfoSourcesCard1Panel",
         "InfoSourcesMainPanel"
       ],
       "hasTitle": true,
@@ -687,7 +687,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
-        "InfoSoucesCard1Panel",
+        "InfoSourcesCard1Panel",
         "InfoSourcesMainPanel"
       ],
       "hasTitle": true,
@@ -695,8 +695,8 @@
       "hasVisibleIf": true,
       "visibleIf": "{InfoSourcesTypes.length} > 1 && {InfoSourcesTypes} notcontains 'DONT_KNOW'"
     },
-    "InfoSoucesCard2Panel": {
-      "name": "InfoSoucesCard2Panel",
+    "InfoSourcesCard2Panel": {
+      "name": "InfoSourcesCard2Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -713,7 +713,7 @@
       "collect": false,
       "path": [
         "INFO_SOURCES-page",
-        "InfoSoucesCard2Panel"
+        "InfoSourcesCard2Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -725,7 +725,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
-        "InfoSoucesCard2Panel",
+        "InfoSourcesCard2Panel",
         "InfoSourcesQualityPanel"
       ],
       "hasTitle": true,
@@ -740,7 +740,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
-        "InfoSoucesCard2Panel",
+        "InfoSourcesCard2Panel",
         "InfoSourcesQualityPanel"
       ],
       "hasTitle": true,
@@ -755,7 +755,7 @@
       "collect": true,
       "path": [
         "INFO_SOURCES-page",
-        "InfoSoucesCard2Panel",
+        "InfoSourcesCard2Panel",
         "InfoSourcesQualityPanel"
       ],
       "hasTitle": true,
@@ -1101,8 +1101,8 @@
       "title": "What symptoms did {CmpnName} have at that time?",
       "hasVisibleIf": false
     },
-    "EarlySymtomsSeverity": {
-      "name": "EarlySymtomsSeverity",
+    "EarlySymptomsSeverity": {
+      "name": "EarlySymptomsSeverity",
       "type": "rating",
       "role": "question",
       "collect": true,
@@ -1184,8 +1184,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "EarlSymptomsOtherConditionsType": {
-      "name": "EarlSymptomsOtherConditionsType",
+    "EarlySymptomsOtherConditionsType": {
+      "name": "EarlySymptomsOtherConditionsType",
       "type": "checkbox",
       "role": "question",
       "collect": true,
@@ -1197,7 +1197,8 @@
       "hasTitle": true,
       "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
       "hasVisibleIf": true,
-      "visibleIf": "{EarlySymptomsOtherConditions} = YES"
+      "visibleIf": "{EarlySymptomsOtherConditions} = 'YES'",
+      "isRequired": true
     },
     "PrimaryDurationCard1Panel": {
       "name": "PrimaryDurationCard1Panel",
@@ -1392,7 +1393,7 @@
         "PrimaryVetRefluxPanel"
       ],
       "hasTitle": true,
-      "title": "Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotadine) or Prilosec (omeprazole) for reflux?",
+      "title": "Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotidine) or Prilosec (omeprazole) for reflux?",
       "hasVisibleIf": true,
       "visibleIf": "{PrimaryVetReflux} = 'YES'",
       "isRequired": true
@@ -1408,7 +1409,7 @@
         "PrimaryVetRefluxPanel"
       ],
       "hasTitle": true,
-      "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotadine) or Prilosec (omeprazole) on your own intiative without a prescription or recommendation from your primary vet?",
+      "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotidine) or Prilosec (omeprazole) on your own initiative without a prescription or recommendation from your primary vet?",
       "hasVisibleIf": true,
       "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
       "isRequired": true
@@ -1489,7 +1490,7 @@
         "PrimaryVetInfoPanel"
       ],
       "hasTitle": true,
-      "title": "What did they tell you about the how LP/GOLPP might affect {CmpnName}?",
+      "title": "What did they tell you about how LP/GOLPP might affect {CmpnName}?",
       "hasVisibleIf": true,
       "visibleIf": "{PrimaryVetInfo} = true",
       "isRequired": true
@@ -1560,7 +1561,7 @@
         "PrimaryVetConfidencePanel"
       ],
       "hasTitle": true,
-      "title": "How confident have you been you in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
+      "title": "How confident have you been in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1798,7 +1799,7 @@
         "TreatmentStatusTypePanel"
       ],
       "hasTitle": true,
-      "title": "What kind procedure or procedures did {CmpnName} have?",
+      "title": "What kind of procedure or procedures did {CmpnName} have?",
       "hasVisibleIf": true,
       "visibleIf": "{TreatmentStatusDidHave} = true",
       "isRequired": true
@@ -2104,7 +2105,7 @@
       "hasTitle": true,
       "title": "Approximate cost of the stent procedures, not including complications:",
       "hasVisibleIf": true,
-      "visibleIf": "{TreatmentStatusStentDidMigrate} = true &&{TreatmentStatusStentReplaced} = true",
+      "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentReplaced} = true",
       "isRequired": true
     },
     "TreatmentStatusStentComplications": {
@@ -2781,7 +2782,7 @@
       "hasTitle": true,
       "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP symptoms?",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptions} = YES",
+      "visibleIf": "{ManagementPrescriptions} = 'YES'",
       "isRequired": true
     },
     "ManagementPrescriptionCost": {
@@ -2797,7 +2798,7 @@
       "hasTitle": true,
       "title": "Average monthly cost of {CmpnName}'s prescriptions:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementPrescriptions} = YES",
+      "visibleIf": "{ManagementPrescriptions} = 'YES'",
       "isRequired": true
     },
     "ManagementPrescriptionDoxepinRatingBreathing": {
@@ -3203,7 +3204,7 @@
       "hasTitle": true,
       "title": "What therapies or treatments did {CmpnName} receive?",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescription} = YES",
+      "visibleIf": "{ManagementNonPrescription} = 'YES'",
       "isRequired": true
     },
     "ManagementNonPrescriptionCost": {
@@ -3401,7 +3402,7 @@
       "hasTitle": true,
       "title": "Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:",
       "hasVisibleIf": true,
-      "visibleIf": "{OTCProductsDidPurchase} = YES",
+      "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
       "isRequired": true
     },
     "OTCProductsCost": {
@@ -3417,7 +3418,7 @@
       "hasTitle": true,
       "title": "What was the average monthly cost of these OTC products?",
       "hasVisibleIf": true,
-      "visibleIf": "{OTCProductsDidPurchase} = YES",
+      "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
       "isRequired": true
     },
     "OTCProductsEffectiveness": {
@@ -3433,7 +3434,7 @@
       "hasTitle": true,
       "title": "Please rate the overall effectiveness of the OTC products you selected above:",
       "hasVisibleIf": true,
-      "visibleIf": "{OTCProductsDidPurchase} = YES",
+      "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
       "isRequired": true
     },
     "OTCProductsCard2Panel": {
@@ -3487,7 +3488,7 @@
       "hasTitle": true,
       "title": "What was the average monthly cost of the blends or protocols?",
       "hasVisibleIf": true,
-      "visibleIf": "{OTCProtocolDidPurchase} = YES",
+      "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
       "isRequired": true
     },
     "OTCProtocolEffectiveness": {
@@ -3503,7 +3504,7 @@
       "hasTitle": true,
       "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
       "hasVisibleIf": true,
-      "visibleIf": "{OTCProtocolDidPurchase} = YES",
+      "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
       "isRequired": true
     },
     "AspirationCard1Panel": {
@@ -3626,7 +3627,7 @@
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = YES"
+      "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = 'YES'"
     },
     "AspirationSurgeryPost": {
       "name": "AspirationSurgeryPost",
@@ -3656,7 +3657,7 @@
       "hasTitle": true,
       "title": "How many times did {CmpnName} get AP after the surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{AspirationSurgeryPost} = YES",
+      "visibleIf": "{AspirationSurgeryPost} = 'YES'",
       "isRequired": true
     },
     "AspirationStentPanel": {
@@ -3670,7 +3671,7 @@
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = YES"
+      "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = 'YES'"
     },
     "AspirationStentPost": {
       "name": "AspirationStentPost",
@@ -3700,7 +3701,7 @@
       "hasTitle": true,
       "title": "How many times did {CmpnName} get AP after the stent implant?",
       "hasVisibleIf": true,
-      "visibleIf": "{AspirationStentPost} = YES",
+      "visibleIf": "{AspirationStentPost} = 'YES'",
       "isRequired": true
     },
     "AspirationCostPanel": {
@@ -3714,7 +3715,7 @@
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{AspirationDidHave} = YES"
+      "visibleIf": "{AspirationDidHave} = 'YES'"
     },
     "AspirationCost": {
       "name": "AspirationCost",
@@ -3791,7 +3792,7 @@
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{NeuropathySymptomsDoesHave} = YES"
+      "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'"
     },
     "NeuropathySymptomsFirst": {
       "name": "NeuropathySymptomsFirst",
@@ -3853,7 +3854,7 @@
       "hasTitle": true,
       "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
       "hasVisibleIf": true,
-      "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
+      "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = 'YES'",
       "isRequired": true
     },
     "NeuropathyOtherIssues": {

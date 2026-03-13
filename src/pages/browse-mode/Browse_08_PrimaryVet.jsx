@@ -10,13 +10,17 @@ const Browse_08_PrimaryVet = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">Your primary veterinarian and Bella&lsquo;s LP/GOLPP</h2>
+        <div className="browse-panel-container" id="PrimaryVetCard1Panel">
+      <div className="browse-content-block" id="PrimaryVetHeading">
+        <h2 className="browse-content-heading">Your primary veterinarian and Bella&lsquo;s LP/GOLPP</h2>
+      </div>
 
-      <p className="browse-content-text">This section asks questions about your primary veterinarian&lsquo;s handling of Bella&lsquo;s LP/GOLPP symptoms.</p>
-      <p className="browse-content-text">If you changed primary vets since Bella&lsquo;s LP/GOLPP symptoms first appeared , please answer the question about your preferred or most recent primary veterinarian.</p>
+      <div className="browse-content-block" id="PrimaryVetText">
+        <p className="browse-content-text">This section asks questions about your primary veterinarian&lsquo;s handling of Bella&lsquo;s LP/GOLPP symptoms.</p>
+        <p className="browse-content-text">If you changed primary vets since Bella&lsquo;s LP/GOLPP symptoms first appeared, please answer the question about your preferred or most recent primary veterinarian.</p>
+      </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="PrimaryVetInflammationPanel">
       <div className="browse-question-container" id="PrimaryVetInflammation">
         <ShowAnswerContent
           title="Did your primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?"
@@ -44,7 +48,7 @@ const Browse_08_PrimaryVet = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="PrimaryVetRefluxPanel">
       <div className="browse-question-container" id="PrimaryVetReflux">
         <ShowAnswerContent
           title="Did your primary veterinarian mention reflux (GERD) or esophageal dysfunction as a possible cause of Bella's symptoms?"
@@ -73,7 +77,7 @@ const Browse_08_PrimaryVet = () => {
 
       <div className="browse-question-container" id="PrimaryVetRefluxMeds">
         <ShowAnswerContent
-          title="Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotadine) or Prilosec (omeprazole) for reflux?"
+          title="Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotidine) or Prilosec (omeprazole) for reflux?"
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -99,7 +103,7 @@ const Browse_08_PrimaryVet = () => {
 
       <div className="browse-question-container" id="PrimaryVetRefluxInitiative">
         <ShowAnswerContent
-          title="Did you start Bella on reflux medications such as Pepcid (famotadine) or Prilosec (omeprazole) on your own intiative without a prescription or recommendation from your primary vet?"
+          title="Did you start Bella on reflux medications such as Pepcid (famotidine) or Prilosec (omeprazole) on your own initiative without a prescription or recommendation from your primary vet?"
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -120,7 +124,7 @@ const Browse_08_PrimaryVet = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="PrimaryVetDiscussPanel">
       <div className="browse-question-container" id="PrimaryVetDidDiscuss">
         <ShowAnswerContent
           title="Did your primary vet discuss LP/GOLPP as a possible cause of Bella's symptoms? "
@@ -153,8 +157,8 @@ const Browse_08_PrimaryVet = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="PrimaryVetCard2Panel">
+      <div className="browse-panel-container" id="PrimaryVetInfoPanel">
       <div className="browse-question-container" id="PrimaryVetInfo">
         <ShowAnswerContent
           title="Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect Bella?"
@@ -179,7 +183,7 @@ const Browse_08_PrimaryVet = () => {
 
       <div className="browse-question-container" id="PrimaryVetInfoDetails">
         <ShowAnswerContent
-          title="What did they tell you about the how LP/GOLPP might affect Bella?"
+          title="What did they tell you about how LP/GOLPP might affect Bella?"
           index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -208,7 +212,7 @@ const Browse_08_PrimaryVet = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="PrimaryVetSurgeryPanel">
       <div className="browse-question-container" id="PrimaryVetSurgery">
         <ShowAnswerContent
           title="Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for Bella's LP/GOLPP?"
@@ -262,10 +266,10 @@ const Browse_08_PrimaryVet = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="PrimaryVetConfidencePanel">
       <div className="browse-question-container" id="PrimaryVetConfidence">
         <ShowAnswerContent
-          title="How confident have you been you in your current primary veterinarian's knowledge level regarding LP/GOLPP?"
+          title="How confident have you been in your current primary veterinarian's knowledge level regarding LP/GOLPP?"
           index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

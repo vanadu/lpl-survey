@@ -10,14 +10,20 @@ const Browse_15_Neuropathy = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">Hind-end weakness and polyneuropathy</h2>
+        <div className="browse-panel-container" id="NeuropathyCard1Panel">
+      <div className="browse-content-block" id="NeuropathyHeading">
+        <h2 className="browse-content-heading">Hind-end weakness and polyneuropathy</h2>
+      </div>
 
-      <p className="browse-content-text">This section asks questions about whether Bella showed symptoms of polyneuropathy and how these symptoms progressed over time.</p>
+      <div className="browse-content-block" id="NeuropathyText">
+        <p className="browse-content-text">This section asks questions about whether Bella showed symptoms of polyneuropathy and how these symptoms progressed over time.</p>
+      </div>
 
-      <p className="browse-content-text">NOTE: Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly in the hind end. Symptoms can include hind-end weakness and incontinence. Younger dogs with idiopathic LP often don&lsquo;t suffer from LP-related polyneuropathy.</p>
+      <div className="browse-content-block" id="NeuropathyText">
+        <p className="browse-content-text">NOTE: Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly in the hind end. Symptoms can include hind-end weakness and incontinence. Younger dogs with idiopathic LP often don&lsquo;t suffer from LP-related polyneuropathy.</p>
+      </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="NeuropathySymptomsDoesHavePanel">
       <div className="browse-question-container" id="NeuropathySymptomsDoesHave">
         <ShowAnswerContent
           title="Over the course of Bella's LP/GOLPP journey, did Bella experience persistent hind-end weakness?"
@@ -46,8 +52,8 @@ const Browse_15_Neuropathy = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="NeuropathyCard2Panel">
+      <div className="browse-panel-container" id="NeuropathyHindEndDoesHavePanel">
       <div className="browse-question-container" id="NeuropathySymptomsFirst">
         <ShowAnswerContent
           title="Which LP/GOLPP symptom appeared first in Bella?"

@@ -193,17 +193,22 @@ function parsePageFileInfo(filename) {
 
 function renderHtmlElement(el) {
   const html = String(el.html || "").trim();
-
   if (!html) return "";
+
+  const id = el.name ? ` id="${escapeTemplateLiteral(el.name)}"` : "";
 
   if (/^\s*<h2\b/i.test(html)) {
     const inner = stripAllTags(stripOuterTag(html, "h2"));
-    return `      <h2 className="browse-content-heading">${escapeJsxText(inner)}</h2>`;
+    return `      <div className="browse-content-block"${id}>
+        <h2 className="browse-content-heading">${escapeJsxText(inner)}</h2>
+      </div>`;
   }
 
   if (/^\s*<h3\b/i.test(html)) {
     const inner = stripAllTags(stripOuterTag(html, "h3"));
-    return `      <h3 className="browse-content-subheading">${escapeJsxText(inner)}</h3>`;
+    return `      <div className="browse-content-block"${id}>
+        <h3 className="browse-content-subheading">${escapeJsxText(inner)}</h3>
+      </div>`;
   }
 
   if (/^\s*<p\b/i.test(html)) {
@@ -215,20 +220,25 @@ function renderHtmlElement(el) {
         const normalized = /^\s*<p\b/i.test(part) ? part : `<p>${part}</p>`;
         const inner = stripAllTags(stripOuterTag(normalized, "p"));
         return inner.trim()
-          ? `      <p className="browse-content-text">${escapeJsxText(inner)}</p>`
+          ? `        <p className="browse-content-text">${escapeJsxText(inner)}</p>`
           : "";
       })
       .filter(Boolean)
       .join("\n");
 
-    if (paragraphs) return paragraphs;
+    if (paragraphs) {
+      return `      <div className="browse-content-block"${id}>
+${paragraphs}
+      </div>`;
+    }
   }
 
   const plainText = stripAllTags(html).trim();
-
   if (!plainText) return "";
 
-  return `      <p className="browse-content-text">${escapeJsxText(plainText)}</p>`;
+  return `      <div className="browse-content-block"${id}>
+        <p className="browse-content-text">${escapeJsxText(plainText)}</p>
+      </div>`;
 }
 
 
@@ -344,28 +354,29 @@ function collectRenderableNodes(elements, exclusions, sourceFilename, bucket = [
       continue;
     }
 
-    if (el.type === "panel") {
-      const panelName = String(el.name || "");
-      const hasTitle = Boolean(String(el.title || "").trim());
-      const hasCardIdentifier = /Card/i.test(panelName);
+if (el.type === "panel") {
+  const panelName = String(el.name || "");
+  const hasTitle = Boolean(String(el.title || "").trim());
+  const hasCardIdentifier = /Card/i.test(panelName);
 
-      if (hasTitle && hasCardIdentifier) {
-        continue;
-      }
+  if (hasTitle && hasCardIdentifier) {
+    continue;
+  }
 
-      bucket.push({
-        kind: "panelContainer",
-        title: hasTitle ? String(el.title).trim() : "",
-        children: collectRenderableNodes(
-          el.elements || [],
-          exclusions,
-          sourceFilename,
-          []
-        ),
-      });
+  bucket.push({
+    kind: "panelContainer",
+    name: panelName,
+    title: hasTitle ? String(el.title).trim() : "",
+    children: collectRenderableNodes(
+      el.elements || [],
+      exclusions,
+      sourceFilename,
+      []
+    ),
+  });
 
-      continue;
-    }
+  continue;
+}
 
     if (el.type === "paneldynamic") {
       collectRenderableNodes(el.elements || [], exclusions, sourceFilename, bucket);
@@ -394,6 +405,8 @@ function collectRenderableNodes(elements, exclusions, sourceFilename, bucket = [
 // -----------------------------------------------------------------------------
 
 function renderPanelContainerBlock(node, getNextAccordionIndex) {
+  const id = node.name ? ` id="${escapeTemplateLiteral(node.name)}"` : "";
+
   const children = (node.children || [])
     .map((child) => {
       if (child.kind === "html") {
@@ -418,17 +431,16 @@ function renderPanelContainerBlock(node, getNextAccordionIndex) {
     .join("\n\n");
 
   if (!node.title) {
-    return `      <div className="browse-panel-container">
+    return `      <div className="browse-panel-container"${id}>
 ${children}
       </div>`;
   }
 
-  return `      <div className="browse-panel-container">
+  return `      <div className="browse-panel-container"${id}>
         <h3 className="browse-showanswer-title">${escapeJsxText(node.title)}</h3>
 ${children}
       </div>`;
 }
-
 
 
 function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename) {

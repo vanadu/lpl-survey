@@ -13,12 +13,12 @@
         {
           "type": "html",
           "name": "AspirationText",
-          "html": "<p>Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This sections asks questions about {CmpnName}'s experience with AP. </p>"
+          "html": "<p>Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This section asks questions about {CmpnName}'s experience with AP. </p>"
         },
         {
           "type": "html",
           "name": "AspirationInfoLink",
-          "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
+          "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?</a></div>"
         },
             {
       "type": "panel",
@@ -137,7 +137,7 @@
         {
     "type": "panel",
     "name": "AspirationSurgeryPanel",
-    "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = YES",
+    "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = 'YES'",
     "elements": [
 
       {
@@ -168,7 +168,7 @@
         "name": "AspirationSurgeryPostCount",
         "title": "How many times did {CmpnName} get AP after the surgery?",
         "isRequired": true,
-        "visibleIf": "{AspirationSurgeryPost} = YES",
+        "visibleIf": "{AspirationSurgeryPost} = 'YES'",
         "choices": [
           {
             "value": "ONE",
@@ -195,7 +195,7 @@
         {
           "type": "panel",
           "name": "AspirationStentPanel",
-          "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = YES",
+          "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = 'YES'",
           "elements": [
 
             {
@@ -225,7 +225,7 @@
               "name": "AspirationStentPostCount",
               "title": "How many times did {CmpnName} get AP after the stent implant?",
               "isRequired": true,
-              "visibleIf": "{AspirationStentPost} = YES",
+              "visibleIf": "{AspirationStentPost} = 'YES'",
               "choices": [
                 {
                   "value": "ONE",
@@ -252,7 +252,7 @@
         {
               "type": "panel",
               "name": "AspirationCostPanel",
-              "visibleIf": "{AspirationDidHave} = YES",
+              "visibleIf": "{AspirationDidHave} = 'YES'",
               "elements": [
                 {
                   "type": "dropdown",

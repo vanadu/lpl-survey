@@ -10,14 +10,20 @@ const Browse_12_Management = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">Medical managment of LP/GOLPP</h2>
+        <div className="browse-panel-container" id="ManagementCard1Panel">
+      <div className="browse-content-block" id="ManagementHeading">
+        <h2 className="browse-content-heading">Medical managment of LP/GOLPP</h2>
+      </div>
 
-      <p className="browse-content-text">IMPORTANT : Attempting to manage LP/GOLPP symptoms with medications is controversial. There is no medication that can restore movement to paralyzed laryneal tissue. That means that even with medication, the risk of breathing crises and a potentially fatal suffocation event is very real. So while medications can&lsquo;t prevent a breathing emergency, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP/GOLPP patient&lsquo;s quality of life.</p>
+      <div className="browse-content-block" id="ManagementTextImportant">
+        <p className="browse-content-text">IMPORTANT : Attempting to manage LP/GOLPP symptoms with medications is controversial. There is no medication that can restore movement to paralyzed laryneal tissue. That means that even with medication, the risk of breathing crises and a potentially fatal suffocation event is very real. So while medications can&lsquo;t prevent a breathing emergency, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP/GOLPP patient&lsquo;s quality of life.</p>
+      </div>
 
-      <p className="browse-content-text">Note: Medications for arthritis/osteoarthritis pain such as NSAIDS (Rimadyl, carprofen) and NGF blockers (Librela, Beransa) may improve mobility by reducing pain, but they aren&lsquo;t specifically prescribed for LP/GOLPP and therefore and aren&lsquo;t included in the &lsquo;Medical management&lsquo; section of the survey.</p>
+      <div className="browse-content-block" id="ManagementTextNote">
+        <p className="browse-content-text">Note: Medications for arthritis/osteoarthritis pain such as NSAIDS (Rimadyl, carprofen) and NGF blockers (Librela, Beransa) may improve mobility by reducing pain, but they aren&lsquo;t specifically prescribed for LP/GOLPP and therefore and aren&lsquo;t included in the &lsquo;Medical management&lsquo; section of the survey.</p>
+      </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="ManagementPrescriptionTypePanel">
       <div className="browse-question-container" id="ManagementPrescriptions">
         <ShowAnswerContent
           title="Did your primary veterinarian provide or prescribe any prescription medications for Bella's LP/GOLPP symptoms?"
@@ -420,8 +426,8 @@ const Browse_12_Management = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="ManagementCard2Panel">
+      <div className="browse-panel-container" id="ManagementNonPrescriptionTypePanel">
       <div className="browse-question-container" id="ManagementNonPrescription">
         <ShowAnswerContent
           title="Did Bella receive acupuncture or other therapies to help with LP/GOLPP symptoms?"

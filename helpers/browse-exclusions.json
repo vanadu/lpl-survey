@@ -1,16 +1,8 @@
 {
   "pages": [
-    "00_LANDING-page.json",
-    "01_USER_INFO-page.json"
   ],
-  "elements": ["CmpnInfoAnimalType"],
+  "elements": [
+  ],
   "panels": [
-    "LandingPrivacyPanel",
-    "ConsentPanel",
-    "dcsdCmpnInfoAgePanel",
-    "lvngCmpnInfoAgePanel",
-    "EarlySymptomsAgePanel",
-    "PrimaryDurationDetailsPanel",
-    "TreatmentStatusAgePanel"
   ]
 }

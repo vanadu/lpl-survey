@@ -10,14 +10,20 @@ const Browse_14_Aspiration = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">Bella&lsquo;s experience with aspiration pneumonia</h2>
+        <div className="browse-panel-container" id="AspirationCard1Panel">
+      <div className="browse-content-block" id="AspirationHeading">
+        <h2 className="browse-content-heading">Bella&lsquo;s experience with aspiration pneumonia</h2>
+      </div>
 
-      <p className="browse-content-text">Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This sections asks questions about Bella&lsquo;s experience with AP.</p>
+      <div className="browse-content-block" id="AspirationText">
+        <p className="browse-content-text">Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This section asks questions about Bella&lsquo;s experience with AP.</p>
+      </div>
 
-      <p className="browse-content-text">&amp;nbsp; What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</p>
+      <div className="browse-content-block" id="AspirationInfoLink">
+        <p className="browse-content-text">&amp;nbsp; What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?</p>
+      </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="AspirationDidHavePanel">
       <div className="browse-question-container" id="AspirationDidHave">
         <ShowAnswerContent
           title="Did Bella ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?"
@@ -45,7 +51,7 @@ const Browse_14_Aspiration = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="AspirationGeneralPanel">
       <div className="browse-question-container" id="AspirationCount">
         <ShowAnswerContent
           title="How many times did Bella get AP?"
@@ -134,8 +140,8 @@ const Browse_14_Aspiration = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="AspirationCard2Panel">
+      <div className="browse-panel-container" id="AspirationSurgeryPanel">
       <div className="browse-question-container" id="AspirationSurgeryPost">
         <ShowAnswerContent
           title="Did Bella ever have AP after the surgery (i.e., tieback, BVEAP)?"
@@ -193,7 +199,7 @@ const Browse_14_Aspiration = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="AspirationStentPanel">
       <div className="browse-question-container" id="AspirationStentPost">
         <ShowAnswerContent
           title="Did Bella ever have AP after the stent implant procedure?"
@@ -251,7 +257,7 @@ const Browse_14_Aspiration = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="AspirationCostPanel">
       <div className="browse-question-container" id="AspirationCost">
         <ShowAnswerContent
           title="What was the approximate pre-insurance cost of the AP treatment for Bella:"

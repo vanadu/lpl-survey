@@ -10,16 +10,46 @@ const Browse_02_CmpnInfo = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">About your LP/GOLPP companion</h2>
+        <div className="browse-panel-container" id="CmpnInfoCard1Panel">
+      <div className="browse-content-block" id="CmpnInfoHeading">
+        <h2 className="browse-content-heading">About your LP/GOLPP companion</h2>
+      </div>
 
-      <p className="browse-content-text">This section asks basic questions about your companion&lsquo;s species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don&lsquo;t know exact information, it&lsquo;s OK to guesstimate.</p>
+      <div className="browse-content-block" id="CmpnInfoText">
+        <p className="browse-content-text">This section asks basic questions about your companion&lsquo;s species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don&lsquo;t know exact information, it&lsquo;s OK to guesstimate.</p>
+      </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="CmpnInfoDetailsPanel">
+      <div className="browse-question-container" id="CmpnInfoAnimalType">
+        <ShowAnswerContent
+          title="Bella's species:"
+          index={1}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Dog</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Cat</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Horse</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
       <div className="browse-question-container" id="CmpnInfoBreed">
         <ShowAnswerContent
           title="Bella's breed or mix:"
-          index={1}
+          index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -32,7 +62,7 @@ const Browse_02_CmpnInfo = () => {
       <div className="browse-question-container" id="CmpnInfoGender">
         <ShowAnswerContent
           title="Bella's gender:"
-          index={2}
+          index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -54,7 +84,7 @@ const Browse_02_CmpnInfo = () => {
       <div className="browse-question-container" id="CmpnInfoWeight">
         <ShowAnswerContent
           title="Bella's last known weight (in lbs or kg):"
-          index={3}
+          index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -67,7 +97,7 @@ const Browse_02_CmpnInfo = () => {
       <div className="browse-question-container" id="CmpnInfoWeightUnits">
         <ShowAnswerContent
           title="Weight units:"
-          index={4}
+          index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -88,16 +118,72 @@ const Browse_02_CmpnInfo = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
-      <div className="browse-panel-container">
-
+      <div className="browse-panel-container" id="CmpnInfoCard2Panel">
+      <div className="browse-panel-container" id="CmpnInfoAgePanel">
+      <div className="browse-panel-container" id="dcsdCmpnInfoAgePanel">
+        <h3 className="browse-showanswer-title">At about what age did Bella cross over the Rainbow Bridge?</h3>
+      <div className="browse-question-container" id="dcsdCmpnInfoAgeYears">
+        <ShowAnswerContent
+          title="Age in years (number):"
+          index={6}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
       </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-question-container" id="dcsdCmpnInfoAgeMonths">
+        <ShowAnswerContent
+          title="Months (number 0 - 11)"
+          index={7}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="lvngCmpnInfoAgePanel">
+        <h3 className="browse-showanswer-title">What is Bella&lsquo;s approximate age (in years and months)?</h3>
+      <div className="browse-question-container" id="lvngCmpnInfoAgeYears">
+        <ShowAnswerContent
+          title="Age in years (number):"
+          index={8}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="lvngCmpnInfoAgeMonths">
+        <ShowAnswerContent
+          title="Months (number 0 - 11)"
+          index={9}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="CmpnInfoDemeanorPanel">
       <div className="browse-question-container" id="CmpnInfoDemeanor">
         <ShowAnswerContent
           title="How would you describe Bella's demeanor?"
-          index={5}
+          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -110,7 +196,7 @@ const Browse_02_CmpnInfo = () => {
       <div className="browse-question-container" id="CmpnInfoAnxiety">
         <ShowAnswerContent
           title="How would you describe Bella's anxiety level?"
-          index={6}
+          index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -123,7 +209,7 @@ const Browse_02_CmpnInfo = () => {
       <div className="browse-question-container" id="CmpnInfoHasInsurance">
         <ShowAnswerContent
           title="Do you have pet insurance for Bella?"
-          index={7}
+          index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

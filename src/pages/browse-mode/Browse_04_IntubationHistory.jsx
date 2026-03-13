@@ -10,12 +10,16 @@ const Browse_04_IntubationHistory = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">Intubation History</h2>
+        <div className="browse-panel-container" id="IntubationHistoryCard1Panel">
+      <div className="browse-content-block" id="IntubationHistoryHeading">
+        <h2 className="browse-content-heading">Intubation History</h2>
+      </div>
 
-      <p className="browse-content-text">This section asks about Bella&lsquo;s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>
+      <div className="browse-content-block" id="IntubationHistoryText">
+        <p className="browse-content-text">This section asks about Bella&lsquo;s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>
+      </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="IntubationHistoryDetails">
       <div className="browse-question-container" id="IntubationHistoryWasIntubated">
         <ShowAnswerContent
           title="Had Bella been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?"

@@ -729,7 +729,7 @@
       "elements": [
         {
           "type": "panel",
-          "name": "InfoSoucesCard1Panel",
+          "name": "InfoSourcesCard1Panel",
           "elements": [
             {
               "type": "html",
@@ -804,7 +804,7 @@
         },
         {
           "type": "panel",
-          "name": "InfoSoucesCard2Panel",
+          "name": "InfoSourcesCard2Panel",
           "elements": [
             {
               "type": "panel",
@@ -1381,7 +1381,7 @@
                 },
                 {
                   "type": "rating",
-                  "name": "EarlySymtomsSeverity",
+                  "name": "EarlySymptomsSeverity",
                   "title": "How severe did you think {CmpnName}'s early symptoms were?",
                   "description": "1 = mild, 5 = severe",
                   "isRequired": true
@@ -1461,10 +1461,10 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "EarlSymptomsOtherConditionsType",
+                  "name": "EarlySymptomsOtherConditionsType",
                   "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
                   "isRequred": true,
-                  "visibleIf": "{EarlySymptomsOtherConditions} = YES",
+                  "visibleIf": "{EarlySymptomsOtherConditions} = 'YES'",
                   "choices": [
                     {
                       "value": "GERD",
@@ -1750,7 +1750,7 @@
                 {
                   "type": "radiogroup",
                   "name": "PrimaryVetRefluxMeds",
-                  "title": "Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotadine) or Prilosec (omeprazole) for reflux?",
+                  "title": "Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotidine) or Prilosec (omeprazole) for reflux?",
                   "isRequired": true,
                   "visibleIf": "{PrimaryVetReflux} = 'YES'",
                   "choices": [
@@ -1772,7 +1772,7 @@
                 {
                   "type": "boolean",
                   "name": "PrimaryVetRefluxInitiative",
-                  "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotadine) or Prilosec (omeprazole) on your own intiative without a prescription or recommendation from your primary vet?",
+                  "title": "Did you start {CmpnName} on reflux medications such as Pepcid (famotidine) or Prilosec (omeprazole) on your own initiative without a prescription or recommendation from your primary vet?",
                   "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
@@ -1835,7 +1835,7 @@
                 {
                   "type": "checkbox",
                   "name": "PrimaryVetInfoDetails",
-                  "title": "What did they tell you about the how LP/GOLPP might affect {CmpnName}?",
+                  "title": "What did they tell you about how LP/GOLPP might affect {CmpnName}?",
                   "isRequired": true,
                   "visibleIf": "{PrimaryVetInfo} = true",
                   "choices": [
@@ -1918,7 +1918,7 @@
                 {
                   "type": "rating",
                   "name": "PrimaryVetConfidence",
-                  "title": "How confident have you been you in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
+                  "title": "How confident have you been in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
                   "description": "1 = not at all confident, 5 = very confident",
                   "isRequired": true,
                   "rateValues": [
@@ -1965,7 +1965,7 @@
                     },
                     {
                       "value": 3,
-                      "tex  !expectt": "3"
+                      "text": "3"
                     },
                     {
                       "value": 4,
@@ -2261,7 +2261,7 @@
                 {
                   "type": "checkbox",
                   "name": "TreatmentStatusType",
-                  "title": "What kind procedure or procedures did {CmpnName} have?",
+                  "title": "What kind of procedure or procedures did {CmpnName} have?",
                   "description": "Please check all that apply.",
                   "isRequired": true,
                   "visibleIf": "{TreatmentStatusDidHave} = true",
@@ -2670,7 +2670,7 @@
                   "title": "Approximate cost of the stent procedures, not including complications:",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentDidMigrate} = true &&{TreatmentStatusStentReplaced} = true",
+                  "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentReplaced} = true",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -3636,7 +3636,7 @@
                   "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP symptoms?",
                   "description": "Please also include discontinued medications.",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = YES",
+                  "visibleIf": "{ManagementPrescriptions} = 'YES'",
                   "choices": [
                     {
                       "value": "DOXEPIN",
@@ -3691,7 +3691,7 @@
                   "title": "Average monthly cost of {CmpnName}'s prescriptions:",
                   "description": "If you don't know exactly, it's OK to guesstimate.",
                   "isRequired": true,
-                  "visibleIf": "{ManagementPrescriptions} = YES",
+                  "visibleIf": "{ManagementPrescriptions} = 'YES'",
                   "choices": [
                     {
                       "value": "UNDER_50",
@@ -4500,7 +4500,7 @@
                   "name": "ManagementNonPrescriptionType",
                   "title": "What therapies or treatments did {CmpnName} receive?",
                   "isRequired": true,
-                  "visibleIf": "{ManagementNonPrescription} = YES",
+                  "visibleIf": "{ManagementNonPrescription} = 'YES'",
                   "choices": [
                     {
                       "value": "ACUPUNCTURE",
@@ -4876,7 +4876,7 @@
                   "name": "OTCProductsType",
                   "title": "Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:",
                   "isRequired": true,
-                  "visibleIf": "{OTCProductsDidPurchase} = YES",
+                  "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
                   "choices": [
                     {
                       "value": "TUMERIC",
@@ -4903,7 +4903,7 @@
                       "text": "Ursolic acid"
                     },
                     {
-                      "value": "PRIMROSE",
+                      "valuinitiative= 'YES'e": "PRIMROSE",
                       "text": "Evening Primrose Oil"
                     },
                     {
@@ -4926,7 +4926,7 @@
                   "name": "OTCProductsCost",
                   "title": "What was the average monthly cost of these OTC products?",
                   "isRequired": true,
-                  "visibleIf": "{OTCProductsDidPurchase} = YES",
+                  "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
                   "choices": [
                     {
                       "value": "UNDER_50",
@@ -4954,7 +4954,7 @@
                   "title": "Please rate the overall effectiveness of the OTC products you selected above:",
                   "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
                   "isRequired": true,
-                  "visibleIf": "{OTCProductsDidPurchase} = YES",
+                  "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -5020,7 +5020,7 @@
                   "name": "OTCProtocolCost",
                   "title": "What was the average monthly cost of the blends or protocols?",
                   "isRequired": true,
-                  "visibleIf": "{OTCProtocolDidPurchase} = YES",
+                  "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
                   "choices": [
                     {
                       "value": "UNDER_50",
@@ -5048,7 +5048,7 @@
                   "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
                   "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
                   "isRequired": true,
-                  "visibleIf": "{OTCProtocolDidPurchase} = YES",
+                  "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -5220,7 +5220,7 @@
             {
               "type": "panel",
               "name": "AspirationSurgeryPanel",
-              "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = YES",
+              "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = 'YES'",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -5249,7 +5249,7 @@
                   "name": "AspirationSurgeryPostCount",
                   "title": "How many times did {CmpnName} get AP after the surgery?",
                   "isRequired": true,
-                  "visibleIf": "{AspirationSurgeryPost} = YES",
+                  "visibleIf": "{AspirationSurgeryPost} = 'YES'",
                   "choices": [
                     {
                       "value": "ONE",
@@ -5275,7 +5275,7 @@
             {
               "type": "panel",
               "name": "AspirationStentPanel",
-              "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = YES",
+              "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = 'YES'",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -5303,7 +5303,7 @@
                   "name": "AspirationStentPostCount",
                   "title": "How many times did {CmpnName} get AP after the stent implant?",
                   "isRequired": true,
-                  "visibleIf": "{AspirationStentPost} = YES",
+                  "visibleIf": "{AspirationStentPost} = 'YES'",
                   "choices": [
                     {
                       "value": "ONE",
@@ -5329,7 +5329,7 @@
             {
               "type": "panel",
               "name": "AspirationCostPanel",
-              "visibleIf": "{AspirationDidHave} = YES",
+              "visibleIf": "{AspirationDidHave} = 'YES'",
               "elements": [
                 {
                   "type": "dropdown",
@@ -5435,7 +5435,7 @@
             {
               "type": "panel",
               "name": "NeuropathyHindEndDoesHavePanel",
-              "visibleIf": "{NeuropathySymptomsDoesHave} = YES",
+              "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -5529,7 +5529,7 @@
                   "name": "NeuropathySymptomsTypeProgression",
                   "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
                   "isRequired": true,
-                  "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = YES",
+                  "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = 'YES'",
                   "choices": [
                     {
                       "value": "BREATHING",

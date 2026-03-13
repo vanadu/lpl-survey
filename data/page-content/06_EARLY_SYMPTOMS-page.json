@@ -107,7 +107,7 @@
             
             {
               "type": "rating",
-              "name": "EarlySymtomsSeverity",
+              "name": "EarlySymptomsSeverity",
               "title": "How severe did you think {CmpnName}'s early symptoms were?",
               "description": "1 = mild, 5 = severe",
               "isRequired": true
@@ -188,10 +188,10 @@
             },
             {
             "type": "checkbox",
-            "name": "EarlSymptomsOtherConditionsType",
+            "name": "EarlySymptomsOtherConditionsType",
             "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
-            "isRequred": true,
-            "visibleIf": "{EarlySymptomsOtherConditions} = YES",
+            "isRequired": true,
+            "visibleIf": "{EarlySymptomsOtherConditions} = 'YES'",
             "choices": [
                 {
                   "value": "GERD",

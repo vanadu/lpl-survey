@@ -3,7 +3,7 @@
   "elements": [
     {
       "type": "panel",
-      "name": "InfoSoucesCard1Panel",
+      "name": "InfoSourcesCard1Panel",
       "elements": [
         {
           "type": "html",
@@ -80,7 +80,7 @@
     },
     {
       "type": "panel",
-      "name": "InfoSoucesCard2Panel",
+      "name": "InfoSourcesCard2Panel",
       "elements": [
         {
           "type": "panel",

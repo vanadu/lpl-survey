@@ -10,13 +10,17 @@ const Browse_09_Diagnosis = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">Bella&lsquo;s LP/GOLPP diagnosis</h2>
+        <div className="browse-panel-container" id="DiagnosisCard1Panel">
+      <div className="browse-content-block" id="DiagnosisHeading">
+        <h2 className="browse-content-heading">Bella&lsquo;s LP/GOLPP diagnosis</h2>
+      </div>
 
-      <p className="browse-content-text">This section asks who provided Bella&lsquo;s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p>
-      <p className="browse-content-text">You may have seen multiple vets about Bella&lsquo;s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about Bella&lsquo;s LP/GOLPP.</p>
+      <div className="browse-content-block" id="DiagnosisText">
+        <p className="browse-content-text">This section asks who provided Bella&lsquo;s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p>
+        <p className="browse-content-text">You may have seen multiple vets about Bella&lsquo;s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about Bella&lsquo;s LP/GOLPP.</p>
+      </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="DiagnosisDetailsPanel">
       <div className="browse-question-container" id="DiagnosisWho">
         <ShowAnswerContent
           title="Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:"

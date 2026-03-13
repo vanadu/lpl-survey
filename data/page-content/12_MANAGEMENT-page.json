@@ -54,7 +54,7 @@
               "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP symptoms?",
               "description": "Please also include discontinued medications.",
               "isRequired": true,
-              "visibleIf": "{ManagementPrescriptions} = YES",
+              "visibleIf": "{ManagementPrescriptions} = 'YES'",
               "choices": [
                 {
                   "value": "DOXEPIN",
@@ -109,7 +109,7 @@
             "title": "Average monthly cost of {CmpnName}'s prescriptions:",
             "description": "If you don't know exactly, it's OK to guesstimate.",
             "isRequired": true,
-            "visibleIf": "{ManagementPrescriptions} = YES",
+            "visibleIf": "{ManagementPrescriptions} = 'YES'",
             "choices": [
               {
                 "value": "UNDER_50",
@@ -526,7 +526,7 @@
               "name": "ManagementNonPrescriptionType",
               "title": "What therapies or treatments did {CmpnName} receive?",
               "isRequired": true,
-              "visibleIf": "{ManagementNonPrescription} = YES",
+              "visibleIf": "{ManagementNonPrescription} = 'YES'",
               "choices": [
                 {
                   "value": "ACUPUNCTURE",

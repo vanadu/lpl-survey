@@ -208,7 +208,7 @@
               {
                 "type": "html",
                 "name": "ConclusionCauseOfDeathHeading",
-                "html": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This questions asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over."
+                "html": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This question asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over."
               },
               {
                 "type": "radiogroup",

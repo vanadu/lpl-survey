@@ -10,12 +10,16 @@ const Browse_05_BreathingCrisis = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">LP Breathing Crisis</h2>
+        <div className="browse-panel-container" id="BreathingCrisisCard1Panel">
+      <div className="browse-content-block" id="BreathingCrisisHeading">
+        <h2 className="browse-content-heading">LP Breathing Crisis</h2>
+      </div>
 
-      <p className="browse-content-text">In a breathing crisis, the paralyzed arytenoid cartilages block the airway and cut off airflow to the lungs. In extreme cases, the crisis escalates into a breathing emergency that requires care at a veterinary facility to restore breathing. These questions are about breathing emergencies that required care from a licensed veterinarian.</p>
+      <div className="browse-content-block" id="BreathingCrisisText">
+        <p className="browse-content-text">In a breathing crisis, the paralyzed arytenoid cartilages block the airway and cut off airflow to the lungs. In extreme cases, the crisis escalates into a breathing emergency that requires care at a veterinary facility to restore breathing. These questions are about breathing emergencies that required care from a licensed veterinarian.</p>
+      </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="BreathingCrisisDidHavePanel">
       <div className="browse-question-container" id="BreathingCrisisDidHave">
         <ShowAnswerContent
           title="Did Bella ever have a breathing crisis that required an emergency visit to a veterinary professional?"
@@ -104,8 +108,8 @@ const Browse_05_BreathingCrisis = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="BreathingCrisisCard2Panel">
+      <div className="browse-panel-container" id="BreathingCrisisDetailsPanel">
       <div className="browse-question-container" id="BreathingCrisisAdvice">
         <ShowAnswerContent
           title="Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?"

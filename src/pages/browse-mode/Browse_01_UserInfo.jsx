@@ -1,0 +1,293 @@
+import React, { useState } from "react";
+import ShowAnswerContent from "../../components/ShowAnswerContent";
+import BrowseMenu from "../../components/BrowseMenu";
+
+const Browse_01_UserInfo = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  return (
+    <>
+    <BrowseMenu />
+    <main className='page browse'>
+      <div className="browse-page">
+        <div className="browse-panel-container" id="UserInfoCard1Panel">
+      <div className="browse-content-block" id="UserInfoHead">
+        <h2 className="browse-content-heading">Before You Begin</h2>
+      </div>
+
+      <div className="browse-content-block" id="UserInfoText1">
+        <p className="browse-content-text">If you&lsquo;re still grieving from the loss of your Lar Par companion, maybe it&lsquo;s best to do the survey later when you&lsquo;ve had time to heal.</p>
+      </div>
+
+      <div className="browse-content-block" id="UserInfoText2">
+        <p className="browse-content-text">If you&lsquo;d like to continue now, please tell us your LP companion&lsquo;s name and if they have crossed over the Rainbow Bridge.</p>
+      </div>
+
+      <div className="browse-panel-container" id="UserInfoLifeStatusNamePanel">
+      <div className="browse-question-container" id="CmpnName">
+        <ShowAnswerContent
+          title="Please tell us your companion's name:"
+          index={1}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="LifeStatus">
+        <ShowAnswerContent
+          title="Has Bella crossed over the Rainbow Bridge?"
+          index={2}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-content-block" id="UserInfoHeading">
+        <h2 className="browse-content-heading">About You</h2>
+      </div>
+
+      <div className="browse-content-block" id="UserInfoText">
+        <p className="browse-content-text">We&lsquo;re asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and verifiable.</p>
+      </div>
+
+      <div className="browse-content-block" id="UserInfoVerificationText">
+        <p className="browse-content-text">We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you&lsquo;re more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p>
+        <p className="browse-content-text">With your consent, we may also contact you to talk in more detail about your experience with LP.</p>
+      </div>
+
+      <div className="browse-panel-container" id="UserInfoVerificationPanel">
+      <div className="browse-question-container" id="UserInfoContactType">
+        <ShowAnswerContent
+          title="Would you like to use email or Facebook Messenger for verification?"
+          index={3}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-boolean">
+              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
+              <span>Facebook</span>
+            </li>
+            <li className="browse-showanswer-boolean">
+              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
+              <span>Email</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="UserInfoContactTypeEmail">
+        <ShowAnswerContent
+          title="Email address:"
+          index={4}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-content-block" id="UserInfoContactTypeFacebookInstructions">
+        <p className="browse-content-text">&amp;nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</p>
+      </div>
+
+      <div className="browse-question-container" id="UserInfoContactTypeFacebook">
+        <ShowAnswerContent
+          title="Facebook account:"
+          index={5}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="UserInfoContactOK">
+        <ShowAnswerContent
+          title="May we contact you to talk more about your LP experience?"
+          index={6}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-boolean">
+              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-boolean">
+              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="UserInfoCard2Panel">
+      <div className="browse-panel-container" id="UserInfoNameCountryPanel">
+        <h3 className="browse-showanswer-title">Your First Name and Country</h3>
+      <div className="browse-question-container" id="UserInfoFirstName">
+        <ShowAnswerContent
+          title="First Name:"
+          index={7}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="UserInfoCountry">
+        <ShowAnswerContent
+          title="Country:"
+          index={8}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>United States</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>United Kingdom</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>Canada</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>Germany</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>Australia/New Zealand</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>France</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>Spain</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>Portugal</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="UserInfoStateRegion">
+        <ShowAnswerContent
+          title="State, province or region (optional):"
+          index={9}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="UserInfoAgeGenderPanel">
+        <h3 className="browse-showanswer-title">Age and Gender (optional)</h3>
+      <div className="browse-question-container" id="UserInfoAgeGroup">
+        <ShowAnswerContent
+          title="Approximately what is your age?"
+          index={10}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>Under 20</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>20-34</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>35-49</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>50-6</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span>Over 65</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="UserInfoGender">
+        <ShowAnswerContent
+          title="Gender information:"
+          index={11}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Woman</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Man</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Non-binary</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Prefer not to say</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+      </div>
+      </div>
+    </main>
+    </>
+  );
+};
+
+export default Browse_01_UserInfo;

@@ -10,12 +10,16 @@ const Browse_03_InfoSources = () => {
     <BrowseMenu />
     <main className='page browse'>
       <div className="browse-page">
-        <div className="browse-panel-container">
-      <h2 className="browse-content-heading">How did you learn about LP/GOLPP?</h2>
+        <div className="browse-panel-container" id="InfoSourcesCard1Panel">
+      <div className="browse-content-block" id="InfoSourcesHeading">
+        <h2 className="browse-content-heading">How did you learn about LP/GOLPP?</h2>
+      </div>
 
-      <p className="browse-content-text">This section asks some questions about how you learned about laryngeal paralysis and geriatric-onset laryngeal paralysis (LP) and polyneuropathy (GOLPP) and whether the information you found helped you make decisions for Bella. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>
+      <div className="browse-content-block" id="InfoSourcesText">
+        <p className="browse-content-text">This section asks some questions about how you learned about laryngeal paralysis and geriatric-onset laryngeal paralysis (LP) and polyneuropathy (GOLPP) and whether the information you found helped you make decisions for Bella. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>
+      </div>
 
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="InfoSourcesMainPanel">
       <div className="browse-question-container" id="InfoSourcesPriorKnowledge">
         <ShowAnswerContent
           title="Had you ever heard of LP before Bella got it?"
@@ -97,8 +101,8 @@ const Browse_03_InfoSources = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container">
-      <div className="browse-panel-container">
+      <div className="browse-panel-container" id="InfoSourcesCard2Panel">
+      <div className="browse-panel-container" id="InfoSourcesQualityPanel">
       <div className="browse-question-container" id="InfoSourcesHardToUnderstand">
         <ShowAnswerContent
           title="Did you find the information you got about LP difficult to understand?"
