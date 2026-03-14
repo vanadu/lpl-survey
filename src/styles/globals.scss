@@ -222,7 +222,7 @@ span.strong-emphasis {
   background: #FFFFFF;
 }
 
-.blob {
+.hero-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -234,10 +234,10 @@ span.strong-emphasis {
   margin: 0 auto;            // center horizontally
   position: relative;        // allows overlay content
   /* layout variables */
-  --hero-w: 920px;
-  --hero-h: 200px;
-  --hero-cols: 6;
-  --hero-rows: 2;
+  --hero-w: 320px;
+  --hero-h: 160px;
+  --hero-cols: 4;
+  --hero-rows: 3;
   --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
 
   /* derived tile sizing */
@@ -254,11 +254,35 @@ span.strong-emphasis {
   position: relative;
   overflow: hidden;
   background-color: #353535;
-  @media (min-width: 768px) and (max-width: 999px) {
-    .hero { --hero-w: 700px; --hero-h: 151px; }
+  // @media (min-width: 768px) and (max-width: 999px) {
+  //   .hero { --hero-w: 700px; --hero-h: 151px; }
+  // }
+  // @media (max-width: 767px) and (min-width: 768px) {
+  //   .hero { --hero-w: 700px; --hero-h: 151px; }
+  // }
+  @include mphone {
+  
   }
-  @media (max-width: 767px) and (min-width: 768px) {
-    .hero { --hero-w: 700px; --hero-h: 151px; }
+  @include lphone {
+  
+  }
+  @include tablet {
+    --hero-w: 700px; --hero-h: 151px; 
+    --hero-cols: 6;
+    --hero-rows: 2;
+    --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
+  }
+  @include desktop {
+    --hero-w: 920px; --hero-h: 200px;
+    --hero-cols: 6;
+    --hero-rows: 2;
+    --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
+  }
+  @include ldesktop {
+    --hero-w: 920px; --hero-h: 200px;
+    --hero-cols: 6;
+    --hero-rows: 2;
+    --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
   }
 }
 
@@ -519,7 +543,8 @@ span.strong-emphasis {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-3);
-  width: 920px;
+  // width: 320px;
+  background: rgba(255, 0, 0, .3) !important; //devred
   @include tablet {
     width: 740px;
   }

@@ -35,16 +35,6 @@ const Browse_00_Landing = () => {
       </div>
 
       <div className="browse-panel-container" id="LandingCard1Panel">
-      <div className="browse-panel-container" id="LandingHeaderPanel">
-      <div className="browse-content-block" id="LandingTitleHead">
-        <p className="browse-content-text">LP/GOLPP Survey 2026 Powered by LarParLife.org</p>
-      </div>
-
-      <div className="browse-content-block" id="LandingVersion">
-        <p className="browse-content-text">Version 0.9/26.03.01.01</p>
-      </div>
-      </div>
-
       <div className="browse-panel-container" id="LandingWelcomePanel">
       <div className="browse-content-block" id="LandingWelcomeHeading">
         <h2 className="browse-content-heading">Welcome to the LP/GOLPP&amp;nbsp;Survey&amp;nbsp;2026</h2>

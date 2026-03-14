@@ -190,6 +190,7 @@ body {
   background: var(--c-page-bg);
   border-radius: var(--border-radius);
   box-sizing: border-box;
+  
 }
 
 @media (min-width: 768px) and (max-width: 999px) {

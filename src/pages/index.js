@@ -36,15 +36,16 @@ const Home = () => {
         />
       <main className="page home">
         <header className="home-head card card--lift">
-
           <SurveyHero/>
-
         </header>
 
           
 
         <section className="content-body home-head">
           <h1>Welcome to the 2026 LP/GOLPP Survey!</h1>
+            {/* <Link href='start-survey' className='link-dark'>
+              Take the Survey!
+            </Link> */}
           <article className="card">
             <h2>Did you know...</h2>
             <p>

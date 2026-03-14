@@ -30,7 +30,21 @@ html{scroll-behavior: smooth;}
 
 
 
-
+  @include mphone {
+  
+  }
+  @include lphone {
+  
+  }
+  @include tablet {
+  
+  }
+  @include desktop {
+  
+  }
+  @include ldesktop {
+  
+  }
 
 
 
@@ -137,389 +151,10 @@ span.strong-emphasis {
   font-weight: 700;
 }
 
-
-/* !VA  SURVEY HERO STYLES 
----------------------------
-*/
+// !VA 
 /* --------------------------------------------------
-   Survey Hero
+   GENERAL CONTENT STYLES
 -------------------------------------------------- */
-
-.hero {
-  width: 920px;
-  height: 200px;
-
-  margin: 0 auto;            // center horizontally
-  position: relative;        // allows overlay content
-
-}
-
-
-
-.hero {
-  width: 920px;
-  height: 200px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  background-color: #353535;
-}
-
-/* grid container */
-
-.hero__grid {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-
-  display: grid;
-  grid-template-columns: repeat(6, 146px);
-  grid-template-rows: repeat(2, 91px);
-  gap: 6px;
-
-  justify-content: center;
-  align-content: center;
-
-  padding: 6px;
-  box-sizing: border-box;
-}
-
-/* tile container */
-
-.hero__tile {
-  width: 146px;
-  height: 91px;
-
-  overflow: hidden;
-  background-color: #353535;
-}
-
-/* image */
-
-.hero__tile img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-  object-fit: cover;
-
-  filter:
-    grayscale(85%)
-    brightness(0.72)
-    contrast(1.18);
-}
-
-/* overlay */
-
-.hero__overlay {
-  position: absolute;
-  inset: 6px;
-  z-index: 2;
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(0,0,0,0) 35%,
-      rgba(0,0,0,0.18) 70%,
-      rgba(0,0,0,0.34) 100%
-    );
-}
-
-/* text layer */
-
-.hero__content {
-  position: relative;
-  z-index: 3;
-
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: white;
-  text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .hero-container {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   border: 1px solid gray;
-//   width: 100%;
-// }
-
-.hero-title-container, .hero-version-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 45%;
-  padding: 20px 0;
-}
-
-.hero-title-container {
-  @include ldesktop {
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--s-6);
-  }
-}
-
-.hero-title-heading,  {
-  font-family: $secondary_font!important;
-  font-size: var(--font-size-4xl);
-  color: var(--c-hero-text);
-  text-align: center;
-  @include ldesktop {
-    text-align: left;
-  }
-}
-
-.hero-title-subheading {
-  font-family: $primary_font;
-  color: var(--c-gray-text);
-  // font-size: 1.313rem!important;
-  // line-height: 1.75rem!important;
-  // font-weight: 600!important;
-  // --sjs-font-size: 15px;
-  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-  padding: var(--s-1) 0;
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  text-align: center;
-  font-variant: small-caps;
-  @include tablet {
-
-  }
-  @include ldesktop {
-    // margin: .5rem 0 0 0!important;
-    // --sjs-font-size: 18px;
-    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-    text-align: left;
-  }
-}
-
-
-.hero-version-container {
-  
-}
-
-.hero-version-content {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.hero-version-text {
-  width: 100%;
-  font-family: $secondary_font!important;
-  color: #353535!important;
-  // --sjs-font-size: 15px;
-  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-  font-size: var(--font-size-md);
-  text-align: left;
-  padding: 0!important;
-  margin: 0!important;
-}
-
-.hero-version-logo {
-  display: block;
-  width: 80px;
-  margin: 0 auto;
-  height: auto;
-  @include tablet {
-    display: block;
-    width: 120px
-  }
-  @include desktop {
-    display: block;
-    width: 120px
-  }
-  @include ldesktop {
-    display: block; 
-    width: 120px;
-    // --sjs-font-size: 15px;
-    // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-  }
-}
-
-
-
-
-
-
-
-
-
-
-/* !VA  START SURVEY PAGE STYLES 
----------------------------
-*/
-
-h2.start-survey-heading {
-  text-align: center;
-}
-
-.survey-mode-button-container {
-  width: 55%;
-  margin: var(--s-6) auto;
-}
-
-
-.survey-mode-buttons {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  &.browse, &.home {
-    justify-content: center;
-  }
-}
-
-
-.survey-mode-btn {
-  text-decoration: none;
-  font-weight: 650;
-  width: 240px;
-  height: auto;
-}
-
-.survey-mode-btn-caption {
-  text-align: center;
-}
-
-
-
-/* !VA  HOME PAGE STYLES 
----------------------------
-*/
-
-
-.home-head h1 {
-  font-family: var(--font-secondary);
-  margin: 0 0 var(--s-2) 0;
-  // font-size: var(--text-h2);
-  line-height: var(--lh-tight);
-  text-align: center;
-}
-
-.home-head .slug {
-  margin: 0 0 var(--s-5) 0;
-  color: var(--c-slug);
-  font-size: var(--font-size-2xl);
-  font-variant: small-caps;
-  letter-spacing: 0.02em;
-}
-
-.home-head {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s-3);
-  width: 920px;
-}
-
-// !VA These are more or less identical to .survey-mode button elements
-.home-survey-button-container {
-  display: flex;
-    justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  height: 140px;
-  margin: var(--s-2) auto 0;
-}
-
-
-.home-survey-buttons {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  height: 140px;
-  z-index: 100;
-  h2 {
-    display: inline-block;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: var(--font-size-3xl)!important;  }
-}
-
-// .home-survey-buttons::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 400px;
-//   height: 140px;
-//   inset: 0;
-//   z-index: -1;
-//   background:
-
-//     radial-gradient(
-//       circle at center,
-//       rgba(0,0,0,0) 55%,
-//       rgba(0,0,0,0.35) 100%
-//     ),
-//      linear-gradient(
-//       rgba(196,196,196,0.8),
-//       rgba(196,196,196,0.8)
-//     ),
-//     url("/img-start-survey-button.png") center / cover no-repeat;
-//     filter: grayscale(50%) contrast(1.2);
-// }
-
-
-.home-survey-btn {
-  text-decoration: none;
-  font-weight: 650;
-  width: 240px;
-  height: auto;
-}
-
-.home-survey-btn-caption {
-  text-align: center;
-}
-
-
-
-.home-start-survey-button {
-  width: 300px;
-  height: auto;
-  background: var(--c-content-bg);
-}
-
-.new-
-
-
-
-
-
-
-
 
 .btn-primary {
   background: var(--accent);
@@ -539,7 +174,8 @@ h2.start-survey-heading {
 .content-body {
   display: grid;
   gap: var(--s-5);
-  margin-top: var(--s-6);
+  margin-top: var(--s-2);
+  margin: 0 var(--s-2) var(--s-2);
 }
 
 .content-body h2 {
@@ -568,17 +204,440 @@ h2.start-survey-heading {
 
 
 
+
+
+
+
+/* !VA  SURVEY HERO STYLES 
+---------------------------
+*/
+/* --------------------------------------------------
+   Survey Hero
+-------------------------------------------------- */
+.hero-wrapper {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  background: #FFFFFF;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hero {
+  margin: 0 auto;            // center horizontally
+  position: relative;        // allows overlay content
+  /* layout variables */
+  --hero-w: 320px;
+  --hero-h: 160px;
+  --hero-cols: 4;
+  --hero-rows: 3;
+  --hero-gap: calc(var(--base-unit) * 0.35); // 6px when base unit = 8px
+  
+  /* derived tile sizing */
+  --tile-w: calc(
+    (var(--hero-w) - ((var(--hero-cols) + 1) * var(--hero-gap))) / var(--hero-cols)
+  );
+  --tile-h: calc((var(--hero-h) - ((var(--hero-rows) + 1) * var(--hero-gap))) / var(--hero-rows)
+    );
+  // !VA width 
+  width: var(--hero-w);
+  height: var(--hero-h);
+  
+  position: relative;
+  overflow: hidden;
+  background-color: #353535;
+  @include mphone {
+    --hero-w: 375px;
+    --hero-h: 200px;
+    --hero-gap: calc(var(--base-unit) * 0.4); // 6px when base unit = 8px
+  }
+  @include lphone {
+          
+  }
+  @include tablet {
+    --hero-w: 700px; --hero-h: 151px; 
+    --hero-cols: 6;
+    --hero-rows: 2;
+    --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
+  }
+  @include desktop {
+    --hero-w: 920px; --hero-h: 200px;
+    --hero-cols: 6;
+    --hero-rows: 2;
+    --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
+  }
+  @include ldesktop {
+    --hero-w: 920px; --hero-h: 200px;
+    --hero-cols: 6;
+    --hero-rows: 2;
+    --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
+  }
+}
+
+/* grid container */
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  // grid
+  display: grid;
+  grid-template-columns: repeat(var(--hero-cols), var(--tile-w));
+  grid-template-rows: repeat(var(--hero-rows), var(--tile-h));
+  gap: var(--hero-gap);
+  // alignment
+  justify-content: center;
+  align-content: center;
+  // whitespace
+  padding: var(--hero-gap);
+  box-sizing: border-box;
+}
+
+.hero__tile {
+  width: var(--tile-w);
+  height: var(--tile-h);
+  overflow: hidden;
+  background-color: #353535;
+}
+
+.hero__grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%) brightness(1) contrast(1.18);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: var(--hero-gap);
+  z-index: 2;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 35%,
+      rgba(0, 0, 0, 0.16) 72%,
+      rgba(0, 0, 0, 0.34) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.28),
+      rgba(0, 0, 0, 0.12) 45%,
+      rgba(0, 0, 0, 0.18)
+    );
+}
+
+/* text layer */
+.hero__content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // width: 45%;
+  width: 100%;
+  padding: 20px 0;
+  @include ldesktop {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--s-4) 0 var(--s-6) var(--s-6);
+    width: 100%;
+  }
+}
+
+.hero-title-heading  {
+  width: 100%;
+  font-family: $secondary_font!important;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--c-hero-text);
+  opacity: .85;
+  text-align: center;
+  @include ldesktop {
+    font-size: 4.5rem;
+    opacity: .75;
+  }
+}
+
+.hero-subtext-container {
+  position: relative;
+  // bottom: -50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin: var(--s-1) 0 0;
+  padding: 0 var(--s-2);
+  @include ldesktop {
+    margin: var(--s-1) var(--s-2) 0;
+    padding: 0;
+  }
+}
+
+.hero-slug {
+  background: rgba(255, 255, 0, .3) !important; //devyel
+  font-size: var(--font-size-xl);
+  color: #313131;
+  font-size: var(--font-size-sm);
+  font-variant: small-caps;
+  @include ldesktop {
+    font-size: var(--font-size-xl);
+  }
+}
+
+.hero-version {
+  width: 100%;
+  font-family: $secondary_font!important;
+  color: #353535!important;
+  // --sjs-font-size: 15px;
+  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  font-size: var(--font-size-sm);
+  text-align: left;
+  padding: 0!important;
+  margin: 0!important;
+  @include ldesktop {
+    font-size: var(--font-size-md);
+  } 
+}
+
+.hero-logo {
+  width: 80px;
+  height: auto;
+  @include ldesktop {
+    width: 120px;
+  }
+}
+
+.hero-title-subheading {
+  font-family: $primary_font;
+  color: #bfbfbf;
+  // line-height: 1.75rem!important;
+  // font-weight: 600!important;
+  // --sjs-font-size: 15px;
+  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  padding: var(--s-1) 0;
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  text-align: center;
+  font-variant: small-caps;
+  @include tablet {
+
+  }
+  @include ldesktop {
+    // margin: .5rem 0 0 0!important;
+    // --sjs-font-size: 18px;
+    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    text-align: left;
+  }
+}
+
+
+.hero-version-container {
+
+}
+
+.hero-version-content {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.hero-version-logo {
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+  height: auto;
+  opacity: .85;
+  @include tablet {
+    display: block;
+    width: 120px
+  }
+  @include desktop {
+    display: block;
+    width: 120px
+  }
+  @include ldesktop {
+    display: block; 
+    width: 200px;
+    // --sjs-font-size: 15px;
+    // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  }
+}
+
+.home {
+  background: rgba(255, 0, 255, .3) !important; //devmag
+  padding: 0;
+  margin: 0;
+  @include mphone {
+  
+  }
+  @include lphone {
+  
+  }
+  @include tablet {
+    margin: 0 auto;
+  }
+  @include desktop {
+    margin: 0 auto;
+  }
+  @include ldesktop {
+    margin: 0 auto;
+  }
+}
+
+
+/* !VA  START SURVEY PAGE STYLES 
+---------------------------
+*/
+
+.survey-mode-button-container {
+  margin: var(--s-6) auto;
+  margin: var(--s-2) var(--s-6) var(--s-6);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.survey-mode-buttons {
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 var(--s-2);
+  &.browse, &.home {
+    justify-content: center;
+  }
+}
+.survey-mode-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.survey-mode-btn-img  {
+  text-decoration: none;
+  font-weight: 650;
+  width: 180px;
+  height: auto;
+}
+
+.survey-mode-btn-caption {
+  font-family: var(--font-secondary);;
+  color: var(--c-text-accent);
+  text-align: center;
+  font-size: var(--font-size-2xl);
+  text-decoration: underline;
+  margin: 0 0 var(--s-2) 0 ;
+}
+
+// !VA How long does it take
+.survey-details-container {
+  h2 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-2xl);
+  }
+}
+
+
+/* !VA  HOME PAGE STYLES 
+---------------------------
+*/
+
+
+.home-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  // width: 320px;
+  background: rgba(255, 0, 0, .3) !important; //devred
+  @include tablet {
+    width: 740px;
+  }
+  @include desktop {
+    width: 920px;
+  }
+  @include ldesktop {
+    width: 920px;
+  }
+}
+
+
+.home-head h1 {
+  font-family: var(--font-secondary);
+  margin: 0 0 var(--s-2) 0;
+  // font-size: var(--text-h2);
+  line-height: var(--lh-tight);
+  text-align: center;
+}
+
+.home-head .slug {
+  margin: 0 0 var(--s-5) 0;
+  color: var(--c-slug);
+  font-size: var(--font-size-2xl);
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+}
+
+
+
 /* !VA  BROWSE MODE STYLES 
 ---------------------------
 */
 
-// !VA Browse index.js hero/header
-// !VA Browser Home Page Header - index.js
+.browse-page {
+  padding: var(--s-2) var(--s-6) 0;
+}
 
+// !VA browse-header styles appears on every browse page
+.browse-header-container {
+  display: flex;
+  justify-content: space-between;
+  .browse-header-title {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-sm);
+  }
+  .browse-header-slug {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-variant: small-caps;
+  }
+  .browse-header-mode {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+  }
+  .browse-header-logo {
+    width: 100px;
+    height: auto;
+  }
+}
 
 
 article {
   margin: var(--s-4);
+  margin: var(--s-2) var(--s-4) var(--s-4);
   font-family: var(--font-primary);
   background: none;
   h2 {
@@ -601,21 +660,68 @@ article {
 }
 
 .browse-panel-container {
-  margin: 20px 20px;
+  margin: var(--s-2) 0 var(--s-1);
+  padding: var(--s-1) var(--s-3) var(--s-3);
   border: 1px solid gray;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
+}
+
+.browse-content-heading {
+  margin: 0 0 var(--s-2) 0;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-xl);
+}
+
+.browse-content-subheading {
+  margin: 0 0 var(--s-2) 0;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-md);
+}
+
+.browse-content-text {
+  margin: 0 0 var(--s-1);
+  font-size: var(--font-size-md);
+}
+
+// !VA Remove border and whitespace from all Card panels
+#LandingCard1Panel, #LandingCard2Panel, #UserInfoCard1Panel, #CmpnInfoCard1Panel {
+    padding: 0!important;
+    margin: 0!important;
+    border: none;
 }
 
 
+// !VA LANDING browse mode modifications
+// !VA Display none
+#LandingHeaderPanel, #LandingAboutPrivacyText01, #LandingAboutPrivacyOrderedList, #LandingPrivacyLink, #LandingAboutPrivacyText02, #LandingConsentText, #LandingConsentLink, #LandingConsent { display: none; }
 
+// !VA Remove border and whitespace
+#LandingWelcomePanel { border: none; margin: 0; padding: 0 }
 
+// !VA Content changes 
+#LandingPrivacyPanel::after {
+  content: "This section of the survey explains what personal information the survey collects and displayslinks to our Privacy Policy.";
+  background: var(--c-content-highlight);
+}
 
+#LandingConsentPanel::after {
+  content: "This section of the survey asks for your consent to proceed with the survey and links to our Consent Policy.";
+  background: rgb(218, 165, 32, 0.5);
+  background: var(--c-content-highlight);
+}
 
+// !VA USER_INFO Content modifications
+#UserInfoText1, #UserInfoText2, #UserInfoLifeStatusNamePanel, #UserInfoText, #UserInfoVerificationText, #UserInfoVerificationPanel, #UserInfoCard2Panel  { display: none; }
 
+#UserInfoHead::after {
+    content: "This section of the survey asks for your companion's name, whether your companion has crossed over the Rainbow Bridge, and if you're sure like to continue.";
+    background: var(--c-content-highlight);
+}
 
-
-
-
+#UserInfoHeading::after {
+    content: "Here you'll be asked your first name, a contact address (Facebook or email), which country you live in, and optional questions about your age and gender.";
+    background: var(--c-content-highlight);
+}
 
 
 

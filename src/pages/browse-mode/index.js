@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Logo from "../../../public/img-lpl-org-logo.png"
 import BrowseMode from "../../../public/img-browse-mode.png"
+import SurveyHero from "../../components/SurveyHero"
 
 
 const index = () => {
@@ -13,30 +14,13 @@ const index = () => {
       <main className='page browse'>
 
         <header>
-          <div className="hero-container">
-            <div className="hero-title-container">
-              <h2 className="hero-title-heading">LP/GOLPP Survey 2026</h2>
-              <p className="hero-title-subheading">powered by larparlife.org</p>
-            </div>
-
-            <div className="hero-version-container">
-              <div className="hero-version-content">
-                <Image 
-                  src={Logo} 
-                  className='hero-version-logo' 
-                  alt="LarPar Life Logo" 
-                />
-                <p className="hero-version-text">Version 0.9/26.03.01.01</p>
-              </div>
-            </div>
-          </div>
+          <SurveyHero />
         </header>
 
 
         <article className="card">
 
           <div className="survey-mode-button-container">
-            <div className="survey-mode-buttons browse">
                   <Link href='/browse-mode' className='link-dark'>
                     <Image 
                       src={BrowseMode} 
@@ -44,7 +28,6 @@ const index = () => {
                     />
                     <figcaption className="survey-mode-btn-caption"><span className="emphasis">Start Browse Mode</span></figcaption>
                   </Link>
-              </div>
            </div>
           <h2>Browse Mode</h2>
           <p>
