@@ -554,6 +554,10 @@ span.strong-emphasis {
 ---------------------------
 */
 
+.browse-page {
+  padding: var(--s-2) var(--s-6) 0;
+}
+
 // !VA browse-header styles appears on every browse page
 .browse-header-container {
   display: flex;
@@ -561,7 +565,6 @@ span.strong-emphasis {
   .browse-header-title {
     font-family: var(--font-secondary);
     font-size: var(--font-size-sm);
-    background: rgba(255, 0, 0, .3) !important; //devred
   }
   .browse-header-slug {
     font-family: var(--font-primary);
@@ -577,64 +580,6 @@ span.strong-emphasis {
     height: auto;
   }
 }
-
-// !VA Hide until add to browse-exclusions.js
-#LandingHeaderPanel,
-{
-  display: none;
-  background: rgba(255, 0, 255, .3) !important; //devmag
-}
-
-// !VA Remove borders from elements
-#LandingWelcomePanel {
-  border: none;
-}
-
-
-
-#LandingTitleHead  {
-  font-family: $secondary_font!important;
-  // !VA Override the default 
-  font-size: calc(1.75 * (var(--sjs-font-size, 16px)));
-  text-align: center;
-  background: rgba(0, 0, 255, .3) !important; //devblue
-  @include ldesktop {
-    // font-size: var(--sjs-article-font-x-large-fontSize, calc(3 * (var(--sjs-font-size, 48px))))!important;
-    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-    text-align: left;
-  }
-
-}
-
-#LandingVersion {
-  font-family: $primary_font!important;
-  // padding: 0!important;
-  // margin: .5rem 0 0 0!important;
-  color: #6b6b6b!important;
-  // font-size: 1.313rem!important;
-  // line-height: 1.75rem!important;
-  // font-weight: 600!important;
-  // --sjs-font-size: 15px;
-  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-  padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
-
-  font-size: var(--sjs-article-font-default-fontSize, calc(3 * (var(--sjs-font-size, 16px))))!important;
-  font-weight: 600;
-  text-align: center;
-  @include tablet {
-
-  }
-  @include ldesktop {
-    // margin: .5rem 0 0 0!important;
-    // --sjs-font-size: 18px;
-    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-    text-align: left;
-  }
-}
-
-
-
-
 
 
 article {
@@ -662,37 +607,68 @@ article {
 }
 
 .browse-panel-container {
-  margin: 20px 20px;
+  margin: var(--s-2) 0 var(--s-1);
+  padding: var(--s-1) var(--s-3) var(--s-3);
   border: 1px solid gray;
   border-radius: var(--border-radius);
 }
-
 
 .browse-content-heading {
   margin: 0 0 var(--s-2) 0;
   font-family: var(--font-secondary);
   font-size: var(--font-size-xl);
-  background: rgba(255, 0, 0, .3) !important; //devred
+}
+
+.browse-content-subheading {
+  margin: 0 0 var(--s-2) 0;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-md);
 }
 
 .browse-content-text {
   margin: 0 0 var(--s-1);
   font-size: var(--font-size-md);
+}
 
+// !VA Remove border and whitespace from all Card panels
+#LandingCard1Panel, #LandingCard2Panel, #UserInfoCard1Panel, #CmpnInfoCard1Panel {
+    padding: 0!important;
+    margin: 0!important;
+    border: none;
 }
 
 
-#LandingCard1Panel,
-#LandingHeaderPanel
-{
-  border: none;
+// !VA LANDING browse mode modifications
+// !VA Display none
+#LandingHeaderPanel, #LandingAboutPrivacyText01, #LandingAboutPrivacyOrderedList, #LandingPrivacyLink, #LandingAboutPrivacyText02, #LandingConsentText, #LandingConsentLink, #LandingConsent { display: none; }
+
+// !VA Remove border and whitespace
+#LandingWelcomePanel { border: none; margin: 0; padding: 0 }
+
+// !VA Content changes 
+#LandingPrivacyPanel::after {
+  content: "This section of the survey explains what personal information the survey collects and displayslinks to our Privacy Policy.";
+  background: var(--c-content-highlight);
 }
 
+#LandingConsentPanel::after {
+  content: "This section of the survey asks for your consent to proceed with the survey and links to our Consent Policy.";
+  background: rgb(218, 165, 32, 0.5);
+  background: var(--c-content-highlight);
+}
 
+// !VA USER_INFO Content modifications
+#UserInfoText1, #UserInfoText2, #UserInfoLifeStatusNamePanel, #UserInfoText, #UserInfoVerificationText, #UserInfoVerificationPanel, #UserInfoCard2Panel  { display: none; }
 
+#UserInfoHead::after {
+    content: "This section of the survey asks for your companion's name, whether your companion has crossed over the Rainbow Bridge, and if you're sure like to continue.";
+    background: var(--c-content-highlight);
+}
 
-
-
+#UserInfoHeading::after {
+    content: "Here you'll be asked your first name, a contact address (Facebook or email), which country you live in, and optional questions about your age and gender.";
+    background: var(--c-content-highlight);
+}
 
 
 

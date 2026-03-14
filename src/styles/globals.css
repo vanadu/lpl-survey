@@ -67,10 +67,12 @@
 
 
   /* !VA  Colors  Note that --c-content-bg is for the content wrapper, which is defined in Layout.js as 'content'. That should be changed to content-wrap or -site-wrap at some point. It's misleading. */
-  --c-primary: #DAA520;
+  /* --c-primary: #DAA520; */
+  --c-primary: rgb(218, 165, 32);
   --c-secondary: #2055DA; 
   --c-content-bg: #353535; /* VA! this is the content wrap bg, not the actual content BG */
   --c-content-text: #212121;
+  --c-content-highlight: rgb(255, 255, 0, 0.5);
   --c-gray-text: #6b6b6b; /* VA! Color of the 'powered by' slug */
   /* VA! Content page with border radius matches the SJ styling */
   --c-hero-text: #FFFFFF;
