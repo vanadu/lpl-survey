@@ -554,29 +554,83 @@ span.strong-emphasis {
 ---------------------------
 */
 
-// !VA Browse index.js hero/header
-// !VA Browser Home Page Header - index.js
+// !VA browse-header styles appears on every browse page
+.browse-header-container {
+  display: flex;
+  justify-content: space-between;
+  .browse-header-title {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-sm);
+    background: rgba(255, 0, 0, .3) !important; //devred
+  }
+  .browse-header-slug {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-variant: small-caps;
+  }
+  .browse-header-mode {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+  }
+  .browse-header-logo {
+    width: 100px;
+    height: auto;
+  }
+}
 
-// #UserInfoCard1Panel {
-//   background: rgba(255, 0, 0, .3) !important; //devred
-//   &::before { 
-//     content: "Page 1 of 16";
-//   }
-// }
+// !VA Hide until add to browse-exclusions.js
+#LandingHeaderPanel,
+{
+  display: none;
+  background: rgba(255, 0, 255, .3) !important; //devmag
+}
 
-
-// #InfoSourcesCard1Panel {
-//   &::before { content: "Page 3 of 16" }
-// }
-
-// #LANDING_page { &::before { content: "Page 1 of 16"}}
-
+// !VA Remove borders from elements
+#LandingWelcomePanel {
+  border: none;
+}
 
 
 
+#LandingTitleHead  {
+  font-family: $secondary_font!important;
+  // !VA Override the default 
+  font-size: calc(1.75 * (var(--sjs-font-size, 16px)));
+  text-align: center;
+  background: rgba(0, 0, 255, .3) !important; //devblue
+  @include ldesktop {
+    // font-size: var(--sjs-article-font-x-large-fontSize, calc(3 * (var(--sjs-font-size, 48px))))!important;
+    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    text-align: left;
+  }
 
+}
 
+#LandingVersion {
+  font-family: $primary_font!important;
+  // padding: 0!important;
+  // margin: .5rem 0 0 0!important;
+  color: #6b6b6b!important;
+  // font-size: 1.313rem!important;
+  // line-height: 1.75rem!important;
+  // font-weight: 600!important;
+  // --sjs-font-size: 15px;
+  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
 
+  font-size: var(--sjs-article-font-default-fontSize, calc(3 * (var(--sjs-font-size, 16px))))!important;
+  font-weight: 600;
+  text-align: center;
+  @include tablet {
+
+  }
+  @include ldesktop {
+    // margin: .5rem 0 0 0!important;
+    // --sjs-font-size: 18px;
+    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
+    text-align: left;
+  }
+}
 
 
 
@@ -610,13 +664,29 @@ article {
 .browse-panel-container {
   margin: 20px 20px;
   border: 1px solid gray;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
 }
 
 
+.browse-content-heading {
+  margin: 0 0 var(--s-2) 0;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-xl);
+  background: rgba(255, 0, 0, .3) !important; //devred
+}
+
+.browse-content-text {
+  margin: 0 0 var(--s-1);
+  font-size: var(--font-size-md);
+
+}
 
 
-
+#LandingCard1Panel,
+#LandingHeaderPanel
+{
+  border: none;
+}
 
 
 

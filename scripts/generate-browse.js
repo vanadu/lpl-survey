@@ -521,14 +521,27 @@ function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename, navCo
 import ShowAnswerContent from "${COMPONENT_IMPORT_PATH}";
 import BrowseMenu from "${BROWSEMENU_IMPORT_PATH}";
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "public/img-lpl-org-logo.png";
 
 const ${fileInfo.componentName} = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
 
   return (
     <>
       <BrowseMenu />
       <main className="page browse">
+        <header className="browse-header-container">
+          <div className="browse-header-title-container">
+            <h2 className="browse-header-title">LP-GOLPP Survey 2026</h2>
+            <p className="browse-header-slug">powered by larparlife.org</p>
+            <p className="browse-header-mode">Browse Mode</p>
+          </div>
+          <div className="browse-logo-container">
+            <Image src={Logo} className="browse-header-logo" alt="LarParLife.org" />
+          </div>
+        </header>
         <div className="browse-page">
 ${pageNav}
 
@@ -577,6 +590,7 @@ function main() {
     fs.writeFileSync(outputPath, jsx, "utf8");
     console.log(`✅ Generated src/pages/browse-mode/${entry.fileInfo.outputFilename}`);
   });
+
 
   console.log("✅ Browse JSX generation complete");
 }

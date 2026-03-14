@@ -2,14 +2,27 @@ import React, { useState } from "react";
 import ShowAnswerContent from "../../components/ShowAnswerContent";
 import BrowseMenu from "../../components/BrowseMenu";
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "public/img-lpl-org-logo.png";
 
 const Browse_02_CmpnInfo = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
 
   return (
     <>
       <BrowseMenu />
       <main className="page browse">
+        <header className="browse-header-container">
+          <div className="browse-header-title-container">
+            <h2 className="browse-header-title">LP-GOLPP Survey 2026</h2>
+            <p className="browse-header-slug">powered by larparlife.org</p>
+            <p className="browse-header-mode">Browse Mode</p>
+          </div>
+          <div className="browse-logo-container">
+            <Image src={Logo} className="browse-header-logo" alt="LarParLife.org" />
+          </div>
+        </header>
         <div className="browse-page">
       <div className="browse-page-nav" aria-label="Browse page navigation">
         <Link className="browse-page-nav__prev" href="/browse-mode/Browse_01_UserInfo" aria-label="Previous page">

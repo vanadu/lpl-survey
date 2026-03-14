@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import IconBar from './IconBar'
 import logo from '../../public/img-lpl-org-logo.png'
+// import logo from '@/public/img-lpl-org-logo.png'
 import * as styles from '../styles/Header.module.scss'
 
 import { motion } from 'framer-motion'

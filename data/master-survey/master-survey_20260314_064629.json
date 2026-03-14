@@ -232,7 +232,7 @@
             {
               "type": "html",
               "name": "UserInfoText2",
-              "html": "<p>If you'd like to continue now, now please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>"
+              "html": "<p>If you'd like to continue now, please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>"
             },
             {
               "type": "panel",
@@ -1463,7 +1463,7 @@
                   "type": "checkbox",
                   "name": "EarlySymptomsOtherConditionsType",
                   "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
-                  "isRequred": true,
+                  "isRequired": true,
                   "visibleIf": "{EarlySymptomsOtherConditions} = 'YES'",
                   "choices": [
                     {
@@ -1691,7 +1691,7 @@
             {
               "type": "html",
               "name": "PrimaryVetText",
-              "html": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p><p>If you changed primary vets since {CmpnName}'s LP/GOLPP symptoms first appeared   , please answer the question about your preferred or most recent primary veterinarian."
+              "html": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p><p>If you changed primary vets since {CmpnName}'s LP/GOLPP symptoms first appeared, please answer the question about your preferred or most recent primary veterinarian.</p>"
             },
             {
               "type": "panel",
@@ -5097,12 +5097,12 @@
             {
               "type": "html",
               "name": "AspirationText",
-              "html": "<p>Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This sections asks questions about {CmpnName}'s experience with AP. </p>"
+              "html": "<p>Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This section asks questions about {CmpnName}'s experience with AP. </p>"
             },
             {
               "type": "html",
               "name": "AspirationInfoLink",
-              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia as why is it a frequent complication of LP/GOLPP ?</a></div>"
+              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' />&nbsp;<a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?</a></div>"
             },
             {
               "type": "panel",
@@ -5805,7 +5805,7 @@
                 {
                   "type": "html",
                   "name": "ConclusionCauseOfDeathHeading",
-                  "html": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This questions asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over."
+                  "html": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This question asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over."
                 },
                 {
                   "type": "radiogroup",
