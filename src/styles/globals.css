@@ -72,6 +72,7 @@
   --c-secondary: #2055DA; 
   --c-content-bg: #353535; /* VA! this is the content wrap bg, not the actual content BG */
   --c-content-text: #212121;
+  --c-link-accent: #8E000B;
   --c-content-highlight: rgb(255, 255, 0, 0.5);
   --c-gray-text: #6b6b6b; /* VA! Color of the 'powered by' slug */
   /* VA! Content page with border radius matches the SJ styling */
@@ -190,7 +191,6 @@ body {
   background: var(--c-page-bg);
   border-radius: var(--border-radius);
   box-sizing: border-box;
-  
 }
 
 @media (min-width: 768px) and (max-width: 999px) {

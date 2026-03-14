@@ -151,6 +151,10 @@ span.strong-emphasis {
   font-weight: 700;
 }
 
+span.no-wrap {
+  white-space: nowrap;
+}
+
 // !VA 
 /* --------------------------------------------------
    GENERAL CONTENT STYLES
@@ -172,14 +176,15 @@ span.strong-emphasis {
 }
 
 .content-body {
-  display: grid;
-  gap: var(--s-5);
-  margin-top: var(--s-2);
-  margin: 0 var(--s-2) var(--s-2);
+  // display: grid;
+  // gap: var(--s-1);
+  display: flex;
+  flex-direction: column;
+  margin: 0 var(--s-2) var(--s-1);
 }
 
 .content-body h2 {
-  margin: 0 0 var(--s-3) 0;
+  margin: 0 0 var(--s-1) 0;
   font-size: var(--font-size-xl);
   line-height: var(--line-heading);
 }
@@ -357,7 +362,9 @@ span.strong-emphasis {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 45%;
+  // width: 45%;
+  width: 100%;
+
   padding: 20px 0;
   @include ldesktop {
     align-items: flex-start;
@@ -370,11 +377,14 @@ span.strong-emphasis {
 .hero-title-heading  {
   width: 100%;
   font-family: $secondary_font!important;
-  font-size: 4.5rem;
+  font-size: 3rem;
+  line-height: 1.125;
   color: var(--c-hero-text);
   text-align: center;
-  opacity: .75;
+  opacity: .85;
   @include ldesktop {
+    font-size: 4.5rem;
+    opacity: .75;
   }
 }
 
@@ -386,29 +396,40 @@ span.strong-emphasis {
   justify-content: space-between;
   margin-top: 20px;
   margin: var(--s-1) var(--s-2) 0;
+  padding: 0 var(--s-2);
 }
 
 .hero-slug {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-md);
   color: #313131;
   font-variant: small-caps;
+  @include ldesktop {
+    font-size: var(--font-size-xl);
+  }
 }
 
-.hero-version-text {
+.hero-version {
   width: 100%;
   font-family: $secondary_font!important;
   color: #353535!important;
   // --sjs-font-size: 15px;
   // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   text-align: left;
   padding: 0!important;
   margin: 0!important;
+  @include ldesktop {
+    font-size: var(--font-size-md);
+  }
 }
 
 .hero-logo {
-  width: 120px;
+  width: 80px;
   height: auto;
+  margin-right: var(--s-1);
+  @include ldesktop {
+    width: 120px;
+  }
 }
 
 .hero-title-subheading {
@@ -483,8 +504,7 @@ span.strong-emphasis {
 */
 
 .survey-mode-button-container {
-  margin: var(--s-6) auto;
-  margin: var(--s-2) var(--s-6) var(--s-6);
+  margin: var(--s-2) var(--s-6) var(--s-1);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -492,7 +512,7 @@ span.strong-emphasis {
 
 
 .survey-mode-buttons {
-  width: 55%;
+  width: 75%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -538,13 +558,23 @@ span.strong-emphasis {
 ---------------------------
 */
 
+// !VA Override .page in global.css, the universal inner container
+.home.page {
+  padding: 0;
+  margin: 0;
+  @include ldesktop {
+    margin: 48px auto 64px;
+    padding: 24px 40px;
+  }
+}
+
+
 
 .home-head {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-3);
   // width: 320px;
-  background: rgba(255, 0, 0, .3) !important; //devred
   @include tablet {
     width: 740px;
   }
@@ -556,14 +586,33 @@ span.strong-emphasis {
   }
 }
 
-
 .home-head h1 {
+  width: 100%;
   font-family: var(--font-secondary);
-  margin: 0 0 var(--s-2) 0;
-  // font-size: var(--text-h2);
-  line-height: var(--lh-tight);
+  margin: var(--s-4) 0 var(--s-2) 0;
+  font-size: var(--font-size-xl);
+  line-height: 1.25;
   text-align: center;
+  @include ldesktop {
+  font-size: var(--font-size-2xl);
+    margin: 0 0 var(--s-2) 0;
+  }
 }
+
+
+.home-take-survey-link {
+  width: 100%;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--c-link-accent);
+  @include ldesktop {
+    font-size: var(--font-size-2xl);
+  }
+}
+
 
 .home-head .slug {
   margin: 0 0 var(--s-5) 0;
@@ -608,12 +657,11 @@ span.strong-emphasis {
 
 
 article {
-  margin: var(--s-4);
   margin: var(--s-2) var(--s-4) var(--s-4);
   font-family: var(--font-primary);
   background: none;
   h2 {
-    padding: var(--s-2) 0 var(--s-1);
+    padding: var(--s-1) 0 0;
     font-size: var(--font-size-xl);
   }
   ul {
@@ -623,7 +671,8 @@ article {
     font-size: var(--font-size-lg);
   }
   p {
-    padding: var(--s-1) 0 var(--s-2);
+    // !VA Padding is on content-body
+    // padding:  0 0 var(--s-2);
   }
   li {
     margin-left: var(--s-5);

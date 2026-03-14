@@ -19,7 +19,7 @@ const SurveyHero = () => {
   return (
     <>
     <div className="hero-wrapper">
-      <div className="blob">
+      <div className="hero-content">
         <Link href='start-survey' className='link-dark'>
           <div className="hero">
             <div className="hero__grid">

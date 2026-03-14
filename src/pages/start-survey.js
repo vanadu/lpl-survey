@@ -22,19 +22,19 @@ const StartSurvey = () => {
               <div className="survey-mode-button-container">
                 <div className="survey-mode-buttons">
                   <Link href='survey-mode' className='survey-mode-button link-dark'>
-                      <figcaption className="survey-mode-btn-caption"><span className="emphasis">Start Survey Now!</span></figcaption>
-                    <Image 
+                      <figcaption className="survey-mode-btn-caption"><span className="emphasis">Take the Survey Now!</span></figcaption>
+                    {/* <Image 
                       src={SurveyMode} 
                       className="survey-mode-btn-img" alt="XXX" 
-                    />
+                    /> */}
                   </Link>
 
                   <Link href='browse-mode' className='survey-mode-button link-dark'>
-                    <figcaption className="survey-mode-btn-caption"><span className="emphasis">Browse Mode</span></figcaption>
-                    <Image 
+                    <figcaption className="survey-mode-btn-caption"><span className="emphasis">Browse the Survey Questions</span></figcaption>
+                    {/* <Image 
                       src={BrowseMode} 
                       className="survey-mode-btn-img" alt="XXX" 
-                    />
+                    /> */}
                   </Link>
               </div>
             </div>
@@ -44,10 +44,10 @@ const StartSurvey = () => {
             <div className="survey-details-container">
               <h2 className="survey-details-heading">How long does the survey take?</h2>
                 <p>
-                  We&lsquo;ll be honest &mdash; this isn&lsquo;t a two-minute survey with a few yes/no questions. It&lsquo;s designed to interactively collect comprehensive, detailed information about your LP/GOLPP journey, from the early stages through the diagnosis and treatment phase. It asks about breathing crises, intubation history, and aspiration pneumonia, and interactions with your veterinarians that influenced your choices. That could take five minutes or twenty &mdash; it all depends on your personal LP/GOLPP experience. 
+                 The goal of the survey is to collect comprehensive information about your LP/GOLPP journey, from the early stages through the diagnosis and treatment phase. That could take five minutes or twenty &mdash; it all depends on your personal LP/GOLPP experience. 
                 </p>
                 <p>
-                  But the good news is that it&lsquo;s designed to be low-impact and user-friendly. You can answer questions while you watch TV or do othe things. The survey will remember your place, so you can come back to it whenever you have a few minutes. The important thing, though, is that you complete the questionnaire and submit, because your experience matters for the people and animals who are just beginning their LP/GOLPP journey now or will be in the future. 
+                  The interactive, mobile-friendly design lets you answer questions while you watch TV or do other things. It remembers you place, so you can come back to it whenever you have a few minutes. The important thing is that you complete the questions and submit your responses whenever it fits into your schedule. Your experience matters for future LP companions and the people who love them just as you love yours. 
                 </p>
 
 

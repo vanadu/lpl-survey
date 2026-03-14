@@ -42,36 +42,31 @@ const Home = () => {
           
 
         <section className="content-body home-head">
-          <h1>Welcome to the 2026 LP/GOLPP Survey!</h1>
-            {/* <Link href='start-survey' className='link-dark'>
+          <h1>Welcome to the <span className="no-wrap">2026&nbsp;LP/GOLPP&nbsp;Survey!</span></h1>
+            <Link href='start-survey' className='home-take-survey-link link-dark'>
               Take the Survey!
-            </Link> */}
+            </Link>
+          </section>
+
+        <section className="content-body">
           <article className="card">
             <h2>Did you know...</h2>
             <p>
-              ...that the suicide rate among veterinarians is four times that of the general population? Veterinarians have an impossible task &mdash; helping patients who can&lsquo;t tell them where it hurts.
-            </p>
-            <p> 
-              Euthanasia fatigue, high student debt, high burnout rates, difficult clients with unrealistic expectations, and access to lethal medication are all cited as contributing factors.
+              ...that the suicide rate among veterinarians is four times that of the general population? Euthanasia fatigue, high student debt, high burnout rates, difficult clients with unrealistic expectations, and access to lethal medication are all cited as contributing factors.
             </p>
           </article>
 
           <article className="card">
             <h2>How can a survey like this help?</h2>
             <p>
-              Veterinary medicine produces more new research than even the most committed vet can keep up with. And canine (or equine or feline) laryngeal paralysis have little in the way of established protocols, so veterinarians often have to make judgement calls based on general veterinary-medical principles.
-            </p>
-            <p>
-              A well-designed survey can provide useful practical insights about the course of a disease over time based on the experience of people who are on the front lines in the trial-and-error battle against LP/GOLPP &mdash; people like you and me.
+              Veterinary medicine produces more new research than even the most committed vet can keep up with and laryngeal paralysis has little in the way of established protocols. A well-designed survey can provide useful practical insights about the course of a disease over time based on the experience of people who are on the front lines in the trial-and-error battle against LP/GOLPP &mdash; people like you.
             </p>
           </article>
 
           <article className="card">
             <h2>Your contribution matters!</h2>
             <p>
-              The goal of this first-of-its-kind survey is to capture long-term observations that veterinarians might not see, such as daily symptoms, medications, supplements, or the aftermath of treatment. Your survey participation may shed light on treatment approaches that might otherwise fly below the veterinary radar.</p>
-            <p> 
-              While it&lsquo;s not empirical research, this kind of aggregated real-world information can help veterinarians help their clients and the animals they love. And anything that helps veterinarians do their seemingly-impossible job is worth pursuing.
+              The goal of this first-of-its-kind survey is to capture long-term observations that veterinarians might not see, such as daily symptoms, medications, supplements, or the aftermath of treatment. Your survey participation provides real-world data that can help veterinarians help their clients and the animals they love.
             </p>
           </article>
         </section>
