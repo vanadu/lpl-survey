@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import SurveyComponent from '@/components/SurveyComponent'
+import SurveyComponent from '@/components/SurveyComponent_BAK'
 import SurveyDevMenu from '@/components/SurveyDevMenu'
 
 
@@ -11,9 +11,9 @@ const UserInfo = () => {
         <div className="section_content">
           <SurveyDevMenu />
 
-          <div className="survey-wrapper">
+          {/* <div className="survey-wrapper">
             <SurveyComponent startPageName = 'USER_INFO-page' />
-          </div>
+          </div> */}
 
         </div>
       </section>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import SurveyComponent from '@/components/SurveyComponent'
+import SurveyComponent from '@/components/SurveyComponent_BAK'
 import SurveyDevMenu from '@/components/SurveyDevMenu'
 
 const IntubationHistory = () => {
@@ -9,9 +9,9 @@ const IntubationHistory = () => {
         <div className="section_content">
           <SurveyDevMenu />
 
-          <div className="survey-wrapper">
+          {/* <div className="survey-wrapper">
             <SurveyComponent startPageName = 'INTUBATION_HISTORY-page' />
-          </div>
+          </div> */}
 
         </div>
       </section>

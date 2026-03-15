@@ -12,11 +12,62 @@ import registry from "../../helpers/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 import { getStyleDirectives } from "./CustomClasses";
 import { attachSurveySyncHandlers } from "../../helpers/syncSelectionValues";
+import surveySchema from "../../helpers/surveySchema.json";
 import SurveyNav from "./SurveyNav";
 
 const CONSENT_PAGE_INDEX = 0;
 const CONSENT_QUESTION = "LandingConsent";
+const SURVEY_DRAFT_STORAGE_KEY = "lpl_survey_draft";
+const SURVEY_DRAFT_VERSION = "survey-v1";
 
+const SAVABLE_KEYS = new Set(surveySchema);
+
+function getSavableSurveyData(allData = {}) {
+  return Object.fromEntries(
+    Object.entries(allData).filter(([key, value]) => {
+      return SAVABLE_KEYS.has(key) && value !== undefined;
+    })
+  );
+}
+
+function buildDraftPayload(survey) {
+  return {
+    version: SURVEY_DRAFT_VERSION,
+    page: survey.currentPageNo,
+    data: getSavableSurveyData(survey.data),
+    savedAt: new Date().toISOString(),
+  };
+}
+
+function saveSurveyDraft(survey) {
+  if (typeof window === "undefined" || !survey) return;
+
+  const draft = buildDraftPayload(survey);
+  localStorage.setItem(SURVEY_DRAFT_STORAGE_KEY, JSON.stringify(draft));
+}
+
+function loadSurveyDraft() {
+  if (typeof window === "undefined") return null;
+
+  const raw = localStorage.getItem(SURVEY_DRAFT_STORAGE_KEY);
+  if (!raw) return null;
+
+  try {
+    const parsed = JSON.parse(raw);
+
+    if (!parsed || parsed.version !== SURVEY_DRAFT_VERSION) return null;
+    if (!parsed.data || typeof parsed.data !== "object") return null;
+
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+function clearSurveyDraft() {
+  if (typeof window === "undefined") return;
+  localStorage.removeItem(SURVEY_DRAFT_STORAGE_KEY);
+}
 
 
 function applyDirective(htmlElement, directive) {
@@ -70,8 +121,6 @@ function applyDirective(htmlElement, directive) {
 }
 
 
-
-
 function applyDirectives(root, directives) {
 
   if (!root || !directives) return;
@@ -120,8 +169,8 @@ const waitForFonts = async () => {
 
 export default function SurveyComponentMaster() {
   const router = useRouter();
-
   const PREFILL_ENABLED = process.env.NEXT_PUBLIC_PREFILL_ENABLED === "true";
+  // console.log('PREFILL_ENABLED :>> ' + PREFILL_ENABLED);
 
   const MIN_SPINNER_MS = 1200;
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -160,7 +209,10 @@ export default function SurveyComponentMaster() {
   }
 
   const [survey, setSurvey] = useState(null);
+  const [isDraftHydrated, setIsDraftHydrated] = useState(false);
 
+
+  // !VA Restores prefill switch!!!
   useEffect(() => {
     setSurvey(buildSurvey(mq(), null));
   }, []);
@@ -177,12 +229,10 @@ export default function SurveyComponentMaster() {
 
   useEffect(() => {
     if (!survey) return;
-
-
-
-    if (!PREFILL_ENABLED) console.log('survey.data :>> ');
-      console.log(survey.data);
+    console.log('PREFILL_ENABLED in useEffect :>> ' + PREFILL_ENABLED);
     if (!PREFILL_ENABLED) return;
+
+    clearSurveyDraft();
 
     let cancelled = false;
 
@@ -199,6 +249,27 @@ export default function SurveyComponentMaster() {
       cancelled = true;
     };
   }, [survey, PREFILL_ENABLED]);
+
+
+  useEffect(() => {
+    if (!survey) return;
+    if (PREFILL_ENABLED) return;
+
+    const draft = loadSurveyDraft();
+    if (!draft?.data) return;
+
+    survey.data = { ...draft.data };
+
+    if (Number.isInteger(draft.page)) {
+      survey.currentPageNo = draft.page;
+    }
+
+    survey.render();
+  }, [survey, PREFILL_ENABLED]);
+
+
+
+
 
   useEffect(() => {
     if (!survey) return;
@@ -252,6 +323,35 @@ export default function SurveyComponentMaster() {
     });
   }, [survey]);
 
+  // !VA Save survey state to localStorage
+  useEffect(() => {
+    if (!survey) return;
+    if (PREFILL_ENABLED) return;
+
+    let saveTimer = null;
+
+    function queueDraftSave() {
+      window.clearTimeout(saveTimer);
+      saveTimer = window.setTimeout(() => {
+        saveSurveyDraft(survey);
+      }, 250);
+    }
+
+    survey.onValueChanged.add(queueDraftSave);
+    survey.onCurrentPageChanged.add(queueDraftSave);
+
+    return () => {
+      window.clearTimeout(saveTimer);
+      survey.onValueChanged.remove(queueDraftSave);
+      survey.onCurrentPageChanged.remove(queueDraftSave);
+    };
+  }, [survey, PREFILL_ENABLED]);
+
+
+
+
+
+
   const handleComplete = useCallback(
     async (sender) => {
       if (isSubmitting) return;
@@ -284,6 +384,9 @@ export default function SurveyComponentMaster() {
           throw new Error(submitResult.error || submitResult.message || "Unknown error");
         }
 
+
+        // !VA Clear the survey state after submission
+        clearSurveyDraft();
         router.push("/submit-success");
       } catch (err) {
         console.error("Submission failed:", err);

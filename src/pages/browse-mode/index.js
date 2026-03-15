@@ -21,13 +21,13 @@ const index = () => {
         <article className="card">
 
           <div className="survey-link-container">
-                  <Link href='/browse-mode' className='link-dark'>
-                    <Image 
-                      src={BrowseMode} 
-                      className="survey-mode-btn" alt="XXX" 
-                    />
-                    <figcaption className="survey-mode-btn-caption"><span className="emphasis">Start Browse Mode</span></figcaption>
-                  </Link>
+              <Link href='/browse-mode' className='link-dark'>
+                <Image 
+                  src={BrowseMode} 
+                  className="survey-mode-btn" alt="XXX" 
+                />
+                <figcaption className="survey-mode-btn-caption"><span className="emphasis">Start Browse Mode</span></figcaption>
+              </Link>
            </div>
           <h2>Browse Mode</h2>
           <p>

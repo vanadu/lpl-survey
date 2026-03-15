@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import SurveyComponent from '@/components/SurveyComponent'
+import SurveyComponent from '@/components/SurveyComponent_BAK'
 import SurveyDevMenu from '@/components/SurveyDevMenu'
 
 const CMPN_INFO = () => {
@@ -10,9 +10,9 @@ const CMPN_INFO = () => {
 
           <SurveyDevMenu />
 
-          <div className="survey-wrapper">
+          {/* <div className="survey-wrapper">
             <SurveyComponent startPageName = 'CMPN_INFO-page' />
-          </div>
+          </div> */}
 
         </div>
       </section>

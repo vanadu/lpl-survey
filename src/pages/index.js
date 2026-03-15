@@ -12,7 +12,7 @@ import SurveyHero from "../components/SurveyHero"
 
 
 import SurveyComponentMaster from '@/components/SurveyComponentMaster'
-import SurveyComponent from '@/components/SurveyComponent'
+import SurveyComponent from '@/components/SurveyComponent_BAK'
 import SurveyDevMenu from '@/components/SurveyDevMenu'
 
 import { NextSeo } from 'next-seo'
