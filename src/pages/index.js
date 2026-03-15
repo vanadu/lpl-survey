@@ -44,7 +44,7 @@ const Home = () => {
         <section className="content-body home-head">
           <h1>Welcome to the <span className="no-wrap">2026&nbsp;LP/GOLPP&nbsp;Survey!</span></h1>
             <Link href='start-survey' className='home-take-survey-link link-dark'>
-              Take the Survey!
+              Take the Survey Now!
             </Link>
           </section>
 
@@ -66,7 +66,7 @@ const Home = () => {
           <article className="card">
             <h2>Your contribution matters!</h2>
             <p>
-              The goal of this first-of-its-kind survey is to capture long-term observations that veterinarians might not see, such as daily symptoms, medications, supplements, or the aftermath of treatment. Your survey participation provides real-world data that can help veterinarians help their clients and the animals they love.
+              The goal of this first-of-its-kind survey is to aggregate long-term observations that might escape the view of individual veterinarians, such as daily symptoms, medications, supplements, or the aftermath of treatment. Your survey participation provides real-world data that can help veterinarians help their clients and the animals they love.
             </p>
           </article>
         </section>

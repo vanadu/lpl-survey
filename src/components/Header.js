@@ -89,9 +89,9 @@ const Header = () => {
     </div>
 
 
-      <div className={styles.header_slug}>
+      {/* <div className={styles.header_slug}>
         <h2 className={styles.header_slug_text}>Serving the Lar Par/GOLPP Community</h2>
-      </div>
+      </div> */}
 
 
     </div>

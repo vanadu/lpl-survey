@@ -42,18 +42,8 @@ const SurveyHero = () => {
 
             <div className="hero__content">
               <div className="hero-title-container">
-                <h2 className="hero-title-heading">LP/GOLPP Survey 2026</h2>
+                <h2 className="hero-title-heading">LP/GOLPP Survey&nbsp;2026</h2>
               </div>
-              {/* <div className="hero-version-container">
-                <div className="hero-version-content">
-                  <Image 
-                    src={Logo} 
-                    className='hero-version-logo' 
-                    alt="LarPar Life Logo" 
-                  />
-                  <p className="hero-version-text">Version 0.9/26.03.01.01</p>
-                </div>
-              </div> */}
             </div>
           </div>
         </Link>

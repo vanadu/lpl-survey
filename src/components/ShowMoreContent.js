@@ -44,7 +44,7 @@ const ShowMoreContent = ({
           {isOpen ? <FaMinusSquare /> : <FaPlusSquare />}
         </span>
 
-        <span className="showmore__title">{title}</span>
+        <h3 className="showmore__title">{title}</h3>
       </button>
 
       <div

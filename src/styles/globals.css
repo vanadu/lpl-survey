@@ -7,15 +7,43 @@
 /* VA! sphone*/
 @media (max-width: 374px)   {
   :root {
-    --base-unit: 5px;
-    --font-size-base: .75rem;
+    --base-unit: 6px;
+    --font-size-base: .875rem;
   }
 }
 /* VA! mphone*/
-@media screen and (min-width: 375px) and (max-width: 413px)   {
+@media (min-width: 375px) and (max-width: 413px)   {
   :root {
-    --base-unit: 5px;
-    --font-size-base: .75rem;   /* 16px normally */
+    --base-unit: 6px;
+    --font-size-base: .875rem;
+  }
+}
+/* VA! lphone*/
+@media (min-width: 414px) and (max-width: 767px) {
+  :root {
+    --base-unit: 7px;
+    --font-size-base: .938rem;
+  }
+}
+/* VA! tablet */
+@media (min-width: 768px) and (max-width: 959px) {
+  :root {
+    --base-unit: 7px;
+    --font-size-base: 1rem;
+  }
+}
+/* VA! desktop */
+  @media (min-width: 960px) and (max-width: 1199px) {
+  :root {
+    --base-unit: 8px;
+    --font-size-base: 1.125rem;
+  }
+}
+/* VA! ldesktop */
+  @media screen and (min-width: 1200px) {
+  :root {
+    --base-unit: 9px;
+    --font-size-base: 1.25rem;
   }
 }
 

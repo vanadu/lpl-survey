@@ -20,7 +20,7 @@ const index = () => {
 
         <article className="card">
 
-          <div className="survey-mode-button-container">
+          <div className="survey-link-container">
                   <Link href='/browse-mode' className='link-dark'>
                     <Image 
                       src={BrowseMode} 

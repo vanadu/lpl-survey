@@ -185,7 +185,7 @@ span.no-wrap {
 
 .content-body h2 {
   margin: 0 0 var(--s-1) 0;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   line-height: var(--line-heading);
   @include mphone {
     
@@ -200,7 +200,7 @@ span.no-wrap {
     
   }
   @include ldesktop {
-    font-size: var(--font-size-xl);
+    // font-size: var(--font-size-xl);
   }
 }
 
@@ -210,11 +210,11 @@ span.no-wrap {
   }
   p, li  {
     font-family: var(--font-primary);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
     line-height: var(--line-body);
     color: var(--c-content-text);
     margin: 0;
-    padding: var(--s-2) 0 var(--s-1);
+    padding: var(--s-1) 0 0;
   }
   li {
       margin: 0 0 0 var(--s-6);
@@ -392,20 +392,18 @@ span.no-wrap {
 .hero-title-heading  {
   width: 100%;
   font-family: $secondary_font!important;
-  font-size: 3rem;
+  font-size: var(--font-size-6xl);
   line-height: 1.125;
   color: var(--c-hero-text);
   text-align: center;
-  opacity: .85;
+  opacity: .9;
   @include ldesktop {
-    font-size: 4.5rem;
-    opacity: .75;
+    opacity: .8;
   }
 }
 
 .hero-subtext-container {
   position: relative;
-  // bottom: -50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -415,12 +413,10 @@ span.no-wrap {
 }
 
 .hero-slug {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   color: #313131;
-  font-variant: small-caps;
-  @include ldesktop {
-    font-size: var(--font-size-xl);
-  }
+  // font-variant: small-caps;
+  text-transform: uppercase;
 }
 
 .hero-version {
@@ -434,7 +430,7 @@ span.no-wrap {
   padding: 0!important;
   margin: 0!important;
   @include ldesktop {
-    font-size: var(--font-size-md);
+    // font-size: var(--font-size-md);
   }
 }
 
@@ -518,40 +514,49 @@ span.no-wrap {
 ---------------------------
 */
 
-.survey-mode-button-container {
+.survey-link-container {
+  width: 100%;
   margin: var(--s-2) var(--s-6) var(--s-1);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  @include ldesktop {
+    // flex-direction: row;
+  }
 }
 
-
-.survey-mode-buttons {
-  width: 75%;
+.survey-links {
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 0 var(--s-2);
+  margin: var(--s-2) var(--s-2) 0;
   &.browse, &.home {
     justify-content: center;
   }
+  @include ldesktop {
+    flex-direction: row;
+  }
 }
-.survey-mode-button {
+
+.survey-mode-link {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 
-.survey-mode-btn-img  {
-  text-decoration: none;
-  font-weight: 650;
-  width: 180px;
+.survey-mode-icon  {
+  margin-right: var(--s-2);
+  width: var(--s-5);
   height: auto;
+  color: var(--c-text-accent);;
 }
 
-.survey-mode-btn-caption {
+.survey-mode-link-text {
   font-family: var(--font-secondary);;
   color: var(--c-text-accent);
   text-align: center;
@@ -560,12 +565,17 @@ span.no-wrap {
   margin: 0 0 var(--s-2) 0 ;
 }
 
+.survey-faqs-heading {
+  margin: 0 0 var(--s-4) 0!important;
+  text-decoration: underline;
+}
+
 // !VA How long does it take
 .survey-details-container {
-  h2 {
-    font-family: var(--font-secondary);
-    font-size: var(--font-size-2xl);
-  }
+  // h2 {
+  //   font-family: var(--font-secondary);
+  //   font-size: var(--font-size-2xl);
+  // }
 }
 
 
@@ -604,13 +614,13 @@ span.no-wrap {
 .home-head h1 {
   width: 100%;
   font-family: var(--font-secondary);
-  margin: var(--s-4) 0 var(--s-2) 0;
-  font-size: var(--font-size-xl);
+  margin: var(--s-4) 0 var(--s-1) 0;
+  font-size: var(--font-size-2xl);
   line-height: 1.25;
   text-align: center;
   @include ldesktop {
   // font-size: var(--font-size-2xl);
-    margin: 0 0 var(--s-2) 0;
+    // margin: 0 0 var(--s-2) 0;
   }
 }
 
@@ -624,7 +634,7 @@ span.no-wrap {
   text-decoration: underline;
   color: var(--c-link-accent);
   @include ldesktop {
-    font-size: var(--font-size-2xl);
+    // font-size: var(--font-size-2xl);
   }
 }
 
@@ -678,7 +688,6 @@ article {
   h2 {
     padding: var(--s-1) 0 0;
     font-size: var(--font-size-md);
-    background: rgba(255, 0, 0, .3) !important; //devred
     @include mphone {
       
     }
@@ -692,7 +701,7 @@ article {
       
     }
     @include ldesktop {
-      font-size: var(--font-size-xl);
+      // font-size: var(--font-size-xl);
     }
   }
   ul {
@@ -920,7 +929,109 @@ article {
 }
 
 /* ==========================================================================
-   ShowMore
+   ShowMore Component Styles
+   Modified Showasnwer Component 
+   Use to distinguish between JSX content and generated Browse Mode content
+   ========================================================================== */
+.showmore-container {
+  scroll-margin-top: var(--disclosure-scroll-margin-top);
+}
+
+.showmore {
+  background: var(--showmore-background);
+  color: var(--showmore-text-color);
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.showmore__trigger {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--disclosure-gap-tight);
+  color: var(--c-link-accent);
+  width: auto;
+  max-width: 100%;
+  // !VA Overrides and custom styles
+  border: none!important;
+  background: none!important;
+  text-align: left;
+}
+
+.showmore__trigger:hover .showmore__title,
+.showmore__trigger:focus-visible .showmore__title {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.showmore__trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: var(--disclosure-radius);
+}
+
+.showmore__icon {
+  color: var(--showmore-icon-color);
+  margin-top: 0.1em;
+  font-size: 0.95rem;
+}
+
+.showmore__title {
+  color: var(--showmore-link-color);
+  font-size: var(--disclosure-title-font-size);
+  line-height: var(--disclosure-title-line-height);
+  font-weight: 700;
+}
+
+.showmore__content {
+  color: var(--showmore-text-color);
+  padding: 0.375rem 0 0.25rem 1.45rem;
+}
+
+.showmore__content > :first-child {
+  margin-top: 0;
+}
+
+.showmore__content > :last-child {
+  margin-bottom: 0;
+}
+
+/* Helpers based on the sample page usage */
+.showmore__text,
+.showmore-content-text {
+  font-size: var(--disclosure-body-font-size);
+  line-height: var(--disclosure-body-line-height);
+}
+
+.showmore__content-space {
+  display: block;
+  height: 0.625rem;
+}
+
+.showmore__content-inline {
+  display: inline;
+}
+
+.showmore__content-block {
+  display: block;
+}
+
+.showmore__content a {
+  color: var(--showmore-link-color);
+  text-underline-offset: 0.12em;
+}
+
+/* Optional state hook */
+.showmore.showmore--open .showmore__title {
+  text-decoration-thickness: 0.08em;
+}
+
+
+
+
+
+/* ==========================================================================
+   Showanswer
    Lighter, text-flow disclosure
    Best for compact supporting detail
    ========================================================================== */
