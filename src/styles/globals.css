@@ -1,17 +1,42 @@
 :root {
+  /* VA! BASE UNIT*/
+  --base-unit: 8px; 
+  --font-size-base: 1rem;   /* 16px normally */
+}
 
-
-  /* --border-radius: 12px; /* VA! changed to calculated, see below**/
-  /* VA! Variables from old LPL */
- 
+/* VA! sphone*/
+@media (max-width: 374px)   {
+  :root {
+    --base-unit: 5px;
+    --font-size-base: .75rem;
+  }
+}
+/* VA! mphone*/
+@media screen and (min-width: 375px) and (max-width: 413px)   {
+  :root {
+    --base-unit: 5px;
+    --font-size-base: .75rem;   /* 16px normally */
+  }
 }
 
 
+
+/* Tablet */
+@media (max-width: 999px) {
+  :root {
+    --base-unit: 7px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  :root {
+    --base-unit: 6px;
+  }
+}
+
 :root {
 
-
-  /* VA! BASE UNIT*/
-  --base-unit: 8px;
 
   /* VA! Deprecated, I think  
   --max-width: 1100px */
@@ -36,7 +61,7 @@
   /* VA!  Base font*/
   /* VA! Changed from 1.125rem to 1rem base for consistency with SJ base*/
   /* --font-size-base: 1.125rem;   16px normally */
-  --font-size-base: 1rem;   /* 16px normally */
+
   /* VA!  Font size variants*/
   --font-size-xs: calc(var(--font-size-base) * 0.875);   /* 14px */
   --font-size-sm: calc(var(--font-size-base) * 0.9375);  /* 15px */
