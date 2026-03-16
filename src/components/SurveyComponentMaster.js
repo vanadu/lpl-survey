@@ -1,7 +1,7 @@
 "use client";
 // Production SurveyComponentMaster that uses the merged JSON file created by merge-surveys.js.
 
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
@@ -12,11 +12,26 @@ import registry from "../../helpers/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 import { getStyleDirectives } from "./CustomClasses";
 import { attachSurveySyncHandlers } from "../../helpers/syncSelectionValues";
+import surveySchema from "../../helpers/surveySchema.json"; 
+
 import SurveyNav from "./SurveyNav";
 
 const CONSENT_PAGE_INDEX = 0;
 const CONSENT_QUESTION = "LandingConsent";
+const DRAFT_STORAGE_KEY = "lpl-survey-draft-v1";
 
+function sanitizeSurveyData(data) {
+  const allowed = new Set(surveySchema);
+  const clean = {};
+
+  Object.entries(data || {}).forEach(([key, value]) => {
+    if (!allowed.has(key)) return;
+    if (value === undefined) return;
+    clean[key] = value;
+  });
+
+  return clean;
+}
 
 
 function applyDirective(htmlElement, directive) {
@@ -120,6 +135,8 @@ const waitForFonts = async () => {
 
 export default function SurveyComponentMaster() {
   const router = useRouter();
+  const hasUserEditedRef = useRef(false);
+  const isRestoringDraftRef = useRef(false);
 
   const PREFILL_ENABLED = process.env.NEXT_PUBLIC_PREFILL_ENABLED === "true";
 
@@ -165,6 +182,43 @@ export default function SurveyComponentMaster() {
     setSurvey(buildSurvey(mq(), null));
   }, []);
 
+
+
+  // !VA NEW
+  useEffect(() => {
+    if (!survey) return;
+
+    try {
+      const raw = localStorage.getItem(DRAFT_STORAGE_KEY);
+      if (!raw) return;
+
+      const parsed = JSON.parse(raw);
+      const restoredData = sanitizeSurveyData(parsed?.data);
+
+      isRestoringDraftRef.current = true;
+
+      survey.data = restoredData;
+
+      if (Number.isInteger(parsed?.currentPageNo)) {
+        const maxPage = Math.max(0, survey.pages.length - 1);
+        survey.currentPageNo = Math.min(parsed.currentPageNo, maxPage);
+      }
+
+      survey.render();
+    } catch (err) {
+      console.warn("Failed to restore survey draft:", err);
+    } finally {
+      isRestoringDraftRef.current = false;
+    }
+  }, [survey]);
+  // !VA NEW
+
+
+
+
+
+
+
   useEffect(() => {
     if (!survey) return;
 
@@ -178,11 +232,11 @@ export default function SurveyComponentMaster() {
   useEffect(() => {
     if (!survey) return;
 
-
-
-    if (!PREFILL_ENABLED) console.log('survey.data :>> ');
+    if (!PREFILL_ENABLED) {
+      console.log("survey.data :>> ");
       console.log(survey.data);
-    if (!PREFILL_ENABLED) return;
+      return;
+    }
 
     let cancelled = false;
 
@@ -252,6 +306,53 @@ export default function SurveyComponentMaster() {
     });
   }, [survey]);
 
+
+
+  // !VA NEW
+  useEffect(() => {
+    if (!survey) return;
+
+    const persistDraft = () => {
+      if (isRestoringDraftRef.current) return;
+      if (!hasUserEditedRef.current) return;
+
+      try {
+        const payload = {
+          data: sanitizeSurveyData(survey.data),
+          currentPageNo: survey.currentPageNo,
+        };
+
+        localStorage.setItem(DRAFT_STORAGE_KEY, JSON.stringify(payload));
+      } catch (err) {
+        console.warn("Failed to save survey draft:", err);
+      }
+    };
+
+    const handleValueChanged = () => {
+      hasUserEditedRef.current = true;
+      persistDraft();
+    };
+
+    const handleCurrentPageChanged = () => {
+      persistDraft();
+    };
+
+    survey.onValueChanged.add(handleValueChanged);
+    survey.onCurrentPageChanged.add(handleCurrentPageChanged);
+
+    return () => {
+      survey.onValueChanged.remove(handleValueChanged);
+      survey.onCurrentPageChanged.remove(handleCurrentPageChanged);
+    };
+  }, [survey]);
+  // !VA NEW
+
+
+
+
+
+
+
   const handleComplete = useCallback(
     async (sender) => {
       if (isSubmitting) return;
@@ -284,6 +385,7 @@ export default function SurveyComponentMaster() {
           throw new Error(submitResult.error || submitResult.message || "Unknown error");
         }
 
+        localStorage.removeItem(DRAFT_STORAGE_KEY);
         router.push("/submit-success");
       } catch (err) {
         console.error("Submission failed:", err);
