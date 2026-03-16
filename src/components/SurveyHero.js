@@ -42,7 +42,7 @@ const SurveyHero = () => {
 
             <div className="hero__content">
               <div className="hero-title-container">
-                <h2 className="hero-title-heading">LP/GOLPP Survey&nbsp;2026</h2>
+                <h2 className="hero-title-heading">LP/GOLPP<span className="mobile-show-inline"><br /></span><span className="no-wrap">&nbsp;Survey&nbsp;2026</span></h2>
               </div>
             </div>
           </div>

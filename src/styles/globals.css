@@ -176,7 +176,7 @@
 
   --disclosure-scroll-margin-top: 5.5rem;
 
-  --disclosure-title-font-size: var(--font-size-lg);
+  --disclosure-title-font-size: var(--font);
   --disclosure-title-line-height: var(--line-heading, 1.25);
   --disclosure-body-font-size: var(--font-size-base, 1rem);
   --disclosure-body-line-height: var(--line-body, 1.5);
