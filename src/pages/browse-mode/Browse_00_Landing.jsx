@@ -66,8 +66,21 @@ const Browse_00_Landing = () => {
         <p className="browse-content-text">Your first name Your companion animal&lsquo;s name The country in which you live Your email address or Facebook account name</p>
       </div>
 
-      <div className="browse-content-block" id="LandingPrivacyLink">
-        <p className="browse-content-text">&amp;nbsp; Learn more about our Privacy Policy</p>
+      <div className="browse-content-block browse-content-block--info" id="LandingPrivacyLink">
+        <div className="survey-general-info">
+          <img
+            src="/img-info-icon.png"
+            className="survey-info-icon"
+            alt="Example image"
+          />
+          {" "}
+          <Link
+            href="/in-progress"
+            className="survey-info-link"
+          >
+            Learn more about our Privacy Policy
+          </Link>
+        </div>
       </div>
 
       <div className="browse-content-block" id="LandingAboutPrivacyText02">
@@ -84,8 +97,21 @@ const Browse_00_Landing = () => {
         <p className="browse-content-text">By selecting &lsquo;Yes&lsquo; below, you confirm that you agree to the terms of our Consent Policy.</p>
       </div>
 
-      <div className="browse-content-block" id="LandingConsentLink">
-        <p className="browse-content-text">&amp;nbsp; Learn more about our Consent&amp;nbsp;Policy</p>
+      <div className="browse-content-block browse-content-block--info" id="LandingConsentLink">
+        <div className="survey-general-info">
+          <img
+            src="/img-info-icon.png"
+            className="survey-info-icon"
+            alt="Example image"
+          />
+          {" "}
+          <Link
+            href="/in-progress"
+            className="survey-info-link"
+          >
+            Learn more about our Consent Policy
+          </Link>
+        </div>
       </div>
 
       <div className="browse-question-container" id="LandingConsent">
@@ -95,6 +121,7 @@ const Browse_00_Landing = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">

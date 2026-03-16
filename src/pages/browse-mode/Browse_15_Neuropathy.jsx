@@ -57,6 +57,7 @@ const Browse_15_Neuropathy = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -87,6 +88,7 @@ const Browse_15_Neuropathy = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -117,26 +119,27 @@ const Browse_15_Neuropathy = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Don&lsquo;t know</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Almost immediately</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Several weeks</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Several months</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Six months or longer</span>
             </li>
           </ul>
@@ -151,26 +154,27 @@ const Browse_15_Neuropathy = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Don&lsquo;t know</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Almost immediately</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Several weeks</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Several months</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Six months or longer</span>
             </li>
           </ul>
@@ -185,6 +189,7 @@ const Browse_15_Neuropathy = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -215,6 +220,7 @@ const Browse_15_Neuropathy = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">

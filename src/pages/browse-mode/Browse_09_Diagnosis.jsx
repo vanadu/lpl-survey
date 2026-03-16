@@ -54,26 +54,27 @@ const Browse_09_Diagnosis = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Primary veterinarian</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Internal medicine specialist</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Neurologist</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Soft tissue specialist or surgeon</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>General or orthopedic surgeon</span>
             </li>
           </ul>
@@ -88,30 +89,31 @@ const Browse_09_Diagnosis = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Visual/auditory exam only</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Sedated visual exam of larynx</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>X-Ray or other imaging</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Ultrasound</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Video endoscope or laryngoscope under anesthesia</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Don&lsquo;t know</span>
             </li>
           </ul>
@@ -126,6 +128,7 @@ const Browse_09_Diagnosis = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -152,26 +155,27 @@ const Browse_09_Diagnosis = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Less than one month</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Between one and three months</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Between four and six months</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Between six months and a year</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Longer than a year</span>
             </li>
           </ul>
@@ -186,6 +190,7 @@ const Browse_09_Diagnosis = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -220,6 +225,7 @@ const Browse_09_Diagnosis = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">In other words, did the surgeon refuse to do the diagnosis unless you agreed to go straight to surgery if the results were positive?</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">

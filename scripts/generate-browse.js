@@ -66,7 +66,8 @@ function escapeJsxText(value = "") {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/\{/g, "&#123;")
-    .replace(/\}/g, "&#125;");
+    .replace(/\}/g, "&#125;")
+    .replace(/&nbsp;/gi, "\u00A0");
 }
 
 function escapeTemplateLiteral(value = "") {
@@ -213,9 +214,80 @@ function buildPageEntries(exclusions) {
 // HTML BLOCK RENDERING
 // -----------------------------------------------------------------------------
 
+
+function renderInfoLinkHtml(el) {
+  const html = String(el.html || "").trim();
+  if (!html) return "";
+
+  const id = el.name ? ` id="${escapeTemplateLiteral(el.name)}"` : "";
+
+  const hasInfoWrapper =
+    /class\s*=\s*["'][^"']*survey-general-info[^"']*["']/i.test(html) &&
+    /<a\b/i.test(html);
+
+  if (!hasInfoWrapper) return "";
+
+  const hrefMatch = html.match(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/i);
+  if (!hrefMatch) return "";
+
+  const href = hrefMatch[1].trim();
+  const linkText = stripAllTags(hrefMatch[2]).trim();
+
+  if (!href || !linkText) return "";
+
+  const isExternalLike =
+    /^(https?:)?\/\//i.test(href) ||
+    /^mailto:/i.test(href) ||
+    /^tel:/i.test(href);
+
+if (isExternalLike) {
+  return `      <div className="browse-content-block browse-content-block--info"${id}>
+        <div className="survey-general-info">
+          <img
+            src="/img-info-icon.png"
+            className="survey-info-icon"
+            alt="Example image"
+          />
+          {" "}
+          <a
+            href="${escapeTemplateLiteral(href)}"
+            className="survey-info-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ${escapeJsxText(linkText)}
+          </a>
+        </div>
+      </div>`;
+}
+
+return `      <div className="browse-content-block browse-content-block--info"${id}>
+        <div className="survey-general-info">
+          <img
+            src="/img-info-icon.png"
+            className="survey-info-icon"
+            alt="Example image"
+          />
+          {" "}
+          <Link
+            href="${escapeTemplateLiteral(href)}"
+            className="survey-info-link"
+          >
+            ${escapeJsxText(linkText)}
+          </Link>
+        </div>
+      </div>`;
+}
+
+
+
+
 function renderHtmlElement(el) {
   const html = String(el.html || "").trim();
   if (!html) return "";
+
+  const infoLinkBlock = renderInfoLinkHtml(el);
+  if (infoLinkBlock) return infoLinkBlock;
 
   const id = el.name ? ` id="${escapeTemplateLiteral(el.name)}"` : "";
 
@@ -303,8 +375,41 @@ function renderQuestionInner(el, sourceFilename) {
       return renderListItems(
         (el.choices || []).map(normalizeChoiceText),
         "browse-showanswer-dropdown",
-        "browse-showanswer-icon--dropdown"
+        "browse-showanswer-icon--radio"
       );
+
+    case "rating":
+      return `          <div className="browse-showanswer-rating" aria-hidden="true">
+                ${[1, 2, 3, 4, 5]
+                  .map(
+                    (n) => `
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        ${n}
+                      </text>
+                    </svg>
+                  </span>`
+                  )
+                  .join("")}
+              </div>`;
 
     case "boolean": {
       const labelTrue = el.labelTrue;
@@ -334,6 +439,16 @@ function renderQuestionInner(el, sourceFilename) {
   }
 }
 
+
+
+function renderQuestionDescription(el) {
+  const description = stripAllTags(replaceTokens(el.description || "")).trim();
+
+  if (!description) return "";
+
+  return `          <p className="browse-question-description">${escapeJsxText(description)}</p>`;
+}
+
 function renderQuestionBlock(el, index, sourceFilename) {
   const title = replaceTokens(el.title || el.name || "Untitled");
   const id = el.name ? ` id="${escapeTemplateLiteral(el.name)}"` : "";
@@ -345,12 +460,14 @@ function renderQuestionBlock(el, index, sourceFilename) {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+${renderQuestionDescription(el)}
           <div className="showanswer__content-block">
 ${renderQuestionInner(el, sourceFilename)}
           </div>
         </ShowAnswerContent>
       </div>`;
 }
+
 
 // -----------------------------------------------------------------------------
 // TREE WALK

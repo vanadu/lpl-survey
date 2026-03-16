@@ -57,6 +57,7 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -83,6 +84,7 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please also include discontinued medications.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">
@@ -141,22 +143,23 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">If you don&lsquo;t know exactly, it&lsquo;s OK to guesstimate.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $50</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$51-$100</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$101-$200</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $200</span>
             </li>
           </ul>
@@ -171,8 +174,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -184,8 +310,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -197,8 +446,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -210,8 +582,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -223,8 +718,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -236,8 +854,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -249,8 +990,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -262,8 +1126,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -275,8 +1262,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -288,8 +1398,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -301,8 +1534,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -314,8 +1670,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -327,8 +1806,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -340,8 +1942,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -353,8 +2078,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -366,8 +2214,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -379,8 +2350,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -392,8 +2486,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -405,8 +2622,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -418,8 +2758,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -431,8 +2894,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -444,8 +3030,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -461,6 +3170,7 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -487,6 +3197,7 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">
@@ -517,22 +3228,23 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">If you don&lsquo;t know exactly, it&lsquo;s OK to guesstimate.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $100</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$101-150</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$151-$250</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $250</span>
             </li>
           </ul>
@@ -547,8 +3259,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -560,8 +3395,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -573,8 +3531,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -586,8 +3667,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -599,8 +3803,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -612,8 +3939,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -625,8 +4075,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -638,8 +4211,131 @@ const Browse_12_Management = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>

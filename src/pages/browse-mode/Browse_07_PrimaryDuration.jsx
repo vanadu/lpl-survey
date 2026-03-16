@@ -54,6 +54,7 @@ const Browse_07_PrimaryDuration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>
@@ -67,6 +68,7 @@ const Browse_07_PrimaryDuration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>
@@ -80,6 +82,7 @@ const Browse_07_PrimaryDuration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -110,6 +113,7 @@ const Browse_07_PrimaryDuration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -144,6 +148,7 @@ const Browse_07_PrimaryDuration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -170,6 +175,7 @@ const Browse_07_PrimaryDuration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please check all that apply.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">

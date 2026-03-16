@@ -458,7 +458,7 @@
 // !VA INFO icons and links
 // --------------------------
 // !VA .survey-general-info is the div wrapper that lives inside the HTML element for general info, i.e. info that's not attached to a question label.
-.survey-wrapper .survey-general-info {
+.survey-general-info {
   // !VA Defaults
   position: relative;
   display: block;
@@ -469,13 +469,13 @@
   margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
 
-.survey-wrapper .survey-info-icon {
+.survey-info-icon {
   width: 16px;
   height: 16px;
   vertical-align: -2px;
 }
 
-.survey-wrapper .survey-info-link {
+.survey-info-link {
   // --sjs-font-size: 16px!important;
   // !VA Font size override, renders to 16px
   font-size: calc(.9 * (var(--sjs-font-size, 16px)));
@@ -487,20 +487,22 @@
 
 // !VA Position info label on inputs or other question elements absolutely and move it down 18px. .survey-input-info is the div wrapper that lives inside the HTML element.
 // !VA IMPORTANT -- not sure if this is doing to work.
-.survey-wrapper .survey-question-info {
+.survey-question-info {
   position: absolute;
   bottom: -16px;
 }
 
-.survey-wrapper .survey-question-info .survey-info-icon {
+.survey-question-info .survey-info-icon, .survey-general-info .survey-info-link {
   width: 14px;
-  height: 14px;
-  vertical-align: -3px;
+
+  vertical-align: 0px;
 }
 
-.survey-wrapper .survey-question-info .survey-info-link {
-  font-size: .813rem;
-  color: #B70B0C;
+.survey-question-info .survey-info-link, .survey-general-info .survey-info-link {
+  font-size: 1rem;
+  font-size: var(--font-size-sm);
+  padding-left: .5rem;
+  color: #B70B0C!important;
   font-weight: bold;
   text-decoration: none;
 }

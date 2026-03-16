@@ -52,6 +52,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -76,6 +77,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>
@@ -89,6 +91,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>
@@ -106,6 +109,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please check all that apply.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">
@@ -143,6 +147,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -165,22 +170,23 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Less than one month</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Between one and two months</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Between three and six months</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Longer than six months</span>
             </li>
           </ul>
@@ -195,6 +201,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -217,30 +224,31 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $2500</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$2501-$4000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$4000-$5500</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$5500-$7000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $7000</span>
             </li>
           </ul>
@@ -255,30 +263,31 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $4000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$4001-$5500</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$5501-$7000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$7001-$9000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $9000</span>
             </li>
           </ul>
@@ -293,6 +302,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -315,30 +325,31 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $1000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$1001-$2000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$2001-$3000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$3001-$5000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $5001</span>
             </li>
           </ul>
@@ -356,6 +367,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please choose all that apply.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">
@@ -386,26 +398,27 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $4000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$4001-$5500</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$5501-$7000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $7000</span>
             </li>
           </ul>
@@ -420,6 +433,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -442,30 +456,31 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $1000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$1001-$2000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$2001-$3000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$3001-$5000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $5001</span>
             </li>
           </ul>
@@ -482,22 +497,23 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Silicone</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Dextronix DexStent LE Nitinol wire</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Nitinol mesh</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Don&lsquo;t know</span>
             </li>
           </ul>
@@ -518,6 +534,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -540,6 +557,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -562,30 +580,31 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $1500</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$1501-$2000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$2001-$3000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$3001-$4000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $4000</span>
             </li>
           </ul>
@@ -600,30 +619,31 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $1500</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$1501-$2000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$2001-$3000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$5500-$7000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $4000</span>
             </li>
           </ul>
@@ -638,6 +658,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -660,30 +681,31 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $1000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$1001-$2000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$2001-$3000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$3001-$5000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $5001</span>
             </li>
           </ul>
@@ -701,6 +723,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please choose all that apply.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">
@@ -731,6 +754,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">This technique is called &lsquo;ablation&lsquo;.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -753,6 +777,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -779,6 +804,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -805,26 +831,27 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $2000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$2001-$4000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$4001-$5500</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $5500</span>
             </li>
           </ul>
@@ -839,6 +866,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -861,30 +889,31 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $1000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$1001-$2000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$2001-$3000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$3001-$5000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $5001</span>
             </li>
           </ul>
@@ -902,6 +931,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please choose all that apply.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">
@@ -932,6 +962,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -958,6 +989,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -984,26 +1016,27 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $2000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$2001-$4000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$4001-$5500</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $5500</span>
             </li>
           </ul>
@@ -1018,6 +1051,7 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -1040,30 +1074,31 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $1000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$1001-$2000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$2001_$3000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$3001-$5000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $5001</span>
             </li>
           </ul>
@@ -1080,8 +1115,131 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very unsatisfied, 5 = very satisfied</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -1093,8 +1251,131 @@ const Browse_10_TreatmentStatus = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = very unsatisfied, 5 = very satisfied</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>

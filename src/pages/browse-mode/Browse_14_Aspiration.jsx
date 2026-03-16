@@ -45,8 +45,21 @@ const Browse_14_Aspiration = () => {
         <p className="browse-content-text">Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This section asks questions about Bella&lsquo;s experience with AP.</p>
       </div>
 
-      <div className="browse-content-block" id="AspirationInfoLink">
-        <p className="browse-content-text">&amp;nbsp; What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?</p>
+      <div className="browse-content-block browse-content-block--info" id="AspirationInfoLink">
+        <div className="survey-general-info">
+          <img
+            src="/img-info-icon.png"
+            className="survey-info-icon"
+            alt="Example image"
+          />
+          {" "}
+          <Link
+            href="/in-progress"
+            className="survey-info-link"
+          >
+            What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?
+          </Link>
+        </div>
       </div>
 
       <div className="browse-panel-container" id="AspirationDidHavePanel">
@@ -57,6 +70,7 @@ const Browse_14_Aspiration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -85,22 +99,23 @@ const Browse_14_Aspiration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Once</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Twice</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Three times</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>More than three times</span>
             </li>
           </ul>
@@ -115,6 +130,7 @@ const Browse_14_Aspiration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -141,22 +157,23 @@ const Browse_14_Aspiration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Once</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Twice</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Three times</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>More than three times</span>
             </li>
           </ul>
@@ -175,6 +192,7 @@ const Browse_14_Aspiration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">Includes tieback, BVEAP, ventrilocordectomy, arytenoidectomy and other invasive surgery procedures.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -201,22 +219,23 @@ const Browse_14_Aspiration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Once</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Twice</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Three times</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>More than three times</span>
             </li>
           </ul>
@@ -233,6 +252,7 @@ const Browse_14_Aspiration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -259,22 +279,23 @@ const Browse_14_Aspiration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Once</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Twice</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Three times</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>More than three times</span>
             </li>
           </ul>
@@ -291,38 +312,39 @@ const Browse_14_Aspiration = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under $100</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$100-$300</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$300-$500</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$500-$1000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$1001-$3000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>$3000-$5000</span>
             </li>
             <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--dropdown" aria-hidden="true"></span>
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over $5000</span>
             </li>
           </ul>

@@ -53,6 +53,7 @@ const Browse_04_IntubationHistory = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -79,6 +80,7 @@ const Browse_04_IntubationHistory = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">
@@ -113,6 +115,7 @@ const Browse_04_IntubationHistory = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-boolean">
@@ -135,6 +138,7 @@ const Browse_04_IntubationHistory = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">

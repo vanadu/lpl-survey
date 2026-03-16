@@ -54,6 +54,7 @@ const Browse_06_EarlySymptoms = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>
@@ -67,6 +68,7 @@ const Browse_06_EarlySymptoms = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>
@@ -82,6 +84,7 @@ const Browse_06_EarlySymptoms = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">
@@ -124,8 +127,131 @@ const Browse_06_EarlySymptoms = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+          <p className="browse-question-description">1 = mild, 5 = severe</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -137,6 +263,7 @@ const Browse_06_EarlySymptoms = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -163,6 +290,7 @@ const Browse_06_EarlySymptoms = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -193,6 +321,7 @@ const Browse_06_EarlySymptoms = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -219,6 +348,7 @@ const Browse_06_EarlySymptoms = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
+
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">
