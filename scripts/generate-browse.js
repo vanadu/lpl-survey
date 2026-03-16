@@ -86,6 +86,8 @@ function stripOuterTag(html, tagName) {
   text = text.replace(openTag, "");
   text = text.replace(closeTag, "");
   text = text.replace(malformedCloseTag, "");
+  // Replace the HTML entity with the actual non-breaking space character.
+  text = text.replace(/&nbsp;/gi, "\u00A0");
 
   return text.trim();
 }
@@ -450,22 +452,44 @@ ${children}
       </div>`;
 }
 
+const CHEVRON_PATHS = {
+  prev: "M208,48V208a8,8,0,0,1-13.66,5.66L128,147.31V208a8,8,0,0,1-13.66,5.66l-80-80a8,8,0,0,1,0-11.32l80-80A8,8,0,0,1,128,48v60.69l66.34-66.35A8,8,0,0,1,208,48Z",
+  next: "M221.66,133.66l-80,80A8,8,0,0,1,128,208V147.31L61.66,213.66A8,8,0,0,1,48,208V48a8,8,0,0,1,13.66-5.66L128,108.69V48a8,8,0,0,1,13.66-5.66l80,80A8,8,0,0,1,221.66,133.66Z",
+};
+
+function renderChevron(direction, srText) {
+  const path = CHEVRON_PATHS[direction];
+  const svg = `<svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="${path}"></path></svg>`;
+
+  return direction === "prev"
+    ? `${svg}<span className="sr-only">${srText}</span>`
+    : `<span className="sr-only">${srText}</span>${svg}`;
+}
+
 function renderNavControl(direction, targetEntry) {
   const baseClass =
     direction === "prev" ? "browse-page-nav__prev" : "browse-page-nav__next";
-  const icon = direction === "prev" ? "‹" : "›";
+
+  const srText = direction === "prev" ? "Previous" : "Next";
   const label = direction === "prev" ? "Previous page" : "Next page";
+  const icon = renderChevron(direction, srText);
 
   if (!targetEntry) {
     return `        <span className="${baseClass} is-disabled" aria-hidden="true">
-          <span>${icon}</span>
+          <span>${icon}
+          </span>
         </span>`;
   }
 
   return `        <Link className="${baseClass}" href="${targetEntry.fileInfo.routePath}" aria-label="${label}">
-          <span aria-hidden="true">${icon}</span>
+          <span aria-hidden="true">${icon}
+          </span>
         </Link>`;
 }
+
+
+
+
 
 function renderPageNav(pageObj, navContext) {
   const markerId = pageObj?.name

@@ -91,10 +91,10 @@ const StartSurvey = () => {
 
                 <ul>
                   <li className="showmore_content_inline">
-                    <span className="emphasis">Survey Mode:</span>&nbsp;&nbsp;If your companion animal has had LP/GOLPP symptoms for a while and you&lsquo;ve discussed the symptoms with a vetarinary professional, start the survey in <span className="emphasis">Survey Mode</span>.
+                    <span className="emphasis">Survey Mode:</span>&nbsp;&nbsp;If your companion animal has had LP/GOLPP symptoms for a while and you&lsquo;ve discussed the symptoms with a veterinary professional, take the survey in <span className="emphasis">Survey Mode</span>.
                   </li>
                   <li className="showmore_content_inline">
-                    <span className="emphasis">Browse Mode</span>&nbsp;&nbsp;If you&lsquo;re new to the LP/GOLPP journey don&lsquo;t know much about it yet, start the survey in <span className="emphasis">Browse Mode</span>. Just reading the questions will jump-start your learning process.</li>
+                    <span className="emphasis">Browse Mode</span>&nbsp;&nbsp;If you&lsquo;re new to the LP/GOLPP journey don&lsquo;t know much about it yet, start the survey in <span className="emphasis">Browse Mode</span> to jump-start your learning process.</li>
                 </ul>
 
               </div>
@@ -109,7 +109,6 @@ const StartSurvey = () => {
               setActiveIndex={setActiveIndex}
               >
               <div className="showmore_content_block">
-              <span className="showmore_content_space"></span>
                 <p className="showmore_content_inline">
                   No, <span className="emphasis">Browse Mode</span> provides a stripped-down, flat version of the survey content without any of the response processing, internal logic, or personalization. 
                 </p>
@@ -131,7 +130,6 @@ const StartSurvey = () => {
               setActiveIndex={setActiveIndex}
               >
               <div className="showmore_content_block">
-              <span className="showmore_content_space"></span>
                 <p className="showmore_content_inline">
                   Highlighted text in <span className="emphasis">Browse Mode</span> summarizes a section that would require a user response in <span className="emphasis">Survey Mode</span> and indicates descriptive text that isn&lsquo;t relevant in <span className="emphasis">Survey Mode</span>. 
                 </p>
