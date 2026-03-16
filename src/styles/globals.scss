@@ -184,7 +184,7 @@ span.no-wrap {
 }
 
 .content-body h2 {
-  margin: 0 0 var(--s-1) 0;
+  margin: var(--s-1) 0 var(--s-1) 0;
   font-size: var(--font-size-lg);
   line-height: var(--line-heading);
   @include mphone {
@@ -210,7 +210,7 @@ span.no-wrap {
   }
   p, li  {
     font-family: var(--font-primary);
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-lg);
     line-height: var(--line-body);
     color: var(--c-content-text);
     margin: 0;
@@ -234,75 +234,54 @@ span.no-wrap {
 /* --------------------------------------------------
    Survey Hero
 -------------------------------------------------- */
+/* --------------------------------------------------
+   Survey Hero
+-------------------------------------------------- */
 .hero-wrapper {
   position: relative;
   display: block;
-
   width: 100%;
-  background: #FFFFFF;
+  background: #fff;
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   width: 100%;
+  margin: 0 auto;
 }
 
 .hero {
-  margin: 0 auto;            // center horizontally
-  position: relative;        // allows overlay content
-  /* layout variables */
-  --hero-w: 320px;
-  --hero-h: 160px;
-  --hero-cols: 4;
-  --hero-rows: 3;
-  --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
-
-  /* derived tile sizing */
-  --tile-w: calc(
-    (var(--hero-w) - ((var(--hero-cols) + 1) * var(--hero-gap))) / var(--hero-cols)
-  );
-  --tile-h: calc(
-    (var(--hero-h) - ((var(--hero-rows) + 1) * var(--hero-gap))) / var(--hero-rows)
-  );
-  // !VA width 
-  width: var(--hero-w);
-  height: var(--hero-h);
-
   position: relative;
+  margin: 0 auto;
+  width: 100%;
+  // max-width: 920px; // optional; remove if you want fully fluid forever
+  aspect-ratio: 6.5 / 3; // mobile default: 4 cols x 3 rows feel
   overflow: hidden;
   background-color: #353535;
-  // @media (min-width: 768px) and (max-width: 999px) {
-  //   .hero { --hero-w: 700px; --hero-h: 151px; }
-  // }
-  // @media (max-width: 767px) and (min-width: 768px) {
-  //   .hero { --hero-w: 700px; --hero-h: 151px; }
-  // }
-  @include mphone {
   
+  --hero-cols: 4;
+  --hero-rows: 3;
+  --hero-gap: calc(var(--base-unit) * 0.45);
+  @include mphone {
+    aspect-ratio: 7 / 3; // mobile default: 4 cols x 3 rows feel
   }
   @include lphone {
-  
+    aspect-ratio: 7.25 / 3; // mobile default: 4 cols x 3 rows feel
   }
   @include tablet {
-    --hero-w: 700px; --hero-h: 151px; 
     --hero-cols: 6;
     --hero-rows: 2;
-    --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
+    aspect-ratio: 8 / 2; // effectively 3 / 1
   }
+
   @include desktop {
-    --hero-w: 920px; --hero-h: 200px;
     --hero-cols: 6;
     --hero-rows: 2;
-    --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
+    aspect-ratio: 920 / 200; // matches your old desktop proportion more closely
   }
   @include ldesktop {
-    --hero-w: 920px; --hero-h: 200px;
     --hero-cols: 6;
     --hero-rows: 2;
-    --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
+    aspect-ratio: 8/2; // matches your old desktop proportion more closely
   }
 }
 
@@ -311,32 +290,22 @@ span.no-wrap {
   position: absolute;
   inset: 0;
   z-index: 1;
-  // grid
+
   display: grid;
-  grid-template-columns: repeat(var(--hero-cols), var(--tile-w));
-  grid-template-rows: repeat(var(--hero-rows), var(--tile-h));
+  grid-template-columns: repeat(var(--hero-cols), minmax(0, 1fr));
+  grid-template-rows: repeat(var(--hero-rows), minmax(0, 1fr));
   gap: var(--hero-gap);
-  // alignment
-  justify-content: center;
-  align-content: center;
-  // whitespace
+
   padding: var(--hero-gap);
   box-sizing: border-box;
 }
 
 .hero__tile {
-  width: var(--tile-w);
-  height: var(--tile-h);
-  overflow: hidden;
-  background-color: #353535;
-}
-
-.hero__grid img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(40%) brightness(1) contrast(1.18);
+  overflow: hidden;
+  background-color: #353535;
 }
 
 .hero__overlay {
@@ -360,17 +329,20 @@ span.no-wrap {
     );
 }
 
-/* text layer */
 .hero__content {
   position: relative;
   z-index: 3;
+  width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
   color: white;
   text-align: center;
 }
+
+
+
+
 
 .hero-title-container {
   display: flex;
@@ -417,6 +389,10 @@ span.no-wrap {
   color: #313131;
   // font-variant: small-caps;
   text-transform: uppercase;
+  @include mphone {
+    font-size: var(--font-size-sm);
+    
+  }
 }
 
 .hero-version {
@@ -468,16 +444,13 @@ span.no-wrap {
 
 
 .hero-version-container {
-
+  // !VA No styling
 }
 
 .hero-version-content {
   display: flex;
   flex-direction: column;
 }
-
-
-
 
 .hero-version-logo {
   display: block;
@@ -496,8 +469,6 @@ span.no-wrap {
   @include ldesktop {
     display: block; 
     width: 200px;
-    // --sjs-font-size: 15px;
-    // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
   }
 }
 
@@ -553,21 +524,22 @@ span.no-wrap {
   margin-right: var(--s-2);
   width: var(--s-5);
   height: auto;
-  color: var(--c-text-accent);;
+  color: var(--c-text-accent);
+
 }
 
 .survey-mode-link-text {
   font-family: var(--font-secondary);;
   color: var(--c-text-accent);
   text-align: center;
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
   text-decoration: underline;
   margin: 0 0 var(--s-2) 0 ;
 }
 
 .survey-faqs-heading {
   margin: 0 0 var(--s-4) 0!important;
-  text-decoration: underline;
 }
 
 // !VA How long does it take
@@ -587,13 +559,19 @@ span.no-wrap {
 .home.page {
   padding: 0;
   margin: 0;
+  @include tablet {
+    margin: 24px auto 32px;
+    padding: 12px 20px;
+  }
+  @include desktop {
+    margin: 24px auto 32px;
+    padding: 12px 20px;
+  }
   @include ldesktop {
     margin: 48px auto 64px;
     padding: 24px 40px;
   }
 }
-
-
 
 .home-head {
   display: flex;
@@ -602,9 +580,11 @@ span.no-wrap {
   // width: 320px;
   @include tablet {
     width: 740px;
+    width: 100%;
   }
   @include desktop {
     width: 920px;
+    width: 100%;
   }
   @include ldesktop {
     width: 920px;
@@ -615,9 +595,13 @@ span.no-wrap {
   width: 100%;
   font-family: var(--font-secondary);
   margin: var(--s-4) 0 var(--s-1) 0;
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   line-height: 1.25;
   text-align: center;
+  @include mphone {
+    font-size: var(--font-size-xl);
+  
+  }
   @include ldesktop {
   // font-size: var(--font-size-2xl);
     // margin: 0 0 var(--s-2) 0;
@@ -633,6 +617,9 @@ span.no-wrap {
   text-align: center;
   text-decoration: underline;
   color: var(--c-link-accent);
+  @include mphone {
+    font-size: var(--font-size-xl);
+  }
   @include ldesktop {
     // font-size: var(--font-size-2xl);
   }

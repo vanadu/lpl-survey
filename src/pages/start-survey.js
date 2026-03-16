@@ -53,7 +53,7 @@ const StartSurvey = () => {
 
           <article>
             <h2 className="survey-faqs-heading">Survey FAQs</h2>
-            <p>Here are some answers to frequently-asked questions about the LP/GOLPP Survey 2026.</p>
+            <p>Here are some answers to frequently-asked questions about the <span className="emphasis">LP/GOLPP Survey 2026</span>.</p>
           </article> 
 
           <article>
@@ -94,14 +94,8 @@ const StartSurvey = () => {
                     <span className="emphasis">Survey Mode:</span>&nbsp;&nbsp;If your companion animal has had LP/GOLPP symptoms for a while and you&lsquo;ve discussed the symptoms with a vetarinary professional, start the survey in <span className="emphasis">Survey Mode</span>.
                   </li>
                   <li className="showmore_content_inline">
-                    <span className="emphasis">Browse Mode</span>&nbsp;&nbsp;If you&lsquo;re new to the LP/GOLPP journey and aren&lsquo;t sure whether your companion animal has LP/GOLPP, start the survey in <span className="emphasis">Browse Mode</span>.</li>
+                    <span className="emphasis">Browse Mode</span>&nbsp;&nbsp;If you&lsquo;re new to the LP/GOLPP journey don&lsquo;t know much about it yet, start the survey in <span className="emphasis">Browse Mode</span>. Just reading the questions will jump-start your learning process.</li>
                 </ul>
-
-
-
-                <p className="showmore_content_inline">
-                  <span className="emphasis">Browse Mode</span> can also be useful if you want to review what kind of questions will be asked before you start the survey, or even if you just want to inform yourself about the issues you and your LP companion will be facing on your LP/GOLPP journey.
-                </p>
 
               </div>
             </ShowMoreContent>
@@ -117,12 +111,12 @@ const StartSurvey = () => {
               <div className="showmore_content_block">
               <span className="showmore_content_space"></span>
                 <p className="showmore_content_inline">
-                  No, <span className="emphasis">Browse Mode</span> provides a stripped-down version of the survey based not on your own LP companion, but rather on a fictional a female Labrador Retriever named Bella. What you&lsquo;ll see is a flat version of the survey content without any of the response processing, internal logic, or personalization that makes the survey functional.
+                  No, <span className="emphasis">Browse Mode</span> provides a stripped-down, flat version of the survey content without any of the response processing, internal logic, or personalization. 
                 </p>
-                <p className="showmore_content_inline">For instance, questions about Bella&lsquo;s age at various points in the LP/GOLPP progression have been removed from <span className="emphasis">Browse Mode</span>, so some of the questions may seem out of context. But for people who are still learning about LP/GOLPP, it&lsquo;s useful to see all the questions in one place, not just the ones that pertain to a specific dog‘s LP journey.</p>
+                <p className="showmore_content_inline">Some of the questions may seem out of context in <span className="emphasis">Browse Mode</span> because the functionality has been disabled. But for people who are still learning about LP/GOLPP, it&lsquo;s useful to see all the questions in one place.</p>
 
                 <p className="showmore_content_inline">
-                  For the full survey experience and to share the details of your LP/GOLPP journey, run the survey in full <span className="emphasis">Survey Mode</span >.
+                  For the fully customized survey experience and to share the details of your LP/GOLPP journey, run the survey in full <span className="emphasis">Survey Mode</span >.
                 </p>
 
               </div>
@@ -131,7 +125,7 @@ const StartSurvey = () => {
 
           <article>
             <ShowMoreContent
-              title='Why is some text in Browse Mode highlighted?' 
+              title='Why is some text highlighted in Browse Mode?' 
               index={4}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
@@ -139,7 +133,7 @@ const StartSurvey = () => {
               <div className="showmore_content_block">
               <span className="showmore_content_space"></span>
                 <p className="showmore_content_inline">
-                  Highlighted text in <span className="emphasis">Browse Mode</span> summarizes a section that would require a user response in <span className="emphasis">Survey Mode</span> and to explain why certain sections have been left out of <span className="emphasis">Browse Mode</span>. 
+                  Highlighted text in <span className="emphasis">Browse Mode</span> summarizes a section that would require a user response in <span className="emphasis">Survey Mode</span> and indicates descriptive text that isn&lsquo;t relevant in <span className="emphasis">Survey Mode</span>. 
                 </p>
               </div>
             </ShowMoreContent>
@@ -154,7 +148,7 @@ const StartSurvey = () => {
               >
               <div className="showmore_content_block">
                 <p className="showmore_content_inline">
-                  <span className="emphasis">Browse Mode</span> doesn&lsquo;t collect any data &mdash; it&lsquo;s purely for informational purposes. If you take the survey in <span className="emphasis">Survey Mode</span>, you&lsquo;ll find links to our Privacy and Consent policies that you can review before you provide any personal information. 
+                  <span className="emphasis">Browse Mode</span> doesn&lsquo;t collect any data &mdash; it&lsquo;s purely for informational purposes. If you take the survey in <span className="emphasis">Survey Mode</span>, you&lsquo;ll find links to our <span className="emphasis">Privacy</span> and <span className="emphasis">Consent</span> policies that you can review before you provide any personal information. 
                 </p>
               </div>
             </ShowMoreContent>

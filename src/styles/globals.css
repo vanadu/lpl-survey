@@ -7,22 +7,22 @@
 /* VA! sphone*/
 @media (max-width: 374px)   {
   :root {
-    --base-unit: 6px;
-    --font-size-base: .875rem;
+    --base-unit: 6.5px;
+    --font-size-base: .913rem;
   }
 }
 /* VA! mphone*/
 @media (min-width: 375px) and (max-width: 413px)   {
   :root {
-    --base-unit: 6px;
+    --base-unit: 6.5px;
     --font-size-base: .875rem;
   }
 }
 /* VA! lphone*/
 @media (min-width: 414px) and (max-width: 767px) {
   :root {
-    --base-unit: 7px;
-    --font-size-base: .938rem;
+    --base-unit: 7.5px;
+    --font-size-base: 1rem;
   }
 }
 /* VA! tablet */
@@ -48,20 +48,6 @@
 }
 
 
-
-/* Tablet */
-@media (max-width: 999px) {
-  :root {
-    --base-unit: 7px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  :root {
-    --base-unit: 6px;
-  }
-}
 
 :root {
 
@@ -92,10 +78,10 @@
 
   /* VA!  Font size variants*/
   --font-size-xs: calc(var(--font-size-base) * 0.875);   /* 14px */
-  --font-size-sm: calc(var(--font-size-base) * 0.9375);  /* 15px */
+  --font-size-sm: calc(var(--font-size-base) * 0.938);  /* 15px */
   --font-size-md: var(--font-size-base);                 /* 16px */
   --font-size-lg: calc(var(--font-size-base) * 1.125);   /* 18px */
-  --font-size-xl: calc(var(--font-size-base) * 1.25);    /* 20px */
+  --font-size-xl: calc(var(--font-size-base) * 1.375);    /* 20px */
   --font-size-2xl: calc(var(--font-size-base) * 1.625);    /* 26px */
   --font-size-3xl: calc(var(--font-size-base) * 2);      /* 32px */
   --font-size-4xl: calc(var(--font-size-base) * 2.5);    /* 40px */
@@ -104,7 +90,7 @@
   /* VA! Line height - unitless*/
     --line-tight: 1.15;
     --line-heading: 1.25;
-    --line-body: 1.5;
+    --line-body: 1.413;
     --line-loose: 1.7;
 
 
@@ -190,7 +176,7 @@
 
   --disclosure-scroll-margin-top: 5.5rem;
 
-  --disclosure-title-font-size: var(--font-size-h4, 1.125rem);
+  --disclosure-title-font-size: var(--font-size-lg);
   --disclosure-title-line-height: var(--line-heading, 1.25);
   --disclosure-body-font-size: var(--font-size-base, 1rem);
   --disclosure-body-line-height: var(--line-body, 1.5);

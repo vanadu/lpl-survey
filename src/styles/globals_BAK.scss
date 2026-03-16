@@ -151,6 +151,10 @@ span.strong-emphasis {
   font-weight: 700;
 }
 
+span.no-wrap {
+  white-space: nowrap;
+}
+
 // !VA 
 /* --------------------------------------------------
    GENERAL CONTENT STYLES
@@ -172,16 +176,32 @@ span.strong-emphasis {
 }
 
 .content-body {
-  display: grid;
-  gap: var(--s-5);
-  margin-top: var(--s-2);
-  margin: 0 var(--s-2) var(--s-2);
+  // display: grid;
+  // gap: var(--s-1);
+  display: flex;
+  flex-direction: column;
+  margin: 0 var(--s-2) var(--s-1);
 }
 
 .content-body h2 {
-  margin: 0 0 var(--s-3) 0;
-  font-size: var(--font-size-xl);
+  margin: var(--s-1) 0 var(--s-1) 0;
+  font-size: var(--font-size-lg);
   line-height: var(--line-heading);
+  @include mphone {
+    
+  }
+  @include lphone {
+    
+  }
+  @include tablet {
+    
+  }
+  @include desktop {
+    
+  }
+  @include ldesktop {
+    // font-size: var(--font-size-xl);
+  }
 }
 
 .content-body  {
@@ -194,7 +214,7 @@ span.strong-emphasis {
     line-height: var(--line-body);
     color: var(--c-content-text);
     margin: 0;
-    padding: var(--s-2) 0 var(--s-1);
+    padding: var(--s-1) 0 0;
   }
   li {
       margin: 0 0 0 var(--s-6);
@@ -217,16 +237,13 @@ span.strong-emphasis {
 .hero-wrapper {
   position: relative;
   display: block;
-
   width: 100%;
   background: #FFFFFF;
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: block;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -238,28 +255,37 @@ span.strong-emphasis {
   --hero-h: 160px;
   --hero-cols: 4;
   --hero-rows: 3;
-  --hero-gap: calc(var(--base-unit) * 0.35); // 6px when base unit = 8px
+  --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
   
   /* derived tile sizing */
   --tile-w: calc(
     (var(--hero-w) - ((var(--hero-cols) + 1) * var(--hero-gap))) / var(--hero-cols)
   );
-  --tile-h: calc((var(--hero-h) - ((var(--hero-rows) + 1) * var(--hero-gap))) / var(--hero-rows)
+  --tile-h: calc(
+    (var(--hero-h) - ((var(--hero-rows) + 1) * var(--hero-gap))) / var(--hero-rows)
     );
-  // !VA width 
-  width: var(--hero-w);
+    // !VA width 
+    width: var(--hero-w);
   height: var(--hero-h);
-  
+
   position: relative;
   overflow: hidden;
   background-color: #353535;
+  // @media (min-width: 768px) and (max-width: 999px) {
+    //   .hero { --hero-w: 700px; --hero-h: 151px; }
+    // }
+    // @media (max-width: 767px) and (min-width: 768px) {
+      //   .hero { --hero-w: 700px; --hero-h: 151px; }
+      // }
   @include mphone {
     --hero-w: 375px;
-    --hero-h: 200px;
-    --hero-gap: calc(var(--base-unit) * 0.4); // 6px when base unit = 8px
+    --hero-h: 160px;
+    --hero-gap: calc(var(--base-unit) * 0.75); // 6px when base unit = 8px
   }
   @include lphone {
-          
+    --hero-w: 414px;
+    --hero-h: 180px;
+    --hero-gap: calc(var(--base-unit) * 0.5); // 6px when base unit = 8px
   }
   @include tablet {
     --hero-w: 700px; --hero-h: 151px; 
@@ -339,10 +365,12 @@ span.strong-emphasis {
 .hero__content {
   position: relative;
   z-index: 3;
+  width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
+  // align-items: center;
+  // justify-content: center;
   color: white;
   text-align: center;
 }
@@ -354,6 +382,7 @@ span.strong-emphasis {
   align-items: center;
   // width: 45%;
   width: 100%;
+
   padding: 20px 0;
   @include ldesktop {
     align-items: flex-start;
@@ -366,40 +395,34 @@ span.strong-emphasis {
 .hero-title-heading  {
   width: 100%;
   font-family: $secondary_font!important;
-  font-size: 3.5rem;
-  line-height: 1;
+  font-size: var(--font-size-6xl);
+  line-height: 1.125;
   color: var(--c-hero-text);
-  opacity: .85;
   text-align: center;
+  opacity: .9;
   @include ldesktop {
-    font-size: 4.5rem;
-    opacity: .75;
+    opacity: .8;
   }
 }
 
 .hero-subtext-container {
   position: relative;
-  // bottom: -50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  margin: var(--s-1) 0 0;
+  margin: var(--s-1) var(--s-2) 0;
   padding: 0 var(--s-2);
-  @include ldesktop {
-    margin: var(--s-1) var(--s-2) 0;
-    padding: 0;
-  }
 }
 
 .hero-slug {
-  background: rgba(255, 255, 0, .3) !important; //devyel
-  font-size: var(--font-size-xl);
-  color: #313131;
   font-size: var(--font-size-sm);
-  font-variant: small-caps;
-  @include ldesktop {
-    font-size: var(--font-size-xl);
+  color: #313131;
+  // font-variant: small-caps;
+  text-transform: uppercase;
+  @include mphone {
+    font-size: var(--font-size-sm);
+    
   }
 }
 
@@ -414,13 +437,14 @@ span.strong-emphasis {
   padding: 0!important;
   margin: 0!important;
   @include ldesktop {
-    font-size: var(--font-size-md);
-  } 
+    // font-size: var(--font-size-md);
+  }
 }
 
 .hero-logo {
   width: 80px;
   height: auto;
+  margin-right: var(--s-1);
   @include ldesktop {
     width: 120px;
   }
@@ -451,16 +475,13 @@ span.strong-emphasis {
 
 
 .hero-version-container {
-
+  // !VA No styling
 }
 
 .hero-version-content {
   display: flex;
   flex-direction: column;
 }
-
-
-
 
 .hero-version-logo {
   display: block;
@@ -479,86 +500,85 @@ span.strong-emphasis {
   @include ldesktop {
     display: block; 
     width: 200px;
-    // --sjs-font-size: 15px;
-    // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
   }
 }
 
-.home {
-  background: rgba(255, 0, 255, .3) !important; //devmag
-  padding: 0;
-  margin: 0;
-  @include mphone {
-  
-  }
-  @include lphone {
-  
-  }
-  @include tablet {
-    margin: 0 auto;
-  }
-  @include desktop {
-    margin: 0 auto;
-  }
-  @include ldesktop {
-    margin: 0 auto;
-  }
-}
+
+
+
+
+
+
+
 
 
 /* !VA  START SURVEY PAGE STYLES 
 ---------------------------
 */
 
-.survey-mode-button-container {
-  margin: var(--s-6) auto;
-  margin: var(--s-2) var(--s-6) var(--s-6);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.survey-link-container {
+  width: 100%;
+  margin: var(--s-2) var(--s-6) var(--s-1);
+  display: block;
+  margin: 0 auto;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  @include ldesktop {
+    // flex-direction: row;
+  }
 }
 
-
-.survey-mode-buttons {
-  width: 55%;
+.survey-links {
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 0 var(--s-2);
+  margin: var(--s-2) var(--s-2) 0;
   &.browse, &.home {
     justify-content: center;
   }
+  @include ldesktop {
+    flex-direction: row;
+  }
 }
-.survey-mode-button {
+
+.survey-mode-link {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 
-.survey-mode-btn-img  {
-  text-decoration: none;
-  font-weight: 650;
-  width: 180px;
+.survey-mode-icon  {
+  margin-right: var(--s-2);
+  width: var(--s-5);
   height: auto;
+  color: var(--c-text-accent);
+
 }
 
-.survey-mode-btn-caption {
+.survey-mode-link-text {
   font-family: var(--font-secondary);;
   color: var(--c-text-accent);
   text-align: center;
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
   text-decoration: underline;
   margin: 0 0 var(--s-2) 0 ;
 }
 
+.survey-faqs-heading {
+  margin: 0 0 var(--s-4) 0!important;
+}
+
 // !VA How long does it take
 .survey-details-container {
-  h2 {
-    font-family: var(--font-secondary);
-    font-size: var(--font-size-2xl);
-  }
+  // h2 {
+  //   font-family: var(--font-secondary);
+  //   font-size: var(--font-size-2xl);
+  // }
 }
 
 
@@ -566,13 +586,23 @@ span.strong-emphasis {
 ---------------------------
 */
 
+// !VA Override .page in global.css, the universal inner container
+.home.page {
+  padding: 0;
+  margin: 0;
+  @include ldesktop {
+    margin: 48px auto 64px;
+    padding: 24px 40px;
+  }
+}
+
+
 
 .home-head {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-3);
   // width: 320px;
-  background: rgba(255, 0, 0, .3) !important; //devred
   @include tablet {
     width: 740px;
   }
@@ -584,14 +614,40 @@ span.strong-emphasis {
   }
 }
 
-
 .home-head h1 {
+  width: 100%;
   font-family: var(--font-secondary);
-  margin: 0 0 var(--s-2) 0;
-  // font-size: var(--text-h2);
-  line-height: var(--lh-tight);
+  margin: var(--s-4) 0 var(--s-1) 0;
+  font-size: var(--font-size-xl);
+  line-height: 1.25;
   text-align: center;
+  @include mphone {
+    font-size: var(--font-size-xl);
+  
+  }
+  @include ldesktop {
+  // font-size: var(--font-size-2xl);
+    // margin: 0 0 var(--s-2) 0;
+  }
 }
+
+
+.home-take-survey-link {
+  width: 100%;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--c-link-accent);
+  @include mphone {
+    font-size: var(--font-size-xl);
+  }
+  @include ldesktop {
+    // font-size: var(--font-size-2xl);
+  }
+}
+
 
 .home-head .slug {
   margin: 0 0 var(--s-5) 0;
@@ -636,13 +692,27 @@ span.strong-emphasis {
 
 
 article {
-  margin: var(--s-4);
   margin: var(--s-2) var(--s-4) var(--s-4);
   font-family: var(--font-primary);
   background: none;
   h2 {
-    padding: var(--s-2) 0 var(--s-1);
-    font-size: var(--font-size-xl);
+    padding: var(--s-1) 0 0;
+    font-size: var(--font-size-md);
+    @include mphone {
+      
+    }
+    @include lphone {
+    
+    }
+    @include tablet {
+      
+    }
+    @include desktop {
+      
+    }
+    @include ldesktop {
+      // font-size: var(--font-size-xl);
+    }
   }
   ul {
     padding-bottom: var(--s-2);
@@ -651,7 +721,8 @@ article {
     font-size: var(--font-size-lg);
   }
   p {
-    padding: var(--s-1) 0 var(--s-2);
+    // !VA Padding is on content-body
+    // padding:  0 0 var(--s-2);
   }
   li {
     margin-left: var(--s-5);
@@ -868,7 +939,109 @@ article {
 }
 
 /* ==========================================================================
-   ShowMore
+   ShowMore Component Styles
+   Modified Showasnwer Component 
+   Use to distinguish between JSX content and generated Browse Mode content
+   ========================================================================== */
+.showmore-container {
+  scroll-margin-top: var(--disclosure-scroll-margin-top);
+}
+
+.showmore {
+  background: var(--showmore-background);
+  color: var(--showmore-text-color);
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.showmore__trigger {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--disclosure-gap-tight);
+  color: var(--c-link-accent);
+  width: auto;
+  max-width: 100%;
+  // !VA Overrides and custom styles
+  border: none!important;
+  background: none!important;
+  text-align: left;
+}
+
+.showmore__trigger:hover .showmore__title,
+.showmore__trigger:focus-visible .showmore__title {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.showmore__trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: var(--disclosure-radius);
+}
+
+.showmore__icon {
+  color: var(--showmore-icon-color);
+  margin-top: 0.1em;
+  font-size: 0.95rem;
+}
+
+.showmore__title {
+  color: var(--showmore-link-color);
+  font-size: var(--disclosure-title-font-size);
+  line-height: var(--disclosure-title-line-height);
+  font-weight: 700;
+}
+
+.showmore__content {
+  color: var(--showmore-text-color);
+  padding: 0.375rem 0 0.25rem 1.45rem;
+}
+
+.showmore__content > :first-child {
+  margin-top: 0;
+}
+
+.showmore__content > :last-child {
+  margin-bottom: 0;
+}
+
+/* Helpers based on the sample page usage */
+.showmore__text,
+.showmore-content-text {
+  font-size: var(--disclosure-body-font-size);
+  line-height: var(--disclosure-body-line-height);
+}
+
+.showmore__content-space {
+  display: block;
+  height: 0.625rem;
+}
+
+.showmore__content-inline {
+  display: inline;
+}
+
+.showmore__content-block {
+  display: block;
+}
+
+.showmore__content a {
+  color: var(--showmore-link-color);
+  text-underline-offset: 0.12em;
+}
+
+/* Optional state hook */
+.showmore.showmore--open .showmore__title {
+  text-decoration-thickness: 0.08em;
+}
+
+
+
+
+
+/* ==========================================================================
+   Showanswer
    Lighter, text-flow disclosure
    Best for compact supporting detail
    ========================================================================== */
