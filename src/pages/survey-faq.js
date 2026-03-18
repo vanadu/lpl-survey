@@ -11,7 +11,7 @@ import ShowMoreContent from '../components/ShowMoreContent'
 
 import { BsClipboardCheck, BsBook } from "react-icons/bs";
 
-const StartSurvey = () => {
+const SurveyFAQ = () => {
 
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -96,7 +96,6 @@ const StartSurvey = () => {
                   <li className="showmore_content_inline">
                     <span className="emphasis">Browse Mode</span>&nbsp;&nbsp;If you&lsquo;re new to the LP/GOLPP journey don&lsquo;t know much about it yet, start the survey in <span className="emphasis">Browse Mode</span> to jump-start your learning process.</li>
                 </ul>
-
               </div>
             </ShowMoreContent>
           </article>
@@ -162,4 +161,4 @@ const StartSurvey = () => {
   )
 }
 
-export default StartSurvey
+export default SurveyFAQ

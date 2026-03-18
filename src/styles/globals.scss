@@ -1380,6 +1380,45 @@ article {
   }
 }
 
+// !VA ICON BAR
+//-------------
+
+.sj-page-iconbar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+
+  width: max-content;   /* shrink to icon width */
+  margin: 0 auto 1rem;  /* center horizontally */
+}
+
+.sj-page-iconbar__item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.35rem;
+  width: 3.75rem;
+  text-decoration: none;
+}
+
+.sj-page-iconbar__img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.sj-page-iconbar__label {
+  font-size: 0.75rem;
+  line-height: 1.1;
+  text-align: center;
+}
+
+
+
+
 
 /* !VA  Scrap Styles  */
 .scrap {

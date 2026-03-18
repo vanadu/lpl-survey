@@ -1,14 +1,13 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useRouter} from 'next/router'
-
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
+// !VA Custom components and images
 import Logo from "../../public/img-lpl-org-logo.png"
-import StartSurveyButton from "../../public/img-start-survey-button.png"
-
+// import StartSurveyButton from "../../public/img-start-survey-button.png"
 import SurveyHero from "../components/SurveyHero"
-
+import ShowMoreContent from '../components/ShowMoreContent'
 
 
 import SurveyComponentMaster from '@/components/SurveyComponentMaster'

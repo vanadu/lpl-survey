@@ -66,8 +66,7 @@ function escapeJsxText(value = "") {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/\{/g, "&#123;")
-    .replace(/\}/g, "&#125;")
-    .replace(/&nbsp;/gi, "\u00A0");
+    .replace(/\}/g, "&#125;");
 }
 
 function escapeTemplateLiteral(value = "") {

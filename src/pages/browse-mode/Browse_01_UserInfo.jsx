@@ -131,7 +131,7 @@ const Browse_01_UserInfo = () => {
       </div>
 
       <div className="browse-content-block" id="UserInfoContactTypeFacebookInstructions">
-        <p className="browse-content-text">&amp;nbsp;Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</p>
+        <p className="browse-content-text">Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</p>
       </div>
 
       <div className="browse-question-container" id="UserInfoContactTypeFacebook">

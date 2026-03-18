@@ -133,6 +133,57 @@ const waitForFonts = async () => {
   }
 };
 
+const TOP_ICON_LINKS = [
+  {
+    href: "/browse-mode/Browse_00_Landing",
+    label: "Browse",
+    imgSrc: "/img-sj-top-icon-browse.png",
+  },
+  {
+    href: "/survey-faq",
+    label: "FAQ",
+    imgSrc: "/img-sj-top-icon-faq.png",
+  },
+  {
+    href: "https://larparlife.com/allabout",
+    label: "LP Info",
+    imgSrc: "/img-sj-top-icon-lpinfo.png",
+  },
+  {
+    href: "/survey-share",
+    label: "Share",
+    imgSrc: "/img-sj-top-icon-share.png",
+  },
+];
+
+function renderTopIconBarHtml() {
+  return `
+    <div class="sj-page-iconbar" aria-label="Page tools">
+      ${TOP_ICON_LINKS.map(
+        ({ href, label, imgSrc }) => `
+          <a
+            class="sj-page-iconbar__item"
+            href="${href}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="${label}"
+          >
+            <img
+              class="sj-page-iconbar__img"
+              src="${imgSrc}"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="sj-page-iconbar__label">${label}</span>
+          </a>
+        `
+      ).join("")}
+    </div>
+  `;
+}
+
+
+
 export default function SurveyComponentMaster() {
   const router = useRouter();
   const hasUserEditedRef = useRef(false);
@@ -347,10 +398,31 @@ export default function SurveyComponentMaster() {
   }, [survey]);
   // !VA NEW
 
+  // !VA Icon Bar
+  useEffect(() => {
+    if (!survey) return;
 
+    const handleAfterRenderPage = (sender, options) => {
+      const pageEl = options?.htmlElement;
+      if (!pageEl) return;
 
+      if (pageEl.querySelector(".sj-page-iconbar")) return;
 
+      const barWrap = document.createElement("div");
+      barWrap.innerHTML = renderTopIconBarHtml();
 
+      const barEl = barWrap.firstElementChild;
+      if (!barEl) return;
+
+      pageEl.prepend(barEl);
+    };
+
+    survey.onAfterRenderPage.add(handleAfterRenderPage);
+
+    return () => {
+      survey.onAfterRenderPage.remove(handleAfterRenderPage);
+    };
+  }, [survey]);
 
 
   const handleComplete = useCallback(
