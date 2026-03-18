@@ -20,7 +20,7 @@ const SurveyHero = () => {
     <>
     <div className="hero-wrapper">
       <div className="hero-content">
-        <Link href='start-survey' className='link-dark'>
+        <Link href='/'>
           <div className="hero">
             <div className="hero__grid">
 

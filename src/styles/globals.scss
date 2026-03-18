@@ -452,58 +452,50 @@ span.no-wrap {
   }
 }
 
-
-
-
-
-
-
-
-
-
 /* !VA  START SURVEY PAGE STYLES 
 ---------------------------
 */
 
-.survey-link-container {
-  width: 100%;
-  margin: var(--s-2) var(--s-6) var(--s-1);
-  display: block;
-  margin: 0 auto;
-  @include tablet {
-    width: 55%;
-  }
-  @include desktop {
-    width: 55%;
-  }
-  @include ldesktop {
-    width: 55%;
-    // flex-direction: row;
-  }
-}
+// !VA Deprecated as per Chat
+// .survey-link-container {
+//   width: 100%;
+//   margin: var(--s-2) var(--s-6) var(--s-1);
+//   display: block;
+//   margin: 0 auto;
+//   @include tablet {
+//     width: 55%;
+//   }
+//   @include desktop {
+//     width: 55%;
+//   }
+//   @include ldesktop {
+//     width: 55%;
+//     // flex-direction: row;
+//   }
+// }
 
-.survey-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin: var(--s-2) var(--s-2) 0;
-  &.browse, &.home {
-    justify-content: center;
-  }
-  @include tablet {
-    flex-direction: row;
-    // width: 60%;
-    justify-content: space-between;
-    background: rgba(255, 255, 0, .3) !important; //devyel
-  }
-  @include desktop {
-    flex-direction: row;
-  }
-  @include ldesktop {
-    flex-direction: row;
-  }
-}
+// .survey-links {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: space-between;
+//   margin: var(--s-2) var(--s-2) 0;
+//   &.browse, &.home {
+//     justify-content: center;
+//   }
+//   @include tablet {
+//     flex-direction: row;
+//     // width: 60%;
+//     justify-content: space-between;
+//     background: rgba(255, 255, 0, .3) !important; //devyel
+//   }
+//   @include desktop {
+//     flex-direction: row;
+//   }
+//   @include ldesktop {
+//     flex-direction: row;
+//   }
+// }
 
 .survey-mode-link {
   display: flex;
@@ -643,6 +635,89 @@ h2.home-about-heading {
   text-align: center;
 }
 
+/* !VA  FAQs PAGE  STYLES 
+---------------------------
+*/
+
+ul.showmore_survey_icons_description {
+  // !VA Override showmore__content ul
+  padding-top: var(--s-2)!important;
+  list-style-type: none;
+  li {
+      padding: 0 0 var(--s-3) 0;
+      margin: 0;
+  }
+  img {
+    width: 30px;
+    height: auto;
+    vertical-align: text-bottom;
+  }
+}
+
+/* !VA  SHARE PAGE  STYLES 
+---------------------------
+*/
+
+
+.share-grid {
+  display: grid;
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+
+  /* mobile */
+  grid-template-columns: 160px;
+  justify-content: center;
+}
+
+.share-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  width: 160px;
+  min-height: 92px;
+  padding: var(--s-3);
+  background: #f5f5f5;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  border: 0;
+}
+
+.share-btn svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.share-btn span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.share-btn:hover {
+  background: #eaeaea;
+  transform: translateY(-2px);
+}
+
+/* tablet+ */
+@media (min-width: 640px) {
+  .share-grid {
+    width: 400px;
+    margin: var(--s-4) auto 0;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: initial;
+  }
+
+  .share-btn {
+    width: 100%;
+  }
+}
 
 /* !VA  BROWSE MODE STYLES 
 ---------------------------
@@ -1119,6 +1194,7 @@ article {
    ========================================================================== */
 .showmore-container {
   scroll-margin-top: var(--disclosure-scroll-margin-top);
+
 }
 
 .showmore {
@@ -1127,6 +1203,7 @@ article {
   border: 0;
   margin: 0;
   padding: 0;
+
 }
 
 .showmore__trigger {
@@ -1170,6 +1247,9 @@ article {
 .showmore__content {
   color: var(--showmore-text-color);
   padding: 0.375rem 0 0.25rem 1.45rem;
+  padding: var(--s-2) 0 var(--s-1) var(--s-4);
+  border-left: 3px solid #e1e1e1;
+
   ul {
       padding: 0;
       margin: 0;
@@ -1207,6 +1287,7 @@ article {
 .showmore__content a {
   color: var(--showmore-link-color);
   text-underline-offset: 0.12em;
+  background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 /* Optional state hook */

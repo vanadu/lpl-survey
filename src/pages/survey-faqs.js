@@ -16,6 +16,29 @@ const SurveyFaqs = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
 
+  const TOP_ICON_LINKS = [
+    {
+      href: "/browse-mode/Browse_00_Landing",
+      label: "Browse",
+      imgSrc: "/img-sj-top-icon-browse.png",
+    },
+    {
+      href: "/survey-faqs",
+      label: "FAQ",
+      imgSrc: "/img-sj-top-icon-faq.png",
+    },
+    {
+      href: "https://larparlife.com/allabout",
+      label: "LP Info",
+      imgSrc: "/img-sj-top-icon-lpinfo.png",
+    },
+    {
+      href: "/survey-share",
+      label: "Share",
+      imgSrc: "/img-sj-top-icon-share.png",
+    },
+  ];
+
   return (
     <>
 
@@ -28,27 +51,10 @@ const SurveyFaqs = () => {
 
         <section className="content-body">
           <article className="card">
-              <div className="survey-link-container">
-                <div className="survey-links">
-                  <Link href='survey-mode' className='survey-mode-link link-dark'>
-                  <BsClipboardCheck className="survey-mode-icon" />
-                      <span className="survey-mode-link-text">Take Survey</span>
-                    {/* <Image 
-                      src={SurveyMode} 
-                      className="survey-mode-btn-img" alt="XXX" 
-                    /> */}
-                  </Link>
-
-                  <Link href='/browse-mode/Browse_00_Landing' className='survey-mode-link link-dark'>
-                  <BsBook className="survey-mode-icon" />
-                    <span className="survey-mode-link-text">Browse Survey</span>
-                    {/* <Image 
-                      src={BrowseMode} 
-                      className="survey-mode-btn-img" alt="XXX" 
-                    /> */}
-                  </Link>
-              </div>
-            </div>
+            <Link href='survey-mode' className='survey-mode-link link-dark'>
+            <BsClipboardCheck className="survey-mode-icon" />
+                <span className="survey-mode-link-text">Take Survey Now!</span>
+            </Link>
           </article>
 
           <article>
@@ -63,7 +69,6 @@ const SurveyFaqs = () => {
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
               >
-              <div className="showmore_content_block">
               <span className="showmore_content_space"></span>
                 <p className="showmore_content_inline">
                  Completing the survey could take five minutes or twenty &mdash; it all depends on your personal LP/GOLPP experience. 
@@ -72,18 +77,46 @@ const SurveyFaqs = () => {
                   The interactive, mobile-friendly design lets you answer questions while you watch TV or do other things. It remembers your place, so you can come back to it whenever you have a few minutes. The important thing is that you complete the questions and submit your responses whenever it fits into your schedule. Your experience matters!
                 </p>
 
-              </div>
+            </ShowMoreContent>
+          </article>
+
+          <article>
+            <ShowMoreContent
+              title='Why are there so many questions about how much things cost?' 
+              index={2}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+              >
+                <p className="showmore_content_inline">
+                  It&lsquo;s not really about the cost itself. Cost is the only reliable way to gauge the severity of a procedure or veterinary health event. If your LP companion spent five days in emergency care for aspiration pneumonia, that will cost much more than a single overnight stay.  
+                </p>
+                <p>The objective is to draw inferences about which approaches result in more or fewer health events that require veterinary care. Cost is the only empirical data available for reference, and that&lsquo;s why it appears so often in the survey.</p>
+            </ShowMoreContent>
+          </article>
+
+          <article>
+            <ShowMoreContent
+              title='What are the icons at the top of each survey page for?' 
+              index={3}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+              >
+                <ul className="showmore_survey_icons_description">
+                  <li><img src="/img-sj-top-icon-browse.png" alt="Browse icon"/>&nbsp;&nbsp;Opens <span className="emphasis">Browse Mode </span>in a new tab so you can browse the survey questions in a flat-file format.</li>
+                  <li><img src="/img-sj-top-icon-faq.png" alt="FAQs icon"/>&nbsp;&nbsp;Opens the <span className="emphasis">Survey FAQs</span> page in a new tab where you can get answers to frequently-asked questions about the survey.</li>
+                  <li><img src="/img-sj-top-icon-lpinfo.png" alt="LP Info icon"/>&nbsp;&nbsp;Opens the <span className="emphasis">Lar Par Guide</span> at <a href="https://larparlife.com">https://larparlife.com</a>, where you can get useful information about a variety of LP/GOLPP related topics.</li>
+                  <li><img src="/img-sj-top-icon-share.png" alt="Browse icon"/>&nbsp;&nbsp;Opens the <span className="emphasis">Share Survey</span> page with convenient links for sharing the survey with your friends and colleagues via social media and email. </li>
+                </ul>
             </ShowMoreContent>
           </article>
 
           <article>
             <ShowMoreContent
               title='Do I have to actually fill out the survey to see the questions?' 
-              index={2}
+              index={4}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
               >
-              <div className="showmore_content_block">
               <span className="showmore_content_space"></span>
                 <p className="showmore_content_inline">
                   The LP/GOLPP Survey 2026 has two working modes: <span className="emphasis">Survey Mode</span> and <span className="emphasis">Browse Mode</span>. 
@@ -99,33 +132,14 @@ const SurveyFaqs = () => {
                   You can&lsquo;t submit responses in <span className="emphasis">Browse Mode</span>. For the fully customized survey experience and to share the details of your LP/GOLPP journey, run the survey in full <span className="emphasis">Survey Mode</span >.
                 </p>
 
-              </div>
             </ShowMoreContent>
           </article>
 
-          <article>
-            <ShowMoreContent
-              title='Can I submit my responses in Browse Mode?' 
-              index={3}
-              activeIndex={activeIndex}
-              setActiveIndex={setActiveIndex}
-              >
-              <div className="showmore_content_block">
-                <p className="showmore_content_inline">
-                  No, <span className="emphasis">Browse Mode</span> provides a stripped-down, flat version of the survey content without any of the response processing, internal logic, or personalization. 
-                </p>
-                <p className="showmore_content_inline">Some of the questions may seem out of context in <span className="emphasis">Browse Mode</span> because the functionality has been disabled. But for people who are still learning about LP/GOLPP, it&lsquo;s useful to see all the questions in one place.</p>
-
-
-
-              </div>
-            </ShowMoreContent>
-          </article>
 
           <article>
             <ShowMoreContent
               title='Why is some text highlighted in Browse Mode?' 
-              index={4}
+              index={5}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
               >
@@ -137,18 +151,20 @@ const SurveyFaqs = () => {
             </ShowMoreContent>
           </article>
           
+
+          
+
+
           <article>
             <ShowMoreContent
               title='Where can I learn more about how my information is being used and the about survey&lsquo;s consent policy?' 
-              index={5}
+              index={6}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
               >
-              <div className="showmore_content_block">
                 <p className="showmore_content_inline">
                   <span className="emphasis">Browse Mode</span> doesn&lsquo;t collect any data &mdash; it&lsquo;s purely for informational purposes. If you take the survey in <span className="emphasis">Survey Mode</span>, you&lsquo;ll find links to our <span className="emphasis">Privacy</span> and <span className="emphasis">Consent</span> policies that you can review before you provide any personal information. 
                 </p>
-              </div>
             </ShowMoreContent>
           </article>
 

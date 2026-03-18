@@ -6,7 +6,6 @@ import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 // !VA Custom components and images
 import Logo from "../../public/img-lpl-org-logo.png"
-// import StartSurveyButton from "../../public/img-start-survey-button.png"
 import SurveyHero from "../components/SurveyHero"
 import ShowMoreContent from '../components/ShowMoreContent'
 import { BsClipboardCheck, BsBook } from "react-icons/bs";
@@ -44,12 +43,13 @@ const Home = () => {
         </section>
 
         <section className="content-body">
+
+
+          <article className="card">
             <h2>How much time will it take?</h2>
             <p>
               The first things people want to know about a survey is how long it will take and whether they can do it on their phones.
             </p>
-
-          <article className="card">
             <div className="home-showmore-container">
               <ShowMoreContent
                 title='How much time does the survey take?' 
@@ -68,7 +68,7 @@ const Home = () => {
                 </div>
               </ShowMoreContent>
             </div>
-            <p>You can learn more about the LP/GOLPP Survey 2026, for instance what the survey icons do and what the goals of the survey are, <Link href='/survey-faqs' className='link-accent'>on the FAQs page</Link>.</p>
+            <p>You can learn more about the LP/GOLPP Survey 2026, for instance what the survey icons do, why many of the questions deal with cost, and what the goals of the survey are, <Link href='/survey-faqs' className='link-accent'>on the FAQs page</Link>.</p>
           </article>
 
 

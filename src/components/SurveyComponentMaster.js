@@ -140,7 +140,7 @@ const TOP_ICON_LINKS = [
     imgSrc: "/img-sj-top-icon-browse.png",
   },
   {
-    href: "/survey-faq",
+    href: "/survey-faqs",
     label: "FAQ",
     imgSrc: "/img-sj-top-icon-faq.png",
   },
