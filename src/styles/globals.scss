@@ -23,32 +23,10 @@ html{scroll-behavior: smooth;}
   background: var(--content-bg);
 }
 
-/* optional if you want section-specific tweaks */
-.section__inner {
-  /* inherits max-width/padding from .page */
+.link-accent {
+  color: var(--c-link-accent);
+  font-weight: 600;
 }
-
-
-
-  @include mphone {
-  
-  }
-  @include lphone {
-  
-  }
-  @include tablet {
-  
-  }
-  @include desktop {
-  
-  }
-  @include ldesktop {
-  
-  }
-
-
-
-
 
 
 // !VA Hide on  mobile phones only excluding tablet
@@ -598,6 +576,7 @@ span.no-wrap {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-3);
+  margin-bottom: var(--s-3);
   // width: 320px;
   @include tablet {
     width: 740px;
@@ -624,13 +603,6 @@ span.no-wrap {
     .no-wrap {
       .whitespace: nowrap;
     }
-  }
-  @include lphone {
-  
-  }
-  @include ldesktop {
-  // font-size: var(--font-size-2xl);
-    // margin: 0 0 var(--s-2) 0;
   }
 }
 
@@ -660,6 +632,16 @@ span.no-wrap {
   letter-spacing: 0.02em;
 }
 
+.home-showmore-container {
+  margin: var(--s-4) 0;
+}
+
+h2.home-about-heading {
+  margin-bottom: var(--s-3);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-xl);
+  text-align: center;
+}
 
 
 /* !VA  BROWSE MODE STYLES 

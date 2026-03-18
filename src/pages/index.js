@@ -3,18 +3,13 @@ import { useState, useEffect } from 'react'
 import { useRouter} from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
+import { NextSeo } from 'next-seo'
 // !VA Custom components and images
 import Logo from "../../public/img-lpl-org-logo.png"
 // import StartSurveyButton from "../../public/img-start-survey-button.png"
 import SurveyHero from "../components/SurveyHero"
 import ShowMoreContent from '../components/ShowMoreContent'
-
-
-import SurveyComponentMaster from '@/components/SurveyComponentMaster'
-import SurveyComponent from '@/components/SurveyComponent_BAK'
-import SurveyDevMenu from '@/components/SurveyDevMenu'
-
-import { NextSeo } from 'next-seo'
+import { BsClipboardCheck, BsBook } from "react-icons/bs";
 
 // !VA Styles
 // import * as styles from '../styles/Home.module.scss'
@@ -42,13 +37,44 @@ const Home = () => {
 
         <section className="content-body home-head">
           <h1>Welcome to the <span className="no-wrap">2026&nbsp;LP/GOLPP&nbsp;Survey!</span></h1>
-            <Link href='start-survey' className='home-take-survey-link link-dark'>
-              Take the Survey Now!
+            <Link href='survey-mode' className='survey-mode-link link-dark'>
+            <BsClipboardCheck className="survey-mode-icon" />
+                <span className="survey-mode-link-text">Take Survey Now!</span>
             </Link>
-          </section>
+        </section>
 
         <section className="content-body">
+            <h2>How much time will it take?</h2>
+            <p>
+              The first things people want to know about a survey is how long it will take and whether they can do it on their phones.
+            </p>
+
           <article className="card">
+            <div className="home-showmore-container">
+              <ShowMoreContent
+                title='How much time does the survey take?' 
+                index={1}
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
+                >
+                <div className="showmore_content_block">
+                <span className="showmore_content_space"></span>
+                  <p className="showmore_content_inline">
+                  Completing the survey could take five minutes or twenty &mdash; it all depends on your personal LP/GOLPP experience. 
+                  </p>
+                  <p className="showmore_content_inline">
+                    The interactive, mobile-friendly design lets you answer questions while you watch TV or do other things. It remembers your place, so you can come back to it whenever you have a few minutes. The important thing is that you complete the questions and submit your responses whenever it fits into your schedule. Your experience matters!
+                  </p>
+                </div>
+              </ShowMoreContent>
+            </div>
+            <p>You can learn more about the LP/GOLPP Survey 2026, for instance what the survey icons do and what the goals of the survey are, <Link href='/survey-faqs' className='link-accent'>on the FAQs page</Link>.</p>
+          </article>
+
+
+
+          <article className="card">
+            <h2 className="home-about-heading">About the 2026 LP/GOLPP Survey</h2>
             <h2>Did you know...</h2>
             <p>
               ...that the suicide rate among veterinarians is four times that of the general population? Euthanasia fatigue, high student debt, high burnout rates, difficult clients with unrealistic expectations, and access to lethal medication are all cited as contributing factors.

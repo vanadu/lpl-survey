@@ -11,7 +11,7 @@ import ShowMoreContent from '../components/ShowMoreContent'
 
 import { BsClipboardCheck, BsBook } from "react-icons/bs";
 
-const SurveyFAQ = () => {
+const SurveyFaqs = () => {
 
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -78,7 +78,7 @@ const SurveyFAQ = () => {
 
           <article>
             <ShowMoreContent
-              title='What&lsquo;s the difference between Survey Mode and Browse Mode?' 
+              title='Do I have to actually fill out the survey to see the questions?' 
               index={2}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
@@ -86,16 +86,19 @@ const SurveyFAQ = () => {
               <div className="showmore_content_block">
               <span className="showmore_content_space"></span>
                 <p className="showmore_content_inline">
-                  The LP/GOLPP Survey 2026 has two working modes: <span className="strong-emphasis">Survey Mode</span> and <span className="strong-emphasis">Browse Mode</span>. Which mode you choose depends on the stage of your LP/GOLPP journey.
+                  The LP/GOLPP Survey 2026 has two working modes: <span className="emphasis">Survey Mode</span> and <span className="emphasis">Browse Mode</span>. 
                 </p>
 
-                <ul>
-                  <li className="showmore_content_inline">
-                    <span className="emphasis">Survey Mode:</span>&nbsp;&nbsp;If your companion animal has had LP/GOLPP symptoms for a while and you&lsquo;ve discussed the symptoms with a veterinary professional, take the survey in <span className="emphasis">Survey Mode</span>.
-                  </li>
-                  <li className="showmore_content_inline">
-                    <span className="emphasis">Browse Mode</span>&nbsp;&nbsp;If you&lsquo;re new to the LP/GOLPP journey don&lsquo;t know much about it yet, start the survey in <span className="emphasis">Browse Mode</span> to jump-start your learning process.</li>
-                </ul>
+                <p className="showmore_content_inline">
+                  <span className="emphasis">Browse Mode</span> is a stripped-down, flat version of the survey content without any of the response processing, internal logic, or personalization. 
+                </p>
+
+                <p className="showmore_content_inline">This can be useful for people who are still learning about LP/GOLPP. It provides quick overview of many of the decisions they&lsquo;ll be facing on their LP/GOLPP journey. But because the functionality is disabled, many of the questions may seem out of context.</p>
+
+                <p className="showmore_content_inline">
+                  You can&lsquo;t submit responses in <span className="emphasis">Browse Mode</span>. For the fully customized survey experience and to share the details of your LP/GOLPP journey, run the survey in full <span className="emphasis">Survey Mode</span >.
+                </p>
+
               </div>
             </ShowMoreContent>
           </article>
@@ -113,9 +116,7 @@ const SurveyFAQ = () => {
                 </p>
                 <p className="showmore_content_inline">Some of the questions may seem out of context in <span className="emphasis">Browse Mode</span> because the functionality has been disabled. But for people who are still learning about LP/GOLPP, it&lsquo;s useful to see all the questions in one place.</p>
 
-                <p className="showmore_content_inline">
-                  For the fully customized survey experience and to share the details of your LP/GOLPP journey, run the survey in full <span className="emphasis">Survey Mode</span >.
-                </p>
+
 
               </div>
             </ShowMoreContent>
@@ -161,4 +162,4 @@ const SurveyFAQ = () => {
   )
 }
 
-export default SurveyFAQ
+export default SurveyFaqs
