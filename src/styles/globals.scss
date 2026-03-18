@@ -1,3 +1,4 @@
+
 /* stylelint-disable comment-empty-line-before */
 @import './mixins/mediaqueries.scss';
 @import './variables.scss';
@@ -624,6 +625,7 @@ span.no-wrap {
   letter-spacing: 0.02em;
 }
 
+// !VA Overrides for 'how much time' question, the only ShowMoreContent on the Home page
 .home-showmore-container {
   margin: var(--s-4) 0;
 }
@@ -827,10 +829,10 @@ article {
 }
 
 // !VA Remove border and whitespace from all Card panels
-#LandingCard1Panel, #LandingCard2Panel, #UserInfoCard1Panel, #CmpnInfoCard2Panel, #CmpnInfoCard1Panel, #InfoSourcesCard1Panel, #InfoSourcesCard1Panel, #BreathingCrisisCard1Panel, #IntubationHistoryCard1Panel, #BreathingCrisisCard2Panel, #EarlySymptomsCard1Panel, #EarlySymptomsCard2Panel, #PrimaryDurationCard1Panel, #PrimaryVetCard1Panel, #PrimaryVetCard2Panel, #DiagnosisCard1Panel, #TreatmentStatusCard1Panel, #TreatmentStatusCard2Panel {
-    padding: 0!important;
-    margin: 0!important;
-    border: none;
+#LandingCard1Panel, #LandingCard2Panel, #UserInfoCard1Panel, #CmpnInfoCard2Panel, #CmpnInfoCard1Panel, #InfoSourcesCard1Panel, #InfoSourcesCard1Panel, #BreathingCrisisCard1Panel, #IntubationHistoryCard1Panel, #BreathingCrisisCard2Panel, #EarlySymptomsCard1Panel, #EarlySymptomsCard2Panel, #PrimaryDurationCard1Panel, #PrimaryVetCard1Panel, #PrimaryVetCard2Panel, #DiagnosisCard1Panel, #TreatmentStatusCard1Panel, #TreatmentStatusCard2Panel, #TreatmentFactorsCard1Panel, #TreatmentFactorsCard2Panel, #ManagementCard1Panel, #ManagementCard2Panel, #OTCProductsCard1Panel, #OTCProductsCard2Panel, #AspirationCard1Panel, #AspirationCard2Panel, #NeuropathyCard1Panel, #NeuropathyCard2Panel, #ConclusionCard1Panel, #ConclusionCard2Panel {
+  padding: 0!important;
+  margin: 0!important;
+  border: none;
 }
 
 
@@ -861,7 +863,6 @@ article {
 // Hide elements
 #UserInfoText1, #UserInfoText2, #UserInfoLifeStatusNamePanel, #UserInfoVerificationPanel, #UserInfoCard2Panel, #UserInfoText  { display: none; }
 
-
 // Browse-specific text
 #UserInfoHead::after {
     content: "This section of the survey asks for your companion's name, whether your companion has crossed over the Rainbow Bridge, and if you're sure like to continue.";
@@ -884,33 +885,198 @@ article {
 } 
 
 // !VA No border on panels
-#CmpnInfoAgePanel { border: none; padding: 0 }
+#CmpnInfoAgePanel, #InfoSourcesHeading, #InfoSourcesQualityPanel  { border: none; padding: 0 }
 
 // !VA Padding on bordered panels
 #CmpnInfoDetailsPanel, #lvngCmpnInfoAgePanel, #CmpnInfoDemeanorPanel { margin: 0; padding: var(--s-4) }
 
-// !VA CMPN_INFO Content modifications
+// !VA Note about Bella 
+#CmpnInfoHeading {
+  margin-top: var(--s-3);
+  &::before {
+    content: "In Browse Mode, the survey questions are pre-filled for a Labrador named Bella. In Survey Mode, you would enter your own LP companion's name, breed and other details.";
+    background: var(--c-content-highlight);
+  } 
+}
+
+// !VA INFO-SOURCES Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#InfoSourcesMainPanel, #InfoSourcesQualityPanel 
+{ margin: 0; padding: var(--s-4) }
+
+#InfoSourcesBestSource {
+  margin-top: var(--s-3);
+  &::after {
+    content: "In Survey Mode, you're asked to select one from the choices you made in the previous question.";
+    background: var(--c-content-highlight);
+  } 
+}
+
+// !VA INTUBATION HISTORY Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#IntubationHistoryDetails 
+{ margin: 0; padding: var(--s-4) }
+
+// !VA BREATHING CRISIS Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#BreathingCrisisDidHavePanel, #BreathingCrisisDetailsPanel 
+{ margin: 0; padding: var(--s-4) }
+
+// !VA EARLY SYMPTOMS Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#EarlySymptomsAgePanel, #EarlySymptomsDetailsPanel, #EarlySymptomsOtherConditionsPanel
+{ margin: 0; padding: var(--s-4) }
+
+// !VA PRIMARY DURATION Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#PrimaryDurationDetailsPanel
+{ margin: 0; padding: var(--s-4) }
+
+// !VA PRIMARY VETERINARIAN Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#PrimaryVetInflammationPanel, #PrimaryVetRefluxPanel, #PrimaryVetDiscussPanel, #PrimaryVetInfoPanel, #PrimaryVetSurgeryPanel, #PrimaryVetConfidencePanel
+{ margin: var(--s-3) 0; padding: var(--s-3) var(--s-4); }
+
+// !VA DIAGNOSIS Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#DiagnosisDetailsPanel 
+{ margin: var(--s-3) 0; padding: var(--s-3) var(--s-4); }
+
+// !VA TREATMENT STATUS Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#TreatmentStatusAgePanel, #TreatmentStatusTypePanel, #TreatmentStatusTiebackPanel, #TreatmentStatusBveapPanel, #TreatmentStatusStentPanel, #TreatmentStatusArytenoidectomyPanel, #TreatmentStatusVentrilocordectomyPanel, #TreatmentStatusRatingPanel
+{ margin: var(--s-3) 0; padding: var(--s-3) var(--s-4); }
+
+#TreatmentStatusTiebackPanel, #TreatmentStatusBveapPanel, #TreatmentStatusStentPanel, #TreatmentStatusArytenoidectomyPanel, #TreatmentStatusVentrilocordectomyPanel {
+  &::before {
+    background: var(--c-content-highlight);
+  } 
+  h3 {
+    margin-top: var(--s-2);
+  }
+}
+
+#TreatmentStatusTiebackPanel::before {
+  content: "In Survey Mode, these questions are only displayed if your LP companion had UAL (tieback) surgery."
+} 
+
+#TreatmentStatusBveapPanel::before {
+  content: "In Survey Mode, these questions are only displayed if your LP companion had BVEAP surgery."
+} 
+
+// !VA TREATMENT FACTORS Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#TreatmentFactorsDecisionPanel, #TreatmentFactorsCostPanel, #TreatmentFactorsStagePanel, #TreatmentFactorsSurgeryRisksPanel, #TreatmentFactorsGeneralPanel, #TreatmentFactorsCircumstancesPanel, #TreatmentFactorsOtherPanel
+{ margin: var(--s-3) 0; padding: var(--s-3) var(--s-4); }
+
+// !VA MANAGEMENT FACTORS Content modifications
+// -----------------------------------
+
+// !VA MANAGEMENT Content modifications
 // -----------------------------------
 // !VA Hide elements
-// #InfoSourcesHeading { display: none; }
+#ManagementPrescriptionDoxepinRatingBreathing,
+#ManagementPrescriptionDoxepinRatingMobility,
+#ManagementPrescriptionTrazodoneRatingBreathing,
+#ManagementPrescriptionTrazodoneRatingMobility,
+#ManagementPrescriptionGabapentinRatingBreathing,
+#ManagementPrescriptionGabapentinRatingMobility,
+#ManagementPrescriptionGalliprantRatingBreathing,
+#ManagementPrescriptionGalliprantRatingMobility,
+#ManagementPrescriptionSteroidRatingBreathing,
+#ManagementPrescriptionSteroidRatingMobility,
+#ManagementPrescriptionAntihistamineRatingBreathing,
+#ManagementPrescriptionAntihistamineRatingMobility,
+#ManagementPrescriptionCereniaRatingBreathing,
+#ManagementPrescriptionCereniaRatingMobility,
+#ManagementPrescriptionMeloxicamRatingBreathing,
+#ManagementPrescriptionMeloxicamRatingMobility,
+#ManagementPrescriptionAcepromineRatingBreathing,
+#ManagementPrescriptionAcepromineRatingMobility,
+#ManagementPrescriptionAlbuterolRatingBreathing,
+#ManagementPrescriptionAlbuterolRatingMobility,
+#ManagementPrescriptionTemarilPRatingBreathing,
+#ManagementPrescriptionTemarilPRatingMobility,
+{ display: none; }
 
-// !VA No border on panels
-#InfoSourcesHeading, #InfoSourcesQualityPanel { border: none; padding: 0 }
+// !VA Padding on bordered panels
+#ManagementPrescriptionTypePanel, #ManagementNonPrescriptionTypePanel
+{ margin: var(--s-3) 0; padding: var(--s-3) var(--s-4); }
 
+#ManagementPrescriptionTypePanel  {
+  margin-top: var(--s-3);
+  &::after {
+    content: "In Survey Mode, you're asked to rate the effectiveness of the prescription medications you selected for breathing and hind-end weakness.";
+    background: var(--c-content-highlight);
+  } 
+}
 
+#ManagementNonPrescriptionAcupunctureRatingBreathing,
+#ManagementNonPrescriptionAcupunctureRatingMobility,
+#ManagementNonPrescriptionTherapyRatingBreathing,
+#ManagementNonPrescriptionTherapyRatingMobility,
+#ManagementNonPrescriptionColdLaserRatingBreathing,
+#ManagementNonPrescriptionColdLaserRatingMobility,
+#ManagementNonPrescriptionChiroRatingBreathing,
+#ManagementNonPrescriptionChiroRatingMobility
+{ display: none; }
 
+#ManagementNonPrescriptionTypePanel  {
+  margin-top: var(--s-3);
+  &::after {
+    content: "In Survey Mode, you're asked to rate the effectiveness of the non-prescription therapies you selected for breathing and hind-end weakness.";
+    background: var(--c-content-highlight);
+  } 
+}
 
+// !VA OTC PRODUCTS Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#OTCProductsTypePanel, #OTCProtocolPanel
+{ margin: var(--s-3) 0; padding: var(--s-3) var(--s-4); }
 
+// !VA ASPIRATION Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#AspirationDidHavePanel, #AspirationGeneralPanel, #AspirationSurgeryPanel, #AspirationStentPanel, #AspirationCostPanel
+{ margin: var(--s-3) 0; padding: var(--s-3) var(--s-4); }
 
+// !VA NEUROPATHY Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#AspirationDidHavePanel, #AspirationGeneralPanel, #AspirationSurgeryPanel, #AspirationStentPanel, #AspirationCostPanel
+{ margin: var(--s-3) 0; padding: var(--s-3) var(--s-4); }
 
+// !VA CONCLUSION Content modifications
+// -----------------------------------
+// !VA Padding on bordered panels
+#ConclusionDetailsPanel, #ConclusionOtherConditionsPanel, #ConclusionCauseOfDeathPanel, #ConclusionOtherPathPanel, #ConclusionThanksPanel
+{ margin: var(--s-3) 0; padding: var(--s-3) var(--s-4); }
 
+// !VA Hide elements
+#ConclusionOtherPathTieback, #ConclusionOtherPathBVEAP, #ConclusionOtherPathStent, #ConclusionOtherPathArytenoidectomy, #ConclusionOtherPathVentrilocordectomy, #ConclusionOtherPathNoTreatment 
+{ display: none }
+
+#ConclusionOtherPathPanel::before {
+  content: "In Survey Mode, these questions ask if, considering your surgery/treatment choice, you would consider another path if you were to have another companion with LP/GOLPP";
+  background: var(--c-content-highlight);
+}
 
 
 
 
 
 .browse-question-container {
-  margin: var(--s-3) 0;
+  margin: var(--s-2) 0 var(--s-2) var(--s-1);
   color: var(--c-content-bg);
   h3 {
     font-size: var(--font-size-md);

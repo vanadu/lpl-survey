@@ -38,7 +38,7 @@ const Browse_13_OtcProducts = () => {
 
       <div className="browse-panel-container" id="OTCProductsCard1Panel">
       <div className="browse-content-block" id="OTCProductsHeading">
-        <h2 className="browse-content-heading">2OTC (Over-The-Counter) Products for LP/GOLPP</h2>
+        <h2 className="browse-content-heading">OTC (Over-The-Counter) Products for LP/GOLPP</h2>
       </div>
 
       <div className="browse-content-block" id="OTCProductsText">

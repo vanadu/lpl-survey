@@ -3408,7 +3408,7 @@
             },
             {
               "type": "panel",
-              "name": "TreatmentFactorsGeneralPanel",
+              "name": "TreatmentFactorsGeneral",
               "title": "How have {CmpnName}'s age and general health considerations factored into your decision?",
               "elements": [
                 {
@@ -3502,7 +3502,7 @@
             },
             {
               "type": "panel",
-              "name": "TreatmentFactorsCircumstancesPanel",
+              "name": "TreatmentFactorsCircumstances",
               "title": "How have your personal circumstances factored into your decision?",
               "elements": [
                 {
@@ -4838,7 +4838,7 @@
             {
               "type": "html",
               "name": "OTCProductsHeading",
-              "html": "<h2>OTC (Over-The-Counter) Products for LP/GOLPP</h2>"
+              "html": "<h2>2OTC (Over-The-Counter) Products for LP/GOLPP</h2>"
             },
             {
               "type": "html",

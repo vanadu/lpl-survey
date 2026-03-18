@@ -189,7 +189,7 @@
 
         {
           "type": "panel",
-          "name": "TreatmentFactorsGeneral",
+          "name": "TreatmentFactorsGeneralPanel",
           "title": "How have {CmpnName}'s age and general health considerations factored into your decision?",
           "elements": [
             {
@@ -239,7 +239,7 @@
 
         {
           "type": "panel",
-          "name": "TreatmentFactorsCircumstances",
+          "name": "TreatmentFactorsCircumstancesPanel",
           "title": "How have your personal circumstances factored into your decision?",
           "elements": [
             {

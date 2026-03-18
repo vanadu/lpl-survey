@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-03-18T10:00:47.676Z",
+    "builtAt": "2026-03-18T21:22:34.753Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -2602,8 +2602,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentFactorsGeneral": {
-      "name": "TreatmentFactorsGeneral",
+    "TreatmentFactorsGeneralPanel": {
+      "name": "TreatmentFactorsGeneralPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -2623,7 +2623,7 @@
       "path": [
         "TREATMENT_FACTORS-page",
         "TreatmentFactorsCard2Panel",
-        "TreatmentFactorsGeneral"
+        "TreatmentFactorsGeneralPanel"
       ],
       "hasTitle": true,
       "title": "{CmpnName}'s age:",
@@ -2638,7 +2638,7 @@
       "path": [
         "TREATMENT_FACTORS-page",
         "TreatmentFactorsCard2Panel",
-        "TreatmentFactorsGeneral"
+        "TreatmentFactorsGeneralPanel"
       ],
       "hasTitle": true,
       "title": "{CmpnName}'s overall health and prospects for quality of life moving forward:",
@@ -2653,15 +2653,15 @@
       "path": [
         "TREATMENT_FACTORS-page",
         "TreatmentFactorsCard2Panel",
-        "TreatmentFactorsGeneral"
+        "TreatmentFactorsGeneralPanel"
       ],
       "hasTitle": true,
       "title": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentFactorsCircumstances": {
-      "name": "TreatmentFactorsCircumstances",
+    "TreatmentFactorsCircumstancesPanel": {
+      "name": "TreatmentFactorsCircumstancesPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -2681,7 +2681,7 @@
       "path": [
         "TREATMENT_FACTORS-page",
         "TreatmentFactorsCard2Panel",
-        "TreatmentFactorsCircumstances"
+        "TreatmentFactorsCircumstancesPanel"
       ],
       "hasTitle": true,
       "title": "Distance to or access to a qualified specialist:",
@@ -2696,7 +2696,7 @@
       "path": [
         "TREATMENT_FACTORS-page",
         "TreatmentFactorsCard2Panel",
-        "TreatmentFactorsCircumstances"
+        "TreatmentFactorsCircumstancesPanel"
       ],
       "hasTitle": true,
       "title": "Ability to provide adequate post-operative care:",

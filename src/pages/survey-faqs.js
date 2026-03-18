@@ -143,17 +143,11 @@ const SurveyFaqs = () => {
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
               >
-              <div className="showmore_content_block">
                 <p className="showmore_content_inline">
                   Highlighted text in <span className="emphasis">Browse Mode</span> summarizes a section that would require a user response in <span className="emphasis">Survey Mode</span> and indicates descriptive text that isn&lsquo;t relevant in <span className="emphasis">Survey Mode</span>. 
                 </p>
-              </div>
             </ShowMoreContent>
           </article>
-          
-
-          
-
 
           <article>
             <ShowMoreContent

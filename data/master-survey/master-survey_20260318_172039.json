@@ -3502,7 +3502,7 @@
             },
             {
               "type": "panel",
-              "name": "TreatmentFactorsCircumstancesPanel",
+              "name": "TreatmentFactorsCircumstances",
               "title": "How have your personal circumstances factored into your decision?",
               "elements": [
                 {

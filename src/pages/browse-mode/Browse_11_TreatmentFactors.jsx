@@ -932,7 +932,7 @@ const Browse_11_TreatmentFactors = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="TreatmentFactorsGeneral">
+      <div className="browse-panel-container" id="TreatmentFactorsGeneralPanel">
         <h3 className="browse-showanswer-title">How have Bella&lsquo;s age and general health considerations factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsAge">
         <ShowAnswerContent
@@ -1343,7 +1343,7 @@ const Browse_11_TreatmentFactors = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="TreatmentFactorsCircumstances">
+      <div className="browse-panel-container" id="TreatmentFactorsCircumstancesPanel">
         <h3 className="browse-showanswer-title">How have your personal circumstances factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsCircumstancesAccess">
         <ShowAnswerContent
