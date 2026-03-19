@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import IconBar from './IconBar'
+import MainNav from './MainNav'
 import logo from '../../public/img-lpl-org-logo.png'
 // import logo from '@/public/img-lpl-org-logo.png'
 import * as styles from '../styles/Header.module.scss'
@@ -70,28 +71,27 @@ const Header = () => {
 
       <div className={styles.header_content}>
         <div className={styles.logo}>
-          <Link href='/' className='link-dark'>
-              <Image 
-              src={logo} 
+          <Link href="/" className="link-dark">
+            <Image
+              src={logo}
               width="0"
               height="0"
               sizes="100vw"
               style={{ width: '100%', height: 'auto' }}
-              className={styles.logo_img} alt="LarParLife Logo" 
+              className={styles.logo_img}
+              alt="LarParLife Logo"
             />
           </Link>
-
         </div>
-          <div className={styles.nav_container}>
-              <IconBar />
+
+        <div className={styles.nav_container}>
+          <MainNav />
+          <div className={styles.desktop_iconbar}>
+            <IconBar />
           </div>
+        </div>
+      </div>
 
-    </div>
-
-
-      {/* <div className={styles.header_slug}>
-        <h2 className={styles.header_slug_text}>Serving the Lar Par/GOLPP Community</h2>
-      </div> */}
 
 
     </div>

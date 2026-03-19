@@ -12,7 +12,7 @@ import { FaExclamationCircle } from 'react-icons/fa'
 import { IoPawSharp } from 'react-icons/io5'
 import { FaHome } from 'react-icons/fa'
 
-import * as styles from '../styles/Header.module.scss'
+import * as styles from '../styles/Nav.module.scss'
 
 // !VA getClick is the handleClick function that is passed in from the MainNav component. handleClick toggles the hidden checkbox on and off that shows/hides the mobile menu. 
 const IconBar = ( { getClick }) => {

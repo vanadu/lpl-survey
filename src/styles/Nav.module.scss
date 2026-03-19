@@ -1,0 +1,314 @@
+@import './variables.scss';
+@import './mixins/mediaqueries.scss';
+
+/* =========================================
+   ROOT
+========================================= */
+
+.main_nav {
+  // position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* =========================================
+   MOBILE HAMBURGER
+========================================= */
+
+.menu_button {
+  position: absolute;
+  top: 4px;
+  right: 20px;
+
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  z-index: 80;
+  cursor: pointer;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu_bar {
+  display: block;
+  width: 40px;
+  height: 5px;
+  border-radius: 999px;
+  background: #000;
+  transform-origin: center;
+  transition: transform 0.28s ease, opacity 0.18s ease;
+}
+
+.bar1_open {
+  transform: translateY(12px) rotate(45deg);
+}
+
+.bar2_open {
+  opacity: 0;
+}
+
+.bar3_open {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+/* =========================================
+   DESKTOP / TABLET INLINE NAV
+========================================= */
+
+.desktop_nav {
+  display: none;
+}
+
+.desktop_nav_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.15rem;
+  list-style: none;
+  margin: var(--s-2) 0 0 0;
+  padding: 0;
+}
+
+.desktop_nav_item {
+
+}
+
+.desktop_nav_item a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--s-2);
+  gap: 0.3rem;
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  line-height: 1.1;
+  white-space: nowrap;
+  cursor: pointer;
+  @include tablet {
+    padding: 0;
+  }
+  @include desktop {
+  }
+  @include ldesktop {
+    padding: 0 var(--s-2);
+  }
+}
+
+.desktop_nav_item a:hover {
+  text-decoration: none;
+}
+
+/* =========================================
+   MOBILE OVERLAY LAYERS
+========================================= */
+
+/* only this catches outside clicks */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  cursor: default;
+  transition: opacity 0.22s ease, visibility 0s linear 0.22s;
+}
+
+.backdrop_open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.22s ease, visibility 0s linear 0s;
+}
+
+/* visual only, never clickable */
+.mobile_menu_bg {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  background-image: url('/bricks/img-brick-11.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 40% 10px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  cursor: default;
+  transition: opacity 0.28s ease, visibility 0s linear 0.28s;
+}
+
+.mobile_menu_bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.mobile_menu_bg_open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+  transition: opacity 0.28s ease, visibility 0s linear 0s;
+}
+
+/* full-screen menu container */
+.mobile_nav {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  cursor: default;
+  transition: opacity 0.22s ease, visibility 0s linear 0.22s;
+}
+
+.mobile_nav_open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.22s ease, visibility 0s linear 0s;
+}
+
+.mobile_nav_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 96px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default;
+}
+
+/* =========================================
+   MOBILE LOGO
+========================================= */
+
+.mobile_nav_logo {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mobile_nav_logo a {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.mobile_nav_logo_img {
+  width: 150px;
+  height: auto;
+}
+
+/* =========================================
+   MOBILE NAV LIST
+========================================= */
+
+.mobile_nav_list {
+  flex: 1 1 auto;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  cursor: default;
+}
+
+.mobile_nav_item {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile_nav_item a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* =========================================
+   MOBILE ICON BAR
+========================================= */
+
+.mobile_nav_iconbar {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: default;
+}
+
+.mobile_nav_iconbar a {
+  cursor: pointer;
+}
+
+
+.icon_bar {
+}
+
+.icons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--s-1);
+  background: $secondary_color;
+  border-radius: calc(var(--border-radius) * 2.5);
+  flex: 1 1 auto;
+}
+
+.icon {
+  padding: calc(var(--s-1)/2) var(--s-4);
+  font-size: var(--font-size-lg);
+  color: #E1E1E1;
+}
+
+/* =========================================
+   SHARED SMALL BITS
+========================================= */
+
+.nav_dropdown_icon {
+  font-size: 14px;
+  flex: 0 0 auto;
+}
+
+/* =========================================
+   TABLET+ SWITCHOVER
+========================================= */
+
+@media (min-width: 768px) {
+  .menu_button,
+  .backdrop,
+  .mobile_menu_bg,
+  .mobile_nav {
+    display: none;
+  }
+
+  .desktop_nav {
+    display: block;
+  }
+}
