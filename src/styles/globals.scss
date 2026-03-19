@@ -1453,7 +1453,6 @@ article {
 .showmore__content a {
   color: var(--showmore-link-color);
   text-underline-offset: 0.12em;
-  background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 /* Optional state hook */
@@ -1616,10 +1615,24 @@ article {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 3rem;
-
+  gap: .375rem;
   width: max-content;   /* shrink to icon width */
-  margin: 0 auto 1rem;  /* center horizontally */
+  margin: -.75rem auto 0;  /* center horizontally */
+  @include mphone {
+    margin: -var(--s-1) auto 0;  /* center horizontally */
+  }
+  @include lphone {
+    margin: -.75rem auto 0;  /* center horizontally */
+  }
+  @include tablet {
+    margin: -var(--s-1) auto 1rem;  /* center horizontally */
+  }
+  @include desktop {
+  
+  }
+  @include ldesktop {
+    gap: 3rem;
+  }
 }
 
 .sj-page-iconbar__item {
@@ -1628,15 +1641,50 @@ article {
   align-items: center;
   justify-content: flex-start;
   gap: 0.35rem;
-  width: 3.75rem;
+  width: 3rem;
   text-decoration: none;
+  @include mphone {
+    width: 3.25rem;
+  }
+  @include lphone {
+    width: 3.5rem;
+  }
+  @include tablet {
+    
+  }
+  @include desktop {
+    
+  }
+  @include ldesktop {
+    width: 3.75rem;
+  }
 }
 
 .sj-page-iconbar__img {
   display: block;
-  width: 36px;
-  height: 36px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
+  @include mphone {
+    width: 24px;
+    height: 24px;
+  }
+  @include lphone {
+      width: 28px;
+    height: 28px;
+  }
+  @include tablet {
+    width: 36px;
+    height: 36px;
+  }
+  @include desktop {
+    width: 36px;
+    height: 36px;
+  }
+  @include ldesktop {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .sj-page-iconbar__label {

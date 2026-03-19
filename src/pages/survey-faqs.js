@@ -50,12 +50,6 @@ const SurveyFaqs = () => {
         </header>
 
         <section className="content-body">
-          <article className="card">
-            <Link href='survey-mode' className='survey-mode-link link-dark'>
-            <BsClipboardCheck className="survey-mode-icon" />
-                <span className="survey-mode-link-text">Take Survey Now!</span>
-            </Link>
-          </article>
 
           <article>
             <h2 className="survey-faqs-heading">Survey FAQs</h2>
