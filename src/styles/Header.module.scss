@@ -161,7 +161,6 @@
     // !VA This is a problem
     width: 85%;
   }
-
 }
 
 // !VA NAV Section
@@ -170,6 +169,9 @@
 // !VA ICON BAR
 .icon_bar {
   // !VA 2024 This is just the container, I think ???
+  position: relative;
+  display: none;
+  z-index: 10;
   @include tablet {
     display: block;
   }
@@ -179,9 +181,6 @@
   @include ldesktop {
     display: block;
   }
-  position: relative;
-  display: none;
-  z-index: 10;
 }
 
 .icons {
