@@ -317,7 +317,7 @@
   
 }
 
-// !VA HTML p, li DEFAULT: NO PADDING ON THESE ELEMENTS
+// !VA HTML p, li DEFAULT: NO PADDING ON THESE   ELEMENTS
 .sd-container-modern .sd-element__content .sd-html {
   p, li {
 
@@ -639,6 +639,10 @@
 .survey-control-w-6ch { box-sizing: border-box; }
 
 
+
+
+
+
 .survey-q-separator-below, .survey-q-separator-above, .survey-q-space-below, .survey-q-separator-above  {
   position: relative;
   padding: 0!important; // no padding, spacing goes around the ::after
@@ -692,7 +696,7 @@
   content: "";
   display: block;
   width: 600px;
-  height: 1px;
+  // height: 1px;
   // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
   margin-top: calc(1* (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   margin-right: auto;
@@ -704,6 +708,19 @@
     margin-left: auto;
   }
 }
+
+// !VA PANEL_NO_BORDER
+.survey-p-no-border {
+  background: rgba(255, 0, 0, .3) !important; //devred
+  border: none!important;
+  box-shadow: none!important;
+  padding: 0!important;
+  margin: 0!important;
+}
+
+
+
+
 
 // !VA PASSTHROUGH STYLES
 
@@ -786,6 +803,7 @@
   padding: 0!important;
   margin: 0!important;
 }
+
 .survey-version-logo {
   display: block;
   width: 80px;
@@ -858,18 +876,20 @@
   box-shadow: none!important;
   padding: 0!important;
   margin: 0!important;
-  
-
-
-
-  @include ldesktop {
-    // padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    // padding-right: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    // padding-bottom: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    // padding-left: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  }
-
 }
+
+// [data-name="CmpnInfoAgePanel"] {
+//   padding: 0!important;
+//   margin: 0!important;
+//   // border: none!important;
+// }
+
+// [data-name="dcsdCmpnInfoAgePanel"] {
+//   padding: 0!important;
+//   margin: 0!important;
+//   // border: none!important;
+//   background: rgba(0, 0, 255, .3) !important; //devblue
+// }
 
 
 .sd-container-modern .sd-element--with-frame {
@@ -877,7 +897,7 @@
 
 // !VA Default border on .sd-element--nested-with-borders, overrides survey-core
 .sd-container-modern .sd-element--nested-with-borders {
-    margin-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  margin-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
@@ -896,17 +916,19 @@
 
     border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
     border-radius: 10px;
-    
-
   }
-
-
-    
-
-
 }
 
-
+/* !VA PANEL_NO_BORDER   
+//  OVERRIDES DEFAULT PANEL BORDER AND WHITESPACE AS PER
+*/
+.sd-container-modern  .survey-p-no-border {
+  background: rgba(255, 0, 0, .3) !important; //devred
+  border: none!important;
+  box-shadow: none!important;
+  padding: 0!important;
+  margin: 0!important;
+}
 
 
 
@@ -926,7 +948,7 @@
 
 
 
-// !VA Force age panels to 
+// !VA Force age panels to 250px
 [data-name="dcsdCmpnInfoAgePanel"],
 [data-name="lvngCmpnInfoAgePanel"],
 [data-name="EarlySymptomsFirstSignsPanel"],
@@ -951,7 +973,7 @@
 
 // // !VA Suppress borders on panels 
 // [data-name="UserInfoNameCountryPanel"],
-// [data-name="UserInfoAgeGenderPanel"] 
+// [data-name="UserInfoAgeGenderPanel"]
 
 // {
 //   &.sd-element--nested-with-borders   {
@@ -974,15 +996,7 @@
 [data-name="dcsdCmpnInfoAgePanel"],
 [data-name="lvngCmpnInfoAgePanel"]
 [data-name="CmpnInfoDemeanor"]
-
-
-
 {
-
-
-
-
-
   .sd-element__content {
     @include ldesktop {
       display: grid;
@@ -1000,11 +1014,6 @@
       margin: 0!important;
     }
   }
-  
-
-
-  
-
   &.sd-element--nested-with-borders   {
     margin: 0!important;
   }
@@ -1023,9 +1032,6 @@
 [data-name="CmpnInfoDetailsPanel"] .sd-element__content.sd-panel__content {
   display: flex;
   flex-direction: column;
-
-
-
   @include ldesktop {
     display: grid;
     gap: 0.25rem 1rem;

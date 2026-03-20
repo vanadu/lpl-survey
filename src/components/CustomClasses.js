@@ -41,10 +41,6 @@ const ITEMS_CARD_PANEL = new Set([
 
 
 const ITEMS_TWO_COL = new Set([
-
-
-
-
   "LandingConsent",
   "LandingPrivacyConsentLinksPanel",
 
@@ -139,17 +135,11 @@ const CONTROL_WIDTH_150 = new Set ([
   "PrimaryDurationFirstConsultMonths",
   "TreatmentStatusAgeYears",
   "TreatmentStatusAgeMonths",
-  
-
 ])
 
 
 const CONTROL_WIDTH_300 = new Set([
-
-
   "CmpnName",
-
-
 
   "UserInfoFirstName",
   "UserInfoCountry",
@@ -157,14 +147,9 @@ const CONTROL_WIDTH_300 = new Set([
   "UserInfoAgeGroup",
   "CmpnInfoBreed",
 
-
-
-
   "InfoSourcesBestSource",
   "BreathingCrisisSubstanceForm",
   "BreathingCrisisCost",
-
-
 
   "TreatmentStatusTiebackOnceCost",
   "TreatmentStatusTiebackMultipleCost",
@@ -195,23 +180,22 @@ const CONTROL_WIDTH_300 = new Set([
 ]);
 
 const CONTROL_WIDTH_600 = new Set([
-
   "BreathingCrisisCount",
-
   "PrimaryDurationVisitsNumber",
-
-
   "DiagnosisWho",
   "DiagnosticType",
   "DiagnosisTimeAfterSymptoms",
   "TreatmentStatusAgeYears",
   "TreatmentStatusAgeMonths",
   "TreatmentStatusTiebackWait"
-
-
-
-
 ]);
+
+
+// PANEL NO BORDER
+const PANEL_NO_BORDER = new Set([
+  "CmpnInfoAgePanel"
+]);
+
 
 // !VA QUESTION SEPARATOR
 
@@ -257,17 +241,12 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
   "NeuropathySymptomsTypeProgression",
 
   "ConclusionOtherConditions"
-
-
-
   ]);
 
 const QUESTION_SPACE_ABOVE = new Set([
 // put question names here (same .name values you already use)
 "UserInfoContactTypeFacebook",
 "UserInfoContactOK",
-
-  
 ]);
 
 
@@ -279,6 +258,13 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "UserInfoContactType",
   "UserInfoContactTypeFacebook",
 
+
+  // "UserInfoFirstName",
+  // "UserInfoCountry",
+  // "UserInfoStateRegion",
+ 
+  // "CmpnInfoBreed",
+  // "CmpnInfoGender",
 
 
   "CmpnInfoAnimalType",
@@ -478,6 +464,10 @@ const QUESTION_SEPARATOR_BELOW = new Set([
     directives.push({ target: "control", className: "survey-control-w-600" });
   }
 
+  if (PANEL_NO_BORDER.has(name)) {
+    directives.push({ target: "question", className: "survey-p-no-border" });
+  }
+
   if (QUESTION_SEPARATOR_ABOVE.has(name)) {
     directives.push({ target: "question", className: "survey-q-separator-above" });
   }
@@ -491,6 +481,8 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   if (QUESTION_SPACE_BELOW.has(name)) {
     directives.push({ target: "question", className: "survey-q-space-below" });
   }
+
+
 
   return directives;
 }
