@@ -2,20 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaChevronRight } from 'react-icons/fa';
 import IconBar from './IconBar';
 
 import logo from '../../public/img-lpl-org-logo.png';
 import styles from '../styles/Nav.module.scss';
-
-const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/survey-mode', label: 'Survey' },
-  { href: '/survey-faqs', label: 'FAQs' },
-  { href: '/survey-share', label: 'Share' },
-  { href: '/contribute', label: 'Contribute' },
-  { href: 'https://larparlife.com/allabout', label: 'Lar Par Guide', guide: true },
-];
 
 export default function MainNav() {
   const [open, setOpen] = useState(false);
@@ -41,20 +33,6 @@ export default function MainNav() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const renderNavLink = (item, onClick) => (
-    <a
-      href={item.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={onClick}
-    >
-      {item.label}
-      {item.guide ? (
-        <FaChevronRight className={styles.nav_dropdown_icon} />
-      ) : null}
-    </a>
-  );
-
   return (
     <div className={styles.main_nav}>
       <button
@@ -72,11 +50,36 @@ export default function MainNav() {
 
       <nav className={styles.desktop_nav} aria-label="Main navigation">
         <ul className={styles.desktop_nav_list}>
-          {navItems.map((item) => (
-            <li key={item.href} className={styles.desktop_nav_item}>
-              {renderNavLink(item)}
-            </li>
-          ))}
+          <li className={styles.desktop_nav_item}>
+            <Link href="/">Home</Link>
+          </li>
+
+          <li className={styles.desktop_nav_item}>
+            <Link href="/survey-mode">Survey</Link>
+          </li>
+
+          <li className={styles.desktop_nav_item}>
+            <Link href="/survey-faqs">FAQs</Link>
+          </li>
+
+          <li className={styles.desktop_nav_item}>
+            <Link href="/survey-share">Share</Link>
+          </li>
+
+          <li className={styles.desktop_nav_item}>
+            <Link href="/survey-donate">Contribute</Link>
+          </li>
+
+          <li className={styles.desktop_nav_item}>
+            <a
+              href="https://larparlife.com/allabout"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lar Par Guide
+              <FaChevronRight className={styles.nav_dropdown_icon} />
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -98,22 +101,48 @@ export default function MainNav() {
       >
         <div className={styles.mobile_nav_inner}>
           <div className={styles.mobile_nav_logo}>
-            <a href="/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+            <Link href="/" onClick={closeMenu}>
               <Image
                 src={logo}
                 alt="LarParLife.org Logo"
                 className={styles.mobile_nav_logo_img}
                 priority
               />
-            </a>
+            </Link>
           </div>
 
           <ul className={styles.mobile_nav_list}>
-            {navItems.map((item) => (
-              <li key={item.href} className={styles.mobile_nav_item}>
-                {renderNavLink(item, closeMenu)}
-              </li>
-            ))}
+            <li className={styles.mobile_nav_item}>
+              <Link href="/" onClick={closeMenu}>Home</Link>
+            </li>
+
+            <li className={styles.mobile_nav_item}>
+              <Link href="/survey-mode" onClick={closeMenu}>Survey</Link>
+            </li>
+
+            <li className={styles.mobile_nav_item}>
+              <Link href="/survey-faqs" onClick={closeMenu}>FAQs</Link>
+            </li>
+
+            <li className={styles.mobile_nav_item}>
+              <Link href="/survey-share" onClick={closeMenu}>Share</Link>
+            </li>
+
+            <li className={styles.mobile_nav_item}>
+              <Link href="/survey-donate" onClick={closeMenu}>Contribute</Link>
+            </li>
+
+            <li className={styles.mobile_nav_item}>
+              <a
+                href="https://larparlife.com/allabout"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+              >
+                Lar Par Guide
+                <FaChevronRight className={styles.nav_dropdown_icon} />
+              </a>
+            </li>
           </ul>
 
           <div className={styles.mobile_nav_iconbar}>
