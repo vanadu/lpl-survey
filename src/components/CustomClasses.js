@@ -205,6 +205,12 @@ const PANEL_NO_BORDER = new Set([
 const QUESTION_SEPARATOR_ABOVE = new Set([
   // put question names here (same .name values you already use)
 
+
+  
+  "UserInfoGender",
+
+  "UserInfoStateRegion",
+
   "IntubationHistoryReason",
   "IntubationHistorySymptoms",
   "IntubationHistoryConcerns",
@@ -214,6 +220,12 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
   "BreathingCrisisProvidedSubstanceType",
 
   "EarlyOtherConditionsType",
+
+
+  "PrimaryDurationVisitsNumber",
+
+  "PrimaryDurationChangedVets",
+
   "PrimaryDurationChangedVetsReason",
   "PrimaryVetInfoDetails",
   "PrimaryVetSurgeryPerception",
@@ -246,7 +258,7 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
 const QUESTION_SPACE_ABOVE = new Set([
 // put question names here (same .name values you already use)
 "UserInfoContactTypeFacebook",
-"UserInfoContactOK",
+"UserInfoContactOK"
 ]);
 
 
@@ -290,6 +302,10 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "EarlySymtomsSeverity",
   "EarlySymptomsHindEndWeakness",
 
+
+
+
+  
   "PrimaryDurationVisitsNumber",
 
 
@@ -400,9 +416,6 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
   const QUESTION_SPACE_BELOW = new Set([
     // put question names here (same .name values you already use)
-
-    "UserInfoFirstName",
-    "UserInfoCountry",
     "UserInfoStateRegion",
  
     "CmpnInfoBreed",

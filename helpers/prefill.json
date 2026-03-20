@@ -74,11 +74,11 @@
     "BARK_CHANGES",
     "EXERCISE_INTOLERANCE"
   ],
-  "EarlySymtomsSeverity": 1,
+  "EarlySymptomsSeverity": 1,
   "EarlySymptomsHindEndWeakness": "YES",
   "EarlySymptomsIncontinence": "NO",
   "EarlySymptomsOtherConditions": "YES",
-  "EarlyOtherConditionsType": [
+  "EarlySymptomsOtherConditionsType": [
     "GERD",
     "ARTHRITIS"
   ],

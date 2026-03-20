@@ -13,7 +13,6 @@
 
 /* !VA  GLOBAL DEFINITIONS
   -border-radius must be set on the panel
-
 */
 
 // !VA Background color
@@ -23,17 +22,13 @@
 
 // !VA Base unit and font size
 .sd-container-modern {
-  
   --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, 8px))!important;
 
   --sd-page-content-padding-left: calc(1 * var(--sjs-base-unit, 8px)) !important;
   --sd-page-content-padding-right: calc(1 * var(--sjs-base-unit, 8px)) !important;
 
-
-
   --sjs-base-unit: 6.5px;
   --sjs-font-size: 15px!important;
-
 
   --sjs-primary-backcolor: #2055DA;
 
@@ -116,30 +111,6 @@
   }
 }
 
-// !VA GLOBAL PADDING
-.sd-container-modern .sd-row {
-  // padding: 0!important;
-  // margin: 0!important;
-  // margin-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  // margin-top: var(--sd-base-vertical-padding);
-  // margin-top: var(--sd-base-vertical-padding)!important;
-  // !VA BASE PADDING
-  // !VA Default
-  // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // !VA Global override
-  // --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
-  // !VA BASE VERTICAL PADDING
-  // !VA Default
-  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // !VA Global override
-  // --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
-  // !VA BASEPAGE PADDING
-  // !VA  Default
-  // --sd-page-vertical-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // !VA Global override
-  // --sd-page-vertical-padding: calc(3* var(--sjs-base-unit, var(--base-unit, 8px)))!important;
-}
-
 // !VA Survey body
 // -------------------------------------------------------------------------
 // !VA  -- background, top and bottom padding, margins, max-width, centered with margin: 0 by default
@@ -172,9 +143,6 @@
   }
 }
 
-
-
-
 // !VA Overrides default.scss
 .sd-panel.sd-element--nested > .sd-panel__content {
     padding-bottom: var(--sd-base-padding);
@@ -195,7 +163,6 @@
   }
 }
 
-
 // !VA DEFAULT PANEL TITLES
 .sd-container-modern .sd-panel__title {
   // font-family: $secondary_font!important;
@@ -203,17 +170,6 @@
   padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
-
-
-.sd-container-modern .sd-question.sd-question--mobile {
-
-
-
-}
-
-
-
-
 
 // !VA DEFAULT QUESTION STYLES
 // !VA Sets the padding below the question header, i.e. title & description
@@ -239,8 +195,6 @@
   padding: calc(0.25 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
 }
 
-
-
 // !VA Sets the height of the boolean element
 .sd-container-modern .sd-boolean__label, .survey-wrapper .sd-boolean__thumb {
   // line-height: calc(.5 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
@@ -251,28 +205,15 @@
 .sd-container-modern .sd-rating .sd-rating__item {
   --sjs-base-unit: 6px;   /* default is usually 8px */
     margin: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
-
-
-
   @include ldesktop {
     --sjs-base-unit: 8px;   /* default is usually 8px */
   }
 }
 
-
-
-
-
-
-
 // !VA H2 DEFAULT: NO PADDING OR MARGIN ON THE H2. Line-height determines whitespace. 
 .sd-container-modern .sd-element__content .sd-html h2 {
   font-family: $secondary_font;
   // !VA Reduced line height
-
-  // font-size: var(--sjs-article-font-x-large-fontSize, calc(1.5 * (var(--sjs-font-size, 16px))));
-
-
   line-height: calc(1 * (var(--sjs-article-font-x-large-lineHeight, var(--sjs-font-size, 16px))));
   // !VA Added top padding
   padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
@@ -295,8 +236,6 @@
   padding-bottom: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
 
-
-
 .sd-container-modern .sd-panel__title  {
   // background: rgba(255, 255, 0, .3) !important; //devyel
 }
@@ -306,15 +245,12 @@
   --sjs-font-questiontitle-size: calc(.9 * (var(--sjs-font-size)));
   span {
     // !VA Line heights for question titles
-    line-height: calc(1.1 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-    
+    line-height: calc(1.1 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));    
     @include ldesktop {
       line-height: calc(1.4 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
     
     }
-
   }
-  
 }
 
 // !VA HTML p, li DEFAULT: NO PADDING ON THESE   ELEMENTS
@@ -330,13 +266,14 @@
   }
 }
 
+/* !VA    
+IMPORTANT: border is the panel border on sd-element--nested-with-borders!
+IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
+*/
 
-
-// !VA This is how you remove the panel borders AND the padding for those panels responsively for specific panels. Or globally for that matter. 
-// !VA IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
-
-
-// !VA IMPORTANT: bordre is the panel border on sd-element--nested-with-borders!
+/* ---------------------------
+  !VA HEADER PANEL ON LANDING PAGE ONLY STYLES
+------------------------------*/
 [data-name="LandingHeaderPanel"] {
 
   &.sd-element--nested-with-borders {
@@ -344,11 +281,9 @@
     padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-
     border: none;
     // !VA overrides .sd-container-modern.sd-element--nested-with-borders
     margin: 0!important;
-    
     @include tablet { 
       border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
       padding: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
@@ -377,9 +312,11 @@
     @include desktop { flex-direction: row; }
     @include ldesktop { flex-direction: row; }
   }
-
 }
 
+/* ---------------------------
+  !VA CONCLUSION THANK-YOU SECTION - TO REVIEW
+------------------------------*/
 .conclusion-thanks-head-container {
   display: flex;
   flex-direction: column;
@@ -393,8 +330,6 @@
     @include tablet { width: 130px }
     @include desktop { width: 140px }
     @include ldesktop {width: 150px }
-
-
   }
   p.conclusion-thanks-note {
     padding: 1rem 0;
@@ -414,6 +349,7 @@
   }
 }
 
+// !VA LIFE-STATUS IMAGEPICKER
 [data-name="LifeStatus"] {
   .sd-imagepicker--static {
     display: flex;
@@ -431,8 +367,9 @@
   }
 }
 
-
-
+/* ---------------------------
+  !VA FOR REVIEW
+------------------------------*/
 // !VA Clear the bottom border in the subpanel title 
 .sd-panel__header::after { 
   content: none !important;
@@ -443,6 +380,9 @@
   margin: 0 !important;
 }
 
+/* ---------------------------
+  !VA BOOLEAN OVERRIDES
+------------------------------*/
 // !VA Sets the padding between the switch and the outer border
 .survey-wrapper .sd-boolean {
   // padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
@@ -455,8 +395,9 @@
   // line-height: calc(1 * (var(--sjs-font-editorfont-size, var(--sjs-font-size, 16px))));
 }
 
-// !VA INFO icons and links
-// --------------------------
+/* ---------------------------
+  !VA INFO ICONS AND LINKS
+------------------------------*/
 // !VA .survey-general-info is the div wrapper that lives inside the HTML element for general info, i.e. info that's not attached to a question label.
 .survey-general-info {
   // !VA Defaults
@@ -494,7 +435,6 @@
 
 .survey-question-info .survey-info-icon, .survey-general-info .survey-info-link {
   width: 14px;
-
   vertical-align: 0px;
 }
 
@@ -508,222 +448,11 @@
 }
 
 
-// --- Typography tokens ---
 
-/* Apply to fieldset.sd-selectbase */
-.survey-two-col {
-  // display: flex;
-  // flex-direction: column;
-
-
-  /* fieldset reset */
-  border: 0;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
-
-  @include ldesktop {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 1rem;
-  }
-}
-
-// !VA Two column checkboxes
-.survey-two-col > .sd-item {
-  // !VA Width of the boolean radios
-  flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
-  box-sizing: border-box;
-}
-// !VA Two column boolean radio buttons, creates a 60% width element
-.survey-two-col .sd-item.sd-radio {
-  // display: flex;
-  // flex-direction: column;
-  // flex: 0 0 calc(50% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
-
-
-
-  @include ldesktop {
-    // !VA Width of the boolean radios
-    flex: 0 0 calc(30% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
-    box-sizing: border-box;
-  }
-
-
-}
-
-// !VA THREE-BUTTON RADIO GROUPS i.e. Yes No Don't know
-// !VA IMPORTANT: 
-// Apply to fieldset.sd-selectbase so titles/headers are unaffected
-.survey-three-col {
-  display: flex;
-  flex-direction: row;
-
-
-  @include ldesktop {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 1rem;
-    width: 600px;
-    // fieldset reset (since target is a fieldset)
-    border: 0;
-    padding: 0;
-    margin: 0;
-    min-width: 0;
-    // !VA Creates a 480px element with three equal button widths
-    .sd-radio {
-      max-width: 180px!important;
-    }
-  }
-
-}
-// !VA I'm not sure what this does
-.survey-three-col > .sd-item {
-  flex: 1 1 14rem; // ~3 columns depending on available width
-}
-
-// !VA NOT USED
-.survey-fieldset-w-60pct { 
-  width: 60%; 
-}
-
-// !VA 
-.survey-fieldset-w-300 { 
-  width: 300px; 
-}
-
-// !VA Medium width text boxes and dropdown, i.e. CmpnName, UserInfoAgeGroup. 
-.survey-control-w-300 { 
-  width: 100%!important;
-  @include mphone { }
-  @include lphone { }
-  @include tablet { width: 300px !important; }
-  @include desktop { width: 300px !important; }
-  @include ldesktop { width: 300px !important; }
-
-}
-
-// !VA Wide text boxes and dropdowns
-.survey-control-w-600 { 
-  width: 100% !important; 
-  @include ldesktop {
-    width: 600px !important; 
-  }
-}
-
-// !VA Unused as yet
-.survey-control-w-200 { 
-  width: 200px!important;
-
-}
-
-// !VA Unused as yetf
-.survey-control-w-150 { 
-  width: 100px!important;
-  @include ldesktop {
-  width: 150px!important;
-
-  }
-}
-// !VA Unused as yet
-// great for 3-digit-ish fields
-.survey-control-w-6ch { 
-  width: 6ch!important; 
-}
-
-
-// !VA Apply border-box to all control elements
-.survey-control-w-200,
-.survey-control-w-300,
-.survey-control-w-600,
-.survey-control-w-6ch { box-sizing: border-box; }
-
-
-
-
-
-
-.survey-q-separator-below, .survey-q-separator-above, .survey-q-space-below, .survey-q-separator-above  {
-  position: relative;
-  padding: 0!important; // no padding, spacing goes around the ::after
-}
-
-// !VA SEPARATOR ABOVE ELEMENT - WHITESPACE ABOVE and BELOW THE SEPARATOR - the row has   
-.survey-q-separator-above::before {
-  content: "";
-  display: block;
-  width: 600px;
-  height: 1px;
-  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
-  margin: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
-  background: rgba(0, 0, 0, 0.08);
-}
-
-// !VA SEPARATOR BELOW ELEMENT - WHITESPACE ABOVE and BELOW THE SEPARATOR - the row has   
-.survey-q-separator-below::after {
-  content: "";
-  display: block;
-  width: 600px;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.08);
-  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
-  margin-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  margin-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  margin-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  margin-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-
-
-  @include ldesktop {
-    margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
-  }
-
-}
-
-// !VA SPACE ABOVE ELEMENT -   
-.survey-q-space-above::before {
-  content: "";
-  display: block;
-  width: 600px;
-  height: 1px;
-  margin: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
-  @include ldesktop {
-    margin: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
-  }
-}
-
-// !VA SPACE BELOW ELEMENT - Margin top defines the spacing. 
-.survey-q-space-below::after {
-  content: "";
-  display: block;
-  width: 600px;
-  // height: 1px;
-  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
-  margin-top: calc(1* (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  margin-right: auto;
-  margin-left: auto;
-
-  @include ldesktop {
-    margin-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-// !VA PANEL_NO_BORDER
-.survey-p-no-border {
-  background: rgba(255, 0, 0, .3) !important; //devred
-  border: none!important;
-  box-shadow: none!important;
-  padding: 0!important;
-  margin: 0!important;
-}
-
-
-
-
-
-// !VA PASSTHROUGH STYLES
-
+/* ---------------------------
+  !VA  PASSTHROUGH STYLES
+------------------------------*/
+// !VA FOR REVIEW - Modify to apply to tablet+ where applicable.
 .landing-title-head-container {
 }
 
@@ -750,7 +479,6 @@
   // --sjs-font-size: 15px;
   // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
   padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
-
   font-size: var(--sjs-article-font-default-fontSize, calc(3 * (var(--sjs-font-size, 16px))))!important;
   font-weight: 600;
   text-align: center;
@@ -803,7 +531,6 @@
   padding: 0!important;
   margin: 0!important;
 }
-
 .survey-version-logo {
   display: block;
   width: 80px;
@@ -820,8 +547,6 @@
   @include ldesktop {
     display: block; 
     width: 100px;
-    // --sjs-font-size: 15px;
-    // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
   }
 }
 
@@ -833,7 +558,6 @@
 // =============================
 
 [data-name="LandingWelcomePanel"] {
-
   &.sd-element--nested-with-borders {
     padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
     padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
@@ -849,28 +573,8 @@
     margin-bottom: 1rem;
     text-align: center;
   }
-
 }
 
-
-// !VA Top-level panels never have any border or whitespace - they are only structural for card distribution on mobile
-// [data-name="LandingCard1Panel"], 
-// [data-name="LandingCard2Panel"],
-// [data-name="UserInfoCard1Panel"],
-// [data-name="UserInfoCard2Panel"]
-//  {
-
-//   &.sd-element--with-frame {
-//   box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
-//     box-shadow: none!important;
-//     background: rgba(0, 128, 0, .3) !important; //devgreen
-//   }
-// }
-
-// [data-name="LandingCard1Panel"], 
-// [data-name="LandingCard2Panel"],
-// [data-name="UserInfoCard1Panel"],
-// [data-name="UserInfoCard2Panel"]
 .survey-card-panel {
   // box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
   box-shadow: none!important;
@@ -892,8 +596,9 @@
 // }
 
 
-.sd-container-modern .sd-element--with-frame {
-}
+// .sd-container-modern .sd-element--with-frame {
+// }
+
 
 // !VA Default border on .sd-element--nested-with-borders, overrides survey-core
 .sd-container-modern .sd-element--nested-with-borders {
@@ -903,7 +608,6 @@
   padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   border: none;
-
   @include ldesktop { 
     // width: 90% !important;
     margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
@@ -919,16 +623,6 @@
   }
 }
 
-/* !VA PANEL_NO_BORDER   
-//  OVERRIDES DEFAULT PANEL BORDER AND WHITESPACE AS PER
-*/
-.sd-container-modern  .survey-p-no-border {
-  background: rgba(255, 0, 0, .3) !important; //devred
-  border: none!important;
-  box-shadow: none!important;
-  padding: 0!important;
-  margin: 0!important;
-}
 
 
 
@@ -945,8 +639,61 @@
   }
 }
 
-
-
+/* ---------------------------
+  !VA ELEMENT-SPECIFIC STYLING
+------------------------------*/
+// !VA Clear extra bottom spacing on radiogroup titles
+[data-name="LandingConsent"],
+[data-name="UserInfoGender"],
+[data-name="CmpnInfoAnimalType"],
+[data-name="IntubationHistoryWasIntubated"],
+[data-name="BreathingCrisisDidHave"],
+[data-name="BreathingCrisisCount"],
+[data-name="BreathingCrisisAdvice"],
+[data-name="BreathingCrisisProvidedSubstance"],
+[data-name="EarlySymptomsHindEndWeakness"],
+[data-name="EarlySymptomsIncontinence"],
+[data-name="EarlySymptomsOtherConditions"],
+[data-name="PrimaryDurationVisitsNumber"],
+[data-name="PrimaryDurationCost"],
+[data-name="PrimaryDurationChangedVets"],,
+[data-name="PrimaryVetInflammation"],
+[data-name="PrimaryVetReflux"],
+[data-name="PrimaryVetReflux"],
+[data-name="PrimaryVetRefluxMeds"],
+[data-name="PrimaryVetDidDiscuss"],
+[data-name="PrimaryVetSurgery"],
+[data-name="PrimaryVetSurgeryPerception"],
+[data-name="DiagnosisStage"],
+[data-name="DiagnosisCost"],
+[data-name="DiagnosisSurgeonContingent"],
+[data-name="TreatmentStatusArytenoidectomyDidExplain"],
+[data-name="TreatmentStatusArytenoidectomyChoice"],
+[data-name="TreatmentStatusVentrilocordectomyDidExplain"],
+[data-name="TreatmentStatusVentrilocordectomyChoice"],
+[data-name="ManagementPrescriptions"],
+[data-name="ManagementNonPrescription"],
+[data-name="OTCProductsDidPurchase"],
+[data-name="AspirationDidHave"],
+[data-name="AspirationInpatient"],
+[data-name="AspirationSurgeryPost"],
+[data-name="AspirationStentPost"],
+[data-name="NeuropathySymptomsDoesHave"],
+[data-name="NeuropathySymptomsFirst"],
+[data-name="NeuropathySymptomsTypeProgression"],
+[data-name="ConclusionCauseOfDeath"],
+[data-name="ConclusionOtherPathTieback"],
+[data-name="ConclusionOtherPathBVEAP"],
+[data-name="ConclusionOtherPathStent"],
+[data-name="ConclusionOtherPathArytenoidectomy"],
+[data-name="ConclusionOtherPathVentrilocordectomy"],
+[data-name="ConclusionStentAlternative"]
+{
+  .sd-question__header {
+    padding: 0!important;
+    margin: 0!important;
+  }
+}
 
 // !VA Force age panels to 250px
 [data-name="dcsdCmpnInfoAgePanel"],
@@ -971,24 +718,7 @@
   padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
 
-// // !VA Suppress borders on panels 
-// [data-name="UserInfoNameCountryPanel"],
-// [data-name="UserInfoAgeGenderPanel"]
 
-// {
-//   &.sd-element--nested-with-borders   {
-//     padding: 0!important;
-//     padding: 0!important;
-//     margin: 0!important;
-//     padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-//     padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-//     padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-//     padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-//     @include ldesktop {
-
-//     }
-//   }
-// }
 
 
 // !VA Force the User Name and Country to 2-1 layout
@@ -1094,6 +824,202 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 // !VA Progress button color
 .sd-progress-buttons__button-content {
   border: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) solid $secondary_color !important;
+}
+
+
+/* ---------------------------
+  !VA CUSTOM CLASSES STYLES
+------------------------------*/
+/* !VA  
+  Custom Classes - PANEL_NO_BORDER -
+  Overrides .sd-container-modern .sd-element--nested-with-borders
+*/
+.sd-container-modern .survey-p-no-border {
+  border: none!important;
+  box-shadow: none!important;
+  padding: 0!important;
+  margin: 0!important;
+}
+
+/* Custom classes - Apply to fieldset.sd-selectbase */
+.survey-two-col {
+  /* fieldset reset */
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  @include ldesktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+}
+
+// !VA Custom classes - Two column checkboxes
+.survey-two-col > .sd-item {
+  // !VA Width of the boolean radios
+  flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
+  box-sizing: border-box;
+}
+// !VA Custom classes - Two column boolean radio buttons, creates a 60% width element on ldesktop
+// !VA FOR REVIEW, should probably be on tablet+
+.survey-two-col .sd-item.sd-radio {
+  @include ldesktop {
+    // !VA Width of the boolean radios
+    flex: 0 0 calc(30% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
+    box-sizing: border-box;
+  }
+}
+
+// !VA Custom classes - THREE-BUTTON RADIO GROUPS i.e. Yes No Don't know
+// !VA FOR REVIEW - should probably be on tablet+
+// Apply to fieldset.sd-selectbase so titles/headers are unaffected
+.survey-three-col {
+  display: flex;
+  flex-direction: row;
+  @include ldesktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    width: 600px;
+    // fieldset reset (since target is a fieldset)
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    // !VA Creates a 480px element with three equal button widths
+    .sd-radio {
+      max-width: 180px!important;
+    }
+  }
+}
+
+// !VA Custom classes
+// !VA FOR REVIEW I'm not sure what this does
+.survey-three-col > .sd-item {
+  flex: 1 1 14rem; // ~3 columns depending on available width
+}
+
+// !VA Custom classes - FOR REVIEW NOT USED
+.survey-fieldset-w-60pct { 
+  width: 60%; 
+}
+
+// !VA Custom classes - FOR REVIEW
+.survey-fieldset-w-300 { 
+  width: 300px; 
+}
+
+// !VA Custom classes - Medium width text boxes and dropdown, i.e. CmpnName, UserInfoAgeGroup. 
+.survey-control-w-300 { 
+  width: 100%!important;
+  @include mphone { }
+  @include lphone { }
+  @include tablet { width: 300px !important; }
+  @include desktop { width: 300px !important; }
+  @include ldesktop { width: 300px !important; }
+}
+
+// !VA Custom classes - Wide text boxes and dropdowns
+// !VA FOR REVIEW - should probably apply to tablet+
+.survey-control-w-600 { 
+  width: 100% !important; 
+  @include ldesktop {
+    width: 600px !important; 
+  }
+}
+
+// !VA Custom classes - Unused as yet
+// !VA FOR REVIEW
+.survey-control-w-200 { 
+  width: 200px!important;
+}
+
+// !VA Custom classes
+// !VA FOR REVIEW, should apply to tablet+ if used at all
+.survey-control-w-150 { 
+  width: 100px!important;
+  @include ldesktop {
+  width: 150px!important;
+  }
+}
+
+// !VA Unused as yet
+// Custom classes - great for 3-digit-ish fields (Chat)
+.survey-control-w-6ch { 
+  width: 6ch!important; 
+}
+
+// !VA Custom classes - Apply border-box to all control elements
+.survey-control-w-200,
+.survey-control-w-300,
+.survey-control-w-600,
+.survey-control-w-6ch { box-sizing: border-box; }
+
+// !VA Custom classes - OVERRIDE PADDING ON ALL CUSTOM CLASS SPACING AND SEPARATORS
+.survey-q-separator-below, .survey-q-separator-above, .survey-q-space-below, .survey-q-separator-above  {
+  position: relative;
+  padding: 0!important; // no padding, spacing goes around the ::after
+}
+
+// !VA Custom classes - SEPARATOR ABOVE ELEMENT - WHITESPACE ABOVE and BELOW THE SEPARATOR   
+.survey-q-separator-above::before {
+  content: "";
+  display: block;
+  width: 600px;
+  height: 1px;
+  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
+  margin: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  background: rgba(0, 0, 0, 0.08);
+}
+
+// !VA Custom classes - SEPARATOR BELOW ELEMENT - WHITESPACE ABOVE and BELOW THE SEPARATOR   
+// !VA FOR REVIEW should probably apply to tablet+
+.survey-q-separator-below::after {
+  content: "";
+  display: block;
+  width: 600px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
+  margin-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  margin-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  margin-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  margin-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  @include ldesktop {
+    margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  }
+}
+
+// !VA Custom classes - SPACE ABOVE ELEMENT 
+// !VA FOR REVIEW should probably apply to tablet+
+.survey-q-space-above::before {
+  content: "";
+  display: block;
+  width: 600px;
+  height: 1px;
+  margin: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  @include ldesktop {
+    margin: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  }
+}
+
+// !VA Custom classes - SPACE BELOW ELEMENT - Margin top defines the spacing. 
+// !VA FOR REVIEW should probably apply to tablet+
+.survey-q-space-below::after {
+  content: "";
+  display: block;
+  width: 600px;
+  // height: 1px;
+  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
+  margin-top: calc(1* (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  margin-right: auto;
+  margin-left: auto;
+  @include ldesktop {
+    margin-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 
@@ -1203,19 +1129,6 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   transform: translateY(0);
 }
 
-// !VA I think this is deprecated - contentWrap not found in any component
-// /* Content starts hidden */
-// .success-contentWrap {
-//   opacity: 0;
-//   transform: translateY(6px);
-// }
-
-// /* When done, fade content in */
-// .success-contentWrap.isVisible {
-//   opacity: 1;
-//   transform: translateY(0);
-// }
-
 .spinner-object {
   width: 42px;
   height: 42px;
@@ -1238,16 +1151,6 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
-
-
-
-
-
-
-
-
-
-
 
 // !VA Content styles
 // !VA This is the H1 that matches with the title tag
@@ -1350,14 +1253,10 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   text-align: center;
 }
 
+// !VA Not sure if this is active
 .survey-spacer {
   height: 300px;
 }
-
-
-
-
-
 
 
 // !VA Survey Submission Spinner
@@ -1394,11 +1293,6 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 .survey-fade.isSubmitting {
   opacity: 0.35;
 }
-
-
-
-
-
 
 
 
@@ -1542,18 +1436,11 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   white-space: nowrap;
 }
 
-
-
-
-
-
-
-
-
-// !VA  DEV ONLY
+/*----------------
+ !VA DEV ONLY
+----------------*/ 
 
 // !VA Survey Text Panel for computedValues
-
 [data-name="LandingTestPanel"] {
   display: none;
 }
@@ -1719,8 +1606,92 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   outline: none;
 }
 
+
+
+
+
+/* !VA -------------
+TO DEPRECATE
+------------------ */
+
+// // !VA Suppress borders on panels 
+// [data-name="UserInfoNameCountryPanel"],
+// [data-name="UserInfoAgeGenderPanel"]
+
+// {
+//   &.sd-element--nested-with-borders   {
+//     padding: 0!important;
+//     padding: 0!important;
+//     margin: 0!important;
+//     padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+//     padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+//     padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+//     padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+//     @include ldesktop {
+
+//     }
+//   }
+// }
+
+
+// !VA Top-level panels never have any border or whitespace - they are only structural for card distribution on mobile
+// [data-name="LandingCard1Panel"], 
+// [data-name="LandingCard2Panel"],
+// [data-name="UserInfoCard1Panel"],
+// [data-name="UserInfoCard2Panel"]
+//  {
+
+//   &.sd-element--with-frame {
+//   box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
+//     box-shadow: none!important;
+//     background: rgba(0, 128, 0, .3) !important; //devgreen
+//   }
+// }
+
+// [data-name="LandingCard1Panel"], 
+// [data-name="LandingCard2Panel"],
+// [data-name="UserInfoCard1Panel"],
+// [data-name="UserInfoCard2Panel"]
+
+
+
 /* IMPORTANT: remove hover-to-open behavior (unreliable) */
 /* .survey-dropdown:hover .survey-dropdown__list { display: flex; } */
 
+// !VA I think this is deprecated - contentWrap not found in any component
+// /* Content starts hidden */
+// .success-contentWrap {
+//   opacity: 0;
+//   transform: translateY(6px);
+// }
+
+// /* When done, fade content in */
+// .success-contentWrap.isVisible {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
 
 
+// !VA GLOBAL PADDING
+.sd-container-modern .sd-row {
+  // padding: 0!important;
+  // margin: 0!important;
+  // margin-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  // margin-top: var(--sd-base-vertical-padding);
+  // margin-top: var(--sd-base-vertical-padding)!important;
+  // !VA BASE PADDING
+  // !VA Default
+  // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  // !VA Global override
+  // --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
+  // !VA BASE VERTICAL PADDING
+  // !VA Default
+  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  // !VA Global override
+  // --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
+  // !VA BASEPAGE PADDING
+  // !VA  Default
+  // --sd-page-vertical-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)));
+  // !VA Global override
+  // --sd-page-vertical-padding: calc(3* var(--sjs-base-unit, var(--base-unit, 8px)))!important;
+}
