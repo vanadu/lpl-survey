@@ -1,0 +1,189 @@
+{
+  "page": "DIAGNOSIS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "DiagnosisHeading.html": {
+      "en": "<h2>{CmpnName}'s LP/GOLPP diagnosis</h2>",
+      "_source": "<h2>{CmpnName}'s LP/GOLPP diagnosis</h2>",
+      "lo": ""
+    },
+    "DiagnosisText.html": {
+      "en": "<p>This section asks who provided {CmpnName}'s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p><p>You may have seen multiple vets about {CmpnName}'s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about {CmpnName}'s LP/GOLPP.</p>",
+      "_source": "<p>This section asks who provided {CmpnName}'s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p><p>You may have seen multiple vets about {CmpnName}'s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about {CmpnName}'s LP/GOLPP.</p>",
+      "lo": ""
+    },
+    "DiagnosisWho.title": {
+      "en": "Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:",
+      "_source": "Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:",
+      "lo": ""
+    },
+    "DiagnosisWho.choices.PRIMARY.text": {
+      "en": "Primary veterinarian",
+      "_source": "Primary veterinarian",
+      "lo": ""
+    },
+    "DiagnosisWho.choices.INTERNIST.text": {
+      "en": "Internal medicine specialist",
+      "_source": "Internal medicine specialist",
+      "lo": ""
+    },
+    "DiagnosisWho.choices.NEUROLOGIST.text": {
+      "en": "Neurologist",
+      "_source": "Neurologist",
+      "lo": ""
+    },
+    "DiagnosisWho.choices.SOFT_TISSUE.text": {
+      "en": "Soft tissue specialist or surgeon",
+      "_source": "Soft tissue specialist or surgeon",
+      "lo": ""
+    },
+    "DiagnosisWho.choices.GENERAL.text": {
+      "en": "General or orthopedic surgeon",
+      "_source": "General or orthopedic surgeon",
+      "lo": ""
+    },
+    "DiagnosticType.title": {
+      "en": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
+      "_source": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
+      "lo": ""
+    },
+    "DiagnosticType.choices.ROUTINE_EXAM.text": {
+      "en": "Visual/auditory exam only",
+      "_source": "Visual/auditory exam only",
+      "lo": ""
+    },
+    "DiagnosticType.choices.SEDATED_VISUAL.text": {
+      "en": "Sedated visual exam of larynx",
+      "_source": "Sedated visual exam of larynx",
+      "lo": ""
+    },
+    "DiagnosticType.choices.XRAY.text": {
+      "en": "X-Ray or other imaging",
+      "_source": "X-Ray or other imaging",
+      "lo": ""
+    },
+    "DiagnosticType.choices.ULTRASOUND.text": {
+      "en": "Ultrasound",
+      "_source": "Ultrasound",
+      "lo": ""
+    },
+    "DiagnosticType.choices.SCOPE.text": {
+      "en": "Video endoscope or laryngoscope under anesthesia",
+      "_source": "Video endoscope or laryngoscope under anesthesia",
+      "lo": ""
+    },
+    "DiagnosticType.choices.DONT_KNOW.text": {
+      "en": "Don't know",
+      "_source": "Don't know",
+      "lo": ""
+    },
+    "DiagnosisStage.title": {
+      "en": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+      "_source": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+      "lo": ""
+    },
+    "DiagnosisStage.choices.UNILATERAL.text": {
+      "en": "Unilateral (one-side)",
+      "_source": "Unilateral (one-side)",
+      "lo": ""
+    },
+    "DiagnosisStage.choices.BILATERAL.text": {
+      "en": "Bilateral (both sides)",
+      "_source": "Bilateral (both sides)",
+      "lo": ""
+    },
+    "DiagnosisStage.choices.WASNT_TOLD.text": {
+      "en": "I wasn't told what stage {CmpnName}'s LP was in",
+      "_source": "I wasn't told what stage {CmpnName}'s LP was in",
+      "lo": ""
+    },
+    "DiagnosisTimeAfterSymptoms.title": {
+      "en": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?:",
+      "_source": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?:",
+      "lo": ""
+    },
+    "DiagnosisTimeAfterSymptoms.choices.LESS_THAN_ONE.text": {
+      "en": "Less than one month",
+      "_source": "Less than one month",
+      "lo": ""
+    },
+    "DiagnosisTimeAfterSymptoms.choices.ONE_TO_THREE.text": {
+      "en": "Between one and three months",
+      "_source": "Between one and three months",
+      "lo": ""
+    },
+    "DiagnosisTimeAfterSymptoms.choices.FOUR_TO_SIX.text": {
+      "en": "Between four and six months",
+      "_source": "Between four and six months",
+      "lo": ""
+    },
+    "DiagnosisTimeAfterSymptoms.choices.SIX_TO_TWELVE.text": {
+      "en": "Between six months and a year",
+      "_source": "Between six months and a year",
+      "lo": ""
+    },
+    "DiagnosisTimeAfterSymptoms.choices.MORE_THAN_TWELVE.text": {
+      "en": "Longer than a year",
+      "_source": "Longer than a year",
+      "lo": ""
+    },
+    "DiagnosisCost.title": {
+      "en": "What was the pre-insurance cost of the diagnosis?",
+      "_source": "What was the pre-insurance cost of the diagnosis?",
+      "lo": ""
+    },
+    "DiagnosisCost.choices.UNDER_500.text": {
+      "en": "Under $500",
+      "_source": "Under $500",
+      "lo": ""
+    },
+    "DiagnosisCost.choices.500_1500.text": {
+      "en": "$501-$1500",
+      "_source": "$501-$1500",
+      "lo": ""
+    },
+    "DiagnosisCost.choices.1501_3000.text": {
+      "en": "$1500-$3000",
+      "_source": "$1500-$3000",
+      "lo": ""
+    },
+    "DiagnosisCost.choices.OVER_3000.text": {
+      "en": "Over $3000",
+      "_source": "Over $3000",
+      "lo": ""
+    },
+    "DiagnosisCost.choices.DONT_KNOW.text": {
+      "en": "Don't know",
+      "_source": "Don't know",
+      "lo": ""
+    },
+    "DiagnosisSurgeonContingent.title": {
+      "en": "Did the surgeon perform the diagnosis without requiring surgery afterwards?",
+      "_source": "Did the surgeon perform the diagnosis without requiring surgery afterwards?",
+      "lo": ""
+    },
+    "DiagnosisSurgeonContingent.description": {
+      "en": "In other words, did the surgeon refuse to do the diagnosis unless you agreed to go straight to surgery if the results were positive?",
+      "_source": "In other words, did the surgeon refuse to do the diagnosis unless you agreed to go straight to surgery if the results were positive?",
+      "lo": ""
+    },
+    "DiagnosisSurgeonContingent.choices.YES.text": {
+      "en": "Yes, required surgery consent before diagnosis",
+      "_source": "Yes, required surgery consent before diagnosis",
+      "lo": ""
+    },
+    "DiagnosisSurgeonContingent.choices.NO.text": {
+      "en": "No, did not require surgery consent for diagnosis",
+      "_source": "No, did not require surgery consent for diagnosis",
+      "lo": ""
+    },
+    "DiagnosisSurgeonContingent.choices.DONT_KNOW.text": {
+      "en": "Don't know",
+      "_source": "Don't know",
+      "lo": ""
+    }
+  }
+}

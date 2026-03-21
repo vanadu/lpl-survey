@@ -1,0 +1,249 @@
+{
+  "page": "OTC_PRODUCTS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "OTCProductsHeading.html": {
+      "en": "<h2>OTC (Over-The-Counter) Products for LP/GOLPP</h2>",
+      "_source": "<h2>OTC (Over-The-Counter) Products for LP/GOLPP</h2>",
+      "lo": ""
+    },
+    "OTCProductsText.html": {
+      "en": "<p><b>IMPORTANT</b>: Attempting to manage LP/GOLPP symptoms with supplements and OTC products is controversial. There are no supplements or OTC products that will restore movement to paralyzed laryneal tissue. That means that even with such products, the risk of breathing crises and a potentially fatal suffocation event is very real. While supplements and OTC products can't prevent a breathing emergency, some veterinary professionals believe some supplements and OTC products may have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life.  </p><p>The questions in this section pertain to the main ingredient of a product, not any specific product. This survey isn't intended to advertise for, recommend, or be used as a marketing vehicle for any specific product. For questions about the effectiveness or safety of any product, consult with a licensed veterinarian.</p>",
+      "_source": "<p><b>IMPORTANT</b>: Attempting to manage LP/GOLPP symptoms with supplements and OTC products is controversial. There are no supplements or OTC products that will restore movement to paralyzed laryneal tissue. That means that even with such products, the risk of breathing crises and a potentially fatal suffocation event is very real. While supplements and OTC products can't prevent a breathing emergency, some veterinary professionals believe some supplements and OTC products may have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life.  </p><p>The questions in this section pertain to the main ingredient of a product, not any specific product. This survey isn't intended to advertise for, recommend, or be used as a marketing vehicle for any specific product. For questions about the effectiveness or safety of any product, consult with a licensed veterinarian.</p>",
+      "lo": ""
+    },
+    "OTCProductsDidPurchase.title": {
+      "en": "Have you purchased OTC products based on a particular ingredient {CmpnName}'s LP/GOLPP symptoms?",
+      "_source": "Have you purchased OTC products based on a particular ingredient {CmpnName}'s LP/GOLPP symptoms?",
+      "lo": ""
+    },
+    "OTCProductsDidPurchase.description": {
+      "en": "Please only include products you've used regularly for over 60 days",
+      "_source": "Please only include products you've used regularly for over 60 days",
+      "lo": ""
+    },
+    "OTCProductsDidPurchase.choices.YES.text": {
+      "en": "Yes",
+      "_source": "Yes",
+      "lo": ""
+    },
+    "OTCProductsDidPurchase.choices.NO.text": {
+      "en": "No",
+      "_source": "No",
+      "lo": ""
+    },
+    "OTCProductsDidPurchase.choices.DONT_KNOW.text": {
+      "en": "Don't know",
+      "_source": "Don't know",
+      "lo": ""
+    },
+    "OTCProductsType.title": {
+      "en": "Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:",
+      "_source": "Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:",
+      "lo": ""
+    },
+    "OTCProductsType.choices.TUMERIC.text": {
+      "en": "Tumeric",
+      "_source": "Tumeric",
+      "lo": ""
+    },
+    "OTCProductsType.choices.CBD.text": {
+      "en": "CBD",
+      "_source": "CBD",
+      "lo": ""
+    },
+    "OTCProductsType.choices.LIONS_MANE.text": {
+      "en": "Lion's mane",
+      "_source": "Lion's mane",
+      "lo": ""
+    },
+    "OTCProductsType.choices.MYELIN_SHEATH.text": {
+      "en": "Myelin sheath",
+      "_source": "Myelin sheath",
+      "lo": ""
+    },
+    "OTCProductsType.choices.EGG_SHELL.text": {
+      "en": "Egg-shell membrane",
+      "_source": "Egg-shell membrane",
+      "lo": ""
+    },
+    "OTCProductsType.choices.URSOLIC.text": {
+      "en": "Ursolic acid",
+      "_source": "Ursolic acid",
+      "lo": ""
+    },
+    "OTCProductsType.choices.Evening_Primrose_Oil.text": {
+      "en": "Evening Primrose Oil",
+      "_source": "Evening Primrose Oil",
+      "lo": ""
+    },
+    "OTCProductsType.choices.FISH_OIL.text": {
+      "en": "Fish or salmon oil",
+      "_source": "Fish or salmon oil",
+      "lo": ""
+    },
+    "OTCProductsType.choices.GLUCOSAMINE.text": {
+      "en": "Glucosamine/Chrondroitin/MSM",
+      "_source": "Glucosamine/Chrondroitin/MSM",
+      "lo": ""
+    },
+    "OTCProductsType.choices.COLLAGEN.text": {
+      "en": "Hyaluronic acid/Collagen",
+      "_source": "Hyaluronic acid/Collagen",
+      "lo": ""
+    },
+    "OTCProductsCost.title": {
+      "en": "What was the average monthly cost of these OTC products?",
+      "_source": "What was the average monthly cost of these OTC products?",
+      "lo": ""
+    },
+    "OTCProductsCost.choices.UNDER_50.text": {
+      "en": "Under $50",
+      "_source": "Under $50",
+      "lo": ""
+    },
+    "OTCProductsCost.choices.51_100.text": {
+      "en": "$51-$100",
+      "_source": "$51-$100",
+      "lo": ""
+    },
+    "OTCProductsCost.choices.101_150.text": {
+      "en": "$101-$150",
+      "_source": "$101-$150",
+      "lo": ""
+    },
+    "OTCProductsCost.choices.OVER_150.text": {
+      "en": "Over $150",
+      "_source": "Over $150",
+      "lo": ""
+    },
+    "OTCProductsEffectiveness.title": {
+      "en": "Please rate the overall effectiveness of the OTC products you selected above:",
+      "_source": "Please rate the overall effectiveness of the OTC products you selected above:",
+      "lo": ""
+    },
+    "OTCProductsEffectiveness.description": {
+      "en": "1 = negative effect, 3 = no effect, 5 = positive effect",
+      "_source": "1 = negative effect, 3 = no effect, 5 = positive effect",
+      "lo": ""
+    },
+    "OTCProductsEffectiveness.rateValues.1.text": {
+      "en": "1",
+      "_source": "1",
+      "lo": ""
+    },
+    "OTCProductsEffectiveness.rateValues.2.text": {
+      "en": "2",
+      "_source": "2",
+      "lo": ""
+    },
+    "OTCProductsEffectiveness.rateValues.3.text": {
+      "en": "3",
+      "_source": "3",
+      "lo": ""
+    },
+    "OTCProductsEffectiveness.rateValues.4.text": {
+      "en": "4",
+      "_source": "4",
+      "lo": ""
+    },
+    "OTCProductsEffectiveness.rateValues.5.text": {
+      "en": "5",
+      "_source": "5",
+      "lo": ""
+    },
+    "OTCProductsEffectiveness.rateValues.DONT_KNOW.text": {
+      "en": "Don't know",
+      "_source": "Don't know",
+      "lo": ""
+    },
+    "OTCProtocolDidPurchase.title": {
+      "en": "Have you purchased products that are advertised as a blend or protocol of OTC ingredients created for a specific illness or condition?",
+      "_source": "Have you purchased products that are advertised as a blend or protocol of OTC ingredients created for a specific illness or condition?",
+      "lo": ""
+    },
+    "OTCProtocolDidPurchase.choices.YES.text": {
+      "en": "Yes",
+      "_source": "Yes",
+      "lo": ""
+    },
+    "OTCProtocolDidPurchase.choices.NO.text": {
+      "en": "No",
+      "_source": "No",
+      "lo": ""
+    },
+    "OTCProtocolDidPurchase.choices.DONT_KNOW.text": {
+      "en": "Don't know",
+      "_source": "Don't know",
+      "lo": ""
+    },
+    "OTCProtocolCost.title": {
+      "en": "What was the average monthly cost of the blends or protocols?",
+      "_source": "What was the average monthly cost of the blends or protocols?",
+      "lo": ""
+    },
+    "OTCProtocolCost.choices.UNDER_50.text": {
+      "en": "Under $50",
+      "_source": "Under $50",
+      "lo": ""
+    },
+    "OTCProtocolCost.choices.51_100.text": {
+      "en": "$51-$100",
+      "_source": "$51-$100",
+      "lo": ""
+    },
+    "OTCProtocolCost.choices.101_150.text": {
+      "en": "$101-$150",
+      "_source": "$101-$150",
+      "lo": ""
+    },
+    "OTCProtocolCost.choices.OVER_150.text": {
+      "en": "Over $150",
+      "_source": "Over $150",
+      "lo": ""
+    },
+    "OTCProtocolEffectiveness.title": {
+      "en": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
+      "_source": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
+      "lo": ""
+    },
+    "OTCProtocolEffectiveness.description": {
+      "en": "1 = negative effect, 3 = no effect, 5 = positive effect",
+      "_source": "1 = negative effect, 3 = no effect, 5 = positive effect",
+      "lo": ""
+    },
+    "OTCProtocolEffectiveness.rateValues.1.text": {
+      "en": "1",
+      "_source": "1",
+      "lo": ""
+    },
+    "OTCProtocolEffectiveness.rateValues.2.text": {
+      "en": "2",
+      "_source": "2",
+      "lo": ""
+    },
+    "OTCProtocolEffectiveness.rateValues.3.text": {
+      "en": "3",
+      "_source": "3",
+      "lo": ""
+    },
+    "OTCProtocolEffectiveness.rateValues.4.text": {
+      "en": "4",
+      "_source": "4",
+      "lo": ""
+    },
+    "OTCProtocolEffectiveness.rateValues.5.text": {
+      "en": "5",
+      "_source": "5",
+      "lo": ""
+    },
+    "OTCProtocolEffectiveness.rateValues.DONT_KNOW.text": {
+      "en": "Don't know",
+      "_source": "Don't know",
+      "lo": ""
+    }
+  }
+}

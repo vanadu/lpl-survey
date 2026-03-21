@@ -1,0 +1,234 @@
+{
+  "page": "CMPN_INFO-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "CmpnInfoHeading.html": {
+      "en": "<h2>About your LP/GOLPP companion<h2>",
+      "_source": "<h2>About your LP/GOLPP companion<h2>",
+      "lo": ""
+    },
+    "CmpnInfoText.html": {
+      "en": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>",
+      "_source": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>",
+      "lo": ""
+    },
+    "CmpnInfoAnimalType.title": {
+      "en": "{CmpnName}'s species:",
+      "_source": "{CmpnName}'s species:",
+      "lo": ""
+    },
+    "CmpnInfoAnimalType.choices.CANINE.text": {
+      "en": "Dog",
+      "_source": "Dog",
+      "lo": ""
+    },
+    "CmpnInfoAnimalType.choices.FELINE.text": {
+      "en": "Cat",
+      "_source": "Cat",
+      "lo": ""
+    },
+    "CmpnInfoAnimalType.choices.EQUINE.text": {
+      "en": "Horse",
+      "_source": "Horse",
+      "lo": ""
+    },
+    "CmpnInfoBreed.title": {
+      "en": "{CmpnName}'s breed or mix:",
+      "_source": "{CmpnName}'s breed or mix:",
+      "lo": ""
+    },
+    "CmpnInfoGender.title": {
+      "en": "{CmpnName}'s gender:",
+      "_source": "{CmpnName}'s gender:",
+      "lo": ""
+    },
+    "CmpnInfoGender.labelTrue": {
+      "en": "Female",
+      "_source": "Female",
+      "lo": ""
+    },
+    "CmpnInfoGender.labelFalse": {
+      "en": "Male",
+      "_source": "Male",
+      "lo": ""
+    },
+    "CmpnInfoWeight.title": {
+      "en": "{CmpnName}'s last known weight (in lbs or kg):",
+      "_source": "{CmpnName}'s last known weight (in lbs or kg):",
+      "lo": ""
+    },
+    "CmpnInfoWeight.description": {
+      "en": "Please enter a number",
+      "_source": "Please enter a number",
+      "lo": ""
+    },
+    "CmpnInfoWeight.validators.0.text": {
+      "en": "Weight must be between 1 and 2200",
+      "_source": "Weight must be between 1 and 2200",
+      "lo": ""
+    },
+    "CmpnInfoWeightUnits.title": {
+      "en": "Weight units:",
+      "_source": "Weight units:",
+      "lo": ""
+    },
+    "CmpnInfoWeightUnits.description": {
+      "en": "Please choose pounds or kilos.",
+      "_source": "Please choose pounds or kilos.",
+      "lo": ""
+    },
+    "CmpnInfoWeightUnits.labelTrue": {
+      "en": "Kg",
+      "_source": "Kg",
+      "lo": ""
+    },
+    "CmpnInfoWeightUnits.labelFalse": {
+      "en": "Lbs",
+      "_source": "Lbs",
+      "lo": ""
+    },
+    "dcsdCmpnInfoAgePanel.title": {
+      "en": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+      "_source": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+      "lo": ""
+    },
+    "dcsdCmpnInfoAgePanel.description": {
+      "en": "Please enter years and months",
+      "_source": "Please enter years and months",
+      "lo": ""
+    },
+    "dcsdCmpnInfoAgeYears.title": {
+      "en": "Age in years (number):",
+      "_source": "Age in years (number):",
+      "lo": ""
+    },
+    "dcsdCmpnInfoAgeYears.validators.0.text": {
+      "en": "Age must be between 1 and 40",
+      "_source": "Age must be between 1 and 40",
+      "lo": ""
+    },
+    "dcsdCmpnInfoAgeMonths.title": {
+      "en": "Months (number 0 - 11)",
+      "_source": "Months (number 0 - 11)",
+      "lo": ""
+    },
+    "dcsdCmpnInfoAgeMonths.validators.0.text": {
+      "en": "Months must be between 0 and 11",
+      "_source": "Months must be between 0 and 11",
+      "lo": ""
+    },
+    "lvngCmpnInfoAgePanel.title": {
+      "en": "What is {CmpnName}'s approximate age (in years and months)?",
+      "_source": "What is {CmpnName}'s approximate age (in years and months)?",
+      "lo": ""
+    },
+    "lvngCmpnInfoAgeYears.title": {
+      "en": "Age in years (number):",
+      "_source": "Age in years (number):",
+      "lo": ""
+    },
+    "lvngCmpnInfoAgeYears.validators.0.text": {
+      "en": "Age must be between 1 and 40",
+      "_source": "Age must be between 1 and 40",
+      "lo": ""
+    },
+    "lvngCmpnInfoAgeMonths.title": {
+      "en": "Months (number 0 - 11)",
+      "_source": "Months (number 0 - 11)",
+      "lo": ""
+    },
+    "lvngCmpnInfoAgeMonths.validators.0.text": {
+      "en": "Months must be between 0 and 11",
+      "_source": "Months must be between 0 and 11",
+      "lo": ""
+    },
+    "CmpnInfoDemeanor.title": {
+      "en": "How would you describe {CmpnName}'s demeanor?",
+      "_source": "How would you describe {CmpnName}'s demeanor?",
+      "lo": ""
+    },
+    "CmpnInfoDemeanor.description": {
+      "en": "1 = very calm, 5 = very energetic",
+      "_source": "1 = very calm, 5 = very energetic",
+      "lo": ""
+    },
+    "CmpnInfoDemeanor.rateValues.1.text": {
+      "en": "1",
+      "_source": "1",
+      "lo": ""
+    },
+    "CmpnInfoDemeanor.rateValues.2.text": {
+      "en": "2",
+      "_source": "2",
+      "lo": ""
+    },
+    "CmpnInfoDemeanor.rateValues.3.text": {
+      "en": "3",
+      "_source": "3",
+      "lo": ""
+    },
+    "CmpnInfoDemeanor.rateValues.4.text": {
+      "en": "4",
+      "_source": "4",
+      "lo": ""
+    },
+    "CmpnInfoDemeanor.rateValues.5.text": {
+      "en": "5",
+      "_source": "5",
+      "lo": ""
+    },
+    "CmpnInfoAnxiety.title": {
+      "en": "How would you describe {CmpnName}'s anxiety level?",
+      "_source": "How would you describe {CmpnName}'s anxiety level?",
+      "lo": ""
+    },
+    "CmpnInfoAnxiety.description": {
+      "en": "1 = not at all anxious, 5 = very anxious",
+      "_source": "1 = not at all anxious, 5 = very anxious",
+      "lo": ""
+    },
+    "CmpnInfoAnxiety.rateValues.1.text": {
+      "en": "1",
+      "_source": "1",
+      "lo": ""
+    },
+    "CmpnInfoAnxiety.rateValues.2.text": {
+      "en": "2",
+      "_source": "2",
+      "lo": ""
+    },
+    "CmpnInfoAnxiety.rateValues.3.text": {
+      "en": "3",
+      "_source": "3",
+      "lo": ""
+    },
+    "CmpnInfoAnxiety.rateValues.4.text": {
+      "en": "4",
+      "_source": "4",
+      "lo": ""
+    },
+    "CmpnInfoAnxiety.rateValues.5.text": {
+      "en": "5",
+      "_source": "5",
+      "lo": ""
+    },
+    "CmpnInfoHasInsurance.title": {
+      "en": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
+      "_source": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
+      "lo": ""
+    },
+    "CmpnInfoHasInsurance.labelTrue": {
+      "en": "Yes",
+      "_source": "Yes",
+      "lo": ""
+    },
+    "CmpnInfoHasInsurance.labelFalse": {
+      "en": "No",
+      "_source": "No",
+      "lo": ""
+    }
+  }
+}

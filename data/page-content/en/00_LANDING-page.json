@@ -1,0 +1,118 @@
+{
+  "name": "LANDING-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "LandingCard1Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "LandingHeaderPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingTitleHead",
+              "html": "<div class='landing-title-head-container'><h2 class='landing-title-heading'>LP/GOLPP Survey 2026</h2><p class='landing-title-subheading'>Powered by LarParLife.org</p></div>"
+            },
+            {
+              "type": "html",
+              "name": "LandingVersion",
+              "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.03.20.01</p></div></div>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "LandingWelcomePanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingWelcomeHeading",
+              "html": "<h2>Welcome to the LP/GOLPP&nbsp;Survey&nbsp;2026</h2>"
+            },
+            {
+              "type": "html",
+              "name": "LandingWelcomeText1",
+              "html": "This survey, the first of its kind, is designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis."
+            },
+            {
+              "type": "html",
+              "name": "LandingWelcomeText2",
+              "html": "Aliqua aute et est proident fugiat sunt consectetur id ipsum magna nostrud tempor magna consequat. Nostrud in est ad ea exercitation. Consequat mollit consequat quis deserunt mollit laboris exercitation nostrud cillum consequat dolor proident sint. Ex duis nisi ad excepteur cupidatat enim pariatur excepteur. Occaecat sint dolor enim incididunt commodo. Consectetur anim elit et cillum ut excepteur."
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "LandingCard2Panel",
+      "elements": [
+
+        {
+          "type": "panel",
+          "name": "LandingPrivacyPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyHeading",
+              "html": "<h3>About your privacy and personal information</h3>"
+            },
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyText01",
+              "html": "<p>We only need four pieces of information to verify survey results:</p>"
+            },
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyOrderedList",
+              "html": "<ul><li class='survey-privacy-bullet-list'>Your first name</li><li class='survey-privacy-bullet-list'>Your companion animal's name</li><li class='survey-privacy-bullet-list'>The country in which you live</li><li class='survey-privacy-bullet-list'>Your email address or Facebook account name</li></ul>"
+            },
+            {
+              "type": "html",
+              "name": "LandingPrivacyLink",
+              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>"
+            },
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyText02",
+              "html": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "LandingConsentPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingAboutConsentHeading",
+              "html": "<h3>About our Consent Policy</h3>"
+            },
+            {
+              "type": "html",
+              "name": "LandingConsentText",
+              "html": "<p>By selecting 'Yes' below, you confirm that you agree to the terms of our Consent Policy.</p>"
+            },
+            {
+              "type": "html",
+              "name": "LandingConsentLink",
+              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "LandingConsent",
+              "title": "Do you want to proceed with the survey in accordance with our Consent Policy?",
+              "choices": [
+                "Yes",
+                "No"
+              ],
+              "isRequired": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

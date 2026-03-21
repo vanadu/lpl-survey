@@ -20,6 +20,11 @@ connect-src 'self' https://www.google-analytics.com https://region1.google-analy
 
 module.exports = {
   reactStrictMode: true,
+   i18n: {
+    locales: ['en', 'lo'],
+    defaultLocale: 'en',
+    localeDetection: false,
+  },
   images: {
     unoptimized: false
   },

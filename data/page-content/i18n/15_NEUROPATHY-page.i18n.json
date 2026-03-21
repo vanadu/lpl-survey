@@ -1,0 +1,179 @@
+{
+  "page": "NEUROPATHY-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "NeuropathyHeading.html": {
+      "en": "<h2>Hind-end weakness and polyneuropathy</h2>",
+      "_source": "<h2>Hind-end weakness and polyneuropathy</h2>",
+      "lo": ""
+    },
+    "NeuropathyText.html": {
+      "en": "<p><b>NOTE:</b> Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly in the hind end. Symptoms can include hind-end weakness and incontinence. Younger dogs with idiopathic LP often don't suffer from LP-related polyneuropathy.</p>",
+      "_source": "<p><b>NOTE:</b> Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly in the hind end. Symptoms can include hind-end weakness and incontinence. Younger dogs with idiopathic LP often don't suffer from LP-related polyneuropathy.</p>",
+      "lo": ""
+    },
+    "NeuropathySymptomsDoesHave.title": {
+      "en": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
+      "_source": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
+      "lo": ""
+    },
+    "NeuropathySymptomsDoesHave.choices.YES.text": {
+      "en": "Yes",
+      "_source": "Yes",
+      "lo": ""
+    },
+    "NeuropathySymptomsDoesHave.choices.NO.text": {
+      "en": "No",
+      "_source": "No",
+      "lo": ""
+    },
+    "NeuropathySymptomsDoesHave.choices.NOT_SURE.text": {
+      "en": "Not sure",
+      "_source": "Not sure",
+      "lo": ""
+    },
+    "NeuropathySymptomsFirst.title": {
+      "en": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
+      "_source": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
+      "lo": ""
+    },
+    "NeuropathySymptomsFirst.choices.HIND_END.text": {
+      "en": "Hind-end weakness appeared first",
+      "_source": "Hind-end weakness appeared first",
+      "lo": ""
+    },
+    "NeuropathySymptomsFirst.choices.BREATHING.text": {
+      "en": "Breathing issues appeared first",
+      "_source": "Breathing issues appeared first",
+      "lo": ""
+    },
+    "NeuropathySymptomsFirst.choices.SAME_TIME.text": {
+      "en": "They both appeared at about the same time",
+      "_source": "They both appeared at about the same time",
+      "lo": ""
+    },
+    "NeuropathySymptomsFirst.choices.DONT_KNOW.text": {
+      "en": "Don't Know",
+      "_source": "Don't Know",
+      "lo": ""
+    },
+    "NeuropathySymptomsBreathingOnset.title": {
+      "en": "About how long after you first noticed hind-end weakness did the breathing issues begin?",
+      "_source": "About how long after you first noticed hind-end weakness did the breathing issues begin?",
+      "lo": ""
+    },
+    "NeuropathySymptomsBreathingOnset.choices.DONT_KNOW.text": {
+      "en": "Don't know",
+      "_source": "Don't know",
+      "lo": ""
+    },
+    "NeuropathySymptomsBreathingOnset.choices.IMMEDIATELY.text": {
+      "en": "Almost immediately",
+      "_source": "Almost immediately",
+      "lo": ""
+    },
+    "NeuropathySymptomsBreathingOnset.choices.WEEKS.text": {
+      "en": "Several weeks",
+      "_source": "Several weeks",
+      "lo": ""
+    },
+    "NeuropathySymptomsBreathingOnset.choices.MONTHS.text": {
+      "en": "Several months",
+      "_source": "Several months",
+      "lo": ""
+    },
+    "NeuropathySymptomsBreathingOnset.choices.HALF_YEAR.text": {
+      "en": "Six months or longer",
+      "_source": "Six months or longer",
+      "lo": ""
+    },
+    "NeuropathySymptomsHindEndOnset.title": {
+      "en": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
+      "_source": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
+      "lo": ""
+    },
+    "NeuropathySymptomsHindEndOnset.choices.DONT_KNOW.text": {
+      "en": "Don't know",
+      "_source": "Don't know",
+      "lo": ""
+    },
+    "NeuropathySymptomsHindEndOnset.choices.IMMEDIATELY.text": {
+      "en": "Almost immediately",
+      "_source": "Almost immediately",
+      "lo": ""
+    },
+    "NeuropathySymptomsHindEndOnset.choices.WEEKS.text": {
+      "en": "Several weeks",
+      "_source": "Several weeks",
+      "lo": ""
+    },
+    "NeuropathySymptomsHindEndOnset.choices.MONTHS.text": {
+      "en": "Several months",
+      "_source": "Several months",
+      "lo": ""
+    },
+    "NeuropathySymptomsHindEndOnset.choices.HALF_YEAR.text": {
+      "en": "Six months or longer",
+      "_source": "Six months or longer",
+      "lo": ""
+    },
+    "NeuropathySymptomsTypeProgression.title": {
+      "en": "Which progressed faster, the breathing issues or the hind-end weakness?",
+      "_source": "Which progressed faster, the breathing issues or the hind-end weakness?",
+      "lo": ""
+    },
+    "NeuropathySymptomsTypeProgression.choices.BREATHING.text": {
+      "en": "The breathing issues progressed faster",
+      "_source": "The breathing issues progressed faster",
+      "lo": ""
+    },
+    "NeuropathySymptomsTypeProgression.choices.HIND_END.text": {
+      "en": "The hind-end weakness progressed faster",
+      "_source": "The hind-end weakness progressed faster",
+      "lo": ""
+    },
+    "NeuropathySymptomsTypeProgression.choices.SAME.text": {
+      "en": "They both progressed at about the same rate",
+      "_source": "They both progressed at about the same rate",
+      "lo": ""
+    },
+    "NeuropathySymptomsTypeProgression.choices.DONT_KNOW.text": {
+      "en": "Don't know",
+      "_source": "Don't know",
+      "lo": ""
+    },
+    "NeuropathyOtherIssues.title": {
+      "en": "Over the course of {CmpnName}'s LP/GOLPP, did any of these issues also appear?",
+      "_source": "Over the course of {CmpnName}'s LP/GOLPP, did any of these issues also appear?",
+      "lo": ""
+    },
+    "NeuropathyOtherIssues.choices.ANXIETY.text": {
+      "en": "Increased anxiety",
+      "_source": "Increased anxiety",
+      "lo": ""
+    },
+    "NeuropathyOtherIssues.choices.COGNITIVE.text": {
+      "en": "Cognitive changes",
+      "_source": "Cognitive changes",
+      "lo": ""
+    },
+    "NeuropathyOtherIssues.choices.BEHAVIOR.text": {
+      "en": "Changes in behavior or personality",
+      "_source": "Changes in behavior or personality",
+      "lo": ""
+    },
+    "NeuropathyOtherIssues.choices.APPETITE.text": {
+      "en": "Changes in appetite",
+      "_source": "Changes in appetite",
+      "lo": ""
+    },
+    "NeuropathyOtherIssues.choices.NONE.text": {
+      "en": "No, {CmpnName} never had any of these issues",
+      "_source": "No, {CmpnName} never had any of these issues",
+      "lo": ""
+    }
+  }
+}
