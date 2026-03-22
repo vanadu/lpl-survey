@@ -1,0 +1,468 @@
+{
+  "name": "CONCLUSION-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "ConclusionCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "ConclusionHeading",
+          "html": "<h2>Dies ist</h2>"
+        },
+        {
+          "type": "html",
+          "name": "Conclusion",
+          "html": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das</p>"
+        },
+        {
+          "type": "panel",
+          "name": "ConclusionsPanelLifeStatusTrue",
+          "visibleIf": "{LifeStatus} = true",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ConclusionsPanelLifeStatusTrueText",
+              "html": "<p><b>So</b>Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen,</p>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ConclusionsPanelLifeStatusFalse",
+          "visibleIf": "{LifeStatus} = false",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ConclusionsPanelLifeStatusFalseText",
+              "html": "<p><b>So</b>Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht</p>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ConclusionDetailsPanel",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "ConclusionSpecialConsiderations",
+              "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO_CONSIDERATIONS",
+                  "text": "Kurze Beschriftungen bleiben dagegen"
+                },
+                {
+                  "value": "EXERCISE",
+                  "text": "Das erleichtert die"
+                },
+                {
+                  "value": "FOOD",
+                  "text": "Am Ende wird die echte Übersetzung diesen Blindtext"
+                },
+                {
+                  "value": "TRAVEL",
+                  "text": "Dies ist ein"
+                },
+                {
+                  "value": "EXCITEMENT",
+                  "text": "Bitte beachten Sie, dass dieser Inhalt nur zu"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "checkbox",
+              "name": "ConclusionGeneralCondition",
+              "title": "Die endgültige Formulierung wird in einer späteren Phase",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO_SYMPTOMS",
+                  "text": "Auch längere Abschnitte lassen"
+                },
+                {
+                  "value": "HIND_END",
+                  "text": "Umlaute wie ä, ö,"
+                },
+                {
+                  "value": "FALLING",
+                  "text": "So kann die"
+                },
+                {
+                  "value": "GET_UP",
+                  "text": "Diese Beispieldaten helfen bei der Kontrolle"
+                },
+                {
+                  "value": "URINARY",
+                  "text": "Der Text ist"
+                },
+                {
+                  "value": "FECAL",
+                  "text": "Auf diese Weise"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "rating",
+              "name": "ConclusionQOL",
+              "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt",
+              "description": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": 2,
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": 3,
+                  "text": "Dadurch wirkt"
+                },
+                {
+                  "value": 4,
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": 5,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Das erleichtert die"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ConclusionOtherConditionsPanel",
+          "elements": [
+            {
+              "type": "boolean",
+              "name": "ConclusionOtherConditionsNew",
+              "title": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht.",
+              "labelTrue": "Bitte beachten",
+              "labelFalse": "Die endgültige",
+              "swapOrder": true,
+              "isRequired": true
+            },
+            {
+              "type": "checkbox",
+              "name": "ConclusionOtherConditions",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von",
+              "visibleIf": "{ConclusionOtherConditionsNew} = true",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "GERD",
+                  "text": "Der Text ist absichtlich"
+                },
+                {
+                  "value": "ME",
+                  "text": "Auf diese"
+                },
+                {
+                  "value": "DM",
+                  "text": "Für Schaltflächen, Hinweise"
+                },
+                {
+                  "value": "ARTHRITIS",
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": "CUSHINGS",
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "CT",
+                  "text": "So entsteht eine"
+                },
+                {
+                  "value": "HYPOTHYROID",
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": "HEMANGIOSARCOMA",
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": "NONE",
+                  "text": "Dadurch wirkt die Testseite"
+                }
+              ],
+              "choicesOrder": "none",
+              "otherText": "Other (max. 250 characters)",
+              "showOtherItem": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "ConclusionCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "ConclusionCauseOfDeathPanel",
+          "visibleIf": "{LifeStatus} = true",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ConclusionCauseOfDeathHeading",
+              "html": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ConclusionCauseOfDeath",
+              "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "COMPLICATIONS",
+                  "text": "Umlaute wie ä, ö, ü und das ß"
+                },
+                {
+                  "value": "BREATHING_CRISIS",
+                  "text": "So kann die Darstellung"
+                },
+                {
+                  "value": "ASPIRATION",
+                  "text": "Diese Beispieldaten helfen"
+                },
+                {
+                  "value": "QOL_POLYNEUROPATHY",
+                  "text": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf"
+                },
+                {
+                  "value": "QOL_BREATHING",
+                  "text": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die"
+                },
+                {
+                  "value": "CANCER",
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "SEIZURE",
+                  "text": "So entsteht eine glaubwürdige Zielsprache für"
+                },
+                {
+                  "value": "INFECTION",
+                  "text": "Dieser Platzhalter eignet"
+                },
+                {
+                  "value": "STOPPED_EATING",
+                  "text": "Die Inhalte rotieren,"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Other reasons"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ConclusionOtherPathPanel",
+          "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "ConclusionOtherPathTieback",
+              "title": "Am Ende wird die echte Übersetzung diesen Blindtext",
+              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "TIEBACK_SAME",
+                  "text": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass"
+                },
+                {
+                  "value": "TIEBACK_NO",
+                  "text": "Die endgültige Formulierung wird in einer späteren Phase ergänzt."
+                },
+                {
+                  "value": "TIEBACK_SOONER",
+                  "text": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö,"
+                },
+                {
+                  "value": "TIEBACK_LATER",
+                  "text": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ConclusionOtherPathBVEAP",
+              "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig",
+              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "BVEAP_SAME",
+                  "text": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des"
+                },
+                {
+                  "value": "BVEAP_NO",
+                  "text": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So"
+                },
+                {
+                  "value": "BVEAP_SOONER",
+                  "text": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+                },
+                {
+                  "value": "BVEAP_LATER",
+                  "text": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ConclusionOtherPathStent",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
+              "choices": [
+                {
+                  "value": "STENT_SAME",
+                  "text": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist"
+                },
+                {
+                  "value": "STENT_NO",
+                  "text": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die"
+                },
+                {
+                  "value": "STENT_SOONER",
+                  "text": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und"
+                },
+                {
+                  "value": "STENT_LATER",
+                  "text": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ConclusionOtherPathArytenoidectomy",
+              "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig",
+              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ARYTENOIDECTOMY_SAME",
+                  "text": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des"
+                },
+                {
+                  "value": "ARYTENOIDECTOMY_NO",
+                  "text": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht"
+                },
+                {
+                  "value": "ARYTENOIDECTOMY_SOONER",
+                  "text": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht"
+                },
+                {
+                  "value": "ARYTENOIDECTOMY_LATER",
+                  "text": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ConclusionOtherPathVentrilocordectomy",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "VENTRILOCORDECTOMY_SAME",
+                  "text": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist"
+                },
+                {
+                  "value": "VENTRILOCORDECTOMY_NO",
+                  "text": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient."
+                },
+                {
+                  "value": "VENTRILOCORDECTOMY_SOONER",
+                  "text": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit"
+                },
+                {
+                  "value": "VENTRILOCORDECTOMY_LATER",
+                  "text": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "ConclusionOtherPathNoTreatment",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusDidHave} = false",
+              "choices": [
+                {
+                  "value": "NO_TREATMENT_SAME",
+                  "text": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise"
+                },
+                {
+                  "value": "NO_TREATMENT_WOULD_DO",
+                  "text": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ConclusionStentAlternative",
+              "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte",
+              "visibleIf": "{TreatmentStatusType} notcontains 'STENT'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Dadurch wirkt"
+                },
+                {
+                  "value": "NO",
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Kurze Beschriftungen bleiben"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "comment",
+              "name": "ConclusionDifferentChoices",
+              "title": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist",
+              "isRequired": false
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionThanksPanel",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "ConclusionThanksHead",
+                  "html": "<div class='conclusion-thanks-head-container'><h2 class='conclusion-thanks-title-heading'>Bitte beachten Sie, dass</h2><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><h3 class='conclusion-thanks-title-subheading'>Die endgültige Formulierung wird in einer späteren</h3><p class='conclusion-thanks-note-mobile'>Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen.</p><p class='conclusion-thanks-note'>Umlaute wie ä, ö,<b>So</b>Diese Beispieldaten helfen bei der Kontrolle</p></div>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

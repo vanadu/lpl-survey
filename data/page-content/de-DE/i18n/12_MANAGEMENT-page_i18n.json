@@ -1,0 +1,1133 @@
+{
+  "page": "MANAGEMENT-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "ManagementHeading.html": {
+      "source": "<h2>Medical managment of LP/GOLPP</h2>",
+      "target": "<h2>Dies ist ein vorläufiger Blindtext</h2>"
+    },
+    "ManagementTextImportant.html": {
+      "source": "<p><b>IMPORTANT</b>: Attempting to manage LP/GOLPP symptoms with medications is controversial. There is no medication that can restore movement to paralyzed laryneal tissue. That means that even with medication, the risk of breathing crises and a potentially fatal suffocation event is very real. So while medications can't prevent a breathing emergency, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life. </p>",
+      "target": "<p><b>Bitte</b>Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten.</p>"
+    },
+    "ManagementTextNote.html": {
+      "source": "<p><b>Note:</b> Medications for arthritis/osteoarthritis pain such as NSAIDS (Rimadyl, carprofen) and NGF blockers (Librela, Beransa) may improve mobility by reducing pain, but they aren't specifically prescribed for LP/GOLPP and therefore and aren't included in the 'Medical management' section of the survey.</p>",
+      "target": "<p><b>Bitte</b>So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst</p>"
+    },
+    "ManagementPrescriptions.title": {
+      "source": "Did your primary veterinarian provide or prescribe any prescription medications for {CmpnName}'s LP/GOLPP symptoms?",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte Übersetzung diesen"
+    },
+    "ManagementPrescriptions.choices.YES.text": {
+      "source": "Yes",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptions.choices.NO.text": {
+      "source": "No",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptions.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementPrescriptionType.title": {
+      "source": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP symptoms?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier"
+    },
+    "ManagementPrescriptionType.description": {
+      "source": "Please also include discontinued medications.",
+      "target": "So kann die Darstellung im Layout"
+    },
+    "ManagementPrescriptionType.choices.DOXEPIN.text": {
+      "source": "Doxepin",
+      "target": "Diese Beispieldaten"
+    },
+    "ManagementPrescriptionType.choices.TRAZODONE.text": {
+      "source": "Trazodone",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionType.choices.GABAPENTIN.text": {
+      "source": "Gabapentin",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionType.choices.GALLIPRANT.text": {
+      "source": "Galliprant",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionType.choices.STEROID.text": {
+      "source": "Prednisone or other steriod",
+      "target": "Die Struktur des Dokuments bleibt"
+    },
+    "ManagementPrescriptionType.choices.ANTIHISTAMINE.text": {
+      "source": "Benadryl or other antihistamine",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen,"
+    },
+    "ManagementPrescriptionType.choices.CERENIA.text": {
+      "source": "Cerenia (maripotant citrate)",
+      "target": "So entsteht eine glaubwürdige"
+    },
+    "ManagementPrescriptionType.choices.MELOXICAM.text": {
+      "source": "Meloxicam",
+      "target": "Dieser Platzhalter"
+    },
+    "ManagementPrescriptionType.choices.ACEPROMINE.text": {
+      "source": "Acepromazine (Atravet, ACP, Acepromine)",
+      "target": "Die Inhalte rotieren, damit nicht"
+    },
+    "ManagementPrescriptionType.choices.ALBUTEROL.text": {
+      "source": "Albuterol or other inhaler",
+      "target": "Dadurch wirkt die Testseite weniger"
+    },
+    "ManagementPrescriptionType.choices.TEMARIL_P.text": {
+      "source": "Temaril P",
+      "target": "Längere Texte dürfen"
+    },
+    "ManagementPrescriptionCost.title": {
+      "source": "Average monthly cost of {CmpnName}'s prescriptions:",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich."
+    },
+    "ManagementPrescriptionCost.description": {
+      "source": "If you don't know exactly, it's OK to guesstimate.",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am"
+    },
+    "ManagementPrescriptionCost.choices.UNDER_50.text": {
+      "source": "Under $50",
+      "target": "Dies ist ein"
+    },
+    "ManagementPrescriptionCost.choices.51_100.text": {
+      "source": "$51-$100",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionCost.choices.101_200.text": {
+      "source": "$101-$200",
+      "target": "Die endgültige"
+    },
+    "ManagementPrescriptionCost.choices.OVER_200.text": {
+      "source": "Over $200",
+      "target": "Auch längere Abschnitte"
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.title": {
+      "source": "Please rate the effect of Doxepin on {CmpnName}'s breathing:",
+      "target": "Umlaute wie ä, ö, ü und das ß sind hier bewusst"
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.title": {
+      "source": "Please rate the effect of Doxepin on {CmpnName}'s mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.title": {
+      "source": "Please rate the effect of Trazodone on {CmpnName}'s breathing:",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute"
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.title": {
+      "source": "Please rate the effect of Trazodone on {CmpnName} mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.title": {
+      "source": "Please rate the effect of Gabapentin on {CmpnName}'s breathing:",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute"
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.title": {
+      "source": "Please rate the effect of Gabapentin on {CmpnName}'s mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.title": {
+      "source": "Please rate the effect of Galliprant on {CmpnName}'s breathing:",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute"
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.title": {
+      "source": "Please rate the effect of Galliprant on {CmpnName}'s mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.title": {
+      "source": "Please rate the effect of Prednisone on {CmpnName}'s breathing:",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute"
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementPrescriptionSteroidRatingMobility.title": {
+      "source": "Please rate the effect of Prednisone on {CmpnName}'s mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+    },
+    "ManagementPrescriptionSteroidRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.title": {
+      "source": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s breathing:",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü"
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.title": {
+      "source": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe"
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.title": {
+      "source": "Please rate the effect of Cerenia on {CmpnName}'s breathing:",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute"
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementPrescriptionCereniaRatingMobility.title": {
+      "source": "Please rate the effect of Cerenia on {CmpnName}'s mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+    },
+    "ManagementPrescriptionCereniaRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.title": {
+      "source": "Please rate the effect of Meloxicam on {CmpnName}'s breathing:",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute"
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.title": {
+      "source": "Please rate the effect of Meloxicam on {CmpnName}'s mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.title": {
+      "source": "Please rate the effect of Acepromine on {CmpnName}'s breathing:",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute"
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.title": {
+      "source": "Please rate the effect of Acepromine on {CmpnName}'s mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.title": {
+      "source": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s breathing:",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü"
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.title": {
+      "source": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe"
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.title": {
+      "source": "Please rate the effect of Temaril P on {CmpnName}'s breathing:",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie"
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.title": {
+      "source": "Please rate the effect of Temaril P on {CmpnName}'s mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht"
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementNonPrescription.title": {
+      "source": "Did {CmpnName} receive acupuncture or other therapies to help with LP/GOLPP symptoms?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü"
+    },
+    "ManagementNonPrescription.choices.YES.text": {
+      "source": "Yes",
+      "target": "So kann"
+    },
+    "ManagementNonPrescription.choices.NO.text": {
+      "source": "No",
+      "target": "Diese Beispieldaten"
+    },
+    "ManagementNonPrescription.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Der Text ist"
+    },
+    "ManagementNonPrescriptionType.title": {
+      "source": "What therapies or treatments did {CmpnName} receive?",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen."
+    },
+    "ManagementNonPrescriptionType.choices.ACUPUNCTURE.text": {
+      "source": "Acupuncture",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementNonPrescriptionType.choices.THERAPY.text": {
+      "source": "Physical or hydro therapy",
+      "target": "Die Struktur des Dokuments bleibt"
+    },
+    "ManagementNonPrescriptionType.choices.LLLT.text": {
+      "source": "Cold laser or red light therapy",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen."
+    },
+    "ManagementNonPrescriptionType.choices.CHIRO.text": {
+      "source": "Chiropractic",
+      "target": "So entsteht"
+    },
+    "ManagementNonPrescriptionCost.title": {
+      "source": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die"
+    },
+    "ManagementNonPrescriptionCost.description": {
+      "source": "If you don't know exactly, it's OK to guesstimate.",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte"
+    },
+    "ManagementNonPrescriptionCost.choices.UNDER_100.text": {
+      "source": "Under $100",
+      "target": "Kurze Beschriftungen bleiben"
+    },
+    "ManagementNonPrescriptionCost.choices.101_150.text": {
+      "source": "$101-150",
+      "target": "Das erleichtert"
+    },
+    "ManagementNonPrescriptionCost.choices.151_250.text": {
+      "source": "$151-$250",
+      "target": "Am Ende"
+    },
+    "ManagementNonPrescriptionCost.choices.OVER_250.text": {
+      "source": "Over $250",
+      "target": "Dies ist ein"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.title": {
+      "source": "Please rate the effect of acupuncture on {CmpnName}'s breathing:",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "So kann"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Diese Beispieldaten"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Der Text"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Auf diese"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die Struktur des"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.title": {
+      "source": "Please rate the effect of acupuncture on {CmpnName}'s mobility or behavior:",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Dadurch wirkt"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Längere Texte"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Das erleichtert"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Am Ende"
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Dies ist ein"
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.title": {
+      "source": "Please rate the effect of physical or hydro therapy on {CmpnName}'s breathing:",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in"
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü"
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "So kann"
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Diese Beispieldaten"
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Der Text"
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Auf diese"
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die Struktur des"
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.title": {
+      "source": "Please rate the effect of physical or hydro therapy on {CmpnName}'s mobility or behavior:",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser"
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich"
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Längere Texte"
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Das erleichtert"
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Am Ende"
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Dies ist"
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Bitte beachten Sie,"
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.title": {
+      "source": "How effective was cold laser or red light therapy on {CmpnName}'s breathing:",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit"
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die"
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Diese Beispieldaten"
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Der Text"
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Auf diese"
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Die Struktur"
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Bitte prüfen Sie"
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.title": {
+      "source": "Please rate the effect of cold laser or red light therapy on {CmpnName}'s mobility or behavior:",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte"
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.title": {
+      "source": "Please rate the effect of chiropractic on {CmpnName}'s breathing on {CmpnName}'s mobility or behavior:",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das"
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.title": {
+      "source": "Please rate the effect of chiropractic on {CmpnName}'s mobility or behavior:",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "page": "INTUBATION_HISTORY-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "IntubationHistoryHeading.html": {
+      "source": "<h2>Intubation History</h2>",
+      "target": "<h2>Dies ist ein</h2>"
+    },
+    "IntubationHistoryText.html": {
+      "source": "<p>This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>",
+      "target": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase</p>"
+    },
+    "IntubationHistoryWasIntubated.title": {
+      "source": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So"
+    },
+    "IntubationHistoryWasIntubated.choices.YES.text": {
+      "source": "Yes",
+      "target": "Diese Beispieldaten"
+    },
+    "IntubationHistoryWasIntubated.choices.NO.text": {
+      "source": "No",
+      "target": "Der Text"
+    },
+    "IntubationHistoryWasIntubated.choices.DONT_KNOW.text": {
+      "source": "Not sure",
+      "target": "Auf diese Weise"
+    },
+    "IntubationHistoryReason.title": {
+      "source": "For what reason or reasons was {CmpnName} intubated prior to the first LP symptoms appearing?",
+      "target": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte"
+    },
+    "IntubationHistoryReason.choices.TEETH_CLEANING.text": {
+      "source": "Teeth cleaning",
+      "target": "So entsteht eine"
+    },
+    "IntubationHistoryReason.choices.DENTAL_SURGERY.text": {
+      "source": "Dental surgery",
+      "target": "Dieser Platzhalter eignet"
+    },
+    "IntubationHistoryReason.choices.NON_DENTAL_SURGERY.text": {
+      "source": "Non-dental surgery",
+      "target": "Die Inhalte rotieren,"
+    },
+    "IntubationHistoryReason.choices.DIAGNOSTIC.text": {
+      "source": "Diagnostic procedure",
+      "target": "Dadurch wirkt die"
+    },
+    "IntubationHistoryReason.choices.EMERGENCY.text": {
+      "source": "Emergency procedure",
+      "target": "Längere Texte dürfen"
+    },
+    "IntubationHistoryConcerns.title": {
+      "source": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels"
+    },
+    "IntubationHistoryConcerns.labelTrue": {
+      "source": "Yes",
+      "target": "Am Ende"
+    },
+    "IntubationHistoryConcerns.labelFalse": {
+      "source": "No",
+      "target": "Dies ist"
+    },
+    "IntubationHistorySymptoms.title": {
+      "source": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient."
+    },
+    "IntubationHistorySymptoms.choices.COUGHING.text": {
+      "source": "Coughing/hacking",
+      "target": "Die endgültige"
+    },
+    "IntubationHistorySymptoms.choices.GAGGING.text": {
+      "source": "Gagging/retching",
+      "target": "Auch längere"
+    },
+    "IntubationHistorySymptoms.choices.PANTING.text": {
+      "source": "Excessive panting",
+      "target": "Umlaute wie ä,"
+    },
+    "IntubationHistorySymptoms.choices.LABORED_BREATHING.text": {
+      "source": "Labored breathing",
+      "target": "So kann die"
+    }
+  }
+}

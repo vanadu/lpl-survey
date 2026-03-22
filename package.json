@@ -8,15 +8,21 @@
     "start": "next start",
     "lint": "next lint",
     "export": "npm run build && next export -o _static",
-    "merge-surveys": "node scripts/merge-surveys.js",
     "build-survey": "node scripts/merge-surveys.js && npm run dev",
     "build-schema": "node scripts/buildSurveySchema.js",
     "build-format": "node scripts/schema-to-format-map.js",
     "build-registry-generated": "node scripts/generate-registry.js --in data/master-survey.json --out helpers/registry.generated.json",
     "build-registry-manual-init": "node scripts/init-registry-manual.js --generated helpers/registry.generated.json --manual helpers/registry.manual.json",
     "build-registry-all": "npm run build:survey && npm run build:registry:manual:init",
+    "merge-surveys": "node scripts/merge-surveys.js --lang",
+    "merge-surveys-en": "node scripts/merge-surveys.js --lang en-US",
+    "merge-surveys-de": "node scripts/merge-surveys.js --lang de-DE",
     "refresh-survey": "node scripts/refresh-survey.mjs",
-    "generate-browse": "node scripts/generate-browse.js"
+    "generate-browse": "node scripts/generate-browse.js",
+    "loc-extract": "node helpers/i18n/extractSurveyPageContent.js --batch",
+    "loc-split": "node helpers/i18n/splitLocales.js",
+    "loc-build": "npm run i18n:extract && npm run i18n:split",
+    "loc-paths-de": "node helpers/projectPaths.js --lang de-DE"
   },
   "dependencies": {
     "@analytics/google-tag-manager": "^0.5.3",

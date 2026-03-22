@@ -1,0 +1,153 @@
+{
+  "page": "DIAGNOSIS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "DiagnosisHeading.html": {
+      "source": "<h2>{CmpnName}'s LP/GOLPP diagnosis</h2>",
+      "target": "<h2>Dies ist ein vorläufiger</h2>"
+    },
+    "DiagnosisText.html": {
+      "source": "<p>This section asks who provided {CmpnName}'s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p><p>You may have seen multiple vets about {CmpnName}'s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about {CmpnName}'s LP/GOLPP.</p>",
+      "target": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen</p><p>Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte</p>"
+    },
+    "DiagnosisWho.title": {
+      "source": "Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise"
+    },
+    "DiagnosisWho.choices.PRIMARY.text": {
+      "source": "Primary veterinarian",
+      "target": "Die Struktur des"
+    },
+    "DiagnosisWho.choices.INTERNIST.text": {
+      "source": "Internal medicine specialist",
+      "target": "Bitte prüfen Sie insbesondere"
+    },
+    "DiagnosisWho.choices.NEUROLOGIST.text": {
+      "source": "Neurologist",
+      "target": "So entsteht"
+    },
+    "DiagnosisWho.choices.SOFT_TISSUE.text": {
+      "source": "Soft tissue specialist or surgeon",
+      "target": "Dieser Platzhalter eignet sich gut für"
+    },
+    "DiagnosisWho.choices.GENERAL.text": {
+      "source": "General or orthopedic surgeon",
+      "target": "Die Inhalte rotieren, damit nicht"
+    },
+    "DiagnosticType.title": {
+      "source": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig"
+    },
+    "DiagnosticType.choices.ROUTINE_EXAM.text": {
+      "source": "Visual/auditory exam only",
+      "target": "Kurze Beschriftungen bleiben dagegen"
+    },
+    "DiagnosticType.choices.SEDATED_VISUAL.text": {
+      "source": "Sedated visual exam of larynx",
+      "target": "Das erleichtert die Prüfung von Buttons,"
+    },
+    "DiagnosticType.choices.XRAY.text": {
+      "source": "X-Ray or other imaging",
+      "target": "Am Ende wird die echte"
+    },
+    "DiagnosticType.choices.ULTRASOUND.text": {
+      "source": "Ultrasound",
+      "target": "Dies ist"
+    },
+    "DiagnosticType.choices.SCOPE.text": {
+      "source": "Video endoscope or laryngoscope under anesthesia",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu"
+    },
+    "DiagnosticType.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "DiagnosisStage.title": {
+      "source": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen."
+    },
+    "DiagnosisStage.choices.UNILATERAL.text": {
+      "source": "Unilateral (one-side)",
+      "target": "Umlaute wie ä,"
+    },
+    "DiagnosisStage.choices.BILATERAL.text": {
+      "source": "Bilateral (both sides)",
+      "target": "So kann die Darstellung"
+    },
+    "DiagnosisStage.choices.WASNT_TOLD.text": {
+      "source": "I wasn't told what stage {CmpnName}'s LP was in",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der"
+    },
+    "DiagnosisTimeAfterSymptoms.title": {
+      "source": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?:",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls"
+    },
+    "DiagnosisTimeAfterSymptoms.choices.LESS_THAN_ONE.text": {
+      "source": "Less than one month",
+      "target": "Die Struktur des Dokuments bleibt"
+    },
+    "DiagnosisTimeAfterSymptoms.choices.ONE_TO_THREE.text": {
+      "source": "Between one and three months",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge"
+    },
+    "DiagnosisTimeAfterSymptoms.choices.FOUR_TO_SIX.text": {
+      "source": "Between four and six months",
+      "target": "So entsteht eine glaubwürdige Zielsprache für"
+    },
+    "DiagnosisTimeAfterSymptoms.choices.SIX_TO_TWELVE.text": {
+      "source": "Between six months and a year",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und"
+    },
+    "DiagnosisTimeAfterSymptoms.choices.MORE_THAN_TWELVE.text": {
+      "source": "Longer than a year",
+      "target": "Die Inhalte rotieren, damit nicht"
+    },
+    "DiagnosisCost.title": {
+      "source": "What was the pre-insurance cost of the diagnosis?",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere"
+    },
+    "DiagnosisCost.choices.UNDER_500.text": {
+      "source": "Under $500",
+      "target": "Kurze Beschriftungen bleiben"
+    },
+    "DiagnosisCost.choices.500_1500.text": {
+      "source": "$501-$1500",
+      "target": "Das erleichtert"
+    },
+    "DiagnosisCost.choices.1501_3000.text": {
+      "source": "$1500-$3000",
+      "target": "Am Ende"
+    },
+    "DiagnosisCost.choices.OVER_3000.text": {
+      "source": "Over $3000",
+      "target": "Dies ist ein"
+    },
+    "DiagnosisCost.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Bitte beachten Sie,"
+    },
+    "DiagnosisSurgeonContingent.title": {
+      "source": "Did the surgeon perform the diagnosis without requiring surgery afterwards?",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte"
+    },
+    "DiagnosisSurgeonContingent.description": {
+      "source": "In other words, did the surgeon refuse to do the diagnosis unless you agreed to go straight to surgery if the results were positive?",
+      "target": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen"
+    },
+    "DiagnosisSurgeonContingent.choices.YES.text": {
+      "source": "Yes, required surgery consent before diagnosis",
+      "target": "Der Text ist absichtlich generisch und enthält keine"
+    },
+    "DiagnosisSurgeonContingent.choices.NO.text": {
+      "source": "No, did not require surgery consent for diagnosis",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für"
+    },
+    "DiagnosisSurgeonContingent.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die Struktur des"
+    }
+  }
+}

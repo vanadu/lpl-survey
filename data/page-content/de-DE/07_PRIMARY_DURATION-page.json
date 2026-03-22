@@ -1,0 +1,167 @@
+{
+  "name": "PRIMARY_DURATION-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "PrimaryDurationCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "PrimaryDurationHeading",
+          "html": "<h2>Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie,</h2>"
+        },
+        {
+          "type": "html",
+          "name": "PrimaryDurationText",
+          "html": "<p>Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich</p>"
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryDurationDetailsPanel",
+          "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur",
+          "elements": [
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "PrimaryDurationFirstConsultYears",
+              "title": "Bitte prüfen Sie insbesondere Zeilenlängen,",
+              "isRequired": true,
+              "min": "1",
+              "max": "40",
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 0,
+                  "maxValue": 40,
+                  "text": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "PrimaryDurationFirstConsultMonths",
+              "title": "Die Inhalte rotieren, damit nicht überall",
+              "isRequired": true,
+              "min": 0,
+              "max": 11,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 0,
+                  "maxValue": 11,
+                  "text": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt."
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "PrimaryDurationVisitsNumber",
+              "title": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": "TWO",
+                  "text": "Am Ende"
+                },
+                {
+                  "value": "MORE_THAN_TWO",
+                  "text": "Dies ist ein vorläufiger"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Bitte beachten Sie,"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "PrimaryDurationCost",
+              "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "UNDER_200",
+                  "text": "So kann die"
+                },
+                {
+                  "value": "200_500",
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": "500_1000",
+                  "text": "Der Text"
+                },
+                {
+                  "value": "OVER_1000",
+                  "text": "Auf diese Weise"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt."
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "PrimaryDurationChangedVets",
+              "title": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO",
+                  "text": "So entsteht"
+                },
+                {
+                  "value": "ONCE",
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": "MORE_THAN_ONCE",
+                  "text": "Die Inhalte rotieren, damit"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "PrimaryDurationChangedVetsReason",
+              "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "description": "Kurze Beschriftungen bleiben dagegen bewusst knapp",
+              "isRequired": true,
+              "visibleIf": "{PrimaryDurationChangedVets} != 'NO'",
+              "choices": [
+                {
+                  "value": "NOTHING_CAN_BE_DONE",
+                  "text": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die"
+                },
+                {
+                  "value": "NO_KNOWLEDGE",
+                  "text": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass"
+                },
+                {
+                  "value": "AGE_ONLY",
+                  "text": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich"
+                },
+                {
+                  "value": "BAD_TESTS",
+                  "text": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann"
+                },
+                {
+                  "value": "MISDIAGNOSED",
+                  "text": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen"
+                }
+              ],
+              "showOtherItem": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

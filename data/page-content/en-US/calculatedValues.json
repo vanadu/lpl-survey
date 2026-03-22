@@ -1,0 +1,95 @@
+[
+  {
+    "type": "calculatedvalue",
+    "name": "cvTreatmentType",
+    "expression": "iif({TreatmentStatusType} contains 'TIEBACK', 'Treatment: TIEBACK', iif({TreatmentStatusType} contains 'BVEAP', 'Treatment: BVEAP', iif({TreatmentStatusType} contains 'STENT', 'Treatment: STENT', iif({TreatmentStatusType} contains 'ARYTENOIDECTOMY', 'Treatment: ARYTENOIDECTOMY', iif({TreatmentStatusType} contains 'VENTRILOCORDECTOMY', 'Treatment: VENTRILOCORDECTOMY', ''))",
+    "includeIntoResult": true
+  },
+
+  {
+    "type": "calculatedvalue",
+    "name": "cvLvngCmpnAgeYearsAsMonths",
+    "expression": "{lvngCmpnInfoAgeYears} * 12",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "cvLvngCmpnAgeTotalMonths",
+    "expression": "{cvLvngCmpnAgeYearsAsMonths} + {lvngCmpnInfoAgeMonths}",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "cvDcsdCmpnAgeYearsAsMonths",
+    "expression": "{dcsdCmpnInfoAgeYears} * 12",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "cvDcsdCmpnAgeTotalMonths",
+    "expression": "{cvDcsdCmpnAgeYearsAsMonths} + {dscdCmpnInfoAgeMonths}",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "cvAgeInMonths",
+    "expression": "iif({LifeStatus} = true, {cvLvngCmpnAgeTotalMonths}, {cvDcsdCmpnAgeTotalMonths})",
+    "includeIntoResult": true
+  },
+  {
+    "name": "cvAgeInMonthsAtSymptomOnset",
+    "expression": "{EarlySymptomsAgeYears} * 12 + {EarlySymptomsAgeMonths}"
+  },
+  {
+    "name": "cvDurationOfSymptomsInMonths",
+    "expression": "{cvAgeInMonths} - {cvAgeInMonthsAtSymptomOnset}"
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "cvObserveFirstPersonPast",
+    "expression": "iif({LifeStatus} = true, 'did you observe', 'have you observed')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "cvDoThirdPersonSingular",
+    "expression": "iif({LifeStatus} = true, 'did', 'does')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "cvDoFirstPersonSingularInitialCap",
+    "expression": "iif({LifeStatus} = true, 'Did', 'Do')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "cvGenderSubjectPronoun",
+    "expression": "iif({CmpnInfoGender} = true, 'she', 'he')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "cvGenderObjectPronoun",
+    "expression": "iif({CmpnInfoGender} = true, 'her', 'his')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "cvStateAdjective",
+    "expression": "iif({LifeStatus} = true, 'last', 'current')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
+    "name": "cvEndOfLife",
+    "expression": "iif({LifeStatus} = true, 'towards the end of {genderObjectPronoun} life', 'in {genderObjectPronoun} current state of health')",
+    "includeIntoResult": true
+  },
+    {
+    "type": "calculatedvalue",
+    "name": "cvThatThis",
+    "expression": "iif({LifeStatus} = true, 'that', 'this')",
+    "includeIntoResult": true
+  }
+]

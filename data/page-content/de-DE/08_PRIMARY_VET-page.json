@@ -1,0 +1,311 @@
+{
+  "name": "PRIMARY_VET-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "PrimaryVetCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "PrimaryVetHeading",
+          "html": "<h2>Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht.</h2>"
+        },
+        {
+          "type": "html",
+          "name": "PrimaryVetText",
+          "html": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer</p><p>Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout</p>"
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryVetInflammationPanel",
+          "title": "",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "PrimaryVetInflammation",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Auf diese"
+                },
+                {
+                  "value": "NO",
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die Struktur des"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryVetRefluxPanel",
+          "title": "",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "PrimaryVetReflux",
+              "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": "NO",
+                  "text": "Dadurch wirkt"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Längere Texte dürfen"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "PrimaryVetRefluxMeds",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte",
+              "isRequired": true,
+              "visibleIf": "{PrimaryVetReflux} = 'YES'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "NO",
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "boolean",
+              "name": "PrimaryVetRefluxInitiative",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten",
+              "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
+              "labelTrue": "Der Text",
+              "labelFalse": "Auf diese",
+              "isRequired": true,
+              "swapOrder": true
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryVetDiscussPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "PrimaryVetDidDiscuss",
+              "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO_MENTION",
+                  "text": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So"
+                },
+                {
+                  "value": "POSSIBLY",
+                  "text": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen."
+                },
+                {
+                  "value": "DEFINITELY",
+                  "text": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Längere Texte dürfen"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "PrimaryVetCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "PrimaryVetInfoPanel",
+          "title": "",
+          "elements": [
+            {
+              "type": "boolean",
+              "name": "PrimaryVetInfo",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+              "labelTrue": "Am Ende",
+              "labelFalse": "Dies ist",
+              "swapOrder": true,
+              "isRequired": true
+            },
+            {
+              "type": "checkbox",
+              "name": "PrimaryVetInfoDetails",
+              "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird",
+              "isRequired": true,
+              "visibleIf": "{PrimaryVetInfo} = true",
+              "choices": [
+                {
+                  "value": "BARK_LOSS",
+                  "text": "Auch längere Abschnitte lassen sich mit"
+                },
+                {
+                  "value": "PROGRESSIVE",
+                  "text": "Umlaute wie ä, ö, ü und"
+                },
+                {
+                  "value": "HOT_HUMID",
+                  "text": "So kann die Darstellung im Layout"
+                },
+                {
+                  "value": "BREATHING_CRISIS",
+                  "text": "Diese Beispieldaten helfen bei der Kontrolle"
+                }
+              ],
+              "showOtherItem": true
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryVetSurgeryPanel",
+          "title": "",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "PrimaryVetSurgery",
+              "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO_RECOMMENDATION",
+                  "text": "Die Struktur des Dokuments"
+                },
+                {
+                  "value": "ADVISED_FOR",
+                  "text": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So"
+                },
+                {
+                  "value": "ADVISED_AGAINST",
+                  "text": "Dieser Platzhalter eignet sich"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "PrimaryVetSurgeryPerception",
+              "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben",
+              "isRequired": true,
+              "visibleIf": "{PrimaryVetSurgery} = 'ADVISED_AGAINST'",
+              "choices": [
+                {
+                  "value": "SPECIFIC_CONDITION",
+                  "text": "Das erleichtert die Prüfung"
+                },
+                {
+                  "value": "GENERAL_PERCEPTION",
+                  "text": "Am Ende wird die"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Dies ist ein"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryVetConfidencePanel",
+          "title": "",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "PrimaryVetConfidence",
+              "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren",
+              "description": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "So kann"
+                },
+                {
+                  "value": 2,
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": 3,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 4,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 5,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die Struktur des"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "PrimaryVetSatisfaction",
+              "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser",
+              "description": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": 2,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 3,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 4,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 5,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Bitte beachten Sie,"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

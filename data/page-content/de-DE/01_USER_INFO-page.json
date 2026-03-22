@@ -1,0 +1,253 @@
+{
+  "name": "USER_INFO-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "UserInfoCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "UserInfoHead",
+          "html": "<h2>Dies ist ein vorläufiger</h2>"
+        },
+        {
+          "type": "html",
+          "name": "UserInfoText1",
+          "html": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä,</p>"
+        },
+        {
+          "type": "html",
+          "name": "UserInfoText2",
+          "html": "<p>So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine</p>"
+        },
+        {
+          "type": "panel",
+          "name": "UserInfoLifeStatusNamePanel",
+          "elements": [
+            {
+              "type": "text",
+              "name": "CmpnName",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig",
+              "isRequired": true
+            },
+            {
+              "type": "imagepicker",
+              "name": "LifeStatus",
+              "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt.",
+              "isRequired": true,
+              "visibleIf": "{CmpnName} notempty",
+              "choices": [
+                {
+                  "value": true,
+                  "imageLink": "/img-companions-rainbow.png",
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": false,
+                  "imageLink": "/img-companions.png",
+                  "text": "Bitte prüfen"
+                }
+              ],
+              "imageWidth": 120,
+              "imageHeight": 120,
+              "showLabel": true
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "UserInfoHeading",
+          "html": "<h2>So entsteht eine</h2>"
+        },
+        {
+          "type": "html",
+          "name": "UserInfoText",
+          "html": "<p>Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte</p>"
+        },
+        {
+          "type": "html",
+          "name": "UserInfoVerificationText",
+          "html": "<p>Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier</p><p>So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist</p>"
+        },
+        {
+          "type": "panel",
+          "name": "UserInfoVerificationPanel",
+          "elements": [
+            {
+              "type": "boolean",
+              "name": "UserInfoContactType",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften",
+              "isRequired": true,
+              "labelTrue": "Die Struktur",
+              "labelFalse": "Bitte prüfen"
+            },
+            {
+              "type": "text",
+              "title": "So entsteht eine",
+              "name": "UserInfoContactTypeEmail",
+              "isRequired": true,
+              "visibleIf": "{UserInfoContactType} = false",
+              "inputType": "email"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoContactTypeFacebookInstructions",
+              "title": "z",
+              "visibleIf": "{UserInfoContactType} = true",
+              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Info icon' />Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt</div>"
+            },
+            {
+              "type": "text",
+              "title": "Längere Texte dürfen",
+              "name": "UserInfoContactTypeFacebook",
+              "isRequired": true,
+              "visibleIf": "{UserInfoContactType} = true",
+              "placeholder": "Kurze Beschriftungen bleiben",
+              "validators": [
+                {
+                  "type": "regex",
+                  "regex": "^(https?:\\/\\/)?(www\\.)?facebook\\.com\\/[a-zA-Z0-9.]{5,}$",
+                  "text": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am"
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "UserInfoContactOK",
+              "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt",
+              "labelTrue": "Die endgültige",
+              "labelFalse": "Auch längere",
+              "swapOrder": true,
+              "isRequired": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "UserInfoCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "UserInfoNameCountryPanel",
+          "title": "Umlaute wie ä, ö, ü und",
+          "elements": [
+            {
+              "type": "text",
+              "title": "So kann die",
+              "name": "UserInfoFirstName",
+              "isRequired": true
+            },
+            {
+              "type": "dropdown",
+              "name": "UserInfoCountry",
+              "title": "Diese Beispieldaten",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "US",
+                  "text": "Der Text ist"
+                },
+                {
+                  "value": "UK",
+                  "text": "Auf diese Weise"
+                },
+                {
+                  "value": "CA",
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "DE",
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": "AU/NZ",
+                  "text": "Bitte prüfen Sie"
+                },
+                {
+                  "value": "FR",
+                  "text": "So entsteht"
+                },
+                {
+                  "value": "ES",
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": "PT",
+                  "text": "Die Inhalte"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "text",
+              "name": "UserInfoStateRegion",
+              "title": "Dadurch wirkt die Testseite weniger künstlich",
+              "isRequired": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "UserInfoAgeGenderPanel",
+          "title": "Längere Texte dürfen hier ruhig",
+          "elements": [
+            {
+              "type": "dropdown",
+              "name": "UserInfoAgeGroup",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp",
+              "width": "70%",
+              "minWidth": "260px",
+              "choices": [
+                {
+                  "value": "UNDER_20",
+                  "text": "Das erleichtert die"
+                },
+                {
+                  "value": "20_34",
+                  "text": "Am Ende"
+                },
+                {
+                  "value": "35_49",
+                  "text": "Dies ist"
+                },
+                "Bitte beachten",
+                {
+                  "value": "OVER_65",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "UserInfoGender",
+              "title": "Auch längere Abschnitte",
+              "isRequired": false,
+              "choices": [
+                {
+                  "value": "WOMAN",
+                  "text": "Umlaute wie"
+                },
+                {
+                  "value": "MAN",
+                  "text": "So kann"
+                },
+                {
+                  "value": "NON_BINARY",
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": "NOT_SAY",
+                  "text": "Der Text ist absichtlich generisch"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Prefer to self-describe"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

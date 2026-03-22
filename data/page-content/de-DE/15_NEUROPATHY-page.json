@@ -1,0 +1,208 @@
+{
+  "name": "NEUROPATHY-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "NeuropathyCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "NeuropathyHeading",
+          "html": "<h2>Dies ist ein vorläufiger Blindtext</h2>"
+        },
+        {
+          "type": "html",
+          "name": "NeuropathyText",
+          "html": "<p><b>Bitte</b>Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen</p>"
+        },
+        {
+          "type": "html",
+          "name": "NeuropathyText",
+          "html": "<p><b>Bitte</b>Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen</p>"
+        },
+        {
+          "type": "panel",
+          "name": "NeuropathySymptomsDoesHavePanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "NeuropathySymptomsDoesHave",
+              "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "NO",
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": "NOT_SURE",
+                  "text": "Bitte prüfen Sie"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "NeuropathyCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "NeuropathyHindEndDoesHavePanel",
+          "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "NeuropathySymptomsFirst",
+              "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "HIND_END",
+                  "text": "Die Inhalte rotieren, damit nicht"
+                },
+                {
+                  "value": "BREATHING",
+                  "text": "Dadurch wirkt die Testseite weniger"
+                },
+                {
+                  "value": "SAME_TIME",
+                  "text": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Das erleichtert die"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "NeuropathySymptomsBreathingOnset",
+              "title": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist ein vorläufiger Blindtext für die",
+              "isRequired": true,
+              "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
+              "choices": [
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Bitte beachten Sie,"
+                },
+                {
+                  "value": "IMMEDIATELY",
+                  "text": "Die endgültige Formulierung"
+                },
+                {
+                  "value": "WEEKS",
+                  "text": "Auch längere Abschnitte"
+                },
+                {
+                  "value": "MONTHS",
+                  "text": "Umlaute wie ä,"
+                },
+                {
+                  "value": "HALF_YEAR",
+                  "text": "So kann die Darstellung im"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "required": true
+            },
+            {
+              "type": "dropdown",
+              "name": "NeuropathySymptomsHindEndOnset",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält",
+              "isRequired": true,
+              "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
+              "choices": [
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Auf diese Weise"
+                },
+                {
+                  "value": "IMMEDIATELY",
+                  "text": "Für Schaltflächen, Hinweise"
+                },
+                {
+                  "value": "WEEKS",
+                  "text": "Die Struktur des"
+                },
+                {
+                  "value": "MONTHS",
+                  "text": "Bitte prüfen Sie"
+                },
+                {
+                  "value": "HALF_YEAR",
+                  "text": "So entsteht eine glaubwürdige Zielsprache"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "NeuropathySymptomsTypeProgression",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte",
+              "isRequired": true,
+              "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = 'YES'",
+              "choices": [
+                {
+                  "value": "BREATHING",
+                  "text": "Dadurch wirkt die Testseite weniger künstlich"
+                },
+                {
+                  "value": "HIND_END",
+                  "text": "Längere Texte dürfen hier ruhig etwas"
+                },
+                {
+                  "value": "SAME",
+                  "text": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Am Ende wird"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "NeuropathyOtherIssues",
+              "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ANXIETY",
+                  "text": "Die endgültige Formulierung"
+                },
+                {
+                  "value": "COGNITIVE",
+                  "text": "Auch längere Abschnitte"
+                },
+                {
+                  "value": "BEHAVIOR",
+                  "text": "Umlaute wie ä, ö, ü und"
+                },
+                {
+                  "value": "APPETITE",
+                  "text": "So kann die Darstellung"
+                },
+                {
+                  "value": "NONE",
+                  "text": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen."
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

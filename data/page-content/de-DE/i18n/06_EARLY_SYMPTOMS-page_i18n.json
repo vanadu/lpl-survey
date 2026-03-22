@@ -1,0 +1,161 @@
+{
+  "page": "EARLY_SYMPTOMS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "EarlySymptomsHeading.html": {
+      "source": "<h2>Your early encounters with LP/GOLPP</h2>",
+      "target": "<h2>Dies ist ein vorläufiger Blindtext für</h2>"
+    },
+    "EarlySymptomsText.html": {
+      "source": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>",
+      "target": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von</p>"
+    },
+    "EarlySymptomsAgePanel.title": {
+      "source": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen"
+    },
+    "EarlySymptomsAgeYears.title": {
+      "source": "Years",
+      "target": "Für Schaltflächen,"
+    },
+    "EarlySymptomsAgeYears.validators.0.text": {
+      "source": "Age must be between 1 and 40",
+      "target": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte"
+    },
+    "EarlySymptomsAgeMonths.title": {
+      "source": "Months (number 0 - 11)",
+      "target": "So entsteht eine glaubwürdige Zielsprache für"
+    },
+    "EarlySymptomsAgeMonths.validators.0.text": {
+      "source": "Months must be between 0 and 11",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne"
+    },
+    "EarlySymptomsType.title": {
+      "source": "What symptoms did {CmpnName} have at that time?",
+      "target": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch"
+    },
+    "EarlySymptomsType.choices.STRIDOR.text": {
+      "source": "Noisy or raspy breathing",
+      "target": "Längere Texte dürfen hier ruhig"
+    },
+    "EarlySymptomsType.choices.PANTING.text": {
+      "source": "Excess panting",
+      "target": "Kurze Beschriftungen bleiben"
+    },
+    "EarlySymptomsType.choices.BARK_CHANGES.text": {
+      "source": "Changes in bark",
+      "target": "Das erleichtert die Prüfung"
+    },
+    "EarlySymptomsType.choices.COUGHING.text": {
+      "source": "Coughing or gagging",
+      "target": "Am Ende wird die"
+    },
+    "EarlySymptomsType.choices.HIND_END.text": {
+      "source": "Hind-end weakness",
+      "target": "Dies ist ein"
+    },
+    "EarlySymptomsType.choices.LABORED_BREATHING.text": {
+      "source": "Labored breathing",
+      "target": "Bitte beachten Sie,"
+    },
+    "EarlySymptomsType.choices.EXERCISE_INTOLERANCE.text": {
+      "source": "Exercise and heat intolerance",
+      "target": "Die endgültige Formulierung wird in"
+    },
+    "EarlySymptomsSeverity.title": {
+      "source": "How severe did you think {CmpnName}'s early symptoms were?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute"
+    },
+    "EarlySymptomsSeverity.description": {
+      "source": "1 = mild, 5 = severe",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt"
+    },
+    "EarlySymptomsHindEndWeakness.title": {
+      "source": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch"
+    },
+    "EarlySymptomsHindEndWeakness.choices.YES.text": {
+      "source": "Yes",
+      "target": "Auf diese"
+    },
+    "EarlySymptomsHindEndWeakness.choices.NO.text": {
+      "source": "No",
+      "target": "Für Schaltflächen,"
+    },
+    "EarlySymptomsHindEndWeakness.choices.DONT_KNOW.text": {
+      "source": "Don't remember",
+      "target": "Die Struktur des"
+    },
+    "EarlySymptomsIncontinence.title": {
+      "source": "Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter"
+    },
+    "EarlySymptomsIncontinence.choices.YES.text": {
+      "source": "Yes",
+      "target": "Die Inhalte"
+    },
+    "EarlySymptomsIncontinence.choices.NO.text": {
+      "source": "No",
+      "target": "Dadurch wirkt"
+    },
+    "EarlySymptomsIncontinence.choices.DONT_KNOW.text": {
+      "source": "Don't remember",
+      "target": "Längere Texte dürfen"
+    },
+    "EarlySymptomsOtherConditions.title": {
+      "source": "When {CmpnName} first started showing symptoms of LP, did {cvGenderSubjectPronoun} have any other health conditions?",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen."
+    },
+    "EarlySymptomsOtherConditions.choices.YES.text": {
+      "source": "Yes",
+      "target": "Am Ende"
+    },
+    "EarlySymptomsOtherConditions.choices.NO.text": {
+      "source": "No",
+      "target": "Dies ist"
+    },
+    "EarlySymptomsOtherConditions.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Bitte beachten Sie,"
+    },
+    "EarlySymptomsOtherConditionsType.title": {
+      "source": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit"
+    },
+    "EarlySymptomsOtherConditionsType.choices.GERD.text": {
+      "source": "Acid reflux (GERD)",
+      "target": "Umlaute wie ä, ö,"
+    },
+    "EarlySymptomsOtherConditionsType.choices.ME.text": {
+      "source": "Megaesophagus",
+      "target": "So kann"
+    },
+    "EarlySymptomsOtherConditionsType.choices.DM.text": {
+      "source": "Degenerative Myelopathy",
+      "target": "Diese Beispieldaten helfen"
+    },
+    "EarlySymptomsOtherConditionsType.choices.ARTHRITIS.text": {
+      "source": "Arthritis",
+      "target": "Der Text"
+    },
+    "EarlySymptomsOtherConditionsType.choices.CUSHINGS.text": {
+      "source": "Cushings",
+      "target": "Auf diese"
+    },
+    "EarlySymptomsOtherConditionsType.choices.CT.text": {
+      "source": "Collapsing Trachea",
+      "target": "Für Schaltflächen, Hinweise"
+    },
+    "EarlySymptomsOtherConditionsType.choices.HYPOTHYROID.text": {
+      "source": "Hypothyroidism",
+      "target": "Die Struktur"
+    },
+    "EarlySymptomsOtherConditionsType.choices.HEMANGIOSARCOMA.text": {
+      "source": "Hemangiosarcoma",
+      "target": "Bitte prüfen"
+    }
+  }
+}

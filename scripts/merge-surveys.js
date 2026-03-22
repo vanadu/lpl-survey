@@ -1,123 +1,78 @@
-/**
- * merge-surveys.js
- *
- * ----------------------------------------------------------------------------
- * PURPOSE
- * ----------------------------------------------------------------------------
- * Merge multiple SurveyJS per-page JSON files into a single master survey JSON,
- * write both a stable “latest” output and a timestamped snapshot, and perform
- * validations to prevent silent drift.
- *
- * Outputs:
- *  - /data/master-survey/master-survey.json                     (authoritative “latest”)
- *  - /data/master-survey_YYYYMMDD_HHMMSS.json     (snapshot for diff/history)
- *  - /helpers/registry.generated.json             (generated registry layer)
- *
- * ----------------------------------------------------------------------------
- * ARCHITECTURE OVERVIEW
- * ----------------------------------------------------------------------------
- * This script has four conceptual layers:
- *
- * LAYER 0 — Configuration
- *   - Which page JSON files are merged, output paths, CI behavior, registry flags
- *
- * LAYER 1 — Merge (Build Master Survey)
- *   - Loads page files and constructs the master survey object
- *   - Defines calculatedValues centrally (single source of truth for these)
- *
- * LAYER 2 — Validation (Drift Prevention)
- *   - Validation #1: Compare calc names in this script vs existing master-survey.json
- *   - Validation #2: Scan page JSONs for {token} references that don’t resolve
- *
- * LAYER 3 — Write Outputs & Post-Processing
- *   - Write latest + snapshot master survey JSON files
- *   - Generate registry.generated.json from the freshly written master survey
- *
- * ----------------------------------------------------------------------------
- * GOTCHAS / NOTES
- * ----------------------------------------------------------------------------
- * - CI / Non-interactive runs:
- *   When CI=true (or stdin/stdout are not TTY), validations should hard fail
- *   instead of prompting. See IS_CI + isInteractive().
- *
- * - Brace tokens vs regex quantifiers:
- *   Some strings (rarely) can include patterns like {5} or {5,10} (regex quantifiers).
- *   Validation #2 ignores tokens that look purely numeric or numeric ranges.
- *
- * - Registry generation:
- *   generate-registry.js runs AFTER master-survey.json is written, so the registry
- *   reflects the exact “latest” master survey output.
- */
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const readline = require("readline");
-
-// Registry generator subprocess
 const { spawnSync } = require("child_process");
 
 // -----------------------------------------------------------------------------
-// LAYER 0 — CONFIGURATION
+// CLI helpers
 // -----------------------------------------------------------------------------
 
-/**
- * REGISTRY BUILD (generated layer)
- *
- * If true, we run generate-registry.js at the end to produce helpers/registry.generated.json.
- */
+function getArg(flag, defaultValue = null) {
+  const idx = process.argv.indexOf(flag);
+  if (idx === -1) return defaultValue;
+  const val = process.argv[idx + 1];
+  if (!val || val.startsWith("--")) return defaultValue;
+  return val;
+}
+
+function hasFlag(flag) {
+  return process.argv.includes(flag);
+}
+
+// -----------------------------------------------------------------------------
+// PATH / I18N
+// -----------------------------------------------------------------------------
+
+function pathToFileUrl(filePath) {
+  const resolved = path.resolve(filePath);
+  const normalized = resolved.split(path.sep).join("/");
+  return `file://${normalized.startsWith("/") ? "" : "/"}${normalized}`;
+}
+
+async function resolvePaths() {
+  const projectRootDir = path.resolve(__dirname, "..");
+
+  const projectPathsModule = await import(
+    pathToFileUrl(
+      path.resolve(projectRootDir, "./helpers/i18n/projectPaths.mjs")
+    )
+  );
+
+  const i18nConfigModule = await import(
+    pathToFileUrl(
+      path.resolve(projectRootDir, "./helpers/i18n/i18nConfig.mjs")
+    )
+  );
+
+  const { buildProjectPaths } = projectPathsModule;
+  const { DEFAULT_LOCALE } = i18nConfigModule;
+
+  const activeLocale = getArg("--lang", DEFAULT_LOCALE);
+  const derived = buildProjectPaths(activeLocale, projectRootDir);
+
+  return { projectRootDir, activeLocale, derived };
+}
+
+// -----------------------------------------------------------------------------
+// CONFIG
+// -----------------------------------------------------------------------------
+
 const BUILD_REGISTRY_GENERATED = true;
 
-/**
- * Registry generator toggles (passed as CLI args to generate-registry.js)
- * - include presentation content (html/expression/image/etc.)?
- * - include visibleIf expression strings?
- */
-const REGISTRY_INCLUDE_PRESENTATION = false; // include html/expression/image/etc.
-const REGISTRY_INCLUDE_VISIBLEIF_EXPR = true; // include visibleIf string, not just boolean
+const REGISTRY_INCLUDE_PRESENTATION = false;
+const REGISTRY_INCLUDE_VISIBLEIF_EXPR = true;
 
-/**
- * Output paths
- * - registry.generated.json lives in /helpers (so /data stays only page JSONs + master)
- * - master-survey.json lives in /data
- */
-const REGISTRY_OUT_PATH = path.resolve(
-  __dirname,
-  "../helpers/registry.generated.json"
-);
+const IS_CI = String(process.env.CI).toLowerCase() === "true";
 
+const PROMPT_ON_CALC_MISMATCH = true;
+const PROMPT_ON_UNKNOWN_REFERENCES = true;
 
-// !VA Replacing...
-// const MASTER_SURVEY_PATH = path.resolve(__dirname, "../data/master-survey/master-survey.json");
+// -----------------------------------------------------------------------------
+// PAGE FILES
+// -----------------------------------------------------------------------------
 
-// /**
-//  * Source pages directory
-//  */
-// const DATA_DIR = path.resolve(__dirname, "../data");
-// !VA Replacing ...
-
-
-
-// ===============================
-// DATA DIRECTORY STRUCTURE
-// ===============================
-
-const DATA_ROOT_DIR = path.resolve(__dirname, "../data");
-const PAGE_CONTENT_DIR = path.join(DATA_ROOT_DIR, "page-content");
-const MASTER_SURVEY_DIR = path.join(DATA_ROOT_DIR, "master-survey");
-
-// latest merged survey location
-const MASTER_SURVEY_PATH = path.join(MASTER_SURVEY_DIR, "master-survey.json");
-
-
-
-
-
-
-
-/**
- * Ordered list of page files to merge.
- * NOTE: Order matters (defines page order in master survey).
- */
 const pageFiles = [
   "00_LANDING-page.json",
   "01_USER_INFO-page.json",
@@ -138,182 +93,84 @@ const pageFiles = [
   "16_CONCLUSION-page.json",
 ];
 
-/**
- * CI / prompt behavior
- *
- * In CI/non-interactive contexts you usually want hard fail.
- * Setting CI=true in env forces hard fail (no prompts).
- */
-const IS_CI = String(process.env.CI).toLowerCase() === "true";
-
-// If true, mismatches trigger the Abort prompt (or hard-fail in CI)
-const PROMPT_ON_CALC_MISMATCH = true;
-const PROMPT_ON_UNKNOWN_REFERENCES = true;
-
 // -----------------------------------------------------------------------------
-// LAYER 0 — UTILITIES
+// UTILITIES
 // -----------------------------------------------------------------------------
 
 function pad2(n) {
   return String(n).padStart(2, "0");
 }
 
-// Compact local timestamp: YYYYMMDD_HHMMSS
 function buildTimestamp() {
   const d = new Date();
-  const YYYY = d.getFullYear();
-  const MM = pad2(d.getMonth() + 1);
-  const DD = pad2(d.getDate());
-  const hh = pad2(d.getHours());
-  const mm = pad2(d.getMinutes());
-  const ss = pad2(d.getSeconds());
-  return `${YYYY}${MM}${DD}_${hh}${mm}${ss}`;
+  return `${d.getFullYear()}${pad2(d.getMonth() + 1)}${pad2(d.getDate())}_${pad2(
+    d.getHours()
+  )}${pad2(d.getMinutes())}${pad2(d.getSeconds())}`;
 }
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
-/**
- * Runs generate-registry.js as a Node subprocess to build registry.generated.json.
- * This is run AFTER master-survey.json is written so the registry is aligned.
- */
-function runGenerateRegistry() {
-  const generatorPath = path.resolve(__dirname, "./generate-registry.js");
-
-  const args = [generatorPath, "--in", MASTER_SURVEY_PATH, "--out", REGISTRY_OUT_PATH];
-
-  // Insert feature flags into args (kept compatible with your existing generator CLI)
-  if (REGISTRY_INCLUDE_PRESENTATION) args.splice(1, 0, "--include-presentation");
-  if (REGISTRY_INCLUDE_VISIBLEIF_EXPR) args.splice(1, 0, "--include-visibleif-expr");
-
-  const result = spawnSync(process.execPath, args, { stdio: "inherit" });
-
-  if (result.error) {
-    console.error("❌ Failed to run generate-registry.js:", result.error);
-    process.exit(1);
-  }
-
-  if (result.status !== 0) {
-    console.error(`❌ generate-registry.js exited with code ${result.status}`);
-    process.exit(result.status ?? 1);
-  }
-
-  console.log("✅ Registry generated at helpers/registry.generated.json");
-}
-
-/**
- * Generic tree traversal helper.
- * Calls visitor(obj) for every object found in an arbitrarily nested structure.
- */
 function traverse(value, visitor) {
-  if (value === null || value === undefined) return;
-
   if (Array.isArray(value)) {
-    for (const v of value) traverse(v, visitor);
-    return;
-  }
-
-  if (typeof value === "object") {
+    value.forEach((v) => traverse(v, visitor));
+  } else if (value && typeof value === "object") {
     visitor(value);
-    for (const k of Object.keys(value)) traverse(value[k], visitor);
+    Object.values(value).forEach((v) => traverse(v, visitor));
   }
 }
 
-/**
- * Extracts a Set of calculatedValue names from a calculatedValues array.
- */
-function setFromCalculatedValues(calculatedValuesArray) {
-  const s = new Set();
-  for (const cv of calculatedValuesArray || []) {
-    if (cv && typeof cv.name === "string" && cv.name.trim()) {
-      s.add(cv.name.trim());
-    }
-  }
-  return s;
+function setFromCalculatedValues(arr) {
+  return new Set(
+    (arr || [])
+      .map((cv) => (cv?.name || "").trim())
+      .filter(Boolean)
+  );
 }
 
-/**
- * Returns sorted array of (a \ b).
- */
 function setDiff(a, b) {
-  const out = [];
-  for (const x of a) if (!b.has(x)) out.push(x);
-  return out.sort();
+  return [...a].filter((x) => !b.has(x)).sort();
 }
 
-/**
- * Collects all element names (questions/panels/etc.) from a page object.
- * We treat any object with both `name` and `type` as an “element”.
- *
- * Also adds the page's own name (so {PageName} is considered resolvable).
- */
 function collectElementNamesFromPage(pageObj) {
   const names = new Set();
 
   traverse(pageObj, (obj) => {
-    if (
-      obj &&
-      typeof obj === "object" &&
-      typeof obj.name === "string" &&
-      obj.name.trim() &&
-      typeof obj.type === "string" &&
-      obj.type.trim()
-    ) {
+    if (obj?.name && obj?.type) {
       names.add(obj.name.trim());
     }
   });
 
-  if (typeof pageObj?.name === "string" && pageObj.name.trim()) {
-    names.add(pageObj.name.trim());
-  }
+  if (pageObj?.name) names.add(pageObj.name.trim());
 
   return names;
 }
 
-/**
- * Extracts {token} references from any string values in the page object,
- * but keeps context (object path and full string value) so errors are actionable.
- *
- * Normalization:
- * - token base is the substring before '.' (e.g. {panel.question} -> panel)
- * - also strips anything after whitespace
- *
- * Gotcha handling:
- * - Ignore regex quantifiers like {5}, {5,}, {5,10} which may appear in strings
- */
 function extractBraceRefsWithContext(pageObj) {
   const hits = [];
 
   function walk(value, pathParts) {
-    if (value === null || value === undefined) return;
-
     if (Array.isArray(value)) {
-      value.forEach((v, i) => walk(v, pathParts.concat([String(i)])));
-      return;
-    }
-
-    if (typeof value === "object") {
-      for (const [k, v] of Object.entries(value)) {
-        walk(v, pathParts.concat([k]));
-      }
-      return;
-    }
-
-    if (typeof value === "string") {
+      value.forEach((v, i) => walk(v, [...pathParts, i]));
+    } else if (value && typeof value === "object") {
+      Object.entries(value).forEach(([k, v]) =>
+        walk(v, [...pathParts, k])
+      );
+    } else if (typeof value === "string") {
       const re = /\{([^}]+)\}/g;
       let m;
-      while ((m = re.exec(value)) !== null) {
-        const raw = (m[1] || "").trim();
-        if (!raw) continue;
 
-        const base = raw.split(".")[0].trim().split(/\s+/)[0].trim();
-        if (!base) continue;
+      while ((m = re.exec(value))) {
+        const base = m[1].split(".")[0].trim();
 
-        // Ignore regex quantifiers like {5}, {5,}, {5,10}
-        if (/^\d+(,\d*)?$/.test(base)) continue;
+        if (!base || /^\d+(,\d*)?$/.test(base)) continue;
 
-        hits.push({ token: base, path: pathParts.join("."), value });
+        hits.push({
+          token: base,
+          path: pathParts.join("."),
+          value,
+        });
       }
     }
   }
@@ -323,206 +180,166 @@ function extractBraceRefsWithContext(pageObj) {
 }
 
 function isInteractive() {
-  return Boolean(process.stdin.isTTY && process.stdout.isTTY);
+  return process.stdin.isTTY && process.stdout.isTTY;
 }
 
-/**
- * Prompt user whether to abort on validation failure.
- * - In CI or non-interactive, always abort (true).
- */
-async function promptAbort(reasonLine) {
+async function promptAbort(msg) {
   if (IS_CI || !isInteractive()) return true;
 
   return new Promise((resolve) => {
-    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
 
-    rl.question(`${reasonLine}\nAbort? [Y/N]: `, (answer) => {
+    rl.question(`${msg}\nAbort? [Y/N]: `, (a) => {
       rl.close();
-      const a = (answer || "").trim().toLowerCase();
-      resolve(a === "y" || a === "yes");
+      resolve(/^y(es)?$/i.test(a));
     });
   });
 }
 
 // -----------------------------------------------------------------------------
+// REGISTRY CALL (SIMPLIFIED)
+// -----------------------------------------------------------------------------
+
+function runGenerateRegistry(activeLocale) {
+  const generatorPath = path.resolve(__dirname, "./generate-registry.js");
+
+  const args = [generatorPath, "--lang", activeLocale];
+
+  if (REGISTRY_INCLUDE_PRESENTATION)
+    args.splice(1, 0, "--include-presentation");
+
+  if (REGISTRY_INCLUDE_VISIBLEIF_EXPR)
+    args.splice(1, 0, "--include-visibleif-expr");
+
+  const result = spawnSync(process.execPath, args, { stdio: "inherit" });
+
+  if (result.error || result.status !== 0) {
+    console.error("❌ generate-registry failed");
+    process.exit(1);
+  }
+}
+
+// -----------------------------------------------------------------------------
 // MAIN
 // -----------------------------------------------------------------------------
+
 async function main() {
+  const { projectRootDir, activeLocale, derived } =
+    await resolvePaths();
+
+  console.log(`\n🌐 merge-surveys locale: ${activeLocale}`);
+
+  const PAGE_CONTENT_DIR = derived.pageContentDir;
+  const MASTER_SURVEY_DIR = derived.masterSurveyDir;
+  const MASTER_SURVEY_PATH = derived.masterSurveyPath;
+  const CALCULATED_VALUES_PATH = derived.calculatedValuesPath;
+
   // ---------------------------------------------------------------------------
-  // LAYER 1 — MERGE: Load pages
+  // LOAD
   // ---------------------------------------------------------------------------
-  const pages = pageFiles.map((filename) => {
-    const filePath = path.join(PAGE_CONTENT_DIR, filename);
-    if (!fs.existsSync(filePath)) {
-      console.error(`❌ Missing page file: data/page-content/${filename}`);
+
+  const pages = pageFiles.map((f) => {
+    const p = path.join(PAGE_CONTENT_DIR, f);
+    if (!fs.existsSync(p)) {
+      console.error(`❌ Missing: ${p}`);
       process.exit(1);
     }
-    return readJson(filePath);
+    return readJson(p);
   });
 
-  // ---------------------------------------------------------------------------
-  // LAYER 1 — MERGE: Build master survey
-  // ---------------------------------------------------------------------------
-
-  /**
-   * Calculated values are centralized here.
-   * Validation #1 ensures these do not drift from existing master-survey.json.
-   */
-  /**
- * Calculated values are centralized in /helpers/calculatedValues.json.
- * Validation #1 ensures these do not drift from existing master-survey.json.
- */
-const calculatedValues = readJson(path.resolve(__dirname, "../helpers/calculatedValues.json"));
+  const calculatedValues = readJson(CALCULATED_VALUES_PATH);
 
   const masterSurvey = {
     calculatedValues,
-    // title: "Master Survey Build",
     showProgressBar: "top",
     questionsOnPageMode: "questionPerPage",
     pages,
   };
 
   // ---------------------------------------------------------------------------
-  // LAYER 2 — VALIDATION #1:
-  // Compare calc names in THIS script vs existing data/master-survey/master-survey.json
+  // VALIDATION #1
   // ---------------------------------------------------------------------------
-  {
-    const scriptCalcs = setFromCalculatedValues(calculatedValues);
-    const masterPath = MASTER_SURVEY_PATH;
 
-    if (!fs.existsSync(masterPath)) {
-      console.warn("⚠️  Validation skipped: data/master-survey/master-survey.json not found (first run?)");
-    } else {
-      const existing = readJson(masterPath);
-      const existingCalcs = setFromCalculatedValues(existing.calculatedValues);
+  if (fs.existsSync(MASTER_SURVEY_PATH)) {
+    const existing = readJson(MASTER_SURVEY_PATH);
 
-      const missingInExisting = setDiff(scriptCalcs, existingCalcs);
-      const extraInExisting = setDiff(existingCalcs, scriptCalcs);
+    const a = setFromCalculatedValues(calculatedValues);
+    const b = setFromCalculatedValues(existing.calculatedValues);
 
-      if (missingInExisting.length || extraInExisting.length) {
-        console.error(
-          "❌ CalculatedValues mismatch between merge-surveys.js and data/master-survey/master-survey.json"
-        );
+    const diff = [...setDiff(a, b), ...setDiff(b, a)];
 
-        if (missingInExisting.length) {
-          console.error(
-            "  Names present in merge-surveys.js but missing in data/master-survey/master-survey.json:"
-          );
-          for (const n of missingInExisting) console.error(`    - ${n}`);
-        }
+    if (diff.length) {
+      console.error("❌ CalculatedValues mismatch");
 
-        if (extraInExisting.length) {
-          console.error(
-            "  Names present in data/master-survey/master-survey.json but not in merge-surveys.js:"
-          );
-          for (const n of extraInExisting) console.error(`    - ${n}`);
-        }
-
-        if (PROMPT_ON_CALC_MISMATCH) {
-          const abort = await promptAbort("CalculatedValues mismatch detected.");
-          if (abort) process.exit(1);
-        }
-      } else {
-        console.log("✅ CalculatedValues match existing data/master-survey/master-survey.json");
+      if (PROMPT_ON_CALC_MISMATCH) {
+        if (await promptAbort("Mismatch detected")) process.exit(1);
       }
     }
   }
 
   // ---------------------------------------------------------------------------
-  // LAYER 2 — VALIDATION #2:
-  // Flag any {token} references in page JSONs that are not:
-  //  - an element/page name found in the pages, OR
-  //  - a calculatedValue name from THIS script
+  // VALIDATION #2
   // ---------------------------------------------------------------------------
-  {
-    // Known element/page names across all pages
-    const elementNames = new Set();
-    for (const page of pages) {
-      const pageNames = collectElementNamesFromPage(page);
-      for (const n of pageNames) elementNames.add(n);
-    }
 
-    // Known calculatedValue names (from this script)
-    const calcNames = setFromCalculatedValues(calculatedValues);
+  const elementNames = new Set();
+  pages.forEach((p) =>
+    collectElementNamesFromPage(p).forEach((n) =>
+      elementNames.add(n)
+    )
+  );
 
-    // Combined known token set
-    const known = new Set([...elementNames, ...calcNames]);
+  const calcNames = setFromCalculatedValues(calculatedValues);
+  const known = new Set([...elementNames, ...calcNames]);
 
-    const unknownRefsByFile = [];
+  for (const file of pageFiles) {
+    const page = readJson(path.join(PAGE_CONTENT_DIR, file));
+    const unknown = extractBraceRefsWithContext(page).filter(
+      (h) => !known.has(h.token)
+    );
 
-    for (const filename of pageFiles) {
-      const page = readJson(path.join(PAGE_CONTENT_DIR, filename));
-      const hits = extractBraceRefsWithContext(page);
-
-      // Only keep hits whose token isn't known
-      const unknownHits = hits.filter((h) => !known.has(h.token));
-
-      if (unknownHits.length) {
-        unknownRefsByFile.push({ filename, unknownHits });
-      }
-    }
-
-    if (unknownRefsByFile.length) {
-      console.error("❌ Unknown {token} references found in page JSONs:");
-      for (const item of unknownRefsByFile) {
-        console.error(`  ${item.filename}`);
-
-        // De-dupe identical token+path combos to reduce spam
-        const seen = new Set();
-
-        for (const h of item.unknownHits) {
-          const key = `${h.token}@@${h.path}`;
-          if (seen.has(key)) continue;
-          seen.add(key);
-
-          // Trim long strings for readability
-          const snippet = h.value.length > 160 ? h.value.slice(0, 160) + "…" : h.value;
-
-          console.error(`    - {${h.token}} at ${h.path}`);
-          console.error(`      "${snippet.replace(/\s+/g, " ").trim()}"`);
-        }
-      }
-
-      console.error(
-        "\nThese tokens are referenced in a page but are not a question/panel/page name and not a calculatedValue name."
-      );
+    if (unknown.length) {
+      console.error(`❌ Unknown tokens in ${file}`);
 
       if (PROMPT_ON_UNKNOWN_REFERENCES) {
-        const abort = await promptAbort("Unknown {token} references detected.");
-        if (abort) process.exit(1);
+        if (await promptAbort("Unknown tokens detected")) process.exit(1);
       }
-    } else {
-      console.log("✅ All {token} references in pages resolve to known element names or calculatedValues");
     }
   }
 
   // ---------------------------------------------------------------------------
-  // LAYER 3 — WRITE OUTPUTS
+  // WRITE
   // ---------------------------------------------------------------------------
 
-  // Ensure output dir exists
-  if (!fs.existsSync(MASTER_SURVEY_DIR)) {
-    fs.mkdirSync(MASTER_SURVEY_DIR, { recursive: true });
-  }
+  fs.mkdirSync(MASTER_SURVEY_DIR, { recursive: true });
 
-  // 1) Authoritative “latest” file
-  fs.writeFileSync(MASTER_SURVEY_PATH, JSON.stringify(masterSurvey, null, 2));
-  console.log("✅ Merged survey written to data/master-survey/master-survey.json");
+  fs.writeFileSync(
+    MASTER_SURVEY_PATH,
+    JSON.stringify(masterSurvey, null, 2)
+  );
 
-  // 2) Timestamped snapshot for diffing/history
-  const stamp = buildTimestamp();
-  const snapshotName = `master-survey_${stamp}.json`;
-  const snapshotPath = path.join(MASTER_SURVEY_DIR, snapshotName);
-  fs.writeFileSync(snapshotPath, JSON.stringify(masterSurvey, null, 2));
-  console.log(`🗂️  Snapshot written to data/master-survey/${snapshotName}`);
+  const snapshot = path.join(
+    MASTER_SURVEY_DIR,
+    `master-survey_${buildTimestamp()}.json`
+  );
 
-  // 3) Generate registry.generated.json from the freshly-written master survey
+  fs.writeFileSync(snapshot, JSON.stringify(masterSurvey, null, 2));
+
+console.log(`📤 masterSurvey output: ${MASTER_SURVEY_PATH}`);
+console.log(`🗂️ snapshot: ${snapshot}`);
+
+  // ---------------------------------------------------------------------------
+  // REGISTRY (SAFE: runs AFTER write)
+  // ---------------------------------------------------------------------------
+
   if (BUILD_REGISTRY_GENERATED) {
-    runGenerateRegistry();
+    runGenerateRegistry(activeLocale);
   }
 }
 
 main().catch((err) => {
-  console.error("❌ merge-surveys.js failed:", err);
+  console.error("❌ merge-surveys failed:", err);
   process.exit(1);
 });

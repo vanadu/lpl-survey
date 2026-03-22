@@ -1,0 +1,75 @@
+{
+  "page": "LANDING-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "LandingTitleHead.html": {
+      "source": "<div class='landing-title-head-container'><h2 class='landing-title-heading'>LP/GOLPP Survey 2026</h2><p class='landing-title-subheading'>Powered by LarParLife.org</p></div>",
+      "target": "<div class='landing-title-head-container'><h2 class='landing-title-heading'>Dies ist ein vorläufiger</h2><p class='landing-title-subheading'>Bitte beachten Sie, dass</p></div>"
+    },
+    "LandingVersion.html": {
+      "source": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.03.20.01</p></div></div>",
+      "target": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Die endgültige Formulierung</p></div></div>"
+    },
+    "LandingWelcomeHeading.html": {
+      "source": "<h2>You better love the LP/GOLPP&nbsp;Survey&nbsp;2026</h2>",
+      "target": "<h2>Auch längere Abschnitte lassen sich mit diesem Platzhalter gut</h2>",
+      "_needsReview": true,
+      "source_prev": "<h2>Loving the LP/GOLPP&nbsp;Survey&nbsp;2026</h2>"
+    },
+    "LandingWelcomeText1.html": {
+      "source": "This survey, the first of its kind, is designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis.",
+      "target": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen"
+    },
+    "LandingWelcomeText2.html": {
+      "source": "Aliqua aute et est proident fugiat sunt consectetur id ipsum magna nostrud tempor magna consequat. Nostrud in est ad ea exercitation. Consequat mollit consequat quis deserunt mollit laboris exercitation nostrud cillum consequat dolor proident sint. Ex duis nisi ad excepteur cupidatat enim pariatur excepteur. Occaecat sint dolor enim incididunt commodo. Consectetur anim elit et cillum ut excepteur.",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe"
+    },
+    "LandingAboutPrivacyHeading.html": {
+      "source": "<h3>About your privacy and personal information</h3>",
+      "target": "<h3>Dadurch wirkt die Testseite weniger künstlich und besser</h3>"
+    },
+    "LandingAboutPrivacyText01.html": {
+      "source": "<p>We only need four pieces of information to verify survey results:</p>",
+      "target": "<p>Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp</p>"
+    },
+    "LandingAboutPrivacyOrderedList.html": {
+      "source": "<ul><li class='survey-privacy-bullet-list'>Your first name</li><li class='survey-privacy-bullet-list'>Your companion animal's name</li><li class='survey-privacy-bullet-list'>The country in which you live</li><li class='survey-privacy-bullet-list'>Your email address or Facebook account name</li></ul>",
+      "target": "<ul><li class='survey-privacy-bullet-list'>Das erleichtert die Prüfung</li><li class='survey-privacy-bullet-list'>Am Ende wird die echte</li><li class='survey-privacy-bullet-list'>Dies ist ein vorläufiger Blindtext für die</li><li class='survey-privacy-bullet-list'>Bitte beachten Sie, dass dieser Inhalt nur zu</li></ul>"
+    },
+    "LandingPrivacyLink.html": {
+      "source": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>",
+      "target": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Die endgültige Formulierung wird in einer späteren Phase</a></div>"
+    },
+    "LandingAboutPrivacyText02.html": {
+      "source": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>",
+      "target": "<p>Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im</p>"
+    },
+    "LandingAboutConsentHeading.html": {
+      "source": "<h3>About our Consent Policy</h3>",
+      "target": "<h3>Diese Beispieldaten helfen bei der</h3>"
+    },
+    "LandingConsentText.html": {
+      "source": "<p>By selecting 'Yes' below, you confirm that you agree to the terms of our Consent Policy.</p>",
+      "target": "<p>Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für</p>"
+    },
+    "LandingConsentLink.html": {
+      "source": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>",
+      "target": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Die Struktur des Dokuments bleibt dabei vollständig erhalten.</a></div>"
+    },
+    "LandingConsent.title": {
+      "source": "Do you want to proceed with the survey in accordance with our Consent Policy?",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser"
+    },
+    "LandingConsent.choices.Yes.text": {
+      "source": "Yes",
+      "target": "Die Inhalte"
+    },
+    "LandingConsent.choices.No.text": {
+      "source": "No",
+      "target": "Dadurch wirkt"
+    }
+  }
+}

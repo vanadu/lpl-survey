@@ -1,0 +1,177 @@
+{
+  "page": "BREATHING_CRISIS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "BreathingCrisisHeading.html": {
+      "source": "<h2>LP Breathing Crisis</h2>",
+      "target": "<h2>Dies ist ein vorläufiger</h2>"
+    },
+    "BreathingCrisisText.html": {
+      "source": "<p>In a breathing crisis, the paralyzed arytenoid cartilages block the airway and cut off airflow to the lungs. In extreme cases, the crisis escalates into a breathing emergency that requires care at a veterinary facility to restore breathing. These questions are about breathing emergencies that required care from a licensed veterinarian. </p>",
+      "target": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text</p>"
+    },
+    "BreathingCrisisDidHave.title": {
+      "source": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur"
+    },
+    "BreathingCrisisDidHave.choices.YES.text": {
+      "source": "Yes",
+      "target": "Bitte prüfen"
+    },
+    "BreathingCrisisDidHave.choices.NO.text": {
+      "source": "No",
+      "target": "So entsteht"
+    },
+    "BreathingCrisisDidHave.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Dieser Platzhalter eignet"
+    },
+    "BreathingCrisisCount.title": {
+      "source": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+      "target": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt."
+    },
+    "BreathingCrisisCount.choices.ONE.text": {
+      "source": "Once",
+      "target": "Längere Texte"
+    },
+    "BreathingCrisisCount.choices.TWO.text": {
+      "source": "Twice",
+      "target": "Kurze Beschriftungen"
+    },
+    "BreathingCrisisCount.choices.MORE_THAN_TWO.text": {
+      "source": "More than twice",
+      "target": "Das erleichtert die Prüfung"
+    },
+    "BreathingCrisisCost.title": {
+      "source": "About what was the total pre-insurance cost of these visits?",
+      "target": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist"
+    },
+    "BreathingCrisisCost.choices.LESS_THAN_250.text": {
+      "source": "Less than $250",
+      "target": "Bitte beachten Sie, dass"
+    },
+    "BreathingCrisisCost.choices.250_500.text": {
+      "source": "$250 - $500",
+      "target": "Die endgültige Formulierung wird"
+    },
+    "BreathingCrisisCost.choices.500_1000.text": {
+      "source": "$500 - $1000",
+      "target": "Auch längere Abschnitte lassen"
+    },
+    "BreathingCrisisCost.choices.MORE_THAN_1000.text": {
+      "source": "More than $1000",
+      "target": "Umlaute wie ä, ö,"
+    },
+    "BreathingCrisisCost.choices.DONT_KNOW.text": {
+      "source": "Don't know or prefer not to say",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden."
+    },
+    "BreathingCrisisAdvice.title": {
+      "source": "Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf"
+    },
+    "BreathingCrisisAdvice.choices.YES.text": {
+      "source": "Yes",
+      "target": "Für Schaltflächen,"
+    },
+    "BreathingCrisisAdvice.choices.NO.text": {
+      "source": "No",
+      "target": "Die Struktur"
+    },
+    "BreathingCrisisAdvice.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Bitte prüfen Sie"
+    },
+    "BreathingCrisisAdviceType.title": {
+      "source": "What advice did they give you to help you deal with a breathing crisis?",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne"
+    },
+    "BreathingCrisisAdviceType.choices.SEDATIVE.text": {
+      "source": "Adminster a sedative",
+      "target": "Die Inhalte rotieren, damit"
+    },
+    "BreathingCrisisAdviceType.choices.COOL_PLACE.text": {
+      "source": "Get them to a cool place",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser"
+    },
+    "BreathingCrisisAdviceType.choices.COOLING_AGENT.text": {
+      "source": "Apply ice, a cooling vest, or some other cooling agent",
+      "target": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen"
+    },
+    "BreathingCrisisAdviceType.choices.BLOW_AIR.text": {
+      "source": "Blow air into their nose (CPR)",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und"
+    },
+    "BreathingCrisisAdviceType.choices.EMERGENCY_FACILITY.text": {
+      "source": "Bring them to an emergency facility immediately",
+      "target": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich"
+    },
+    "BreathingCrisisProvidedSubstance.title": {
+      "source": "Did a veterinary professional provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in"
+    },
+    "BreathingCrisisProvidedSubstance.choices.YES.text": {
+      "source": "Yes",
+      "target": "Auch längere"
+    },
+    "BreathingCrisisProvidedSubstance.choices.NO.text": {
+      "source": "No",
+      "target": "Umlaute wie"
+    },
+    "BreathingCrisisProvidedSubstance.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So kann die"
+    },
+    "BreathingCrisisProvidedSubstanceType.title": {
+      "source": "What substance or product did they provide?",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und"
+    },
+    "BreathingCrisisProvidedSubstanceType.choices.SEDATIVE.text": {
+      "source": "Sedative",
+      "target": "Der Text"
+    },
+    "BreathingCrisisProvidedSubstanceType.choices.STEROID.text": {
+      "source": "Steroid, i.e., prednisone",
+      "target": "Auf diese Weise lassen"
+    },
+    "BreathingCrisisProvidedSubstanceType.choices.OXYGEN.text": {
+      "source": "Supplemental oxygen",
+      "target": "Für Schaltflächen, Hinweise"
+    },
+    "BreathingCrisisProvidedSubstanceType.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die Struktur des"
+    },
+    "BreathingCrisisSubstanceForm.title": {
+      "source": "In what form was the sedative or steroid provided?",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine"
+    },
+    "BreathingCrisisSubstanceForm.choices.INJECTIBLE.text": {
+      "source": "Injectible",
+      "target": "Dieser Platzhalter"
+    },
+    "BreathingCrisisSubstanceForm.choices.LIQUID.text": {
+      "source": "Liquid",
+      "target": "Die Inhalte"
+    },
+    "BreathingCrisisSubstanceForm.choices.SUPPOSITORY.text": {
+      "source": "Suppository",
+      "target": "Dadurch wirkt"
+    },
+    "BreathingCrisisSubstanceForm.choices.GEL.text": {
+      "source": "Gel or paste",
+      "target": "Längere Texte dürfen hier"
+    },
+    "BreathingCrisisSubstanceForm.choices.PILL.text": {
+      "source": "Pill or tablet",
+      "target": "Kurze Beschriftungen bleiben dagegen"
+    },
+    "BreathingCrisisSubstanceForm.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Das erleichtert die"
+    }
+  }
+}

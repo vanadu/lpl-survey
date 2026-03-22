@@ -1,0 +1,89 @@
+{
+  "page": "INTUBATION_HISTORY-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "IntubationHistoryHeading.html": {
+      "source": "<h2>Intubation History</h2>",
+      "target": ""
+    },
+    "IntubationHistoryText.html": {
+      "source": "<p>This section asks about {CmpnName}'s intubation history in the 12 months prior to LP/GOLPP symptoms.</p>",
+      "target": ""
+    },
+    "IntubationHistoryWasIntubated.title": {
+      "source": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
+      "target": ""
+    },
+    "IntubationHistoryWasIntubated.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "IntubationHistoryWasIntubated.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "IntubationHistoryWasIntubated.choices.DONT_KNOW.text": {
+      "source": "Not sure",
+      "target": ""
+    },
+    "IntubationHistoryReason.title": {
+      "source": "For what reason or reasons was {CmpnName} intubated prior to the first LP symptoms appearing?",
+      "target": ""
+    },
+    "IntubationHistoryReason.choices.TEETH_CLEANING.text": {
+      "source": "Teeth cleaning",
+      "target": ""
+    },
+    "IntubationHistoryReason.choices.DENTAL_SURGERY.text": {
+      "source": "Dental surgery",
+      "target": ""
+    },
+    "IntubationHistoryReason.choices.NON_DENTAL_SURGERY.text": {
+      "source": "Non-dental surgery",
+      "target": ""
+    },
+    "IntubationHistoryReason.choices.DIAGNOSTIC.text": {
+      "source": "Diagnostic procedure",
+      "target": ""
+    },
+    "IntubationHistoryReason.choices.EMERGENCY.text": {
+      "source": "Emergency procedure",
+      "target": ""
+    },
+    "IntubationHistoryConcerns.title": {
+      "source": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
+      "target": ""
+    },
+    "IntubationHistoryConcerns.labelTrue": {
+      "source": "Yes",
+      "target": ""
+    },
+    "IntubationHistoryConcerns.labelFalse": {
+      "source": "No",
+      "target": ""
+    },
+    "IntubationHistorySymptoms.title": {
+      "source": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
+      "target": ""
+    },
+    "IntubationHistorySymptoms.choices.COUGHING.text": {
+      "source": "Coughing/hacking",
+      "target": ""
+    },
+    "IntubationHistorySymptoms.choices.GAGGING.text": {
+      "source": "Gagging/retching",
+      "target": ""
+    },
+    "IntubationHistorySymptoms.choices.PANTING.text": {
+      "source": "Excessive panting",
+      "target": ""
+    },
+    "IntubationHistorySymptoms.choices.LABORED_BREATHING.text": {
+      "source": "Labored breathing",
+      "target": ""
+    }
+  }
+}

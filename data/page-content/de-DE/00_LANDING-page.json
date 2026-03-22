@@ -1,0 +1,116 @@
+{
+  "name": "LANDING-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "LandingCard1Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "LandingHeaderPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingTitleHead",
+              "html": "<div class='landing-title-head-container'><h2 class='landing-title-heading'>Dies ist ein vorläufiger</h2><p class='landing-title-subheading'>Bitte beachten Sie, dass</p></div>"
+            },
+            {
+              "type": "html",
+              "name": "LandingVersion",
+              "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Die endgültige Formulierung</p></div></div>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "LandingWelcomePanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingWelcomeHeading",
+              "html": "<h2>Auch längere Abschnitte lassen sich mit diesem Platzhalter gut</h2>"
+            },
+            {
+              "type": "html",
+              "name": "LandingWelcomeText1",
+              "html": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen"
+            },
+            {
+              "type": "html",
+              "name": "LandingWelcomeText2",
+              "html": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "LandingCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "LandingPrivacyPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyHeading",
+              "html": "<h3>Dadurch wirkt die Testseite weniger künstlich und besser</h3>"
+            },
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyText01",
+              "html": "<p>Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp</p>"
+            },
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyOrderedList",
+              "html": "<ul><li class='survey-privacy-bullet-list'>Das erleichtert die Prüfung</li><li class='survey-privacy-bullet-list'>Am Ende wird die echte</li><li class='survey-privacy-bullet-list'>Dies ist ein vorläufiger Blindtext für die</li><li class='survey-privacy-bullet-list'>Bitte beachten Sie, dass dieser Inhalt nur zu</li></ul>"
+            },
+            {
+              "type": "html",
+              "name": "LandingPrivacyLink",
+              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Die endgültige Formulierung wird in einer späteren Phase</a></div>"
+            },
+            {
+              "type": "html",
+              "name": "LandingAboutPrivacyText02",
+              "html": "<p>Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im</p>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "LandingConsentPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "LandingAboutConsentHeading",
+              "html": "<h3>Diese Beispieldaten helfen bei der</h3>"
+            },
+            {
+              "type": "html",
+              "name": "LandingConsentText",
+              "html": "<p>Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für</p>"
+            },
+            {
+              "type": "html",
+              "name": "LandingConsentLink",
+              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Die Struktur des Dokuments bleibt dabei vollständig erhalten.</a></div>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "LandingConsent",
+              "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser",
+              "choices": [
+                "Die Inhalte",
+                "Dadurch wirkt"
+              ],
+              "isRequired": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

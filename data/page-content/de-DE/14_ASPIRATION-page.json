@@ -1,0 +1,295 @@
+{
+  "name": "ASPIRATION-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "AspirationCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "AspirationHeading",
+          "html": "<h2>Dies ist ein vorläufiger Blindtext für</h2>"
+        },
+        {
+          "type": "html",
+          "name": "AspirationText",
+          "html": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut</p>"
+        },
+        {
+          "type": "html",
+          "name": "AspirationInfoLink",
+          "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im</a></div>"
+        },
+        {
+          "type": "panel",
+          "name": "AspirationDidHavePanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "AspirationDidHave",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Auf diese"
+                },
+                {
+                  "value": "NO",
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die Struktur des"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "AspirationGeneralPanel",
+          "visibleIf": "{AspirationDidHave} = 'YES'",
+          "elements": [
+            {
+              "type": "dropdown",
+              "name": "AspirationCount",
+              "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So",
+              "isRequired": true,
+              "visibleIf": "{AspirationDidHave} = 'YES'",
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": "TWO",
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": "THREE",
+                  "text": "Dadurch wirkt die"
+                },
+                {
+                  "value": "MORE_THAN_THREE",
+                  "text": "Längere Texte dürfen hier ruhig"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "AspirationInpatient",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons,",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Am Ende"
+                },
+                {
+                  "value": "NO",
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Bitte beachten Sie,"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "AspirationInpatientCount",
+              "visibleIf": "{AspirationInpatient} = 'YES'",
+              "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Umlaute wie"
+                },
+                {
+                  "value": "TWO",
+                  "text": "So kann"
+                },
+                {
+                  "value": "THREE",
+                  "text": "Diese Beispieldaten helfen"
+                },
+                {
+                  "value": "MORE_THAN_THREE",
+                  "text": "Der Text ist absichtlich generisch"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "AspirationCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "AspirationSurgeryPanel",
+          "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = 'YES'",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "AspirationSurgeryPost",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften",
+              "description": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "So entsteht"
+                },
+                {
+                  "value": "NO",
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die Inhalte rotieren,"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "AspirationSurgeryPostCount",
+              "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen",
+              "isRequired": true,
+              "visibleIf": "{AspirationSurgeryPost} = 'YES'",
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": "TWO",
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": "THREE",
+                  "text": "Am Ende wird"
+                },
+                {
+                  "value": "MORE_THAN_THREE",
+                  "text": "Dies ist ein vorläufiger Blindtext"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "AspirationStentPanel",
+          "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = 'YES'",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "AspirationStentPost",
+              "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Auch längere"
+                },
+                {
+                  "value": "NO",
+                  "text": "Umlaute wie"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So kann die"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "AspirationStentPostCount",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich",
+              "isRequired": true,
+              "visibleIf": "{AspirationStentPost} = 'YES'",
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Auf diese"
+                },
+                {
+                  "value": "TWO",
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "THREE",
+                  "text": "Die Struktur des"
+                },
+                {
+                  "value": "MORE_THAN_THREE",
+                  "text": "Bitte prüfen Sie insbesondere Zeilenlängen,"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "AspirationCostPanel",
+          "visibleIf": "{AspirationDidHave} = 'YES'",
+          "elements": [
+            {
+              "type": "dropdown",
+              "name": "AspirationCost",
+              "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Die Inhalte rotieren, damit nicht"
+                },
+                {
+                  "value": "UNDER_100",
+                  "text": "Dadurch wirkt die"
+                },
+                {
+                  "value": "100_300",
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": "300_500",
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": "500_1000",
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": "1001_3000",
+                  "text": "Am Ende"
+                },
+                {
+                  "value": "3000_5000",
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "OVER_5000",
+                  "text": "Bitte beachten Sie,"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

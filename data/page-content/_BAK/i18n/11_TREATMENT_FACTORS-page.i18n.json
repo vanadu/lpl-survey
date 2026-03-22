@@ -1,0 +1,393 @@
+{
+  "page": "TREATMENT_FACTORS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "TreatmentFactorsHeading.html": {
+      "source": "<h2>Factors that have influenced your LP/GOLPP decisions</h2>",
+      "target": ""
+    },
+    "TreatmentFactorsText.html": {
+      "source": "<p>Magna ullamco in sint esse exercitation nostrud eiusmod sint excepteur reprehenderit velit sit. Exercitation minim veniam fugiat elit. Nisi eu ipsum pariatur officia qui dolor consectetur Lorem aliquip non. Commodo labore cupidatat culpa ea exercitation aliquip laborum qui in tempor. Adipisicing esse ex est exercitation in laboris nisi eu ut deserunt dolor.</p>",
+      "target": ""
+    },
+    "TreatmentFactorsDetailsText.html": {
+      "source": "<p>Please rate the relevant factors in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>",
+      "target": ""
+    },
+    "TreatmentFactorsDecision.title": {
+      "source": "Have you made a decision about whether or not to pursue LP surgery such as tieback for {CmpnName}?",
+      "target": ""
+    },
+    "TreatmentFactorsDecision.choices.WILL_PURSUE.text": {
+      "source": "We will pursue LP surgery such as tieback.",
+      "target": ""
+    },
+    "TreatmentFactorsDecision.choices.WILL_NOT_PURSUE.text": {
+      "source": "We've decided not to pursue LP surgery.",
+      "target": ""
+    },
+    "TreatmentFactorsDecision.choices.UNDECIDED.text": {
+      "source": "We haven't decided yet.",
+      "target": ""
+    },
+    "TreatmentFactorsDecisionStent.title": {
+      "source": "If a veterinarian were to offer a stent implant for LP/GOLPP in your area, would you explore that as a surgery alternative?",
+      "target": ""
+    },
+    "TreatmentFactorsDecisionStent.choices.YES.text": {
+      "source": "Yes, we would consider a stent implant.",
+      "target": ""
+    },
+    "TreatmentFactorsDecisionStent.choices.NO.text": {
+      "source": "No, we would not consider a stent implant.",
+      "target": ""
+    },
+    "TreatmentFactorsDecisionStent.choices.NOT_INFORMED.text": {
+      "source": "We need more information.",
+      "target": ""
+    },
+    "TreatmentFactorsCostPanel.title": {
+      "source": "How have financial considerations factored into your decision?",
+      "target": ""
+    },
+    "TreatmentFactorsCost.title": {
+      "source": "Cost of surgical/stent procedure:",
+      "target": ""
+    },
+    "TreatmentFactorsCost.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": ""
+    },
+    "TreatmentFactorsCost.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "TreatmentFactorsCost.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "TreatmentFactorsCost.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "TreatmentFactorsCost.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "TreatmentFactorsCost.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "TreatmentFactorsCostComplications.title": {
+      "source": "Added cost of possible post-op complications such as aspiration pneumonia:",
+      "target": ""
+    },
+    "TreatmentFactorsCostComplications.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": ""
+    },
+    "TreatmentFactorsCostComplications.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "TreatmentFactorsCostComplications.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "TreatmentFactorsCostComplications.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "TreatmentFactorsCostComplications.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "TreatmentFactorsCostComplications.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "TreatmentFactorsStagePanel.title": {
+      "source": "How has the stage of {CmpnName}'s LP/GOLPP factored into your decision?",
+      "target": ""
+    },
+    "TreatmentFactorsStageLP.title": {
+      "source": "Fear of a breathing emergency:",
+      "target": ""
+    },
+    "TreatmentFactorsStageLP.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": ""
+    },
+    "TreatmentFactorsStageLP.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "TreatmentFactorsStageLP.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "TreatmentFactorsStageLP.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "TreatmentFactorsStageLP.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "TreatmentFactorsStageLP.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "TreatmentFactorsStageNeuropathy.title": {
+      "source": "{CmpnName}'s hind-end weakness and polyneuropathy:",
+      "target": ""
+    },
+    "TreatmentFactorsStageNeuropathy.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": ""
+    },
+    "TreatmentFactorsStageNeuropathy.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "TreatmentFactorsStageNeuropathy.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "TreatmentFactorsStageNeuropathy.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "TreatmentFactorsStageNeuropathy.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "TreatmentFactorsStageNeuropathy.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "TreatmentFactorsSurgeryRisksPanel.title": {
+      "source": "How have the risks of surgery factored into your decision?",
+      "target": ""
+    },
+    "TreatmentFactorsRisks.title": {
+      "source": "Risks of a surgical procedure with extended anesthesia:",
+      "target": ""
+    },
+    "TreatmentFactorsRisks.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": ""
+    },
+    "TreatmentFactorsRisks.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "TreatmentFactorsRisks.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "TreatmentFactorsRisks.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "TreatmentFactorsRisks.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "TreatmentFactorsRisks.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "TreatmentFactorsRisksComplications.title": {
+      "source": "Risks of post-op complications such as aspiration pneumonia or suture failure:",
+      "target": ""
+    },
+    "TreatmentFactorsRisksComplications.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": ""
+    },
+    "TreatmentFactorsRisksComplications.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "TreatmentFactorsRisksComplications.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "TreatmentFactorsRisksComplications.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "TreatmentFactorsRisksComplications.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "TreatmentFactorsRisksComplications.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "TreatmentFactorsGeneralPanel.title": {
+      "source": "How have {CmpnName}'s age and general health considerations factored into your decision?",
+      "target": ""
+    },
+    "TreatmentFactorsAge.title": {
+      "source": "{CmpnName}'s age:",
+      "target": ""
+    },
+    "TreatmentFactorsAge.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": ""
+    },
+    "TreatmentFactorsAge.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "TreatmentFactorsAge.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "TreatmentFactorsAge.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "TreatmentFactorsAge.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "TreatmentFactorsAge.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "TreatmentFactorsGeneralHealth.title": {
+      "source": "{CmpnName}'s overall health and prospects for quality of life moving forward:",
+      "target": ""
+    },
+    "TreatmentFactorsGeneralHealth.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": ""
+    },
+    "TreatmentFactorsGeneralHealth.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "TreatmentFactorsGeneralHealth.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "TreatmentFactorsGeneralHealth.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "TreatmentFactorsGeneralHealth.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "TreatmentFactorsGeneralHealth.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "TreatmentFactorsCoexisting.title": {
+      "source": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
+      "target": ""
+    },
+    "TreatmentFactorsCoexisting.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": ""
+    },
+    "TreatmentFactorsCoexisting.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "TreatmentFactorsCoexisting.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "TreatmentFactorsCoexisting.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "TreatmentFactorsCoexisting.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "TreatmentFactorsCoexisting.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesPanel.title": {
+      "source": "How have your personal circumstances factored into your decision?",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesAccess.title": {
+      "source": "Distance to or access to a qualified specialist:",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesAccess.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesAccess.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesAccess.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesAccess.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesAccess.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesAccess.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesCare.title": {
+      "source": "Ability to provide adequate post-operative care:",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesCare.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesCare.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesCare.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesCare.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesCare.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "TreatmentFactorsCircumstancesCare.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "TreatmentFactorsOtherPanel.title": {
+      "source": "What other considerations, if any, have factored into your decision?",
+      "target": ""
+    },
+    "TreatmentFactorsOther.title": {
+      "source": "Other considerations:",
+      "target": ""
+    },
+    "TreatmentFactorsOther.description": {
+      "source": "Maximum 250 characters.",
+      "target": ""
+    }
+  }
+}

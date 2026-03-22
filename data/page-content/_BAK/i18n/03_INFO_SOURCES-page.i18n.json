@@ -1,0 +1,161 @@
+{
+  "page": "INFO_SOURCES-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "InfoSourcesHeading.html": {
+      "source": "<h2>How did you learn about LP/GOLPP?</h2>",
+      "target": ""
+    },
+    "InfoSourcesText.html": {
+      "source": "<p>This section asks some questions about how you learned about laryngeal paralysis and geriatric-onset laryngeal paralysis (LP) and polyneuropathy (GOLPP) and whether the information you found helped you make decisions for {CmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>",
+      "target": ""
+    },
+    "InfoSourcesPriorKnowledge.title": {
+      "source": "Had you ever heard of LP before {CmpnName} got it?",
+      "target": ""
+    },
+    "InfoSourcesPriorKnowledge.labelTrue": {
+      "source": "Yes",
+      "target": ""
+    },
+    "InfoSourcesPriorKnowledge.labelFalse": {
+      "source": "No",
+      "target": ""
+    },
+    "InfoSourcesTypes.title": {
+      "source": "Which sources of information have you accessed to learn about LP?",
+      "target": ""
+    },
+    "InfoSourcesTypes.choices.VETERINARIANS.text": {
+      "source": "Veterinarians",
+      "target": ""
+    },
+    "InfoSourcesTypes.choices.WEBSITES.text": {
+      "source": "Websites",
+      "target": ""
+    },
+    "InfoSourcesTypes.choices.FACEBOOK_GROUPS.text": {
+      "source": "Facebook groups",
+      "target": ""
+    },
+    "InfoSourcesTypes.choices.SOCIAL_VIDEO.text": {
+      "source": "Youtube, Instagram or other video",
+      "target": ""
+    },
+    "InfoSourcesTypes.choices.SOCIAL_CHAT.text": {
+      "source": "Reddit, X (Twitter), or other social media",
+      "target": ""
+    },
+    "InfoSourcesTypes.choices.AI_MODELS.text": {
+      "source": "AI models like ChatGPT",
+      "target": ""
+    },
+    "InfoSourcesTypes.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "InfoSourcesBestSource.title": {
+      "source": "Which of those information sources did you find MOST useful (please select one)?",
+      "target": ""
+    },
+    "InfoSourcesHardToUnderstand.title": {
+      "source": "Did you find the information you got about LP difficult to understand?",
+      "target": ""
+    },
+    "InfoSourcesHardToUnderstand.description": {
+      "source": "1 = no, not difficult at all, 5 = very difficult",
+      "target": ""
+    },
+    "InfoSourcesHardToUnderstand.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "InfoSourcesHardToUnderstand.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "InfoSourcesHardToUnderstand.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "InfoSourcesHardToUnderstand.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "InfoSourcesHardToUnderstand.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "InfoSourcesHardToUnderstand.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "InfoSourcesContradictory.title": {
+      "source": "Do you feel like a lot of the information you got about LP was contradictory?",
+      "target": ""
+    },
+    "InfoSourcesContradictory.description": {
+      "source": "1 = not at all contradictory, 5 = very contradictory",
+      "target": ""
+    },
+    "InfoSourcesContradictory.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "InfoSourcesContradictory.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "InfoSourcesContradictory.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "InfoSourcesContradictory.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "InfoSourcesContradictory.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "InfoSourcesContradictory.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "InfoSourcesClearAnswers.title": {
+      "source": "Did you find it hard to get clear answers to your questions so you could make informed choices for {CmpnName}?",
+      "target": ""
+    },
+    "InfoSourcesClearAnswers.description": {
+      "source": "1 = No, not hard at all, 5 = yes, very hard",
+      "target": ""
+    },
+    "InfoSourcesClearAnswers.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "InfoSourcesClearAnswers.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "InfoSourcesClearAnswers.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "InfoSourcesClearAnswers.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "InfoSourcesClearAnswers.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "InfoSourcesClearAnswers.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    }
+  }
+}

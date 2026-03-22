@@ -1,0 +1,116 @@
+{
+  "name": "INTUBATION_HISTORY-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "IntubationHistoryCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "IntubationHistoryHeading",
+          "html": "<h2>Dies ist ein</h2>"
+        },
+        {
+          "type": "html",
+          "name": "IntubationHistoryText",
+          "html": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase</p>"
+        },
+        {
+          "type": "panel",
+          "name": "IntubationHistoryDetails",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "IntubationHistoryWasIntubated",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": "NO",
+                  "text": "Der Text"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Auf diese Weise"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "IntubationHistoryReason",
+              "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte",
+              "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "TEETH_CLEANING",
+                  "text": "So entsteht eine"
+                },
+                {
+                  "value": "DENTAL_SURGERY",
+                  "text": "Dieser Platzhalter eignet"
+                },
+                {
+                  "value": "NON_DENTAL_SURGERY",
+                  "text": "Die Inhalte rotieren,"
+                },
+                {
+                  "value": "DIAGNOSTIC",
+                  "text": "Dadurch wirkt die"
+                },
+                {
+                  "value": "EMERGENCY",
+                  "text": "Längere Texte dürfen"
+                }
+              ],
+              "choicesOrder": "none",
+              "otherText": "Other",
+              "showOtherItem": true
+            },
+            {
+              "type": "boolean",
+              "name": "IntubationHistoryConcerns",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels",
+              "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
+              "labelTrue": "Am Ende",
+              "labelFalse": "Dies ist",
+              "swapOrder": true,
+              "isRequired": true
+            },
+            {
+              "type": "checkbox",
+              "name": "IntubationHistorySymptoms",
+              "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient.",
+              "visibleIf": "{IntubationHistoryWasIntubated} = 'YES' && {IntubationHistoryConcerns} = true",
+              "choices": [
+                {
+                  "value": "COUGHING",
+                  "text": "Die endgültige"
+                },
+                {
+                  "value": "GAGGING",
+                  "text": "Auch längere"
+                },
+                {
+                  "value": "PANTING",
+                  "text": "Umlaute wie ä,"
+                },
+                {
+                  "value": "LABORED_BREATHING",
+                  "text": "So kann die"
+                }
+              ],
+              "choicesOrder": "none",
+              "otherText": "Other",
+              "showOtherItem": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

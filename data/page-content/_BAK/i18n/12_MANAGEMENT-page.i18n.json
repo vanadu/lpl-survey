@@ -1,0 +1,1133 @@
+{
+  "page": "MANAGEMENT-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "ManagementHeading.html": {
+      "source": "<h2>Medical managment of LP/GOLPP</h2>",
+      "target": ""
+    },
+    "ManagementTextImportant.html": {
+      "source": "<p><b>IMPORTANT</b>: Attempting to manage LP/GOLPP symptoms with medications is controversial. There is no medication that can restore movement to paralyzed laryneal tissue. That means that even with medication, the risk of breathing crises and a potentially fatal suffocation event is very real. So while medications can't prevent a breathing emergency, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life. </p>",
+      "target": ""
+    },
+    "ManagementTextNote.html": {
+      "source": "<p><b>Note:</b> Medications for arthritis/osteoarthritis pain such as NSAIDS (Rimadyl, carprofen) and NGF blockers (Librela, Beransa) may improve mobility by reducing pain, but they aren't specifically prescribed for LP/GOLPP and therefore and aren't included in the 'Medical management' section of the survey.</p>",
+      "target": ""
+    },
+    "ManagementPrescriptions.title": {
+      "source": "Did your primary veterinarian provide or prescribe any prescription medications for {CmpnName}'s LP/GOLPP symptoms?",
+      "target": ""
+    },
+    "ManagementPrescriptions.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "ManagementPrescriptions.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "ManagementPrescriptions.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionType.title": {
+      "source": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP symptoms?",
+      "target": ""
+    },
+    "ManagementPrescriptionType.description": {
+      "source": "Please also include discontinued medications.",
+      "target": ""
+    },
+    "ManagementPrescriptionType.choices.DOXEPIN.text": {
+      "source": "Doxepin",
+      "target": ""
+    },
+    "ManagementPrescriptionType.choices.TRAZODONE.text": {
+      "source": "Trazodone",
+      "target": ""
+    },
+    "ManagementPrescriptionType.choices.GABAPENTIN.text": {
+      "source": "Gabapentin",
+      "target": ""
+    },
+    "ManagementPrescriptionType.choices.GALLIPRANT.text": {
+      "source": "Galliprant",
+      "target": ""
+    },
+    "ManagementPrescriptionType.choices.STEROID.text": {
+      "source": "Prednisone or other steriod",
+      "target": ""
+    },
+    "ManagementPrescriptionType.choices.ANTIHISTAMINE.text": {
+      "source": "Benadryl or other antihistamine",
+      "target": ""
+    },
+    "ManagementPrescriptionType.choices.CERENIA.text": {
+      "source": "Cerenia (maripotant citrate)",
+      "target": ""
+    },
+    "ManagementPrescriptionType.choices.MELOXICAM.text": {
+      "source": "Meloxicam",
+      "target": ""
+    },
+    "ManagementPrescriptionType.choices.ACEPROMINE.text": {
+      "source": "Acepromazine (Atravet, ACP, Acepromine)",
+      "target": ""
+    },
+    "ManagementPrescriptionType.choices.ALBUTEROL.text": {
+      "source": "Albuterol or other inhaler",
+      "target": ""
+    },
+    "ManagementPrescriptionType.choices.TEMARIL_P.text": {
+      "source": "Temaril P",
+      "target": ""
+    },
+    "ManagementPrescriptionCost.title": {
+      "source": "Average monthly cost of {CmpnName}'s prescriptions:",
+      "target": ""
+    },
+    "ManagementPrescriptionCost.description": {
+      "source": "If you don't know exactly, it's OK to guesstimate.",
+      "target": ""
+    },
+    "ManagementPrescriptionCost.choices.UNDER_50.text": {
+      "source": "Under $50",
+      "target": ""
+    },
+    "ManagementPrescriptionCost.choices.51_100.text": {
+      "source": "$51-$100",
+      "target": ""
+    },
+    "ManagementPrescriptionCost.choices.101_200.text": {
+      "source": "$101-$200",
+      "target": ""
+    },
+    "ManagementPrescriptionCost.choices.OVER_200.text": {
+      "source": "Over $200",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.title": {
+      "source": "Please rate the effect of Doxepin on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.title": {
+      "source": "Please rate the effect of Doxepin on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionDoxepinRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.title": {
+      "source": "Please rate the effect of Trazodone on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.title": {
+      "source": "Please rate the effect of Trazodone on {CmpnName} mobility or behavior:",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.title": {
+      "source": "Please rate the effect of Gabapentin on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.title": {
+      "source": "Please rate the effect of Gabapentin on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionGabapentinRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.title": {
+      "source": "Please rate the effect of Galliprant on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.title": {
+      "source": "Please rate the effect of Galliprant on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionGalliprantRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.title": {
+      "source": "Please rate the effect of Prednisone on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingMobility.title": {
+      "source": "Please rate the effect of Prednisone on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionSteroidRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.title": {
+      "source": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.title": {
+      "source": "Please rate the effect of Benadryl or other antihistamine on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.title": {
+      "source": "Please rate the effect of Cerenia on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingMobility.title": {
+      "source": "Please rate the effect of Cerenia on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionCereniaRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.title": {
+      "source": "Please rate the effect of Meloxicam on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.title": {
+      "source": "Please rate the effect of Meloxicam on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.title": {
+      "source": "Please rate the effect of Acepromine on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.title": {
+      "source": "Please rate the effect of Acepromine on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionAcepromineRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.title": {
+      "source": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.title": {
+      "source": "Please rate the effect of Albuterol or other inhaler on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.title": {
+      "source": "Please rate the effect of Temaril P on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.title": {
+      "source": "Please rate the effect of Temaril P on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementPrescriptionTemarilPRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementNonPrescription.title": {
+      "source": "Did {CmpnName} receive acupuncture or other therapies to help with LP/GOLPP symptoms?",
+      "target": ""
+    },
+    "ManagementNonPrescription.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "ManagementNonPrescription.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "ManagementNonPrescription.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementNonPrescriptionType.title": {
+      "source": "What therapies or treatments did {CmpnName} receive?",
+      "target": ""
+    },
+    "ManagementNonPrescriptionType.choices.ACUPUNCTURE.text": {
+      "source": "Acupuncture",
+      "target": ""
+    },
+    "ManagementNonPrescriptionType.choices.THERAPY.text": {
+      "source": "Physical or hydro therapy",
+      "target": ""
+    },
+    "ManagementNonPrescriptionType.choices.LLLT.text": {
+      "source": "Cold laser or red light therapy",
+      "target": ""
+    },
+    "ManagementNonPrescriptionType.choices.CHIRO.text": {
+      "source": "Chiropractic",
+      "target": ""
+    },
+    "ManagementNonPrescriptionCost.title": {
+      "source": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
+      "target": ""
+    },
+    "ManagementNonPrescriptionCost.description": {
+      "source": "If you don't know exactly, it's OK to guesstimate.",
+      "target": ""
+    },
+    "ManagementNonPrescriptionCost.choices.UNDER_100.text": {
+      "source": "Under $100",
+      "target": ""
+    },
+    "ManagementNonPrescriptionCost.choices.101_150.text": {
+      "source": "$101-150",
+      "target": ""
+    },
+    "ManagementNonPrescriptionCost.choices.151_250.text": {
+      "source": "$151-$250",
+      "target": ""
+    },
+    "ManagementNonPrescriptionCost.choices.OVER_250.text": {
+      "source": "Over $250",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.title": {
+      "source": "Please rate the effect of acupuncture on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.title": {
+      "source": "Please rate the effect of acupuncture on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.title": {
+      "source": "Please rate the effect of physical or hydro therapy on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.title": {
+      "source": "Please rate the effect of physical or hydro therapy on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.title": {
+      "source": "How effective was cold laser or red light therapy on {CmpnName}'s breathing:",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.title": {
+      "source": "Please rate the effect of cold laser or red light therapy on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.title": {
+      "source": "Please rate the effect of chiropractic on {CmpnName}'s breathing on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.title": {
+      "source": "Please rate the effect of chiropractic on {CmpnName}'s mobility or behavior:",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.description": {
+      "source": "1 = very negative, 3 = no effect,  5 = very positive",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ManagementNonPrescriptionChiroRatingMobility.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    }
+  }
+}

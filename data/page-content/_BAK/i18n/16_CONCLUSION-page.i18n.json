@@ -1,0 +1,349 @@
+{
+  "page": "CONCLUSION-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "ConclusionHeading.html": {
+      "source": "<h2>Conclusion</h2>",
+      "target": ""
+    },
+    "Conclusion.html": {
+      "source": "<p>The last section of this survey references your earlier responses to determine how {CmpnName}'s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression. </p>",
+      "target": ""
+    },
+    "ConclusionsPanelLifeStatusTrueText.html": {
+      "source": "<p><b>NOTE: </b>These questions ask about the last station of {CmpnName}'s LP/GOLPP journey before {cvGenderSubjectPronoun} crossed over the Rainbow Bridge. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later. </p>",
+      "target": ""
+    },
+    "ConclusionsPanelLifeStatusFalseText.html": {
+      "source": "<p><b>IMPORTANT:</b> Please answer the questions about {CmpnName} in {cvGenderObjectPronoun} current state of health:</p>",
+      "target": ""
+    },
+    "ConclusionSpecialConsiderations.title": {
+      "source": "Please describe any special considerations for {CmpnName} due to LP-related breathing issues:",
+      "target": ""
+    },
+    "ConclusionSpecialConsiderations.choices.NO_CONSIDERATIONS.text": {
+      "source": "No special considerations",
+      "target": ""
+    },
+    "ConclusionSpecialConsiderations.choices.EXERCISE.text": {
+      "source": "Exercise limitations",
+      "target": ""
+    },
+    "ConclusionSpecialConsiderations.choices.FOOD.text": {
+      "source": "Type, amount or frequency of feeding",
+      "target": ""
+    },
+    "ConclusionSpecialConsiderations.choices.TRAVEL.text": {
+      "source": "Travel restrictions",
+      "target": ""
+    },
+    "ConclusionSpecialConsiderations.choices.EXCITEMENT.text": {
+      "source": "Other behavior restrictions i.e., anxiety, excitement",
+      "target": ""
+    },
+    "ConclusionGeneralCondition.title": {
+      "source": "Please describe {CmpnName}'s general physical condition:",
+      "target": ""
+    },
+    "ConclusionGeneralCondition.choices.NO_SYMPTOMS.text": {
+      "source": "No noticeable symptoms",
+      "target": ""
+    },
+    "ConclusionGeneralCondition.choices.HIND_END.text": {
+      "source": "Significant hind-end weakness",
+      "target": ""
+    },
+    "ConclusionGeneralCondition.choices.FALLING.text": {
+      "source": "Frequent falling",
+      "target": ""
+    },
+    "ConclusionGeneralCondition.choices.GET_UP.text": {
+      "source": "Difficulty getting up or standing",
+      "target": ""
+    },
+    "ConclusionGeneralCondition.choices.URINARY.text": {
+      "source": "Urinary incontinence",
+      "target": ""
+    },
+    "ConclusionGeneralCondition.choices.FECAL.text": {
+      "source": "Fecal incontinence",
+      "target": ""
+    },
+    "ConclusionQOL.title": {
+      "source": "How would you rate {CmpnName}'s quality of life at this stage?",
+      "target": ""
+    },
+    "ConclusionQOL.description": {
+      "source": "1 = very poor, 3 = fair, 5 = very good",
+      "target": ""
+    },
+    "ConclusionQOL.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "ConclusionQOL.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "ConclusionQOL.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "ConclusionQOL.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "ConclusionQOL.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "ConclusionQOL.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ConclusionOtherConditionsNew.title": {
+      "source": "Did {CmpnName} develop any new conditions during {cvGenderObjectPronoun} LP/GOLPP journey that {cvGenderSubjectPronoun} didn't have before?",
+      "target": ""
+    },
+    "ConclusionOtherConditionsNew.labelTrue": {
+      "source": "Yes",
+      "target": ""
+    },
+    "ConclusionOtherConditionsNew.labelFalse": {
+      "source": "No",
+      "target": ""
+    },
+    "ConclusionOtherConditions.title": {
+      "source": "What other conditions did {CmpnName} develop during {cvGenderObjectPronoun} LP/GOLPP journey?",
+      "target": ""
+    },
+    "ConclusionOtherConditions.description": {
+      "source": "The selections you made about the beginning of {CmpnName}'s LP/GOLPP journey are preselected.",
+      "target": ""
+    },
+    "ConclusionOtherConditions.choices.GERD.text": {
+      "source": "Acid reflux (GERD)",
+      "target": ""
+    },
+    "ConclusionOtherConditions.choices.ME.text": {
+      "source": "Megaesophagus",
+      "target": ""
+    },
+    "ConclusionOtherConditions.choices.DM.text": {
+      "source": "Degenerative Myelopathy",
+      "target": ""
+    },
+    "ConclusionOtherConditions.choices.ARTHRITIS.text": {
+      "source": "Arthritis",
+      "target": ""
+    },
+    "ConclusionOtherConditions.choices.CUSHINGS.text": {
+      "source": "Cushings",
+      "target": ""
+    },
+    "ConclusionOtherConditions.choices.CT.text": {
+      "source": "Collapsing Trachea",
+      "target": ""
+    },
+    "ConclusionOtherConditions.choices.HYPOTHYROID.text": {
+      "source": "Hypothyroidism",
+      "target": ""
+    },
+    "ConclusionOtherConditions.choices.HEMANGIOSARCOMA.text": {
+      "source": "Hemangiosarcoma",
+      "target": ""
+    },
+    "ConclusionOtherConditions.choices.NONE.text": {
+      "source": "No new conditions",
+      "target": ""
+    },
+    "ConclusionCauseOfDeathHeading.html": {
+      "source": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This question asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over.",
+      "target": ""
+    },
+    "ConclusionCauseOfDeath.title": {
+      "source": "What was the ultimate reason why {CmpnName} crossed over the Rainbow Bridge?",
+      "target": ""
+    },
+    "ConclusionCauseOfDeath.choices.COMPLICATIONS.text": {
+      "source": "Post-op complications of LP-related surgical procedure",
+      "target": ""
+    },
+    "ConclusionCauseOfDeath.choices.BREATHING_CRISIS.text": {
+      "source": "LP-related breathing crisis",
+      "target": ""
+    },
+    "ConclusionCauseOfDeath.choices.ASPIRATION.text": {
+      "source": "Aspiration pneumonia",
+      "target": ""
+    },
+    "ConclusionCauseOfDeath.choices.QOL_POLYNEUROPATHY.text": {
+      "source": "Quality of life due to polyneuropathy or hind-end weakness",
+      "target": ""
+    },
+    "ConclusionCauseOfDeath.choices.QOL_BREATHING.text": {
+      "source": "Quality of life due to LP-related breathing problems",
+      "target": ""
+    },
+    "ConclusionCauseOfDeath.choices.CANCER.text": {
+      "source": "Cancer",
+      "target": ""
+    },
+    "ConclusionCauseOfDeath.choices.SEIZURE.text": {
+      "source": "Seizure, stroke, or cardiac event",
+      "target": ""
+    },
+    "ConclusionCauseOfDeath.choices.INFECTION.text": {
+      "source": "Bacterial/viral infection",
+      "target": ""
+    },
+    "ConclusionCauseOfDeath.choices.STOPPED_EATING.text": {
+      "source": "Stopped eating",
+      "target": ""
+    },
+    "ConclusionOtherPathPanel.title": {
+      "source": "These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?",
+      "target": ""
+    },
+    "ConclusionOtherPathTieback.title": {
+      "source": "What if anything would you differently?",
+      "target": ""
+    },
+    "ConclusionOtherPathTieback.choices.TIEBACK_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathTieback.choices.TIEBACK_NO.text": {
+      "source": "I would not do tieback surgery again",
+      "target": ""
+    },
+    "ConclusionOtherPathTieback.choices.TIEBACK_SOONER.text": {
+      "source": "I would do tieback surgery sooner than I did with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathTieback.choices.TIEBACK_LATER.text": {
+      "source": "I would wait to do tieback surgery longer than I did with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathBVEAP.title": {
+      "source": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "target": ""
+    },
+    "ConclusionOtherPathBVEAP.choices.BVEAP_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathBVEAP.choices.BVEAP_NO.text": {
+      "source": "I would not do BVEAP surgery again",
+      "target": ""
+    },
+    "ConclusionOtherPathBVEAP.choices.BVEAP_SOONER.text": {
+      "source": "I would do BVEAP surgery sooner than I did with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathBVEAP.choices.BVEAP_LATER.text": {
+      "source": "I would wait to do BVEAP surgery longer than I did with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathStent.title": {
+      "source": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??",
+      "target": ""
+    },
+    "ConclusionOtherPathStent.choices.STENT_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathStent.choices.STENT_NO.text": {
+      "source": "I would not do the laryngeal stent implant again",
+      "target": ""
+    },
+    "ConclusionOtherPathStent.choices.STENT_SOONER.text": {
+      "source": "I would do laryngeal stent implant surgery sooner than I did with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathStent.choices.STENT_LATER.text": {
+      "source": "I would wait to do a laryngeal stent implant longer than I did with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathArytenoidectomy.title": {
+      "source": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "target": ""
+    },
+    "ConclusionOtherPathArytenoidectomy.choices.ARYTENOIDECTOMY_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathArytenoidectomy.choices.ARYTENOIDECTOMY_NO.text": {
+      "source": "I would not do the arytenoidectomy surgery again",
+      "target": ""
+    },
+    "ConclusionOtherPathArytenoidectomy.choices.ARYTENOIDECTOMY_SOONER.text": {
+      "source": "I would do the arytenoidectomy surgery sooner than I did with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathArytenoidectomy.choices.ARYTENOIDECTOMY_LATER.text": {
+      "source": "I would wait to do the arytenoidectomy longer than I did with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathVentrilocordectomy.title": {
+      "source": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "target": ""
+    },
+    "ConclusionOtherPathVentrilocordectomy.choices.VENTRILOCORDECTOMY_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathVentrilocordectomy.choices.VENTRILOCORDECTOMY_NO.text": {
+      "source": "I would not do the ventrilocordectomy surgery again",
+      "target": ""
+    },
+    "ConclusionOtherPathVentrilocordectomy.choices.VENTRILOCORDECTOMY_SOONER.text": {
+      "source": "I would do the ventrilocordectomy surgery sooner than I did with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathVentrilocordectomy.choices.VENTRILOCORDECTOMY_LATER.text": {
+      "source": "I would wait to do the ventrilocordectomy longer than I did with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathNoTreatment.title": {
+      "source": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "target": ""
+    },
+    "ConclusionOtherPathNoTreatment.choices.NO_TREATMENT_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": ""
+    },
+    "ConclusionOtherPathNoTreatment.choices.NO_TREATMENT_WOULD_DO.text": {
+      "source": "I would pursue tieback, laryngeal stent, or other veterinary procedure",
+      "target": ""
+    },
+    "ConclusionStentAlternative.title": {
+      "source": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
+      "target": ""
+    },
+    "ConclusionStentAlternative.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "ConclusionStentAlternative.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "ConclusionStentAlternative.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "ConclusionDifferentChoices.title": {
+      "source": "Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).",
+      "target": ""
+    },
+    "ConclusionThanksHead.html": {
+      "source": "<div class='conclusion-thanks-head-container'><h2 class='conclusion-thanks-title-heading'>LP/GOLPP Survey 2026</h2><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><h3 class='conclusion-thanks-title-subheading'>Thank You For Taking The Survey!</h3><p class='conclusion-thanks-note-mobile'>Please select the checkbox to complete and submit.</p><p class='conclusion-thanks-note'>Please click the <b>Complete</b> button to submit your responses.</p></div>",
+      "target": ""
+    }
+  }
+}

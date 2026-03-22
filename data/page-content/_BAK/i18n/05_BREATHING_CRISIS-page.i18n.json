@@ -1,0 +1,177 @@
+{
+  "page": "BREATHING_CRISIS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "BreathingCrisisHeading.html": {
+      "source": "<h2>LP Breathing Crisis</h2>",
+      "target": ""
+    },
+    "BreathingCrisisText.html": {
+      "source": "<p>In a breathing crisis, the paralyzed arytenoid cartilages block the airway and cut off airflow to the lungs. In extreme cases, the crisis escalates into a breathing emergency that requires care at a veterinary facility to restore breathing. These questions are about breathing emergencies that required care from a licensed veterinarian. </p>",
+      "target": ""
+    },
+    "BreathingCrisisDidHave.title": {
+      "source": "Did {CmpnName} ever have a breathing crisis that required an emergency visit to a veterinary professional?",
+      "target": ""
+    },
+    "BreathingCrisisDidHave.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "BreathingCrisisDidHave.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "BreathingCrisisDidHave.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "BreathingCrisisCount.title": {
+      "source": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+      "target": ""
+    },
+    "BreathingCrisisCount.choices.ONE.text": {
+      "source": "Once",
+      "target": ""
+    },
+    "BreathingCrisisCount.choices.TWO.text": {
+      "source": "Twice",
+      "target": ""
+    },
+    "BreathingCrisisCount.choices.MORE_THAN_TWO.text": {
+      "source": "More than twice",
+      "target": ""
+    },
+    "BreathingCrisisCost.title": {
+      "source": "About what was the total pre-insurance cost of these visits?",
+      "target": ""
+    },
+    "BreathingCrisisCost.choices.LESS_THAN_250.text": {
+      "source": "Less than $250",
+      "target": ""
+    },
+    "BreathingCrisisCost.choices.250_500.text": {
+      "source": "$250 - $500",
+      "target": ""
+    },
+    "BreathingCrisisCost.choices.500_1000.text": {
+      "source": "$500 - $1000",
+      "target": ""
+    },
+    "BreathingCrisisCost.choices.MORE_THAN_1000.text": {
+      "source": "More than $1000",
+      "target": ""
+    },
+    "BreathingCrisisCost.choices.DONT_KNOW.text": {
+      "source": "Don't know or prefer not to say",
+      "target": ""
+    },
+    "BreathingCrisisAdvice.title": {
+      "source": "Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?",
+      "target": ""
+    },
+    "BreathingCrisisAdvice.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "BreathingCrisisAdvice.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "BreathingCrisisAdvice.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "BreathingCrisisAdviceType.title": {
+      "source": "What advice did they give you to help you deal with a breathing crisis?",
+      "target": ""
+    },
+    "BreathingCrisisAdviceType.choices.SEDATIVE.text": {
+      "source": "Adminster a sedative",
+      "target": ""
+    },
+    "BreathingCrisisAdviceType.choices.COOL_PLACE.text": {
+      "source": "Get them to a cool place",
+      "target": ""
+    },
+    "BreathingCrisisAdviceType.choices.COOLING_AGENT.text": {
+      "source": "Apply ice, a cooling vest, or some other cooling agent",
+      "target": ""
+    },
+    "BreathingCrisisAdviceType.choices.BLOW_AIR.text": {
+      "source": "Blow air into their nose (CPR)",
+      "target": ""
+    },
+    "BreathingCrisisAdviceType.choices.EMERGENCY_FACILITY.text": {
+      "source": "Bring them to an emergency facility immediately",
+      "target": ""
+    },
+    "BreathingCrisisProvidedSubstance.title": {
+      "source": "Did a veterinary professional provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?",
+      "target": ""
+    },
+    "BreathingCrisisProvidedSubstance.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "BreathingCrisisProvidedSubstance.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "BreathingCrisisProvidedSubstance.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "BreathingCrisisProvidedSubstanceType.title": {
+      "source": "What substance or product did they provide?",
+      "target": ""
+    },
+    "BreathingCrisisProvidedSubstanceType.choices.SEDATIVE.text": {
+      "source": "Sedative",
+      "target": ""
+    },
+    "BreathingCrisisProvidedSubstanceType.choices.STEROID.text": {
+      "source": "Steroid, i.e., prednisone",
+      "target": ""
+    },
+    "BreathingCrisisProvidedSubstanceType.choices.OXYGEN.text": {
+      "source": "Supplemental oxygen",
+      "target": ""
+    },
+    "BreathingCrisisProvidedSubstanceType.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "BreathingCrisisSubstanceForm.title": {
+      "source": "In what form was the sedative or steroid provided?",
+      "target": ""
+    },
+    "BreathingCrisisSubstanceForm.choices.INJECTIBLE.text": {
+      "source": "Injectible",
+      "target": ""
+    },
+    "BreathingCrisisSubstanceForm.choices.LIQUID.text": {
+      "source": "Liquid",
+      "target": ""
+    },
+    "BreathingCrisisSubstanceForm.choices.SUPPOSITORY.text": {
+      "source": "Suppository",
+      "target": ""
+    },
+    "BreathingCrisisSubstanceForm.choices.GEL.text": {
+      "source": "Gel or paste",
+      "target": ""
+    },
+    "BreathingCrisisSubstanceForm.choices.PILL.text": {
+      "source": "Pill or tablet",
+      "target": ""
+    },
+    "BreathingCrisisSubstanceForm.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "page": "PRIMARY_VET-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "PrimaryVetHeading.html": {
+      "source": "<h2>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h2>",
+      "target": ""
+    },
+    "PrimaryVetText.html": {
+      "source": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p><p>If you changed primary vets since {CmpnName}'s LP/GOLPP symptoms first appeared, please answer the question about your preferred or most recent primary veterinarian.</p>",
+      "target": ""
+    },
+    "PrimaryVetInflammation.title": {
+      "source": "Did your primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
+      "target": ""
+    },
+    "PrimaryVetInflammation.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "PrimaryVetInflammation.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "PrimaryVetInflammation.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "PrimaryVetReflux.title": {
+      "source": "Did your primary veterinarian mention reflux (GERD) or esophageal dysfunction as a possible cause of {CmpnName}'s symptoms?",
+      "target": ""
+    },
+    "PrimaryVetReflux.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "PrimaryVetReflux.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "PrimaryVetReflux.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "PrimaryVetRefluxMeds.title": {
+      "source": "Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotidine) or Prilosec (omeprazole) for reflux?",
+      "target": ""
+    },
+    "PrimaryVetRefluxMeds.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "PrimaryVetRefluxMeds.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "PrimaryVetRefluxMeds.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "PrimaryVetRefluxInitiative.title": {
+      "source": "Did you start {CmpnName} on reflux medications such as Pepcid (famotidine) or Prilosec (omeprazole) on your own initiative without a prescription or recommendation from your primary vet?",
+      "target": ""
+    },
+    "PrimaryVetRefluxInitiative.labelTrue": {
+      "source": "Yes",
+      "target": ""
+    },
+    "PrimaryVetRefluxInitiative.labelFalse": {
+      "source": "No",
+      "target": ""
+    },
+    "PrimaryVetDidDiscuss.title": {
+      "source": "Did your primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms?",
+      "target": ""
+    },
+    "PrimaryVetDidDiscuss.choices.NO_MENTION.text": {
+      "source": "No, did not mention LP/GOLPP at all",
+      "target": ""
+    },
+    "PrimaryVetDidDiscuss.choices.POSSIBLY.text": {
+      "source": "Said {CmpnName}'s symptoms were possibly due to LP/GOLPP",
+      "target": ""
+    },
+    "PrimaryVetDidDiscuss.choices.DEFINITELY.text": {
+      "source": "Said {CmpnName}'s symptoms were definitely due to LP/GOLPP",
+      "target": ""
+    },
+    "PrimaryVetDidDiscuss.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "PrimaryVetInfo.title": {
+      "source": "Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect {CmpnName}?",
+      "target": ""
+    },
+    "PrimaryVetInfo.labelTrue": {
+      "source": "Yes",
+      "target": ""
+    },
+    "PrimaryVetInfo.labelFalse": {
+      "source": "No",
+      "target": ""
+    },
+    "PrimaryVetInfoDetails.title": {
+      "source": "What did they tell you about how LP/GOLPP might affect {CmpnName}?",
+      "target": ""
+    },
+    "PrimaryVetInfoDetails.choices.BARK_LOSS.text": {
+      "source": "Loss or weakening of bark",
+      "target": ""
+    },
+    "PrimaryVetInfoDetails.choices.PROGRESSIVE.text": {
+      "source": "LP/GOLPP is a progressive disease",
+      "target": ""
+    },
+    "PrimaryVetInfoDetails.choices.HOT_HUMID.text": {
+      "source": "Hot, humid weather exacerbates symptoms",
+      "target": ""
+    },
+    "PrimaryVetInfoDetails.choices.BREATHING_CRISIS.text": {
+      "source": "Potential for life-threatening breathing crisis",
+      "target": ""
+    },
+    "PrimaryVetSurgery.title": {
+      "source": "Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for {CmpnName}'s LP/GOLPP?",
+      "target": ""
+    },
+    "PrimaryVetSurgery.choices.NO_RECOMMENDATION.text": {
+      "source": "Made no recommendation",
+      "target": ""
+    },
+    "PrimaryVetSurgery.choices.ADVISED_FOR.text": {
+      "source": "Encouraged me to talk to a surgeon",
+      "target": ""
+    },
+    "PrimaryVetSurgery.choices.ADVISED_AGAINST.text": {
+      "source": "Advised against surgery",
+      "target": ""
+    },
+    "PrimaryVetSurgeryPerception.title": {
+      "source": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
+      "target": ""
+    },
+    "PrimaryVetSurgeryPerception.choices.SPECIFIC_CONDITION.text": {
+      "source": "{CmpnName}'s specific condition",
+      "target": ""
+    },
+    "PrimaryVetSurgeryPerception.choices.GENERAL_PERCEPTION.text": {
+      "source": "General negative perception",
+      "target": ""
+    },
+    "PrimaryVetSurgeryPerception.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "PrimaryVetConfidence.title": {
+      "source": "How confident have you been in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
+      "target": ""
+    },
+    "PrimaryVetConfidence.description": {
+      "source": "1 = not at all confident, 5 = very confident",
+      "target": ""
+    },
+    "PrimaryVetConfidence.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "PrimaryVetConfidence.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "PrimaryVetConfidence.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "PrimaryVetConfidence.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "PrimaryVetConfidence.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "PrimaryVetConfidence.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "PrimaryVetSatisfaction.title": {
+      "source": "How satisfied have you been with your current primary veterinarian's handling of {CmpnName}'s LP/GOLPP?",
+      "target": ""
+    },
+    "PrimaryVetSatisfaction.description": {
+      "source": "1 = not at all satisfied, 5 = very satisfied",
+      "target": ""
+    },
+    "PrimaryVetSatisfaction.rateValues.1.text": {
+      "source": "1",
+      "target": ""
+    },
+    "PrimaryVetSatisfaction.rateValues.2.text": {
+      "source": "2",
+      "target": ""
+    },
+    "PrimaryVetSatisfaction.rateValues.3.text": {
+      "source": "3",
+      "target": ""
+    },
+    "PrimaryVetSatisfaction.rateValues.4.text": {
+      "source": "4",
+      "target": ""
+    },
+    "PrimaryVetSatisfaction.rateValues.5.text": {
+      "source": "5",
+      "target": ""
+    },
+    "PrimaryVetSatisfaction.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    }
+  }
+}

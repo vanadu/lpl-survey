@@ -1,0 +1,191 @@
+{
+  "name": "INFO_SOURCES-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "InfoSourcesCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "InfoSourcesHeading",
+          "html": "<h2>Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht.</h2>"
+        },
+        {
+          "type": "html",
+          "name": "InfoSourcesText",
+          "html": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich</p>"
+        },
+        {
+          "type": "panel",
+          "name": "InfoSourcesMainPanel",
+          "elements": [
+            {
+              "type": "boolean",
+              "name": "InfoSourcesPriorKnowledge",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise",
+              "labelTrue": "Die Struktur",
+              "labelFalse": "Bitte prüfen",
+              "swapOrder": true,
+              "isRequired": true
+            },
+            {
+              "type": "checkbox",
+              "name": "InfoSourcesTypes",
+              "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für",
+              "choices": [
+                {
+                  "value": "VETERINARIANS",
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": "WEBSITES",
+                  "text": "Dadurch wirkt"
+                },
+                {
+                  "value": "FACEBOOK_GROUPS",
+                  "text": "Längere Texte dürfen"
+                },
+                {
+                  "value": "SOCIAL_VIDEO",
+                  "text": "Kurze Beschriftungen bleiben dagegen bewusst knapp"
+                },
+                {
+                  "value": "SOCIAL_CHAT",
+                  "text": "Das erleichtert die Prüfung von Buttons, Labels und kleinen"
+                },
+                {
+                  "value": "AI_MODELS",
+                  "text": "Am Ende wird die echte"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Dies ist ein"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Other Sources"
+            },
+            {
+              "type": "dropdown",
+              "name": "InfoSourcesBestSource",
+              "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer",
+              "visibleIf": "{InfoSourcesTypes.length} > 1 && {InfoSourcesTypes} notcontains 'DONT_KNOW'",
+              "choices": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "InfoSourcesCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "InfoSourcesQualityPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "InfoSourcesHardToUnderstand",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "InfoSourcesContradictory",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe Absatz",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "InfoSourcesClearAnswers",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann",
+              "description": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 2,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 3,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 4,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": 5,
+                  "text": "So entsteht"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Dieser Platzhalter eignet"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4205 @@
+{
+  "meta": {
+    "registryVersion": "1.0.0",
+    "builtAt": "2026-03-22T11:09:39.443Z",
+    "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\de-DE\\master-survey.json",
+    "calculatedValues": [
+      "cvAgeInMonths",
+      "cvAgeInMonthsAtSymptomOnset",
+      "cvDcsdCmpnAgeTotalMonths",
+      "cvDcsdCmpnAgeYearsAsMonths",
+      "cvDoFirstPersonSingularInitialCap",
+      "cvDoThirdPersonSingular",
+      "cvDurationOfSymptomsInMonths",
+      "cvEndOfLife",
+      "cvGenderObjectPronoun",
+      "cvGenderSubjectPronoun",
+      "cvLvngCmpnAgeTotalMonths",
+      "cvLvngCmpnAgeYearsAsMonths",
+      "cvObserveFirstPersonPast",
+      "cvStateAdjective",
+      "cvThatThis",
+      "cvTreatmentType"
+    ],
+    "flags": {
+      "includePresentation": false,
+      "includeVisibleIfExpr": true
+    }
+  },
+  "elements": {
+    "LandingCard1Panel": {
+      "name": "LandingCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "LANDING-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "LandingHeaderPanel": {
+      "name": "LandingHeaderPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "LANDING-page",
+        "LandingCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "LandingWelcomePanel": {
+      "name": "LandingWelcomePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "LANDING-page",
+        "LandingCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "LandingCard2Panel": {
+      "name": "LandingCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "LANDING-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "LandingPrivacyPanel": {
+      "name": "LandingPrivacyPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "LANDING-page",
+        "LandingCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "LandingConsentPanel": {
+      "name": "LandingConsentPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "LANDING-page",
+        "LandingCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "LandingConsent": {
+      "name": "LandingConsent",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "LANDING-page",
+        "LandingCard2Panel",
+        "LandingConsentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "UserInfoCard1Panel": {
+      "name": "UserInfoCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "UserInfoLifeStatusNamePanel": {
+      "name": "UserInfoLifeStatusNamePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "CmpnName": {
+      "name": "CmpnName",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel",
+        "UserInfoLifeStatusNamePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "LifeStatus": {
+      "name": "LifeStatus",
+      "type": "imagepicker",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel",
+        "UserInfoLifeStatusNamePanel"
+      ],
+      "hasTitle": true,
+      "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt.",
+      "hasVisibleIf": true,
+      "visibleIf": "{CmpnName} notempty",
+      "isRequired": true
+    },
+    "UserInfoVerificationPanel": {
+      "name": "UserInfoVerificationPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "UserInfoContactType": {
+      "name": "UserInfoContactType",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel",
+        "UserInfoVerificationPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "UserInfoContactTypeEmail": {
+      "name": "UserInfoContactTypeEmail",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel",
+        "UserInfoVerificationPanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine",
+      "hasVisibleIf": true,
+      "visibleIf": "{UserInfoContactType} = false",
+      "isRequired": true
+    },
+    "UserInfoContactTypeFacebook": {
+      "name": "UserInfoContactTypeFacebook",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel",
+        "UserInfoVerificationPanel"
+      ],
+      "hasTitle": true,
+      "title": "Längere Texte dürfen",
+      "hasVisibleIf": true,
+      "visibleIf": "{UserInfoContactType} = true",
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "UserInfoContactOK": {
+      "name": "UserInfoContactOK",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel",
+        "UserInfoVerificationPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "UserInfoCard2Panel": {
+      "name": "UserInfoCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "UserInfoNameCountryPanel": {
+      "name": "UserInfoNameCountryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Umlaute wie ä, ö, ü und",
+      "hasVisibleIf": false
+    },
+    "UserInfoFirstName": {
+      "name": "UserInfoFirstName",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard2Panel",
+        "UserInfoNameCountryPanel"
+      ],
+      "hasTitle": true,
+      "title": "So kann die",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "UserInfoCountry": {
+      "name": "UserInfoCountry",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard2Panel",
+        "UserInfoNameCountryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "UserInfoStateRegion": {
+      "name": "UserInfoStateRegion",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard2Panel",
+        "UserInfoNameCountryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dadurch wirkt die Testseite weniger künstlich",
+      "hasVisibleIf": false,
+      "isRequired": false
+    },
+    "UserInfoAgeGenderPanel": {
+      "name": "UserInfoAgeGenderPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Längere Texte dürfen hier ruhig",
+      "hasVisibleIf": false
+    },
+    "UserInfoAgeGroup": {
+      "name": "UserInfoAgeGroup",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard2Panel",
+        "UserInfoAgeGenderPanel"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp",
+      "hasVisibleIf": false
+    },
+    "UserInfoGender": {
+      "name": "UserInfoGender",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard2Panel",
+        "UserInfoAgeGenderPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte",
+      "hasVisibleIf": false,
+      "isRequired": false
+    },
+    "CmpnInfoCard1Panel": {
+      "name": "CmpnInfoCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "CmpnInfoDetailsPanel": {
+      "name": "CmpnInfoDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "CmpnInfoAnimalType": {
+      "name": "CmpnInfoAnimalType",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
+        "CmpnInfoDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "So kann die",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "CmpnInfoBreed": {
+      "name": "CmpnInfoBreed",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
+        "CmpnInfoDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Für Schaltflächen, Hinweise und Überschriften",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "CmpnInfoGender": {
+      "name": "CmpnInfoGender",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
+        "CmpnInfoDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Struktur des",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "CmpnInfoWeight": {
+      "name": "CmpnInfoWeight",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
+        "CmpnInfoDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen.",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "CmpnInfoWeightUnits": {
+      "name": "CmpnInfoWeightUnits",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
+        "CmpnInfoDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Längere Texte dürfen",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "CmpnInfoCard2Panel": {
+      "name": "CmpnInfoCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "CmpnInfoAgePanel": {
+      "name": "CmpnInfoAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "dcsdCmpnInfoAgePanel": {
+      "name": "dcsdCmpnInfoAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt",
+      "hasVisibleIf": true,
+      "visibleIf": "{LifeStatus} = true"
+    },
+    "dcsdCmpnInfoAgeYears": {
+      "name": "dcsdCmpnInfoAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel",
+        "dcsdCmpnInfoAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "dcsdCmpnInfoAgeMonths": {
+      "name": "dcsdCmpnInfoAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel",
+        "dcsdCmpnInfoAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "So kann die Darstellung im Layout",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "lvngCmpnInfoAgePanel": {
+      "name": "lvngCmpnInfoAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf",
+      "hasVisibleIf": true,
+      "visibleIf": "{LifeStatus} = false"
+    },
+    "lvngCmpnInfoAgeYears": {
+      "name": "lvngCmpnInfoAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel",
+        "lvngCmpnInfoAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Für Schaltflächen, Hinweise und Überschriften",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "lvngCmpnInfoAgeMonths": {
+      "name": "lvngCmpnInfoAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel",
+        "lvngCmpnInfoAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine glaubwürdige Zielsprache für",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "CmpnInfoDemeanorPanel": {
+      "name": "CmpnInfoDemeanorPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "CmpnInfoDemeanor": {
+      "name": "CmpnInfoDemeanor",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoDemeanorPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "CmpnInfoAnxiety": {
+      "name": "CmpnInfoAnxiety",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoDemeanorPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "CmpnInfoHasInsurance": {
+      "name": "CmpnInfoHasInsurance",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoDemeanorPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte",
+      "hasVisibleIf": false
+    },
+    "InfoSourcesCard1Panel": {
+      "name": "InfoSourcesCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "INFO_SOURCES-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "InfoSourcesMainPanel": {
+      "name": "InfoSourcesMainPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "INFO_SOURCES-page",
+        "InfoSourcesCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "InfoSourcesPriorKnowledge": {
+      "name": "InfoSourcesPriorKnowledge",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "INFO_SOURCES-page",
+        "InfoSourcesCard1Panel",
+        "InfoSourcesMainPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "InfoSourcesTypes": {
+      "name": "InfoSourcesTypes",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "INFO_SOURCES-page",
+        "InfoSourcesCard1Panel",
+        "InfoSourcesMainPanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für",
+      "hasVisibleIf": false
+    },
+    "InfoSourcesBestSource": {
+      "name": "InfoSourcesBestSource",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "INFO_SOURCES-page",
+        "InfoSourcesCard1Panel",
+        "InfoSourcesMainPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer",
+      "hasVisibleIf": true,
+      "visibleIf": "{InfoSourcesTypes.length} > 1 && {InfoSourcesTypes} notcontains 'DONT_KNOW'"
+    },
+    "InfoSourcesCard2Panel": {
+      "name": "InfoSourcesCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "INFO_SOURCES-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "InfoSourcesQualityPanel": {
+      "name": "InfoSourcesQualityPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "INFO_SOURCES-page",
+        "InfoSourcesCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "InfoSourcesHardToUnderstand": {
+      "name": "InfoSourcesHardToUnderstand",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "INFO_SOURCES-page",
+        "InfoSourcesCard2Panel",
+        "InfoSourcesQualityPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "InfoSourcesContradictory": {
+      "name": "InfoSourcesContradictory",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "INFO_SOURCES-page",
+        "InfoSourcesCard2Panel",
+        "InfoSourcesQualityPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe Absatz",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "InfoSourcesClearAnswers": {
+      "name": "InfoSourcesClearAnswers",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "INFO_SOURCES-page",
+        "InfoSourcesCard2Panel",
+        "InfoSourcesQualityPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "IntubationHistoryCard1Panel": {
+      "name": "IntubationHistoryCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "INTUBATION_HISTORY-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "IntubationHistoryDetails": {
+      "name": "IntubationHistoryDetails",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "INTUBATION_HISTORY-page",
+        "IntubationHistoryCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "IntubationHistoryWasIntubated": {
+      "name": "IntubationHistoryWasIntubated",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "INTUBATION_HISTORY-page",
+        "IntubationHistoryCard1Panel",
+        "IntubationHistoryDetails"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "IntubationHistoryReason": {
+      "name": "IntubationHistoryReason",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "INTUBATION_HISTORY-page",
+        "IntubationHistoryCard1Panel",
+        "IntubationHistoryDetails"
+      ],
+      "hasTitle": true,
+      "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte",
+      "hasVisibleIf": true,
+      "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
+      "isRequired": true
+    },
+    "IntubationHistoryConcerns": {
+      "name": "IntubationHistoryConcerns",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "INTUBATION_HISTORY-page",
+        "IntubationHistoryCard1Panel",
+        "IntubationHistoryDetails"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels",
+      "hasVisibleIf": true,
+      "visibleIf": "{IntubationHistoryWasIntubated} = 'YES'",
+      "isRequired": true
+    },
+    "IntubationHistorySymptoms": {
+      "name": "IntubationHistorySymptoms",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "INTUBATION_HISTORY-page",
+        "IntubationHistoryCard1Panel",
+        "IntubationHistoryDetails"
+      ],
+      "hasTitle": true,
+      "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient.",
+      "hasVisibleIf": true,
+      "visibleIf": "{IntubationHistoryWasIntubated} = 'YES' && {IntubationHistoryConcerns} = true"
+    },
+    "BreathingCrisisCard1Panel": {
+      "name": "BreathingCrisisCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING_CRISIS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "BreathingCrisisDidHavePanel": {
+      "name": "BreathingCrisisDidHavePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "BreathingCrisisDidHave": {
+      "name": "BreathingCrisisDidHave",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard1Panel",
+        "BreathingCrisisDidHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur",
+      "hasVisibleIf": false
+    },
+    "BreathingCrisisCount": {
+      "name": "BreathingCrisisCount",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard1Panel",
+        "BreathingCrisisDidHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt.",
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+      "isRequired": true
+    },
+    "BreathingCrisisCost": {
+      "name": "BreathingCrisisCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard1Panel",
+        "BreathingCrisisDidHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist",
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+      "isRequired": true
+    },
+    "BreathingCrisisCard2Panel": {
+      "name": "BreathingCrisisCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING_CRISIS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "BreathingCrisisDetailsPanel": {
+      "name": "BreathingCrisisDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingCrisisDidHave} = 'YES'"
+    },
+    "BreathingCrisisAdvice": {
+      "name": "BreathingCrisisAdvice",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel",
+        "BreathingCrisisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "BreathingCrisisAdviceType": {
+      "name": "BreathingCrisisAdviceType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel",
+        "BreathingCrisisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne",
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingCrisisAdvice} = 'YES'",
+      "isRequired": true
+    },
+    "BreathingCrisisProvidedSubstance": {
+      "name": "BreathingCrisisProvidedSubstance",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel",
+        "BreathingCrisisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "BreathingCrisisProvidedSubstanceType": {
+      "name": "BreathingCrisisProvidedSubstanceType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel",
+        "BreathingCrisisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und",
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
+      "isRequired": true
+    },
+    "BreathingCrisisSubstanceForm": {
+      "name": "BreathingCrisisSubstanceForm",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING_CRISIS-page",
+        "BreathingCrisisCard2Panel",
+        "BreathingCrisisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine",
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
+      "isRequired": true
+    },
+    "EarlySymptomsCard1Panel": {
+      "name": "EarlySymptomsCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "EARLY_SYMPTOMS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "EarlySymptomsAgePanel": {
+      "name": "EarlySymptomsAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen",
+      "hasVisibleIf": false
+    },
+    "EarlySymptomsAgeYears": {
+      "name": "EarlySymptomsAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
+        "EarlySymptomsAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Für Schaltflächen,",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "EarlySymptomsAgeMonths": {
+      "name": "EarlySymptomsAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
+        "EarlySymptomsAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine glaubwürdige Zielsprache für",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "EarlySymptomsDetailsPanel": {
+      "name": "EarlySymptomsDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "EarlySymptomsType": {
+      "name": "EarlySymptomsType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
+        "EarlySymptomsDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch",
+      "hasVisibleIf": false
+    },
+    "EarlySymptomsSeverity": {
+      "name": "EarlySymptomsSeverity",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
+        "EarlySymptomsDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "EarlySymptomsHindEndWeakness": {
+      "name": "EarlySymptomsHindEndWeakness",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
+        "EarlySymptomsDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "EarlySymptomsIncontinence": {
+      "name": "EarlySymptomsIncontinence",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard1Panel",
+        "EarlySymptomsDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "EarlySymptomsCard2Panel": {
+      "name": "EarlySymptomsCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "EARLY_SYMPTOMS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "EarlySymptomsOtherConditionsPanel": {
+      "name": "EarlySymptomsOtherConditionsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "EarlySymptomsOtherConditions": {
+      "name": "EarlySymptomsOtherConditions",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard2Panel",
+        "EarlySymptomsOtherConditionsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "EarlySymptomsOtherConditionsType": {
+      "name": "EarlySymptomsOtherConditionsType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "EARLY_SYMPTOMS-page",
+        "EarlySymptomsCard2Panel",
+        "EarlySymptomsOtherConditionsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit",
+      "hasVisibleIf": true,
+      "visibleIf": "{EarlySymptomsOtherConditions} = 'YES'",
+      "isRequired": true
+    },
+    "PrimaryDurationCard1Panel": {
+      "name": "PrimaryDurationCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_DURATION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "PrimaryDurationDetailsPanel": {
+      "name": "PrimaryDurationDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_DURATION-page",
+        "PrimaryDurationCard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur",
+      "hasVisibleIf": false
+    },
+    "PrimaryDurationFirstConsultYears": {
+      "name": "PrimaryDurationFirstConsultYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_DURATION-page",
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte prüfen Sie insbesondere Zeilenlängen,",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "PrimaryDurationFirstConsultMonths": {
+      "name": "PrimaryDurationFirstConsultMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_DURATION-page",
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Inhalte rotieren, damit nicht überall",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "PrimaryDurationVisitsNumber": {
+      "name": "PrimaryDurationVisitsNumber",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_DURATION-page",
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "PrimaryDurationCost": {
+      "name": "PrimaryDurationCost",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_DURATION-page",
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "PrimaryDurationChangedVets": {
+      "name": "PrimaryDurationChangedVets",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_DURATION-page",
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "PrimaryDurationChangedVetsReason": {
+      "name": "PrimaryDurationChangedVetsReason",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_DURATION-page",
+        "PrimaryDurationCard1Panel",
+        "PrimaryDurationDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+      "hasVisibleIf": true,
+      "visibleIf": "{PrimaryDurationChangedVets} != 'NO'",
+      "isRequired": true
+    },
+    "PrimaryVetCard1Panel": {
+      "name": "PrimaryVetCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_VET-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "PrimaryVetInflammationPanel": {
+      "name": "PrimaryVetInflammationPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "PrimaryVetInflammation": {
+      "name": "PrimaryVetInflammation",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel",
+        "PrimaryVetInflammationPanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "PrimaryVetRefluxPanel": {
+      "name": "PrimaryVetRefluxPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "PrimaryVetReflux": {
+      "name": "PrimaryVetReflux",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel",
+        "PrimaryVetRefluxPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "PrimaryVetRefluxMeds": {
+      "name": "PrimaryVetRefluxMeds",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel",
+        "PrimaryVetRefluxPanel"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte",
+      "hasVisibleIf": true,
+      "visibleIf": "{PrimaryVetReflux} = 'YES'",
+      "isRequired": true
+    },
+    "PrimaryVetRefluxInitiative": {
+      "name": "PrimaryVetRefluxInitiative",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel",
+        "PrimaryVetRefluxPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten",
+      "hasVisibleIf": true,
+      "visibleIf": "{PrimaryVetRefluxMeds} != 'YES'",
+      "isRequired": true
+    },
+    "PrimaryVetDiscussPanel": {
+      "name": "PrimaryVetDiscussPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "PrimaryVetDidDiscuss": {
+      "name": "PrimaryVetDidDiscuss",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard1Panel",
+        "PrimaryVetDiscussPanel"
+      ],
+      "hasTitle": true,
+      "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "PrimaryVetCard2Panel": {
+      "name": "PrimaryVetCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_VET-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "PrimaryVetInfoPanel": {
+      "name": "PrimaryVetInfoPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "PrimaryVetInfo": {
+      "name": "PrimaryVetInfo",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
+        "PrimaryVetInfoPanel"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "PrimaryVetInfoDetails": {
+      "name": "PrimaryVetInfoDetails",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
+        "PrimaryVetInfoPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird",
+      "hasVisibleIf": true,
+      "visibleIf": "{PrimaryVetInfo} = true",
+      "isRequired": true
+    },
+    "PrimaryVetSurgeryPanel": {
+      "name": "PrimaryVetSurgeryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "PrimaryVetSurgery": {
+      "name": "PrimaryVetSurgery",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
+        "PrimaryVetSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "PrimaryVetSurgeryPerception": {
+      "name": "PrimaryVetSurgeryPerception",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
+        "PrimaryVetSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben",
+      "hasVisibleIf": true,
+      "visibleIf": "{PrimaryVetSurgery} = 'ADVISED_AGAINST'",
+      "isRequired": true
+    },
+    "PrimaryVetConfidencePanel": {
+      "name": "PrimaryVetConfidencePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "PrimaryVetConfidence": {
+      "name": "PrimaryVetConfidence",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
+        "PrimaryVetConfidencePanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "PrimaryVetSatisfaction": {
+      "name": "PrimaryVetSatisfaction",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY_VET-page",
+        "PrimaryVetCard2Panel",
+        "PrimaryVetConfidencePanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisCard1Panel": {
+      "name": "DiagnosisCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "DIAGNOSIS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "DiagnosisDetailsPanel": {
+      "name": "DiagnosisDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "DiagnosisWho": {
+      "name": "DiagnosisWho",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosticType": {
+      "name": "DiagnosticType",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisStage": {
+      "name": "DiagnosisStage",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisTimeAfterSymptoms": {
+      "name": "DiagnosisTimeAfterSymptoms",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisCost": {
+      "name": "DiagnosisCost",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisSurgeonContingent": {
+      "name": "DiagnosisSurgeonContingent",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte",
+      "hasVisibleIf": true,
+      "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
+      "isRequired": true
+    },
+    "TreatmentStatusCard1Panel": {
+      "name": "TreatmentStatusCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "TreatmentStatusDidHave": {
+      "name": "TreatmentStatusDidHave",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusAgePanel": {
+      "name": "TreatmentStatusAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true"
+    },
+    "TreatmentStatusAgeYears": {
+      "name": "TreatmentStatusAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard1Panel",
+        "TreatmentStatusAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "TreatmentStatusAgeMonths": {
+      "name": "TreatmentStatusAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard1Panel",
+        "TreatmentStatusAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dadurch wirkt die Testseite weniger künstlich",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "TreatmentStatusCard2Panel": {
+      "name": "TreatmentStatusCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "TreatmentStatusTypePanel": {
+      "name": "TreatmentStatusTypePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "TreatmentStatusType": {
+      "name": "TreatmentStatusType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true",
+      "isRequired": true
+    },
+    "TreatmentStatusTiebackPanel": {
+      "name": "TreatmentStatusTiebackPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Der Text ist absichtlich generisch und enthält keine echte",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'"
+    },
+    "TreatmentStatusTiebackEmergency": {
+      "name": "TreatmentStatusTiebackEmergency",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusTiebackWait": {
+      "name": "TreatmentStatusTiebackWait",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusTiebackEmergency} = true",
+      "isRequired": true
+    },
+    "TreatmentStatusTiebackCount": {
+      "name": "TreatmentStatusTiebackCount",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusTiebackOnceCost": {
+      "name": "TreatmentStatusTiebackOnceCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusTiebackCount} = 'ONCE'",
+      "isRequired": true
+    },
+    "TreatmentStatusTiebackMultipleCost": {
+      "name": "TreatmentStatusTiebackMultipleCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusTiebackCount} = 'MORE_THAN_ONCE'",
+      "isRequired": true
+    },
+    "TreatmentStatusTiebackComplications": {
+      "name": "TreatmentStatusTiebackComplications",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusTiebackComplicationsCost": {
+      "name": "TreatmentStatusTiebackComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusTiebackComplications} = true",
+      "isRequired": true
+    },
+    "TreatmentStatusBveapPanel": {
+      "name": "TreatmentStatusBveapPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'"
+    },
+    "TreatmentStatusBveapReasons": {
+      "name": "TreatmentStatusBveapReasons",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusBveapPanel"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusBveapCost": {
+      "name": "TreatmentStatusBveapCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusBveapPanel"
+      ],
+      "hasTitle": true,
+      "title": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusBveapComplications": {
+      "name": "TreatmentStatusBveapComplications",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusBveapPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusBveapComplicationsCost": {
+      "name": "TreatmentStatusBveapComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusBveapPanel"
+      ],
+      "hasTitle": true,
+      "title": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusBveapComplications} = true",
+      "isRequired": true
+    },
+    "TreatmentStatusStentPanel": {
+      "name": "TreatmentStatusStentPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'"
+    },
+    "TreatmentStatusStentType": {
+      "name": "TreatmentStatusStentType",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusDexstentPanel": {
+      "name": "TreatmentStatusDexstentPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusStentPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusStentType} contains 'DEXSTENT'"
+    },
+    "TreatmentStatusStentDidMigrate": {
+      "name": "TreatmentStatusStentDidMigrate",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusStentType} = 'SILICONE' || {TreatmentStatusStentType} = 'NITINOL_MESH'",
+      "isRequired": true
+    },
+    "TreatmentStatusStentReplaced": {
+      "name": "TreatmentStatusStentReplaced",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
+      "isRequired": true
+    },
+    "TreatmentStatusStentCostOnce": {
+      "name": "TreatmentStatusStentCostOnce",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusStentDidMigrate} = false || {TreatmentStatusStentReplaced} = false",
+      "isRequired": true
+    },
+    "TreatmentStatusStentCostRepeat": {
+      "name": "TreatmentStatusStentCostRepeat",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie,",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentReplaced} = true",
+      "isRequired": true
+    },
+    "TreatmentStatusStentComplications": {
+      "name": "TreatmentStatusStentComplications",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusStentType} notempty",
+      "isRequired": true
+    },
+    "TreatmentStatusStentComplicationsCost": {
+      "name": "TreatmentStatusStentComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusStentComplications} = true",
+      "isRequired": true
+    },
+    "TreatmentStatusArytenoidectomyPanel": {
+      "name": "TreatmentStatusArytenoidectomyPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'"
+    },
+    "TreatmentStatusArytenoidectomyReasons": {
+      "name": "TreatmentStatusArytenoidectomyReasons",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusArytenoidectomyLaser": {
+      "name": "TreatmentStatusArytenoidectomyLaser",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusArytenoidectomyDidExplain": {
+      "name": "TreatmentStatusArytenoidectomyDidExplain",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusArytenoidectomyChoice": {
+      "name": "TreatmentStatusArytenoidectomyChoice",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusArytenoidectomyCost": {
+      "name": "TreatmentStatusArytenoidectomyCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusArytenoidectomyComplications": {
+      "name": "TreatmentStatusArytenoidectomyComplications",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusArytenoidectomyComplicationsCost": {
+      "name": "TreatmentStatusArytenoidectomyComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusArytenoidectomyComplications} = true",
+      "isRequired": true
+    },
+    "TreatmentStatusVentrilocordectomyPanel": {
+      "name": "TreatmentStatusVentrilocordectomyPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte prüfen Sie insbesondere Zeilenlängen,",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'"
+    },
+    "TreatmentStatusVentrilocordectomyReasons": {
+      "name": "TreatmentStatusVentrilocordectomyReasons",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusVentrilocordectomyDidExplain": {
+      "name": "TreatmentStatusVentrilocordectomyDidExplain",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusVentrilocordectomyChoice": {
+      "name": "TreatmentStatusVentrilocordectomyChoice",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusVentrilocordectomyCost": {
+      "name": "TreatmentStatusVentrilocordectomyCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusVentrilocordectomyComplications": {
+      "name": "TreatmentStatusVentrilocordectomyComplications",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusVentrilocordectomyComplicationsCost": {
+      "name": "TreatmentStatusVentrilocordectomyComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusVentrilocordectomyComplications} = true",
+      "isRequired": true
+    },
+    "TreatmentStatusRatingPanel": {
+      "name": "TreatmentStatusRatingPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true"
+    },
+    "TreatmentStatusSurgeonInformLevel": {
+      "name": "TreatmentStatusSurgeonInformLevel",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusRatingPanel"
+      ],
+      "hasTitle": true,
+      "title": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentStatusTreatmentSatisfactionLevel": {
+      "name": "TreatmentStatusTreatmentSatisfactionLevel",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_STATUS-page",
+        "TreatmentStatusCard2Panel",
+        "TreatmentStatusRatingPanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsCard1Panel": {
+      "name": "TreatmentFactorsCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "TreatmentFactorsDecisionPanel": {
+      "name": "TreatmentFactorsDecisionPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = false && {LifeStatus} = false"
+    },
+    "TreatmentFactorsDecision": {
+      "name": "TreatmentFactorsDecision",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard1Panel",
+        "TreatmentFactorsDecisionPanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsDecisionStent": {
+      "name": "TreatmentFactorsDecisionStent",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard1Panel",
+        "TreatmentFactorsDecisionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsCard2Panel": {
+      "name": "TreatmentFactorsCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "TreatmentFactorsCostPanel": {
+      "name": "TreatmentFactorsCostPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen.",
+      "hasVisibleIf": false
+    },
+    "TreatmentFactorsCost": {
+      "name": "TreatmentFactorsCost",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsCostPanel"
+      ],
+      "hasTitle": true,
+      "title": "Der Text ist absichtlich generisch",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsCostComplications": {
+      "name": "TreatmentFactorsCostComplications",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsCostPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsStagePanel": {
+      "name": "TreatmentFactorsStagePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann",
+      "hasVisibleIf": false
+    },
+    "TreatmentFactorsStageLP": {
+      "name": "TreatmentFactorsStageLP",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsStagePanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsStageNeuropathy": {
+      "name": "TreatmentFactorsStageNeuropathy",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsStagePanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Inhalte rotieren, damit nicht überall",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsSurgeryRisksPanel": {
+      "name": "TreatmentFactorsSurgeryRisksPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte",
+      "hasVisibleIf": false
+    },
+    "TreatmentFactorsRisks": {
+      "name": "TreatmentFactorsRisks",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsSurgeryRisksPanel"
+      ],
+      "hasTitle": true,
+      "title": "Umlaute wie ä, ö, ü und das ß sind hier",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsRisksComplications": {
+      "name": "TreatmentFactorsRisksComplications",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsSurgeryRisksPanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsGeneralPanel": {
+      "name": "TreatmentFactorsGeneralPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in",
+      "hasVisibleIf": false
+    },
+    "TreatmentFactorsAge": {
+      "name": "TreatmentFactorsAge",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsGeneralPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsGeneralHealth": {
+      "name": "TreatmentFactorsGeneralHealth",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsGeneralPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsCoexisting": {
+      "name": "TreatmentFactorsCoexisting",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsGeneralPanel"
+      ],
+      "hasTitle": true,
+      "title": "Am Ende wird die echte Übersetzung diesen Blindtext",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsCircumstancesPanel": {
+      "name": "TreatmentFactorsCircumstancesPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf",
+      "hasVisibleIf": false
+    },
+    "TreatmentFactorsCircumstancesAccess": {
+      "name": "TreatmentFactorsCircumstancesAccess",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsCircumstancesPanel"
+      ],
+      "hasTitle": true,
+      "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsCircumstancesCare": {
+      "name": "TreatmentFactorsCircumstancesCare",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsCircumstancesPanel"
+      ],
+      "hasTitle": true,
+      "title": "Das erleichtert die Prüfung von Buttons, Labels und",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsOtherPanel": {
+      "name": "TreatmentFactorsOtherPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text",
+      "hasVisibleIf": false
+    },
+    "TreatmentFactorsOther": {
+      "name": "TreatmentFactorsOther",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsOtherPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise",
+      "hasVisibleIf": false,
+      "isRequired": false
+    },
+    "ManagementCard1Panel": {
+      "name": "ManagementCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "MANAGEMENT-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ManagementPrescriptionTypePanel": {
+      "name": "ManagementPrescriptionTypePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ManagementPrescriptions": {
+      "name": "ManagementPrescriptions",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte Übersetzung diesen",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ManagementPrescriptionType": {
+      "name": "ManagementPrescriptionType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionCost": {
+      "name": "ManagementPrescriptionCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich.",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionDoxepinRatingBreathing": {
+      "name": "ManagementPrescriptionDoxepinRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Umlaute wie ä, ö, ü und das ß sind hier bewusst",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'DOXEPIN'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionDoxepinRatingMobility": {
+      "name": "ManagementPrescriptionDoxepinRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'DOXEPIN'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionTrazodoneRatingBreathing": {
+      "name": "ManagementPrescriptionTrazodoneRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TRAZODONE'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionTrazodoneRatingMobility": {
+      "name": "ManagementPrescriptionTrazodoneRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TRAZODONE'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionGabapentinRatingBreathing": {
+      "name": "ManagementPrescriptionGabapentinRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GABAPENTIN'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionGabapentinRatingMobility": {
+      "name": "ManagementPrescriptionGabapentinRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GABAPENTIN'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionGalliprantRatingBreathing": {
+      "name": "ManagementPrescriptionGalliprantRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GALLIPRANT'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionGalliprantRatingMobility": {
+      "name": "ManagementPrescriptionGalliprantRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GALLIPRANT'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionSteroidRatingBreathing": {
+      "name": "ManagementPrescriptionSteroidRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'STEROID'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionSteroidRatingMobility": {
+      "name": "ManagementPrescriptionSteroidRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'STEROID'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionAntihistamineRatingBreathing": {
+      "name": "ManagementPrescriptionAntihistamineRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionAntihistamineRatingMobility": {
+      "name": "ManagementPrescriptionAntihistamineRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionCereniaRatingBreathing": {
+      "name": "ManagementPrescriptionCereniaRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'CERENIA'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionCereniaRatingMobility": {
+      "name": "ManagementPrescriptionCereniaRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'CERENIA'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionMeloxicamRatingBreathing": {
+      "name": "ManagementPrescriptionMeloxicamRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'MELOXICAM'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionMeloxicamRatingMobility": {
+      "name": "ManagementPrescriptionMeloxicamRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'MELOXICAM'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionAcepromineRatingBreathing": {
+      "name": "ManagementPrescriptionAcepromineRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ACEPROMINE'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionAcepromineRatingMobility": {
+      "name": "ManagementPrescriptionAcepromineRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ACEPROMINE'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionAlbuterolRatingBreathing": {
+      "name": "ManagementPrescriptionAlbuterolRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ALBUTEROL'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionAlbuterolRatingMobility": {
+      "name": "ManagementPrescriptionAlbuterolRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ALBUTEROL'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionTemarilPRatingBreathing": {
+      "name": "ManagementPrescriptionTemarilPRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TEMARIL_P'",
+      "isRequired": true
+    },
+    "ManagementPrescriptionTemarilPRatingMobility": {
+      "name": "ManagementPrescriptionTemarilPRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard1Panel",
+        "ManagementPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TEMARIL_P'",
+      "isRequired": true
+    },
+    "ManagementCard2Panel": {
+      "name": "ManagementCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "MANAGEMENT-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ManagementNonPrescriptionTypePanel": {
+      "name": "ManagementNonPrescriptionTypePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ManagementNonPrescription": {
+      "name": "ManagementNonPrescription",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ManagementNonPrescriptionType": {
+      "name": "ManagementNonPrescriptionType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen.",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementNonPrescription} = 'YES'",
+      "isRequired": true
+    },
+    "ManagementNonPrescriptionCost": {
+      "name": "ManagementNonPrescriptionCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementNonPrescription} = 'YES'",
+      "isRequired": true
+    },
+    "ManagementNonPrescriptionAcupunctureRatingBreathing": {
+      "name": "ManagementNonPrescriptionAcupunctureRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
+      "isRequired": true
+    },
+    "ManagementNonPrescriptionAcupunctureRatingMobility": {
+      "name": "ManagementNonPrescriptionAcupunctureRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
+      "isRequired": true
+    },
+    "ManagementNonPrescriptionTherapyRatingBreathing": {
+      "name": "ManagementNonPrescriptionTherapyRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
+      "isRequired": true
+    },
+    "ManagementNonPrescriptionTherapyRatingMobility": {
+      "name": "ManagementNonPrescriptionTherapyRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
+      "isRequired": true
+    },
+    "ManagementNonPrescriptionColdLaserRatingBreathing": {
+      "name": "ManagementNonPrescriptionColdLaserRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
+      "isRequired": true
+    },
+    "ManagementNonPrescriptionColdLaserRatingMobility": {
+      "name": "ManagementNonPrescriptionColdLaserRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
+      "isRequired": true
+    },
+    "ManagementNonPrescriptionChiroRatingBreathing": {
+      "name": "ManagementNonPrescriptionChiroRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
+      "isRequired": true
+    },
+    "ManagementNonPrescriptionChiroRatingMobility": {
+      "name": "ManagementNonPrescriptionChiroRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "MANAGEMENT-page",
+        "ManagementCard2Panel",
+        "ManagementNonPrescriptionTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+      "hasVisibleIf": true,
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
+      "isRequired": true
+    },
+    "OTCProductsCard1Panel": {
+      "name": "OTCProductsCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "OTC_PRODUCTS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "OTCProductsTypePanel": {
+      "name": "OTCProductsTypePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "OTC_PRODUCTS-page",
+        "OTCProductsCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "OTCProductsDidPurchase": {
+      "name": "OTCProductsDidPurchase",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "OTC_PRODUCTS-page",
+        "OTCProductsCard1Panel",
+        "OTCProductsTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "OTCProductsType": {
+      "name": "OTCProductsType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "OTC_PRODUCTS-page",
+        "OTCProductsCard1Panel",
+        "OTCProductsTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und",
+      "hasVisibleIf": true,
+      "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "OTCProductsCost": {
+      "name": "OTCProductsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "OTC_PRODUCTS-page",
+        "OTCProductsCard1Panel",
+        "OTCProductsTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass",
+      "hasVisibleIf": true,
+      "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "OTCProductsEffectiveness": {
+      "name": "OTCProductsEffectiveness",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "OTC_PRODUCTS-page",
+        "OTCProductsCard1Panel",
+        "OTCProductsTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch",
+      "hasVisibleIf": true,
+      "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "OTCProductsCard2Panel": {
+      "name": "OTCProductsCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "OTC_PRODUCTS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "OTCProtocolPanel": {
+      "name": "OTCProtocolPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "OTC_PRODUCTS-page",
+        "OTCProductsCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "OTCProtocolDidPurchase": {
+      "name": "OTCProtocolDidPurchase",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "OTC_PRODUCTS-page",
+        "OTCProductsCard2Panel",
+        "OTCProtocolPanel"
+      ],
+      "hasTitle": true,
+      "title": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "OTCProtocolCost": {
+      "name": "OTCProtocolCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "OTC_PRODUCTS-page",
+        "OTCProductsCard2Panel",
+        "OTCProtocolPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö,",
+      "hasVisibleIf": true,
+      "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "OTCProtocolEffectiveness": {
+      "name": "OTCProtocolEffectiveness",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "OTC_PRODUCTS-page",
+        "OTCProductsCard2Panel",
+        "OTCProtocolPanel"
+      ],
+      "hasTitle": true,
+      "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten.",
+      "hasVisibleIf": true,
+      "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "AspirationCard1Panel": {
+      "name": "AspirationCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "ASPIRATION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "AspirationDidHavePanel": {
+      "name": "AspirationDidHavePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "AspirationDidHave": {
+      "name": "AspirationDidHave",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard1Panel",
+        "AspirationDidHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "AspirationGeneralPanel": {
+      "name": "AspirationGeneralPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationDidHave} = 'YES'"
+    },
+    "AspirationCount": {
+      "name": "AspirationCount",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard1Panel",
+        "AspirationGeneralPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So",
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationDidHave} = 'YES'",
+      "isRequired": true
+    },
+    "AspirationInpatient": {
+      "name": "AspirationInpatient",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard1Panel",
+        "AspirationGeneralPanel"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons,",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "AspirationInpatientCount": {
+      "name": "AspirationInpatientCount",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard1Panel",
+        "AspirationGeneralPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem",
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationInpatient} = 'YES'",
+      "isRequired": true
+    },
+    "AspirationCard2Panel": {
+      "name": "AspirationCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "ASPIRATION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "AspirationSurgeryPanel": {
+      "name": "AspirationSurgeryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = 'YES'"
+    },
+    "AspirationSurgeryPost": {
+      "name": "AspirationSurgeryPost",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard2Panel",
+        "AspirationSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "AspirationSurgeryPostCount": {
+      "name": "AspirationSurgeryPostCount",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard2Panel",
+        "AspirationSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen",
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationSurgeryPost} = 'YES'",
+      "isRequired": true
+    },
+    "AspirationStentPanel": {
+      "name": "AspirationStentPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = 'YES'"
+    },
+    "AspirationStentPost": {
+      "name": "AspirationStentPost",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard2Panel",
+        "AspirationStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "AspirationStentPostCount": {
+      "name": "AspirationStentPostCount",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard2Panel",
+        "AspirationStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich",
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationStentPost} = 'YES'",
+      "isRequired": true
+    },
+    "AspirationCostPanel": {
+      "name": "AspirationCostPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationDidHave} = 'YES'"
+    },
+    "AspirationCost": {
+      "name": "AspirationCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "ASPIRATION-page",
+        "AspirationCard2Panel",
+        "AspirationCostPanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "NeuropathyCard1Panel": {
+      "name": "NeuropathyCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "NeuropathySymptomsDoesHavePanel": {
+      "name": "NeuropathySymptomsDoesHavePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "NeuropathySymptomsDoesHave": {
+      "name": "NeuropathySymptomsDoesHave",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard1Panel",
+        "NeuropathySymptomsDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "NeuropathyCard2Panel": {
+      "name": "NeuropathyCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "NeuropathyHindEndDoesHavePanel": {
+      "name": "NeuropathyHindEndDoesHavePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'"
+    },
+    "NeuropathySymptomsFirst": {
+      "name": "NeuropathySymptomsFirst",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
+        "NeuropathyHindEndDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "NeuropathySymptomsBreathingOnset": {
+      "name": "NeuropathySymptomsBreathingOnset",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
+        "NeuropathyHindEndDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist ein vorläufiger Blindtext für die",
+      "hasVisibleIf": true,
+      "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
+      "isRequired": true
+    },
+    "NeuropathySymptomsHindEndOnset": {
+      "name": "NeuropathySymptomsHindEndOnset",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
+        "NeuropathyHindEndDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält",
+      "hasVisibleIf": true,
+      "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
+      "isRequired": true
+    },
+    "NeuropathySymptomsTypeProgression": {
+      "name": "NeuropathySymptomsTypeProgression",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
+        "NeuropathyHindEndDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte",
+      "hasVisibleIf": true,
+      "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = 'YES'",
+      "isRequired": true
+    },
+    "NeuropathyOtherIssues": {
+      "name": "NeuropathyOtherIssues",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
+        "NeuropathyHindEndDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionCard1Panel": {
+      "name": "ConclusionCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ConclusionsPanelLifeStatusTrue": {
+      "name": "ConclusionsPanelLifeStatusTrue",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{LifeStatus} = true"
+    },
+    "ConclusionsPanelLifeStatusFalse": {
+      "name": "ConclusionsPanelLifeStatusFalse",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{LifeStatus} = false"
+    },
+    "ConclusionDetailsPanel": {
+      "name": "ConclusionDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ConclusionSpecialConsiderations": {
+      "name": "ConclusionSpecialConsiderations",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionGeneralCondition": {
+      "name": "ConclusionGeneralCondition",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer späteren Phase",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionQOL": {
+      "name": "ConclusionQOL",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherConditionsPanel": {
+      "name": "ConclusionOtherConditionsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ConclusionOtherConditionsNew": {
+      "name": "ConclusionOtherConditionsNew",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionOtherConditionsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht.",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherConditions": {
+      "name": "ConclusionOtherConditions",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionOtherConditionsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie",
+      "hasVisibleIf": true,
+      "visibleIf": "{ConclusionOtherConditionsNew} = true",
+      "isRequired": true
+    },
+    "ConclusionCard2Panel": {
+      "name": "ConclusionCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ConclusionCauseOfDeathPanel": {
+      "name": "ConclusionCauseOfDeathPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{LifeStatus} = true"
+    },
+    "ConclusionCauseOfDeath": {
+      "name": "ConclusionCauseOfDeath",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionCauseOfDeathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherPathPanel": {
+      "name": "ConclusionOtherPathPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die",
+      "hasVisibleIf": false
+    },
+    "ConclusionOtherPathTieback": {
+      "name": "ConclusionOtherPathTieback",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Am Ende wird die echte Übersetzung diesen Blindtext",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathBVEAP": {
+      "name": "ConclusionOtherPathBVEAP",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathStent": {
+      "name": "ConclusionOtherPathStent",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathArytenoidectomy": {
+      "name": "ConclusionOtherPathArytenoidectomy",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathVentrilocordectomy": {
+      "name": "ConclusionOtherPathVentrilocordectomy",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathNoTreatment": {
+      "name": "ConclusionOtherPathNoTreatment",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = false",
+      "isRequired": true
+    },
+    "ConclusionStentAlternative": {
+      "name": "ConclusionStentAlternative",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusType} notcontains 'STENT'",
+      "isRequired": true
+    },
+    "ConclusionDifferentChoices": {
+      "name": "ConclusionDifferentChoices",
+      "type": "comment",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist",
+      "hasVisibleIf": false,
+      "isRequired": false
+    },
+    "ConclusionThanksPanel": {
+      "name": "ConclusionThanksPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    }
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "name": "CMPN_INFO-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "CmpnInfoCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "CmpnInfoHeading",
+          "html": "<h2>Dies ist ein vorläufiger Blindtext<h2>"
+        },
+        {
+          "type": "html",
+          "name": "CmpnInfoText",
+          "html": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst</p>"
+        },
+        {
+          "type": "panel",
+          "name": "CmpnInfoDetailsPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "CmpnInfoAnimalType",
+              "title": "So kann die",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "CANINE",
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": "FELINE",
+                  "text": "Der Text"
+                },
+                {
+                  "value": "EQUINE",
+                  "text": "Auf diese"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "CmpnInfoBreed",
+              "title": "Für Schaltflächen, Hinweise und Überschriften",
+              "isRequired": true
+            },
+            {
+              "type": "boolean",
+              "name": "CmpnInfoGender",
+              "title": "Die Struktur des",
+              "isRequired": true,
+              "labelTrue": "Bitte prüfen",
+              "labelFalse": "So entsteht"
+            },
+            {
+              "type": "text",
+              "name": "CmpnInfoWeight",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen.",
+              "description": "Die Inhalte rotieren, damit nicht",
+              "isRequired": true,
+              "inputType": "number",
+              "min": 1,
+              "max": 2200,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 2200,
+                  "text": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt."
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "CmpnInfoWeightUnits",
+              "title": "Längere Texte dürfen",
+              "description": "Kurze Beschriftungen bleiben dagegen bewusst knapp",
+              "isRequired": true,
+              "labelTrue": "Das erleichtert",
+              "labelFalse": "Am Ende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "CmpnInfoCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "CmpnInfoAgePanel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "dcsdCmpnInfoAgePanel",
+              "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt",
+              "description": "Die endgültige Formulierung wird in einer",
+              "visibleIf": "{LifeStatus} = true",
+              "elements": [
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "dcsdCmpnInfoAgeYears",
+                  "title": "Auch längere Abschnitte lassen sich",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Umlaute wie ä, ö, ü und das ß sind"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "dcsdCmpnInfoAgeMonths",
+                  "title": "So kann die Darstellung im Layout",
+                  "isRequired": true,
+                  "min": 0,
+                  "max": 11,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 0,
+                      "maxValue": 11,
+                      "text": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "lvngCmpnInfoAgePanel",
+              "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf",
+              "visibleIf": "{LifeStatus} = false",
+              "elements": [
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnInfoAgeYears",
+                  "title": "Für Schaltflächen, Hinweise und Überschriften",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "lvngCmpnInfoAgeMonths",
+                  "title": "So entsteht eine glaubwürdige Zielsprache für",
+                  "isRequired": true,
+                  "min": 0,
+                  "max": 11,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 0,
+                      "maxValue": 11,
+                      "text": "Dieser Platzhalter eignet sich gut für Mockups und interne"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "CmpnInfoDemeanorPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "CmpnInfoDemeanor",
+              "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere",
+              "isRequired": true,
+              "displayMode": "buttons",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "CmpnInfoAnxiety",
+              "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt.",
+              "description": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "So kann"
+                },
+                {
+                  "value": 2,
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": 3,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 4,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 5,
+                  "text": "Für Schaltflächen,"
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "CmpnInfoHasInsurance",
+              "required": true,
+              "title": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte",
+              "labelTrue": "So entsteht",
+              "labelFalse": "Dieser Platzhalter",
+              "swapOrder": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

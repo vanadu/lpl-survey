@@ -1,0 +1,125 @@
+{
+  "page": "PRIMARY_DURATION-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "PrimaryDurationHeading.html": {
+      "source": "<h2>Duration of care by primary veterinarians for LP/GOLPP symptoms</h2>",
+      "target": "<h2>Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie,</h2>"
+    },
+    "PrimaryDurationText.html": {
+      "source": "<p>This section asks about the duration of {CmpnName}'s care by primary veterinarians for LP/GOLPP symptoms. This includes any primary veterinarians who saw {CmpnName} since the LP/GOLPP symptoms first appeared. It also asks whether you switched primary vets because of how {CmpnName}'s symptoms were being handled. </p>",
+      "target": "<p>Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich</p>"
+    },
+    "PrimaryDurationDetailsPanel.title": {
+      "source": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur"
+    },
+    "PrimaryDurationFirstConsultYears.title": {
+      "source": "Age in years (number):",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen,"
+    },
+    "PrimaryDurationFirstConsultYears.validators.0.text": {
+      "source": "Age must be between 1 and 40",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser"
+    },
+    "PrimaryDurationFirstConsultMonths.title": {
+      "source": "Months (number 0 - 11)",
+      "target": "Die Inhalte rotieren, damit nicht überall"
+    },
+    "PrimaryDurationFirstConsultMonths.validators.0.text": {
+      "source": "Months must be between 0 and 11",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt."
+    },
+    "PrimaryDurationVisitsNumber.title": {
+      "source": "About how many times did a primary veterinarian see {CmpnName} about LP/GOLPP symptoms?",
+      "target": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich."
+    },
+    "PrimaryDurationVisitsNumber.choices.ONE.text": {
+      "source": "Once",
+      "target": "Das erleichtert"
+    },
+    "PrimaryDurationVisitsNumber.choices.TWO.text": {
+      "source": "Twice",
+      "target": "Am Ende"
+    },
+    "PrimaryDurationVisitsNumber.choices.MORE_THAN_TWO.text": {
+      "source": "More than twice",
+      "target": "Dies ist ein vorläufiger"
+    },
+    "PrimaryDurationVisitsNumber.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Bitte beachten Sie,"
+    },
+    "PrimaryDurationCost.title": {
+      "source": "About what was the total pre-insurance cost of these visits to primary veterinarians about {CmpnName}'s LP/GOLPP symptoms?",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie"
+    },
+    "PrimaryDurationCost.choices.UNDER_200.text": {
+      "source": "Under $200",
+      "target": "So kann die"
+    },
+    "PrimaryDurationCost.choices.200_500.text": {
+      "source": "$200-$500",
+      "target": "Diese Beispieldaten"
+    },
+    "PrimaryDurationCost.choices.500_1000.text": {
+      "source": "$500-$1000",
+      "target": "Der Text"
+    },
+    "PrimaryDurationCost.choices.OVER_1000.text": {
+      "source": "Over $1000",
+      "target": "Auf diese Weise"
+    },
+    "PrimaryDurationCost.choices.DONT_KNOW.text": {
+      "source": "Don't know or prefer not to say",
+      "target": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt."
+    },
+    "PrimaryDurationChangedVets.title": {
+      "source": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
+      "target": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen."
+    },
+    "PrimaryDurationChangedVets.choices.NO.text": {
+      "source": "No",
+      "target": "So entsteht"
+    },
+    "PrimaryDurationChangedVets.choices.ONCE.text": {
+      "source": "Once",
+      "target": "Dieser Platzhalter"
+    },
+    "PrimaryDurationChangedVets.choices.MORE_THAN_ONCE.text": {
+      "source": "More than once",
+      "target": "Die Inhalte rotieren, damit"
+    },
+    "PrimaryDurationChangedVetsReason.title": {
+      "source": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "PrimaryDurationChangedVetsReason.description": {
+      "source": "Please check all that apply.",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp"
+    },
+    "PrimaryDurationChangedVetsReason.choices.NOTHING_CAN_BE_DONE.text": {
+      "source": "The previous vet said nothing could be done about {CmpnName}'s symptoms.",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die"
+    },
+    "PrimaryDurationChangedVetsReason.choices.NO_KNOWLEDGE.text": {
+      "source": "The previous vet couldn't give possible causes for {CmpnName}'s symptoms.",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass"
+    },
+    "PrimaryDurationChangedVetsReason.choices.AGE_ONLY.text": {
+      "source": "The previous vet said {CmpnName}'s symptoms were just due to age.",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich"
+    },
+    "PrimaryDurationChangedVetsReason.choices.BAD_TESTS.text": {
+      "source": "The previous vet ordered tests that I didn't think were relevant.",
+      "target": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann"
+    },
+    "PrimaryDurationChangedVetsReason.choices.MISDIAGNOSED.text": {
+      "source": "The previous vet misdiagnosed {CmpnName}'s symptoms.",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen"
+    }
+  }
+}

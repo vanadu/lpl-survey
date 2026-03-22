@@ -1,0 +1,205 @@
+{
+  "page": "ASPIRATION-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "AspirationHeading.html": {
+      "source": "<h2>{CmpnName}'s experience with aspiration pneumonia</h2>",
+      "target": ""
+    },
+    "AspirationText.html": {
+      "source": "<p>Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This section asks questions about {CmpnName}'s experience with AP. </p>",
+      "target": ""
+    },
+    "AspirationInfoLink.html": {
+      "source": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?</a></div>",
+      "target": ""
+    },
+    "AspirationDidHave.title": {
+      "source": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
+      "target": ""
+    },
+    "AspirationDidHave.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "AspirationDidHave.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "AspirationDidHave.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "AspirationCount.title": {
+      "source": "How many times did {CmpnName} get AP?",
+      "target": ""
+    },
+    "AspirationCount.choices.ONE.text": {
+      "source": "Once",
+      "target": ""
+    },
+    "AspirationCount.choices.TWO.text": {
+      "source": "Twice",
+      "target": ""
+    },
+    "AspirationCount.choices.THREE.text": {
+      "source": "Three times",
+      "target": ""
+    },
+    "AspirationCount.choices.MORE_THAN_THREE.text": {
+      "source": "More than three times",
+      "target": ""
+    },
+    "AspirationInpatient.title": {
+      "source": "Did {CmpnName} ever need inpatient, overnight, or emergency care for AP?",
+      "target": ""
+    },
+    "AspirationInpatient.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "AspirationInpatient.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "AspirationInpatient.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "AspirationInpatientCount.title": {
+      "source": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
+      "target": ""
+    },
+    "AspirationInpatientCount.choices.ONE.text": {
+      "source": "Once",
+      "target": ""
+    },
+    "AspirationInpatientCount.choices.TWO.text": {
+      "source": "Twice",
+      "target": ""
+    },
+    "AspirationInpatientCount.choices.THREE.text": {
+      "source": "Three times",
+      "target": ""
+    },
+    "AspirationInpatientCount.choices.MORE_THAN_THREE.text": {
+      "source": "More than three times",
+      "target": ""
+    },
+    "AspirationSurgeryPost.title": {
+      "source": "Did {CmpnName} ever have AP after the surgery (i.e., tieback, BVEAP)?",
+      "target": ""
+    },
+    "AspirationSurgeryPost.description": {
+      "source": "Includes tieback, BVEAP, ventrilocordectomy, arytenoidectomy and other invasive surgery procedures.",
+      "target": ""
+    },
+    "AspirationSurgeryPost.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "AspirationSurgeryPost.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "AspirationSurgeryPost.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "AspirationSurgeryPostCount.title": {
+      "source": "How many times did {CmpnName} get AP after the surgery?",
+      "target": ""
+    },
+    "AspirationSurgeryPostCount.choices.ONE.text": {
+      "source": "Once",
+      "target": ""
+    },
+    "AspirationSurgeryPostCount.choices.TWO.text": {
+      "source": "Twice",
+      "target": ""
+    },
+    "AspirationSurgeryPostCount.choices.THREE.text": {
+      "source": "Three times",
+      "target": ""
+    },
+    "AspirationSurgeryPostCount.choices.MORE_THAN_THREE.text": {
+      "source": "More than three times",
+      "target": ""
+    },
+    "AspirationStentPost.title": {
+      "source": "Did {CmpnName} ever have AP after the stent implant procedure?",
+      "target": ""
+    },
+    "AspirationStentPost.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "AspirationStentPost.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "AspirationStentPost.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "AspirationStentPostCount.title": {
+      "source": "How many times did {CmpnName} get AP after the stent implant?",
+      "target": ""
+    },
+    "AspirationStentPostCount.choices.ONE.text": {
+      "source": "Once",
+      "target": ""
+    },
+    "AspirationStentPostCount.choices.TWO.text": {
+      "source": "Twice",
+      "target": ""
+    },
+    "AspirationStentPostCount.choices.THREE.text": {
+      "source": "Three times",
+      "target": ""
+    },
+    "AspirationStentPostCount.choices.MORE_THAN_THREE.text": {
+      "source": "More than three times",
+      "target": ""
+    },
+    "AspirationCost.title": {
+      "source": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
+      "target": ""
+    },
+    "AspirationCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": ""
+    },
+    "AspirationCost.choices.UNDER_100.text": {
+      "source": "Under $100",
+      "target": ""
+    },
+    "AspirationCost.choices.100_300.text": {
+      "source": "$100-$300",
+      "target": ""
+    },
+    "AspirationCost.choices.300_500.text": {
+      "source": "$300-$500",
+      "target": ""
+    },
+    "AspirationCost.choices.500_1000.text": {
+      "source": "$500-$1000",
+      "target": ""
+    },
+    "AspirationCost.choices.1001_3000.text": {
+      "source": "$1001-$3000",
+      "target": ""
+    },
+    "AspirationCost.choices.3000_5000.text": {
+      "source": "$3000-$5000",
+      "target": ""
+    },
+    "AspirationCost.choices.OVER_5000.text": {
+      "source": "Over $5000",
+      "target": ""
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "page": "OTC_PRODUCTS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "OTCProductsHeading.html": {
+      "source": "<h2>OTC (Over-The-Counter) Products for LP/GOLPP</h2>",
+      "target": "<h2>Dies ist ein vorläufiger Blindtext für</h2>"
+    },
+    "OTCProductsText.html": {
+      "source": "<p><b>IMPORTANT</b>: Attempting to manage LP/GOLPP symptoms with supplements and OTC products is controversial. There are no supplements or OTC products that will restore movement to paralyzed laryneal tissue. That means that even with such products, the risk of breathing crises and a potentially fatal suffocation event is very real. While supplements and OTC products can't prevent a breathing emergency, some veterinary professionals believe some supplements and OTC products may have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life.  </p><p>The questions in this section pertain to the main ingredient of a product, not any specific product. This survey isn't intended to advertise for, recommend, or be used as a marketing vehicle for any specific product. For questions about the effectiveness or safety of any product, consult with a licensed veterinarian.</p>",
+      "target": "<p><b>Bitte</b>Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für</p><p>Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte Übersetzung diesen</p>"
+    },
+    "OTCProductsDidPurchase.title": {
+      "source": "Have you purchased OTC products based on a particular ingredient {CmpnName}'s LP/GOLPP symptoms?",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu"
+    },
+    "OTCProductsDidPurchase.description": {
+      "source": "Please only include products you've used regularly for over 60 days",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich"
+    },
+    "OTCProductsDidPurchase.choices.YES.text": {
+      "source": "Yes",
+      "target": "Umlaute wie"
+    },
+    "OTCProductsDidPurchase.choices.NO.text": {
+      "source": "No",
+      "target": "So kann"
+    },
+    "OTCProductsDidPurchase.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Diese Beispieldaten helfen"
+    },
+    "OTCProductsType.title": {
+      "source": "Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und"
+    },
+    "OTCProductsType.choices.TUMERIC.text": {
+      "source": "Tumeric",
+      "target": "Die Struktur"
+    },
+    "OTCProductsType.choices.CBD.text": {
+      "source": "CBD",
+      "target": "Bitte prüfen"
+    },
+    "OTCProductsType.choices.LIONS_MANE.text": {
+      "source": "Lion's mane",
+      "target": "So entsteht eine"
+    },
+    "OTCProductsType.choices.MYELIN_SHEATH.text": {
+      "source": "Myelin sheath",
+      "target": "Dieser Platzhalter eignet"
+    },
+    "OTCProductsType.choices.EGG_SHELL.text": {
+      "source": "Egg-shell membrane",
+      "target": "Die Inhalte rotieren,"
+    },
+    "OTCProductsType.choices.URSOLIC.text": {
+      "source": "Ursolic acid",
+      "target": "Dadurch wirkt die"
+    },
+    "OTCProductsType.choices.Evening_Primrose_Oil.text": {
+      "source": "Evening Primrose Oil",
+      "target": "Längere Texte dürfen hier"
+    },
+    "OTCProductsType.choices.FISH_OIL.text": {
+      "source": "Fish or salmon oil",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst"
+    },
+    "OTCProductsType.choices.GLUCOSAMINE.text": {
+      "source": "Glucosamine/Chrondroitin/MSM",
+      "target": "Das erleichtert"
+    },
+    "OTCProductsType.choices.COLLAGEN.text": {
+      "source": "Hyaluronic acid/Collagen",
+      "target": "Am Ende wird"
+    },
+    "OTCProductsCost.title": {
+      "source": "What was the average monthly cost of these OTC products?",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass"
+    },
+    "OTCProductsCost.choices.UNDER_50.text": {
+      "source": "Under $50",
+      "target": "Die endgültige Formulierung"
+    },
+    "OTCProductsCost.choices.51_100.text": {
+      "source": "$51-$100",
+      "target": "Auch längere"
+    },
+    "OTCProductsCost.choices.101_150.text": {
+      "source": "$101-$150",
+      "target": "Umlaute wie"
+    },
+    "OTCProductsCost.choices.OVER_150.text": {
+      "source": "Over $150",
+      "target": "So kann die"
+    },
+    "OTCProductsEffectiveness.title": {
+      "source": "Please rate the overall effectiveness of the OTC products you selected above:",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch"
+    },
+    "OTCProductsEffectiveness.description": {
+      "source": "1 = negative effect, 3 = no effect, 5 = positive effect",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird"
+    },
+    "OTCProductsEffectiveness.rateValues.1.text": {
+      "source": "1",
+      "target": "Die Struktur"
+    },
+    "OTCProductsEffectiveness.rateValues.2.text": {
+      "source": "2",
+      "target": "Bitte prüfen"
+    },
+    "OTCProductsEffectiveness.rateValues.3.text": {
+      "source": "3",
+      "target": "So entsteht"
+    },
+    "OTCProductsEffectiveness.rateValues.4.text": {
+      "source": "4",
+      "target": "Dieser Platzhalter"
+    },
+    "OTCProductsEffectiveness.rateValues.5.text": {
+      "source": "5",
+      "target": "Die Inhalte"
+    },
+    "OTCProductsEffectiveness.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Dadurch wirkt die"
+    },
+    "OTCProtocolDidPurchase.title": {
+      "source": "Have you purchased products that are advertised as a blend or protocol of OTC ingredients created for a specific illness or condition?",
+      "target": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am"
+    },
+    "OTCProtocolDidPurchase.choices.YES.text": {
+      "source": "Yes",
+      "target": "Dies ist"
+    },
+    "OTCProtocolDidPurchase.choices.NO.text": {
+      "source": "No",
+      "target": "Bitte beachten"
+    },
+    "OTCProtocolDidPurchase.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "OTCProtocolCost.title": {
+      "source": "What was the average monthly cost of the blends or protocols?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö,"
+    },
+    "OTCProtocolCost.choices.UNDER_50.text": {
+      "source": "Under $50",
+      "target": "So kann die"
+    },
+    "OTCProtocolCost.choices.51_100.text": {
+      "source": "$51-$100",
+      "target": "Diese Beispieldaten"
+    },
+    "OTCProtocolCost.choices.101_150.text": {
+      "source": "$101-$150",
+      "target": "Der Text"
+    },
+    "OTCProtocolCost.choices.OVER_150.text": {
+      "source": "Over $150",
+      "target": "Auf diese Weise"
+    },
+    "OTCProtocolEffectiveness.title": {
+      "source": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
+      "target": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten."
+    },
+    "OTCProtocolEffectiveness.description": {
+      "source": "1 = negative effect, 3 = no effect, 5 = positive effect",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische"
+    },
+    "OTCProtocolEffectiveness.rateValues.1.text": {
+      "source": "1",
+      "target": "Dieser Platzhalter"
+    },
+    "OTCProtocolEffectiveness.rateValues.2.text": {
+      "source": "2",
+      "target": "Die Inhalte"
+    },
+    "OTCProtocolEffectiveness.rateValues.3.text": {
+      "source": "3",
+      "target": "Dadurch wirkt"
+    },
+    "OTCProtocolEffectiveness.rateValues.4.text": {
+      "source": "4",
+      "target": "Längere Texte"
+    },
+    "OTCProtocolEffectiveness.rateValues.5.text": {
+      "source": "5",
+      "target": "Kurze Beschriftungen"
+    },
+    "OTCProtocolEffectiveness.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Das erleichtert die"
+    }
+  }
+}

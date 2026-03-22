@@ -1,0 +1,955 @@
+{
+  "name": "TREATMENT_STATUS-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "TreatmentStatusCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "TreatmentStatusHeading",
+          "html": "<h2>Dies ist ein</h2>"
+        },
+        {
+          "type": "html",
+          "name": "TreatmentStatusText",
+          "html": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das</p>"
+        },
+        {
+          "type": "boolean",
+          "name": "TreatmentStatusDidHave",
+          "title": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und",
+          "isRequired": true,
+          "labelTrue": "Der Text",
+          "labelFalse": "Auf diese",
+          "swapOrder": true
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentStatusAgePanel",
+          "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig",
+          "description": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine",
+          "visibleIf": "{TreatmentStatusDidHave} = true",
+          "elements": [
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "TreatmentStatusAgeYears",
+              "title": "Dieser Platzhalter",
+              "isRequired": true,
+              "min": "1",
+              "max": "40",
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 40,
+                  "text": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "TreatmentStatusAgeMonths",
+              "title": "Dadurch wirkt die Testseite weniger künstlich",
+              "isRequired": true,
+              "min": 0,
+              "max": 11,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 0,
+                  "maxValue": 11,
+                  "text": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "TreatmentStatusCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "TreatmentStatusTypePanel",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "TreatmentStatusType",
+              "title": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am",
+              "description": "Dies ist ein vorläufiger Blindtext für",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusDidHave} = true",
+              "choices": [
+                {
+                  "value": "TIEBACK",
+                  "text": "Bitte beachten Sie, dass dieser"
+                },
+                {
+                  "value": "BVEAP",
+                  "text": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch"
+                },
+                {
+                  "value": "STENT",
+                  "text": "Umlaute wie ä,"
+                },
+                {
+                  "value": "ARYTENOIDECTOMY",
+                  "text": "So kann die"
+                },
+                {
+                  "value": "VENTRILOCORDECTOMY",
+                  "text": "Diese Beispieldaten"
+                }
+              ],
+              "showOtherItem": true
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentStatusTiebackPanel",
+          "title": "Der Text ist absichtlich generisch und enthält keine echte",
+          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
+          "elements": [
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusTiebackEmergency",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften",
+              "labelTrue": "Die Struktur",
+              "labelFalse": "Bitte prüfen",
+              "swapOrder": true,
+              "isRequired": true
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusTiebackWait",
+              "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusTiebackEmergency} = true",
+              "choices": [
+                {
+                  "value": "UNDER_ONE",
+                  "text": "Die Inhalte rotieren, damit nicht"
+                },
+                {
+                  "value": "ONE_TWO",
+                  "text": "Dadurch wirkt die Testseite weniger künstlich"
+                },
+                {
+                  "value": "THREE_SIX",
+                  "text": "Längere Texte dürfen hier ruhig etwas"
+                },
+                {
+                  "value": "MORE_THAN_SIX",
+                  "text": "Kurze Beschriftungen bleiben dagegen bewusst"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "required": true
+            },
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusTiebackCount",
+              "title": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am",
+              "isRequired": true,
+              "labelTrue": "Dies ist ein vorläufiger",
+              "labelFalse": "Bitte beachten",
+              "swapOrder": true
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusTiebackOnceCost",
+              "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch",
+              "description": "Umlaute wie ä, ö, ü und das ß sind hier bewusst",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusTiebackCount} = 'ONCE'",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "So kann die Darstellung im"
+                },
+                {
+                  "value": "UNDER_2500",
+                  "text": "Diese Beispieldaten helfen"
+                },
+                {
+                  "value": "2501_4000",
+                  "text": "Der Text"
+                },
+                {
+                  "value": "4001_5500",
+                  "text": "Auf diese"
+                },
+                {
+                  "value": "5500_7000",
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "OVER_7000",
+                  "text": "Die Struktur des"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusTiebackMultipleCost",
+              "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine",
+              "description": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusTiebackCount} = 'MORE_THAN_ONCE'",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Dadurch wirkt die Testseite weniger"
+                },
+                {
+                  "value": "UNDER_4000",
+                  "text": "Längere Texte dürfen"
+                },
+                {
+                  "value": "4001_5500",
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": "5501_7000",
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": "7001_9000",
+                  "text": "Am Ende"
+                },
+                {
+                  "value": "OVER_9000",
+                  "text": "Dies ist ein"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusTiebackComplications",
+              "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase",
+              "labelTrue": "Auch längere",
+              "labelFalse": "Umlaute wie",
+              "isRequired": true,
+              "swapOrder": true
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusTiebackComplicationsCost",
+              "title": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "description": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusTiebackComplications} = true",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Für Schaltflächen, Hinweise und Überschriften"
+                },
+                {
+                  "value": "UNDER_4000",
+                  "text": "Die Struktur des"
+                },
+                {
+                  "value": "1001_2000",
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "2001_3000",
+                  "text": "So entsteht"
+                },
+                {
+                  "value": "3001_5000",
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": "OVER_5001",
+                  "text": "Die Inhalte rotieren,"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentStatusBveapPanel",
+          "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen",
+          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "TreatmentStatusBveapReasons",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die",
+              "description": "Am Ende wird die echte Übersetzung",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "AP_RISK",
+                  "text": "Dies ist ein vorläufiger Blindtext für"
+                },
+                {
+                  "value": "SWIM",
+                  "text": "Bitte beachten Sie, dass dieser"
+                },
+                {
+                  "value": "PERMANENCE",
+                  "text": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere"
+                },
+                {
+                  "value": "REPUTATION",
+                  "text": "Umlaute wie ä, ö,"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusBveapCost",
+              "title": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten",
+              "description": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Für Schaltflächen, Hinweise und Überschriften"
+                },
+                {
+                  "value": "UNDER_4000",
+                  "text": "Die Struktur des"
+                },
+                {
+                  "value": "4001_5500",
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "5501_7000",
+                  "text": "So entsteht"
+                },
+                {
+                  "value": "OVER_7000",
+                  "text": "Dieser Platzhalter eignet"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusBveapComplications",
+              "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt.",
+              "isRequired": true,
+              "labelTrue": "Längere Texte",
+              "labelFalse": "Kurze Beschriftungen",
+              "swapOrder": true
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusBveapComplicationsCost",
+              "title": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte",
+              "description": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie,",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusBveapComplications} = true",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Die endgültige Formulierung wird in"
+                },
+                {
+                  "value": "UNDER_1000",
+                  "text": "Auch längere Abschnitte"
+                },
+                {
+                  "value": "1001_2000",
+                  "text": "Umlaute wie"
+                },
+                {
+                  "value": "2001_3000",
+                  "text": "So kann"
+                },
+                {
+                  "value": "3001_5000",
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": "OVER_5001",
+                  "text": "Der Text ist"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentStatusStentPanel",
+          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
+          "elements": [
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusStentType",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "SILICONE",
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": "DEXSTENT",
+                  "text": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge"
+                },
+                {
+                  "value": "NITINOL_MESH",
+                  "text": "So entsteht eine"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Dieser Platzhalter eignet"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "panel",
+              "name": "TreatmentStatusDexstentPanel",
+              "visibleIf": "{TreatmentStatusStentType} contains 'DEXSTENT'",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "TreatmentStatusDexstentText",
+                  "html": "<b>Die</b>Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die"
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusStentDidMigrate",
+              "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusStentType} = 'SILICONE' || {TreatmentStatusStentType} = 'NITINOL_MESH'",
+              "labelTrue": "Auch längere",
+              "labelFalse": "Umlaute wie",
+              "swapOrder": true
+            },
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusStentReplaced",
+              "title": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
+              "labelTrue": "Auf diese",
+              "labelFalse": "Für Schaltflächen,",
+              "swapOrder": true
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusStentCostOnce",
+              "title": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie",
+              "description": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusStentDidMigrate} = false || {TreatmentStatusStentReplaced} = false",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Die Inhalte rotieren, damit nicht"
+                },
+                {
+                  "value": "UNDER_1500",
+                  "text": "Dadurch wirkt die"
+                },
+                {
+                  "value": "1501_2500",
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": "2001_3000",
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": "3001_4000",
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": "OVER_4000",
+                  "text": "Am Ende wird"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusStentCostRepeat",
+              "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie,",
+              "description": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentReplaced} = true",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Umlaute wie ä, ö, ü"
+                },
+                {
+                  "value": "UNDER_1500",
+                  "text": "So kann die"
+                },
+                {
+                  "value": "1501_2500",
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": "2001_3000",
+                  "text": "Der Text"
+                },
+                {
+                  "value": "3001_4000",
+                  "text": "Auf diese"
+                },
+                {
+                  "value": "OVER_4000",
+                  "text": "Für Schaltflächen, Hinweise"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusStentComplications",
+              "title": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge",
+              "visibleIf": "{TreatmentStatusStentType} notempty",
+              "isRequired": true,
+              "labelTrue": "So entsteht",
+              "labelFalse": "Dieser Platzhalter",
+              "swapOrder": true
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusStentComplicationsCost",
+              "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusStentComplications} = true",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Längere Texte dürfen hier ruhig"
+                },
+                {
+                  "value": "UNDER_1000",
+                  "text": "Kurze Beschriftungen bleiben"
+                },
+                {
+                  "value": "1001_2000",
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": "2001_3000",
+                  "text": "Am Ende"
+                },
+                {
+                  "value": "3001_5000",
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "OVER_5001",
+                  "text": "Bitte beachten Sie,"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentStatusArytenoidectomyPanel",
+          "title": "Die endgültige Formulierung wird in einer",
+          "description": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier",
+          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "TreatmentStatusArytenoidectomyReasons",
+              "title": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen",
+              "description": "Der Text ist absichtlich generisch und",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "COST",
+                  "text": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen,"
+                },
+                {
+                  "value": "RECOMMEND_PRIMARY",
+                  "text": "Die Struktur des Dokuments bleibt"
+                },
+                {
+                  "value": "RECOMMENDED_SPECIALIST",
+                  "text": "Bitte prüfen Sie insbesondere"
+                },
+                {
+                  "value": "AVAILABILITY",
+                  "text": "So entsteht"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusArytenoidectomyLaser",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen.",
+              "description": "Die Inhalte rotieren, damit nicht überall",
+              "labelTrue": "Dadurch wirkt",
+              "labelFalse": "Längere Texte",
+              "isRequired": true,
+              "swapOrder": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "TreatmentStatusArytenoidectomyDidExplain",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "NO",
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "TreatmentStatusArytenoidectomyChoice",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "So kann"
+                },
+                {
+                  "value": "NO",
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Der Text ist"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusArytenoidectomyCost",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise",
+              "description": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "So entsteht eine glaubwürdige Zielsprache"
+                },
+                {
+                  "value": "UNDER_2000",
+                  "text": "Dieser Platzhalter eignet"
+                },
+                {
+                  "value": "2001_4000",
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": "4001_5500",
+                  "text": "Dadurch wirkt"
+                },
+                {
+                  "value": "OVER_5500",
+                  "text": "Längere Texte dürfen"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusArytenoidectomyComplications",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+              "isRequired": true,
+              "labelTrue": "Am Ende",
+              "labelFalse": "Dies ist",
+              "swapOrder": true
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusArytenoidectomyComplicationsCost",
+              "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in",
+              "description": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusArytenoidectomyComplications} = true",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "So kann die Darstellung im"
+                },
+                {
+                  "value": "UNDER_1000",
+                  "text": "Diese Beispieldaten helfen"
+                },
+                {
+                  "value": "1001_2000",
+                  "text": "Der Text"
+                },
+                {
+                  "value": "2001_3000",
+                  "text": "Auf diese"
+                },
+                {
+                  "value": "3001_5000",
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "OVER_5001",
+                  "text": "Die Struktur des"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentStatusVentrilocordectomyPanel",
+          "title": "Bitte prüfen Sie insbesondere Zeilenlängen,",
+          "description": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte",
+          "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "TreatmentStatusVentrilocordectomyReasons",
+              "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte",
+              "description": "Kurze Beschriftungen bleiben dagegen bewusst knapp",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "COST",
+                  "text": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am"
+                },
+                {
+                  "value": "RECOMMEND_PRIMARY",
+                  "text": "Dies ist ein vorläufiger Blindtext"
+                },
+                {
+                  "value": "RECOMMENDED_SPECIALIST",
+                  "text": "Bitte beachten Sie, dass"
+                },
+                {
+                  "value": "AVAILABILITY",
+                  "text": "Die endgültige"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "TreatmentStatusVentrilocordectomyDidExplain",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "So kann"
+                },
+                {
+                  "value": "NO",
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Der Text ist"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "TreatmentStatusVentrilocordectomyChoice",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": "NO",
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusVentrilocordectomyCost",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Kurze Beschriftungen bleiben dagegen bewusst"
+                },
+                {
+                  "value": "UNDER_2000",
+                  "text": "Das erleichtert die"
+                },
+                {
+                  "value": "2001_4000",
+                  "text": "Am Ende"
+                },
+                {
+                  "value": "4001_5500",
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "OVER_5500",
+                  "text": "Bitte beachten Sie,"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "boolean",
+              "name": "TreatmentStatusVentrilocordectomyComplications",
+              "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut",
+              "isRequired": true,
+              "labelTrue": "Umlaute wie",
+              "labelFalse": "So kann",
+              "swapOrder": true
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentStatusVentrilocordectomyComplicationsCost",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch",
+              "description": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen,",
+              "isRequired": true,
+              "visibleIf": "{TreatmentStatusVentrilocordectomyComplications} = true",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Die Struktur des Dokuments bleibt"
+                },
+                {
+                  "value": "UNDER_1000",
+                  "text": "Bitte prüfen Sie"
+                },
+                {
+                  "value": "1001_2000",
+                  "text": "So entsteht"
+                },
+                {
+                  "value": "2001_3000",
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": "3001_5000",
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": "OVER_5001",
+                  "text": "Dadurch wirkt die"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentStatusRatingPanel",
+          "visibleIf": "{TreatmentStatusDidHave} = true",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "TreatmentStatusSurgeonInformLevel",
+              "title": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+              "description": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen.",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 2,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": 3,
+                  "text": "Die endgültige"
+                },
+                {
+                  "value": 4,
+                  "text": "Auch längere"
+                },
+                {
+                  "value": 5,
+                  "text": "Umlaute wie"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So kann die"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentStatusTreatmentSatisfactionLevel",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text",
+              "description": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 2,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": 3,
+                  "text": "So entsteht"
+                },
+                {
+                  "value": 4,
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": 5,
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Dadurch wirkt die"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

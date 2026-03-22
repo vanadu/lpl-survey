@@ -1,0 +1,247 @@
+{
+  "name": "BREATHING_CRISIS-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "BreathingCrisisCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "BreathingCrisisHeading",
+          "html": "<h2>Dies ist ein vorläufiger</h2>"
+        },
+        {
+          "type": "html",
+          "name": "BreathingCrisisText",
+          "html": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text</p>"
+        },
+        {
+          "type": "panel",
+          "name": "BreathingCrisisDidHavePanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisDidHave",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "NO",
+                  "text": "So entsteht"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Dieser Platzhalter eignet"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisCount",
+              "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt.",
+              "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": "TWO",
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": "MORE_THAN_TWO",
+                  "text": "Das erleichtert die Prüfung"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "BreathingCrisisCost",
+              "title": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist",
+              "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "LESS_THAN_250",
+                  "text": "Bitte beachten Sie, dass"
+                },
+                {
+                  "value": "250_500",
+                  "text": "Die endgültige Formulierung wird"
+                },
+                {
+                  "value": "500_1000",
+                  "text": "Auch längere Abschnitte lassen"
+                },
+                {
+                  "value": "MORE_THAN_1000",
+                  "text": "Umlaute wie ä, ö,"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So kann die Darstellung im Layout realistisch beurteilt werden."
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "BreathingCrisisCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "BreathingCrisisDetailsPanel",
+          "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisAdvice",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "NO",
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Bitte prüfen Sie"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "BreathingCrisisAdviceType",
+              "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne",
+              "isRequired": true,
+              "visibleIf": "{BreathingCrisisAdvice} = 'YES'",
+              "choices": [
+                {
+                  "value": "SEDATIVE",
+                  "text": "Die Inhalte rotieren, damit"
+                },
+                {
+                  "value": "COOL_PLACE",
+                  "text": "Dadurch wirkt die Testseite weniger künstlich und besser"
+                },
+                {
+                  "value": "COOLING_AGENT",
+                  "text": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen"
+                },
+                {
+                  "value": "BLOW_AIR",
+                  "text": "Das erleichtert die Prüfung von Buttons, Labels und"
+                },
+                {
+                  "value": "EMERGENCY_FACILITY",
+                  "text": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisProvidedSubstance",
+              "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Auch längere"
+                },
+                {
+                  "value": "NO",
+                  "text": "Umlaute wie"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So kann die"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "BreathingCrisisProvidedSubstanceType",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und",
+              "isRequired": true,
+              "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
+              "choices": [
+                {
+                  "value": "SEDATIVE",
+                  "text": "Der Text"
+                },
+                {
+                  "value": "STEROID",
+                  "text": "Auf diese Weise lassen"
+                },
+                {
+                  "value": "OXYGEN",
+                  "text": "Für Schaltflächen, Hinweise"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die Struktur des"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "dropdown",
+              "name": "BreathingCrisisSubstanceForm",
+              "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine",
+              "isRequired": true,
+              "visibleIf": "{BreathingCrisisProvidedSubstance} = 'YES'",
+              "choices": [
+                {
+                  "value": "INJECTIBLE",
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": "LIQUID",
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": "SUPPOSITORY",
+                  "text": "Dadurch wirkt"
+                },
+                {
+                  "value": "GEL",
+                  "text": "Längere Texte dürfen hier"
+                },
+                {
+                  "value": "PILL",
+                  "text": "Kurze Beschriftungen bleiben dagegen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Das erleichtert die"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

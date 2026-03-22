@@ -17,12 +17,20 @@ connect-src 'self' https://www.google-analytics.com https://region1.google-analy
 
 
 
+const { createRequire } = require("module");
+const requireESM = createRequire(__filename);
+
+const {
+  SUPPORTED_LOCALES,
+  DEFAULT_LOCALE,
+} = requireESM("./helpers/i18n/i18nConfig.mjs");
 
 module.exports = {
-  reactStrictMode: true,
-   i18n: {
-    locales: ['en', 'lo'],
-    defaultLocale: 'en',
+  i18n: {
+    locales: SUPPORTED_LOCALES
+      .filter((locale) => locale.nextEnabled !== false)
+      .map((locale) => locale.tag),
+    defaultLocale: DEFAULT_LOCALE,
     localeDetection: false,
   },
   images: {

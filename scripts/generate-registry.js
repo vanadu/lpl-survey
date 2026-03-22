@@ -2,37 +2,7 @@
 /**
  * Survey Registry Generator (generated layer)
  *
- * Produces registry.generated.json from a SurveyJS master survey JSON.
- *
- * Output schema:
- * {
- *   meta: { registryVersion, builtAt?, builtFrom?, calculatedValues? },
- *   elements: {
- *     [name]: {
- *       name, type, role, collect, path,
- *       hasTitle, title?,
- *       hasVisibleIf, visibleIf?,
- *       isRequired?, hasValidators?
- *     }
- *   }
- * }
- *
- * Usage:
- *   node scripts/generate-registry.js \
- *     --in data/master-survey.json \
- *     --out helpers/registry.generated.json
- *
- * Flags:
- *   --include-presentation     Include presentation elements (html, image, expression, etc.)
- *                             Default: false (skips presentation)
- *
- *   --include-visibleif-expr   Include the visibleIf expression string (visibleIf) when present
- *                             Default: false (only emits hasVisibleIf boolean)
- *
- * Notes:
- * - "path" is the ancestor chain only: [pageName, ...panelNames] (does not include the element itself)
- * - Elements are keyed by element.name
- * - Ordering is stable for diffability
+ * i18n-aware version
  */
 
 const fs = require("fs");
@@ -51,17 +21,49 @@ function hasFlag(flag) {
   return process.argv.includes(flag);
 }
 
-const inPath = getArg("--in", "data/master-survey.json");
-const outPath = getArg("--out", "helpers/registry.generated.json");
+// ---------------- I18N / PATH RESOLUTION ----------------
 
+function pathToFileUrl(filePath) {
+  const resolved = path.resolve(filePath);
+  const normalized = resolved.split(path.sep).join("/");
+  return `file://${normalized.startsWith("/") ? "" : "/"}${normalized}`;
+}
+
+async function resolvePaths() {
+  // scripts → project root
+  const projectRootDir = path.resolve(__dirname, "..");
+
+  const projectPathsModule = await import(
+    pathToFileUrl(
+      path.resolve(projectRootDir, "./helpers/i18n/projectPaths.mjs")
+    )
+  );
+
+  const i18nConfigModule = await import(
+    pathToFileUrl(
+      path.resolve(projectRootDir, "./helpers/i18n/i18nConfig.mjs")
+    )
+  );
+
+  const { buildProjectPaths } = projectPathsModule;
+  const { DEFAULT_LOCALE } = i18nConfigModule;
+
+  const activeLocale = getArg("--lang", DEFAULT_LOCALE);
+  const derived = buildProjectPaths(activeLocale, projectRootDir);
+
+  return {
+    projectRootDir,
+    activeLocale,
+    inPath: getArg("--in", derived.masterSurveyPath),
+    outPath: getArg("--out", derived.registryPath),
+  };
+}
+
+// ---------------- Flags ----------------
 const includePresentation = hasFlag("--include-presentation");
 const includeVisibleIfExpr = hasFlag("--include-visibleif-expr");
 
 // ---------------- Classification ----------------
-/**
- * Treat these as presentation-only (non-collecting) elements.
- * (You can add to this list as you discover more.)
- */
 const PRESENTATION_TYPES = new Set([
   "html",
   "image",
@@ -79,16 +81,7 @@ function shouldCollect(role) {
   return role === "question";
 }
 
-// ---------------- Stable output helpers ----------------
-// !VA Order by appearance in master-survey.json. Stop using this function to prevent alphabetization of keys
-// function stableSortKeys(obj) {
-//   const sorted = {};
-//   Object.keys(obj)
-//     .sort((a, b) => a.localeCompare(b))
-//     .forEach((k) => (sorted[k] = obj[k]));
-//   return sorted;
-// }
-
+// ---------------- Helpers ----------------
 function ensureDirExists(filePath) {
   const dir = path.dirname(filePath);
   fs.mkdirSync(dir, { recursive: true });
@@ -108,7 +101,7 @@ function extractGeneratedFlags(el) {
   const hasValidators =
     Array.isArray(el.validators) && el.validators.length > 0 ? true : undefined;
 
-  const out = {
+  return {
     hasTitle,
     ...(hasTitle ? { title: rawTitle } : {}),
     hasVisibleIf,
@@ -116,14 +109,9 @@ function extractGeneratedFlags(el) {
     ...(isRequired !== undefined ? { isRequired } : {}),
     ...(hasValidators !== undefined ? { hasValidators } : {}),
   };
-
-  return out;
 }
 
 // ---------------- Tree walk ----------------
-/**
- * Walk SurveyJS "elements" arrays. Tracks panel ancestry to build path.
- */
 function walkElements({ elements, pageName, ancestors, outElements }) {
   if (!Array.isArray(elements)) return;
 
@@ -133,62 +121,40 @@ function walkElements({ elements, pageName, ancestors, outElements }) {
     const elName = el.name;
     const elType = el.type || "unknown";
 
-    // Skip anonymous elements (can happen in some SurveyJS structures)
     if (!elName || typeof elName !== "string") continue;
 
     const role = classifyRole(elType);
 
-    // Optional: exclude presentation elements (html/image/expression/etc.)
     if (!includePresentation && role === "presentation") {
-      // If a presentation node somehow nests elements, still traverse them
       if (Array.isArray(el.elements)) {
         walkElements({ elements: el.elements, pageName, ancestors, outElements });
       }
-      // paneldynamic templateElements do not apply here typically, but harmless to ignore
       continue;
     }
 
     const collect = shouldCollect(role);
     const pathChain = [pageName, ...ancestors];
 
-
-    // !VA Prevent alphabetization. Replace:
-    // if (outElements[elName]) {
-    //   console.warn(
-    //     `[registry] duplicate element name "${elName}" encountered; overwriting previous entry`
-    //   );
-    // }
-    // outElements[elName] = {
-    //   name: elName,
-    //   type: elType,
-    //   role,
-    //   collect,
-    //   path: pathChain,
-    //   ...extractGeneratedFlags(el),
-    // };
-
-    // !VA With
     if (outElements[elName]) {
-  console.warn(`[registry] duplicate element name "${elName}" encountered; overwriting previous entry`);
-    // Move key to the new insertion position to reflect latest appearance:
-    delete outElements[elName];
-  }
-  outElements[elName] = {
-    name: elName,
-    type: elType,
-    role,
-    collect,
-    path: pathChain,
-    ...extractGeneratedFlags(el),
-  };
+      console.warn(
+        `[registry] duplicate element name "${elName}" encountered; overwriting previous entry`
+      );
+      delete outElements[elName];
+    }
 
+    outElements[elName] = {
+      name: elName,
+      type: elType,
+      role,
+      collect,
+      path: pathChain,
+      ...extractGeneratedFlags(el),
+    };
 
-
-
-
-    // Recurse into normal nested elements
     if (Array.isArray(el.elements) && el.elements.length > 0) {
-      const nextAncestors = role === "panel" ? [...ancestors, elName] : ancestors;
+      const nextAncestors =
+        role === "panel" ? [...ancestors, elName] : ancestors;
+
       walkElements({
         elements: el.elements,
         pageName,
@@ -197,9 +163,9 @@ function walkElements({ elements, pageName, ancestors, outElements }) {
       });
     }
 
-    // Recurse into paneldynamic templates (common SurveyJS pattern)
     if (elType === "paneldynamic" && Array.isArray(el.templateElements)) {
       const nextAncestors = [...ancestors, elName];
+
       walkElements({
         elements: el.templateElements,
         pageName,
@@ -211,14 +177,13 @@ function walkElements({ elements, pageName, ancestors, outElements }) {
 }
 
 // ---------------- Build registry ----------------
-function buildRegistryGenerated(surveyJson) {
+function buildRegistryGenerated(surveyJson, inPath) {
   const pages = Array.isArray(surveyJson.pages) ? surveyJson.pages : [];
-
   const elements = {};
 
   for (const page of pages) {
     const pageName =
-      typeof page?.name === "string" && page.name.trim().length > 0
+      typeof page?.name === "string" && page.name.trim()
         ? page.name.trim()
         : "UNNAMED_PAGE";
 
@@ -230,15 +195,14 @@ function buildRegistryGenerated(surveyJson) {
     });
   }
 
-  // Capture calculatedValues names (useful for validation/drift tooling)
   const calculatedValues = Array.isArray(surveyJson.calculatedValues)
     ? surveyJson.calculatedValues
         .map((cv) => (typeof cv?.name === "string" ? cv.name.trim() : ""))
-        .filter((n) => n.length > 0)
+        .filter(Boolean)
         .sort((a, b) => a.localeCompare(b))
     : [];
 
-  const registry = {
+  return {
     meta: {
       registryVersion: "1.0.0",
       builtAt: new Date().toISOString(),
@@ -249,20 +213,26 @@ function buildRegistryGenerated(surveyJson) {
         includeVisibleIfExpr,
       },
     },
-    // !VA Order by appearance in master-survey.json. Replace
-    // elements: stableSortKeys(elements),
-    // !VA With
     elements,
-
   };
-
-  return registry;
 }
 
 // ---------------- Main ----------------
-(function main() {
-  const absIn = path.resolve(process.cwd(), inPath);
-  const absOut = path.resolve(process.cwd(), outPath);
+(async function main() {
+  const { projectRootDir, activeLocale, inPath, outPath } =
+    await resolvePaths();
+
+  console.log(`\n🌐 generate-registry locale: ${activeLocale}`);
+  console.log(`📥 masterSurvey input: ${inPath}`);
+  console.log(`📤 registry output: ${outPath}\n`);
+
+  const absIn = path.isAbsolute(inPath)
+    ? inPath
+    : path.resolve(projectRootDir, inPath);
+
+  const absOut = path.isAbsolute(outPath)
+    ? outPath
+    : path.resolve(projectRootDir, outPath);
 
   if (!fs.existsSync(absIn)) {
     console.error(`[registry] input not found: ${absIn}`);
@@ -271,18 +241,20 @@ function buildRegistryGenerated(surveyJson) {
 
   let survey;
   try {
-    const raw = fs.readFileSync(absIn, "utf8");
-    survey = JSON.parse(raw);
+    survey = JSON.parse(fs.readFileSync(absIn, "utf8"));
   } catch (e) {
     console.error(`[registry] failed to read/parse JSON: ${absIn}`);
     console.error(e);
     process.exit(1);
   }
 
-  const registry = buildRegistryGenerated(survey);
+  const registry = buildRegistryGenerated(survey, inPath);
 
   ensureDirExists(absOut);
   fs.writeFileSync(absOut, JSON.stringify(registry, null, 2) + "\n", "utf8");
 
   console.log(`[registry] wrote: ${absOut}`);
-})();
+})().catch((err) => {
+  console.error("❌ generate-registry failed:", err);
+  process.exit(1);
+});

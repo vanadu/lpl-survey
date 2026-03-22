@@ -1,0 +1,254 @@
+{
+  "name": "OTC_PRODUCTS-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "OTCProductsCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "OTCProductsHeading",
+          "html": "<h2>Dies ist ein vorläufiger Blindtext für</h2>"
+        },
+        {
+          "type": "html",
+          "name": "OTCProductsText",
+          "html": "<p><b>Bitte</b>Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für</p><p>Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte Übersetzung diesen</p>"
+        },
+        {
+          "type": "panel",
+          "name": "OTCProductsTypePanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "OTCProductsDidPurchase",
+              "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu",
+              "description": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Umlaute wie"
+                },
+                {
+                  "value": "NO",
+                  "text": "So kann"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Diese Beispieldaten helfen"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "OTCProductsType",
+              "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und",
+              "isRequired": true,
+              "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
+              "choices": [
+                {
+                  "value": "TUMERIC",
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": "CBD",
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "LIONS_MANE",
+                  "text": "So entsteht eine"
+                },
+                {
+                  "value": "MYELIN_SHEATH",
+                  "text": "Dieser Platzhalter eignet"
+                },
+                {
+                  "value": "EGG_SHELL",
+                  "text": "Die Inhalte rotieren,"
+                },
+                {
+                  "value": "URSOLIC",
+                  "text": "Dadurch wirkt die"
+                },
+                {
+                  "valuinitiative= 'YES'e": "PRIMROSE",
+                  "text": "Längere Texte dürfen hier"
+                },
+                {
+                  "value": "FISH_OIL",
+                  "text": "Kurze Beschriftungen bleiben dagegen bewusst"
+                },
+                {
+                  "value": "GLUCOSAMINE",
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": "COLLAGEN",
+                  "text": "Am Ende wird"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "dropdown",
+              "name": "OTCProductsCost",
+              "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass",
+              "isRequired": true,
+              "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
+              "choices": [
+                {
+                  "value": "UNDER_50",
+                  "text": "Die endgültige Formulierung"
+                },
+                {
+                  "value": "51_100",
+                  "text": "Auch längere"
+                },
+                {
+                  "value": "101_150",
+                  "text": "Umlaute wie"
+                },
+                {
+                  "value": "OVER_150",
+                  "text": "So kann die"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "rating",
+              "name": "OTCProductsEffectiveness",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch",
+              "description": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird",
+              "isRequired": true,
+              "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 2,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": 3,
+                  "text": "So entsteht"
+                },
+                {
+                  "value": 4,
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": 5,
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Dadurch wirkt die"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "OTCProductsCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "OTCProtocolPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "OTCProtocolDidPurchase",
+              "title": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "NO",
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "OTCProtocolCost",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö,",
+              "isRequired": true,
+              "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
+              "choices": [
+                {
+                  "value": "UNDER_50",
+                  "text": "So kann die"
+                },
+                {
+                  "value": "51_100",
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": "101_150",
+                  "text": "Der Text"
+                },
+                {
+                  "value": "OVER_150",
+                  "text": "Auf diese Weise"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "rating",
+              "name": "OTCProtocolEffectiveness",
+              "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten.",
+              "description": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische",
+              "isRequired": true,
+              "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": 2,
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": 3,
+                  "text": "Dadurch wirkt"
+                },
+                {
+                  "value": 4,
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": 5,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Das erleichtert die"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

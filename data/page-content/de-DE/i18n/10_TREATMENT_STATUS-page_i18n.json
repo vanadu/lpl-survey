@@ -1,0 +1,841 @@
+{
+  "page": "TREATMENT_STATUS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "TreatmentStatusHeading.html": {
+      "source": "<h2>Veterinary-Medical Procedures</h2>",
+      "target": "<h2>Dies ist ein</h2>"
+    },
+    "TreatmentStatusText.html": {
+      "source": "<p>This section asks questions about any surgery or implant procedure {CmpnName} underwent to treat LP/GOLPP symptoms. This only includes surgeries or procedures that diriectly modify the structure of the larynx.</p>",
+      "target": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das</p>"
+    },
+    "TreatmentStatusDidHave.title": {
+      "source": "Did {CmpnName} undergo a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und"
+    },
+    "TreatmentStatusDidHave.labelTrue": {
+      "source": "Yes",
+      "target": "Der Text"
+    },
+    "TreatmentStatusDidHave.labelFalse": {
+      "source": "No",
+      "target": "Auf diese"
+    },
+    "TreatmentStatusAgePanel.title": {
+      "source": "At about what age did {CmpnName} have the first surgery or stent procedure?",
+      "target": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig"
+    },
+    "TreatmentStatusAgePanel.description": {
+      "source": "If you can't remember exactly, it's OK to guesstimate.",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine"
+    },
+    "TreatmentStatusAgeYears.title": {
+      "source": "Years",
+      "target": "Dieser Platzhalter"
+    },
+    "TreatmentStatusAgeYears.validators.0.text": {
+      "source": "Age must be between 1 and 40",
+      "target": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint."
+    },
+    "TreatmentStatusAgeMonths.title": {
+      "source": "Months (number 0 - 11)",
+      "target": "Dadurch wirkt die Testseite weniger künstlich"
+    },
+    "TreatmentStatusAgeMonths.validators.0.text": {
+      "source": "Months must be between 0 and 11",
+      "target": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze"
+    },
+    "TreatmentStatusType.title": {
+      "source": "What kind of procedure or procedures did {CmpnName} have?",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am"
+    },
+    "TreatmentStatusType.description": {
+      "source": "Please check all that apply.",
+      "target": "Dies ist ein vorläufiger Blindtext für"
+    },
+    "TreatmentStatusType.choices.TIEBACK.text": {
+      "source": "Tieback (Unilateral Arytenoid Lateralization)",
+      "target": "Bitte beachten Sie, dass dieser"
+    },
+    "TreatmentStatusType.choices.BVEAP.text": {
+      "source": "BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch"
+    },
+    "TreatmentStatusType.choices.STENT.text": {
+      "source": "Laryngeal stent",
+      "target": "Umlaute wie ä,"
+    },
+    "TreatmentStatusType.choices.ARYTENOIDECTOMY.text": {
+      "source": "Partial arytenoidectomy",
+      "target": "So kann die"
+    },
+    "TreatmentStatusType.choices.VENTRILOCORDECTOMY.text": {
+      "source": "Ventrilocordectomy",
+      "target": "Diese Beispieldaten"
+    },
+    "TreatmentStatusTiebackPanel.title": {
+      "source": "Questions about tieback (Unilateral Arytenoid Lateralization) surgery",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte"
+    },
+    "TreatmentStatusTiebackEmergency.title": {
+      "source": "Was emergency tieback performed on {CmpnName} after a life-threatening breathing emergency?",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften"
+    },
+    "TreatmentStatusTiebackEmergency.labelTrue": {
+      "source": "Yes",
+      "target": "Die Struktur"
+    },
+    "TreatmentStatusTiebackEmergency.labelFalse": {
+      "source": "No",
+      "target": "Bitte prüfen"
+    },
+    "TreatmentStatusTiebackWait.title": {
+      "source": "How long did you have to wait for non-emergency tieback surgery for {CmpnName}:",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und"
+    },
+    "TreatmentStatusTiebackWait.choices.UNDER_ONE.text": {
+      "source": "Less than one month",
+      "target": "Die Inhalte rotieren, damit nicht"
+    },
+    "TreatmentStatusTiebackWait.choices.ONE_TWO.text": {
+      "source": "Between one and two months",
+      "target": "Dadurch wirkt die Testseite weniger künstlich"
+    },
+    "TreatmentStatusTiebackWait.choices.THREE_SIX.text": {
+      "source": "Between three and six months",
+      "target": "Längere Texte dürfen hier ruhig etwas"
+    },
+    "TreatmentStatusTiebackWait.choices.MORE_THAN_SIX.text": {
+      "source": "Longer than six months",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst"
+    },
+    "TreatmentStatusTiebackCount.title": {
+      "source": "How many times did {CmpnName} undergo tieback (UAL) surgery?",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am"
+    },
+    "TreatmentStatusTiebackCount.labelTrue": {
+      "source": "More than once",
+      "target": "Dies ist ein vorläufiger"
+    },
+    "TreatmentStatusTiebackCount.labelFalse": {
+      "source": "Once",
+      "target": "Bitte beachten"
+    },
+    "TreatmentStatusTiebackOnceCost.title": {
+      "source": "Approximate cost of surgery (not including post-op complications):",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch"
+    },
+    "TreatmentStatusTiebackOnceCost.description": {
+      "source": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+      "target": "Umlaute wie ä, ö, ü und das ß sind hier bewusst"
+    },
+    "TreatmentStatusTiebackOnceCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "So kann die Darstellung im"
+    },
+    "TreatmentStatusTiebackOnceCost.choices.UNDER_2500.text": {
+      "source": "Under $2500",
+      "target": "Diese Beispieldaten helfen"
+    },
+    "TreatmentStatusTiebackOnceCost.choices.2501_4000.text": {
+      "source": "$2501-$4000",
+      "target": "Der Text"
+    },
+    "TreatmentStatusTiebackOnceCost.choices.4001_5500.text": {
+      "source": "$4000-$5500",
+      "target": "Auf diese"
+    },
+    "TreatmentStatusTiebackOnceCost.choices.5500_7000.text": {
+      "source": "$5500-$7000",
+      "target": "Für Schaltflächen,"
+    },
+    "TreatmentStatusTiebackOnceCost.choices.OVER_7000.text": {
+      "source": "Over $7000",
+      "target": "Die Struktur des"
+    },
+    "TreatmentStatusTiebackMultipleCost.title": {
+      "source": "Approximate total cost of surgeries (not including post-op complications):",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine"
+    },
+    "TreatmentStatusTiebackMultipleCost.description": {
+      "source": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die"
+    },
+    "TreatmentStatusTiebackMultipleCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "Dadurch wirkt die Testseite weniger"
+    },
+    "TreatmentStatusTiebackMultipleCost.choices.UNDER_4000.text": {
+      "source": "Under $4000",
+      "target": "Längere Texte dürfen"
+    },
+    "TreatmentStatusTiebackMultipleCost.choices.4001_5500.text": {
+      "source": "$4001-$5500",
+      "target": "Kurze Beschriftungen"
+    },
+    "TreatmentStatusTiebackMultipleCost.choices.5501_7000.text": {
+      "source": "$5501-$7000",
+      "target": "Das erleichtert"
+    },
+    "TreatmentStatusTiebackMultipleCost.choices.7001_9000.text": {
+      "source": "$7001-$9000",
+      "target": "Am Ende"
+    },
+    "TreatmentStatusTiebackMultipleCost.choices.OVER_9000.text": {
+      "source": "Over $9000",
+      "target": "Dies ist ein"
+    },
+    "TreatmentStatusTiebackComplications.title": {
+      "source": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase"
+    },
+    "TreatmentStatusTiebackComplications.labelTrue": {
+      "source": "Yes",
+      "target": "Auch längere"
+    },
+    "TreatmentStatusTiebackComplications.labelFalse": {
+      "source": "No",
+      "target": "Umlaute wie"
+    },
+    "TreatmentStatusTiebackComplicationsCost.title": {
+      "source": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "TreatmentStatusTiebackComplicationsCost.description": {
+      "source": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf"
+    },
+    "TreatmentStatusTiebackComplicationsCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "Für Schaltflächen, Hinweise und Überschriften"
+    },
+    "TreatmentStatusTiebackComplicationsCost.choices.UNDER_4000.text": {
+      "source": "Under $1000",
+      "target": "Die Struktur des"
+    },
+    "TreatmentStatusTiebackComplicationsCost.choices.1001_2000.text": {
+      "source": "$1001-$2000",
+      "target": "Bitte prüfen"
+    },
+    "TreatmentStatusTiebackComplicationsCost.choices.2001_3000.text": {
+      "source": "$2001-$3000",
+      "target": "So entsteht"
+    },
+    "TreatmentStatusTiebackComplicationsCost.choices.3001_5000.text": {
+      "source": "$3001-$5000",
+      "target": "Dieser Platzhalter"
+    },
+    "TreatmentStatusTiebackComplicationsCost.choices.OVER_5001.text": {
+      "source": "Over $5001",
+      "target": "Die Inhalte rotieren,"
+    },
+    "TreatmentStatusBveapPanel.title": {
+      "source": "Questions about BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen"
+    },
+    "TreatmentStatusBveapReasons.title": {
+      "source": "Why did you choose BVEAP over other surgery types?",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die"
+    },
+    "TreatmentStatusBveapReasons.description": {
+      "source": "Please choose all that apply.",
+      "target": "Am Ende wird die echte Übersetzung"
+    },
+    "TreatmentStatusBveapReasons.choices.AP_RISK.text": {
+      "source": "Reduced risk of aspiration pneumonia",
+      "target": "Dies ist ein vorläufiger Blindtext für"
+    },
+    "TreatmentStatusBveapReasons.choices.SWIM.text": {
+      "source": "Ability to swim post-op",
+      "target": "Bitte beachten Sie, dass dieser"
+    },
+    "TreatmentStatusBveapReasons.choices.PERMANENCE.text": {
+      "source": "No risk of suture failure as with tieback surgery",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere"
+    },
+    "TreatmentStatusBveapReasons.choices.REPUTATION.text": {
+      "source": "Reputation of surgeon",
+      "target": "Umlaute wie ä, ö,"
+    },
+    "TreatmentStatusBveapCost.title": {
+      "source": "Approximate cost of BVEAP surgery (not including post-op complications):",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten"
+    },
+    "TreatmentStatusBveapCost.description": {
+      "source": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf"
+    },
+    "TreatmentStatusBveapCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "Für Schaltflächen, Hinweise und Überschriften"
+    },
+    "TreatmentStatusBveapCost.choices.UNDER_4000.text": {
+      "source": "Under $4000",
+      "target": "Die Struktur des"
+    },
+    "TreatmentStatusBveapCost.choices.4001_5500.text": {
+      "source": "$4001-$5500",
+      "target": "Bitte prüfen"
+    },
+    "TreatmentStatusBveapCost.choices.5501_7000.text": {
+      "source": "$5501-$7000",
+      "target": "So entsteht"
+    },
+    "TreatmentStatusBveapCost.choices.OVER_7000.text": {
+      "source": "Over $7000",
+      "target": "Dieser Platzhalter eignet"
+    },
+    "TreatmentStatusBveapComplications.title": {
+      "source": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+      "target": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt."
+    },
+    "TreatmentStatusBveapComplications.labelTrue": {
+      "source": "Yes",
+      "target": "Längere Texte"
+    },
+    "TreatmentStatusBveapComplications.labelFalse": {
+      "source": "No",
+      "target": "Kurze Beschriftungen"
+    },
+    "TreatmentStatusBveapComplicationsCost.title": {
+      "source": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte"
+    },
+    "TreatmentStatusBveapComplicationsCost.description": {
+      "source": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie,"
+    },
+    "TreatmentStatusBveapComplicationsCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "Die endgültige Formulierung wird in"
+    },
+    "TreatmentStatusBveapComplicationsCost.choices.UNDER_1000.text": {
+      "source": "Under $1000",
+      "target": "Auch längere Abschnitte"
+    },
+    "TreatmentStatusBveapComplicationsCost.choices.1001_2000.text": {
+      "source": "$1001-$2000",
+      "target": "Umlaute wie"
+    },
+    "TreatmentStatusBveapComplicationsCost.choices.2001_3000.text": {
+      "source": "$2001-$3000",
+      "target": "So kann"
+    },
+    "TreatmentStatusBveapComplicationsCost.choices.3001_5000.text": {
+      "source": "$3001-$5000",
+      "target": "Diese Beispieldaten"
+    },
+    "TreatmentStatusBveapComplicationsCost.choices.OVER_5001.text": {
+      "source": "Over $5001",
+      "target": "Der Text ist"
+    },
+    "TreatmentStatusStentType.title": {
+      "source": "What type of stent implant did {CmpnName} receive?",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für"
+    },
+    "TreatmentStatusStentType.choices.SILICONE.text": {
+      "source": "Silicone",
+      "target": "Die Struktur"
+    },
+    "TreatmentStatusStentType.choices.DEXSTENT.text": {
+      "source": "Dextronix DexStent LE Nitinol wire",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge"
+    },
+    "TreatmentStatusStentType.choices.NITINOL_MESH.text": {
+      "source": "Nitinol mesh",
+      "target": "So entsteht eine"
+    },
+    "TreatmentStatusStentType.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Dieser Platzhalter eignet"
+    },
+    "TreatmentStatusDexstentText.html": {
+      "source": "<b>IMPORTANT</b>: The Dextronix DexStent LE Nitinol wire stent device has been discontinued by the manufacturer. Report parties involved in the sale or use of this device to your local veterinary regulatory agency.",
+      "target": "<b>Die</b>Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die"
+    },
+    "TreatmentStatusStentDidMigrate.title": {
+      "source": "After the initial implant procedure, did {CmpnName} cough out the stent or did it migrate out of position?",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird"
+    },
+    "TreatmentStatusStentDidMigrate.labelTrue": {
+      "source": "Yes",
+      "target": "Auch längere"
+    },
+    "TreatmentStatusStentDidMigrate.labelFalse": {
+      "source": "No",
+      "target": "Umlaute wie"
+    },
+    "TreatmentStatusStentReplaced.title": {
+      "source": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist"
+    },
+    "TreatmentStatusStentReplaced.labelTrue": {
+      "source": "Yes",
+      "target": "Auf diese"
+    },
+    "TreatmentStatusStentReplaced.labelFalse": {
+      "source": "No",
+      "target": "Für Schaltflächen,"
+    },
+    "TreatmentStatusStentCostOnce.title": {
+      "source": "Approximate cost of stent implant procedure, not including complications:",
+      "target": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie"
+    },
+    "TreatmentStatusStentCostOnce.description": {
+      "source": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet"
+    },
+    "TreatmentStatusStentCostOnce.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "Die Inhalte rotieren, damit nicht"
+    },
+    "TreatmentStatusStentCostOnce.choices.UNDER_1500.text": {
+      "source": "Under $1500",
+      "target": "Dadurch wirkt die"
+    },
+    "TreatmentStatusStentCostOnce.choices.1501_2500.text": {
+      "source": "$1501-$2000",
+      "target": "Längere Texte"
+    },
+    "TreatmentStatusStentCostOnce.choices.2001_3000.text": {
+      "source": "$2001-$3000",
+      "target": "Kurze Beschriftungen"
+    },
+    "TreatmentStatusStentCostOnce.choices.3001_4000.text": {
+      "source": "$3001-$4000",
+      "target": "Das erleichtert"
+    },
+    "TreatmentStatusStentCostOnce.choices.OVER_4000.text": {
+      "source": "Over $4000",
+      "target": "Am Ende wird"
+    },
+    "TreatmentStatusStentCostRepeat.title": {
+      "source": "Approximate cost of the stent procedures, not including complications:",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie,"
+    },
+    "TreatmentStatusStentCostRepeat.description": {
+      "source": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere"
+    },
+    "TreatmentStatusStentCostRepeat.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "Umlaute wie ä, ö, ü"
+    },
+    "TreatmentStatusStentCostRepeat.choices.UNDER_1500.text": {
+      "source": "Under $1500",
+      "target": "So kann die"
+    },
+    "TreatmentStatusStentCostRepeat.choices.1501_2500.text": {
+      "source": "$1501-$2000",
+      "target": "Diese Beispieldaten"
+    },
+    "TreatmentStatusStentCostRepeat.choices.2001_3000.text": {
+      "source": "$2001-$3000",
+      "target": "Der Text"
+    },
+    "TreatmentStatusStentCostRepeat.choices.3001_4000.text": {
+      "source": "$5500-$7000",
+      "target": "Auf diese"
+    },
+    "TreatmentStatusStentCostRepeat.choices.OVER_4000.text": {
+      "source": "Over $4000",
+      "target": "Für Schaltflächen, Hinweise"
+    },
+    "TreatmentStatusStentComplications.title": {
+      "source": "Were there post-operative complications that required overnight inpatient care for {CmpnName}?",
+      "target": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge"
+    },
+    "TreatmentStatusStentComplications.labelTrue": {
+      "source": "Yes",
+      "target": "So entsteht"
+    },
+    "TreatmentStatusStentComplications.labelFalse": {
+      "source": "No",
+      "target": "Dieser Platzhalter"
+    },
+    "TreatmentStatusStentComplicationsCost.title": {
+      "source": "Approximate cost of post-procedure complications, not including the cost of the stent implant procedure:",
+      "target": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser"
+    },
+    "TreatmentStatusStentComplicationsCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "Längere Texte dürfen hier ruhig"
+    },
+    "TreatmentStatusStentComplicationsCost.choices.UNDER_1000.text": {
+      "source": "Under $1000",
+      "target": "Kurze Beschriftungen bleiben"
+    },
+    "TreatmentStatusStentComplicationsCost.choices.1001_2000.text": {
+      "source": "$1001-$2000",
+      "target": "Das erleichtert"
+    },
+    "TreatmentStatusStentComplicationsCost.choices.2001_3000.text": {
+      "source": "$2001-$3000",
+      "target": "Am Ende"
+    },
+    "TreatmentStatusStentComplicationsCost.choices.3001_5000.text": {
+      "source": "$3001-$5000",
+      "target": "Dies ist"
+    },
+    "TreatmentStatusStentComplicationsCost.choices.OVER_5001.text": {
+      "source": "Over $5001",
+      "target": "Bitte beachten Sie,"
+    },
+    "TreatmentStatusArytenoidectomyPanel.title": {
+      "source": "Questions about partial arytenoidectomy surgery",
+      "target": "Die endgültige Formulierung wird in einer"
+    },
+    "TreatmentStatusArytenoidectomyPanel.description": {
+      "source": "Partial arytenoidectomy is the surgical removal of a section of one of the arytenoid (laryngeal) cartilages.",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier"
+    },
+    "TreatmentStatusArytenoidectomyReasons.title": {
+      "source": "Why did you choose partial arytenoidectomy over other surgery types?",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen"
+    },
+    "TreatmentStatusArytenoidectomyReasons.description": {
+      "source": "Please choose all that apply.",
+      "target": "Der Text ist absichtlich generisch und"
+    },
+    "TreatmentStatusArytenoidectomyReasons.choices.COST.text": {
+      "source": "Cost of this surgery compared to other surgery types",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen,"
+    },
+    "TreatmentStatusArytenoidectomyReasons.choices.RECOMMEND_PRIMARY.text": {
+      "source": "Recommended by primary veterinarian",
+      "target": "Die Struktur des Dokuments bleibt"
+    },
+    "TreatmentStatusArytenoidectomyReasons.choices.RECOMMENDED_SPECIALIST.text": {
+      "source": "Recommended by specialist",
+      "target": "Bitte prüfen Sie insbesondere"
+    },
+    "TreatmentStatusArytenoidectomyReasons.choices.AVAILABILITY.text": {
+      "source": "Availablility",
+      "target": "So entsteht"
+    },
+    "TreatmentStatusArytenoidectomyLaser.title": {
+      "source": "Was the partial arytenoidectomy performed with a laser?",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen."
+    },
+    "TreatmentStatusArytenoidectomyLaser.description": {
+      "source": "This technique is called 'ablation'.",
+      "target": "Die Inhalte rotieren, damit nicht überall"
+    },
+    "TreatmentStatusArytenoidectomyLaser.labelTrue": {
+      "source": "Yes",
+      "target": "Dadurch wirkt"
+    },
+    "TreatmentStatusArytenoidectomyLaser.labelFalse": {
+      "source": "No",
+      "target": "Längere Texte"
+    },
+    "TreatmentStatusArytenoidectomyDidExplain.title": {
+      "source": "Did the surgeon explain the pros and cons of this surgery type vs standard tieback surgery?",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende"
+    },
+    "TreatmentStatusArytenoidectomyDidExplain.choices.YES.text": {
+      "source": "Yes",
+      "target": "Dies ist"
+    },
+    "TreatmentStatusArytenoidectomyDidExplain.choices.NO.text": {
+      "source": "No",
+      "target": "Bitte beachten"
+    },
+    "TreatmentStatusArytenoidectomyDidExplain.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "TreatmentStatusArytenoidectomyChoice.title": {
+      "source": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß"
+    },
+    "TreatmentStatusArytenoidectomyChoice.choices.YES.text": {
+      "source": "Yes",
+      "target": "So kann"
+    },
+    "TreatmentStatusArytenoidectomyChoice.choices.NO.text": {
+      "source": "No",
+      "target": "Diese Beispieldaten"
+    },
+    "TreatmentStatusArytenoidectomyChoice.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Der Text ist"
+    },
+    "TreatmentStatusArytenoidectomyCost.title": {
+      "source": "Approximate cost of the partial arytenoidectomy (not including post-op complications):",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise"
+    },
+    "TreatmentStatusArytenoidectomyCost.description": {
+      "source": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+      "target": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie"
+    },
+    "TreatmentStatusArytenoidectomyCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "So entsteht eine glaubwürdige Zielsprache"
+    },
+    "TreatmentStatusArytenoidectomyCost.choices.UNDER_2000.text": {
+      "source": "Under $2000",
+      "target": "Dieser Platzhalter eignet"
+    },
+    "TreatmentStatusArytenoidectomyCost.choices.2001_4000.text": {
+      "source": "$2001-$4000",
+      "target": "Die Inhalte"
+    },
+    "TreatmentStatusArytenoidectomyCost.choices.4001_5500.text": {
+      "source": "$4001-$5500",
+      "target": "Dadurch wirkt"
+    },
+    "TreatmentStatusArytenoidectomyCost.choices.OVER_5500.text": {
+      "source": "Over $5500",
+      "target": "Längere Texte dürfen"
+    },
+    "TreatmentStatusArytenoidectomyComplications.title": {
+      "source": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen."
+    },
+    "TreatmentStatusArytenoidectomyComplications.labelTrue": {
+      "source": "Yes",
+      "target": "Am Ende"
+    },
+    "TreatmentStatusArytenoidectomyComplications.labelFalse": {
+      "source": "No",
+      "target": "Dies ist"
+    },
+    "TreatmentStatusArytenoidectomyComplicationsCost.title": {
+      "source": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in"
+    },
+    "TreatmentStatusArytenoidectomyComplicationsCost.description": {
+      "source": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute"
+    },
+    "TreatmentStatusArytenoidectomyComplicationsCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "So kann die Darstellung im"
+    },
+    "TreatmentStatusArytenoidectomyComplicationsCost.choices.UNDER_1000.text": {
+      "source": "Under $1000",
+      "target": "Diese Beispieldaten helfen"
+    },
+    "TreatmentStatusArytenoidectomyComplicationsCost.choices.1001_2000.text": {
+      "source": "$1001-$2000",
+      "target": "Der Text"
+    },
+    "TreatmentStatusArytenoidectomyComplicationsCost.choices.2001_3000.text": {
+      "source": "$2001-$3000",
+      "target": "Auf diese"
+    },
+    "TreatmentStatusArytenoidectomyComplicationsCost.choices.3001_5000.text": {
+      "source": "$3001-$5000",
+      "target": "Für Schaltflächen,"
+    },
+    "TreatmentStatusArytenoidectomyComplicationsCost.choices.OVER_5001.text": {
+      "source": "Over $5001",
+      "target": "Die Struktur des"
+    },
+    "TreatmentStatusVentrilocordectomyPanel.title": {
+      "source": "Questions about ventrilocordectomy surgery",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen,"
+    },
+    "TreatmentStatusVentrilocordectomyPanel.description": {
+      "source": "Ventrilocordectomy is the surgical removal of the vocal folds (vocal cords) that dogs use to bark.",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte"
+    },
+    "TreatmentStatusVentrilocordectomyReasons.title": {
+      "source": "Why did you choose ventrilocordectomy over other surgery types?",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte"
+    },
+    "TreatmentStatusVentrilocordectomyReasons.description": {
+      "source": "Please choose all that apply.",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp"
+    },
+    "TreatmentStatusVentrilocordectomyReasons.choices.COST.text": {
+      "source": "Cost of this surgery compared to other surgery types",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am"
+    },
+    "TreatmentStatusVentrilocordectomyReasons.choices.RECOMMEND_PRIMARY.text": {
+      "source": "Recommended by primary veterinarian",
+      "target": "Dies ist ein vorläufiger Blindtext"
+    },
+    "TreatmentStatusVentrilocordectomyReasons.choices.RECOMMENDED_SPECIALIST.text": {
+      "source": "Recommended by specialist",
+      "target": "Bitte beachten Sie, dass"
+    },
+    "TreatmentStatusVentrilocordectomyReasons.choices.AVAILABILITY.text": {
+      "source": "Availablility",
+      "target": "Die endgültige"
+    },
+    "TreatmentStatusVentrilocordectomyDidExplain.title": {
+      "source": "Did the surgeon explain the pros and cons of this surgery type vs tieback surgery?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß"
+    },
+    "TreatmentStatusVentrilocordectomyDidExplain.choices.YES.text": {
+      "source": "Yes",
+      "target": "So kann"
+    },
+    "TreatmentStatusVentrilocordectomyDidExplain.choices.NO.text": {
+      "source": "No",
+      "target": "Diese Beispieldaten"
+    },
+    "TreatmentStatusVentrilocordectomyDidExplain.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Der Text ist"
+    },
+    "TreatmentStatusVentrilocordectomyChoice.title": {
+      "source": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt."
+    },
+    "TreatmentStatusVentrilocordectomyChoice.choices.YES.text": {
+      "source": "Yes",
+      "target": "Die Struktur"
+    },
+    "TreatmentStatusVentrilocordectomyChoice.choices.NO.text": {
+      "source": "No",
+      "target": "Bitte prüfen"
+    },
+    "TreatmentStatusVentrilocordectomyChoice.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "TreatmentStatusVentrilocordectomyCost.title": {
+      "source": "Approximate cost of the ventrilocordectomy (not including post-op complications):",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die"
+    },
+    "TreatmentStatusVentrilocordectomyCost.description": {
+      "source": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte"
+    },
+    "TreatmentStatusVentrilocordectomyCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst"
+    },
+    "TreatmentStatusVentrilocordectomyCost.choices.UNDER_2000.text": {
+      "source": "Under $2000",
+      "target": "Das erleichtert die"
+    },
+    "TreatmentStatusVentrilocordectomyCost.choices.2001_4000.text": {
+      "source": "$2001-$4000",
+      "target": "Am Ende"
+    },
+    "TreatmentStatusVentrilocordectomyCost.choices.4001_5500.text": {
+      "source": "$4001-$5500",
+      "target": "Dies ist"
+    },
+    "TreatmentStatusVentrilocordectomyCost.choices.OVER_5500.text": {
+      "source": "Over $5500",
+      "target": "Bitte beachten Sie,"
+    },
+    "TreatmentStatusVentrilocordectomyComplications.title": {
+      "source": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut"
+    },
+    "TreatmentStatusVentrilocordectomyComplications.labelTrue": {
+      "source": "Yes",
+      "target": "Umlaute wie"
+    },
+    "TreatmentStatusVentrilocordectomyComplications.labelFalse": {
+      "source": "No",
+      "target": "So kann"
+    },
+    "TreatmentStatusVentrilocordectomyComplicationsCost.title": {
+      "source": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch"
+    },
+    "TreatmentStatusVentrilocordectomyComplicationsCost.description": {
+      "source": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen,"
+    },
+    "TreatmentStatusVentrilocordectomyComplicationsCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "Die Struktur des Dokuments bleibt"
+    },
+    "TreatmentStatusVentrilocordectomyComplicationsCost.choices.UNDER_1000.text": {
+      "source": "Under $1000",
+      "target": "Bitte prüfen Sie"
+    },
+    "TreatmentStatusVentrilocordectomyComplicationsCost.choices.1001_2000.text": {
+      "source": "$1001-$2000",
+      "target": "So entsteht"
+    },
+    "TreatmentStatusVentrilocordectomyComplicationsCost.choices.2001_3000.text": {
+      "source": "$2001_$3000",
+      "target": "Dieser Platzhalter"
+    },
+    "TreatmentStatusVentrilocordectomyComplicationsCost.choices.3001_5000.text": {
+      "source": "$3001-$5000",
+      "target": "Die Inhalte"
+    },
+    "TreatmentStatusVentrilocordectomyComplicationsCost.choices.OVER_5001.text": {
+      "source": "Over $5001",
+      "target": "Dadurch wirkt die"
+    },
+    "TreatmentStatusSurgeonInformLevel.title": {
+      "source": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
+      "target": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen."
+    },
+    "TreatmentStatusSurgeonInformLevel.description": {
+      "source": "1 = very unsatisfied, 5 = very satisfied",
+      "target": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen."
+    },
+    "TreatmentStatusSurgeonInformLevel.rateValues.1.text": {
+      "source": "1",
+      "target": "Dies ist"
+    },
+    "TreatmentStatusSurgeonInformLevel.rateValues.2.text": {
+      "source": "2",
+      "target": "Bitte beachten"
+    },
+    "TreatmentStatusSurgeonInformLevel.rateValues.3.text": {
+      "source": "3",
+      "target": "Die endgültige"
+    },
+    "TreatmentStatusSurgeonInformLevel.rateValues.4.text": {
+      "source": "4",
+      "target": "Auch längere"
+    },
+    "TreatmentStatusSurgeonInformLevel.rateValues.5.text": {
+      "source": "5",
+      "target": "Umlaute wie"
+    },
+    "TreatmentStatusSurgeonInformLevel.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So kann die"
+    },
+    "TreatmentStatusTreatmentSatisfactionLevel.title": {
+      "source": "How satisfied were you with the results of the procedure?",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text"
+    },
+    "TreatmentStatusTreatmentSatisfactionLevel.description": {
+      "source": "1 = very unsatisfied, 5 = very satisfied",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für"
+    },
+    "TreatmentStatusTreatmentSatisfactionLevel.rateValues.1.text": {
+      "source": "1",
+      "target": "Die Struktur"
+    },
+    "TreatmentStatusTreatmentSatisfactionLevel.rateValues.2.text": {
+      "source": "2",
+      "target": "Bitte prüfen"
+    },
+    "TreatmentStatusTreatmentSatisfactionLevel.rateValues.3.text": {
+      "source": "3",
+      "target": "So entsteht"
+    },
+    "TreatmentStatusTreatmentSatisfactionLevel.rateValues.4.text": {
+      "source": "4",
+      "target": "Dieser Platzhalter"
+    },
+    "TreatmentStatusTreatmentSatisfactionLevel.rateValues.5.text": {
+      "source": "5",
+      "target": "Die Inhalte"
+    },
+    "TreatmentStatusTreatmentSatisfactionLevel.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Dadurch wirkt die"
+    }
+  }
+}

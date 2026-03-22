@@ -1,0 +1,189 @@
+{
+  "page": "USER_INFO-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "UserInfoHead.html": {
+      "source": "<h2>Before You Begin</h2>",
+      "target": ""
+    },
+    "UserInfoText1.html": {
+      "source": "<p>If you're still grieving from the loss of your Lar Par companion, maybe it's best to do the survey later when you've had time to heal. </p>",
+      "target": ""
+    },
+    "UserInfoText2.html": {
+      "source": "<p>If you'd like to continue now, please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>",
+      "target": ""
+    },
+    "CmpnName.title": {
+      "source": "Please tell us your companion's name:",
+      "target": ""
+    },
+    "LifeStatus.title": {
+      "source": "Has {CmpnName} crossed over the Rainbow Bridge?",
+      "target": ""
+    },
+    "LifeStatus.choices.true.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "LifeStatus.choices.false.text": {
+      "source": "No",
+      "target": ""
+    },
+    "UserInfoHeading.html": {
+      "source": "<h2>About You</h2>",
+      "target": ""
+    },
+    "UserInfoText.html": {
+      "source": "<p>We're asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and verifiable.</p>",
+      "target": ""
+    },
+    "UserInfoVerificationText.html": {
+      "source": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>",
+      "target": ""
+    },
+    "UserInfoContactType.title": {
+      "source": "Would you like to use email or Facebook Messenger for verification?",
+      "target": ""
+    },
+    "UserInfoContactType.labelTrue": {
+      "source": "Facebook",
+      "target": ""
+    },
+    "UserInfoContactType.labelFalse": {
+      "source": "Email",
+      "target": ""
+    },
+    "UserInfoContactTypeEmail.title": {
+      "source": "Email address:",
+      "target": ""
+    },
+    "UserInfoContactTypeFacebookInstructions.html": {
+      "source": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Info icon' />Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>",
+      "target": ""
+    },
+    "UserInfoContactTypeFacebook.title": {
+      "source": "Facebook account:",
+      "target": ""
+    },
+    "UserInfoContactTypeFacebook.placeholder": {
+      "source": "eg. https://www.facebook.com/my.profile.name",
+      "target": ""
+    },
+    "UserInfoContactTypeFacebook.validators.0.text": {
+      "source": "Please enter a valid Facebook profile URL, e.g., https://facebook.com/your.username",
+      "target": ""
+    },
+    "UserInfoContactOK.title": {
+      "source": "May we contact you to talk more about your LP experience?",
+      "target": ""
+    },
+    "UserInfoContactOK.labelTrue": {
+      "source": "Yes",
+      "target": ""
+    },
+    "UserInfoContactOK.labelFalse": {
+      "source": "No",
+      "target": ""
+    },
+    "UserInfoNameCountryPanel.title": {
+      "source": "Your First Name and Country",
+      "target": ""
+    },
+    "UserInfoFirstName.title": {
+      "source": "First Name:",
+      "target": ""
+    },
+    "UserInfoCountry.title": {
+      "source": "Country:",
+      "target": ""
+    },
+    "UserInfoCountry.choices.US.text": {
+      "source": "United States",
+      "target": ""
+    },
+    "UserInfoCountry.choices.UK.text": {
+      "source": "United Kingdom",
+      "target": ""
+    },
+    "UserInfoCountry.choices.CA.text": {
+      "source": "Canada",
+      "target": ""
+    },
+    "UserInfoCountry.choices.DE.text": {
+      "source": "Germany",
+      "target": ""
+    },
+    "UserInfoCountry.choices.AU_NZ.text": {
+      "source": "Australia/New Zealand",
+      "target": ""
+    },
+    "UserInfoCountry.choices.FR.text": {
+      "source": "France",
+      "target": ""
+    },
+    "UserInfoCountry.choices.ES.text": {
+      "source": "Spain",
+      "target": ""
+    },
+    "UserInfoCountry.choices.PT.text": {
+      "source": "Portugal",
+      "target": ""
+    },
+    "UserInfoStateRegion.title": {
+      "source": "State, province or region (optional):",
+      "target": ""
+    },
+    "UserInfoAgeGenderPanel.title": {
+      "source": "Age and Gender (optional)",
+      "target": ""
+    },
+    "UserInfoAgeGroup.title": {
+      "source": "Approximately what is your age?",
+      "target": ""
+    },
+    "UserInfoAgeGroup.choices.UNDER_20.text": {
+      "source": "Under 20",
+      "target": ""
+    },
+    "UserInfoAgeGroup.choices.20_34.text": {
+      "source": "20-34",
+      "target": ""
+    },
+    "UserInfoAgeGroup.choices.35_49.text": {
+      "source": "35-49",
+      "target": ""
+    },
+    "UserInfoAgeGroup.choices.50-6.text": {
+      "source": "50-6",
+      "target": ""
+    },
+    "UserInfoAgeGroup.choices.OVER_65.text": {
+      "source": "Over 65",
+      "target": ""
+    },
+    "UserInfoGender.title": {
+      "source": "Gender information:",
+      "target": ""
+    },
+    "UserInfoGender.choices.WOMAN.text": {
+      "source": "Woman",
+      "target": ""
+    },
+    "UserInfoGender.choices.MAN.text": {
+      "source": "Man",
+      "target": ""
+    },
+    "UserInfoGender.choices.NON_BINARY.text": {
+      "source": "Non-binary",
+      "target": ""
+    },
+    "UserInfoGender.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": ""
+    }
+  }
+}

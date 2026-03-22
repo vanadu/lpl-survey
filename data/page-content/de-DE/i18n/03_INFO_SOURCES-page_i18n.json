@@ -1,0 +1,161 @@
+{
+  "page": "INFO_SOURCES-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "InfoSourcesHeading.html": {
+      "source": "<h2>How did you learn about LP/GOLPP?</h2>",
+      "target": "<h2>Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht.</h2>"
+    },
+    "InfoSourcesText.html": {
+      "source": "<p>This section asks some questions about how you learned about laryngeal paralysis and geriatric-onset laryngeal paralysis (LP) and polyneuropathy (GOLPP) and whether the information you found helped you make decisions for {CmpnName}. There is no right or wrong answer, so please answer as best as you can without thinking too hard about it.</p>",
+      "target": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich</p>"
+    },
+    "InfoSourcesPriorKnowledge.title": {
+      "source": "Had you ever heard of LP before {CmpnName} got it?",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise"
+    },
+    "InfoSourcesPriorKnowledge.labelTrue": {
+      "source": "Yes",
+      "target": "Die Struktur"
+    },
+    "InfoSourcesPriorKnowledge.labelFalse": {
+      "source": "No",
+      "target": "Bitte prüfen"
+    },
+    "InfoSourcesTypes.title": {
+      "source": "Which sources of information have you accessed to learn about LP?",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für"
+    },
+    "InfoSourcesTypes.choices.VETERINARIANS.text": {
+      "source": "Veterinarians",
+      "target": "Die Inhalte"
+    },
+    "InfoSourcesTypes.choices.WEBSITES.text": {
+      "source": "Websites",
+      "target": "Dadurch wirkt"
+    },
+    "InfoSourcesTypes.choices.FACEBOOK_GROUPS.text": {
+      "source": "Facebook groups",
+      "target": "Längere Texte dürfen"
+    },
+    "InfoSourcesTypes.choices.SOCIAL_VIDEO.text": {
+      "source": "Youtube, Instagram or other video",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp"
+    },
+    "InfoSourcesTypes.choices.SOCIAL_CHAT.text": {
+      "source": "Reddit, X (Twitter), or other social media",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und kleinen"
+    },
+    "InfoSourcesTypes.choices.AI_MODELS.text": {
+      "source": "AI models like ChatGPT",
+      "target": "Am Ende wird die echte"
+    },
+    "InfoSourcesTypes.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Dies ist ein"
+    },
+    "InfoSourcesBestSource.title": {
+      "source": "Which of those information sources did you find MOST useful (please select one)?",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer"
+    },
+    "InfoSourcesHardToUnderstand.title": {
+      "source": "Did you find the information you got about LP difficult to understand?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü"
+    },
+    "InfoSourcesHardToUnderstand.description": {
+      "source": "1 = no, not difficult at all, 5 = very difficult",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der"
+    },
+    "InfoSourcesHardToUnderstand.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "InfoSourcesHardToUnderstand.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "InfoSourcesHardToUnderstand.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "InfoSourcesHardToUnderstand.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "InfoSourcesHardToUnderstand.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "InfoSourcesHardToUnderstand.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So entsteht eine"
+    },
+    "InfoSourcesContradictory.title": {
+      "source": "Do you feel like a lot of the information you got about LP was contradictory?",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe Absatz"
+    },
+    "InfoSourcesContradictory.description": {
+      "source": "1 = not at all contradictory, 5 = very contradictory",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen"
+    },
+    "InfoSourcesContradictory.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "InfoSourcesContradictory.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "InfoSourcesContradictory.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "InfoSourcesContradictory.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "InfoSourcesContradictory.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "InfoSourcesContradictory.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "InfoSourcesClearAnswers.title": {
+      "source": "Did you find it hard to get clear answers to your questions so you could make informed choices for {CmpnName}?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann"
+    },
+    "InfoSourcesClearAnswers.description": {
+      "source": "1 = No, not hard at all, 5 = yes, very hard",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch"
+    },
+    "InfoSourcesClearAnswers.rateValues.1.text": {
+      "source": "1",
+      "target": "Auf diese"
+    },
+    "InfoSourcesClearAnswers.rateValues.2.text": {
+      "source": "2",
+      "target": "Für Schaltflächen,"
+    },
+    "InfoSourcesClearAnswers.rateValues.3.text": {
+      "source": "3",
+      "target": "Die Struktur"
+    },
+    "InfoSourcesClearAnswers.rateValues.4.text": {
+      "source": "4",
+      "target": "Bitte prüfen"
+    },
+    "InfoSourcesClearAnswers.rateValues.5.text": {
+      "source": "5",
+      "target": "So entsteht"
+    },
+    "InfoSourcesClearAnswers.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Dieser Platzhalter eignet"
+    }
+  }
+}

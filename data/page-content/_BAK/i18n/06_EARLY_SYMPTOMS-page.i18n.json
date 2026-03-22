@@ -1,0 +1,161 @@
+{
+  "page": "EARLY_SYMPTOMS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "EarlySymptomsHeading.html": {
+      "source": "<h2>Your early encounters with LP/GOLPP</h2>",
+      "target": ""
+    },
+    "EarlySymptomsText.html": {
+      "source": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>",
+      "target": ""
+    },
+    "EarlySymptomsAgePanel.title": {
+      "source": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
+      "target": ""
+    },
+    "EarlySymptomsAgeYears.title": {
+      "source": "Years",
+      "target": ""
+    },
+    "EarlySymptomsAgeYears.validators.0.text": {
+      "source": "Age must be between 1 and 40",
+      "target": ""
+    },
+    "EarlySymptomsAgeMonths.title": {
+      "source": "Months (number 0 - 11)",
+      "target": ""
+    },
+    "EarlySymptomsAgeMonths.validators.0.text": {
+      "source": "Months must be between 0 and 11",
+      "target": ""
+    },
+    "EarlySymptomsType.title": {
+      "source": "What symptoms did {CmpnName} have at that time?",
+      "target": ""
+    },
+    "EarlySymptomsType.choices.STRIDOR.text": {
+      "source": "Noisy or raspy breathing",
+      "target": ""
+    },
+    "EarlySymptomsType.choices.PANTING.text": {
+      "source": "Excess panting",
+      "target": ""
+    },
+    "EarlySymptomsType.choices.BARK_CHANGES.text": {
+      "source": "Changes in bark",
+      "target": ""
+    },
+    "EarlySymptomsType.choices.COUGHING.text": {
+      "source": "Coughing or gagging",
+      "target": ""
+    },
+    "EarlySymptomsType.choices.HIND_END.text": {
+      "source": "Hind-end weakness",
+      "target": ""
+    },
+    "EarlySymptomsType.choices.LABORED_BREATHING.text": {
+      "source": "Labored breathing",
+      "target": ""
+    },
+    "EarlySymptomsType.choices.EXERCISE_INTOLERANCE.text": {
+      "source": "Exercise and heat intolerance",
+      "target": ""
+    },
+    "EarlySymptomsSeverity.title": {
+      "source": "How severe did you think {CmpnName}'s early symptoms were?",
+      "target": ""
+    },
+    "EarlySymptomsSeverity.description": {
+      "source": "1 = mild, 5 = severe",
+      "target": ""
+    },
+    "EarlySymptomsHindEndWeakness.title": {
+      "source": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
+      "target": ""
+    },
+    "EarlySymptomsHindEndWeakness.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "EarlySymptomsHindEndWeakness.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "EarlySymptomsHindEndWeakness.choices.DONT_KNOW.text": {
+      "source": "Don't remember",
+      "target": ""
+    },
+    "EarlySymptomsIncontinence.title": {
+      "source": "Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?",
+      "target": ""
+    },
+    "EarlySymptomsIncontinence.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "EarlySymptomsIncontinence.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "EarlySymptomsIncontinence.choices.DONT_KNOW.text": {
+      "source": "Don't remember",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditions.title": {
+      "source": "When {CmpnName} first started showing symptoms of LP, did {cvGenderSubjectPronoun} have any other health conditions?",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditions.choices.YES.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditions.choices.NO.text": {
+      "source": "No",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditions.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditionsType.title": {
+      "source": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditionsType.choices.GERD.text": {
+      "source": "Acid reflux (GERD)",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditionsType.choices.ME.text": {
+      "source": "Megaesophagus",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditionsType.choices.DM.text": {
+      "source": "Degenerative Myelopathy",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditionsType.choices.ARTHRITIS.text": {
+      "source": "Arthritis",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditionsType.choices.CUSHINGS.text": {
+      "source": "Cushings",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditionsType.choices.CT.text": {
+      "source": "Collapsing Trachea",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditionsType.choices.HYPOTHYROID.text": {
+      "source": "Hypothyroidism",
+      "target": ""
+    },
+    "EarlySymptomsOtherConditionsType.choices.HEMANGIOSARCOMA.text": {
+      "source": "Hemangiosarcoma",
+      "target": ""
+    }
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "page": "CONCLUSION-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "ConclusionHeading.html": {
+      "source": "<h2>Conclusion</h2>",
+      "target": "<h2>Dies ist</h2>"
+    },
+    "Conclusion.html": {
+      "source": "<p>The last section of this survey references your earlier responses to determine how {CmpnName}'s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression. </p>",
+      "target": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das</p>"
+    },
+    "ConclusionsPanelLifeStatusTrueText.html": {
+      "source": "<p><b>NOTE: </b>These questions ask about the last station of {CmpnName}'s LP/GOLPP journey before {cvGenderSubjectPronoun} crossed over the Rainbow Bridge. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later. </p>",
+      "target": "<p><b>So</b>Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen,</p>"
+    },
+    "ConclusionsPanelLifeStatusFalseText.html": {
+      "source": "<p><b>IMPORTANT:</b> Please answer the questions about {CmpnName} in {cvGenderObjectPronoun} current state of health:</p>",
+      "target": "<p><b>So</b>Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht</p>"
+    },
+    "ConclusionSpecialConsiderations.title": {
+      "source": "Please describe any special considerations for {CmpnName} due to LP-related breathing issues:",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas"
+    },
+    "ConclusionSpecialConsiderations.choices.NO_CONSIDERATIONS.text": {
+      "source": "No special considerations",
+      "target": "Kurze Beschriftungen bleiben dagegen"
+    },
+    "ConclusionSpecialConsiderations.choices.EXERCISE.text": {
+      "source": "Exercise limitations",
+      "target": "Das erleichtert die"
+    },
+    "ConclusionSpecialConsiderations.choices.FOOD.text": {
+      "source": "Type, amount or frequency of feeding",
+      "target": "Am Ende wird die echte Übersetzung diesen Blindtext"
+    },
+    "ConclusionSpecialConsiderations.choices.TRAVEL.text": {
+      "source": "Travel restrictions",
+      "target": "Dies ist ein"
+    },
+    "ConclusionSpecialConsiderations.choices.EXCITEMENT.text": {
+      "source": "Other behavior restrictions i.e., anxiety, excitement",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu"
+    },
+    "ConclusionGeneralCondition.title": {
+      "source": "Please describe {CmpnName}'s general physical condition:",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase"
+    },
+    "ConclusionGeneralCondition.choices.NO_SYMPTOMS.text": {
+      "source": "No noticeable symptoms",
+      "target": "Auch längere Abschnitte lassen"
+    },
+    "ConclusionGeneralCondition.choices.HIND_END.text": {
+      "source": "Significant hind-end weakness",
+      "target": "Umlaute wie ä, ö,"
+    },
+    "ConclusionGeneralCondition.choices.FALLING.text": {
+      "source": "Frequent falling",
+      "target": "So kann die"
+    },
+    "ConclusionGeneralCondition.choices.GET_UP.text": {
+      "source": "Difficulty getting up or standing",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "ConclusionGeneralCondition.choices.URINARY.text": {
+      "source": "Urinary incontinence",
+      "target": "Der Text ist"
+    },
+    "ConclusionGeneralCondition.choices.FECAL.text": {
+      "source": "Fecal incontinence",
+      "target": "Auf diese Weise"
+    },
+    "ConclusionQOL.title": {
+      "source": "How would you rate {CmpnName}'s quality of life at this stage?",
+      "target": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt"
+    },
+    "ConclusionQOL.description": {
+      "source": "1 = very poor, 3 = fair, 5 = very good",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für"
+    },
+    "ConclusionQOL.rateValues.1.text": {
+      "source": "1",
+      "target": "Dieser Platzhalter"
+    },
+    "ConclusionQOL.rateValues.2.text": {
+      "source": "2",
+      "target": "Die Inhalte"
+    },
+    "ConclusionQOL.rateValues.3.text": {
+      "source": "3",
+      "target": "Dadurch wirkt"
+    },
+    "ConclusionQOL.rateValues.4.text": {
+      "source": "4",
+      "target": "Längere Texte"
+    },
+    "ConclusionQOL.rateValues.5.text": {
+      "source": "5",
+      "target": "Kurze Beschriftungen"
+    },
+    "ConclusionQOL.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Das erleichtert die"
+    },
+    "ConclusionOtherConditionsNew.title": {
+      "source": "Did {CmpnName} develop any new conditions during {cvGenderObjectPronoun} LP/GOLPP journey that {cvGenderSubjectPronoun} didn't have before?",
+      "target": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht."
+    },
+    "ConclusionOtherConditionsNew.labelTrue": {
+      "source": "Yes",
+      "target": "Bitte beachten"
+    },
+    "ConclusionOtherConditionsNew.labelFalse": {
+      "source": "No",
+      "target": "Die endgültige"
+    },
+    "ConclusionOtherConditions.title": {
+      "source": "What other conditions did {CmpnName} develop during {cvGenderObjectPronoun} LP/GOLPP journey?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie"
+    },
+    "ConclusionOtherConditions.description": {
+      "source": "The selections you made about the beginning of {CmpnName}'s LP/GOLPP journey are preselected.",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von"
+    },
+    "ConclusionOtherConditions.choices.GERD.text": {
+      "source": "Acid reflux (GERD)",
+      "target": "Der Text ist absichtlich"
+    },
+    "ConclusionOtherConditions.choices.ME.text": {
+      "source": "Megaesophagus",
+      "target": "Auf diese"
+    },
+    "ConclusionOtherConditions.choices.DM.text": {
+      "source": "Degenerative Myelopathy",
+      "target": "Für Schaltflächen, Hinweise"
+    },
+    "ConclusionOtherConditions.choices.ARTHRITIS.text": {
+      "source": "Arthritis",
+      "target": "Die Struktur"
+    },
+    "ConclusionOtherConditions.choices.CUSHINGS.text": {
+      "source": "Cushings",
+      "target": "Bitte prüfen"
+    },
+    "ConclusionOtherConditions.choices.CT.text": {
+      "source": "Collapsing Trachea",
+      "target": "So entsteht eine"
+    },
+    "ConclusionOtherConditions.choices.HYPOTHYROID.text": {
+      "source": "Hypothyroidism",
+      "target": "Dieser Platzhalter"
+    },
+    "ConclusionOtherConditions.choices.HEMANGIOSARCOMA.text": {
+      "source": "Hemangiosarcoma",
+      "target": "Die Inhalte"
+    },
+    "ConclusionOtherConditions.choices.NONE.text": {
+      "source": "No new conditions",
+      "target": "Dadurch wirkt die Testseite"
+    },
+    "ConclusionCauseOfDeathHeading.html": {
+      "source": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This question asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over.",
+      "target": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte"
+    },
+    "ConclusionCauseOfDeath.title": {
+      "source": "What was the ultimate reason why {CmpnName} crossed over the Rainbow Bridge?",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit"
+    },
+    "ConclusionCauseOfDeath.choices.COMPLICATIONS.text": {
+      "source": "Post-op complications of LP-related surgical procedure",
+      "target": "Umlaute wie ä, ö, ü und das ß"
+    },
+    "ConclusionCauseOfDeath.choices.BREATHING_CRISIS.text": {
+      "source": "LP-related breathing crisis",
+      "target": "So kann die Darstellung"
+    },
+    "ConclusionCauseOfDeath.choices.ASPIRATION.text": {
+      "source": "Aspiration pneumonia",
+      "target": "Diese Beispieldaten helfen"
+    },
+    "ConclusionCauseOfDeath.choices.QOL_POLYNEUROPATHY.text": {
+      "source": "Quality of life due to polyneuropathy or hind-end weakness",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf"
+    },
+    "ConclusionCauseOfDeath.choices.QOL_BREATHING.text": {
+      "source": "Quality of life due to LP-related breathing problems",
+      "target": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die"
+    },
+    "ConclusionCauseOfDeath.choices.CANCER.text": {
+      "source": "Cancer",
+      "target": "Bitte prüfen"
+    },
+    "ConclusionCauseOfDeath.choices.SEIZURE.text": {
+      "source": "Seizure, stroke, or cardiac event",
+      "target": "So entsteht eine glaubwürdige Zielsprache für"
+    },
+    "ConclusionCauseOfDeath.choices.INFECTION.text": {
+      "source": "Bacterial/viral infection",
+      "target": "Dieser Platzhalter eignet"
+    },
+    "ConclusionCauseOfDeath.choices.STOPPED_EATING.text": {
+      "source": "Stopped eating",
+      "target": "Die Inhalte rotieren,"
+    },
+    "ConclusionOtherPathPanel.title": {
+      "source": "These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die"
+    },
+    "ConclusionOtherPathTieback.title": {
+      "source": "What if anything would you differently?",
+      "target": "Am Ende wird die echte Übersetzung diesen Blindtext"
+    },
+    "ConclusionOtherPathTieback.choices.TIEBACK_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass"
+    },
+    "ConclusionOtherPathTieback.choices.TIEBACK_NO.text": {
+      "source": "I would not do tieback surgery again",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt."
+    },
+    "ConclusionOtherPathTieback.choices.TIEBACK_SOONER.text": {
+      "source": "I would do tieback surgery sooner than I did with {CmpnName}",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö,"
+    },
+    "ConclusionOtherPathTieback.choices.TIEBACK_LATER.text": {
+      "source": "I would wait to do tieback surgery longer than I did with {CmpnName}",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von"
+    },
+    "ConclusionOtherPathBVEAP.title": {
+      "source": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig"
+    },
+    "ConclusionOtherPathBVEAP.choices.BVEAP_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des"
+    },
+    "ConclusionOtherPathBVEAP.choices.BVEAP_NO.text": {
+      "source": "I would not do BVEAP surgery again",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So"
+    },
+    "ConclusionOtherPathBVEAP.choices.BVEAP_SOONER.text": {
+      "source": "I would do BVEAP surgery sooner than I did with {CmpnName}",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+    },
+    "ConclusionOtherPathBVEAP.choices.BVEAP_LATER.text": {
+      "source": "I would wait to do BVEAP surgery longer than I did with {CmpnName}",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher"
+    },
+    "ConclusionOtherPathStent.title": {
+      "source": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen."
+    },
+    "ConclusionOtherPathStent.choices.STENT_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist"
+    },
+    "ConclusionOtherPathStent.choices.STENT_NO.text": {
+      "source": "I would not do the laryngeal stent implant again",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die"
+    },
+    "ConclusionOtherPathStent.choices.STENT_SOONER.text": {
+      "source": "I would do laryngeal stent implant surgery sooner than I did with {CmpnName}",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und"
+    },
+    "ConclusionOtherPathStent.choices.STENT_LATER.text": {
+      "source": "I would wait to do a laryngeal stent implant longer than I did with {CmpnName}",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und"
+    },
+    "ConclusionOtherPathArytenoidectomy.title": {
+      "source": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig"
+    },
+    "ConclusionOtherPathArytenoidectomy.choices.ARYTENOIDECTOMY_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des"
+    },
+    "ConclusionOtherPathArytenoidectomy.choices.ARYTENOIDECTOMY_NO.text": {
+      "source": "I would not do the arytenoidectomy surgery again",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht"
+    },
+    "ConclusionOtherPathArytenoidectomy.choices.ARYTENOIDECTOMY_SOONER.text": {
+      "source": "I would do the arytenoidectomy surgery sooner than I did with {CmpnName}",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht"
+    },
+    "ConclusionOtherPathArytenoidectomy.choices.ARYTENOIDECTOMY_LATER.text": {
+      "source": "I would wait to do the arytenoidectomy longer than I did with {CmpnName}",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher"
+    },
+    "ConclusionOtherPathVentrilocordectomy.title": {
+      "source": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen."
+    },
+    "ConclusionOtherPathVentrilocordectomy.choices.VENTRILOCORDECTOMY_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist"
+    },
+    "ConclusionOtherPathVentrilocordectomy.choices.VENTRILOCORDECTOMY_NO.text": {
+      "source": "I would not do the ventrilocordectomy surgery again",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient."
+    },
+    "ConclusionOtherPathVentrilocordectomy.choices.VENTRILOCORDECTOMY_SOONER.text": {
+      "source": "I would do the ventrilocordectomy surgery sooner than I did with {CmpnName}",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit"
+    },
+    "ConclusionOtherPathVentrilocordectomy.choices.VENTRILOCORDECTOMY_LATER.text": {
+      "source": "I would wait to do the ventrilocordectomy longer than I did with {CmpnName}",
+      "target": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung"
+    },
+    "ConclusionOtherPathNoTreatment.title": {
+      "source": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine"
+    },
+    "ConclusionOtherPathNoTreatment.choices.NO_TREATMENT_SAME.text": {
+      "source": "I would pursue the same treatment path as with {CmpnName}",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise"
+    },
+    "ConclusionOtherPathNoTreatment.choices.NO_TREATMENT_WOULD_DO.text": {
+      "source": "I would pursue tieback, laryngeal stent, or other veterinary procedure",
+      "target": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere"
+    },
+    "ConclusionStentAlternative.title": {
+      "source": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte"
+    },
+    "ConclusionStentAlternative.choices.YES.text": {
+      "source": "Yes",
+      "target": "Dadurch wirkt"
+    },
+    "ConclusionStentAlternative.choices.NO.text": {
+      "source": "No",
+      "target": "Längere Texte"
+    },
+    "ConclusionStentAlternative.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Kurze Beschriftungen bleiben"
+    },
+    "ConclusionDifferentChoices.title": {
+      "source": "Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist"
+    },
+    "ConclusionThanksHead.html": {
+      "source": "<div class='conclusion-thanks-head-container'><h2 class='conclusion-thanks-title-heading'>LP/GOLPP Survey 2026</h2><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><h3 class='conclusion-thanks-title-subheading'>Thank You For Taking The Survey!</h3><p class='conclusion-thanks-note-mobile'>Please select the checkbox to complete and submit.</p><p class='conclusion-thanks-note'>Please click the <b>Complete</b> button to submit your responses.</p></div>",
+      "target": "<div class='conclusion-thanks-head-container'><h2 class='conclusion-thanks-title-heading'>Bitte beachten Sie, dass</h2><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><h3 class='conclusion-thanks-title-subheading'>Die endgültige Formulierung wird in einer späteren</h3><p class='conclusion-thanks-note-mobile'>Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen.</p><p class='conclusion-thanks-note'>Umlaute wie ä, ö,<b>So</b>Diese Beispieldaten helfen bei der Kontrolle</p></div>"
+    }
+  }
+}

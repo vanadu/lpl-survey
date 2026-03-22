@@ -1,0 +1,145 @@
+{
+  "page": "NEUROPATHY-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "NeuropathyHeading.html": {
+      "source": "<h2>Hind-end weakness and polyneuropathy</h2>",
+      "target": "<h2>Dies ist ein vorläufiger Blindtext</h2>"
+    },
+    "NeuropathyText.html": {
+      "source": "<p><b>NOTE:</b> Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly in the hind end. Symptoms can include hind-end weakness and incontinence. Younger dogs with idiopathic LP often don't suffer from LP-related polyneuropathy.</p>",
+      "target": "<p><b>Bitte</b>Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen</p>"
+    },
+    "NeuropathySymptomsDoesHave.title": {
+      "source": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige"
+    },
+    "NeuropathySymptomsDoesHave.choices.YES.text": {
+      "source": "Yes",
+      "target": "Für Schaltflächen,"
+    },
+    "NeuropathySymptomsDoesHave.choices.NO.text": {
+      "source": "No",
+      "target": "Die Struktur"
+    },
+    "NeuropathySymptomsDoesHave.choices.NOT_SURE.text": {
+      "source": "Not sure",
+      "target": "Bitte prüfen Sie"
+    },
+    "NeuropathySymptomsFirst.title": {
+      "source": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser"
+    },
+    "NeuropathySymptomsFirst.choices.HIND_END.text": {
+      "source": "Hind-end weakness appeared first",
+      "target": "Die Inhalte rotieren, damit nicht"
+    },
+    "NeuropathySymptomsFirst.choices.BREATHING.text": {
+      "source": "Breathing issues appeared first",
+      "target": "Dadurch wirkt die Testseite weniger"
+    },
+    "NeuropathySymptomsFirst.choices.SAME_TIME.text": {
+      "source": "They both appeared at about the same time",
+      "target": "Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen"
+    },
+    "NeuropathySymptomsFirst.choices.DONT_KNOW.text": {
+      "source": "Don't Know",
+      "target": "Das erleichtert die"
+    },
+    "NeuropathySymptomsBreathingOnset.title": {
+      "source": "About how long after you first noticed hind-end weakness did the breathing issues begin?",
+      "target": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies ist ein vorläufiger Blindtext für die"
+    },
+    "NeuropathySymptomsBreathingOnset.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Bitte beachten Sie,"
+    },
+    "NeuropathySymptomsBreathingOnset.choices.IMMEDIATELY.text": {
+      "source": "Almost immediately",
+      "target": "Die endgültige Formulierung"
+    },
+    "NeuropathySymptomsBreathingOnset.choices.WEEKS.text": {
+      "source": "Several weeks",
+      "target": "Auch längere Abschnitte"
+    },
+    "NeuropathySymptomsBreathingOnset.choices.MONTHS.text": {
+      "source": "Several months",
+      "target": "Umlaute wie ä,"
+    },
+    "NeuropathySymptomsBreathingOnset.choices.HALF_YEAR.text": {
+      "source": "Six months or longer",
+      "target": "So kann die Darstellung im"
+    },
+    "NeuropathySymptomsHindEndOnset.title": {
+      "source": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält"
+    },
+    "NeuropathySymptomsHindEndOnset.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Auf diese Weise"
+    },
+    "NeuropathySymptomsHindEndOnset.choices.IMMEDIATELY.text": {
+      "source": "Almost immediately",
+      "target": "Für Schaltflächen, Hinweise"
+    },
+    "NeuropathySymptomsHindEndOnset.choices.WEEKS.text": {
+      "source": "Several weeks",
+      "target": "Die Struktur des"
+    },
+    "NeuropathySymptomsHindEndOnset.choices.MONTHS.text": {
+      "source": "Several months",
+      "target": "Bitte prüfen Sie"
+    },
+    "NeuropathySymptomsHindEndOnset.choices.HALF_YEAR.text": {
+      "source": "Six months or longer",
+      "target": "So entsteht eine glaubwürdige Zielsprache"
+    },
+    "NeuropathySymptomsTypeProgression.title": {
+      "source": "Which progressed faster, the breathing issues or the hind-end weakness?",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte"
+    },
+    "NeuropathySymptomsTypeProgression.choices.BREATHING.text": {
+      "source": "The breathing issues progressed faster",
+      "target": "Dadurch wirkt die Testseite weniger künstlich"
+    },
+    "NeuropathySymptomsTypeProgression.choices.HIND_END.text": {
+      "source": "The hind-end weakness progressed faster",
+      "target": "Längere Texte dürfen hier ruhig etwas"
+    },
+    "NeuropathySymptomsTypeProgression.choices.SAME.text": {
+      "source": "They both progressed at about the same rate",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert"
+    },
+    "NeuropathySymptomsTypeProgression.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Am Ende wird"
+    },
+    "NeuropathyOtherIssues.title": {
+      "source": "Over the course of {CmpnName}'s LP/GOLPP, did any of these issues also appear?",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu"
+    },
+    "NeuropathyOtherIssues.choices.ANXIETY.text": {
+      "source": "Increased anxiety",
+      "target": "Die endgültige Formulierung"
+    },
+    "NeuropathyOtherIssues.choices.COGNITIVE.text": {
+      "source": "Cognitive changes",
+      "target": "Auch längere Abschnitte"
+    },
+    "NeuropathyOtherIssues.choices.BEHAVIOR.text": {
+      "source": "Changes in behavior or personality",
+      "target": "Umlaute wie ä, ö, ü und"
+    },
+    "NeuropathyOtherIssues.choices.APPETITE.text": {
+      "source": "Changes in appetite",
+      "target": "So kann die Darstellung"
+    },
+    "NeuropathyOtherIssues.choices.NONE.text": {
+      "source": "No, {CmpnName} never had any of these issues",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen."
+    }
+  }
+}

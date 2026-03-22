@@ -1,0 +1,189 @@
+{
+  "page": "CMPN_INFO-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "CmpnInfoHeading.html": {
+      "source": "<h2>2026.03.21-About your LP/GOLPP companion<h2>",
+      "target": "<h2>Dies ist ein vorläufiger Blindtext<h2>"
+    },
+    "CmpnInfoText.html": {
+      "source": "<p>2026.03.21-This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>",
+      "target": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst</p>"
+    },
+    "CmpnInfoAnimalType.title": {
+      "source": "{CmpnName}'s species:",
+      "target": "So kann die"
+    },
+    "CmpnInfoAnimalType.choices.CANINE.text": {
+      "source": "Dog",
+      "target": "Diese Beispieldaten"
+    },
+    "CmpnInfoAnimalType.choices.FELINE.text": {
+      "source": "Cat",
+      "target": "Der Text"
+    },
+    "CmpnInfoAnimalType.choices.EQUINE.text": {
+      "source": "Horse",
+      "target": "Auf diese"
+    },
+    "CmpnInfoBreed.title": {
+      "source": "2026.03.21-{CmpnName}'s breed or mix:",
+      "target": "Für Schaltflächen, Hinweise und Überschriften"
+    },
+    "CmpnInfoGender.title": {
+      "source": "2026.03.21-{CmpnName}'s gender:",
+      "target": "Die Struktur des"
+    },
+    "CmpnInfoGender.labelTrue": {
+      "source": "Female",
+      "target": "Bitte prüfen"
+    },
+    "CmpnInfoGender.labelFalse": {
+      "source": "Male",
+      "target": "So entsteht"
+    },
+    "CmpnInfoWeight.title": {
+      "source": "{CmpnName}'s last known weight (in lbs or kg):",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen."
+    },
+    "CmpnInfoWeight.description": {
+      "source": "Please enter a number",
+      "target": "Die Inhalte rotieren, damit nicht"
+    },
+    "CmpnInfoWeight.validators.0.text": {
+      "source": "Weight must be between 1 and 2200",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt."
+    },
+    "CmpnInfoWeightUnits.title": {
+      "source": "Weight units:",
+      "target": "Längere Texte dürfen"
+    },
+    "CmpnInfoWeightUnits.description": {
+      "source": "Please choose pounds or kilos.",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp"
+    },
+    "CmpnInfoWeightUnits.labelTrue": {
+      "source": "Kg",
+      "target": "Das erleichtert"
+    },
+    "CmpnInfoWeightUnits.labelFalse": {
+      "source": "Lbs",
+      "target": "Am Ende"
+    },
+    "dcsdCmpnInfoAgePanel.title": {
+      "source": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt"
+    },
+    "dcsdCmpnInfoAgePanel.description": {
+      "source": "Please enter years and months",
+      "target": "Die endgültige Formulierung wird in einer"
+    },
+    "dcsdCmpnInfoAgeYears.title": {
+      "source": "Age in years (number):",
+      "target": "Auch längere Abschnitte lassen sich"
+    },
+    "dcsdCmpnInfoAgeYears.validators.0.text": {
+      "source": "Age must be between 1 and 40",
+      "target": "Umlaute wie ä, ö, ü und das ß sind"
+    },
+    "dcsdCmpnInfoAgeMonths.title": {
+      "source": "Months (number 0 - 11)",
+      "target": "So kann die Darstellung im Layout"
+    },
+    "dcsdCmpnInfoAgeMonths.validators.0.text": {
+      "source": "Months must be between 0 and 11",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und"
+    },
+    "lvngCmpnInfoAgePanel.title": {
+      "source": "What is {CmpnName}'s approximate age (in years and months)?",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf"
+    },
+    "lvngCmpnInfoAgeYears.title": {
+      "source": "Age in years (number):",
+      "target": "Für Schaltflächen, Hinweise und Überschriften"
+    },
+    "lvngCmpnInfoAgeYears.validators.0.text": {
+      "source": "Age must be between 1 and 40",
+      "target": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte"
+    },
+    "lvngCmpnInfoAgeMonths.title": {
+      "source": "Months (number 0 - 11)",
+      "target": "So entsteht eine glaubwürdige Zielsprache für"
+    },
+    "lvngCmpnInfoAgeMonths.validators.0.text": {
+      "source": "Months must be between 0 and 11",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne"
+    },
+    "CmpnInfoDemeanor.title": {
+      "source": "How would you describe {CmpnName}'s demeanor?",
+      "target": "Die Inhalte rotieren, damit nicht überall derselbe Absatz"
+    },
+    "CmpnInfoDemeanor.description": {
+      "source": "1 = very calm, 5 = very energetic",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere"
+    },
+    "CmpnInfoDemeanor.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "CmpnInfoDemeanor.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "CmpnInfoDemeanor.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "CmpnInfoDemeanor.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "CmpnInfoDemeanor.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "CmpnInfoAnxiety.title": {
+      "source": "How would you describe {CmpnName}'s anxiety level?",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt."
+    },
+    "CmpnInfoAnxiety.description": {
+      "source": "1 = not at all anxious, 5 = very anxious",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie"
+    },
+    "CmpnInfoAnxiety.rateValues.1.text": {
+      "source": "1",
+      "target": "So kann"
+    },
+    "CmpnInfoAnxiety.rateValues.2.text": {
+      "source": "2",
+      "target": "Diese Beispieldaten"
+    },
+    "CmpnInfoAnxiety.rateValues.3.text": {
+      "source": "3",
+      "target": "Der Text"
+    },
+    "CmpnInfoAnxiety.rateValues.4.text": {
+      "source": "4",
+      "target": "Auf diese"
+    },
+    "CmpnInfoAnxiety.rateValues.5.text": {
+      "source": "5",
+      "target": "Für Schaltflächen,"
+    },
+    "CmpnInfoHasInsurance.title": {
+      "source": "{cvDoFirstPersonSingularInitialCap} you have pet insurance for {CmpnName}?",
+      "target": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte"
+    },
+    "CmpnInfoHasInsurance.labelTrue": {
+      "source": "Yes",
+      "target": "So entsteht"
+    },
+    "CmpnInfoHasInsurance.labelFalse": {
+      "source": "No",
+      "target": "Dieser Platzhalter"
+    }
+  }
+}

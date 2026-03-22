@@ -1,0 +1,192 @@
+{
+  "name": "DIAGNOSIS-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "DiagnosisCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "DiagnosisHeading",
+          "html": "<h2>Dies ist ein vorläufiger</h2>"
+        },
+        {
+          "type": "html",
+          "name": "DiagnosisText",
+          "html": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen</p><p>Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte</p>"
+        },
+        {
+          "type": "panel",
+          "name": "DiagnosisDetailsPanel",
+          "elements": [
+            {
+              "type": "dropdown",
+              "name": "DiagnosisWho",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "PRIMARY",
+                  "text": "Die Struktur des"
+                },
+                {
+                  "value": "INTERNIST",
+                  "text": "Bitte prüfen Sie insbesondere"
+                },
+                {
+                  "value": "NEUROLOGIST",
+                  "text": "So entsteht"
+                },
+                {
+                  "value": "SOFT_TISSUE",
+                  "text": "Dieser Platzhalter eignet sich gut für"
+                },
+                {
+                  "value": "GENERAL",
+                  "text": "Die Inhalte rotieren, damit nicht"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "DiagnosticType",
+              "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ROUTINE_EXAM",
+                  "text": "Kurze Beschriftungen bleiben dagegen"
+                },
+                {
+                  "value": "SEDATED_VISUAL",
+                  "text": "Das erleichtert die Prüfung von Buttons,"
+                },
+                {
+                  "value": "XRAY",
+                  "text": "Am Ende wird die echte"
+                },
+                {
+                  "value": "ULTRASOUND",
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "SCOPE",
+                  "text": "Bitte beachten Sie, dass dieser Inhalt nur zu"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "DiagnosisStage",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "UNILATERAL",
+                  "text": "Umlaute wie ä,"
+                },
+                {
+                  "value": "BILATERAL",
+                  "text": "So kann die Darstellung"
+                },
+                {
+                  "value": "WASNT_TOLD",
+                  "text": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "DiagnosisTimeAfterSymptoms",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "LESS_THAN_ONE",
+                  "text": "Die Struktur des Dokuments bleibt"
+                },
+                {
+                  "value": "ONE_TO_THREE",
+                  "text": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge"
+                },
+                {
+                  "value": "FOUR_TO_SIX",
+                  "text": "So entsteht eine glaubwürdige Zielsprache für"
+                },
+                {
+                  "value": "SIX_TO_TWELVE",
+                  "text": "Dieser Platzhalter eignet sich gut für Mockups und"
+                },
+                {
+                  "value": "MORE_THAN_TWELVE",
+                  "text": "Die Inhalte rotieren, damit nicht"
+                }
+              ],
+              "showOtherItem": false,
+              "required": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "DiagnosisCost",
+              "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "UNDER_500",
+                  "text": "Kurze Beschriftungen bleiben"
+                },
+                {
+                  "value": "500_1500",
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": "1501_3000",
+                  "text": "Am Ende"
+                },
+                {
+                  "value": "OVER_3000",
+                  "text": "Dies ist ein"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Bitte beachten Sie,"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "DiagnosisSurgeonContingent",
+              "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte",
+              "description": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen",
+              "isRequired": true,
+              "visibleIf": "{DiagnosisWho} = 'SOFT_TISSUE'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Der Text ist absichtlich generisch und enthält keine"
+                },
+                {
+                  "value": "NO",
+                  "text": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die Struktur des"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

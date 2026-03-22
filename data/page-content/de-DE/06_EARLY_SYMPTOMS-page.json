@@ -1,0 +1,231 @@
+{
+  "name": "EARLY_SYMPTOMS-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "EarlySymptomsCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "EarlySymptomsHeading",
+          "html": "<h2>Dies ist ein vorläufiger Blindtext für</h2>"
+        },
+        {
+          "type": "html",
+          "name": "EarlySymptomsText",
+          "html": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von</p>"
+        },
+        {
+          "type": "panel",
+          "name": "EarlySymptomsAgePanel",
+          "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen",
+          "elements": [
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "EarlySymptomsAgeYears",
+              "title": "Für Schaltflächen,",
+              "isRequired": true,
+              "min": "1",
+              "max": "40",
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 1,
+                  "maxValue": 40,
+                  "text": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "inputType": "number",
+              "name": "EarlySymptomsAgeMonths",
+              "title": "So entsteht eine glaubwürdige Zielsprache für",
+              "isRequired": true,
+              "min": 0,
+              "max": 11,
+              "validators": [
+                {
+                  "type": "numeric",
+                  "minValue": 0,
+                  "maxValue": 11,
+                  "text": "Dieser Platzhalter eignet sich gut für Mockups und interne"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "EarlySymptomsDetailsPanel",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "EarlySymptomsType",
+              "title": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch",
+              "choices": [
+                {
+                  "value": "STRIDOR",
+                  "text": "Längere Texte dürfen hier ruhig"
+                },
+                {
+                  "value": "PANTING",
+                  "text": "Kurze Beschriftungen bleiben"
+                },
+                {
+                  "value": "BARK_CHANGES",
+                  "text": "Das erleichtert die Prüfung"
+                },
+                {
+                  "value": "COUGHING",
+                  "text": "Am Ende wird die"
+                },
+                {
+                  "value": "HIND_END",
+                  "text": "Dies ist ein"
+                },
+                {
+                  "value": "LABORED_BREATHING",
+                  "text": "Bitte beachten Sie,"
+                },
+                {
+                  "value": "EXERCISE_INTOLERANCE",
+                  "text": "Die endgültige Formulierung wird in"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "noneText": "Don't know",
+              "otherText": "Other (max 250 characters)"
+            },
+            {
+              "type": "rating",
+              "name": "EarlySymptomsSeverity",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt",
+              "isRequired": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "EarlySymptomsHindEndWeakness",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Auf diese"
+                },
+                {
+                  "value": "NO",
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die Struktur des"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "EarlySymptomsIncontinence",
+              "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": "NO",
+                  "text": "Dadurch wirkt"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Längere Texte dürfen"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "EarlySymptomsCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "EarlySymptomsOtherConditionsPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "EarlySymptomsOtherConditions",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Am Ende"
+                },
+                {
+                  "value": "NO",
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Bitte beachten Sie,"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "EarlySymptomsOtherConditionsType",
+              "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit",
+              "isRequired": true,
+              "visibleIf": "{EarlySymptomsOtherConditions} = 'YES'",
+              "choices": [
+                {
+                  "value": "GERD",
+                  "text": "Umlaute wie ä, ö,"
+                },
+                {
+                  "value": "ME",
+                  "text": "So kann"
+                },
+                {
+                  "value": "DM",
+                  "text": "Diese Beispieldaten helfen"
+                },
+                {
+                  "value": "ARTHRITIS",
+                  "text": "Der Text"
+                },
+                {
+                  "value": "CUSHINGS",
+                  "text": "Auf diese"
+                },
+                {
+                  "value": "CT",
+                  "text": "Für Schaltflächen, Hinweise"
+                },
+                {
+                  "value": "HYPOTHYROID",
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": "HEMANGIOSARCOMA",
+                  "text": "Bitte prüfen"
+                }
+              ],
+              "choicesOrder": "none",
+              "otherText": "Other (max. 250 characters)",
+              "showOtherItem": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

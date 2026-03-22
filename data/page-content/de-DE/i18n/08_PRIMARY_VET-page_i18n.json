@@ -1,0 +1,225 @@
+{
+  "page": "PRIMARY_VET-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "PrimaryVetHeading.html": {
+      "source": "<h2>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h2>",
+      "target": "<h2>Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht.</h2>"
+    },
+    "PrimaryVetText.html": {
+      "source": "<p>This section asks questions about your primary veterinarian's handling of {CmpnName}'s LP/GOLPP symptoms.</p><p>If you changed primary vets since {CmpnName}'s LP/GOLPP symptoms first appeared, please answer the question about your preferred or most recent primary veterinarian.</p>",
+      "target": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer</p><p>Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout</p>"
+    },
+    "PrimaryVetInflammation.title": {
+      "source": "Did your primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält"
+    },
+    "PrimaryVetInflammation.choices.YES.text": {
+      "source": "Yes",
+      "target": "Auf diese"
+    },
+    "PrimaryVetInflammation.choices.NO.text": {
+      "source": "No",
+      "target": "Für Schaltflächen,"
+    },
+    "PrimaryVetInflammation.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die Struktur des"
+    },
+    "PrimaryVetReflux.title": {
+      "source": "Did your primary veterinarian mention reflux (GERD) or esophageal dysfunction as a possible cause of {CmpnName}'s symptoms?",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut"
+    },
+    "PrimaryVetReflux.choices.YES.text": {
+      "source": "Yes",
+      "target": "Die Inhalte"
+    },
+    "PrimaryVetReflux.choices.NO.text": {
+      "source": "No",
+      "target": "Dadurch wirkt"
+    },
+    "PrimaryVetReflux.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Längere Texte dürfen"
+    },
+    "PrimaryVetRefluxMeds.title": {
+      "source": "Did your primary veterinarian prescribe or recommend a reflux medication such as Pepcid (famotidine) or Prilosec (omeprazole) for reflux?",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte"
+    },
+    "PrimaryVetRefluxMeds.choices.YES.text": {
+      "source": "Yes",
+      "target": "Dies ist"
+    },
+    "PrimaryVetRefluxMeds.choices.NO.text": {
+      "source": "No",
+      "target": "Bitte beachten"
+    },
+    "PrimaryVetRefluxMeds.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die endgültige Formulierung"
+    },
+    "PrimaryVetRefluxInitiative.title": {
+      "source": "Did you start {CmpnName} on reflux medications such as Pepcid (famotidine) or Prilosec (omeprazole) on your own initiative without a prescription or recommendation from your primary vet?",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten"
+    },
+    "PrimaryVetRefluxInitiative.labelTrue": {
+      "source": "Yes",
+      "target": "Der Text"
+    },
+    "PrimaryVetRefluxInitiative.labelFalse": {
+      "source": "No",
+      "target": "Auf diese"
+    },
+    "PrimaryVetDidDiscuss.title": {
+      "source": "Did your primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms?",
+      "target": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig"
+    },
+    "PrimaryVetDidDiscuss.choices.NO_MENTION.text": {
+      "source": "No, did not mention LP/GOLPP at all",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So"
+    },
+    "PrimaryVetDidDiscuss.choices.POSSIBLY.text": {
+      "source": "Said {CmpnName}'s symptoms were possibly due to LP/GOLPP",
+      "target": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen."
+    },
+    "PrimaryVetDidDiscuss.choices.DEFINITELY.text": {
+      "source": "Said {CmpnName}'s symptoms were definitely due to LP/GOLPP",
+      "target": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch"
+    },
+    "PrimaryVetDidDiscuss.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Längere Texte dürfen"
+    },
+    "PrimaryVetInfo.title": {
+      "source": "Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect {CmpnName}?",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen."
+    },
+    "PrimaryVetInfo.labelTrue": {
+      "source": "Yes",
+      "target": "Am Ende"
+    },
+    "PrimaryVetInfo.labelFalse": {
+      "source": "No",
+      "target": "Dies ist"
+    },
+    "PrimaryVetInfoDetails.title": {
+      "source": "What did they tell you about how LP/GOLPP might affect {CmpnName}?",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird"
+    },
+    "PrimaryVetInfoDetails.choices.BARK_LOSS.text": {
+      "source": "Loss or weakening of bark",
+      "target": "Auch längere Abschnitte lassen sich mit"
+    },
+    "PrimaryVetInfoDetails.choices.PROGRESSIVE.text": {
+      "source": "LP/GOLPP is a progressive disease",
+      "target": "Umlaute wie ä, ö, ü und"
+    },
+    "PrimaryVetInfoDetails.choices.HOT_HUMID.text": {
+      "source": "Hot, humid weather exacerbates symptoms",
+      "target": "So kann die Darstellung im Layout"
+    },
+    "PrimaryVetInfoDetails.choices.BREATHING_CRISIS.text": {
+      "source": "Potential for life-threatening breathing crisis",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "PrimaryVetSurgery.title": {
+      "source": "Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for {CmpnName}'s LP/GOLPP?",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für"
+    },
+    "PrimaryVetSurgery.choices.NO_RECOMMENDATION.text": {
+      "source": "Made no recommendation",
+      "target": "Die Struktur des Dokuments"
+    },
+    "PrimaryVetSurgery.choices.ADVISED_FOR.text": {
+      "source": "Encouraged me to talk to a surgeon",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So"
+    },
+    "PrimaryVetSurgery.choices.ADVISED_AGAINST.text": {
+      "source": "Advised against surgery",
+      "target": "Dieser Platzhalter eignet sich"
+    },
+    "PrimaryVetSurgeryPerception.title": {
+      "source": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
+      "target": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben"
+    },
+    "PrimaryVetSurgeryPerception.choices.SPECIFIC_CONDITION.text": {
+      "source": "{CmpnName}'s specific condition",
+      "target": "Das erleichtert die Prüfung"
+    },
+    "PrimaryVetSurgeryPerception.choices.GENERAL_PERCEPTION.text": {
+      "source": "General negative perception",
+      "target": "Am Ende wird die"
+    },
+    "PrimaryVetSurgeryPerception.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Dies ist ein"
+    },
+    "PrimaryVetConfidence.title": {
+      "source": "How confident have you been in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren"
+    },
+    "PrimaryVetConfidence.description": {
+      "source": "1 = not at all confident, 5 = very confident",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie"
+    },
+    "PrimaryVetConfidence.rateValues.1.text": {
+      "source": "1",
+      "target": "So kann"
+    },
+    "PrimaryVetConfidence.rateValues.2.text": {
+      "source": "2",
+      "target": "Diese Beispieldaten"
+    },
+    "PrimaryVetConfidence.rateValues.3.text": {
+      "source": "3",
+      "target": "Der Text"
+    },
+    "PrimaryVetConfidence.rateValues.4.text": {
+      "source": "4",
+      "target": "Auf diese"
+    },
+    "PrimaryVetConfidence.rateValues.5.text": {
+      "source": "5",
+      "target": "Für Schaltflächen,"
+    },
+    "PrimaryVetConfidence.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die Struktur des"
+    },
+    "PrimaryVetSatisfaction.title": {
+      "source": "How satisfied have you been with your current primary veterinarian's handling of {CmpnName}'s LP/GOLPP?",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser"
+    },
+    "PrimaryVetSatisfaction.description": {
+      "source": "1 = not at all satisfied, 5 = very satisfied",
+      "target": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die"
+    },
+    "PrimaryVetSatisfaction.rateValues.1.text": {
+      "source": "1",
+      "target": "Längere Texte"
+    },
+    "PrimaryVetSatisfaction.rateValues.2.text": {
+      "source": "2",
+      "target": "Kurze Beschriftungen"
+    },
+    "PrimaryVetSatisfaction.rateValues.3.text": {
+      "source": "3",
+      "target": "Das erleichtert"
+    },
+    "PrimaryVetSatisfaction.rateValues.4.text": {
+      "source": "4",
+      "target": "Am Ende"
+    },
+    "PrimaryVetSatisfaction.rateValues.5.text": {
+      "source": "5",
+      "target": "Dies ist"
+    },
+    "PrimaryVetSatisfaction.rateValues.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Bitte beachten Sie,"
+    }
+  }
+}

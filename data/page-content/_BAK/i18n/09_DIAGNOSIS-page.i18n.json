@@ -1,0 +1,153 @@
+{
+  "page": "DIAGNOSIS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "DiagnosisHeading.html": {
+      "source": "<h2>{CmpnName}'s LP/GOLPP diagnosis</h2>",
+      "target": ""
+    },
+    "DiagnosisText.html": {
+      "source": "<p>This section asks who provided {CmpnName}'s LP/GOLPP diagnosis and what diagnostic procedures they used to arrive at their conclusion.</p><p>You may have seen multiple vets about {CmpnName}'s LP/GOLPP symptoms. Please answer the question about the vet who provided the definitive diagnosis, i.e., the one you used to make decisions about {CmpnName}'s LP/GOLPP.</p>",
+      "target": ""
+    },
+    "DiagnosisWho.title": {
+      "source": "Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:",
+      "target": ""
+    },
+    "DiagnosisWho.choices.PRIMARY.text": {
+      "source": "Primary veterinarian",
+      "target": ""
+    },
+    "DiagnosisWho.choices.INTERNIST.text": {
+      "source": "Internal medicine specialist",
+      "target": ""
+    },
+    "DiagnosisWho.choices.NEUROLOGIST.text": {
+      "source": "Neurologist",
+      "target": ""
+    },
+    "DiagnosisWho.choices.SOFT_TISSUE.text": {
+      "source": "Soft tissue specialist or surgeon",
+      "target": ""
+    },
+    "DiagnosisWho.choices.GENERAL.text": {
+      "source": "General or orthopedic surgeon",
+      "target": ""
+    },
+    "DiagnosticType.title": {
+      "source": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
+      "target": ""
+    },
+    "DiagnosticType.choices.ROUTINE_EXAM.text": {
+      "source": "Visual/auditory exam only",
+      "target": ""
+    },
+    "DiagnosticType.choices.SEDATED_VISUAL.text": {
+      "source": "Sedated visual exam of larynx",
+      "target": ""
+    },
+    "DiagnosticType.choices.XRAY.text": {
+      "source": "X-Ray or other imaging",
+      "target": ""
+    },
+    "DiagnosticType.choices.ULTRASOUND.text": {
+      "source": "Ultrasound",
+      "target": ""
+    },
+    "DiagnosticType.choices.SCOPE.text": {
+      "source": "Video endoscope or laryngoscope under anesthesia",
+      "target": ""
+    },
+    "DiagnosticType.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "DiagnosisStage.title": {
+      "source": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+      "target": ""
+    },
+    "DiagnosisStage.choices.UNILATERAL.text": {
+      "source": "Unilateral (one-side)",
+      "target": ""
+    },
+    "DiagnosisStage.choices.BILATERAL.text": {
+      "source": "Bilateral (both sides)",
+      "target": ""
+    },
+    "DiagnosisStage.choices.WASNT_TOLD.text": {
+      "source": "I wasn't told what stage {CmpnName}'s LP was in",
+      "target": ""
+    },
+    "DiagnosisTimeAfterSymptoms.title": {
+      "source": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?:",
+      "target": ""
+    },
+    "DiagnosisTimeAfterSymptoms.choices.LESS_THAN_ONE.text": {
+      "source": "Less than one month",
+      "target": ""
+    },
+    "DiagnosisTimeAfterSymptoms.choices.ONE_TO_THREE.text": {
+      "source": "Between one and three months",
+      "target": ""
+    },
+    "DiagnosisTimeAfterSymptoms.choices.FOUR_TO_SIX.text": {
+      "source": "Between four and six months",
+      "target": ""
+    },
+    "DiagnosisTimeAfterSymptoms.choices.SIX_TO_TWELVE.text": {
+      "source": "Between six months and a year",
+      "target": ""
+    },
+    "DiagnosisTimeAfterSymptoms.choices.MORE_THAN_TWELVE.text": {
+      "source": "Longer than a year",
+      "target": ""
+    },
+    "DiagnosisCost.title": {
+      "source": "What was the pre-insurance cost of the diagnosis?",
+      "target": ""
+    },
+    "DiagnosisCost.choices.UNDER_500.text": {
+      "source": "Under $500",
+      "target": ""
+    },
+    "DiagnosisCost.choices.500_1500.text": {
+      "source": "$501-$1500",
+      "target": ""
+    },
+    "DiagnosisCost.choices.1501_3000.text": {
+      "source": "$1500-$3000",
+      "target": ""
+    },
+    "DiagnosisCost.choices.OVER_3000.text": {
+      "source": "Over $3000",
+      "target": ""
+    },
+    "DiagnosisCost.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    },
+    "DiagnosisSurgeonContingent.title": {
+      "source": "Did the surgeon perform the diagnosis without requiring surgery afterwards?",
+      "target": ""
+    },
+    "DiagnosisSurgeonContingent.description": {
+      "source": "In other words, did the surgeon refuse to do the diagnosis unless you agreed to go straight to surgery if the results were positive?",
+      "target": ""
+    },
+    "DiagnosisSurgeonContingent.choices.YES.text": {
+      "source": "Yes, required surgery consent before diagnosis",
+      "target": ""
+    },
+    "DiagnosisSurgeonContingent.choices.NO.text": {
+      "source": "No, did not require surgery consent for diagnosis",
+      "target": ""
+    },
+    "DiagnosisSurgeonContingent.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": ""
+    }
+  }
+}

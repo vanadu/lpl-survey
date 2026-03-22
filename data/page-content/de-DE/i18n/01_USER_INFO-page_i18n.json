@@ -1,0 +1,189 @@
+{
+  "page": "USER_INFO-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "UserInfoHead.html": {
+      "source": "<h2>Before You Begin</h2>",
+      "target": "<h2>Dies ist ein vorläufiger</h2>"
+    },
+    "UserInfoText1.html": {
+      "source": "<p>If you're still grieving from the loss of your Lar Par companion, maybe it's best to do the survey later when you've had time to heal. </p>",
+      "target": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä,</p>"
+    },
+    "UserInfoText2.html": {
+      "source": "<p>If you'd like to continue now, please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>",
+      "target": "<p>So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine</p>"
+    },
+    "CmpnName.title": {
+      "source": "Please tell us your companion's name:",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig"
+    },
+    "LifeStatus.title": {
+      "source": "Has {CmpnName} crossed over the Rainbow Bridge?",
+      "target": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt."
+    },
+    "LifeStatus.choices.true.text": {
+      "source": "Yes",
+      "target": "Die Struktur"
+    },
+    "LifeStatus.choices.false.text": {
+      "source": "No",
+      "target": "Bitte prüfen"
+    },
+    "UserInfoHeading.html": {
+      "source": "<h2>About You</h2>",
+      "target": "<h2>So entsteht eine</h2>"
+    },
+    "UserInfoText.html": {
+      "source": "<p>We're asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and verifiable.</p>",
+      "target": "<p>Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte</p>"
+    },
+    "UserInfoVerificationText.html": {
+      "source": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>",
+      "target": "<p>Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier</p><p>So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist</p>"
+    },
+    "UserInfoContactType.title": {
+      "source": "Would you like to use email or Facebook Messenger for verification?",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften"
+    },
+    "UserInfoContactType.labelTrue": {
+      "source": "Facebook",
+      "target": "Die Struktur"
+    },
+    "UserInfoContactType.labelFalse": {
+      "source": "Email",
+      "target": "Bitte prüfen"
+    },
+    "UserInfoContactTypeEmail.title": {
+      "source": "Email address:",
+      "target": "So entsteht eine"
+    },
+    "UserInfoContactTypeFacebookInstructions.html": {
+      "source": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Info icon' />Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</div>",
+      "target": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Info icon' />Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt</div>"
+    },
+    "UserInfoContactTypeFacebook.title": {
+      "source": "Facebook account:",
+      "target": "Längere Texte dürfen"
+    },
+    "UserInfoContactTypeFacebook.placeholder": {
+      "source": "eg. https://www.facebook.com/my.profile.name",
+      "target": "Kurze Beschriftungen bleiben"
+    },
+    "UserInfoContactTypeFacebook.validators.0.text": {
+      "source": "Please enter a valid Facebook profile URL, e.g., https://facebook.com/your.username",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am"
+    },
+    "UserInfoContactOK.title": {
+      "source": "May we contact you to talk more about your LP experience?",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt"
+    },
+    "UserInfoContactOK.labelTrue": {
+      "source": "Yes",
+      "target": "Die endgültige"
+    },
+    "UserInfoContactOK.labelFalse": {
+      "source": "No",
+      "target": "Auch längere"
+    },
+    "UserInfoNameCountryPanel.title": {
+      "source": "Your First Name and Country",
+      "target": "Umlaute wie ä, ö, ü und"
+    },
+    "UserInfoFirstName.title": {
+      "source": "First Name:",
+      "target": "So kann die"
+    },
+    "UserInfoCountry.title": {
+      "source": "Country:",
+      "target": "Diese Beispieldaten"
+    },
+    "UserInfoCountry.choices.US.text": {
+      "source": "United States",
+      "target": "Der Text ist"
+    },
+    "UserInfoCountry.choices.UK.text": {
+      "source": "United Kingdom",
+      "target": "Auf diese Weise"
+    },
+    "UserInfoCountry.choices.CA.text": {
+      "source": "Canada",
+      "target": "Für Schaltflächen,"
+    },
+    "UserInfoCountry.choices.DE.text": {
+      "source": "Germany",
+      "target": "Die Struktur"
+    },
+    "UserInfoCountry.choices.AU_NZ.text": {
+      "source": "Australia/New Zealand",
+      "target": "Bitte prüfen Sie"
+    },
+    "UserInfoCountry.choices.FR.text": {
+      "source": "France",
+      "target": "So entsteht"
+    },
+    "UserInfoCountry.choices.ES.text": {
+      "source": "Spain",
+      "target": "Dieser Platzhalter"
+    },
+    "UserInfoCountry.choices.PT.text": {
+      "source": "Portugal",
+      "target": "Die Inhalte"
+    },
+    "UserInfoStateRegion.title": {
+      "source": "State, province or region (optional):",
+      "target": "Dadurch wirkt die Testseite weniger künstlich"
+    },
+    "UserInfoAgeGenderPanel.title": {
+      "source": "Age and Gender (optional)",
+      "target": "Längere Texte dürfen hier ruhig"
+    },
+    "UserInfoAgeGroup.title": {
+      "source": "Approximately what is your age?",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp"
+    },
+    "UserInfoAgeGroup.choices.UNDER_20.text": {
+      "source": "Under 20",
+      "target": "Das erleichtert die"
+    },
+    "UserInfoAgeGroup.choices.20_34.text": {
+      "source": "20-34",
+      "target": "Am Ende"
+    },
+    "UserInfoAgeGroup.choices.35_49.text": {
+      "source": "35-49",
+      "target": "Dies ist"
+    },
+    "UserInfoAgeGroup.choices.50-6.text": {
+      "source": "50-6",
+      "target": "Bitte beachten"
+    },
+    "UserInfoAgeGroup.choices.OVER_65.text": {
+      "source": "Over 65",
+      "target": "Die endgültige Formulierung"
+    },
+    "UserInfoGender.title": {
+      "source": "Gender information:",
+      "target": "Auch längere Abschnitte"
+    },
+    "UserInfoGender.choices.WOMAN.text": {
+      "source": "Woman",
+      "target": "Umlaute wie"
+    },
+    "UserInfoGender.choices.MAN.text": {
+      "source": "Man",
+      "target": "So kann"
+    },
+    "UserInfoGender.choices.NON_BINARY.text": {
+      "source": "Non-binary",
+      "target": "Diese Beispieldaten"
+    },
+    "UserInfoGender.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "Der Text ist absichtlich generisch"
+    }
+  }
+}

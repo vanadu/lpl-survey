@@ -1,0 +1,449 @@
+{
+  "name": "TREATMENT_FACTORS-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "TreatmentFactorsCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "TreatmentFactorsHeading",
+          "html": "<h2>Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte</h2>"
+        },
+        {
+          "type": "html",
+          "name": "TreatmentFactorsText",
+          "html": "<p>Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise</p>"
+        },
+        {
+          "type": "html",
+          "name": "TreatmentFactorsDetailsText",
+          "html": "<p>Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen,</p>"
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsDecisionPanel",
+          "visibleIf": "{TreatmentStatusDidHave} = false && {LifeStatus} = false",
+          "elements": [
+            {
+              "type": "dropdown",
+              "name": "TreatmentFactorsDecision",
+              "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "WILL_PURSUE",
+                  "text": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere"
+                },
+                {
+                  "value": "WILL_NOT_PURSUE",
+                  "text": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das"
+                },
+                {
+                  "value": "UNDECIDED",
+                  "text": "Am Ende wird die echte"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "TreatmentFactorsDecisionStent",
+              "title": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut"
+                },
+                {
+                  "value": "NO",
+                  "text": "Umlaute wie ä, ö, ü und das ß sind hier"
+                },
+                {
+                  "value": "NOT_INFORMED",
+                  "text": "So kann die Darstellung im"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "TreatmentFactorsCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsCostPanel",
+          "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen.",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsCost",
+              "title": "Der Text ist absichtlich generisch",
+              "description": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen,",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 2,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": 3,
+                  "text": "So entsteht"
+                },
+                {
+                  "value": 4,
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": 5,
+                  "text": "Die Inhalte"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsCostComplications",
+              "title": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen",
+              "description": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 2,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 3,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": 4,
+                  "text": "Die endgültige"
+                },
+                {
+                  "value": 5,
+                  "text": "Auch längere"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsStagePanel",
+          "title": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsStageLP",
+              "title": "Diese Beispieldaten helfen bei der Kontrolle",
+              "description": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 2,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 3,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": 4,
+                  "text": "So entsteht"
+                },
+                {
+                  "value": 5,
+                  "text": "Dieser Platzhalter"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsStageNeuropathy",
+              "title": "Die Inhalte rotieren, damit nicht überall",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsSurgeryRisksPanel",
+          "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsRisks",
+              "title": "Umlaute wie ä, ö, ü und das ß sind hier",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsRisksComplications",
+              "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für",
+              "description": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": 2,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 3,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 4,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 5,
+                  "text": "Dies ist"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsGeneralPanel",
+          "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsAge",
+              "title": "Auch längere Abschnitte",
+              "description": "Umlaute wie ä, ö, ü und das ß sind hier bewusst",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "So kann"
+                },
+                {
+                  "value": 2,
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": 3,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 4,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 5,
+                  "text": "Für Schaltflächen,"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsGeneralHealth",
+              "title": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge",
+              "description": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": 2,
+                  "text": "Dadurch wirkt"
+                },
+                {
+                  "value": 3,
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": 4,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 5,
+                  "text": "Das erleichtert"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsCoexisting",
+              "title": "Am Ende wird die echte Übersetzung diesen Blindtext",
+              "description": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie,",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Die endgültige"
+                },
+                {
+                  "value": 2,
+                  "text": "Auch längere"
+                },
+                {
+                  "value": 3,
+                  "text": "Umlaute wie"
+                },
+                {
+                  "value": 4,
+                  "text": "So kann"
+                },
+                {
+                  "value": 5,
+                  "text": "Diese Beispieldaten"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsCircumstancesPanel",
+          "title": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsCircumstancesAccess",
+              "title": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die",
+              "description": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": 2,
+                  "text": "Die Inhalte"
+                },
+                {
+                  "value": 3,
+                  "text": "Dadurch wirkt"
+                },
+                {
+                  "value": 4,
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": 5,
+                  "text": "Kurze Beschriftungen"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "TreatmentFactorsCircumstancesCare",
+              "title": "Das erleichtert die Prüfung von Buttons, Labels und",
+              "description": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": 2,
+                  "text": "Die endgültige"
+                },
+                {
+                  "value": 3,
+                  "text": "Auch längere"
+                },
+                {
+                  "value": 4,
+                  "text": "Umlaute wie"
+                },
+                {
+                  "value": 5,
+                  "text": "So kann"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "TreatmentFactorsOtherPanel",
+          "title": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text",
+          "elements": [
+            {
+              "type": "text",
+              "name": "TreatmentFactorsOther",
+              "title": "Auf diese Weise",
+              "description": "Für Schaltflächen, Hinweise und",
+              "isRequired": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

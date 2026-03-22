@@ -1,0 +1,1245 @@
+{
+  "name": "MANAGEMENT-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "ManagementCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "ManagementHeading",
+          "html": "<h2>Dies ist ein vorläufiger Blindtext</h2>"
+        },
+        {
+          "type": "html",
+          "name": "ManagementTextImportant",
+          "html": "<p><b>Bitte</b>Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten.</p>"
+        },
+        {
+          "type": "html",
+          "name": "ManagementTextNote",
+          "html": "<p><b>Bitte</b>So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas ausführlicher ausfallen. Kurze Beschriftungen bleiben dagegen bewusst</p>"
+        },
+        {
+          "type": "panel",
+          "name": "ManagementPrescriptionTypePanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "ManagementPrescriptions",
+              "title": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am Ende wird die echte Übersetzung diesen",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "NO",
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "ManagementPrescriptionType",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier",
+              "description": "So kann die Darstellung im Layout",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES'",
+              "choices": [
+                {
+                  "value": "DOXEPIN",
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": "TRAZODONE",
+                  "text": "Der Text"
+                },
+                {
+                  "value": "GABAPENTIN",
+                  "text": "Auf diese"
+                },
+                {
+                  "value": "GALLIPRANT",
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "STEROID",
+                  "text": "Die Struktur des Dokuments bleibt"
+                },
+                {
+                  "value": "ANTIHISTAMINE",
+                  "text": "Bitte prüfen Sie insbesondere Zeilenlängen,"
+                },
+                {
+                  "value": "CERENIA",
+                  "text": "So entsteht eine glaubwürdige"
+                },
+                {
+                  "value": "MELOXICAM",
+                  "text": "Dieser Platzhalter"
+                },
+                {
+                  "value": "ACEPROMINE",
+                  "text": "Die Inhalte rotieren, damit nicht"
+                },
+                {
+                  "value": "ALBUTEROL",
+                  "text": "Dadurch wirkt die Testseite weniger"
+                },
+                {
+                  "value": "TEMARIL_P",
+                  "text": "Längere Texte dürfen"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "dropdown",
+              "name": "ManagementPrescriptionCost",
+              "title": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich.",
+              "description": "Das erleichtert die Prüfung von Buttons, Labels und kleinen Hinweisen. Am",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES'",
+              "choices": [
+                {
+                  "value": "UNDER_50",
+                  "text": "Dies ist ein"
+                },
+                {
+                  "value": "51_100",
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "101_200",
+                  "text": "Die endgültige"
+                },
+                {
+                  "value": "OVER_200",
+                  "text": "Auch längere Abschnitte"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "required": true
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionDoxepinRatingBreathing",
+              "title": "Umlaute wie ä, ö, ü und das ß sind hier bewusst",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'DOXEPIN'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionDoxepinRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'DOXEPIN'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionTrazodoneRatingBreathing",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TRAZODONE'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionTrazodoneRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TRAZODONE'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionGabapentinRatingBreathing",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GABAPENTIN'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionGabapentinRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GABAPENTIN'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionGalliprantRatingBreathing",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GALLIPRANT'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionGalliprantRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'GALLIPRANT'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionSteroidRatingBreathing",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'STEROID'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionSteroidRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'STEROID'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionAntihistamineRatingBreathing",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionAntihistamineRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ANTIHISTAMINE'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionCereniaRatingBreathing",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'CERENIA'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionCereniaRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'CERENIA'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionMeloxicamRatingBreathing",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'MELOXICAM'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionMeloxicamRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'MELOXICAM'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionAcepromineRatingBreathing",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ACEPROMINE'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionAcepromineRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ACEPROMINE'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionAlbuterolRatingBreathing",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ALBUTEROL'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionAlbuterolRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht überall derselbe",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'ALBUTEROL'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionTemarilPRatingBreathing",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TEMARIL_P'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementPrescriptionTemarilPRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementPrescriptions} = 'YES' && {ManagementPrescriptionType} contains 'TEMARIL_P'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "ManagementCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "ManagementNonPrescriptionTypePanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "ManagementNonPrescription",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "So kann"
+                },
+                {
+                  "value": "NO",
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Der Text ist"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "ManagementNonPrescriptionType",
+              "title": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen.",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = 'YES'",
+              "choices": [
+                {
+                  "value": "ACUPUNCTURE",
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "THERAPY",
+                  "text": "Die Struktur des Dokuments bleibt"
+                },
+                {
+                  "value": "LLLT",
+                  "text": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen."
+                },
+                {
+                  "value": "CHIRO",
+                  "text": "So entsteht"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "dropdown",
+              "name": "ManagementNonPrescriptionCost",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = 'YES'",
+              "choices": [
+                {
+                  "value": "UNDER_100",
+                  "text": "Kurze Beschriftungen bleiben"
+                },
+                {
+                  "value": "101_150",
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": "151_250",
+                  "text": "Am Ende"
+                },
+                {
+                  "value": "OVER_250",
+                  "text": "Dies ist ein"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "required": true
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionAcupunctureRatingBreathing",
+              "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die",
+              "description": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "So kann"
+                },
+                {
+                  "value": 2,
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": 3,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 4,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 5,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die Struktur des"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionAcupunctureRatingMobility",
+              "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für",
+              "description": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit nicht",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Dadurch wirkt"
+                },
+                {
+                  "value": 2,
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": 3,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 4,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 5,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Dies ist ein"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionTherapyRatingBreathing",
+              "title": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in",
+              "description": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "So kann"
+                },
+                {
+                  "value": 2,
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": 3,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 4,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 5,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die Struktur des"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionTherapyRatingMobility",
+              "title": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser",
+              "description": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt die Testseite weniger künstlich",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Längere Texte"
+                },
+                {
+                  "value": 2,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 3,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 4,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 5,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Bitte beachten Sie,"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionColdLaserRatingBreathing",
+              "title": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit",
+              "description": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Diese Beispieldaten"
+                },
+                {
+                  "value": 2,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 3,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 4,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 5,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Bitte prüfen Sie"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionColdLaserRatingMobility",
+              "title": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionChiroRatingBreathing",
+              "title": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das",
+              "description": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Der Text"
+                },
+                {
+                  "value": 2,
+                  "text": "Auf diese"
+                },
+                {
+                  "value": 3,
+                  "text": "Für Schaltflächen,"
+                },
+                {
+                  "value": 4,
+                  "text": "Die Struktur"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte prüfen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "So entsteht eine"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ManagementNonPrescriptionChiroRatingMobility",
+              "title": "Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit",
+              "description": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen hier ruhig etwas",
+              "isRequired": true,
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "Kurze Beschriftungen"
+                },
+                {
+                  "value": 2,
+                  "text": "Das erleichtert"
+                },
+                {
+                  "value": 3,
+                  "text": "Am Ende"
+                },
+                {
+                  "value": 4,
+                  "text": "Dies ist"
+                },
+                {
+                  "value": 5,
+                  "text": "Bitte beachten"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Die endgültige Formulierung"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

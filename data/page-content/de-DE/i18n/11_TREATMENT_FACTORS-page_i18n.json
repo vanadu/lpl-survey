@@ -1,0 +1,393 @@
+{
+  "page": "TREATMENT_FACTORS-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "TreatmentFactorsHeading.html": {
+      "source": "<h2>Factors that have influenced your LP/GOLPP decisions</h2>",
+      "target": "<h2>Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte</h2>"
+    },
+    "TreatmentFactorsText.html": {
+      "source": "<p>Magna ullamco in sint esse exercitation nostrud eiusmod sint excepteur reprehenderit velit sit. Exercitation minim veniam fugiat elit. Nisi eu ipsum pariatur officia qui dolor consectetur Lorem aliquip non. Commodo labore cupidatat culpa ea exercitation aliquip laborum qui in tempor. Adipisicing esse ex est exercitation in laboris nisi eu ut deserunt dolor.</p>",
+      "target": "<p>Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut prüfen. Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf diese Weise</p>"
+    },
+    "TreatmentFactorsDetailsText.html": {
+      "source": "<p>Please rate the relevant factors in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>",
+      "target": "<p>Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen,</p>"
+    },
+    "TreatmentFactorsDecision.title": {
+      "source": "Have you made a decision about whether or not to pursue LP surgery such as tieback for {CmpnName}?",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups und interne Abnahmen. Die Inhalte rotieren, damit"
+    },
+    "TreatmentFactorsDecision.choices.WILL_PURSUE.text": {
+      "source": "We will pursue LP surgery such as tieback.",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere"
+    },
+    "TreatmentFactorsDecision.choices.WILL_NOT_PURSUE.text": {
+      "source": "We've decided not to pursue LP surgery.",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das"
+    },
+    "TreatmentFactorsDecision.choices.UNDECIDED.text": {
+      "source": "We haven't decided yet.",
+      "target": "Am Ende wird die echte"
+    },
+    "TreatmentFactorsDecisionStent.title": {
+      "source": "If a veterinarian were to offer a stent implant for LP/GOLPP in your area, would you explore that as a surgery alternative?",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt."
+    },
+    "TreatmentFactorsDecisionStent.choices.YES.text": {
+      "source": "Yes, we would consider a stent implant.",
+      "target": "Auch längere Abschnitte lassen sich mit diesem Platzhalter gut"
+    },
+    "TreatmentFactorsDecisionStent.choices.NO.text": {
+      "source": "No, we would not consider a stent implant.",
+      "target": "Umlaute wie ä, ö, ü und das ß sind hier"
+    },
+    "TreatmentFactorsDecisionStent.choices.NOT_INFORMED.text": {
+      "source": "We need more information.",
+      "target": "So kann die Darstellung im"
+    },
+    "TreatmentFactorsCostPanel.title": {
+      "source": "How have financial considerations factored into your decision?",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen."
+    },
+    "TreatmentFactorsCost.title": {
+      "source": "Cost of surgical/stent procedure:",
+      "target": "Der Text ist absichtlich generisch"
+    },
+    "TreatmentFactorsCost.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen,"
+    },
+    "TreatmentFactorsCost.rateValues.1.text": {
+      "source": "1",
+      "target": "Die Struktur"
+    },
+    "TreatmentFactorsCost.rateValues.2.text": {
+      "source": "2",
+      "target": "Bitte prüfen"
+    },
+    "TreatmentFactorsCost.rateValues.3.text": {
+      "source": "3",
+      "target": "So entsteht"
+    },
+    "TreatmentFactorsCost.rateValues.4.text": {
+      "source": "4",
+      "target": "Dieser Platzhalter"
+    },
+    "TreatmentFactorsCost.rateValues.5.text": {
+      "source": "5",
+      "target": "Die Inhalte"
+    },
+    "TreatmentFactorsCostComplications.title": {
+      "source": "Added cost of possible post-op complications such as aspiration pneumonia:",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen"
+    },
+    "TreatmentFactorsCostComplications.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die"
+    },
+    "TreatmentFactorsCostComplications.rateValues.1.text": {
+      "source": "1",
+      "target": "Am Ende"
+    },
+    "TreatmentFactorsCostComplications.rateValues.2.text": {
+      "source": "2",
+      "target": "Dies ist"
+    },
+    "TreatmentFactorsCostComplications.rateValues.3.text": {
+      "source": "3",
+      "target": "Bitte beachten"
+    },
+    "TreatmentFactorsCostComplications.rateValues.4.text": {
+      "source": "4",
+      "target": "Die endgültige"
+    },
+    "TreatmentFactorsCostComplications.rateValues.5.text": {
+      "source": "5",
+      "target": "Auch längere"
+    },
+    "TreatmentFactorsStagePanel.title": {
+      "source": "How has the stage of {CmpnName}'s LP/GOLPP factored into your decision?",
+      "target": "Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann"
+    },
+    "TreatmentFactorsStageLP.title": {
+      "source": "Fear of a breathing emergency:",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle"
+    },
+    "TreatmentFactorsStageLP.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf"
+    },
+    "TreatmentFactorsStageLP.rateValues.1.text": {
+      "source": "1",
+      "target": "Für Schaltflächen,"
+    },
+    "TreatmentFactorsStageLP.rateValues.2.text": {
+      "source": "2",
+      "target": "Die Struktur"
+    },
+    "TreatmentFactorsStageLP.rateValues.3.text": {
+      "source": "3",
+      "target": "Bitte prüfen"
+    },
+    "TreatmentFactorsStageLP.rateValues.4.text": {
+      "source": "4",
+      "target": "So entsteht"
+    },
+    "TreatmentFactorsStageLP.rateValues.5.text": {
+      "source": "5",
+      "target": "Dieser Platzhalter"
+    },
+    "TreatmentFactorsStageNeuropathy.title": {
+      "source": "{CmpnName}'s hind-end weakness and polyneuropathy:",
+      "target": "Die Inhalte rotieren, damit nicht überall"
+    },
+    "TreatmentFactorsStageNeuropathy.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte"
+    },
+    "TreatmentFactorsStageNeuropathy.rateValues.1.text": {
+      "source": "1",
+      "target": "Kurze Beschriftungen"
+    },
+    "TreatmentFactorsStageNeuropathy.rateValues.2.text": {
+      "source": "2",
+      "target": "Das erleichtert"
+    },
+    "TreatmentFactorsStageNeuropathy.rateValues.3.text": {
+      "source": "3",
+      "target": "Am Ende"
+    },
+    "TreatmentFactorsStageNeuropathy.rateValues.4.text": {
+      "source": "4",
+      "target": "Dies ist"
+    },
+    "TreatmentFactorsStageNeuropathy.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte beachten"
+    },
+    "TreatmentFactorsSurgeryRisksPanel.title": {
+      "source": "How have the risks of surgery factored into your decision?",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte"
+    },
+    "TreatmentFactorsRisks.title": {
+      "source": "Risks of a surgical procedure with extended anesthesia:",
+      "target": "Umlaute wie ä, ö, ü und das ß sind hier"
+    },
+    "TreatmentFactorsRisks.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": "So kann die Darstellung im Layout realistisch beurteilt werden. Diese Beispieldaten"
+    },
+    "TreatmentFactorsRisks.rateValues.1.text": {
+      "source": "1",
+      "target": "Der Text"
+    },
+    "TreatmentFactorsRisks.rateValues.2.text": {
+      "source": "2",
+      "target": "Auf diese"
+    },
+    "TreatmentFactorsRisks.rateValues.3.text": {
+      "source": "3",
+      "target": "Für Schaltflächen,"
+    },
+    "TreatmentFactorsRisks.rateValues.4.text": {
+      "source": "4",
+      "target": "Die Struktur"
+    },
+    "TreatmentFactorsRisks.rateValues.5.text": {
+      "source": "5",
+      "target": "Bitte prüfen"
+    },
+    "TreatmentFactorsRisksComplications.title": {
+      "source": "Risks of post-op complications such as aspiration pneumonia or suture failure:",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für"
+    },
+    "TreatmentFactorsRisksComplications.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": "Die Inhalte rotieren, damit nicht überall derselbe Absatz erscheint. Dadurch wirkt"
+    },
+    "TreatmentFactorsRisksComplications.rateValues.1.text": {
+      "source": "1",
+      "target": "Längere Texte"
+    },
+    "TreatmentFactorsRisksComplications.rateValues.2.text": {
+      "source": "2",
+      "target": "Kurze Beschriftungen"
+    },
+    "TreatmentFactorsRisksComplications.rateValues.3.text": {
+      "source": "3",
+      "target": "Das erleichtert"
+    },
+    "TreatmentFactorsRisksComplications.rateValues.4.text": {
+      "source": "4",
+      "target": "Am Ende"
+    },
+    "TreatmentFactorsRisksComplications.rateValues.5.text": {
+      "source": "5",
+      "target": "Dies ist"
+    },
+    "TreatmentFactorsGeneralPanel.title": {
+      "source": "How have {CmpnName}'s age and general health considerations factored into your decision?",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in"
+    },
+    "TreatmentFactorsAge.title": {
+      "source": "{CmpnName}'s age:",
+      "target": "Auch längere Abschnitte"
+    },
+    "TreatmentFactorsAge.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": "Umlaute wie ä, ö, ü und das ß sind hier bewusst"
+    },
+    "TreatmentFactorsAge.rateValues.1.text": {
+      "source": "1",
+      "target": "So kann"
+    },
+    "TreatmentFactorsAge.rateValues.2.text": {
+      "source": "2",
+      "target": "Diese Beispieldaten"
+    },
+    "TreatmentFactorsAge.rateValues.3.text": {
+      "source": "3",
+      "target": "Der Text"
+    },
+    "TreatmentFactorsAge.rateValues.4.text": {
+      "source": "4",
+      "target": "Auf diese"
+    },
+    "TreatmentFactorsAge.rateValues.5.text": {
+      "source": "5",
+      "target": "Für Schaltflächen,"
+    },
+    "TreatmentFactorsGeneralHealth.title": {
+      "source": "{CmpnName}'s overall health and prospects for quality of life moving forward:",
+      "target": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge"
+    },
+    "TreatmentFactorsGeneralHealth.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet"
+    },
+    "TreatmentFactorsGeneralHealth.rateValues.1.text": {
+      "source": "1",
+      "target": "Die Inhalte"
+    },
+    "TreatmentFactorsGeneralHealth.rateValues.2.text": {
+      "source": "2",
+      "target": "Dadurch wirkt"
+    },
+    "TreatmentFactorsGeneralHealth.rateValues.3.text": {
+      "source": "3",
+      "target": "Längere Texte"
+    },
+    "TreatmentFactorsGeneralHealth.rateValues.4.text": {
+      "source": "4",
+      "target": "Kurze Beschriftungen"
+    },
+    "TreatmentFactorsGeneralHealth.rateValues.5.text": {
+      "source": "5",
+      "target": "Das erleichtert"
+    },
+    "TreatmentFactorsCoexisting.title": {
+      "source": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
+      "target": "Am Ende wird die echte Übersetzung diesen Blindtext"
+    },
+    "TreatmentFactorsCoexisting.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": "Dies ist ein vorläufiger Blindtext für die Übersetzungsansicht. Bitte beachten Sie,"
+    },
+    "TreatmentFactorsCoexisting.rateValues.1.text": {
+      "source": "1",
+      "target": "Die endgültige"
+    },
+    "TreatmentFactorsCoexisting.rateValues.2.text": {
+      "source": "2",
+      "target": "Auch längere"
+    },
+    "TreatmentFactorsCoexisting.rateValues.3.text": {
+      "source": "3",
+      "target": "Umlaute wie"
+    },
+    "TreatmentFactorsCoexisting.rateValues.4.text": {
+      "source": "4",
+      "target": "So kann"
+    },
+    "TreatmentFactorsCoexisting.rateValues.5.text": {
+      "source": "5",
+      "target": "Diese Beispieldaten"
+    },
+    "TreatmentFactorsCircumstancesPanel.title": {
+      "source": "How have your personal circumstances factored into your decision?",
+      "target": "Der Text ist absichtlich generisch und enthält keine echte Übersetzung. Auf"
+    },
+    "TreatmentFactorsCircumstancesAccess.title": {
+      "source": "Distance to or access to a qualified specialist:",
+      "target": "Für Schaltflächen, Hinweise und Überschriften wird ebenfalls Blindtext erzeugt. Die"
+    },
+    "TreatmentFactorsCircumstancesAccess.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So entsteht eine"
+    },
+    "TreatmentFactorsCircumstancesAccess.rateValues.1.text": {
+      "source": "1",
+      "target": "Dieser Platzhalter"
+    },
+    "TreatmentFactorsCircumstancesAccess.rateValues.2.text": {
+      "source": "2",
+      "target": "Die Inhalte"
+    },
+    "TreatmentFactorsCircumstancesAccess.rateValues.3.text": {
+      "source": "3",
+      "target": "Dadurch wirkt"
+    },
+    "TreatmentFactorsCircumstancesAccess.rateValues.4.text": {
+      "source": "4",
+      "target": "Längere Texte"
+    },
+    "TreatmentFactorsCircumstancesAccess.rateValues.5.text": {
+      "source": "5",
+      "target": "Kurze Beschriftungen"
+    },
+    "TreatmentFactorsCircumstancesCare.title": {
+      "source": "Ability to provide adequate post-operative care:",
+      "target": "Das erleichtert die Prüfung von Buttons, Labels und"
+    },
+    "TreatmentFactorsCircumstancesCare.description": {
+      "source": "1 = not a factor, 5 = deciding factor",
+      "target": "Am Ende wird die echte Übersetzung diesen Blindtext natürlich ersetzen. Dies"
+    },
+    "TreatmentFactorsCircumstancesCare.rateValues.1.text": {
+      "source": "1",
+      "target": "Bitte beachten"
+    },
+    "TreatmentFactorsCircumstancesCare.rateValues.2.text": {
+      "source": "2",
+      "target": "Die endgültige"
+    },
+    "TreatmentFactorsCircumstancesCare.rateValues.3.text": {
+      "source": "3",
+      "target": "Auch längere"
+    },
+    "TreatmentFactorsCircumstancesCare.rateValues.4.text": {
+      "source": "4",
+      "target": "Umlaute wie"
+    },
+    "TreatmentFactorsCircumstancesCare.rateValues.5.text": {
+      "source": "5",
+      "target": "So kann"
+    },
+    "TreatmentFactorsOtherPanel.title": {
+      "source": "What other considerations, if any, have factored into your decision?",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text"
+    },
+    "TreatmentFactorsOther.title": {
+      "source": "Other considerations:",
+      "target": "Auf diese Weise"
+    },
+    "TreatmentFactorsOther.description": {
+      "source": "Maximum 250 characters.",
+      "target": "Für Schaltflächen, Hinweise und"
+    }
+  }
+}

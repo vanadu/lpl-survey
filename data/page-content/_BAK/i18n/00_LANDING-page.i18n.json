@@ -1,0 +1,75 @@
+{
+  "page": "LANDING-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "LandingTitleHead.html": {
+      "source": "<div class='landing-title-head-container'><h2 class='landing-title-heading'>LP/GOLPP Survey 2026</h2><p class='landing-title-subheading'>Powered by LarParLife.org</p></div>",
+      "target": ""
+    },
+    "LandingVersion.html": {
+      "source": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.03.20.01</p></div></div>",
+      "target": ""
+    },
+    "LandingWelcomeHeading.html": {
+      "source": "<h2>You better love the LP/GOLPP&nbsp;Survey&nbsp;2026</h2>",
+      "target": "",
+      "_needsReview": true,
+      "source_prev": "<h2>Loving the LP/GOLPP&nbsp;Survey&nbsp;2026</h2>"
+    },
+    "LandingWelcomeText1.html": {
+      "source": "This survey, the first of its kind, is designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis.",
+      "target": ""
+    },
+    "LandingWelcomeText2.html": {
+      "source": "Aliqua aute et est proident fugiat sunt consectetur id ipsum magna nostrud tempor magna consequat. Nostrud in est ad ea exercitation. Consequat mollit consequat quis deserunt mollit laboris exercitation nostrud cillum consequat dolor proident sint. Ex duis nisi ad excepteur cupidatat enim pariatur excepteur. Occaecat sint dolor enim incididunt commodo. Consectetur anim elit et cillum ut excepteur.",
+      "target": ""
+    },
+    "LandingAboutPrivacyHeading.html": {
+      "source": "<h3>About your privacy and personal information</h3>",
+      "target": ""
+    },
+    "LandingAboutPrivacyText01.html": {
+      "source": "<p>We only need four pieces of information to verify survey results:</p>",
+      "target": ""
+    },
+    "LandingAboutPrivacyOrderedList.html": {
+      "source": "<ul><li class='survey-privacy-bullet-list'>Your first name</li><li class='survey-privacy-bullet-list'>Your companion animal's name</li><li class='survey-privacy-bullet-list'>The country in which you live</li><li class='survey-privacy-bullet-list'>Your email address or Facebook account name</li></ul>",
+      "target": ""
+    },
+    "LandingPrivacyLink.html": {
+      "source": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>",
+      "target": ""
+    },
+    "LandingAboutPrivacyText02.html": {
+      "source": "<p>This information ensures that all the survey respondents are unique and verifiable without making them identifiable outside the context of the survey.</p>",
+      "target": ""
+    },
+    "LandingAboutConsentHeading.html": {
+      "source": "<h3>About our Consent Policy</h3>",
+      "target": ""
+    },
+    "LandingConsentText.html": {
+      "source": "<p>By selecting 'Yes' below, you confirm that you agree to the terms of our Consent Policy.</p>",
+      "target": ""
+    },
+    "LandingConsentLink.html": {
+      "source": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>",
+      "target": ""
+    },
+    "LandingConsent.title": {
+      "source": "Do you want to proceed with the survey in accordance with our Consent Policy?",
+      "target": ""
+    },
+    "LandingConsent.choices.Yes.text": {
+      "source": "Yes",
+      "target": ""
+    },
+    "LandingConsent.choices.No.text": {
+      "source": "No",
+      "target": ""
+    }
+  }
+}

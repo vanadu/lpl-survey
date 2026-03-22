@@ -1,0 +1,205 @@
+{
+  "page": "ASPIRATION-page",
+  "sourceLocale": "en",
+  "targets": [
+    "lo"
+  ],
+  "entries": {
+    "AspirationHeading.html": {
+      "source": "<h2>{CmpnName}'s experience with aspiration pneumonia</h2>",
+      "target": "<h2>Dies ist ein vorläufiger Blindtext für</h2>"
+    },
+    "AspirationText.html": {
+      "source": "<p>Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This section asks questions about {CmpnName}'s experience with AP. </p>",
+      "target": "<p>Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem Platzhalter gut</p>"
+    },
+    "AspirationInfoLink.html": {
+      "source": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?</a></div>",
+      "target": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Umlaute wie ä, ö, ü und das ß sind hier bewusst enthalten. So kann die Darstellung im</a></div>"
+    },
+    "AspirationDidHave.title": {
+      "source": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich generisch und enthält keine"
+    },
+    "AspirationDidHave.choices.YES.text": {
+      "source": "Yes",
+      "target": "Auf diese"
+    },
+    "AspirationDidHave.choices.NO.text": {
+      "source": "No",
+      "target": "Für Schaltflächen,"
+    },
+    "AspirationDidHave.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die Struktur des"
+    },
+    "AspirationCount.title": {
+      "source": "How many times did {CmpnName} get AP?",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen, Einzüge und Sonderzeichen. So"
+    },
+    "AspirationCount.choices.ONE.text": {
+      "source": "Once",
+      "target": "Dieser Platzhalter"
+    },
+    "AspirationCount.choices.TWO.text": {
+      "source": "Twice",
+      "target": "Die Inhalte"
+    },
+    "AspirationCount.choices.THREE.text": {
+      "source": "Three times",
+      "target": "Dadurch wirkt die"
+    },
+    "AspirationCount.choices.MORE_THAN_THREE.text": {
+      "source": "More than three times",
+      "target": "Längere Texte dürfen hier ruhig"
+    },
+    "AspirationInpatient.title": {
+      "source": "Did {CmpnName} ever need inpatient, overnight, or emergency care for AP?",
+      "target": "Kurze Beschriftungen bleiben dagegen bewusst knapp und übersichtlich. Das erleichtert die Prüfung von Buttons,"
+    },
+    "AspirationInpatient.choices.YES.text": {
+      "source": "Yes",
+      "target": "Am Ende"
+    },
+    "AspirationInpatient.choices.NO.text": {
+      "source": "No",
+      "target": "Dies ist"
+    },
+    "AspirationInpatient.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Bitte beachten Sie,"
+    },
+    "AspirationInpatientCount.title": {
+      "source": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
+      "target": "Die endgültige Formulierung wird in einer späteren Phase ergänzt. Auch längere Abschnitte lassen sich mit diesem"
+    },
+    "AspirationInpatientCount.choices.ONE.text": {
+      "source": "Once",
+      "target": "Umlaute wie"
+    },
+    "AspirationInpatientCount.choices.TWO.text": {
+      "source": "Twice",
+      "target": "So kann"
+    },
+    "AspirationInpatientCount.choices.THREE.text": {
+      "source": "Three times",
+      "target": "Diese Beispieldaten helfen"
+    },
+    "AspirationInpatientCount.choices.MORE_THAN_THREE.text": {
+      "source": "More than three times",
+      "target": "Der Text ist absichtlich generisch"
+    },
+    "AspirationSurgeryPost.title": {
+      "source": "Did {CmpnName} ever have AP after the surgery (i.e., tieback, BVEAP)?",
+      "target": "Auf diese Weise lassen sich mehrsprachige Seiten zuverlässig testen. Für Schaltflächen, Hinweise und Überschriften"
+    },
+    "AspirationSurgeryPost.description": {
+      "source": "Includes tieback, BVEAP, ventrilocordectomy, arytenoidectomy and other invasive surgery procedures.",
+      "target": "Die Struktur des Dokuments bleibt dabei vollständig erhalten. Bitte prüfen Sie insbesondere"
+    },
+    "AspirationSurgeryPost.choices.YES.text": {
+      "source": "Yes",
+      "target": "So entsteht"
+    },
+    "AspirationSurgeryPost.choices.NO.text": {
+      "source": "No",
+      "target": "Dieser Platzhalter"
+    },
+    "AspirationSurgeryPost.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "Die Inhalte rotieren,"
+    },
+    "AspirationSurgeryPostCount.title": {
+      "source": "How many times did {CmpnName} get AP after the surgery?",
+      "target": "Dadurch wirkt die Testseite weniger künstlich und besser verteilt. Längere Texte dürfen"
+    },
+    "AspirationSurgeryPostCount.choices.ONE.text": {
+      "source": "Once",
+      "target": "Kurze Beschriftungen"
+    },
+    "AspirationSurgeryPostCount.choices.TWO.text": {
+      "source": "Twice",
+      "target": "Das erleichtert"
+    },
+    "AspirationSurgeryPostCount.choices.THREE.text": {
+      "source": "Three times",
+      "target": "Am Ende wird"
+    },
+    "AspirationSurgeryPostCount.choices.MORE_THAN_THREE.text": {
+      "source": "More than three times",
+      "target": "Dies ist ein vorläufiger Blindtext"
+    },
+    "AspirationStentPost.title": {
+      "source": "Did {CmpnName} ever have AP after the stent implant procedure?",
+      "target": "Bitte beachten Sie, dass dieser Inhalt nur zu Testzwecken dient. Die endgültige"
+    },
+    "AspirationStentPost.choices.YES.text": {
+      "source": "Yes",
+      "target": "Auch längere"
+    },
+    "AspirationStentPost.choices.NO.text": {
+      "source": "No",
+      "target": "Umlaute wie"
+    },
+    "AspirationStentPost.choices.DONT_KNOW.text": {
+      "source": "Don't know",
+      "target": "So kann die"
+    },
+    "AspirationStentPostCount.title": {
+      "source": "How many times did {CmpnName} get AP after the stent implant?",
+      "target": "Diese Beispieldaten helfen bei der Kontrolle von Umbrüchen und Abständen. Der Text ist absichtlich"
+    },
+    "AspirationStentPostCount.choices.ONE.text": {
+      "source": "Once",
+      "target": "Auf diese"
+    },
+    "AspirationStentPostCount.choices.TWO.text": {
+      "source": "Twice",
+      "target": "Für Schaltflächen,"
+    },
+    "AspirationStentPostCount.choices.THREE.text": {
+      "source": "Three times",
+      "target": "Die Struktur des"
+    },
+    "AspirationStentPostCount.choices.MORE_THAN_THREE.text": {
+      "source": "More than three times",
+      "target": "Bitte prüfen Sie insbesondere Zeilenlängen,"
+    },
+    "AspirationCost.title": {
+      "source": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
+      "target": "So entsteht eine glaubwürdige Zielsprache für technische Testläufe. Dieser Platzhalter eignet sich gut für Mockups"
+    },
+    "AspirationCost.choices.NOT_SAY.text": {
+      "source": "Prefer not to say",
+      "target": "Die Inhalte rotieren, damit nicht"
+    },
+    "AspirationCost.choices.UNDER_100.text": {
+      "source": "Under $100",
+      "target": "Dadurch wirkt die"
+    },
+    "AspirationCost.choices.100_300.text": {
+      "source": "$100-$300",
+      "target": "Längere Texte"
+    },
+    "AspirationCost.choices.300_500.text": {
+      "source": "$300-$500",
+      "target": "Kurze Beschriftungen"
+    },
+    "AspirationCost.choices.500_1000.text": {
+      "source": "$500-$1000",
+      "target": "Das erleichtert"
+    },
+    "AspirationCost.choices.1001_3000.text": {
+      "source": "$1001-$3000",
+      "target": "Am Ende"
+    },
+    "AspirationCost.choices.3000_5000.text": {
+      "source": "$3000-$5000",
+      "target": "Dies ist"
+    },
+    "AspirationCost.choices.OVER_5000.text": {
+      "source": "Over $5000",
+      "target": "Bitte beachten Sie,"
+    }
+  }
+}
