@@ -49,7 +49,11 @@ const Browse_06_EarlySymptoms = () => {
         <h3 className="browse-showanswer-title">At about what age did Bella start showing symptoms of LP/GOLPP?</h3>
       <div className="browse-question-container" id="EarlySymptomsAgeYears">
         <ShowAnswerContent
-          title="Years"
+          header={
+            <span className="showanswer__title">
+              Years
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -63,7 +67,11 @@ const Browse_06_EarlySymptoms = () => {
 
       <div className="browse-question-container" id="EarlySymptomsAgeMonths">
         <ShowAnswerContent
-          title="Months (number 0 - 11)"
+          header={
+            <span className="showanswer__title">
+              Months (number 0 - 11)
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -79,7 +87,11 @@ const Browse_06_EarlySymptoms = () => {
       <div className="browse-panel-container" id="EarlySymptomsDetailsPanel">
       <div className="browse-question-container" id="EarlySymptomsType">
         <ShowAnswerContent
-          title="What symptoms did Bella have at that time?"
+          header={
+            <span className="showanswer__title">
+              What symptoms did Bella have at that time?
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -122,7 +134,11 @@ const Browse_06_EarlySymptoms = () => {
 
       <div className="browse-question-container" id="EarlySymptomsSeverity">
         <ShowAnswerContent
-          title="How severe did you think Bella's early symptoms were?"
+          header={
+            <span className="showanswer__title">
+              How severe did you think Bella's early symptoms were?
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -258,7 +274,11 @@ const Browse_06_EarlySymptoms = () => {
 
       <div className="browse-question-container" id="EarlySymptomsHindEndWeakness">
         <ShowAnswerContent
-          title="Was Bella already showing signs of hind-end weakness in this early stage?"
+          header={
+            <span className="showanswer__title">
+              Was Bella already showing signs of hind-end weakness in this early stage?
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -285,7 +305,11 @@ const Browse_06_EarlySymptoms = () => {
 
       <div className="browse-question-container" id="EarlySymptomsIncontinence">
         <ShowAnswerContent
-          title="Was Bella already showing signs of urinary or fecal incontinence weakness in this early stage?"
+          header={
+            <span className="showanswer__title">
+              Was Bella already showing signs of urinary or fecal incontinence weakness in this early stage?
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -316,7 +340,11 @@ const Browse_06_EarlySymptoms = () => {
       <div className="browse-panel-container" id="EarlySymptomsOtherConditionsPanel">
       <div className="browse-question-container" id="EarlySymptomsOtherConditions">
         <ShowAnswerContent
-          title="When Bella first started showing symptoms of LP, did she have any other health conditions?"
+          header={
+            <span className="showanswer__title">
+              When Bella first started showing symptoms of LP, did she have any other health conditions?
+            </span>
+          }
           index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -343,7 +371,11 @@ const Browse_06_EarlySymptoms = () => {
 
       <div className="browse-question-container" id="EarlySymptomsOtherConditionsType">
         <ShowAnswerContent
-          title="Which other conditions did Bella have when the first LP symptoms appeared?"
+          header={
+            <span className="showanswer__title">
+              Which other conditions did Bella have when the first LP symptoms appeared?
+            </span>
+          }
           index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

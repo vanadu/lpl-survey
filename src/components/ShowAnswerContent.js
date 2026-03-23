@@ -1,8 +1,10 @@
 import { useId, useRef } from 'react'
 import { FaPlusSquare, FaMinusSquare } from 'react-icons/fa'
 
+const OPEN_SCROLL_DELAY = 220
+
 const ShowAnswerContent = ({
-  title,
+  header,
   anchor,
   children,
   index,
@@ -12,19 +14,34 @@ const ShowAnswerContent = ({
   const isOpen = activeIndex === index
   const contentId = useId()
   const showanswerRef = useRef(null)
+  const triggerRef = useRef(null)
 
   const handleToggle = () => {
-    const nextIndex = isOpen ? 0 : index
-    setActiveIndex(nextIndex)
+    if (isOpen) {
+      const triggerTopBefore = triggerRef.current?.getBoundingClientRect().top ?? 0
 
-    if (!isOpen) {
+      setActiveIndex(null)
+
       requestAnimationFrame(() => {
-        showanswerRef.current?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        })
+        const triggerTopAfter = triggerRef.current?.getBoundingClientRect().top ?? 0
+        const delta = triggerTopAfter - triggerTopBefore
+
+        if (delta !== 0) {
+          window.scrollBy(0, delta)
+        }
       })
+
+      return
     }
+
+    setActiveIndex(index)
+
+    window.setTimeout(() => {
+      showanswerRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }, OPEN_SCROLL_DELAY)
   }
 
   return (
@@ -34,6 +51,7 @@ const ShowAnswerContent = ({
       id={anchor || undefined}
     >
       <button
+        ref={triggerRef}
         type="button"
         className="showanswer__trigger"
         aria-expanded={isOpen}
@@ -43,8 +61,7 @@ const ShowAnswerContent = ({
         <span className="showanswer__icon" aria-hidden="true">
           {isOpen ? <FaMinusSquare /> : <FaPlusSquare />}
         </span>
-
-        <h3 className="showanswer__title">{title}</h3>
+        {header}
       </button>
 
       <div

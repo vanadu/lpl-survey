@@ -48,7 +48,11 @@ const Browse_02_CmpnInfo = () => {
       <div className="browse-panel-container" id="CmpnInfoDetailsPanel">
       <div className="browse-question-container" id="CmpnInfoAnimalType">
         <ShowAnswerContent
-          title="Bella's species:"
+          header={
+            <span className="showanswer__title">
+              Bella's species:
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -75,7 +79,11 @@ const Browse_02_CmpnInfo = () => {
 
       <div className="browse-question-container" id="CmpnInfoBreed">
         <ShowAnswerContent
-          title="Bella's breed or mix:"
+          header={
+            <span className="showanswer__title">
+              Bella's breed or mix:
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -89,7 +97,11 @@ const Browse_02_CmpnInfo = () => {
 
       <div className="browse-question-container" id="CmpnInfoGender">
         <ShowAnswerContent
-          title="Bella's gender:"
+          header={
+            <span className="showanswer__title">
+              Bella's gender:
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -112,7 +124,11 @@ const Browse_02_CmpnInfo = () => {
 
       <div className="browse-question-container" id="CmpnInfoWeight">
         <ShowAnswerContent
-          title="Bella's last known weight (in lbs or kg):"
+          header={
+            <span className="showanswer__title">
+              Bella's last known weight (in lbs or kg):
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -126,7 +142,11 @@ const Browse_02_CmpnInfo = () => {
 
       <div className="browse-question-container" id="CmpnInfoWeightUnits">
         <ShowAnswerContent
-          title="Weight units:"
+          header={
+            <span className="showanswer__title">
+              Weight units:
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -155,7 +175,11 @@ const Browse_02_CmpnInfo = () => {
         <h3 className="browse-showanswer-title">At about what age did Bella cross over the Rainbow Bridge?</h3>
       <div className="browse-question-container" id="dcsdCmpnInfoAgeYears">
         <ShowAnswerContent
-          title="Age in years (number):"
+          header={
+            <span className="showanswer__title">
+              Age in years (number):
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -169,7 +193,11 @@ const Browse_02_CmpnInfo = () => {
 
       <div className="browse-question-container" id="dcsdCmpnInfoAgeMonths">
         <ShowAnswerContent
-          title="Months (number 0 - 11)"
+          header={
+            <span className="showanswer__title">
+              Months (number 0 - 11)
+            </span>
+          }
           index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -186,7 +214,11 @@ const Browse_02_CmpnInfo = () => {
         <h3 className="browse-showanswer-title">What is Bella&lsquo;s approximate age (in years and months)?</h3>
       <div className="browse-question-container" id="lvngCmpnInfoAgeYears">
         <ShowAnswerContent
-          title="Age in years (number):"
+          header={
+            <span className="showanswer__title">
+              Age in years (number):
+            </span>
+          }
           index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -200,7 +232,11 @@ const Browse_02_CmpnInfo = () => {
 
       <div className="browse-question-container" id="lvngCmpnInfoAgeMonths">
         <ShowAnswerContent
-          title="Months (number 0 - 11)"
+          header={
+            <span className="showanswer__title">
+              Months (number 0 - 11)
+            </span>
+          }
           index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -217,7 +253,11 @@ const Browse_02_CmpnInfo = () => {
       <div className="browse-panel-container" id="CmpnInfoDemeanorPanel">
       <div className="browse-question-container" id="CmpnInfoDemeanor">
         <ShowAnswerContent
-          title="How would you describe Bella's demeanor?"
+          header={
+            <span className="showanswer__title">
+              How would you describe Bella's demeanor?
+            </span>
+          }
           index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -353,7 +393,11 @@ const Browse_02_CmpnInfo = () => {
 
       <div className="browse-question-container" id="CmpnInfoAnxiety">
         <ShowAnswerContent
-          title="How would you describe Bella's anxiety level?"
+          header={
+            <span className="showanswer__title">
+              How would you describe Bella's anxiety level?
+            </span>
+          }
           index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -489,7 +533,11 @@ const Browse_02_CmpnInfo = () => {
 
       <div className="browse-question-container" id="CmpnInfoHasInsurance">
         <ShowAnswerContent
-          title="Do you have pet insurance for Bella?"
+          header={
+            <span className="showanswer__title">
+              Do you have pet insurance for Bella?
+            </span>
+          }
           index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

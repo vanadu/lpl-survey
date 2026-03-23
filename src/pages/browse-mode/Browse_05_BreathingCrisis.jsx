@@ -48,7 +48,11 @@ const Browse_05_BreathingCrisis = () => {
       <div className="browse-panel-container" id="BreathingCrisisDidHavePanel">
       <div className="browse-question-container" id="BreathingCrisisDidHave">
         <ShowAnswerContent
-          title="Did Bella ever have a breathing crisis that required an emergency visit to a veterinary professional?"
+          header={
+            <span className="showanswer__title">
+              Did Bella ever have a breathing crisis that required an emergency visit to a veterinary professional?
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -75,7 +79,11 @@ const Browse_05_BreathingCrisis = () => {
 
       <div className="browse-question-container" id="BreathingCrisisCount">
         <ShowAnswerContent
-          title="How many times did Bella visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?"
+          header={
+            <span className="showanswer__title">
+              How many times did Bella visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -102,7 +110,11 @@ const Browse_05_BreathingCrisis = () => {
 
       <div className="browse-question-container" id="BreathingCrisisCost">
         <ShowAnswerContent
-          title="About what was the total pre-insurance cost of these visits?"
+          header={
+            <span className="showanswer__title">
+              About what was the total pre-insurance cost of these visits?
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -141,7 +153,11 @@ const Browse_05_BreathingCrisis = () => {
       <div className="browse-panel-container" id="BreathingCrisisDetailsPanel">
       <div className="browse-question-container" id="BreathingCrisisAdvice">
         <ShowAnswerContent
-          title="Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?"
+          header={
+            <span className="showanswer__title">
+              Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -168,7 +184,11 @@ const Browse_05_BreathingCrisis = () => {
 
       <div className="browse-question-container" id="BreathingCrisisAdviceType">
         <ShowAnswerContent
-          title="What advice did they give you to help you deal with a breathing crisis?"
+          header={
+            <span className="showanswer__title">
+              What advice did they give you to help you deal with a breathing crisis?
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -203,7 +223,11 @@ const Browse_05_BreathingCrisis = () => {
 
       <div className="browse-question-container" id="BreathingCrisisProvidedSubstance">
         <ShowAnswerContent
-          title="Did a veterinary professional provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?"
+          header={
+            <span className="showanswer__title">
+              Did a veterinary professional provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -230,7 +254,11 @@ const Browse_05_BreathingCrisis = () => {
 
       <div className="browse-question-container" id="BreathingCrisisProvidedSubstanceType">
         <ShowAnswerContent
-          title="What substance or product did they provide?"
+          header={
+            <span className="showanswer__title">
+              What substance or product did they provide?
+            </span>
+          }
           index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -261,7 +289,11 @@ const Browse_05_BreathingCrisis = () => {
 
       <div className="browse-question-container" id="BreathingCrisisSubstanceForm">
         <ShowAnswerContent
-          title="In what form was the sedative or steroid provided?"
+          header={
+            <span className="showanswer__title">
+              In what form was the sedative or steroid provided?
+            </span>
+          }
           index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

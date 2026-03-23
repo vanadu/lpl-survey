@@ -49,7 +49,11 @@ const Browse_09_Diagnosis = () => {
       <div className="browse-panel-container" id="DiagnosisDetailsPanel">
       <div className="browse-question-container" id="DiagnosisWho">
         <ShowAnswerContent
-          title="Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:"
+          header={
+            <span className="showanswer__title">
+              Which veterinary professional provided you with the definitive LP/GOLPP diagnosis:
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -84,7 +88,11 @@ const Browse_09_Diagnosis = () => {
 
       <div className="browse-question-container" id="DiagnosticType">
         <ShowAnswerContent
-          title="What diagnostic procedure was used to arrive at the definitive diagnosis?"
+          header={
+            <span className="showanswer__title">
+              What diagnostic procedure was used to arrive at the definitive diagnosis?
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -123,7 +131,11 @@ const Browse_09_Diagnosis = () => {
 
       <div className="browse-question-container" id="DiagnosisStage">
         <ShowAnswerContent
-          title="Was Bella diagnosed with unilateral or bilateral LP?"
+          header={
+            <span className="showanswer__title">
+              Was Bella diagnosed with unilateral or bilateral LP?
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -150,7 +162,11 @@ const Browse_09_Diagnosis = () => {
 
       <div className="browse-question-container" id="DiagnosisTimeAfterSymptoms">
         <ShowAnswerContent
-          title="About how long after Bella's first symptoms appeared did you get the diagnosis?:"
+          header={
+            <span className="showanswer__title">
+              About how long after Bella's first symptoms appeared did you get the diagnosis?:
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -185,7 +201,11 @@ const Browse_09_Diagnosis = () => {
 
       <div className="browse-question-container" id="DiagnosisCost">
         <ShowAnswerContent
-          title="What was the pre-insurance cost of the diagnosis?"
+          header={
+            <span className="showanswer__title">
+              What was the pre-insurance cost of the diagnosis?
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -220,7 +240,11 @@ const Browse_09_Diagnosis = () => {
 
       <div className="browse-question-container" id="DiagnosisSurgeonContingent">
         <ShowAnswerContent
-          title="Did the surgeon perform the diagnosis without requiring surgery afterwards?"
+          header={
+            <span className="showanswer__title">
+              Did the surgeon perform the diagnosis without requiring surgery afterwards?
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

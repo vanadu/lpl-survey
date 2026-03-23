@@ -39,7 +39,7 @@ const Browse_00_Landing = () => {
       <div className="browse-panel-container" id="LandingCard1Panel">
       <div className="browse-panel-container" id="LandingWelcomePanel">
       <div className="browse-content-block" id="LandingWelcomeHeading">
-        <h2 className="browse-content-heading">Welcome to the LP/GOLPP Survey 2026</h2>
+        <h2 className="browse-content-heading">You better love the LP/GOLPP Survey 2026</h2>
       </div>
 
       <div className="browse-content-block" id="LandingWelcomeText1">
@@ -116,7 +116,11 @@ const Browse_00_Landing = () => {
 
       <div className="browse-question-container" id="LandingConsent">
         <ShowAnswerContent
-          title="Do you want to proceed with the survey in accordance with our Consent Policy?"
+          header={
+            <span className="showanswer__title">
+              Do you want to proceed with the survey in accordance with our Consent Policy?
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

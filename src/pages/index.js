@@ -1,13 +1,14 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import { useRouter} from 'next/router'
-import Link from 'next/link'
-import Image from 'next/image'
-import { NextSeo } from 'next-seo'
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Image from 'next/image';
+import { NextSeo } from 'next-seo';
 // !VA Custom components and images
-import Logo from "../../public/img-lpl-org-logo.png"
-import SurveyHero from "../components/SurveyHero"
-import ShowMoreContent from '../components/ShowMoreContent'
+import Logo from "../../public/img-lpl-org-logo.png";
+import SurveyHero from "../components/SurveyHero";
+import ShowMoreContent from '../components/ShowMoreContent';
+import AccordionContent from '../components/AccordionContent';
 import { BsClipboardCheck, BsBook } from "react-icons/bs";
 
 // !VA Styles
@@ -15,21 +16,15 @@ import { BsClipboardCheck, BsBook } from "react-icons/bs";
 
 const Home = () => {
   // !VA Log out the posts exported from the getStaticProps function below 
-  const router = useRouter()
+  const router = useRouter();
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeAccordionIndex, setActiveAccordionIndex] = useState(0);
 
-  const [activeIndex, setActiveIndex] = useState(0)
-
-
-  return (
-    <>
-      <NextSeo 
-        title="LarPar/GOLPP Survey 2026: Presented by LarParLife.org"
-        description="Gathering information about laryngeal paralysis in dogs, cats, and horses to move forward towards better treatments in the future"
-        canonical="https://larparlife.com"
-        />
+  return <>
+      <NextSeo title="LarPar/GOLPP Survey 2026: Presented by LarParLife.org" description="Gathering information about laryngeal paralysis in dogs, cats, and horses to move forward towards better treatments in the future" canonical="https://larparlife.com" />
       <main className="page home">
         <header className="home-head card card--lift">
-          <SurveyHero/>
+          <SurveyHero />
         </header>
 
           
@@ -46,59 +41,72 @@ const Home = () => {
 
 
           <article className="card">
-            <h2>How much time will it take?</h2>
-            <p>
+            <h2 data-translate="index.h2.001">How much time will it take?</h2>
+            <p data-translate="index.p.002">
               The first things people want to know about a survey is how long it will take and whether they can do it on their phones.
             </p>
             <div className="home-showmore-container">
-              <ShowMoreContent
-                title='How much time does the survey take?' 
-                index={1}
-                activeIndex={activeIndex}
-                setActiveIndex={setActiveIndex}
-                >
-                <div className="showmore_content_block">
-                <span className="showmore_content_space"></span>
-                  <p className="showmore_content_inline">
+
+            <ShowMoreContent header={<h3 className="showmore__title" data-translate="index.h3.003">
+                  How much time does the survey take?
+                </h3>} index={1} activeIndex={activeIndex} setActiveIndex={setActiveIndex}>
+                <p className="showmore_content_inline" data-translate="index.p.004">
                   Completing the survey could take five minutes or twenty &mdash; it all depends on your personal LP/GOLPP experience. 
-                  </p>
-                  <p className="showmore_content_inline">
-                    The interactive, mobile-friendly design lets you answer questions while you watch TV or do other things. It remembers your place, so you can come back to it whenever you have a few minutes. The important thing is that you complete the questions and submit your responses whenever it fits into your schedule. Your experience matters!
-                  </p>
-                </div>
-              </ShowMoreContent>
+                </p>
+                <p className="showmore_content_inline" data-translate="index.p.005">
+                  The interactive, mobile-friendly design lets you answer questions while you watch TV or do other things. It remembers your place, so you can come back to it whenever you have a few minutes. The important thing is that you complete the questions and submit your responses whenever it fits into your schedule. Your experience matters!
+                </p>
+            </ShowMoreContent>
+            
             </div>
-            <p>You can learn more about the LP/GOLPP Survey 2026, for instance what the survey icons do, why many of the questions deal with cost, and what the goals of the survey are, <Link href='/survey-faqs' className='link-accent'>on the FAQs page</Link>.</p>
+            <p data-translate="index.p.006">You can learn more about the LP/GOLPP Survey 2026, for instance what the survey icons do, why many of the questions deal with cost, and what the goals of the survey are, <Link href='/survey-faqs' className='link-accent'>on the FAQs page</Link>.</p>
           </article>
 
 
 
           <article className="card">
-            <h2 className="home-about-heading">About the 2026 LP/GOLPP Survey</h2>
-            <h2>Did you know...</h2>
-            <p>
+            <h2 className="home-about-heading" data-translate="index.h2.007">About the 2026 LP/GOLPP Survey</h2>
+            <h2 data-translate="index.h2.008">Did you know...</h2>
+            <p data-translate="index.p.009">
               ...that the suicide rate among veterinarians is four times that of the general population? Euthanasia fatigue, high student debt, high burnout rates, difficult clients with unrealistic expectations, and access to lethal medication are all cited as contributing factors.
             </p>
           </article>
 
           <article className="card">
-            <h2>How can a survey like this help?</h2>
-            <p>
+            <h2 data-translate="index.h2.010">How can a survey like this help?</h2>
+            <p data-translate="index.p.011">
               Veterinary medicine produces more new research than even the most committed vet can keep up with and laryngeal paralysis has little in the way of established protocols. A well-designed survey can provide useful practical insights about the course of a disease over time based on the experience of people who are on the front lines in the trial-and-error battle against LP/GOLPP &mdash; people like you.
             </p>
           </article>
 
           <article className="card">
-            <h2>Your contribution matters!</h2>
-            <p>
+            <h2 data-translate="index.h2.012">Your contribution matters!</h2>
+            <p data-translate="index.p.013">
               The goal of this first-of-its-kind survey is to aggregate long-term observations that might escape the view of individual veterinarians, such as daily symptoms, medications, supplements, or the aftermath of treatment. Your survey participation provides real-world data that can help veterinarians help their clients and the animals they love.
             </p>
           </article>
+
+          <article className="card">
+
+            <AccordionContent
+              header={
+                <h3 className="accordion__title">
+                  Accordion content
+                </h3>
+              }
+              index={XXX}
+              activeAccordionIndex={activeAccordionIndex}
+              setActiveAccordionIndex={setActiveAccordionIndex}
+            >
+              <p className="accordion__text">
+                Pariatur laboris incididunt proident magna irure fugiat ea eiusmod minim officia tempor enim in velit. Fugiat est ut labore sit. Consequat qui id quis id occaecat occaecat laboris proident. Amet reprehenderit dolore occaecat do nulla occaecat excepteur occaecat. Ad anim id ea aute elit sunt exercitation officia mollit minim esse sint labore. Excepteur qui qui culpa id voluptate duis tempor aute ad nostrud. Consequat quis tempor excepteur magna.
+              </p>
+            </AccordionContent>
+
+          </article>
+
         </section>
       </main>
-    </>
-  )
-}
-
-export default Home
-
+    </>;
+};
+export default Home;

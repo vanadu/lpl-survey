@@ -5,15 +5,17 @@
  * h2, h3, p, li, a
  *
  * Rules:
+ * - Non-recursive: only scans files directly inside the folders passed on CLI
  * - If className or class exists, insert data-translate immediately after it
  * - Otherwise insert data-translate as the first prop
  * - Skip elements that already have data-translate
- * - Generate deterministic keys from file path + tag + text slug
+ * - Generate short sequential keys per file: FileBase.tag.001
+ * - Log every file scanned, not just changed files
  *
  * Usage:
  *   node scripts/add-data-translate.js
- *   node scripts/add-data-translate.js src/pages
- *   node scripts/add-data-translate.js pages browse-mode components
+ *   node scripts/add-data-translate.js pages
+ *   node scripts/add-data-translate.js pages components
  */
 
 const fs = require("fs");
@@ -33,8 +35,8 @@ const EXCLUDED_DIRS = new Set([
   ".git",
   "dist",
   "build",
-  "browse-mode", // generated — never touch
-]); 
+  "browse-mode",
+]);
 
 function getCliDirs() {
   const dirs = process.argv.slice(2);
@@ -50,56 +52,8 @@ function exists(p) {
   }
 }
 
-function walk(dir, out = []) {
-  if (!exists(dir)) return out;
-
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
-
-    if (entry.isDirectory()) {
-      if (EXCLUDED_DIRS.has(entry.name)) {
-        continue;
-      }
-      walk(fullPath, out);
-      continue;
-    }
-
-    const ext = path.extname(entry.name);
-    if (VALID_EXTENSIONS.has(ext)) {
-      out.push(fullPath);
-    }
-  }
-
-  return out;
-}
-
-
-
-
 function toPosix(p) {
   return p.split(path.sep).join("/");
-}
-
-function slugify(text) {
-  return String(text)
-    .toLowerCase()
-    .replace(/&nbsp;/g, " ")
-    .replace(/\s+/g, " ")
-    .trim()
-    .replace(/[^a-z0-9]+/g, "_")
-    .replace(/^_+|_+$/g, "")
-    .slice(0, 48) || "text";
-}
-
-function fileSlug(filePath) {
-  const rel = toPosix(path.relative(process.cwd(), filePath));
-  return rel
-    .replace(/\.[^.]+$/, "")
-    .replace(/[^a-zA-Z0-9/]+/g, "")
-    .replace(/\//g, "_")
-    .toLowerCase();
 }
 
 function isTargetJsxTag(nameNode) {
@@ -124,73 +78,50 @@ function findClassAttrIndex(attrs) {
   );
 }
 
-function getTextFromNode(node) {
-  if (!node) return "";
-
-  if (t.isJSXText(node)) {
-    return node.value;
-  }
-
-  if (t.isStringLiteral(node)) {
-    return node.value;
-  }
-
-  if (t.isJSXExpressionContainer(node)) {
-    return getTextFromNode(node.expression);
-  }
-
-  if (t.isTemplateLiteral(node)) {
-    return node.quasis.map((q) => q.value.cooked || "").join(" ");
-  }
-
-  if (t.isBinaryExpression(node, { operator: "+" })) {
-    return `${getTextFromNode(node.left)} ${getTextFromNode(node.right)}`;
-  }
-
-  if (t.isConditionalExpression(node)) {
-    return `${getTextFromNode(node.consequent)} ${getTextFromNode(node.alternate)}`;
-  }
-
-  if (t.isLogicalExpression(node)) {
-    return `${getTextFromNode(node.left)} ${getTextFromNode(node.right)}`;
-  }
-
-  if (t.isCallExpression(node)) {
-    return "";
-  }
-
-  return "";
-}
-
-function collectVisibleText(openingElPath) {
-  const parent = openingElPath.parentPath?.node;
-  if (!parent || !t.isJSXElement(parent)) return "";
-
-  const pieces = [];
-
-  for (const child of parent.children) {
-    if (t.isJSXText(child)) {
-      pieces.push(child.value);
-    } else if (t.isJSXExpressionContainer(child)) {
-      pieces.push(getTextFromNode(child.expression));
-    }
-  }
-
-  return pieces.join(" ").replace(/\s+/g, " ").trim();
-}
-
-function buildTranslateKey(filePath, tagName, visibleText, counter) {
-  const base = fileSlug(filePath);
-  const textPart = slugify(visibleText);
-  const num = String(counter).padStart(3, "0");
-  return `${base}.${tagName}.${num}.${textPart}`;
-}
-
 function makeDataTranslateAttr(value) {
   return t.jsxAttribute(
     t.jsxIdentifier("data-translate"),
     t.stringLiteral(value)
   );
+}
+
+function getFileBaseKey(filePath) {
+  const base = path.basename(filePath, path.extname(filePath));
+  return base.replace(/[^A-Za-z0-9]+/g, "_").replace(/^_+|_+$/g, "") || "File";
+}
+
+function buildTranslateKey(filePath, tagName, counter) {
+  const fileBase = getFileBaseKey(filePath);
+  const num = String(counter).padStart(3, "0");
+  return `${fileBase}.${tagName}.${num}`;
+}
+
+function listFilesShallow(dir) {
+  if (!exists(dir)) return [];
+
+  const stat = fs.statSync(dir);
+  if (!stat.isDirectory()) return [];
+
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+
+    if (entry.isDirectory()) {
+      if (EXCLUDED_DIRS.has(entry.name)) {
+        continue;
+      }
+      continue; // non-recursive by design
+    }
+
+    const ext = path.extname(entry.name);
+    if (VALID_EXTENSIONS.has(ext)) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
 }
 
 function processFile(filePath) {
@@ -208,9 +139,12 @@ function processFile(filePath) {
       ],
     });
   } catch (err) {
-    console.warn(`Skipping parse error: ${filePath}`);
-    console.warn(`  ${err.message}`);
-    return { changed: false, inserted: 0 };
+    return {
+      status: "parse-error",
+      changed: false,
+      inserted: 0,
+      message: err.message,
+    };
   }
 
   let inserted = 0;
@@ -229,10 +163,8 @@ function processFile(filePath) {
 
       localCounter += 1;
 
-      const visibleText = collectVisibleText(path);
-      const key = buildTranslateKey(filePath, tagName, visibleText, localCounter);
+      const key = buildTranslateKey(filePath, tagName, localCounter);
       const newAttr = makeDataTranslateAttr(key);
-
       const classIndex = findClassAttrIndex(attrs);
 
       if (classIndex >= 0) {
@@ -246,7 +178,7 @@ function processFile(filePath) {
   });
 
   if (!inserted) {
-    return { changed: false, inserted: 0 };
+    return { status: "unchanged", changed: false, inserted: 0 };
   }
 
   const output = generate(
@@ -259,31 +191,56 @@ function processFile(filePath) {
   ).code;
 
   fs.writeFileSync(filePath, output + "\n", "utf8");
-  return { changed: true, inserted };
+  return { status: "updated", changed: true, inserted };
 }
 
 function main() {
   const dirs = getCliDirs();
-  const files = [...new Set(dirs.flatMap((dir) => walk(path.resolve(dir))))];
+  const files = [...new Set(dirs.flatMap((dir) => listFilesShallow(path.resolve(dir))))];
 
   if (!files.length) {
     console.log("No matching files found.");
     process.exit(0);
   }
 
+  let scannedFiles = 0;
   let changedFiles = 0;
   let insertedTotal = 0;
+  let unchangedFiles = 0;
+  let parseErrors = 0;
 
   for (const file of files) {
+    scannedFiles += 1;
+
+    const rel = toPosix(path.relative(process.cwd(), file));
     const result = processFile(file);
-    if (result.changed) {
+
+    if (result.status === "updated") {
       changedFiles += 1;
       insertedTotal += result.inserted;
-      console.log(`Updated ${toPosix(path.relative(process.cwd(), file))} (+${result.inserted})`);
+      console.log(`[updated]   ${rel} (+${result.inserted})`);
+      continue;
+    }
+
+    if (result.status === "unchanged") {
+      unchangedFiles += 1;
+      console.log(`[unchanged] ${rel}`);
+      continue;
+    }
+
+    if (result.status === "parse-error") {
+      parseErrors += 1;
+      console.log(`[error]     ${rel}`);
+      console.log(`            ${result.message}`);
     }
   }
 
-  console.log(`\nDone. Updated ${changedFiles} file(s), inserted ${insertedTotal} data-translate attribute(s).`);
+  console.log("\nDone.");
+  console.log(`Scanned files : ${scannedFiles}`);
+  console.log(`Updated files : ${changedFiles}`);
+  console.log(`Unchanged     : ${unchangedFiles}`);
+  console.log(`Parse errors  : ${parseErrors}`);
+  console.log(`Attrs inserted: ${insertedTotal}`);
 }
 
 main();

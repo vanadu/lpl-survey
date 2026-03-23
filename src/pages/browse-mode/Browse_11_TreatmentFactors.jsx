@@ -52,7 +52,11 @@ const Browse_11_TreatmentFactors = () => {
       <div className="browse-panel-container" id="TreatmentFactorsDecisionPanel">
       <div className="browse-question-container" id="TreatmentFactorsDecision">
         <ShowAnswerContent
-          title="Have you made a decision about whether or not to pursue LP surgery such as tieback for Bella?"
+          header={
+            <span className="showanswer__title">
+              Have you made a decision about whether or not to pursue LP surgery such as tieback for Bella?
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -79,7 +83,11 @@ const Browse_11_TreatmentFactors = () => {
 
       <div className="browse-question-container" id="TreatmentFactorsDecisionStent">
         <ShowAnswerContent
-          title="If a veterinarian were to offer a stent implant for LP/GOLPP in your area, would you explore that as a surgery alternative?"
+          header={
+            <span className="showanswer__title">
+              If a veterinarian were to offer a stent implant for LP/GOLPP in your area, would you explore that as a surgery alternative?
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -111,7 +119,11 @@ const Browse_11_TreatmentFactors = () => {
         <h3 className="browse-showanswer-title">How have financial considerations factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsCost">
         <ShowAnswerContent
-          title="Cost of surgical/stent procedure:"
+          header={
+            <span className="showanswer__title">
+              Cost of surgical/stent procedure:
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -247,7 +259,11 @@ const Browse_11_TreatmentFactors = () => {
 
       <div className="browse-question-container" id="TreatmentFactorsCostComplications">
         <ShowAnswerContent
-          title="Added cost of possible post-op complications such as aspiration pneumonia:"
+          header={
+            <span className="showanswer__title">
+              Added cost of possible post-op complications such as aspiration pneumonia:
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -386,7 +402,11 @@ const Browse_11_TreatmentFactors = () => {
         <h3 className="browse-showanswer-title">How has the stage of Bella&lsquo;s LP/GOLPP factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsStageLP">
         <ShowAnswerContent
-          title="Fear of a breathing emergency:"
+          header={
+            <span className="showanswer__title">
+              Fear of a breathing emergency:
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -522,7 +542,11 @@ const Browse_11_TreatmentFactors = () => {
 
       <div className="browse-question-container" id="TreatmentFactorsStageNeuropathy">
         <ShowAnswerContent
-          title="Bella's hind-end weakness and polyneuropathy:"
+          header={
+            <span className="showanswer__title">
+              Bella's hind-end weakness and polyneuropathy:
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -661,7 +685,11 @@ const Browse_11_TreatmentFactors = () => {
         <h3 className="browse-showanswer-title">How have the risks of surgery factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsRisks">
         <ShowAnswerContent
-          title="Risks of a surgical procedure with extended anesthesia:"
+          header={
+            <span className="showanswer__title">
+              Risks of a surgical procedure with extended anesthesia:
+            </span>
+          }
           index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -797,7 +825,11 @@ const Browse_11_TreatmentFactors = () => {
 
       <div className="browse-question-container" id="TreatmentFactorsRisksComplications">
         <ShowAnswerContent
-          title="Risks of post-op complications such as aspiration pneumonia or suture failure:"
+          header={
+            <span className="showanswer__title">
+              Risks of post-op complications such as aspiration pneumonia or suture failure:
+            </span>
+          }
           index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -936,7 +968,11 @@ const Browse_11_TreatmentFactors = () => {
         <h3 className="browse-showanswer-title">How have Bella&lsquo;s age and general health considerations factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsAge">
         <ShowAnswerContent
-          title="Bella's age:"
+          header={
+            <span className="showanswer__title">
+              Bella's age:
+            </span>
+          }
           index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1072,7 +1108,11 @@ const Browse_11_TreatmentFactors = () => {
 
       <div className="browse-question-container" id="TreatmentFactorsGeneralHealth">
         <ShowAnswerContent
-          title="Bella's overall health and prospects for quality of life moving forward:"
+          header={
+            <span className="showanswer__title">
+              Bella's overall health and prospects for quality of life moving forward:
+            </span>
+          }
           index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1208,7 +1248,11 @@ const Browse_11_TreatmentFactors = () => {
 
       <div className="browse-question-container" id="TreatmentFactorsCoexisting">
         <ShowAnswerContent
-          title="Bella's preexisting conditions other than LP/GOLPP:"
+          header={
+            <span className="showanswer__title">
+              Bella's preexisting conditions other than LP/GOLPP:
+            </span>
+          }
           index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1347,7 +1391,11 @@ const Browse_11_TreatmentFactors = () => {
         <h3 className="browse-showanswer-title">How have your personal circumstances factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsCircumstancesAccess">
         <ShowAnswerContent
-          title="Distance to or access to a qualified specialist:"
+          header={
+            <span className="showanswer__title">
+              Distance to or access to a qualified specialist:
+            </span>
+          }
           index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1483,7 +1531,11 @@ const Browse_11_TreatmentFactors = () => {
 
       <div className="browse-question-container" id="TreatmentFactorsCircumstancesCare">
         <ShowAnswerContent
-          title="Ability to provide adequate post-operative care:"
+          header={
+            <span className="showanswer__title">
+              Ability to provide adequate post-operative care:
+            </span>
+          }
           index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1622,7 +1674,11 @@ const Browse_11_TreatmentFactors = () => {
         <h3 className="browse-showanswer-title">What other considerations, if any, have factored into your decision?</h3>
       <div className="browse-question-container" id="TreatmentFactorsOther">
         <ShowAnswerContent
-          title="Other considerations:"
+          header={
+            <span className="showanswer__title">
+              Other considerations:
+            </span>
+          }
           index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

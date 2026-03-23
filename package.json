@@ -52,6 +52,10 @@
     "survey-react-ui": "^2.5.5"
   },
   "devDependencies": {
+    "@babel/generator": "^7.29.1",
+    "@babel/parser": "^7.29.2",
+    "@babel/traverse": "^7.29.0",
+    "@babel/types": "^7.29.0",
     "eslint-config-next": "^14.2.23",
     "sass": "^1.60.0",
     "sharp": "^0.34.5",

@@ -49,7 +49,11 @@ const Browse_13_OtcProducts = () => {
       <div className="browse-panel-container" id="OTCProductsTypePanel">
       <div className="browse-question-container" id="OTCProductsDidPurchase">
         <ShowAnswerContent
-          title="Have you purchased OTC products based on a particular ingredient Bella's LP/GOLPP symptoms?"
+          header={
+            <span className="showanswer__title">
+              Have you purchased OTC products based on a particular ingredient Bella's LP/GOLPP symptoms?
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -76,7 +80,11 @@ const Browse_13_OtcProducts = () => {
 
       <div className="browse-question-container" id="OTCProductsType">
         <ShowAnswerContent
-          title="Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for Bella's LP/GOLPP symptoms:"
+          header={
+            <span className="showanswer__title">
+              Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for Bella's LP/GOLPP symptoms:
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -131,7 +139,11 @@ const Browse_13_OtcProducts = () => {
 
       <div className="browse-question-container" id="OTCProductsCost">
         <ShowAnswerContent
-          title="What was the average monthly cost of these OTC products?"
+          header={
+            <span className="showanswer__title">
+              What was the average monthly cost of these OTC products?
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -162,7 +174,11 @@ const Browse_13_OtcProducts = () => {
 
       <div className="browse-question-container" id="OTCProductsEffectiveness">
         <ShowAnswerContent
-          title="Please rate the overall effectiveness of the OTC products you selected above:"
+          header={
+            <span className="showanswer__title">
+              Please rate the overall effectiveness of the OTC products you selected above:
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -302,7 +318,11 @@ const Browse_13_OtcProducts = () => {
       <div className="browse-panel-container" id="OTCProtocolPanel">
       <div className="browse-question-container" id="OTCProtocolDidPurchase">
         <ShowAnswerContent
-          title="Have you purchased products that are advertised as a blend or protocol of OTC ingredients created for a specific illness or condition? "
+          header={
+            <span className="showanswer__title">
+              Have you purchased products that are advertised as a blend or protocol of OTC ingredients created for a specific illness or condition? 
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -329,7 +349,11 @@ const Browse_13_OtcProducts = () => {
 
       <div className="browse-question-container" id="OTCProtocolCost">
         <ShowAnswerContent
-          title="What was the average monthly cost of the blends or protocols?"
+          header={
+            <span className="showanswer__title">
+              What was the average monthly cost of the blends or protocols?
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -360,7 +384,11 @@ const Browse_13_OtcProducts = () => {
 
       <div className="browse-question-container" id="OTCProtocolEffectiveness">
         <ShowAnswerContent
-          title="Please rate the overall effectiveness of the blends or 'protocols' you purchased for Bella:"
+          header={
+            <span className="showanswer__title">
+              Please rate the overall effectiveness of the blends or 'protocols' you purchased for Bella:
+            </span>
+          }
           index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

@@ -65,7 +65,11 @@ const Browse_14_Aspiration = () => {
       <div className="browse-panel-container" id="AspirationDidHavePanel">
       <div className="browse-question-container" id="AspirationDidHave">
         <ShowAnswerContent
-          title="Did Bella ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?"
+          header={
+            <span className="showanswer__title">
+              Did Bella ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -94,7 +98,11 @@ const Browse_14_Aspiration = () => {
       <div className="browse-panel-container" id="AspirationGeneralPanel">
       <div className="browse-question-container" id="AspirationCount">
         <ShowAnswerContent
-          title="How many times did Bella get AP?"
+          header={
+            <span className="showanswer__title">
+              How many times did Bella get AP?
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -125,7 +133,11 @@ const Browse_14_Aspiration = () => {
 
       <div className="browse-question-container" id="AspirationInpatient">
         <ShowAnswerContent
-          title="Did Bella ever need inpatient, overnight, or emergency care for AP?"
+          header={
+            <span className="showanswer__title">
+              Did Bella ever need inpatient, overnight, or emergency care for AP?
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -152,7 +164,11 @@ const Browse_14_Aspiration = () => {
 
       <div className="browse-question-container" id="AspirationInpatientCount">
         <ShowAnswerContent
-          title="How many times did Bella require inpatient, overnight, or emergency care for AP?"
+          header={
+            <span className="showanswer__title">
+              How many times did Bella require inpatient, overnight, or emergency care for AP?
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -187,7 +203,11 @@ const Browse_14_Aspiration = () => {
       <div className="browse-panel-container" id="AspirationSurgeryPanel">
       <div className="browse-question-container" id="AspirationSurgeryPost">
         <ShowAnswerContent
-          title="Did Bella ever have AP after the surgery (i.e., tieback, BVEAP)?"
+          header={
+            <span className="showanswer__title">
+              Did Bella ever have AP after the surgery (i.e., tieback, BVEAP)?
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -214,7 +234,11 @@ const Browse_14_Aspiration = () => {
 
       <div className="browse-question-container" id="AspirationSurgeryPostCount">
         <ShowAnswerContent
-          title="How many times did Bella get AP after the surgery?"
+          header={
+            <span className="showanswer__title">
+              How many times did Bella get AP after the surgery?
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -247,7 +271,11 @@ const Browse_14_Aspiration = () => {
       <div className="browse-panel-container" id="AspirationStentPanel">
       <div className="browse-question-container" id="AspirationStentPost">
         <ShowAnswerContent
-          title="Did Bella ever have AP after the stent implant procedure?"
+          header={
+            <span className="showanswer__title">
+              Did Bella ever have AP after the stent implant procedure?
+            </span>
+          }
           index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -274,7 +302,11 @@ const Browse_14_Aspiration = () => {
 
       <div className="browse-question-container" id="AspirationStentPostCount">
         <ShowAnswerContent
-          title="How many times did Bella get AP after the stent implant?"
+          header={
+            <span className="showanswer__title">
+              How many times did Bella get AP after the stent implant?
+            </span>
+          }
           index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -307,7 +339,11 @@ const Browse_14_Aspiration = () => {
       <div className="browse-panel-container" id="AspirationCostPanel">
       <div className="browse-question-container" id="AspirationCost">
         <ShowAnswerContent
-          title="What was the approximate pre-insurance cost of the AP treatment for Bella:"
+          header={
+            <span className="showanswer__title">
+              What was the approximate pre-insurance cost of the AP treatment for Bella:
+            </span>
+          }
           index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

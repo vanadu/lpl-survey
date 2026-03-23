@@ -7,7 +7,7 @@ const path = require("path");
 
 const PROJECT_ROOT = path.resolve(__dirname, "..");
 const DATA_ROOT_DIR = path.join(PROJECT_ROOT, "data");
-const PAGE_CONTENT_DIR = path.join(DATA_ROOT_DIR, "page-content");
+const PAGE_CONTENT_DIR = path.join(DATA_ROOT_DIR, "page-content", "en-US");
 const OUTPUT_DIR = path.join(PROJECT_ROOT, "src", "pages", "browse-mode");
 const COMPONENT_IMPORT_PATH = "../../components/ShowAnswerContent";
 const BROWSEMENU_IMPORT_PATH = "../../components/BrowseMenu";
@@ -448,13 +448,18 @@ function renderQuestionDescription(el) {
   return `          <p className="browse-question-description">${escapeJsxText(description)}</p>`;
 }
 
+
 function renderQuestionBlock(el, index, sourceFilename) {
   const title = replaceTokens(el.title || el.name || "Untitled");
   const id = el.name ? ` id="${escapeTemplateLiteral(el.name)}"` : "";
 
   return `      <div className="browse-question-container"${id}>
         <ShowAnswerContent
-          title="${escapeTemplateLiteral(title)}"
+          header={
+            <span className="showanswer__title">
+              ${escapeTemplateLiteral(title)}
+            </span>
+          }
           index={${index}}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

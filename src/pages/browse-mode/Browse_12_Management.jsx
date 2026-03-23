@@ -52,7 +52,11 @@ const Browse_12_Management = () => {
       <div className="browse-panel-container" id="ManagementPrescriptionTypePanel">
       <div className="browse-question-container" id="ManagementPrescriptions">
         <ShowAnswerContent
-          title="Did your primary veterinarian provide or prescribe any prescription medications for Bella's LP/GOLPP symptoms?"
+          header={
+            <span className="showanswer__title">
+              Did your primary veterinarian provide or prescribe any prescription medications for Bella's LP/GOLPP symptoms?
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -79,7 +83,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionType">
         <ShowAnswerContent
-          title="What prescription medications if any did your primary veterinarian prescribe or recommend for Bella's LP/GOLPP symptoms?"
+          header={
+            <span className="showanswer__title">
+              What prescription medications if any did your primary veterinarian prescribe or recommend for Bella's LP/GOLPP symptoms?
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -138,7 +146,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionCost">
         <ShowAnswerContent
-          title="Average monthly cost of Bella's prescriptions:"
+          header={
+            <span className="showanswer__title">
+              Average monthly cost of Bella's prescriptions:
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -169,7 +181,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionDoxepinRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of Doxepin on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Doxepin on Bella's breathing:
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -305,7 +321,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionDoxepinRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of Doxepin on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Doxepin on Bella's mobility or behavior:
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -441,7 +461,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionTrazodoneRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of Trazodone on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Trazodone on Bella's breathing:
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -577,7 +601,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionTrazodoneRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of Trazodone on Bella mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Trazodone on Bella mobility or behavior:
+            </span>
+          }
           index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -713,7 +741,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionGabapentinRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of Gabapentin on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Gabapentin on Bella's breathing:
+            </span>
+          }
           index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -849,7 +881,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionGabapentinRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of Gabapentin on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Gabapentin on Bella's mobility or behavior:
+            </span>
+          }
           index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -985,7 +1021,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionGalliprantRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of Galliprant on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Galliprant on Bella's breathing:
+            </span>
+          }
           index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1121,7 +1161,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionGalliprantRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of Galliprant on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Galliprant on Bella's mobility or behavior:
+            </span>
+          }
           index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1257,7 +1301,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionSteroidRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of Prednisone on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Prednisone on Bella's breathing:
+            </span>
+          }
           index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1393,7 +1441,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionSteroidRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of Prednisone on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Prednisone on Bella's mobility or behavior:
+            </span>
+          }
           index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1529,7 +1581,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionAntihistamineRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of Benadryl or other antihistamine on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Benadryl or other antihistamine on Bella's breathing:
+            </span>
+          }
           index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1665,7 +1721,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionAntihistamineRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of Benadryl or other antihistamine on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Benadryl or other antihistamine on Bella's mobility or behavior:
+            </span>
+          }
           index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1801,7 +1861,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionCereniaRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of Cerenia on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Cerenia on Bella's breathing:
+            </span>
+          }
           index={16}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -1937,7 +2001,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionCereniaRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of Cerenia on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Cerenia on Bella's mobility or behavior:
+            </span>
+          }
           index={17}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -2073,7 +2141,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionMeloxicamRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of Meloxicam on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Meloxicam on Bella's breathing:
+            </span>
+          }
           index={18}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -2209,7 +2281,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionMeloxicamRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of Meloxicam on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Meloxicam on Bella's mobility or behavior:
+            </span>
+          }
           index={19}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -2345,7 +2421,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionAcepromineRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of Acepromine on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Acepromine on Bella's breathing:
+            </span>
+          }
           index={20}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -2481,7 +2561,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionAcepromineRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of Acepromine on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Acepromine on Bella's mobility or behavior:
+            </span>
+          }
           index={21}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -2617,7 +2701,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionAlbuterolRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of Albuterol or other inhaler on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Albuterol or other inhaler on Bella's breathing:
+            </span>
+          }
           index={22}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -2753,7 +2841,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionAlbuterolRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of Albuterol or other inhaler on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Albuterol or other inhaler on Bella's mobility or behavior:
+            </span>
+          }
           index={23}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -2889,7 +2981,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionTemarilPRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of Temaril P on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Temaril P on Bella's breathing:
+            </span>
+          }
           index={24}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -3025,7 +3121,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementPrescriptionTemarilPRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of Temaril P on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of Temaril P on Bella's mobility or behavior:
+            </span>
+          }
           index={25}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -3165,7 +3265,11 @@ const Browse_12_Management = () => {
       <div className="browse-panel-container" id="ManagementNonPrescriptionTypePanel">
       <div className="browse-question-container" id="ManagementNonPrescription">
         <ShowAnswerContent
-          title="Did Bella receive acupuncture or other therapies to help with LP/GOLPP symptoms?"
+          header={
+            <span className="showanswer__title">
+              Did Bella receive acupuncture or other therapies to help with LP/GOLPP symptoms?
+            </span>
+          }
           index={26}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -3192,7 +3296,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementNonPrescriptionType">
         <ShowAnswerContent
-          title="What therapies or treatments did Bella receive?"
+          header={
+            <span className="showanswer__title">
+              What therapies or treatments did Bella receive?
+            </span>
+          }
           index={27}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -3223,7 +3331,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementNonPrescriptionCost">
         <ShowAnswerContent
-          title="Average monthly cost of Bella's acupuncture or other therapies:"
+          header={
+            <span className="showanswer__title">
+              Average monthly cost of Bella's acupuncture or other therapies:
+            </span>
+          }
           index={28}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -3254,7 +3366,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementNonPrescriptionAcupunctureRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of acupuncture on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of acupuncture on Bella's breathing:
+            </span>
+          }
           index={29}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -3390,7 +3506,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementNonPrescriptionAcupunctureRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of acupuncture on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of acupuncture on Bella's mobility or behavior:
+            </span>
+          }
           index={30}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -3526,7 +3646,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementNonPrescriptionTherapyRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of physical or hydro therapy on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of physical or hydro therapy on Bella's breathing:
+            </span>
+          }
           index={31}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -3662,7 +3786,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementNonPrescriptionTherapyRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of physical or hydro therapy on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of physical or hydro therapy on Bella's mobility or behavior:
+            </span>
+          }
           index={32}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -3798,7 +3926,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementNonPrescriptionColdLaserRatingBreathing">
         <ShowAnswerContent
-          title="How effective was cold laser or red light therapy on Bella's breathing:"
+          header={
+            <span className="showanswer__title">
+              How effective was cold laser or red light therapy on Bella's breathing:
+            </span>
+          }
           index={33}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -3934,7 +4066,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementNonPrescriptionColdLaserRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of cold laser or red light therapy on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of cold laser or red light therapy on Bella's mobility or behavior:
+            </span>
+          }
           index={34}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -4070,7 +4206,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementNonPrescriptionChiroRatingBreathing">
         <ShowAnswerContent
-          title="Please rate the effect of chiropractic on Bella's breathing on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of chiropractic on Bella's breathing on Bella's mobility or behavior:
+            </span>
+          }
           index={35}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -4206,7 +4346,11 @@ const Browse_12_Management = () => {
 
       <div className="browse-question-container" id="ManagementNonPrescriptionChiroRatingMobility">
         <ShowAnswerContent
-          title="Please rate the effect of chiropractic on Bella's mobility or behavior:"
+          header={
+            <span className="showanswer__title">
+              Please rate the effect of chiropractic on Bella's mobility or behavior:
+            </span>
+          }
           index={36}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

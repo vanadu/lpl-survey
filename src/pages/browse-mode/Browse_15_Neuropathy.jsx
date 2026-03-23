@@ -52,7 +52,11 @@ const Browse_15_Neuropathy = () => {
       <div className="browse-panel-container" id="NeuropathySymptomsDoesHavePanel">
       <div className="browse-question-container" id="NeuropathySymptomsDoesHave">
         <ShowAnswerContent
-          title="Over the course of Bella's LP/GOLPP journey, did Bella experience persistent hind-end weakness?"
+          header={
+            <span className="showanswer__title">
+              Over the course of Bella's LP/GOLPP journey, did Bella experience persistent hind-end weakness?
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -83,7 +87,11 @@ const Browse_15_Neuropathy = () => {
       <div className="browse-panel-container" id="NeuropathyHindEndDoesHavePanel">
       <div className="browse-question-container" id="NeuropathySymptomsFirst">
         <ShowAnswerContent
-          title="Which LP/GOLPP symptom appeared first in Bella?"
+          header={
+            <span className="showanswer__title">
+              Which LP/GOLPP symptom appeared first in Bella?
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -114,7 +122,11 @@ const Browse_15_Neuropathy = () => {
 
       <div className="browse-question-container" id="NeuropathySymptomsBreathingOnset">
         <ShowAnswerContent
-          title="About how long after you first noticed hind-end weakness did the breathing issues begin?"
+          header={
+            <span className="showanswer__title">
+              About how long after you first noticed hind-end weakness did the breathing issues begin?
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -149,7 +161,11 @@ const Browse_15_Neuropathy = () => {
 
       <div className="browse-question-container" id="NeuropathySymptomsHindEndOnset">
         <ShowAnswerContent
-          title="About now long after you first noticed breathing issues did the hind-end weakness begin?"
+          header={
+            <span className="showanswer__title">
+              About now long after you first noticed breathing issues did the hind-end weakness begin?
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -184,7 +200,11 @@ const Browse_15_Neuropathy = () => {
 
       <div className="browse-question-container" id="NeuropathySymptomsTypeProgression">
         <ShowAnswerContent
-          title="Which progressed faster, the breathing issues or the hind-end weakness?"
+          header={
+            <span className="showanswer__title">
+              Which progressed faster, the breathing issues or the hind-end weakness?
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -215,7 +235,11 @@ const Browse_15_Neuropathy = () => {
 
       <div className="browse-question-container" id="NeuropathyOtherIssues">
         <ShowAnswerContent
-          title="Over the course of Bella's LP/GOLPP, did any of these issues also appear?"
+          header={
+            <span className="showanswer__title">
+              Over the course of Bella's LP/GOLPP, did any of these issues also appear?
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

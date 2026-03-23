@@ -48,7 +48,11 @@ const Browse_04_IntubationHistory = () => {
       <div className="browse-panel-container" id="IntubationHistoryDetails">
       <div className="browse-question-container" id="IntubationHistoryWasIntubated">
         <ShowAnswerContent
-          title="Had Bella been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?"
+          header={
+            <span className="showanswer__title">
+              Had Bella been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -75,7 +79,11 @@ const Browse_04_IntubationHistory = () => {
 
       <div className="browse-question-container" id="IntubationHistoryReason">
         <ShowAnswerContent
-          title="For what reason or reasons was Bella intubated prior to the first LP symptoms appearing?"
+          header={
+            <span className="showanswer__title">
+              For what reason or reasons was Bella intubated prior to the first LP symptoms appearing?
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -110,7 +118,11 @@ const Browse_04_IntubationHistory = () => {
 
       <div className="browse-question-container" id="IntubationHistoryConcerns">
         <ShowAnswerContent
-          title="Do you remember having any concerns about how the intubation/anesthesia affected Bella?"
+          header={
+            <span className="showanswer__title">
+              Do you remember having any concerns about how the intubation/anesthesia affected Bella?
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -133,7 +145,11 @@ const Browse_04_IntubationHistory = () => {
 
       <div className="browse-question-container" id="IntubationHistorySymptoms">
         <ShowAnswerContent
-          title="What symptoms did Bella have after the intubation/anesthesia?"
+          header={
+            <span className="showanswer__title">
+              What symptoms did Bella have after the intubation/anesthesia?
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

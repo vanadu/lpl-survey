@@ -49,7 +49,11 @@ const Browse_07_PrimaryDuration = () => {
         <h3 className="browse-showanswer-title">About how old was Bella when you first consulted with a primary veterinarian about LP/GOLPP symptoms?</h3>
       <div className="browse-question-container" id="PrimaryDurationFirstConsultYears">
         <ShowAnswerContent
-          title="Age in years (number):"
+          header={
+            <span className="showanswer__title">
+              Age in years (number):
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -63,7 +67,11 @@ const Browse_07_PrimaryDuration = () => {
 
       <div className="browse-question-container" id="PrimaryDurationFirstConsultMonths">
         <ShowAnswerContent
-          title="Months (number 0 - 11)"
+          header={
+            <span className="showanswer__title">
+              Months (number 0 - 11)
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -77,7 +85,11 @@ const Browse_07_PrimaryDuration = () => {
 
       <div className="browse-question-container" id="PrimaryDurationVisitsNumber">
         <ShowAnswerContent
-          title="About how many times did a primary veterinarian see Bella about LP/GOLPP symptoms?"
+          header={
+            <span className="showanswer__title">
+              About how many times did a primary veterinarian see Bella about LP/GOLPP symptoms?
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -108,7 +120,11 @@ const Browse_07_PrimaryDuration = () => {
 
       <div className="browse-question-container" id="PrimaryDurationCost">
         <ShowAnswerContent
-          title="About what was the total pre-insurance cost of these visits to primary veterinarians about Bella's LP/GOLPP symptoms?"
+          header={
+            <span className="showanswer__title">
+              About what was the total pre-insurance cost of these visits to primary veterinarians about Bella's LP/GOLPP symptoms?
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -143,7 +159,11 @@ const Browse_07_PrimaryDuration = () => {
 
       <div className="browse-question-container" id="PrimaryDurationChangedVets">
         <ShowAnswerContent
-          title="Did you ever change primary veterinarians because how they handled Bella's LP/GOLPP symptoms?"
+          header={
+            <span className="showanswer__title">
+              Did you ever change primary veterinarians because how they handled Bella's LP/GOLPP symptoms?
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -170,7 +190,11 @@ const Browse_07_PrimaryDuration = () => {
 
       <div className="browse-question-container" id="PrimaryDurationChangedVetsReason">
         <ShowAnswerContent
-          title="Why did you change veterinarians after Bella started showing symptoms of LP/GOLPP?"
+          header={
+            <span className="showanswer__title">
+              Why did you change veterinarians after Bella started showing symptoms of LP/GOLPP?
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

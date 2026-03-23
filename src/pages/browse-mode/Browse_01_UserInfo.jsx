@@ -52,7 +52,11 @@ const Browse_01_UserInfo = () => {
       <div className="browse-panel-container" id="UserInfoLifeStatusNamePanel">
       <div className="browse-question-container" id="CmpnName">
         <ShowAnswerContent
-          title="Please tell us your companion's name:"
+          header={
+            <span className="showanswer__title">
+              Please tell us your companion's name:
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -66,7 +70,11 @@ const Browse_01_UserInfo = () => {
 
       <div className="browse-question-container" id="LifeStatus">
         <ShowAnswerContent
-          title="Has Bella crossed over the Rainbow Bridge?"
+          header={
+            <span className="showanswer__title">
+              Has Bella crossed over the Rainbow Bridge?
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -95,7 +103,11 @@ const Browse_01_UserInfo = () => {
       <div className="browse-panel-container" id="UserInfoVerificationPanel">
       <div className="browse-question-container" id="UserInfoContactType">
         <ShowAnswerContent
-          title="Would you like to use email or Facebook Messenger for verification?"
+          header={
+            <span className="showanswer__title">
+              Would you like to use email or Facebook Messenger for verification?
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -118,7 +130,11 @@ const Browse_01_UserInfo = () => {
 
       <div className="browse-question-container" id="UserInfoContactTypeEmail">
         <ShowAnswerContent
-          title="Email address:"
+          header={
+            <span className="showanswer__title">
+              Email address:
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -136,7 +152,11 @@ const Browse_01_UserInfo = () => {
 
       <div className="browse-question-container" id="UserInfoContactTypeFacebook">
         <ShowAnswerContent
-          title="Facebook account:"
+          header={
+            <span className="showanswer__title">
+              Facebook account:
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -150,7 +170,11 @@ const Browse_01_UserInfo = () => {
 
       <div className="browse-question-container" id="UserInfoContactOK">
         <ShowAnswerContent
-          title="May we contact you to talk more about your LP experience?"
+          header={
+            <span className="showanswer__title">
+              May we contact you to talk more about your LP experience?
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -178,7 +202,11 @@ const Browse_01_UserInfo = () => {
         <h3 className="browse-showanswer-title">Your First Name and Country</h3>
       <div className="browse-question-container" id="UserInfoFirstName">
         <ShowAnswerContent
-          title="First Name:"
+          header={
+            <span className="showanswer__title">
+              First Name:
+            </span>
+          }
           index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -192,7 +220,11 @@ const Browse_01_UserInfo = () => {
 
       <div className="browse-question-container" id="UserInfoCountry">
         <ShowAnswerContent
-          title="Country:"
+          header={
+            <span className="showanswer__title">
+              Country:
+            </span>
+          }
           index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -239,7 +271,11 @@ const Browse_01_UserInfo = () => {
 
       <div className="browse-question-container" id="UserInfoStateRegion">
         <ShowAnswerContent
-          title="State, province or region (optional):"
+          header={
+            <span className="showanswer__title">
+              State, province or region (optional):
+            </span>
+          }
           index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -256,7 +292,11 @@ const Browse_01_UserInfo = () => {
         <h3 className="browse-showanswer-title">Age and Gender (optional)</h3>
       <div className="browse-question-container" id="UserInfoAgeGroup">
         <ShowAnswerContent
-          title="Approximately what is your age?"
+          header={
+            <span className="showanswer__title">
+              Approximately what is your age?
+            </span>
+          }
           index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -291,7 +331,11 @@ const Browse_01_UserInfo = () => {
 
       <div className="browse-question-container" id="UserInfoGender">
         <ShowAnswerContent
-          title="Gender information:"
+          header={
+            <span className="showanswer__title">
+              Gender information:
+            </span>
+          }
           index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

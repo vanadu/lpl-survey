@@ -48,7 +48,11 @@ const Browse_03_InfoSources = () => {
       <div className="browse-panel-container" id="InfoSourcesMainPanel">
       <div className="browse-question-container" id="InfoSourcesPriorKnowledge">
         <ShowAnswerContent
-          title="Had you ever heard of LP before Bella got it?"
+          header={
+            <span className="showanswer__title">
+              Had you ever heard of LP before Bella got it?
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -71,7 +75,11 @@ const Browse_03_InfoSources = () => {
 
       <div className="browse-question-container" id="InfoSourcesTypes">
         <ShowAnswerContent
-          title="Which sources of information have you accessed to learn about LP?"
+          header={
+            <span className="showanswer__title">
+              Which sources of information have you accessed to learn about LP?
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -114,7 +122,11 @@ const Browse_03_InfoSources = () => {
 
       <div className="browse-question-container" id="InfoSourcesBestSource">
         <ShowAnswerContent
-          title="Which of those information sources did you find MOST useful (please select one)?"
+          header={
+            <span className="showanswer__title">
+              Which of those information sources did you find MOST useful (please select one)?
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -134,7 +146,11 @@ const Browse_03_InfoSources = () => {
       <div className="browse-panel-container" id="InfoSourcesQualityPanel">
       <div className="browse-question-container" id="InfoSourcesHardToUnderstand">
         <ShowAnswerContent
-          title="Did you find the information you got about LP difficult to understand?"
+          header={
+            <span className="showanswer__title">
+              Did you find the information you got about LP difficult to understand?
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -270,7 +286,11 @@ const Browse_03_InfoSources = () => {
 
       <div className="browse-question-container" id="InfoSourcesContradictory">
         <ShowAnswerContent
-          title="Do you feel like a lot of the information you got about LP was contradictory?"
+          header={
+            <span className="showanswer__title">
+              Do you feel like a lot of the information you got about LP was contradictory?
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -406,7 +426,11 @@ const Browse_03_InfoSources = () => {
 
       <div className="browse-question-container" id="InfoSourcesClearAnswers">
         <ShowAnswerContent
-          title="Did you find it hard to get clear answers to your questions so you could make informed choices for Bella?"
+          header={
+            <span className="showanswer__title">
+              Did you find it hard to get clear answers to your questions so you could make informed choices for Bella?
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

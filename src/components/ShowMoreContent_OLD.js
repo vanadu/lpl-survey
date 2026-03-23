@@ -1,10 +1,8 @@
 import { useId, useRef } from 'react'
 import { FaPlusSquare, FaMinusSquare } from 'react-icons/fa'
 
-const OPEN_SCROLL_DELAY = 300
-
 const ShowMoreContent = ({
-  header,
+  title,
   anchor,
   children,
   index,
@@ -14,34 +12,19 @@ const ShowMoreContent = ({
   const isOpen = activeIndex === index
   const contentId = useId()
   const showmoreRef = useRef(null)
-  const triggerRef = useRef(null)
 
   const handleToggle = () => {
-    if (isOpen) {
-      const triggerTopBefore = triggerRef.current?.getBoundingClientRect().top ?? 0
+    const nextIndex = isOpen ? 0 : index
+    setActiveIndex(nextIndex)
 
-      setActiveIndex(null)
-
+    if (!isOpen) {
       requestAnimationFrame(() => {
-        const triggerTopAfter = triggerRef.current?.getBoundingClientRect().top ?? 0
-        const delta = triggerTopAfter - triggerTopBefore
-
-        if (delta !== 0) {
-          window.scrollBy(0, delta)
-        }
+        showmoreRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
       })
-
-      return
     }
-
-    setActiveIndex(index)
-
-    window.setTimeout(() => {
-      showmoreRef.current?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
-    }, OPEN_SCROLL_DELAY)
   }
 
   return (
@@ -51,7 +34,6 @@ const ShowMoreContent = ({
       id={anchor || undefined}
     >
       <button
-        ref={triggerRef}
         type="button"
         className="showmore__trigger"
         aria-expanded={isOpen}
@@ -61,7 +43,7 @@ const ShowMoreContent = ({
         <span className="showmore__icon" aria-hidden="true">
           {isOpen ? <FaMinusSquare /> : <FaPlusSquare />}
         </span>
-        {header}
+        <h3 className="showmore__title">{title}</h3>
       </button>
 
       <div

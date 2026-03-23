@@ -60,7 +60,11 @@ const Browse_16_Conclusion = () => {
       <div className="browse-panel-container" id="ConclusionDetailsPanel">
       <div className="browse-question-container" id="ConclusionSpecialConsiderations">
         <ShowAnswerContent
-          title="Please describe any special considerations for Bella due to LP-related breathing issues:"
+          header={
+            <span className="showanswer__title">
+              Please describe any special considerations for Bella due to LP-related breathing issues:
+            </span>
+          }
           index={1}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -95,7 +99,11 @@ const Browse_16_Conclusion = () => {
 
       <div className="browse-question-container" id="ConclusionGeneralCondition">
         <ShowAnswerContent
-          title="Please describe Bella's general physical condition:"
+          header={
+            <span className="showanswer__title">
+              Please describe Bella's general physical condition:
+            </span>
+          }
           index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -134,7 +142,11 @@ const Browse_16_Conclusion = () => {
 
       <div className="browse-question-container" id="ConclusionQOL">
         <ShowAnswerContent
-          title="How would you rate Bella's quality of life at this stage?"
+          header={
+            <span className="showanswer__title">
+              How would you rate Bella's quality of life at this stage?
+            </span>
+          }
           index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -272,7 +284,11 @@ const Browse_16_Conclusion = () => {
       <div className="browse-panel-container" id="ConclusionOtherConditionsPanel">
       <div className="browse-question-container" id="ConclusionOtherConditionsNew">
         <ShowAnswerContent
-          title="Did Bella develop any new conditions during her LP/GOLPP journey that she didn't have before?"
+          header={
+            <span className="showanswer__title">
+              Did Bella develop any new conditions during her LP/GOLPP journey that she didn't have before?
+            </span>
+          }
           index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -295,7 +311,11 @@ const Browse_16_Conclusion = () => {
 
       <div className="browse-question-container" id="ConclusionOtherConditions">
         <ShowAnswerContent
-          title="What other conditions did Bella develop during her LP/GOLPP journey?"
+          header={
+            <span className="showanswer__title">
+              What other conditions did Bella develop during her LP/GOLPP journey?
+            </span>
+          }
           index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -354,7 +374,11 @@ const Browse_16_Conclusion = () => {
 
       <div className="browse-question-container" id="ConclusionCauseOfDeath">
         <ShowAnswerContent
-          title="What was the ultimate reason why Bella crossed over the Rainbow Bridge?"
+          header={
+            <span className="showanswer__title">
+              What was the ultimate reason why Bella crossed over the Rainbow Bridge?
+            </span>
+          }
           index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -408,7 +432,11 @@ const Browse_16_Conclusion = () => {
         <h3 className="browse-showanswer-title">These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?</h3>
       <div className="browse-question-container" id="ConclusionOtherPathTieback">
         <ShowAnswerContent
-          title="What if anything would you differently?"
+          header={
+            <span className="showanswer__title">
+              What if anything would you differently?
+            </span>
+          }
           index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -439,7 +467,11 @@ const Browse_16_Conclusion = () => {
 
       <div className="browse-question-container" id="ConclusionOtherPathBVEAP">
         <ShowAnswerContent
-          title="Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?"
+          header={
+            <span className="showanswer__title">
+              Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?
+            </span>
+          }
           index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -470,7 +502,11 @@ const Browse_16_Conclusion = () => {
 
       <div className="browse-question-container" id="ConclusionOtherPathStent">
         <ShowAnswerContent
-          title="Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??"
+          header={
+            <span className="showanswer__title">
+              Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??
+            </span>
+          }
           index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -501,7 +537,11 @@ const Browse_16_Conclusion = () => {
 
       <div className="browse-question-container" id="ConclusionOtherPathArytenoidectomy">
         <ShowAnswerContent
-          title="Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?"
+          header={
+            <span className="showanswer__title">
+              Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?
+            </span>
+          }
           index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -532,7 +572,11 @@ const Browse_16_Conclusion = () => {
 
       <div className="browse-question-container" id="ConclusionOtherPathVentrilocordectomy">
         <ShowAnswerContent
-          title="Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?"
+          header={
+            <span className="showanswer__title">
+              Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?
+            </span>
+          }
           index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -563,7 +607,11 @@ const Browse_16_Conclusion = () => {
 
       <div className="browse-question-container" id="ConclusionOtherPathNoTreatment">
         <ShowAnswerContent
-          title="Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?"
+          header={
+            <span className="showanswer__title">
+              Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?
+            </span>
+          }
           index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -586,7 +634,11 @@ const Browse_16_Conclusion = () => {
 
       <div className="browse-question-container" id="ConclusionStentAlternative">
         <ShowAnswerContent
-          title="If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?"
+          header={
+            <span className="showanswer__title">
+              If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?
+            </span>
+          }
           index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
@@ -613,7 +665,11 @@ const Browse_16_Conclusion = () => {
 
       <div className="browse-question-container" id="ConclusionDifferentChoices">
         <ShowAnswerContent
-          title="Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional)."
+          header={
+            <span className="showanswer__title">
+              Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).
+            </span>
+          }
           index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
