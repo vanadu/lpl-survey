@@ -34,11 +34,11 @@ import {
   buildProjectPaths,
   getLocaleConfig,
   logProjectPaths,
-} from "../helpers/projectPaths.mjs";
+} from "../helpers/i18n/projectPaths.mjs";
 import {
   DEFAULT_LOCALE,
   SUPPORTED_LOCALES,
-} from "../helpers/i18nConfig.mjs";
+} from "../helpers/i18n/i18nConfig.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

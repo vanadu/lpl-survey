@@ -1,0 +1,17 @@
+{
+  "sourceLocale": "en-US",
+  "targetLocale": "de-DE",
+  "sourceFile": "survey-faqs.js",
+  "entries": {
+    "survey_faqs.h2.001": {
+      "source": "Survey FAQs",
+      "target": "",
+      "_context": "h2:line42"
+    },
+    "survey_faqs.p.002": {
+      "source": "Here are some answers to frequently-asked questions about the LP/GOLPP Survey 2026.",
+      "target": "",
+      "_context": "p:line43"
+    }
+  }
+}

@@ -86,24 +86,7 @@ const Home = () => {
             </p>
           </article>
 
-          <article className="card">
 
-            <AccordionContent
-              header={
-                <h3 className="accordion__title">
-                  Accordion content
-                </h3>
-              }
-              index={XXX}
-              activeAccordionIndex={activeAccordionIndex}
-              setActiveAccordionIndex={setActiveAccordionIndex}
-            >
-              <p className="accordion__text">
-                Pariatur laboris incididunt proident magna irure fugiat ea eiusmod minim officia tempor enim in velit. Fugiat est ut labore sit. Consequat qui id quis id occaecat occaecat laboris proident. Amet reprehenderit dolore occaecat do nulla occaecat excepteur occaecat. Ad anim id ea aute elit sunt exercitation officia mollit minim esse sint labore. Excepteur qui qui culpa id voluptate duis tempor aute ad nostrud. Consequat quis tempor excepteur magna.
-              </p>
-            </AccordionContent>
-
-          </article>
 
         </section>
       </main>

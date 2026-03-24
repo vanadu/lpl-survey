@@ -341,7 +341,7 @@ span.no-wrap {
 
 .hero-title-heading  {
   width: 100%;
-  font-family: $secondary_font!important;
+  font-family: var(--font-secondary)!important;
   font-size: var(--font-size-6xl);
   line-height: 1.125;
   color: var(--c-hero-text);
@@ -378,7 +378,7 @@ span.no-wrap {
 
 .hero-version {
   width: 100%;
-  font-family: $secondary_font!important;
+  font-family: var(--font-secondary)!important;
   color: #353535!important;
   // --sjs-font-size: 15px;
   // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
@@ -401,32 +401,19 @@ span.no-wrap {
 }
 
 .hero-title-subheading {
-  font-family: $primary_font;
+  font-family: var(--font-primary);
   color: #bfbfbf;
-  // line-height: 1.75rem!important;
-  // font-weight: 600!important;
-  // --sjs-font-size: 15px;
-  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
   padding: var(--s-1) 0;
   font-size: var(--font-size-3xl);
   font-weight: 600;
   text-align: center;
   font-variant: small-caps;
-  @include tablet {
-
-  }
   @include ldesktop {
-    // margin: .5rem 0 0 0!important;
-    // --sjs-font-size: 18px;
     // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
     text-align: left;
   }
 }
 
-
-.hero-version-container {
-  // !VA No styling
-}
 
 .hero-version-content {
   display: flex;
@@ -452,6 +439,8 @@ span.no-wrap {
     width: 200px;
   }
 }
+
+
 
 /* !VA  START SURVEY PAGE STYLES 
 ---------------------------
@@ -1128,7 +1117,7 @@ article {
 }
 
 .showanswer__content-block li + li {
-  margin-top: 0.5rem;
+  margin-top: var(--s-2);
 }
 
 
@@ -1190,7 +1179,7 @@ article {
 }
 
 .browse-question-description {
-  margin: 0 0 0.75rem;
+  margin: 0 0 var(--s-3);
   font-size: 0.875rem;
   font-size: var(--font-size-sm);
   line-height: 1.4;
@@ -1205,7 +1194,7 @@ article {
 .browse-info-link-row {
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: var(--s-2);
 }
 
 .browse-info-link-icon {
@@ -1217,7 +1206,7 @@ article {
   justify-content: center;
   border: 1px solid currentColor;
   border-radius: 50%;
-  font: 700 0.75rem/1 Arial, Helvetica, sans-serif;
+  font: 700 var(--s-3)/1 Arial, Helvetica, sans-serif;
 }
 
 .browse-info-link {
@@ -1423,7 +1412,7 @@ article {
 
 .showmore__content {
   color: var(--showmore-text-color);
-  padding: 0.375rem 0 0.25rem 1.45rem;
+  padding: 0.375rem 0 var(--s-1) 1.45rem;
   padding: var(--s-2) 0 var(--s-1) var(--s-4);
   border-left: 3px solid #e1e1e1;
 
@@ -1528,7 +1517,7 @@ article {
 
 .showanswer__content {
   color: var(--showanswer-text-color);
-  padding: 0.375rem 0 0.25rem 1.45rem;
+  padding: 0.375rem 0 var(--s-1) 1.45rem;
 }
 
 .showanswer__content > :first-child {
@@ -1597,7 +1586,7 @@ article {
 @media (max-width: 767px) {
   .accordion__trigger,
   .showanswer__trigger {
-    gap: 0.5rem;
+    gap: var(--s-2);
   }
 
   .accordion__icon,
@@ -1699,13 +1688,289 @@ article {
 }
 
 .sj-page-iconbar__label {
-  font-size: 0.75rem;
+  font-size: var(--s-3);
   line-height: 1.1;
   text-align: center;
 }
 
 
 
+/* !VA ---------------------------  
+      CONTACT FORM
+*/
+
+// .section {
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: flex-start;
+//   width: 100%;
+//   background:   var(--c-form-bg);
+//   color: --content-text;
+// }
+
+// .section-content {
+//   @include mphone {
+//     padding: 0 1.5rem 0 1rem;
+//   }
+//   @include lphone {
+//     padding: 0 1.5rem 0 1.25rem;
+//   }
+//   @include tablet {
+//     display: block;
+//     width: 740px;
+//   }
+//   @include desktop {
+//     display: block;
+//     width: 860px;
+//     margin: 0 auto;
+//     padding: 0;
+//   }
+//   @include ldesktop {
+//     display: block;
+//     width: 960px;
+//     padding: 0;
+//   }
+
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100%;
+//   padding: 0 var(--s-3) 0;
+// }
+
+.container-flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.topic-head {
+  margin: var(--s-2) 0 0 var(--s-3);
+  position: relative;
+  width: 100%;
+  margin: var(--s-2) 0 var(--s-3);
+}
+
+.topic-subhead-title {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--s-4)!important;
+  font-family: var(--font-secondary);;
+  font-size: var(--font-size-2xl);
+  // line-height: $rootLargeLineHeight;
+  font-weight: 600;
+  text-align: center;
+  color: --content-text;
+}
+
+.heading-framed-text {
+  display: inline-block;
+  margin: var(--s-2) auto 0;
+  padding: var(--s-1) 0 0.313rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  color: #212121;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-2xl);
+  text-align: center;
+}
+
+.content-text,
+.content-list-item-svg {
+  width: 100%;
+  padding: var(--s-1) 0 var(--s-1);
+  color: --content-text;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-md);
+  text-align: left;
+}
+
+.content-list-no-bullet {
+  // !VA OVerride content-body ul
+  margin: var(--s-4) 0 var(--s-4)!important;;
+  list-style: none;
+}
+
+// .content-list-item {
+//   // display: flex;
+//   // justify-content: space-between;
+//   display: inline-block;
+//   width: 100%;
+//   margin: var(--s-1) 0 var(--s-1);
+//   padding-left: var(--s-6);
+//   font-family: var(--font-primary);
+//   color: --content-text;
+//   font-size: var(--font-size-lg);
+//   font-weight: 400;
+//   text-align: left;
+//   text-indent: -1.5rem;
+//   background: rgba(0, 128, 0, .3) !important; //devgreen
+// }
+
+// .content-list-item-svg {
+//   width: 100%;
+//   width: 24px!important;
+//   height: auto;
+//   display: block;
+//   margin: 0 auto;
+//   font-size: var(--font-size-lg);
+//   background: rgba(255, 0, 0, .3) !important; //devred
+// }
+
+.content-list-item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-left: 0 !important;
+}
+
+.content-list-item-svg {
+  flex: 0 0 auto;
+  margin-right: 1rem;   // only space between icon and text
+  width: 1em;
+  height: 1em;
+}
+
+.contact-privacy {
+  color: $gray_text_color;
+  font-size: var(--font-size-xs);
+}
+
+.contact-form-feedback {
+  display: block;
+  text-align: center;
+  margin: 0 0 var(--s-4);
+}
+
+.contact-heading {
+
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: var(--s-2);
+}
+
+.heading-head {
+  display: block;
+  width: 100%;
+  padding: 0;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  text-align: center;
+  color: --content-text;
+}
+
+.contact-form {
+  position: relative;
+  margin: 1rem auto;
+  color: --content-text;
+  @include tablet {
+    width: 600px;
+  }
+  @include desktop {
+    width: 800px;
+    margin: 1rem auto 2rem;
+  }
+  @include ldesktop {
+    width: 800px;
+    margin: 2rem auto;
+  }
+}
+
+.contact-form-user {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include lphone {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include ldesktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+.contact-form-user .contact-form-field {
+  width: 100%;
+  @include lphone {
+    width: 49%;
+  }
+  @include tablet {
+    width: 49%;
+  }
+  @include desktop {
+    width: 49%;
+  }
+  @include ldesktop {
+    width: 49%;
+  }
+}
+
+.contact-form-input-label {
+  display: block;
+  width: 90%;
+  margin-bottom: var(--s-1);
+  font-family: var(--font-primary);
+  font-size: 0.866rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.contact-form-input,
+.contact-form-textarea {
+  display: block;
+  width: 100%;
+  margin: var(--s-2) 0;
+  background:   var(--c-form-bg);
+  border: 1px solid gray;
+  color: --content-text;
+  font-size: 1.063rem;
+}
+
+.contact-form-input {
+  height: 30px;
+  text-align: left;
+}
+
+.contact-form-message {
+  width: 100%;
+}
+
+.contact-form-textarea {
+  height: 140px;
+  text-align: left;
+}
+
+.contact-form-button {
+  display: block;
+  width: 140px;
+  margin: 2rem auto;
+  padding: 1rem 3rem;
+  background: $primary_color;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form-link {
+  display: inline;
+  font-weight: 600;
+  color: $secondary_link_color;
+}
 
 
 /* !VA  Scrap Styles  */

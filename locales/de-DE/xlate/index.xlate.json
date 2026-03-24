@@ -1,0 +1,57 @@
+{
+  "sourceLocale": "en-US",
+  "targetLocale": "de-DE",
+  "sourceFile": "index.js",
+  "entries": {
+    "index.h2.001": {
+      "source": "How much time will it take?",
+      "target": "",
+      "_context": "h2:line44"
+    },
+    "index.p.002": {
+      "source": "The first things people want to know about a survey is how long it will take and whether they can do it on their phones.",
+      "target": "",
+      "_context": "p:line45"
+    },
+    "index.p.006": {
+      "source": "You can learn more about the LP/GOLPP Survey 2026, for instance what the survey icons do, why many of the questions deal with cost, and what the goals of the survey are, on the FAQs page.",
+      "target": "",
+      "_context": "p:line62"
+    },
+    "index.h2.007": {
+      "source": "About the 2026 LP/GOLPP Survey",
+      "target": "",
+      "_context": "h2:line68"
+    },
+    "index.h2.008": {
+      "source": "Did you know...",
+      "target": "",
+      "_context": "h2:line69"
+    },
+    "index.p.009": {
+      "source": "...that the suicide rate among veterinarians is four times that of the general population? Euthanasia fatigue, high student debt, high burnout rates, difficult clients with unrealistic expectations, and access to lethal medication are all cited as contributing factors.",
+      "target": "",
+      "_context": "p:line70"
+    },
+    "index.h2.010": {
+      "source": "How can a survey like this help?",
+      "target": "",
+      "_context": "h2:line76"
+    },
+    "index.p.011": {
+      "source": "Veterinary medicine produces more new research than even the most committed vet can keep up with and laryngeal paralysis has little in the way of established protocols. A well-designed survey can provide useful practical insights about the course of a disease over time based on the experience of people who are on the front lines in the trial-and-error battle against LP/GOLPP — people like you.",
+      "target": "",
+      "_context": "p:line77"
+    },
+    "index.h2.012": {
+      "source": "Your contribution matters!",
+      "target": "",
+      "_context": "h2:line83"
+    },
+    "index.p.013": {
+      "source": "The goal of this first-of-its-kind survey is to aggregate long-term observations that might escape the view of individual veterinarians, such as daily symptoms, medications, supplements, or the aftermath of treatment. Your survey participation provides real-world data that can help veterinarians help their clients and the animals they love.",
+      "target": "",
+      "_context": "p:line84"
+    }
+  }
+}

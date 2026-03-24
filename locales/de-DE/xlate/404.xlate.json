@@ -1,0 +1,17 @@
+{
+  "sourceLocale": "en-US",
+  "targetLocale": "de-DE",
+  "sourceFile": "404.js",
+  "entries": {
+    "404.h2.001": {
+      "source": "You‘re being redirected automatically back to the home page...",
+      "target": "",
+      "_context": "h2:line17"
+    },
+    "404.p.002": {
+      "source": "Go back to the Homepage",
+      "target": "",
+      "_context": "p:line18"
+    }
+  }
+}
