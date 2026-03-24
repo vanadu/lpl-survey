@@ -457,7 +457,7 @@ function renderQuestionBlock(el, index, sourceFilename) {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              ${escapeTemplateLiteral(title)}
+              ${escapeJsxText(title)}
             </span>
           }
           index={${index}}
