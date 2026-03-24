@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import SurveyComponent from '@/components/SurveyComponent_BAK'
+import SurveyComponent from '@/components/SurveyComponent'
 import SurveyDevMenu from '@/components/SurveyDevMenu'
 
 const ASPIRATION = () => {
