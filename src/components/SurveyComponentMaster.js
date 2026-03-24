@@ -328,19 +328,34 @@ export default function SurveyComponentMaster() {
   }, [survey]);
 
   // Consent enforcement
+  // useEffect(() => {
+  //   if (!survey) return;
+
+  //   function handleValidatePage(sender, options) {
+  //     if (sender.currentPageNo !== CONSENT_PAGE_INDEX) return;
+  //     if (sender.getValue(CONSENT_QUESTION) !== "Yes") {
+  //       options.errors.push({ text: "You must agree to the terms to continue." });
+  //     }
+  //   }
+
+  //   survey.onValidatePage.add(handleValidatePage);
+  //   return () => survey.onValidatePage.remove(handleValidatePage);
+  // }, [survey]);
   useEffect(() => {
     if (!survey) return;
 
-    function handleValidatePage(sender, options) {
-      if (sender.currentPageNo !== CONSENT_PAGE_INDEX) return;
-      if (sender.getValue(CONSENT_QUESTION) !== "Yes") {
-        options.errors.push({ text: "You must agree to the terms to continue." });
-      }
-    }
+    const handleValueChanged = (sender, options) => {
+      if (options.name !== CONSENT_QUESTION) return;
 
-    survey.onValidatePage.add(handleValidatePage);
-    return () => survey.onValidatePage.remove(handleValidatePage);
-  }, [survey]);
+      if (options.value === "No") {
+        router.push("/"); // or whatever page you want
+      }
+    };
+
+  survey.onValueChanged.add(handleValueChanged);
+  return () => survey.onValueChanged.remove(handleValueChanged);
+}, [survey, router]);
+
 
   // Sync handlers
   useEffect(() => {
