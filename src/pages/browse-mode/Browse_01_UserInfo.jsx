@@ -54,7 +54,7 @@ const Browse_01_UserInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please tell us your companion's name:
+              Please tell us your companion&lsquo;s name:
             </span>
           }
           index={1}

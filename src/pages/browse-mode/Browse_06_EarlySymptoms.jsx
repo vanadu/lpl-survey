@@ -136,7 +136,7 @@ const Browse_06_EarlySymptoms = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How severe did you think Bella's early symptoms were?
+              How severe did you think Bella&lsquo;s early symptoms were?
             </span>
           }
           index={4}

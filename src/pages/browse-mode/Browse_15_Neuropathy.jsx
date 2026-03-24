@@ -54,7 +54,7 @@ const Browse_15_Neuropathy = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Over the course of Bella's LP/GOLPP journey, did Bella experience persistent hind-end weakness?
+              Over the course of Bella&lsquo;s LP/GOLPP journey, did Bella experience persistent hind-end weakness?
             </span>
           }
           index={1}
@@ -237,7 +237,7 @@ const Browse_15_Neuropathy = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Over the course of Bella's LP/GOLPP, did any of these issues also appear?
+              Over the course of Bella&lsquo;s LP/GOLPP, did any of these issues also appear?
             </span>
           }
           index={6}

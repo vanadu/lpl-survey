@@ -101,7 +101,7 @@ const Browse_16_Conclusion = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please describe Bella's general physical condition:
+              Please describe Bella&lsquo;s general physical condition:
             </span>
           }
           index={2}
@@ -144,7 +144,7 @@ const Browse_16_Conclusion = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How would you rate Bella's quality of life at this stage?
+              How would you rate Bella&lsquo;s quality of life at this stage?
             </span>
           }
           index={3}
@@ -286,7 +286,7 @@ const Browse_16_Conclusion = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella develop any new conditions during her LP/GOLPP journey that she didn't have before?
+              Did Bella develop any new conditions during her LP/GOLPP journey that she didn&lsquo;t have before?
             </span>
           }
           index={4}

@@ -84,7 +84,7 @@ const Browse_08_PrimaryVet = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did your primary veterinarian mention reflux (GERD) or esophageal dysfunction as a possible cause of Bella's symptoms?
+              Did your primary veterinarian mention reflux (GERD) or esophageal dysfunction as a possible cause of Bella&lsquo;s symptoms?
             </span>
           }
           index={2}
@@ -175,7 +175,7 @@ const Browse_08_PrimaryVet = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did your primary vet discuss LP/GOLPP as a possible cause of Bella's symptoms? 
+              Did your primary vet discuss LP/GOLPP as a possible cause of Bella&lsquo;s symptoms? 
             </span>
           }
           index={5}
@@ -278,7 +278,7 @@ const Browse_08_PrimaryVet = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for Bella's LP/GOLPP?
+              Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for Bella&lsquo;s LP/GOLPP?
             </span>
           }
           index={8}
@@ -309,7 +309,7 @@ const Browse_08_PrimaryVet = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Do you feel like your primary veterinarian's recommendation against surgery was due to Bella's condition or to a generally negative perception of tieback surgery?
+              Do you feel like your primary veterinarian&lsquo;s recommendation against surgery was due to Bella&lsquo;s condition or to a generally negative perception of tieback surgery?
             </span>
           }
           index={9}
@@ -342,7 +342,7 @@ const Browse_08_PrimaryVet = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How confident have you been in your current primary veterinarian's knowledge level regarding LP/GOLPP?
+              How confident have you been in your current primary veterinarian&lsquo;s knowledge level regarding LP/GOLPP?
             </span>
           }
           index={10}
@@ -482,7 +482,7 @@ const Browse_08_PrimaryVet = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How satisfied have you been with your current primary veterinarian's handling of Bella's LP/GOLPP?
+              How satisfied have you been with your current primary veterinarian&lsquo;s handling of Bella&lsquo;s LP/GOLPP?
             </span>
           }
           index={11}

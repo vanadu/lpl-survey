@@ -51,7 +51,7 @@ const Browse_13_OtcProducts = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Have you purchased OTC products based on a particular ingredient Bella's LP/GOLPP symptoms?
+              Have you purchased OTC products based on a particular ingredient Bella&lsquo;s LP/GOLPP symptoms?
             </span>
           }
           index={1}
@@ -82,7 +82,7 @@ const Browse_13_OtcProducts = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for Bella's LP/GOLPP symptoms:
+              Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for Bella&lsquo;s LP/GOLPP symptoms:
             </span>
           }
           index={2}
@@ -386,7 +386,7 @@ const Browse_13_OtcProducts = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the overall effectiveness of the blends or 'protocols' you purchased for Bella:
+              Please rate the overall effectiveness of the blends or &lsquo;protocols&lsquo; you purchased for Bella:
             </span>
           }
           index={7}

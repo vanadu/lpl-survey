@@ -122,7 +122,7 @@ const Browse_07_PrimaryDuration = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About what was the total pre-insurance cost of these visits to primary veterinarians about Bella's LP/GOLPP symptoms?
+              About what was the total pre-insurance cost of these visits to primary veterinarians about Bella&lsquo;s LP/GOLPP symptoms?
             </span>
           }
           index={4}
@@ -161,7 +161,7 @@ const Browse_07_PrimaryDuration = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did you ever change primary veterinarians because how they handled Bella's LP/GOLPP symptoms?
+              Did you ever change primary veterinarians because how they handled Bella&lsquo;s LP/GOLPP symptoms?
             </span>
           }
           index={5}

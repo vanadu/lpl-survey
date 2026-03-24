@@ -544,7 +544,7 @@ const Browse_11_TreatmentFactors = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella's hind-end weakness and polyneuropathy:
+              Bella&lsquo;s hind-end weakness and polyneuropathy:
             </span>
           }
           index={6}
@@ -970,7 +970,7 @@ const Browse_11_TreatmentFactors = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella's age:
+              Bella&lsquo;s age:
             </span>
           }
           index={9}
@@ -1110,7 +1110,7 @@ const Browse_11_TreatmentFactors = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella's overall health and prospects for quality of life moving forward:
+              Bella&lsquo;s overall health and prospects for quality of life moving forward:
             </span>
           }
           index={10}
@@ -1250,7 +1250,7 @@ const Browse_11_TreatmentFactors = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella's preexisting conditions other than LP/GOLPP:
+              Bella&lsquo;s preexisting conditions other than LP/GOLPP:
             </span>
           }
           index={11}

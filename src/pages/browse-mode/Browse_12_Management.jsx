@@ -54,7 +54,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did your primary veterinarian provide or prescribe any prescription medications for Bella's LP/GOLPP symptoms?
+              Did your primary veterinarian provide or prescribe any prescription medications for Bella&lsquo;s LP/GOLPP symptoms?
             </span>
           }
           index={1}
@@ -85,7 +85,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What prescription medications if any did your primary veterinarian prescribe or recommend for Bella's LP/GOLPP symptoms?
+              What prescription medications if any did your primary veterinarian prescribe or recommend for Bella&lsquo;s LP/GOLPP symptoms?
             </span>
           }
           index={2}
@@ -148,7 +148,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Average monthly cost of Bella's prescriptions:
+              Average monthly cost of Bella&lsquo;s prescriptions:
             </span>
           }
           index={3}
@@ -183,7 +183,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Doxepin on Bella's breathing:
+              Please rate the effect of Doxepin on Bella&lsquo;s breathing:
             </span>
           }
           index={4}
@@ -323,7 +323,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Doxepin on Bella's mobility or behavior:
+              Please rate the effect of Doxepin on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={5}
@@ -463,7 +463,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Trazodone on Bella's breathing:
+              Please rate the effect of Trazodone on Bella&lsquo;s breathing:
             </span>
           }
           index={6}
@@ -743,7 +743,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Gabapentin on Bella's breathing:
+              Please rate the effect of Gabapentin on Bella&lsquo;s breathing:
             </span>
           }
           index={8}
@@ -883,7 +883,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Gabapentin on Bella's mobility or behavior:
+              Please rate the effect of Gabapentin on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={9}
@@ -1023,7 +1023,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Galliprant on Bella's breathing:
+              Please rate the effect of Galliprant on Bella&lsquo;s breathing:
             </span>
           }
           index={10}
@@ -1163,7 +1163,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Galliprant on Bella's mobility or behavior:
+              Please rate the effect of Galliprant on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={11}
@@ -1303,7 +1303,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Prednisone on Bella's breathing:
+              Please rate the effect of Prednisone on Bella&lsquo;s breathing:
             </span>
           }
           index={12}
@@ -1443,7 +1443,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Prednisone on Bella's mobility or behavior:
+              Please rate the effect of Prednisone on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={13}
@@ -1583,7 +1583,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Benadryl or other antihistamine on Bella's breathing:
+              Please rate the effect of Benadryl or other antihistamine on Bella&lsquo;s breathing:
             </span>
           }
           index={14}
@@ -1723,7 +1723,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Benadryl or other antihistamine on Bella's mobility or behavior:
+              Please rate the effect of Benadryl or other antihistamine on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={15}
@@ -1863,7 +1863,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Cerenia on Bella's breathing:
+              Please rate the effect of Cerenia on Bella&lsquo;s breathing:
             </span>
           }
           index={16}
@@ -2003,7 +2003,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Cerenia on Bella's mobility or behavior:
+              Please rate the effect of Cerenia on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={17}
@@ -2143,7 +2143,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Meloxicam on Bella's breathing:
+              Please rate the effect of Meloxicam on Bella&lsquo;s breathing:
             </span>
           }
           index={18}
@@ -2283,7 +2283,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Meloxicam on Bella's mobility or behavior:
+              Please rate the effect of Meloxicam on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={19}
@@ -2423,7 +2423,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Acepromine on Bella's breathing:
+              Please rate the effect of Acepromine on Bella&lsquo;s breathing:
             </span>
           }
           index={20}
@@ -2563,7 +2563,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Acepromine on Bella's mobility or behavior:
+              Please rate the effect of Acepromine on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={21}
@@ -2703,7 +2703,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Albuterol or other inhaler on Bella's breathing:
+              Please rate the effect of Albuterol or other inhaler on Bella&lsquo;s breathing:
             </span>
           }
           index={22}
@@ -2843,7 +2843,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Albuterol or other inhaler on Bella's mobility or behavior:
+              Please rate the effect of Albuterol or other inhaler on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={23}
@@ -2983,7 +2983,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Temaril P on Bella's breathing:
+              Please rate the effect of Temaril P on Bella&lsquo;s breathing:
             </span>
           }
           index={24}
@@ -3123,7 +3123,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of Temaril P on Bella's mobility or behavior:
+              Please rate the effect of Temaril P on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={25}
@@ -3333,7 +3333,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Average monthly cost of Bella's acupuncture or other therapies:
+              Average monthly cost of Bella&lsquo;s acupuncture or other therapies:
             </span>
           }
           index={28}
@@ -3368,7 +3368,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of acupuncture on Bella's breathing:
+              Please rate the effect of acupuncture on Bella&lsquo;s breathing:
             </span>
           }
           index={29}
@@ -3508,7 +3508,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of acupuncture on Bella's mobility or behavior:
+              Please rate the effect of acupuncture on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={30}
@@ -3648,7 +3648,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of physical or hydro therapy on Bella's breathing:
+              Please rate the effect of physical or hydro therapy on Bella&lsquo;s breathing:
             </span>
           }
           index={31}
@@ -3788,7 +3788,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of physical or hydro therapy on Bella's mobility or behavior:
+              Please rate the effect of physical or hydro therapy on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={32}
@@ -3928,7 +3928,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How effective was cold laser or red light therapy on Bella's breathing:
+              How effective was cold laser or red light therapy on Bella&lsquo;s breathing:
             </span>
           }
           index={33}
@@ -4068,7 +4068,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of cold laser or red light therapy on Bella's mobility or behavior:
+              Please rate the effect of cold laser or red light therapy on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={34}
@@ -4208,7 +4208,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of chiropractic on Bella's breathing on Bella's mobility or behavior:
+              Please rate the effect of chiropractic on Bella&lsquo;s breathing on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={35}
@@ -4348,7 +4348,7 @@ const Browse_12_Management = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please rate the effect of chiropractic on Bella's mobility or behavior:
+              Please rate the effect of chiropractic on Bella&lsquo;s mobility or behavior:
             </span>
           }
           index={36}

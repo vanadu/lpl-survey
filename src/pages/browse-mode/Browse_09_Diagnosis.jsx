@@ -164,7 +164,7 @@ const Browse_09_Diagnosis = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About how long after Bella's first symptoms appeared did you get the diagnosis?:
+              About how long after Bella&lsquo;s first symptoms appeared did you get the diagnosis?:
             </span>
           }
           index={4}

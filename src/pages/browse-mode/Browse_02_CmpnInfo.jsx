@@ -50,7 +50,7 @@ const Browse_02_CmpnInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella's species:
+              Bella&lsquo;s species:
             </span>
           }
           index={1}
@@ -81,7 +81,7 @@ const Browse_02_CmpnInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella's breed or mix:
+              Bella&lsquo;s breed or mix:
             </span>
           }
           index={2}
@@ -99,7 +99,7 @@ const Browse_02_CmpnInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella's gender:
+              Bella&lsquo;s gender:
             </span>
           }
           index={3}
@@ -126,7 +126,7 @@ const Browse_02_CmpnInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella's last known weight (in lbs or kg):
+              Bella&lsquo;s last known weight (in lbs or kg):
             </span>
           }
           index={4}
@@ -255,7 +255,7 @@ const Browse_02_CmpnInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How would you describe Bella's demeanor?
+              How would you describe Bella&lsquo;s demeanor?
             </span>
           }
           index={10}
@@ -395,7 +395,7 @@ const Browse_02_CmpnInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How would you describe Bella's anxiety level?
+              How would you describe Bella&lsquo;s anxiety level?
             </span>
           }
           index={11}
