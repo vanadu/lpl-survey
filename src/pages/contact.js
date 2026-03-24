@@ -125,8 +125,8 @@ export default function MessageForm() {
   return (
     <>
       <NextSeo 
-        title="Stent Procedure for Laryngeal Paralysis in Dogs: Contact Us"
-        description="Contact us to learn more about laryngeal paralysis and stent implants as an effective alternative to surgery."
+        title="LP/GOLPP Survey 2006: Contact Us"
+        description="Contact us to provide feedback, suggestions or comments about the 2026 LP/GOLPP Survey powered by LarParLife.org."
         canonical="https://larparlife.com/contact"
       />
 
@@ -142,15 +142,21 @@ export default function MessageForm() {
 
         <section className="content-body">
             {/* CONTENT START */}
-            <div className="topic-head">
-              <h1 className="topic-subhead-title">
-                Survey Comments or Suggestions?
-              </h1>
 
-              <div className="container-flex-center">
-                <h2 className="heading-framed-text">Contact Us</h2>
+
+
+            <article className='card'>
+
+              <div className="topic-head">
+                <h1 className="topic-subhead-title">
+                  Survey Comments or Suggestions?
+                </h1>
+
+                <div className="container-flex-center">
+                  <h2 className="heading-framed-text">Contact Us</h2>
+                </div>
               </div>
-            </div>
+            </article>
         </section>
 
         <section className="content-body home-head">
@@ -158,6 +164,8 @@ export default function MessageForm() {
             <div className="outer-conditional-open">
               {formSubmitted.title === '' ? (
                 <div className="contact-form-feedback">
+
+                  
 
                   <p className="content-text">
                     If you have questions, comments, or suggestions about the 2026 LP/GOLPP Survey, feel free to contact us.

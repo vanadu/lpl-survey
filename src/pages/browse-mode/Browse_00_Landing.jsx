@@ -39,7 +39,7 @@ const Browse_00_Landing = () => {
       <div className="browse-panel-container" id="LandingCard1Panel">
       <div className="browse-panel-container" id="LandingWelcomePanel">
       <div className="browse-content-block" id="LandingWelcomeHeading">
-        <h2 className="browse-content-heading">You better love the LP/GOLPP Survey 2026</h2>
+        <h2 className="browse-content-heading">Welcome to the LP/GOLPP Survey 2026</h2>
       </div>
 
       <div className="browse-content-block" id="LandingWelcomeText1">
@@ -75,7 +75,7 @@ const Browse_00_Landing = () => {
           />
           {" "}
           <Link
-            href="/in-progress"
+            href="/privacy-info"
             className="survey-info-link"
           >
             Learn more about our Privacy Policy
@@ -106,7 +106,7 @@ const Browse_00_Landing = () => {
           />
           {" "}
           <Link
-            href="/in-progress"
+            href="/consent-info"
             className="survey-info-link"
           >
             Learn more about our Consent Policy

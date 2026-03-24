@@ -554,7 +554,21 @@ span.no-wrap {
   }
 }
 
-.home-head {
+.home-head, .consent-info, .privacy-info {
+  h1 {
+    width: 100%;
+    font-family: var(--font-secondary);
+    margin: var(--s-4) 0 var(--s-1) 0;
+    font-size: var(--font-size-xl);
+    line-height: 1.25;
+    text-align: center;
+    @include mphone {
+      font-size: var(--font-size-xl);
+      .no-wrap {
+        .whitespace: nowrap;
+      }
+    }
+  }
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-3);
@@ -573,20 +587,6 @@ span.no-wrap {
   }
 }
 
-.home-head h1 {
-  width: 100%;
-  font-family: var(--font-secondary);
-  margin: var(--s-4) 0 var(--s-1) 0;
-  font-size: var(--font-size-xl);
-  line-height: 1.25;
-  text-align: center;
-  @include mphone {
-    font-size: var(--font-size-xl);
-    .no-wrap {
-      .whitespace: nowrap;
-    }
-  }
-}
 
 
 .home-take-survey-link {
@@ -750,21 +750,6 @@ article {
   h2 {
     padding: var(--s-1) 0 0;
     font-size: var(--font-size-md);
-    @include mphone {
-      
-    }
-    @include lphone {
-    
-    }
-    @include tablet {
-      
-    }
-    @include desktop {
-      
-    }
-    @include ldesktop {
-      // font-size: var(--font-size-xl);
-    }
   }
   ul {
     padding-bottom: var(--s-2);
@@ -1694,10 +1679,22 @@ article {
 }
 
 
+// =============================
+// !VA CONSENT and PRIVACY
+// =============================
+article .consent-info, article .privacy-info {
+  h2 {
+    background: rgba(255, 0, 0, .3) !important; //devred
+  }
 
-/* !VA ---------------------------  
-      CONTACT FORM
-*/
+
+
+}
+
+
+// =============================
+// !VA CONTACT FORM MODIFICATIONS
+// =============================
 
 // .section {
 //   position: relative;
@@ -1790,48 +1787,23 @@ article {
 
 .content-list-no-bullet {
   // !VA OVerride content-body ul
-  margin: var(--s-4) 0 var(--s-4)!important;;
+  margin: var(--s-4) 0 var(--s-4) -.5rem!important ;
   list-style: none;
 }
 
-// .content-list-item {
-//   // display: flex;
-//   // justify-content: space-between;
-//   display: inline-block;
-//   width: 100%;
-//   margin: var(--s-1) 0 var(--s-1);
-//   padding-left: var(--s-6);
-//   font-family: var(--font-primary);
-//   color: --content-text;
-//   font-size: var(--font-size-lg);
-//   font-weight: 400;
-//   text-align: left;
-//   text-indent: -1.5rem;
-//   background: rgba(0, 128, 0, .3) !important; //devgreen
-// }
-
-// .content-list-item-svg {
-//   width: 100%;
-//   width: 24px!important;
-//   height: auto;
-//   display: block;
-//   margin: 0 auto;
-//   font-size: var(--font-size-lg);
-//   background: rgba(255, 0, 0, .3) !important; //devred
-// }
 
 .content-list-item {
-  display: flex;
-  align-items: center;
+  padding-left: 1rem;     // total space for icon + gap
+  text-indent: -1.5rem;     // pull first line back
   text-align: left;
-  margin-left: 0 !important;
 }
 
 .content-list-item-svg {
-  flex: 0 0 auto;
-  margin-right: 1rem;   // only space between icon and text
+  display: inline-block;
   width: 1em;
   height: 1em;
+  margin-right: .5rem;     // space between icon and text
+  // vertical-align: text-top; // or middle, tweak as needed
 }
 
 .contact-privacy {
@@ -1842,11 +1814,10 @@ article {
 .contact-form-feedback {
   display: block;
   text-align: center;
-  margin: 0 0 var(--s-4);
+  margin: 0 var(--s-4) var(--s-4);
 }
 
 .contact-heading {
-
   width: 100%;
   height: auto;
   display: block;
