@@ -21,7 +21,7 @@ const ConsentInfo = () => {
             <h2 className="consent-info__heading">What to Expect</h2>
             <ul className="consent-info__list">
               <li className="consent-info__list-item">
-                The survey takes approximately X–Y minutes to complete
+                The survey takes approximately X-Y minutes to complete
               </li>
               <li className="consent-info__list-item">
                 Questions cover symptoms, history, and related experiences
@@ -64,7 +64,7 @@ const ConsentInfo = () => {
 
             <ul className="consent-info__list consent-info__list--data-points">
               <li className="consent-info__list-item">Your first name</li>
-              <li className="consent-info__list-item">Your companion animal’s name</li>
+              <li className="consent-info__list-item">Your companion animal&lsquo;s name</li>
               <li className="consent-info__list-item">The country in which you live</li>
               <li className="consent-info__list-item">
                 Your email address or Facebook account name

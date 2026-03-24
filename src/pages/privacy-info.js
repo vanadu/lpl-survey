@@ -23,7 +23,7 @@ const PrivacyInfo = () => {
             </p>
             <ul className="privacy-info__list privacy-info__list--data-points">
               <li className="privacy-info__list-item">First name</li>
-              <li className="privacy-info__list-item">Companion animal’s name</li>
+              <li className="privacy-info__list-item">Companion animal&lsquo;s name</li>
               <li className="privacy-info__list-item">Country of residence</li>
               <li className="privacy-info__list-item">
                 Email address or Facebook account name
