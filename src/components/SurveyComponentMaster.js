@@ -327,20 +327,6 @@ export default function SurveyComponentMaster() {
     };
   }, [survey]);
 
-  // Consent enforcement
-  // useEffect(() => {
-  //   if (!survey) return;
-
-  //   function handleValidatePage(sender, options) {
-  //     if (sender.currentPageNo !== CONSENT_PAGE_INDEX) return;
-  //     if (sender.getValue(CONSENT_QUESTION) !== "Yes") {
-  //       options.errors.push({ text: "You must agree to the terms to continue." });
-  //     }
-  //   }
-
-  //   survey.onValidatePage.add(handleValidatePage);
-  //   return () => survey.onValidatePage.remove(handleValidatePage);
-  // }, [survey]);
   useEffect(() => {
     if (!survey) return;
 
@@ -372,7 +358,13 @@ export default function SurveyComponentMaster() {
     });
   }, [survey]);
 
-
+  // !VA Set all questions to searchEnabled = false to prevent them from opening the keyboard on tablets
+  s.getAllQuestions().forEach((q) => {
+    const t = q.getType?.();
+    if (t === "dropdown" || t === "tagbox") {
+      q.searchEnabled = false;
+    }
+  });
 
   // !VA NEW
   useEffect(() => {
