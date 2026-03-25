@@ -201,6 +201,16 @@ export default function SurveyComponentMaster() {
   function buildSurvey(isMobile, prev) {
     const s = new Model(masterSurvey);
 
+    // !VA Set all questions to searchEnabled = false to prevent them from opening the keyboard on tablets
+    s.getAllQuestions().forEach((q) => {
+      const t = q.getType?.();
+      if (t === "dropdown" || t === "tagbox") {
+        q.searchEnabled = false;
+      }
+    });
+
+
+
     s.showCompletedPage = false;
     s.applyTheme(SharpLight);
 
@@ -358,13 +368,7 @@ export default function SurveyComponentMaster() {
     });
   }, [survey]);
 
-  // !VA Set all questions to searchEnabled = false to prevent them from opening the keyboard on tablets
-  s.getAllQuestions().forEach((q) => {
-    const t = q.getType?.();
-    if (t === "dropdown" || t === "tagbox") {
-      q.searchEnabled = false;
-    }
-  });
+
 
   // !VA NEW
   useEffect(() => {

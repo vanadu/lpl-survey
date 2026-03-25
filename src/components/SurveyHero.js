@@ -52,7 +52,7 @@ const SurveyHero = () => {
         <div className="hero-subtext-container">
           <div className="hero-subtext">
             <h3 className="hero-slug">powered by larparlife.org</h3>
-            <p className="hero-version">Version 0.9/26.03.20.01</p>
+            <p className="hero-version">Version 0.9/26.03.25.01</p>
           </div>
           <div className="logo-container">
             <Image 

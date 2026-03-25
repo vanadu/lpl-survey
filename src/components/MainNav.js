@@ -66,9 +66,9 @@ export default function MainNav() {
             <Link href="/survey-share">Share</Link>
           </li>
 
-          <li className={styles.desktop_nav_item}>
+          {/* <li className={styles.desktop_nav_item}>
             <Link href="/survey-donate">Contribute</Link>
-          </li>
+          </li> */}
 
           <li className={styles.desktop_nav_item}>
             <a
@@ -128,9 +128,9 @@ export default function MainNav() {
               <Link href="/survey-share" onClick={closeMenu}>Share</Link>
             </li>
 
-            <li className={styles.mobile_nav_item}>
+            {/* <li className={styles.mobile_nav_item}>
               <Link href="/survey-donate" onClick={closeMenu}>Contribute</Link>
-            </li>
+            </li> */}
 
             <li className={styles.mobile_nav_item}>
               <a

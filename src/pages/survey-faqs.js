@@ -49,10 +49,18 @@ const SurveyFaqs = () => {
 
         </header>
 
+
+        <section className="content-body home-head">
+            <Link href='survey-mode' className='survey-mode-link link-dark'>
+            <BsClipboardCheck className="survey-mode-icon" />
+                <span className="survey-mode-link-text">Take Survey Now!</span>
+            </Link>
+            <h1>2026&nbsp;LP/GOLPP&nbsp;Survey FAQs</h1>
+        </section>
+
         <section className="content-body">
 
           <article>
-            <h2 className="survey-faqs-heading">Survey FAQs</h2>
             <p>Here are some answers to frequently-asked questions about the <span className="emphasis">LP/GOLPP Survey 2026</span>.</p>
           </article> 
 
@@ -83,7 +91,7 @@ const SurveyFaqs = () => {
                   Why are there so many questions about how much things cost
                 </h3>
               }
-              index={1}
+              index={2}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}>
               <p className="showmore_content_inline">
@@ -103,13 +111,13 @@ const SurveyFaqs = () => {
                   What are the icons at the top of each survey page for?
                 </h3>
               }
-              index={1}
+              index={3}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}>
                 <ul className="showmore_survey_icons_description">
                   <li><img src="/img-sj-top-icon-browse.png" alt="Browse icon"/>&nbsp;&nbsp;Opens <span className="emphasis">Browse Mode </span>in a new tab so you can browse the survey questions in a flat-file format.</li>
                   <li><img src="/img-sj-top-icon-faq.png" alt="FAQs icon"/>&nbsp;&nbsp;Opens the <span className="emphasis">Survey FAQs</span> page in a new tab where you can get answers to frequently-asked questions about the survey.</li>
-                  <li><img src="/img-sj-top-icon-lpinfo.png" alt="LP Info icon"/>&nbsp;&nbsp;Opens the <span className="emphasis">Lar Par Guide</span> at <a href="https://larparlife.com">https://larparlife.com</a>, where you can get useful information about a variety of LP/GOLPP related topics.</li>
+                  <li><img src="/img-sj-top-icon-lpinfo.png" alt="LP Info icon"/>&nbsp;&nbsp;Opens the <span className="emphasis">Lar Par Guide</span> at <a href="https://larparlife.com" className="link-accent">https://larparlife.com</a>, where you can get useful information about a variety of LP/GOLPP related topics.</li>
                   <li><img src="/img-sj-top-icon-share.png" alt="Browse icon"/>&nbsp;&nbsp;Opens the <span className="emphasis">Share Survey</span> page with convenient links for sharing the survey with your friends and colleagues via social media and email. </li>
                 </ul>
             </ShowMoreContent>
@@ -124,7 +132,7 @@ const SurveyFaqs = () => {
                   Do I have to actually fill out the survey to see the questions?
                 </h3>
               }
-              index={1}
+              index={4}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}>
                 <span className="showmore_content_space"></span>
@@ -153,7 +161,7 @@ const SurveyFaqs = () => {
                   Why is some text highlighted in Browse Mode?
                 </h3>
               }
-              index={1}
+              index={5}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}>
                 <p className="showmore_content_inline">
@@ -166,23 +174,12 @@ const SurveyFaqs = () => {
           <article>
 
             <ShowMoreContent
-              title='Where can I learn more about how my information is being used and the about survey&lsquo;s consent policy?' 
-              index={6}
-              activeIndex={activeIndex}
-              setActiveIndex={setActiveIndex}
-              >
-                <p className="showmore_content_inline">
-                  <span className="emphasis">Browse Mode</span> doesn&lsquo;t collect any data &mdash; it&lsquo;s purely for informational purposes. If you take the survey in <span className="emphasis">Survey Mode</span>, you&lsquo;ll find links to our <span className="emphasis">Privacy</span> and <span className="emphasis">Consent</span> policies that you can review before you provide any personal information. 
-                </p>
-            </ShowMoreContent>
-
-            <ShowMoreContent
               header={
                 <h3 className="showmore__title">
                   Where can I learn more about how my information is being used and the about survey&lsquo;s consent policy?
                 </h3>
               }
-              index={1}
+              index={6}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}>
                 <p className="showmore_content_inline">
