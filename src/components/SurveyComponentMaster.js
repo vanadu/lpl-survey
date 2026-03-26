@@ -8,7 +8,7 @@ import { SharpLight } from "survey-core/themes";
 import { useRouter } from "next/router";
 
 import masterSurvey from "../../data/master-survey/en-US/master-survey.json";
-import registry from "../../helpers/registry.generated.json";
+import registry from "../../data/registry/en-US/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 import { getStyleDirectives } from "./CustomClasses";
 import { attachSurveySyncHandlers } from "../../helpers/syncSelectionValues";

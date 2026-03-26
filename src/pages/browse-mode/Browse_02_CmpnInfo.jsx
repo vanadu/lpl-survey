@@ -46,6 +46,7 @@ const Browse_02_CmpnInfo = () => {
       </div>
 
       <div className="browse-panel-container" id="CmpnInfoDetailsPanel">
+      <div className="browse-panel-container" id="CmpnInfoAnimalTypePanel">
       <div className="browse-question-container" id="CmpnInfoAnimalType">
         <ShowAnswerContent
           header={
@@ -76,7 +77,9 @@ const Browse_02_CmpnInfo = () => {
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
 
+      <div className="browse-panel-container" id="CmpnInfoBreedGenderPanel">
       <div className="browse-question-container" id="CmpnInfoBreed">
         <ShowAnswerContent
           header={
@@ -121,7 +124,9 @@ const Browse_02_CmpnInfo = () => {
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
 
+      <div className="browse-panel-container" id="CmpnInfoWeightPanel">
       <div className="browse-question-container" id="CmpnInfoWeight">
         <ShowAnswerContent
           header={
@@ -165,6 +170,7 @@ const Browse_02_CmpnInfo = () => {
           </ul>
           </div>
         </ShowAnswerContent>
+      </div>
       </div>
       </div>
       </div>

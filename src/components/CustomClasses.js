@@ -146,6 +146,10 @@ const CONTROL_WIDTH_300 = new Set([
   "UserInfoStateRegion",
   "UserInfoAgeGroup",
   "CmpnInfoBreed",
+    "CmpnInfoGender",
+
+
+
 
   "InfoSourcesBestSource",
   "BreathingCrisisSubstanceForm",
@@ -180,6 +184,10 @@ const CONTROL_WIDTH_300 = new Set([
 ]);
 
 const CONTROL_WIDTH_600 = new Set([
+
+
+
+
   "BreathingCrisisCount",
   "PrimaryDurationVisitsNumber",
   "DiagnosisWho",
@@ -193,6 +201,9 @@ const CONTROL_WIDTH_600 = new Set([
 
 // PANEL NO BORDER
 const PANEL_NO_BORDER = new Set([
+  "CmpnInfoAnimalTypePanel",
+  "CmpnInfoBreedGenderPanel",
+  "CmpnInfoWeightPanel",
   "CmpnInfoAgePanel"
 ]);
 

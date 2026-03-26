@@ -776,21 +776,31 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 }
 
 // !VA Force CmpnInfoDetailsPanel into 1-2-2 grid layout
+// !VA Deprecated...Added separate panels for breed/mix and weight
 [data-name="CmpnInfoDetailsPanel"] .sd-element__content.sd-panel__content {
   display: flex;
   flex-direction: column;
-  @include ldesktop {
-    display: grid;
-    gap: 0.25rem 1rem;
-    align-items: start;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-auto-flow: row;
-    // make first three children hild span both columns
-    > :first-child {
-      grid-column: 1 / -1;
-    }
-  }
+  // @include ldesktop {
+  //   display: grid;
+  //   gap: 0.25rem 1rem;
+  //   align-items: start;
+  //   grid-template-columns: repeat(2, minmax(0, 1fr));
+  //   grid-auto-flow: row;
+  //   // make first three children hild span both columns
+  //   > :first-child {
+  //     grid-column: 1 / -1;
+  //   }
+  // }
 }
+
+
+
+[data-name="CmpnInfoBreedGenderPanel"] {
+  background: rgba(0, 0, 255, .3) !important; //devblue
+}
+
+
+
 
 // !VA Force age/date panels to two-column layout
 [data-name="dcsdCmpnInfoAgePanel"] .sd-element__content.sd-panel__content,
@@ -800,6 +810,7 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 [data-name="TreatmentStatusAgePanel"] .sd-element__content.sd-panel__content
 {
   display: flex;
+  background: rgba(255, 0, 0, .3) !important; //devred
   .sd-row {
     padding: 0!important;
     margin: 0!important;

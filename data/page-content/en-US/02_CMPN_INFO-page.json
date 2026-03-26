@@ -1,7 +1,6 @@
 {
   "name": "CMPN_INFO-page",
   "elements": [
-
     {
       "type": "panel",
       "name": "CmpnInfoCard1Panel",
@@ -16,83 +15,97 @@
           "name": "CmpnInfoText",
           "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
         },
-
         {
           "type": "panel",
           "name": "CmpnInfoDetailsPanel",
           "elements": [
             {
-              "type": "radiogroup",
-              "name": "CmpnInfoAnimalType",
-              "title": "{CmpnName}'s species:",
-              "isRequired": true,
-              "choices": [
+              "type": "panel",
+              "name": "CmpnInfoAnimalTypePanel",
+              "elements": [
                 {
-                  "value": "CANINE",
-                  "text": "Dog"
-                },
-                {
-                  "value": "FELINE",
-                  "text": "Cat"
-                },
-                {
-                  "value": "EQUINE",
-                  "text": "Horse"
+                  "type": "radiogroup",
+                  "name": "CmpnInfoAnimalType",
+                  "title": "{CmpnName}'s species:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "CANINE",
+                      "text": "Dog"
+                    },
+                    {
+                      "value": "FELINE",
+                      "text": "Cat"
+                    },
+                    {
+                      "value": "EQUINE",
+                      "text": "Horse"
+                    }
+                  ]
                 }
               ]
             },
             {
-            "type": "text",
-            "name": "CmpnInfoBreed",
-            "title": "{CmpnName}'s breed or mix:",
-            "isRequired": true
-            },
-            {
-              "type": "boolean",
-              "name": "CmpnInfoGender",
-              "title": "{CmpnName}'s gender:",
-              "isRequired": true,
-              "labelTrue": "Female",
-              "labelFalse": "Male"
-            },
-            {
-              "type": "text",
-              "name": "CmpnInfoWeight",
-              "title": "{CmpnName}'s last known weight (in lbs or kg):",
-              "description": "Please enter a number",
-              "isRequired": true,
-              "inputType": "number",
-              "min": 1,
-              "max": 2200,
-              "validators": [
+              "type": "panel",
+              "name": "CmpnInfoBreedGenderPanel",
+              "elements": [
                 {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 2200,
-                  "text": "Weight must be between 1 and 2200"
+                "type": "text",
+                "name": "CmpnInfoBreed",
+                "title": "{CmpnName}'s breed or mix:",
+                "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "CmpnInfoGender",
+                  "title": "{CmpnName}'s gender:",
+                  "isRequired": true,
+                  "labelTrue": "Female",
+                  "labelFalse": "Male"
                 }
               ]
             },
             {
-              "type": "boolean",
-              "name": "CmpnInfoWeightUnits",
-              "title": "Weight units:",
-              "description": "Please choose pounds or kilos.",
-              "isRequired": true,
-              "labelTrue": "Kg",
-              "labelFalse": "Lbs"
+              "type": "panel",
+              "name": "CmpnInfoWeightPanel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "CmpnInfoWeight",
+                  "title": "{CmpnName}'s last known weight (in lbs or kg):",
+                  "description": "Please enter a number",
+                  "isRequired": true,
+                  "inputType": "number",
+                  "min": 1,
+                  "max": 2200,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 2200,
+                      "text": "Weight must be between 1 and 2200"
+                    }
+                  ]
+                },
+                {
+                  "type": "boolean",
+                  "name": "CmpnInfoWeightUnits",
+                  "title": "Weight units:",
+                  "description": "Please choose pounds or kilos.",
+                  "isRequired": true,
+                  "labelTrue": "Kg",
+                  "labelFalse": "Lbs"
+                }
+              ]
             }
           ]
         }
       ]
     },
-
     {
       "type": "panel",
       "name": "CmpnInfoCard2Panel",
       "elements": [
-
-
         {
           "type": "panel",
           "name": "CmpnInfoAgePanel",

@@ -484,86 +484,80 @@
             },
             {
               "type": "panel",
-              "name": "CmpnInfoDetailsPanel",
+              "name": "CmpnInfoAnimalTypePanel",
               "elements": [
                 {
-                  "type": "panel",
-                  "name": "CmpnInfoAnimalTypePanel",
-                  "elements": [
+                  "type": "radiogroup",
+                  "name": "CmpnInfoAnimalType",
+                  "title": "{CmpnName}'s species:",
+                  "isRequired": true,
+                  "choices": [
                     {
-                      "type": "radiogroup",
-                      "name": "CmpnInfoAnimalType",
-                      "title": "{CmpnName}'s species:",
-                      "isRequired": true,
-                      "choices": [
-                        {
-                          "value": "CANINE",
-                          "text": "Dog"
-                        },
-                        {
-                          "value": "FELINE",
-                          "text": "Cat"
-                        },
-                        {
-                          "value": "EQUINE",
-                          "text": "Horse"
-                        }
-                      ]
+                      "value": "CANINE",
+                      "text": "Dog"
+                    },
+                    {
+                      "value": "FELINE",
+                      "text": "Cat"
+                    },
+                    {
+                      "value": "EQUINE",
+                      "text": "Horse"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "CmpnInfoBreedGenderPanel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "CmpnInfoBreed",
+                  "title": "{CmpnName}'s breed or mix:",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "CmpnInfoGender",
+                  "title": "{CmpnName}'s gender:",
+                  "isRequired": true,
+                  "labelTrue": "Female",
+                  "labelFalse": "Male"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "CmpnInfoWeightPanel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "CmpnInfoWeight",
+                  "title": "{CmpnName}'s last known weight (in lbs or kg):",
+                  "description": "Please enter a number",
+                  "isRequired": true,
+                  "inputType": "number",
+                  "min": 1,
+                  "max": 2200,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 2200,
+                      "text": "Weight must be between 1 and 2200"
                     }
                   ]
                 },
                 {
-                  "type": "panel",
-                  "name": "CmpnInfoBreedGenderPanel",
-                  "elements": [
-                    {
-                      "type": "text",
-                      "name": "CmpnInfoBreed",
-                      "title": "{CmpnName}'s breed or mix:",
-                      "isRequired": true
-                    },
-                    {
-                      "type": "boolean",
-                      "name": "CmpnInfoGender",
-                      "title": "{CmpnName}'s gender:",
-                      "isRequired": true,
-                      "labelTrue": "Female",
-                      "labelFalse": "Male"
-                    }
-                  ]
-                },
-                {
-                  "type": "panel",
-                  "name": "CmpnInfoWeightPanel",
-                  "elements": [
-                    {
-                      "type": "text",
-                      "name": "CmpnInfoWeight",
-                      "title": "{CmpnName}'s last known weight (in lbs or kg):",
-                      "description": "Please enter a number",
-                      "isRequired": true,
-                      "inputType": "number",
-                      "min": 1,
-                      "max": 2200,
-                      "validators": [
-                        {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 2200,
-                          "text": "Weight must be between 1 and 2200"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "boolean",
-                      "name": "CmpnInfoWeightUnits",
-                      "title": "Weight units:",
-                      "description": "Please choose pounds or kilos.",
-                      "isRequired": true,
-                      "labelTrue": "Kg",
-                      "labelFalse": "Lbs"
-                    }
-                  ]
+                  "type": "boolean",
+                  "name": "CmpnInfoWeightUnits",
+                  "title": "Weight units:",
+                  "description": "Please choose pounds or kilos.",
+                  "isRequired": true,
+                  "labelTrue": "Kg",
+                  "labelFalse": "Lbs"
                 }
               ]
             }

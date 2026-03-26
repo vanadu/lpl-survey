@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-03-26T08:51:41.001Z",
+    "builtAt": "2026-03-26T10:31:26.941Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -375,6 +375,19 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "CmpnInfoAnimalTypePanel": {
+      "name": "CmpnInfoAnimalTypePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
+        "CmpnInfoDetailsPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "CmpnInfoAnimalType": {
       "name": "CmpnInfoAnimalType",
       "type": "radiogroup",
@@ -383,12 +396,26 @@
       "path": [
         "CMPN_INFO-page",
         "CmpnInfoCard1Panel",
-        "CmpnInfoDetailsPanel"
+        "CmpnInfoDetailsPanel",
+        "CmpnInfoAnimalTypePanel"
       ],
       "hasTitle": true,
       "title": "{CmpnName}'s species:",
       "hasVisibleIf": false,
       "isRequired": true
+    },
+    "CmpnInfoBreedGenderPanel": {
+      "name": "CmpnInfoBreedGenderPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
+        "CmpnInfoDetailsPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "CmpnInfoBreed": {
       "name": "CmpnInfoBreed",
@@ -398,7 +425,8 @@
       "path": [
         "CMPN_INFO-page",
         "CmpnInfoCard1Panel",
-        "CmpnInfoDetailsPanel"
+        "CmpnInfoDetailsPanel",
+        "CmpnInfoBreedGenderPanel"
       ],
       "hasTitle": true,
       "title": "{CmpnName}'s breed or mix:",
@@ -413,12 +441,26 @@
       "path": [
         "CMPN_INFO-page",
         "CmpnInfoCard1Panel",
-        "CmpnInfoDetailsPanel"
+        "CmpnInfoDetailsPanel",
+        "CmpnInfoBreedGenderPanel"
       ],
       "hasTitle": true,
       "title": "{CmpnName}'s gender:",
       "hasVisibleIf": false,
       "isRequired": true
+    },
+    "CmpnInfoWeightPanel": {
+      "name": "CmpnInfoWeightPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
+        "CmpnInfoDetailsPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "CmpnInfoWeight": {
       "name": "CmpnInfoWeight",
@@ -428,7 +470,8 @@
       "path": [
         "CMPN_INFO-page",
         "CmpnInfoCard1Panel",
-        "CmpnInfoDetailsPanel"
+        "CmpnInfoDetailsPanel",
+        "CmpnInfoWeightPanel"
       ],
       "hasTitle": true,
       "title": "{CmpnName}'s last known weight (in lbs or kg):",
@@ -444,7 +487,8 @@
       "path": [
         "CMPN_INFO-page",
         "CmpnInfoCard1Panel",
-        "CmpnInfoDetailsPanel"
+        "CmpnInfoDetailsPanel",
+        "CmpnInfoWeightPanel"
       ],
       "hasTitle": true,
       "title": "Weight units:",
