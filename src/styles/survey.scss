@@ -355,6 +355,23 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 90%;
+      @include mphone {
+      
+      }
+      @include lphone {
+        
+      }
+      @include tablet {
+        width: 60%;
+      }
+      @include desktop {
+        width: 60%;
+      }
+      @include ldesktop {
+        width: 60%;
+      }
+
   }
   .sd-imagepicker__item  {
     width: 40%;
@@ -796,6 +813,22 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
     box-sizing: border-box;
   }
 }
+
+// !VA Force space below on mobile only
+[data-name="UserInfoFirstName"] {
+  margin-bottom: var(--s-3);
+  @include tablet {
+    margin-bottom: 0;
+  }
+  @include desktop {
+  }
+  @include ldesktop {
+    margin-bottom: 0;
+  }
+}
+
+
+
 
 
 [data-name="ConclusionDifferentChoices"]  {
@@ -1435,6 +1468,9 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+
+
 
 /*----------------
  !VA DEV ONLY

@@ -55,7 +55,7 @@ const SurveyFaqs = () => {
             <BsClipboardCheck className="survey-mode-icon" />
                 <span className="survey-mode-link-text">Take Survey Now!</span>
             </Link>
-            <h1>2026&nbsp;LP/GOLPP&nbsp;Survey FAQs</h1>
+            w<h1>2026&nbsp;LP/GOLPP&nbsp;Survey FAQs</h1>
         </section>
 
         <section className="content-body">
@@ -88,17 +88,17 @@ const SurveyFaqs = () => {
             <ShowMoreContent
               header={
                 <h3 className="showmore__title">
-                  Why are there so many questions about how much things cost
+                  Why are there so many questions about treatment costs?
                 </h3>
               }
               index={2}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}>
               <p className="showmore_content_inline">
-                It&lsquo;s not really about the cost itself. Cost is the only reliable way to gauge the severity of a procedure or veterinary health event. If your LP companion spent five days in emergency care for aspiration pneumonia, that will cost much more than a single overnight stay.  
+                It&lsquo;s not really about the cost itself. Cost is the only reliable way to gauge the severity or relative benefit of a procedure. For instance, five days in emergency care for aspiration pneumonia costs proportionally more than a single overnight stay, and that reflects the severity of the event. Some medications or supplements cost more than others yet may bring less actual benefit.    
               </p>
               <p className="showmore_content_inline">
-                The objective is to draw inferences about which approaches result in more or fewer health events that require veterinary care. Cost is the only empirical data available for reference, and that&lsquo;s why it appears so often in the survey.
+                The objective is to draw inferences about which approaches result in more or fewer health events that require veterinary care and improve the quality of life of the patient. Cost is the only empirical data available for reference, and that&lsquo;s why it appears so often in the survey.
               </p>
             </ShowMoreContent>
           </article>

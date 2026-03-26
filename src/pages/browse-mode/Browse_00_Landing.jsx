@@ -43,11 +43,11 @@ const Browse_00_Landing = () => {
       </div>
 
       <div className="browse-content-block" id="LandingWelcomeText1">
-        <p className="browse-content-text">This survey, the first of its kind, is designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis.</p>
+        <p className="browse-content-text">This survey is the first phase of a longitudinal study designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis.</p>
       </div>
 
       <div className="browse-content-block" id="LandingWelcomeText2">
-        <p className="browse-content-text">Aliqua aute et est proident fugiat sunt consectetur id ipsum magna nostrud tempor magna consequat. Nostrud in est ad ea exercitation. Consequat mollit consequat quis deserunt mollit laboris exercitation nostrud cillum consequat dolor proident sint. Ex duis nisi ad excepteur cupidatat enim pariatur excepteur. Occaecat sint dolor enim incididunt commodo. Consectetur anim elit et cillum ut excepteur.</p>
+        <p className="browse-content-text">By sharing what you’ve seen &amp;mdash; symptoms, treatments, and day-to-day changes &amp;mdash; you can help build a clearer understanding of how this disease progresses and what actually helps. Each response adds to a growing body of real-world knowledge, helping to identify patterns, compare outcomes, and move toward better answers for animals with LP and the people who care for them.</p>
       </div>
       </div>
       </div>

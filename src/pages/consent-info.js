@@ -14,7 +14,7 @@ const ConsentInfo = () => {
 
             <article className="card consent-info-section">
               <h1 className="consent-info-title">Consent to Participate in Survey</h1>
-              <h2 className="consent-info-heading">Purpose</h2>
+              <h3 className="consent-info-heading">Purpose</h3>
               <p className="consent-info-text">
                 You are invited to take part in a survey about experiences related to LP/GOLPP.
                 The goal is to collect information for research, awareness, and general
@@ -23,7 +23,7 @@ const ConsentInfo = () => {
             </article>
 
             <article className="consent-info-section">
-              <h2 className="consent-info-heading">What to Expect</h2>
+              <h3 className="consent-info-heading">What to Expect</h3>
               <ul className="consent-info-list">
                 <li className="consent-info-list-item">
                   The survey takes approximately 5-20 minutes to complete, depending on your own personal LP/GOLPP experience.
@@ -38,14 +38,14 @@ const ConsentInfo = () => {
             </article>
 
             <article className="consent-info-section">
-              <h2 className="consent-info-heading">Voluntary Participation</h2>
+              <h3 className="consent-info-heading">Voluntary Participation</h3>
               <p className="consent-info-text">
                 Participation is completely voluntary. You may stop at any time without penalty.
               </p>
             </article>
 
             <article className="consent-info-section">
-              <h2 className="consent-info-heading">Risks / Discomforts</h2>
+              <h3 className="consent-info-heading">Risks / Discomforts</h3>
               <p className="consent-info-text">
                 There are no known physical risks. Some questions may involve personal topics
                 and could cause mild emotional discomfort.
@@ -53,7 +53,7 @@ const ConsentInfo = () => {
             </article>
 
             <article className="consent-info-section">
-              <h2 className="consent-info-heading">Benefits</h2>
+              <h3 className="consent-info-heading">Benefits</h3>
               <p className="consent-info-text">
                 There is no direct benefit to you. Your responses may contribute to a better
                 understanding of LP/GOLPP.
@@ -61,7 +61,7 @@ const ConsentInfo = () => {
             </article>
 
             <article className="consent-info-section">
-              <h2 className="consent-info-heading">Privacy and Data Use</h2>
+              <h3 className="consent-info-heading">Privacy and Data Use</h3>
 
               <p className="consent-info-text">
                 We collect a limited set of information needed to verify survey results:
@@ -99,7 +99,7 @@ const ConsentInfo = () => {
             </article>
 
             <article className="consent-info-section">
-              <h2 className="consent-info-heading">Data Controller</h2>
+              <h3 className="consent-info-heading">Data Controller</h3>
               <p className="consent-info-text">LarparLife.org</p>
               <p className="consent-info-text">
                 Contact: <Link href='/contact' className='link-accent'>Data Controller Contact</Link>
@@ -107,7 +107,7 @@ const ConsentInfo = () => {
             </article>
 
             <article className="consent-info-section">
-              <h2 className="consent-info-heading">Data Retention</h2>
+              <h3 className="consent-info-heading">Data Retention</h3>
               <p className="consent-info-text">
                 Responses may be stored for future analysis unless you request deletion
                 (where identifiable data has been provided).
@@ -115,7 +115,7 @@ const ConsentInfo = () => {
             </article>
 
             <article className="consent-info-section">
-              <h2 className="consent-info-heading">Your Rights (EU/EEA)</h2>
+              <h3 className="consent-info-heading">Your Rights (EU/EEA)</h3>
               <p className="consent-info-text">You have the right to:</p>
               <ul className="consent-info-list">
                 <li className="consent-info-list-item">Access your data</li>
@@ -140,14 +140,14 @@ const ConsentInfo = () => {
             </article>
 
             <article className="consent-info-section">
-              <h2 className="consent-info-heading">Eligibility</h2>
+              <h3 className="consent-info-heading">Eligibility</h3>
               <p className="consent-info-text">
                 You should be 18 years or older (or have appropriate consent, if applicable).
               </p>
             </article>
 
             <article className="consent-info-section">
-              <h2 className="consent-info-heading">Contact</h2>
+              <h3 className="consent-info-heading">Contact</h3>
               <p className="consent-info-text">
                 For questions about this survey or your data, contact:
               </p>
@@ -155,7 +155,7 @@ const ConsentInfo = () => {
             </article>
 
             <article className="consent-info-section consent-info-section--consent">
-              <h2 className="consent-info-heading">Consent</h2>
+              <h3 className="consent-info-heading">Consent</h3>
               <p className="consent-info-text">
                 By continuing, you confirm that:
               </p>

@@ -163,7 +163,7 @@ span.no-wrap {
     font-size: var(--font-size-lg);
     line-height: var(--line-heading);
   }
-  h3 {
+  h3.article-heading {
     margin: var(--s-2) 0 0;
     font-family: var(--font-primary);
     font-size: var(--font-size-lg);
@@ -1322,9 +1322,8 @@ ul.showmore_survey_icons_description {
   background: var(--showmore-background);
   color: var(--showmore-text-color);
   border: 0;
-  margin: 0;
+  margin: var(--s-2) 0;
   padding: 0;
-
 }
 
 .showmore__trigger {
@@ -1359,8 +1358,6 @@ ul.showmore_survey_icons_description {
 }
 
 .showmore__title {
-  padding: 0!important;
-  margin: 0!important;
   font-family: var(--font-primary)!important;
   color: var(--showmore-link-color);
   font-size: var(--font-size-md)!important;
@@ -1368,15 +1365,6 @@ ul.showmore_survey_icons_description {
   font-weight: 700;
 }
 
-
-.showmore__tits {
-  font-family: var(--font-primary)!important;
-  color: var(--showmore-link-color);
-  // font-size: var(--font-size-xl)!important;
-  line-height: var(--disclosure-title-line-height);
-  font-weight: 700;
-  background: rgba(255, 0, 0, .3) !important; //devred
-}
 
 .showmore__content {
   color: var(--showmore-text-color);
@@ -1594,9 +1582,10 @@ ul.showmore_survey_icons_description {
   }
   @include tablet {
     margin: -var(--s-1) auto 1rem;  /* center horizontally */
+    gap: 3rem;
   }
   @include desktop {
-  
+    gap: 3rem;
   }
   @include ldesktop {
     gap: 3rem;
@@ -1609,22 +1598,23 @@ ul.showmore_survey_icons_description {
   align-items: center;
   justify-content: flex-start;
   gap: 0.35rem;
-  width: 3rem;
+  width: 2.75rem;
   text-decoration: none;
   @include mphone {
-    width: 3.25rem;
+    width: 3rem;
   }
   @include lphone {
-    width: 3.5rem;
+    width: 3.25rem;
   }
   @include tablet {
+    width: 3.5rem;
     
   }
   @include desktop {
-    
+    width: 4rem;
   }
   @include ldesktop {
-    width: 3.75rem;
+    width: 4rem;
   }
 }
 
@@ -1634,12 +1624,12 @@ ul.showmore_survey_icons_description {
   height: 20px;
   object-fit: contain;
   @include mphone {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
   @include lphone {
-      width: 28px;
-    height: 28px;
+      width: 26px;
+    height: 26px;
   }
   @include tablet {
     width: 36px;

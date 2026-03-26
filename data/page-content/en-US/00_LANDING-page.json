@@ -33,12 +33,12 @@
             {
               "type": "html",
               "name": "LandingWelcomeText1",
-              "html": "This survey, the first of its kind, is designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis."
+              "html": "This survey is the first phase of a longitudinal study designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis."
             },
             {
               "type": "html",
               "name": "LandingWelcomeText2",
-              "html": "Aliqua aute et est proident fugiat sunt consectetur id ipsum magna nostrud tempor magna consequat. Nostrud in est ad ea exercitation. Consequat mollit consequat quis deserunt mollit laboris exercitation nostrud cillum consequat dolor proident sint. Ex duis nisi ad excepteur cupidatat enim pariatur excepteur. Occaecat sint dolor enim incididunt commodo. Consectetur anim elit et cillum ut excepteur."
+              "html": "By sharing what you’ve seen &mdash; symptoms, treatments, and day-to-day changes &mdash; you can help build a clearer understanding of how this disease progresses and what actually helps. Each response adds to a growing body of real-world knowledge, helping to identify patterns, compare outcomes, and move toward better answers for animals with LP and the people who care for them."
             }
 
           ]
