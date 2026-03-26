@@ -154,36 +154,20 @@ span.no-wrap {
   cursor: pointer;
 }
 
-.content-body {
-  // display: grid;
-  // gap: var(--s-1);
-  display: flex;
-  flex-direction: column;
-  margin: 0 var(--s-2) var(--s-1);
-}
-
-.content-body h2 {
-  margin: var(--s-1) 0 var(--s-1) 0;
-  font-size: var(--font-size-lg);
-  line-height: var(--line-heading);
-  @include mphone {
-    
-  }
-  @include lphone {
-    
-  }
-  @include tablet {
-    
-  }
-  @include desktop {
-    
-  }
-  @include ldesktop {
-    // font-size: var(--font-size-xl);
-  }
-}
-
 .content-body  {
+    display: flex;
+    flex-direction: column;
+    margin: 0 var(--s-2) var(--s-1);
+  h2 {
+    margin: var(--s-1) 0 var(--s-1);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-heading);
+  }
+  h3 {
+    margin: var(--s-2) 0 0;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-lg);
+  }
   ul {
     margin-bottom: var(--s-2);
   }
@@ -193,7 +177,7 @@ span.no-wrap {
     line-height: var(--line-body);
     color: var(--c-content-text);
     margin: 0;
-    padding: var(--s-1) 0 0;
+    padding: var(--s-1) 0;
   }
   li {
       margin: 0 0 0 var(--s-6);
@@ -201,7 +185,26 @@ span.no-wrap {
   }
 }
 
+article.home-content {
+  // !VA Extra whitespace above the Your Experience Matters heading on the home page
+  margin-top: var(--s-4);
+}
 
+// article {
+//   margin: var(--s-2) var(--s-4) var(--s-4);
+//   font-family: var(--font-primary);
+//   background: none;
+//   h2 {
+//     padding: var(--s-1) 0 0;
+//   }
+//   ul {
+//     padding-bottom: var(--s-2);
+//   }
+//   li {
+//     margin-left: var(--s-5);
+//     padding: var(--s-1) 0 var(--s-1) var(--s-4);
+//   }
+// }
 
 
 
@@ -743,29 +746,7 @@ ul.showmore_survey_icons_description {
 }
 
 
-article {
-  margin: var(--s-2) var(--s-4) var(--s-4);
-  font-family: var(--font-primary);
-  background: none;
-  h2 {
-    padding: var(--s-1) 0 0;
-    font-size: var(--font-size-md);
-  }
-  ul {
-    padding-bottom: var(--s-2);
-  }
-  p, li {
-    font-size: var(--font-size-lg);
-  }
-  p {
-    // !VA Padding is on content-body
-    // padding:  0 0 var(--s-2);
-  }
-  li {
-    margin-left: var(--s-5);
-    padding: var(--s-1) 0 var(--s-1) var(--s-4);
-  }
-}
+
 
 .browse-panel-container {
   margin: var(--s-2) 0 var(--s-1);
@@ -1373,14 +1354,16 @@ article {
 
 .showmore__icon {
   color: var(--showmore-icon-color);
-  margin-top: 0.1em;
+  margin-top: 0.313rem;
   font-size: 0.95rem;
 }
 
 .showmore__title {
+  padding: 0!important;
+  margin: 0!important;
   font-family: var(--font-primary)!important;
   color: var(--showmore-link-color);
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-md)!important;
   line-height: var(--disclosure-title-line-height);
   font-weight: 700;
 }

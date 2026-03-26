@@ -46,7 +46,6 @@ const Home = () => {
 
 
           <article className="card">
-            <h2>How much time will it take?</h2>
             <p>
               The first things people want to know about a survey is how long it will take and whether they can do it on their phones.
             </p>
@@ -70,32 +69,71 @@ const Home = () => {
             </ShowMoreContent>
             
             </div>
-            <p>You can learn more about the LP/GOLPP Survey 2026, for instance what the survey icons do, why many of the questions deal with cost, and what the goals of the survey are, <Link href='/survey-faqs' className='link-accent'>on the FAQs page</Link>.</p>
+            <p>You can learn more about the <span className="emphasis">LP/GOLPP Survey 2026</span > on the <Link href='/survey-faqs' className='link-accent'>FAQs page</Link>.</p>
+          </article>
+
+
+          <article class="card home-content">
+            <h2 className="home-about-heading">Your experience matters!</h2>
+            <p>This survey is the first phase of a long-range research study focused on better understanding canine laryngeal paralysis (LP) and geriatric-onset laryngeal paralysis &amp; polyneuropathy (GOLPP).</p>
+            
+            <h3>Why now and why you?</h3>
+            <p>Today, there are no clearly established treatment protocols for LP. Veterinarians often have to rely on general medical approaches to manage a condition that is still not well understood. The most common surgical treatment dates back to the 1980s, and efforts to expand or rethink treatment options have been limited. At the same time, there is very little accessible, up-to-date information available to support ongoing education about the disease.</p>
+
+            <p>In recent years, social media &mdash; especially platforms like Facebook &mdash; has dramatically increased awareness of LP. Large online communities of dog owners are now sharing experiences, observations, and treatment outcomes in real time. While this has created valuable peer support, it has also led to the spread of inconsistent and sometimes conflicting information.</p>
+            
+            <h3>Transforming experience into knowledge</h3>
+            <p>This study begins by turning that growing body of real-world experience into structured data.</p>
+
+            <p>The goal of this first phase is to gather detailed information directly from people who are actively managing their beloved companion&lsquo;s LP/GOLPP. These individuals &mdash; people like you &mdash; are on the front lines making decisions, trying treatments, and observing outcomes day by day. Your experiences represent a largely untapped source of insight into how the disease progresses and how different treatments perform in real-world conditions.</p>
+
+            <h3>Strength in numbers</h3>
+            <p>As more people participate, the value of the data increases. Larger numbers of responses make it possible to identify meaningful patterns, compare outcomes, and improve the reliability of conclusions.</p>
+
+            <p>This survey is not just a one-time questionnaire. It is designed as the foundation for an ongoing study that will track the course of the disease over time, including treatments, changes in condition, and long-term outcomes.</p>
+
+            {/* <p>Your beloved companion&lsquo;s LP/GOLPP journey </p> */}
           </article>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <article className="card">
-            <h2 className="home-about-heading">About the 2026 LP/GOLPP Survey</h2>
-            <h2>Did you know...</h2>
+            {/* <h2>Did you know...</h2>
             <p>
               ...that the suicide rate among veterinarians is four times that of the general population? Euthanasia fatigue, high student debt, high burnout rates, difficult clients with unrealistic expectations, and access to lethal medication are all cited as contributing factors.
-            </p>
+            </p> */}
           </article>
 
-          <article className="card">
-            <h2>How can a survey like this help?</h2>
+          {/* <article className="card">
             <p>
-              Veterinary medicine produces more new research than even the most committed vet can keep up with and laryngeal paralysis has little in the way of established protocols. A well-designed survey can provide useful practical insights about the course of a disease over time based on the experience of people who are on the front lines in the trial-and-error battle against LP/GOLPP &mdash; people like you.
+               A comprehensive survey can provide useful practical insights about the course of a disease over time based on the experience of people who are on the front lines in the trial-and-error battle against LP/GOLPP &mdash; people like you.
             </p>
-          </article>
+          </article> */}
 
-          <article className="card">
+          {/* <article className="card">
             <h2>Your contribution matters!</h2>
             <p>
-              The goal of this first-of-its-kind survey is to aggregate long-term observations that might escape the view of individual veterinarians, such as daily symptoms, medications, supplements, or the aftermath of treatment. Your survey participation provides real-world data that can help veterinarians help their clients and the animals they love.
+              The goal of this survey is to aggregate long-term observations that might escape the view of individual veterinarians, such as daily symptoms, medications, supplements, or the aftermath of treatment. Your survey participation provides real-world data that can help veterinarians help their clients and the animals they love.
             </p>
-          </article>
+          </article> */}
+
         </section>
       </main>
     </>
