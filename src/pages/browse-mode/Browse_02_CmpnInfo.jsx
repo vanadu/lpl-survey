@@ -131,7 +131,7 @@ const Browse_02_CmpnInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella&lsquo;s last known weight (in lbs or kg):
+              Bella&lsquo;s last known weight:
             </span>
           }
           index={4}

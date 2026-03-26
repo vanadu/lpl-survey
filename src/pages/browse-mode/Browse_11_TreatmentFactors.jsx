@@ -42,11 +42,7 @@ const Browse_11_TreatmentFactors = () => {
       </div>
 
       <div className="browse-content-block" id="TreatmentFactorsText">
-        <p className="browse-content-text">Magna ullamco in sint esse exercitation nostrud eiusmod sint excepteur reprehenderit velit sit. Exercitation minim veniam fugiat elit. Nisi eu ipsum pariatur officia qui dolor consectetur Lorem aliquip non. Commodo labore cupidatat culpa ea exercitation aliquip laborum qui in tempor. Adipisicing esse ex est exercitation in laboris nisi eu ut deserunt dolor.</p>
-      </div>
-
-      <div className="browse-content-block" id="TreatmentFactorsDetailsText">
-        <p className="browse-content-text">Please rate the relevant factors in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>
+        <p className="browse-content-text">The LP/GOLPP journey requires making difficult decisions based on personal, financial, and family considerations. Please rate the factors that played a role in your LP/GOLPP decisions.</p>
       </div>
 
       <div className="browse-panel-container" id="TreatmentFactorsDecisionPanel">
@@ -116,7 +112,7 @@ const Browse_11_TreatmentFactors = () => {
 
       <div className="browse-panel-container" id="TreatmentFactorsCard2Panel">
       <div className="browse-panel-container" id="TreatmentFactorsCostPanel">
-        <h3 className="browse-showanswer-title">How have financial considerations factored into your decision?</h3>
+        <h3 className="browse-showanswer-title">How have financial considerations factored into your LP/GOLPP decisions?</h3>
       <div className="browse-question-container" id="TreatmentFactorsCost">
         <ShowAnswerContent
           header={
@@ -399,12 +395,12 @@ const Browse_11_TreatmentFactors = () => {
       </div>
 
       <div className="browse-panel-container" id="TreatmentFactorsStagePanel">
-        <h3 className="browse-showanswer-title">How has the stage of Bella&lsquo;s LP/GOLPP factored into your decision?</h3>
-      <div className="browse-question-container" id="TreatmentFactorsStageLP">
+        <h3 className="browse-showanswer-title">Which aspects of Bella&lsquo;s LP/GOLPP have factored into your decisions?</h3>
+      <div className="browse-question-container" id="TreatmentFactorsBreathingCrisisFear">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Fear of a breathing emergency:
+              Fear of a breathing crisis or emergency:
             </span>
           }
           index={5}
@@ -682,12 +678,12 @@ const Browse_11_TreatmentFactors = () => {
       </div>
 
       <div className="browse-panel-container" id="TreatmentFactorsSurgeryRisksPanel">
-        <h3 className="browse-showanswer-title">How have the risks of surgery factored into your decision?</h3>
-      <div className="browse-question-container" id="TreatmentFactorsRisks">
+        <h3 className="browse-showanswer-title">Which risk factors of surgery have factored into your decision?</h3>
+      <div className="browse-question-container" id="TreatmentFactorsAnesthesia">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Risks of a surgical procedure with extended anesthesia:
+              Extended anesthesia:
             </span>
           }
           index={7}
@@ -823,14 +819,154 @@ const Browse_11_TreatmentFactors = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="TreatmentFactorsRisksComplications">
+      <div className="browse-question-container" id="TreatmentFactorsInpatientComplications">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Risks of post-op complications such as aspiration pneumonia or suture failure:
+              Risk of direct inpatient complications of surgery:
             </span>
           }
           index={8}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <p className="browse-question-description">1 = not a factor, 5 = deciding factor</p>
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="TreatmentFactorsLongTermComplications">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Risks of long-term complications such as aspiration pneumonia, suture failure, or infection:
+            </span>
+          }
+          index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -973,7 +1109,7 @@ const Browse_11_TreatmentFactors = () => {
               Bella&lsquo;s age:
             </span>
           }
-          index={9}
+          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1110,10 +1246,10 @@ const Browse_11_TreatmentFactors = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella&lsquo;s overall health and prospects for quality of life moving forward:
+              Bella&lsquo;s overall health and prospects for quality of life:
             </span>
           }
-          index={10}
+          index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1253,7 +1389,7 @@ const Browse_11_TreatmentFactors = () => {
               Bella&lsquo;s preexisting conditions other than LP/GOLPP:
             </span>
           }
-          index={11}
+          index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1396,7 +1532,7 @@ const Browse_11_TreatmentFactors = () => {
               Distance to or access to a qualified specialist:
             </span>
           }
-          index={12}
+          index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1536,7 +1672,7 @@ const Browse_11_TreatmentFactors = () => {
               Ability to provide adequate post-operative care:
             </span>
           }
-          index={13}
+          index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1679,11 +1815,11 @@ const Browse_11_TreatmentFactors = () => {
               Other considerations:
             </span>
           }
-          index={14}
+          index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">Maximum 250 characters.</p>
+          <p className="browse-question-description">Maximum 250 charactsers.</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>

@@ -487,65 +487,83 @@
               "name": "CmpnInfoDetailsPanel",
               "elements": [
                 {
-                  "type": "radiogroup",
-                  "name": "CmpnInfoAnimalType",
-                  "title": "{CmpnName}'s species:",
-                  "isRequired": true,
-                  "choices": [
+                  "type": "panel",
+                  "name": "CmpnInfoAnimalTypePanel",
+                  "elements": [
                     {
-                      "value": "CANINE",
-                      "text": "Dog"
-                    },
-                    {
-                      "value": "FELINE",
-                      "text": "Cat"
-                    },
-                    {
-                      "value": "EQUINE",
-                      "text": "Horse"
+                      "type": "radiogroup",
+                      "name": "CmpnInfoAnimalType",
+                      "title": "{CmpnName}'s species:",
+                      "isRequired": true,
+                      "choices": [
+                        {
+                          "value": "CANINE",
+                          "text": "Dog"
+                        },
+                        {
+                          "value": "FELINE",
+                          "text": "Cat"
+                        },
+                        {
+                          "value": "EQUINE",
+                          "text": "Horse"
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "type": "text",
-                  "name": "CmpnInfoBreed",
-                  "title": "{CmpnName}'s breed or mix:",
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "CmpnInfoGender",
-                  "title": "{CmpnName}'s gender:",
-                  "isRequired": true,
-                  "labelTrue": "Female",
-                  "labelFalse": "Male"
-                },
-                {
-                  "type": "text",
-                  "name": "CmpnInfoWeight",
-                  "title": "{CmpnName}'s last known weight (in lbs or kg):",
-                  "description": "Please enter a number",
-                  "isRequired": true,
-                  "inputType": "number",
-                  "min": 1,
-                  "max": 2200,
-                  "validators": [
+                  "type": "panel",
+                  "name": "CmpnInfoBreedGenderPanel",
+                  "elements": [
                     {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 2200,
-                      "text": "Weight must be between 1 and 2200"
+                      "type": "text",
+                      "name": "CmpnInfoBreed",
+                      "title": "{CmpnName}'s breed or mix:",
+                      "isRequired": true
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "CmpnInfoGender",
+                      "title": "{CmpnName}'s gender:",
+                      "isRequired": true,
+                      "labelTrue": "Female",
+                      "labelFalse": "Male"
                     }
                   ]
                 },
                 {
-                  "type": "boolean",
-                  "name": "CmpnInfoWeightUnits",
-                  "title": "Weight units:",
-                  "description": "Please choose pounds or kilos.",
-                  "isRequired": true,
-                  "labelTrue": "Kg",
-                  "labelFalse": "Lbs"
+                  "type": "panel",
+                  "name": "CmpnInfoWeightPanel",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "name": "CmpnInfoWeight",
+                      "title": "{CmpnName}'s last known weight:",
+                      "description": "Please enter a number",
+                      "isRequired": true,
+                      "inputType": "number",
+                      "min": 1,
+                      "max": 2200,
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 2200,
+                          "text": "Weight must be between 1 and 2200"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "CmpnInfoWeightUnits",
+                      "title": "Weight units:",
+                      "description": "Please choose pounds or kilos.",
+                      "isRequired": true,
+                      "labelTrue": "Kg",
+                      "labelFalse": "Lbs"
+                    }
+                  ]
                 }
               ]
             }
@@ -1528,7 +1546,7 @@
             },
             {
               "type": "panel",
-              "name": "PrimaryDurationDetailsPanel",
+              "name": "PrimaryDurationFirstConsultAgePanel",
               "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
               "elements": [
                 {
@@ -1564,7 +1582,13 @@
                       "text": "Months must be between 0 and 11"
                     }
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "PrimaryDurationDetailsPanel",
+              "elements": [
                 {
                   "type": "radiogroup",
                   "name": "PrimaryDurationVisitsNumber",
@@ -3149,12 +3173,7 @@
             {
               "type": "html",
               "name": "TreatmentFactorsText",
-              "html": "<p>Magna ullamco in sint esse exercitation nostrud eiusmod sint excepteur reprehenderit velit sit. Exercitation minim veniam fugiat elit. Nisi eu ipsum pariatur officia qui dolor consectetur Lorem aliquip non. Commodo labore cupidatat culpa ea exercitation aliquip laborum qui in tempor. Adipisicing esse ex est exercitation in laboris nisi eu ut deserunt dolor.</p>"
-            },
-            {
-              "type": "html",
-              "name": "TreatmentFactorsDetailsText",
-              "html": "<p>Please rate the relevant factors in your decision whether or not to pursue tieback or other LP/GOLPP surgery.</p>"
+              "html": "<p>The LP/GOLPP journey requires making difficult decisions based on personal, financial, and family considerations. Please rate the factors that played a role in your LP/GOLPP decisions. </p>"
             },
             {
               "type": "panel",
@@ -3214,7 +3233,7 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsCostPanel",
-              "title": "How have financial considerations factored into your decision?",
+              "title": "How have financial considerations factored into your LP/GOLPP decisions?",
               "elements": [
                 {
                   "type": "rating",
@@ -3279,12 +3298,12 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsStagePanel",
-              "title": "How has the stage of {CmpnName}'s LP/GOLPP factored into your decision?",
+              "title": "Which aspects of {CmpnName}'s LP/GOLPP have factored into your decisions?",
               "elements": [
                 {
                   "type": "rating",
-                  "name": "TreatmentFactorsStageLP",
-                  "title": "Fear of a breathing emergency:",
+                  "name": "TreatmentFactorsBreathingCrisisFear",
+                  "title": "Fear of a breathing crisis or emergency:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3344,12 +3363,12 @@
             {
               "type": "panel",
               "name": "TreatmentFactorsSurgeryRisksPanel",
-              "title": "How have the risks of surgery factored into your decision?",
+              "title": "Which risk factors of surgery have factored into your decision?",
               "elements": [
                 {
                   "type": "rating",
-                  "name": "TreatmentFactorsRisks",
-                  "title": "Risks of a surgical procedure with extended anesthesia:",
+                  "name": "TreatmentFactorsAnesthesia",
+                  "title": "Extended anesthesia:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3377,8 +3396,37 @@
                 },
                 {
                   "type": "rating",
-                  "name": "TreatmentFactorsRisksComplications",
-                  "title": "Risks of post-op complications such as aspiration pneumonia or suture failure:",
+                  "name": "TreatmentFactorsInpatientComplications",
+                  "title": "Risk of direct inpatient complications of surgery:",
+                  "description": "1 = not a factor, 5 = deciding factor",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TreatmentFactorsLongTermComplications",
+                  "title": "Risks of long-term complications such as aspiration pneumonia, suture failure, or infection:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3443,7 +3491,7 @@
                 {
                   "type": "rating",
                   "name": "TreatmentFactorsGeneralHealth",
-                  "title": "{CmpnName}'s overall health and prospects for quality of life moving forward:",
+                  "title": "{CmpnName}'s overall health and prospects for quality of life:",
                   "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
@@ -3574,7 +3622,7 @@
                   "type": "text",
                   "name": "TreatmentFactorsOther",
                   "title": "Other considerations:",
-                  "description": "Maximum 250 characters.",
+                  "description": "Maximum 250 charactsers.",
                   "isRequired": false
                 }
               ]

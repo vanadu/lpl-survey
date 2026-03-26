@@ -778,7 +778,7 @@ ul.showmore_survey_icons_description {
 
 
 // !VA BROWSE-SPECIFIC CONTENT
-*::after {
+.page.browse::after {
   font-size: var(--font-size-md);
   background: var(--c-content-highlight);
 }

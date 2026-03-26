@@ -17,7 +17,7 @@
         },
         {
           "type": "panel",
-          "name": "PrimaryDurationDetailsPanel",
+          "name": "PrimaryDurationFirstConsultAgePanel",
           "title": "About how old was {CmpnName} when you first consulted with a primary veterinarian about LP/GOLPP symptoms?",
           "elements": [
             {
@@ -53,8 +53,13 @@
                   "text": "Months must be between 0 and 11"
                 }
               ]
-            },
-
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryDurationDetailsPanel",
+          "elements": [
             {
               "type": "radiogroup",
               "name": "PrimaryDurationVisitsNumber",

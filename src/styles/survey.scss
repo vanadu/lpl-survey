@@ -737,11 +737,10 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 
 
 
-
 // !VA Force the User Name and Country to 2-1 layout
 [data-name="UserInfoNameCountryPanel"],
 [data-name="dcsdCmpnInfoAgePanel"],
-[data-name="lvngCmpnInfoAgePanel"]
+[data-name="lvngCmpnInfoAgePanel"],
 [data-name="CmpnInfoDemeanor"]
 {
   .sd-element__content {
@@ -794,28 +793,56 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 }
 
 
-
-[data-name="CmpnInfoBreedGenderPanel"] {
-  background: rgba(0, 0, 255, .3) !important; //devblue
-}
-
-
-
-
-// !VA Force age/date panels to two-column layout
-[data-name="dcsdCmpnInfoAgePanel"] .sd-element__content.sd-panel__content,
-[data-name="lvngCmpnInfoAgePanel"] .sd-element__content.sd-panel__content,
-[data-name="EarlySymptomsFirstSignsPanel"] .sd-element__content.sd-panel__content,
-[data-name="PrimaryDurationFirstConsult"] .sd-element__content.sd-panel__content,
-[data-name="TreatmentStatusAgePanel"] .sd-element__content.sd-panel__content
+// !VA Force THESE panels to display flex
+[data-name="PrimaryDurationFirstConsultAgePanel"],
+[data-name="CmpnInfoBreedGenderPanel"], 
+[data-name="CmpnInfoWeightPanel"],
+[data-name="EarlySymptomsAgePanel"]
 {
-  display: flex;
   background: rgba(255, 0, 0, .3) !important; //devred
-  .sd-row {
+  .sd-element__content.sd-panel__content {
+    display: flex !important;
+    flex-direction: column;
     padding: 0!important;
     margin: 0!important;
+    @include ldesktop {
+      flex-direction: row !important;
+
+    }
+  }
+  .sd-row {
+
+    @include ldesktop {
+      padding: 0!important;
+      margin: 0!important;
+    }
   }
 }
+
+[data-name="CmpnInfoBreed"], [data-name="CmpnInfoGender"], [data-name="CmpnInfoWeight"], [data-name="CmpnInfoWeightUnits"],{
+  width: 300px !important;
+  padding: 0!important;
+  margin: 0!important;
+}
+
+// !VA Force age/date panels to two-column layout
+[data-name="dcsdCmpnInfoAgePanel"],
+[data-name="lvngCmpnInfoAgePanel"],
+[data-name="EarlySymptomsFirstSignsPanel"], 
+[data-name="PrimaryDurationFirstConsult"],
+[data-name="TreatmentStatusAgePanel"] 
+{
+  .sd-element__content.sd-panel__content {
+    display: flex;
+    .sd-row {
+      padding: 0!important;
+      margin: 0!important;
+    }
+  }
+}
+
+
+
 
 // !VA This is to force two-column radiogroups to two columns
 [data-name="ConclusionCauseOfDeath"] .sd-selectbase.survey-two-col {

@@ -115,7 +115,7 @@
                 {
                   "type": "html",
                   "name": "LandingVersion",
-                  "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.03.20.01</p></div></div>"
+                  "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.03.25.01</p></div></div>"
                 }
               ]
             },
@@ -126,17 +126,17 @@
                 {
                   "type": "html",
                   "name": "LandingWelcomeHeading",
-                  "html": "<h2>You better love the LP/GOLPP&nbsp;Survey&nbsp;2026</h2>"
+                  "html": "<h2>Welcome to the LP/GOLPP&nbsp;Survey&nbsp;2026</h2>"
                 },
                 {
                   "type": "html",
                   "name": "LandingWelcomeText1",
-                  "html": "This survey, the first of its kind, is designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis."
+                  "html": "This survey is the first phase of a longitudinal study designed to collect information directly from the people whose beloved companions suffer from canine laryngeal paralysis."
                 },
                 {
                   "type": "html",
                   "name": "LandingWelcomeText2",
-                  "html": "Aliqua aute et est proident fugiat sunt consectetur id ipsum magna nostrud tempor magna consequat. Nostrud in est ad ea exercitation. Consequat mollit consequat quis deserunt mollit laboris exercitation nostrud cillum consequat dolor proident sint. Ex duis nisi ad excepteur cupidatat enim pariatur excepteur. Occaecat sint dolor enim incididunt commodo. Consectetur anim elit et cillum ut excepteur."
+                  "html": "By sharing what you’ve seen &mdash; symptoms, treatments, and day-to-day changes &mdash; you can help build a clearer understanding of how this disease progresses and what actually helps. Each response adds to a growing body of real-world knowledge, helping to identify patterns, compare outcomes, and move toward better answers for animals with LP and the people who care for them."
                 }
               ]
             }
@@ -168,7 +168,7 @@
                 {
                   "type": "html",
                   "name": "LandingPrivacyLink",
-                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>"
+                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/privacy-info' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Privacy Policy</a></div>"
                 },
                 {
                   "type": "html",
@@ -194,7 +194,7 @@
                 {
                   "type": "html",
                   "name": "LandingConsentLink",
-                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
+                  "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/consent-info' class='survey-info-link' target='_blank' rel='noopener noreferrer'>Learn more about our Consent Policy</a></div>"
                 },
                 {
                   "type": "radiogroup",
@@ -487,65 +487,83 @@
               "name": "CmpnInfoDetailsPanel",
               "elements": [
                 {
-                  "type": "radiogroup",
-                  "name": "CmpnInfoAnimalType",
-                  "title": "{CmpnName}'s species:",
-                  "isRequired": true,
-                  "choices": [
+                  "type": "panel",
+                  "name": "CmpnInfoAnimalTypePanel",
+                  "elements": [
                     {
-                      "value": "CANINE",
-                      "text": "Dog"
-                    },
-                    {
-                      "value": "FELINE",
-                      "text": "Cat"
-                    },
-                    {
-                      "value": "EQUINE",
-                      "text": "Horse"
+                      "type": "radiogroup",
+                      "name": "CmpnInfoAnimalType",
+                      "title": "{CmpnName}'s species:",
+                      "isRequired": true,
+                      "choices": [
+                        {
+                          "value": "CANINE",
+                          "text": "Dog"
+                        },
+                        {
+                          "value": "FELINE",
+                          "text": "Cat"
+                        },
+                        {
+                          "value": "EQUINE",
+                          "text": "Horse"
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "type": "text",
-                  "name": "CmpnInfoBreed",
-                  "title": "{CmpnName}'s breed or mix:",
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "CmpnInfoGender",
-                  "title": "{CmpnName}'s gender:",
-                  "isRequired": true,
-                  "labelTrue": "Female",
-                  "labelFalse": "Male"
-                },
-                {
-                  "type": "text",
-                  "name": "CmpnInfoWeight",
-                  "title": "{CmpnName}'s last known weight (in lbs or kg):",
-                  "description": "Please enter a number",
-                  "isRequired": true,
-                  "inputType": "number",
-                  "min": 1,
-                  "max": 2200,
-                  "validators": [
+                  "type": "panel",
+                  "name": "CmpnInfoBreedGenderPanel",
+                  "elements": [
                     {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 2200,
-                      "text": "Weight must be between 1 and 2200"
+                      "type": "text",
+                      "name": "CmpnInfoBreed",
+                      "title": "{CmpnName}'s breed or mix:",
+                      "isRequired": true
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "CmpnInfoGender",
+                      "title": "{CmpnName}'s gender:",
+                      "isRequired": true,
+                      "labelTrue": "Female",
+                      "labelFalse": "Male"
                     }
                   ]
                 },
                 {
-                  "type": "boolean",
-                  "name": "CmpnInfoWeightUnits",
-                  "title": "Weight units:",
-                  "description": "Please choose pounds or kilos.",
-                  "isRequired": true,
-                  "labelTrue": "Kg",
-                  "labelFalse": "Lbs"
+                  "type": "panel",
+                  "name": "CmpnInfoWeightPanel",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "name": "CmpnInfoWeight",
+                      "title": "{CmpnName}'s last known weight:",
+                      "description": "Please enter a number",
+                      "isRequired": true,
+                      "inputType": "number",
+                      "min": 1,
+                      "max": 2200,
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 2200,
+                          "text": "Weight must be between 1 and 2200"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "CmpnInfoWeightUnits",
+                      "title": "Weight units:",
+                      "description": "Please choose pounds or kilos.",
+                      "isRequired": true,
+                      "labelTrue": "Kg",
+                      "labelFalse": "Lbs"
+                    }
+                  ]
                 }
               ]
             }

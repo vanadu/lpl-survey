@@ -45,7 +45,7 @@ const Browse_07_PrimaryDuration = () => {
         <p className="browse-content-text">This section asks about the duration of Bella&lsquo;s care by primary veterinarians for LP/GOLPP symptoms. This includes any primary veterinarians who saw Bella since the LP/GOLPP symptoms first appeared. It also asks whether you switched primary vets because of how Bella&lsquo;s symptoms were being handled.</p>
       </div>
 
-      <div className="browse-panel-container" id="PrimaryDurationDetailsPanel">
+      <div className="browse-panel-container" id="PrimaryDurationFirstConsultAgePanel">
         <h3 className="browse-showanswer-title">About how old was Bella when you first consulted with a primary veterinarian about LP/GOLPP symptoms?</h3>
       <div className="browse-question-container" id="PrimaryDurationFirstConsultYears">
         <ShowAnswerContent
@@ -82,7 +82,9 @@ const Browse_07_PrimaryDuration = () => {
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
 
+      <div className="browse-panel-container" id="PrimaryDurationDetailsPanel">
       <div className="browse-question-container" id="PrimaryDurationVisitsNumber">
         <ShowAnswerContent
           header={

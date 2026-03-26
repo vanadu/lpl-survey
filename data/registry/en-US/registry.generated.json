@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-03-26T10:31:26.941Z",
+    "builtAt": "2026-03-26T13:02:17.169Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -474,7 +474,7 @@
         "CmpnInfoWeightPanel"
       ],
       "hasTitle": true,
-      "title": "{CmpnName}'s last known weight (in lbs or kg):",
+      "title": "{CmpnName}'s last known weight:",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
@@ -1255,8 +1255,8 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "PrimaryDurationDetailsPanel": {
-      "name": "PrimaryDurationDetailsPanel",
+    "PrimaryDurationFirstConsultAgePanel": {
+      "name": "PrimaryDurationFirstConsultAgePanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -1276,7 +1276,7 @@
       "path": [
         "PRIMARY_DURATION-page",
         "PrimaryDurationCard1Panel",
-        "PrimaryDurationDetailsPanel"
+        "PrimaryDurationFirstConsultAgePanel"
       ],
       "hasTitle": true,
       "title": "Age in years (number):",
@@ -1292,13 +1292,25 @@
       "path": [
         "PRIMARY_DURATION-page",
         "PrimaryDurationCard1Panel",
-        "PrimaryDurationDetailsPanel"
+        "PrimaryDurationFirstConsultAgePanel"
       ],
       "hasTitle": true,
       "title": "Months (number 0 - 11)",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
+    },
+    "PrimaryDurationDetailsPanel": {
+      "name": "PrimaryDurationDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY_DURATION-page",
+        "PrimaryDurationCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "PrimaryDurationVisitsNumber": {
       "name": "PrimaryDurationVisitsNumber",
@@ -2527,7 +2539,7 @@
         "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
-      "title": "How have financial considerations factored into your decision?",
+      "title": "How have financial considerations factored into your LP/GOLPP decisions?",
       "hasVisibleIf": false
     },
     "TreatmentFactorsCost": {
@@ -2570,11 +2582,11 @@
         "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
-      "title": "How has the stage of {CmpnName}'s LP/GOLPP factored into your decision?",
+      "title": "Which aspects of {CmpnName}'s LP/GOLPP have factored into your decisions?",
       "hasVisibleIf": false
     },
-    "TreatmentFactorsStageLP": {
-      "name": "TreatmentFactorsStageLP",
+    "TreatmentFactorsBreathingCrisisFear": {
+      "name": "TreatmentFactorsBreathingCrisisFear",
       "type": "rating",
       "role": "question",
       "collect": true,
@@ -2584,7 +2596,7 @@
         "TreatmentFactorsStagePanel"
       ],
       "hasTitle": true,
-      "title": "Fear of a breathing emergency:",
+      "title": "Fear of a breathing crisis or emergency:",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -2613,11 +2625,11 @@
         "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
-      "title": "How have the risks of surgery factored into your decision?",
+      "title": "Which risk factors of surgery have factored into your decision?",
       "hasVisibleIf": false
     },
-    "TreatmentFactorsRisks": {
-      "name": "TreatmentFactorsRisks",
+    "TreatmentFactorsAnesthesia": {
+      "name": "TreatmentFactorsAnesthesia",
       "type": "rating",
       "role": "question",
       "collect": true,
@@ -2627,12 +2639,12 @@
         "TreatmentFactorsSurgeryRisksPanel"
       ],
       "hasTitle": true,
-      "title": "Risks of a surgical procedure with extended anesthesia:",
+      "title": "Extended anesthesia:",
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentFactorsRisksComplications": {
-      "name": "TreatmentFactorsRisksComplications",
+    "TreatmentFactorsInpatientComplications": {
+      "name": "TreatmentFactorsInpatientComplications",
       "type": "rating",
       "role": "question",
       "collect": true,
@@ -2642,7 +2654,22 @@
         "TreatmentFactorsSurgeryRisksPanel"
       ],
       "hasTitle": true,
-      "title": "Risks of post-op complications such as aspiration pneumonia or suture failure:",
+      "title": "Risk of direct inpatient complications of surgery:",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TreatmentFactorsLongTermComplications": {
+      "name": "TreatmentFactorsLongTermComplications",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "TREATMENT_FACTORS-page",
+        "TreatmentFactorsCard2Panel",
+        "TreatmentFactorsSurgeryRisksPanel"
+      ],
+      "hasTitle": true,
+      "title": "Risks of long-term complications such as aspiration pneumonia, suture failure, or infection:",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -2685,7 +2712,7 @@
         "TreatmentFactorsGeneralPanel"
       ],
       "hasTitle": true,
-      "title": "{CmpnName}'s overall health and prospects for quality of life moving forward:",
+      "title": "{CmpnName}'s overall health and prospects for quality of life:",
       "hasVisibleIf": false,
       "isRequired": true
     },

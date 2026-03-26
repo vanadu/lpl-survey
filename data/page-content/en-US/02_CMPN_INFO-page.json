@@ -72,7 +72,7 @@
                 {
                   "type": "text",
                   "name": "CmpnInfoWeight",
-                  "title": "{CmpnName}'s last known weight (in lbs or kg):",
+                  "title": "{CmpnName}'s last known weight:",
                   "description": "Please enter a number",
                   "isRequired": true,
                   "inputType": "number",

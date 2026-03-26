@@ -1,0 +1,19 @@
+Removed:
+
+
+
+
+Added:
+
+CmpnInfoBreedGenderPanel
+CmpnInfoWeightPanel
+
+
+TreatmentFactorsRisks -> TreatmentFactorsAnesthesia
+						-> TreatmentFactorsLongTermComplications
+						-> TreatmentFactorsInpatientComplications
+						
+						
+TreatmentFactorsStagePanel -> TreatmentFactorsAspectsPanel
+TreatmentFactorsStageLP -> TreatmentFactorsBreathingCrisisFear
+TreatmentFactorsStageNeuropathy -> TreatmentFactorsNeuropathy

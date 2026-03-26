@@ -96,7 +96,7 @@ const ITEMS_THREE_COL = new Set([
   "BreathingCrisisProvidedSubstance",
   "EarlySymptomsHindEndWeakness",
   "EarlySymptomsIncontinence",
-  "EarlyOtherConditions",
+  "EarlySymptomsOtherConditions",
   "PrimaryDurationChangedVets",
   "PrimaryVetInflammation",
   "PrimaryVetRefluxPanel",
@@ -145,8 +145,6 @@ const CONTROL_WIDTH_300 = new Set([
   "UserInfoCountry",
   "UserInfoStateRegion",
   "UserInfoAgeGroup",
-  "CmpnInfoBreed",
-    "CmpnInfoGender",
 
 
 
@@ -220,6 +218,8 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
   
   "UserInfoGender",
 
+  "CmpnInfoWeightPanel",
+
   "UserInfoStateRegion",
 
   "IntubationHistoryReason",
@@ -230,7 +230,7 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
   "BreathingCrisisCost", 
   "BreathingCrisisProvidedSubstanceType",
 
-  "EarlyOtherConditionsType",
+  "EarlySymptomsOtherConditionsType",
 
 
   "PrimaryDurationVisitsNumber",
@@ -291,6 +291,7 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
 
   "CmpnInfoAnimalType",
+
   "CmpnInfoDemeanor",
   "CmpnInfoAnxiety",
 
@@ -310,7 +311,7 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "BreathingCrisisProvidedSubstanceType",
 
   "EarlySymptomsType",
-  "EarlySymtomsSeverity",
+  "EarlySymptomsSeverity",
   "EarlySymptomsHindEndWeakness",
 
 
@@ -433,7 +434,7 @@ const QUESTION_SEPARATOR_BELOW = new Set([
     "CmpnInfoGender",
 
 
-
+    "TreatmentStatusDidHave",
 
 
     "TreatmentStatusBveapComplications",
