@@ -73,24 +73,26 @@ const Home = () => {
           </article>
 
 
-          <article class="card home-content">
+          <article className="card home-content">
             <h2 className="home-about-heading">Your experience matters!</h2>
             <p>This survey is the first phase of a long-range research study focused on better understanding canine laryngeal paralysis (LP) and geriatric-onset laryngeal paralysis &amp; polyneuropathy (GOLPP).</p>
             
-            <h3>Why now and why you?</h3>
+            <h3 className='article-heading'>Why now and why you?</h3>
             <p>Today, there are no clearly established treatment protocols for LP. Veterinarians often have to rely on general medical approaches to manage a condition that is still not well understood. The most common surgical treatment dates back to the 1980s, and efforts to expand or rethink treatment options have been limited. At the same time, there is very little accessible, up-to-date information available to support ongoing education about the disease.</p>
 
             <p>In recent years, social media &mdash; especially platforms like Facebook &mdash; has dramatically increased awareness of LP. Large online communities of dog owners are now sharing experiences, observations, and treatment outcomes in real time. While this has created valuable peer support, it has also led to the spread of inconsistent and sometimes conflicting information.</p>
             
-            <h3>Transforming experience into knowledge</h3>
+            <h3 className='article-heading'>Transforming experience into knowledge</h3>
             <p>This study begins by turning that growing body of real-world experience into structured data.</p>
 
             <p>The goal of this first phase is to gather detailed information directly from people who are actively managing their beloved companion&lsquo;s LP/GOLPP. These individuals &mdash; people like you &mdash; are on the front lines making decisions, trying treatments, and observing outcomes day by day. Your experiences represent a largely untapped source of insight into how the disease progresses and how different treatments perform in real-world conditions.</p>
 
-            <h3>Strength in numbers</h3>
+            <h3 className='article-heading'>Strength in numbers</h3>
             <p>As more people participate, the value of the data increases. Larger numbers of responses make it possible to identify meaningful patterns, compare outcomes, and improve the reliability of conclusions.</p>
 
             <p>This survey is not just a one-time questionnaire. It is designed as the foundation for an ongoing study that will track the course of the disease over time, including treatments, changes in condition, and long-term outcomes.</p>
+
+            <p>For more informatin about the <span className="emphasis">2026 LP/GOLPP Survey</span> see the <Link href='/survey-faqs' className='link-accent'>FAQs page</Link>.</p>
 
             {/* <p>Your beloved companion&lsquo;s LP/GOLPP journey </p> */}
           </article>
