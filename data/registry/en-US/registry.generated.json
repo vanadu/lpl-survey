@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-03-27T08:11:57.399Z",
+    "builtAt": "2026-03-30T08:53:28.760Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -1171,7 +1171,7 @@
         "EarlySymptomsDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
+      "title": "Was {CmpnName} showing signs of hind-end weakness at this stage?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1186,7 +1186,7 @@
         "EarlySymptomsDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?",
+      "title": "Was {CmpnName} of urinary or fecal incontinence at this stage?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -2572,8 +2572,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentFactorsStagePanel": {
-      "name": "TreatmentFactorsStagePanel",
+    "TreatmentFactorsAspectsPanel": {
+      "name": "TreatmentFactorsAspectsPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -2582,7 +2582,7 @@
         "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
-      "title": "Which aspects of {CmpnName}'s LP/GOLPP have factored into your decisions?",
+      "title": "Which aspects of {CmpnName}'s LP/GOLPP symptoms have factored into your decisions?",
       "hasVisibleIf": false
     },
     "TreatmentFactorsBreathingCrisisFear": {
@@ -2593,25 +2593,25 @@
       "path": [
         "TREATMENT_FACTORS-page",
         "TreatmentFactorsCard2Panel",
-        "TreatmentFactorsStagePanel"
+        "TreatmentFactorsAspectsPanel"
       ],
       "hasTitle": true,
       "title": "Fear of a breathing crisis or emergency:",
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentFactorsStageNeuropathy": {
-      "name": "TreatmentFactorsStageNeuropathy",
+    "TreatmentFactorsNeuropathyProgression": {
+      "name": "TreatmentFactorsNeuropathyProgression",
       "type": "rating",
       "role": "question",
       "collect": true,
       "path": [
         "TREATMENT_FACTORS-page",
         "TreatmentFactorsCard2Panel",
-        "TreatmentFactorsStagePanel"
+        "TreatmentFactorsAspectsPanel"
       ],
       "hasTitle": true,
-      "title": "{CmpnName}'s hind-end weakness and polyneuropathy:",
+      "title": "Progression of {CmpnName}'s hind-end weakness and polyneuropathy:",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -2625,7 +2625,7 @@
         "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
-      "title": "Which risk factors of surgery have factored into your decision?",
+      "title": "Which risk factors of surgery have factored into your LP/GOLPP decisions?",
       "hasVisibleIf": false
     },
     "TreatmentFactorsAnesthesia": {
@@ -2683,7 +2683,7 @@
         "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
-      "title": "How have {CmpnName}'s age and general health considerations factored into your decision?",
+      "title": "How have {CmpnName}'s age and general health considerations factored into your LP/GOLPP decisions?",
       "hasVisibleIf": false
     },
     "TreatmentFactorsAge": {
@@ -2759,8 +2759,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "TreatmentFactorsCircumstancesCare": {
-      "name": "TreatmentFactorsCircumstancesCare",
+    "TreatmentFactorsCircumstancesFutureCare": {
+      "name": "TreatmentFactorsCircumstancesFutureCare",
       "type": "rating",
       "role": "question",
       "collect": true,
@@ -2770,7 +2770,7 @@
         "TreatmentFactorsCircumstancesPanel"
       ],
       "hasTitle": true,
-      "title": "Ability to provide adequate post-operative care:",
+      "title": "Ability to provide adequate care in the future:",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -2784,7 +2784,7 @@
         "TreatmentFactorsCard2Panel"
       ],
       "hasTitle": true,
-      "title": "What other considerations, if any, have factored into your decision?",
+      "title": "What other considerations, if any, have factored into your LP/GOLPP decisions?",
       "hasVisibleIf": false
     },
     "TreatmentFactorsOther": {
@@ -3307,7 +3307,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of acupuncture on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'ACUPUNCTURE'",
       "isRequired": true
     },
     "ManagementNonPrescriptionAcupunctureRatingMobility": {
@@ -3323,7 +3323,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of acupuncture on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'ACUPUNCTURE'",
       "isRequired": true
     },
     "ManagementNonPrescriptionTherapyRatingBreathing": {
@@ -3339,7 +3339,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'THERAPY'",
       "isRequired": true
     },
     "ManagementNonPrescriptionTherapyRatingMobility": {
@@ -3355,7 +3355,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'THERAPY'",
       "isRequired": true
     },
     "ManagementNonPrescriptionColdLaserRatingBreathing": {
@@ -3371,7 +3371,7 @@
       "hasTitle": true,
       "title": "How effective was cold laser or red light therapy on {CmpnName}'s breathing:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'LLLT'",
       "isRequired": true
     },
     "ManagementNonPrescriptionColdLaserRatingMobility": {
@@ -3387,7 +3387,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of cold laser or red light therapy on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'LLLT'",
       "isRequired": true
     },
     "ManagementNonPrescriptionChiroRatingBreathing": {
@@ -3403,7 +3403,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of chiropractic on {CmpnName}'s breathing on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'CHIRO'",
       "isRequired": true
     },
     "ManagementNonPrescriptionChiroRatingMobility": {
@@ -3419,7 +3419,7 @@
       "hasTitle": true,
       "title": "Please rate the effect of chiropractic on {CmpnName}'s mobility or behavior:",
       "hasVisibleIf": true,
-      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
+      "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'CHIRO'",
       "isRequired": true
     },
     "OTCProductsCard1Panel": {

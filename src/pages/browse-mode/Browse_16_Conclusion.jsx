@@ -325,6 +325,10 @@ const Browse_16_Conclusion = () => {
           <ul>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>No new conditions</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Acid reflux (GERD)</span>
             </li>
             <li className="browse-showanswer-checkbox">
@@ -354,10 +358,6 @@ const Browse_16_Conclusion = () => {
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Hemangiosarcoma</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>No new conditions</span>
             </li>
           </ul>
           </div>

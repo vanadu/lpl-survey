@@ -582,7 +582,7 @@
               "title": "Please rate the effect of acupuncture on {CmpnName}'s breathing:",
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
-              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'ACUPUNCTURE'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -598,7 +598,7 @@
               "title": "Please rate the effect of acupuncture on {CmpnName}'s mobility or behavior:",
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
-              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'ACUPUNCTURE'",
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'ACUPUNCTURE'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -614,7 +614,7 @@
               "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s breathing:",
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
-              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'THERAPY'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -630,7 +630,7 @@
               "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s mobility or behavior:",
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
-              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'THERAPY'",
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'THERAPY'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -646,7 +646,7 @@
               "title": "How effective was cold laser or red light therapy on {CmpnName}'s breathing:",
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
-              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'LLLT'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -662,7 +662,7 @@
               "title": "Please rate the effect of cold laser or red light therapy on {CmpnName}'s mobility or behavior:",
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
-              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'LLLT'",
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'LLLT'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -678,7 +678,7 @@
               "title": "Please rate the effect of chiropractic on {CmpnName}'s breathing on {CmpnName}'s mobility or behavior:",
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
-              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'CHIRO'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -694,7 +694,7 @@
               "title": "Please rate the effect of chiropractic on {CmpnName}'s mobility or behavior:",
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
-              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementPrescriptionType} contains 'CHIRO'",
+              "visibleIf": "{ManagementNonPrescription} = 'YES' && {ManagementNonPrescriptionType} contains 'CHIRO'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

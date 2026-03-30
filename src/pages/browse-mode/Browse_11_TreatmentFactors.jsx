@@ -394,8 +394,8 @@ const Browse_11_TreatmentFactors = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="TreatmentFactorsStagePanel">
-        <h3 className="browse-showanswer-title">Which aspects of Bella&lsquo;s LP/GOLPP have factored into your decisions?</h3>
+      <div className="browse-panel-container" id="TreatmentFactorsAspectsPanel">
+        <h3 className="browse-showanswer-title">Which aspects of Bella&lsquo;s LP/GOLPP symptoms have factored into your decisions?</h3>
       <div className="browse-question-container" id="TreatmentFactorsBreathingCrisisFear">
         <ShowAnswerContent
           header={
@@ -536,11 +536,11 @@ const Browse_11_TreatmentFactors = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="TreatmentFactorsStageNeuropathy">
+      <div className="browse-question-container" id="TreatmentFactorsNeuropathyProgression">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella&lsquo;s hind-end weakness and polyneuropathy:
+              Progression of Bella&lsquo;s hind-end weakness and polyneuropathy:
             </span>
           }
           index={6}
@@ -678,7 +678,7 @@ const Browse_11_TreatmentFactors = () => {
       </div>
 
       <div className="browse-panel-container" id="TreatmentFactorsSurgeryRisksPanel">
-        <h3 className="browse-showanswer-title">Which risk factors of surgery have factored into your decision?</h3>
+        <h3 className="browse-showanswer-title">Which risk factors of surgery have factored into your LP/GOLPP decisions?</h3>
       <div className="browse-question-container" id="TreatmentFactorsAnesthesia">
         <ShowAnswerContent
           header={
@@ -1101,7 +1101,7 @@ const Browse_11_TreatmentFactors = () => {
       </div>
 
       <div className="browse-panel-container" id="TreatmentFactorsGeneralPanel">
-        <h3 className="browse-showanswer-title">How have Bella&lsquo;s age and general health considerations factored into your decision?</h3>
+        <h3 className="browse-showanswer-title">How have Bella&lsquo;s age and general health considerations factored into your LP/GOLPP decisions?</h3>
       <div className="browse-question-container" id="TreatmentFactorsAge">
         <ShowAnswerContent
           header={
@@ -1665,11 +1665,11 @@ const Browse_11_TreatmentFactors = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="TreatmentFactorsCircumstancesCare">
+      <div className="browse-question-container" id="TreatmentFactorsCircumstancesFutureCare">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Ability to provide adequate post-operative care:
+              Ability to provide adequate care in the future:
             </span>
           }
           index={14}
@@ -1807,7 +1807,7 @@ const Browse_11_TreatmentFactors = () => {
       </div>
 
       <div className="browse-panel-container" id="TreatmentFactorsOtherPanel">
-        <h3 className="browse-showanswer-title">What other considerations, if any, have factored into your decision?</h3>
+        <h3 className="browse-showanswer-title">What other considerations, if any, have factored into your LP/GOLPP decisions?</h3>
       <div className="browse-question-container" id="TreatmentFactorsOther">
         <ShowAnswerContent
           header={

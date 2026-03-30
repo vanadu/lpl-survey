@@ -92,7 +92,7 @@ const Home = () => {
 
             <p>This survey is not just a one-time questionnaire. It is designed as the foundation for an ongoing study that will track the course of the disease over time, including treatments, changes in condition, and long-term outcomes.</p>
 
-            <p>For more informatin about the <span className="emphasis">2026 LP/GOLPP Survey</span> see the <Link href='/survey-faqs' className='link-accent'>FAQs page</Link>.</p>
+            <p>For more information about the <span className="emphasis">2026 LP/GOLPP Survey</span> see the <Link href='/survey-faqs' className='link-accent'>FAQs page</Link>.</p>
 
             {/* <p>Your beloved companion&lsquo;s LP/GOLPP journey </p> */}
           </article>

@@ -149,6 +149,10 @@
             "isRequired": true,
             "choices": [
                 {
+                  "value": "NONE",
+                  "text": "No new conditions"
+                },
+                {
                   "value": "GERD",
                   "text": "Acid reflux (GERD)"
                 },
@@ -179,10 +183,6 @@
                 {
                   "value": "HEMANGIOSARCOMA",
                   "text": "Hemangiosarcoma"
-                },
-                {
-                  "value": "NONE",
-                  "text": "No new conditions"
                 }
               ],
               "choicesOrder": "none",

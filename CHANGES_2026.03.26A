@@ -9,11 +9,40 @@ CmpnInfoBreedGenderPanel
 CmpnInfoWeightPanel
 
 
-TreatmentFactorsRisks -> TreatmentFactorsAnesthesia
-						-> TreatmentFactorsLongTermComplications
-						-> TreatmentFactorsInpatientComplications
-						
-						
 TreatmentFactorsStagePanel -> TreatmentFactorsAspectsPanel
 TreatmentFactorsStageLP -> TreatmentFactorsBreathingCrisisFear
-TreatmentFactorsStageNeuropathy -> TreatmentFactorsNeuropathy
+TreatmentFactorsStageNeuropathy --> TreatmentFactorsNeuropathyProgression
+
+
+TreatmentFactorsSurgeryRisksPanel
+
+
+TreatmentFactorsRisks -> TreatmentFactorsAnesthesia
+						-> TreatmentFactorsInpatientComplications
+						-> TreatmentFactorsLongTermComplications
+						
+						
+TreatmentFactorsGeneralHealth --> TreatmentFactorsQualityOfLife		
+						
+TreatmentFactorsCircumstancesCare --> TreatmentFactorsCircumstancesFutureCare
+
+Add SEPARATOR_TOP
+-------------
+
+UserInfoContactOK
+
+
+
+
+Remove SEPARATOR_TOP
+--------------------
+
+PrimaryDurationVisitsNumber
+
+
+
+
+
+
+
+Add cisapride, metaclo

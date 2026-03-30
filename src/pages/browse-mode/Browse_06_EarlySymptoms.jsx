@@ -42,7 +42,7 @@ const Browse_06_EarlySymptoms = () => {
       </div>
 
       <div className="browse-content-block" id="EarlySymptomsText">
-        <p className="browse-content-text">Most people know something&lsquo;s wrong with their companion before they know it&lsquo;s LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe Bella might have it.</p>
+        <p className="browse-content-text">MThis section asks questions about the early phase of your LP/GOLPP journey and how you came to believe Bella might have it.</p>
       </div>
 
       <div className="browse-panel-container" id="EarlySymptomsAgePanel">
@@ -276,7 +276,7 @@ const Browse_06_EarlySymptoms = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Was Bella already showing signs of hind-end weakness in this early stage?
+              Was Bella showing signs of hind-end weakness at this stage?
             </span>
           }
           index={5}
@@ -307,7 +307,7 @@ const Browse_06_EarlySymptoms = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Was Bella already showing signs of urinary or fecal incontinence weakness in this early stage?
+              Was Bella of urinary or fecal incontinence at this stage?
             </span>
           }
           index={6}

@@ -109,8 +109,8 @@
 
         {
           "type": "panel",
-          "name": "TreatmentFactorsStagePanel",
-          "title": "Which aspects of {CmpnName}'s LP/GOLPP have factored into your decisions?",
+          "name": "TreatmentFactorsAspectsPanel",
+          "title": "Which aspects of {CmpnName}'s LP/GOLPP symptoms have factored into your decisions?",
           "elements": [
           {
             "type": "rating",
@@ -129,8 +129,8 @@
 
           {
             "type": "rating",
-            "name": "TreatmentFactorsStageNeuropathy",
-            "title": "{CmpnName}'s hind-end weakness and polyneuropathy:",
+            "name": "TreatmentFactorsNeuropathyProgression",
+            "title": "Progression of {CmpnName}'s hind-end weakness and polyneuropathy:",
             "description": "1 = not a factor, 5 = deciding factor",
             "isRequired": true,
             "rateValues": [
@@ -147,7 +147,7 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsSurgeryRisksPanel",
-          "title": "Which risk factors of surgery have factored into your decision?",
+          "title": "Which risk factors of surgery have factored into your LP/GOLPP decisions?",
           "elements": [
             {
               "type": "rating",
@@ -198,7 +198,7 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsGeneralPanel",
-          "title": "How have {CmpnName}'s age and general health considerations factored into your decision?",
+          "title": "How have {CmpnName}'s age and general health considerations factored into your LP/GOLPP decisions?",
           "elements": [
             {
               "type": "rating",
@@ -216,7 +216,7 @@
             },
             {
               "type": "rating",
-              "name": "TreatmentFactorsGeneralHealth",
+            "name": "TreatmentFactorsGeneralHealth",
               "title": "{CmpnName}'s overall health and prospects for quality of life:",
               "description": "1 = not a factor, 5 = deciding factor",
               "isRequired": true,
@@ -267,8 +267,8 @@
 
             {
               "type": "rating",
-              "name": "TreatmentFactorsCircumstancesCare",
-              "title": "Ability to provide adequate post-operative care:",
+              "name": "TreatmentFactorsCircumstancesFutureCare",
+              "title": "Ability to provide adequate care in the future:",
               "description": "1 = not a factor, 5 = deciding factor",
               "isRequired": true,
               "rateValues": [
@@ -285,7 +285,7 @@
         {
           "type": "panel",
           "name": "TreatmentFactorsOtherPanel",
-          "title": "What other considerations, if any, have factored into your decision?",
+          "title": "What other considerations, if any, have factored into your LP/GOLPP decisions?",
           "elements": [
             {
               "type": "text",

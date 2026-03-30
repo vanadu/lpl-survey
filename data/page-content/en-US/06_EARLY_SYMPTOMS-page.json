@@ -13,7 +13,7 @@
         {
           "type": "html",
           "name": "EarlySymptomsText",
-          "html": "<p>Most people know something's wrong with their companion before they know it's LP or even before they know there is such a thing as LP. This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
+          "html": "<p>MThis section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
         },
         {
           "type": "panel",
@@ -115,7 +115,7 @@
             {
               "type": "radiogroup",
               "name": "EarlySymptomsHindEndWeakness",
-              "title": "Was {CmpnName} already showing signs of hind-end weakness in this early stage?",
+              "title": "Was {CmpnName} showing signs of hind-end weakness at this stage?",
               "isRequired": true,
               "choices": [
                 {
@@ -135,7 +135,7 @@
             {
               "type": "radiogroup",
               "name": "EarlySymptomsIncontinence",
-              "title": "Was {CmpnName} already showing signs of urinary or fecal incontinence weakness in this early stage?",
+              "title": "Was {CmpnName} of urinary or fecal incontinence at this stage?",
               "isRequired": true,
               "choices": [
                 {

@@ -12,8 +12,8 @@ const ITEMS_CARD_PANEL = new Set([
   "CmpnInfoCard1Panel",
   "CmpnInfoCard2Panel",
   "CmpnInfoCard2Panel",
-  "InfoSoucesCard1Panel",
-  "InfoSoucesCard2Panel",
+  "InfoSourcesCard1Panel",
+  "InfoSourcesCard2Panel",
   "IntubationHistoryCard1Panel",
   "BreathingCrisisCard1Panel",
   "BreathingCrisisCard2Panel",
@@ -30,6 +30,10 @@ const ITEMS_CARD_PANEL = new Set([
   "TreatmentFactorsCard2Panel",
   "ManagementCard1Panel",
   "ManagementCard2Panel",
+
+  "OTCProductsCard1Panel",
+  "OTCProductsCard2Panel",
+
   "AspirationCard1Panel",
   "AspirationCard2Panel",
   "NeuropathyCard1Panel",
@@ -183,10 +187,10 @@ const CONTROL_WIDTH_300 = new Set([
 
 const CONTROL_WIDTH_600 = new Set([
 
-
-
-
   "BreathingCrisisCount",
+
+
+
   "PrimaryDurationVisitsNumber",
   "DiagnosisWho",
   "DiagnosticType",
@@ -232,32 +236,24 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
 
   "EarlySymptomsOtherConditionsType",
 
-
   "PrimaryDurationVisitsNumber",
-
   "PrimaryDurationChangedVets",
-
   "PrimaryDurationChangedVetsReason",
+
   "PrimaryVetInfoDetails",
   "PrimaryVetSurgeryPerception",
 
   "TreatmentStatusTiebackComplications",
-
   "TreatmentStatusTiebackComplicationsCost",
 
   "ManagementPrescriptionType",
-
   "ManagementNonPrescriptionType",
-
   "ManagementNonPrescriptionCost",
-
-
 
   "OTCProductsType",
   "OTCProtocolCost",
 
   "AspirationInpatientCount",
-
   "AspirationSurgeryPostCount",
   "AspirationStentPostCount",
 
@@ -278,33 +274,22 @@ const QUESTION_SPACE_ABOVE = new Set([
 const QUESTION_SEPARATOR_BELOW = new Set([
   // put question names here (same .name values you already use)
   "CmpnName",
+
   "UserInfoContactType",
   "UserInfoContactTypeFacebook",
-
-
-
   // "UserInfoCountry",
   // "UserInfoStateRegion",
  
   // "CmpnInfoBreed",
   // "CmpnInfoGender",
-
-
   "CmpnInfoAnimalType",
-
   "CmpnInfoDemeanor",
   "CmpnInfoAnxiety",
 
   "InfoSourcesPriorKnowledge", 
-
   "InfoSourcesTypes",
   "InfoSourcesHardToUnderstand",
   "InfoSourcesContradictory",
-
-
-
-
-
 
   "BreathingCrisisAdvice",
   "BreathingCrisisAdviceType",
@@ -313,19 +298,11 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "EarlySymptomsType",
   "EarlySymptomsSeverity",
   "EarlySymptomsHindEndWeakness",
-
-
-
-
   
   "PrimaryDurationVisitsNumber",
 
-
-
-
   "PrimaryVetReflux",
   "PrimaryVetRefluxMeds",
-
   "PrimaryVetConfidence",
 
   "DiagnosisWho",
@@ -337,8 +314,6 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "TreatmentStatusTiebackEmergency",
   "TreatmentStatusTiebackWait",
   "TreatmentStatusTiebackCount",
-
-
 
   "TreatmentStatusBveapReasons",
   "TreatmentStatusBveapCost",
@@ -361,27 +336,18 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "TreatmentStatusVentrilocordectomyDidExplain",
   "TreatmentStatusVentrilocordectomyCost",
 
-
-
-
   "TreatmentStatusSurgeonInformLevel",
 
+  // "TreatmentFactorsCost",
+  // "TreatmentFactorsStageLP",
+  // "TreatmentFactorsRisks",
+  // "TreatmentFactorsAge",
+  // "TreatmentFactorsGeneralHealth",
+  // "TreatmentFactorsCostPanel",
+  // "TreatmentFactorsCircumstancesAccess",
+  // "TreatmentFactorsOther",
 
 
-
-  "TreatmentFactorsCost",
-
-  "TreatmentFactorsStageLP",
-
-  "TreatmentFactorsRisks",
-
-  "TreatmentFactorsAge",
-  "TreatmentFactorsGeneralHealth",
-
-  "TreatmentFactorsCircumstancesAccess",
-
-
-  "TreatmentFactorsOther",
   "ManagementPrescriptionType",
   "ManagementPrescriptionCost",
 

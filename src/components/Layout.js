@@ -7,11 +7,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="site-wrap">
-        <Header />
+        {/* <Header /> */}
         <div className="content">
           { children }
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

@@ -1,0 +1,14 @@
+PAGE_REFACTOR.TXT
+
+The file list is referenced in:
+
+/next.config.js
+
+/scripts/generateBilingualFile.js
+/scripts/merge-surveys.js
+/scripts/generate-browse.js
+
+
+
+/src/components/SurveyComponent.js
+/src/components/SurveyComponentMaster.js - only in TOP_ICON_LINKS

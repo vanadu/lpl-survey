@@ -243,15 +243,17 @@
 // !VA PANEL TITLES - SET TO SAME AS QUESTION TITLES
 .sd-container-modern .sd-title.sd-element__title {
   --sjs-font-questiontitle-size: calc(.9 * (var(--sjs-font-size)));
-  span {
     // !VA Line heights for question titles
-    line-height: calc(1.1 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));    
+    line-height: calc(.85 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));  
     @include ldesktop {
       line-height: calc(1.4 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-    
     }
-  }
 }
+
+
+
+
+
 
 // !VA HTML p, li DEFAULT: NO PADDING ON THESE   ELEMENTS
 .sd-container-modern .sd-element__content .sd-html {
@@ -599,42 +601,44 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
   margin: 0!important;
 }
 
-// [data-name="CmpnInfoAgePanel"] {
-//   padding: 0!important;
-//   margin: 0!important;
-//   // border: none!important;
-// }
-
-// [data-name="dcsdCmpnInfoAgePanel"] {
-//   padding: 0!important;
-//   margin: 0!important;
-//   // border: none!important;
-//   background: rgba(0, 0, 255, .3) !important; //devblue
-// }
-
-
-// .sd-container-modern .sd-element--with-frame {
-// }
 
 
 // !VA Default border on .sd-element--nested-with-borders, overrides survey-core
 .sd-container-modern .sd-element--nested-with-borders {
   margin-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   border: none;
-  @include ldesktop { 
-    // width: 90% !important;
+  border-top: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
+  @include tablet {
+      // width: 90% !important;
     margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-
     padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-
-
+    border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
+    border-radius: 10px;
+  }
+  @include desktop {
+    // width: 90% !important;
+    margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
+    border-radius: 10px;
+  }
+  @include ldesktop { 
+    // width: 90% !important;
+    margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
     border-radius: 10px;
   }
@@ -799,19 +803,30 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 [data-name="CmpnInfoWeightPanel"],
 [data-name="EarlySymptomsAgePanel"]
 {
-  background: rgba(255, 0, 0, .3) !important; //devred
   .sd-element__content.sd-panel__content {
     display: flex !important;
     flex-direction: column;
     padding: 0!important;
     margin: 0!important;
+    @include tablet {
+      flex-direction: row !important;
+    }
+    @include desktop {
+      flex-direction: row !important;
+    }
     @include ldesktop {
       flex-direction: row !important;
-
     }
   }
   .sd-row {
-
+    @include tablet {
+      padding: 0!important;
+      margin: 0!important;
+    }
+    @include desktop {
+      padding: 0!important;
+      margin: 0!important;
+    }
     @include ldesktop {
       padding: 0!important;
       margin: 0!important;
@@ -919,6 +934,16 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   padding: 0;
   margin: 0;
   min-width: 0;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
   @include ldesktop {
     display: flex;
     flex-wrap: wrap;
@@ -1680,7 +1705,12 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   outline: none;
 }
 
-
+// !VA 2026.03.28
+// ==================
+// !VA Remove for print
+.sd-progress-buttons {
+  // display: none!important;
+}
 
 
 
