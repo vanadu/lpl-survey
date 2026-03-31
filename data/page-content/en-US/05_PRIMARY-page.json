@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "PrimaryHeading",
-          "html": "<h2>Your current primary veterinarian and {CmpnName}'s LP/GOLPP</h2>"
+          "html": "<h2>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h2>"
         },
         {
           "type": "html",
@@ -61,32 +61,8 @@
                 }
               ],
               "showOtherItem": false
-            },
-            {
-              "type": "radiogroup",
-              "name": "PrimaryDidDiscuss",
-              "title": "Did your current primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms? ",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "NO_MENTION",
-                  "text": "No, did not mention LP/GOLPP at all"
-                },
-                {
-                  "value": "POSSIBLY",
-                  "text": "Said {CmpnName}'s symptoms were possibly due to LP/GOLPP"
-                },
-                {
-                  "value": "DEFINITELY",
-                  "text": "Said {CmpnName}'s symptoms were definitely due to LP/GOLPP"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
             }
+
           ]
         }
       ]
@@ -100,14 +76,36 @@
           "name": "PrimaryInfoPanel",
           "title": "",
           "elements": [
-
-
+          {
+            "type": "radiogroup",
+            "name": "PrimaryDidDiscuss",
+            "title": "Did your current primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms? ",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "NO_MENTION",
+                "text": "No, did not mention LP/GOLPP at all"
+              },
+              {
+                "value": "POSSIBLY",
+                "text": "Said {CmpnName}'s symptoms were possibly due to LP/GOLPP"
+              },
+              {
+                "value": "DEFINITELY",
+                "text": "Said {CmpnName}'s symptoms were definitely due to LP/GOLPP"
+              },
+              {
+                "value": "DONT_KNOW",
+                "text": "Don't know"
+              }
+            ],
+            "showOtherItem": false
+          },
           {
             "type": "radiogroup",
             "name": "PrimaryInfoDetails",
             "title": "Did your current primary veterinarian give you useful information about LP/GOLPP?",
             "isRequired": true,
-            "visibleIf": "{PrimaryVetInfo} = true",
             "choices": [
               {
                 "value": "NO_INFO",
@@ -123,12 +121,60 @@
               },
               {
                 "value": "DONT_KNOW",
-                "text": "Don&lsquo;t know or can&lsquo;t remember."
+                "text": "Don't know or can't remember."
               }
-            ],
-            "showOtherItem": true
+            ]
           }
         ]
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryReferralPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "PrimaryDidRefer",
+              "title": "Did your primary veterinarian refer you to a specialist about {CmpnName}'s LP/GOLPP?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "PrimaryReferral",
+              "title": "Which specialist were you referred to?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "INTERNIST",
+                  "text": "Internal medicine specialist (internist)"
+                },
+                {
+                  "value": "NEUROLOGIST",
+                  "text": "Neurologist"
+                },
+                {
+                  "value": "SURGEON",
+                  "text": "Soft-tissue specialist/surgeon"
+                },
+                {
+                  "value": "HOLISTIC",
+                  "text": "Holistic or acupuncturist"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": false
+            }
+          ]
         },
         {
           "type": "panel",
@@ -162,7 +208,7 @@
               "name": "PrimarySurgeryPerception",
               "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
               "isRequired": true,
-              "visibleIf": "{PrimaryVetSurgery} = 'ADVISED_AGAINST'",
+              "visibleIf": "{PrimarySurgery} = 'ADVISED_AGAINST'",
               "choices": [
                 {
                   "value": "SPECIFIC_CONDITION",

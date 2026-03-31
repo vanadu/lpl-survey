@@ -65,12 +65,27 @@ const ITEMS_TWO_COL = new Set([
 
   "FactorsSourcesTypes",
 
+  "SymptomsAgePanel", //This is no working, not sure why
+  "SymptomsType",
+  "SymptomsOtherConditionsType",
+
+  "PrimaryDidRefer",
+  "PrimaryReferral"
 
 
 ]);
 
 const ITEMS_THREE_COL = new Set([
   "CmpnInfoAnimalType",
+
+  "SymptomsNeckRestraint",
+  "SymptomsSeverity",
+  "SymptomsIntubationWasIntubated",
+  "SymptomsOtherConditions",
+
+  "PrimaryInflammationPanel", //check if this style includes a space after - it shouldn't
+  "PrimaryReflux",
+  "PrimaryChangedVets"
 
 
 ]);
@@ -83,6 +98,10 @@ const CONTROL_WIDTH_150 = new Set ([
   "dcsdCmpnInfoAgeMonths",
   "lvngCmpnInfoAgeYears",
   "lvngCmpnInfoAgeMonths",
+
+  "SymptomsAgeYears",
+  "SymptomsAgeMonths"
+
 
 ])
 
@@ -131,6 +150,18 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
 
   "CmpnInfoWeightPanel",
 
+  "SymptomsIntubationConcerns",
+  "SymptomsOtherConditionsType",
+
+  "PrimaryReflux",
+  "PrimaryInfoDetails",
+  "PrimarySurgeryPerception",
+  "PrimaryChangedVetsReason",
+  "PrimaryConfidence",
+  "PrimaryReferral"
+
+
+
 
   ]);
 
@@ -155,7 +186,13 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
   "FactorsPriorKnowledge", 
   "FactorsSourcesTypes",
-  "FactorsBestSource"
+  "FactorsBestSource",
+
+  "SymptomsType",
+  "SymptomsSeverity",
+  "SymptomsIntubationSymptoms"
+
+
 
   
 ]);

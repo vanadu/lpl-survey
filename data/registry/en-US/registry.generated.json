@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-03-30T18:39:48.092Z",
+    "builtAt": "2026-03-31T09:46:01.929Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -1296,21 +1296,9 @@
         "PrimaryInflammationPanel"
       ],
       "hasTitle": true,
-      "title": "Did your primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
+      "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
       "hasVisibleIf": false,
       "isRequired": true
-    },
-    "PrimaryRefluxPanel": {
-      "name": "PrimaryRefluxPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PRIMARY-page",
-        "PrimaryCard1Panel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
     },
     "PrimaryReflux": {
       "name": "PrimaryReflux",
@@ -1320,52 +1308,10 @@
       "path": [
         "PRIMARY-page",
         "PrimaryCard1Panel",
-        "PrimaryRefluxPanel"
+        "PrimaryInflammationPanel"
       ],
       "hasTitle": true,
-      "title": "Did your primary veterinarian mention reflux (GERD) or esophageal dysfunction in relation to {CmpnName}&lsquo;s symptoms?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "PrimaryDiscussPanel": {
-      "name": "PrimaryDiscussPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PRIMARY-page",
-        "PrimaryCard1Panel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
-    "PrimaryDidDiscuss": {
-      "name": "PrimaryDidDiscuss",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PRIMARY-page",
-        "PrimaryCard1Panel",
-        "PrimaryDiscussPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did your primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "PrimaryInfo": {
-      "name": "PrimaryInfo",
-      "type": "boolean",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PRIMARY-page",
-        "PrimaryCard1Panel",
-        "PrimaryDiscussPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect {CmpnName}?",
+      "title": "Did your current primary veterinarian mention reflux (GERD) or esophageal dysfunction in relation to {CmpnName}'s symptoms?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1392,6 +1338,21 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "PrimaryDidDiscuss": {
+      "name": "PrimaryDidDiscuss",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY-page",
+        "PrimaryCard2Panel",
+        "PrimaryInfoPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did your current primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "PrimaryInfoDetails": {
       "name": "PrimaryInfoDetails",
       "type": "radiogroup",
@@ -1403,9 +1364,50 @@
         "PrimaryInfoPanel"
       ],
       "hasTitle": true,
-      "title": "What did they tell you about LP/GOLPP?",
-      "hasVisibleIf": true,
-      "visibleIf": "{PrimaryVetInfo} = true",
+      "title": "Did your current primary veterinarian give you useful information about LP/GOLPP?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "PrimaryReferralPanel": {
+      "name": "PrimaryReferralPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY-page",
+        "PrimaryCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "PrimaryDidRefer": {
+      "name": "PrimaryDidRefer",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY-page",
+        "PrimaryCard2Panel",
+        "PrimaryReferralPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did your primary veterinarian refer you to a specialist about {CmpnName}'s LP/GOLPP?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "PrimaryReferral": {
+      "name": "PrimaryReferral",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PRIMARY-page",
+        "PrimaryCard2Panel",
+        "PrimaryReferralPanel"
+      ],
+      "hasTitle": true,
+      "title": "Which specialist were you referred to?",
+      "hasVisibleIf": false,
       "isRequired": true
     },
     "PrimarySurgeryPanel": {
@@ -1448,7 +1450,7 @@
       "hasTitle": true,
       "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{PrimaryVetSurgery} = 'ADVISED_AGAINST'",
+      "visibleIf": "{PrimarySurgery} = 'ADVISED_AGAINST'",
       "isRequired": true
     },
     "PrimaryConfidencePanel": {

@@ -76,20 +76,43 @@
     "ARTHRITIS"
   ],
 
+"PrimaryInflammation": "YES",
+"PrimaryReflux": "DONT_KNOW",
+"PrimaryDidRefer": "YES",
+"PrimaryReferral": [
+  "INTERNIST",
+  "HOLISTIC"
+],
+"PrimaryDidDiscuss": "NO_MENTION",
+"PrimaryInfoDetails": "NO_INFO",
+"PrimarySurgery": "ADVISED_AGAINST",
+"PrimarySurgeryPerception": "GENERAL_PERCEPTION",
+"PrimaryChangedVets": "MORE_THAN_ONCE",
+"PrimaryChangedVetsReason": [
+  "NOTHING_CAN_BE_DONE",
+  "AGE_ONLY"
+],
+"PrimaryConfidence": "3",
 
 
 
-  "IntubationHistoryWasIntubated": "YES",
-  "IntubationHistoryReason": [
-    "TEETH_CLEANING",
-    "DIAGNOSTIC"
-  ],
-  "IntubationHistoryConcerns": true,
-  "IntubationHistorySymptoms": [
-    "COUGHING",
-    "PANTING",
-    "GAGGING"
-  ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
 
   "BreathingCrisisDidHave": "YES",
   "BreathingCrisisCount": "TWO",
@@ -132,20 +155,6 @@
     "MISDIAGNOSED"
   ],
   
-  "PrimaryVetInflammation": "YES",
-  "PrimaryVetReflux": "YES",
-  "PrimaryVetRefluxMeds": "NO",
-  "PrimaryVetRefluxInitiative": true,
-  "PrimaryVetDidDiscuss": "POSSIBLY",
-  "PrimaryVetInfo": true,
-  "PrimaryVetInfoDetails": [
-    "BARK_LOSS",
-    "PROGRESSIVE"
-  ],
-  "PrimaryVetSurgery": "ADVISED_AGAINST",
-  "PrimaryVetSurgeryPerception": "GENERAL_PERCEPTION",
-  "PrimaryVetConfidence": 3,
-  "PrimaryVetSatisfaction": 3,
 
   "DiagnosisWho": "SOFT_TISSUE",
   "DiagnosticType": "SCOPE",

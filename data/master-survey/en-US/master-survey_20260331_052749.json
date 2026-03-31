@@ -1650,60 +1650,8 @@
                       "value": "DONT_KNOW",
                       "text": "Don't know or can't remember."
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "PrimaryReferralPanel",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "PrimaryDidRefer",
-                  "title": "Did your primary veterinarian refer you to a specialist about {CmpnName}'s LP/GOLPP?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Item1"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "Item2"
-                    }
                   ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "checkbox",
-                  "name": "PrimaryReferral",
-                  "title": "Which specialist were you referred to?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "INTERNIST",
-                      "text": "Internal medicine specialist (internist)"
-                    },
-                    {
-                      "value": "NEUROLOGIST",
-                      "text": "Neurologist"
-                    },
-                    {
-                      "value": "SURGEON",
-                      "text": "Soft-tissue specialist/surgeon"
-                    },
-                    {
-                      "value": "HOLISTIC",
-                      "text": "Holistic or acupuncturist"
-                    },
-                    {
-                      "value": "Other",
-                      "text": "OTHER"
-                    }
-                  ],
-                  "showOtherItem": true,
-                  "showNoneItem": false
+                  "showOtherItem": true
                 }
               ]
             },

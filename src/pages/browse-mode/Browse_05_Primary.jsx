@@ -38,11 +38,11 @@ const Browse_05_Primary = () => {
 
       <div className="browse-panel-container" id="PrimaryCard1Panel">
       <div className="browse-content-block" id="PrimaryHeading">
-        <h2 className="browse-content-heading">Your primary veterinarian and Bella&lsquo;s LP/GOLPP</h2>
+        <h2 className="browse-content-heading">Your current primary veterinarian and Bella&lsquo;s LP/GOLPP</h2>
       </div>
 
       <div className="browse-content-block" id="PrimaryText">
-        <p className="browse-content-text">This section asks questions about how your primary veterinarian handled Bella&lsquo;s LP/GOLPP symptoms.</p>
+        <p className="browse-content-text">This section asks questions about how your current primary veterinarian handled Bella&lsquo;s LP/GOLPP symptoms.</p>
       </div>
 
       <div className="browse-panel-container" id="PrimaryInflammationPanel">
@@ -50,7 +50,7 @@ const Browse_05_Primary = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did your primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?
+              Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?
             </span>
           }
           index={1}
@@ -76,14 +76,12 @@ const Browse_05_Primary = () => {
           </div>
         </ShowAnswerContent>
       </div>
-      </div>
 
-      <div className="browse-panel-container" id="PrimaryRefluxPanel">
       <div className="browse-question-container" id="PrimaryReflux">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did your primary veterinarian mention reflux (GERD) or esophageal dysfunction in relation to Bella&amp;lsquo;s symptoms?
+              Did your current primary veterinarian mention reflux (GERD) or esophageal dysfunction in relation to Bella&lsquo;s symptoms?
             </span>
           }
           index={2}
@@ -110,13 +108,15 @@ const Browse_05_Primary = () => {
         </ShowAnswerContent>
       </div>
       </div>
+      </div>
 
-      <div className="browse-panel-container" id="PrimaryDiscussPanel">
+      <div className="browse-panel-container" id="PrimaryCard2Panel">
+      <div className="browse-panel-container" id="PrimaryInfoPanel">
       <div className="browse-question-container" id="PrimaryDidDiscuss">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did your primary vet discuss LP/GOLPP as a possible cause of Bella&lsquo;s symptoms? 
+              Did your current primary vet discuss LP/GOLPP as a possible cause of Bella&lsquo;s symptoms? 
             </span>
           }
           index={3}
@@ -147,11 +147,11 @@ const Browse_05_Primary = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="PrimaryInfo">
+      <div className="browse-question-container" id="PrimaryInfoDetails">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect Bella?
+              Did your current primary veterinarian give you useful information about LP/GOLPP?
             </span>
           }
           index={4}
@@ -161,28 +161,34 @@ const Browse_05_Primary = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>Yes</span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No, I received little or no information.</span>
             </li>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>No</span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>They gave me a general description of LP/GOLPP without going into detail.</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Explained LP/GOLPP in detail and told me about possible options, including surgery.</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know or can&lsquo;t remember.</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
       </div>
-      </div>
 
-      <div className="browse-panel-container" id="PrimaryCard2Panel">
-      <div className="browse-panel-container" id="PrimaryInfoPanel">
-      <div className="browse-question-container" id="PrimaryInfoDetails">
+      <div className="browse-panel-container" id="PrimaryReferralPanel">
+      <div className="browse-question-container" id="PrimaryDidRefer">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What did they tell you about LP/GOLPP?
+              Did your primary veterinarian refer you to a specialist about Bella&lsquo;s LP/GOLPP?
             </span>
           }
           index={5}
@@ -194,19 +200,50 @@ const Browse_05_Primary = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I received little or no information.</span>
+              <span>Item1</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Gave me a general description of LP/GOLPP without going into detail.</span>
+              <span>Item2</span>
             </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Explained LP/GOLPP in detail and told me about possible options, including surgery.</span>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="PrimaryReferral">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Which specialist were you referred to?
+            </span>
+          }
+          index={6}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Internal medicine specialist (internist)</span>
             </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&amp;lsquo;t know or can&amp;lsquo;t remember.</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Neurologist</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Soft-tissue specialist/surgeon</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Holistic or acupuncturist</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>OTHER</span>
             </li>
           </ul>
           </div>
@@ -222,7 +259,7 @@ const Browse_05_Primary = () => {
               Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for Bella&lsquo;s LP/GOLPP?
             </span>
           }
-          index={6}
+          index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -253,7 +290,7 @@ const Browse_05_Primary = () => {
               Do you feel like your primary veterinarian&lsquo;s recommendation against surgery was due to Bella&lsquo;s condition or to a generally negative perception of tieback surgery?
             </span>
           }
-          index={7}
+          index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -286,7 +323,7 @@ const Browse_05_Primary = () => {
               Did you ever change primary veterinarians because how they handled Bella&lsquo;s LP/GOLPP symptoms?
             </span>
           }
-          index={8}
+          index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -317,7 +354,7 @@ const Browse_05_Primary = () => {
               Why did you change veterinarians after Bella started showing symptoms of LP/GOLPP?
             </span>
           }
-          index={9}
+          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -356,7 +393,7 @@ const Browse_05_Primary = () => {
               How confident have you been in your current primary veterinarian&lsquo;s knowledge level regarding LP/GOLPP?
             </span>
           }
-          index={10}
+          index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
