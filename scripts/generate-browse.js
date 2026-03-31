@@ -30,7 +30,7 @@ const pageFiles = [
   "03_FACTORS-page.json",
   "04_SYMPTOMS-page.json",
   "05_PRIMARY-page.json",
-  // "06_DIAGNOSIS-page.json",
+  "06_DIAGNOSIS-page.json"
   // "07_MEDICATION-page.json",
   // "08_PROCEDURE-page.json", 
   // "09_THERAPY-page.json",

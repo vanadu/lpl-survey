@@ -30,15 +30,15 @@ const Browse_05_Primary = () => {
           </span>
         </Link>
         <div className="browse-page-marker" id="PRIMARY-page"></div>
-        <span className="browse-page-nav__next is-disabled" aria-hidden="true">
-          <span><span className="sr-only">Next</span><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M221.66,133.66l-80,80A8,8,0,0,1,128,208V147.31L61.66,213.66A8,8,0,0,1,48,208V48a8,8,0,0,1,13.66-5.66L128,108.69V48a8,8,0,0,1,13.66-5.66l80,80A8,8,0,0,1,221.66,133.66Z"></path></svg>
+        <Link className="browse-page-nav__next" href="/browse-mode/Browse_06_Diagnosis" aria-label="Next page">
+          <span aria-hidden="true"><span className="sr-only">Next</span><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M221.66,133.66l-80,80A8,8,0,0,1,128,208V147.31L61.66,213.66A8,8,0,0,1,48,208V48a8,8,0,0,1,13.66-5.66L128,108.69V48a8,8,0,0,1,13.66-5.66l80,80A8,8,0,0,1,221.66,133.66Z"></path></svg>
           </span>
-        </span>
+        </Link>
       </div>
 
       <div className="browse-panel-container" id="PrimaryCard1Panel">
       <div className="browse-content-block" id="PrimaryHeading">
-        <h2 className="browse-content-heading">Your current primary veterinarian and Bella&lsquo;s LP/GOLPP</h2>
+        <h2 className="browse-content-heading">Your primary veterinarian and Bella&lsquo;s LP/GOLPP</h2>
       </div>
 
       <div className="browse-content-block" id="PrimaryText">
@@ -200,11 +200,11 @@ const Browse_05_Primary = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Item1</span>
+              <span>Yes</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Item2</span>
+              <span>No</span>
             </li>
           </ul>
           </div>
@@ -240,10 +240,6 @@ const Browse_05_Primary = () => {
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Holistic or acupuncturist</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>OTHER</span>
             </li>
           </ul>
           </div>
@@ -351,7 +347,7 @@ const Browse_05_Primary = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Why did you change veterinarians after Bella started showing symptoms of LP/GOLPP?
+              What did the previous primary vet say or do that caused you to change to a different veterinarian?
             </span>
           }
           index={10}
@@ -363,23 +359,23 @@ const Browse_05_Primary = () => {
           <ul>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>The previous vet said nothing could be done about Bella&lsquo;s symptoms.</span>
+              <span>Said nothing could be done about Bella&lsquo;s symptoms.</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>The previous vet couldn&lsquo;t give possible causes for Bella&lsquo;s symptoms.</span>
+              <span>Couldn&lsquo;t give possible causes for Bella&lsquo;s symptoms.</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>The previous vet said Bella&lsquo;s symptoms were just due to age.</span>
+              <span>Said Bella&lsquo;s symptoms were just due to age.</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>The previous vet ordered tests that I didn&lsquo;t think were relevant.</span>
+              <span>Ordered tests that I didn&lsquo;t think were relevant.</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>The previous vet misdiagnosed Bella&lsquo;s symptoms.</span>
+              <span>Misdiagnosed Bella&lsquo;s symptoms.</span>
             </li>
           </ul>
           </div>

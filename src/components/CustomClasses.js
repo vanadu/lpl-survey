@@ -18,6 +18,8 @@ const ITEMS_CARD_PANEL = new Set([
   "SymptomsCard2Panel",
   "PrimaryCard1Panel",
   "PrimaryCard2Panel",
+  "DiagnosisCard1Panel",
+  "DiagnosisCard2Panel",
 
 
   // "InfoSourcesCard1Panel",
@@ -70,7 +72,11 @@ const ITEMS_TWO_COL = new Set([
   "SymptomsOtherConditionsType",
 
   "PrimaryDidRefer",
-  "PrimaryReferral"
+  "PrimaryReferral",
+
+  "DiagnosisWho",
+  "DiagnosisCorrectDiagnosis",
+  "DiagnosisCost"
 
 
 ]);
@@ -85,7 +91,10 @@ const ITEMS_THREE_COL = new Set([
 
   "PrimaryInflammationPanel", //check if this style includes a space after - it shouldn't
   "PrimaryReflux",
-  "PrimaryChangedVets"
+  "PrimaryChangedVets",
+
+  "DiagnosisMisdiagnosis",
+  "DiagnosisPrecededSurgery"
 
 
 ]);
@@ -117,6 +126,7 @@ const CONTROL_WIDTH_300 = new Set([
 
   "FactorsBestSource",
 
+
 ]);
 
 const CONTROL_WIDTH_600 = new Set([
@@ -133,7 +143,8 @@ const PANEL_NO_BORDER = new Set([
   "CmpnInfoAnimalTypePanel",
   "CmpnInfoBreedGenderPanel",
   "CmpnInfoWeightPanel",
-  "CmpnInfoAgePanel"
+  "CmpnInfoAgePanel",
+  "DiagnosisDetailsPanel"
 ]);
 
 
@@ -158,7 +169,13 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
   "PrimarySurgeryPerception",
   "PrimaryChangedVetsReason",
   "PrimaryConfidence",
-  "PrimaryReferral"
+  "PrimaryReferral",
+  "PrimaryChangedVetsReason",
+  "DiagnosisCorrectDiagnosis",
+  "DiagnosisStage",
+  "DiagnosisTimeAfterSymptoms",
+  "DiagnosisCost",
+  "DiagnosisPrecededSurgery"
 
 
 
@@ -190,7 +207,10 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
   "SymptomsType",
   "SymptomsSeverity",
-  "SymptomsIntubationSymptoms"
+  "SymptomsIntubationSymptoms",
+
+  "DiagnosisWho",
+
 
 
 

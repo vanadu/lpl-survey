@@ -1,0 +1,256 @@
+{
+  "name": "DIAGNOSIS-page",
+  "elements": [
+
+    {
+      "type": "panel",
+      "name": "DiagnosisCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "DiagnosisHeading",
+          "html": "<h2>{CmpnName}'s LP/GOLPP diagnosis</h2>"
+        },
+        {
+          "type": "html",
+          "name": "DiagnosisText",
+          "html": "<p>This section asks about {CmpnName}'s LP/GOLPP diagnosis.</p>"
+        },
+        {
+          "type": "panel",
+          "name": "DiagnosisSpecialistPanel",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "DiagnosisWho",
+              "title": "Which veterinary specialists gave you a diagnosis for {CmpnName}'s LP/GOLPP symptoms?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "PRIMARY",
+                  "text": "Primary veterinarian"
+                },
+                {
+                  "value": "INTERNIST",
+                  "text": "Internal medicine specialist"
+                },
+                {
+                  "value": "NEUROLOGIST",
+                  "text": "Neurologist"
+                },
+                {
+                  "value": "SOFT_TISSUE",
+                  "text": "Soft tissue specialist or surgeon"
+                },
+                {
+                  "value": "GENERAL",
+                  "text": "General or orthopedic surgeon"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "DiagnosisMisdiagnosis",
+              "title": "Did any of these specialists misdiagnose {CmpnName}'s symptoms?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "DiagnosisCorrectDiagnosis",
+              "title": "Which veterinary specialist gave you the correct diagnosis?",
+              "isRequired": true,
+              "visibleIf": "{DiagnosisMisdiagnosis} = 'YES'",
+              "choices": [
+                {
+                  "value": "PRIMARY",
+                  "text": "Primary veterinarian"
+                },
+                {
+                  "value": "INTERNIST",
+                  "text": "Internal medicine specialist"
+                },
+                {
+                  "value": "NEUROLOGIST",
+                  "text": "Neurologist"
+                },
+                {
+                  "value": "SOFT_TISSUE",
+                  "text": "Soft tissue specialist or surgeon"
+                },
+                {
+                  "value": "GENERAL",
+                  "text": "General or orthopedic surgeon"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Other option"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "DiagnosisCard2Panel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "DiagnosisDetailsPanel",
+              "elements": [
+
+                {
+                  "type": "dropdown",
+                  "name": "DiagnosticType",
+                  "title": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ROUTINE_EXAM",
+                      "text": "Visual/auditory exam only"
+                    },
+                    {
+                      "value": "SEDATED_VISUAL",
+                      "text": "Sedated visual exam of larynx"
+                    },
+                    {
+                      "value": "XRAY",
+                      "text": "X-Ray or other imaging"
+                    },
+                    {
+                      "value": "ULTRASOUND",
+                      "text": "Ultrasound"
+                    },
+                    {
+                      "value": "SCOPE",
+                      "text": "Video endoscope or laryngoscope under anesthesia"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "DiagnosisStage",
+                  "title": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "UNILATERAL",
+                      "text": "Unilateral (one-side)"
+                    },
+                    {
+                      "value": "BILATERAL",
+                      "text": "Bilateral (both sides)"
+                    },
+                    {
+                      "value": "WASNT_TOLD",
+                      "text": "I wasn't told what stage {CmpnName}'s LP was in"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                "type": "dropdown",
+                "name": "DiagnosisTimeAfterSymptoms",
+                "title": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?",
+                "isRequired": true,
+                "choices": [
+                  {
+                    "value": "LESS_THAN_ONE",
+                    "text": "Less than one month"
+                  },
+                  {
+                    "value": "ONE_TO_THREE",
+                    "text": "Between one and three months"
+                  },
+                  {
+                    "value": "FOUR_TO_SIX",
+                    "text": "Between four and six months"
+                  },
+                  {
+                    "value": "SIX_TO_TWELVE",
+                    "text": "Between six months and a year"
+                  },
+                  {
+                    "value": "MORE_THAN_TWELVE",
+                    "text": "Longer than a year"
+                  }
+                ],
+                "showOtherItem": false,
+                "required": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "DiagnosisCost",
+                  "title": "What was the pre-insurance cost of the diagnosis?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "UNDER_500",
+                      "text": "Under $500"
+                    },
+                    {
+                      "value": "500_1500",
+                      "text": "$501-$1500"
+                    },
+                    {
+                      "value": "1501_3000",
+                      "text": "$1500-$3000"
+                    },
+                    {
+                      "value": "OVER_3000",
+                      "text": "Over $3000"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "DiagnosisPrecededSurgery",
+                  "title": "Did {CmpnName} have LP surgery immediately after the diagnosis?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

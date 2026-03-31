@@ -153,6 +153,7 @@
               "name": "PrimaryReferral",
               "title": "Which specialist were you referred to?",
               "isRequired": true,
+              "visibleIf": "{PrimaryDidRefer} = 'YES'",
               "choices": [
                 {
                   "value": "INTERNIST",
@@ -256,30 +257,30 @@
             {
               "type": "checkbox",
               "name": "PrimaryChangedVetsReason",
-              "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?",
+              "title": "What did the previous primary vet say or do that caused you to change to a different veterinarian?",
               "description": "Please check all that apply.",
               "isRequired": true,
               "visibleIf": "{PrimaryChangedVets} != 'NO'",
               "choices": [
                 {
                   "value": "NOTHING_CAN_BE_DONE",
-                  "text": "The previous vet said nothing could be done about {CmpnName}'s symptoms."
+                  "text": "Said nothing could be done about {CmpnName}'s symptoms."
                 },
                 {
                   "value": "NO_KNOWLEDGE",
-                  "text": "The previous vet couldn't give possible causes for {CmpnName}'s symptoms."
+                  "text": "Couldn't give possible causes for {CmpnName}'s symptoms."
                 },
                 {
                   "value": "AGE_ONLY",
-                  "text": "The previous vet said {CmpnName}'s symptoms were just due to age."
+                  "text": "Said {CmpnName}'s symptoms were just due to age."
                 },
                 {
                   "value": "BAD_TESTS",
-                  "text": "The previous vet ordered tests that I didn't think were relevant."
+                  "text": "Ordered tests that I didn't think were relevant."
                 },
                 {
                   "value": "MISDIAGNOSED",
-                  "text": "The previous vet misdiagnosed {CmpnName}'s symptoms."
+                  "text": "Misdiagnosed {CmpnName}'s symptoms."
                 }
               ],
               "showOtherItem": true

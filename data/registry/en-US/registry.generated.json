@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-03-31T09:46:01.929Z",
+    "builtAt": "2026-03-31T10:39:43.823Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -1407,7 +1407,8 @@
       ],
       "hasTitle": true,
       "title": "Which specialist were you referred to?",
-      "hasVisibleIf": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{PrimaryDidRefer} = 'YES'",
       "isRequired": true
     },
     "PrimarySurgeryPanel": {
@@ -1491,7 +1492,7 @@
         "PrimaryConfidencePanel"
       ],
       "hasTitle": true,
-      "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?",
+      "title": "What did the previous primary vet say or do that caused you to change to a different veterinarian?",
       "hasVisibleIf": true,
       "visibleIf": "{PrimaryChangedVets} != 'NO'",
       "isRequired": true
@@ -1508,6 +1509,180 @@
       ],
       "hasTitle": true,
       "title": "How confident have you been in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisCard1Panel": {
+      "name": "DiagnosisCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "DIAGNOSIS-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "DiagnosisSpecialistPanel": {
+      "name": "DiagnosisSpecialistPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "DiagnosisWho": {
+      "name": "DiagnosisWho",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisSpecialistPanel"
+      ],
+      "hasTitle": true,
+      "title": "Which veterinary specialists gave you a diagnosis for {CmpnName}'s LP/GOLPP symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisMisdiagnosis": {
+      "name": "DiagnosisMisdiagnosis",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisSpecialistPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did any of these specialists misdiagnose {CmpnName}' symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisCorrectDiagnosis": {
+      "name": "DiagnosisCorrectDiagnosis",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisSpecialistPanel"
+      ],
+      "hasTitle": true,
+      "title": "Which veterinary specialist gave you the correct diagnosis?",
+      "hasVisibleIf": true,
+      "visibleIf": "{DiagnosisMisdiagnosis} = 'YES'",
+      "isRequired": true
+    },
+    "DiagnosisCard2Panel": {
+      "name": "DiagnosisCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "DiagnosisDetailsPanel": {
+      "name": "DiagnosisDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "DiagnosticType": {
+      "name": "DiagnosticType",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisCard2Panel",
+        "DiagnosisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "What diagnostic procedure was used to arrive at the definitive diagnosis?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisStage": {
+      "name": "DiagnosisStage",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisCard2Panel",
+        "DiagnosisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisTimeAfterSymptoms": {
+      "name": "DiagnosisTimeAfterSymptoms",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisCard2Panel",
+        "DiagnosisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisCost": {
+      "name": "DiagnosisCost",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisCard2Panel",
+        "DiagnosisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the pre-insurance cost of the diagnosis?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "DiagnosisPrecededSurgery": {
+      "name": "DiagnosisPrecededSurgery",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel",
+        "DiagnosisCard2Panel",
+        "DiagnosisDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have LP surgery immediately after the diagnosis?",
       "hasVisibleIf": false,
       "isRequired": true
     }

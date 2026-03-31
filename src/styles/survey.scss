@@ -860,12 +860,23 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 
 
 // !VA This is to force two-column radiogroups to two columns
-[data-name="ConclusionCauseOfDeath"] .sd-selectbase.survey-two-col {
+// [data-name="ConclusionCauseOfDeath"] .sd-selectbase.survey-two-col {
+//   .sd-item.sd-radio {
+//     flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
+//     box-sizing: border-box;
+//   }
+// }
+
+// !VA This is to force two-column radiogroups to two columns
+.sd-selectbase.survey-two-col {
   .sd-item.sd-radio {
     flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
     box-sizing: border-box;
   }
 }
+
+
+
 
 // !VA Force space below on mobile only
 [data-name="UserInfoFirstName"] {
