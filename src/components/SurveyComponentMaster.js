@@ -357,7 +357,7 @@ export default function SurveyComponentMaster() {
   useEffect(() => {
     if (!survey) return;
     return attachSurveySyncHandlers(survey, {
-      checkboxToDropdown: [{ source: "InfoSourcesTypes", target: "InfoSourcesBestSource" }],
+      checkboxToDropdown: [{ source: "FactorsSourcesTypes", target: "FactorsBestSource" }],
       checkboxToCheckbox: [
         {
           source: "EarlyOtherConditionsType",

@@ -664,7 +664,7 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
   !VA ELEMENT-SPECIFIC STYLING
 ------------------------------*/
 // !VA Clear extra bottom spacing on radiogroup titles
-[data-name="LandingConsent"],
+// [data-name="LandingConsent"],
 [data-name="UserInfoGender"],
 [data-name="CmpnInfoAnimalType"],
 [data-name="IntubationHistoryWasIntubated"],
@@ -967,6 +967,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   }
 }
 
+
 // !VA Custom classes - THREE-BUTTON RADIO GROUPS i.e. Yes No Don't know
 // !VA FOR REVIEW - should probably be on tablet+
 // Apply to fieldset.sd-selectbase so titles/headers are unaffected
@@ -1074,15 +1075,23 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 .survey-q-separator-below::after {
   content: "";
   display: block;
-  width: 600px;
+  width: 300px;
   height: 1px;
   background: rgba(0, 0, 0, 0.08);
   // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
-  margin-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  margin-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  margin-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  margin-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+
+  margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+
+  @include tablet {
+    width: 500px;
+    margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  }
+  @include desktop {
+    width: 600px;
+    margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  }
   @include ldesktop {
+      width: 600px;
     margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
   }
 }

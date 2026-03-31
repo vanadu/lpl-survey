@@ -1,0 +1,329 @@
+{
+  "name": "FACTORS-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "FactorsCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "FactorsHeading",
+          "html": "<h2>Your LP/GOLPP Decisions</h2>"
+        },
+        {
+          "type": "html",
+          "name": "FactorsText",
+          "html": "<p>This section asks some questions about how you learned about LP/GOLPP and about your decision-making process. Please don&lsquo;t overthink. In this section it&lsquo;s best to answer according to your first impulse.</p>"
+        },
+        {
+          "type": "panel",
+          "name": "FactorsSourcesPanel",
+          "elements": [
+
+            {
+              "type": "boolean",
+              "name": "FactorsPriorKnowledge",
+              "title": "Had you ever heard of LP before {CmpnName} got it?",
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "swapOrder": true,
+              "isRequired": true
+            },
+            {
+              "type": "checkbox",
+              "name": "FactorsSourcesTypes",
+              "title": "Which sources of information have you accessed to learn about LP?",
+              "choices": [
+                {
+                  "value": "VETERINARIANS",
+                  "text": "Veterinarians"
+                },
+                {
+                  "value": "WEBSITES",
+                  "text": "Websites"
+                },
+                {
+                  "value": "FACEBOOK_GROUPS",
+                  "text": "Facebook groups"
+                },
+                {
+                  "value": "SOCIAL_VIDEO",
+                  "text": "Youtube, Instagram or other video"
+                },
+                {
+                  "value": "SOCIAL_CHAT",
+                  "text": "Social media chat"
+                },
+                {
+                  "value": "AI_MODELS",
+                  "text": "AI models like ChatGPT"
+                },
+                { "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Other Sources"
+            },
+            {
+              "type": "dropdown",
+              "name": "FactorsBestSource",
+              "title": "Which of those information sources did you find MOST useful (please select one)?",
+              "visibleIf": "{FactorsSourcesTypes.length} > 1 && {FactorsTypes} notcontains 'DONT_KNOW'",
+              "choices": [
+
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "FactorsClearAnswers",
+              "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {CmpnName}?",
+              "description": "1 = No, not hard at all, 5 = yes, very hard",
+              "isRequired": true,
+              "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" },
+              { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "FactorsCard2Panel",
+      "elements": [
+
+        {
+          "type": "panel",
+          "name": "FactorsCostPanel",
+          "title": "How have financial considerations factored into your LP/GOLPP decisions?", 
+          "elements": [
+            {
+              "type": "rating",
+              "name": "FactorsProcedureCost",
+              "title": "Cost of surgical/stent procedure:",
+              "description": "1 = less important, 5 = more important",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "FactorsComplicationsCost",
+              "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
+              "description": "1 = less important, 5 = more important",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "FactorsSymptomsPanel",
+          "title": "Which aspects of {CmpnName}'s LP/GOLPP symptoms have factored into your decisions?",
+          "elements": [
+          {
+            "type": "rating",
+            "name": "FactorsSymptomsBreathingCrisis",
+            "title": "Fear of a breathing crisis or emergency:",
+            "description": "1 = less important, 5 = more important",
+            "isRequired": true,
+            "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" }
+            ]
+          },
+
+          {
+            "type": "rating",
+            "name": "FactorsSymptomsNeuropathy",
+            "title": "Progression of {CmpnName}'s hind-end weakness and polyneuropathy:",
+            "description": "1 = less important, 5 = more important",
+            "isRequired": true,
+            "rateValues": [
+              { "value": 1, "text": "1" },
+              { "value": 2, "text": "2" },
+              { "value": 3, "text": "3" },
+              { "value": 4, "text": "4" },
+              { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "FactorsSurgeryRisksPanel",
+          "title": "Which risk factors of surgery have factored into your LP/GOLPP decisions?",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "FactorsSurgeryAnesthesia",
+              "title": "Extended anesthesia:",
+              "description": "1 = less important, 5 = more important",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "FactorsSurgeryInpatient",
+              "title": "Risk of direct inpatient complications of surgery:",
+              "description": "1 = less important, 5 = more important",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "FactorsSurgeryLongTerm",
+              "title": "Risks of long-term complications such as aspiration pneumonia, suture failure, or infection:",
+              "description": "1 = less important, 5 = more important",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "FactorsGeneralPanel",
+          "title": "How have {CmpnName}'s age and general health considerations factored into your LP/GOLPP decisions?",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "FactorsGeneralAge",
+              "title": "{CmpnName}'s age:",
+              "description": "1 = less important, 5 = more important",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "rating",
+            "name": "FactorsGeneralHealth",
+              "title": "{CmpnName}'s overall health and prospects for quality of life:",
+              "description": "1 = less important, 5 = more important",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "FactorsGeneralCoexisting",
+              "title": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
+              "description": "1 = less important, 5 = more important",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "FactorsCircumstancesPanel",
+          "title": "How have your personal circumstances factored into your decision?",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "FactorsCircumstancesAccess",
+              "title": "Distance to or access to a qualified specialist:",
+              "description": "1 = less important, 5 = more important",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+
+            {
+              "type": "rating",
+              "name": "FactorsCircumstancesFutureCare",
+              "title": "Ability to provide adequate care in the future:",
+              "description": "1 = less important, 5 = more important",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "FactorsOtherPanel",
+          "title": "What other considerations, if any, have factored into your LP/GOLPP decisions?",
+          "elements": [
+            {
+              "type": "text",
+              "name": "FactorsOther",
+              "title": "Other considerations:",
+              "description": "Maximum 250 characters.",
+              "isRequired": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

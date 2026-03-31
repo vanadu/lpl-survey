@@ -11,43 +11,53 @@ import { getStyleDirectives } from "./CustomClasses";
 import { attachSurveySyncHandlers } from "../../helpers/syncSelectionValues";
 
 
+// import LANDING from "../../data/page-content/en-US/00_LANDING-page.json";
+// import USER_INFO from "../../data/page-content/en-US/01_USER_INFO-page.json";
+// import CMPN_INFO from "../../data/page-content/en-US/02_CMPN_INFO-page.json";
+// import INFO_SOURCES from "../../data/page-content/en-US/03_INFO_SOURCES-page.json";
+// import INTUBATION_HISTORY from "../../data/page-content/en-US/04_INTUBATION_HISTORY-page.json";
+// import BREATHING_CRISIS from "../../data/page-content/en-US/05_BREATHING_CRISIS-page.json";
+// import EARLY_SYMPTOMS from "../../data/page-content/en-US/06_EARLY_SYMPTOMS-page.json";
+// import PRIMARY_DURATION from "../../data/page-content/en-US/07_PRIMARY_DURATION-page.json";
+// import PRIMARY_VET from "../../data/page-content/en-US/08_PRIMARY_VET-page.json";
+// import DIAGNOSIS from "../../data/page-content/en-US/09_DIAGNOSIS-page.json";
+// import TREATMENT_STATUS from "../../data/page-content/en-US/10_TREATMENT_STATUS-page.json";
+// import TREATMENT_FACTORS from "../../data/page-content/en-US/11_TREATMENT_FACTORS-page.json";
+// import MANAGEMENT from "../../data/page-content/en-US/12_MANAGEMENT-page.json";
+// import OTC_PRODUCTS from "../../data/page-content/en-US/13_OTC_PRODUCTS-page.json";
+// import ASPIRATION from "../../data/page-content/en-US/14_ASPIRATION-page.json";
+// import NEUROPATHY from "../../data/page-content/en-US/15_NEUROPATHY-page.json";
+// import CONCLUSION from "../../data/page-content/en-US/16_CONCLUSION-page.json";
+
 import LANDING from "../../data/page-content/en-US/00_LANDING-page.json";
 import USER_INFO from "../../data/page-content/en-US/01_USER_INFO-page.json";
 import CMPN_INFO from "../../data/page-content/en-US/02_CMPN_INFO-page.json";
-import INFO_SOURCES from "../../data/page-content/en-US/03_INFO_SOURCES-page.json";
-import INTUBATION_HISTORY from "../../data/page-content/en-US/04_INTUBATION_HISTORY-page.json";
-import BREATHING_CRISIS from "../../data/page-content/en-US/05_BREATHING_CRISIS-page.json";
-import EARLY_SYMPTOMS from "../../data/page-content/en-US/06_EARLY_SYMPTOMS-page.json";
-import PRIMARY_DURATION from "../../data/page-content/en-US/07_PRIMARY_DURATION-page.json";
-import PRIMARY_VET from "../../data/page-content/en-US/08_PRIMARY_VET-page.json";
-import DIAGNOSIS from "../../data/page-content/en-US/09_DIAGNOSIS-page.json";
-import TREATMENT_STATUS from "../../data/page-content/en-US/10_TREATMENT_STATUS-page.json";
-import TREATMENT_FACTORS from "../../data/page-content/en-US/11_TREATMENT_FACTORS-page.json";
-import MANAGEMENT from "../../data/page-content/en-US/12_MANAGEMENT-page.json";
-import OTC_PRODUCTS from "../../data/page-content/en-US/13_OTC_PRODUCTS-page.json";
-import ASPIRATION from "../../data/page-content/en-US/14_ASPIRATION-page.json";
-import NEUROPATHY from "../../data/page-content/en-US/15_NEUROPATHY-page.json";
-import CONCLUSION from "../../data/page-content/en-US/16_CONCLUSION-page.json";
+import FACTORS from "../../data/page-content/en-US/03_FACTORS-page.json";
+// import SYMPTOMS from "../../data/page-content/en-US/04_SYMPTOMS-page.json";
+// import PRIMARY from "../../data/page-content/en-US/05_PRIMARY-page.json";
+// import DIAGNOSIS from "../../data/page-content/en-US/06_DIAGNOSIS-page.json";
+// import MEDICATION from "../../data/page-content/en-US/07_MEDICATION-page.json";
+// import PROCEDURE from "../../data/page-content/en-US/08_PROCEDURE-page.json";
+// import THERAPY from "../../data/page-content/en-US/09_THERAPY-page.json";
+// import BREATHING from "../../data/page-content/en-US/10_BREATHING-page.json";
+// import NEUROPATHY from "../../data/page-content/en-US/11_NEUROPATHY-page.json";
+// import CONCLUSION from "../../data/page-content/en-US/12_CONCLUSION-page.json";
 
 const surveyJson = {
   pages: [
     LANDING,
     USER_INFO,
     CMPN_INFO,
-    INFO_SOURCES,
-    INTUBATION_HISTORY,
-    BREATHING_CRISIS,
-    EARLY_SYMPTOMS,
-    PRIMARY_DURATION,
-    PRIMARY_VET,
-    DIAGNOSIS,
-    TREATMENT_STATUS,
-    TREATMENT_FACTORS,
-    MANAGEMENT,
-    OTC_PRODUCTS,
-    ASPIRATION,
-    NEUROPATHY,
-    CONCLUSION,
+    FACTORS
+    // SYMPTOMS,
+    // PRIMARY,
+    // DIAGNOSIS,
+    // MEDICATION,
+    // PROCEDURE,
+    // THERAPY,
+    // BREATHING,
+    // NEUROPATHY,
+    // CONCLUSION
   ],
 };
 

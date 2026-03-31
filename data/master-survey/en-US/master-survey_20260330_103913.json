@@ -866,7 +866,7 @@
                   "type": "rating",
                   "name": "FactorsProcedureCost",
                   "title": "Cost of surgical/stent procedure:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -895,7 +895,7 @@
                   "type": "rating",
                   "name": "FactorsComplicationsCost",
                   "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -931,7 +931,7 @@
                   "type": "rating",
                   "name": "FactorsSymptomsBreathingCrisis",
                   "title": "Fear of a breathing crisis or emergency:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -960,7 +960,7 @@
                   "type": "rating",
                   "name": "FactorsSymptomsNeuropathy",
                   "title": "Progression of {CmpnName}'s hind-end weakness and polyneuropathy:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -996,7 +996,7 @@
                   "type": "rating",
                   "name": "FactorsSurgeryAnesthesia",
                   "title": "Extended anesthesia:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -1025,7 +1025,7 @@
                   "type": "rating",
                   "name": "FactorsSurgeryInpatient",
                   "title": "Risk of direct inpatient complications of surgery:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -1054,7 +1054,7 @@
                   "type": "rating",
                   "name": "FactorsSurgeryLongTerm",
                   "title": "Risks of long-term complications such as aspiration pneumonia, suture failure, or infection:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -1090,7 +1090,7 @@
                   "type": "rating",
                   "name": "FactorsGeneralAge",
                   "title": "{CmpnName}'s age:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -1119,7 +1119,7 @@
                   "type": "rating",
                   "name": "FactorsGeneralHealth",
                   "title": "{CmpnName}'s overall health and prospects for quality of life:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -1148,7 +1148,7 @@
                   "type": "rating",
                   "name": "FactorsGeneralCoexisting",
                   "title": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -1184,7 +1184,7 @@
                   "type": "rating",
                   "name": "FactorsCircumstancesAccess",
                   "title": "Distance to or access to a qualified specialist:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -1213,7 +1213,7 @@
                   "type": "rating",
                   "name": "FactorsCircumstancesFutureCare",
                   "title": "Ability to provide adequate care in the future:",
-                  "description": "1 = less important, 5 = more important",
+                  "description": "1 = not a factor, 5 = deciding factor",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -1251,571 +1251,6 @@
                   "title": "Other considerations:",
                   "description": "Maximum 250 characters.",
                   "isRequired": false
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "SYMPTOMS-page",
-      "elements": [
-        {
-          "type": "panel",
-          "name": "SymptomsCard1Panel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "SymptomsHeading",
-              "html": "<h2>Your early encounters with LP/GOLPP</h2>"
-            },
-            {
-              "type": "html",
-              "name": "SymptomsText",
-              "html": "<p>This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
-            },
-            {
-              "type": "panel",
-              "name": "SymptomsAgePanel",
-              "title": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
-              "elements": [
-                {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "SymptomsAgeYears",
-                  "title": "Years",
-                  "isRequired": true,
-                  "min": "1",
-                  "max": "40",
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 40,
-                      "text": "Age must be between 1 and 40"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "SymptomsAgeMonths",
-                  "title": "Months (number 0 - 11)",
-                  "isRequired": true,
-                  "min": 0,
-                  "max": 11,
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 0,
-                      "maxValue": 11,
-                      "text": "Months must be between 0 and 11"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "SymptomsDetailsPanel",
-              "elements": [
-                {
-                  "type": "checkbox",
-                  "name": "SymptomsType",
-                  "title": "What symptoms did {CmpnName} have at that time?",
-                  "choices": [
-                    {
-                      "value": "STRIDOR",
-                      "text": "Noisy, raspy or labored breathing"
-                    },
-                    {
-                      "value": "BARK_CHANGES",
-                      "text": "Changes in bark"
-                    },
-                    {
-                      "value": "COUGHING",
-                      "text": "Coughing or gagging"
-                    },
-                    {
-                      "value": "HIND_END",
-                      "text": "Hind-end weakness"
-                    },
-                    {
-                      "value": "EXERCISE_INTOLERANCE",
-                      "text": "Exercise and heat intolerance"
-                    }
-                  ],
-                  "showOtherItem": true,
-                  "showNoneItem": true,
-                  "noneText": "Don't know",
-                  "otherText": "Other (max 250 characters)"
-                },
-                {
-                  "type": "rating",
-                  "name": "SymptomsSeverity",
-                  "title": "How severe did you think {CmpnName}'s early symptoms were?",
-                  "description": "1 = mild, 5 = severe",
-                  "isRequired": true
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "SymptomsNeckRestraint",
-                  "title": "Does/Did {CmpnName} have a history of pulling on a neck restraint or collar? ",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false,
-                  "swapOrder": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "SymptomsIntubationPanel",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "SymptomsIntubationWasIntubated",
-                  "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Not sure"
-                    }
-                  ]
-                },
-                {
-                  "type": "boolean",
-                  "name": "SymptomsIntubationConcerns",
-                  "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
-                  "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "swapOrder": true,
-                  "isRequired": true
-                },
-                {
-                  "type": "checkbox",
-                  "name": "SymptomsIntubationSymptoms",
-                  "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
-                  "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES' && {SymptomsIntubationConcerns} = true",
-                  "choices": [
-                    {
-                      "value": "COUGHING",
-                      "text": "Coughing/hacking"
-                    },
-                    {
-                      "value": "GAGGING",
-                      "text": "Gagging/retching"
-                    },
-                    {
-                      "value": "PANTING",
-                      "text": "Excessive panting"
-                    },
-                    {
-                      "value": "LABORED_BREATHING",
-                      "text": "Labored breathing"
-                    }
-                  ],
-                  "choicesOrder": "none",
-                  "otherText": "Other",
-                  "showOtherItem": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "SymptomsCard2Panel",
-          "elements": [
-            {
-              "type": "panel",
-              "name": "SymptomsOtherConditionsPanel",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "SymptomsOtherConditions",
-                  "title": "When {CmpnName} first started showing symptoms of LP, did {cvGenderSubjectPronoun} have any other health conditions?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "checkbox",
-                  "name": "SymptomsOtherConditionsType",
-                  "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
-                  "isRequired": true,
-                  "visibleIf": "{SymptomsOtherConditions} = 'YES'",
-                  "choices": [
-                    {
-                      "value": "GERD",
-                      "text": "Acid reflux (GERD)"
-                    },
-                    {
-                      "value": "ME",
-                      "text": "Megaesophagus"
-                    },
-                    {
-                      "value": "DM",
-                      "text": "Degenerative Myelopathy"
-                    },
-                    {
-                      "value": "ARTHRITIS",
-                      "text": "Arthritis"
-                    },
-                    {
-                      "value": "CUSHINGS",
-                      "text": "Cushings"
-                    },
-                    {
-                      "value": "CT",
-                      "text": "Collapsing Trachea"
-                    },
-                    {
-                      "value": "HYPOTHYROID",
-                      "text": "Hypothyroidism"
-                    },
-                    {
-                      "value": "HEMANGIOSARCOMA",
-                      "text": "Hemangiosarcoma"
-                    }
-                  ],
-                  "choicesOrder": "none",
-                  "otherText": "Other (max. 250 characters)",
-                  "showOtherItem": true
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "PRIMARY-page",
-      "elements": [
-        {
-          "type": "panel",
-          "name": "PrimaryCard1Panel",
-          "elements": [
-            {
-              "type": "html",
-              "name": "PrimaryHeading",
-              "html": "<h2>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h2>"
-            },
-            {
-              "type": "html",
-              "name": "PrimaryText",
-              "html": "<p>This section asks questions about how your primary veterinarian handled {CmpnName}'s LP/GOLPP symptoms.</p>"
-            },
-            {
-              "type": "panel",
-              "name": "PrimaryInflammationPanel",
-              "title": "",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "PrimaryInflammation",
-                  "title": "Did your primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "PrimaryRefluxPanel",
-              "title": "",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "PrimaryReflux",
-                  "title": "Did your primary veterinarian mention reflux (GERD) or esophageal dysfunction in relation to {CmpnName}&lsquo;s symptoms?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "PrimaryDiscussPanel",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "PrimaryDidDiscuss",
-                  "title": "Did your primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms? ",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "NO_MENTION",
-                      "text": "No, did not mention LP/GOLPP at all"
-                    },
-                    {
-                      "value": "POSSIBLY",
-                      "text": "Said {CmpnName}'s symptoms were possibly due to LP/GOLPP"
-                    },
-                    {
-                      "value": "DEFINITELY",
-                      "text": "Said {CmpnName}'s symptoms were definitely due to LP/GOLPP"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "boolean",
-                  "name": "PrimaryInfo",
-                  "title": "Did your current primary veterinarian give you helpful information about how LP/GOLPP might affect {CmpnName}?",
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "swapOrder": true,
-                  "isRequired": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "PrimaryCard2Panel",
-          "elements": [
-            {
-              "type": "panel",
-              "name": "PrimaryInfoPanel",
-              "title": "",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "PrimaryInfoDetails",
-                  "title": "What did they tell you about LP/GOLPP?",
-                  "isRequired": true,
-                  "visibleIf": "{PrimaryVetInfo} = true",
-                  "choices": [
-                    {
-                      "value": "NO_INFO",
-                      "text": "I received little or no information."
-                    },
-                    {
-                      "value": "GENERAL_INFO",
-                      "text": "Gave me a general description of LP/GOLPP without going into detail."
-                    },
-                    {
-                      "value": "DETAILED_INFO",
-                      "text": "Explained LP/GOLPP in detail and told me about possible options, including surgery."
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don&lsquo;t know or can&lsquo;t remember."
-                    }
-                  ],
-                  "showOtherItem": true
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "PrimarySurgeryPanel",
-              "title": "",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "PrimarySurgery",
-                  "title": "Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for {CmpnName}'s LP/GOLPP?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "NO_RECOMMENDATION",
-                      "text": "Made no recommendation"
-                    },
-                    {
-                      "value": "ADVISED_FOR",
-                      "text": "Encouraged me to talk to a surgeon"
-                    },
-                    {
-                      "value": "ADVISED_AGAINST",
-                      "text": "Advised against surgery"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "PrimarySurgeryPerception",
-                  "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
-                  "isRequired": true,
-                  "visibleIf": "{PrimaryVetSurgery} = 'ADVISED_AGAINST'",
-                  "choices": [
-                    {
-                      "value": "SPECIFIC_CONDITION",
-                      "text": "{CmpnName}'s specific condition"
-                    },
-                    {
-                      "value": "GENERAL_PERCEPTION",
-                      "text": "General negative perception"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "PrimaryConfidencePanel",
-              "title": "",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "PrimaryChangedVets",
-                  "title": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "ONCE",
-                      "text": "Once"
-                    },
-                    {
-                      "value": "MORE_THAN_ONCE",
-                      "text": "More than once"
-                    }
-                  ]
-                },
-                {
-                  "type": "checkbox",
-                  "name": "PrimaryChangedVetsReason",
-                  "title": "Why did you change veterinarians after {CmpnName} started showing symptoms of LP/GOLPP?",
-                  "description": "Please check all that apply.",
-                  "isRequired": true,
-                  "visibleIf": "{PrimaryChangedVets} != 'NO'",
-                  "choices": [
-                    {
-                      "value": "NOTHING_CAN_BE_DONE",
-                      "text": "The previous vet said nothing could be done about {CmpnName}'s symptoms."
-                    },
-                    {
-                      "value": "NO_KNOWLEDGE",
-                      "text": "The previous vet couldn't give possible causes for {CmpnName}'s symptoms."
-                    },
-                    {
-                      "value": "AGE_ONLY",
-                      "text": "The previous vet said {CmpnName}'s symptoms were just due to age."
-                    },
-                    {
-                      "value": "BAD_TESTS",
-                      "text": "The previous vet ordered tests that I didn't think were relevant."
-                    },
-                    {
-                      "value": "MISDIAGNOSED",
-                      "text": "The previous vet misdiagnosed {CmpnName}'s symptoms."
-                    }
-                  ],
-                  "showOtherItem": true
-                },
-                {
-                  "type": "rating",
-                  "name": "PrimaryConfidence",
-                  "title": "How confident have you been in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
-                  "description": "1 = not at all confident, 5 = very confident",
-                  "isRequired": true,
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
                 }
               ]
             }

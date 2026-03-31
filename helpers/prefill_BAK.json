@@ -62,20 +62,6 @@
     "EXERCISE_INTOLERANCE"
   ],
   "SymptomsSeverity": 1,
-  "SymptomsNeckRestraint": "YES",
-  "SymptomsIntubationWasIntubated": "YES",
-  "SymptomsIntubationConcerns": "YES",
-  "SymptomsIntubationSymptoms": [
-    "COUGHING",
-    "PANTING",
-    "GAGGING"
-  ],
-  "SymptomsOtherConditions": "YES",
-  "SymptomsOtherConditionsType": [
-    "GERD",
-    "ARTHRITIS"
-  ],
-
 
 
 

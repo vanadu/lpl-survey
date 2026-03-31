@@ -1,0 +1,478 @@
+export function getStyleDirectives(item) {
+  const name = item?.name;
+  if (!name) return [];
+
+  const directives = [];
+
+const ITEMS_CARD_PANEL = new Set([
+  "LandingCard1Panel",
+  "LandingCard2Panel",
+  "UserInfoCard1Panel",
+  "UserInfoCard2Panel",
+  "CmpnInfoCard1Panel",
+  "CmpnInfoCard2Panel",
+  "CmpnInfoCard2Panel",
+  "InfoSourcesCard1Panel",
+  "InfoSourcesCard2Panel",
+  "IntubationHistoryCard1Panel",
+  "BreathingCrisisCard1Panel",
+  "BreathingCrisisCard2Panel",
+  "EarlySymptomsCard1Panel",
+  "EarlySymptomsCard2Panel",
+  "PrimaryDurationCard1Panel",
+  "PrimaryDurationCard2Panel",
+  "PrimaryVetCard1Panel",
+  "PrimaryVetCard2Panel",
+  "DiagnosisCard1Panel",
+  "TreatmentStatusCard1Panel",
+  "TreatmentStatusCard2Panel",
+  "TreatmentFactorsCard1Panel",
+  "TreatmentFactorsCard2Panel",
+  "ManagementCard1Panel",
+  "ManagementCard2Panel",
+
+  "OTCProductsCard1Panel",
+  "OTCProductsCard2Panel",
+
+  "AspirationCard1Panel",
+  "AspirationCard2Panel",
+  "NeuropathyCard1Panel",
+  "NeuropathyCard2Panel",
+  "ConclusionCard1Panel",
+  "ConclusionCard2Panel",
+
+])
+
+
+const ITEMS_TWO_COL = new Set([
+  "LandingConsent",
+  "LandingPrivacyConsentLinksPanel",
+
+  "lvngCmpnInfoAgePanel",
+  "dcsdCmpnInfoAgePanel",
+
+  "BreathingCrisisAdviceType",
+  "BreathingCrisisProvidedSubstanceType",
+
+  "EarlySymptomsType",
+  "EarlySymptomsAgePanel",
+
+  "EarlSymptomsOtherConditionsType", 
+
+  "PrimaryDurationCost",
+  "PrimaryDurationChangedVetsReason",
+  "PrimaryVetInfoDetails",
+  "DiagnosisCost",
+  "TreatmentStatusDidHave",
+  "TreatmentStatusType",
+  "TreatmentStatusTiebackCount",
+  "TreatmentStatusTiebackComplications",
+  "TreatmentStatusBveapReasons",
+  "TreatmentStatusBveapComplications",
+  "TreatmentStatusStentDidMigrate",
+  "TreatmentStatusStentReplaced",
+  "TreatmentStatusStentComplications",
+  "TreatmentStatusArytenoidectomyReasons",
+  "TreatmentStatusArytenoidectomyComplications",
+  "TreatmentStatusVentrilocordectomyReasons",
+  "TreatmentStatusVentrilocordectomyComplications",
+  "ManagementPrescriptionType",
+  "ManagementNonPrescriptionType",
+  "OTCProductsType",
+  "NeuropathyOtherIssues",
+  "ConclusionGeneralCondition",
+  "ConclusionSpecialConsiderations",
+  "ConclusionOtherConditions",
+  // "ConclusionCauseOfDeath" // This looks terrible two-col
+  "UserInfoGender",
+  "InfoSourcesTypes",
+  "IntubationHistoryReason",
+  "IntubationHistorySymptoms",
+]);
+
+const ITEMS_THREE_COL = new Set([
+  "CmpnInfoAnimalType",
+  "IntubationHistoryWasIntubated",
+  // "BreathingCrisisDidHavePanel",
+  "BreathingCrisisDidHave",
+  "BreathingCrisisCount",
+  "BreathingCrisisAdvice",
+  "BreathingCrisisProvidedSubstance",
+  "EarlySymptomsHindEndWeakness",
+  "EarlySymptomsIncontinence",
+  "EarlySymptomsOtherConditions",
+  "PrimaryDurationChangedVets",
+  "PrimaryVetInflammation",
+  "PrimaryVetRefluxPanel",
+  "PrimaryVetRefluxMeds",
+  "TreatmentStatusArytenoidectomyDidExplain",
+  "TreatmentStatusArytenoidectomyChoice",
+  "TreatmentStatusVentrilocordectomyDidExplain",
+  "TreatmentStatusVentrilocordectomyChoice",
+  "ManagementPrescriptions",
+  "ManagementNonPrescription",
+  "OTCProductsDidPurchase",
+  "OTCProtocolDidPurchase",
+  "AspirationDidHave",
+  "AspirationInpatient",
+  "AspirationSurgeryPost",
+  "AspirationStentPost",
+  "NeuropathySymptomsDoesHave",
+
+  "ConclusionStentAlternative",
+
+  "PrimaryDurationVisitsNumberPanel",
+
+]);
+
+// !VA CONTROL Elements
+const CONTROL_WIDTH_150 = new Set ([
+  "LandingConsent",
+  "CmpnInfoWeight",
+  "dcsdCmpnInfoAgeYears",
+  "dcsdCmpnInfoAgeMonths",
+  "lvngCmpnInfoAgeYears",
+  "lvngCmpnInfoAgeMonths",
+  "EarlySymptomsAgeYears",
+  "EarlySymptomsAgeMonths",
+  "PrimaryDurationFirstConsultYears",
+  "PrimaryDurationFirstConsultMonths",
+  "TreatmentStatusAgeYears",
+  "TreatmentStatusAgeMonths",
+])
+
+
+const CONTROL_WIDTH_300 = new Set([
+  "CmpnName",
+
+  "UserInfoFirstName",
+  "UserInfoCountry",
+  "UserInfoStateRegion",
+  "UserInfoAgeGroup",
+
+
+
+
+  "InfoSourcesBestSource",
+  "BreathingCrisisSubstanceForm",
+  "BreathingCrisisCost",
+
+  "TreatmentStatusTiebackOnceCost",
+  "TreatmentStatusTiebackMultipleCost",
+  "TreatmentStatusTiebackComplicationsCost",
+  ,"TreatmentStatusBveapCost",
+  "TreatmentStatusBveapComplicationsCost",
+  "TreatmentStatusStentType",
+  "TreatmentStatusStentCostOnce",
+  "TreatmentStatusStentCostRepeat",
+
+  "TreatmentStatusStentComplicationsCost",
+  "TreatmentStatusArytenoidectomyCost",
+  "TreatmentStatusArytenoidectomyComplicationsCost",
+  "TreatmentStatusVentrilocordectomyCost",
+  "TreatmentStatusVentrilocordectomyComplicationsCost",
+  "ManagementPrescriptionCost",
+  "ManagementNonPrescriptionCost",
+  "OTCProductsCost",
+  "OTCProtocolCost",
+  "AspirationCount",
+  "AspirationInpatientCount",
+  "AspirationSurgeryPostCount",
+  "AspirationStentPostCount",
+  "AspirationCost",
+  "NeuropathySymptomsBreathingOnset",
+  "NeuropathySymptomsHindEndOnset"
+
+]);
+
+const CONTROL_WIDTH_600 = new Set([
+
+  "BreathingCrisisCount",
+
+
+
+  "PrimaryDurationVisitsNumber",
+  "DiagnosisWho",
+  "DiagnosticType",
+  "DiagnosisTimeAfterSymptoms",
+  "TreatmentStatusAgeYears",
+  "TreatmentStatusAgeMonths",
+  "TreatmentStatusTiebackWait"
+]);
+
+
+// PANEL NO BORDER
+const PANEL_NO_BORDER = new Set([
+  "CmpnInfoAnimalTypePanel",
+  "CmpnInfoBreedGenderPanel",
+  "CmpnInfoWeightPanel",
+  "CmpnInfoAgePanel"
+]);
+
+
+// !VA QUESTION SEPARATOR
+
+// Add near the other Sets
+
+// !VA Works for 
+const QUESTION_SEPARATOR_ABOVE = new Set([
+  // put question names here (same .name values you already use)
+
+
+  
+  "UserInfoGender",
+
+  "CmpnInfoWeightPanel",
+
+  "UserInfoStateRegion",
+
+  "IntubationHistoryReason",
+  "IntubationHistorySymptoms",
+  "IntubationHistoryConcerns",
+
+  "BreathingCrisisCount", 
+  "BreathingCrisisCost", 
+  "BreathingCrisisProvidedSubstanceType",
+
+  "EarlySymptomsOtherConditionsType",
+
+  "PrimaryDurationVisitsNumber",
+  "PrimaryDurationChangedVets",
+  "PrimaryDurationChangedVetsReason",
+
+  "PrimaryVetInfoDetails",
+  "PrimaryVetSurgeryPerception",
+
+  "TreatmentStatusTiebackComplications",
+  "TreatmentStatusTiebackComplicationsCost",
+
+  "ManagementPrescriptionType",
+  "ManagementNonPrescriptionType",
+  "ManagementNonPrescriptionCost",
+
+  "OTCProductsType",
+  "OTCProtocolCost",
+
+  "AspirationInpatientCount",
+  "AspirationSurgeryPostCount",
+  "AspirationStentPostCount",
+
+  "NeuropathySymptomsTypeProgression",
+
+  "ConclusionOtherConditions"
+  ]);
+
+const QUESTION_SPACE_ABOVE = new Set([
+// put question names here (same .name values you already use)
+"UserInfoContactTypeFacebook",
+"UserInfoContactOK"
+]);
+
+
+
+
+const QUESTION_SEPARATOR_BELOW = new Set([
+  // put question names here (same .name values you already use)
+  "CmpnName",
+
+  "UserInfoContactType",
+  "UserInfoContactTypeFacebook",
+  // "UserInfoCountry",
+  // "UserInfoStateRegion",
+ 
+  // "CmpnInfoBreed",
+  // "CmpnInfoGender",
+  "CmpnInfoAnimalType",
+  "CmpnInfoDemeanor",
+  "CmpnInfoAnxiety",
+
+  "InfoSourcesPriorKnowledge", 
+  "InfoSourcesTypes",
+  "InfoSourcesHardToUnderstand",
+  "InfoSourcesContradictory",
+
+  "BreathingCrisisAdvice",
+  "BreathingCrisisAdviceType",
+  "BreathingCrisisProvidedSubstanceType",
+
+  "EarlySymptomsType",
+  "EarlySymptomsSeverity",
+  "EarlySymptomsHindEndWeakness",
+  
+  "PrimaryDurationVisitsNumber",
+
+  "PrimaryVetReflux",
+  "PrimaryVetRefluxMeds",
+  "PrimaryVetConfidence",
+
+  "DiagnosisWho",
+  "DiagnosticType",
+  "DiagnosisStage",
+  "DiagnosisTimeAfterSymptoms",
+  "DiagnosisCost",
+
+  "TreatmentStatusTiebackEmergency",
+  "TreatmentStatusTiebackWait",
+  "TreatmentStatusTiebackCount",
+
+  "TreatmentStatusBveapReasons",
+  "TreatmentStatusBveapCost",
+
+  "TreatmentStatusStentType",
+  "TreatmentStatusStentDidMigrate",
+  "TreatmentStatusStentReplaced",
+  "TreatmentStatusStentCostOnce",
+  "TreatmentStatusStentCostRepeat",
+
+  "TreatmentStatusArytenoidectomyReasons",
+  "TreatmentStatusArytenoidectomyLaser",
+  "TreatmentStatusArytenoidectomyDidExplain",
+  "TreatmentStatusArytenoidectomyChoice",
+  "TreatmentStatusArytenoidectomyCost",
+
+  "TreatmentStatusVentrilocordectomyReasons",
+  "TreatmentStatusVentrilocordectomyDidExplain",
+  "TreatmentStatusVentrilocordectomyChoice",
+  "TreatmentStatusVentrilocordectomyDidExplain",
+  "TreatmentStatusVentrilocordectomyCost",
+
+  "TreatmentStatusSurgeonInformLevel",
+
+  // "TreatmentFactorsCost",
+  // "TreatmentFactorsStageLP",
+  // "TreatmentFactorsRisks",
+  // "TreatmentFactorsAge",
+  // "TreatmentFactorsGeneralHealth",
+  // "TreatmentFactorsCostPanel",
+  // "TreatmentFactorsCircumstancesAccess",
+  // "TreatmentFactorsOther",
+
+
+  "ManagementPrescriptionType",
+  "ManagementPrescriptionCost",
+
+  "ManagementPrescriptionDoxepinRatingBreathing",
+  "ManagementPrescriptionTrazodoneGabapentinRatingBreathing",
+  "ManagementPrescriptionGabapentinRatingBreathing",
+  "ManagementPrescriptionGalliprantRatingBreathing",
+  "ManagementPrescriptionSteroidRatingBreathing",
+  "ManagementPrescriptionAntihistamineRatingBreathing",
+  "ManagementPrescriptionCereniaRatingBreathing",
+  "ManagementPrescriptionMeloxicamRatingBreathing",
+  "ManagementPrescriptionAcepromazineRatingBreathing",
+  "ManagementPrescriptionAlbuterolRatingBreathing",
+  "ManagementPrescriptionTemarilPRatingBreathing",
+
+  "ManagementNonPrescriptionAcupunctureRatingBreathing",
+  "ManagementNonPrescriptionTherapyRatingBreathing",
+  "ManagementNonPrescriptionColdLaserRatingBreathing",
+  "ManagementNonPrescriptionChiroRatingBreathing",
+
+  "OTCProductsType",
+  "OTCProductsCost",
+  "OTCProtocolCost",
+
+  "AspirationCount",
+
+
+
+  "NeuropathySymptomsFirst",
+
+  "NeuropathySymptomsTypeProgression",
+  "ConclusionSpecialConsiderations",
+  "ConclusionGeneralCondition",
+
+  "ConclusionOtherPathTieback",
+  "ConclusionOtherPathBVEAP",
+  "ConclusionOtherPathStent",
+  "ConclusionOtherPathArytenoidectomy",
+  "ConclusionOtherPathVentrilocordectomy",
+
+  "ConclusionStentAlternative"
+  
+  ]);
+
+  const QUESTION_SPACE_BELOW = new Set([
+    // put question names here (same .name values you already use)
+    "UserInfoStateRegion",
+ 
+    "CmpnInfoBreed",
+    "CmpnInfoGender",
+
+
+    "TreatmentStatusDidHave",
+
+
+    "TreatmentStatusBveapComplications",
+
+    "TreatmentStatusArytenoidectomyComplicationsCost",
+
+    "TreatmentStatusVentrilocordectomyComplications",
+
+    "ManagementPrescriptionDoxepinRatingMobility",
+    "ManagementPrescriptionTrazodoneRatingMobility",
+    "ManagementPrescriptionGabapentinRatingMobility",
+    "ManagementPrescriptionGalliprantRatingMobility",
+    "ManagementPrescriptionSteroidRatingMobility",
+    "ManagementPrescriptionAntihistamineRatingMobility",
+    "ManagementPrescriptionCereniaRatingMobility",
+    "ManagementPrescriptionMeloxicamRatingMobility",
+    "ManagementPrescriptionAcepromazineRatingMobility",
+    "ManagementPrescriptionAlbuterolRatingMobility",
+    "ManagementPrescriptionTemarilPRatingMobility",
+
+    "ManagementNonPrescriptionAcupunctureRatingMobility",
+    "ManagementNonPrescriptionTherapyRatingMobility",
+    "ManagementNonPrescriptionColdLaserRatingMobility",
+    "ManagementNonPrescriptionChiroRatingMobility",
+
+    "NeuropathySymptomsBreathingOnset",
+    "NeuropathySymptomsHindEndOnset",
+    
+    "ConclusionOtherConditionsNew"
+  ]);
+
+
+  if (ITEMS_CARD_PANEL.has(name)) {
+    directives.push({ target: "panels", className: "survey-card-panel" });
+  }
+
+  if (ITEMS_TWO_COL.has(name)) {
+    directives.push({ target: "items", className: "survey-two-col" });
+  }
+  if (ITEMS_THREE_COL.has(name)) {
+    directives.push({ target: "items", className: "survey-three-col" });
+  }
+
+  if (CONTROL_WIDTH_150.has(name)) {
+    directives.push({ target: "control", className: "survey-control-w-150" });
+  }
+  if (CONTROL_WIDTH_300.has(name)) {
+    directives.push({ target: "control", className: "survey-control-w-300" });
+  }
+  if (CONTROL_WIDTH_600.has(name)) {
+    directives.push({ target: "control", className: "survey-control-w-600" });
+  }
+
+  if (PANEL_NO_BORDER.has(name)) {
+    directives.push({ target: "question", className: "survey-p-no-border" });
+  }
+
+  if (QUESTION_SEPARATOR_ABOVE.has(name)) {
+    directives.push({ target: "question", className: "survey-q-separator-above" });
+  }
+  if (QUESTION_SPACE_ABOVE.has(name)) {
+    directives.push({ target: "question", className: "survey-q-space-above" });
+  }
+
+  if (QUESTION_SEPARATOR_BELOW.has(name)) {
+    directives.push({ target: "question", className: "survey-q-separator-below" });
+  }
+  if (QUESTION_SPACE_BELOW.has(name)) {
+    directives.push({ target: "question", className: "survey-q-space-below" });
+  }
+
+
+
+  return directives;
+}
