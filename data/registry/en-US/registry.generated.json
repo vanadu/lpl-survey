@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-03-31T10:39:43.823Z",
+    "builtAt": "2026-04-02T10:29:39.864Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -1561,7 +1561,7 @@
         "DiagnosisSpecialistPanel"
       ],
       "hasTitle": true,
-      "title": "Did any of these specialists misdiagnose {CmpnName}' symptoms?",
+      "title": "Did any of these specialists misdiagnose {CmpnName}'s symptoms?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1640,7 +1640,7 @@
     },
     "DiagnosisTimeAfterSymptoms": {
       "name": "DiagnosisTimeAfterSymptoms",
-      "type": "dropdown",
+      "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
@@ -1685,6 +1685,2330 @@
       "title": "Did {CmpnName} have LP surgery immediately after the diagnosis?",
       "hasVisibleIf": false,
       "isRequired": true
+    },
+    "MedicationCard1Panel": {
+      "name": "MedicationCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "Medication-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "MedicationPrescriptionPanel": {
+      "name": "MedicationPrescriptionPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "MedicationPrescription": {
+      "name": "MedicationPrescription",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did/does {CmpnName} take any prescription medications for LP/GOLPP symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "MedicationPrescriptionType": {
+      "name": "MedicationPrescriptionType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP symptoms?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionCost": {
+      "name": "MedicationPrescriptionCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Average monthly cost of {CmpnName}'s prescriptions:",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionDoxepinRatingBreathing": {
+      "name": "MedicationPrescriptionDoxepinRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Doxepin have an effect on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionDoxepinRatingMobility": {
+      "name": "MedicationPrescriptionDoxepinRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Doxepin have an effect on {CmpnName}'s mobility or behavior?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionTrazodoneRatingBreathing": {
+      "name": "MedicationPrescriptionTrazodoneRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Trazodone have an effect on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionTrazodoneRatingMobility": {
+      "name": "MedicationPrescriptionTrazodoneRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Trazodone have an effect on {CmpnName} mobility or behavior?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionGabapentinRatingBreathing": {
+      "name": "MedicationPrescriptionGabapentinRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Gabapentin have an effect on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionGabapentinRatingMobility": {
+      "name": "MedicationPrescriptionGabapentinRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Gabapentin have an effect on {CmpnName}'s mobility or behavior?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionGalliprantRatingBreathing": {
+      "name": "MedicationPrescriptionGalliprantRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Galliprant have an effect on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionGalliprantRatingMobility": {
+      "name": "MedicationPrescriptionGalliprantRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Galliprant have an effect on {CmpnName}'s mobility or behavior?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionSteroidRatingBreathing": {
+      "name": "MedicationPrescriptionSteroidRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Prednisone have an effect on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionSteroidRatingMobility": {
+      "name": "MedicationPrescriptionSteroidRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Prednisone have an effect on {CmpnName}'s mobility or behavior?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionAntihistamineRatingBreathing": {
+      "name": "MedicationPrescriptionAntihistamineRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Benadryl or other antihistamine have an effect on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionAntihistamineRatingMobility": {
+      "name": "MedicationPrescriptionAntihistamineRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Benadryl or other antihistamine have an effect on {CmpnName}'s mobility or behavior?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionCereniaRatingBreathing": {
+      "name": "MedicationPrescriptionCereniaRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Cerenia have an effect on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionCereniaRatingMobility": {
+      "name": "MedicationPrescriptionCereniaRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Cerenia have an effect on {CmpnName}'s mobility or behavior?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionMeloxicamRatingBreathing": {
+      "name": "MedicationPrescriptionMeloxicamRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Meloxicam have an effect on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionMeloxicamRatingMobility": {
+      "name": "MedicationPrescriptionMeloxicamRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Meloxicam have an effect on {CmpnName}'s mobility or behavior?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionAcepromineRatingBreathing": {
+      "name": "MedicationPrescriptionAcepromineRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Acepromine have an effect on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionAcepromineRatingMobility": {
+      "name": "MedicationPrescriptionAcepromineRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Acepromine have an effect on {CmpnName}'s mobility or behavior?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionAlbuterolRatingBreathing": {
+      "name": "MedicationPrescriptionAlbuterolRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Albuterol or other inhaler have an effect on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionAlbuterolRatingMobility": {
+      "name": "MedicationPrescriptionAlbuterolRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Albuterol or other inhaler have an effect on {CmpnName}'s mobility or behavior?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionTemarilPRatingBreathing": {
+      "name": "MedicationPrescriptionTemarilPRatingBreathing",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Temaril P have an effect on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
+      "isRequired": true
+    },
+    "MedicationPrescriptionTemarilPRatingMobility": {
+      "name": "MedicationPrescriptionTemarilPRatingMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationPrescriptionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did Temaril P have an effect on {CmpnName}'s mobility or behavior?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
+      "isRequired": true
+    },
+    "MedicationRefluxMedicationPanel": {
+      "name": "MedicationRefluxMedicationPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "MedicationRefluxMedications": {
+      "name": "MedicationRefluxMedications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationRefluxMedicationPanel"
+      ],
+      "hasTitle": true,
+      "title": "Has {CmpnName} taken any medications for reflux (GERD) or to improve digestive motility?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "MedicationRefluxMedicationsLPEffect": {
+      "name": "MedicationRefluxMedicationsLPEffect",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationRefluxMedicationPanel"
+      ],
+      "hasTitle": true,
+      "title": "How did the reflux medications affect {CmpnName}'s LP/GOLPP symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "MedicationRefluxMedicationsAPEffect": {
+      "name": "MedicationRefluxMedicationsAPEffect",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel",
+        "MedicationRefluxMedicationPanel"
+      ],
+      "hasTitle": true,
+      "title": "How did the reflux medications affect {CmpnName}'s risk of aspiration pneumonia?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "MedicationCard2Panel": {
+      "name": "MedicationCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "Medication-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "MedicationSupplementsTypePanel": {
+      "name": "MedicationSupplementsTypePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "Medication-page",
+        "MedicationCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "MedicationSupplementsDidPurchase": {
+      "name": "MedicationSupplementsDidPurchase",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard2Panel",
+        "MedicationSupplementsTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Have you purchased supplements based on a particular ingredient for {CmpnName}'s LP/GOLPP symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "MedicationSupplementsType": {
+      "name": "MedicationSupplementsType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard2Panel",
+        "MedicationSupplementsTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Please select the main ingredient in the supplements {CmpnName} has taken:",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "MedicationSupplementsCost": {
+      "name": "MedicationSupplementsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard2Panel",
+        "MedicationSupplementsTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the average monthly cost of the supplements?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "MedicationSupplementsEffectiveness": {
+      "name": "MedicationSupplementsEffectiveness",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard2Panel",
+        "MedicationSupplementsTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Please rate the overall effectiveness of the supplements:",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "MedicationProtocolPanel": {
+      "name": "MedicationProtocolPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "Medication-page",
+        "MedicationCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "MedicationProtocolDidPurchase": {
+      "name": "MedicationProtocolDidPurchase",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard2Panel",
+        "MedicationProtocolPanel"
+      ],
+      "hasTitle": true,
+      "title": "Have you purchased products that are advertised as a blend or protocol of ingredients created for LP/GOLPP?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "MedicationProtocolCost": {
+      "name": "MedicationProtocolCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard2Panel",
+        "MedicationProtocolPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the average monthly cost of the blends or protocols?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "MedicationProtocolEffectiveness": {
+      "name": "MedicationProtocolEffectiveness",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard2Panel",
+        "MedicationProtocolPanel"
+      ],
+      "hasTitle": true,
+      "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureCard1Panel": {
+      "name": "ProcedureCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureDidHave": {
+      "name": "ProcedureDidHave",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} undergo a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureAgePanel": {
+      "name": "ProcedureAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true"
+    },
+    "ProcedureAgeYears": {
+      "name": "ProcedureAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Years",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureAgeMonths": {
+      "name": "ProcedureAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Months (number 0 - 11)",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureScheduled": {
+      "name": "ProcedureScheduled",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureScheduledWait": {
+      "name": "ProcedureScheduledWait",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "How far in advance did you have to schedule the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureCard2Panel": {
+      "name": "ProcedureCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureTypePanel": {
+      "name": "ProcedureTypePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureType": {
+      "name": "ProcedureType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "What kind of procedure or procedures did {CmpnName} have?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureTiebackPanel": {
+      "name": "ProcedureTiebackPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Questions about tieback (Unilateral Arytenoid Lateralization) surgery",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TIEBACK'"
+    },
+    "ProcedureTiebackEmergency": {
+      "name": "ProcedureTiebackEmergency",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Was emergency tieback performed on {CmpnName} after a life-threatening breathing emergency?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTiebackInfection": {
+      "name": "ProcedureTiebackInfection",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have any unexpected issues with infection or swelling at the incision site?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTiebackSuturesFail": {
+      "name": "ProcedureTiebackSuturesFail",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the sutures ever fail, causing a return of {CmpnName} LP symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTiebackSuturesFailRepeat": {
+      "name": "ProcedureTiebackSuturesFailRepeat",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the sutures ever fail, causing a return of {CmpnName} LP symptoms?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureTiebackCount": {
+      "name": "ProcedureTiebackCount",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "How many times did {CmpnName} undergo tieback (UAL) surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTiebackMultipleCost": {
+      "name": "ProcedureTiebackMultipleCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Approximate total cost of surgeries (not including post-op complications):",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureTiebackCount} = 'MORE_THAN_ONCE'",
+      "isRequired": true
+    },
+    "ProcedureTiebackComplications": {
+      "name": "ProcedureTiebackComplications",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTiebackComplicationsCost": {
+      "name": "ProcedureTiebackComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureTiebackPanel"
+      ],
+      "hasTitle": true,
+      "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureTiebackComplications} = true",
+      "isRequired": true
+    },
+    "ProcedureBveapPanel": {
+      "name": "ProcedureBveapPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Questions about BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'BVEAP'"
+    },
+    "ProcedureBveapReasons": {
+      "name": "ProcedureBveapReasons",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureBveapPanel"
+      ],
+      "hasTitle": true,
+      "title": "Why did you choose BVEAP over other surgery types?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureBveapCost": {
+      "name": "ProcedureBveapCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureBveapPanel"
+      ],
+      "hasTitle": true,
+      "title": "Approximate cost of BVEAP surgery (not including post-op complications):",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureBveapComplications": {
+      "name": "ProcedureBveapComplications",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureBveapPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureBveapComplicationsCost": {
+      "name": "ProcedureBveapComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureBveapPanel"
+      ],
+      "hasTitle": true,
+      "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureBveapComplications} = true",
+      "isRequired": true
+    },
+    "ProcedureStentPanel": {
+      "name": "ProcedureStentPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'STENT'"
+    },
+    "ProcedureStentType": {
+      "name": "ProcedureStentType",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "What type of stent implant did {CmpnName} receive?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureDexstentPanel": {
+      "name": "ProcedureDexstentPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureStentType} contains 'DEXSTENT'"
+    },
+    "ProcedureStentDidMigrate": {
+      "name": "ProcedureStentDidMigrate",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} eject or 'cough out' the stent, or did it migrate out of position?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureStentType} = 'SILICONE' || {ProcedureStentType} = 'NITINOL_MESH'",
+      "isRequired": true
+    },
+    "ProcedureStentReplaced": {
+      "name": "ProcedureStentReplaced",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Was it replaced with a new stent of a different size?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureStentDidMigrate} = true && {ProcedureStentType} != 'DONT_KNOW' && {ProcedureStentType} != 'DEXSTENT' && {ProcedureStentType} != 'Other'",
+      "isRequired": true
+    },
+    "ProcedureStentHalitosis": {
+      "name": "ProcedureStentHalitosis",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have halitosis after the stent implant?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureStentHalitosisRating": {
+      "name": "ProcedureStentHalitosisRating",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "How bad was {CmpnName}’s halitosis after the stent implant?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureStentHalitosis} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureStentInfected": {
+      "name": "ProcedureStentInfected",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the tissue around the stent ever become infected?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureStentInfectedHandling": {
+      "name": "ProcedureStentInfectedHandling",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "How was the infection handled?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureStentInfected} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureStentThroatclear": {
+      "name": "ProcedureStentThroatclear",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} frequently cough or throat-clear after the stent procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureStentThroatclearImproved": {
+      "name": "ProcedureStentThroatclearImproved",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName}'s coughing or throat-clearing improve over time?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureStentCostOnce": {
+      "name": "ProcedureStentCostOnce",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Approximate cost of stent implant procedure, not including complications:",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureStentDidMigrate} = false || {ProcedureStentReplaced} = false",
+      "isRequired": true
+    },
+    "ProcedureStentCostRepeat": {
+      "name": "ProcedureStentCostRepeat",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Approximate cost of the stent procedures, not including complications:",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureStentDidMigrate} = true && {ProcedureStentReplaced} = true",
+      "isRequired": true
+    },
+    "ProcedureStentComplications": {
+      "name": "ProcedureStentComplications",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there post-operative complications that required overnight inpatient care for {CmpnName}?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureStentType} notempty",
+      "isRequired": true
+    },
+    "ProcedureArytenoidectomyPanel": {
+      "name": "ProcedureArytenoidectomyPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Questions about partial arytenoidectomy surgery",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'ARYTENOIDECTOMY'"
+    },
+    "ProcedureArytenoidectomyReasons": {
+      "name": "ProcedureArytenoidectomyReasons",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Why did you choose partial arytenoidectomy over other surgery types?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureArytenoidectomyLaser": {
+      "name": "ProcedureArytenoidectomyLaser",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Was the partial arytenoidectomy performed with a laser?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureArytenoidectomyDidExplain": {
+      "name": "ProcedureArytenoidectomyDidExplain",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon explain the pros and cons of this surgery type vs standard tieback surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureArytenoidectomyChoice": {
+      "name": "ProcedureArytenoidectomyChoice",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureArytenoidectomyCost": {
+      "name": "ProcedureArytenoidectomyCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Approximate cost of the partial arytenoidectomy (not including post-op complications):",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureArytenoidectomyComplications": {
+      "name": "ProcedureArytenoidectomyComplications",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureArytenoidectomyComplicationsCost": {
+      "name": "ProcedureArytenoidectomyComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureArytenoidectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureArytenoidectomyComplications} = true",
+      "isRequired": true
+    },
+    "ProcedureVentrilocordectomyPanel": {
+      "name": "ProcedureVentrilocordectomyPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Questions about ventrilocordectomy surgery",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VENTRILOCORDECTOMY'"
+    },
+    "ProcedureVentrilocordectomyReasons": {
+      "name": "ProcedureVentrilocordectomyReasons",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Why did you choose ventrilocordectomy over other surgery types?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVentrilocordectomyDidExplain": {
+      "name": "ProcedureVentrilocordectomyDidExplain",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon explain the pros and cons of this surgery type vs tieback surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVentrilocordectomyChoice": {
+      "name": "ProcedureVentrilocordectomyChoice",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVentrilocordectomyCost": {
+      "name": "ProcedureVentrilocordectomyCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Approximate cost of the ventrilocordectomy (not including post-op complications):",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVentrilocordectomyComplications": {
+      "name": "ProcedureVentrilocordectomyComplications",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVentrilocordectomyComplicationsCost": {
+      "name": "ProcedureVentrilocordectomyComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureVentrilocordectomyPanel"
+      ],
+      "hasTitle": true,
+      "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureVentrilocordectomyComplications} = true",
+      "isRequired": true
+    },
+    "ProcedureRatingPanel": {
+      "name": "ProcedureRatingPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true"
+    },
+    "ProcedureSurgeonInformLevel": {
+      "name": "ProcedureSurgeonInformLevel",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureRatingPanel"
+      ],
+      "hasTitle": true,
+      "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTreatmentSatisfactionLevel": {
+      "name": "ProcedureTreatmentSatisfactionLevel",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureRatingPanel"
+      ],
+      "hasTitle": true,
+      "title": "How satisfied were you with the results of the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTiebackOnceCost": {
+      "name": "ProcedureTiebackOnceCost",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureRatingPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the approximate cost of the procedure including post-op complications?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = 'YES'",
+      "isRequired": true
+    },
+    "TherapyCard1Panel": {
+      "name": "TherapyCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "THERAPY-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "TherapyTypePanel": {
+      "name": "TherapyTypePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "THERAPY-page",
+        "TherapyCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "TherapyDidPurchase": {
+      "name": "TherapyDidPurchase",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "THERAPY-page",
+        "TherapyCard1Panel",
+        "TherapyTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Have you purchased OTC products based on a particular ingredient {CmpnName}'s LP/GOLPP symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "TherapyType": {
+      "name": "TherapyType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "THERAPY-page",
+        "TherapyCard1Panel",
+        "TherapyTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:",
+      "hasVisibleIf": true,
+      "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "TherapyCost": {
+      "name": "TherapyCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "THERAPY-page",
+        "TherapyCard1Panel",
+        "TherapyTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the average monthly cost of these OTC products?",
+      "hasVisibleIf": true,
+      "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "TherapyEffectiveness": {
+      "name": "TherapyEffectiveness",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "THERAPY-page",
+        "TherapyCard1Panel",
+        "TherapyTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "Please rate the overall effectiveness of the OTC products you selected above:",
+      "hasVisibleIf": true,
+      "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "TherapyCard2Panel": {
+      "name": "TherapyCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "THERAPY-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "OTCProtocolPanel": {
+      "name": "OTCProtocolPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "THERAPY-page",
+        "TherapyCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "OTCProtocolDidPurchase": {
+      "name": "OTCProtocolDidPurchase",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "THERAPY-page",
+        "TherapyCard2Panel",
+        "OTCProtocolPanel"
+      ],
+      "hasTitle": true,
+      "title": "Have you purchased products that are advertised as a blend or protocol of OTC ingredients created for a specific illness or condition?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "OTCProtocolCost": {
+      "name": "OTCProtocolCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "THERAPY-page",
+        "TherapyCard2Panel",
+        "OTCProtocolPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the average monthly cost of the blends or protocols?",
+      "hasVisibleIf": true,
+      "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "OTCProtocolEffectiveness": {
+      "name": "OTCProtocolEffectiveness",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "THERAPY-page",
+        "TherapyCard2Panel",
+        "OTCProtocolPanel"
+      ],
+      "hasTitle": true,
+      "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
+      "hasVisibleIf": true,
+      "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "BreathingCard1Panel": {
+      "name": "BreathingCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "BreathingDidHavePanel": {
+      "name": "BreathingDidHavePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "BreathingDidHave": {
+      "name": "BreathingDidHave",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard1Panel",
+        "BreathingDidHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "BreathingGeneralPanel": {
+      "name": "BreathingGeneralPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationDidHave} = 'YES'"
+    },
+    "BreathingCount": {
+      "name": "BreathingCount",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard1Panel",
+        "BreathingGeneralPanel"
+      ],
+      "hasTitle": true,
+      "title": "How many times did {CmpnName} get AP?",
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationDidHave} = 'YES'",
+      "isRequired": true
+    },
+    "BreathingInpatient": {
+      "name": "BreathingInpatient",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard1Panel",
+        "BreathingGeneralPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} ever need inpatient, overnight, or emergency care for AP?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "BreathingInpatientCount": {
+      "name": "BreathingInpatientCount",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard1Panel",
+        "BreathingGeneralPanel"
+      ],
+      "hasTitle": true,
+      "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationInpatient} = 'YES'",
+      "isRequired": true
+    },
+    "BreathingCard2Panel": {
+      "name": "BreathingCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "BreathingSurgeryPanel": {
+      "name": "BreathingSurgeryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = 'YES'"
+    },
+    "BreathingSurgeryPost": {
+      "name": "BreathingSurgeryPost",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard2Panel",
+        "BreathingSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} ever have AP after the surgery (i.e., tieback, BVEAP)?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "BreathingSurgeryPostCount": {
+      "name": "BreathingSurgeryPostCount",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard2Panel",
+        "BreathingSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "How many times did {CmpnName} get AP after the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationSurgeryPost} = 'YES'",
+      "isRequired": true
+    },
+    "BreathingStentPanel": {
+      "name": "BreathingStentPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = 'YES'"
+    },
+    "BreathingStentPost": {
+      "name": "BreathingStentPost",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard2Panel",
+        "BreathingStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} ever have AP after the stent implant procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "BreathingStentPostCount": {
+      "name": "BreathingStentPostCount",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard2Panel",
+        "BreathingStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "How many times did {CmpnName} get AP after the stent implant?",
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationStentPost} = 'YES'",
+      "isRequired": true
+    },
+    "BreathingCostPanel": {
+      "name": "BreathingCostPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{AspirationDidHave} = 'YES'"
+    },
+    "BreathingCost": {
+      "name": "BreathingCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard2Panel",
+        "BreathingCostPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "NeuropathyCard1Panel": {
+      "name": "NeuropathyCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "NeuropathySymptomsDoesHavePanel": {
+      "name": "NeuropathySymptomsDoesHavePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "NeuropathySymptomsDoesHave": {
+      "name": "NeuropathySymptomsDoesHave",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard1Panel",
+        "NeuropathySymptomsDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "NeuropathyCard2Panel": {
+      "name": "NeuropathyCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "NeuropathyHindEndDoesHavePanel": {
+      "name": "NeuropathyHindEndDoesHavePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'"
+    },
+    "NeuropathySymptomsFirst": {
+      "name": "NeuropathySymptomsFirst",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
+        "NeuropathyHindEndDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "NeuropathySymptomsBreathingOnset": {
+      "name": "NeuropathySymptomsBreathingOnset",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
+        "NeuropathyHindEndDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "About how long after you first noticed hind-end weakness did the breathing issues begin?",
+      "hasVisibleIf": true,
+      "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
+      "isRequired": true
+    },
+    "NeuropathySymptomsHindEndOnset": {
+      "name": "NeuropathySymptomsHindEndOnset",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
+        "NeuropathyHindEndDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
+      "hasVisibleIf": true,
+      "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
+      "isRequired": true
+    },
+    "NeuropathySymptomsTypeProgression": {
+      "name": "NeuropathySymptomsTypeProgression",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
+        "NeuropathyHindEndDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
+      "hasVisibleIf": true,
+      "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = 'YES'",
+      "isRequired": true
+    },
+    "NeuropathyOtherIssues": {
+      "name": "NeuropathyOtherIssues",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard2Panel",
+        "NeuropathyHindEndDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Over the course of {CmpnName}'s LP/GOLPP, did any of these issues also appear?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionCard1Panel": {
+      "name": "ConclusionCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ConclusionsPanelLifeStatusTrue": {
+      "name": "ConclusionsPanelLifeStatusTrue",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{LifeStatus} = true"
+    },
+    "ConclusionsPanelLifeStatusFalse": {
+      "name": "ConclusionsPanelLifeStatusFalse",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{LifeStatus} = false"
+    },
+    "ConclusionDetailsPanel": {
+      "name": "ConclusionDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ConclusionSpecialConsiderations": {
+      "name": "ConclusionSpecialConsiderations",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Please describe any special considerations for {CmpnName} due to LP-related breathing issues:",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionGeneralCondition": {
+      "name": "ConclusionGeneralCondition",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Please describe {CmpnName}'s general physical condition:",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionQOL": {
+      "name": "ConclusionQOL",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "How would you rate {CmpnName}'s quality of life at this stage?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherConditionsPanel": {
+      "name": "ConclusionOtherConditionsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ConclusionOtherConditionsNew": {
+      "name": "ConclusionOtherConditionsNew",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionOtherConditionsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} develop any new conditions during {cvGenderObjectPronoun} LP/GOLPP journey that {cvGenderSubjectPronoun} didn't have before?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherConditions": {
+      "name": "ConclusionOtherConditions",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionOtherConditionsPanel"
+      ],
+      "hasTitle": true,
+      "title": "What other conditions did {CmpnName} develop during {cvGenderObjectPronoun} LP/GOLPP journey?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ConclusionOtherConditionsNew} = true",
+      "isRequired": true
+    },
+    "ConclusionCard2Panel": {
+      "name": "ConclusionCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ConclusionCauseOfDeathPanel": {
+      "name": "ConclusionCauseOfDeathPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{LifeStatus} = true"
+    },
+    "ConclusionCauseOfDeath": {
+      "name": "ConclusionCauseOfDeath",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionCauseOfDeathPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the ultimate reason why {CmpnName} crossed over the Rainbow Bridge?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionOtherPathPanel": {
+      "name": "ConclusionOtherPathPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?",
+      "hasVisibleIf": false
+    },
+    "ConclusionOtherPathTieback": {
+      "name": "ConclusionOtherPathTieback",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "What if anything would you differently?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathBVEAP": {
+      "name": "ConclusionOtherPathBVEAP",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathStent": {
+      "name": "ConclusionOtherPathStent",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathArytenoidectomy": {
+      "name": "ConclusionOtherPathArytenoidectomy",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathVentrilocordectomy": {
+      "name": "ConclusionOtherPathVentrilocordectomy",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+      "isRequired": true
+    },
+    "ConclusionOtherPathNoTreatment": {
+      "name": "ConclusionOtherPathNoTreatment",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusDidHave} = false",
+      "isRequired": true
+    },
+    "ConclusionStentAlternative": {
+      "name": "ConclusionStentAlternative",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{TreatmentStatusType} notcontains 'STENT'",
+      "isRequired": true
+    },
+    "ConclusionDifferentChoices": {
+      "name": "ConclusionDifferentChoices",
+      "type": "comment",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": true,
+      "title": "Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).",
+      "hasVisibleIf": false,
+      "isRequired": false
+    },
+    "ConclusionThanksPanel": {
+      "name": "ConclusionThanksPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard2Panel",
+        "ConclusionOtherPathPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     }
   }
 }

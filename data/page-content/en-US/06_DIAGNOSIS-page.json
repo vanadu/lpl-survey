@@ -168,7 +168,7 @@
                   "showOtherItem": false
                 },
                 {
-                "type": "dropdown",
+                "type": "radiogroup",
                 "name": "DiagnosisTimeAfterSymptoms",
                 "title": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?",
                 "isRequired": true,

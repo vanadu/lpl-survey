@@ -1,0 +1,304 @@
+{
+  "name": "BREATHING-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "BreathingCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "BreathingHeading",
+          "html": "<h2>{CmpnName}'s experience with aspiration pneumonia</h2>"
+        },
+        {
+          "type": "html",
+          "name": "BreathingText",
+          "html": "<p>Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This section asks questions about {CmpnName}'s experience with AP. </p>"
+        },
+        {
+          "type": "html",
+          "name": "BreathingInfoLink",
+          "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?</a></div>"
+        },
+            {
+      "type": "panel",
+      "name": "BreathingDidHavePanel",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "BreathingDidHave",
+          "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "BreathingGeneralPanel",
+      "visibleIf": "{AspirationDidHave} = 'YES'",
+      "elements": [
+        {
+        "type": "dropdown",
+        "name": "BreathingCount",
+        "title": "How many times did {CmpnName} get AP?",
+        "isRequired": true,
+        "visibleIf": "{AspirationDidHave} = 'YES'",
+        "choices": [
+          {
+            "value": "ONE",
+            "text": "Once"
+          },
+          {
+            "value": "TWO",
+            "text": "Twice"
+          },
+          {
+            "value": "THREE",
+            "text": "Three times"
+          },
+          {
+            "value": "MORE_THAN_THREE",
+            "text": "More than three times"
+          }
+        ],
+        "showOtherItem": false
+        },
+        {
+          "type": "radiogroup",
+          "name": "BreathingInpatient",
+          "title": "Did {CmpnName} ever need inpatient, overnight, or emergency care for AP?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "YES",
+              "text": "Yes"
+            },
+            {
+              "value": "NO",
+              "text": "No"
+            },
+            {
+              "value": "DONT_KNOW",
+              "text": "Don't know"
+            }
+          ],
+          "showOtherItem": false
+        },
+        {
+          "type": "dropdown",
+          "name": "BreathingInpatientCount",
+          "visibleIf": "{AspirationInpatient} = 'YES'",
+          "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "ONE",
+              "text": "Once"
+            },
+            {
+              "value": "TWO",
+              "text": "Twice"
+            },
+            {
+              "value": "THREE",
+              "text": "Three times"
+            },
+            {
+              "value": "MORE_THAN_THREE",
+              "text": "More than three times"
+            }
+          ],
+          "showOtherItem": false
+        }
+      ]
+    }
+
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "BreathingCard2Panel",
+      "elements": [
+        {
+    "type": "panel",
+    "name": "BreathingSurgeryPanel",
+    "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = 'YES'",
+    "elements": [
+
+      {
+        "type": "radiogroup",
+        "name": "BreathingSurgeryPost",
+        "title": "Did {CmpnName} ever have AP after the surgery (i.e., tieback, BVEAP)?",
+        "description": "Includes tieback, BVEAP, ventrilocordectomy, arytenoidectomy and other invasive surgery procedures.",
+        "isRequired": true,
+        "choices": [
+          {
+            "value": "YES",
+            "text": "Yes"
+          },
+          {
+            "value": "NO",
+            "text": "No"
+          },
+          {
+            "value": "DONT_KNOW",
+            "text": "Don't know"
+          }
+        ],
+        "showOtherItem": false
+      },
+
+      {
+        "type": "dropdown",
+        "name": "BreathingSurgeryPostCount",
+        "title": "How many times did {CmpnName} get AP after the surgery?",
+        "isRequired": true,
+        "visibleIf": "{AspirationSurgeryPost} = 'YES'",
+        "choices": [
+          {
+            "value": "ONE",
+            "text": "Once"
+          },
+          {
+            "value": "TWO",
+            "text": "Twice"
+          },
+          {
+            "value": "THREE",
+            "text": "Three times"
+          },
+          {
+            "value": "MORE_THAN_THREE",
+            "text": "More than three times"
+          }
+        ],
+        "showOtherItem": false
+      }
+
+    ]
+        },
+        {
+          "type": "panel",
+          "name": "BreathingStentPanel",
+          "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = 'YES'",
+          "elements": [
+
+            {
+              "type": "radiogroup",
+              "name": "BreathingStentPost",
+              "title": "Did {CmpnName} ever have AP after the stent implant procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+            {
+              "type": "dropdown",
+              "name": "BreathingStentPostCount",
+              "title": "How many times did {CmpnName} get AP after the stent implant?",
+              "isRequired": true,
+              "visibleIf": "{AspirationStentPost} = 'YES'",
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Once"
+                },
+                {
+                  "value": "TWO",
+                  "text": "Twice"
+                },
+                {
+                  "value": "THREE",
+                  "text": "Three times"
+                },
+                {
+                  "value": "MORE_THAN_THREE",
+                  "text": "More than three times"
+                }
+              ],
+              "showOtherItem": false
+            }
+
+          ]
+        },
+        {
+              "type": "panel",
+              "name": "BreathingCostPanel",
+              "visibleIf": "{AspirationDidHave} = 'YES'",
+              "elements": [
+                {
+                  "type": "dropdown",
+                  "name": "BreathingCost",
+                  "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
+                      "value": "UNDER_100",
+                      "text": "Under $100"
+                    },
+                    {
+                      "value": "100_300",
+                      "text": "$100-$300"
+                    },
+                    {
+                      "value": "300_500",
+                      "text": "$300-$500"
+                    },
+                    {
+                      "value": "500_1000",
+                      "text": "$500-$1000"
+                    },
+                    {
+                      "value": "1001_3000",
+                      "text": "$1001-$3000"
+                    },
+                    {
+                      "value": "3000_5000",
+                      "text": "$3000-$5000"
+                    },
+                    {
+                      "value": "OVER_5000",
+                      "text": "Over $5000"
+                    }
+                  ]
+                }
+              ]
+        }
+      ]
+    }
+  ]
+}
+
+

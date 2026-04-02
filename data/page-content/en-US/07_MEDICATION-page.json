@@ -1,0 +1,743 @@
+{
+  "name": "Medication-page",
+  "elements": [
+
+    {
+      "type": "panel",
+      "name": "MedicationCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "MedicationHeading",
+          "html": "<h2>{CmpnName}'s LP/GOLPP medications</h2>"
+        },
+        {
+          "type": "html",
+          "name": "MedicationTextImportant",
+          "html": "<p>This section asks about prescription and non-prescription medications and supplements {CmpnName} has taken for LP/GOLPP. </p>"
+        },
+        
+        {
+          "type": "panel",
+          "name": "MedicationPrescriptionPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "MedicationPrescription",
+              "title": "Did/does {CmpnName} take any prescription medications for LP/GOLPP symptoms?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "MedicationPrescriptionType",
+              "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP symptoms?",
+              "description": "Please also include discontinued medications.",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES'",
+              "choices": [
+                {
+                  "value": "DOXEPIN",
+                  "text": "Doxepin"
+                },
+                {
+                  "value": "TRAZODONE",
+                  "text": "Trazodone"
+                },
+                {
+                  "value": "GABAPENTIN",
+                  "text": "Gabapentin"
+                },
+                {
+                  "value": "GALLIPRANT",
+                  "text": "Galliprant"
+                },
+                {
+                  "value": "STEROID",
+                  "text": "Prednisone or other steriod"
+                },      
+                {
+                  "value": "ANTIHISTAMINE",
+                  "text": "Benadryl or other antihistamine"
+                },                            
+                {
+                  "value": "CERENIA",
+                  "text": "Cerenia (maripotant citrate)"
+                },
+                {
+                  "value": "MELOXICAM",
+                  "text": "Meloxicam"
+                },
+                {
+                  "value": "ACEPROMINE",
+                  "text": "Acepromazine (Atravet, ACP, Acepromine)"
+                },
+                {
+                  "value": "ALBUTEROL",
+                  "text": "Albuterol or other inhaler"
+                },
+                {
+                  "value": "TEMARIL_P",
+                  "text": "Temaril P"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+            "type": "dropdown",
+            "name": "MedicationPrescriptionCost",
+            "title": "Average monthly cost of {CmpnName}'s prescriptions:",
+            "description": "If you don't know exactly, it's OK to guesstimate.",
+            "isRequired": true,
+            "visibleIf": "{MedicationPrescription} = 'YES'",
+            "choices": [
+              {
+                "value": "UNDER_50",
+                "text": "Under $50"
+              },
+              {
+                "value": "51_100",
+                "text": "$51-$100"
+              },
+              {
+                "value": "101_200",
+                "text": "$101-$200"
+              },
+              {
+                "value": "OVER_200",
+                "text": "Over $200"
+              }
+            ],
+            "showOtherItem": true,
+            "showNoneItem": true,
+            "required": true
+            },
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionDoxepinRatingBreathing",
+              "title": "Did Doxepin have an effect on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionDoxepinRatingMobility",
+              "title": "Did Doxepin have an effect on {CmpnName}'s mobility or behavior?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionTrazodoneRatingBreathing",
+              "title": "Did Trazodone have an effect on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionTrazodoneRatingMobility",
+              "title": "Did Trazodone have an effect on {CmpnName} mobility or behavior?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionGabapentinRatingBreathing",
+              "title": "Did Gabapentin have an effect on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionGabapentinRatingMobility",
+              "title": "Did Gabapentin have an effect on {CmpnName}'s mobility or behavior?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionGalliprantRatingBreathing",
+              "title": "Did Galliprant have an effect on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },    
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionGalliprantRatingMobility",
+              "title": "Did Galliprant have an effect on {CmpnName}'s mobility or behavior?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },    
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionSteroidRatingBreathing",
+              "title": "Did Prednisone have an effect on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },   
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionSteroidRatingMobility",
+              "title": "Did Prednisone have an effect on {CmpnName}'s mobility or behavior?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },   
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionAntihistamineRatingBreathing",
+              "title": "Did Benadryl or other antihistamine have an effect on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },   
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionAntihistamineRatingMobility",
+              "title": "Did Benadryl or other antihistamine have an effect on {CmpnName}'s mobility or behavior?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },  
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionCereniaRatingBreathing",
+              "title": "Did Cerenia have an effect on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },   
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionCereniaRatingMobility",
+              "title": "Did Cerenia have an effect on {CmpnName}'s mobility or behavior?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },   
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionMeloxicamRatingBreathing",
+              "title": "Did Meloxicam have an effect on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionMeloxicamRatingMobility",
+              "title": "Did Meloxicam have an effect on {CmpnName}'s mobility or behavior?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },      
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionAcepromineRatingBreathing",
+              "title": "Did Acepromine have an effect on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },   
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionAcepromineRatingMobility",
+              "title": "Did Acepromine have an effect on {CmpnName}'s mobility or behavior?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },   
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionAlbuterolRatingBreathing",
+              "title": "Did Albuterol or other inhaler have an effect on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionAlbuterolRatingMobility",
+              "title": "Did Albuterol or other inhaler have an effect on {CmpnName}'s mobility or behavior?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },     
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionTemarilPRatingBreathing",
+              "title": "Did Temaril P have an effect on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },   
+            {
+              "type": "rating",
+              "name": "MedicationPrescriptionTemarilPRatingMobility",
+              "title": "Did Temaril P have an effect on {CmpnName}'s mobility or behavior?",
+              "description": "1 = very negative, 3 = no effect,  5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "MedicationRefluxMedicationPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "MedicationRefluxMedications",
+              "title": "Has {CmpnName} taken any medications for reflux (GERD) or to improve digestive motility?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES_PRESCRIBED",
+                  "text": "Yes, as prescribed by a veterinarian"
+                },
+                {
+                  "value": "YES_UNPRESCRIBED",
+                  "text": "Yes, without a prescription on my own initiative"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "rating",
+              "name": "MedicationRefluxMedicationsLPEffect",
+              "title": "How did the reflux medications affect {CmpnName}'s LP/GOLPP symptoms?",
+              "description": "1, very negative = no, 3 = no effect, 5 = yes, positive effect",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "MedicationRefluxMedicationsAPEffect",
+              "title": "How did the reflux medications affect {CmpnName}'s risk of aspiration pneumonia?",
+              "description": "1, very negative = no, 3 = no effect, 5 = yes, very positive",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "MedicationCard2Panel",
+      "elements": [
+
+        {
+          "type": "panel",
+          "name": "MedicationSupplementsTypePanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "MedicationSupplementsDidPurchase",
+              "title": "Have you purchased supplements based on a particular ingredient for {CmpnName}'s LP/GOLPP symptoms?",
+              "description": "Please only include products you've used regularly for over 60 days",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "MedicationSupplementsType",
+              "title": "Please select the main ingredient in the supplements {CmpnName} has taken:",
+              "isRequired": true,
+              "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+              "choices": [
+                {
+                  "value": "TUMERIC",
+                  "text": "Tumeric"
+                },
+                {
+                  "value": "CBD",
+                  "text": "CBD"
+                },
+                {
+                  "value": "LIONS_MANE",
+                  "text": "Lion's mane"
+                },
+                {
+                  "value": "MYELIN_SHEATH",
+                  "text": "Myelin sheath"
+                },
+                {
+                  "value": "EGG_SHELL",
+                  "text": "Egg-shell membrane"
+                },                             
+                {
+                  "value": "URSOLIC",
+                  "text": "Ursolic acid"
+                },
+                {
+                  "valuinitiative= 'YES'e": "PRIMROSE",
+                  "text": "Evening Primrose Oil"
+                },
+                {
+                  "value": "FISH_OIL",
+                  "text": "Fish or salmon oil"
+                },
+                {
+                  "value": "GLUCOSAMINE",
+                  "text": "Glucosamine/Chrondroitin/MSM"
+                },
+                {
+                  "value": "COLLAGEN",
+                  "text": "Hyaluronic acid/Collagen"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+            "type": "dropdown",
+            "name": "MedicationSupplementsCost",
+            "title": "What was the average monthly cost of the supplements?",
+            "isRequired": true,
+            "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+            "choices": [
+              {
+                "value": "UNDER_50",
+                "text": "Under $50"
+              },
+              {
+                "value": "51_100",
+                "text": "$51-$100"
+              },
+              {
+                "value": "101_150",
+                "text": "$101-$150"
+              },
+              {
+                "value": "OVER_150",
+                "text": "Over $150"
+              }
+            ],
+            "showOtherItem": false,
+            "showNoneItem": false
+            },
+            {
+              "type": "rating",
+              "name": "MedicationSupplementsEffectiveness",
+              "title": "Please rate the overall effectiveness of the supplements:",
+              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "isRequired": true,
+              "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
+        },
+                {
+          "type": "panel",
+          "name": "MedicationProtocolPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "MedicationProtocolDidPurchase",
+              "title": "Have you purchased products that are advertised as a blend or protocol of ingredients created for LP/GOLPP? ",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "MedicationProtocolCost",
+              "title": "What was the average monthly cost of the blends or protocols?",
+              "isRequired": true,
+              "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+              "choices": [
+                {
+                  "value": "UNDER_50",
+                  "text": "Under $50"
+                },
+                {
+                  "value": "51_100",
+                  "text": "$51-$100"
+                },
+                {
+                  "value": "101_150",
+                  "text": "$101-$150"
+                },
+                {
+                  "value": "OVER_150",
+                  "text": "Over $150"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+
+            {
+              "type": "rating",
+              "name": "MedicationProtocolEffectiveness",
+              "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
+              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "isRequired": true,
+              "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

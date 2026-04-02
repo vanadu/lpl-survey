@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "public/img-lpl-org-logo.png";
 
-const Browse_06_Diagnosis = () => {
+const Browse_10_Breathing = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
 
@@ -25,74 +25,52 @@ const Browse_06_Diagnosis = () => {
         </header>
         <div className="browse-page">
       <div className="browse-page-nav" aria-label="Browse page navigation">
-        <Link className="browse-page-nav__prev" href="/browse-mode/Browse_05_Primary" aria-label="Previous page">
+        <Link className="browse-page-nav__prev" href="/browse-mode/Browse_09_Therapy" aria-label="Previous page">
           <span aria-hidden="true"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M208,48V208a8,8,0,0,1-13.66,5.66L128,147.31V208a8,8,0,0,1-13.66,5.66l-80-80a8,8,0,0,1,0-11.32l80-80A8,8,0,0,1,128,48v60.69l66.34-66.35A8,8,0,0,1,208,48Z"></path></svg><span className="sr-only">Previous</span>
           </span>
         </Link>
-        <div className="browse-page-marker" id="DIAGNOSIS-page"></div>
-        <Link className="browse-page-nav__next" href="/browse-mode/Browse_07_Medication" aria-label="Next page">
+        <div className="browse-page-marker" id="BREATHING-page"></div>
+        <Link className="browse-page-nav__next" href="/browse-mode/Browse_11_Neuropathy" aria-label="Next page">
           <span aria-hidden="true"><span className="sr-only">Next</span><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M221.66,133.66l-80,80A8,8,0,0,1,128,208V147.31L61.66,213.66A8,8,0,0,1,48,208V48a8,8,0,0,1,13.66-5.66L128,108.69V48a8,8,0,0,1,13.66-5.66l80,80A8,8,0,0,1,221.66,133.66Z"></path></svg>
           </span>
         </Link>
       </div>
 
-      <div className="browse-panel-container" id="DiagnosisCard1Panel">
-      <div className="browse-content-block" id="DiagnosisHeading">
-        <h2 className="browse-content-heading">Bella&lsquo;s LP/GOLPP diagnosis</h2>
+      <div className="browse-panel-container" id="BreathingCard1Panel">
+      <div className="browse-content-block" id="BreathingHeading">
+        <h2 className="browse-content-heading">Bella&lsquo;s experience with aspiration pneumonia</h2>
       </div>
 
-      <div className="browse-content-block" id="DiagnosisText">
-        <p className="browse-content-text">This section asks about Bella&lsquo;s LP/GOLPP diagnosis.</p>
+      <div className="browse-content-block" id="BreathingText">
+        <p className="browse-content-text">Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This section asks questions about Bella&lsquo;s experience with AP.</p>
       </div>
 
-      <div className="browse-panel-container" id="DiagnosisSpecialistPanel">
-      <div className="browse-question-container" id="DiagnosisWho">
+      <div className="browse-content-block browse-content-block--info" id="BreathingInfoLink">
+        <div className="survey-general-info">
+          <img
+            src="/img-info-icon.png"
+            className="survey-info-icon"
+            alt="Example image"
+          />
+          {" "}
+          <Link
+            href="/in-progress"
+            className="survey-info-link"
+          >
+            What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?
+          </Link>
+        </div>
+      </div>
+
+      <div className="browse-panel-container" id="BreathingDidHavePanel">
+      <div className="browse-question-container" id="BreathingDidHave">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Which veterinary specialists gave you a diagnosis for Bella&lsquo;s LP/GOLPP symptoms?
+              Did Bella ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?
             </span>
           }
           index={1}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Primary veterinarian</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Internal medicine specialist</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Neurologist</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Soft tissue specialist or surgeon</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>General or orthopedic surgeon</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="DiagnosisMisdiagnosis">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did any of these specialists misdiagnose Bella&lsquo;s symptoms?
-            </span>
-          }
-          index={2}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -115,12 +93,49 @@ const Browse_06_Diagnosis = () => {
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
 
-      <div className="browse-question-container" id="DiagnosisCorrectDiagnosis">
+      <div className="browse-panel-container" id="BreathingGeneralPanel">
+      <div className="browse-question-container" id="BreathingCount">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Which veterinary specialist gave you the correct diagnosis?
+              How many times did Bella get AP?
+            </span>
+          }
+          index={2}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Once</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Twice</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Three times</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>More than three times</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="BreathingInpatient">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Did Bella ever need inpatient, overnight, or emergency care for AP?
             </span>
           }
           index={3}
@@ -132,37 +147,26 @@ const Browse_06_Diagnosis = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Primary veterinarian</span>
+              <span>Yes</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Internal medicine specialist</span>
+              <span>No</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Neurologist</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Soft tissue specialist or surgeon</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>General or orthopedic surgeon</span>
+              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
-      </div>
 
-      <div className="browse-panel-container" id="DiagnosisCard2Panel">
-      <div className="browse-panel-container" id="DiagnosisDetailsPanel">
-      <div className="browse-question-container" id="DiagnosticType">
+      <div className="browse-question-container" id="BreathingInpatientCount">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What diagnostic procedure was used to arrive at the definitive diagnosis?
+              How many times did Bella require inpatient, overnight, or emergency care for AP?
             </span>
           }
           index={4}
@@ -174,25 +178,52 @@ const Browse_06_Diagnosis = () => {
           <ul>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Visual/auditory exam only</span>
+              <span>Once</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Sedated visual exam of larynx</span>
+              <span>Twice</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>X-Ray or other imaging</span>
+              <span>Three times</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Ultrasound</span>
+              <span>More than three times</span>
             </li>
-            <li className="browse-showanswer-dropdown">
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="BreathingCard2Panel">
+      <div className="browse-panel-container" id="BreathingSurgeryPanel">
+      <div className="browse-question-container" id="BreathingSurgeryPost">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Did Bella ever have AP after the surgery (i.e., tieback, BVEAP)?
+            </span>
+          }
+          index={5}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <p className="browse-question-description">Includes tieback, BVEAP, ventrilocordectomy, arytenoidectomy and other invasive surgery procedures.</p>
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Video endoscope or laryngoscope under anesthesia</span>
+              <span>Yes</span>
             </li>
-            <li className="browse-showanswer-dropdown">
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Don&lsquo;t know</span>
             </li>
@@ -201,42 +232,11 @@ const Browse_06_Diagnosis = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="DiagnosisStage">
+      <div className="browse-question-container" id="BreathingSurgeryPostCount">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Was Bella diagnosed with unilateral or bilateral LP?
-            </span>
-          }
-          index={5}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Unilateral (one-side)</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Bilateral (both sides)</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I wasn&lsquo;t told what stage Bella&lsquo;s LP was in</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="DiagnosisTimeAfterSymptoms">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              About how long after Bella&lsquo;s first symptoms appeared did you get the diagnosis?
+              How many times did Bella get AP after the surgery?
             </span>
           }
           index={6}
@@ -246,78 +246,37 @@ const Browse_06_Diagnosis = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Less than one month</span>
+              <span>Once</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Between one and three months</span>
+              <span>Twice</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Between four and six months</span>
+              <span>Three times</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Between six months and a year</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Longer than a year</span>
+              <span>More than three times</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
 
-      <div className="browse-question-container" id="DiagnosisCost">
+      <div className="browse-panel-container" id="BreathingStentPanel">
+      <div className="browse-question-container" id="BreathingStentPost">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What was the pre-insurance cost of the diagnosis?
+              Did Bella ever have AP after the stent implant procedure?
             </span>
           }
           index={7}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $500</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$501-$1500</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$1500-$3000</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $3000</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="DiagnosisPrecededSurgery">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did Bella have LP surgery immediately after the diagnosis?
-            </span>
-          }
-          index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -340,6 +299,93 @@ const Browse_06_Diagnosis = () => {
           </div>
         </ShowAnswerContent>
       </div>
+
+      <div className="browse-question-container" id="BreathingStentPostCount">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              How many times did Bella get AP after the stent implant?
+            </span>
+          }
+          index={8}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Once</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Twice</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Three times</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>More than three times</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="BreathingCostPanel">
+      <div className="browse-question-container" id="BreathingCost">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              What was the approximate pre-insurance cost of the AP treatment for Bella:
+            </span>
+          }
+          index={9}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Prefer not to say</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Under $100</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$100-$300</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$300-$500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$500-$1000</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$1001-$3000</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$3000-$5000</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Over $5000</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
       </div>
       </div>
       </div>
@@ -349,4 +395,4 @@ const Browse_06_Diagnosis = () => {
   );
 };
 
-export default Browse_06_Diagnosis;
+export default Browse_10_Breathing;

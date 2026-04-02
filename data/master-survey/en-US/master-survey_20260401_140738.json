@@ -3886,7 +3886,6 @@
                   "title": "How bad was {CmpnName}’s halitosis after the stent implant?",
                   "description": "1 = not bad, 5 = very bad",
                   "isRequired": true,
-                  "visibleIf": "{ProcedureStentHalitosis} = 'YES'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3917,7 +3916,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ProcedureStentInfected",
-                  "title": "Did the tissue around the stent ever become infected?",
+                  "title": "Did the tissue around the stent become infected?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -3926,7 +3925,7 @@
                     },
                     {
                       "value": "NO",
-                      "text": "No"
+                      "text": "NO"
                     },
                     {
                       "value": "DONT_KNOW",
@@ -3940,7 +3939,6 @@
                   "name": "ProcedureStentInfectedHandling",
                   "title": "How was the infection handled?",
                   "isRequired": true,
-                  "visibleIf": "{ProcedureStentInfected} = 'YES'",
                   "choices": [
                     {
                       "value": "REMOVED_PERMANENTLY",

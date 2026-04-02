@@ -80,13 +80,13 @@ const pageFiles = [
   "03_FACTORS-page.json",
   "04_SYMPTOMS-page.json",
   "05_PRIMARY-page.json",
-  "06_DIAGNOSIS-page.json"
-  // "07_MEDICATION-page.json",
-  // "08_PROCEDURE-page.json", 
-  // "09_THERAPY-page.json",
-  // "10_BREATHING-page.json",
-  // "11_NEUROPATHY-page.json",
-  // "12_CONCLUSION-page.json"
+  "06_DIAGNOSIS-page.json",
+  "07_MEDICATION-page.json",
+  "08_PROCEDURE-page.json", 
+  "09_THERAPY-page.json",
+  "10_BREATHING-page.json",
+  "11_NEUROPATHY-page.json",
+  "12_CONCLUSION-page.json"
 ];
 
 // -----------------------------------------------------------------------------

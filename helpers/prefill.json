@@ -76,99 +76,130 @@
     "ARTHRITIS"
   ],
 
-"PrimaryInflammation": "YES",
-"PrimaryReflux": "DONT_KNOW",
-"PrimaryDidRefer": "YES",
-"PrimaryReferral": [
-  "INTERNIST",
-  "HOLISTIC"
-],
-"PrimaryDidDiscuss": "NO_MENTION",
-"PrimaryInfoDetails": "NO_INFO",
-"PrimarySurgery": "ADVISED_AGAINST",
-"PrimarySurgeryPerception": "GENERAL_PERCEPTION",
-"PrimaryChangedVets": "MORE_THAN_ONCE",
-"PrimaryChangedVetsReason": [
-  "NOTHING_CAN_BE_DONE",
-  "AGE_ONLY"
-],
-"PrimaryConfidence": "3",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  "BreathingCrisisDidHave": "YES",
-  "BreathingCrisisCount": "TWO",
-  "BreathingCrisisCost": "500_1000",
-  "BreathingCrisisAdvice": "YES",
-  "BreathingCrisisAdviceType": [
-    "COOL_PLACE",
-    "COOLING_AGENT",
-    "EMERGENCY_FACILITY"
+  "PrimaryInflammation": "YES",
+  "PrimaryReflux": "DONT_KNOW",
+  "PrimaryDidRefer": "YES",
+  "PrimaryReferral": [
+    "INTERNIST",
+    "HOLISTIC"
   ],
-  "BreathingCrisisProvidedSubstance": "YES",
-  "BreathingCrisisProvidedSubstanceType": [
-    "STEROID"
+  "PrimaryDidDiscuss": "NO_MENTION",
+  "PrimaryInfoDetails": "NO_INFO",
+  "PrimarySurgery": "ADVISED_AGAINST",
+  "PrimarySurgeryPerception": "GENERAL_PERCEPTION",
+  "PrimaryChangedVets": "MORE_THAN_ONCE",
+  "PrimaryChangedVetsReason": [
+    "NOTHING_CAN_BE_DONE",
+    "AGE_ONLY"
   ],
-  "BreathingCrisisSubstanceForm": "LIQUID",
+  "PrimaryConfidence": "3",
 
-  "EarlySymptomsAgeYears": "11",
-  "EarlySymptomsAgeMonths": "2",
-  "EarlySymptomsType": [
-    "PANTING",
-    "BARK_CHANGES",
-    "EXERCISE_INTOLERANCE"
+  "DiagnosisWho": [
+    "PRIMARY",
+    "INTERNIST"
   ],
-  "EarlySymptomsSeverity": 1,
-  "EarlySymptomsHindEndWeakness": "YES",
-  "EarlySymptomsIncontinence": "NO",
-  "EarlySymptomsOtherConditions": "YES",
-  "EarlySymptomsOtherConditionsType": [
-    "GERD",
-    "ARTHRITIS"
-  ],
-
-  "PrimaryDurationFirstConsultYears": 13,
-  "PrimaryDurationFirstConsultMonths": 1,
-  "PrimaryDurationVisitsNumber": "MORE_THAN_TWO",
-  "PrimaryDurationCost": "UNDER_200",
-  "PrimaryDurationChangedVets": "ONCE",
-  "PrimaryDurationChangedVetsReason": [
-    "AGE_ONLY",
-    "MISDIAGNOSED"
-  ],
-  
-
-  "DiagnosisWho": "SOFT_TISSUE",
+  "DiagnosisMisdiagnosis": "YES",
+  "DiagnosisCorrectDiagnosis": "SOFT_TISSUE",
   "DiagnosticType": "SCOPE",
   "DiagnosisStage": "UNILATERAL",
   "DiagnosisTimeAfterSymptoms": "ONE_TO_THREE",
   "DiagnosisCost": "500_1500",
   "DiagnosisSurgeonContingent": "YES",
+  "DiagnosisPrecededSurgery": "YES",
 
-  "TreatmentStatusDidHave": true,
-  "TreatmentStatusAgeYears": "13",
-  "TreatmentStatusAgeMonths": "6",
-  "TreatmentStatusType":  [
-    "TIEBACK"
+  "MedicationPrescription": "YES",
+  "MedicationPrescriptionType": [
+    "DOXEPIN",
+    "TRAZODONE",
+    "CERENIA"
   ],
+  "MedicationPrescriptionCost": "UNDER_50",
+  "MedicationPrescriptionDoxepinRatingBreathing": 4,
+  "MedicationPrescriptionDoxepinRatingMobility": 2,
+  "MedicationPrescriptionTrazodoneRatingBreathing": 3,
+  "MedicationPrescriptionTrazodoneRatingMobility": 4,
+  "MedicationPrescriptionGabapentinRatingBreathing": 5,
+  "MedicationPrescriptionGabapentinRatingMobility": 4,
+  "MedicationPrescriptionGalliprantRatingBreathing": 3,
+  "MedicationPrescriptionGalliprantRatingMobility": 3,
+  "MedicationPrescriptionSteroidRatingBreathing": 2,
+  "MedicationPrescriptionSteroidRatingMobility": 4,
+  "MedicationPrescriptionAntihistamineRatingBreathing": 3,
+  "MedicationPrescriptionAntihistamineRatingMobility": 3,
+  "MedicationPrescriptionCereniaRatingBreathing": 4,
+  "MedicationPrescriptionCereniaRatingMobility": 3,
+  "MedicationPrescriptionMeloxicamRatingBreathing": 2,
+  "MedicationPrescriptionMeloxicamRatingMobility": 3,
+  "MedicationPrescriptionAcepromineRatingBreathing": 3,
+  "MedicationPrescriptionAcepromineRatingMobility": 3,
+  "MedicationPrescriptionAlbuterolRatingBreathing": 3,
+  "MedicationPrescriptionAlbuterolRatingMobility": 3,
+  "MedicationPrescriptionTemarilPRatingBreathing": 3,
+  "MedicationPrescriptionTemarilPRatingMobility": 3,
+  "MedicationRefluxMedications": [
+    "YES_PRESCRIBED"
+  ],
+  "MedicationRefluxMedicationsLPEffect": 3,
+  "MedicationRefluxMedicationsAPEffect": 3,
+  "MedicationSupplementsDidPurchase": "YES",
+  "MedicationSupplementsType": [
+    "TUMERIC",
+    "MYELIN_SHEATH",
+    "URSOLIC"
+  ],
+  "MedicationSupplementsCost": "51_100",
+  "MedicationSupplementsEffectiveness": 3,
+
+  "MedicationProtocolDidPurchase": "YES",
+  "MedicationProtocolCost": [
+    "51_100"
+  ],
+  "MedicationProtocolEffectiveness": 2,
+
+  "ProcedureDidHave": true,
+  "ProcedureAgeYears": "13",
+  "ProcedureAgeMonths": "6",
+  "ProcedureType":  [
+    "STENT"
+  ],
+  "ProcedureScheduled": "SCHEDULED",
+  "ProcedureScheduledWait": "LESS_THAN_TWO_WEEKS",
+  "ProcedureTiebackEmergency": "YES",
+  "ProcedureTiebackCount": "MORE_THAN_ONCE",
+  "ProcedureTiebackOnceCost": "UNDER_2500",
+  "ProcedureTiebackMultipleCost": "UNDER_4000",
+
+  "ProcedureStentType": "SILICONE",
+  "ProcedureStentDidMigrate": true,
+  "ProcedureStentReplaced": true,
+
+  "ProcedureStentHalitosis": "YES",
+  "ProcedureStentHalitosisRating": 2,
+  "ProcedureStentInfected": "YES",
+  "ProcedureStentInfectedHandling": "REMOVED_AND_REPLACED",
+  "ProcedureStentThroatclear": "YES",
+  "ProcedureStentThroatclearImproved": "YES",
+  "ProcedureStentCostOnce": "1501_2500",
+  "ProcedureStentCostRepeat": "2001_3000",
+  "ProcedureStentComplications": "NO",
+
+
+
+
+
+
+
+
+  "ProcedureSurgeonInformLevel": 5,
+  "ProcedureTreatmentSatisfactionLevel": 5,
+
+
+
+
+
+
+
+
 
   "TreatmentStatusTiebackEmergency": true,
   "TreatmentStatusTiebackWait": "THREE_SIX",

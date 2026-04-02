@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "public/img-lpl-org-logo.png";
 
-const Browse_06_Diagnosis = () => {
+const Browse_11_Neuropathy = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
 
@@ -25,32 +25,36 @@ const Browse_06_Diagnosis = () => {
         </header>
         <div className="browse-page">
       <div className="browse-page-nav" aria-label="Browse page navigation">
-        <Link className="browse-page-nav__prev" href="/browse-mode/Browse_05_Primary" aria-label="Previous page">
+        <Link className="browse-page-nav__prev" href="/browse-mode/Browse_10_Breathing" aria-label="Previous page">
           <span aria-hidden="true"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M208,48V208a8,8,0,0,1-13.66,5.66L128,147.31V208a8,8,0,0,1-13.66,5.66l-80-80a8,8,0,0,1,0-11.32l80-80A8,8,0,0,1,128,48v60.69l66.34-66.35A8,8,0,0,1,208,48Z"></path></svg><span className="sr-only">Previous</span>
           </span>
         </Link>
-        <div className="browse-page-marker" id="DIAGNOSIS-page"></div>
-        <Link className="browse-page-nav__next" href="/browse-mode/Browse_07_Medication" aria-label="Next page">
+        <div className="browse-page-marker" id="NEUROPATHY-page"></div>
+        <Link className="browse-page-nav__next" href="/browse-mode/Browse_12_Conclusion" aria-label="Next page">
           <span aria-hidden="true"><span className="sr-only">Next</span><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M221.66,133.66l-80,80A8,8,0,0,1,128,208V147.31L61.66,213.66A8,8,0,0,1,48,208V48a8,8,0,0,1,13.66-5.66L128,108.69V48a8,8,0,0,1,13.66-5.66l80,80A8,8,0,0,1,221.66,133.66Z"></path></svg>
           </span>
         </Link>
       </div>
 
-      <div className="browse-panel-container" id="DiagnosisCard1Panel">
-      <div className="browse-content-block" id="DiagnosisHeading">
-        <h2 className="browse-content-heading">Bella&lsquo;s LP/GOLPP diagnosis</h2>
+      <div className="browse-panel-container" id="NeuropathyCard1Panel">
+      <div className="browse-content-block" id="NeuropathyHeading">
+        <h2 className="browse-content-heading">Hind-end weakness and polyneuropathy</h2>
       </div>
 
-      <div className="browse-content-block" id="DiagnosisText">
-        <p className="browse-content-text">This section asks about Bella&lsquo;s LP/GOLPP diagnosis.</p>
+      <div className="browse-content-block" id="NeuropathyText">
+        <p className="browse-content-text">This section asks questions about whether Bella showed symptoms of polyneuropathy and how these symptoms progressed over time.</p>
       </div>
 
-      <div className="browse-panel-container" id="DiagnosisSpecialistPanel">
-      <div className="browse-question-container" id="DiagnosisWho">
+      <div className="browse-content-block" id="NeuropathyText">
+        <p className="browse-content-text">NOTE: Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly in the hind end. Symptoms can include hind-end weakness and incontinence. Younger dogs with idiopathic LP often don&lsquo;t suffer from LP-related polyneuropathy.</p>
+      </div>
+
+      <div className="browse-panel-container" id="NeuropathySymptomsDoesHavePanel">
+      <div className="browse-question-container" id="NeuropathySymptomsDoesHave">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Which veterinary specialists gave you a diagnosis for Bella&lsquo;s LP/GOLPP symptoms?
+              Over the course of Bella&lsquo;s LP/GOLPP journey, did Bella experience persistent hind-end weakness?
             </span>
           }
           index={1}
@@ -60,36 +64,32 @@ const Browse_06_Diagnosis = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Primary veterinarian</span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
             </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Internal medicine specialist</span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
             </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Neurologist</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Soft tissue specialist or surgeon</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>General or orthopedic surgeon</span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Not sure</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
+      </div>
 
-      <div className="browse-question-container" id="DiagnosisMisdiagnosis">
+      <div className="browse-panel-container" id="NeuropathyCard2Panel">
+      <div className="browse-panel-container" id="NeuropathyHindEndDoesHavePanel">
+      <div className="browse-question-container" id="NeuropathySymptomsFirst">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did any of these specialists misdiagnose Bella&lsquo;s symptoms?
+              Which LP/GOLPP symptom appeared first in Bella?
             </span>
           }
           index={2}
@@ -101,26 +101,30 @@ const Browse_06_Diagnosis = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
+              <span>Hind-end weakness appeared first</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
+              <span>Breathing issues appeared first</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
+              <span>They both appeared at about the same time</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t Know</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="DiagnosisCorrectDiagnosis">
+      <div className="browse-question-container" id="NeuropathySymptomsBreathingOnset">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Which veterinary specialist gave you the correct diagnosis?
+              About how long after you first noticed hind-end weakness did the breathing issues begin?
             </span>
           }
           index={3}
@@ -130,39 +134,36 @@ const Browse_06_Diagnosis = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Primary veterinarian</span>
+              <span>Don&lsquo;t know</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Internal medicine specialist</span>
+              <span>Almost immediately</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Neurologist</span>
+              <span>Several weeks</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Soft tissue specialist or surgeon</span>
+              <span>Several months</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>General or orthopedic surgeon</span>
+              <span>Six months or longer</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
-      </div>
 
-      <div className="browse-panel-container" id="DiagnosisCard2Panel">
-      <div className="browse-panel-container" id="DiagnosisDetailsPanel">
-      <div className="browse-question-container" id="DiagnosticType">
+      <div className="browse-question-container" id="NeuropathySymptomsHindEndOnset">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What diagnostic procedure was used to arrive at the definitive diagnosis?
+              About now long after you first noticed breathing issues did the hind-end weakness begin?
             </span>
           }
           index={4}
@@ -174,38 +175,34 @@ const Browse_06_Diagnosis = () => {
           <ul>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Visual/auditory exam only</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Sedated visual exam of larynx</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>X-Ray or other imaging</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Ultrasound</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Video endoscope or laryngoscope under anesthesia</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Don&lsquo;t know</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Almost immediately</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Several weeks</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Several months</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Six months or longer</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="DiagnosisStage">
+      <div className="browse-question-container" id="NeuropathySymptomsTypeProgression">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Was Bella diagnosed with unilateral or bilateral LP?
+              Which progressed faster, the breathing issues or the hind-end weakness?
             </span>
           }
           index={5}
@@ -217,26 +214,30 @@ const Browse_06_Diagnosis = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Unilateral (one-side)</span>
+              <span>The breathing issues progressed faster</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Bilateral (both sides)</span>
+              <span>The hind-end weakness progressed faster</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I wasn&lsquo;t told what stage Bella&lsquo;s LP was in</span>
+              <span>They both progressed at about the same rate</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="DiagnosisTimeAfterSymptoms">
+      <div className="browse-question-container" id="NeuropathyOtherIssues">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About how long after Bella&lsquo;s first symptoms appeared did you get the diagnosis?
+              Over the course of Bella&lsquo;s LP/GOLPP, did any of these issues also appear?
             </span>
           }
           index={6}
@@ -246,100 +247,29 @@ const Browse_06_Diagnosis = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Less than one month</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Increased anxiety</span>
             </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Between one and three months</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Cognitive changes</span>
             </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Between four and six months</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Changes in behavior or personality</span>
             </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Between six months and a year</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Changes in appetite</span>
             </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Longer than a year</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="DiagnosisCost">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              What was the pre-insurance cost of the diagnosis?
-            </span>
-          }
-          index={7}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $500</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$501-$1500</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$1500-$3000</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $3000</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>No, Bella never had any of these issues</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="DiagnosisPrecededSurgery">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did Bella have LP surgery immediately after the diagnosis?
-            </span>
-          }
-          index={8}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
       </div>
       </div>
       </div>
@@ -349,4 +279,4 @@ const Browse_06_Diagnosis = () => {
   );
 };
 
-export default Browse_06_Diagnosis;
+export default Browse_11_Neuropathy;

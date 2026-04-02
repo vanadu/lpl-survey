@@ -20,7 +20,18 @@ const ITEMS_CARD_PANEL = new Set([
   "PrimaryCard2Panel",
   "DiagnosisCard1Panel",
   "DiagnosisCard2Panel",
-
+  "MedicationCard1Panel",
+  "MedicationCard2Panel",
+  "ProcedureCard1Panel",
+  "ProcedureCard2Panel",
+  "TherapyCard1Panel",
+  "TherapyCard2Panel",
+  "BreathingCard1Panel",
+  "BreathingCard2Panel",
+  "NeuropathyCard1Panel",
+  "NeuropathyCard2Panel",
+  "ConclusionCard1Panel",
+  "ConclusionCard2Panel",
 
   // "InfoSourcesCard1Panel",
   // "InfoSourcesCard2Panel",
@@ -76,7 +87,13 @@ const ITEMS_TWO_COL = new Set([
 
   "DiagnosisWho",
   "DiagnosisCorrectDiagnosis",
-  "DiagnosisCost"
+  "DiagnosisCost",
+
+  "MedicationPrescriptionType",
+  "MedicationSupplementsType",
+
+  "ProcedureType",
+  "ProcedureScheduled",
 
 
 ]);
@@ -94,7 +111,13 @@ const ITEMS_THREE_COL = new Set([
   "PrimaryChangedVets",
 
   "DiagnosisMisdiagnosis",
-  "DiagnosisPrecededSurgery"
+  "DiagnosisPrecededSurgery",
+
+  "MedicationPrescription",
+  "MedicationSupplementsDidPurchase",
+
+  "ProcedureStentHalitosis",
+  "ProcedureStentInfected"
 
 
 ]);
@@ -109,7 +132,10 @@ const CONTROL_WIDTH_150 = new Set ([
   "lvngCmpnInfoAgeMonths",
 
   "SymptomsAgeYears",
-  "SymptomsAgeMonths"
+  "SymptomsAgeMonths",
+
+  "ProcedureAgeYears",
+  "ProcedureAgeMonths"
 
 
 ])
@@ -125,6 +151,10 @@ const CONTROL_WIDTH_300 = new Set([
   "UserInfoAgeGroup",
 
   "FactorsBestSource",
+
+  "ProcedureScheduledWait",
+
+  "ProcedureStentType"
 
 
 ]);
@@ -175,9 +205,48 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
   "DiagnosisStage",
   "DiagnosisTimeAfterSymptoms",
   "DiagnosisCost",
-  "DiagnosisPrecededSurgery"
+  "DiagnosisPrecededSurgery",
+
+  "MedicationPrescriptionType",
+  "MedicationPrescriptionCost",
+  "MedicationPrescriptionDoxepinRatingBreathing",
+  "MedicationPrescriptionTrazodoneRatingBreathing",
+  "MedicationPrescriptionGabapentinRatingBreathing",
+  "MedicationPrescriptionGalliprantRatingBreathing",
+  "MedicationPrescriptionSteroidRatingBreathing",
+  "MedicationPrescriptionAntihistamineRatingBreathing",
+  "MedicationPrescriptionCereniaRatingBreathing",
+  "MedicationPrescriptionMeloxicamRatingBreathing",
+  "MedicationPrescriptionAcepromineRatingBreathing",
+  "MedicationPrescriptionAlbuterolRatingBreathing",
+  "MedicationPrescriptionTemarilPRatingBreathing",
+  "MedicationRefluxMedicationsLPEffect",
+  "MedicationRefluxMedicationsAPEffect",
+  "MedicationSupplementsCost",
+  "MedicationSupplementsEffectiveness",
+  "MedicationProtocolCost",
+  "MedicationProtocolEffectiveness",
+
+  "ProcedureScheduled",
+  "ProcedureScheduledWait",
+  "ProcedureTiebackCount",
+  "ProcedureTiebackComplications",
+  "ProcedureTiebackOnceCost",
+  "ProcedureTiebackComplications",
+
+  "ProcedureStentDidMigrate",
+  "ProcedureStentReplaced",
+  "ProcedureStentHalitosis",
+  "ProcedureStentHalitosisRating",
+  "ProcedureStentInfected",
+  "ProcedureStentInfectedHandling",
+  "ProcedureStentThroatclear",
+  "ProcedureStentThroatclearImproved",
 
 
+
+
+  "ProcedureTreatmentSatisfactionLevel"
 
 
   ]);
@@ -186,7 +255,7 @@ const QUESTION_SPACE_ABOVE = new Set([
 // put question names here (same .name values you already use)
 
   "UserInfoContactTypeFacebook",
-  "UserInfoContactOK"
+  "UserInfoContactOK",
 
 ]);
 
@@ -223,6 +292,13 @@ const QUESTION_SEPARATOR_BELOW = new Set([
  
     "CmpnInfoBreed",
     "CmpnInfoGender",
+
+    "MedicationPrescriptionCost",
+
+    "ProcedureDidHave",
+
+
+
 
 
     "TreatmentStatusDidHave",
