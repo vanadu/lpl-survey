@@ -298,6 +298,8 @@ async function main() {
 
     if (unknown.length) {
       console.error(`❌ Unknown tokens in ${file}`);
+      console.log('unknown :>> ');
+      console.log(unknown);
 
       if (PROMPT_ON_UNKNOWN_REFERENCES) {
         if (await promptAbort("Unknown tokens detected")) process.exit(1);

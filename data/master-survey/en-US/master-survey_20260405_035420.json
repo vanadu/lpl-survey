@@ -2,8 +2,14 @@
   "calculatedValues": [
     {
       "type": "calculatedvalue",
-      "name": "cvTreatmentType",
-      "expression": "iif({TreatmentStatusType} contains 'TIEBACK', 'Treatment: TIEBACK', iif({TreatmentStatusType} contains 'BVEAP', 'Treatment: BVEAP', iif({TreatmentStatusType} contains 'STENT', 'Treatment: STENT', iif({TreatmentStatusType} contains 'ARYTENOIDECTOMY', 'Treatment: ARYTENOIDECTOMY', iif({TreatmentStatusType} contains 'VENTRILOCORDECTOMY', 'Treatment: VENTRILOCORDECTOMY', ''))",
+      "name": "cvProcedureType",
+      "expression": "iif({ProcedureType} contains 'TIEBACK', 'Treatment: TIEBACK', iif({ProcedureType} contains 'BVEAP', 'Treatment: BVEAP', iif({ProcedureType} contains 'STENT', 'Treatment: STENT', iif({ProcedureType} contains 'ARYTENOIDECTOMY', 'Treatment: ARYTENOIDECTOMY', iif({ProcedureType} contains 'VENTRILOCORDECTOMY', 'Treatment: VENTRILOCORDECTOMY', ''))",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "cvProcedureTypeShort",
+      "expression": "iif({ProcedureType} contains 'TIEBACK', 'tieback', iif({ProcedureType} contains 'BVEAP', 'BVEAP', iif({ProcedureType} contains 'STENT', 'stent', iif({ProcedureType} contains 'ARYTENOIDECTOMY', 'arytenoidectomy', iif({ProcedureType} contains 'VENTRILOCORDECTOMY', 'ventrilocordectomy', ''))",
       "includeIntoResult": true
     },
     {
@@ -475,7 +481,7 @@
             {
               "type": "html",
               "name": "CmpnInfoHeading",
-              "html": "<h2>About your LP/GOLPP companion<h2>"
+              "html": "<h2>About Your LP/GOLPP companion<h2>"
             },
             {
               "type": "html",
@@ -813,7 +819,7 @@
                   "type": "dropdown",
                   "name": "FactorsBestSource",
                   "title": "Which of those information sources did you find MOST useful (please select one)?",
-                  "visibleIf": "{FactorsSourcesTypes.length} > 1 && {FactorsTypes} notcontains 'DONT_KNOW'",
+                  "visibleIf": "{FactorsSourcesTypes.length} > 1 && {FactorsSourcesTypes} notcontains 'DONT_KNOW'",
                   "choices": []
                 },
                 {
@@ -1268,7 +1274,7 @@
             {
               "type": "html",
               "name": "SymptomsHeading",
-              "html": "<h2>Your early encounters with LP/GOLPP</h2>"
+              "html": "<h2>{CmpnName}'s Early LP/GOLPP Symptoms</h2>"
             },
             {
               "type": "html",
@@ -1536,12 +1542,12 @@
             {
               "type": "html",
               "name": "PrimaryHeading",
-              "html": "<h2>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h2>"
+              "html": "<h2>Your Primary Veterinarian and {CmpnName}'s LP/GOLPP</h2>"
             },
             {
               "type": "html",
               "name": "PrimaryText",
-              "html": "<p>This section asks questions about how your current primary veterinarian handled {CmpnName}'s LP/GOLPP symptoms.</p>"
+              "html": "<p>This section asks questions about how your primary veterinarian(s) handled {CmpnName}'s LP/GOLPP symptoms.</p>"
             },
             {
               "type": "panel",
@@ -1859,7 +1865,7 @@
             {
               "type": "html",
               "name": "DiagnosisHeading",
-              "html": "<h2>{CmpnName}'s LP/GOLPP diagnosis</h2>"
+              "html": "<h2>{CmpnName}'s LP/GOLPP Diagnosis</h2>"
             },
             {
               "type": "html",
@@ -2017,7 +2023,7 @@
                       "showOtherItem": false
                     },
                     {
-                      "type": "dropdown",
+                      "type": "radiogroup",
                       "name": "DiagnosisTimeAfterSymptoms",
                       "title": "About how long after {CmpnName}'s first symptoms appeared did you get the diagnosis?",
                       "isRequired": true,
@@ -2118,16 +2124,16 @@
             {
               "type": "html",
               "name": "MedicationTextImportant",
-              "html": "<p><b>IMPORTANT</b>: There is no medication that can restore movement to paralyzed laryneal tissue. Even with medication, the risk of breathing crises and a fatal suffocation event is real. While medications can't prevent a breathing emergency, many veterinary professionals believe some medications can have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life. </p>"
+              "html": "<p>This section asks about prescription and non-prescription medications and supplements {CmpnName} has taken for LP/GOLPP. </p>"
             },
             {
               "type": "panel",
-              "name": "MedicationLPMedicationsPanel",
+              "name": "MedicationPrescriptionPanel",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "MedicationLPMedications",
-                  "title": "Did your primary veterinarian provide or prescribe any prescription medications specifically for {CmpnName}'s LP/GOLPP symptoms?",
+                  "name": "MedicationPrescription",
+                  "title": "Did/does {CmpnName} take any prescription medications for LP/GOLPP symptoms?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -2147,11 +2153,11 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "MedicationLPMedicationsType",
+                  "name": "MedicationPrescriptionType",
                   "title": "What prescription medications if any did your primary veterinarian prescribe or recommend for {CmpnName}'s LP/GOLPP symptoms?",
                   "description": "Please also include discontinued medications.",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES'",
+                  "visibleIf": "{MedicationPrescription} = 'YES'",
                   "choices": [
                     {
                       "value": "DOXEPIN",
@@ -2206,7 +2212,7 @@
                   "title": "Average monthly cost of {CmpnName}'s prescriptions:",
                   "description": "If you don't know exactly, it's OK to guesstimate.",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES'",
+                  "visibleIf": "{MedicationPrescription} = 'YES'",
                   "choices": [
                     {
                       "value": "UNDER_50",
@@ -2235,7 +2241,7 @@
                   "title": "Did Doxepin have an effect on {CmpnName}'s breathing?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2269,7 +2275,7 @@
                   "title": "Did Doxepin have an effect on {CmpnName}'s mobility or behavior?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2303,7 +2309,7 @@
                   "title": "Did Trazodone have an effect on {CmpnName}'s breathing?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2337,7 +2343,7 @@
                   "title": "Did Trazodone have an effect on {CmpnName} mobility or behavior?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2371,7 +2377,7 @@
                   "title": "Did Gabapentin have an effect on {CmpnName}'s breathing?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2405,7 +2411,7 @@
                   "title": "Did Gabapentin have an effect on {CmpnName}'s mobility or behavior?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2439,7 +2445,7 @@
                   "title": "Did Galliprant have an effect on {CmpnName}'s breathing?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2473,7 +2479,7 @@
                   "title": "Did Galliprant have an effect on {CmpnName}'s mobility or behavior?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2507,7 +2513,7 @@
                   "title": "Did Prednisone have an effect on {CmpnName}'s breathing?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2541,7 +2547,7 @@
                   "title": "Did Prednisone have an effect on {CmpnName}'s mobility or behavior?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2575,7 +2581,7 @@
                   "title": "Did Benadryl or other antihistamine have an effect on {CmpnName}'s breathing?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2609,7 +2615,7 @@
                   "title": "Did Benadryl or other antihistamine have an effect on {CmpnName}'s mobility or behavior?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2643,7 +2649,7 @@
                   "title": "Did Cerenia have an effect on {CmpnName}'s breathing?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2677,7 +2683,7 @@
                   "title": "Did Cerenia have an effect on {CmpnName}'s mobility or behavior?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2711,7 +2717,7 @@
                   "title": "Did Meloxicam have an effect on {CmpnName}'s breathing?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2745,7 +2751,7 @@
                   "title": "Did Meloxicam have an effect on {CmpnName}'s mobility or behavior?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2779,7 +2785,7 @@
                   "title": "Did Acepromine have an effect on {CmpnName}'s breathing?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2813,7 +2819,7 @@
                   "title": "Did Acepromine have an effect on {CmpnName}'s mobility or behavior?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2847,7 +2853,7 @@
                   "title": "Did Albuterol or other inhaler have an effect on {CmpnName}'s breathing?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2881,7 +2887,7 @@
                   "title": "Did Albuterol or other inhaler have an effect on {CmpnName}'s mobility or behavior?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2915,7 +2921,7 @@
                   "title": "Did Temaril P have an effect on {CmpnName}'s breathing?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2949,7 +2955,7 @@
                   "title": "Did Temaril P have an effect on {CmpnName}'s mobility or behavior?",
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
-                  "visibleIf": "{MedicationPrescriptions} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
+                  "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2986,12 +2992,12 @@
                 {
                   "type": "radiogroup",
                   "name": "MedicationRefluxMedications",
-                  "title": "Has {CmpnName} taken any medications for reflux (GERD) or to improve digestive motility?",
+                  "title": "Has {CmpnName} taken any medications for reflux (GERD)negative or to improve digestive motility?",
                   "isRequired": true,
                   "choices": [
                     {
                       "value": "YES_PRESCRIBED",
-                      "text": "Yes, as prescribed by veterinarian"
+                      "text": "Yes, as prescribed by a veterinarian"
                     },
                     {
                       "value": "YES_UNPRESCRIBED",
@@ -3003,14 +3009,1815 @@
                     }
                   ],
                   "showOtherItem": false
+                },
+                {
+                  "type": "rating",
+                  "name": "MedicationRefluxMedicationsLPEffect",
+                  "title": "How did the reflux medications affect {CmpnName}'s LP/GOLPP symptoms?",
+                  "description": "1 = very negative, 3 = no effect, 5 = very positive",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "MedicationRefluxMedicationsAPEffect",
+                  "title": "How did the reflux medications affect {CmpnName}'s risk of aspiration pneumonia?",
+                  "description": "1 = very negative, 3 = no effect, 5 = yes, very positive",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "MedicationCard2Panel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "MedicationSupplementsTypePanel",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "MedicationSupplementsDidPurchase",
+                  "title": "Have you purchased supplements based on a particular ingredient for {CmpnName}'s LP/GOLPP symptoms?",
+                  "description": "Please only include products you've used regularly for over 60 days",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "checkbox",
+                  "name": "MedicationSupplementsType",
+                  "title": "Please select the main ingredient in the supplements {CmpnName} has taken:",
+                  "isRequired": true,
+                  "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "TUMERIC",
+                      "text": "Tumeric"
+                    },
+                    {
+                      "value": "CBD",
+                      "text": "CBD"
+                    },
+                    {
+                      "value": "LIONS_MANE",
+                      "text": "Lion's mane"
+                    },
+                    {
+                      "value": "MYELIN_SHEATH",
+                      "text": "Myelin sheath"
+                    },
+                    {
+                      "value": "EGG_SHELL",
+                      "text": "Egg-shell membrane"
+                    },
+                    {
+                      "value": "URSOLIC",
+                      "text": "Ursolic acid"
+                    },
+                    {
+                      "valuinitiative= 'YES'e": "PRIMROSE",
+                      "text": "Evening Primrose Oil"
+                    },
+                    {
+                      "value": "FISH_OIL",
+                      "text": "Fish or salmon oil"
+                    },
+                    {
+                      "value": "GLUCOSAMINE",
+                      "text": "Glucosamine/Chrondroitin/MSM"
+                    },
+                    {
+                      "value": "COLLAGEN",
+                      "text": "Hyaluronic acid/Collagen"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "dropdown",
+                  "name": "MedicationSupplementsCost",
+                  "title": "What was the average monthly cost of the supplements?",
+                  "isRequired": true,
+                  "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "UNDER_50",
+                      "text": "Under $50"
+                    },
+                    {
+                      "value": "51_100",
+                      "text": "$51-$100"
+                    },
+                    {
+                      "value": "101_150",
+                      "text": "$101-$150"
+                    },
+                    {
+                      "value": "OVER_150",
+                      "text": "Over $150"
+                    }
+                  ],
+                  "showOtherItem": false,
+                  "showNoneItem": false
+                },
+                {
+                  "type": "rating",
+                  "name": "MedicationSupplementsEffectiveness",
+                  "title": "Please rate the overall effectiveness of the supplements:",
+                  "description": "1 = very negative, 3 = no effect, 5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "MedicationProtocolPanel",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "MedicationProtocolDidPurchase",
+                  "title": "Have you purchased products that are advertised as a blend or protocol of ingredients created for LP/GOLPP? ",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "dropdown",
+                  "name": "MedicationProtocolCost",
+                  "title": "What was the average monthly cost of the blends or protocols?",
+                  "isRequired": true,
+                  "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "UNDER_50",
+                      "text": "Under $50"
+                    },
+                    {
+                      "value": "51_100",
+                      "text": "$51-$100"
+                    },
+                    {
+                      "value": "101_150",
+                      "text": "$101-$150"
+                    },
+                    {
+                      "value": "OVER_150",
+                      "text": "Over $150"
+                    }
+                  ],
+                  "showOtherItem": false,
+                  "showNoneItem": false
+                },
+                {
+                  "type": "rating",
+                  "name": "MedicationProtocolEffectiveness",
+                  "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
+                  "description": "1 = very negative, 3 = no effect, 5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PROCEDURE-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "ProcedureCard1Panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedureHeading",
+              "html": "<h2>Veterinary-Medical Procedures for LP</h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedureText",
+              "html": "<p>This section asks questions about veterinary procedures such as surgery or stent implant that {CmpnName} underwent to treat laryngeal paralysis. </p>"
+            },
+            {
+              "type": "boolean",
+              "name": "ProcedureDidHave",
+              "title": "Did {CmpnName} undergo a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
+              "isRequired": true,
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "swapOrder": true
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureAgePanel",
+              "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
+              "description": "If you can't remember exactly, it's OK to guesstimate.",
+              "visibleIf": "{ProcedureDidHave} = true",
+              "elements": [
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "ProcedureAgeYears",
+                  "title": "Years",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "ProcedureAgeMonths",
+                  "title": "Months (number 0 - 11)",
+                  "isRequired": true,
+                  "min": 0,
+                  "max": 11,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 0,
+                      "maxValue": 11,
+                      "text": "Months must be between 0 and 11"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureScheduled",
+                  "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "SCHEDULED",
+                      "text": "Scheduled"
+                    },
+                    {
+                      "value": "EMERGENCY",
+                      "text": "Emergency"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "dropdown",
+                  "name": "ProcedureScheduledWait",
+                  "title": "How far in advance was the procedure scheduled?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureScheduled} = 'SCHEDULED'",
+                  "choices": [
+                    {
+                      "value": "LESS_THAN_TWO_WEEKS",
+                      "text": "Less than two weeks"
+                    },
+                    {
+                      "value": "TWO_TO_FOUR_WEEKS",
+                      "text": "Two to four weeks"
+                    },
+                    {
+                      "value": "FOUR_TO_EIGHT_WEEKS",
+                      "text": "Four to eight weeks"
+                    },
+                    {
+                      "value": "OVER_EIGHT_WEEKS",
+                      "text": "More than eight weeks"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ProcedureCard2Panel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "ProcedureTypePanel",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "ProcedureType",
+                  "title": "What kind of procedure or procedures did {CmpnName} have?",
+                  "description": "Please check all that apply.",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureDidHave} = true",
+                  "choices": [
+                    {
+                      "value": "TIEBACK",
+                      "text": "Tieback (Unilateral Arytenoid Lateralization)"
+                    },
+                    {
+                      "value": "BVEAP",
+                      "text": "BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)"
+                    },
+                    {
+                      "value": "STENT",
+                      "text": "Laryngeal stent"
+                    },
+                    {
+                      "value": "ARYTENOIDECTOMY",
+                      "text": "Partial arytenoidectomy"
+                    },
+                    {
+                      "value": "VENTRILOCORDECTOMY",
+                      "text": "Ventrilocordectomy"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureTiebackPanel",
+              "title": "Questions about {CmpnName}'s tieback surgery",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TIEBACK'",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureTiebackSuturesFail",
+                  "title": "Did the sutures ever fail, causing a return of {CmpnName} LP symptoms?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureTiebackSuturesFailTime",
+                  "title": "How long after the tieback surgery did the sutures fail?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "UNDER_TWO_MONTHS",
+                      "text": "Less than two months"
+                    },
+                    {
+                      "value": "TWO_TO_SIX_MONTHS",
+                      "text": "Two to six months"
+                    },
+                    {
+                      "value": "MORE_THAN_SIX_MONTHS",
+                      "text": "More than six months"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "ProcedureTiebackRepeat",
+                  "title": "Did you repeat the tieback on the other side after the first suture failure?",
+                  "isRequired": true,
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
+                  "swapOrder": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureBveapPanel",
+              "title": "Questions about {CmpnName}'s BVEAP surgery",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'BVEAP'",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "ProcedureBveapReasons",
+                  "title": "Why did you choose BVEAP over other surgery types?",
+                  "description": "Please choose all that apply.",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "AP_RISK",
+                      "text": "Reduced risk of aspiration pneumonia"
+                    },
+                    {
+                      "value": "SWIM",
+                      "text": "Ability to swim post-op"
+                    },
+                    {
+                      "value": "PERMANENCE",
+                      "text": "No risk of return of symptoms due to suture failure"
+                    },
+                    {
+                      "value": "REPUTATION",
+                      "text": "Reputation of surgeon"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureStentPanel",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'STENT'",
+              "elements": [
+                {
+                  "type": "dropdown",
+                  "name": "ProcedureStentType",
+                  "title": "What type of stent implant did {CmpnName} receive?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "SILICONE",
+                      "text": "Silicone"
+                    },
+                    {
+                      "value": "DEXSTENT",
+                      "text": "Dextronix DexStent LE Nitinol wire"
+                    },
+                    {
+                      "value": "NITINOL_MESH",
+                      "text": "Nitinol mesh"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "panel",
+                  "name": "ProcedureDexstentPanel",
+                  "visibleIf": "{ProcedureStentType} contains 'DEXSTENT'",
+                  "elements": [
+                    {
+                      "type": "html",
+                      "name": "ProcedureDexstentText",
+                      "html": "<b>IMPORTANT</b>: The Dextronix DexStent LE Nitinol wire stent device has been discontinued by the manufacturer. Report parties involved in the sale or use of this device to your local veterinary regulatory agency."
+                    }
+                  ]
+                },
+                {
+                  "type": "boolean",
+                  "name": "ProcedureStentDidMigrate",
+                  "title": "Did {CmpnName} eject or 'cough out' the stent, or did it migrate out of position?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureStentType} = 'SILICONE' || {ProcedureStentType} = 'NITINOL_MESH'",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
+                  "swapOrder": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "ProcedureStentReplaced",
+                  "title": "Was it replaced with a new stent of a different size?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureStentDidMigrate} = true && {ProcedureStentType} != 'DONT_KNOW' && {ProcedureStentType} != 'DEXSTENT' && {ProcedureStentType} != 'Other'",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
+                  "swapOrder": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureStentHalitosis",
+                  "title": "Did {CmpnName} have halitosis after the stent implant?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "rating",
+                  "name": "ProcedureStentHalitosisRating",
+                  "title": "How bad was {CmpnName}’s halitosis after the stent implant?",
+                  "description": "1 = not bad, 5 = very bad",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureStentHalitosis} = 'YES'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureStentInfected",
+                  "title": "Did the tissue around the stent ever become infected?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureStentInfectedHandling",
+                  "title": "How was the infection handled?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureStentInfected} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "REMOVED_PERMANENTLY",
+                      "text": "The stent was permanently removed"
+                    },
+                    {
+                      "value": "REMOVED_AND_REPLACED",
+                      "text": "The stent was removed, disinfected, and replaced"
+                    },
+                    {
+                      "value": "NO_ACTION",
+                      "text": "No action was taken"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureArytenoidectomyPanel",
+              "title": "Questions about partial arytenoidectomy surgery",
+              "description": "Partial arytenoidectomy is the surgical removal of a section of one of the arytenoid (laryngeal) cartilages.",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'ARYTENOIDECTOMY'",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "ProcedureArytenoidectomyReasons",
+                  "title": "Why did you choose partial arytenoidectomy over other surgery types?",
+                  "description": "Please choose all that apply.",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "COST",
+                      "text": "Cost of this surgery compared to other surgery types"
+                    },
+                    {
+                      "value": "RECOMMEND_PRIMARY",
+                      "text": "Recommended by primary veterinarian"
+                    },
+                    {
+                      "value": "RECOMMENDED_SPECIALIST",
+                      "text": "Recommended by specialist"
+                    },
+                    {
+                      "value": "AVAILABILITY",
+                      "text": "Availablility"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureArytenoidectomyLaser",
+                  "title": "Was the partial arytenoidectomy performed with a laser?",
+                  "description": "This technique is called 'ablation'.",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
+                  "isRequired": true,
+                  "swapOrder": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureArytenoidectomyLaser",
+                  "title": "Was the partial arytenoidectomy performed with a laser?",
+                  "description": "This technique is called 'ablation'.",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureVentrilocordectomyPanel",
+              "title": "Questions about ventrilocordectomy surgery",
+              "description": "Ventrilocordectomy is the surgical removal of the vocal folds (vocal cords) that dogs use to bark.",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VENTRILOCORDECTOMY'",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "ProcedureVentrilocordectomyReasons",
+                  "title": "Why did you choose ventrilocordectomy over other surgery types?",
+                  "description": "Please choose all that apply.",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "COST",
+                      "text": "Cost of this surgery compared to other surgery types"
+                    },
+                    {
+                      "value": "RECOMMEND_PRIMARY",
+                      "text": "Recommended by primary veterinarian"
+                    },
+                    {
+                      "value": "RECOMMENDED_SPECIALIST",
+                      "text": "Recommended by specialist"
+                    },
+                    {
+                      "value": "AVAILABILITY",
+                      "text": "Availablility"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureIssuesPanel",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureIncisionInfection",
+                  "title": "Did {CmpnName} have any unexpected issues with infection, swelling or seroma at the incision site?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureType} notcontains 'STENT'",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureIssuesThroatclear",
+                  "title": "Did {CmpnName} frequently cough or throat-clear after the {cvProcedureTypeShort} procedure?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureIssuesThroatclearImproved",
+                  "title": "Did {CmpnName}'s coughing or throat-clearing improve over time?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureIssuesThroatclear} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureCostPanel",
+              "elements": [
+                {
+                  "type": "dropdown",
+                  "name": "ProcedureCost",
+                  "title": "What was the approximate cost of the {cvProcedureTypeShort} procedure, not including post-operative complications?",
+                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureDidHave} = true",
+                  "choices": [
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
+                      "value": "UNDER_1500",
+                      "text": "Under $1500"
+                    },
+                    {
+                      "value": "1501_2500",
+                      "text": "$1501 - $2500"
+                    },
+                    {
+                      "value": "2501_4000",
+                      "text": "$2501 - $3500"
+                    },
+                    {
+                      "value": "4001_5500",
+                      "text": "$3501 - $4500"
+                    },
+                    {
+                      "value": "5501_8000",
+                      "text": "$5501 - $8000"
+                    },
+                    {
+                      "value": "OVER_8000",
+                      "text": "Over $8000"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureComplications",
+                  "title": "Were there immediate post-operative complications that required at least one extra night of inpatient care?",
+                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "dropdown",
+                  "name": "ProcedureCostComplications",
+                  "title": "What was the approximate cost of the post-operative complications, not including aspiration pneumonia?",
+                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureComplications} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
+                    {
+                      "value": "UNDER_1500",
+                      "text": "Under $1500"
+                    },
+                    {
+                      "value": "1501_2500",
+                      "text": "$1501 - $2500"
+                    },
+                    {
+                      "value": "2501_4000",
+                      "text": "$2501 - $3500"
+                    },
+                    {
+                      "value": "4001_5500",
+                      "text": "$3501 - $4500"
+                    },
+                    {
+                      "value": "5501_8000",
+                      "text": "$5501 - $8000"
+                    },
+                    {
+                      "value": "OVER_8000",
+                      "text": "Over $8000"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureRatingPanel",
+              "visibleIf": "{ProcedureDidHave} = true",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureComparison",
+                  "title": "Did the surgeon explain the pros and cons of this surgery type in comparison to tieback or other LP surgery or stent procedures?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureChoice",
+                  "title": "Did the surgeon offer you the choice between this surgery type other LP surgery or stent procedures?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "rating",
+                  "name": "ProcedureSurgeonInformation",
+                  "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
+                  "description": "1 = very unsatisfied, 5 = very satisfied",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "ProcedureSatisfaction",
+                  "title": "How satisfied were you with the results of the procedure?",
+                  "description": "1 = very unsatisfied, 5 = very satisfied",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "THERAPY-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "TherapyCard1Panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "TherapyHeading",
+              "html": "<h2>Therapy for LP/GOLPP</h2>"
+            },
+            {
+              "type": "html",
+              "name": "TherapyText",
+              "html": "<p>This section asks about non-traditional treatments or therapy {CmpnName} has had for LP/GOLPP.</p>"
+            },
+            {
+              "type": "panel",
+              "name": "TherapyTypePanel",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "TherapyDidHave",
+                  "title": "Did {CmpnName} receive acupuncture or other therapies to help with LP/GOLPP symptoms?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "checkbox",
+                  "name": "TherapyType",
+                  "title": "What therapies or treatments did {CmpnName} receive?",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "ACUPUNCTURE",
+                      "text": "Acupuncture"
+                    },
+                    {
+                      "value": "THERAPY",
+                      "text": "Physical or hydro therapy"
+                    },
+                    {
+                      "value": "LLLT",
+                      "text": "Cold laser or red light therapy"
+                    },
+                    {
+                      "value": "CHIRO",
+                      "text": "Chiropractic"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyAcupunctureRatingBreathing",
+                  "title": "Please rate the effect of acupuncture on {CmpnName}'s breathing:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'ACUPUNCTURE'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyAcupunctureRatingMobility",
+                  "title": "Please rate the effect of acupuncture on {CmpnName}'s mobility or behavior:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'ACUPUNCTURE'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyTherapyRatingBreathing",
+                  "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s breathing:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'THERAPY'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyTherapyRatingMobility",
+                  "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s mobility or behavior:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'THERAPY'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyColdLaserRatingBreathing",
+                  "title": "How effective was cold laser or red light therapy on {CmpnName}'s breathing:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'LLLT'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyColdLaserRatingMobility",
+                  "title": "Please rate the effect of cold laser or red light therapy on {CmpnName}'s mobility or behavior:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'LLLT'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyChiroRatingBreathing",
+                  "title": "Please rate the effect of chiropractic on {CmpnName}'s breathing on {CmpnName}'s mobility or behavior:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'CHIRO'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyChiroRatingMobility",
+                  "title": "Please rate the effect of chiropractic on {CmpnName}'s mobility or behavior:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'CHIRO'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "dropdown",
+                  "name": "TherapyCost",
+                  "title": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
+                  "description": "If you don't know exactly, it's OK to guesstimate.",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyType} = notempty",
+                  "choices": [
+                    {
+                      "value": "UNDER_100",
+                      "text": "Under $100"
+                    },
+                    {
+                      "value": "101_150",
+                      "text": "$101-150"
+                    },
+                    {
+                      "value": "151_250",
+                      "text": "$151-$250"
+                    },
+                    {
+                      "value": "OVER_250",
+                      "text": "Over $250"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "showNoneItem": true,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BREATHING-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "BreathingCard1Panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "BreathingHeading",
+              "html": "<h2>Breathing Crises and Aspiration Pneumonia</h2>"
+            },
+            {
+              "type": "html",
+              "name": "BreathingText",
+              "html": "<p>This section asks questions about {CmpnName}'s experience with breathing crises and aspiration pneumonia. </p>"
+            },
+            {
+              "type": "html",
+              "name": "BreathingInfoLink",
+              "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?</a></div>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "BreathingCrisisPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisDidHave",
+              "title": "Did {CmpnName} ever have a breathing crisis that caused you to fear for {cvGenderObjectPronoun} life?",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisCount",
+              "title": "How many times do your remember {CmpnName} having a life-threatening breathing crisis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ONCE",
+                  "text": "Once"
+                },
+                {
+                  "value": "TWICE",
+                  "text": "Twice"
+                },
+                {
+                  "value": "THREE_TIMES",
+                  "text": "Three times"
+                },
+                {
+                  "value": "MORE_THAN_THREE",
+                  "text": "Four or more times"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingEmergencyDidHave",
+              "title": "Did {CmpnName} ever have a breathing emergency that required a visit to a veterinary professional?",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingEmergencyCount",
+              "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+              "visibleIf": "{BreathingEmergencyDidHave} = 'YES'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Once"
+                },
+                {
+                  "value": "TWO",
+                  "text": "Twice"
+                },
+                {
+                  "value": "MORE_THAN_TWO",
+                  "text": "More than twice"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "BreathingEmergencyCost",
+              "title": "About what was the total pre-insurance cost of these visits?",
+              "visibleIf": "{BreathingEmergencyDidHave} = 'YES'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "LESS_THAN_250",
+                  "text": "Less than $250"
+                },
+                {
+                  "value": "250_500",
+                  "text": "$250 - $500"
+                },
+                {
+                  "value": "500_1000",
+                  "text": "$500 - $1000"
+                },
+                {
+                  "value": "MORE_THAN_1000",
+                  "text": "More than $1000"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or prefer not to say"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisAdvice",
+              "title": "Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?",
+              "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "BreathingCrisisAdviceType",
+              "title": "What advice did they give you to help you deal with a breathing crisis?",
+              "isRequired": true,
+              "visibleIf": "{BreathingCrisisAdvice} = 'YES'",
+              "choices": [
+                {
+                  "value": "SEDATIVE",
+                  "text": "Adminster a sedative"
+                },
+                {
+                  "value": "COOL_PLACE",
+                  "text": "Get them to a cool place"
+                },
+                {
+                  "value": "SUPPLEMENTAL_OXYGEN",
+                  "text": "Administer supplemental oxygen"
+                },
+                {
+                  "value": "COOLING_AGENT",
+                  "text": "Apply ice, a cooling vest, or some other cooling agent"
+                },
+                {
+                  "value": "BLOW_AIR",
+                  "text": "Blow air into their nose (CPR)"
+                },
+                {
+                  "value": "EMERGENCY_FACILITY",
+                  "text": "Bring them to an emergency facility immediately"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisProductRecommended",
+              "title": "Did a veterinary professional recommend or provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "BreathingCrisisProductRecommendedType",
+              "title": "What substance or product did they provide or recommend?",
+              "isRequired": true,
+              "visibleIf": "{BreathingCrisisProductRecommended} = 'YES'",
+              "choices": [
+                {
+                  "value": "SEDATIVE",
+                  "text": "Sedative"
+                },
+                {
+                  "value": "STEROID",
+                  "text": "Steroid, i.e., prednisone"
+                },
+                {
+                  "value": "OXYGEN",
+                  "text": "Supplemental oxygen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "dropdown",
+              "name": "BreathingCrisisProductRecommendedForm",
+              "title": "In what form was the sedative or steroid provided?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "INJECTIBLE",
+                  "text": "Injectible"
+                },
+                {
+                  "value": "LIQUID",
+                  "text": "Liquid"
+                },
+                {
+                  "value": "SUPPOSITORY",
+                  "text": "Suppository"
+                },
+                {
+                  "value": "GEL",
+                  "text": "Gel or paste"
+                },
+                {
+                  "value": "PILL",
+                  "text": "Pill or tablet"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
+            },
+            {
+              "type": "radio",
+              "name": "BreathingOxygenDidUse",
+              "title": "Did you every use a supplemental oxygen product to help with {CmpnName}'s breathing crises?",
+              "choices": [
+                {
+                  "value": "NO",
+                  "text": "No, we never used supplemental oxygen"
+                },
+                {
+                  "value": "YES_PREVENT",
+                  "text": "Yes, we used supplemental oxygen to prevent breathing crises"
+                },
+                {
+                  "value": "YES_REVIVE",
+                  "text": "Yes, we used supplemental oxygen to revive {CmpnName} from a breathing crisis"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
                 }
               ]
             },
             {
               "type": "rating",
-              "name": "MedicationRefluxMedicationsLPEffect",
-              "title": "Did the reflux medications affect {CmpnName}'s LP/GOLPP symptoms?",
-              "description": "1, very negative = no, 3 = no effect, 5 = yes, positive effect",
+              "name": "BreathingCrisisOxygenPrevent",
+              "title": "How effective was the supplemental oxygen product in preventing a breathing crisis?",
+              "description": "1 = ineffective, 5 = very effective",
               "isRequired": true,
               "rateValues": [
                 {
@@ -3041,9 +4848,9 @@
             },
             {
               "type": "rating",
-              "name": "MedicationRefluxMedicationsAPEffect",
-              "title": "Did the reflux medications affect {CmpnName}'s risk of aspiration pneumonia?",
-              "description": "1, very negative = no, 3 = no effect, 5 = yes, very positive",
+              "name": "BreathingCrisisOxygenRevive",
+              "title": "How effective was the supplemental oxygen product in bringing {CmpnName} out of the breathing crisis?",
+              "description": "1 = ineffective, 5 = very effective",
               "isRequired": true,
               "rateValues": [
                 {
@@ -3076,16 +4883,16 @@
         },
         {
           "type": "panel",
-          "name": "MedicationCard2Panel",
+          "name": "BreathingCard2Panel",
           "elements": [
             {
               "type": "panel",
-              "name": "MedicationNonPrescriptionTypePanel",
+              "name": "BreathingAspirationPanel",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "MedicationNonPrescription",
-                  "title": "Did {CmpnName} receive acupuncture or other therapies to help with LP/GOLPP symptoms?",
+                  "name": "BreathingAspirationDidHave",
+                  "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -3104,54 +4911,271 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "checkbox",
-                  "name": "MedicationNonPrescriptionType",
-                  "title": "What therapies or treatments did {CmpnName} receive?",
+                  "type": "dropdown",
+                  "name": "BreathingAspirationCount",
+                  "title": "How many times did {CmpnName} get AP?",
                   "isRequired": true,
-                  "visibleIf": "{MedicationNonPrescription} = 'YES'",
+                  "visibleIf": "{BreathingAspirationDidHave} = 'YES'",
                   "choices": [
                     {
-                      "value": "ACUPUNCTURE",
-                      "text": "Acupuncture"
+                      "value": 0,
+                      "text": "Never"
                     },
                     {
-                      "value": "THERAPY",
-                      "text": "Physical or hydro therapy"
+                      "value": 1,
+                      "text": "Once"
                     },
                     {
-                      "value": "LLLT",
-                      "text": "Cold laser or red light therapy"
+                      "value": 2,
+                      "text": "Twice"
                     },
                     {
-                      "value": "CHIRO",
-                      "text": "Chiropractic"
+                      "value": 3,
+                      "text": "Three times"
+                    },
+                    {
+                      "value": 4,
+                      "text": "More than three times"
                     }
                   ],
-                  "showOtherItem": true
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "BreathingAspirationBeforeProcedure",
+                  "title": "How many times did {CmpnName} get aspiration pneumonia after the surgery or stent procedure?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureDidHave} = 'YES'",
+                  "choices": [
+                    {
+                      "value": 0,
+                      "text": "Never"
+                    },
+                    {
+                      "value": 1,
+                      "text": "Once"
+                    },
+                    {
+                      "value": 2,
+                      "text": "Twice"
+                    },
+                    {
+                      "value": 3,
+                      "text": "Three times"
+                    },
+                    {
+                      "value": 4,
+                      "text": "More than three times"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Other option"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "BreathingAspirationInpatient",
+                  "title": "Did {CmpnName} ever need inpatient, overnight, or emergency care for AP?",
+                  "isRequired": true,
+                  "visibleIf": "{BreathingAspirationDidHave} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
                 },
                 {
                   "type": "dropdown",
-                  "name": "MedicationNonPrescriptionCost",
-                  "title": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
-                  "description": "If you don't know exactly, it's OK to guesstimate.",
+                  "name": "BreathingAspirationInpatientCount",
+                  "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
+                  "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
                   "isRequired": true,
-                  "visibleIf": "{MedicationNonPrescription} = 'YES'",
                   "choices": [
+                    {
+                      "value": 1,
+                      "text": "Once"
+                    },
+                    {
+                      "value": 2,
+                      "text": "Twice"
+                    },
+                    {
+                      "value": 3,
+                      "text": "Three times"
+                    },
+                    {
+                      "value": 4,
+                      "text": "More than three times"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "dropdown",
+                  "name": "BreathingAspirationCost",
+                  "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "NOT_SAY",
+                      "text": "Prefer not to say"
+                    },
                     {
                       "value": "UNDER_100",
                       "text": "Under $100"
                     },
                     {
-                      "value": "101_150",
-                      "text": "$101-150"
+                      "value": "100_300",
+                      "text": "$100-$300"
                     },
                     {
-                      "value": "151_250",
-                      "text": "$151-$250"
+                      "value": "300_500",
+                      "text": "$300-$500"
                     },
                     {
-                      "value": "OVER_250",
-                      "text": "Over $250"
+                      "value": "500_1000",
+                      "text": "$500-$1000"
+                    },
+                    {
+                      "value": "1001_3000",
+                      "text": "$1001-$3000"
+                    },
+                    {
+                      "value": "3000_5000",
+                      "text": "$3000-$5000"
+                    },
+                    {
+                      "value": "OVER_5000",
+                      "text": "Over $5000"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NEUROPATHY-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "NeuropathyCard1Panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "NeuropathyHeading",
+              "html": "<h2>Hind-end weakness and polyneuropathy</h2>"
+            },
+            {
+              "type": "html",
+              "name": "NeuropathyText",
+              "html": "<p>This section asks questions about whether {CmpnName} showed symptoms of polyneuropathy and how these symptoms progressed over time. </p>"
+            },
+            {
+              "type": "html",
+              "name": "NeuropathyText",
+              "html": "<p><b>NOTE:</b> Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly in the hind end. Symptoms can include hind-end weakness and incontinence. Younger dogs with idiopathic LP often don't suffer from LP-related polyneuropathy.</p>"
+            },
+            {
+              "type": "panel",
+              "name": "NeuropathySymptomsDoesHavePanel",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "NeuropathySymptomsDoesHave",
+                  "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "NOT_SURE",
+                      "text": "Not sure"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "NeuropathyCard2Panel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "NeuropathyHindEndDoesHavePanel",
+              "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "NeuropathySymptomsFirst",
+                  "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "HIND_END",
+                      "text": "Hind-end weakness appeared first"
+                    },
+                    {
+                      "value": "BREATHING",
+                      "text": "Breathing issues appeared first"
+                    },
+                    {
+                      "value": "SAME_TIME",
+                      "text": "They both appeared at about the same time"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't Know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "dropdown",
+                  "name": "NeuropathySymptomsBreathingOnset",
+                  "title": "About how long after you first noticed hind-end weakness did the breathing issues begin?",
+                  "isRequired": true,
+                  "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
+                  "choices": [
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    },
+                    {
+                      "value": "IMMEDIATELY",
+                      "text": "Almost immediately"
+                    },
+                    {
+                      "value": "WEEKS",
+                      "text": "Several weeks"
+                    },
+                    {
+                      "value": "MONTHS",
+                      "text": "Several months"
+                    },
+                    {
+                      "value": "HALF_YEAR",
+                      "text": "Six months or longer"
                     }
                   ],
                   "showOtherItem": true,
@@ -3159,12 +5183,209 @@
                   "required": true
                 },
                 {
-                  "type": "rating",
-                  "name": "MedicationNonPrescriptionAcupunctureRatingBreathing",
-                  "title": "Did acupuncture have an effect on {CmpnName}'s breathing?",
-                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "type": "dropdown",
+                  "name": "NeuropathySymptomsHindEndOnset",
+                  "title": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
                   "isRequired": true,
-                  "visibleIf": "{MedicationNonPrescription} = 'YES' && {MedicationNonPrescriptionType} contains 'ACUPUNCTURE'",
+                  "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
+                  "choices": [
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    },
+                    {
+                      "value": "IMMEDIATELY",
+                      "text": "Almost immediately"
+                    },
+                    {
+                      "value": "WEEKS",
+                      "text": "Several weeks"
+                    },
+                    {
+                      "value": "MONTHS",
+                      "text": "Several months"
+                    },
+                    {
+                      "value": "HALF_YEAR",
+                      "text": "Six months or longer"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "NeuropathySymptomsTypeProgression",
+                  "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
+                  "isRequired": true,
+                  "visibleIf": "{SymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "BREATHING",
+                      "text": "The breathing issues progressed faster"
+                    },
+                    {
+                      "value": "HIND_END",
+                      "text": "The hind-end weakness progressed faster"
+                    },
+                    {
+                      "value": "SAME",
+                      "text": "They both progressed at about the same rate"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "checkbox",
+                  "name": "NeuropathyOtherIssues",
+                  "title": "Over the course of {CmpnName}'s LP/GOLPP, did any of these issues also appear?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ANXIETY",
+                      "text": "Increased anxiety"
+                    },
+                    {
+                      "value": "COGNITIVE",
+                      "text": "Cognitive changes"
+                    },
+                    {
+                      "value": "BEHAVIOR",
+                      "text": "Changes in behavior or personality"
+                    },
+                    {
+                      "value": "APPETITE",
+                      "text": "Changes in appetite"
+                    },
+                    {
+                      "value": "NONE",
+                      "text": "No, {CmpnName} never had any of these issues"
+                    }
+                  ],
+                  "showOtherItem": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CONCLUSION-page",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "ConclusionCard1Panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ConclusionHeading",
+              "html": "<h2>Conclusion</h2>"
+            },
+            {
+              "type": "html",
+              "name": "Conclusion",
+              "html": "<p>The last section of this survey references your earlier responses to determine how {CmpnName}'s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression. </p>"
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionsPanelLifeStatusTrue",
+              "visibleIf": "{LifeStatus} = true",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "ConclusionsPanelLifeStatusTrueText",
+                  "html": "<p><b>NOTE: </b>These questions ask about the last station of {CmpnName}'s LP/GOLPP journey before {cvGenderSubjectPronoun} crossed over the Rainbow Bridge. If it's too painful to revisit this stage of {CmpnName}'s life, it might be best to discontinue the survey and return to it later. </p>"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionsPanelLifeStatusFalse",
+              "visibleIf": "{LifeStatus} = false",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "ConclusionsPanelLifeStatusFalseText",
+                  "html": "<p><b>IMPORTANT:</b> Please answer the questions about {CmpnName} in {cvGenderObjectPronoun} current state of health:</p>"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionDetailsPanel",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "ConclusionSpecialConsiderations",
+                  "title": "Please describe any special considerations for {CmpnName} due to LP-related breathing issues:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "NO_CONSIDERATIONS",
+                      "text": "No special considerations"
+                    },
+                    {
+                      "value": "EXERCISE",
+                      "text": "Exercise limitations"
+                    },
+                    {
+                      "value": "FOOD",
+                      "text": "Type, amount or frequency of feeding"
+                    },
+                    {
+                      "value": "TRAVEL",
+                      "text": "Travel restrictions"
+                    },
+                    {
+                      "value": "EXCITEMENT",
+                      "text": "Other behavior restrictions i.e., anxiety, excitement"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ConclusionGeneralCondition",
+                  "title": "Please describe {CmpnName}'s general physical condition:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "NO_SYMPTOMS",
+                      "text": "No noticeable symptoms"
+                    },
+                    {
+                      "value": "HIND_END",
+                      "text": "Significant hind-end weakness"
+                    },
+                    {
+                      "value": "FALLING",
+                      "text": "Frequent falling"
+                    },
+                    {
+                      "value": "GET_UP",
+                      "text": "Difficulty getting up or standing"
+                    },
+                    {
+                      "value": "URINARY",
+                      "text": "Urinary incontinence"
+                    },
+                    {
+                      "value": "FECAL",
+                      "text": "Fecal incontinence"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "rating",
+                  "name": "ConclusionQOL",
+                  "title": "How would you rate {CmpnName}'s quality of life at this stage?",
+                  "description": "1 = very poor, 3 = fair, 5 = very good",
+                  "isRequired": true,
                   "rateValues": [
                     {
                       "value": 1,
@@ -3191,242 +5412,326 @@
                       "text": "Don't know"
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionOtherConditionsPanel",
+              "elements": [
+                {
+                  "type": "boolean",
+                  "name": "ConclusionOtherConditionsNew",
+                  "title": "Did {CmpnName} develop any new conditions during {cvGenderObjectPronoun} LP/GOLPP journey that {cvGenderSubjectPronoun} didn't have before?",
+                  "labelTrue": "Yes",
+                  "labelFalse": "No",
+                  "swapOrder": true,
+                  "isRequired": true
                 },
                 {
-                  "type": "rating",
-                  "name": "MedicationNonPrescriptionAcupunctureRatingMobility",
-                  "title": "Did acupuncture have an effect on {CmpnName}'s mobility or behavior?",
-                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "type": "checkbox",
+                  "name": "ConclusionOtherConditions",
+                  "title": "What other conditions did {CmpnName} develop during {cvGenderObjectPronoun} LP/GOLPP journey?",
+                  "description": "The selections you made about the beginning of {CmpnName}'s LP/GOLPP journey are preselected.",
+                  "visibleIf": "{ConclusionOtherConditionsNew} = true",
                   "isRequired": true,
-                  "visibleIf": "{MedicationNonPrescription} = 'YES' && {MedicationNonPrescriptionType} contains 'ACUPUNCTURE'",
-                  "rateValues": [
+                  "choices": [
                     {
-                      "value": 1,
-                      "text": "1"
+                      "value": "NONE",
+                      "text": "No new conditions"
                     },
                     {
-                      "value": 2,
-                      "text": "2"
+                      "value": "GERD",
+                      "text": "Acid reflux (GERD)"
                     },
                     {
-                      "value": 3,
-                      "text": "3"
+                      "value": "ME",
+                      "text": "Megaesophagus"
                     },
                     {
-                      "value": 4,
-                      "text": "4"
+                      "value": "DM",
+                      "text": "Degenerative Myelopathy"
                     },
                     {
-                      "value": 5,
-                      "text": "5"
+                      "value": "ARTHRITIS",
+                      "text": "Arthritis"
+                    },
+                    {
+                      "value": "CUSHINGS",
+                      "text": "Cushings"
+                    },
+                    {
+                      "value": "CT",
+                      "text": "Collapsing Trachea"
+                    },
+                    {
+                      "value": "HYPOTHYROID",
+                      "text": "Hypothyroidism"
+                    },
+                    {
+                      "value": "HEMANGIOSARCOMA",
+                      "text": "Hemangiosarcoma"
+                    }
+                  ],
+                  "choicesOrder": "none",
+                  "otherText": "Other (max. 250 characters)",
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ConclusionCard2Panel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "ConclusionCauseOfDeathPanel",
+              "visibleIf": "{LifeStatus} = true",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "ConclusionCauseOfDeathHeading",
+                  "html": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This question asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over."
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionCauseOfDeath",
+                  "title": "What was the ultimate reason why {CmpnName} crossed over the Rainbow Bridge?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "COMPLICATIONS",
+                      "text": "Post-op complications of LP-related surgical procedure"
+                    },
+                    {
+                      "value": "BREATHING_CRISIS",
+                      "text": "LP-related breathing crisis"
+                    },
+                    {
+                      "value": "ASPIRATION",
+                      "text": "Aspiration pneumonia"
+                    },
+                    {
+                      "value": "QOL_POLYNEUROPATHY",
+                      "text": "Quality of life due to polyneuropathy or hind-end weakness"
+                    },
+                    {
+                      "value": "QOL_BREATHING",
+                      "text": "Quality of life due to LP-related breathing problems"
+                    },
+                    {
+                      "value": "CANCER",
+                      "text": "Cancer"
+                    },
+                    {
+                      "value": "SEIZURE",
+                      "text": "Seizure, stroke, or cardiac event"
+                    },
+                    {
+                      "value": "INFECTION",
+                      "text": "Bacterial/viral infection"
+                    },
+                    {
+                      "value": "STOPPED_EATING",
+                      "text": "Stopped eating"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Other reasons"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ConclusionOtherPathPanel",
+              "title": "These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionOtherPathTieback",
+                  "title": "What if anything would you differently?",
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TIEBACK'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "TIEBACK_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "TIEBACK_NO",
+                      "text": "I would not do tieback surgery again"
+                    },
+                    {
+                      "value": "TIEBACK_SOONER",
+                      "text": "I would do tieback surgery sooner than I did with {CmpnName}"
+                    },
+                    {
+                      "value": "TIEBACK_LATER",
+                      "text": "I would wait to do tieback surgery longer than I did with {CmpnName}"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionOtherPathBVEAP",
+                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'BVEAP'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "BVEAP_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "BVEAP_NO",
+                      "text": "I would not do BVEAP surgery again"
+                    },
+                    {
+                      "value": "BVEAP_SOONER",
+                      "text": "I would do BVEAP surgery sooner than I did with {CmpnName}"
+                    },
+                    {
+                      "value": "BVEAP_LATER",
+                      "text": "I would wait to do BVEAP surgery longer than I did with {CmpnName}"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionOtherPathStent",
+                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'STENT'",
+                  "choices": [
+                    {
+                      "value": "STENT_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "STENT_NO",
+                      "text": "I would not do the laryngeal stent implant again"
+                    },
+                    {
+                      "value": "STENT_SOONER",
+                      "text": "I would do laryngeal stent implant surgery sooner than I did with {CmpnName}"
+                    },
+                    {
+                      "value": "STENT_LATER",
+                      "text": "I would wait to do a laryngeal stent implant longer than I did with {CmpnName}"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionOtherPathArytenoidectomy",
+                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'ARYTENOIDECTOMY'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ARYTENOIDECTOMY_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "ARYTENOIDECTOMY_NO",
+                      "text": "I would not do the arytenoidectomy surgery again"
+                    },
+                    {
+                      "value": "ARYTENOIDECTOMY_SOONER",
+                      "text": "I would do the arytenoidectomy surgery sooner than I did with {CmpnName}"
+                    },
+                    {
+                      "value": "ARYTENOIDECTOMY_LATER",
+                      "text": "I would wait to do the arytenoidectomy longer than I did with {CmpnName}"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionOtherPathVentrilocordectomy",
+                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VENTRILOCORDECTOMY'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "VENTRILOCORDECTOMY_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "VENTRILOCORDECTOMY_NO",
+                      "text": "I would not do the ventrilocordectomy surgery again"
+                    },
+                    {
+                      "value": "VENTRILOCORDECTOMY_SOONER",
+                      "text": "I would do the ventrilocordectomy surgery sooner than I did with {CmpnName}"
+                    },
+                    {
+                      "value": "VENTRILOCORDECTOMY_LATER",
+                      "text": "I would wait to do the ventrilocordectomy longer than I did with {CmpnName}"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ConclusionOtherPathNoTreatment",
+                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureDidHave} = false",
+                  "choices": [
+                    {
+                      "value": "NO_TREATMENT_SAME",
+                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                    },
+                    {
+                      "value": "NO_TREATMENT_WOULD_DO",
+                      "text": "I would pursue tieback, laryngeal stent, or other veterinary procedure"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ConclusionStentAlternative",
+                  "title": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
+                  "visibleIf": "{ProcedureType} notcontains 'STENT'",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
                     },
                     {
                       "value": "DONT_KNOW",
                       "text": "Don't know"
                     }
-                  ]
+                  ],
+                  "showOtherItem": false
                 },
                 {
-                  "type": "rating",
-                  "name": "MedicationNonPrescriptionTherapyRatingBreathing",
-                  "title": "Did physical or hydro therapy have an effect on {CmpnName}'s breathing?",
-                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
-                  "isRequired": true,
-                  "visibleIf": "{MedicationNonPrescription} = 'YES' && {MedicationNonPrescriptionType} contains 'THERAPY'",
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
+                  "type": "comment",
+                  "name": "ConclusionDifferentChoices",
+                  "title": "Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).",
+                  "isRequired": false
                 },
                 {
-                  "type": "rating",
-                  "name": "MedicationNonPrescriptionTherapyRatingMobility",
-                  "title": "Did physical or hydro therapy have an effect on {CmpnName}'s mobility or behavior?",
-                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
-                  "isRequired": true,
-                  "visibleIf": "{MedicationNonPrescription} = 'YES' && {MedicationNonPrescriptionType} contains 'THERAPY'",
-                  "rateValues": [
+                  "type": "panel",
+                  "name": "ConclusionThanksPanel",
+                  "elements": [
                     {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
-                },
-                {
-                  "type": "rating",
-                  "name": "MedicationNonPrescriptionColdLaserRatingBreathing",
-                  "title": "How effective was cold laser or red light therapy have an effect on {CmpnName}'s breathing?",
-                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
-                  "isRequired": true,
-                  "visibleIf": "{MedicationNonPrescription} = 'YES' && {MedicationNonPrescriptionType} contains 'LLLT'",
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
-                },
-                {
-                  "type": "rating",
-                  "name": "MedicationNonPrescriptionColdLaserRatingMobility",
-                  "title": "Did cold laser or red light therapy have an effect on {CmpnName}'s mobility or behavior?",
-                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
-                  "isRequired": true,
-                  "visibleIf": "{MedicationNonPrescription} = 'YES' && {MedicationNonPrescriptionType} contains 'LLLT'",
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
-                },
-                {
-                  "type": "rating",
-                  "name": "MedicationNonPrescriptionChiroRatingBreathing",
-                  "title": "Did chiropractic have an effect on {CmpnName}'s breathing have an effect on {CmpnName}'s mobility or behavior?",
-                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
-                  "isRequired": true,
-                  "visibleIf": "{MedicationNonPrescription} = 'YES' && {MedicationNonPrescriptionType} contains 'CHIRO'",
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
-                },
-                {
-                  "type": "rating",
-                  "name": "MedicationNonPrescriptionChiroRatingMobility",
-                  "title": "Did chiropractic have an effect on {CmpnName}'s mobility or behavior?",
-                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
-                  "isRequired": true,
-                  "visibleIf": "{MedicationNonPrescription} = 'YES' && {MedicationNonPrescriptionType} contains 'CHIRO'",
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
+                      "type": "html",
+                      "name": "ConclusionThanksHead",
+                      "html": "<div class='conclusion-thanks-head-container'><h2 class='conclusion-thanks-title-heading'>LP/GOLPP Survey 2026</h2><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><h3 class='conclusion-thanks-title-subheading'>Thank You For Taking The Survey!</h3><p class='conclusion-thanks-note-mobile'>Please select the checkbox to complete and submit.</p><p class='conclusion-thanks-note'>Please click the <b>Complete</b> button to submit your responses.</p></div>"
                     }
                   ]
                 }

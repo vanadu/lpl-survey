@@ -38,11 +38,11 @@ const Browse_05_Primary = () => {
 
       <div className="browse-panel-container" id="PrimaryCard1Panel">
       <div className="browse-content-block" id="PrimaryHeading">
-        <h2 className="browse-content-heading">Your primary veterinarian and Bella&lsquo;s LP/GOLPP</h2>
+        <h2 className="browse-content-heading">Your Primary Veterinarian and Bella&lsquo;s LP/GOLPP</h2>
       </div>
 
       <div className="browse-content-block" id="PrimaryText">
-        <p className="browse-content-text">This section asks questions about how your current primary veterinarian handled Bella&lsquo;s LP/GOLPP symptoms.</p>
+        <p className="browse-content-text">This section asks questions about how your primary veterinarian(s) handled Bella&lsquo;s LP/GOLPP symptoms.</p>
       </div>
 
       <div className="browse-panel-container" id="PrimaryInflammationPanel">

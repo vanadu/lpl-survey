@@ -2,8 +2,14 @@
   "calculatedValues": [
     {
       "type": "calculatedvalue",
-      "name": "cvTreatmentType",
-      "expression": "iif({TreatmentStatusType} contains 'TIEBACK', 'Treatment: TIEBACK', iif({TreatmentStatusType} contains 'BVEAP', 'Treatment: BVEAP', iif({TreatmentStatusType} contains 'STENT', 'Treatment: STENT', iif({TreatmentStatusType} contains 'ARYTENOIDECTOMY', 'Treatment: ARYTENOIDECTOMY', iif({TreatmentStatusType} contains 'VENTRILOCORDECTOMY', 'Treatment: VENTRILOCORDECTOMY', ''))",
+      "name": "cvProcedureType",
+      "expression": "iif({ProcedureType} contains 'TIEBACK', 'Treatment: TIEBACK', iif({ProcedureType} contains 'BVEAP', 'Treatment: BVEAP', iif({ProcedureType} contains 'STENT', 'Treatment: STENT', iif({ProcedureType} contains 'ARYTENOIDECTOMY', 'Treatment: ARYTENOIDECTOMY', iif({ProcedureType} contains 'VENTRILOCORDECTOMY', 'Treatment: VENTRILOCORDECTOMY', ''))",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
+      "name": "cvProcedureTypeShort",
+      "expression": "iif({ProcedureType} contains 'TIEBACK', 'tieback', iif({ProcedureType} contains 'BVEAP', 'BVEAP', iif({ProcedureType} contains 'STENT', 'stent', iif({ProcedureType} contains 'ARYTENOIDECTOMY', 'arytenoidectomy', iif({ProcedureType} contains 'VENTRILOCORDECTOMY', 'ventrilocordectomy', ''))",
       "includeIntoResult": true
     },
     {
@@ -475,7 +481,7 @@
             {
               "type": "html",
               "name": "CmpnInfoHeading",
-              "html": "<h2>About your LP/GOLPP companion<h2>"
+              "html": "<h2>About Your LP/GOLPP companion<h2>"
             },
             {
               "type": "html",
@@ -813,7 +819,7 @@
                   "type": "dropdown",
                   "name": "FactorsBestSource",
                   "title": "Which of those information sources did you find MOST useful (please select one)?",
-                  "visibleIf": "{FactorsSourcesTypes.length} > 1 && {FactorsTypes} notcontains 'DONT_KNOW'",
+                  "visibleIf": "{FactorsSourcesTypes.length} > 1 && {FactorsSourcesTypes} notcontains 'DONT_KNOW'",
                   "choices": []
                 },
                 {
@@ -1268,7 +1274,7 @@
             {
               "type": "html",
               "name": "SymptomsHeading",
-              "html": "<h2>Your early encounters with LP/GOLPP</h2>"
+              "html": "<h2>{CmpnName}'s Early LP/GOLPP Symptoms</h2>"
             },
             {
               "type": "html",
@@ -1277,49 +1283,49 @@
             },
             {
               "type": "panel",
-              "name": "SymptomsAgePanel",
-              "title": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
+              "name": "SymptomsDetailsPanel",
               "elements": [
                 {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "SymptomsAgeYears",
-                  "title": "Years",
-                  "isRequired": true,
-                  "min": "1",
-                  "max": "40",
-                  "validators": [
+                  "type": "panel",
+                  "name": "SymptomsAgePanel",
+                  "title": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
+                  "elements": [
                     {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 40,
-                      "text": "Age must be between 1 and 40"
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "SymptomsAgeYears",
+                      "title": "Years",
+                      "isRequired": true,
+                      "min": "1",
+                      "max": "40",
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 40,
+                          "text": "Age must be between 1 and 40"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "SymptomsAgeMonths",
+                      "title": "Months (number 0 - 11)",
+                      "isRequired": true,
+                      "min": 0,
+                      "max": 11,
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 0,
+                          "maxValue": 11,
+                          "text": "Months must be between 0 and 11"
+                        }
+                      ]
                     }
                   ]
                 },
-                {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "SymptomsAgeMonths",
-                  "title": "Months (number 0 - 11)",
-                  "isRequired": true,
-                  "min": 0,
-                  "max": 11,
-                  "validators": [
-                    {
-                      "type": "numeric",
-                      "minValue": 0,
-                      "maxValue": 11,
-                      "text": "Months must be between 0 and 11"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "SymptomsDetailsPanel",
-              "elements": [
                 {
                   "type": "checkbox",
                   "name": "SymptomsType",
@@ -1536,12 +1542,12 @@
             {
               "type": "html",
               "name": "PrimaryHeading",
-              "html": "<h2>Your primary veterinarian and {CmpnName}'s LP/GOLPP</h2>"
+              "html": "<h2>Your Primary Veterinarian and {CmpnName}'s LP/GOLPP</h2>"
             },
             {
               "type": "html",
               "name": "PrimaryText",
-              "html": "<p>This section asks questions about how your current primary veterinarian handled {CmpnName}'s LP/GOLPP symptoms.</p>"
+              "html": "<p>This section asks questions about how your primary veterinarian(s) handled {CmpnName}'s LP/GOLPP symptoms.</p>"
             },
             {
               "type": "panel",
@@ -1859,7 +1865,7 @@
             {
               "type": "html",
               "name": "DiagnosisHeading",
-              "html": "<h2>{CmpnName}'s LP/GOLPP diagnosis</h2>"
+              "html": "<h2>{CmpnName}'s LP/GOLPP Diagnosis</h2>"
             },
             {
               "type": "html",
@@ -2986,7 +2992,7 @@
                 {
                   "type": "radiogroup",
                   "name": "MedicationRefluxMedications",
-                  "title": "Has {CmpnName} taken any medications for reflux (GERD) or to improve digestive motility?",
+                  "title": "Has {CmpnName} taken any medications for reflux (GERD)negative or to improve digestive motility?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -3007,8 +3013,8 @@
                 {
                   "type": "rating",
                   "name": "MedicationRefluxMedicationsLPEffect",
-                  "title": "Did the reflux medications affect {CmpnName}'s LP/GOLPP symptoms?",
-                  "description": "1, very negative = no, 3 = no effect, 5 = yes, positive effect",
+                  "title": "How did the reflux medications affect {CmpnName}'s LP/GOLPP symptoms?",
+                  "description": "1 = very negative, 3 = no effect, 5 = very positive",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -3040,8 +3046,8 @@
                 {
                   "type": "rating",
                   "name": "MedicationRefluxMedicationsAPEffect",
-                  "title": "Did the reflux medications affect {CmpnName}'s risk of aspiration pneumonia?",
-                  "description": "1, very negative = no, 3 = no effect, 5 = yes, very positive",
+                  "title": "How did the reflux medications affect {CmpnName}'s risk of aspiration pneumonia?",
+                  "description": "1 = very negative, 3 = no effect, 5 = yes, very positive",
                   "isRequired": true,
                   "rateValues": [
                     {
@@ -3157,7 +3163,7 @@
                 {
                   "type": "dropdown",
                   "name": "MedicationSupplementsCost",
-                  "title": "What was the average monthly cost of these OTC products?",
+                  "title": "What was the average monthly cost of the supplements?",
                   "isRequired": true,
                   "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
                   "choices": [
@@ -3184,8 +3190,8 @@
                 {
                   "type": "rating",
                   "name": "MedicationSupplementsEffectiveness",
-                  "title": "Please rate the overall effectiveness of the OTC products you selected above:",
-                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "title": "Please rate the overall effectiveness of the supplements:",
+                  "description": "1 = very negative, 3 = no effect, 5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
                   "rateValues": [
@@ -3224,7 +3230,7 @@
                 {
                   "type": "radiogroup",
                   "name": "MedicationProtocolDidPurchase",
-                  "title": "Have you purchased products that are advertised as a blend or protocol of OTC ingredients created for a specific illness or condition? ",
+                  "title": "Have you purchased products that are advertised as a blend or protocol of ingredients created for LP/GOLPP? ",
                   "isRequired": true,
                   "choices": [
                     {
@@ -3273,7 +3279,7 @@
                   "type": "rating",
                   "name": "MedicationProtocolEffectiveness",
                   "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
-                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+                  "description": "1 = very negative, 3 = no effect, 5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
                   "rateValues": [
@@ -3319,12 +3325,12 @@
             {
               "type": "html",
               "name": "ProcedureHeading",
-              "html": "<h2>Veterinary-Medical Procedures</h2>"
+              "html": "<h2>Veterinary-Medical Procedures for LP</h2>"
             },
             {
               "type": "html",
               "name": "ProcedureText",
-              "html": "<p>This section asks questions about any surgery or implant procedure {CmpnName} underwent to treat LP/GOLPP symptoms. This only includes surgeries or procedures that diriectly modify the structure of the larynx.</p>"
+              "html": "<p>This section asks questions about veterinary procedures such as surgery or stent implant that {CmpnName} underwent to treat laryngeal paralysis. </p>"
             },
             {
               "type": "boolean",
@@ -3338,9 +3344,9 @@
             {
               "type": "panel",
               "name": "ProcedureAgePanel",
-              "title": "At about what age did {CmpnName} have the first surgery or stent procedure?",
+              "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
               "description": "If you can't remember exactly, it's OK to guesstimate.",
-              "visibleIf": "{TreatmentStatusDidHave} = true",
+              "visibleIf": "{ProcedureDidHave} = true",
               "elements": [
                 {
                   "type": "text",
@@ -3396,8 +3402,9 @@
                 {
                   "type": "dropdown",
                   "name": "ProcedureScheduledWait",
-                  "title": "How far in advance did you have to schedule the procedure?",
+                  "title": "How far in advance was the procedure scheduled?",
                   "isRequired": true,
+                  "visibleIf": "{ProcedureScheduled} = 'SCHEDULED'",
                   "choices": [
                     {
                       "value": "LESS_THAN_TWO_WEEKS",
@@ -3413,7 +3420,7 @@
                     },
                     {
                       "value": "OVER_EIGHT_WEEKS",
-                      "text": "Move than eight weeks"
+                      "text": "More than eight weeks"
                     }
                   ],
                   "showOtherItem": false
@@ -3436,7 +3443,7 @@
                   "title": "What kind of procedure or procedures did {CmpnName} have?",
                   "description": "Please check all that apply.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusDidHave} = true",
+                  "visibleIf": "{ProcedureDidHave} = true",
                   "choices": [
                     {
                       "value": "TIEBACK",
@@ -3466,148 +3473,72 @@
             {
               "type": "panel",
               "name": "ProcedureTiebackPanel",
-              "title": "Questions about tieback (Unilateral Arytenoid Lateralization) surgery",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
+              "title": "Questions about {CmpnName}'s tieback surgery",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TIEBACK'",
               "elements": [
                 {
+                  "type": "radiogroup",
+                  "name": "ProcedureTiebackSuturesFail",
+                  "title": "Did the sutures ever fail, causing a return of {CmpnName} LP symptoms?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureTiebackSuturesFailTime",
+                  "title": "How long after the tieback surgery did the sutures fail?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "UNDER_TWO_MONTHS",
+                      "text": "Less than two months"
+                    },
+                    {
+                      "value": "TWO_TO_SIX_MONTHS",
+                      "text": "Two to six months"
+                    },
+                    {
+                      "value": "MORE_THAN_SIX_MONTHS",
+                      "text": "More than six months"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
                   "type": "boolean",
-                  "name": "ProcedureTiebackEmergency",
-                  "title": "Was emergency tieback performed on {CmpnName} after a life-threatening breathing emergency?",
+                  "name": "ProcedureTiebackRepeat",
+                  "title": "Did you repeat the tieback on the other side after the first suture failure?",
+                  "isRequired": true,
                   "labelTrue": "Yes",
                   "labelFalse": "No",
-                  "swapOrder": true,
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "ProcedureTiebackCount",
-                  "title": "How many times did {CmpnName} undergo tieback (UAL) surgery?",
-                  "isRequired": true,
-                  "labelTrue": "More than once",
-                  "labelFalse": "Once",
                   "swapOrder": true
-                },
-                {
-                  "type": "dropdown",
-                  "name": "ProcedureTiebackOnceCost",
-                  "title": "Approximate cost of surgery (not including post-op complications):",
-                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-                  "isRequired": true,
-                  "visibleIf": "{TreatmentStatusTiebackCount} = 'ONCE'",
-                  "choices": [
-                    {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
-                    },
-                    {
-                      "value": "UNDER_2500",
-                      "text": "Under $2500"
-                    },
-                    {
-                      "value": "2501_4000",
-                      "text": "$2501-$4000"
-                    },
-                    {
-                      "value": "4001_5500",
-                      "text": "$4000-$5500"
-                    },
-                    {
-                      "value": "5500_7000",
-                      "text": "$5500-$7000"
-                    },
-                    {
-                      "value": "OVER_7000",
-                      "text": "Over $7000"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "dropdown",
-                  "name": "ProcedureTiebackMultipleCost",
-                  "title": "Approximate total cost of surgeries (not including post-op complications):",
-                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-                  "isRequired": true,
-                  "visibleIf": "{TreatmentStatusTiebackCount} = 'MORE_THAN_ONCE'",
-                  "choices": [
-                    {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
-                    },
-                    {
-                      "value": "UNDER_4000",
-                      "text": "Under $4000"
-                    },
-                    {
-                      "value": "4001_5500",
-                      "text": "$4001-$5500"
-                    },
-                    {
-                      "value": "5501_7000",
-                      "text": "$5501-$7000"
-                    },
-                    {
-                      "value": "7001_9000",
-                      "text": "$7001-$9000"
-                    },
-                    {
-                      "value": "OVER_9000",
-                      "text": "Over $9000"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "boolean",
-                  "name": "ProcedureTiebackComplications",
-                  "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "isRequired": true,
-                  "swapOrder": true
-                },
-                {
-                  "type": "dropdown",
-                  "name": "ProcedureTiebackComplicationsCost",
-                  "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
-                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-                  "isRequired": true,
-                  "visibleIf": "{TreatmentStatusTiebackComplications} = true",
-                  "choices": [
-                    {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
-                    },
-                    {
-                      "value": "UNDER_4000",
-                      "text": "Under $1000"
-                    },
-                    {
-                      "value": "1001_2000",
-                      "text": "$1001-$2000"
-                    },
-                    {
-                      "value": "2001_3000",
-                      "text": "$2001-$3000"
-                    },
-                    {
-                      "value": "3001_5000",
-                      "text": "$3001-$5000"
-                    },
-                    {
-                      "value": "OVER_5001",
-                      "text": "Over $5001"
-                    }
-                  ],
-                  "showOtherItem": false
                 }
               ]
             },
             {
               "type": "panel",
               "name": "ProcedureBveapPanel",
-              "title": "Questions about BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
+              "title": "Questions about {CmpnName}'s BVEAP surgery",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'BVEAP'",
               "elements": [
                 {
                   "type": "checkbox",
@@ -3626,7 +3557,7 @@
                     },
                     {
                       "value": "PERMANENCE",
-                      "text": "No risk of suture failure as with tieback surgery"
+                      "text": "No risk of return of symptoms due to suture failure"
                     },
                     {
                       "value": "REPUTATION",
@@ -3634,87 +3565,13 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "dropdown",
-                  "name": "ProcedureBveapCost",
-                  "title": "Approximate cost of BVEAP surgery (not including post-op complications):",
-                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
-                    },
-                    {
-                      "value": "UNDER_4000",
-                      "text": "Under $4000"
-                    },
-                    {
-                      "value": "4001_5500",
-                      "text": "$4001-$5500"
-                    },
-                    {
-                      "value": "5501_7000",
-                      "text": "$5501-$7000"
-                    },
-                    {
-                      "value": "OVER_7000",
-                      "text": "Over $7000"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "boolean",
-                  "name": "ProcedureBveapComplications",
-                  "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
-                  "isRequired": true,
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "swapOrder": true
-                },
-                {
-                  "type": "dropdown",
-                  "name": "ProcedureBveapComplicationsCost",
-                  "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
-                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-                  "isRequired": true,
-                  "visibleIf": "{TreatmentStatusBveapComplications} = true",
-                  "choices": [
-                    {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
-                    },
-                    {
-                      "value": "UNDER_1000",
-                      "text": "Under $1000"
-                    },
-                    {
-                      "value": "1001_2000",
-                      "text": "$1001-$2000"
-                    },
-                    {
-                      "value": "2001_3000",
-                      "text": "$2001-$3000"
-                    },
-                    {
-                      "value": "3001_5000",
-                      "text": "$3001-$5000"
-                    },
-                    {
-                      "value": "OVER_5001",
-                      "text": "Over $5001"
-                    }
-                  ],
-                  "showOtherItem": false
                 }
               ]
             },
             {
               "type": "panel",
               "name": "ProcedureStentPanel",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'STENT'",
               "elements": [
                 {
                   "type": "dropdown",
@@ -3744,7 +3601,7 @@
                 {
                   "type": "panel",
                   "name": "ProcedureDexstentPanel",
-                  "visibleIf": "{TreatmentStatusStentType} contains 'DEXSTENT'",
+                  "visibleIf": "{ProcedureStentType} contains 'DEXSTENT'",
                   "elements": [
                     {
                       "type": "html",
@@ -3756,9 +3613,9 @@
                 {
                   "type": "boolean",
                   "name": "ProcedureStentDidMigrate",
-                  "title": "After the initial implant procedure, did {CmpnName} cough out the stent or did it migrate out of position?",
+                  "title": "Did {CmpnName} eject or 'cough out' the stent, or did it migrate out of position?",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentType} = 'SILICONE' || {TreatmentStatusStentType} = 'NITINOL_MESH'",
+                  "visibleIf": "{ProcedureStentType} = 'SILICONE' || {ProcedureStentType} = 'NITINOL_MESH'",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
                   "swapOrder": true
@@ -3766,123 +3623,111 @@
                 {
                   "type": "boolean",
                   "name": "ProcedureStentReplaced",
-                  "title": "After the first stent implant migrated or was coughed out, did you have it replaced with another stent?",
+                  "title": "Was it replaced with a new stent of a different size?",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentType} != 'DONT_KNOW' && {TreatmentStatusStentType} != 'DEXSTENT' && {TreatmentStatusStentType} != 'Other'",
+                  "visibleIf": "{ProcedureStentDidMigrate} = true && {ProcedureStentType} != 'DONT_KNOW' && {ProcedureStentType} != 'DEXSTENT' && {ProcedureStentType} != 'Other'",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
                   "swapOrder": true
                 },
                 {
-                  "type": "dropdown",
-                  "name": "ProcedureStentCostOnce",
-                  "title": "Approximate cost of stent implant procedure, not including complications:",
-                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+                  "type": "radiogroup",
+                  "name": "ProcedureStentHalitosis",
+                  "title": "Did {CmpnName} have halitosis after the stent implant?",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentDidMigrate} = false || {TreatmentStatusStentReplaced} = false",
                   "choices": [
                     {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
+                      "value": "YES",
+                      "text": "Yes"
                     },
                     {
-                      "value": "UNDER_1500",
-                      "text": "Under $1500"
+                      "value": "NO",
+                      "text": "No"
                     },
                     {
-                      "value": "1501_2500",
-                      "text": "$1501-$2000"
-                    },
-                    {
-                      "value": "2001_3000",
-                      "text": "$2001-$3000"
-                    },
-                    {
-                      "value": "3001_4000",
-                      "text": "$3001-$4000"
-                    },
-                    {
-                      "value": "OVER_4000",
-                      "text": "Over $4000"
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
                     }
                   ],
                   "showOtherItem": false
                 },
                 {
-                  "type": "dropdown",
-                  "name": "ProcedureStentCostRepeat",
-                  "title": "Approximate cost of the stent procedures, not including complications:",
-                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+                  "type": "rating",
+                  "name": "ProcedureStentHalitosisRating",
+                  "title": "How bad was {CmpnName}’s halitosis after the stent implant?",
+                  "description": "1 = not bad, 5 = very bad",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentDidMigrate} = true && {TreatmentStatusStentReplaced} = true",
+                  "visibleIf": "{ProcedureStentHalitosis} = 'YES'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureStentInfected",
+                  "title": "Did the tissue around the stent ever become infected?",
+                  "isRequired": true,
                   "choices": [
                     {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
+                      "value": "YES",
+                      "text": "Yes"
                     },
                     {
-                      "value": "UNDER_1500",
-                      "text": "Under $1500"
+                      "value": "NO",
+                      "text": "No"
                     },
                     {
-                      "value": "1501_2500",
-                      "text": "$1501-$2000"
-                    },
-                    {
-                      "value": "2001_3000",
-                      "text": "$2001-$3000"
-                    },
-                    {
-                      "value": "3001_4000",
-                      "text": "$5500-$7000"
-                    },
-                    {
-                      "value": "OVER_4000",
-                      "text": "Over $4000"
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
                     }
                   ],
                   "showOtherItem": false
                 },
                 {
-                  "type": "boolean",
-                  "name": "ProcedureStentComplications",
-                  "title": "Were there post-operative complications that required overnight inpatient care for {CmpnName}?",
-                  "visibleIf": "{TreatmentStatusStentType} notempty",
+                  "type": "radiogroup",
+                  "name": "ProcedureStentInfectedHandling",
+                  "title": "How was the infection handled?",
                   "isRequired": true,
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "swapOrder": true
-                },
-                {
-                  "type": "dropdown",
-                  "name": "ProcedureStentComplicationsCost",
-                  "title": "Approximate cost of post-procedure complications, not including the cost of the stent implant procedure:",
-                  "isRequired": true,
-                  "visibleIf": "{TreatmentStatusStentComplications} = true",
+                  "visibleIf": "{ProcedureStentInfected} = 'YES'",
                   "choices": [
                     {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
+                      "value": "REMOVED_PERMANENTLY",
+                      "text": "The stent was permanently removed"
                     },
                     {
-                      "value": "UNDER_1000",
-                      "text": "Under $1000"
+                      "value": "REMOVED_AND_REPLACED",
+                      "text": "The stent was removed, disinfected, and replaced"
                     },
                     {
-                      "value": "1001_2000",
-                      "text": "$1001-$2000"
+                      "value": "NO_ACTION",
+                      "text": "No action was taken"
                     },
                     {
-                      "value": "2001_3000",
-                      "text": "$2001-$3000"
-                    },
-                    {
-                      "value": "3001_5000",
-                      "text": "$3001-$5000"
-                    },
-                    {
-                      "value": "OVER_5001",
-                      "text": "Over $5001"
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
                     }
                   ],
                   "showOtherItem": false
@@ -3894,7 +3739,7 @@
               "name": "ProcedureArytenoidectomyPanel",
               "title": "Questions about partial arytenoidectomy surgery",
               "description": "Partial arytenoidectomy is the surgical removal of a section of one of the arytenoid (laryngeal) cartilages.",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'ARYTENOIDECTOMY'",
               "elements": [
                 {
                   "type": "checkbox",
@@ -3923,7 +3768,7 @@
                   "showOtherItem": true
                 },
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "ProcedureArytenoidectomyLaser",
                   "title": "Was the partial arytenoidectomy performed with a laser?",
                   "description": "This technique is called 'ablation'.",
@@ -3934,8 +3779,9 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "ProcedureArytenoidectomyDidExplain",
-                  "title": "Did the surgeon explain the pros and cons of this surgery type vs standard tieback surgery?",
+                  "name": "ProcedureArytenoidectomyLaser",
+                  "title": "Was the partial arytenoidectomy performed with a laser?",
+                  "description": "This technique is called 'ablation'.",
                   "isRequired": true,
                   "choices": [
                     {
@@ -3949,101 +3795,6 @@
                     {
                       "value": "DONT_KNOW",
                       "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "ProcedureArytenoidectomyChoice",
-                  "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "dropdown",
-                  "name": "ProcedureArytenoidectomyCost",
-                  "title": "Approximate cost of the partial arytenoidectomy (not including post-op complications):",
-                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
-                    },
-                    {
-                      "value": "UNDER_2000",
-                      "text": "Under $2000"
-                    },
-                    {
-                      "value": "2001_4000",
-                      "text": "$2001-$4000"
-                    },
-                    {
-                      "value": "4001_5500",
-                      "text": "$4001-$5500"
-                    },
-                    {
-                      "value": "OVER_5500",
-                      "text": "Over $5500"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "boolean",
-                  "name": "ProcedureArytenoidectomyComplications",
-                  "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
-                  "isRequired": true,
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "swapOrder": true
-                },
-                {
-                  "type": "dropdown",
-                  "name": "ProcedureArytenoidectomyComplicationsCost",
-                  "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
-                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-                  "isRequired": true,
-                  "visibleIf": "{TreatmentStatusArytenoidectomyComplications} = true",
-                  "choices": [
-                    {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
-                    },
-                    {
-                      "value": "UNDER_1000",
-                      "text": "Under $1000"
-                    },
-                    {
-                      "value": "1001_2000",
-                      "text": "$1001-$2000"
-                    },
-                    {
-                      "value": "2001_3000",
-                      "text": "$2001-$3000"
-                    },
-                    {
-                      "value": "3001_5000",
-                      "text": "$3001-$5000"
-                    },
-                    {
-                      "value": "OVER_5001",
-                      "text": "Over $5001"
                     }
                   ],
                   "showOtherItem": false
@@ -4055,7 +3806,7 @@
               "name": "ProcedureVentrilocordectomyPanel",
               "title": "Questions about ventrilocordectomy surgery",
               "description": "Ventrilocordectomy is the surgical removal of the vocal folds (vocal cords) that dogs use to bark.",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VENTRILOCORDECTOMY'",
               "elements": [
                 {
                   "type": "checkbox",
@@ -4082,11 +3833,39 @@
                     }
                   ],
                   "showOtherItem": true
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureIssuesPanel",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureIncisionInfection",
+                  "title": "Did {CmpnName} have any unexpected issues with infection, swelling or seroma at the incision site?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureType} notcontains 'STENT'",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
                 },
                 {
                   "type": "radiogroup",
-                  "name": "ProcedureVentrilocordectomyDidExplain",
-                  "title": "Did the surgeon explain the pros and cons of this surgery type vs tieback surgery?",
+                  "name": "ProcedureIssuesThroatclear",
+                  "title": "Did {CmpnName} frequently cough or throat-clear after the {cvProcedureTypeShort} procedure?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -4106,9 +3885,10 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "ProcedureVentrilocordectomyChoice",
-                  "title": "Did the surgeon offer you the choice between this surgery type and standard tieback surgery?",
+                  "name": "ProcedureIssuesThroatclearImproved",
+                  "title": "Did {CmpnName}'s coughing or throat-clearing improve over time?",
                   "isRequired": true,
+                  "visibleIf": "{ProcedureIssuesThroatclear} = 'YES'",
                   "choices": [
                     {
                       "value": "YES",
@@ -4124,77 +3904,108 @@
                     }
                   ],
                   "showOtherItem": false
-                },
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureCostPanel",
+              "elements": [
                 {
                   "type": "dropdown",
-                  "name": "ProcedureVentrilocordectomyCost",
-                  "title": "Approximate cost of the ventrilocordectomy (not including post-op complications):",
+                  "name": "ProcedureCost",
+                  "title": "What was the approximate cost of the {cvProcedureTypeShort} procedure, not including post-operative complications?",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
+                  "visibleIf": "{ProcedureDidHave} = true",
                   "choices": [
                     {
                       "value": "NOT_SAY",
                       "text": "Prefer not to say"
                     },
                     {
-                      "value": "UNDER_2000",
-                      "text": "Under $2000"
+                      "value": "UNDER_1500",
+                      "text": "Under $1500"
                     },
                     {
-                      "value": "2001_4000",
-                      "text": "$2001-$4000"
+                      "value": "1501_2500",
+                      "text": "$1501 - $2500"
+                    },
+                    {
+                      "value": "2501_4000",
+                      "text": "$2501 - $3500"
                     },
                     {
                       "value": "4001_5500",
-                      "text": "$4001-$5500"
+                      "text": "$3501 - $4500"
                     },
                     {
-                      "value": "OVER_5500",
-                      "text": "Over $5500"
+                      "value": "5501_8000",
+                      "text": "$5501 - $8000"
+                    },
+                    {
+                      "value": "OVER_8000",
+                      "text": "Over $8000"
                     }
                   ],
                   "showOtherItem": false
                 },
                 {
-                  "type": "boolean",
-                  "name": "ProcedureVentrilocordectomyComplications",
-                  "title": "Were there unexpected post-operative complications that required at least one extra night of inpatient care?",
-                  "isRequired": true,
-                  "labelTrue": "Yes",
-                  "labelFalse": "No",
-                  "swapOrder": true
+                  "type": "radiogroup",
+                  "name": "ProcedureComplications",
+                  "title": "Were there immediate post-operative complications that required at least one extra night of inpatient care?",
+                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
                 },
                 {
                   "type": "dropdown",
-                  "name": "ProcedureVentrilocordectomyComplicationsCost",
-                  "title": "Approximate cost of post-operative complications, not including the cost of the surgery:",
+                  "name": "ProcedureCostComplications",
+                  "title": "What was the approximate cost of the post-operative complications, not including aspiration pneumonia?",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusVentrilocordectomyComplications} = true",
+                  "visibleIf": "{ProcedureComplications} = 'YES'",
                   "choices": [
                     {
                       "value": "NOT_SAY",
                       "text": "Prefer not to say"
                     },
                     {
-                      "value": "UNDER_1000",
-                      "text": "Under $1000"
+                      "value": "UNDER_1500",
+                      "text": "Under $1500"
                     },
                     {
-                      "value": "1001_2000",
-                      "text": "$1001-$2000"
+                      "value": "1501_2500",
+                      "text": "$1501 - $2500"
                     },
                     {
-                      "value": "2001_3000",
-                      "text": "$2001_$3000"
+                      "value": "2501_4000",
+                      "text": "$2501 - $3500"
                     },
                     {
-                      "value": "3001_5000",
-                      "text": "$3001-$5000"
+                      "value": "4001_5500",
+                      "text": "$3501 - $4500"
                     },
                     {
-                      "value": "OVER_5001",
-                      "text": "Over $5001"
+                      "value": "5501_8000",
+                      "text": "$5501 - $8000"
+                    },
+                    {
+                      "value": "OVER_8000",
+                      "text": "Over $8000"
                     }
                   ],
                   "showOtherItem": false
@@ -4204,11 +4015,53 @@
             {
               "type": "panel",
               "name": "ProcedureRatingPanel",
-              "visibleIf": "{TreatmentStatusDidHave} = true",
+              "visibleIf": "{ProcedureDidHave} = true",
               "elements": [
                 {
+                  "type": "radiogroup",
+                  "name": "ProcedureComparison",
+                  "title": "Did the surgeon explain the pros and cons of this surgery type in comparison to tieback or other LP surgery or stent procedures?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureChoice",
+                  "title": "Did the surgeon offer you the choice between this surgery type other LP surgery or stent procedures?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
                   "type": "rating",
-                  "name": "ProcedureSurgeonInformLevel",
+                  "name": "ProcedureSurgeonInformation",
                   "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
                   "description": "1 = very unsatisfied, 5 = very satisfied",
                   "isRequired": true,
@@ -4241,7 +4094,7 @@
                 },
                 {
                   "type": "rating",
-                  "name": "ProcedureTreatmentSatisfactionLevel",
+                  "name": "ProcedureSatisfaction",
                   "title": "How satisfied were you with the results of the procedure?",
                   "description": "1 = very unsatisfied, 5 = very satisfied",
                   "isRequired": true,
@@ -4288,12 +4141,12 @@
             {
               "type": "html",
               "name": "TherapyHeading",
-              "html": "<h2>OTC (Over-The-Counter) Products for LP/GOLPP</h2>"
+              "html": "<h2>Therapy for LP/GOLPP</h2>"
             },
             {
               "type": "html",
               "name": "TherapyText",
-              "html": "<p><b>IMPORTANT</b>: Attempting to manage LP/GOLPP symptoms with supplements and OTC products is controversial. There are no supplements or OTC products that will restore movement to paralyzed laryneal tissue. That means that even with such products, the risk of breathing crises and a potentially fatal suffocation event is very real. While supplements and OTC products can't prevent a breathing emergency, some veterinary professionals believe some supplements and OTC products may have a positive effect on symptoms and improve an LP/GOLPP patient's quality of life.  </p><p>The questions in this section pertain to the main ingredient of a product, not any specific product. This survey isn't intended to advertise for, recommend, or be used as a marketing vehicle for any specific product. For questions about the effectiveness or safety of any product, consult with a licensed veterinarian.</p>"
+              "html": "<p>This section asks about non-traditional treatments or therapy {CmpnName} has had for LP/GOLPP.</p>"
             },
             {
               "type": "panel",
@@ -4301,9 +4154,8 @@
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "TherapyDidPurchase",
-                  "title": "Have you purchased OTC products based on a particular ingredient {CmpnName}'s LP/GOLPP symptoms?",
-                  "description": "Please only include products you've used regularly for over 60 days",
+                  "name": "TherapyDidHave",
+                  "title": "Did {CmpnName} receive acupuncture or other therapies to help with LP/GOLPP symptoms?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -4324,207 +4176,329 @@
                 {
                   "type": "checkbox",
                   "name": "TherapyType",
-                  "title": "Please select the main ingredient in any over-the-counter supplements or non-prescription remedies you have purchased for {CmpnName}'s LP/GOLPP symptoms:",
+                  "title": "What therapies or treatments did {CmpnName} receive?",
                   "isRequired": true,
-                  "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
+                  "visibleIf": "{TherapyDidHave} = 'YES'",
                   "choices": [
                     {
-                      "value": "TUMERIC",
-                      "text": "Tumeric"
+                      "value": "ACUPUNCTURE",
+                      "text": "Acupuncture"
                     },
                     {
-                      "value": "CBD",
-                      "text": "CBD"
+                      "value": "THERAPY",
+                      "text": "Physical or hydro therapy"
                     },
                     {
-                      "value": "LIONS_MANE",
-                      "text": "Lion's mane"
+                      "value": "LLLT",
+                      "text": "Cold laser or red light therapy"
                     },
                     {
-                      "value": "MYELIN_SHEATH",
-                      "text": "Myelin sheath"
-                    },
-                    {
-                      "value": "EGG_SHELL",
-                      "text": "Egg-shell membrane"
-                    },
-                    {
-                      "value": "URSOLIC",
-                      "text": "Ursolic acid"
-                    },
-                    {
-                      "valuinitiative= 'YES'e": "PRIMROSE",
-                      "text": "Evening Primrose Oil"
-                    },
-                    {
-                      "value": "FISH_OIL",
-                      "text": "Fish or salmon oil"
-                    },
-                    {
-                      "value": "GLUCOSAMINE",
-                      "text": "Glucosamine/Chrondroitin/MSM"
-                    },
-                    {
-                      "value": "COLLAGEN",
-                      "text": "Hyaluronic acid/Collagen"
+                      "value": "CHIRO",
+                      "text": "Chiropractic"
                     }
                   ],
                   "showOtherItem": true
                 },
                 {
+                  "type": "rating",
+                  "name": "TherapyAcupunctureRatingBreathing",
+                  "title": "Please rate the effect of acupuncture on {CmpnName}'s breathing:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'ACUPUNCTURE'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyAcupunctureRatingMobility",
+                  "title": "Please rate the effect of acupuncture on {CmpnName}'s mobility or behavior:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'ACUPUNCTURE'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyTherapyRatingBreathing",
+                  "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s breathing:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'THERAPY'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyTherapyRatingMobility",
+                  "title": "Please rate the effect of physical or hydro therapy on {CmpnName}'s mobility or behavior:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'THERAPY'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyColdLaserRatingBreathing",
+                  "title": "How effective was cold laser or red light therapy on {CmpnName}'s breathing:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'LLLT'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyColdLaserRatingMobility",
+                  "title": "Please rate the effect of cold laser or red light therapy on {CmpnName}'s mobility or behavior:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'LLLT'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyChiroRatingBreathing",
+                  "title": "Please rate the effect of chiropractic on {CmpnName}'s breathing on {CmpnName}'s mobility or behavior:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'CHIRO'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "TherapyChiroRatingMobility",
+                  "title": "Please rate the effect of chiropractic on {CmpnName}'s mobility or behavior:",
+                  "description": "1 = very negative, 3 = no effect,  5 = very positive",
+                  "isRequired": true,
+                  "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'CHIRO'",
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
                   "type": "dropdown",
                   "name": "TherapyCost",
-                  "title": "What was the average monthly cost of these OTC products?",
+                  "title": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
+                  "description": "If you don't know exactly, it's OK to guesstimate.",
                   "isRequired": true,
-                  "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
+                  "visibleIf": "{TherapyType} = notempty",
                   "choices": [
                     {
-                      "value": "UNDER_50",
-                      "text": "Under $50"
-                    },
-                    {
-                      "value": "51_100",
-                      "text": "$51-$100"
+                      "value": "UNDER_100",
+                      "text": "Under $100"
                     },
                     {
                       "value": "101_150",
-                      "text": "$101-$150"
+                      "text": "$101-150"
                     },
                     {
-                      "value": "OVER_150",
-                      "text": "Over $150"
+                      "value": "151_250",
+                      "text": "$151-$250"
+                    },
+                    {
+                      "value": "OVER_250",
+                      "text": "Over $250"
                     }
                   ],
-                  "showOtherItem": false,
-                  "showNoneItem": false
-                },
-                {
-                  "type": "rating",
-                  "name": "TherapyEffectiveness",
-                  "title": "Please rate the overall effectiveness of the OTC products you selected above:",
-                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
-                  "isRequired": true,
-                  "visibleIf": "{OTCProductsDidPurchase} = 'YES'",
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "TherapyCard2Panel",
-          "elements": [
-            {
-              "type": "panel",
-              "name": "OTCProtocolPanel",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "OTCProtocolDidPurchase",
-                  "title": "Have you purchased products that are advertised as a blend or protocol of OTC ingredients created for a specific illness or condition? ",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "dropdown",
-                  "name": "OTCProtocolCost",
-                  "title": "What was the average monthly cost of the blends or protocols?",
-                  "isRequired": true,
-                  "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
-                  "choices": [
-                    {
-                      "value": "UNDER_50",
-                      "text": "Under $50"
-                    },
-                    {
-                      "value": "51_100",
-                      "text": "$51-$100"
-                    },
-                    {
-                      "value": "101_150",
-                      "text": "$101-$150"
-                    },
-                    {
-                      "value": "OVER_150",
-                      "text": "Over $150"
-                    }
-                  ],
-                  "showOtherItem": false,
-                  "showNoneItem": false
-                },
-                {
-                  "type": "rating",
-                  "name": "OTCProtocolEffectiveness",
-                  "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
-                  "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
-                  "isRequired": true,
-                  "visibleIf": "{OTCProtocolDidPurchase} = 'YES'",
-                  "rateValues": [
-                    {
-                      "value": 1,
-                      "text": "1"
-                    },
-                    {
-                      "value": 2,
-                      "text": "2"
-                    },
-                    {
-                      "value": 3,
-                      "text": "3"
-                    },
-                    {
-                      "value": 4,
-                      "text": "4"
-                    },
-                    {
-                      "value": 5,
-                      "text": "5"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
+                  "showOtherItem": true,
+                  "showNoneItem": true,
+                  "required": true
                 }
               ]
             }
@@ -4542,25 +4516,382 @@
             {
               "type": "html",
               "name": "BreathingHeading",
-              "html": "<h2>{CmpnName}'s experience with aspiration pneumonia</h2>"
+              "html": "<h2>Breathing Crises and Aspiration Pneumonia</h2>"
             },
             {
               "type": "html",
               "name": "BreathingText",
-              "html": "<p>Aspiration pneumonia (AP) is the most common and most serious direct complication of LP/GOLPP. This section asks questions about {CmpnName}'s experience with AP. </p>"
+              "html": "<p>This section asks questions about {CmpnName}'s experience with breathing crises and aspiration pneumonia. </p>"
             },
             {
               "type": "html",
               "name": "BreathingInfoLink",
               "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?</a></div>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "BreathingCrisisPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisDidHave",
+              "title": "Did {CmpnName} ever have a breathing crisis that caused you to fear for {cvGenderObjectPronoun} life?",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
             },
             {
+              "type": "radiogroup",
+              "name": "BreathingCrisisCount",
+              "title": "How many times do your remember {CmpnName} having a life-threatening breathing crisis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ONCE",
+                  "text": "Once"
+                },
+                {
+                  "value": "TWICE",
+                  "text": "Twice"
+                },
+                {
+                  "value": "THREE_TIMES",
+                  "text": "Three times"
+                },
+                {
+                  "value": "MORE_THAN_THREE",
+                  "text": "Four or more times"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingEmergencyDidHave",
+              "title": "Did {CmpnName} ever have a breathing emergency that required a visit to a veterinary professional?",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingEmergencyCount",
+              "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+              "visibleIf": "{BreathingEmergencyDidHave} = 'YES'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "ONE",
+                  "text": "Once"
+                },
+                {
+                  "value": "TWO",
+                  "text": "Twice"
+                },
+                {
+                  "value": "MORE_THAN_TWO",
+                  "text": "More than twice"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "BreathingEmergencyCost",
+              "title": "About what was the total pre-insurance cost of these visits?",
+              "visibleIf": "{BreathingEmergencyDidHave} = 'YES'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "LESS_THAN_250",
+                  "text": "Less than $250"
+                },
+                {
+                  "value": "250_500",
+                  "text": "$250 - $500"
+                },
+                {
+                  "value": "500_1000",
+                  "text": "$500 - $1000"
+                },
+                {
+                  "value": "MORE_THAN_1000",
+                  "text": "More than $1000"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or prefer not to say"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisAdvice",
+              "title": "Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?",
+              "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "BreathingCrisisAdviceType",
+              "title": "What advice did they give you to help you deal with a breathing crisis?",
+              "isRequired": true,
+              "visibleIf": "{BreathingCrisisAdvice} = 'YES'",
+              "choices": [
+                {
+                  "value": "SEDATIVE",
+                  "text": "Adminster a sedative"
+                },
+                {
+                  "value": "COOL_PLACE",
+                  "text": "Get them to a cool place"
+                },
+                {
+                  "value": "SUPPLEMENTAL_OXYGEN",
+                  "text": "Administer supplemental oxygen"
+                },
+                {
+                  "value": "COOLING_AGENT",
+                  "text": "Apply ice, a cooling vest, or some other cooling agent"
+                },
+                {
+                  "value": "BLOW_AIR",
+                  "text": "Blow air into their nose (CPR)"
+                },
+                {
+                  "value": "EMERGENCY_FACILITY",
+                  "text": "Bring them to an emergency facility immediately"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisProductRecommended",
+              "title": "Did a veterinary professional recommend or provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "BreathingCrisisProductRecommendedType",
+              "title": "What substance or product did they provide or recommend?",
+              "isRequired": true,
+              "visibleIf": "{BreathingCrisisProductRecommended} = 'YES'",
+              "choices": [
+                {
+                  "value": "SEDATIVE",
+                  "text": "Sedative"
+                },
+                {
+                  "value": "STEROID",
+                  "text": "Steroid, i.e., prednisone"
+                },
+                {
+                  "value": "OXYGEN",
+                  "text": "Supplemental oxygen"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "dropdown",
+              "name": "BreathingCrisisProductRecommendedForm",
+              "title": "In what form was the sedative or steroid provided?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "INJECTIBLE",
+                  "text": "Injectible"
+                },
+                {
+                  "value": "LIQUID",
+                  "text": "Liquid"
+                },
+                {
+                  "value": "SUPPOSITORY",
+                  "text": "Suppository"
+                },
+                {
+                  "value": "GEL",
+                  "text": "Gel or paste"
+                },
+                {
+                  "value": "PILL",
+                  "text": "Pill or tablet"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true
+            },
+            {
+              "type": "radio",
+              "name": "BreathingOxygenDidUse",
+              "title": "Did you every use a supplemental oxygen product to help with {CmpnName}'s breathing crises?",
+              "choices": [
+                {
+                  "value": "NO",
+                  "text": "No, we never used supplemental oxygen"
+                },
+                {
+                  "value": "YES_PREVENT",
+                  "text": "Yes, we used supplemental oxygen to prevent breathing crises"
+                },
+                {
+                  "value": "YES_REVIVE",
+                  "text": "Yes, we used supplemental oxygen to revive {CmpnName} from a breathing crisis"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "BreathingCrisisOxygenPrevent",
+              "title": "How effective was the supplemental oxygen product in preventing a breathing crisis?",
+              "description": "1 = ineffective, 5 = very effective",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "1"
+                },
+                {
+                  "value": 2,
+                  "text": "2"
+                },
+                {
+                  "value": 3,
+                  "text": "3"
+                },
+                {
+                  "value": 4,
+                  "text": "4"
+                },
+                {
+                  "value": 5,
+                  "text": "5"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "BreathingCrisisOxygenRevive",
+              "title": "How effective was the supplemental oxygen product in bringing {CmpnName} out of the breathing crisis?",
+              "description": "1 = ineffective, 5 = very effective",
+              "isRequired": true,
+              "rateValues": [
+                {
+                  "value": 1,
+                  "text": "1"
+                },
+                {
+                  "value": 2,
+                  "text": "2"
+                },
+                {
+                  "value": 3,
+                  "text": "3"
+                },
+                {
+                  "value": 4,
+                  "text": "4"
+                },
+                {
+                  "value": 5,
+                  "text": "5"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "BreathingCard2Panel",
+          "elements": [
+            {
               "type": "panel",
-              "name": "BreathingDidHavePanel",
+              "name": "BreathingAspirationPanel",
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "BreathingDidHave",
+                  "name": "BreathingAspirationDidHave",
                   "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
                   "isRequired": true,
                   "choices": [
@@ -4578,35 +4909,32 @@
                     }
                   ],
                   "showOtherItem": false
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "BreathingGeneralPanel",
-              "visibleIf": "{AspirationDidHave} = 'YES'",
-              "elements": [
+                },
                 {
                   "type": "dropdown",
-                  "name": "BreathingCount",
+                  "name": "BreathingAspirationCount",
                   "title": "How many times did {CmpnName} get AP?",
                   "isRequired": true,
-                  "visibleIf": "{AspirationDidHave} = 'YES'",
+                  "visibleIf": "{BreathingAspirationDidHave} = 'YES'",
                   "choices": [
                     {
-                      "value": "ONE",
+                      "value": 0,
+                      "text": "Never"
+                    },
+                    {
+                      "value": 1,
                       "text": "Once"
                     },
                     {
-                      "value": "TWO",
+                      "value": 2,
                       "text": "Twice"
                     },
                     {
-                      "value": "THREE",
+                      "value": 3,
                       "text": "Three times"
                     },
                     {
-                      "value": "MORE_THAN_THREE",
+                      "value": 4,
                       "text": "More than three times"
                     }
                   ],
@@ -4614,9 +4942,41 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "BreathingInpatient",
+                  "name": "BreathingAspirationBeforeProcedure",
+                  "title": "How many times did {CmpnName} get aspiration pneumonia after the surgery or stent procedure?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureDidHave} = 'YES'",
+                  "choices": [
+                    {
+                      "value": 0,
+                      "text": "Never"
+                    },
+                    {
+                      "value": 1,
+                      "text": "Once"
+                    },
+                    {
+                      "value": 2,
+                      "text": "Twice"
+                    },
+                    {
+                      "value": 3,
+                      "text": "Three times"
+                    },
+                    {
+                      "value": 4,
+                      "text": "More than three times"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Other option"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "BreathingAspirationInpatient",
                   "title": "Did {CmpnName} ever need inpatient, overnight, or emergency care for AP?",
                   "isRequired": true,
+                  "visibleIf": "{BreathingAspirationDidHave} = 'YES'",
                   "choices": [
                     {
                       "value": "YES",
@@ -4635,155 +4995,33 @@
                 },
                 {
                   "type": "dropdown",
-                  "name": "BreathingInpatientCount",
-                  "visibleIf": "{AspirationInpatient} = 'YES'",
+                  "name": "BreathingAspirationInpatientCount",
+                  "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
                   "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "ONE",
+                      "value": 1,
                       "text": "Once"
                     },
                     {
-                      "value": "TWO",
+                      "value": 2,
                       "text": "Twice"
                     },
                     {
-                      "value": "THREE",
+                      "value": 3,
                       "text": "Three times"
                     },
                     {
-                      "value": "MORE_THAN_THREE",
+                      "value": 4,
                       "text": "More than three times"
-                    }
-                  ],
-                  "showOtherItem": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "BreathingCard2Panel",
-          "elements": [
-            {
-              "type": "panel",
-              "name": "BreathingSurgeryPanel",
-              "visibleIf": "{TreatmentStatusType} notcontains 'STENT' && {AspirationDidHave} = 'YES'",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "BreathingSurgeryPost",
-                  "title": "Did {CmpnName} ever have AP after the surgery (i.e., tieback, BVEAP)?",
-                  "description": "Includes tieback, BVEAP, ventrilocordectomy, arytenoidectomy and other invasive surgery procedures.",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
                     }
                   ],
                   "showOtherItem": false
                 },
                 {
                   "type": "dropdown",
-                  "name": "BreathingSurgeryPostCount",
-                  "title": "How many times did {CmpnName} get AP after the surgery?",
-                  "isRequired": true,
-                  "visibleIf": "{AspirationSurgeryPost} = 'YES'",
-                  "choices": [
-                    {
-                      "value": "ONE",
-                      "text": "Once"
-                    },
-                    {
-                      "value": "TWO",
-                      "text": "Twice"
-                    },
-                    {
-                      "value": "THREE",
-                      "text": "Three times"
-                    },
-                    {
-                      "value": "MORE_THAN_THREE",
-                      "text": "More than three times"
-                    }
-                  ],
-                  "showOtherItem": false
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "BreathingStentPanel",
-              "visibleIf": "{TreatmentStatusType} contains 'STENT' && {AspirationDidHave} = 'YES'",
-              "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "BreathingStentPost",
-                  "title": "Did {CmpnName} ever have AP after the stent implant procedure?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "dropdown",
-                  "name": "BreathingStentPostCount",
-                  "title": "How many times did {CmpnName} get AP after the stent implant?",
-                  "isRequired": true,
-                  "visibleIf": "{AspirationStentPost} = 'YES'",
-                  "choices": [
-                    {
-                      "value": "ONE",
-                      "text": "Once"
-                    },
-                    {
-                      "value": "TWO",
-                      "text": "Twice"
-                    },
-                    {
-                      "value": "THREE",
-                      "text": "Three times"
-                    },
-                    {
-                      "value": "MORE_THAN_THREE",
-                      "text": "More than three times"
-                    }
-                  ],
-                  "showOtherItem": false
-                }
-              ]
-            },
-            {
-              "type": "panel",
-              "name": "BreathingCostPanel",
-              "visibleIf": "{AspirationDidHave} = 'YES'",
-              "elements": [
-                {
-                  "type": "dropdown",
-                  "name": "BreathingCost",
+                  "name": "BreathingAspirationCost",
                   "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
                   "isRequired": true,
                   "choices": [
@@ -4979,7 +5217,7 @@
                   "name": "NeuropathySymptomsTypeProgression",
                   "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
                   "isRequired": true,
-                  "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = 'YES'",
+                  "visibleIf": "{SymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = 'YES'",
                   "choices": [
                     {
                       "value": "BREATHING",
@@ -5314,7 +5552,7 @@
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathTieback",
                   "title": "What if anything would you differently?",
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TIEBACK'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -5340,7 +5578,7 @@
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathBVEAP",
                   "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'BVEAP'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -5367,7 +5605,7 @@
                   "name": "ConclusionOtherPathStent",
                   "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'STENT'",
                   "choices": [
                     {
                       "value": "STENT_SAME",
@@ -5392,7 +5630,7 @@
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathArytenoidectomy",
                   "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'ARYTENOIDECTOMY'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -5418,7 +5656,7 @@
                   "type": "radiogroup",
                   "name": "ConclusionOtherPathVentrilocordectomy",
                   "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-                  "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VENTRILOCORDECTOMY'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -5445,7 +5683,7 @@
                   "name": "ConclusionOtherPathNoTreatment",
                   "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
                   "isRequired": true,
-                  "visibleIf": "{TreatmentStatusDidHave} = false",
+                  "visibleIf": "{ProcedureDidHave} = false",
                   "choices": [
                     {
                       "value": "NO_TREATMENT_SAME",
@@ -5462,7 +5700,7 @@
                   "type": "radiogroup",
                   "name": "ConclusionStentAlternative",
                   "title": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
-                  "visibleIf": "{TreatmentStatusType} notcontains 'STENT'",
+                  "visibleIf": "{ProcedureType} notcontains 'STENT'",
                   "isRequired": true,
                   "choices": [
                     {

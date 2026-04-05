@@ -38,7 +38,7 @@ const Browse_02_CmpnInfo = () => {
 
       <div className="browse-panel-container" id="CmpnInfoCard1Panel">
       <div className="browse-content-block" id="CmpnInfoHeading">
-        <h2 className="browse-content-heading">About your LP/GOLPP companion</h2>
+        <h2 className="browse-content-heading">About Your LP/GOLPP companion</h2>
       </div>
 
       <div className="browse-content-block" id="CmpnInfoText">

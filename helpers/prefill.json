@@ -160,14 +160,25 @@
   "ProcedureAgeYears": "13",
   "ProcedureAgeMonths": "6",
   "ProcedureType":  [
-    "STENT"
+    "TIEBACK"
   ],
   "ProcedureScheduled": "SCHEDULED",
   "ProcedureScheduledWait": "LESS_THAN_TWO_WEEKS",
-  "ProcedureTiebackEmergency": "YES",
-  "ProcedureTiebackCount": "MORE_THAN_ONCE",
-  "ProcedureTiebackOnceCost": "UNDER_2500",
-  "ProcedureTiebackMultipleCost": "UNDER_4000",
+
+
+  "ProcedureIncisionInfection": "YES",
+
+  "ProcedureCostComplications": "1501_2500",
+
+
+  "ProcedureTiebackIncisionInfection": "YES",
+  "ProcedureTiebackSuturesFail": "YES",
+  "ProcedureTiebackSuturesFailTime": "UNDER_TWO_MONTHS",
+
+
+  "ProcedureTiebackRepeat": false,
+
+ 
 
   "ProcedureStentType": "SILICONE",
   "ProcedureStentDidMigrate": true,
@@ -177,163 +188,68 @@
   "ProcedureStentHalitosisRating": 2,
   "ProcedureStentInfected": "YES",
   "ProcedureStentInfectedHandling": "REMOVED_AND_REPLACED",
-  "ProcedureStentThroatclear": "YES",
-  "ProcedureStentThroatclearImproved": "YES",
   "ProcedureStentCostOnce": "1501_2500",
   "ProcedureStentCostRepeat": "2001_3000",
   "ProcedureStentComplications": "NO",
-
-
-
-
-
-
-
-
-  "ProcedureSurgeonInformLevel": 5,
-  "ProcedureTreatmentSatisfactionLevel": 5,
-
-
-
-
-
-
-
-
-
-  "TreatmentStatusTiebackEmergency": true,
-  "TreatmentStatusTiebackWait": "THREE_SIX",
-  "TreatmentStatusTiebackCount": true,
-  "TreatmentStatusTiebackOnceCost": "4001_5500",
-  "TreatmentStatusTiebackMultipleCost": "5501_7000",
-  "TreatmentStatusTiebackComplications": true,
-  "TreatmentStatusTiebackComplicationsCost": "3001_5000",
-
-  "TreatmentStatusSurgeonInformLevel": 4,
-  "TreatmentStatusTreatmentSatisfactionLevel": 2,
-
-
-  "TreatmentStatusBveapReasons": [
-    "AP_RISK",
-    "PERMANENCE",
-    "REPUTATION"
-  ],
-  "TreatmentStatusBveapCost": "5501_7000",
-  "TreatmentStatusBveapComplications": "true",
-  "TreatmentStatusBveapComplicationsCost": "OVER_5001",
-  "TreatmentStatusStentType": "SILICONE",
-  "TreatmentStatusStentDidMigrate": true,
-  "TreatmentStatusStentReplaced": true,
-  "TreatmentStatusStentCostOnce": "3001_4000",
-  "TreatmentStatusStentCostRepeat": "3001_4000",
-  "TreatmentStatusStentComplications": true,
-  "TreatmentStatusStentComplicationsCost": "1001_2000",
-  "TreatmentStatusArytenoidectomyReasons": [
-    "COST",
-    "AVAILABILITY"
-  ],
-  "TreatmentStatusArytenoidectomyLaser": true,
-  "TreatmentStatusArytenoidectomyDidExplain": "YES",
-  "TreatmentStatusArytenoidectomyChoice": "YES",
-  "TreatmentStatusArytenoidectomyCost": "UNDER_2000",
-  "TreatmentStatusArytenoidectomyComplications": true,
-  "TreatmentStatusArytenoidectomyComplicationsCost": "UNDER_1000",
-  "TreatmentStatusVentrilocordectomyReasons": [
-    "COST",
-    "AVAILABILITY"
-  ],
-  "TreatmentStatusVentrilocordectomyDidExplain": "YES",
-  "TreatmentStatusVentrilocordectomyChoice": "YES",
-  "TreatmentStatusVentrilocordectomyCost": "UNDER_2000",
-  "TreatmentStatusVentrilocordectomyComplications": true,
-  "TreatmentStatusVentrilocordectomyComplicationsCost": "UNDER_1000",
-
-
-  "TreatmentFactorsDecision": "UNDECIDED",
-  "TreatmentFactorsDecisionStent": "NOT_INFORMED",
-  "TreatmentFactorsCost": 4,
-  "TreatmentFactorsCostComplications": 4,
-  "TreatmentFactorsBreathingCrisisFear": 3,
-  "TreatmentFactorsNeuropathyProgression": 3,
-  "TreatmentFactorsAnesthesia": 4,
-  "TreatmentFactorsInpatientComplications": 5,
-  "TreatmentFactorsLongTermComplications": 5,
-  "TreatmentFactorsAge": 3,
-  "TreatmentFactorsGeneralHealth": 3,
-  "TreatmentFactorsCoexisting": 2,
-  "TreatmentFactorsCircumstancesAccess": 1,
-  "TreatmentFactorsCircumstancesFutureCare": 3,
-  "TreatmentFactorsOther": "Hind end weakness",
-
-  "ManagementPrescriptions": "YES",
-  "ManagementPrescriptionType": [
-    "DOXEPIN",
-    "CERENIA",
-    "GABAPENTIN",
-    "ANTIHISTAMINE"
-  ],
-  "ManagementPrescriptionCost": "51_100",
-  "ManagementPrescriptionDoxepinRatingBreathing": 4,
-  "ManagementPrescriptionDoxepinRatingMobility": 4,
-  "ManagementPrescriptionTrazodoneRatingBreathing": 2,
-  "ManagementPrescriptionTrazodoneRatingMobility": 2,
-  "ManagementPrescriptionGabapentinRatingBreathing": 2,
-  "ManagementPrescriptionGabapentinRatingMobility": 2,
-  "ManagementPrescriptionGalliprantRatingBreathing": 3,
-  "ManagementPrescriptionGalliprantRatingMobility": 3,
-  "ManagementPrescriptionSteroidRatingBreathing": 2,
-  "ManagementPrescriptionSteroidRatingMobility": 2,
-  "ManagementPrescriptionAntihistamineRatingBreathing": 2,
-  "ManagementPrescriptionAntihistamineRatingMobility": 2,
-  "ManagementPrescriptionCereniaRatingBreathing": 3,
-  "ManagementPrescriptionCereniaRatingMobility": 3,
-  "ManagementPrescriptionMeloxicamRatingBreathing": 4,
-  "ManagementPrescriptionMeloxicamRatingMobility": 4,
-  "ManagementPrescriptionAcepromineRatingBreathing": 4,
-  "ManagementPrescriptionAcepromineRatingMobility": 4,
-  "ManagementPrescriptionAlbuterolRatingBreathing": 1,
-  "ManagementPrescriptionAlbuterolRatingMobility": 1,
-  "ManagementPrescriptionTemarilPRatingBreathing": 3,
-  "ManagementPrescriptionTemarilPRatingMobility": 3,
   
-  "ManagementNonPrescription": "YES",
-  "ManagementNonPrescriptionType": [
-    "ACUPUNCTURE",
-    "THERAPY"
+  "ProcedureIssuesThroatclear": "YES",
+  "ProcedureIssuesThroatclearImproved": "YES",
+
+  "ProcedureCost": "2501_4000",
+  "ProcedureComplications": "YES",
+  "ProcedureComplicationsCost": "1501_2500",
+
+
+  "ProcedureComparison": "YES",
+  "ProcedureChoice": "YES",
+
+  "ProcedureSurgeonInformation": 5,
+  "ProcedureSatisfaction": 5,
+
+
+
+
+  "TherapyDidHave": "YES",
+  "TherapyType": "ACUPUNCTURE",
+
+  "TherapyCost": "101_150",
+
+  "TherapyAcupunctureRatingBreathing": 3,
+  "TherapyAcupunctureRatingMobility": 4,
+  "TherapyTherapyRatingBreathing": 3,
+  "TherapyTherapyRatingMobility": 4,
+  "TherapyColdLaserRatingBreathing": 3,
+  "TherapyColdLaserRatingMobility": 4,
+  "TherapyChiroRatingBreathing": 3,
+  "TherapyChiroRatingMobility": 4,
+
+  "BreathingCrisisDidHave": "YES",
+  "BreathingCrisisCount": "MORE_THAN_THREE",
+  "BreathingEmergencyDidHave": "TWO",
+  "BreathingEmergencyCount": "MORE_THAN_TWO",
+  "BreathingEmergencyCost": "MORE_THAN_1000",
+  "BreathingCrisisAdvice": "YES",
+  "BreathingCrisisAdviceType": [
+    "SEDATIVE",
+    "COOL_PLACE",
+    "EMERGENCY_FACILITY"
   ],
-  "ManagementNonPrescriptionCost": "151_250",
-  "ManagementNonPrescriptionAcupunctureRatingBreathing": 3,
-  "ManagementNonPrescriptionAcupunctureRatingMobility": 4,
-  "ManagementNonPrescriptionTherapyRatingBreathing": 3,
-  "ManagementNonPrescriptionTherapyRatingMobility": 4,
-  "ManagementNonPrescriptionColdLaserRatingBreathing": 3,
-  "ManagementNonPrescriptionColdLaserRatingMobility": 4,
-  "ManagementNonPrescriptionChiroRatingBreathing": 3,
-  "ManagementNonPrescriptionChiroRatingMobility": 4,
-
-  "OTCProductsDidPurchase": "YES",
-  "OTCProductsType": [
-    "TUMERIC",
-    "CBD",
-    "URSOLIC"
+  "BreathingCrisisProductRecommended": "YES",
+  "BreathingCrisisProductRecommendedType": [
+    "SEDATIVE"
   ],
-  "OTCProductsCost": "101_150",
-  "OTCProductsEffectiveness": 4,
-  "OTCProtocolDidPurchase": "YES",
-  "OTCProtocolCost": "51_100",
-  "OTCProtocolEffectiveness": 3,
+  "BreathingCrisisProductRecommendedForm": "INJECTIBLE",
+  "BreathingOxygenDidUse": "YES_PREVENT",
+  "BreathingCrisisOxygenPrevent": 4,
+  "BreathingCrisisOxygenRevive": 1,
+  "BreathingAspirationDidHave": "YES",
+  "BreathingAspirationCount": 3,
+  "BreathingAspirationBeforeProcedure": 3,
+  "BreathingAspirationInpatient": "YES",
+  "BreathingAspirationInpatientCount": 3,
+  "BreathingAspirationCost": "1001_3000",
 
-  "AspirationDidHave": "YES",
-  "AspirationCount": "TWO",
-  "AspirationInpatient": "YES",
-  "AspirationInpatientCount": "ONE",
-  "AspirationSurgeryPost": "YES",
-  "AspirationSurgeryPostCount": "ONE",
-  "AspirationStentPost": "YES",
-  "AspirationStentPostCount": "ONE",
-  "AspirationCost": "UNDER_100",
 
-  "NeuropathySymptomsDoesHave": "YES",
   "NeuropathySymptomsFirst": "BREATHING",
   "NeuropathySymptomsBreathingOnset": "WEEKS",
   "NeuropathySymptomsHindEndOnset": "MONTHS",
@@ -360,14 +276,7 @@
   "ConclusionOtherPathBVEAP": "BVEAP_SOONER",
   "ConclusionOtherPathStent": "STENT_SAME",
   "ConclusionOtherPathArytenoidectomy": "ARYTENOIDECTOMY_NO",
-  "ConclusionOtherPathVentrilocordectomy": "VENTRILOCORDECTOMY_NO",
-
-
-  
-  "ConclusionStentAlternative": "YES"
-
-  
-    
+  "ConclusionOtherPathVentrilocordectomy": "VENTRILOCORDECTOMY_NO"
 
 
 

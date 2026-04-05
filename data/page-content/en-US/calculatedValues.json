@@ -1,11 +1,16 @@
 [
   {
     "type": "calculatedvalue",
-    "name": "cvTreatmentType",
-    "expression": "iif({TreatmentStatusType} contains 'TIEBACK', 'Treatment: TIEBACK', iif({TreatmentStatusType} contains 'BVEAP', 'Treatment: BVEAP', iif({TreatmentStatusType} contains 'STENT', 'Treatment: STENT', iif({TreatmentStatusType} contains 'ARYTENOIDECTOMY', 'Treatment: ARYTENOIDECTOMY', iif({TreatmentStatusType} contains 'VENTRILOCORDECTOMY', 'Treatment: VENTRILOCORDECTOMY', ''))",
+    "name": "cvProcedureType",
+    "expression": "iif({ProcedureType} contains 'TIEBACK', 'Treatment: TIEBACK', iif({ProcedureType} contains 'BVEAP', 'Treatment: BVEAP', iif({ProcedureType} contains 'STENT', 'Treatment: STENT', iif({ProcedureType} contains 'ARYTENOIDECTOMY', 'Treatment: ARYTENOIDECTOMY', iif({ProcedureType} contains 'VENTRILOCORDECTOMY', 'Treatment: VENTRILOCORDECTOMY', ''))",
     "includeIntoResult": true
   },
-
+  {
+    "type": "calculatedvalue",
+    "name": "cvProcedureTypeShort",
+    "expression": "iif({ProcedureType} contains 'TIEBACK', 'tieback', iif({ProcedureType} contains 'BVEAP', 'BVEAP', iif({ProcedureType} contains 'STENT', 'stent', iif({ProcedureType} contains 'ARYTENOIDECTOMY', 'arytenoidectomy', iif({ProcedureType} contains 'VENTRILOCORDECTOMY', 'ventrilocordectomy', ''))",
+    "includeIntoResult": true
+  },
   {
     "type": "calculatedvalue",
     "name": "cvLvngCmpnAgeYearsAsMonths",

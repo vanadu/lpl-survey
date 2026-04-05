@@ -161,7 +161,7 @@
               "name": "NeuropathySymptomsTypeProgression",
               "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
               "isRequired": true,
-              "visibleIf": "{EarlySymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = 'YES'",
+              "visibleIf": "{SymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = 'YES'",
               "choices": [
                 {
                   "value": "BREATHING",

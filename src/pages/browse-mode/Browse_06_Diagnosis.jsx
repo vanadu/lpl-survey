@@ -38,7 +38,7 @@ const Browse_06_Diagnosis = () => {
 
       <div className="browse-panel-container" id="DiagnosisCard1Panel">
       <div className="browse-content-block" id="DiagnosisHeading">
-        <h2 className="browse-content-heading">Bella&lsquo;s LP/GOLPP diagnosis</h2>
+        <h2 className="browse-content-heading">Bella&lsquo;s LP/GOLPP Diagnosis</h2>
       </div>
 
       <div className="browse-content-block" id="DiagnosisText">

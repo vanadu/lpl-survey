@@ -69,7 +69,7 @@
               "type": "dropdown",
               "name": "FactorsBestSource",
               "title": "Which of those information sources did you find MOST useful (please select one)?",
-              "visibleIf": "{FactorsSourcesTypes.length} > 1 && {FactorsTypes} notcontains 'DONT_KNOW'",
+              "visibleIf": "{FactorsSourcesTypes.length} > 1 && {FactorsSourcesTypes} notcontains 'DONT_KNOW'",
               "choices": [
 
               ]

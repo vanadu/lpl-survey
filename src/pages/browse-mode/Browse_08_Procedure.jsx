@@ -38,11 +38,11 @@ const Browse_08_Procedure = () => {
 
       <div className="browse-panel-container" id="ProcedureCard1Panel">
       <div className="browse-content-block" id="ProcedureHeading">
-        <h2 className="browse-content-heading">Veterinary-Medical Procedures</h2>
+        <h2 className="browse-content-heading">Veterinary-Medical Procedures for LP</h2>
       </div>
 
       <div className="browse-content-block" id="ProcedureText">
-        <p className="browse-content-text">This section asks questions about any surgery or implant procedure Bella underwent to treat LP/GOLPP symptoms. This only includes surgeries or procedures that diriectly modify the structure of the larynx.</p>
+        <p className="browse-content-text">This section asks questions about veterinary procedures such as surgery or stent implant that Bella underwent to treat laryngeal paralysis.</p>
       </div>
 
       <div className="browse-question-container" id="ProcedureDidHave">
@@ -141,7 +141,7 @@ const Browse_08_Procedure = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How far in advance did you have to schedule the procedure?
+              How far in advance was the procedure scheduled?
             </span>
           }
           index={5}
@@ -165,7 +165,7 @@ const Browse_08_Procedure = () => {
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Move than eight weeks</span>
+              <span>More than eight weeks</span>
             </li>
           </ul>
           </div>
@@ -217,12 +217,12 @@ const Browse_08_Procedure = () => {
       </div>
 
       <div className="browse-panel-container" id="ProcedureTiebackPanel">
-        <h3 className="browse-showanswer-title">Questions about tieback (Unilateral Arytenoid Lateralization) surgery</h3>
-      <div className="browse-question-container" id="ProcedureTiebackEmergency">
+        <h3 className="browse-showanswer-title">Questions about Bella&lsquo;s tieback surgery</h3>
+      <div className="browse-question-container" id="ProcedureTiebackSuturesFail">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Was emergency tieback performed on Bella after a life-threatening breathing emergency?
+              Did the sutures ever fail, causing a return of Bella LP symptoms?
             </span>
           }
           index={7}
@@ -232,24 +232,28 @@ const Browse_08_Procedure = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Yes</span>
             </li>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureTiebackInfection">
+      <div className="browse-question-container" id="ProcedureTiebackSuturesFailTime">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella have any unexpected issues with infection or swelling at the incision site?
+              How long after the tieback surgery did the sutures fail?
             </span>
           }
           index={8}
@@ -261,11 +265,15 @@ const Browse_08_Procedure = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
+              <span>Less than two months</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
+              <span>Two to six months</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>More than six months</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
@@ -276,11 +284,11 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureTiebackSuturesFail">
+      <div className="browse-question-container" id="ProcedureTiebackRepeat">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the sutures ever fail, causing a return of Bella LP symptoms?
+              Did you repeat the tieback on the other side after the first suture failure?
             </span>
           }
           index={9}
@@ -290,212 +298,6 @@ const Browse_08_Procedure = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureTiebackSuturesFailRepeat">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did the sutures ever fail, causing a return of Bella LP symptoms?
-            </span>
-          }
-          index={10}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureTiebackSuturesFailRepeat">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did the sutures ever fail, causing a return of Bella LP symptoms?
-            </span>
-          }
-          index={11}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureTiebackCount">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              How many times did Bella undergo tieback (UAL) surgery?
-            </span>
-          }
-          index={12}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>More than once</span>
-            </li>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>Once</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureTiebackOnceCost">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Approximate cost of surgery (not including post-op complications):
-            </span>
-          }
-          index={13}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $2500</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2501-$4000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$4000-$5500</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$5500-$7000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $7000</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureTiebackMultipleCost">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Approximate total cost of surgeries (not including post-op complications):
-            </span>
-          }
-          index={14}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $4000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$4001-$5500</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$5501-$7000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$7001-$9000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $9000</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureTiebackComplications">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Were there unexpected post-operative complications that required at least one extra night of inpatient care?
-            </span>
-          }
-          index={15}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
             <li className="browse-showanswer-boolean">
               <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
               <span>Yes</span>
@@ -503,49 +305,6 @@ const Browse_08_Procedure = () => {
             <li className="browse-showanswer-boolean">
               <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
               <span>No</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureTiebackComplicationsCost">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Approximate cost of post-operative complications, not including the cost of the surgery:
-            </span>
-          }
-          index={16}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $1000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$1001-$2000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2001-$3000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$3001-$5000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $5001</span>
             </li>
           </ul>
           </div>
@@ -554,7 +313,7 @@ const Browse_08_Procedure = () => {
       </div>
 
       <div className="browse-panel-container" id="ProcedureBveapPanel">
-        <h3 className="browse-showanswer-title">Questions about BVEAP (Bilateral Vocal Fold Excision &amp; Arytenoid Pexy)</h3>
+        <h3 className="browse-showanswer-title">Questions about Bella&lsquo;s BVEAP surgery</h3>
       <div className="browse-question-container" id="ProcedureBveapReasons">
         <ShowAnswerContent
           header={
@@ -562,7 +321,7 @@ const Browse_08_Procedure = () => {
               Why did you choose BVEAP over other surgery types?
             </span>
           }
-          index={17}
+          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -579,120 +338,11 @@ const Browse_08_Procedure = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>No risk of suture failure as with tieback surgery</span>
+              <span>No risk of return of symptoms due to suture failure</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Reputation of surgeon</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureBveapCost">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Approximate cost of BVEAP surgery (not including post-op complications):
-            </span>
-          }
-          index={18}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $4000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$4001-$5500</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$5501-$7000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $7000</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureBveapComplications">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Were there unexpected post-operative complications that required at least one extra night of inpatient care?
-            </span>
-          }
-          index={19}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureBveapComplicationsCost">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Approximate cost of post-operative complications, not including the cost of the surgery:
-            </span>
-          }
-          index={20}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $1000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$1001-$2000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2001-$3000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$3001-$5000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $5001</span>
             </li>
           </ul>
           </div>
@@ -708,7 +358,7 @@ const Browse_08_Procedure = () => {
               What type of stent implant did Bella receive?
             </span>
           }
-          index={21}
+          index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -749,7 +399,7 @@ const Browse_08_Procedure = () => {
               Did Bella eject or &lsquo;cough out&lsquo; the stent, or did it migrate out of position?
             </span>
           }
-          index={22}
+          index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -776,7 +426,7 @@ const Browse_08_Procedure = () => {
               Was it replaced with a new stent of a different size?
             </span>
           }
-          index={23}
+          index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -803,7 +453,7 @@ const Browse_08_Procedure = () => {
               Did Bella have halitosis after the stent implant?
             </span>
           }
-          index={24}
+          index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -834,7 +484,7 @@ const Browse_08_Procedure = () => {
               How bad was Bella’s halitosis after the stent implant?
             </span>
           }
-          index={25}
+          index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -974,7 +624,7 @@ const Browse_08_Procedure = () => {
               Did the tissue around the stent ever become infected?
             </span>
           }
-          index={26}
+          index={16}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1005,7 +655,7 @@ const Browse_08_Procedure = () => {
               How was the infection handled?
             </span>
           }
-          index={27}
+          index={17}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1014,194 +664,19 @@ const Browse_08_Procedure = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>The stent was permanently removed.</span>
+              <span>The stent was permanently removed</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>The stent was removed, disinfected, and replaced.</span>
+              <span>The stent was removed, disinfected, and replaced</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No action was taken.</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know.</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureStentThroatclear">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did Bella frequently cough or throat-clear after the stent procedure?
-            </span>
-          }
-          index={28}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
+              <span>No action was taken</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureStentThroatclearImproved">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did Bella&lsquo;s coughing or throat-clearing improve over time?
-            </span>
-          }
-          index={29}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureStentCostOnce">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Approximate cost of stent implant procedure, not including complications:
-            </span>
-          }
-          index={30}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $1500</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$1501-$2000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2001-$3000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$3001-$4000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $4000</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureStentCostRepeat">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Approximate cost of the stent procedures, not including complications:
-            </span>
-          }
-          index={31}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $1500</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$1501-$2000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2001-$3000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$5500-$7000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $4000</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureStentComplications">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Were there post-operative complications that required overnight inpatient care for Bella?
-            </span>
-          }
-          index={32}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>No</span>
             </li>
           </ul>
           </div>
@@ -1218,7 +693,7 @@ const Browse_08_Procedure = () => {
               Why did you choose partial arytenoidectomy over other surgery types?
             </span>
           }
-          index={33}
+          index={18}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1253,38 +728,31 @@ const Browse_08_Procedure = () => {
               Was the partial arytenoidectomy performed with a laser?
             </span>
           }
-          index={34}
+          index={19}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
           <p className="browse-question-description">This technique is called &lsquo;ablation&lsquo;.</p>
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
+
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureArytenoidectomyDidExplain">
+      <div className="browse-question-container" id="ProcedureArytenoidectomyLaser">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon explain the pros and cons of this surgery type vs standard tieback surgery?
+              Was the partial arytenoidectomy performed with a laser?
             </span>
           }
-          index={35}
+          index={20}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-
+          <p className="browse-question-description">This technique is called &lsquo;ablation&lsquo;.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-radio">
@@ -1298,146 +766,6 @@ const Browse_08_Procedure = () => {
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureArytenoidectomyChoice">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did the surgeon offer you the choice between this surgery type and standard tieback surgery?
-            </span>
-          }
-          index={36}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureArytenoidectomyCost">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Approximate cost of the partial arytenoidectomy (not including post-op complications):
-            </span>
-          }
-          index={37}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $2000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2001-$4000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$4001-$5500</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $5500</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureArytenoidectomyComplications">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Were there unexpected post-operative complications that required at least one extra night of inpatient care?
-            </span>
-          }
-          index={38}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureArytenoidectomyComplicationsCost">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Approximate cost of post-operative complications, not including the cost of the surgery:
-            </span>
-          }
-          index={39}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $1000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$1001-$2000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2001-$3000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$3001-$5000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $5001</span>
             </li>
           </ul>
           </div>
@@ -1454,7 +782,7 @@ const Browse_08_Procedure = () => {
               Why did you choose ventrilocordectomy over other surgery types?
             </span>
           }
-          index={40}
+          index={21}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1481,15 +809,17 @@ const Browse_08_Procedure = () => {
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
 
-      <div className="browse-question-container" id="ProcedureVentrilocordectomyDidExplain">
+      <div className="browse-panel-container" id="ProcedureIssuesPanel">
+      <div className="browse-question-container" id="ProcedureIncisionInfection">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon explain the pros and cons of this surgery type vs tieback surgery?
+              Did Bella have any unexpected issues with infection, swelling or seroma at the incision site?
             </span>
           }
-          index={41}
+          index={22}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1513,14 +843,14 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureVentrilocordectomyChoice">
+      <div className="browse-question-container" id="ProcedureIssuesThroatclear">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon offer you the choice between this surgery type and standard tieback surgery?
+              Did Bella frequently cough or throat-clear after the &#123;cvProcedureTypeShort&#125; procedure?
             </span>
           }
-          index={42}
+          index={23}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1544,80 +874,47 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureVentrilocordectomyCost">
+      <div className="browse-question-container" id="ProcedureIssuesThroatclearImproved">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Approximate cost of the ventrilocordectomy (not including post-op complications):
+              Did Bella&lsquo;s coughing or throat-clearing improve over time?
             </span>
           }
-          index={43}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $2000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2001-$4000</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$4001-$5500</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $5500</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureVentrilocordectomyComplications">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Were there unexpected post-operative complications that required at least one extra night of inpatient care?
-            </span>
-          }
-          index={44}
+          index={24}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Yes</span>
             </li>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
 
-      <div className="browse-question-container" id="ProcedureVentrilocordectomyComplicationsCost">
+      <div className="browse-panel-container" id="ProcedureCostPanel">
+      <div className="browse-question-container" id="ProcedureCost">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Approximate cost of post-operative complications, not including the cost of the surgery:
+              What was the approximate cost of the &#123;cvProcedureTypeShort&#125; procedure, not including post-operative complications?
             </span>
           }
-          index={45}
+          index={25}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1630,23 +927,105 @@ const Browse_08_Procedure = () => {
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $1000</span>
+              <span>Under $1500</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$1001-$2000</span>
+              <span>$1501 - $2500</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2001_$3000</span>
+              <span>$2501 - $3500</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$3001-$5000</span>
+              <span>$3501 - $4500</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $5001</span>
+              <span>$5501 - $8000</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Over $8000</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ProcedureComplications">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Were there immediate post-operative complications that required at least one extra night of inpatient care?
+            </span>
+          }
+          index={26}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ProcedureCostComplications">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              What was the approximate cost of the post-operative complications, not including aspiration pneumonia?
+            </span>
+          }
+          index={27}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Prefer not to say</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Under $1500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$1501 - $2500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$2501 - $3500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$3501 - $4500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$5501 - $8000</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Over $8000</span>
             </li>
           </ul>
           </div>
@@ -1655,14 +1034,76 @@ const Browse_08_Procedure = () => {
       </div>
 
       <div className="browse-panel-container" id="ProcedureRatingPanel">
-      <div className="browse-question-container" id="ProcedureSurgeonInformLevel">
+      <div className="browse-question-container" id="ProcedureComparison">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Did the surgeon explain the pros and cons of this surgery type in comparison to tieback or other LP surgery or stent procedures?
+            </span>
+          }
+          index={28}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ProcedureChoice">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Did the surgeon offer you the choice between this surgery type other LP surgery or stent procedures?
+            </span>
+          }
+          index={29}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ProcedureSurgeonInformation">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
               How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??
             </span>
           }
-          index={46}
+          index={30}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1795,14 +1236,14 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureTreatmentSatisfactionLevel">
+      <div className="browse-question-container" id="ProcedureSatisfaction">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
               How satisfied were you with the results of the procedure?
             </span>
           }
-          index={47}
+          index={31}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1931,49 +1372,6 @@ const Browse_08_Procedure = () => {
                     </svg>
                   </span>
               </div>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureTiebackOnceCost">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              What was the approximate cost of the procedure including post-op complications?
-            </span>
-          }
-          index={48}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $2500</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2501-$4000</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$4000-$5500</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$5500-$7000</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $7000</span>
-            </li>
-          </ul>
           </div>
         </ShowAnswerContent>
       </div>

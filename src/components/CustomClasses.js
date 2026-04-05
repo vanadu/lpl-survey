@@ -33,35 +33,6 @@ const ITEMS_CARD_PANEL = new Set([
   "ConclusionCard1Panel",
   "ConclusionCard2Panel",
 
-  // "InfoSourcesCard1Panel",
-  // "InfoSourcesCard2Panel",
-  // "IntubationHistoryCard1Panel",
-  // "BreathingCrisisCard1Panel",
-  // "BreathingCrisisCard2Panel",
-  // "EarlySymptomsCard1Panel",
-  // "EarlySymptomsCard2Panel",
-  // "PrimaryDurationCard1Panel",
-  // "PrimaryDurationCard2Panel",
-  // "PrimaryVetCard1Panel",
-  // "PrimaryVetCard2Panel",
-  // "DiagnosisCard1Panel",
-  // "TreatmentStatusCard1Panel",
-  // "TreatmentStatusCard2Panel",
-  // "TreatmentFactorsCard1Panel",
-  // "TreatmentFactorsCard2Panel",
-  // "ManagementCard1Panel",
-  // "ManagementCard2Panel",
-
-  // "OTCProductsCard1Panel",
-  // "OTCProductsCard2Panel",
-
-  // "AspirationCard1Panel",
-  // "AspirationCard2Panel",
-  // "NeuropathyCard1Panel",
-  // "NeuropathyCard2Panel",
-  // "ConclusionCard1Panel",
-  // "ConclusionCard2Panel",
-
 ])
 
 
@@ -80,6 +51,7 @@ const ITEMS_TWO_COL = new Set([
 
   "SymptomsAgePanel", //This is no working, not sure why
   "SymptomsType",
+  "SymptomsIntubationSymptoms",
   "SymptomsOtherConditionsType",
 
   "PrimaryDidRefer",
@@ -116,8 +88,20 @@ const ITEMS_THREE_COL = new Set([
   "MedicationPrescription",
   "MedicationSupplementsDidPurchase",
 
+  "ProcedureTiebackIncisionInfection",
+  "ProcedureTiebackSuturesFail",
+  "ProcedureTiebackCount",
+
+
   "ProcedureStentHalitosis",
-  "ProcedureStentInfected"
+  "ProcedureStentInfected",
+  "ProcedureIssuesThroatclear",
+  "ProcedureIssuesThroatclearImproved",
+
+  "ProcedureComplications",
+  "ProcedureComparison",
+  "ProcedureChoice"
+
 
 
 ]);
@@ -154,6 +138,9 @@ const CONTROL_WIDTH_300 = new Set([
 
   "ProcedureScheduledWait",
 
+  "ProcedureCost",
+  "ProcedureComplicationsCost",
+
   "ProcedureStentType"
 
 
@@ -166,15 +153,30 @@ const CONTROL_WIDTH_600 = new Set([
 ]);
 
 
+
+
+
 // PANEL NO BORDER
 const PANEL_NO_BORDER = new Set([
 
   // "UserInfoLifeStatusNamePanel",
   "CmpnInfoAnimalTypePanel",
-  "CmpnInfoBreedGenderPanel",
+  "CmpnInfoBreedGenderPanel", // has survey-p-no-border, sd-element--nested-with-borders
   "CmpnInfoWeightPanel",
   "CmpnInfoAgePanel",
-  "DiagnosisDetailsPanel"
+
+  "SymptomsAgePanel",
+  "DiagnosisDetailsPanel",
+  "BreathingCrisisDidHave"
+]);
+
+// PANEL TWO COL - Age panels
+const PANEL_TWO_COL = new Set([
+  "UserInfoNameCountryPanel",
+  "dcsdCmpnInfoAgePanel",
+  "lvngCmpnInfoAgePanel",
+  "CmpnInfoDemeanor",
+  "SymptomsAgePanel"
 ]);
 
 
@@ -193,6 +195,7 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
 
   "SymptomsIntubationConcerns",
   "SymptomsOtherConditionsType",
+  "SymptomsIntubationSymptoms",
 
   "PrimaryReflux",
   "PrimaryInfoDetails",
@@ -229,10 +232,8 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
 
   "ProcedureScheduled",
   "ProcedureScheduledWait",
+
   "ProcedureTiebackCount",
-  "ProcedureTiebackComplications",
-  "ProcedureTiebackOnceCost",
-  "ProcedureTiebackComplications",
 
   "ProcedureStentDidMigrate",
   "ProcedureStentReplaced",
@@ -240,13 +241,16 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
   "ProcedureStentHalitosisRating",
   "ProcedureStentInfected",
   "ProcedureStentInfectedHandling",
-  "ProcedureStentThroatclear",
-  "ProcedureStentThroatclearImproved",
+  
+  "ProcedureComplications",
+  "ProcedureComplicationsCost",
 
+  "ProcedureIssuesThroatclearImproved",
 
+  "ProcedureChoice",
 
-
-  "ProcedureTreatmentSatisfactionLevel"
+  "ProcedureSurgeonInformation",
+  "ProcedureSatisfaction"
 
 
   ]);
@@ -276,7 +280,7 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
   "SymptomsType",
   "SymptomsSeverity",
-  "SymptomsIntubationSymptoms",
+
 
   "DiagnosisWho",
 
@@ -301,14 +305,6 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
 
 
-    "TreatmentStatusDidHave",
-
-
-    "TreatmentStatusBveapComplications",
-
-    "TreatmentStatusArytenoidectomyComplicationsCost",
-
-    "TreatmentStatusVentrilocordectomyComplications",
 
     "ManagementPrescriptionDoxepinRatingMobility",
     "ManagementPrescriptionTrazodoneRatingMobility",
@@ -357,6 +353,10 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
   if (PANEL_NO_BORDER.has(name)) {
     directives.push({ target: "question", className: "survey-p-no-border" });
+  }
+
+  if (PANEL_TWO_COL.has(name)) {
+    directives.push({ target: "question", className: "survey-p-two-col" });
   }
 
   if (QUESTION_SEPARATOR_ABOVE.has(name)) {

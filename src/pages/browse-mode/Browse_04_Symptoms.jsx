@@ -38,13 +38,14 @@ const Browse_04_Symptoms = () => {
 
       <div className="browse-panel-container" id="SymptomsCard1Panel">
       <div className="browse-content-block" id="SymptomsHeading">
-        <h2 className="browse-content-heading">Your early encounters with LP/GOLPP</h2>
+        <h2 className="browse-content-heading">Bella&lsquo;s Early LP/GOLPP Symptoms</h2>
       </div>
 
       <div className="browse-content-block" id="SymptomsText">
         <p className="browse-content-text">This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe Bella might have it.</p>
       </div>
 
+      <div className="browse-panel-container" id="SymptomsDetailsPanel">
       <div className="browse-panel-container" id="SymptomsAgePanel">
         <h3 className="browse-showanswer-title">At about what age did Bella start showing symptoms of LP/GOLPP?</h3>
       <div className="browse-question-container" id="SymptomsAgeYears">
@@ -84,7 +85,6 @@ const Browse_04_Symptoms = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="SymptomsDetailsPanel">
       <div className="browse-question-container" id="SymptomsType">
         <ShowAnswerContent
           header={

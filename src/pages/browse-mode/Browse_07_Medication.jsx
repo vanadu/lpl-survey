@@ -3261,7 +3261,7 @@ const Browse_07_Medication = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Has Bella taken any medications for reflux (GERD) or to improve digestive motility?
+              Has Bella taken any medications for reflux (GERD)negative or to improve digestive motility?
             </span>
           }
           index={26}
@@ -3299,7 +3299,7 @@ const Browse_07_Medication = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1, very negative = no, 3 = no effect, 5 = yes, positive effect</p>
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-rating" aria-hidden="true">
                 
@@ -3439,7 +3439,7 @@ const Browse_07_Medication = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1, very negative = no, 3 = no effect, 5 = yes, very positive</p>
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = yes, very positive</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-rating" aria-hidden="true">
                 
@@ -3708,7 +3708,7 @@ const Browse_07_Medication = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1 = negative effect, 3 = no effect, 5 = positive effect</p>
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-rating" aria-hidden="true">
                 
@@ -3916,7 +3916,7 @@ const Browse_07_Medication = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1 = negative effect, 3 = no effect, 5 = positive effect</p>
+          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = very positive</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-rating" aria-hidden="true">
                 

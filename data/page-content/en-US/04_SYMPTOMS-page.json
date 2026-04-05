@@ -8,59 +8,59 @@
         {
           "type": "html",
           "name": "SymptomsHeading",
-          "html": "<h2>Your early encounters with LP/GOLPP</h2>"
+          "html": "<h2>{CmpnName}'s Early LP/GOLPP Symptoms</h2>"
         },
         {
           "type": "html",
           "name": "SymptomsText",
           "html": "<p>This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
         },
-        {
-          "type": "panel",
-          "name": "SymptomsAgePanel",
-          "title": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
-          "elements": [
 
-            {
-              "type": "text",
-              "inputType": "number",
-              "name": "SymptomsAgeYears",
-              "title": "Years",
-              "isRequired": true,
-              "min": "1",
-              "max": "40",
-                "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 1,
-                  "maxValue": 40,
-                  "text": "Age must be between 1 and 40"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "inputType": "number",
-              "name": "SymptomsAgeMonths",
-              "title": "Months (number 0 - 11)",
-              "isRequired": true,
-              "min": 0,
-              "max": 11,
-              "validators": [
-                {
-                  "type": "numeric",
-                  "minValue": 0,
-                  "maxValue": 11,
-                  "text": "Months must be between 0 and 11"
-                }
-              ]
-            }
-          ]
-        },
         {
           "type": "panel",
           "name": "SymptomsDetailsPanel",
           "elements": [
+          {
+            "type": "panel",
+            "name": "SymptomsAgePanel",
+            "title": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
+            "elements": [
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "SymptomsAgeYears",
+                  "title": "Years",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                    "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "SymptomsAgeMonths",
+                  "title": "Months (number 0 - 11)",
+                  "isRequired": true,
+                  "min": 0,
+                  "max": 11,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 0,
+                      "maxValue": 11,
+                      "text": "Months must be between 0 and 11"
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "type": "checkbox",
               "name": "SymptomsType",

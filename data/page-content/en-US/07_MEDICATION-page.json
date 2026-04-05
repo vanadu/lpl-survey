@@ -487,7 +487,7 @@
             {
               "type": "radiogroup",
               "name": "MedicationRefluxMedications",
-              "title": "Has {CmpnName} taken any medications for reflux (GERD) or to improve digestive motility?",
+              "title": "Has {CmpnName} taken any medications for reflux (GERD)negative or to improve digestive motility?",
               "isRequired": true,
               "choices": [
                 {
@@ -509,7 +509,7 @@
               "type": "rating",
               "name": "MedicationRefluxMedicationsLPEffect",
               "title": "How did the reflux medications affect {CmpnName}'s LP/GOLPP symptoms?",
-              "description": "1, very negative = no, 3 = no effect, 5 = yes, positive effect",
+              "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "rateValues": [
                 { "value": 1, "text": "1" },
@@ -524,7 +524,7 @@
               "type": "rating",
               "name": "MedicationRefluxMedicationsAPEffect",
               "title": "How did the reflux medications affect {CmpnName}'s risk of aspiration pneumonia?",
-              "description": "1, very negative = no, 3 = no effect, 5 = yes, very positive",
+              "description": "1 = very negative, 3 = no effect, 5 = yes, very positive",
               "isRequired": true,
               "rateValues": [
                 { "value": 1, "text": "1" },
@@ -651,7 +651,7 @@
               "type": "rating",
               "name": "MedicationSupplementsEffectiveness",
               "title": "Please rate the overall effectiveness of the supplements:",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
               "rateValues": [
@@ -722,7 +722,7 @@
               "type": "rating",
               "name": "MedicationProtocolEffectiveness",
               "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
-              "description": "1 = negative effect, 3 = no effect, 5 = positive effect",
+              "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
               "rateValues": [

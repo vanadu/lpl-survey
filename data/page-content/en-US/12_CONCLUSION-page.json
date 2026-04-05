@@ -269,7 +269,7 @@
               "type": "radiogroup",
               "name": "ConclusionOtherPathTieback",
               "title": "What if anything would you differently?",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'TIEBACK'",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TIEBACK'",
               "isRequired": true,
               "choices": [
                 {
@@ -296,7 +296,7 @@
               "type": "radiogroup",
               "name": "ConclusionOtherPathBVEAP",
               "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'BVEAP'",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'BVEAP'",
               "isRequired": true,
               "choices": [
                 {
@@ -325,7 +325,7 @@
               "name": "ConclusionOtherPathStent",
               "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??",
               "isRequired": true,
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'STENT'",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'STENT'",
               "choices": [
                 {
                   "value": "STENT_SAME",
@@ -353,7 +353,7 @@
               "type": "radiogroup",
               "name": "ConclusionOtherPathArytenoidectomy",
               "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'ARYTENOIDECTOMY'",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'ARYTENOIDECTOMY'",
               "isRequired": true,
               "choices": [
                 {
@@ -382,7 +382,7 @@
               "type": "radiogroup",
               "name": "ConclusionOtherPathVentrilocordectomy",
               "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-              "visibleIf": "{TreatmentStatusDidHave} = true && {TreatmentStatusType} contains 'VENTRILOCORDECTOMY'",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VENTRILOCORDECTOMY'",
               "isRequired": true,
               "choices": [
                 {
@@ -411,7 +411,7 @@
               "name": "ConclusionOtherPathNoTreatment",
               "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
               "isRequired": true,
-              "visibleIf": "{TreatmentStatusDidHave} = false",
+              "visibleIf": "{ProcedureDidHave} = false",
               "choices": [
                 {
                   "value": "NO_TREATMENT_SAME",
@@ -430,7 +430,7 @@
               "type": "radiogroup",
               "name": "ConclusionStentAlternative",
               "title": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
-              "visibleIf": "{TreatmentStatusType} notcontains 'STENT'",
+              "visibleIf": "{ProcedureType} notcontains 'STENT'",
               "isRequired": true,
               "choices": [
                 {
