@@ -149,6 +149,9 @@
   /* VA! Border radius based on space-unit */
   --border-radius: calc(var(--space-unit) * 1.25);    /* 12px */
 
+  /* !VA  SEPARATOR  */
+  --survey-separator-color: rgba(0, 0, 0, 0.08);
+
 
 
   /* !VA  Accordion and Showmore  */

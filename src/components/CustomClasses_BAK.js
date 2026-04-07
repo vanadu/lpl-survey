@@ -12,116 +12,116 @@ const ITEMS_CARD_PANEL = new Set([
   "CmpnInfoCard1Panel",
   "CmpnInfoCard2Panel",
   "CmpnInfoCard2Panel",
-  "InfoSourcesCard1Panel",
-  "InfoSourcesCard2Panel",
-  "IntubationHistoryCard1Panel",
-  "BreathingCrisisCard1Panel",
-  "BreathingCrisisCard2Panel",
-  "EarlySymptomsCard1Panel",
-  "EarlySymptomsCard2Panel",
-  "PrimaryDurationCard1Panel",
-  "PrimaryDurationCard2Panel",
-  "PrimaryVetCard1Panel",
-  "PrimaryVetCard2Panel",
+  "FactorsCard1Panel",
+  "FactorsCard2Panel",
+  "SymptomsCard1Panel",
+  "SymptomsCard2Panel",
+  "PrimaryCard1Panel",
+  "PrimaryCard2Panel",
   "DiagnosisCard1Panel",
-  "TreatmentStatusCard1Panel",
-  "TreatmentStatusCard2Panel",
-  "TreatmentFactorsCard1Panel",
-  "TreatmentFactorsCard2Panel",
-  "ManagementCard1Panel",
-  "ManagementCard2Panel",
-
-  "OTCProductsCard1Panel",
-  "OTCProductsCard2Panel",
-
-  "AspirationCard1Panel",
-  "AspirationCard2Panel",
+  "DiagnosisCard2Panel",
+  "MedicationCard1Panel",
+  "MedicationCard2Panel",
+  "ProcedureCard1Panel",
+  "ProcedureCard2Panel",
+  "TherapyCard1Panel",
+  "TherapyCard2Panel",
+  "BreathingCard1Panel",
+  "BreathingCard2Panel",
   "NeuropathyCard1Panel",
   "NeuropathyCard2Panel",
   "ConclusionCard1Panel",
   "ConclusionCard2Panel",
-
 ])
-
 
 const ITEMS_TWO_COL = new Set([
   "LandingConsent",
   "LandingPrivacyConsentLinksPanel",
 
+  "UserInfoGender",
+
   "lvngCmpnInfoAgePanel",
   "dcsdCmpnInfoAgePanel",
 
-  "BreathingCrisisAdviceType",
-  "BreathingCrisisProvidedSubstanceType",
+  "FactorsSourcesTypes",
 
-  "EarlySymptomsType",
-  "EarlySymptomsAgePanel",
+  "SymptomsType",
+  "SymptomsIntubationSymptoms",
+  "SymptomsOtherConditionsType",
 
-  "EarlSymptomsOtherConditionsType", 
+  "PrimaryDidRefer",
+  "PrimaryReferral",
 
-  "PrimaryDurationCost",
-  "PrimaryDurationChangedVetsReason",
-  "PrimaryVetInfoDetails",
+  "DiagnosisWho",
+  "DiagnosisCorrectDiagnosis",
   "DiagnosisCost",
-  "TreatmentStatusDidHave",
-  "TreatmentStatusType",
-  "TreatmentStatusTiebackCount",
-  "TreatmentStatusTiebackComplications",
-  "TreatmentStatusBveapReasons",
-  "TreatmentStatusBveapComplications",
-  "TreatmentStatusStentDidMigrate",
-  "TreatmentStatusStentReplaced",
-  "TreatmentStatusStentComplications",
-  "TreatmentStatusArytenoidectomyReasons",
-  "TreatmentStatusArytenoidectomyComplications",
-  "TreatmentStatusVentrilocordectomyReasons",
-  "TreatmentStatusVentrilocordectomyComplications",
-  "ManagementPrescriptionType",
-  "ManagementNonPrescriptionType",
-  "OTCProductsType",
-  "NeuropathyOtherIssues",
-  "ConclusionGeneralCondition",
-  "ConclusionSpecialConsiderations",
-  "ConclusionOtherConditions",
-  // "ConclusionCauseOfDeath" // This looks terrible two-col
-  "UserInfoGender",
-  "InfoSourcesTypes",
-  "IntubationHistoryReason",
-  "IntubationHistorySymptoms",
+
+  "MedicationPrescriptionType",
+  "MedicationSupplementsType",
+
+  "ProcedureType",
+  "ProcedureScheduled",
+  
+  "BreathingCrisisCount",
+  "BreathingCrisisProductRecommendedType",
+  "BreathingAspirationCount",
+  "BreathingAspirationAfterProcedure"
+
+
+
 ]);
 
 const ITEMS_THREE_COL = new Set([
   "CmpnInfoAnimalType",
-  "IntubationHistoryWasIntubated",
-  // "BreathingCrisisDidHavePanel",
+
+  "SymptomsNeckRestraint",
+  "SymptomsSeverity",
+  "SymptomsIntubationWasIntubated",
+  "SymptomsOtherConditions",
+
+  "PrimaryInflammationPanel", //check if this style includes a space after - it shouldn't
+  "PrimaryReflux",
+  "PrimaryChangedVets",
+
+  "DiagnosisMisdiagnosis",
+  "DiagnosisPrecededSurgery",
+
+  "MedicationPrescription",
+  "MedicationSupplementsDidPurchase",
+
+  "ProcedureTiebackIncisionInfection",
+  "ProcedureTiebackSuturesFail",
+  "ProcedureTiebackCount",
+
+
+  "ProcedureStentHalitosis",
+  "ProcedureStentInfected",
+  "ProcedureIssuesThroatclear",
+  "ProcedureIssuesThroatclearImproved",
+
+  "ProcedureIncisionInfection",
+  "TherapyDidHave",
   "BreathingCrisisDidHave",
-  "BreathingCrisisCount",
+  "BreathingEmergencyDidHave",
+  "BreathingOxygenDidUse",
+
+  "ProcedureComplications",
+  "ProcedureComparison",
+  "ProcedureChoice",
+
   "BreathingCrisisAdvice",
-  "BreathingCrisisProvidedSubstance",
-  "EarlySymptomsHindEndWeakness",
-  "EarlySymptomsIncontinence",
-  "EarlySymptomsOtherConditions",
-  "PrimaryDurationChangedVets",
-  "PrimaryVetInflammation",
-  "PrimaryVetRefluxPanel",
-  "PrimaryVetRefluxMeds",
-  "TreatmentStatusArytenoidectomyDidExplain",
-  "TreatmentStatusArytenoidectomyChoice",
-  "TreatmentStatusVentrilocordectomyDidExplain",
-  "TreatmentStatusVentrilocordectomyChoice",
-  "ManagementPrescriptions",
-  "ManagementNonPrescription",
-  "OTCProductsDidPurchase",
-  "OTCProtocolDidPurchase",
-  "AspirationDidHave",
-  "AspirationInpatient",
-  "AspirationSurgeryPost",
-  "AspirationStentPost",
-  "NeuropathySymptomsDoesHave",
+  "BreathingEmergencyCount",
+  "BreathingCrisisProductRecommended",
+  "BreathingAspirationDidHave",
+  "BreathingAspirationInpatient",
+  "BreathingAspirationProcedureAntibiotics",
+  "BreathingAspirationProcedureReflux",
+  ""
 
-  "ConclusionStentAlternative",
 
-  "PrimaryDurationVisitsNumberPanel",
+
+
+
 
 ]);
 
@@ -133,80 +133,63 @@ const CONTROL_WIDTH_150 = new Set ([
   "dcsdCmpnInfoAgeMonths",
   "lvngCmpnInfoAgeYears",
   "lvngCmpnInfoAgeMonths",
-  "EarlySymptomsAgeYears",
-  "EarlySymptomsAgeMonths",
-  "PrimaryDurationFirstConsultYears",
-  "PrimaryDurationFirstConsultMonths",
-  "TreatmentStatusAgeYears",
-  "TreatmentStatusAgeMonths",
+
+  "SymptomsAgeYears",
+  "SymptomsAgeMonths",
+
+  "ProcedureAgeYears",
+  "ProcedureAgeMonths",
+  
+
+
+
 ])
 
 
 const CONTROL_WIDTH_300 = new Set([
+
   "CmpnName",
+  "UserInfoContactTypeEmail",
 
   "UserInfoFirstName",
   "UserInfoCountry",
   "UserInfoStateRegion",
   "UserInfoAgeGroup",
 
+  "FactorsBestSource",
 
+  "ProcedureScheduledWait",
+  "ProcedureCost",
+  "ProcedureComplicationsCost",
+  "ProcedureStentType",
 
-
-  "InfoSourcesBestSource",
-  "BreathingCrisisSubstanceForm",
-  "BreathingCrisisCost",
-
-  "TreatmentStatusTiebackOnceCost",
-  "TreatmentStatusTiebackMultipleCost",
-  "TreatmentStatusTiebackComplicationsCost",
-  ,"TreatmentStatusBveapCost",
-  "TreatmentStatusBveapComplicationsCost",
-  "TreatmentStatusStentType",
-  "TreatmentStatusStentCostOnce",
-  "TreatmentStatusStentCostRepeat",
-
-  "TreatmentStatusStentComplicationsCost",
-  "TreatmentStatusArytenoidectomyCost",
-  "TreatmentStatusArytenoidectomyComplicationsCost",
-  "TreatmentStatusVentrilocordectomyCost",
-  "TreatmentStatusVentrilocordectomyComplicationsCost",
-  "ManagementPrescriptionCost",
-  "ManagementNonPrescriptionCost",
-  "OTCProductsCost",
-  "OTCProtocolCost",
-  "AspirationCount",
-  "AspirationInpatientCount",
-  "AspirationSurgeryPostCount",
-  "AspirationStentPostCount",
-  "AspirationCost",
-  "NeuropathySymptomsBreathingOnset",
-  "NeuropathySymptomsHindEndOnset"
+  "BreathingEmergencyCost",
+  "BreathingAspirationCost"
 
 ]);
 
 const CONTROL_WIDTH_600 = new Set([
-
-  "BreathingCrisisCount",
-
-
-
-  "PrimaryDurationVisitsNumber",
-  "DiagnosisWho",
-  "DiagnosticType",
-  "DiagnosisTimeAfterSymptoms",
-  "TreatmentStatusAgeYears",
-  "TreatmentStatusAgeMonths",
-  "TreatmentStatusTiebackWait"
+  "UserInfoContactTypeFacebook",
 ]);
 
+// Only use to remove borders on panels
+const QUESTION_NO_BORDER = new Set([
 
-// PANEL NO BORDER
-const PANEL_NO_BORDER = new Set([
+  // "UserInfoLifeStatusNamePanel",
   "CmpnInfoAnimalTypePanel",
-  "CmpnInfoBreedGenderPanel",
+  "CmpnInfoBreedGenderPanel", // has survey-p-no-border, sd-element--nested-with-borders
   "CmpnInfoWeightPanel",
-  "CmpnInfoAgePanel"
+  "CmpnInfoAgePanel",
+  "SymptomsAgePanel",
+  "DiagnosisDetailsPanel",
+  "ProcedureAgePanel"
+]);
+
+// Only use to make panel contents two-column to make them look the same as two-column questions. Applies 
+const PANEL_TWO_COL = new Set([
+  "UserInfoNameCountryPanel",
+  "SymptomsAgePanel",
+  "ProcedureAgePanel"
 ]);
 
 
@@ -218,58 +201,105 @@ const PANEL_NO_BORDER = new Set([
 const QUESTION_SEPARATOR_ABOVE = new Set([
   // put question names here (same .name values you already use)
 
-
-  
   "UserInfoGender",
+  "UserInfoStateRegion",
 
   "CmpnInfoWeightPanel",
 
-  "UserInfoStateRegion",
+  "SymptomsType",
+  "SymptomsIntubationConcerns",
+  "SymptomsOtherConditionsType",
+  "SymptomsIntubationSymptoms",
 
-  "IntubationHistoryReason",
-  "IntubationHistorySymptoms",
-  "IntubationHistoryConcerns",
+  "PrimaryReflux",
+  "PrimaryInfoDetails",
+  "PrimarySurgeryPerception",
+  "PrimaryChangedVetsReason",
+  "PrimaryConfidence",
+  "PrimaryReferral",
+  "PrimaryChangedVetsReason",
+  "DiagnosisCorrectDiagnosis",
+  "DiagnosisStage",
+  "DiagnosisTimeAfterSymptoms",
+  "DiagnosisCost",
+  "DiagnosisPrecededSurgery",
 
-  "BreathingCrisisCount", 
-  "BreathingCrisisCost", 
-  "BreathingCrisisProvidedSubstanceType",
+  "MedicationPrescriptionType",
+  "MedicationPrescriptionCost",
+  "MedicationPrescriptionDoxepinRatingBreathing",
+  "MedicationPrescriptionTrazodoneRatingBreathing",
+  "MedicationPrescriptionGabapentinRatingBreathing",
+  "MedicationPrescriptionGalliprantRatingBreathing",
+  "MedicationPrescriptionSteroidRatingBreathing",
+  "MedicationPrescriptionAntihistamineRatingBreathing",
+  "MedicationPrescriptionCereniaRatingBreathing",
+  "MedicationPrescriptionMeloxicamRatingBreathing",
+  "MedicationPrescriptionAcepromineRatingBreathing",
+  "MedicationPrescriptionAlbuterolRatingBreathing",
+  "MedicationPrescriptionTemarilPRatingBreathing",
+  "MedicationRefluxMedicationsLPEffect",
+  "MedicationRefluxMedicationsAPEffect",
+  "MedicationSupplementsType",
+  "MedicationSupplementsCost",
+  "MedicationSupplementsEffectiveness",
+  "MedicationProtocolCost",
+  "MedicationProtocolEffectiveness",
 
-  "EarlySymptomsOtherConditionsType",
+  "ProcedureScheduled",
+  "ProcedureScheduledWait",
+  "ProcedureTiebackSuturesFailTime",
+  "ProcedureTiebackRepeat",
+  "ProcedureTiebackCount",
+  "ProcedureStentDidMigrate",
+  "ProcedureStentReplaced",
+  "ProcedureStentHalitosis",
+  "ProcedureStentHalitosisRating",
+  "ProcedureStentInfected",
+  "ProcedureStentInfectedHandling",
+  "ProcedureComplications",
+  "ProcedureCostComplications",
+  "ProcedureIssuesThroatclear",
+  "ProcedureIssuesThroatclearImproved",
+  "ProcedureChoice",
+  "ProcedureSurgeonInformation",
+  "ProcedureSatisfaction",
 
-  "PrimaryDurationVisitsNumber",
-  "PrimaryDurationChangedVets",
-  "PrimaryDurationChangedVetsReason",
+  "TherapyType",
+  "TherapyAcupunctureRatingBreathing",
+  "TherapyTherapyRatingBreathing",
+  "TherapyColdLaserRatingBreathing",
+  "TherapyChiroRatingBreathing",
 
-  "PrimaryVetInfoDetails",
-  "PrimaryVetSurgeryPerception",
+  "BreathingCrisisCount",
+  "BreathingEmergencyDidHave",
+  "BreathingEmergencyCount",
+  "BreathingEmergencyCost",
+  "BreathingCrisisAdvice",
+  "BreathingCrisisAdviceType",
+  "BreathingCrisisProductRecommended",
+  "BreathingCrisisProductRecommendedType",
+  "BreathingCrisisProductRecommendedForm",
+  "BreathingOxygenDidUse",
+  "BreathingCrisisOxygenPrevent",
+  "BreathingCrisisOxygenRevive",
+  "BreathingAspirationProcedureReflux",
+  "BreathingAspirationCount",
+  "BreathingAspirationAfterProcedure",
+  "BreathingAspirationInpatient",
+  "BreathingAspirationCost"
 
-  "TreatmentStatusTiebackComplications",
-  "TreatmentStatusTiebackComplicationsCost",
 
-  "ManagementPrescriptionType",
-  "ManagementNonPrescriptionType",
-  "ManagementNonPrescriptionCost",
 
-  "OTCProductsType",
-  "OTCProtocolCost",
 
-  "AspirationInpatientCount",
-  "AspirationSurgeryPostCount",
-  "AspirationStentPostCount",
-
-  "NeuropathySymptomsTypeProgression",
-
-  "ConclusionOtherConditions"
   ]);
 
 const QUESTION_SPACE_ABOVE = new Set([
 // put question names here (same .name values you already use)
-"UserInfoContactTypeFacebook",
-"UserInfoContactOK"
+
+  "UserInfoContactTypeFacebook",
+  "UserInfoContactOK",
+
 ]);
-
-
-
 
 const QUESTION_SEPARATOR_BELOW = new Set([
   // put question names here (same .name values you already use)
@@ -277,120 +307,21 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
   "UserInfoContactType",
   "UserInfoContactTypeFacebook",
-  // "UserInfoCountry",
-  // "UserInfoStateRegion",
  
-  // "CmpnInfoBreed",
-  // "CmpnInfoGender",
   "CmpnInfoAnimalType",
   "CmpnInfoDemeanor",
   "CmpnInfoAnxiety",
 
-  "InfoSourcesPriorKnowledge", 
-  "InfoSourcesTypes",
-  "InfoSourcesHardToUnderstand",
-  "InfoSourcesContradictory",
+  "FactorsPriorKnowledge", 
+  "FactorsSourcesTypes",
+  "FactorsBestSource",
 
-  "BreathingCrisisAdvice",
-  "BreathingCrisisAdviceType",
-  "BreathingCrisisProvidedSubstanceType",
-
-  "EarlySymptomsType",
-  "EarlySymptomsSeverity",
-  "EarlySymptomsHindEndWeakness",
-  
-  "PrimaryDurationVisitsNumber",
-
-  "PrimaryVetReflux",
-  "PrimaryVetRefluxMeds",
-  "PrimaryVetConfidence",
+  "SymptomsType",
+  "SymptomsSeverity",
 
   "DiagnosisWho",
-  "DiagnosticType",
-  "DiagnosisStage",
-  "DiagnosisTimeAfterSymptoms",
-  "DiagnosisCost",
 
-  "TreatmentStatusTiebackEmergency",
-  "TreatmentStatusTiebackWait",
-  "TreatmentStatusTiebackCount",
-
-  "TreatmentStatusBveapReasons",
-  "TreatmentStatusBveapCost",
-
-  "TreatmentStatusStentType",
-  "TreatmentStatusStentDidMigrate",
-  "TreatmentStatusStentReplaced",
-  "TreatmentStatusStentCostOnce",
-  "TreatmentStatusStentCostRepeat",
-
-  "TreatmentStatusArytenoidectomyReasons",
-  "TreatmentStatusArytenoidectomyLaser",
-  "TreatmentStatusArytenoidectomyDidExplain",
-  "TreatmentStatusArytenoidectomyChoice",
-  "TreatmentStatusArytenoidectomyCost",
-
-  "TreatmentStatusVentrilocordectomyReasons",
-  "TreatmentStatusVentrilocordectomyDidExplain",
-  "TreatmentStatusVentrilocordectomyChoice",
-  "TreatmentStatusVentrilocordectomyDidExplain",
-  "TreatmentStatusVentrilocordectomyCost",
-
-  "TreatmentStatusSurgeonInformLevel",
-
-  // "TreatmentFactorsCost",
-  // "TreatmentFactorsStageLP",
-  // "TreatmentFactorsRisks",
-  // "TreatmentFactorsAge",
-  // "TreatmentFactorsGeneralHealth",
-  // "TreatmentFactorsCostPanel",
-  // "TreatmentFactorsCircumstancesAccess",
-  // "TreatmentFactorsOther",
-
-
-  "ManagementPrescriptionType",
-  "ManagementPrescriptionCost",
-
-  "ManagementPrescriptionDoxepinRatingBreathing",
-  "ManagementPrescriptionTrazodoneGabapentinRatingBreathing",
-  "ManagementPrescriptionGabapentinRatingBreathing",
-  "ManagementPrescriptionGalliprantRatingBreathing",
-  "ManagementPrescriptionSteroidRatingBreathing",
-  "ManagementPrescriptionAntihistamineRatingBreathing",
-  "ManagementPrescriptionCereniaRatingBreathing",
-  "ManagementPrescriptionMeloxicamRatingBreathing",
-  "ManagementPrescriptionAcepromazineRatingBreathing",
-  "ManagementPrescriptionAlbuterolRatingBreathing",
-  "ManagementPrescriptionTemarilPRatingBreathing",
-
-  "ManagementNonPrescriptionAcupunctureRatingBreathing",
-  "ManagementNonPrescriptionTherapyRatingBreathing",
-  "ManagementNonPrescriptionColdLaserRatingBreathing",
-  "ManagementNonPrescriptionChiroRatingBreathing",
-
-  "OTCProductsType",
-  "OTCProductsCost",
-  "OTCProtocolCost",
-
-  "AspirationCount",
-
-
-
-  "NeuropathySymptomsFirst",
-
-  "NeuropathySymptomsTypeProgression",
-  "ConclusionSpecialConsiderations",
-  "ConclusionGeneralCondition",
-
-  "ConclusionOtherPathTieback",
-  "ConclusionOtherPathBVEAP",
-  "ConclusionOtherPathStent",
-  "ConclusionOtherPathArytenoidectomy",
-  "ConclusionOtherPathVentrilocordectomy",
-
-  "ConclusionStentAlternative"
-  
-  ]);
+]);
 
   const QUESTION_SPACE_BELOW = new Set([
     // put question names here (same .name values you already use)
@@ -399,32 +330,9 @@ const QUESTION_SEPARATOR_BELOW = new Set([
     "CmpnInfoBreed",
     "CmpnInfoGender",
 
+    "MedicationPrescriptionCost",
 
-    "TreatmentStatusDidHave",
-
-
-    "TreatmentStatusBveapComplications",
-
-    "TreatmentStatusArytenoidectomyComplicationsCost",
-
-    "TreatmentStatusVentrilocordectomyComplications",
-
-    "ManagementPrescriptionDoxepinRatingMobility",
-    "ManagementPrescriptionTrazodoneRatingMobility",
-    "ManagementPrescriptionGabapentinRatingMobility",
-    "ManagementPrescriptionGalliprantRatingMobility",
-    "ManagementPrescriptionSteroidRatingMobility",
-    "ManagementPrescriptionAntihistamineRatingMobility",
-    "ManagementPrescriptionCereniaRatingMobility",
-    "ManagementPrescriptionMeloxicamRatingMobility",
-    "ManagementPrescriptionAcepromazineRatingMobility",
-    "ManagementPrescriptionAlbuterolRatingMobility",
-    "ManagementPrescriptionTemarilPRatingMobility",
-
-    "ManagementNonPrescriptionAcupunctureRatingMobility",
-    "ManagementNonPrescriptionTherapyRatingMobility",
-    "ManagementNonPrescriptionColdLaserRatingMobility",
-    "ManagementNonPrescriptionChiroRatingMobility",
+    "ProcedureDidHave",
 
     "NeuropathySymptomsBreathingOnset",
     "NeuropathySymptomsHindEndOnset",
@@ -432,11 +340,12 @@ const QUESTION_SEPARATOR_BELOW = new Set([
     "ConclusionOtherConditionsNew"
   ]);
 
-
+  // !VA PANELS applies to the closest element with sd-panel.sd-element--with-frame
   if (ITEMS_CARD_PANEL.has(name)) {
     directives.push({ target: "panels", className: "survey-card-panel" });
   }
 
+  // !VA  ITEMS Only applies to elements with sd-selectbase or fieldset.sd-selectbase
   if (ITEMS_TWO_COL.has(name)) {
     directives.push({ target: "items", className: "survey-two-col" });
   }
@@ -444,6 +353,7 @@ const QUESTION_SEPARATOR_BELOW = new Set([
     directives.push({ target: "items", className: "survey-three-col" });
   }
 
+  // !VA CONTROL only applies to elements with .sd-input.sd-dropdown or input, textarea or select
   if (CONTROL_WIDTH_150.has(name)) {
     directives.push({ target: "control", className: "survey-control-w-150" });
   }
@@ -454,13 +364,20 @@ const QUESTION_SEPARATOR_BELOW = new Set([
     directives.push({ target: "control", className: "survey-control-w-600" });
   }
 
-  if (PANEL_NO_BORDER.has(name)) {
-    directives.push({ target: "question", className: "survey-p-no-border" });
+  // !VA This could apply to anything but only use it to remove borders from panels
+  if (QUESTION_NO_BORDER.has(name)) {
+    directives.push({ target: "question", className: "survey-question-no-border" });
+  }
+
+  // !VA This can apply to anything but should only be used for panels to make them two-columm so they look like the two-column fieldset and selectbase items. 
+  if (PANEL_TWO_COL.has(name)) {
+    directives.push({ target: "question", className: "survey-panel-two-col" });
   }
 
   if (QUESTION_SEPARATOR_ABOVE.has(name)) {
     directives.push({ target: "question", className: "survey-q-separator-above" });
   }
+
   if (QUESTION_SPACE_ABOVE.has(name)) {
     directives.push({ target: "question", className: "survey-q-space-above" });
   }

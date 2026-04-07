@@ -34,6 +34,60 @@ function sanitizeSurveyData(data) {
 }
 
 
+// function applyDirective(htmlElement, directive) {
+//   if (!htmlElement || !directive) return;
+
+//   const className = directive.className || directive.addClass;
+//   if (!className) return;
+
+//   const target = directive.target || "root";
+//   // !VA This can target a SD question OR an SD panel and takes into consideration that panel titles can also serve as question labels.
+//   if (target === "question") {
+//     console.log(htmlElement);
+//     console.log('className :>> ' + className);
+//     htmlElement.classList.add(className);
+//     return;
+//   }
+
+//   // ✅ NEW: strictly apply ONLY to elements that are BOTH sd-panel AND sd-element--with-frame and used only to target card panels in CustomClasses
+//   if (target === "panels") {
+//     const panelEl = htmlElement.closest(".sd-panel.sd-element--with-frame");
+//     if (panelEl) panelEl.classList.add(className);
+//     return; // <-- critical: never fall through and accidentally tag fieldsets
+//   }
+
+//   // ✅ items (pick ONE items handler; keep the one you actually want)
+//   if (target === "items") {
+//     const itemsEl =
+//       htmlElement.querySelector(".sd-selectbase") ||
+//       htmlElement.querySelector("fieldset.sd-selectbase");
+//     if (itemsEl) itemsEl.classList.add(className);
+//     return;
+//   }
+
+//   if (target === "control") {
+//     const dropdownWrapper = htmlElement.querySelector(".sd-input.sd-dropdown");
+//     if (dropdownWrapper) {
+//       dropdownWrapper.classList.add(className);
+//       return;
+//     }
+
+//     const inputEl = htmlElement.querySelector("input, textarea, select");
+//     if (inputEl) {
+//       const wrapper = inputEl.closest(".sd-input");
+//       if (wrapper) wrapper.classList.add(className);
+//       return;
+//     }
+
+//     htmlElement.classList.add(className);
+//     return;
+//   }
+
+//   htmlElement.classList.add(className);
+// }
+
+
+
 function applyDirective(htmlElement, directive) {
   if (!htmlElement || !directive) return;
 
@@ -41,22 +95,46 @@ function applyDirective(htmlElement, directive) {
   if (!className) return;
 
   const target = directive.target || "root";
-  // !VA This can target a SD question OR an SD panel and takes into consideration that panel titles can also serve as question labels.
-  if (target === "question") {
-    console.log(htmlElement);
-    console.log('className :>> ' + className);
-    htmlElement.classList.add(className);
+
+  if (target === "row") {
+    const rowEl =
+      htmlElement.closest(".sd-row") ||
+      htmlElement.closest(".sd-page__row") ||
+      htmlElement.closest(".sd-element") ||
+      htmlElement;
+
+    rowEl.classList.add(className);
     return;
   }
 
-  // ✅ NEW: strictly apply ONLY to elements that are BOTH sd-panel AND sd-element--with-frame and used only to target card panels in CustomClasses
-  if (target === "panels") {
-    const panelEl = htmlElement.closest(".sd-panel.sd-element--with-frame");
-    if (panelEl) panelEl.classList.add(className);
-    return; // <-- critical: never fall through and accidentally tag fieldsets
+
+
+  if (target === "question") {
+    const questionEl =
+      htmlElement.closest(".sd-question") ||
+      htmlElement.closest(".sd-element") ||
+      htmlElement;
+
+    questionEl.classList.add(className);
+    return;
   }
 
-  // ✅ items (pick ONE items handler; keep the one you actually want)
+  if (target === "panel") {
+    const panelEl =
+      htmlElement.closest(".sd-panel") ||
+      htmlElement.closest(".sd-element") ||
+      htmlElement;
+
+    panelEl.classList.add(className);
+    return;
+  }
+
+  if (target === "card") {
+    const cardEl = htmlElement.closest(".sd-panel.sd-element--with-frame");
+    if (cardEl) cardEl.classList.add(className);
+    return;
+  }
+
   if (target === "items") {
     const itemsEl =
       htmlElement.querySelector(".sd-selectbase") ||
@@ -75,8 +153,10 @@ function applyDirective(htmlElement, directive) {
     const inputEl = htmlElement.querySelector("input, textarea, select");
     if (inputEl) {
       const wrapper = inputEl.closest(".sd-input");
-      if (wrapper) wrapper.classList.add(className);
-      return;
+      if (wrapper) {
+        wrapper.classList.add(className);
+        return;
+      }
     }
 
     htmlElement.classList.add(className);
@@ -85,6 +165,10 @@ function applyDirective(htmlElement, directive) {
 
   htmlElement.classList.add(className);
 }
+
+
+
+
 
 
 

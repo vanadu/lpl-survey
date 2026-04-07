@@ -4660,15 +4660,15 @@
               "choices": [
                 {
                   "value": "ONE",
-                  "text": "Once"
+                  "text": "One"
                 },
                 {
                   "value": "TWO",
-                  "text": "Twice"
+                  "text": "Two"
                 },
                 {
                   "value": "MORE_THAN_TWO",
-                  "text": "More than twice"
+                  "text": "More than two"
                 }
               ],
               "showOtherItem": false,
@@ -4962,10 +4962,6 @@
                   "isRequired": true,
                   "visibleIf": "{BreathingAspirationDidHave} = 'YES'",
                   "choices": [
-                    {
-                      "value": 0,
-                      "text": "Never"
-                    },
                     {
                       "value": 1,
                       "text": "Once"

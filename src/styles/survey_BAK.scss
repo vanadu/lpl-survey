@@ -1003,46 +1003,79 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 .survey-control-w-600,
 .survey-control-w-6ch { box-sizing: border-box; }
 
-
-
-.survey-q-separator-above,
-.survey-q-separator-below {
-  --sep-width: min(300px, 70%);
+// !VA Custom classes - OVERRIDE PADDING ON ALL CUSTOM CLASS SPACING AND SEPARATORS
+.survey-q-separator-below, .survey-q-separator-above, .survey-q-space-below, .survey-q-separator-above  {
+  position: relative;
+  padding: 0!important; // no padding, spacing goes around the ::after
 }
 
-.survey-q-separator-above {
-  padding-top: 1.25rem;
-  background-image: linear-gradient(
-    to right,
-    transparent calc(50% - (var(--sep-width) / 2)),
-    var(--survey-separator-color) calc(50% - (var(--sep-width) / 2)),
-    var(--survey-separator-color) calc(50% + (var(--sep-width) / 2)),
-    transparent calc(50% + (var(--sep-width) / 2))
-  );
-  background-repeat: no-repeat;
-  background-size: 100% 1px;
-  background-position: center top;
+// !VA Custom classes - SEPARATOR ABOVE ELEMENT - WHITESPACE ABOVE and BELOW THE SEPARATOR   
+.survey-q-separator-above::before {
+  content: "";
+  display: block;
+  width: 600px;
+  height: 1px;
+  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
+  margin: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  background: rgba(0, 0, 0, 0.08);
 }
 
-.survey-q-separator-below {
-  padding-bottom: 1.25rem;
-  background-image: linear-gradient(
-    to right,
-    transparent calc(50% - (var(--sep-width) / 2)),
-    var(--survey-separator-color) calc(50% - (var(--sep-width) / 2)),
-    var(--survey-separator-color) calc(50% + (var(--sep-width) / 2)),
-    transparent calc(50% + (var(--sep-width) / 2))
-  );
-  background-repeat: no-repeat;
-  background-size: 100% 1px;
-  background-position: center bottom;
+// !VA Custom classes - SEPARATOR BELOW ELEMENT - WHITESPACE ABOVE and BELOW THE SEPARATOR   
+// !VA FOR REVIEW should probably apply to tablet+
+.survey-q-separator-below::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
+
+  margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+
+  @include tablet {
+    width: 500px;
+    margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  }
+  @include desktop {
+    width: 600px;
+    margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  }
+  @include ldesktop {
+      width: 600px;
+    margin: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  }
 }
 
+// !VA Custom classes - SPACE ABOVE ELEMENT 
+// !VA FOR REVIEW should probably apply to tablet+
+.survey-q-space-above::before {
+  content: "";
+  display: block;
+  width: 600px;
+  height: 1px;
+  margin: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  @include ldesktop {
+    margin: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) auto calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; // centers horizontally
+  }
+}
 
-
-
-
-
+// !VA Custom classes - SPACE BELOW ELEMENT - Margin top defines the spacing. 
+// !VA FOR REVIEW should probably apply to tablet+
+.survey-q-space-below::after {
+  content: "";
+  display: block;
+  width: 600px;
+  // height: 1px;
+  // !VA Whitespace above is larger than whitespace below because sd-row has whitespace above by default
+  margin-top: calc(1* (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  margin-right: auto;
+  margin-left: auto;
+  @include ldesktop {
+    margin-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 
 
 // !VA SUCCESS/INPROGRESS page
@@ -1331,15 +1364,14 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 }
 
 /* Animate ONLY the page content when SurveyJS swaps pages */
-// !VA 2026.04.07 This was breaking the animation - let SJ handle it.
-// .sd-page.sd-body__page .sd-row {
-//   animation: sjPageFadeIn 300ms ease;
-// }
+.sd-page.sd-body__page .sd-row {
+  animation: sjPageFadeIn 300ms ease;
+}
 
-// @keyframes sjPageFadeIn {
-//   from { opacity: 0; transform: translateY(2px); }
-//   to   { opacity: 1; transform: translateY(0); }
-// }
+@keyframes sjPageFadeIn {
+  from { opacity: 0; transform: translateY(2px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 
 // !VA NAV MODS
