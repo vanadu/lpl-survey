@@ -134,57 +134,69 @@
       "elements": [
         {
           "type": "panel",
-          "name": "UserInfoNameCountryPanel",
+          "name": "UserInfoLocationPanel",
           "title": "Your First Name and Country",
           "elements": [
             {
-              "type": "text",
-              "title": "First Name:",
-              "name": "UserInfoFirstName",
-              "isRequired": true
-            },
-            {
-              "type": "dropdown",
-              "name": "UserInfoCountry",
-              "title": "Country:",
-              "isRequired": true,
-              "choices": [
-                { "value": "US",
-                  "text": "United States"
+              "type": "panel",
+              "name": "UserInfoNameCountryPanel",
+
+              "elements": [
+                {
+                  "type": "text",
+                  "title": "First Name:",
+                  "name": "UserInfoFirstName",
+                  "isRequired": true
                 },
-                { "value": "UK",
-                  "text": "United Kingdom"
-                },
-                { "value": "CA",
-                  "text": "Canada"
-                },
-                { "value": "DE",
-                  "text": "Germany"
-                },
-                { "value": "AU/NZ",
-                  "text": "Australia/New Zealand"
-                },
-                { "value": "FR",
-                  "text": "France"
-                },
-                { "value": "ES",
-                  "text": "Spain"
-                },
-                { "value": "PT",
-                  "text": "Portugal"
+                {
+                  "type": "dropdown",
+                  "name": "UserInfoCountry",
+                  "title": "Country:",
+                  "isRequired": true,
+                  "choices": [
+                    { "value": "US",
+                      "text": "United States"
+                    },
+                    { "value": "UK",
+                      "text": "United Kingdom"
+                    },
+                    { "value": "CA",
+                      "text": "Canada"
+                    },
+                    { "value": "DE",
+                      "text": "Germany"
+                    },
+                    { "value": "AU/NZ",
+                      "text": "Australia/New Zealand"
+                    },
+                    { "value": "FR",
+                      "text": "France"
+                    },
+                    { "value": "ES",
+                      "text": "Spain"
+                    },
+                    { "value": "PT",
+                      "text": "Portugal"
+                    }
+                  ],
+                  "showOtherItem": true
                 }
-              ],
-              "showOtherItem": true
+              ]
             },
             {
-              "type": "text",
-              "name": "UserInfoStateRegion",
-              "title": "State, province or region (optional):",
-              "isRequired": false
+              "type": "panel",
+              "name": "UserInfoStateRegionPanel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "UserInfoStateRegion",
+                  "title": "State, province or region (optional):",
+                  "isRequired": false
+                }
+              ]
             }
           ]
         },
-
         {
           "type": "panel",
           "name": "UserInfoAgeGenderPanel",

@@ -12,7 +12,7 @@
   "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
   "UserInfoContactOK": true,
 
-  "CmpnName": "Happy",
+  "CmpnName": "Billie",
   "LifeStatus": true,
 
   "CmpnInfoAnimalType": "CANINE",
@@ -136,9 +136,7 @@
   "MedicationPrescriptionAlbuterolRatingMobility": 3,
   "MedicationPrescriptionTemarilPRatingBreathing": 3,
   "MedicationPrescriptionTemarilPRatingMobility": 3,
-  "MedicationRefluxMedications": [
-    "YES_PRESCRIBED"
-  ],
+  "MedicationRefluxMedications": "YES_UNPRESCRIBED",
   "MedicationRefluxMedicationsLPEffect": 3,
   "MedicationRefluxMedicationsAPEffect": 3,
   "MedicationSupplementsDidPurchase": "YES",
@@ -182,6 +180,8 @@
   "ProcedureStentComplications": "NO",
   "ProcedureIssuesThroatclear": "YES",
   "ProcedureIssuesThroatclearImproved": "YES",
+  "ProcedureAntibiotics": "YES",
+  "ProcedureRefluxMeds": "NO",
   "ProcedureCost": "2501_4000",
   "ProcedureComplications": "YES",
   "ProcedureComplicationsCost": "1501_2500",
@@ -205,7 +205,31 @@
   "TherapyChiroRatingBreathing": 3,
   "TherapyChiroRatingMobility": 4,
 
-
+  "BreathingCrisisDidHave": "YES",
+  "BreathingCrisisCount": "THREE",
+  "BreathingEmergencyDidHave": "YES",
+  "BreathingEmergencyCount": "MORE_THAN_TWO",
+  "BreathingEmergencyCost": "MORE_THAN_1000",
+  "BreathingCrisisAdvice": "YES",
+  "BreathingCrisisAdviceType": [
+    "SEDATIVE",
+    "COOL_PLACE",
+    "EMERGENCY_FACILITY"
+  ],
+  "BreathingCrisisProductRecommended": "YES",
+  "BreathingCrisisProductRecommendedType": [
+    "SEDATIVE"
+  ],
+  "BreathingCrisisProductRecommendedForm": "INJECTIBLE",
+  "BreathingOxygenDidUse": "YES",
+  "BreathingCrisisOxygenPrevent": 4,
+  "BreathingCrisisOxygenRevive": 1,
+  "BreathingAspirationDidHave": "YES",
+  "BreathingAspirationCount": 3,
+  "BreathingAspirationAfterProcedure": 3,
+  "BreathingAspirationInpatient": "YES",
+  "BreathingAspirationInpatientCount": 3,
+  "BreathingAspirationCost": "1001_3000",
 
 
 
@@ -235,7 +259,10 @@
   "ConclusionOtherPathBVEAP": "BVEAP_SOONER",
   "ConclusionOtherPathStent": "STENT_SAME",
   "ConclusionOtherPathArytenoidectomy": "ARYTENOIDECTOMY_NO",
-  "ConclusionOtherPathVentrilocordectomy": "VENTRILOCORDECTOMY_NO"
+  "ConclusionOtherPathVentrilocordectomy": "VENTRILOCORDECTOMY_NO",
+
+
+  "ConclusionStentAlternative": "YES"
 
 
 

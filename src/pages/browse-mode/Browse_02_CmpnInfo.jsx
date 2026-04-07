@@ -179,6 +179,7 @@ const Browse_02_CmpnInfo = () => {
       <div className="browse-panel-container" id="CmpnInfoAgePanel">
       <div className="browse-panel-container" id="dcsdCmpnInfoAgePanel">
         <h3 className="browse-showanswer-title">At about what age did Bella cross over the Rainbow Bridge?</h3>
+      <div className="browse-panel-container" id="dcsdCmpnInfoAgeDetailsPanel">
       <div className="browse-question-container" id="dcsdCmpnInfoAgeYears">
         <ShowAnswerContent
           header={
@@ -215,9 +216,11 @@ const Browse_02_CmpnInfo = () => {
         </ShowAnswerContent>
       </div>
       </div>
+      </div>
 
       <div className="browse-panel-container" id="lvngCmpnInfoAgePanel">
-        <h3 className="browse-showanswer-title">What is Bella&lsquo;s approximate age (in years and months)?</h3>
+        <h3 className="browse-showanswer-title">At about what age did Bella cross over the Rainbow Bridge?</h3>
+      <div className="browse-panel-container" id="lvngCmpnInfoAgeDetailsPanel">
       <div className="browse-question-container" id="lvngCmpnInfoAgeYears">
         <ShowAnswerContent
           header={
@@ -252,6 +255,7 @@ const Browse_02_CmpnInfo = () => {
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>
         </ShowAnswerContent>
+      </div>
       </div>
       </div>
       </div>

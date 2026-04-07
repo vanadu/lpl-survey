@@ -3952,54 +3952,48 @@
               ]
             },
             {
-              "type": "panel",
-              "name": "ProcedureMedicationsPanel",
-              "elements": [
+              "type": "radiogroup",
+              "name": "ProcedureAntibiotics",
+              "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "choices": [
                 {
-                  "type": "radiogroup",
-                  "name": "ProcedureAntibiotics",
-                  "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
-                  "isRequired": true,
-                  "visibleIf": "{ProcedureDidHave} = true",
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "value": "YES",
+                  "text": "Yes"
                 },
                 {
-                  "type": "radiogroup",
-                  "name": "ProcedureRefluxMeds",
-                  "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the surgery?",
-                  "isRequired": true,
-                  "visibleIf": "{ProcedureDidHave} = true",
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
                 }
-              ]
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureRefluxMeds",
+              "title": "Did the surgeon/stent provider give you medications to reflux after the surgery?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
             },
             {
               "type": "panel",

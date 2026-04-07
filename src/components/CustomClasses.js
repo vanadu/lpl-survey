@@ -66,6 +66,12 @@ export function getStyleDirectives(item) {
     "BreathingCrisisProductRecommendedType",
     "BreathingAspirationCount",
     "BreathingAspirationAfterProcedure",
+
+
+
+    "ConclusionGeneralCondition",
+    "ConclusionOtherConditions"
+
   ]);
 
   const ITEMS_THREE_COL = new Set([
@@ -85,6 +91,7 @@ export function getStyleDirectives(item) {
 
     "MedicationPrescription",
     "MedicationSupplementsDidPurchase",
+    "MedicationProtocolDidPurchase",
 
     "ProcedureTiebackIncisionInfection",
     "ProcedureTiebackSuturesFail",
@@ -94,8 +101,11 @@ export function getStyleDirectives(item) {
     "ProcedureStentInfected",
     "ProcedureIssuesThroatclear",
     "ProcedureIssuesThroatclearImproved",
-
     "ProcedureIncisionInfection",
+    "ProcedureAntibiotics",
+    "ProcedureRefluxMeds",
+
+
     "TherapyDidHave",
     "BreathingCrisisDidHave",
     "BreathingEmergencyDidHave",
@@ -112,6 +122,11 @@ export function getStyleDirectives(item) {
     "BreathingAspirationInpatient",
     "BreathingAspirationProcedureAntibiotics",
     "BreathingAspirationProcedureReflux",
+
+    "NeuropathySymptomsDoesHave",
+
+    "ConclusionStentAlternative"
+
   ]);
 
   // !VA CONTROL Elements
@@ -139,6 +154,10 @@ export function getStyleDirectives(item) {
     "UserInfoStateRegion",
     "UserInfoAgeGroup",
 
+
+    "CmpnInfoBreed",
+    "CmpnInfoGender",
+
     "FactorsBestSource",
 
     "ProcedureScheduledWait",
@@ -148,6 +167,11 @@ export function getStyleDirectives(item) {
 
     "BreathingEmergencyCost",
     "BreathingAspirationCost",
+
+
+
+
+
   ]);
 
   const CONTROL_WIDTH_600 = new Set([
@@ -157,30 +181,51 @@ export function getStyleDirectives(item) {
   // Only use to remove borders on panels
   const PANEL_NO_BORDER = new Set([
     // "UserInfoLifeStatusNamePanel",
+    "UserInfoNameCountryPanel",
+    "UserInfoStateRegionPanel",
     "CmpnInfoAnimalTypePanel",
     "CmpnInfoBreedGenderPanel",
+
+    "dcsdCmpnInfoAgeDetailsPanel",
+    "lvngCmpnInfoAgeDetailsPanel",
+
+    "SymptomsAgeDetailsPanel",
+
+
     "CmpnInfoWeightPanel",
     "CmpnInfoAgePanel",
     "SymptomsAgePanel",
     "DiagnosisDetailsPanel",
     "ProcedureAgePanel",
+    "ProcedureAgeDetailsPanel"
+
+    
   ]);
 
   // Only use to make panel contents two-column to make them look the same as two-column questions.
   const PANEL_TWO_COL = new Set([
     "UserInfoNameCountryPanel",
-    "SymptomsAgePanel",
-    "ProcedureAgePanel",
+    // "SymptomsAgePanel",
+    "SymptomsAgeDetailsPanel",
+    "ProcedureAgeDetailsPanel",
   ]);
 
   // !VA QUESTION SEPARATOR
   const QUESTION_SEPARATOR_ABOVE = new Set([
+
+    "UserInfoContactOK",
     "UserInfoGender",
-    "UserInfoStateRegion",
+    "UserInfoStateRegionPanel",
 
     "CmpnInfoWeightPanel",
 
+    "FactorsSourcesTypes",
+    "FactorsBestSource",
+    "FactorsClearAnswers",
+
     "SymptomsType",
+    "SymptomsSeverity",
+    "SymptomsNeckRestraint",
     "SymptomsIntubationConcerns",
     "SymptomsOtherConditionsType",
     "SymptomsIntubationSymptoms",
@@ -261,11 +306,20 @@ export function getStyleDirectives(item) {
     "BreathingAspirationAfterProcedure",
     "BreathingAspirationInpatient",
     "BreathingAspirationCost",
+
+
+    "ConclusionGeneralCondition",
+    "ConclusionQOL",
+    "ConclusionOtherConditions"
+
+
+
+
   ]);
 
   const QUESTION_SPACE_ABOVE = new Set([
     "UserInfoContactTypeFacebook",
-    "UserInfoContactOK",
+    "UserInfoNameCountryPanel",
   ]);
 
   const QUESTION_SEPARATOR_BELOW = new Set([
@@ -277,13 +331,6 @@ export function getStyleDirectives(item) {
     "CmpnInfoAnimalType",
     "CmpnInfoDemeanor",
     "CmpnInfoAnxiety",
-
-    "FactorsPriorKnowledge",
-    "FactorsSourcesTypes",
-    "FactorsBestSource",
-
-    "SymptomsType",
-    "SymptomsSeverity",
 
     "DiagnosisWho",
   ]);
@@ -336,21 +383,6 @@ export function getStyleDirectives(item) {
   if (PANEL_TWO_COL.has(name)) {
     directives.push({ target: "panel", className: "survey-panel-two-col" });
   }
-
-  // !VA QUESTION should only target actual question roots
-  // if (QUESTION_SEPARATOR_ABOVE.has(name)) {
-  //   directives.push({ target: "question", className: "survey-q-separator-above" });
-  // }
-  // if (QUESTION_SPACE_ABOVE.has(name)) {
-  //   directives.push({ target: "question", className: "survey-q-space-above" });
-  // }
-
-  // if (QUESTION_SEPARATOR_BELOW.has(name)) {
-  //   directives.push({ target: "question", className: "survey-q-separator-below" });
-  // }
-  // if (QUESTION_SPACE_BELOW.has(name)) {
-  //   directives.push({ target: "question", className: "survey-q-space-below" });
-  // }
 
   if (QUESTION_SEPARATOR_ABOVE.has(name)) {
     directives.push({ target: "row", className: "survey-q-separator-above" });

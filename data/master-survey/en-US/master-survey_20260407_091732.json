@@ -647,47 +647,40 @@
                 {
                   "type": "panel",
                   "name": "lvngCmpnInfoAgePanel",
-                  "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+                  "title": "What is {CmpnName}'s approximate age (in years and months)?",
                   "visibleIf": "{LifeStatus} = false",
                   "elements": [
                     {
-                      "type": "panel",
-                      "name": "lvngCmpnInfoAgeDetailsPanel",
-                      "description": "Please enter years and months",
-                      "elements": [
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "lvngCmpnInfoAgeYears",
+                      "title": "Age in years (number):",
+                      "isRequired": true,
+                      "min": "1",
+                      "max": "40",
+                      "validators": [
                         {
-                          "type": "text",
-                          "inputType": "number",
-                          "name": "lvngCmpnInfoAgeYears",
-                          "title": "Age in years (number):",
-                          "isRequired": true,
-                          "min": "1",
-                          "max": "40",
-                          "validators": [
-                            {
-                              "type": "numeric",
-                              "minValue": 1,
-                              "maxValue": 40,
-                              "text": "Age must be between 1 and 40"
-                            }
-                          ]
-                        },
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 40,
+                          "text": "Age must be between 1 and 40"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "lvngCmpnInfoAgeMonths",
+                      "title": "Months (number 0 - 11)",
+                      "isRequired": true,
+                      "min": 0,
+                      "max": 11,
+                      "validators": [
                         {
-                          "type": "text",
-                          "inputType": "number",
-                          "name": "lvngCmpnInfoAgeMonths",
-                          "title": "Months (number 0 - 11)",
-                          "isRequired": true,
-                          "min": 0,
-                          "max": 11,
-                          "validators": [
-                            {
-                              "type": "numeric",
-                              "minValue": 0,
-                              "maxValue": 11,
-                              "text": "Months must be between 0 and 11"
-                            }
-                          ]
+                          "type": "numeric",
+                          "minValue": 0,
+                          "maxValue": 11,
+                          "text": "Months must be between 0 and 11"
                         }
                       ]
                     }
@@ -1316,43 +1309,36 @@
                   "title": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
                   "elements": [
                     {
-                      "type": "panel",
-                      "name": "SymptomsAgeDetailsPanel",
-                      "description": "Please enter years and months",
-                      "elements": [
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "SymptomsAgeYears",
+                      "title": "Years",
+                      "isRequired": true,
+                      "min": "1",
+                      "max": "40",
+                      "validators": [
                         {
-                          "type": "text",
-                          "inputType": "number",
-                          "name": "SymptomsAgeYears",
-                          "title": "Years",
-                          "isRequired": true,
-                          "min": "1",
-                          "max": "40",
-                          "validators": [
-                            {
-                              "type": "numeric",
-                              "minValue": 1,
-                              "maxValue": 40,
-                              "text": "Age must be between 1 and 40"
-                            }
-                          ]
-                        },
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 40,
+                          "text": "Age must be between 1 and 40"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "SymptomsAgeMonths",
+                      "title": "Months (number 0 - 11)",
+                      "isRequired": true,
+                      "min": 0,
+                      "max": 11,
+                      "validators": [
                         {
-                          "type": "text",
-                          "inputType": "number",
-                          "name": "SymptomsAgeMonths",
-                          "title": "Months (number 0 - 11)",
-                          "isRequired": true,
-                          "min": 0,
-                          "max": 11,
-                          "validators": [
-                            {
-                              "type": "numeric",
-                              "minValue": 0,
-                              "maxValue": 11,
-                              "text": "Months must be between 0 and 11"
-                            }
-                          ]
+                          "type": "numeric",
+                          "minValue": 0,
+                          "maxValue": 11,
+                          "text": "Months must be between 0 and 11"
                         }
                       ]
                     }
@@ -3381,46 +3367,40 @@
                   "type": "panel",
                   "name": "ProcedureAgePanel",
                   "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
+                  "description": "If you can't remember exactly, it's OK to guesstimate.",
                   "visibleIf": "{ProcedureDidHave} = true",
                   "elements": [
                     {
-                      "type": "panel",
-                      "name": "ProcedureAgeDetailsPanel",
-                      "description": "Please enter age in years and months.",
-                      "elements": [
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "ProcedureAgeYears",
+                      "title": "Years",
+                      "isRequired": true,
+                      "min": "1",
+                      "max": "40",
+                      "validators": [
                         {
-                          "type": "text",
-                          "inputType": "number",
-                          "name": "ProcedureAgeYears",
-                          "title": "Years",
-                          "isRequired": true,
-                          "min": "1",
-                          "max": "40",
-                          "validators": [
-                            {
-                              "type": "numeric",
-                              "minValue": 1,
-                              "maxValue": 40,
-                              "text": "Age must be between 1 and 40"
-                            }
-                          ]
-                        },
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 40,
+                          "text": "Age must be between 1 and 40"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "ProcedureAgeMonths",
+                      "title": "Months (number 0 - 11)",
+                      "isRequired": true,
+                      "min": 0,
+                      "max": 11,
+                      "validators": [
                         {
-                          "type": "text",
-                          "inputType": "number",
-                          "name": "ProcedureAgeMonths",
-                          "title": "Months (number 0 - 11)",
-                          "isRequired": true,
-                          "min": 0,
-                          "max": 11,
-                          "validators": [
-                            {
-                              "type": "numeric",
-                              "minValue": 0,
-                              "maxValue": 11,
-                              "text": "Months must be between 0 and 11"
-                            }
-                          ]
+                          "type": "numeric",
+                          "minValue": 0,
+                          "maxValue": 11,
+                          "text": "Months must be between 0 and 11"
                         }
                       ]
                     }
@@ -3952,54 +3932,48 @@
               ]
             },
             {
-              "type": "panel",
-              "name": "ProcedureMedicationsPanel",
-              "elements": [
+              "type": "radiogroup",
+              "name": "ProcedureAntibiotics",
+              "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "choices": [
                 {
-                  "type": "radiogroup",
-                  "name": "ProcedureAntibiotics",
-                  "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
-                  "isRequired": true,
-                  "visibleIf": "{ProcedureDidHave} = true",
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "value": "YES",
+                  "text": "Yes"
                 },
                 {
-                  "type": "radiogroup",
-                  "name": "ProcedureRefluxMeds",
-                  "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the surgery?",
-                  "isRequired": true,
-                  "visibleIf": "{ProcedureDidHave} = true",
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
                 }
-              ]
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureRefluxMeds",
+              "title": "Did the surgeon/stent provider give you medications to reflux after the surgery?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
             },
             {
               "type": "panel",

@@ -152,6 +152,7 @@
   --sjs-font-questiontitle-size: 17px;
   padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 // !VA DEFAULT QUESTION STYLES
@@ -547,39 +548,12 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
   }
 }
 
-
-
-
-
-// !VA Custom Panel Layouts
-// =============================
-
-[data-name="LandingWelcomePanel"] {
-  &.sd-element--nested-with-borders {
-    padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-    padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-    margin-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-    border: none!important;
-  }
-  .sd-panel__content {
-    padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-    margin-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  }
-
-  h2 {
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-}
-
 .survey-card-panel {
   // box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
   box-shadow: none!important;
   padding: 0!important;
   margin: 0!important;
 }
-
-
 
 // !VA Default border on .sd-element--nested-with-borders, overrides survey-core
 .sd-container-modern .sd-element--nested-with-borders {
@@ -622,60 +596,7 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
   }
 }
 
-
-
-
-// !VA INFO ICONSThis is probably going to have to be where all the info icon links are styled because I have no idea how to get that into the formatting helper. 
-[data-name="LandingPrivacyConsentLinksPanel"] .sd-element__content.sd-panel__content {
-  display: flex;
-  width: 80%;
-  padding: 0!important;
-  margin: 0!important;
-  .sd-row {
-    padding: 0!important;
-    margin: 0!important;
-  }
-}
-
-/* ---------------------------
-  !VA ELEMENT-SPECIFIC STYLING
-------------------------------*/
-// !VA Clear extra bottom spacing on radiogroup titles
-// [data-name="LandingConsent"],
-// !VA 2026.04.05 Removed ALL datanames. Need a more global fix for this.
-
-
-
-
-// !VA Force age panels to 250px
-[data-name="dcsdCmpnInfoAgePanel"],
-[data-name="lvngCmpnInfoAgePanel"],
-[data-name="EarlySymptomsFirstSignsPanel"],
-[data-name="PrimaryDurationFirstConsult"],
-[data-name="TreatmentStatusAgePanel"]
-{
-  // background: rgba(255, 0, 0, .3) !important; //devred
-  .sd-element__content.sd-panel__content {
-    .sd-row {
-        width: 250px!important;
-        padding: 0!important;
-        margin: 0!important;
-    }
-  }
-}
-
-
-[data-name="UserInfoAboutPanel"],
-[data-name="CmpnInfoAgeBehaviorPanel"]
-{
-  padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-}
-
-
-
 // !VA Force panels to two column layout
-// [data-name="UserInfoNameCountryPanel"],
-// [data-name="SymptomsAgePanel"],
 .survey-panel-two-col {
   .sd-element__content {
     @include ldesktop {
@@ -701,10 +622,60 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
     padding: 0!important;
     margin: 0!important;
   }
+}
 
+
+// =====================================================
+// !VA ELEMENT-SPECIFIC STYLING and CUSTOM PANEL LAYOUTS
+// =====================================================
+
+[data-name="LandingWelcomePanel"] {
+  &.sd-element--nested-with-borders {
+    padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    margin-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    border: none!important;
+  }
+  .sd-panel__content {
+    padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    margin-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+
+// !VA INFO ICONS This is probably going to have to be where all the info icon links are styled because I have no idea how to get that into the formatting helper. 
+[data-name="LandingPrivacyConsentLinksPanel"] .sd-element__content.sd-panel__content {
+  display: flex;
+  width: 80%;
+  padding: 0!important;
+  margin: 0!important;
   .sd-row {
-    // padding: 0!important;
-    // margin: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+  }
+}
+
+
+
+// !VA Force age panels to 250px
+[data-name="dcsdCmpnInfoAgeDetailsPanel"],
+[data-name="lvngCmpnInfoAgeDetailsPanel"],
+[data-name="SymptomsAgeDetailsPanel"],
+[data-name="EarlySymptomsFirstSignsPanel"],
+[data-name="PrimaryDurationFirstConsult"],
+[data-name="TreatmentStatusAgePanel"]
+{
+  .sd-element__content.sd-panel__content {
+    .sd-row {
+        width: 250px!important;
+        padding: 0!important;
+        margin: 0!important;
+    }
   }
 }
 
@@ -714,27 +685,6 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
     width: 100% !important;
   }
 }
-
-
-
-// !VA Force CmpnInfoDetailsPanel into 1-2-2 grid layout
-// !VA Deprecated...Added separate panels for breed/mix and weight
-[data-name="CmpnInfoDetailsPanel"] .sd-element__content.sd-panel__content {
-  display: flex;
-  flex-direction: column;
-  // @include ldesktop {
-  //   display: grid;
-  //   gap: 0.25rem 1rem;
-  //   align-items: start;
-  //   grid-template-columns: repeat(2, minmax(0, 1fr));
-  //   grid-auto-flow: row;
-  //   // make first three children hild span both columns
-  //   > :first-child {
-  //     grid-column: 1 / -1;
-  //   }
-  // }
-}
-
 
 // !VA Force THESE panels to display flex
 [data-name="PrimaryDurationFirstConsultAgePanel"],
@@ -773,11 +723,6 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
   }
 }
 
-[data-name="CmpnInfoBreed"], [data-name="CmpnInfoGender"], [data-name="CmpnInfoWeight"], [data-name="CmpnInfoWeightUnits"],{
-  width: 300px !important;
-  padding: 0!important;
-  margin: 0!important;
-}
 
 // !VA Force age/date panels to two-column layout
 [data-name="dcsdCmpnInfoAgePanel"],
@@ -1007,11 +952,12 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 .survey-q-separator-above,
 .survey-q-separator-below {
-  --sep-width: min(300px, 70%);
+  --sep-width: min(400px, 70%);
 }
 
 .survey-q-separator-above {
-  padding-top: 1.25rem;
+  margin-top: 1rem!important; // !VA 2026.04.07
+  padding-top: .75rem; // !VA 2026.04.07
   background-image: linear-gradient(
     to right,
     transparent calc(50% - (var(--sep-width) / 2)),
@@ -1022,6 +968,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   background-repeat: no-repeat;
   background-size: 100% 1px;
   background-position: center top;
+  // background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 .survey-q-separator-below {

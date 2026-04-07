@@ -150,7 +150,7 @@
   --border-radius: calc(var(--space-unit) * 1.25);    /* 12px */
 
   /* !VA  SEPARATOR  */
-  --survey-separator-color: rgba(0, 0, 0, 0.08);
+  --survey-separator-color: rgba(0, 0, 0, 0.07);
 
 
 

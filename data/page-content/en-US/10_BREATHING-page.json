@@ -445,7 +445,7 @@
             {
               "type": "radiotroup",
               "name": "BreathingAspirationInpatientCount",
-              "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
+              "visibleIf": "{BreathingAspirationDidHave} = 'YES'{BreathingAspirationInpatient} = 'YES'",
               "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
               "isRequired": true,
               "choices": [
@@ -473,7 +473,7 @@
               "name": "BreathingAspirationCost",
               "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
               "isRequired": true,
-              "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
+              "visibleIf": "{BreathingAspirationDidHave} = 'YES'{BreathingAspirationInpatient} = 'YES'",
               "choices": [
                 {
                   "value": "NOT_SAY",

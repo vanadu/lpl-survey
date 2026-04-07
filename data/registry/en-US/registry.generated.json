@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-07T11:46:10.458Z",
+    "builtAt": "2026-04-07T15:03:07.346Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -253,8 +253,8 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "UserInfoNameCountryPanel": {
-      "name": "UserInfoNameCountryPanel",
+    "UserInfoLocationPanel": {
+      "name": "UserInfoLocationPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -266,6 +266,19 @@
       "title": "Your First Name and Country",
       "hasVisibleIf": false
     },
+    "UserInfoNameCountryPanel": {
+      "name": "UserInfoNameCountryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard2Panel",
+        "UserInfoLocationPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "UserInfoFirstName": {
       "name": "UserInfoFirstName",
       "type": "text",
@@ -274,6 +287,7 @@
       "path": [
         "USER_INFO-page",
         "UserInfoCard2Panel",
+        "UserInfoLocationPanel",
         "UserInfoNameCountryPanel"
       ],
       "hasTitle": true,
@@ -289,12 +303,26 @@
       "path": [
         "USER_INFO-page",
         "UserInfoCard2Panel",
+        "UserInfoLocationPanel",
         "UserInfoNameCountryPanel"
       ],
       "hasTitle": true,
       "title": "Country:",
       "hasVisibleIf": false,
       "isRequired": true
+    },
+    "UserInfoStateRegionPanel": {
+      "name": "UserInfoStateRegionPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard2Panel",
+        "UserInfoLocationPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "UserInfoStateRegion": {
       "name": "UserInfoStateRegion",
@@ -304,7 +332,8 @@
       "path": [
         "USER_INFO-page",
         "UserInfoCard2Panel",
-        "UserInfoNameCountryPanel"
+        "UserInfoLocationPanel",
+        "UserInfoStateRegionPanel"
       ],
       "hasTitle": true,
       "title": "State, province or region (optional):",
@@ -534,6 +563,20 @@
       "hasVisibleIf": true,
       "visibleIf": "{LifeStatus} = true"
     },
+    "dcsdCmpnInfoAgeDetailsPanel": {
+      "name": "dcsdCmpnInfoAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel",
+        "dcsdCmpnInfoAgePanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "dcsdCmpnInfoAgeYears": {
       "name": "dcsdCmpnInfoAgeYears",
       "type": "text",
@@ -543,7 +586,8 @@
         "CMPN_INFO-page",
         "CmpnInfoCard2Panel",
         "CmpnInfoAgePanel",
-        "dcsdCmpnInfoAgePanel"
+        "dcsdCmpnInfoAgePanel",
+        "dcsdCmpnInfoAgeDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Age in years (number):",
@@ -560,7 +604,8 @@
         "CMPN_INFO-page",
         "CmpnInfoCard2Panel",
         "CmpnInfoAgePanel",
-        "dcsdCmpnInfoAgePanel"
+        "dcsdCmpnInfoAgePanel",
+        "dcsdCmpnInfoAgeDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Months (number 0 - 11)",
@@ -579,9 +624,23 @@
         "CmpnInfoAgePanel"
       ],
       "hasTitle": true,
-      "title": "What is {CmpnName}'s approximate age (in years and months)?",
+      "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
       "hasVisibleIf": true,
       "visibleIf": "{LifeStatus} = false"
+    },
+    "lvngCmpnInfoAgeDetailsPanel": {
+      "name": "lvngCmpnInfoAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoAgePanel",
+        "lvngCmpnInfoAgePanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "lvngCmpnInfoAgeYears": {
       "name": "lvngCmpnInfoAgeYears",
@@ -592,7 +651,8 @@
         "CMPN_INFO-page",
         "CmpnInfoCard2Panel",
         "CmpnInfoAgePanel",
-        "lvngCmpnInfoAgePanel"
+        "lvngCmpnInfoAgePanel",
+        "lvngCmpnInfoAgeDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Age in years (number):",
@@ -609,7 +669,8 @@
         "CMPN_INFO-page",
         "CmpnInfoCard2Panel",
         "CmpnInfoAgePanel",
-        "lvngCmpnInfoAgePanel"
+        "lvngCmpnInfoAgePanel",
+        "lvngCmpnInfoAgeDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Months (number 0 - 11)",
@@ -1076,6 +1137,20 @@
       "title": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
       "hasVisibleIf": false
     },
+    "SymptomsAgeDetailsPanel": {
+      "name": "SymptomsAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "SYMPTOMS-page",
+        "SymptomsCard1Panel",
+        "SymptomsDetailsPanel",
+        "SymptomsAgePanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "SymptomsAgeYears": {
       "name": "SymptomsAgeYears",
       "type": "text",
@@ -1085,7 +1160,8 @@
         "SYMPTOMS-page",
         "SymptomsCard1Panel",
         "SymptomsDetailsPanel",
-        "SymptomsAgePanel"
+        "SymptomsAgePanel",
+        "SymptomsAgeDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Years",
@@ -1102,7 +1178,8 @@
         "SYMPTOMS-page",
         "SymptomsCard1Panel",
         "SymptomsDetailsPanel",
-        "SymptomsAgePanel"
+        "SymptomsAgePanel",
+        "SymptomsAgeDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Months (number 0 - 11)",
@@ -2366,6 +2443,20 @@
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = true"
     },
+    "ProcedureAgeDetailsPanel": {
+      "name": "ProcedureAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureDetailsPanel",
+        "ProcedureAgePanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ProcedureAgeYears": {
       "name": "ProcedureAgeYears",
       "type": "text",
@@ -2375,7 +2466,8 @@
         "PROCEDURE-page",
         "ProcedureCard1Panel",
         "ProcedureDetailsPanel",
-        "ProcedureAgePanel"
+        "ProcedureAgePanel",
+        "ProcedureAgeDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Years",
@@ -2392,7 +2484,8 @@
         "PROCEDURE-page",
         "ProcedureCard1Panel",
         "ProcedureDetailsPanel",
-        "ProcedureAgePanel"
+        "ProcedureAgePanel",
+        "ProcedureAgeDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Months (number 0 - 11)",
@@ -2827,6 +2920,18 @@
       "visibleIf": "{ProcedureIssuesThroatclear} = 'YES'",
       "isRequired": true
     },
+    "ProcedureMedicationsPanel": {
+      "name": "ProcedureMedicationsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ProcedureAntibiotics": {
       "name": "ProcedureAntibiotics",
       "type": "radiogroup",
@@ -2834,7 +2939,8 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "ProcedureCard2Panel",
+        "ProcedureMedicationsPanel"
       ],
       "hasTitle": true,
       "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
@@ -2849,10 +2955,11 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "ProcedureCard2Panel",
+        "ProcedureMedicationsPanel"
       ],
       "hasTitle": true,
-      "title": "Did the surgeon/stent provider give you medications to reflux after the surgery?",
+      "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the surgery?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true

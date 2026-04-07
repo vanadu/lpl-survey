@@ -75,6 +75,7 @@ const Browse_08_Procedure = () => {
       <div className="browse-panel-container" id="ProcedureDetailsPanel">
       <div className="browse-panel-container" id="ProcedureAgePanel">
         <h3 className="browse-showanswer-title">At about what age did Bella have the first procedure for LP/ GOLPP?</h3>
+      <div className="browse-panel-container" id="ProcedureAgeDetailsPanel">
       <div className="browse-question-container" id="ProcedureAgeYears">
         <ShowAnswerContent
           header={
@@ -109,6 +110,7 @@ const Browse_08_Procedure = () => {
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>
         </ShowAnswerContent>
+      </div>
       </div>
       </div>
 
@@ -908,6 +910,7 @@ const Browse_08_Procedure = () => {
       </div>
       </div>
 
+      <div className="browse-panel-container" id="ProcedureMedicationsPanel">
       <div className="browse-question-container" id="ProcedureAntibiotics">
         <ShowAnswerContent
           header={
@@ -943,7 +946,7 @@ const Browse_08_Procedure = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon/stent provider give you medications to reflux after the surgery?
+              Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the surgery?
             </span>
           }
           index={26}
@@ -968,6 +971,7 @@ const Browse_08_Procedure = () => {
           </ul>
           </div>
         </ShowAnswerContent>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="ProcedureCostPanel">

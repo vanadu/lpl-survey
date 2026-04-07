@@ -47,23 +47,7 @@
                 }
               ],
               "showOtherItem": false
-            }
-          ]
-        }
-      ]
-    },
-
-
-
-    {
-      "type": "panel",
-      "name": "NeuropathyCard2Panel",
-      "elements": [
-        {
-          "type": "panel",
-          "name": "NeuropathyHindEndDoesHavePanel",
-          "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
-          "elements": [
+            },
             {
               "type": "radiogroup",
               "name": "NeuropathySymptomsFirst",
@@ -89,7 +73,24 @@
                 }
               ],
               "showOtherItem": false
-            },
+            }
+          ]
+        }
+      ]
+    },
+
+
+
+    {
+      "type": "panel",
+      "name": "NeuropathyCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "NeuropathyHindEndDoesHavePanel",
+          "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
+          "elements": [
+
 
             {
               "type": "dropdown",

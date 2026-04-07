@@ -198,8 +198,9 @@ const Browse_01_UserInfo = () => {
       </div>
 
       <div className="browse-panel-container" id="UserInfoCard2Panel">
-      <div className="browse-panel-container" id="UserInfoNameCountryPanel">
+      <div className="browse-panel-container" id="UserInfoLocationPanel">
         <h3 className="browse-showanswer-title">Your First Name and Country</h3>
+      <div className="browse-panel-container" id="UserInfoNameCountryPanel">
       <div className="browse-question-container" id="UserInfoFirstName">
         <ShowAnswerContent
           header={
@@ -268,7 +269,9 @@ const Browse_01_UserInfo = () => {
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
 
+      <div className="browse-panel-container" id="UserInfoStateRegionPanel">
       <div className="browse-question-container" id="UserInfoStateRegion">
         <ShowAnswerContent
           header={
@@ -285,6 +288,7 @@ const Browse_01_UserInfo = () => {
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>
         </ShowAnswerContent>
+      </div>
       </div>
       </div>
 

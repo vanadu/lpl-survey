@@ -48,6 +48,7 @@ const Browse_04_Symptoms = () => {
       <div className="browse-panel-container" id="SymptomsDetailsPanel">
       <div className="browse-panel-container" id="SymptomsAgePanel">
         <h3 className="browse-showanswer-title">At about what age did Bella start showing symptoms of LP/GOLPP?</h3>
+      <div className="browse-panel-container" id="SymptomsAgeDetailsPanel">
       <div className="browse-question-container" id="SymptomsAgeYears">
         <ShowAnswerContent
           header={
@@ -82,6 +83,7 @@ const Browse_04_Symptoms = () => {
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>
         </ShowAnswerContent>
+      </div>
       </div>
       </div>
 
