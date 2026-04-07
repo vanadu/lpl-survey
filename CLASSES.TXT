@@ -7,10 +7,7 @@ BreathingCrisisCount
 
 ITEMS_THREE_COL
 -------------
-ProcedureIncisionInfection
-TherapyDidHave
-BreathingCrisisDidHave
-BreathingEmergencyDidHave
+
 	
 	
 
@@ -32,6 +29,10 @@ CONTROL_WIDTH_600
 
 QUESTION_SEPARATOR_ABOVE
 ------------------------
+
+SymptomsType
+
+
 ProcedureTiebackSuturesFailTime
 ProcedureIssuesThroatclear;
 ProcedureComplications

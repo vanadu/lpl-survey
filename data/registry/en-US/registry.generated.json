@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-05T08:08:02.597Z",
+    "builtAt": "2026-04-07T09:43:11.864Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -2135,7 +2135,7 @@
         "MedicationRefluxMedicationPanel"
       ],
       "hasTitle": true,
-      "title": "Has {CmpnName} taken any medications for reflux (GERD)negative or to improve digestive motility?",
+      "title": "Has {CmpnName} taken any medications for reflux (GERD) or to improve digestive motility?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -2339,6 +2339,18 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "ProcedureDetailsPanel": {
+      "name": "ProcedureDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ProcedureAgePanel": {
       "name": "ProcedureAgePanel",
       "type": "panel",
@@ -2346,7 +2358,8 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard1Panel"
+        "ProcedureCard1Panel",
+        "ProcedureDetailsPanel"
       ],
       "hasTitle": true,
       "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
@@ -2361,6 +2374,7 @@
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
+        "ProcedureDetailsPanel",
         "ProcedureAgePanel"
       ],
       "hasTitle": true,
@@ -2377,6 +2391,7 @@
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
+        "ProcedureDetailsPanel",
         "ProcedureAgePanel"
       ],
       "hasTitle": true,
@@ -2393,7 +2408,7 @@
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureAgePanel"
+        "ProcedureDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
@@ -2408,7 +2423,7 @@
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureAgePanel"
+        "ProcedureDetailsPanel"
       ],
       "hasTitle": true,
       "title": "How far in advance was the procedure scheduled?",
@@ -2812,6 +2827,36 @@
       "visibleIf": "{ProcedureIssuesThroatclear} = 'YES'",
       "isRequired": true
     },
+    "ProcedureAntibiotics": {
+      "name": "ProcedureAntibiotics",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureRefluxMeds": {
+      "name": "ProcedureRefluxMeds",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon/stent provider give you medications to reflux after the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
     "ProcedureCostPanel": {
       "name": "ProcedureCostPanel",
       "type": "panel",
@@ -3186,8 +3231,9 @@
         "BreathingCrisisPanel"
       ],
       "hasTitle": true,
-      "title": "How many times do your remember {CmpnName} having a life-threatening breathing crisis?",
-      "hasVisibleIf": false,
+      "title": "How many such breathing crises did {CmpnName} have?",
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
       "isRequired": true
     },
     "BreathingEmergencyDidHave": {
@@ -3213,7 +3259,7 @@
         "BreathingCrisisPanel"
       ],
       "hasTitle": true,
-      "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+      "title": "How many visits did {CmpnName} make to veterinary professionals because of a breathing crisis?",
       "hasVisibleIf": true,
       "visibleIf": "{BreathingEmergencyDidHave} = 'YES'",
       "isRequired": true
@@ -3244,8 +3290,7 @@
       ],
       "hasTitle": true,
       "title": "Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?",
-      "hasVisibleIf": true,
-      "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+      "hasVisibleIf": false,
       "isRequired": true
     },
     "BreathingCrisisAdviceType": {
@@ -3273,7 +3318,7 @@
         "BreathingCrisisPanel"
       ],
       "hasTitle": true,
-      "title": "Did a veterinary professional recommend or provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?",
+      "title": "Did a veterinary professional recommend or provide you with a substance or product to deal with a breathing crisis?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -3303,12 +3348,13 @@
       ],
       "hasTitle": true,
       "title": "In what form was the sedative or steroid provided?",
-      "hasVisibleIf": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingCrisisProductRecommended} = 'STEROID' || {BreathingCrisisProductRecommended} = 'SEDATIVE'",
       "isRequired": true
     },
     "BreathingOxygenDidUse": {
       "name": "BreathingOxygenDidUse",
-      "type": "radio",
+      "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
@@ -3316,7 +3362,7 @@
         "BreathingCrisisPanel"
       ],
       "hasTitle": true,
-      "title": "Did you every use a supplemental oxygen product to help with {CmpnName}'s breathing crises?",
+      "title": "Did you ever use a supplemental oxygen product for {CmpnName}?",
       "hasVisibleIf": false
     },
     "BreathingCrisisOxygenPrevent": {
@@ -3329,8 +3375,9 @@
         "BreathingCrisisPanel"
       ],
       "hasTitle": true,
-      "title": "How effective was the supplemental oxygen product in preventing a breathing crisis?",
-      "hasVisibleIf": false,
+      "title": "Did the supplemental oxygen help prevent a breathing crisis?",
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
       "isRequired": true
     },
     "BreathingCrisisOxygenRevive": {
@@ -3343,8 +3390,9 @@
         "BreathingCrisisPanel"
       ],
       "hasTitle": true,
-      "title": "How effective was the supplemental oxygen product in bringing {CmpnName} out of the breathing crisis?",
-      "hasVisibleIf": false,
+      "title": "Did the supplemental oxygen help revive {CmpnName} from a breathing crisis?",
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
       "isRequired": true
     },
     "BreathingCard2Panel": {
@@ -3381,13 +3429,13 @@
         "BreathingAspirationPanel"
       ],
       "hasTitle": true,
-      "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
+      "title": "Did {CmpnName} ever get aspiration pneumonia (AP)?",
       "hasVisibleIf": false,
       "isRequired": true
     },
     "BreathingAspirationCount": {
       "name": "BreathingAspirationCount",
-      "type": "dropdown",
+      "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
@@ -3401,8 +3449,8 @@
       "visibleIf": "{BreathingAspirationDidHave} = 'YES'",
       "isRequired": true
     },
-    "BreathingAspirationBeforeProcedure": {
-      "name": "BreathingAspirationBeforeProcedure",
+    "BreathingAspirationAfterProcedure": {
+      "name": "BreathingAspirationAfterProcedure",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
@@ -3414,7 +3462,7 @@
       "hasTitle": true,
       "title": "How many times did {CmpnName} get aspiration pneumonia after the surgery or stent procedure?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = 'YES'",
+      "visibleIf": "{ProcedureDidHave} = true && {BreathingAspirationDidHave} = 'YES'",
       "isRequired": true
     },
     "BreathingAspirationInpatient": {
@@ -3435,7 +3483,7 @@
     },
     "BreathingAspirationInpatientCount": {
       "name": "BreathingAspirationInpatientCount",
-      "type": "dropdown",
+      "type": "radiotroup",
       "role": "question",
       "collect": true,
       "path": [
@@ -3461,7 +3509,8 @@
       ],
       "hasTitle": true,
       "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
-      "hasVisibleIf": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
       "isRequired": true
     },
     "NeuropathyCard1Panel": {

@@ -99,7 +99,7 @@ const Browse_10_Breathing = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How many times do your remember Bella having a life-threatening breathing crisis?
+              How many such breathing crises did Bella have?
             </span>
           }
           index={2}
@@ -111,19 +111,19 @@ const Browse_10_Breathing = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Once</span>
+              <span>One</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Twice</span>
+              <span>Two</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Three times</span>
+              <span>Three</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Four or more times</span>
+              <span>Four or more</span>
             </li>
           </ul>
           </div>
@@ -165,7 +165,7 @@ const Browse_10_Breathing = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How many times did Bella visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?
+              How many visits did Bella make to veterinary professionals because of a breathing crisis?
             </span>
           }
           index={4}
@@ -309,7 +309,7 @@ const Browse_10_Breathing = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did a veterinary professional recommend or provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?
+              Did a veterinary professional recommend or provide you with a substance or product to deal with a breathing crisis?
             </span>
           }
           index={8}
@@ -361,10 +361,6 @@ const Browse_10_Breathing = () => {
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Supplemental oxygen</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>
@@ -418,7 +414,7 @@ const Browse_10_Breathing = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did you every use a supplemental oxygen product to help with Bella&lsquo;s breathing crises?
+              Did you ever use a supplemental oxygen product for Bella?
             </span>
           }
           index={11}
@@ -427,7 +423,20 @@ const Browse_10_Breathing = () => {
         >
 
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-generic" aria-hidden="true"></div>
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
           </div>
         </ShowAnswerContent>
       </div>
@@ -436,14 +445,14 @@ const Browse_10_Breathing = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How effective was the supplemental oxygen product in preventing a breathing crisis?
+              Did the supplemental oxygen help prevent a breathing crisis?
             </span>
           }
           index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1 = ineffective, 5 = very effective</p>
+          <p className="browse-question-description">1 - did not help at all, 3 = helped somewhat, 5 = helped very much</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-rating" aria-hidden="true">
                 
@@ -576,14 +585,14 @@ const Browse_10_Breathing = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How effective was the supplemental oxygen product in bringing Bella out of the breathing crisis?
+              Did the supplemental oxygen help revive Bella from a breathing crisis?
             </span>
           }
           index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1 = ineffective, 5 = very effective</p>
+          <p className="browse-question-description">1 - did not help at all, 3 = helped somewhat, 5 = helped very much</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-rating" aria-hidden="true">
                 
@@ -719,7 +728,7 @@ const Browse_10_Breathing = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?
+              Did Bella ever get aspiration pneumonia (AP)?
             </span>
           }
           index={14}
@@ -760,23 +769,23 @@ const Browse_10_Breathing = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-dropdown">
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Never</span>
             </li>
-            <li className="browse-showanswer-dropdown">
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Once</span>
             </li>
-            <li className="browse-showanswer-dropdown">
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Twice</span>
             </li>
-            <li className="browse-showanswer-dropdown">
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Three times</span>
             </li>
-            <li className="browse-showanswer-dropdown">
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>More than three times</span>
             </li>
@@ -785,7 +794,7 @@ const Browse_10_Breathing = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="BreathingAspirationBeforeProcedure">
+      <div className="browse-question-container" id="BreathingAspirationAfterProcedure">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -868,24 +877,7 @@ const Browse_10_Breathing = () => {
         >
 
           <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Once</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Twice</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Three times</span>
-            </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>More than three times</span>
-            </li>
-          </ul>
+          <div className="browse-showanswer-generic" aria-hidden="true"></div>
           </div>
         </ShowAnswerContent>
       </div>

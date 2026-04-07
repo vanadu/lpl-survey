@@ -2992,7 +2992,7 @@
                 {
                   "type": "radiogroup",
                   "name": "MedicationRefluxMedications",
-                  "title": "Has {CmpnName} taken any medications for reflux (GERD)negative or to improve digestive motility?",
+                  "title": "Has {CmpnName} taken any medications for reflux (GERD) or to improve digestive motility?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -3343,42 +3343,48 @@
             },
             {
               "type": "panel",
-              "name": "ProcedureAgePanel",
-              "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
-              "description": "If you can't remember exactly, it's OK to guesstimate.",
-              "visibleIf": "{ProcedureDidHave} = true",
+              "name": "ProcedureDetailsPanel",
               "elements": [
                 {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "ProcedureAgeYears",
-                  "title": "Years",
-                  "isRequired": true,
-                  "min": "1",
-                  "max": "40",
-                  "validators": [
+                  "type": "panel",
+                  "name": "ProcedureAgePanel",
+                  "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
+                  "description": "If you can't remember exactly, it's OK to guesstimate.",
+                  "visibleIf": "{ProcedureDidHave} = true",
+                  "elements": [
                     {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 40,
-                      "text": "Age must be between 1 and 40"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "inputType": "number",
-                  "name": "ProcedureAgeMonths",
-                  "title": "Months (number 0 - 11)",
-                  "isRequired": true,
-                  "min": 0,
-                  "max": 11,
-                  "validators": [
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "ProcedureAgeYears",
+                      "title": "Years",
+                      "isRequired": true,
+                      "min": "1",
+                      "max": "40",
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 40,
+                          "text": "Age must be between 1 and 40"
+                        }
+                      ]
+                    },
                     {
-                      "type": "numeric",
-                      "minValue": 0,
-                      "maxValue": 11,
-                      "text": "Months must be between 0 and 11"
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "ProcedureAgeMonths",
+                      "title": "Months (number 0 - 11)",
+                      "isRequired": true,
+                      "min": 0,
+                      "max": 11,
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 0,
+                          "maxValue": 11,
+                          "text": "Months must be between 0 and 11"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -3906,6 +3912,50 @@
                   "showOtherItem": false
                 }
               ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureAntibiotics",
+              "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureRefluxMeds",
+              "title": "Did the surgeon/stent provider give you medications to reflux after the surgery?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
             },
             {
               "type": "panel",
@@ -4557,24 +4607,25 @@
             {
               "type": "radiogroup",
               "name": "BreathingCrisisCount",
-              "title": "How many times do your remember {CmpnName} having a life-threatening breathing crisis?",
+              "title": "How many such breathing crises did {CmpnName} have?",
               "isRequired": true,
+              "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
               "choices": [
                 {
-                  "value": "ONCE",
-                  "text": "Once"
+                  "value": "ONE",
+                  "text": "One"
                 },
                 {
-                  "value": "TWICE",
-                  "text": "Twice"
+                  "value": "TWO",
+                  "text": "Two"
                 },
                 {
-                  "value": "THREE_TIMES",
-                  "text": "Three times"
+                  "value": "THREE",
+                  "text": "Three"
                 },
                 {
-                  "value": "MORE_THAN_THREE",
-                  "text": "Four or more times"
+                  "value": "FOUR_OR_MORE",
+                  "text": "Four or more"
                 }
               ],
               "showOtherItem": false
@@ -4603,7 +4654,7 @@
             {
               "type": "radiogroup",
               "name": "BreathingEmergencyCount",
-              "title": "How many times did {CmpnName} visit a veterinary professional due to an LP/GOLPP-associated breathing crisis?",
+              "title": "How many visits did {CmpnName} make to veterinary professionals because of a breathing crisis?",
               "visibleIf": "{BreathingEmergencyDidHave} = 'YES'",
               "isRequired": true,
               "choices": [
@@ -4658,7 +4709,6 @@
               "type": "radiogroup",
               "name": "BreathingCrisisAdvice",
               "title": "Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?",
-              "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
               "isRequired": true,
               "choices": [
                 {
@@ -4712,7 +4762,7 @@
             {
               "type": "radiogroup",
               "name": "BreathingCrisisProductRecommended",
-              "title": "Did a veterinary professional recommend or provide you with a substance or product to help deal with an LP/GOLPP-induced breathing emergency/crisis?",
+              "title": "Did a veterinary professional recommend or provide you with a substance or product to deal with a breathing crisis?",
               "isRequired": true,
               "choices": [
                 {
@@ -4748,10 +4798,6 @@
                 {
                   "value": "OXYGEN",
                   "text": "Supplemental oxygen"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
                 }
               ],
               "showOtherItem": true
@@ -4761,6 +4807,7 @@
               "name": "BreathingCrisisProductRecommendedForm",
               "title": "In what form was the sedative or steroid provided?",
               "isRequired": true,
+              "visibleIf": "{BreathingCrisisProductRecommended} = 'STEROID' || {BreathingCrisisProductRecommended} = 'SEDATIVE'",
               "choices": [
                 {
                   "value": "INJECTIBLE",
@@ -4791,21 +4838,17 @@
               "showNoneItem": true
             },
             {
-              "type": "radio",
+              "type": "radiogroup",
               "name": "BreathingOxygenDidUse",
-              "title": "Did you every use a supplemental oxygen product to help with {CmpnName}'s breathing crises?",
+              "title": "Did you ever use a supplemental oxygen product for {CmpnName}?",
               "choices": [
                 {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
                   "value": "NO",
-                  "text": "No, we never used supplemental oxygen"
-                },
-                {
-                  "value": "YES_PREVENT",
-                  "text": "Yes, we used supplemental oxygen to prevent breathing crises"
-                },
-                {
-                  "value": "YES_REVIVE",
-                  "text": "Yes, we used supplemental oxygen to revive {CmpnName} from a breathing crisis"
+                  "text": "No"
                 },
                 {
                   "value": "DONT_KNOW",
@@ -4816,9 +4859,10 @@
             {
               "type": "rating",
               "name": "BreathingCrisisOxygenPrevent",
-              "title": "How effective was the supplemental oxygen product in preventing a breathing crisis?",
-              "description": "1 = ineffective, 5 = very effective",
+              "title": "Did the supplemental oxygen help prevent a breathing crisis?",
+              "description": "1 - did not help at all,  3 = helped somewhat, 5 = helped very much",
               "isRequired": true,
+              "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
               "rateValues": [
                 {
                   "value": 1,
@@ -4849,9 +4893,10 @@
             {
               "type": "rating",
               "name": "BreathingCrisisOxygenRevive",
-              "title": "How effective was the supplemental oxygen product in bringing {CmpnName} out of the breathing crisis?",
-              "description": "1 = ineffective, 5 = very effective",
+              "title": "Did the supplemental oxygen help revive {CmpnName} from a breathing crisis?",
+              "description": "1 - did not help at all, 3 = helped somewhat, 5 = helped very much",
               "isRequired": true,
+              "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
               "rateValues": [
                 {
                   "value": 1,
@@ -4892,7 +4937,7 @@
                 {
                   "type": "radiogroup",
                   "name": "BreathingAspirationDidHave",
-                  "title": "Did {CmpnName} ever get aspiration pneumonia (AP) after the appearance of the first LP/GOLPP symptoms?",
+                  "title": "Did {CmpnName} ever get aspiration pneumonia (AP)?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -4911,7 +4956,7 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "BreathingAspirationCount",
                   "title": "How many times did {CmpnName} get AP?",
                   "isRequired": true,
@@ -4942,10 +4987,10 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "BreathingAspirationBeforeProcedure",
+                  "name": "BreathingAspirationAfterProcedure",
                   "title": "How many times did {CmpnName} get aspiration pneumonia after the surgery or stent procedure?",
                   "isRequired": true,
-                  "visibleIf": "{ProcedureDidHave} = 'YES'",
+                  "visibleIf": "{ProcedureDidHave} = true && {BreathingAspirationDidHave} = 'YES'",
                   "choices": [
                     {
                       "value": 0,
@@ -4968,8 +5013,7 @@
                       "text": "More than three times"
                     }
                   ],
-                  "showOtherItem": true,
-                  "otherText": "Other option"
+                  "showOtherItem": false
                 },
                 {
                   "type": "radiogroup",
@@ -4994,7 +5038,7 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiotroup",
                   "name": "BreathingAspirationInpatientCount",
                   "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
                   "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
@@ -5024,6 +5068,7 @@
                   "name": "BreathingAspirationCost",
                   "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
                   "isRequired": true,
+                  "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
                   "choices": [
                     {
                       "value": "NOT_SAY",

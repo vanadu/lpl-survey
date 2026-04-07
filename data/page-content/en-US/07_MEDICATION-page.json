@@ -487,7 +487,7 @@
             {
               "type": "radiogroup",
               "name": "MedicationRefluxMedications",
-              "title": "Has {CmpnName} taken any medications for reflux (GERD)negative or to improve digestive motility?",
+              "title": "Has {CmpnName} taken any medications for reflux (GERD) or to improve digestive motility?",
               "isRequired": true,
               "choices": [
                 {

@@ -75,6 +75,23 @@
   }
 }
 
+// !VA THIS INVALIDATES THE BASE FONT SIZE RECALCULATION!
+// !VA FONT SIZE & LINE HEIGHT FOR NATIVE ELEMENTS
+// .sd-container-modern {
+//     --sjs-article-font-x-large-fontSize: 24px!important;  // H2
+//     --sjs-article-font-large-fontSize: 21px; // H3
+//     --sjs-article-font-default-fontSize: 18px;  // Body text
+//     --sjs-font-questiontitle-size: 17px; // Question titles
+//     --sjs-article-font-default-lineHeight: 26px;
+//   @include ldesktop {
+//     --sjs-article-font-x-large-fontSize: 24px!important;  // H2
+//     --sjs-article-font-large-fontSize: 21px; // H3
+//     --sjs-article-font-default-fontSize: 18px;  // Body text
+//     --sjs-font-questiontitle-size: 17px; // Question titles
+//     --sjs-article-font-default-lineHeight: 26px;
+//   }
+
+// }
 
 // !VA PAGE OVERRIDES - 
 .sd-container-modern .sd-page.sd-body__page  {
@@ -232,6 +249,11 @@
       line-height: calc(1.4 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
     }
 }
+
+
+
+
+
 
 // !VA HTML p, li DEFAULT: NO PADDING ON THESE   ELEMENTS
 .sd-container-modern .sd-element__content .sd-html {
@@ -625,6 +647,7 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 
 
 
+
 // !VA INFO ICONSThis is probably going to have to be where all the info icon links are styled because I have no idea how to get that into the formatting helper. 
 [data-name="LandingPrivacyConsentLinksPanel"] .sd-element__content.sd-panel__content {
   display: flex;
@@ -642,19 +665,64 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 ------------------------------*/
 // !VA Clear extra bottom spacing on radiogroup titles
 // [data-name="LandingConsent"],
-// !VA 2026.04.05 Removed ALL datanames. Need a more global fix for this.
-
-
-
+[data-name="UserInfoGender"],
+[data-name="CmpnInfoAnimalType"],
+[data-name="IntubationHistoryWasIntubated"],
+[data-name="BreathingCrisisDidHave"],
+[data-name="BreathingCrisisCount"],
+[data-name="BreathingCrisisAdvice"],
+[data-name="BreathingCrisisProvidedSubstance"],
+[data-name="EarlySymptomsHindEndWeakness"],
+[data-name="EarlySymptomsIncontinence"],
+[data-name="EarlySymptomsOtherConditions"],
+[data-name="PrimaryDurationVisitsNumber"],
+[data-name="PrimaryDurationCost"],
+[data-name="PrimaryDurationChangedVets"],,
+[data-name="PrimaryVetInflammation"],
+[data-name="PrimaryVetReflux"],
+[data-name="PrimaryVetReflux"],
+[data-name="PrimaryVetRefluxMeds"],
+[data-name="PrimaryVetDidDiscuss"],
+[data-name="PrimaryVetSurgery"],
+[data-name="PrimaryVetSurgeryPerception"],
+[data-name="DiagnosisStage"],
+[data-name="DiagnosisCost"],
+[data-name="DiagnosisSurgeonContingent"],
+[data-name="TreatmentStatusArytenoidectomyDidExplain"],
+[data-name="TreatmentStatusArytenoidectomyChoice"],
+[data-name="TreatmentStatusVentrilocordectomyDidExplain"],
+[data-name="TreatmentStatusVentrilocordectomyChoice"],
+[data-name="ManagementPrescriptions"],
+[data-name="ManagementNonPrescription"],
+[data-name="OTCProductsDidPurchase"],
+[data-name="AspirationDidHave"],
+[data-name="AspirationInpatient"],
+[data-name="AspirationSurgeryPost"],
+[data-name="AspirationStentPost"],
+[data-name="NeuropathySymptomsDoesHave"],
+[data-name="NeuropathySymptomsFirst"],
+[data-name="NeuropathySymptomsTypeProgression"],
+[data-name="ConclusionCauseOfDeath"],
+[data-name="ConclusionOtherPathTieback"],
+[data-name="ConclusionOtherPathBVEAP"],
+[data-name="ConclusionOtherPathStent"],
+[data-name="ConclusionOtherPathArytenoidectomy"],
+[data-name="ConclusionOtherPathVentrilocordectomy"],
+[data-name="ConclusionStentAlternative"]
+{
+  .sd-question__header {
+    padding: 0!important;
+    margin: 0!important;
+  }
+}
 
 // !VA Force age panels to 250px
 [data-name="dcsdCmpnInfoAgePanel"],
 [data-name="lvngCmpnInfoAgePanel"],
 [data-name="EarlySymptomsFirstSignsPanel"],
 [data-name="PrimaryDurationFirstConsult"],
-[data-name="TreatmentStatusAgePanel"]
+[data-name="TreatmentStatusAgePanel"],
 {
-  // background: rgba(255, 0, 0, .3) !important; //devred
   .sd-element__content.sd-panel__content {
     .sd-row {
         width: 250px!important;
@@ -673,14 +741,16 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 
 
 
-// !VA Force panels to two column layout
-// [data-name="UserInfoNameCountryPanel"],
-// [data-name="SymptomsAgePanel"],
-.survey-panel-two-col {
+// !VA Force the User Name and Country to 2-1 layout
+[data-name="UserInfoNameCountryPanel"],
+[data-name="dcsdCmpnInfoAgePanel"],
+[data-name="lvngCmpnInfoAgePanel"],
+[data-name="CmpnInfoDemeanor"]
+{
   .sd-element__content {
     @include ldesktop {
       display: grid;
-      width: 70%;          /* important */
+      width: 100%;          /* important */
       grid-template-columns: 1r 1fr;
       gap: 0.75rem 1rem;
       align-items: start;
@@ -707,15 +777,6 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
     // margin: 0!important;
   }
 }
-
-// !VA Override width on panels with two-column dropdowns, otherwise the dropdown list will get narrow width defined above
-[data-name="UserInfoNameCountryPanel"] {
-  .sd-element__content {
-    width: 100% !important;
-  }
-}
-
-
 
 // !VA Force CmpnInfoDetailsPanel into 1-2-2 grid layout
 // !VA Deprecated...Added separate panels for breed/mix and weight
@@ -870,7 +931,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
   Custom Classes - PANEL_NO_BORDER -
   Overrides .sd-container-modern .sd-element--nested-with-borders
 */
-.sd-container-modern .survey-question-no-border {
+.sd-container-modern .survey-p-no-border {
   border: none!important;
   box-shadow: none!important;
   padding: 0!important;

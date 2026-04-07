@@ -164,26 +164,15 @@
   ],
   "ProcedureScheduled": "SCHEDULED",
   "ProcedureScheduledWait": "LESS_THAN_TWO_WEEKS",
-
-
   "ProcedureIncisionInfection": "YES",
-
   "ProcedureCostComplications": "1501_2500",
-
-
   "ProcedureTiebackIncisionInfection": "YES",
   "ProcedureTiebackSuturesFail": "YES",
   "ProcedureTiebackSuturesFailTime": "UNDER_TWO_MONTHS",
-
-
   "ProcedureTiebackRepeat": false,
-
- 
-
   "ProcedureStentType": "SILICONE",
   "ProcedureStentDidMigrate": true,
   "ProcedureStentReplaced": true,
-
   "ProcedureStentHalitosis": "YES",
   "ProcedureStentHalitosisRating": 2,
   "ProcedureStentInfected": "YES",
@@ -191,18 +180,13 @@
   "ProcedureStentCostOnce": "1501_2500",
   "ProcedureStentCostRepeat": "2001_3000",
   "ProcedureStentComplications": "NO",
-  
   "ProcedureIssuesThroatclear": "YES",
   "ProcedureIssuesThroatclearImproved": "YES",
-
   "ProcedureCost": "2501_4000",
   "ProcedureComplications": "YES",
   "ProcedureComplicationsCost": "1501_2500",
-
-
   "ProcedureComparison": "YES",
   "ProcedureChoice": "YES",
-
   "ProcedureSurgeonInformation": 5,
   "ProcedureSatisfaction": 5,
 
@@ -211,9 +195,7 @@
 
   "TherapyDidHave": "YES",
   "TherapyType": "ACUPUNCTURE",
-
   "TherapyCost": "101_150",
-
   "TherapyAcupunctureRatingBreathing": 3,
   "TherapyAcupunctureRatingMobility": 4,
   "TherapyTherapyRatingBreathing": 3,
@@ -223,31 +205,8 @@
   "TherapyChiroRatingBreathing": 3,
   "TherapyChiroRatingMobility": 4,
 
-  "BreathingCrisisDidHave": "YES",
-  "BreathingCrisisCount": "MORE_THAN_THREE",
-  "BreathingEmergencyDidHave": "TWO",
-  "BreathingEmergencyCount": "MORE_THAN_TWO",
-  "BreathingEmergencyCost": "MORE_THAN_1000",
-  "BreathingCrisisAdvice": "YES",
-  "BreathingCrisisAdviceType": [
-    "SEDATIVE",
-    "COOL_PLACE",
-    "EMERGENCY_FACILITY"
-  ],
-  "BreathingCrisisProductRecommended": "YES",
-  "BreathingCrisisProductRecommendedType": [
-    "SEDATIVE"
-  ],
-  "BreathingCrisisProductRecommendedForm": "INJECTIBLE",
-  "BreathingOxygenDidUse": "YES_PREVENT",
-  "BreathingCrisisOxygenPrevent": 4,
-  "BreathingCrisisOxygenRevive": 1,
-  "BreathingAspirationDidHave": "YES",
-  "BreathingAspirationCount": 3,
-  "BreathingAspirationBeforeProcedure": 3,
-  "BreathingAspirationInpatient": "YES",
-  "BreathingAspirationInpatientCount": 3,
-  "BreathingAspirationCost": "1001_3000",
+
+
 
 
   "NeuropathySymptomsFirst": "BREATHING",

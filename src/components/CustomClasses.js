@@ -32,11 +32,7 @@ const ITEMS_CARD_PANEL = new Set([
   "NeuropathyCard2Panel",
   "ConclusionCard1Panel",
   "ConclusionCard2Panel",
-
 ])
-
-
-
 
 const ITEMS_TWO_COL = new Set([
   "LandingConsent",
@@ -49,7 +45,6 @@ const ITEMS_TWO_COL = new Set([
 
   "FactorsSourcesTypes",
 
-  "SymptomsAgePanel", //This is no working, not sure why
   "SymptomsType",
   "SymptomsIntubationSymptoms",
   "SymptomsOtherConditionsType",
@@ -66,6 +61,12 @@ const ITEMS_TWO_COL = new Set([
 
   "ProcedureType",
   "ProcedureScheduled",
+  
+  "BreathingCrisisCount",
+  "BreathingCrisisProductRecommendedType",
+  "BreathingAspirationCount",
+  "BreathingAspirationAfterProcedure"
+
 
 
 ]);
@@ -98,9 +99,27 @@ const ITEMS_THREE_COL = new Set([
   "ProcedureIssuesThroatclear",
   "ProcedureIssuesThroatclearImproved",
 
+  "ProcedureIncisionInfection",
+  "TherapyDidHave",
+  "BreathingCrisisDidHave",
+  "BreathingEmergencyDidHave",
+  "BreathingOxygenDidUse",
+
   "ProcedureComplications",
   "ProcedureComparison",
-  "ProcedureChoice"
+  "ProcedureChoice",
+
+  "BreathingCrisisAdvice",
+  "BreathingEmergencyCount",
+  "BreathingCrisisProductRecommended",
+  "BreathingAspirationDidHave",
+  "BreathingAspirationInpatient",
+  "BreathingAspirationProcedureAntibiotics",
+  "BreathingAspirationProcedureReflux",
+  ""
+
+
+
 
 
 
@@ -119,7 +138,9 @@ const CONTROL_WIDTH_150 = new Set ([
   "SymptomsAgeMonths",
 
   "ProcedureAgeYears",
-  "ProcedureAgeMonths"
+  "ProcedureAgeMonths",
+  
+
 
 
 ])
@@ -128,6 +149,7 @@ const CONTROL_WIDTH_150 = new Set ([
 const CONTROL_WIDTH_300 = new Set([
 
   "CmpnName",
+  "UserInfoContactTypeEmail",
 
   "UserInfoFirstName",
   "UserInfoCountry",
@@ -137,46 +159,37 @@ const CONTROL_WIDTH_300 = new Set([
   "FactorsBestSource",
 
   "ProcedureScheduledWait",
-
   "ProcedureCost",
   "ProcedureComplicationsCost",
+  "ProcedureStentType",
 
-  "ProcedureStentType"
-
+  "BreathingEmergencyCost",
+  "BreathingAspirationCost"
 
 ]);
 
 const CONTROL_WIDTH_600 = new Set([
-
-
-
+  "UserInfoContactTypeFacebook",
 ]);
 
-
-
-
-
-// PANEL NO BORDER
-const PANEL_NO_BORDER = new Set([
+// Only use to remove borders on panels
+const QUESTION_NO_BORDER = new Set([
 
   // "UserInfoLifeStatusNamePanel",
   "CmpnInfoAnimalTypePanel",
   "CmpnInfoBreedGenderPanel", // has survey-p-no-border, sd-element--nested-with-borders
   "CmpnInfoWeightPanel",
   "CmpnInfoAgePanel",
-
   "SymptomsAgePanel",
   "DiagnosisDetailsPanel",
-  "BreathingCrisisDidHave"
+  "ProcedureAgePanel"
 ]);
 
-// PANEL TWO COL - Age panels
+// Only use to make panel contents two-column to make them look the same as two-column questions. Applies 
 const PANEL_TWO_COL = new Set([
   "UserInfoNameCountryPanel",
-  "dcsdCmpnInfoAgePanel",
-  "lvngCmpnInfoAgePanel",
-  "CmpnInfoDemeanor",
-  "SymptomsAgePanel"
+  "SymptomsAgePanel",
+  "ProcedureAgePanel"
 ]);
 
 
@@ -193,6 +206,7 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
 
   "CmpnInfoWeightPanel",
 
+  "SymptomsType",
   "SymptomsIntubationConcerns",
   "SymptomsOtherConditionsType",
   "SymptomsIntubationSymptoms",
@@ -225,6 +239,7 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
   "MedicationPrescriptionTemarilPRatingBreathing",
   "MedicationRefluxMedicationsLPEffect",
   "MedicationRefluxMedicationsAPEffect",
+  "MedicationSupplementsType",
   "MedicationSupplementsCost",
   "MedicationSupplementsEffectiveness",
   "MedicationProtocolCost",
@@ -232,25 +247,48 @@ const QUESTION_SEPARATOR_ABOVE = new Set([
 
   "ProcedureScheduled",
   "ProcedureScheduledWait",
-
+  "ProcedureTiebackSuturesFailTime",
+  "ProcedureTiebackRepeat",
   "ProcedureTiebackCount",
-
   "ProcedureStentDidMigrate",
   "ProcedureStentReplaced",
   "ProcedureStentHalitosis",
   "ProcedureStentHalitosisRating",
   "ProcedureStentInfected",
   "ProcedureStentInfectedHandling",
-  
   "ProcedureComplications",
-  "ProcedureComplicationsCost",
-
+  "ProcedureCostComplications",
+  "ProcedureIssuesThroatclear",
   "ProcedureIssuesThroatclearImproved",
-
   "ProcedureChoice",
-
   "ProcedureSurgeonInformation",
-  "ProcedureSatisfaction"
+  "ProcedureSatisfaction",
+
+  "TherapyType",
+  "TherapyAcupunctureRatingBreathing",
+  "TherapyTherapyRatingBreathing",
+  "TherapyColdLaserRatingBreathing",
+  "TherapyChiroRatingBreathing",
+
+  "BreathingCrisisCount",
+  "BreathingEmergencyDidHave",
+  "BreathingEmergencyCount",
+  "BreathingEmergencyCost",
+  "BreathingCrisisAdvice",
+  "BreathingCrisisAdviceType",
+  "BreathingCrisisProductRecommended",
+  "BreathingCrisisProductRecommendedType",
+  "BreathingCrisisProductRecommendedForm",
+  "BreathingOxygenDidUse",
+  "BreathingCrisisOxygenPrevent",
+  "BreathingCrisisOxygenRevive",
+  "BreathingAspirationProcedureReflux",
+  "BreathingAspirationCount",
+  "BreathingAspirationAfterProcedure",
+  "BreathingAspirationInpatient",
+  "BreathingAspirationCost"
+
+
 
 
   ]);
@@ -281,13 +319,8 @@ const QUESTION_SEPARATOR_BELOW = new Set([
   "SymptomsType",
   "SymptomsSeverity",
 
-
   "DiagnosisWho",
 
-
-
-
-  
 ]);
 
   const QUESTION_SPACE_BELOW = new Set([
@@ -301,39 +334,18 @@ const QUESTION_SEPARATOR_BELOW = new Set([
 
     "ProcedureDidHave",
 
-
-
-
-
-
-    "ManagementPrescriptionDoxepinRatingMobility",
-    "ManagementPrescriptionTrazodoneRatingMobility",
-    "ManagementPrescriptionGabapentinRatingMobility",
-    "ManagementPrescriptionGalliprantRatingMobility",
-    "ManagementPrescriptionSteroidRatingMobility",
-    "ManagementPrescriptionAntihistamineRatingMobility",
-    "ManagementPrescriptionCereniaRatingMobility",
-    "ManagementPrescriptionMeloxicamRatingMobility",
-    "ManagementPrescriptionAcepromazineRatingMobility",
-    "ManagementPrescriptionAlbuterolRatingMobility",
-    "ManagementPrescriptionTemarilPRatingMobility",
-
-    "ManagementNonPrescriptionAcupunctureRatingMobility",
-    "ManagementNonPrescriptionTherapyRatingMobility",
-    "ManagementNonPrescriptionColdLaserRatingMobility",
-    "ManagementNonPrescriptionChiroRatingMobility",
-
     "NeuropathySymptomsBreathingOnset",
     "NeuropathySymptomsHindEndOnset",
     
     "ConclusionOtherConditionsNew"
   ]);
 
-
+  // !VA PANELS applies to the closest element with sd-panel.sd-element--with-frame
   if (ITEMS_CARD_PANEL.has(name)) {
     directives.push({ target: "panels", className: "survey-card-panel" });
   }
 
+  // !VA  ITEMS Only applies to elements with sd-selectbase or fieldset.sd-selectbase
   if (ITEMS_TWO_COL.has(name)) {
     directives.push({ target: "items", className: "survey-two-col" });
   }
@@ -341,6 +353,7 @@ const QUESTION_SEPARATOR_BELOW = new Set([
     directives.push({ target: "items", className: "survey-three-col" });
   }
 
+  // !VA CONTROL only applies to elements with .sd-input.sd-dropdown or input, textarea or select
   if (CONTROL_WIDTH_150.has(name)) {
     directives.push({ target: "control", className: "survey-control-w-150" });
   }
@@ -351,12 +364,14 @@ const QUESTION_SEPARATOR_BELOW = new Set([
     directives.push({ target: "control", className: "survey-control-w-600" });
   }
 
-  if (PANEL_NO_BORDER.has(name)) {
-    directives.push({ target: "question", className: "survey-p-no-border" });
+  // !VA This could apply to anything but only use it to remove borders from panels
+  if (QUESTION_NO_BORDER.has(name)) {
+    directives.push({ target: "question", className: "survey-question-no-border" });
   }
 
+  // !VA This can apply to anything but should only be used for panels to make them two-columm so they look like the two-column fieldset and selectbase items. 
   if (PANEL_TWO_COL.has(name)) {
-    directives.push({ target: "question", className: "survey-p-two-col" });
+    directives.push({ target: "question", className: "survey-panel-two-col" });
   }
 
   if (QUESTION_SEPARATOR_ABOVE.has(name)) {

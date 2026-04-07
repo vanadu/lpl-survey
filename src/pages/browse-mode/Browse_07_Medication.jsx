@@ -3261,7 +3261,7 @@ const Browse_07_Medication = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Has Bella taken any medications for reflux (GERD)negative or to improve digestive motility?
+              Has Bella taken any medications for reflux (GERD) or to improve digestive motility?
             </span>
           }
           index={26}

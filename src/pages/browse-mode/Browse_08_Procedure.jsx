@@ -72,6 +72,7 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
+      <div className="browse-panel-container" id="ProcedureDetailsPanel">
       <div className="browse-panel-container" id="ProcedureAgePanel">
         <h3 className="browse-showanswer-title">At about what age did Bella have the first procedure for LP/ GOLPP?</h3>
       <div className="browse-question-container" id="ProcedureAgeYears">
@@ -108,6 +109,7 @@ const Browse_08_Procedure = () => {
           <div className="browse-showanswer-input" aria-hidden="true"></div>
           </div>
         </ShowAnswerContent>
+      </div>
       </div>
 
       <div className="browse-question-container" id="ProcedureScheduled">
@@ -906,6 +908,68 @@ const Browse_08_Procedure = () => {
       </div>
       </div>
 
+      <div className="browse-question-container" id="ProcedureAntibiotics">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?
+            </span>
+          }
+          index={25}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ProcedureRefluxMeds">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Did the surgeon/stent provider give you medications to reflux after the surgery?
+            </span>
+          }
+          index={26}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
       <div className="browse-panel-container" id="ProcedureCostPanel">
       <div className="browse-question-container" id="ProcedureCost">
         <ShowAnswerContent
@@ -914,7 +978,7 @@ const Browse_08_Procedure = () => {
               What was the approximate cost of the &#123;cvProcedureTypeShort&#125; procedure, not including post-operative complications?
             </span>
           }
-          index={25}
+          index={27}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -961,7 +1025,7 @@ const Browse_08_Procedure = () => {
               Were there immediate post-operative complications that required at least one extra night of inpatient care?
             </span>
           }
-          index={26}
+          index={28}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -992,7 +1056,7 @@ const Browse_08_Procedure = () => {
               What was the approximate cost of the post-operative complications, not including aspiration pneumonia?
             </span>
           }
-          index={27}
+          index={29}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1041,7 +1105,7 @@ const Browse_08_Procedure = () => {
               Did the surgeon explain the pros and cons of this surgery type in comparison to tieback or other LP surgery or stent procedures?
             </span>
           }
-          index={28}
+          index={30}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1072,7 +1136,7 @@ const Browse_08_Procedure = () => {
               Did the surgeon offer you the choice between this surgery type other LP surgery or stent procedures?
             </span>
           }
-          index={29}
+          index={31}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1103,7 +1167,7 @@ const Browse_08_Procedure = () => {
               How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??
             </span>
           }
-          index={30}
+          index={32}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1243,7 +1307,7 @@ const Browse_08_Procedure = () => {
               How satisfied were you with the results of the procedure?
             </span>
           }
-          index={31}
+          index={33}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

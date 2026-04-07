@@ -41,13 +41,15 @@ function applyDirective(htmlElement, directive) {
   if (!className) return;
 
   const target = directive.target || "root";
-
+  // !VA This can target a SD question OR an SD panel and takes into consideration that panel titles can also serve as question labels.
   if (target === "question") {
+    console.log(htmlElement);
+    console.log('className :>> ' + className);
     htmlElement.classList.add(className);
     return;
   }
 
-  // ✅ NEW: strictly apply ONLY to elements that are BOTH sd-panel AND sd-element--with-frame
+  // ✅ NEW: strictly apply ONLY to elements that are BOTH sd-panel AND sd-element--with-frame and used only to target card panels in CustomClasses
   if (target === "panels") {
     const panelEl = htmlElement.closest(".sd-panel.sd-element--with-frame");
     if (panelEl) panelEl.classList.add(className);
