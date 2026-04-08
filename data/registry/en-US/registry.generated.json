@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-07T15:03:07.346Z",
+    "builtAt": "2026-04-08T10:53:46.137Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -2620,7 +2620,8 @@
       ],
       "hasTitle": true,
       "title": "Did you repeat the tieback on the other side after the first suture failure?",
-      "hasVisibleIf": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
       "isRequired": true
     },
     "ProcedureBveapPanel": {
@@ -3046,7 +3047,7 @@
         "ProcedureRatingPanel"
       ],
       "hasTitle": true,
-      "title": "Did the surgeon explain the pros and cons of this surgery type in comparison to tieback or other LP surgery or stent procedures?",
+      "title": "Did the surgeon explain the pros and cons of this surgery type in comparison to other LP surgery or stent procedures?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -3601,7 +3602,7 @@
       "hasTitle": true,
       "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
       "hasVisibleIf": true,
-      "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
+      "visibleIf": "{BreathingAspirationDidHave} = 'YES'{BreathingAspirationInpatient} = 'YES'",
       "isRequired": true
     },
     "BreathingAspirationCost": {
@@ -3617,7 +3618,7 @@
       "hasTitle": true,
       "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
       "hasVisibleIf": true,
-      "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
+      "visibleIf": "{BreathingAspirationDidHave} = 'YES'{BreathingAspirationInpatient} = 'YES'",
       "isRequired": true
     },
     "NeuropathyCard1Panel": {
@@ -3658,6 +3659,21 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "NeuropathySymptomsFirst": {
+      "name": "NeuropathySymptomsFirst",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard1Panel",
+        "NeuropathySymptomsDoesHavePanel"
+      ],
+      "hasTitle": true,
+      "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "NeuropathyCard2Panel": {
       "name": "NeuropathyCard2Panel",
       "type": "panel",
@@ -3681,21 +3697,6 @@
       "hasTitle": false,
       "hasVisibleIf": true,
       "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'"
-    },
-    "NeuropathySymptomsFirst": {
-      "name": "NeuropathySymptomsFirst",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "NEUROPATHY-page",
-        "NeuropathyCard2Panel",
-        "NeuropathyHindEndDoesHavePanel"
-      ],
-      "hasTitle": true,
-      "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
-      "hasVisibleIf": false,
-      "isRequired": true
     },
     "NeuropathySymptomsBreathingOnset": {
       "name": "NeuropathySymptomsBreathingOnset",

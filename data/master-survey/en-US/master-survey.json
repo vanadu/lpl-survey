@@ -3572,6 +3572,7 @@
                   "name": "ProcedureTiebackRepeat",
                   "title": "Did you repeat the tieback on the other side after the first suture failure?",
                   "isRequired": true,
+                  "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
                   "swapOrder": true
@@ -4114,7 +4115,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ProcedureComparison",
-                  "title": "Did the surgeon explain the pros and cons of this surgery type in comparison to tieback or other LP surgery or stent procedures?",
+                  "title": "Did the surgeon explain the pros and cons of this surgery type in comparison to other LP surgery or stent procedures?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -5080,7 +5081,7 @@
                 {
                   "type": "radiotroup",
                   "name": "BreathingAspirationInpatientCount",
-                  "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
+                  "visibleIf": "{BreathingAspirationDidHave} = 'YES'{BreathingAspirationInpatient} = 'YES'",
                   "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
                   "isRequired": true,
                   "choices": [
@@ -5108,7 +5109,7 @@
                   "name": "BreathingAspirationCost",
                   "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
                   "isRequired": true,
-                  "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
+                  "visibleIf": "{BreathingAspirationDidHave} = 'YES'{BreathingAspirationInpatient} = 'YES'",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -5196,20 +5197,7 @@
                     }
                   ],
                   "showOtherItem": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "NeuropathyCard2Panel",
-          "elements": [
-            {
-              "type": "panel",
-              "name": "NeuropathyHindEndDoesHavePanel",
-              "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
-              "elements": [
+                },
                 {
                   "type": "radiogroup",
                   "name": "NeuropathySymptomsFirst",
@@ -5234,7 +5222,20 @@
                     }
                   ],
                   "showOtherItem": false
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "NeuropathyCard2Panel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "NeuropathyHindEndDoesHavePanel",
+              "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
+              "elements": [
                 {
                   "type": "dropdown",
                   "name": "NeuropathySymptomsBreathingOnset",
@@ -5624,7 +5625,7 @@
                     }
                   ],
                   "showOtherItem": true,
-                  "otherText": "Other reasons"
+                  "otherText": "Other reasons (please briefly explain)"
                 }
               ]
             },

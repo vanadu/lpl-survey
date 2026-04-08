@@ -80,11 +80,7 @@ const Browse_11_Neuropathy = () => {
           </div>
         </ShowAnswerContent>
       </div>
-      </div>
-      </div>
 
-      <div className="browse-panel-container" id="NeuropathyCard2Panel">
-      <div className="browse-panel-container" id="NeuropathyHindEndDoesHavePanel">
       <div className="browse-question-container" id="NeuropathySymptomsFirst">
         <ShowAnswerContent
           header={
@@ -119,7 +115,11 @@ const Browse_11_Neuropathy = () => {
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
+      </div>
 
+      <div className="browse-panel-container" id="NeuropathyCard2Panel">
+      <div className="browse-panel-container" id="NeuropathyHindEndDoesHavePanel">
       <div className="browse-question-container" id="NeuropathySymptomsBreathingOnset">
         <ShowAnswerContent
           header={

@@ -351,11 +351,11 @@
             {
               "type": "panel",
               "name": "UserInfoLocationPanel",
+              "title": "Your First Name and Country",
               "elements": [
                 {
                   "type": "panel",
                   "name": "UserInfoNameCountryPanel",
-                  "title": "Your First Name and Country",
                   "elements": [
                     {
                       "type": "text",
@@ -599,40 +599,46 @@
                   "type": "panel",
                   "name": "dcsdCmpnInfoAgePanel",
                   "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
-                  "description": "Please enter years and months",
                   "visibleIf": "{LifeStatus} = true",
                   "elements": [
                     {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "dcsdCmpnInfoAgeYears",
-                      "title": "Age in years (number):",
-                      "isRequired": true,
-                      "min": "1",
-                      "max": "40",
-                      "validators": [
+                      "type": "panel",
+                      "name": "dcsdCmpnInfoAgeDetailsPanel",
+                      "description": "Please enter years and months",
+                      "elements": [
                         {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 40,
-                          "text": "Age must be between 1 and 40"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "dcsdCmpnInfoAgeMonths",
-                      "title": "Months (number 0 - 11)",
-                      "isRequired": true,
-                      "min": 0,
-                      "max": 11,
-                      "validators": [
+                          "type": "text",
+                          "inputType": "number",
+                          "name": "dcsdCmpnInfoAgeYears",
+                          "title": "Age in years (number):",
+                          "isRequired": true,
+                          "min": "1",
+                          "max": "40",
+                          "validators": [
+                            {
+                              "type": "numeric",
+                              "minValue": 1,
+                              "maxValue": 40,
+                              "text": "Age must be between 1 and 40"
+                            }
+                          ]
+                        },
                         {
-                          "type": "numeric",
-                          "minValue": 0,
-                          "maxValue": 11,
-                          "text": "Months must be between 0 and 11"
+                          "type": "text",
+                          "inputType": "number",
+                          "name": "dcsdCmpnInfoAgeMonths",
+                          "title": "Months (number 0 - 11)",
+                          "isRequired": true,
+                          "min": 0,
+                          "max": 11,
+                          "validators": [
+                            {
+                              "type": "numeric",
+                              "minValue": 0,
+                              "maxValue": 11,
+                              "text": "Months must be between 0 and 11"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -641,40 +647,47 @@
                 {
                   "type": "panel",
                   "name": "lvngCmpnInfoAgePanel",
-                  "title": "What is {CmpnName}'s approximate age (in years and months)?",
+                  "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
                   "visibleIf": "{LifeStatus} = false",
                   "elements": [
                     {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "lvngCmpnInfoAgeYears",
-                      "title": "Age in years (number):",
-                      "isRequired": true,
-                      "min": "1",
-                      "max": "40",
-                      "validators": [
+                      "type": "panel",
+                      "name": "lvngCmpnInfoAgeDetailsPanel",
+                      "description": "Please enter years and months",
+                      "elements": [
                         {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 40,
-                          "text": "Age must be between 1 and 40"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "lvngCmpnInfoAgeMonths",
-                      "title": "Months (number 0 - 11)",
-                      "isRequired": true,
-                      "min": 0,
-                      "max": 11,
-                      "validators": [
+                          "type": "text",
+                          "inputType": "number",
+                          "name": "lvngCmpnInfoAgeYears",
+                          "title": "Age in years (number):",
+                          "isRequired": true,
+                          "min": "1",
+                          "max": "40",
+                          "validators": [
+                            {
+                              "type": "numeric",
+                              "minValue": 1,
+                              "maxValue": 40,
+                              "text": "Age must be between 1 and 40"
+                            }
+                          ]
+                        },
                         {
-                          "type": "numeric",
-                          "minValue": 0,
-                          "maxValue": 11,
-                          "text": "Months must be between 0 and 11"
+                          "type": "text",
+                          "inputType": "number",
+                          "name": "lvngCmpnInfoAgeMonths",
+                          "title": "Months (number 0 - 11)",
+                          "isRequired": true,
+                          "min": 0,
+                          "max": 11,
+                          "validators": [
+                            {
+                              "type": "numeric",
+                              "minValue": 0,
+                              "maxValue": 11,
+                              "text": "Months must be between 0 and 11"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1303,36 +1316,43 @@
                   "title": "At about what age did {CmpnName} start showing symptoms of LP/GOLPP?",
                   "elements": [
                     {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "SymptomsAgeYears",
-                      "title": "Years",
-                      "isRequired": true,
-                      "min": "1",
-                      "max": "40",
-                      "validators": [
+                      "type": "panel",
+                      "name": "SymptomsAgeDetailsPanel",
+                      "description": "Please enter years and months",
+                      "elements": [
                         {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 40,
-                          "text": "Age must be between 1 and 40"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "SymptomsAgeMonths",
-                      "title": "Months (number 0 - 11)",
-                      "isRequired": true,
-                      "min": 0,
-                      "max": 11,
-                      "validators": [
+                          "type": "text",
+                          "inputType": "number",
+                          "name": "SymptomsAgeYears",
+                          "title": "Years",
+                          "isRequired": true,
+                          "min": "1",
+                          "max": "40",
+                          "validators": [
+                            {
+                              "type": "numeric",
+                              "minValue": 1,
+                              "maxValue": 40,
+                              "text": "Age must be between 1 and 40"
+                            }
+                          ]
+                        },
                         {
-                          "type": "numeric",
-                          "minValue": 0,
-                          "maxValue": 11,
-                          "text": "Months must be between 0 and 11"
+                          "type": "text",
+                          "inputType": "number",
+                          "name": "SymptomsAgeMonths",
+                          "title": "Months (number 0 - 11)",
+                          "isRequired": true,
+                          "min": 0,
+                          "max": 11,
+                          "validators": [
+                            {
+                              "type": "numeric",
+                              "minValue": 0,
+                              "maxValue": 11,
+                              "text": "Months must be between 0 and 11"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -3361,40 +3381,46 @@
                   "type": "panel",
                   "name": "ProcedureAgePanel",
                   "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
-                  "description": "If you can't remember exactly, it's OK to guesstimate.",
                   "visibleIf": "{ProcedureDidHave} = true",
                   "elements": [
                     {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "ProcedureAgeYears",
-                      "title": "Years",
-                      "isRequired": true,
-                      "min": "1",
-                      "max": "40",
-                      "validators": [
+                      "type": "panel",
+                      "name": "ProcedureAgeDetailsPanel",
+                      "description": "Please enter age in years and months.",
+                      "elements": [
                         {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 40,
-                          "text": "Age must be between 1 and 40"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "inputType": "number",
-                      "name": "ProcedureAgeMonths",
-                      "title": "Months (number 0 - 11)",
-                      "isRequired": true,
-                      "min": 0,
-                      "max": 11,
-                      "validators": [
+                          "type": "text",
+                          "inputType": "number",
+                          "name": "ProcedureAgeYears",
+                          "title": "Years",
+                          "isRequired": true,
+                          "min": "1",
+                          "max": "40",
+                          "validators": [
+                            {
+                              "type": "numeric",
+                              "minValue": 1,
+                              "maxValue": 40,
+                              "text": "Age must be between 1 and 40"
+                            }
+                          ]
+                        },
                         {
-                          "type": "numeric",
-                          "minValue": 0,
-                          "maxValue": 11,
-                          "text": "Months must be between 0 and 11"
+                          "type": "text",
+                          "inputType": "number",
+                          "name": "ProcedureAgeMonths",
+                          "title": "Months (number 0 - 11)",
+                          "isRequired": true,
+                          "min": 0,
+                          "max": 11,
+                          "validators": [
+                            {
+                              "type": "numeric",
+                              "minValue": 0,
+                              "maxValue": 11,
+                              "text": "Months must be between 0 and 11"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -3546,6 +3572,7 @@
                   "name": "ProcedureTiebackRepeat",
                   "title": "Did you repeat the tieback on the other side after the first suture failure?",
                   "isRequired": true,
+                  "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
                   "swapOrder": true
@@ -3926,48 +3953,54 @@
               ]
             },
             {
-              "type": "radiogroup",
-              "name": "ProcedureAntibiotics",
-              "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
-              "isRequired": true,
-              "visibleIf": "{ProcedureDidHave} = true",
-              "choices": [
+              "type": "panel",
+              "name": "ProcedureMedicationsPanel",
+              "elements": [
                 {
-                  "value": "YES",
-                  "text": "Yes"
+                  "type": "radiogroup",
+                  "name": "ProcedureAntibiotics",
+                  "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureDidHave} = true",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
                 },
                 {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
+                  "type": "radiogroup",
+                  "name": "ProcedureRefluxMeds",
+                  "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the surgery?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureDidHave} = true",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
                 }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "radiogroup",
-              "name": "ProcedureRefluxMeds",
-              "title": "Did the surgeon/stent provider give you medications to reflux after the surgery?",
-              "isRequired": true,
-              "visibleIf": "{ProcedureDidHave} = true",
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
+              ]
             },
             {
               "type": "panel",
@@ -4082,7 +4115,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ProcedureComparison",
-                  "title": "Did the surgeon explain the pros and cons of this surgery type in comparison to tieback or other LP surgery or stent procedures?",
+                  "title": "Did the surgeon explain the pros and cons of this surgery type in comparison to other LP surgery or stent procedures?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -5048,7 +5081,7 @@
                 {
                   "type": "radiotroup",
                   "name": "BreathingAspirationInpatientCount",
-                  "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
+                  "visibleIf": "{BreathingAspirationDidHave} = 'YES'{BreathingAspirationInpatient} = 'YES'",
                   "title": "How many times did {CmpnName} require inpatient, overnight, or emergency care for AP?",
                   "isRequired": true,
                   "choices": [
@@ -5076,7 +5109,7 @@
                   "name": "BreathingAspirationCost",
                   "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
                   "isRequired": true,
-                  "visibleIf": "{BreathingAspirationInpatient} = 'YES'",
+                  "visibleIf": "{BreathingAspirationDidHave} = 'YES'{BreathingAspirationInpatient} = 'YES'",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -5164,20 +5197,7 @@
                     }
                   ],
                   "showOtherItem": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "NeuropathyCard2Panel",
-          "elements": [
-            {
-              "type": "panel",
-              "name": "NeuropathyHindEndDoesHavePanel",
-              "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
-              "elements": [
+                },
                 {
                   "type": "radiogroup",
                   "name": "NeuropathySymptomsFirst",
@@ -5202,7 +5222,20 @@
                     }
                   ],
                   "showOtherItem": false
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "NeuropathyCard2Panel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "NeuropathyHindEndDoesHavePanel",
+              "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
+              "elements": [
                 {
                   "type": "dropdown",
                   "name": "NeuropathySymptomsBreathingOnset",
@@ -5592,7 +5625,7 @@
                     }
                   ],
                   "showOtherItem": true,
-                  "otherText": "Other reasons"
+                  "otherText": "Other reasons (please briefly explain)"
                 }
               ]
             },

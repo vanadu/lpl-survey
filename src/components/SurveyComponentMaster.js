@@ -498,30 +498,30 @@ export default function SurveyComponentMaster() {
 
   // !VA Date: 2026.03.28 Removed for print
   // !VA Icon Bar
-  // useEffect(() => {
-  //   if (!survey) return;
+  useEffect(() => {
+    if (!survey) return;
 
-  //   const handleAfterRenderPage = (sender, options) => {
-  //     const pageEl = options?.htmlElement;
-  //     if (!pageEl) return;
+    const handleAfterRenderPage = (sender, options) => {
+      const pageEl = options?.htmlElement;
+      if (!pageEl) return;
 
-  //     if (pageEl.querySelector(".sj-page-iconbar")) return;
+      if (pageEl.querySelector(".sj-page-iconbar")) return;
 
-  //     const barWrap = document.createElement("div");
-  //     barWrap.innerHTML = renderTopIconBarHtml();
+      const barWrap = document.createElement("div");
+      barWrap.innerHTML = renderTopIconBarHtml();
 
-  //     const barEl = barWrap.firstElementChild;
-  //     if (!barEl) return;
+      const barEl = barWrap.firstElementChild;
+      if (!barEl) return;
 
-  //     pageEl.prepend(barEl);
-  //   };
+      pageEl.prepend(barEl);
+    };
 
-  //   survey.onAfterRenderPage.add(handleAfterRenderPage);
+    survey.onAfterRenderPage.add(handleAfterRenderPage);
 
-  //   return () => {
-  //     survey.onAfterRenderPage.remove(handleAfterRenderPage);
-  //   };
-  // }, [survey]);
+    return () => {
+      survey.onAfterRenderPage.remove(handleAfterRenderPage);
+    };
+  }, [survey]);
 
 
   const handleComplete = useCallback(

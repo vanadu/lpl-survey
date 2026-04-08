@@ -1106,7 +1106,7 @@ const Browse_08_Procedure = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon explain the pros and cons of this surgery type in comparison to tieback or other LP surgery or stent procedures?
+              Did the surgeon explain the pros and cons of this surgery type in comparison to other LP surgery or stent procedures?
             </span>
           }
           index={30}
