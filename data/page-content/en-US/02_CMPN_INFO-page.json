@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "CmpnInfoHeading",
-          "html": "<h2>About Your LP/GOLPP companion<h2>"
+          "html": "<h2>About Your LP/GOLPP companion</h2>"
         },
         {
           "type": "html",
@@ -70,31 +70,38 @@
               "name": "CmpnInfoWeightPanel",
               "elements": [
                 {
-                  "type": "text",
-                  "name": "CmpnInfoWeight",
-                  "title": "{CmpnName}'s last known weight:",
-                  "description": "Please enter a number",
-                  "isRequired": true,
-                  "inputType": "number",
-                  "min": 1,
-                  "max": 2200,
-                  "validators": [
+                  "type": "panel",
+                  "name": "CmpnInfoWeightDetailsPanel",
+                  "elements": [
+
                     {
-                      "type": "numeric",
-                      "minValue": 1,
-                      "maxValue": 2200,
-                      "text": "Weight must be between 1 and 2200"
+                      "type": "text",
+                      "name": "CmpnInfoWeight",
+                      "title": "{CmpnName}'s last known weight:",
+                      "description": "Please enter a number",
+                      "isRequired": true,
+                      "inputType": "number",
+                      "min": 1,
+                      "max": 2200,
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 2200,
+                          "text": "Weight must be between 1 and 2200"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "CmpnInfoWeightUnits",
+                      "title": "Weight units:",
+                      "description": "Please choose pounds or kilos.",
+                      "isRequired": true,
+                      "labelTrue": "Kg",
+                      "labelFalse": "Lbs"
                     }
                   ]
-                },
-                {
-                  "type": "boolean",
-                  "name": "CmpnInfoWeightUnits",
-                  "title": "Weight units:",
-                  "description": "Please choose pounds or kilos.",
-                  "isRequired": true,
-                  "labelTrue": "Kg",
-                  "labelFalse": "Lbs"
                 }
               ]
             }
@@ -126,7 +133,7 @@
                       "type": "text",
                       "inputType": "number",
                       "name": "dcsdCmpnInfoAgeYears",
-                      "title": "Age in years (number):",
+                      "title": "Years",
                       "isRequired": true,
                       "min": "1",
                       "max": "40",
@@ -143,7 +150,7 @@
                       "type": "text",
                       "inputType": "number",
                       "name": "dcsdCmpnInfoAgeMonths",
-                      "title": "Months (number 0 - 11)",
+                      "title": "Months (0 - 11)",
                       "isRequired": true,
                       "min": 0,
                       "max": 11,
@@ -178,7 +185,7 @@
                       "type": "text",
                       "inputType": "number",
                       "name": "lvngCmpnInfoAgeYears",
-                      "title": "Age in years (number):",
+                      "title": "Years",
                       "isRequired": true,
                       "min": "1",
                       "max": "40",
@@ -195,7 +202,7 @@
                       "type": "text",
                       "inputType": "number",
                       "name": "lvngCmpnInfoAgeMonths",
-                      "title": "Months (number 0 - 11)",
+                      "title": "Months (0 - 11)",
                       "isRequired": true,
                       "min": 0,
                       "max": 11,

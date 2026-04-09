@@ -38,10 +38,15 @@ export function getStyleDirectives(item) {
     "LandingConsent",
     "LandingPrivacyConsentLinksPanel",
 
+    "UserInfoAgeGroup",
     "UserInfoGender",
 
     "lvngCmpnInfoAgePanel",
     "dcsdCmpnInfoAgePanel",
+
+    // "CmpnInfoWeightPanel",
+    // "CmpnInfoWeightUnits",
+
 
     "FactorsSourcesTypes",
 
@@ -131,7 +136,7 @@ export function getStyleDirectives(item) {
 
   // !VA CONTROL Elements
   const CONTROL_WIDTH_150 = new Set([
-    "LandingConsent",
+    // "LandingConsent",
     "CmpnInfoWeight",
     "dcsdCmpnInfoAgeYears",
     "dcsdCmpnInfoAgeMonths",
@@ -152,7 +157,6 @@ export function getStyleDirectives(item) {
     "UserInfoFirstName",
     "UserInfoCountry",
     "UserInfoStateRegion",
-    "UserInfoAgeGroup",
 
 
     "CmpnInfoBreed",
@@ -185,17 +189,18 @@ export function getStyleDirectives(item) {
     "UserInfoStateRegionPanel",
     "CmpnInfoAnimalTypePanel",
     "CmpnInfoBreedGenderPanel",
+    "CmpnInfoWeightDetailsPanel",
+    "CmpnInfoWeightPanel",
+    "CmpnInfoAgePanel",
 
     "dcsdCmpnInfoAgeDetailsPanel",
     "lvngCmpnInfoAgeDetailsPanel",
 
     "SymptomsAgeDetailsPanel",
-
-
-    "CmpnInfoWeightPanel",
-    "CmpnInfoAgePanel",
     "SymptomsAgePanel",
+
     "DiagnosisDetailsPanel",
+    
     "ProcedureAgePanel",
     "ProcedureAgeDetailsPanel"
 
@@ -206,13 +211,18 @@ export function getStyleDirectives(item) {
   const PANEL_TWO_COL = new Set([
     "UserInfoNameCountryPanel",
     // "SymptomsAgePanel",
+    "dcsdCmpnInfoAgeDetailsPanel",
+    "lvngCmpnInfoAgeDetailsPanel",
     "SymptomsAgeDetailsPanel",
     "ProcedureAgeDetailsPanel",
+    // "dcsdCmpnInfoAgePanel",
+    // "SymptomsAgePanel",
+    // "CmpnInfoWeightDetailsPanel",
   ]);
 
   // !VA QUESTION SEPARATOR
   const QUESTION_SEPARATOR_ABOVE = new Set([
-
+    "LifeStatus",
     "UserInfoContactOK",
     "UserInfoGender",
     "UserInfoStateRegionPanel",
@@ -320,18 +330,24 @@ export function getStyleDirectives(item) {
   const QUESTION_SPACE_ABOVE = new Set([
     "UserInfoContactTypeFacebook",
     "UserInfoNameCountryPanel",
+
+
+    "FactorsProcedureCost",
+    "FactorsSymptomsBreathingCrisis",
+    "FactorsSurgeryAnesthesia",
+    "FactorsGeneralAge",
+    "FactorsCircumstancesAccess",
+    "FactorsOther"
+
+
   ]);
 
   const QUESTION_SEPARATOR_BELOW = new Set([
-    "CmpnName",
-
     "UserInfoContactType",
     "UserInfoContactTypeFacebook",
-
     "CmpnInfoAnimalType",
     "CmpnInfoDemeanor",
     "CmpnInfoAnxiety",
-
     "DiagnosisWho",
   ]);
 

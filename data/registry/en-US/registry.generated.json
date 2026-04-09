@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-08T10:53:46.137Z",
+    "builtAt": "2026-04-09T09:52:56.707Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -355,7 +355,7 @@
     },
     "UserInfoAgeGroup": {
       "name": "UserInfoAgeGroup",
-      "type": "dropdown",
+      "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
@@ -364,7 +364,7 @@
         "UserInfoAgeGenderPanel"
       ],
       "hasTitle": true,
-      "title": "Approximately what is your age?",
+      "title": "Age group:",
       "hasVisibleIf": false
     },
     "UserInfoGender": {
@@ -492,6 +492,20 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "CmpnInfoWeightDetailsPanel": {
+      "name": "CmpnInfoWeightDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel",
+        "CmpnInfoDetailsPanel",
+        "CmpnInfoWeightPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "CmpnInfoWeight": {
       "name": "CmpnInfoWeight",
       "type": "text",
@@ -501,7 +515,8 @@
         "CMPN_INFO-page",
         "CmpnInfoCard1Panel",
         "CmpnInfoDetailsPanel",
-        "CmpnInfoWeightPanel"
+        "CmpnInfoWeightPanel",
+        "CmpnInfoWeightDetailsPanel"
       ],
       "hasTitle": true,
       "title": "{CmpnName}'s last known weight:",
@@ -518,7 +533,8 @@
         "CMPN_INFO-page",
         "CmpnInfoCard1Panel",
         "CmpnInfoDetailsPanel",
-        "CmpnInfoWeightPanel"
+        "CmpnInfoWeightPanel",
+        "CmpnInfoWeightDetailsPanel"
       ],
       "hasTitle": true,
       "title": "Weight units:",
@@ -590,7 +606,7 @@
         "dcsdCmpnInfoAgeDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Age in years (number):",
+      "title": "Years",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
@@ -608,7 +624,7 @@
         "dcsdCmpnInfoAgeDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Months (number 0 - 11)",
+      "title": "Months (0 - 11)",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
@@ -655,7 +671,7 @@
         "lvngCmpnInfoAgeDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Age in years (number):",
+      "title": "Years",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
@@ -673,7 +689,7 @@
         "lvngCmpnInfoAgeDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Months (number 0 - 11)",
+      "title": "Months (0 - 11)",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
@@ -1182,7 +1198,7 @@
         "SymptomsAgeDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Months (number 0 - 11)",
+      "title": "Months (0 - 11)",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true
@@ -2488,7 +2504,7 @@
         "ProcedureAgeDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Months (number 0 - 11)",
+      "title": "Months (0 - 11)",
       "hasVisibleIf": false,
       "isRequired": true,
       "hasValidators": true

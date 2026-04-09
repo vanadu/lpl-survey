@@ -39,7 +39,7 @@
                 {
                   "type": "panel",
                   "name": "ProcedureAgeDetailsPanel",
-                  "description": "Please enter age in years and months.",
+                  "description": "Please enter years and months.",
                   "elements": [
 
                     {
@@ -63,7 +63,7 @@
                       "type": "text",
                       "inputType": "number",
                       "name": "ProcedureAgeMonths",
-                      "title": "Months (number 0 - 11)",
+                      "title": "Months (0 - 11)",
                       "isRequired": true,
                       "min": 0,
                       "max": 11,

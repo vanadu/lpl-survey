@@ -16,6 +16,11 @@
           "html": "<p>This section asks some questions about how you learned about LP/GOLPP and about your decision-making process. Please don&lsquo;t overthink. In this section it&lsquo;s best to answer according to your first impulse.</p>"
         },
         {
+          "type": "html",
+          "name": "FactorsInfoText",
+          "html": "These questions ask about how you learned what you know about LP/GOLPP."
+        },
+        {
           "type": "panel",
           "name": "FactorsSourcesPanel",
           "elements": [
@@ -97,7 +102,11 @@
       "type": "panel",
       "name": "FactorsCard2Panel",
       "elements": [
-
+        {
+          "type": "html",
+          "name": "FactorsInfoText",
+          "html": "These ask about which factors played a role in the decisions you&lsquo;ve made about {CmpnName}'s LP/GOLPP/."
+        },
         {
           "type": "panel",
           "name": "FactorsCostPanel",

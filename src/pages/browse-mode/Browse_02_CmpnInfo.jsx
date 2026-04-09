@@ -127,6 +127,7 @@ const Browse_02_CmpnInfo = () => {
       </div>
 
       <div className="browse-panel-container" id="CmpnInfoWeightPanel">
+      <div className="browse-panel-container" id="CmpnInfoWeightDetailsPanel">
       <div className="browse-question-container" id="CmpnInfoWeight">
         <ShowAnswerContent
           header={
@@ -174,6 +175,7 @@ const Browse_02_CmpnInfo = () => {
       </div>
       </div>
       </div>
+      </div>
 
       <div className="browse-panel-container" id="CmpnInfoCard2Panel">
       <div className="browse-panel-container" id="CmpnInfoAgePanel">
@@ -184,7 +186,7 @@ const Browse_02_CmpnInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Age in years (number):
+              Years
             </span>
           }
           index={6}
@@ -202,7 +204,7 @@ const Browse_02_CmpnInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Months (number 0 - 11)
+              Months (0 - 11)
             </span>
           }
           index={7}
@@ -225,7 +227,7 @@ const Browse_02_CmpnInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Age in years (number):
+              Years
             </span>
           }
           index={8}
@@ -243,7 +245,7 @@ const Browse_02_CmpnInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Months (number 0 - 11)
+              Months (0 - 11)
             </span>
           }
           index={9}

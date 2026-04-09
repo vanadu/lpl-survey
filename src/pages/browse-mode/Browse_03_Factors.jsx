@@ -45,6 +45,10 @@ const Browse_03_Factors = () => {
         <p className="browse-content-text">This section asks some questions about how you learned about LP/GOLPP and about your decision-making process. Please don&amp;lsquo;t overthink. In this section it&amp;lsquo;s best to answer according to your first impulse.</p>
       </div>
 
+      <div className="browse-content-block" id="FactorsInfoText">
+        <p className="browse-content-text">These questions ask about how you learned what you know about LP/GOLPP.</p>
+      </div>
+
       <div className="browse-panel-container" id="FactorsSourcesPanel">
       <div className="browse-question-container" id="FactorsPriorKnowledge">
         <ShowAnswerContent
@@ -283,6 +287,10 @@ const Browse_03_Factors = () => {
       </div>
 
       <div className="browse-panel-container" id="FactorsCard2Panel">
+      <div className="browse-content-block" id="FactorsInfoText">
+        <p className="browse-content-text">These ask about which factors played a role in the decisions you&amp;lsquo;ve made about Bella&lsquo;s LP/GOLPP/.</p>
+      </div>
+
       <div className="browse-panel-container" id="FactorsCostPanel">
         <h3 className="browse-showanswer-title">How have financial considerations factored into your LP/GOLPP decisions?</h3>
       <div className="browse-question-container" id="FactorsProcedureCost">

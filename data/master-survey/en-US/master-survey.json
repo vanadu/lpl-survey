@@ -287,7 +287,12 @@
             {
               "type": "html",
               "name": "UserInfoVerificationText",
-              "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p><p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
+              "html": "<p>We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you're more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoMayContactText",
+              "html": "<p>With your consent, we may also contact you to talk in more detail about your experience with LP.</p>"
             },
             {
               "type": "panel",
@@ -426,9 +431,9 @@
               "title": "Age and Gender (optional)",
               "elements": [
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "UserInfoAgeGroup",
-                  "title": "Approximately what is your age?",
+                  "title": "Age group:",
                   "width": "70%",
                   "minWidth": "260px",
                   "choices": [
@@ -493,7 +498,7 @@
             {
               "type": "html",
               "name": "CmpnInfoHeading",
-              "html": "<h2>About Your LP/GOLPP companion<h2>"
+              "html": "<h2>About Your LP/GOLPP companion</h2>"
             },
             {
               "type": "html",
@@ -555,31 +560,37 @@
                   "name": "CmpnInfoWeightPanel",
                   "elements": [
                     {
-                      "type": "text",
-                      "name": "CmpnInfoWeight",
-                      "title": "{CmpnName}'s last known weight:",
-                      "description": "Please enter a number",
-                      "isRequired": true,
-                      "inputType": "number",
-                      "min": 1,
-                      "max": 2200,
-                      "validators": [
+                      "type": "panel",
+                      "name": "CmpnInfoWeightDetailsPanel",
+                      "elements": [
                         {
-                          "type": "numeric",
-                          "minValue": 1,
-                          "maxValue": 2200,
-                          "text": "Weight must be between 1 and 2200"
+                          "type": "text",
+                          "name": "CmpnInfoWeight",
+                          "title": "{CmpnName}'s last known weight:",
+                          "description": "Please enter a number",
+                          "isRequired": true,
+                          "inputType": "number",
+                          "min": 1,
+                          "max": 2200,
+                          "validators": [
+                            {
+                              "type": "numeric",
+                              "minValue": 1,
+                              "maxValue": 2200,
+                              "text": "Weight must be between 1 and 2200"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "boolean",
+                          "name": "CmpnInfoWeightUnits",
+                          "title": "Weight units:",
+                          "description": "Please choose pounds or kilos.",
+                          "isRequired": true,
+                          "labelTrue": "Kg",
+                          "labelFalse": "Lbs"
                         }
                       ]
-                    },
-                    {
-                      "type": "boolean",
-                      "name": "CmpnInfoWeightUnits",
-                      "title": "Weight units:",
-                      "description": "Please choose pounds or kilos.",
-                      "isRequired": true,
-                      "labelTrue": "Kg",
-                      "labelFalse": "Lbs"
                     }
                   ]
                 }
@@ -610,7 +621,7 @@
                           "type": "text",
                           "inputType": "number",
                           "name": "dcsdCmpnInfoAgeYears",
-                          "title": "Age in years (number):",
+                          "title": "Years",
                           "isRequired": true,
                           "min": "1",
                           "max": "40",
@@ -627,7 +638,7 @@
                           "type": "text",
                           "inputType": "number",
                           "name": "dcsdCmpnInfoAgeMonths",
-                          "title": "Months (number 0 - 11)",
+                          "title": "Months (0 - 11)",
                           "isRequired": true,
                           "min": 0,
                           "max": 11,
@@ -659,7 +670,7 @@
                           "type": "text",
                           "inputType": "number",
                           "name": "lvngCmpnInfoAgeYears",
-                          "title": "Age in years (number):",
+                          "title": "Years",
                           "isRequired": true,
                           "min": "1",
                           "max": "40",
@@ -676,7 +687,7 @@
                           "type": "text",
                           "inputType": "number",
                           "name": "lvngCmpnInfoAgeMonths",
-                          "title": "Months (number 0 - 11)",
+                          "title": "Months (0 - 11)",
                           "isRequired": true,
                           "min": 0,
                           "max": 11,
@@ -791,6 +802,11 @@
               "html": "<p>This section asks some questions about how you learned about LP/GOLPP and about your decision-making process. Please don&lsquo;t overthink. In this section it&lsquo;s best to answer according to your first impulse.</p>"
             },
             {
+              "type": "html",
+              "name": "FactorsInfoText",
+              "html": "These questions ask about how you learned what you know about LP/GOLPP."
+            },
+            {
               "type": "panel",
               "name": "FactorsSourcesPanel",
               "elements": [
@@ -888,6 +904,11 @@
           "type": "panel",
           "name": "FactorsCard2Panel",
           "elements": [
+            {
+              "type": "html",
+              "name": "FactorsInfoText",
+              "html": "These ask about which factors played a role in the decisions you&lsquo;ve made about {CmpnName}'s LP/GOLPP/."
+            },
             {
               "type": "panel",
               "name": "FactorsCostPanel",
@@ -1341,7 +1362,7 @@
                           "type": "text",
                           "inputType": "number",
                           "name": "SymptomsAgeMonths",
-                          "title": "Months (number 0 - 11)",
+                          "title": "Months (0 - 11)",
                           "isRequired": true,
                           "min": 0,
                           "max": 11,
@@ -3386,7 +3407,7 @@
                     {
                       "type": "panel",
                       "name": "ProcedureAgeDetailsPanel",
-                      "description": "Please enter age in years and months.",
+                      "description": "Please enter years and months.",
                       "elements": [
                         {
                           "type": "text",
@@ -3409,7 +3430,7 @@
                           "type": "text",
                           "inputType": "number",
                           "name": "ProcedureAgeMonths",
-                          "title": "Months (number 0 - 11)",
+                          "title": "Months (0 - 11)",
                           "isRequired": true,
                           "min": 0,
                           "max": 11,

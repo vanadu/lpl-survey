@@ -71,7 +71,7 @@ const Browse_04_Symptoms = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Months (number 0 - 11)
+              Months (0 - 11)
             </span>
           }
           index={2}

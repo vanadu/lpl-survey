@@ -97,6 +97,9 @@ const Browse_01_UserInfo = () => {
 
       <div className="browse-content-block" id="UserInfoVerificationText">
         <p className="browse-content-text">We contact a random sample of respondents for verification purposes. You may or may not be contacted. You can provide an email address or, if you&lsquo;re more comfortable communicating via Facebook Messenger, you can provide your Facebook account name.</p>
+      </div>
+
+      <div className="browse-content-block" id="UserInfoMayContactText">
         <p className="browse-content-text">With your consent, we may also contact you to talk in more detail about your experience with LP.</p>
       </div>
 
@@ -298,7 +301,7 @@ const Browse_01_UserInfo = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Approximately what is your age?
+              Age group:
             </span>
           }
           index={10}
@@ -308,23 +311,23 @@ const Browse_01_UserInfo = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-dropdown">
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Under 20</span>
             </li>
-            <li className="browse-showanswer-dropdown">
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>20-34</span>
             </li>
-            <li className="browse-showanswer-dropdown">
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>35-49</span>
             </li>
-            <li className="browse-showanswer-dropdown">
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>50-6</span>
             </li>
-            <li className="browse-showanswer-dropdown">
+            <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Over 65</span>
             </li>
