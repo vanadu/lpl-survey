@@ -198,12 +198,12 @@ const Browse_05_Primary = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+            <li className="browse-showanswer-boolean">
+              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
               <span>Yes</span>
             </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+            <li className="browse-showanswer-boolean">
+              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
               <span>No</span>
             </li>
           </ul>

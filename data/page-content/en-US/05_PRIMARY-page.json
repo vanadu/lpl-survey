@@ -132,28 +132,20 @@
           "name": "PrimaryReferralPanel",
           "elements": [
             {
-              "type": "radiogroup",
+              "type": "boolean",
               "name": "PrimaryDidRefer",
               "title": "Did your primary veterinarian refer you to a specialist about {CmpnName}'s LP/GOLPP?",
               "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                }
-              ],
-              "showOtherItem": false
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "swapOrder": true
             },
             {
               "type": "checkbox",
               "name": "PrimaryReferral",
               "title": "Which specialist were you referred to?",
               "isRequired": true,
-              "visibleIf": "{PrimaryDidRefer} = 'YES'",
+              "visibleIf": "{PrimaryDidRefer} = true",
               "choices": [
                 {
                   "value": "INTERNIST",

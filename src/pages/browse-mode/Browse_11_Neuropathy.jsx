@@ -49,8 +49,8 @@ const Browse_11_Neuropathy = () => {
         <p className="browse-content-text">NOTE: Polyneuropathy refers to the weakening of motor function due to neurological degeneration, particularly in the hind end. Symptoms can include hind-end weakness and incontinence. Younger dogs with idiopathic LP often don&lsquo;t suffer from LP-related polyneuropathy.</p>
       </div>
 
-      <div className="browse-panel-container" id="NeuropathySymptomsDoesHavePanel">
-      <div className="browse-question-container" id="NeuropathySymptomsDoesHave">
+      <div className="browse-panel-container" id="NeuropathySymptomsPanel">
+      <div className="browse-question-container" id="NeuropathySymptoms">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -163,7 +163,7 @@ const Browse_11_Neuropathy = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About now long after you first noticed breathing issues did the hind-end weakness begin?
+              About how long after you first noticed breathing issues did the hind-end weakness begin?
             </span>
           }
           index={4}

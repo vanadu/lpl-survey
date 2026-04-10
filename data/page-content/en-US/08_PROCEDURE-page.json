@@ -81,22 +81,14 @@
               ]
             },
             {
-              "type": "radiogroup",
+              "type": "boolean",
               "name": "ProcedureScheduled",
               "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
               "isRequired": true,
               "visibleIf": "{ProcedureDidHave} = true",
-              "choices": [
-                {
-                  "value": "SCHEDULED",
-                  "text": "Scheduled"
-                },
-                {
-                  "value": "EMERGENCY",
-                  "text": "Emergency"
-                }
-              ],
-              "showOtherItem": false
+              "labelTrue": "Scheduled",
+              "labelFalse": "Emergency",
+              "swapOrder": true
             },
             {
             "type": "dropdown",
@@ -340,6 +332,28 @@
               "type": "radiogroup",
               "name": "ProcedureStentHalitosis",
               "title": "Did {CmpnName} have halitosis after the stent implant?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureStentHalitosisImprove",
+              "title": "Did {CmpnName} the halitosis improve with time?",
               "isRequired": true,
               "choices": [
                 {
@@ -702,6 +716,7 @@
               "name": "ProcedureComplications",
               "title": "Were there immediate post-operative complications that required at least one extra night of inpatient care?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+              "visibleIf": "{ProcedureDidHave} = true",
               "choices": [
                 {
                   "value": "YES",

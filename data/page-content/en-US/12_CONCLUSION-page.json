@@ -181,10 +181,6 @@
               "isRequired": true,
               "choices": [
                 {
-                  "value": "NONE",
-                  "text": "No new conditions"
-                },
-                {
                   "value": "GERD",
                   "text": "Acid reflux (GERD)"
                 },
@@ -348,7 +344,7 @@
               "name": "ConclusionOtherPathDetails",
               "title": "What do you think you would do differently?",
               "isRequired": true,
-              "visibleIf": "{ProcedureDidHave} = true",
+              "visibleIf": "{ConclusionOtherPath} = 'YES' && {ProcedureDidHave} = true",
               "choices": [
                 {
                   "value": "NO_SURGERY",
@@ -376,7 +372,7 @@
               "name": "ConclusionOtherPathTimeframe",
               "title": "If you had another LP/GOLPP dog, would you do the surgical/stent procedure earlier or later?",
               "isRequired": true,
-              "visibleIf": "{ProcedureDidHave} = true",
+              "visibleIf": "{ProcedureDidHave} = true && {ConclusionOtherPath} = 'YES'",
               "choices": [
                 {
                   "value": "EARLIER",
@@ -388,30 +384,33 @@
                 },
                 {
                   "value": "SAME",
-                  "text": "Same time frame"
+                  "text": "At about the same time frame"
                 },
                 {
                   "value": "DONT_KNOW",
                   "text": "Don't know"
                 }
               ],
-              "showOtherItem": true,
-              "otherText": "Other option"
+              "showOtherItem": false
             },
             {
               "type": "checkbox",
               "name": "ConclusionOtherPathNoTreatment",
               "title": "If you were to have another LP/GOLPP companion, what if anything would you differently?",
               "isRequired": true,
-              "visibleIf": "{ProcedureDidHave} = false",
+              "visibleIf": "{ConclusionOtherPath} = 'YES' && {ProcedureDidHave} = false",
               "choices": [
                 {
                   "value": "NO_TREATMENT_SAME",
                   "text": "I would pursue the same course of action as with {CmpnName}"
                 },
                 {
-                  "value": "NO_TREATMENT_WOULD_DO",
+                  "value": "NO_TREATMENT_PROCEDURE",
                   "text": "I would pursue tieback, laryngeal stent, or other surgical procedure"
+                },
+                {
+                  "value": "NO_TREATMENT_THERAPY",
+                  "text": "I would pursue acupuncture, physical therapy, or other non-traditional approaches"
                 }
               ],
               "showOtherItem": false

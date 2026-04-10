@@ -584,6 +584,10 @@
               "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
               "choices": [
                 {
+                  "value": "SLIPPERY_ELM",
+                  "text": "Slippery elm"
+                },
+                {
                   "value": "TUMERIC",
                   "text": "Tumeric"
                 },
@@ -655,8 +659,24 @@
             },
             {
               "type": "rating",
-              "name": "MedicationSupplementsEffectiveness",
-              "title": "Please rate the overall effectiveness of the supplements:",
+              "name": "MedicationSupplementsBreathing",
+              "title": "What was the effect of the supplements on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect, 5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "MedicationSupplementsMobility",
+              "title": "What was the effect of the supplements on {CmpnName}'s mobility or behavior?",
               "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
@@ -671,7 +691,7 @@
             }
           ]
         },
-                {
+        {
           "type": "panel",
           "name": "MedicationProtocolPanel",
           "elements": [
@@ -726,8 +746,24 @@
 
             {
               "type": "rating",
-              "name": "MedicationProtocolEffectiveness",
-              "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
+              "name": "MedicationProtocolBreathing",
+              "title": "What was the effect of the blends or protocols on {CmpnName}'s breathing?",
+              "description": "1 = very negative, 3 = no effect, 5 = very positive",
+              "isRequired": true,
+              "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "MedicationProtocolMobility",
+              "title": "What was the effect of the blends or protocols on {CmpnName}'s mobility or behavior?",
               "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
@@ -742,7 +778,6 @@
             }
           ]
         }
-
       ]
     }
   ]

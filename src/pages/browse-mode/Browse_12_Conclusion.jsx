@@ -53,7 +53,7 @@ const Browse_12_Conclusion = () => {
 
       <div className="browse-panel-container" id="ConclusionsPanelLifeStatusFalse">
       <div className="browse-content-block" id="ConclusionsPanelLifeStatusFalseText">
-        <p className="browse-content-text">IMPORTANT: Please answer the questions about Bella in her current state of health:</p>
+        <p className="browse-content-text">IMPORTANT: Please answer the questions about Bella in her current state of health.</p>
       </div>
       </div>
 
@@ -121,7 +121,7 @@ const Browse_12_Conclusion = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Rstrictred access to stairs</span>
+              <span>Restrictred access to stairs</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -366,10 +366,6 @@ const Browse_12_Conclusion = () => {
           <p className="browse-question-description">The selections you made about the beginning of Bella&lsquo;s LP/GOLPP journey are preselected.</p>
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>No new conditions</span>
-            </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Acid reflux (GERD)</span>
@@ -839,7 +835,7 @@ const Browse_12_Conclusion = () => {
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Same time frame</span>
+              <span>At about the same time frame</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
@@ -871,6 +867,10 @@ const Browse_12_Conclusion = () => {
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>I would pursue tieback, laryngeal stent, or other surgical procedure</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>I would pursue acupuncture, physical therapy, or other non-traditional approaches</span>
             </li>
           </ul>
           </div>

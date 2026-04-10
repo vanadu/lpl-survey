@@ -78,7 +78,9 @@ export function getStyleDirectives(item) {
 
 
     "ConclusionGeneralCondition",
-    "ConclusionOtherConditions"
+    "ConclusionOtherConditions",
+
+    "ConclusionOtherPathTimeframe"
 
   ]);
 
@@ -131,7 +133,7 @@ export function getStyleDirectives(item) {
     "BreathingAspirationProcedureAntibiotics",
     "BreathingAspirationProcedureReflux",
 
-    "NeuropathySymptomsDoesHave",
+    "NeuropathySymptoms",
 
     "ConclusionLifestyleChanges",
 
@@ -283,9 +285,11 @@ export function getStyleDirectives(item) {
     "MedicationRefluxMedicationsAPEffect",
     "MedicationSupplementsType",
     "MedicationSupplementsCost",
-    "MedicationSupplementsEffectiveness",
+    "MedicationSupplementsBreathing",
+    "MedicationSupplementsMobility",
     "MedicationProtocolCost",
-    "MedicationProtocolEffectiveness",
+    "MedicationProtocolBreathing",
+    "MedicationProtocolMobility",
 
 
     "ProcedureScheduledWait",
@@ -331,11 +335,16 @@ export function getStyleDirectives(item) {
     "BreathingAspirationInpatient",
     "BreathingAspirationCost",
 
+    "NeuropathySymptomsFirst",
+    "NeuropathySymptomsTypeProgression",
+    "NeuropathyOtherIssues",
+
 
     "ConclusionLifestyleChangesDetails",
     "ConclusionGeneralCondition",
     "ConclusionQOL",
-    "ConclusionOtherConditions"
+    "ConclusionOtherConditions",
+    "ConclusionOtherPathTimeframe"
 
 
 
@@ -352,7 +361,9 @@ export function getStyleDirectives(item) {
     "FactorsSurgeryAnesthesia",
     "FactorsGeneralAge",
     "FactorsCircumstancesAccess",
-    "FactorsOther"
+    "FactorsOther",
+
+    "ConclusionOtherPath"
 
 
   ]);

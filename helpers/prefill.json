@@ -1,3 +1,273 @@
 {
+
   
+  "LandingConsent": "Yes",
+  "UserInfoFirstName": "Test01",
+  "UserInfoCountry": "US",
+  "UserInfoStateRegion": "MD",
+  "UserInfoAgeGroup": "OVER_65",
+  "UserInfoGender": "NOT_SAY",
+  "UserInfoContactType": false,
+  "UserInfoContactTypeEmail": "example@example.com",
+  "UserInfoContactTypeFacebook": "https://www.facebook.com/my.profile.name",
+  "UserInfoContactOK": true,
+
+  "CmpnName": "Billie",
+  "LifeStatus": false,
+
+  "CmpnInfoAnimalType": "CANINE",
+  "CmpnInfoBreed": "Lab",
+  "CmpnInfoGender": false,
+  "lvngCmpnInfoAgeYears": 14,
+  "lvngCmpnInfoAgeMonths": 0,
+  "dcsdCmpnInfoAgeYears": 14,
+  "dcsdCmpnInfoAgeMonths": 0,
+  "CmpnInfoWeight": 50,
+  "CmpnInfoWeightUnits": false,
+  "CmpnInfoDemeanor": 3,
+  "CmpnInfoAnxiety": 3,
+  "CmpnInfoHasInsurance": true,
+
+
+
+  "FactorsPriorKnowledge": true,
+  "FactorsSourcesTypes": [
+    "VETERINARIANS",
+    "WEBSITES",
+    "FACEBOOK_GROUPS"
+  ],
+
+  "FactorsClearAnswers": 4,
+
+
+  "FactorsProcedureCost": 4,
+  "FactorsComplicationsCost": 3,
+  "FactorsSymptomsBreathingCrisis": 5,
+  "FactorsSymptomsNeuropathy": 3,
+  "FactorsSurgeryAnesthesia": 4,
+  "FactorsSurgeryInpatient": 5,
+  "FactorsSurgeryLongTerm": 3,
+  "FactorsGeneralAge": 2,
+  "FactorsGeneralHealth": 4,
+  "FactorsGeneralCoexisting": 3,
+  "FactorsCircumstancesAccess": 1,
+  "FactorsCircumstancesFutureCare": 2,
+  "FactorsOther": "User input",
+
+  "SymptomsAgeYears": 13,
+  "SymptomsAgeMonths": 3,
+  "SymptomsType": [
+    "STRIDOR",
+    "COUGHING",
+    "EXERCISE_INTOLERANCE"
+  ],
+  "SymptomsSeverity": 1,
+  "SymptomsNeckRestraint": "YES",
+  "SymptomsIntubationWasIntubated": "YES",
+  "SymptomsIntubationCount": 5,
+  "SymptomsIntubationCountAfter": 3,
+
+  "SymptomsIntubationConcerns": true,
+  "SymptomsIntubationSymptoms": [
+    "COUGHING",
+    "PANTING",
+    "GAGGING"
+  ],
+  "SymptomsOtherConditions": "YES",
+  "SymptomsOtherConditionsType": [
+    "GERD",
+    "ARTHRITIS"
+  ],
+
+  "PrimaryInflammation": "YES",
+  "PrimaryReflux": "DONT_KNOW",
+  "PrimaryDidRefer": true,
+  "PrimaryReferral": [
+    "INTERNIST",
+    "HOLISTIC"
+  ],
+  "PrimaryDidDiscuss": "NO_MENTION",
+  "PrimaryInfoDetails": "NO_INFO",
+  "PrimarySurgery": "ADVISED_AGAINST",
+  "PrimarySurgeryPerception": "GENERAL_PERCEPTION",
+  "PrimaryChangedVets": "MORE_THAN_ONCE",
+  "PrimaryChangedVetsReason": [
+    "NOTHING_CAN_BE_DONE",
+    "AGE_ONLY"
+  ],
+  "PrimaryConfidence": "3",
+
+  "DiagnosisWho": [
+    "PRIMARY",
+    "INTERNIST"
+  ],
+  "DiagnosisMisdiagnosis": "YES",
+  "DiagnosisCorrectDiagnosis": "SOFT_TISSUE",
+  "DiagnosticType": "SCOPE",
+  "DiagnosisStage": "UNILATERAL",
+  "DiagnosisTimeAfterSymptoms": "ONE_TO_THREE",
+  "DiagnosisCost": "500_1500",
+  "DiagnosisSurgeonContingent": "YES",
+  "DiagnosisPrecededSurgery": "YES",
+
+  "MedicationPrescription": "YES",
+  "MedicationPrescriptionType": [
+    "DOXEPIN",
+    "TRAZODONE",
+    "CERENIA"
+  ],
+  "MedicationPrescriptionCost": "UNDER_50",
+  "MedicationPrescriptionDoxepinRatingBreathing": 4,
+  "MedicationPrescriptionDoxepinRatingMobility": 2,
+  "MedicationPrescriptionTrazodoneRatingBreathing": 3,
+  "MedicationPrescriptionTrazodoneRatingMobility": 4,
+  "MedicationPrescriptionGabapentinRatingBreathing": 5,
+  "MedicationPrescriptionGabapentinRatingMobility": 4,
+  "MedicationPrescriptionGalliprantRatingBreathing": 3,
+  "MedicationPrescriptionGalliprantRatingMobility": 3,
+  "MedicationPrescriptionSteroidRatingBreathing": 2,
+  "MedicationPrescriptionSteroidRatingMobility": 4,
+  "MedicationPrescriptionAntihistamineRatingBreathing": 3,
+  "MedicationPrescriptionAntihistamineRatingMobility": 3,
+  "MedicationPrescriptionCereniaRatingBreathing": 4,
+  "MedicationPrescriptionCereniaRatingMobility": 3,
+  "MedicationPrescriptionMeloxicamRatingBreathing": 2,
+  "MedicationPrescriptionMeloxicamRatingMobility": 3,
+  "MedicationPrescriptionAcepromineRatingBreathing": 3,
+  "MedicationPrescriptionAcepromineRatingMobility": 3,
+  "MedicationPrescriptionAlbuterolRatingBreathing": 3,
+  "MedicationPrescriptionAlbuterolRatingMobility": 3,
+  "MedicationPrescriptionTemarilPRatingBreathing": 3,
+  "MedicationPrescriptionTemarilPRatingMobility": 3,
+  "MedicationRefluxMedications": "YES_UNPRESCRIBED",
+  "MedicationRefluxMedicationsLPEffect": 3,
+  "MedicationRefluxMedicationsAPEffect": 3,
+  "MedicationSupplementsDidPurchase": "YES",
+  "MedicationSupplementsType": [
+    "TUMERIC",
+    "MYELIN_SHEATH",
+    "URSOLIC"
+  ],
+  "MedicationSupplementsCost": "51_100",
+  "MedicationSupplementsBreathing": 3,
+  "MedicationSupplementsMobility": 5,
+
+  "MedicationProtocolDidPurchase": "YES",
+  "MedicationProtocolCost": "51_100",
+  "MedicationProtocolBreathing": 2,
+  "MedicationProtocolMobility": 2,
+
+  "ProcedureDidHave": true,
+  "ProcedureAgeYears": "13",
+  "ProcedureAgeMonths": "6",
+  "ProcedureType":  [
+    "TIEBACK"
+  ],
+  "ProcedureScheduled": "SCHEDULED",
+  "ProcedureScheduledWait": "LESS_THAN_TWO_WEEKS",
+  "ProcedureIncisionInfection": "YES",
+  "ProcedureCostComplications": "1501_2500",
+  "ProcedureTiebackIncisionInfection": "YES",
+  "ProcedureTiebackSuturesFail": "YES",
+  "ProcedureTiebackSuturesFailTime": "UNDER_TWO_MONTHS",
+  "ProcedureTiebackRepeat": false,
+  "ProcedureStentType": "SILICONE",
+  "ProcedureStentDidMigrate": true,
+  "ProcedureStentReplaced": true,
+  "ProcedureStentHalitosis": "YES",
+  "ProcedureStentHalitosisRating": 2,
+  "ProcedureStentInfected": "YES",
+  "ProcedureStentInfectedHandling": "REMOVED_AND_REPLACED",
+  "ProcedureStentCostOnce": "1501_2500",
+  "ProcedureStentCostRepeat": "2001_3000",
+  "ProcedureStentComplications": "NO",
+  "ProcedureIssuesThroatclear": "YES",
+  "ProcedureIssuesThroatclearImproved": "YES",
+  "ProcedureAntibiotics": "YES",
+  "ProcedureRefluxMeds": "NO",
+  "ProcedureCost": "2501_4000",
+  "ProcedureComplications": "YES",
+  "ProcedureComplicationsCost": "1501_2500",
+  "ProcedureComparison": "YES",
+  "ProcedureChoice": "YES",
+  "ProcedureSurgeonInformation": 5,
+  "ProcedureSatisfaction": 5,
+
+
+
+
+  "TherapyDidHave": "YES",
+  "TherapyType": "ACUPUNCTURE",
+  "TherapyCost": "101_150",
+  "TherapyAcupunctureRatingBreathing": 3,
+  "TherapyAcupunctureRatingMobility": 4,
+  "TherapyTherapyRatingBreathing": 3,
+  "TherapyTherapyRatingMobility": 4,
+  "TherapyColdLaserRatingBreathing": 3,
+  "TherapyColdLaserRatingMobility": 4,
+  "TherapyChiroRatingBreathing": 3,
+  "TherapyChiroRatingMobility": 4,
+
+  "BreathingCrisisDidHave": "YES",
+  "BreathingCrisisCount": 5,
+  "BreathingEmergencyDidHave": "YES",
+  "BreathingEmergencyCount": 3,
+  "BreathingEmergencyCost": "MORE_THAN_1000",
+  "BreathingCrisisAdvice": "YES",
+  "BreathingCrisisAdviceType": [
+    "SEDATIVE",
+    "COOL_PLACE",
+    "EMERGENCY_FACILITY"
+  ],
+  "BreathingCrisisProductRecommended": "YES",
+  "BreathingCrisisProductRecommendedType": [
+    "SEDATIVE"
+  ],
+  "BreathingCrisisProductRecommendedForm": "INJECTIBLE",
+  "BreathingOxygenDidUse": "YES",
+  "BreathingCrisisOxygenPrevent": 4,
+  "BreathingCrisisOxygenRevive": 1,
+  "BreathingAspirationDidHave": "YES",
+  "BreathingAspirationCount": 3,
+  "BreathingAspirationAfterProcedure": 3,
+  "BreathingAspirationInpatient": "YES",
+  "BreathingAspirationInpatientCount": 3,
+  "BreathingAspirationCost": "1001_3000",
+
+
+  "NeuropathySymptoms": "YES",
+  "NeuropathySymptomsFirst": "BREATHING",
+  "NeuropathySymptomsBreathingOnset": "WEEKS",
+  "NeuropathySymptomsHindEndOnset": "MONTHS",
+  "NeuropathySymptomsTypeProgression": "HIND_END",
+  "NeuropathyOtherIssues": [
+    "ANXIETY"
+  ],
+
+  "ConclusionLifestyleChanges": "YES",
+  "ConclusionLifestyleChangesDetails": [
+   "EXERCISE",
+   "FEEDING",
+   "TRAVEL",
+   "SWIMMING",
+   "STAIRS"
+  ],
+  "ConclusionGeneralCondition": [
+    "HIND_END",
+    "FALLING"
+  ],
+  "ConclusionQOL": 2,
+  "ConclusionOtherConditionsNew": true,
+  "ConclusionUserLifestyle": 5,
+  "ConclusionUserDistress": 5,
+  "ConclusionOtherPath": "YES",
+  "ConclusionOtherPathDetails": "NO_SURGERY",
+  "ConclusionOtherPathTimeframe": "EARLIER",
+  "ConclusionOtherPathNoTreatment": "NO_TREATMENT_THERAPY",
+  "ConclusionCauseOfDeath": "QOL_POLYNEUROPATHY"
+
+
+
+
+
 }

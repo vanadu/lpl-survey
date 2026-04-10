@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-10T10:03:46.588Z",
+    "builtAt": "2026-04-10T13:22:15.739Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -1244,7 +1244,7 @@
         "SymptomsDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Has {CmpnName}ever had a history of pulling on a neck restraint or collar?",
+      "title": "Has {CmpnName} ever had a history of pulling on a neck restraint or collar?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1512,7 +1512,7 @@
     },
     "PrimaryDidRefer": {
       "name": "PrimaryDidRefer",
-      "type": "radiogroup",
+      "type": "boolean",
       "role": "question",
       "collect": true,
       "path": [
@@ -1538,7 +1538,7 @@
       "hasTitle": true,
       "title": "Which specialist were you referred to?",
       "hasVisibleIf": true,
-      "visibleIf": "{PrimaryDidRefer} = 'YES'",
+      "visibleIf": "{PrimaryDidRefer} = true",
       "isRequired": true
     },
     "PrimarySurgeryPanel": {
@@ -2365,8 +2365,8 @@
       "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
       "isRequired": true
     },
-    "MedicationSupplementsEffectiveness": {
-      "name": "MedicationSupplementsEffectiveness",
+    "MedicationSupplementsBreathing": {
+      "name": "MedicationSupplementsBreathing",
       "type": "rating",
       "role": "question",
       "collect": true,
@@ -2376,7 +2376,23 @@
         "MedicationSupplementsTypePanel"
       ],
       "hasTitle": true,
-      "title": "Please rate the overall effectiveness of the supplements:",
+      "title": "What was the effect of the supplements on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "MedicationSupplementsMobility": {
+      "name": "MedicationSupplementsMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard2Panel",
+        "MedicationSupplementsTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the effect of the supplements on {CmpnName}'s mobility or behavior?",
       "hasVisibleIf": true,
       "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
       "isRequired": true
@@ -2424,8 +2440,8 @@
       "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
       "isRequired": true
     },
-    "MedicationProtocolEffectiveness": {
-      "name": "MedicationProtocolEffectiveness",
+    "MedicationProtocolBreathing": {
+      "name": "MedicationProtocolBreathing",
       "type": "rating",
       "role": "question",
       "collect": true,
@@ -2435,7 +2451,23 @@
         "MedicationProtocolPanel"
       ],
       "hasTitle": true,
-      "title": "Please rate the overall effectiveness of the blends or 'protocols' you purchased for {CmpnName}:",
+      "title": "What was the effect of the blends or protocols on {CmpnName}'s breathing?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+      "isRequired": true
+    },
+    "MedicationProtocolMobility": {
+      "name": "MedicationProtocolMobility",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "Medication-page",
+        "MedicationCard2Panel",
+        "MedicationProtocolPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the effect of the blends or protocols on {CmpnName}'s mobility or behavior?",
       "hasVisibleIf": true,
       "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
       "isRequired": true
@@ -2544,7 +2576,7 @@
     },
     "ProcedureScheduled": {
       "name": "ProcedureScheduled",
-      "type": "radiogroup",
+      "type": "boolean",
       "role": "question",
       "collect": true,
       "path": [
@@ -2789,6 +2821,21 @@
       ],
       "hasTitle": true,
       "title": "Did {CmpnName} have halitosis after the stent implant?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureStentHalitosisImprove": {
+      "name": "ProcedureStentHalitosisImprove",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureStentPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} the halitosis improve with time?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -3056,7 +3103,8 @@
       ],
       "hasTitle": true,
       "title": "Were there immediate post-operative complications that required at least one extra night of inpatient care?",
-      "hasVisibleIf": false
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true"
     },
     "ProcedureCostComplications": {
       "name": "ProcedureCostComplications",
@@ -3683,8 +3731,8 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "NeuropathySymptomsDoesHavePanel": {
-      "name": "NeuropathySymptomsDoesHavePanel",
+    "NeuropathySymptomsPanel": {
+      "name": "NeuropathySymptomsPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -3695,15 +3743,15 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "NeuropathySymptomsDoesHave": {
-      "name": "NeuropathySymptomsDoesHave",
+    "NeuropathySymptoms": {
+      "name": "NeuropathySymptoms",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "NEUROPATHY-page",
         "NeuropathyCard1Panel",
-        "NeuropathySymptomsDoesHavePanel"
+        "NeuropathySymptomsPanel"
       ],
       "hasTitle": true,
       "title": "Over the course of {CmpnName}'s LP/GOLPP journey, did {CmpnName} experience persistent hind-end weakness?",
@@ -3718,12 +3766,12 @@
       "path": [
         "NEUROPATHY-page",
         "NeuropathyCard1Panel",
-        "NeuropathySymptomsDoesHavePanel"
+        "NeuropathySymptomsPanel"
       ],
       "hasTitle": true,
       "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
       "hasVisibleIf": true,
-      "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
+      "visibleIf": "{NeuropathySymptoms} = 'YES'",
       "isRequired": true
     },
     "NeuropathyCard2Panel": {
@@ -3748,7 +3796,7 @@
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'"
+      "visibleIf": "{NeuropathySymptoms} = 'YES'"
     },
     "NeuropathySymptomsBreathingOnset": {
       "name": "NeuropathySymptomsBreathingOnset",
@@ -3763,7 +3811,7 @@
       "hasTitle": true,
       "title": "About how long after you first noticed hind-end weakness did the breathing issues begin?",
       "hasVisibleIf": true,
-      "visibleIf": "{NeuropathySymptomsFirst} = 'HIND_END'",
+      "visibleIf": "{NeuropathySymptoms} = 'YES' && {NeuropathySymptomsFirst} = 'HIND_END'",
       "isRequired": true
     },
     "NeuropathySymptomsHindEndOnset": {
@@ -3777,9 +3825,9 @@
         "NeuropathyHindEndDoesHavePanel"
       ],
       "hasTitle": true,
-      "title": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
+      "title": "About how long after you first noticed breathing issues did the hind-end weakness begin?",
       "hasVisibleIf": true,
-      "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
+      "visibleIf": "{NeuropathySymptoms} = 'YES' && {NeuropathySymptomsFirst} = 'BREATHING'",
       "isRequired": true
     },
     "NeuropathySymptomsTypeProgression": {
@@ -3795,7 +3843,7 @@
       "hasTitle": true,
       "title": "Which progressed faster, the breathing issues or the hind-end weakness?",
       "hasVisibleIf": true,
-      "visibleIf": "{SymptomsType} contains 'HIND_END' || {NeuropathySymptomsDoesHave} = 'YES'",
+      "visibleIf": "{SymptomsType} contains 'HIND_END' || {NeuropathySymptoms} = 'YES'",
       "isRequired": true
     },
     "NeuropathyOtherIssues": {
@@ -4076,7 +4124,7 @@
       "hasTitle": true,
       "title": "What do you think you would do differently?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true",
+      "visibleIf": "{ConclusionOtherPath} = 'YES' && {ProcedureDidHave} = true",
       "isRequired": true
     },
     "ConclusionOtherPathTimeframe": {
@@ -4108,7 +4156,7 @@
       "hasTitle": true,
       "title": "If you were to have another LP/GOLPP companion, what if anything would you differently?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = false",
+      "visibleIf": "{ConclusionOtherPath} = 'YES' && {ProcedureDidHave} = false",
       "isRequired": true
     },
     "ConclusionDifferentChoices": {

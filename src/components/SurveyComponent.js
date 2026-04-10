@@ -5,7 +5,7 @@ import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { SharpLight } from "survey-core/themes";
 import prefillData from "../../helpers/prefill.json";
-import registry from "../../helpers/registry.generated.json";
+import registry from "../../data/registry/en-US/registry.generated.json";
 import { attachPanelDataNameStamper } from "../../helpers/panelDataNameStamper";
 import { getStyleDirectives } from "./CustomClasses";
 import { attachSurveySyncHandlers } from "../../helpers/syncSelectionValues";

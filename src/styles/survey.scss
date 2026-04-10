@@ -470,9 +470,7 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
   box-shadow: none!important;
   padding: 0!important;
   margin: 0!important;
-  // background: rgba(255, 0, 0, .3) !important; //devred
   .sd-panel__content {
-    // background: rgba(0, 0, 255, .3) !important; //devblue
       padding: 0!important;
     margin: 0!important;
   }
@@ -624,6 +622,13 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
     margin: 0!important;
   }
 }
+
+// !VA Override surver-two-col width for LandingConsent 
+[data-name="LandingConsent"] fieldset.sd-selectbase {
+  width: 460px;
+}
+
+
 
 // !VA LIFE-STATUS IMAGEPICKER
 [data-name="LifeStatus"] {
@@ -790,16 +795,17 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 // !VA Force two-column radiogroups to two columns
 .sd-selectbase.survey-two-col {
   .sd-item.sd-radio {
+    background: rgba(255, 0, 0, .3) !important; //devred
     flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
     box-sizing: border-box;
     @include tablet {
-      flex: 0 0 calc(30% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
+      flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
     }
     @include desktop {
-      flex: 0 0 calc(30% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
+      flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
     }
     @include ldesktop {
-      flex: 0 0 calc(30% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
+      flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
     }
   }
 }
@@ -1537,84 +1543,3 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 TO DEPRECATE
 ------------------ */
 
-// // !VA Suppress borders on panels 
-// [data-name="UserInfoNameCountryPanel"],
-// [data-name="UserInfoAgeGenderPanel"]
-
-// {
-//   &.sd-element--nested-with-borders   {
-//     padding: 0!important;
-//     padding: 0!important;
-//     margin: 0!important;
-//     padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-//     padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-//     padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-//     padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-//     @include ldesktop {
-
-//     }
-//   }
-// }
-
-
-// !VA Top-level panels never have any border or whitespace - they are only structural for card distribution on mobile
-// [data-name="LandingCard1Panel"], 
-// [data-name="LandingCard2Panel"],
-// [data-name="UserInfoCard1Panel"],
-// [data-name="UserInfoCard2Panel"]
-//  {
-
-//   &.sd-element--with-frame {
-//   box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
-//     box-shadow: none!important;
-//     background: rgba(0, 128, 0, .3) !important; //devgreen
-//   }
-// }
-
-// [data-name="LandingCard1Panel"], 
-// [data-name="LandingCard2Panel"],
-// [data-name="UserInfoCard1Panel"],
-// [data-name="UserInfoCard2Panel"]
-
-
-
-/* IMPORTANT: remove hover-to-open behavior (unreliable) */
-/* .survey-dropdown:hover .survey-dropdown__list { display: flex; } */
-
-// !VA I think this is deprecated - contentWrap not found in any component
-// /* Content starts hidden */
-// .success-contentWrap {
-//   opacity: 0;
-//   transform: translateY(6px);
-// }
-
-// /* When done, fade content in */
-// .success-contentWrap.isVisible {
-//   opacity: 1;
-//   transform: translateY(0);
-// }
-
-
-// !VA GLOBAL PADDING
-.sd-container-modern .sd-row {
-  // padding: 0!important;
-  // margin: 0!important;
-  // margin-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  // margin-top: var(--sd-base-vertical-padding);
-  // margin-top: var(--sd-base-vertical-padding)!important;
-  // !VA BASE PADDING
-  // !VA Default
-  // --sd-base-padding: calc(5 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // !VA Global override
-  // --sd-base-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
-  // !VA BASE VERTICAL PADDING
-  // !VA Default
-  // --sd-base-vertical-padding: calc(4 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // !VA Global override
-  // --sd-base-vertical-padding: calc(1 * var(--sjs-base-unit, var(--base-unit, 8px)))!important;
-  // !VA BASEPAGE PADDING
-  // !VA  Default
-  // --sd-page-vertical-padding: calc(3 * var(--sjs-base-unit, var(--base-unit, 8px)));
-  // !VA Global override
-  // --sd-page-vertical-padding: calc(3* var(--sjs-base-unit, var(--base-unit, 8px)))!important;
-}

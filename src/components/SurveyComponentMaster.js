@@ -446,7 +446,7 @@ export default function SurveyComponentMaster() {
       checkboxToDropdown: [{ source: "FactorsSourcesTypes", target: "FactorsBestSource" }],
       checkboxToCheckbox: [
         {
-          source: "EarlyOtherConditionsType",
+          source: "SymptomsOtherConditionsType",
           target: "ConclusionOtherConditions",
           options: { onlyIfEmpty: true, copyOther: true },
         },

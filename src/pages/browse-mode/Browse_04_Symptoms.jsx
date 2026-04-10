@@ -270,7 +270,7 @@ const Browse_04_Symptoms = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Has Bellaever had a history of pulling on a neck restraint or collar? 
+              Has Bella ever had a history of pulling on a neck restraint or collar? 
             </span>
           }
           index={5}
