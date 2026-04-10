@@ -186,7 +186,7 @@
             {
               "type": "radiogroup",
               "name": "PrimarySurgery",
-              "title": "Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for {CmpnName}'s LP/GOLPP?",
+              "title": "Did your primary veterinarian make a recommendation about tieback or other surgical procedures for {CmpnName}'s LP/GOLPP?",
               "isRequired": true,
               "choices": [
                 {
@@ -207,7 +207,7 @@
             {
               "type": "radiogroup",
               "name": "PrimarySurgeryPerception",
-              "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
+              "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of LP/GOLPP surgery?",
               "isRequired": true,
               "visibleIf": "{PrimarySurgery} = 'ADVISED_AGAINST'",
               "choices": [

@@ -270,7 +270,7 @@ const Browse_04_Symptoms = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Does/Did Bella have a history of pulling on a neck restraint or collar? 
+              Has Bellaever had a history of pulling on a neck restraint or collar? 
             </span>
           }
           index={5}
@@ -303,7 +303,7 @@ const Browse_04_Symptoms = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Had Bella been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?
+              Was Bella ever intubated under anesthesia?
             </span>
           }
           index={6}
@@ -330,14 +330,100 @@ const Browse_04_Symptoms = () => {
         </ShowAnswerContent>
       </div>
 
+      <div className="browse-question-container" id="SymptomsIntubationCount">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              About how many times was Bella intubated under anesthesia?
+            </span>
+          }
+          index={7}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Once</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Twice</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Three times</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Four times</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Five times</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Six or more times</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="SymptomsIntubationCountAfter">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              About how many times was Bella intubated under anesthesia after the first appearance of LP/GOLPP symptoms?
+            </span>
+          }
+          index={8}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Once</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Twice</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Three times</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Four times</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Five times</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Six or more times</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
       <div className="browse-question-container" id="SymptomsIntubationConcerns">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Do you remember having any concerns about how the intubation/anesthesia affected Bella?
+              Do you remember having any concerns about how the intubation or anesthesia affected Bella?
             </span>
           }
-          index={7}
+          index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -361,10 +447,10 @@ const Browse_04_Symptoms = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What symptoms did Bella have after the intubation/anesthesia?
+              What symptoms or behaviors did Bella have after the intubation with anesthesia?
             </span>
           }
-          index={8}
+          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -385,7 +471,19 @@ const Browse_04_Symptoms = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Labored breathing</span>
+              <span>Loud or labored breathing</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Change in bark</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>General weakness or lethargy</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Change in appetite</span>
             </li>
           </ul>
           </div>
@@ -403,7 +501,7 @@ const Browse_04_Symptoms = () => {
               When Bella first started showing symptoms of LP, did she have any other health conditions?
             </span>
           }
-          index={9}
+          index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -434,7 +532,7 @@ const Browse_04_Symptoms = () => {
               Which other conditions did Bella have when the first LP symptoms appeared?
             </span>
           }
-          index={10}
+          index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -472,6 +570,10 @@ const Browse_04_Symptoms = () => {
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Hemangiosarcoma</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Other cancer</span>
             </li>
           </ul>
           </div>

@@ -288,7 +288,7 @@ const Browse_03_Factors = () => {
 
       <div className="browse-panel-container" id="FactorsCard2Panel">
       <div className="browse-content-block" id="FactorsInfoText">
-        <p className="browse-content-text">These ask about which factors played a role in the decisions you&amp;lsquo;ve made about Bella&lsquo;s LP/GOLPP/.</p>
+        <p className="browse-content-text">These questions ask which factors played a role in the decisions you&amp;lsquo;ve made about Bella&lsquo;s&amp;nbsp;LP/GOLPP.</p>
       </div>
 
       <div className="browse-panel-container" id="FactorsCostPanel">

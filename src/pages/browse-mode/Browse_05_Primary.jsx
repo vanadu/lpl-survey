@@ -252,7 +252,7 @@ const Browse_05_Primary = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for Bella&lsquo;s LP/GOLPP?
+              Did your primary veterinarian make a recommendation about tieback or other surgical procedures for Bella&lsquo;s LP/GOLPP?
             </span>
           }
           index={7}
@@ -283,7 +283,7 @@ const Browse_05_Primary = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Do you feel like your primary veterinarian&lsquo;s recommendation against surgery was due to Bella&lsquo;s condition or to a generally negative perception of tieback surgery?
+              Do you feel like your primary veterinarian&lsquo;s recommendation against surgery was due to Bella&lsquo;s condition or to a generally negative perception of LP/GOLPP surgery?
             </span>
           }
           index={8}

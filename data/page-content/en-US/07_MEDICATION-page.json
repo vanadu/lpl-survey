@@ -9,7 +9,7 @@
         {
           "type": "html",
           "name": "MedicationHeading",
-          "html": "<h2>{CmpnName}'s LP/GOLPP medications</h2>"
+          "html": "<h2>{CmpnName}'s LP/GOLPP Medications</h2>"
         },
         {
           "type": "html",
@@ -24,7 +24,7 @@
             {
               "type": "radiogroup",
               "name": "MedicationPrescription",
-              "title": "Did/does {CmpnName} take any prescription medications for LP/GOLPP symptoms?",
+              "title": "{cvDoThirdPersonSingularInitialCap} {CmpnName} take any prescription medications for LP/GOLPP symptoms?",
               "isRequired": true,
               "choices": [
                 {
@@ -125,6 +125,12 @@
             "showOtherItem": true,
             "showNoneItem": true,
             "required": true
+            },
+            {
+              "type": "html",
+              "name": "MedicationRatingText",
+              "title": "Medications can affect not only breathing, but also behavior and mobility. This section asks you to rate the medications separately for their effect on {CmpnName}'s breathing and mobility/behavior.",
+              "html": ""
             },
             {
               "type": "rating",

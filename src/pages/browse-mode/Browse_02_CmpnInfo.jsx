@@ -221,7 +221,7 @@ const Browse_02_CmpnInfo = () => {
       </div>
 
       <div className="browse-panel-container" id="lvngCmpnInfoAgePanel">
-        <h3 className="browse-showanswer-title">At about what age did Bella cross over the Rainbow Bridge?</h3>
+        <h3 className="browse-showanswer-title">About how old is Bella?</h3>
       <div className="browse-panel-container" id="lvngCmpnInfoAgeDetailsPanel">
       <div className="browse-question-container" id="lvngCmpnInfoAgeYears">
         <ShowAnswerContent

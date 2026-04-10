@@ -149,16 +149,16 @@
                 {
                   "type": "radiogroup",
                   "name": "DiagnosisStage",
-                  "title": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+                  "title": "According to the diagnosis, what in what stage was {CmpnName}'s LP/GOLPP?",
                   "isRequired": true,
                   "choices": [
                     {
                       "value": "UNILATERAL",
-                      "text": "Unilateral (one-side)"
+                      "text": "One side partially or fully paralyzed (unilateral)"
                     },
                     {
                       "value": "BILATERAL",
-                      "text": "Bilateral (both sides)"
+                      "text": "Both sides partially or fully paralyzed (bilateral)"
                     },
                     {
                       "value": "WASNT_TOLD",

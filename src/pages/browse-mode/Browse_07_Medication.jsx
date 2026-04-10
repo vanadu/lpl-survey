@@ -38,7 +38,7 @@ const Browse_07_Medication = () => {
 
       <div className="browse-panel-container" id="MedicationCard1Panel">
       <div className="browse-content-block" id="MedicationHeading">
-        <h2 className="browse-content-heading">Bella&lsquo;s LP/GOLPP medications</h2>
+        <h2 className="browse-content-heading">Bella&lsquo;s LP/GOLPP Medications</h2>
       </div>
 
       <div className="browse-content-block" id="MedicationTextImportant">
@@ -50,7 +50,7 @@ const Browse_07_Medication = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did/does Bella take any prescription medications for LP/GOLPP symptoms?
+              &#123;cvDoThirdPersonSingularInitialCap&#125; Bella take any prescription medications for LP/GOLPP symptoms?
             </span>
           }
           index={1}

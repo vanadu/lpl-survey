@@ -51,6 +51,8 @@ export function getStyleDirectives(item) {
     "FactorsSourcesTypes",
 
     "SymptomsType",
+    "SymptomsIntubationCount",
+    "SymptomsIntubationCountAfter",
     "SymptomsIntubationSymptoms",
     "SymptomsOtherConditionsType",
 
@@ -68,6 +70,7 @@ export function getStyleDirectives(item) {
     "ProcedureScheduled",
 
     "BreathingCrisisCount",
+    "BreathingEmergencyCount",
     "BreathingCrisisProductRecommendedType",
     "BreathingAspirationCount",
     "BreathingAspirationAfterProcedure",
@@ -121,7 +124,7 @@ export function getStyleDirectives(item) {
     "ProcedureChoice",
 
     "BreathingCrisisAdvice",
-    "BreathingEmergencyCount",
+
     "BreathingCrisisProductRecommended",
     "BreathingAspirationDidHave",
     "BreathingAspirationInpatient",
@@ -129,6 +132,8 @@ export function getStyleDirectives(item) {
     "BreathingAspirationProcedureReflux",
 
     "NeuropathySymptomsDoesHave",
+
+    "ConclusionLifestyleChanges",
 
     "ConclusionStentAlternative"
 
@@ -164,13 +169,22 @@ export function getStyleDirectives(item) {
 
     "FactorsBestSource",
 
+    "MedicationPrescriptionCost",
+    "MedicationSupplementsCost",
+    "MedicationProtocolCost",
+
     "ProcedureScheduledWait",
     "ProcedureCost",
-    "ProcedureComplicationsCost",
+    "ProcedureCostComplications",
     "ProcedureStentType",
+
+    "TherapyCost",
 
     "BreathingEmergencyCost",
     "BreathingAspirationCost",
+
+    "NeuropathySymptomsBreathingOnset",
+    "NeuropathySymptomsHindEndOnset"
 
 
 
@@ -180,6 +194,7 @@ export function getStyleDirectives(item) {
 
   const CONTROL_WIDTH_600 = new Set([
     "UserInfoContactTypeFacebook",
+    "DiagnosticType"
   ]);
 
   // Only use to remove borders on panels
@@ -200,11 +215,9 @@ export function getStyleDirectives(item) {
     "SymptomsAgePanel",
 
     "DiagnosisDetailsPanel",
-    
+
     "ProcedureAgePanel",
     "ProcedureAgeDetailsPanel"
-
-    
   ]);
 
   // Only use to make panel contents two-column to make them look the same as two-column questions.
@@ -274,7 +287,7 @@ export function getStyleDirectives(item) {
     "MedicationProtocolCost",
     "MedicationProtocolEffectiveness",
 
-    "ProcedureScheduled",
+
     "ProcedureScheduledWait",
     "ProcedureTiebackSuturesFailTime",
     "ProcedureTiebackRepeat",
@@ -289,6 +302,7 @@ export function getStyleDirectives(item) {
     "ProcedureCostComplications",
     "ProcedureIssuesThroatclear",
     "ProcedureIssuesThroatclearImproved",
+    "ProcedureRefluxMeds",
     "ProcedureChoice",
     "ProcedureSurgeonInformation",
     "ProcedureSatisfaction",
@@ -318,6 +332,7 @@ export function getStyleDirectives(item) {
     "BreathingAspirationCost",
 
 
+    "ConclusionLifestyleChangesDetails",
     "ConclusionGeneralCondition",
     "ConclusionQOL",
     "ConclusionOtherConditions"
@@ -344,11 +359,11 @@ export function getStyleDirectives(item) {
 
   const QUESTION_SEPARATOR_BELOW = new Set([
     "UserInfoContactType",
-    "UserInfoContactTypeFacebook",
     "CmpnInfoAnimalType",
     "CmpnInfoDemeanor",
     "CmpnInfoAnxiety",
     "DiagnosisWho",
+    "ProcedureAgeDetailsPanel"
   ]);
 
   const QUESTION_SPACE_BELOW = new Set([

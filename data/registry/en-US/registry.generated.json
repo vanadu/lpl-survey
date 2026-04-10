@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-09T09:52:56.707Z",
+    "builtAt": "2026-04-10T10:03:46.588Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -10,6 +10,7 @@
       "cvDcsdCmpnAgeYearsAsMonths",
       "cvDoFirstPersonSingularInitialCap",
       "cvDoThirdPersonSingular",
+      "cvDoThirdPersonSingularInitialCap",
       "cvDurationOfSymptomsInMonths",
       "cvEndOfLife",
       "cvGenderObjectPronoun",
@@ -640,7 +641,7 @@
         "CmpnInfoAgePanel"
       ],
       "hasTitle": true,
-      "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+      "title": "About how old is {CmpnName}?",
       "hasVisibleIf": true,
       "visibleIf": "{LifeStatus} = false"
     },
@@ -1243,7 +1244,7 @@
         "SymptomsDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Does/Did {CmpnName} have a history of pulling on a neck restraint or collar?",
+      "title": "Has {CmpnName}ever had a history of pulling on a neck restraint or collar?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1270,8 +1271,40 @@
         "SymptomsIntubationPanel"
       ],
       "hasTitle": true,
-      "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
+      "title": "Was {CmpnName} ever intubated under anesthesia?",
       "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "SymptomsIntubationCount": {
+      "name": "SymptomsIntubationCount",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "SYMPTOMS-page",
+        "SymptomsCard1Panel",
+        "SymptomsIntubationPanel"
+      ],
+      "hasTitle": true,
+      "title": "About how many times was {CmpnName} intubated under anesthesia?",
+      "hasVisibleIf": true,
+      "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
+      "isRequired": true
+    },
+    "SymptomsIntubationCountAfter": {
+      "name": "SymptomsIntubationCountAfter",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "SYMPTOMS-page",
+        "SymptomsCard1Panel",
+        "SymptomsIntubationPanel"
+      ],
+      "hasTitle": true,
+      "title": "About how many times was {CmpnName} intubated under anesthesia after the first appearance of LP/GOLPP symptoms?",
+      "hasVisibleIf": true,
+      "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
       "isRequired": true
     },
     "SymptomsIntubationConcerns": {
@@ -1285,7 +1318,7 @@
         "SymptomsIntubationPanel"
       ],
       "hasTitle": true,
-      "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
+      "title": "Do you remember having any concerns about how the intubation or anesthesia affected {CmpnName}?",
       "hasVisibleIf": true,
       "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
       "isRequired": true
@@ -1301,7 +1334,7 @@
         "SymptomsIntubationPanel"
       ],
       "hasTitle": true,
-      "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
+      "title": "What symptoms or behaviors did {CmpnName} have after the intubation with anesthesia?",
       "hasVisibleIf": true,
       "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES' && {SymptomsIntubationConcerns} = true"
     },
@@ -1531,7 +1564,7 @@
         "PrimarySurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for {CmpnName}'s LP/GOLPP?",
+      "title": "Did your primary veterinarian make a recommendation about tieback or other surgical procedures for {CmpnName}'s LP/GOLPP?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1546,7 +1579,7 @@
         "PrimarySurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
+      "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of LP/GOLPP surgery?",
       "hasVisibleIf": true,
       "visibleIf": "{PrimarySurgery} = 'ADVISED_AGAINST'",
       "isRequired": true
@@ -1731,7 +1764,7 @@
         "DiagnosisDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+      "title": "According to the diagnosis, what in what stage was {CmpnName}'s LP/GOLPP?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1817,7 +1850,7 @@
         "MedicationPrescriptionPanel"
       ],
       "hasTitle": true,
-      "title": "Did/does {CmpnName} take any prescription medications for LP/GOLPP symptoms?",
+      "title": "{cvDoThirdPersonSingularInitialCap} {CmpnName} take any prescription medications for LP/GOLPP symptoms?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -2521,7 +2554,8 @@
       ],
       "hasTitle": true,
       "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
-      "hasVisibleIf": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
     },
     "ProcedureScheduledWait": {
@@ -2537,7 +2571,7 @@
       "hasTitle": true,
       "title": "How far in advance was the procedure scheduled?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureScheduled} = 'SCHEDULED'",
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureScheduled} = 'SCHEDULED'",
       "isRequired": true
     },
     "ProcedureCard2Panel": {
@@ -2888,7 +2922,8 @@
         "ProcedureCard2Panel"
       ],
       "hasTitle": false,
-      "hasVisibleIf": false
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true"
     },
     "ProcedureIncisionInfection": {
       "name": "ProcedureIncisionInfection",
@@ -2960,7 +2995,7 @@
         "ProcedureMedicationsPanel"
       ],
       "hasTitle": true,
-      "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
+      "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the procedure?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
@@ -2976,7 +3011,7 @@
         "ProcedureMedicationsPanel"
       ],
       "hasTitle": true,
-      "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the surgery?",
+      "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the procedure?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
@@ -3036,7 +3071,7 @@
       "hasTitle": true,
       "title": "What was the approximate cost of the post-operative complications, not including aspiration pneumonia?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureComplications} = 'YES'",
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureComplications} = 'YES'",
       "isRequired": true
     },
     "ProcedureRatingPanel": {
@@ -3307,7 +3342,7 @@
       "hasTitle": true,
       "title": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
       "hasVisibleIf": true,
-      "visibleIf": "{TherapyType} = notempty",
+      "visibleIf": "{TherapyType} notempty",
       "isRequired": true
     },
     "BreathingCard1Panel": {
@@ -3687,7 +3722,8 @@
       ],
       "hasTitle": true,
       "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
-      "hasVisibleIf": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
       "isRequired": true
     },
     "NeuropathyCard2Panel": {
@@ -3826,8 +3862,23 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "ConclusionSpecialConsiderations": {
-      "name": "ConclusionSpecialConsiderations",
+    "ConclusionLifestyleChanges": {
+      "name": "ConclusionLifestyleChanges",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did you make any changes to {CmpnName}'s lifestyle or routine due to {cvGenderObjectPronoun} LP/GOLPP?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionLifestyleChangesDetails": {
+      "name": "ConclusionLifestyleChangesDetails",
       "type": "checkbox",
       "role": "question",
       "collect": true,
@@ -3837,8 +3888,9 @@
         "ConclusionDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Please describe any special considerations for {CmpnName} due to LP-related breathing issues:",
-      "hasVisibleIf": false,
+      "title": "Please describe any lifestyle restrictions or changes you made for {CmpnName} due to {cvGenderObjectPronoun} LP/GOLPP:",
+      "hasVisibleIf": true,
+      "visibleIf": "{ConclusionLifestyleChanges} = 'YES'",
       "isRequired": true
     },
     "ConclusionGeneralCondition": {
@@ -3852,7 +3904,7 @@
         "ConclusionDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Please describe {CmpnName}'s general physical condition:",
+      "title": "How has {CmpnName}'s condition changed since the first LP/GOLPP symptoms appeared?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -3914,6 +3966,36 @@
       "visibleIf": "{ConclusionOtherConditionsNew} = true",
       "isRequired": true
     },
+    "ConclusionUserLifestyle": {
+      "name": "ConclusionUserLifestyle",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionOtherConditionsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Has {CmpnName}'s LP/GOLPP resulted in a substantial change to your lifestyle?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionUserDistress": {
+      "name": "ConclusionUserDistress",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionOtherConditionsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Has {CmpnName}'s LP/GOLPP caused you or anyone in your family significant emotional distress or anxiety?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "ConclusionCard2Panel": {
       "name": "ConclusionCard2Panel",
       "type": "panel",
@@ -3966,8 +4048,8 @@
       "title": "These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?",
       "hasVisibleIf": false
     },
-    "ConclusionOtherPathTieback": {
-      "name": "ConclusionOtherPathTieback",
+    "ConclusionOtherPath": {
+      "name": "ConclusionOtherPath",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
@@ -3977,13 +4059,12 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "What if anything would you differently?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TIEBACK'",
+      "title": "Would you do anything differently than with {CmpnName}?",
+      "hasVisibleIf": false,
       "isRequired": true
     },
-    "ConclusionOtherPathBVEAP": {
-      "name": "ConclusionOtherPathBVEAP",
+    "ConclusionOtherPathDetails": {
+      "name": "ConclusionOtherPathDetails",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
@@ -3993,13 +4074,13 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "title": "What do you think you would do differently?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'BVEAP'",
+      "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
     },
-    "ConclusionOtherPathStent": {
-      "name": "ConclusionOtherPathStent",
+    "ConclusionOtherPathTimeframe": {
+      "name": "ConclusionOtherPathTimeframe",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
@@ -4009,41 +4090,9 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??",
+      "title": "If you had another LP/GOLPP dog, would you do the surgical/stent procedure earlier or later?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'STENT'",
-      "isRequired": true
-    },
-    "ConclusionOtherPathArytenoidectomy": {
-      "name": "ConclusionOtherPathArytenoidectomy",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionCard2Panel",
-        "ConclusionOtherPathPanel"
-      ],
-      "hasTitle": true,
-      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'ARYTENOIDECTOMY'",
-      "isRequired": true
-    },
-    "ConclusionOtherPathVentrilocordectomy": {
-      "name": "ConclusionOtherPathVentrilocordectomy",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionCard2Panel",
-        "ConclusionOtherPathPanel"
-      ],
-      "hasTitle": true,
-      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VENTRILOCORDECTOMY'",
+      "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
     },
     "ConclusionOtherPathNoTreatment": {
@@ -4057,25 +4106,9 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+      "title": "If you were to have another LP/GOLPP companion, what if anything would you differently?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = false",
-      "isRequired": true
-    },
-    "ConclusionStentAlternative": {
-      "name": "ConclusionStentAlternative",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "CONCLUSION-page",
-        "ConclusionCard2Panel",
-        "ConclusionOtherPathPanel"
-      ],
-      "hasTitle": true,
-      "title": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureType} notcontains 'STENT'",
       "isRequired": true
     },
     "ConclusionDifferentChoices": {
@@ -4089,7 +4122,7 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).",
+      "title": "Please add any brief comments about your and {CmpnName}'s LP/GOLPP journey (optional, maximum 250 characters).",
       "hasVisibleIf": false,
       "isRequired": false
     },

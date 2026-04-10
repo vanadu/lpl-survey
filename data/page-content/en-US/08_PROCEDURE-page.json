@@ -85,6 +85,7 @@
               "name": "ProcedureScheduled",
               "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
               "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
               "choices": [
                 {
                   "value": "SCHEDULED",
@@ -102,7 +103,7 @@
             "name": "ProcedureScheduledWait",
             "title": "How far in advance was the procedure scheduled?",
             "isRequired": true,
-            "visibleIf": "{ProcedureScheduled} = 'SCHEDULED'",
+            "visibleIf": "{ProcedureDidHave} = true && {ProcedureScheduled} = 'SCHEDULED'",
             "choices": [
               {
                 "value": "LESS_THAN_TWO_WEEKS",
@@ -533,8 +534,8 @@
         {
           "type": "panel",
           "name": "ProcedureIssuesPanel",
+          "visibleIf": "{ProcedureDidHave} = true",
           "elements": [
-
             {
               "type": "radiogroup",
               "name": "ProcedureIncisionInfection",
@@ -610,7 +611,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureAntibiotics",
-              "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
+              "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the procedure?",
               "isRequired": true,
               "visibleIf": "{ProcedureDidHave} = true",
               "choices": [
@@ -632,7 +633,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureRefluxMeds",
-              "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the surgery?",
+              "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the procedure?",
               "isRequired": true,
               "visibleIf": "{ProcedureDidHave} = true",
               "choices": [
@@ -723,7 +724,7 @@
               "title": "What was the approximate cost of the post-operative complications, not including aspiration pneumonia?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
-              "visibleIf": "{ProcedureComplications} = 'YES'",
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureComplications} = 'YES'",
               "choices": [
                 {
                   "value": "NOT_SAY",

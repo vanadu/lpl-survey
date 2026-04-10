@@ -53,7 +53,7 @@
               "name": "NeuropathySymptomsFirst",
               "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
               "isRequired": true,
-
+              "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
               "choices": [
                 {
                   "value": "HIND_END",
@@ -128,7 +128,7 @@
             {
               "type": "dropdown",
               "name": "NeuropathySymptomsHindEndOnset",
-              "title": "About now long after you first noticed breathing issues did the hind-end weakness begin?",
+              "title": "About how long after you first noticed breathing issues did the hind-end weakness begin?",
               "isRequired": true,
               "visibleIf": "{NeuropathySymptomsFirst} = 'BREATHING'",
               "choices": [

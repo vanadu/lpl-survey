@@ -97,7 +97,7 @@
               "showOtherItem": true,
               "showNoneItem": true,
               "noneText": "Don't know",
-              "otherText": "Other (max 250 characters)"
+              "otherText": "Other"
             },
             {
               "type": "rating",
@@ -109,7 +109,7 @@
             {
               "type": "radiogroup",
               "name": "SymptomsNeckRestraint",
-              "title": "Does/Did {CmpnName} have a history of pulling on a neck restraint or collar? ",
+              "title": "Has {CmpnName} ever had a history of pulling on a neck restraint or collar? ",
               "isRequired": true,
               "choices": [
                 {
@@ -137,7 +137,7 @@
             {
               "type": "radiogroup",
               "name": "SymptomsIntubationWasIntubated",
-              "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
+              "title": "Was {CmpnName} ever intubated under anesthesia?",
               "isRequired": true,
               "choices": [
                 {
@@ -155,9 +155,77 @@
               ]
             },
             {
+              "type": "radiogroup",
+              "name": "SymptomsIntubationCount",
+              "title": "About how many times was {CmpnName} intubated under anesthesia?",
+              "isRequired": true,
+              "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
+              "choices": [
+                {
+                  "value": 1,
+                  "text": "Once"
+                },
+                {
+                  "value": 2,
+                  "text": "Twice"
+                },
+                {
+                  "value": 3,
+                  "text": "Three times"
+                },
+                {
+                  "value": 4,
+                  "text": "Four times"
+                },
+                {
+                  "value": 5,
+                  "text": "Five times"
+                },
+                {
+                  "value": 6,
+                  "text": "Six or more times"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "SymptomsIntubationCountAfter",
+              "title": "About how many times was {CmpnName} intubated under anesthesia after the first appearance of LP/GOLPP symptoms?",
+              "isRequired": true,
+              "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
+              "choices": [
+                {
+                  "value": 1,
+                  "text": "Once"
+                },
+                {
+                  "value": 2,
+                  "text": "Twice"
+                },
+                {
+                  "value": 3,
+                  "text": "Three times"
+                },
+                {
+                  "value": 4,
+                  "text": "Four times"
+                },
+                {
+                  "value": 5,
+                  "text": "Five times"
+                },
+                {
+                  "value": 6,
+                  "text": "Six or more times"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
               "type": "boolean",
               "name": "SymptomsIntubationConcerns",
-              "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
+              "title": "Do you remember having any concerns about how the intubation or anesthesia affected {CmpnName}?",
               "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
               "labelTrue": "Yes",
               "labelFalse": "No",
@@ -167,7 +235,7 @@
             {
               "type": "checkbox",
               "name": "SymptomsIntubationSymptoms",
-              "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
+              "title": "What symptoms or behaviors did {CmpnName} have after the intubation with anesthesia?",
               "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES' && {SymptomsIntubationConcerns} = true",
               "choices": [
                 {
@@ -184,7 +252,19 @@
                 },
                 {
                   "value": "LABORED_BREATHING",
-                  "text": "Labored breathing"
+                  "text": "Loud or labored breathing"
+                },
+                {
+                  "value": "BARK_CHANGE",
+                  "text": "Change in bark"
+                },
+                {
+                  "value": "WEAKNESS",
+                  "text": "General weakness or lethargy"
+                },
+                {
+                  "value": "APPETITE",
+                  "text": "Change in appetite"
                 }
               ],
               "choicesOrder": "none",
@@ -225,12 +305,12 @@
               "showOtherItem": false
             },
             {
-            "type": "checkbox",
-            "name": "SymptomsOtherConditionsType",
-            "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
-            "isRequired": true,
-            "visibleIf": "{SymptomsOtherConditions} = 'YES'",
-            "choices": [
+              "type": "checkbox",
+              "name": "SymptomsOtherConditionsType",
+              "title": "Which other conditions did {CmpnName} have when the first LP symptoms appeared?",
+              "isRequired": true,
+              "visibleIf": "{SymptomsOtherConditions} = 'YES'",
+              "choices": [
                 {
                   "value": "GERD",
                   "text": "Acid reflux (GERD)"
@@ -262,15 +342,19 @@
                 {
                   "value": "HEMANGIOSARCOMA",
                   "text": "Hemangiosarcoma"
+                },
+                {
+                  "value": "OTHER_CANCER",
+                  "text": "Other cancer"
                 }
               ],
               "choicesOrder": "none",
-              "otherText": "Other (max. 250 characters)",
+              "otherText": "Other",
               "showOtherItem": true
             }
           ]
         }
-        ]
+      ]
     }
   ]
 }

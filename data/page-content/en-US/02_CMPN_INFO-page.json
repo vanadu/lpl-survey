@@ -172,7 +172,7 @@
             {
               "type": "panel",
               "name": "lvngCmpnInfoAgePanel",
-              "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+              "title": "About how old is {CmpnName}?",
               "visibleIf": "{LifeStatus} = false",
               "elements": [
 

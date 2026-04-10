@@ -205,7 +205,7 @@ const Browse_06_Diagnosis = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Was Bella diagnosed with unilateral or bilateral LP?
+              According to the diagnosis, what in what stage was Bella&lsquo;s LP/GOLPP?
             </span>
           }
           index={5}
@@ -217,11 +217,11 @@ const Browse_06_Diagnosis = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Unilateral (one-side)</span>
+              <span>One side partially or fully paralyzed (unilateral)</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Bilateral (both sides)</span>
+              <span>Both sides partially or fully paralyzed (bilateral)</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>

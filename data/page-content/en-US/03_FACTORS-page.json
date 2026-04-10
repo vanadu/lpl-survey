@@ -105,7 +105,7 @@
         {
           "type": "html",
           "name": "FactorsInfoText",
-          "html": "These ask about which factors played a role in the decisions you&lsquo;ve made about {CmpnName}'s LP/GOLPP/."
+          "html": "These questions ask which factors played a role in the decisions you&lsquo;ve made about {CmpnName}'s&nbsp;LP/GOLPP."
         },
         {
           "type": "panel",

@@ -70,6 +70,12 @@
     },
     {
       "type": "calculatedvalue",
+      "name": "cvDoThirdPersonSingularInitialCap",
+      "expression": "iif({LifeStatus} = true, 'Did', 'Does')",
+      "includeIntoResult": true
+    },
+    {
+      "type": "calculatedvalue",
       "name": "cvGenderSubjectPronoun",
       "expression": "iif({CmpnInfoGender} = true, 'she', 'he')",
       "includeIntoResult": true
@@ -449,7 +455,10 @@
                       "value": "35_49",
                       "text": "35-49"
                     },
-                    "50-6",
+                    {
+                      "value": "50_64",
+                      "text": "50-64"
+                    },
                     {
                       "value": "OVER_65",
                       "text": "Over 65"
@@ -658,7 +667,7 @@
                 {
                   "type": "panel",
                   "name": "lvngCmpnInfoAgePanel",
-                  "title": "At about what age did {CmpnName} cross over the Rainbow Bridge?",
+                  "title": "About how old is {CmpnName}?",
                   "visibleIf": "{LifeStatus} = false",
                   "elements": [
                     {
@@ -907,7 +916,7 @@
             {
               "type": "html",
               "name": "FactorsInfoText",
-              "html": "These ask about which factors played a role in the decisions you&lsquo;ve made about {CmpnName}'s LP/GOLPP/."
+              "html": "These questions ask which factors played a role in the decisions you&lsquo;ve made about {CmpnName}'s&nbsp;LP/GOLPP."
             },
             {
               "type": "panel",
@@ -1408,7 +1417,7 @@
                   "showOtherItem": true,
                   "showNoneItem": true,
                   "noneText": "Don't know",
-                  "otherText": "Other (max 250 characters)"
+                  "otherText": "Other"
                 },
                 {
                   "type": "rating",
@@ -1420,7 +1429,7 @@
                 {
                   "type": "radiogroup",
                   "name": "SymptomsNeckRestraint",
-                  "title": "Does/Did {CmpnName} have a history of pulling on a neck restraint or collar? ",
+                  "title": "Has {CmpnName}ever had a history of pulling on a neck restraint or collar? ",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1448,7 +1457,7 @@
                 {
                   "type": "radiogroup",
                   "name": "SymptomsIntubationWasIntubated",
-                  "title": "Had {CmpnName} been intubated under anesthesia for any reason in the 12 months prior to the first LP symptoms?",
+                  "title": "Was {CmpnName} ever intubated under anesthesia?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1466,9 +1475,77 @@
                   ]
                 },
                 {
+                  "type": "radiogroup",
+                  "name": "SymptomsIntubationCount",
+                  "title": "About how many times was {CmpnName} intubated under anesthesia?",
+                  "isRequired": true,
+                  "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
+                  "choices": [
+                    {
+                      "value": 1,
+                      "text": "Once"
+                    },
+                    {
+                      "value": 2,
+                      "text": "Twice"
+                    },
+                    {
+                      "value": 3,
+                      "text": "Three times"
+                    },
+                    {
+                      "value": 4,
+                      "text": "Four times"
+                    },
+                    {
+                      "value": 5,
+                      "text": "Five times"
+                    },
+                    {
+                      "value": 6,
+                      "text": "Six or more times"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "SymptomsIntubationCountAfter",
+                  "title": "About how many times was {CmpnName} intubated under anesthesia after the first appearance of LP/GOLPP symptoms?",
+                  "isRequired": true,
+                  "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
+                  "choices": [
+                    {
+                      "value": 1,
+                      "text": "Once"
+                    },
+                    {
+                      "value": 2,
+                      "text": "Twice"
+                    },
+                    {
+                      "value": 3,
+                      "text": "Three times"
+                    },
+                    {
+                      "value": 4,
+                      "text": "Four times"
+                    },
+                    {
+                      "value": 5,
+                      "text": "Five times"
+                    },
+                    {
+                      "value": 6,
+                      "text": "Six or more times"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
                   "type": "boolean",
                   "name": "SymptomsIntubationConcerns",
-                  "title": "Do you remember having any concerns about how the intubation/anesthesia affected {CmpnName}?",
+                  "title": "Do you remember having any concerns about how the intubation or anesthesia affected {CmpnName}?",
                   "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
                   "labelTrue": "Yes",
                   "labelFalse": "No",
@@ -1478,7 +1555,7 @@
                 {
                   "type": "checkbox",
                   "name": "SymptomsIntubationSymptoms",
-                  "title": "What symptoms did {CmpnName} have after the intubation/anesthesia?",
+                  "title": "What symptoms or behaviors did {CmpnName} have after the intubation with anesthesia?",
                   "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES' && {SymptomsIntubationConcerns} = true",
                   "choices": [
                     {
@@ -1495,7 +1572,19 @@
                     },
                     {
                       "value": "LABORED_BREATHING",
-                      "text": "Labored breathing"
+                      "text": "Loud or labored breathing"
+                    },
+                    {
+                      "value": "BARK_CHANGE",
+                      "text": "Change in bark"
+                    },
+                    {
+                      "value": "WEAKNESS",
+                      "text": "General weakness or lethargy"
+                    },
+                    {
+                      "value": "APPETITE",
+                      "text": "Change in appetite"
                     }
                   ],
                   "choicesOrder": "none",
@@ -1573,10 +1662,14 @@
                     {
                       "value": "HEMANGIOSARCOMA",
                       "text": "Hemangiosarcoma"
+                    },
+                    {
+                      "value": "OTHER_CANCER",
+                      "text": "Other cancer"
                     }
                   ],
                   "choicesOrder": "none",
-                  "otherText": "Other (max. 250 characters)",
+                  "otherText": "Other",
                   "showOtherItem": true
                 }
               ]
@@ -1771,7 +1864,7 @@
                 {
                   "type": "radiogroup",
                   "name": "PrimarySurgery",
-                  "title": "Did your primary veterinarian make a recommendation about tieback or other LP/GOLPP surgeries for {CmpnName}'s LP/GOLPP?",
+                  "title": "Did your primary veterinarian make a recommendation about tieback or other surgical procedures for {CmpnName}'s LP/GOLPP?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1792,7 +1885,7 @@
                 {
                   "type": "radiogroup",
                   "name": "PrimarySurgeryPerception",
-                  "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of tieback surgery?",
+                  "title": "Do you feel like your primary veterinarian's recommendation against surgery was due to {CmpnName}'s condition or to a generally negative perception of LP/GOLPP surgery?",
                   "isRequired": true,
                   "visibleIf": "{PrimarySurgery} = 'ADVISED_AGAINST'",
                   "choices": [
@@ -2057,16 +2150,16 @@
                     {
                       "type": "radiogroup",
                       "name": "DiagnosisStage",
-                      "title": "Was {CmpnName} diagnosed with unilateral or bilateral LP?",
+                      "title": "According to the diagnosis, what in what stage was {CmpnName}'s LP/GOLPP?",
                       "isRequired": true,
                       "choices": [
                         {
                           "value": "UNILATERAL",
-                          "text": "Unilateral (one-side)"
+                          "text": "One side partially or fully paralyzed (unilateral)"
                         },
                         {
                           "value": "BILATERAL",
-                          "text": "Bilateral (both sides)"
+                          "text": "Both sides partially or fully paralyzed (bilateral)"
                         },
                         {
                           "value": "WASNT_TOLD",
@@ -2172,7 +2265,7 @@
             {
               "type": "html",
               "name": "MedicationHeading",
-              "html": "<h2>{CmpnName}'s LP/GOLPP medications</h2>"
+              "html": "<h2>{CmpnName}'s LP/GOLPP Medications</h2>"
             },
             {
               "type": "html",
@@ -2186,7 +2279,7 @@
                 {
                   "type": "radiogroup",
                   "name": "MedicationPrescription",
-                  "title": "Did/does {CmpnName} take any prescription medications for LP/GOLPP symptoms?",
+                  "title": "{cvDoThirdPersonSingularInitialCap} {CmpnName} take any prescription medications for LP/GOLPP symptoms?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -2287,6 +2380,12 @@
                   "showOtherItem": true,
                   "showNoneItem": true,
                   "required": true
+                },
+                {
+                  "type": "html",
+                  "name": "MedicationRatingText",
+                  "title": "Medications can affect not only breathing, but also behavior and mobility. This section asks you to rate the medications separately for their effect on {CmpnName}'s breathing and mobility/behavior.",
+                  "html": ""
                 },
                 {
                   "type": "rating",
@@ -3452,6 +3551,7 @@
                   "name": "ProcedureScheduled",
                   "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
                   "isRequired": true,
+                  "visibleIf": "{ProcedureDidHave} = true",
                   "choices": [
                     {
                       "value": "SCHEDULED",
@@ -3469,7 +3569,7 @@
                   "name": "ProcedureScheduledWait",
                   "title": "How far in advance was the procedure scheduled?",
                   "isRequired": true,
-                  "visibleIf": "{ProcedureScheduled} = 'SCHEDULED'",
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureScheduled} = 'SCHEDULED'",
                   "choices": [
                     {
                       "value": "LESS_THAN_TWO_WEEKS",
@@ -3905,6 +4005,7 @@
             {
               "type": "panel",
               "name": "ProcedureIssuesPanel",
+              "visibleIf": "{ProcedureDidHave} = true",
               "elements": [
                 {
                   "type": "radiogroup",
@@ -3980,7 +4081,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ProcedureAntibiotics",
-                  "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?",
+                  "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the procedure?",
                   "isRequired": true,
                   "visibleIf": "{ProcedureDidHave} = true",
                   "choices": [
@@ -4002,7 +4103,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ProcedureRefluxMeds",
-                  "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the surgery?",
+                  "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the procedure?",
                   "isRequired": true,
                   "visibleIf": "{ProcedureDidHave} = true",
                   "choices": [
@@ -4093,7 +4194,7 @@
                   "title": "What was the approximate cost of the post-operative complications, not including aspiration pneumonia?",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{ProcedureComplications} = 'YES'",
+                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureComplications} = 'YES'",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -4593,7 +4694,7 @@
                   "title": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
                   "description": "If you don't know exactly, it's OK to guesstimate.",
                   "isRequired": true,
-                  "visibleIf": "{TherapyType} = notempty",
+                  "visibleIf": "{TherapyType} notempty",
                   "choices": [
                     {
                       "value": "UNDER_100",
@@ -4678,20 +4779,28 @@
               "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
               "choices": [
                 {
-                  "value": "ONE",
+                  "value": 1,
                   "text": "One"
                 },
                 {
-                  "value": "TWO",
+                  "value": 2,
                   "text": "Two"
                 },
                 {
-                  "value": "THREE",
+                  "value": 3,
                   "text": "Three"
                 },
                 {
-                  "value": "FOUR_OR_MORE",
-                  "text": "Four or more"
+                  "value": 4,
+                  "text": "Four"
+                },
+                {
+                  "value": 5,
+                  "text": "Five"
+                },
+                {
+                  "value": 6,
+                  "text": "Six or more"
                 }
               ],
               "showOtherItem": false
@@ -4725,16 +4834,28 @@
               "isRequired": true,
               "choices": [
                 {
-                  "value": "ONE",
+                  "value": 1,
                   "text": "One"
                 },
                 {
-                  "value": "TWO",
+                  "value": 2,
                   "text": "Two"
                 },
                 {
-                  "value": "MORE_THAN_TWO",
-                  "text": "More than two"
+                  "value": 3,
+                  "text": "Three"
+                },
+                {
+                  "value": 4,
+                  "text": "Four"
+                },
+                {
+                  "value": 5,
+                  "text": "Five"
+                },
+                {
+                  "value": 6,
+                  "text": "Six or more"
                 }
               ],
               "showOtherItem": false,
@@ -4795,6 +4916,7 @@
               "type": "checkbox",
               "name": "BreathingCrisisAdviceType",
               "title": "What advice did they give you to help you deal with a breathing crisis?",
+              "description": "Please check all that apply",
               "isRequired": true,
               "visibleIf": "{BreathingCrisisAdvice} = 'YES'",
               "choices": [
@@ -5224,6 +5346,7 @@
                   "name": "NeuropathySymptomsFirst",
                   "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
                   "isRequired": true,
+                  "visibleIf": "{NeuropathySymptomsDoesHave} = 'YES'",
                   "choices": [
                     {
                       "value": "HIND_END",
@@ -5426,30 +5549,56 @@
               "name": "ConclusionDetailsPanel",
               "elements": [
                 {
-                  "type": "checkbox",
-                  "name": "ConclusionSpecialConsiderations",
-                  "title": "Please describe any special considerations for {CmpnName} due to LP-related breathing issues:",
+                  "type": "radiogroup",
+                  "name": "ConclusionLifestyleChanges",
+                  "title": "Did you make any changes to {CmpnName}'s lifestyle or routine due to {cvGenderObjectPronoun} LP/GOLPP?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "NO_CONSIDERATIONS",
-                      "text": "No special considerations"
+                      "value": "YES",
+                      "text": "Yes"
                     },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ],
+                  "showOtherItem": false
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ConclusionLifestyleChangesDetails",
+                  "title": "Please describe any lifestyle restrictions or changes you made for {CmpnName} due to {cvGenderObjectPronoun} LP/GOLPP:",
+                  "isRequired": true,
+                  "visibleIf": "{ConclusionLifestyleChanges} = 'YES'",
+                  "choices": [
                     {
                       "value": "EXERCISE",
-                      "text": "Exercise limitations"
+                      "text": "Exercise restrictions"
                     },
                     {
-                      "value": "FOOD",
-                      "text": "Type, amount or frequency of feeding"
+                      "value": "FEEDING",
+                      "text": "Changes in food and/or feeding frequency"
                     },
                     {
                       "value": "TRAVEL",
                       "text": "Travel restrictions"
                     },
                     {
-                      "value": "EXCITEMENT",
-                      "text": "Other behavior restrictions i.e., anxiety, excitement"
+                      "value": "SWIMMING",
+                      "text": "Restricted swimming and access to water"
+                    },
+                    {
+                      "value": "STAIRS",
+                      "text": "Rstrictred access to stairs"
+                    },
+                    {
+                      "value": "INTERACTION",
+                      "text": "Limitations on interaction with people or other animals"
                     }
                   ],
                   "showOtherItem": true
@@ -5457,20 +5606,20 @@
                 {
                   "type": "checkbox",
                   "name": "ConclusionGeneralCondition",
-                  "title": "Please describe {CmpnName}'s general physical condition:",
+                  "title": "How has {CmpnName}'s condition changed since the first LP/GOLPP symptoms appeared?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "NO_SYMPTOMS",
-                      "text": "No noticeable symptoms"
+                      "value": "NO_CHANGE",
+                      "text": "No significant change"
                     },
                     {
-                      "value": "HIND_END",
-                      "text": "Significant hind-end weakness"
+                      "value": "KNUCKLING",
+                      "text": "Knuckling"
                     },
                     {
                       "value": "FALLING",
-                      "text": "Frequent falling"
+                      "text": "Frequent falling while walking"
                     },
                     {
                       "value": "GET_UP",
@@ -5483,6 +5632,14 @@
                     {
                       "value": "FECAL",
                       "text": "Fecal incontinence"
+                    },
+                    {
+                      "value": "COGNITIVE",
+                      "text": "Cognitive or behavioral changes"
+                    },
+                    {
+                      "value": "ANXIETY",
+                      "text": "Significant increase in anxiety"
                     }
                   ],
                   "showOtherItem": false
@@ -5578,11 +5735,81 @@
                     {
                       "value": "HEMANGIOSARCOMA",
                       "text": "Hemangiosarcoma"
+                    },
+                    {
+                      "value": "CANCER",
+                      "text": "Cancer or malignant tumor"
                     }
                   ],
                   "choicesOrder": "none",
-                  "otherText": "Other (max. 250 characters)",
+                  "otherText": "Other",
                   "showOtherItem": true
+                },
+                {
+                  "type": "rating",
+                  "name": "ConclusionUserLifestyle",
+                  "title": "Has {CmpnName}'s LP/GOLPP resulted in a substantial change to your lifestyle?",
+                  "description": "1 = no, not at all, 5 = yes, very much",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "rating",
+                  "name": "ConclusionUserDistress",
+                  "title": "Has {CmpnName}'s LP/GOLPP caused you or anyone in your family significant emotional distress or anxiety?",
+                  "description": "1 = no, not at all, 5 = yes, very much",
+                  "isRequired": true,
+                  "rateValues": [
+                    {
+                      "value": 1,
+                      "text": "1"
+                    },
+                    {
+                      "value": 2,
+                      "text": "2"
+                    },
+                    {
+                      "value": 3,
+                      "text": "3"
+                    },
+                    {
+                      "value": 4,
+                      "text": "4"
+                    },
+                    {
+                      "value": 5,
+                      "text": "5"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
                 }
               ]
             }
@@ -5614,7 +5841,7 @@
                     },
                     {
                       "value": "BREATHING_CRISIS",
-                      "text": "LP-related breathing crisis"
+                      "text": "Fatal LP-related breathing crisis"
                     },
                     {
                       "value": "ASPIRATION",
@@ -5629,16 +5856,8 @@
                       "text": "Quality of life due to LP-related breathing problems"
                     },
                     {
-                      "value": "CANCER",
-                      "text": "Cancer"
-                    },
-                    {
-                      "value": "SEIZURE",
-                      "text": "Seizure, stroke, or cardiac event"
-                    },
-                    {
-                      "value": "INFECTION",
-                      "text": "Bacterial/viral infection"
+                      "value": "QOL_AGING",
+                      "text": "Poor quality of life due to aging"
                     },
                     {
                       "value": "STOPPED_EATING",
@@ -5646,7 +5865,7 @@
                     }
                   ],
                   "showOtherItem": true,
-                  "otherText": "Other reasons (please briefly explain)"
+                  "otherText": "Other cause unrelated to GOLPP (please explain)"
                 }
               ]
             },
@@ -5657,170 +5876,93 @@
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "ConclusionOtherPathTieback",
-                  "title": "What if anything would you differently?",
-                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TIEBACK'",
+                  "name": "ConclusionOtherPath",
+                  "title": "Would you do anything differently than with {CmpnName}?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "TIEBACK_SAME",
-                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                      "value": "YES",
+                      "text": "Yes, I would do things differently."
                     },
                     {
-                      "value": "TIEBACK_NO",
-                      "text": "I would not do tieback surgery again"
+                      "value": "NO",
+                      "text": "No, I would choose the same course of action."
                     },
                     {
-                      "value": "TIEBACK_SOONER",
-                      "text": "I would do tieback surgery sooner than I did with {CmpnName}"
-                    },
-                    {
-                      "value": "TIEBACK_LATER",
-                      "text": "I would wait to do tieback surgery longer than I did with {CmpnName}"
+                      "value": "DONT_KNOW",
+                      "text": "Don't know or prefer not to say."
                     }
                   ],
                   "showOtherItem": false
                 },
                 {
                   "type": "radiogroup",
-                  "name": "ConclusionOtherPathBVEAP",
-                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'BVEAP'",
+                  "name": "ConclusionOtherPathDetails",
+                  "title": "What do you think you would do differently?",
                   "isRequired": true,
+                  "visibleIf": "{ProcedureDidHave} = true",
                   "choices": [
                     {
-                      "value": "BVEAP_SAME",
-                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                      "value": "NO_SURGERY",
+                      "text": "I would not pursue surgery for another LP/GOLPP dog."
                     },
                     {
-                      "value": "BVEAP_NO",
-                      "text": "I would not do BVEAP surgery again"
+                      "value": "DIFFERENT_PROCEDURE",
+                      "text": "I would pursue a different surgery or a laryngeal stent rather than the one {CmpnName} had."
                     },
                     {
-                      "value": "BVEAP_SOONER",
-                      "text": "I would do BVEAP surgery sooner than I did with {CmpnName}"
+                      "value": "DIFFERENT_VET",
+                      "text": "If would find a different surgeon to do the same procedure {CmpnName} had."
                     },
                     {
-                      "value": "BVEAP_LATER",
-                      "text": "I would wait to do BVEAP surgery longer than I did with {CmpnName}"
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
                     }
                   ],
-                  "showOtherItem": false
+                  "showOtherItem": true,
+                  "otherText": "Other option"
                 },
                 {
                   "type": "radiogroup",
-                  "name": "ConclusionOtherPathStent",
-                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??",
+                  "name": "ConclusionOtherPathTimeframe",
+                  "title": "If you had another LP/GOLPP dog, would you do the surgical/stent procedure earlier or later?",
                   "isRequired": true,
-                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'STENT'",
+                  "visibleIf": "{ProcedureDidHave} = true",
                   "choices": [
                     {
-                      "value": "STENT_SAME",
-                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                      "value": "EARLIER",
+                      "text": "Earlier"
                     },
                     {
-                      "value": "STENT_NO",
-                      "text": "I would not do the laryngeal stent implant again"
+                      "value": "LATER",
+                      "text": "Later"
                     },
                     {
-                      "value": "STENT_SOONER",
-                      "text": "I would do laryngeal stent implant surgery sooner than I did with {CmpnName}"
+                      "value": "SAME",
+                      "text": "Same time frame"
                     },
                     {
-                      "value": "STENT_LATER",
-                      "text": "I would wait to do a laryngeal stent implant longer than I did with {CmpnName}"
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
                     }
                   ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "ConclusionOtherPathArytenoidectomy",
-                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'ARYTENOIDECTOMY'",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "ARYTENOIDECTOMY_SAME",
-                      "text": "I would pursue the same treatment path as with {CmpnName}"
-                    },
-                    {
-                      "value": "ARYTENOIDECTOMY_NO",
-                      "text": "I would not do the arytenoidectomy surgery again"
-                    },
-                    {
-                      "value": "ARYTENOIDECTOMY_SOONER",
-                      "text": "I would do the arytenoidectomy surgery sooner than I did with {CmpnName}"
-                    },
-                    {
-                      "value": "ARYTENOIDECTOMY_LATER",
-                      "text": "I would wait to do the arytenoidectomy longer than I did with {CmpnName}"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "ConclusionOtherPathVentrilocordectomy",
-                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
-                  "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VENTRILOCORDECTOMY'",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "VENTRILOCORDECTOMY_SAME",
-                      "text": "I would pursue the same treatment path as with {CmpnName}"
-                    },
-                    {
-                      "value": "VENTRILOCORDECTOMY_NO",
-                      "text": "I would not do the ventrilocordectomy surgery again"
-                    },
-                    {
-                      "value": "VENTRILOCORDECTOMY_SOONER",
-                      "text": "I would do the ventrilocordectomy surgery sooner than I did with {CmpnName}"
-                    },
-                    {
-                      "value": "VENTRILOCORDECTOMY_LATER",
-                      "text": "I would wait to do the ventrilocordectomy longer than I did with {CmpnName}"
-                    }
-                  ],
-                  "showOtherItem": false
+                  "showOtherItem": true,
+                  "otherText": "Other option"
                 },
                 {
                   "type": "checkbox",
                   "name": "ConclusionOtherPathNoTreatment",
-                  "title": "Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?",
+                  "title": "If you were to have another LP/GOLPP companion, what if anything would you differently?",
                   "isRequired": true,
                   "visibleIf": "{ProcedureDidHave} = false",
                   "choices": [
                     {
                       "value": "NO_TREATMENT_SAME",
-                      "text": "I would pursue the same treatment path as with {CmpnName}"
+                      "text": "I would pursue the same course of action as with {CmpnName}"
                     },
                     {
                       "value": "NO_TREATMENT_WOULD_DO",
-                      "text": "I would pursue tieback, laryngeal stent, or other veterinary procedure"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "ConclusionStentAlternative",
-                  "title": "If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?",
-                  "visibleIf": "{ProcedureType} notcontains 'STENT'",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
+                      "text": "I would pursue tieback, laryngeal stent, or other surgical procedure"
                     }
                   ],
                   "showOtherItem": false
@@ -5828,7 +5970,7 @@
                 {
                   "type": "comment",
                   "name": "ConclusionDifferentChoices",
-                  "title": "Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).",
+                  "title": "Please add any brief comments about your and {CmpnName}'s LP/GOLPP journey (optional, maximum 250 characters).",
                   "isRequired": false
                 },
                 {

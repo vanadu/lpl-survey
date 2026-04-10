@@ -915,7 +915,7 @@ const Browse_08_Procedure = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the surgery?
+              Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the procedure?
             </span>
           }
           index={25}
@@ -946,7 +946,7 @@ const Browse_08_Procedure = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the surgery?
+              Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the procedure?
             </span>
           }
           index={26}

@@ -123,7 +123,15 @@ const Browse_10_Breathing = () => {
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Four or more</span>
+              <span>Four</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Five</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Six or more</span>
             </li>
           </ul>
           </div>
@@ -185,7 +193,19 @@ const Browse_10_Breathing = () => {
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>More than two</span>
+              <span>Three</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Four</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Five</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Six or more</span>
             </li>
           </ul>
           </div>
@@ -273,7 +293,7 @@ const Browse_10_Breathing = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-
+          <p className="browse-question-description">Please check all that apply</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-checkbox">

@@ -55,21 +55,30 @@
           "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
           "choices": [
             {
-              "value": "ONE",
+              "value": 1,
               "text": "One"
             },
             {
-              "value": "TWO",
+              "value": 2,
               "text": "Two"
             },
             {
-              "value": "THREE",
+              "value": 3,
               "text": "Three"
             },
             {
-              "value": "FOUR_OR_MORE",
-              "text": "Four or more"
+              "value": 4,
+              "text": "Four"
+            },
+            {
+              "value": 5,
+              "text": "Five"
+            },
+            {
+              "value": 6,
+              "text": "Six or more"
             }
+
           ],
           "showOtherItem": false
         },
@@ -102,16 +111,28 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "ONE",
+              "value": 1,
               "text": "One"
             },
             {
-              "value": "TWO",
+              "value": 2,
               "text": "Two"
             },
             {
-              "value": "MORE_THAN_TWO",
-              "text": "More than two"
+              "value": 3,
+              "text": "Three"
+            },
+            {
+              "value": 4,
+              "text": "Four"
+            },
+            {
+              "value": 5,
+              "text": "Five"
+            },
+            {
+              "value": 6,
+              "text": "Six or more"
             }
           ],
           "showOtherItem": false,
@@ -172,6 +193,7 @@
           "type": "checkbox",
           "name": "BreathingCrisisAdviceType",
           "title": "What advice did they give you to help you deal with a breathing crisis?",
+          "description": "Please check all that apply",
           "isRequired": true,
           "visibleIf": "{BreathingCrisisAdvice} = 'YES'",
           "choices": [

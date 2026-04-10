@@ -58,11 +58,11 @@ const Browse_12_Conclusion = () => {
       </div>
 
       <div className="browse-panel-container" id="ConclusionDetailsPanel">
-      <div className="browse-question-container" id="ConclusionSpecialConsiderations">
+      <div className="browse-question-container" id="ConclusionLifestyleChanges">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please describe any special considerations for Bella due to LP-related breathing issues:
+              Did you make any changes to Bella&lsquo;s lifestyle or routine due to her LP/GOLPP?
             </span>
           }
           index={1}
@@ -72,36 +72,28 @@ const Browse_12_Conclusion = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>No special considerations</span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
             </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Exercise limitations</span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
             </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Type, amount or frequency of feeding</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Travel restrictions</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Other behavior restrictions i.e., anxiety, excitement</span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ConclusionGeneralCondition">
+      <div className="browse-question-container" id="ConclusionLifestyleChangesDetails">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please describe Bella&lsquo;s general physical condition:
+              Please describe any lifestyle restrictions or changes you made for Bella due to her LP/GOLPP:
             </span>
           }
           index={2}
@@ -113,15 +105,58 @@ const Browse_12_Conclusion = () => {
           <ul>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>No noticeable symptoms</span>
+              <span>Exercise restrictions</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Significant hind-end weakness</span>
+              <span>Changes in food and/or feeding frequency</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Frequent falling</span>
+              <span>Travel restrictions</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Restricted swimming and access to water</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Rstrictred access to stairs</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Limitations on interaction with people or other animals</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ConclusionGeneralCondition">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              How has Bella&lsquo;s condition changed since the first LP/GOLPP symptoms appeared?
+            </span>
+          }
+          index={3}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>No significant change</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Knuckling</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Frequent falling while walking</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -135,6 +170,14 @@ const Browse_12_Conclusion = () => {
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Fecal incontinence</span>
             </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Cognitive or behavioral changes</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Significant increase in anxiety</span>
+            </li>
           </ul>
           </div>
         </ShowAnswerContent>
@@ -147,7 +190,7 @@ const Browse_12_Conclusion = () => {
               How would you rate Bella&lsquo;s quality of life at this stage?
             </span>
           }
-          index={3}
+          index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -289,7 +332,7 @@ const Browse_12_Conclusion = () => {
               Did Bella develop any new conditions during her LP/GOLPP journey that she didn&lsquo;t have before?
             </span>
           }
-          index={4}
+          index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -316,7 +359,7 @@ const Browse_12_Conclusion = () => {
               What other conditions did Bella develop during her LP/GOLPP journey?
             </span>
           }
-          index={5}
+          index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -359,7 +402,291 @@ const Browse_12_Conclusion = () => {
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Hemangiosarcoma</span>
             </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Cancer or malignant tumor</span>
+            </li>
           </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ConclusionUserLifestyle">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Has Bella&lsquo;s LP/GOLPP resulted in a substantial change to your lifestyle?
+            </span>
+          }
+          index={7}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <p className="browse-question-description">1 = no, not at all, 5 = yes, very much</p>
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ConclusionUserDistress">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Has Bella&lsquo;s LP/GOLPP caused you or anyone in your family significant emotional distress or anxiety?
+            </span>
+          }
+          index={8}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <p className="browse-question-description">1 = no, not at all, 5 = yes, very much</p>
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
           </div>
         </ShowAnswerContent>
       </div>
@@ -379,7 +706,7 @@ const Browse_12_Conclusion = () => {
               What was the ultimate reason why Bella crossed over the Rainbow Bridge?
             </span>
           }
-          index={6}
+          index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -392,7 +719,7 @@ const Browse_12_Conclusion = () => {
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>LP-related breathing crisis</span>
+              <span>Fatal LP-related breathing crisis</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
@@ -408,15 +735,7 @@ const Browse_12_Conclusion = () => {
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Cancer</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Seizure, stroke, or cardiac event</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Bacterial/viral infection</span>
+              <span>Poor quality of life due to aging</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
@@ -430,116 +749,11 @@ const Browse_12_Conclusion = () => {
 
       <div className="browse-panel-container" id="ConclusionOtherPathPanel">
         <h3 className="browse-showanswer-title">These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?</h3>
-      <div className="browse-question-container" id="ConclusionOtherPathTieback">
+      <div className="browse-question-container" id="ConclusionOtherPath">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What if anything would you differently?
-            </span>
-          }
-          index={7}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would pursue the same treatment path as with Bella</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would not do tieback surgery again</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would do tieback surgery sooner than I did with Bella</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would wait to do tieback surgery longer than I did with Bella</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ConclusionOtherPathBVEAP">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?
-            </span>
-          }
-          index={8}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would pursue the same treatment path as with Bella</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would not do BVEAP surgery again</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would do BVEAP surgery sooner than I did with Bella</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would wait to do BVEAP surgery longer than I did with Bella</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ConclusionOtherPathStent">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently??
-            </span>
-          }
-          index={9}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would pursue the same treatment path as with Bella</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would not do the laryngeal stent implant again</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would do laryngeal stent implant surgery sooner than I did with Bella</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would wait to do a laryngeal stent implant longer than I did with Bella</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ConclusionOtherPathArytenoidectomy">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?
+              Would you do anything differently than with Bella?
             </span>
           }
           index={10}
@@ -551,30 +765,26 @@ const Browse_12_Conclusion = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would pursue the same treatment path as with Bella</span>
+              <span>Yes, I would do things differently.</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would not do the arytenoidectomy surgery again</span>
+              <span>No, I would choose the same course of action.</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would do the arytenoidectomy surgery sooner than I did with Bella</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would wait to do the arytenoidectomy longer than I did with Bella</span>
+              <span>Don&lsquo;t know or prefer not to say.</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ConclusionOtherPathVentrilocordectomy">
+      <div className="browse-question-container" id="ConclusionOtherPathDetails">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?
+              What do you think you would do differently?
             </span>
           }
           index={11}
@@ -586,73 +796,15 @@ const Browse_12_Conclusion = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would pursue the same treatment path as with Bella</span>
+              <span>I would not pursue surgery for another LP/GOLPP dog.</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would not do the ventrilocordectomy surgery again</span>
+              <span>I would pursue a different surgery or a laryngeal stent rather than the one Bella had.</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would do the ventrilocordectomy surgery sooner than I did with Bella</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would wait to do the ventrilocordectomy longer than I did with Bella</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ConclusionOtherPathNoTreatment">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Faced with the same decisions with another LP/GOLPP companion, what if anything would you differently?
-            </span>
-          }
-          index={12}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>I would pursue the same treatment path as with Bella</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>I would pursue tieback, laryngeal stent, or other veterinary procedure</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ConclusionStentAlternative">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              If the laryngeal stent were widely available, would you pursue that as an alternative to surgery?
-            </span>
-          }
-          index={13}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
+              <span>If would find a different surgeon to do the same procedure Bella had.</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
@@ -663,11 +815,73 @@ const Browse_12_Conclusion = () => {
         </ShowAnswerContent>
       </div>
 
+      <div className="browse-question-container" id="ConclusionOtherPathTimeframe">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              If you had another LP/GOLPP dog, would you do the surgical/stent procedure earlier or later?
+            </span>
+          }
+          index={12}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Earlier</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Later</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Same time frame</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ConclusionOtherPathNoTreatment">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              If you were to have another LP/GOLPP companion, what if anything would you differently?
+            </span>
+          }
+          index={13}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>I would pursue the same course of action as with Bella</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>I would pursue tieback, laryngeal stent, or other surgical procedure</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
       <div className="browse-question-container" id="ConclusionDifferentChoices">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please briefly describe things you might do differently if you were to have another dog with LP/GOLPP (optional).
+              Please add any brief comments about your and Bella&lsquo;s LP/GOLPP journey (optional, maximum 250 characters).
             </span>
           }
           index={14}

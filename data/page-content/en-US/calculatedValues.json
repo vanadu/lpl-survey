@@ -69,6 +69,12 @@
   },
   {
     "type": "calculatedvalue",
+    "name": "cvDoThirdPersonSingularInitialCap",
+    "expression": "iif({LifeStatus} = true, 'Did', 'Does')",
+    "includeIntoResult": true
+  },
+  {
+    "type": "calculatedvalue",
     "name": "cvGenderSubjectPronoun",
     "expression": "iif({CmpnInfoGender} = true, 'she', 'he')",
     "includeIntoResult": true
