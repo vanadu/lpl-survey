@@ -795,7 +795,7 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 // !VA Force two-column radiogroups to two columns
 .sd-selectbase.survey-two-col {
   .sd-item.sd-radio {
-    background: rgba(255, 0, 0, .3) !important; //devred
+    
     flex: 0 0 calc(45% - 0.5rem); /* 0.5rem is half of the column gap (1rem) */
     box-sizing: border-box;
     @include tablet {
