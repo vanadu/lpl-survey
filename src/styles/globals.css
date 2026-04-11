@@ -14,8 +14,8 @@
 /* VA! mphone*/
 @media (min-width: 375px) and (max-width: 413px)   {
   :root {
-    --base-unit: 6.5px;
-    --font-size-base: .875rem;
+    --base-unit: 7px;
+    --font-size-base: .913rem;
   }
 }
 /* VA! lphone*/
@@ -50,11 +50,6 @@
 
 
 :root {
-
-
-  /* VA! Deprecated, I think  
-  --max-width: 1100px */
-  
   /* !VA Page/Content size   */ 
   --page-max: 1000px;
   --page-x: clamp(16px, 3vw, 48px);
