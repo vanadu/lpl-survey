@@ -6001,7 +6001,7 @@
                   "name": "ConclusionOtherPathTimeframe",
                   "title": "If you had another LP/GOLPP dog, would you do the surgical/stent procedure earlier or later?",
                   "isRequired": true,
-                  "visibleIf": "{ProcedureDidHave} = true",
+                  "visibleIf": "{ProcedureDidHave} = true && {ConclusionOtherPath} = 'YES'",
                   "choices": [
                     {
                       "value": "EARLIER",

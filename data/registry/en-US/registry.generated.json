@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-10T13:22:15.739Z",
+    "builtAt": "2026-04-11T08:07:24.786Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -4140,7 +4140,7 @@
       "hasTitle": true,
       "title": "If you had another LP/GOLPP dog, would you do the surgical/stent procedure earlier or later?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true",
+      "visibleIf": "{ProcedureDidHave} = true && {ConclusionOtherPath} = 'YES'",
       "isRequired": true
     },
     "ConclusionOtherPathNoTreatment": {

@@ -55,7 +55,7 @@ const SurveyFaqs = () => {
             <BsClipboardCheck className="survey-mode-icon" />
                 <span className="survey-mode-link-text">Take Survey Now!</span>
             </Link>
-            w<h1>2026&nbsp;LP/GOLPP&nbsp;Survey FAQs</h1>
+            <h1>2026&nbsp;LP/GOLPP&nbsp;Survey FAQs</h1>
         </section>
 
         <section className="content-body">
