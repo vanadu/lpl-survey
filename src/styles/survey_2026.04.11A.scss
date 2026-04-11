@@ -1280,88 +1280,111 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
    - bottom nav only becomes visible via .isVisible (JS)
    - no overlay styling (transparent container; only icons visible)
 ======================================== */
+
+// !VA NAV MODS
+// Mobile-only: hide SurveyJS default navigation UI
+@media (max-width: 639px) {
+  .sd-navigation,
+  .sd-body__navigation,
+  .sd-footer,
+  .sd-action-bar {
+    display: none !important;
+  }
+}
+
+// Desktop: never show the custom nav
 @media (min-width: 640px) {
-  .sj-navbtn {
+  .sj-surveynav {
     display: none !important;
   }
 }
 
 .sj-page-has-nav {
-  position: relative;
+  position: relative; // positioning context for TOP nav
 }
 
-/* one tiny touch target per control, no full-width overlay */
-.sj-navbtn {
-  position: absolute;
-  z-index: 50;
-  width: 64px;
-  height: 52px;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  background: transparent;
-  appearance: none;
+/* shared nav container (transparent; no blur, no bg, no opacity overlay) */
+.sj-surveynav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  line-height: 0;
-  opacity: .7;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
+  padding: 0 10px;
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  border: 0;
+  pointer-events: none; // allow page interaction; buttons re-enable below
+  z-index: 50;
 }
 
-.sj-navbtn svg {
-  display: block;
-  flex: 0 0 auto;
-  color: var(--c-link-accent);
+/* TOP: pinned visually to top of the card (page-scoped) */
+.sj-surveynav--top {
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  top: 4px;
 }
 
-.sj-navbtn svg {
-  width: 36px;
-  height: 36px;
-  stroke: currentColor;
-  color: var(--c-link-accent);
-}
-
-.sj-navbtn .sr-only {
-  opacity: 0;
-}
-
-.sj-navbtn:disabled {
-  opacity: .35;
-}
-
-/* top pair */
-.sj-navbtn--top-prev  { top: 4px; left: 4px; }
-.sj-navbtn--top-next  { top: 4px; right: 4px; }
-
-/* bottom pair */
-.sj-navbtn--bottom-prev { bottom: 4px; left: 4px; }
-.sj-navbtn--bottom-next { bottom: 4px; right: 4px; }
-
-.sj-navbtn--bottom {
+/* BOTTOM: fixed to viewport, but width/left are synced to the page via JS */
+.sj-surveynav--bottom {
+  position: absolute;
+  bottom: 4px;
+  left: 0;   // overwritten by JS to match page rect
+  // width: auto; // overwritten by JS
+  width: 100%; // !VA
   opacity: 0;
   visibility: hidden;
   transform: translateY(6px);
   transition: opacity 120ms ease, transform 120ms ease, visibility 120ms ease;
+
+  // when hidden, ensure it doesn't intercept taps
+  pointer-events: none;
 }
 
-.sj-navbtn--bottom.isVisible {
-  opacity: .7;
+.sj-surveynav--bottom.isVisible {
+  opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  // container stays pointer-events:none; buttons enable pointer events individually
 }
 
-/* keep normal survey content scroll-first */
-.sd-body,
-.sd-page,
-.sd-page__content,
-.sd-row,
-.sd-panel,
-.sd-question,
-.sd-element__content {
-  touch-action: pan-y;
+/* Re-enable clicks only on buttons */
+.sj-surveynav__btn {
+  pointer-events: auto;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  opacity: .7;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sj-surveynav__btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.sj-surveynav__btn svg {
+  width: 36px;
+  height: 36px;
+  stroke: currentColor;
+  color: var(--c-link-accent);;
+}
+
+/* screen-reader-only */
+.sj-surveynav__btn .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 

@@ -203,24 +203,27 @@ export default function SurveyNav({ survey }) {
 
   const rightLabel = isLast ? "Submit" : "Next";
 
+
   return (
     <>
-      <div
-        ref={topRef}
-        className="sj-surveynav sj-surveynav--top"
-        aria-label="Survey navigation"
-      >
+      <div ref={topRef} className="sj-navmount sj-navmount--top" aria-hidden="false">
         <button
-          className="sj-surveynav__btn"
+          className="sj-navbtn sj-navbtn--top-prev"
           onClick={handlePrevTop}
           disabled={isFirst}
           type="button"
+          aria-label="Previous"
         >
           <PiCaretDoubleLeftFill aria-hidden="true" />
           <span className="sr-only">Previous</span>
         </button>
 
-        <button className="sj-surveynav__btn" onClick={handleNextTop} type="button">
+        <button
+          className="sj-navbtn sj-navbtn--top-next"
+          onClick={handleNextTop}
+          type="button"
+          aria-label={rightLabel}
+        >
           {rightIcon}
           <span className="sr-only">{rightLabel}</span>
         </button>
@@ -228,24 +231,32 @@ export default function SurveyNav({ survey }) {
 
       <div
         ref={bottomRef}
-        className={`sj-surveynav sj-surveynav--bottom ${showBottom ? "isVisible" : ""}`}
-        aria-label="Survey navigation"
+        className={`sj-navmount sj-navmount--bottom ${showBottom ? "isVisible" : ""}`}
+        aria-hidden="false"
       >
         <button
-          className="sj-surveynav__btn"
+          className="sj-navbtn sj-navbtn--bottom-prev"
           onClick={handlePrevBottom}
           disabled={isFirst}
           type="button"
+          aria-label="Previous"
         >
           <PiCaretDoubleLeftFill aria-hidden="true" />
           <span className="sr-only">Previous</span>
         </button>
 
-        <button className="sj-surveynav__btn" onClick={handleNextBottom} type="button">
+        <button
+          className="sj-navbtn sj-navbtn--bottom-next"
+          onClick={handleNextBottom}
+          type="button"
+          aria-label={rightLabel}
+        >
           {rightIcon}
           <span className="sr-only">{rightLabel}</span>
         </button>
       </div>
     </>
   );
+
+
 }
