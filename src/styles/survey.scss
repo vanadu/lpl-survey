@@ -16,17 +16,36 @@
 */
 
 
+// .sd-body,
+// .sd-page,
+// .sd-page__content,
+// .sd-row,
+// .sd-question,
+// .sd-panel,
+// .sd-element__content {
+//   touch-action: pan-y;
+// }
+
 .sd-body,
 .sd-page,
 .sd-page__content,
 .sd-row,
-.sd-question,
 .sd-panel,
+.sd-question,
 .sd-element__content {
   touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-
+input,
+textarea,
+select,
+button,
+a,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
 
 
 // !VA Background color
@@ -737,9 +756,9 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 }
 
 // !VA PROGRESS BAR
-.sd-root-modern--mobile.sd-progress-buttons {
-padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-}
+// .sd-root-modern--mobile.sd-progress-buttons {
+// padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+// }
 
 
 // !VA Progress text color
@@ -1255,6 +1274,11 @@ padding:calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--
 
 // !VA NAV MODS
 // Mobile-only: hide SurveyJS default navigation UI
+
+.sj-surveynav {
+      display: none !important;
+}
+
 @media (max-width: 639px) {
   .sd-navigation,
   .sd-body__navigation,
