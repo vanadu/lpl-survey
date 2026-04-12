@@ -24,18 +24,18 @@ const SurveyHero = () => {
           <div className="hero">
             <div className="hero__grid">
 
-              <Image src={HeroImg01} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-              <Image src={HeroImg02} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-              <Image src={HeroImg03} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-              <Image src={HeroImg04} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-              <Image src={HeroImg05} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-              <Image src={HeroImg06} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-              <Image src={HeroImg07} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-              <Image src={HeroImg08} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-              <Image src={HeroImg09} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-              <Image src={HeroImg10} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-              <Image src={HeroImg11} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
-              <Image src={HeroImg12} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" />
+              <div class="hero__cell"><Image src={HeroImg01} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+              <div class="hero__cell"><Image src={HeroImg02} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+              <div class="hero__cell"><Image src={HeroImg03} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+              <div class="hero__cell"><Image src={HeroImg04} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+              <div class="hero__cell"><Image src={HeroImg05} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+              <div class="hero__cell"><Image src={HeroImg06} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+              <div class="hero__cell"><Image src={HeroImg07} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+              <div class="hero__cell"><Image src={HeroImg08} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+              <div class="hero__cell"><Image src={HeroImg09} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+              <div class="hero__cell"><Image src={HeroImg10} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+              <div class="hero__cell"><Image src={HeroImg11} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+              <div class="hero__cell"><Image src={HeroImg12} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
             </div>
 
             <div className="hero__overlay"></div>

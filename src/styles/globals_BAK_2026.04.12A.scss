@@ -269,46 +269,6 @@ article.home-content {
 }
 
 /* grid container */
-.hero {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  aspect-ratio: 6.5 / 3;
-  overflow: hidden;
-  background-color: #353535;
-
-  --hero-cols: 4;
-  --hero-rows: 3;
-  --hero-gap: calc(var(--base-unit) * 0.45);
-
-  @include mphone {
-    aspect-ratio: 7 / 3;
-  }
-
-  @include lphone {
-    aspect-ratio: 7.25 / 3;
-    max-width: 414px;
-  }
-
-  @include tablet {
-    --hero-cols: 6;
-    --hero-rows: 2;
-    aspect-ratio: 8 / 2;
-  }
-
-  @include desktop {
-    --hero-cols: 6;
-    --hero-rows: 2;
-    aspect-ratio: 920 / 200;
-  }
-
-  @include ldesktop {
-    --hero-cols: 6;
-    --hero-rows: 2;
-    aspect-ratio: 9 / 2;
-  }
-}
-
 .hero__grid {
   position: absolute;
   inset: 0;
@@ -321,21 +281,33 @@ article.home-content {
   box-sizing: border-box;
 }
 
-.hero__cell {
-  min-width: 0;
-  min-height: 0;
+.hero__tile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   overflow: hidden;
   background-color: #353535;
 }
 
-.hero__tile {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-width: 0;
-  min-height: 0;
-  object-fit: cover;
-  object-position: center center;
+.hero__overlay {
+  position: absolute;
+  inset: var(--hero-gap);
+  z-index: 2;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 35%,
+      rgba(0, 0, 0, 0.16) 72%,
+      rgba(0, 0, 0, 0.34) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.28),
+      rgba(0, 0, 0, 0.12) 45%,
+      rgba(0, 0, 0, 0.18)
+    );
 }
 
 .hero__content {
@@ -1947,4 +1919,8 @@ article .consent-info, article .privacy-info {
 .scrap {
   margin: 10px 0;
   background: rgba(0, 0, 0, .1) !important; //devgry
+}
+
+h1 {
+  background: rgba(0, 0, 255, .3) !important; //devblue
 }
