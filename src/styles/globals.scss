@@ -273,12 +273,10 @@ article.home-content {
   position: absolute;
   inset: 0;
   z-index: 1;
-
   display: grid;
   grid-template-columns: repeat(var(--hero-cols), minmax(0, 1fr));
   grid-template-rows: repeat(var(--hero-rows), minmax(0, 1fr));
   gap: var(--hero-gap);
-
   padding: var(--hero-gap);
   box-sizing: border-box;
 }
@@ -1921,4 +1919,8 @@ article .consent-info, article .privacy-info {
 .scrap {
   margin: 10px 0;
   background: rgba(0, 0, 0, .1) !important; //devgry
+}
+
+h1 {
+  background: rgba(0, 0, 255, .3) !important; //devblue
 }
