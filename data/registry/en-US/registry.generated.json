@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-11T08:07:24.786Z",
+    "builtAt": "2026-04-12T09:50:23.837Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -1104,7 +1104,7 @@
     },
     "FactorsOther": {
       "name": "FactorsOther",
-      "type": "text",
+      "type": "comment",
       "role": "question",
       "collect": true,
       "path": [

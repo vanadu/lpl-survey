@@ -104,6 +104,7 @@
               "name": "SymptomsSeverity",
               "title": "How severe did you think {CmpnName}'s early symptoms were?",
               "description": "1 = mild, 5 = severe",
+              "displayMode": "buttons", 
               "isRequired": true
             },
             {

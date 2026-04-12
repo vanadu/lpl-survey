@@ -878,6 +878,7 @@
                   "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {CmpnName}?",
                   "description": "1 = No, not hard at all, 5 = yes, very hard",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -929,6 +930,7 @@
                   "title": "Cost of surgical/stent procedure:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -958,6 +960,7 @@
                   "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -994,6 +997,7 @@
                   "title": "Fear of a breathing crisis or emergency:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1023,6 +1027,7 @@
                   "title": "Progression of {CmpnName}'s hind-end weakness and polyneuropathy:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1059,6 +1064,7 @@
                   "title": "Extended anesthesia:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1088,6 +1094,7 @@
                   "title": "Risk of direct inpatient complications of surgery:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1117,6 +1124,7 @@
                   "title": "Risks of long-term complications such as aspiration pneumonia, suture failure, or infection:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1153,6 +1161,7 @@
                   "title": "{CmpnName}'s age:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1182,6 +1191,7 @@
                   "title": "{CmpnName}'s overall health and prospects for quality of life:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1211,6 +1221,7 @@
                   "title": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1247,6 +1258,7 @@
                   "title": "Distance to or access to a qualified specialist:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1276,6 +1288,7 @@
                   "title": "Ability to provide adequate care in the future:",
                   "description": "1 = less important, 5 = more important",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -1307,7 +1320,7 @@
               "title": "What other considerations, if any, have factored into your LP/GOLPP decisions?",
               "elements": [
                 {
-                  "type": "text",
+                  "type": "comment",
                   "name": "FactorsOther",
                   "title": "Other considerations:",
                   "description": "Maximum 250 characters.",
@@ -1424,6 +1437,7 @@
                   "name": "SymptomsSeverity",
                   "title": "How severe did you think {CmpnName}'s early symptoms were?",
                   "description": "1 = mild, 5 = severe",
+                  "displayMode": "buttons",
                   "isRequired": true
                 },
                 {
@@ -1960,6 +1974,7 @@
                   "title": "How confident have you been in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
                   "description": "1 = not at all confident, 5 = very confident",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2386,6 +2401,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2420,6 +2436,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2454,6 +2471,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2488,6 +2506,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2522,6 +2541,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2556,6 +2576,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2590,6 +2611,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2624,6 +2646,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2658,6 +2681,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2692,6 +2716,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2726,6 +2751,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2760,6 +2786,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2794,6 +2821,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2828,6 +2856,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2862,6 +2891,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2896,6 +2926,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2930,6 +2961,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2964,6 +2996,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -2998,6 +3031,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3032,6 +3066,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3066,6 +3101,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3100,6 +3136,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3160,6 +3197,7 @@
                   "title": "How did the reflux medications affect {CmpnName}'s LP/GOLPP symptoms?",
                   "description": "1 = very negative, 3 = no effect, 5 = very positive",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3193,6 +3231,7 @@
                   "title": "How did the reflux medications affect {CmpnName}'s risk of aspiration pneumonia?",
                   "description": "1 = very negative, 3 = no effect, 5 = yes, very positive",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3342,6 +3381,7 @@
                   "description": "1 = very negative, 3 = no effect, 5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3376,6 +3416,7 @@
                   "description": "1 = very negative, 3 = no effect, 5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3464,6 +3505,7 @@
                   "description": "1 = very negative, 3 = no effect, 5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3498,6 +3540,7 @@
                   "description": "1 = very negative, 3 = no effect, 5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -3901,6 +3944,7 @@
                   "description": "1 = not bad, 5 = very bad",
                   "isRequired": true,
                   "visibleIf": "{ProcedureStentHalitosis} = 'YES'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4360,6 +4404,7 @@
                   "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
                   "description": "1 = very unsatisfied, 5 = very satisfied",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4393,6 +4438,7 @@
                   "title": "How satisfied were you with the results of the procedure?",
                   "description": "1 = very unsatisfied, 5 = very satisfied",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4501,6 +4547,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'ACUPUNCTURE'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4535,6 +4582,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'ACUPUNCTURE'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4569,6 +4617,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'THERAPY'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4603,6 +4652,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'THERAPY'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4637,6 +4687,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'LLLT'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4671,6 +4722,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'LLLT'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4705,6 +4757,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'CHIRO'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -4739,6 +4792,7 @@
                   "description": "1 = very negative, 3 = no effect,  5 = very positive",
                   "isRequired": true,
                   "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'CHIRO'",
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -5129,6 +5183,7 @@
               "description": "1 - did not help at all,  3 = helped somewhat, 5 = helped very much",
               "isRequired": true,
               "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
+              "displayMode": "buttons",
               "rateValues": [
                 {
                   "value": 1,
@@ -5163,6 +5218,7 @@
               "description": "1 - did not help at all, 3 = helped somewhat, 5 = helped very much",
               "isRequired": true,
               "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
+              "displayMode": "buttons",
               "rateValues": [
                 {
                   "value": 1,
@@ -5825,6 +5881,7 @@
                   "title": "Has {CmpnName}'s LP/GOLPP resulted in a substantial change to your lifestyle?",
                   "description": "1 = no, not at all, 5 = yes, very much",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,
@@ -5858,6 +5915,7 @@
                   "title": "Has {CmpnName}'s LP/GOLPP caused you or anyone in your family significant emotional distress or anxiety?",
                   "description": "1 = no, not at all, 5 = yes, very much",
                   "isRequired": true,
+                  "displayMode": "buttons",
                   "rateValues": [
                     {
                       "value": 1,

@@ -2001,7 +2001,7 @@ const Browse_03_Factors = () => {
         >
           <p className="browse-question-description">Maximum 250 characters.</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-input" aria-hidden="true"></div>
+          <div className="browse-showanswer-textarea" aria-hidden="true"></div>
           </div>
         </ShowAnswerContent>
       </div>

@@ -328,6 +328,7 @@
           "description": "1 - did not help at all,  3 = helped somewhat, 5 = helped very much",
           "isRequired": true,
           "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
+          "displayMode": "buttons",
           "rateValues": [
             { "value": 1, "text": "1" },
             { "value": 2, "text": "2" },
@@ -344,6 +345,7 @@
           "description": "1 - did not help at all, 3 = helped somewhat, 5 = helped very much",
           "isRequired": true,
           "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
+          "displayMode": "buttons",
           "rateValues": [
             { "value": 1, "text": "1" },
             { "value": 2, "text": "2" },

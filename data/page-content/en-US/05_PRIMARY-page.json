@@ -283,6 +283,7 @@
               "title": "How confident have you been in your current primary veterinarian's knowledge level regarding LP/GOLPP?",
               "description": "1 = not at all confident, 5 = very confident",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

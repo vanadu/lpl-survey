@@ -139,6 +139,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -155,6 +156,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'DOXEPIN'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -171,6 +173,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -187,6 +190,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TRAZODONE'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -203,6 +207,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -219,6 +224,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GABAPENTIN'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -235,6 +241,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -251,6 +258,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'GALLIPRANT'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -267,6 +275,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -283,6 +292,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'STEROID'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -299,6 +309,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -315,6 +326,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ANTIHISTAMINE'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -331,6 +343,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -347,6 +360,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'CERENIA'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -363,6 +377,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -379,6 +394,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'MELOXICAM'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -395,6 +411,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -411,6 +428,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ACEPROMINE'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -427,6 +445,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -443,6 +462,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'ALBUTEROL'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -459,6 +479,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -475,6 +496,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationPrescription} = 'YES' && {MedicationPrescriptionType} contains 'TEMARIL_P'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -517,6 +539,7 @@
               "title": "How did the reflux medications affect {CmpnName}'s LP/GOLPP symptoms?",
               "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -532,6 +555,7 @@
               "title": "How did the reflux medications affect {CmpnName}'s risk of aspiration pneumonia?",
               "description": "1 = very negative, 3 = no effect, 5 = yes, very positive",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -664,6 +688,7 @@
               "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -680,6 +705,7 @@
               "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -751,6 +777,7 @@
               "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -767,6 +794,7 @@
               "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

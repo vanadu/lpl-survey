@@ -227,6 +227,7 @@
               "title": "Has {CmpnName}'s LP/GOLPP resulted in a substantial change to your lifestyle?",
               "description": "1 = no, not at all, 5 = yes, very much",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -242,6 +243,7 @@
               "title": "Has {CmpnName}'s LP/GOLPP caused you or anyone in your family significant emotional distress or anxiety?",
               "description": "1 = no, not at all, 5 = yes, very much",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

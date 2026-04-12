@@ -85,6 +85,7 @@
               "title": "Did you find it hard to get clear answers to your questions so you could make informed choices for {CmpnName}?",
               "description": "1 = No, not hard at all, 5 = yes, very hard",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
               { "value": 1, "text": "1" },
               { "value": 2, "text": "2" },
@@ -118,6 +119,7 @@
               "title": "Cost of surgical/stent procedure:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -132,6 +134,7 @@
               "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -154,6 +157,7 @@
             "title": "Fear of a breathing crisis or emergency:",
             "description": "1 = less important, 5 = more important",
             "isRequired": true,
+            "displayMode": "buttons",
             "rateValues": [
               { "value": 1, "text": "1" },
               { "value": 2, "text": "2" },
@@ -169,6 +173,7 @@
             "title": "Progression of {CmpnName}'s hind-end weakness and polyneuropathy:",
             "description": "1 = less important, 5 = more important",
             "isRequired": true,
+            "displayMode": "buttons",
             "rateValues": [
               { "value": 1, "text": "1" },
               { "value": 2, "text": "2" },
@@ -191,6 +196,7 @@
               "title": "Extended anesthesia:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -205,6 +211,7 @@
               "title": "Risk of direct inpatient complications of surgery:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -219,6 +226,7 @@
               "title": "Risks of long-term complications such as aspiration pneumonia, suture failure, or infection:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -242,6 +250,7 @@
               "title": "{CmpnName}'s age:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -252,10 +261,11 @@
             },
             {
               "type": "rating",
-            "name": "FactorsGeneralHealth",
+              "name": "FactorsGeneralHealth",
               "title": "{CmpnName}'s overall health and prospects for quality of life:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -270,6 +280,7 @@
               "title": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -292,6 +303,7 @@
               "title": "Distance to or access to a qualified specialist:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -307,6 +319,7 @@
               "title": "Ability to provide adequate care in the future:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -324,7 +337,7 @@
           "title": "What other considerations, if any, have factored into your LP/GOLPP decisions?",
           "elements": [
             {
-              "type": "text",
+              "type": "comment",
               "name": "FactorsOther",
               "title": "Other considerations:",
               "description": "Maximum 250 characters.",

@@ -378,6 +378,7 @@
               "description": "1 = not bad, 5 = very bad",
               "isRequired": true,
               "visibleIf": "{ProcedureStentHalitosis} = 'YES'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -828,6 +829,7 @@
               "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
               "description": "1 = very unsatisfied, 5 = very satisfied",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -843,6 +845,7 @@
               "title": "How satisfied were you with the results of the procedure?",
               "description": "1 = very unsatisfied, 5 = very satisfied",
               "isRequired": true,
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

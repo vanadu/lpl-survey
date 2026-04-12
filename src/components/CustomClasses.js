@@ -186,7 +186,8 @@ export function getStyleDirectives(item) {
     "BreathingAspirationCost",
 
     "NeuropathySymptomsBreathingOnset",
-    "NeuropathySymptomsHindEndOnset"
+    "NeuropathySymptomsHindEndOnset",
+
 
 
 

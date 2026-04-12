@@ -1320,7 +1320,7 @@
               "title": "What other considerations, if any, have factored into your LP/GOLPP decisions?",
               "elements": [
                 {
-                  "type": "comment",
+                  "type": "text",
                   "name": "FactorsOther",
                   "title": "Other considerations:",
                   "description": "Maximum 250 characters.",

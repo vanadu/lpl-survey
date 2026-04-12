@@ -79,6 +79,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'ACUPUNCTURE'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -95,6 +96,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'ACUPUNCTURE'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -111,6 +113,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'THERAPY'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -127,6 +130,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'THERAPY'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -143,6 +147,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'LLLT'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -159,6 +164,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'LLLT'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -175,6 +181,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'CHIRO'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
@@ -191,6 +198,7 @@
               "description": "1 = very negative, 3 = no effect,  5 = very positive",
               "isRequired": true,
               "visibleIf": "{TherapyDidHave} = 'YES' && {TherapyType} contains 'CHIRO'",
+              "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },
