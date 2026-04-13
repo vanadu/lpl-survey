@@ -863,7 +863,7 @@ const Browse_03_Factors = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Extended anesthesia:
+              Risks of extended anesthesia:
             </span>
           }
           index={9}
@@ -1003,7 +1003,7 @@ const Browse_03_Factors = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Risk of direct inpatient complications of surgery:
+              Risks of inpatient complications of surgery:
             </span>
           }
           index={10}
@@ -1281,12 +1281,12 @@ const Browse_03_Factors = () => {
       </div>
 
       <div className="browse-panel-container" id="FactorsGeneralPanel">
-        <h3 className="browse-showanswer-title">How have Bella&lsquo;s age and general health considerations factored into your LP/GOLPP decisions?</h3>
+        <h3 className="browse-showanswer-title">Age and general health considerations</h3>
       <div className="browse-question-container" id="FactorsGeneralAge">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella&lsquo;s age:
+              How has Bella&lsquo;s age factored into your decisions?
             </span>
           }
           index={12}
@@ -1426,7 +1426,7 @@ const Browse_03_Factors = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella&lsquo;s overall health and prospects for quality of life:
+              How has Bella&lsquo;s overall health factored into your decisions?
             </span>
           }
           index={13}
@@ -1566,7 +1566,7 @@ const Browse_03_Factors = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Bella&lsquo;s preexisting conditions other than LP/GOLPP:
+              How have Bella&lsquo;s preexisting conditions other than LP/GOLPP factored into your decisions?
             </span>
           }
           index={14}

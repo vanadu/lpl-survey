@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-12T09:50:23.837Z",
+    "builtAt": "2026-04-13T11:45:05.877Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -954,7 +954,7 @@
         "FactorsSurgeryRisksPanel"
       ],
       "hasTitle": true,
-      "title": "Extended anesthesia:",
+      "title": "Risks of extended anesthesia:",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -969,7 +969,7 @@
         "FactorsSurgeryRisksPanel"
       ],
       "hasTitle": true,
-      "title": "Risk of direct inpatient complications of surgery:",
+      "title": "Risks of inpatient complications of surgery:",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -998,7 +998,7 @@
         "FactorsCard2Panel"
       ],
       "hasTitle": true,
-      "title": "How have {CmpnName}'s age and general health considerations factored into your LP/GOLPP decisions?",
+      "title": "Age and general health considerations",
       "hasVisibleIf": false
     },
     "FactorsGeneralAge": {
@@ -1012,7 +1012,7 @@
         "FactorsGeneralPanel"
       ],
       "hasTitle": true,
-      "title": "{CmpnName}'s age:",
+      "title": "How has {CmpnName}'s age factored into your decisions?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1027,7 +1027,7 @@
         "FactorsGeneralPanel"
       ],
       "hasTitle": true,
-      "title": "{CmpnName}'s overall health and prospects for quality of life:",
+      "title": "How has {CmpnName}'s overall health factored into your decisions?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1042,7 +1042,7 @@
         "FactorsGeneralPanel"
       ],
       "hasTitle": true,
-      "title": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
+      "title": "How have {CmpnName}'s preexisting conditions other than LP/GOLPP factored into your decisions?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1277,7 +1277,7 @@
     },
     "SymptomsIntubationCount": {
       "name": "SymptomsIntubationCount",
-      "type": "radiogroup",
+      "type": "dropdown",
       "role": "question",
       "collect": true,
       "path": [
@@ -1291,8 +1291,8 @@
       "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
       "isRequired": true
     },
-    "SymptomsIntubationCountAfter": {
-      "name": "SymptomsIntubationCountAfter",
+    "SymptomsIntubationBeforeSymptoms": {
+      "name": "SymptomsIntubationBeforeSymptoms",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
@@ -1302,7 +1302,7 @@
         "SymptomsIntubationPanel"
       ],
       "hasTitle": true,
-      "title": "About how many times was {CmpnName} intubated under anesthesia after the first appearance of LP/GOLPP symptoms?",
+      "title": "Was {CmpnName} intubated under anesthesia immediately prior to the first appearance of LP/GOLPP symptoms?",
       "hasVisibleIf": true,
       "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
       "isRequired": true
@@ -1334,9 +1334,10 @@
         "SymptomsIntubationPanel"
       ],
       "hasTitle": true,
-      "title": "What symptoms or behaviors did {CmpnName} have after the intubation with anesthesia?",
+      "title": "What symptoms or behaviors did {CmpnName} have after the intubation under anesthesia?",
       "hasVisibleIf": true,
-      "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES' && {SymptomsIntubationConcerns} = true"
+      "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES' && {SymptomsIntubationConcerns} = true",
+      "isRequired": true
     },
     "SymptomsCard2Panel": {
       "name": "SymptomsCard2Panel",
@@ -1372,7 +1373,7 @@
         "SymptomsOtherConditionsPanel"
       ],
       "hasTitle": true,
-      "title": "When {CmpnName} first started showing symptoms of LP, did {cvGenderSubjectPronoun} have any other health conditions?",
+      "title": "When {CmpnName} first started showing symptoms of LP, were you aware of any other health issues?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1445,17 +1446,6 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "PrimaryCard2Panel": {
-      "name": "PrimaryCard2Panel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PRIMARY-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
     "PrimaryInfoPanel": {
       "name": "PrimaryInfoPanel",
       "type": "panel",
@@ -1463,7 +1453,7 @@
       "collect": false,
       "path": [
         "PRIMARY-page",
-        "PrimaryCard2Panel"
+        "PrimaryCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -1475,7 +1465,7 @@
       "collect": true,
       "path": [
         "PRIMARY-page",
-        "PrimaryCard2Panel",
+        "PrimaryCard1Panel",
         "PrimaryInfoPanel"
       ],
       "hasTitle": true,
@@ -1490,13 +1480,24 @@
       "collect": true,
       "path": [
         "PRIMARY-page",
-        "PrimaryCard2Panel",
+        "PrimaryCard1Panel",
         "PrimaryInfoPanel"
       ],
       "hasTitle": true,
       "title": "Did your current primary veterinarian give you useful information about LP/GOLPP?",
       "hasVisibleIf": false,
       "isRequired": true
+    },
+    "PrimaryCard2Panel": {
+      "name": "PrimaryCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "PrimaryReferralPanel": {
       "name": "PrimaryReferralPanel",
@@ -1691,7 +1692,7 @@
         "DiagnosisSpecialistPanel"
       ],
       "hasTitle": true,
-      "title": "Did any of these specialists misdiagnose {CmpnName}'s symptoms?",
+      "title": "Were {CmpnName}'s symptoms ever misdiagnosed?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -1812,7 +1813,7 @@
         "DiagnosisDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Did {CmpnName} have LP surgery immediately after the diagnosis?",
+      "title": "Did {CmpnName} undergo a procedure for LP (i.e., surgery or stent implant) immediately after the diagnosis?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -2280,21 +2281,6 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "MedicationRefluxMedicationsAPEffect": {
-      "name": "MedicationRefluxMedicationsAPEffect",
-      "type": "rating",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "Medication-page",
-        "MedicationCard1Panel",
-        "MedicationRefluxMedicationPanel"
-      ],
-      "hasTitle": true,
-      "title": "How did the reflux medications affect {CmpnName}'s risk of aspiration pneumonia?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
     "MedicationCard2Panel": {
       "name": "MedicationCard2Panel",
       "type": "panel",
@@ -2644,6 +2630,21 @@
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
+    },
+    "ProcedureSequence": {
+      "name": "ProcedureSequence",
+      "type": "ranking",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureTypePanel"
+      ],
+      "hasTitle": true,
+      "title": "In what order were these procedures performed?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureType.length} > 1"
     },
     "ProcedureTiebackPanel": {
       "name": "ProcedureTiebackPanel",
@@ -2999,7 +3000,7 @@
         "ProcedureIssuesPanel"
       ],
       "hasTitle": true,
-      "title": "Did {CmpnName} frequently cough or throat-clear after the {cvProcedureTypeShort} procedure?",
+      "title": "Did {CmpnName} frequently cough or throat-clear after the procedure?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -3426,11 +3427,12 @@
       ],
       "hasTitle": true,
       "title": "Did {CmpnName} ever have a breathing crisis that caused you to fear for {cvGenderObjectPronoun} life?",
-      "hasVisibleIf": false
+      "hasVisibleIf": false,
+      "isRequired": true
     },
     "BreathingCrisisCount": {
       "name": "BreathingCrisisCount",
-      "type": "radiogroup",
+      "type": "dropdown",
       "role": "question",
       "collect": true,
       "path": [
@@ -3458,7 +3460,7 @@
     },
     "BreathingEmergencyCount": {
       "name": "BreathingEmergencyCount",
-      "type": "radiogroup",
+      "type": "dropdown",
       "role": "question",
       "collect": true,
       "path": [
@@ -3642,7 +3644,7 @@
     },
     "BreathingAspirationCount": {
       "name": "BreathingAspirationCount",
-      "type": "radiogroup",
+      "type": "dropdown",
       "role": "question",
       "collect": true,
       "path": [
@@ -3658,7 +3660,7 @@
     },
     "BreathingAspirationAfterProcedure": {
       "name": "BreathingAspirationAfterProcedure",
-      "type": "radiogroup",
+      "type": "dropdown",
       "role": "question",
       "collect": true,
       "path": [
@@ -3670,6 +3672,22 @@
       "title": "How many times did {CmpnName} get aspiration pneumonia after the surgery or stent procedure?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = true && {BreathingAspirationDidHave} = 'YES'",
+      "isRequired": true
+    },
+    "BreathingAspirationAfterRefluxMeds": {
+      "name": "BreathingAspirationAfterRefluxMeds",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard2Panel",
+        "BreathingAspirationPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} ever get aspiration pneumonia after taking medications for acid reflux (GERD) regularly?",
+      "hasVisibleIf": true,
+      "visibleIf": "{MedicationRefluxMedications} != 'NO'",
       "isRequired": true
     },
     "BreathingAspirationInpatient": {
@@ -3715,9 +3733,9 @@
         "BreathingAspirationPanel"
       ],
       "hasTitle": true,
-      "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
+      "title": "About what was the pre-insurance cost of the veterinary AP treatment for {CmpnName}:",
       "hasVisibleIf": true,
-      "visibleIf": "{BreathingAspirationDidHave} = 'YES'{BreathingAspirationInpatient} = 'YES'",
+      "visibleIf": "{BreathingAspirationDidHave} = 'YES' &&{BreathingAspirationInpatient} = 'YES'",
       "isRequired": true
     },
     "NeuropathyCard1Panel": {
@@ -3772,6 +3790,21 @@
       "title": "Which LP/GOLPP symptom appeared first in {CmpnName}?",
       "hasVisibleIf": true,
       "visibleIf": "{NeuropathySymptoms} = 'YES'",
+      "isRequired": true
+    },
+    "NeuropathyFrontLegs": {
+      "name": "NeuropathyFrontLegs",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard1Panel",
+        "NeuropathySymptomsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} also suffer from weakness in the front legs?",
+      "hasVisibleIf": false,
       "isRequired": true
     },
     "NeuropathyCard2Panel": {
@@ -3909,6 +3942,36 @@
       ],
       "hasTitle": false,
       "hasVisibleIf": false
+    },
+    "ConclusionNewSymptoms": {
+      "name": "ConclusionNewSymptoms",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} develop new symptoms over the course of his LP/GOLPP journey?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ConclusionNewSymptomsType": {
+      "name": "ConclusionNewSymptomsType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel",
+        "ConclusionDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "What other LP/GOLPP symptoms did {CmpnName} develop since he first showed LP/GOLPP symptoms?",
+      "hasVisibleIf": false,
+      "isRequired": true
     },
     "ConclusionLifestyleChanges": {
       "name": "ConclusionLifestyleChanges",
@@ -4106,8 +4169,7 @@
         "ConclusionCard2Panel",
         "ConclusionOtherPathPanel"
       ],
-      "hasTitle": true,
-      "title": "Would you do anything differently than with {CmpnName}?",
+      "hasTitle": false,
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -4170,7 +4232,7 @@
         "ConclusionOtherPathPanel"
       ],
       "hasTitle": true,
-      "title": "Please add any brief comments about your and {CmpnName}'s LP/GOLPP journey (optional, maximum 250 characters).",
+      "title": "Please add any brief comments about your LP/GOLPP journey (optional, maximum 250 characters).",
       "hasVisibleIf": false,
       "isRequired": false
     },

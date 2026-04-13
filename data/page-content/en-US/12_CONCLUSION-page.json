@@ -47,6 +47,76 @@
         "elements": [
           {
             "type": "radiogroup",
+            "name": "ConclusionNewSymptoms",
+            "title": "Did {CmpnName} develop new symptoms over the course of his LP/GOLPP journey?",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "YES",
+                "text": "Yes"
+              },
+              {
+                "value": "NO",
+                "text": "No"
+              },
+              {
+                "value": "DONT_KNOW",
+                "text": "Don't know"
+              }
+            ],
+            "showOtherItem": false
+          },
+          {
+            "type": "checkbox",
+            "name": "ConclusionNewSymptomsType",
+            "description": "The symptoms you selected earlier in the survey are preselected here.",
+            "title": "What other LP/GOLPP symptoms did {CmpnName} develop since he first showed LP/GOLPP symptoms?",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "STRIDOR",
+                "text": "Noisy, raspy or labored breathing"
+              },
+              {
+                "value": "BARK_CHANGES",
+                "text": "Changes in bark"
+              },
+              {
+                "value": "COUGHING",
+                "text": "Coughing, gagging, or retching"
+              },
+              {
+                "value": "HIND_END",
+                "text": "Hind-end weakness"
+              },
+              {
+                "value": "EXERCISE_INTOLERANCE",
+                "text": "Exercise and heat intolerance"
+              },
+              {
+                "value": "MUCUS",
+                "text": "Expectorating mucus"
+              },
+              {
+                "value": "HALITOSIS",
+                "text": "Halitosis (bad breath)"
+              },
+              {
+                "value": "REGURGITATION",
+                "text": "Regurgitating or vomiting "
+              },
+              {
+                "value": "CYANOSIS",
+                "text": "Gums turning blue or discolored"
+              }
+            ],
+            "showOtherItem": true,
+            "otherText": "Other"
+          },
+
+
+          {
+            "type": "radiogroup",
             "name": "ConclusionLifestyleChanges",
             "title": "Did you make any changes to {CmpnName}'s lifestyle or routine due to {cvGenderObjectPronoun} LP/GOLPP?",
             "isRequired": true,
@@ -92,7 +162,7 @@
               },
               {
                 "value": "STAIRS",
-                "text": "Restrictred access to stairs"
+                "text": "Restricted access to stairs"
               },
               {
                 "value": "INTERACTION",
@@ -233,8 +303,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -249,8 +318,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             }
           ]
@@ -322,7 +390,6 @@
             {
               "type": "radiogroup",
               "name": "ConclusionOtherPath",
-              "title": "Would you do anything differently than with {CmpnName}?",
               "isRequired": true,
               "choices": [
                 {
@@ -354,19 +421,15 @@
                 },
                 {
                   "value": "DIFFERENT_PROCEDURE",
-                  "text": "I would pursue a different surgery or a laryngeal stent rather than the one {CmpnName} had."
+                  "text": "I would pursue a different surgery or procedure."
                 },
                 {
                   "value": "DIFFERENT_VET",
                   "text": "If would find a different surgeon to do the same procedure {CmpnName} had."
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
                 }
               ],
               "showOtherItem": true,
-              "otherText": "Other option"
+              "otherText": "Other (please describe)"
             },
 
             {
@@ -421,7 +484,7 @@
             {
               "type": "comment",
               "name": "ConclusionDifferentChoices",
-              "title": "Please add any brief comments about your and {CmpnName}'s LP/GOLPP journey (optional, maximum 250 characters).",
+              "title": "Please add any brief comments about your LP/GOLPP journey (optional, maximum 250 characters).",
               "isRequired": false
             },
             {

@@ -44,23 +44,6 @@ const Browse_10_Breathing = () => {
       <div className="browse-content-block" id="BreathingText">
         <p className="browse-content-text">This section asks questions about Bella&lsquo;s experience with breathing crises and aspiration pneumonia.</p>
       </div>
-
-      <div className="browse-content-block browse-content-block--info" id="BreathingInfoLink">
-        <div className="survey-general-info">
-          <img
-            src="/img-info-icon.png"
-            className="survey-info-icon"
-            alt="Example image"
-          />
-          {" "}
-          <Link
-            href="/in-progress"
-            className="survey-info-link"
-          >
-            What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?
-          </Link>
-        </div>
-      </div>
       </div>
 
       <div className="browse-panel-container" id="BreathingCrisisPanel">
@@ -109,27 +92,27 @@ const Browse_10_Breathing = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>One</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Two</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Three</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Four</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Five</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Six or more</span>
             </li>
@@ -183,27 +166,27 @@ const Browse_10_Breathing = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>One</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Two</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Three</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Four</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Five</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Six or more</span>
             </li>
@@ -789,19 +772,19 @@ const Browse_10_Breathing = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Once</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Twice</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Three times</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>More than three times</span>
             </li>
@@ -824,25 +807,56 @@ const Browse_10_Breathing = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Never</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Once</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Twice</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Three times</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>More than three times</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="BreathingAspirationAfterRefluxMeds">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Did Bella ever get aspiration pneumonia after taking medications for acid reflux (GERD) regularly?
+            </span>
+          }
+          index={17}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>
@@ -856,7 +870,7 @@ const Browse_10_Breathing = () => {
               Did Bella ever need inpatient, overnight, or emergency care for AP?
             </span>
           }
-          index={17}
+          index={18}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -887,7 +901,7 @@ const Browse_10_Breathing = () => {
               How many times did Bella require inpatient, overnight, or emergency care for AP?
             </span>
           }
-          index={18}
+          index={19}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -902,10 +916,10 @@ const Browse_10_Breathing = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What was the approximate pre-insurance cost of the AP treatment for Bella:
+              About what was the pre-insurance cost of the veterinary AP treatment for Bella:
             </span>
           }
-          index={19}
+          index={20}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

@@ -10,7 +10,7 @@
         {
           "type": "html",
           "name": "NeuropathyHeading",
-          "html": "<h2>Hind-end weakness and polyneuropathy</h2>"
+          "html": "<h2>Hind-End Weakness and Polyneuropathy</h2>"
         },
         {
           "type": "html",
@@ -70,6 +70,27 @@
                 {
                   "value": "DONT_KNOW",
                   "text": "Don't Know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "NeuropathyFrontLegs",
+              "title": "Did {CmpnName} also suffer from weakness in the front legs?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
                 }
               ],
               "showOtherItem": false
@@ -184,6 +205,7 @@
               "showOtherItem": false
             },
 
+
             {
               "type": "checkbox",
               "name": "NeuropathyOtherIssues",
@@ -191,12 +213,24 @@
               "isRequired": true,
               "choices": [
                 {
+                  "value": "NONE",
+                  "text": "No, {CmpnName} never had any of these issues"
+                },
+                {
+                  "value": "FACIAL_PARALYSIS",
+                  "text": "Increased anxiety"
+                },
+                {
+                  "value": "TREMORS",
+                  "text": "Tremors"
+                },
+                {
                   "value": "ANXIETY",
                   "text": "Increased anxiety"
                 },
                 {
                   "value": "COGNITIVE",
-                  "text": "Cognitive changes"
+                  "text": "Disorientation or cognitive changes"
                 },
                 {
                   "value": "BEHAVIOR",
@@ -207,9 +241,14 @@
                   "text": "Changes in appetite"
                 },
                 {
-                  "value": "NONE",
-                  "text": "No, {CmpnName} never had any of these issues"
+                  "value": "HEAD_TILT",
+                  "text": "Head tilting to one side"
+                },
+                {
+                  "value": "EYE_MOVEMENTS",
+                  "text": "Strange eye movements"
                 }
+
               ],
               "showOtherItem": false
             }

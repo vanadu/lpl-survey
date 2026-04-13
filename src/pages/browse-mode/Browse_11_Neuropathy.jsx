@@ -38,7 +38,7 @@ const Browse_11_Neuropathy = () => {
 
       <div className="browse-panel-container" id="NeuropathyCard1Panel">
       <div className="browse-content-block" id="NeuropathyHeading">
-        <h2 className="browse-content-heading">Hind-end weakness and polyneuropathy</h2>
+        <h2 className="browse-content-heading">Hind-End Weakness and Polyneuropathy</h2>
       </div>
 
       <div className="browse-content-block" id="NeuropathyText">
@@ -115,6 +115,37 @@ const Browse_11_Neuropathy = () => {
           </div>
         </ShowAnswerContent>
       </div>
+
+      <div className="browse-question-container" id="NeuropathyFrontLegs">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Did Bella also suffer from weakness in the front legs?
+            </span>
+          }
+          index={3}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
       </div>
       </div>
 
@@ -127,7 +158,7 @@ const Browse_11_Neuropathy = () => {
               About how long after you first noticed hind-end weakness did the breathing issues begin?
             </span>
           }
-          index={3}
+          index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -166,7 +197,7 @@ const Browse_11_Neuropathy = () => {
               About how long after you first noticed breathing issues did the hind-end weakness begin?
             </span>
           }
-          index={4}
+          index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -205,7 +236,7 @@ const Browse_11_Neuropathy = () => {
               Which progressed faster, the breathing issues or the hind-end weakness?
             </span>
           }
-          index={5}
+          index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -240,7 +271,7 @@ const Browse_11_Neuropathy = () => {
               Over the course of Bella&lsquo;s LP/GOLPP, did any of these issues also appear?
             </span>
           }
-          index={6}
+          index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -249,11 +280,23 @@ const Browse_11_Neuropathy = () => {
           <ul>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>No, Bella never had any of these issues</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Increased anxiety</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Cognitive changes</span>
+              <span>Tremors</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Increased anxiety</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Disorientation or cognitive changes</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -265,7 +308,11 @@ const Browse_11_Neuropathy = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>No, Bella never had any of these issues</span>
+              <span>Head tilting to one side</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Strange eye movements</span>
             </li>
           </ul>
           </div>

@@ -89,7 +89,7 @@ const Browse_06_Diagnosis = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did any of these specialists misdiagnose Bella&lsquo;s symptoms?
+              Were Bella&lsquo;s symptoms ever misdiagnosed?
             </span>
           }
           index={2}
@@ -314,7 +314,7 @@ const Browse_06_Diagnosis = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella have LP surgery immediately after the diagnosis?
+              Did Bella undergo a procedure for LP (i.e., surgery or stent implant) immediately after the diagnosis?
             </span>
           }
           index={8}

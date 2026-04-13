@@ -64,6 +64,62 @@
             }
 
           ]
+        },
+        {
+          "type": "panel",
+          "name": "PrimaryInfoPanel",
+          "title": "",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "PrimaryDidDiscuss",
+              "title": "Did your current primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms? ",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO_MENTION",
+                  "text": "No, did not mention LP/GOLPP at all"
+                },
+                {
+                  "value": "POSSIBLY",
+                  "text": "Said {CmpnName}'s symptoms were possibly due to LP/GOLPP"
+                },
+                {
+                  "value": "DEFINITELY",
+                  "text": "Said {CmpnName}'s symptoms were definitely due to LP/GOLPP"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "PrimaryInfoDetails",
+              "title": "Did your current primary veterinarian give you useful information about LP/GOLPP?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO_INFO",
+                  "text": "No, I received little or no information."
+                },
+                {
+                  "value": "GENERAL_INFO",
+                  "text": "They gave me a general description of LP/GOLPP without going into detail."
+                },
+                {
+                  "value": "DETAILED_INFO",
+                  "text": "Explained LP/GOLPP in detail and told me about possible options, including surgery."
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or can't remember."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -71,62 +127,7 @@
       "type": "panel",
       "name": "PrimaryCard2Panel",
       "elements": [
-        {
-          "type": "panel",
-          "name": "PrimaryInfoPanel",
-          "title": "",
-          "elements": [
-          {
-            "type": "radiogroup",
-            "name": "PrimaryDidDiscuss",
-            "title": "Did your current primary vet discuss LP/GOLPP as a possible cause of {CmpnName}'s symptoms? ",
-            "isRequired": true,
-            "choices": [
-              {
-                "value": "NO_MENTION",
-                "text": "No, did not mention LP/GOLPP at all"
-              },
-              {
-                "value": "POSSIBLY",
-                "text": "Said {CmpnName}'s symptoms were possibly due to LP/GOLPP"
-              },
-              {
-                "value": "DEFINITELY",
-                "text": "Said {CmpnName}'s symptoms were definitely due to LP/GOLPP"
-              },
-              {
-                "value": "DONT_KNOW",
-                "text": "Don't know"
-              }
-            ],
-            "showOtherItem": false
-          },
-          {
-            "type": "radiogroup",
-            "name": "PrimaryInfoDetails",
-            "title": "Did your current primary veterinarian give you useful information about LP/GOLPP?",
-            "isRequired": true,
-            "choices": [
-              {
-                "value": "NO_INFO",
-                "text": "No, I received little or no information."
-              },
-              {
-                "value": "GENERAL_INFO",
-                "text": "They gave me a general description of LP/GOLPP without going into detail."
-              },
-              {
-                "value": "DETAILED_INFO",
-                "text": "Explained LP/GOLPP in detail and told me about possible options, including surgery."
-              },
-              {
-                "value": "DONT_KNOW",
-                "text": "Don't know or can't remember."
-              }
-            ]
-          }
-        ]
-        },
+
         {
           "type": "panel",
           "name": "PrimaryReferralPanel",
@@ -289,8 +290,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             }
           ]

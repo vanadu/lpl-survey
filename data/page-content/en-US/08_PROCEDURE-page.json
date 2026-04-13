@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "ProcedureHeading",
-          "html": "<h2>Veterinary-Medical Procedures for LP</h2>"
+          "html": "<h2>Veterinary-Medical Procedures for&nbsp;LP</h2>"
         },
         {
           "type": "html",
@@ -157,9 +157,20 @@
               }
             ],
             "showOtherItem": true
+            },
+            {
+              "type": "ranking",
+              "name": "ProcedureSequence",
+              "title": "In what order were these procedures performed?",
+              "description": "Please drag and drop the procedures into the order in which they were performed, first to last.",
+              "choicesFromQuestion": "ProcedureType",
+              "choicesFromQuestionMode": "selected",
+              "hideIfChoicesEmpty": true,
+              "visibleIf": "{ProcedureType.length} > 1"
             }
           ]
         },
+
         {
           "type": "panel",
           "name": "ProcedureTiebackPanel",
@@ -577,7 +588,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureIssuesThroatclear",
-              "title": "Did {CmpnName} frequently cough or throat-clear after the {cvProcedureTypeShort} procedure?",
+              "title": "Did {CmpnName} frequently cough or throat-clear after the procedure?",
               "isRequired": true,
               "choices": [
                 {

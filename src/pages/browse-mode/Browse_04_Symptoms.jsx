@@ -111,7 +111,7 @@ const Browse_04_Symptoms = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Coughing or gagging</span>
+              <span>Coughing, gagging, or retching</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -120,6 +120,22 @@ const Browse_04_Symptoms = () => {
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Exercise and heat intolerance</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Expectorating mucus</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Halitosis (bad breath)</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Regurgitating or vomiting </span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Gums turning blue or discolored</span>
             </li>
           </ul>
           </div>
@@ -344,27 +360,27 @@ const Browse_04_Symptoms = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Once</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Twice</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Three times</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Four times</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Five times</span>
             </li>
-            <li className="browse-showanswer-radio">
+            <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>Six or more times</span>
             </li>
@@ -373,11 +389,11 @@ const Browse_04_Symptoms = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="SymptomsIntubationCountAfter">
+      <div className="browse-question-container" id="SymptomsIntubationBeforeSymptoms">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About how many times was Bella intubated under anesthesia after the first appearance of LP/GOLPP symptoms?
+              Was Bella intubated under anesthesia immediately prior to the first appearance of LP/GOLPP symptoms?
             </span>
           }
           index={8}
@@ -389,27 +405,15 @@ const Browse_04_Symptoms = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Once</span>
+              <span>Yes</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Twice</span>
+              <span>No</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Three times</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Four times</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Five times</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Six or more times</span>
+              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>
@@ -447,7 +451,7 @@ const Browse_04_Symptoms = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What symptoms or behaviors did Bella have after the intubation with anesthesia?
+              What symptoms or behaviors did Bella have after the intubation under anesthesia?
             </span>
           }
           index={10}
@@ -498,7 +502,7 @@ const Browse_04_Symptoms = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              When Bella first started showing symptoms of LP, did she have any other health conditions?
+              When Bella first started showing symptoms of LP, were you aware of any other health issues?
             </span>
           }
           index={11}

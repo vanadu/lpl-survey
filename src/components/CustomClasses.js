@@ -51,8 +51,6 @@ export function getStyleDirectives(item) {
     "FactorsSourcesTypes",
 
     "SymptomsType",
-    "SymptomsIntubationCount",
-    "SymptomsIntubationCountAfter",
     "SymptomsIntubationSymptoms",
     "SymptomsOtherConditionsType",
 
@@ -69,17 +67,15 @@ export function getStyleDirectives(item) {
     "ProcedureType",
     "ProcedureScheduled",
 
-    "BreathingCrisisCount",
-    "BreathingEmergencyCount",
     "BreathingCrisisProductRecommendedType",
     "BreathingAspirationCount",
     "BreathingAspirationAfterProcedure",
 
+    "NeuropathyOtherIssues",
 
-
+    "ConclusionNewSymptomsType",
     "ConclusionGeneralCondition",
     "ConclusionOtherConditions",
-
     "ConclusionOtherPathTimeframe"
 
   ]);
@@ -90,6 +86,7 @@ export function getStyleDirectives(item) {
     "SymptomsNeckRestraint",
     "SymptomsSeverity",
     "SymptomsIntubationWasIntubated",
+    "SymptomsIntubationBeforeSymptoms",
     "SymptomsOtherConditions",
 
     "PrimaryInflammationPanel",
@@ -115,8 +112,10 @@ export function getStyleDirectives(item) {
     "ProcedureAntibiotics",
     "ProcedureRefluxMeds",
 
-
     "TherapyDidHave",
+
+    "BreathingCrisisCount",
+    "BreathingEmergencyCount",
     "BreathingCrisisDidHave",
     "BreathingEmergencyDidHave",
     "BreathingOxygenDidUse",
@@ -126,17 +125,17 @@ export function getStyleDirectives(item) {
     "ProcedureChoice",
 
     "BreathingCrisisAdvice",
-
     "BreathingCrisisProductRecommended",
     "BreathingAspirationDidHave",
     "BreathingAspirationInpatient",
     "BreathingAspirationProcedureAntibiotics",
-    "BreathingAspirationProcedureReflux",
+    "BreathingAspirationAfterRefluxMeds",
 
     "NeuropathySymptoms",
+    "NeuropathyFrontLegs",
 
+    "ConclusionNewSymptoms",
     "ConclusionLifestyleChanges",
-
     "ConclusionStentAlternative"
 
   ]);
@@ -170,6 +169,8 @@ export function getStyleDirectives(item) {
     "CmpnInfoGender",
 
     "FactorsBestSource",
+
+    "SymptomsIntubationCount",
 
     "MedicationPrescriptionCost",
     "MedicationSupplementsCost",
@@ -252,6 +253,8 @@ export function getStyleDirectives(item) {
     "SymptomsType",
     "SymptomsSeverity",
     "SymptomsNeckRestraint",
+    "SymptomsIntubationCount",
+    "SymptomsIntubationBeforeSymptoms",
     "SymptomsIntubationConcerns",
     "SymptomsOtherConditionsType",
     "SymptomsIntubationSymptoms",
@@ -271,6 +274,7 @@ export function getStyleDirectives(item) {
 
     "MedicationPrescriptionType",
     "MedicationPrescriptionCost",
+    "MedicationRatingText",
     "MedicationPrescriptionDoxepinRatingBreathing",
     "MedicationPrescriptionTrazodoneRatingBreathing",
     "MedicationPrescriptionGabapentinRatingBreathing",
@@ -330,31 +334,40 @@ export function getStyleDirectives(item) {
     "BreathingOxygenDidUse",
     "BreathingCrisisOxygenPrevent",
     "BreathingCrisisOxygenRevive",
-    "BreathingAspirationProcedureReflux",
+    "BreathingAspirationAfterRefluxMeds",
     "BreathingAspirationCount",
     "BreathingAspirationAfterProcedure",
     "BreathingAspirationInpatient",
     "BreathingAspirationCost",
 
     "NeuropathySymptomsFirst",
+    "NeuropathyFrontLegs",
     "NeuropathySymptomsTypeProgression",
     "NeuropathyOtherIssues",
 
-
+    "ConclusionNewSymptomsType",
     "ConclusionLifestyleChangesDetails",
     "ConclusionGeneralCondition",
     "ConclusionQOL",
+
+
+
     "ConclusionOtherConditions",
-    "ConclusionOtherPathTimeframe"
+
+    "ConclusionUserLifestyle",
 
 
+    "ConclusionOtherPathDetails",
+    "ConclusionOtherPathTimeframe",
+
+    "ConclusionDifferentChoices"
 
 
   ]);
 
   const QUESTION_SPACE_ABOVE = new Set([
     "UserInfoContactTypeFacebook",
-    "UserInfoNameCountryPanel",
+    // "UserInfoNameCountryPanel",
 
 
     "FactorsProcedureCost",
@@ -382,7 +395,9 @@ export function getStyleDirectives(item) {
     "UserInfoStateRegion",
 
     "CmpnInfoBreed",
-    "CmpnInfoGender",
+    // "CmpnInfoGender",
+
+    "CmpnInfoWeight",
 
     "MedicationPrescriptionCost",
 

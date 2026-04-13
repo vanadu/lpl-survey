@@ -14,11 +14,6 @@
           "type": "html",
           "name": "BreathingText",
           "html": "<p>This section asks questions about {CmpnName}'s experience with breathing crises and aspiration pneumonia. </p>"
-        },
-        {
-          "type": "html",
-          "name": "BreathingInfoLink",
-          "html": "<div class='survey-general-info'><img src='/img-info-icon.png' class='survey-info-icon' alt='Example image' /><a href='/in-progress' class='survey-info-link' target='_blank' rel='noopener noreferrer'>What is aspiration pneumonia and why is it a frequent complication of LP/GOLPP ?</a></div>"
         }
       ]
     },
@@ -31,6 +26,7 @@
           "type": "radiogroup",
           "name": "BreathingCrisisDidHave",
           "title": "Did {CmpnName} ever have a breathing crisis that caused you to fear for {cvGenderObjectPronoun} life?",
+          "isRequired": true,
           "choices": [
             {
               "value": "YES",
@@ -48,7 +44,7 @@
           "showOtherItem": false
         },
         {
-          "type": "radiogroup",
+          "type": "dropdown",
           "name": "BreathingCrisisCount",
           "title": "How many such breathing crises did {CmpnName} have?",
           "isRequired": true,
@@ -104,7 +100,7 @@
           "showNoneItem": false
         },
         {
-          "type": "radiogroup",
+          "type": "dropdown",
           "name": "BreathingEmergencyCount",
           "title": "How many visits did {CmpnName} make to veterinary professionals because of a breathing crisis?",
           "visibleIf": "{BreathingEmergencyDidHave} = 'YES'",   
@@ -388,7 +384,7 @@
               "showOtherItem": false
             },
             {
-            "type": "radiogroup",
+            "type": "dropdown",
             "name": "BreathingAspirationCount",
             "title": "How many times did {CmpnName} get AP?",
             "isRequired": true,
@@ -415,7 +411,7 @@
             },
 
             {
-              "type": "radiogroup",
+              "type": "dropdown",
               "name": "BreathingAspirationAfterProcedure",
               "title": "How many times did {CmpnName} get aspiration pneumonia after the surgery or stent procedure?",
               "isRequired": true,
@@ -440,6 +436,28 @@
                 {
                   "value": 4,
                   "text": "More than three times"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingAspirationAfterRefluxMeds",
+              "title": "Did {CmpnName} ever get aspiration pneumonia after taking medications for acid reflux (GERD) regularly?",
+              "isRequired": true,
+              "visibleIf": "{MedicationRefluxMedications} != 'NO'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
                 }
               ],
               "showOtherItem": false
@@ -495,9 +513,9 @@
             {
               "type": "dropdown",
               "name": "BreathingAspirationCost",
-              "title": "What was the approximate pre-insurance cost of the AP treatment for {CmpnName}:",
+              "title": "About what was the pre-insurance cost of the veterinary AP treatment for {CmpnName}:",
               "isRequired": true,
-              "visibleIf": "{BreathingAspirationDidHave} = 'YES'{BreathingAspirationInpatient} = 'YES'",
+              "visibleIf": "{BreathingAspirationDidHave} = 'YES' &&{BreathingAspirationInpatient} = 'YES'",
               "choices": [
                 {
                   "value": "NOT_SAY",

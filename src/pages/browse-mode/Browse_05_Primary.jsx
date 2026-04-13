@@ -108,9 +108,7 @@ const Browse_05_Primary = () => {
         </ShowAnswerContent>
       </div>
       </div>
-      </div>
 
-      <div className="browse-panel-container" id="PrimaryCard2Panel">
       <div className="browse-panel-container" id="PrimaryInfoPanel">
       <div className="browse-question-container" id="PrimaryDidDiscuss">
         <ShowAnswerContent
@@ -182,7 +180,9 @@ const Browse_05_Primary = () => {
         </ShowAnswerContent>
       </div>
       </div>
+      </div>
 
+      <div className="browse-panel-container" id="PrimaryCard2Panel">
       <div className="browse-panel-container" id="PrimaryReferralPanel">
       <div className="browse-question-container" id="PrimaryDidRefer">
         <ShowAnswerContent

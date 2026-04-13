@@ -91,8 +91,7 @@
               { "value": 2, "text": "2" },
               { "value": 3, "text": "3" },
               { "value": 4, "text": "4" },
-              { "value": 5, "text": "5" },
-              { "value": "DONT_KNOW", "text": "Don't know" }
+              { "value": 5, "text": "5" }
               ]
             }
           ]
@@ -193,7 +192,7 @@
             {
               "type": "rating",
               "name": "FactorsSurgeryAnesthesia",
-              "title": "Extended anesthesia:",
+              "title": "Risks of extended anesthesia:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
               "displayMode": "buttons",
@@ -208,7 +207,7 @@
             {
               "type": "rating",
               "name": "FactorsSurgeryInpatient",
-              "title": "Risk of direct inpatient complications of surgery:",
+              "title": "Risks of inpatient complications of surgery:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
               "displayMode": "buttons",
@@ -242,12 +241,12 @@
         {
           "type": "panel",
           "name": "FactorsGeneralPanel",
-          "title": "How have {CmpnName}'s age and general health considerations factored into your LP/GOLPP decisions?",
+          "title": "Age and general health considerations",
           "elements": [
             {
               "type": "rating",
               "name": "FactorsGeneralAge",
-              "title": "{CmpnName}'s age:",
+              "title": "How has {CmpnName}'s age factored into your decisions?",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
               "displayMode": "buttons",
@@ -262,7 +261,7 @@
             {
               "type": "rating",
               "name": "FactorsGeneralHealth",
-              "title": "{CmpnName}'s overall health and prospects for quality of life:",
+              "title": "How has {CmpnName}'s overall health factored into your decisions?",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
               "displayMode": "buttons",
@@ -277,7 +276,7 @@
             {
               "type": "rating",
               "name": "FactorsGeneralCoexisting",
-              "title": "{CmpnName}'s preexisting conditions other than LP/GOLPP:",
+              "title": "How have {CmpnName}'s preexisting conditions other than LP/GOLPP factored into your decisions?",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
               "displayMode": "buttons",

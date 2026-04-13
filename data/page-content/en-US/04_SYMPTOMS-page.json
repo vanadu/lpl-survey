@@ -83,7 +83,7 @@
                 },
                 {
                   "value": "COUGHING",
-                  "text": "Coughing or gagging"
+                  "text": "Coughing, gagging, or retching"
                 },
                 {
                   "value": "HIND_END",
@@ -92,11 +92,25 @@
                 {
                   "value": "EXERCISE_INTOLERANCE",
                   "text": "Exercise and heat intolerance"
+                },
+                {
+                  "value": "MUCUS",
+                  "text": "Expectorating mucus"
+                },
+                {
+                  "value": "HALITOSIS",
+                  "text": "Halitosis (bad breath)"
+                },
+                {
+                  "value": "REGURGITATION",
+                  "text": "Regurgitating or vomiting "
+                },
+                {
+                  "value": "CYANOSIS",
+                  "text": "Gums turning blue or discolored"
                 }
               ],
               "showOtherItem": true,
-              "showNoneItem": true,
-              "noneText": "Don't know",
               "otherText": "Other"
             },
             {
@@ -156,7 +170,7 @@
               ]
             },
             {
-              "type": "radiogroup",
+              "type": "dropdown",
               "name": "SymptomsIntubationCount",
               "title": "About how many times was {CmpnName} intubated under anesthesia?",
               "isRequired": true,
@@ -191,34 +205,21 @@
             },
             {
               "type": "radiogroup",
-              "name": "SymptomsIntubationCountAfter",
-              "title": "About how many times was {CmpnName} intubated under anesthesia after the first appearance of LP/GOLPP symptoms?",
+              "name": "SymptomsIntubationBeforeSymptoms",
+              "title": "Was {CmpnName} intubated under anesthesia immediately prior to the first appearance of LP/GOLPP symptoms?",
               "isRequired": true,
               "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
               "choices": [
                 {
-                  "value": 1,
-                  "text": "Once"
+                  "value": "YES",
+                  "text": "Yes"
                 },
                 {
-                  "value": 2,
-                  "text": "Twice"
+                  "value": "NO",
+                  "text": "No"
                 },
-                {
-                  "value": 3,
-                  "text": "Three times"
-                },
-                {
-                  "value": 4,
-                  "text": "Four times"
-                },
-                {
-                  "value": 5,
-                  "text": "Five times"
-                },
-                {
-                  "value": 6,
-                  "text": "Six or more times"
+                { "value": "DONT_KNOW",
+                  "text": "Don't know"
                 }
               ],
               "showOtherItem": false
@@ -236,7 +237,8 @@
             {
               "type": "checkbox",
               "name": "SymptomsIntubationSymptoms",
-              "title": "What symptoms or behaviors did {CmpnName} have after the intubation with anesthesia?",
+              "title": "What symptoms or behaviors did {CmpnName} have after the intubation under anesthesia?",
+              "isRequired": true,
               "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES' && {SymptomsIntubationConcerns} = true",
               "choices": [
                 {
@@ -287,7 +289,7 @@
             {
               "type": "radiogroup",
               "name": "SymptomsOtherConditions",
-              "title": "When {CmpnName} first started showing symptoms of LP, did {cvGenderSubjectPronoun} have any other health conditions?",
+              "title": "When {CmpnName} first started showing symptoms of LP, were you aware of any other health issues?",
               "isRequired": true,
               "choices": [
                 {

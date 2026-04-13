@@ -1598,19 +1598,22 @@ ul.showmore_survey_icons_description {
   justify-content: center;
   align-items: flex-start;
   gap: .375rem;
+  // !VA I don't understand why Chat did this or what it's supposed to do.
   width: max-content;   /* shrink to icon width */
-  margin: -.75rem auto 0;  /* center horizontally */
+  width: 100%; 
+  margin: -var(--s-1) auto var(--s-4);  /* center horizontally */
   @include mphone {
-    margin: -var(--s-1) auto 0;  /* center horizontally */
+    margin: -1rem auto var(--s-4);  /* center horizontally */
   }
   @include lphone {
-    margin: -.75rem auto 0;  /* center horizontally */
+    margin: -1rem auto 0;  /* center horizontally */
   }
   @include tablet {
-    margin: -var(--s-1) auto 1rem;  /* center horizontally */
+    margin: -var(--s-1) auto .5rem;  /* center horizontally */
     gap: 3rem;
   }
   @include desktop {
+    margin: -var(--s-1) auto .5rem;  /* center horizontally */
     gap: 3rem;
   }
   @include ldesktop {

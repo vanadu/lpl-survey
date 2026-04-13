@@ -58,6 +58,92 @@ const Browse_12_Conclusion = () => {
       </div>
 
       <div className="browse-panel-container" id="ConclusionDetailsPanel">
+      <div className="browse-question-container" id="ConclusionNewSymptoms">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Did Bella develop new symptoms over the course of his LP/GOLPP journey?
+            </span>
+          }
+          index={1}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ConclusionNewSymptomsType">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              What other LP/GOLPP symptoms did Bella develop since he first showed LP/GOLPP symptoms?
+            </span>
+          }
+          index={2}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <p className="browse-question-description">The symptoms you selected earlier in the survey are preselected here.</p>
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Noisy, raspy or labored breathing</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Changes in bark</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Coughing, gagging, or retching</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Hind-end weakness</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Exercise and heat intolerance</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Expectorating mucus</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Halitosis (bad breath)</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Regurgitating or vomiting </span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Gums turning blue or discolored</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
       <div className="browse-question-container" id="ConclusionLifestyleChanges">
         <ShowAnswerContent
           header={
@@ -65,7 +151,7 @@ const Browse_12_Conclusion = () => {
               Did you make any changes to Bella&lsquo;s lifestyle or routine due to her LP/GOLPP?
             </span>
           }
-          index={1}
+          index={3}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -96,7 +182,7 @@ const Browse_12_Conclusion = () => {
               Please describe any lifestyle restrictions or changes you made for Bella due to her LP/GOLPP:
             </span>
           }
-          index={2}
+          index={4}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -121,7 +207,7 @@ const Browse_12_Conclusion = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Restrictred access to stairs</span>
+              <span>Restricted access to stairs</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -139,7 +225,7 @@ const Browse_12_Conclusion = () => {
               How has Bella&lsquo;s condition changed since the first LP/GOLPP symptoms appeared?
             </span>
           }
-          index={3}
+          index={5}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -190,7 +276,7 @@ const Browse_12_Conclusion = () => {
               How would you rate Bella&lsquo;s quality of life at this stage?
             </span>
           }
-          index={4}
+          index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -332,7 +418,7 @@ const Browse_12_Conclusion = () => {
               Did Bella develop any new conditions during her LP/GOLPP journey that she didn&lsquo;t have before?
             </span>
           }
-          index={5}
+          index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -359,7 +445,7 @@ const Browse_12_Conclusion = () => {
               What other conditions did Bella develop during her LP/GOLPP journey?
             </span>
           }
-          index={6}
+          index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -414,7 +500,7 @@ const Browse_12_Conclusion = () => {
               Has Bella&lsquo;s LP/GOLPP resulted in a substantial change to your lifestyle?
             </span>
           }
-          index={7}
+          index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -554,7 +640,7 @@ const Browse_12_Conclusion = () => {
               Has Bella&lsquo;s LP/GOLPP caused you or anyone in your family significant emotional distress or anxiety?
             </span>
           }
-          index={8}
+          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -702,7 +788,7 @@ const Browse_12_Conclusion = () => {
               What was the ultimate reason why Bella crossed over the Rainbow Bridge?
             </span>
           }
-          index={9}
+          index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -749,10 +835,10 @@ const Browse_12_Conclusion = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Would you do anything differently than with Bella?
+              ConclusionOtherPath
             </span>
           }
-          index={10}
+          index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -783,7 +869,7 @@ const Browse_12_Conclusion = () => {
               What do you think you would do differently?
             </span>
           }
-          index={11}
+          index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -796,15 +882,11 @@ const Browse_12_Conclusion = () => {
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>I would pursue a different surgery or a laryngeal stent rather than the one Bella had.</span>
+              <span>I would pursue a different surgery or procedure.</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>If would find a different surgeon to do the same procedure Bella had.</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>
@@ -818,7 +900,7 @@ const Browse_12_Conclusion = () => {
               If you had another LP/GOLPP dog, would you do the surgical/stent procedure earlier or later?
             </span>
           }
-          index={12}
+          index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -853,7 +935,7 @@ const Browse_12_Conclusion = () => {
               If you were to have another LP/GOLPP companion, what if anything would you differently?
             </span>
           }
-          index={13}
+          index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -881,10 +963,10 @@ const Browse_12_Conclusion = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please add any brief comments about your and Bella&lsquo;s LP/GOLPP journey (optional, maximum 250 characters).
+              Please add any brief comments about your LP/GOLPP journey (optional, maximum 250 characters).
             </span>
           }
-          index={14}
+          index={16}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

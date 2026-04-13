@@ -230,6 +230,7 @@
   "BreathingAspirationDidHave": "YES",
   "BreathingAspirationCount": 3,
   "BreathingAspirationAfterProcedure": 3,
+  "BreathingAspirationAfterRefluxMeds": "NO",
   "BreathingAspirationInpatient": "YES",
   "BreathingAspirationInpatientCount": 3,
   "BreathingAspirationCost": "1001_3000",
@@ -240,10 +241,12 @@
   "NeuropathySymptomsBreathingOnset": "WEEKS",
   "NeuropathySymptomsHindEndOnset": "MONTHS",
   "NeuropathySymptomsTypeProgression": "HIND_END",
+  "NeuropathyFrontLegs": "NO",
   "NeuropathyOtherIssues": [
     "ANXIETY"
   ],
 
+  "ConclusionNewSymptoms": "YES",
   "ConclusionLifestyleChanges": "YES",
   "ConclusionLifestyleChangesDetails": [
    "EXERCISE",

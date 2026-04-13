@@ -110,12 +110,13 @@ label {
 
 
 // !VA PAGE OVERRIDES - 
+// !VA Whitespace top and bottom on mobile and larger
 .sd-container-modern .sd-page.sd-body__page  {
   background: #FFFFFF;
   // !VA This comes out to 10px;
   border-radius: calc(2.5 * (var(--sjs-corner-radius, 4px)));
   // border-radius: 50px!important;
-  padding-top: calc(3.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  padding-top: calc(4 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   padding-bottom: calc(10 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))));
@@ -173,13 +174,14 @@ label {
 
 // !VA Overrides default.scss
 .sd-panel.sd-element--nested > .sd-panel__content {
-    padding-bottom: var(--sd-base-padding);
-    padding-bottom: 0;
-  --animation-padding-top: var(--sd-base-padding);
+    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+    padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+    --animation-padding-top: var(--sd-base-padding);
 }
 
 // !VA DEFAULT PANEL CONTENT PADDING - Whitespace above and below the panel content - NOT the whitespace between the panel boundary and the content! Sets the whitespace between panels
 .sd-container-modern .sd-panel__content {
+  // !VA The padding below appears to do nothing at all...
   padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   // !VA Overrides default.scss
   padding-bottom: calc(1* (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
@@ -220,8 +222,12 @@ label {
 // !VA GLOBAL BOOLEAN STYLES
 // !VA Sets the padding between the switch and the outer border
 .sd-container-modern .sd-boolean {
-  // padding: calc(0.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
-  padding: calc(0.25 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+  padding:
+  calc(.25 * (var(--sjs-base-unit, var(--base-unit, 8px)))) // top
+  calc(.25 * (var(--sjs-base-unit, var(--base-unit, 8px)))) // right
+  calc(.25 * (var(--sjs-base-unit, var(--base-unit, 8px)))) // bottom
+  calc(.25 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important; //left
+  margin-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
 
 // !VA Sets the height of the boolean element
@@ -243,7 +249,7 @@ label {
 .sd-container-modern .sd-element__content .sd-html h2 {
   font-family: $secondary_font;
   // !VA Reduced line height
-  line-height: calc(1 * (var(--sjs-article-font-x-large-lineHeight, var(--sjs-font-size, 16px))));
+  line-height: calc(1.25 * (var(--sjs-article-font-x-large-lineHeight, var(--sjs-font-size, 16px))));
   // !VA Added top padding
   padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
 }
@@ -565,6 +571,27 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 // !VA Force AGE panels to two column layout, as defined in CustomClasses
 .survey-panel-two-col {
   .sd-element__content {
+
+    @include tablet {
+      display: grid;
+      width: 60%;          /* important */
+      grid-template-columns: 1r 1fr;
+      gap: 0.75rem 1rem;
+      align-items: start;
+      max-width: 100%;
+      box-sizing: border-box;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+    @include desktop {
+      display: grid;
+      width: 60%;          /* important */
+      grid-template-columns: 1r 1fr;
+      gap: 0.75rem 1rem;
+      align-items: start;
+      max-width: 100%;
+      box-sizing: border-box;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
     @include ldesktop {
       display: grid;
       width: 60%;          /* important */
@@ -574,11 +601,11 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
       max-width: 100%;
       box-sizing: border-box;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      
     }
     .sd-row {
       padding: 0!important;
       margin: 0!important;
+      // background: rgba(0, 128, 0, .3) !important; //devgreen
     }
   }
   &.sd-element--nested-with-borders   {
@@ -590,7 +617,10 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
   }
 }
 
-
+.sd-row {
+  // !VA 2026.04.12
+  margin-top: 0!important;
+}
 
 // =====================================================
 // !VA ELEMENT-SPECIFIC STYLING and CUSTOM PANEL LAYOUTS
@@ -719,20 +749,25 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 [data-name="CmpnInfoWeightDetailsPanel"],
 {
   .sd-element__content.sd-panel__content {
-    width: 650px!important;
+    width: 280px!important;
     display: flex !important;
     flex-direction: column;
     padding: 0!important;
     margin: 0!important;
     @include tablet {
       flex-direction: row !important;
+      width: 650px!important;
     }
     @include desktop {
       flex-direction: row !important;
+      width: 650px!important;
     }
     @include ldesktop {
+      width: 650px!important;
       flex-direction: row !important;
     }
+  }
+  .sd-question {
   }
   .sd-row {
     @include tablet {
@@ -893,7 +928,6 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 // !VA Custom classes - Medium width text boxes and dropdown, i.e. CmpnName, UserInfoAgeGroup. 
 .survey-control-w-300 { 
   // width: 100%!important;
-  background: rgba(255, 0, 0, .3) !important; //devred
   width: 260px!important;
   // @include mphone { }
   // @include lphone { }
@@ -946,7 +980,7 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 }
 
 .survey-q-separator-above {
-  margin-top: 1rem!important; // !VA 2026.04.07
+  // margin-top: 1rem!important; // !VA 2026.04.07
   padding-top: .75rem; // !VA 2026.04.07
   background-image: linear-gradient(
     to right,
@@ -958,10 +992,18 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
   background-repeat: no-repeat;
   background-size: 100% 1px;
   background-position: center top;
+
+
+  @include ldesktop {
+     margin-top: .5rem!important; // !VA 2026.04.07
+    padding-top: 1.25rem; // !VA 2026.04.07
+  }
+
 }
 
 .survey-q-separator-below {
-  padding-bottom: 1.25rem;
+  padding-bottom: calc(.25 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  margin-bottom: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   background-image: linear-gradient(
     to right,
     transparent calc(50% - (var(--sep-width) / 2)),
@@ -972,6 +1014,12 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
   background-repeat: no-repeat;
   background-size: 100% 1px;
   background-position: center bottom;
+
+  @include ldesktop {
+    padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    margin-bottom: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  }
+
 }
 
 .survey-q-space-above { 

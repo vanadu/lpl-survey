@@ -109,7 +109,7 @@ const Browse_07_Medication = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Prednisone or other steriod</span>
+              <span>Steroid (i.e. Prednisone, Meloxicam)</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -121,7 +121,7 @@ const Browse_07_Medication = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Meloxicam</span>
+              <span>Theophylline</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -173,6 +173,10 @@ const Browse_07_Medication = () => {
           </ul>
           </div>
         </ShowAnswerContent>
+      </div>
+
+      <div className="browse-content-block" id="MedicationRatingText">
+        <p className="browse-content-text">Medications can affect not only breathing, but also behavior and mobility. This section asks you to rate the medications separately for their effect on Bella&amp;lsquo;s breathing and mobility/behavior. If you&amp;lsquo;re not sure how effective the medication was, please select option 3, &amp;lsquo;no effect&amp;rsquo;.</p>
       </div>
 
       <div className="browse-question-container" id="MedicationPrescriptionDoxepinRatingBreathing">
@@ -3427,146 +3431,6 @@ const Browse_07_Medication = () => {
           </div>
         </ShowAnswerContent>
       </div>
-
-      <div className="browse-question-container" id="MedicationRefluxMedicationsAPEffect">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              How did the reflux medications affect Bella&lsquo;s risk of aspiration pneumonia?
-            </span>
-          }
-          index={28}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">1 = very negative, 3 = no effect, 5 = yes, very positive</p>
-          <div className="showanswer__content-block">
-          <div className="browse-showanswer-rating" aria-hidden="true">
-                
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        1
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        2
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        3
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        4
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        5
-                      </text>
-                    </svg>
-                  </span>
-              </div>
-          </div>
-        </ShowAnswerContent>
-      </div>
       </div>
       </div>
 
@@ -3579,7 +3443,7 @@ const Browse_07_Medication = () => {
               Have you purchased supplements based on a particular ingredient for Bella&lsquo;s LP/GOLPP symptoms?
             </span>
           }
-          index={29}
+          index={28}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -3610,7 +3474,7 @@ const Browse_07_Medication = () => {
               Please select the main ingredient in the supplements Bella has taken:
             </span>
           }
-          index={30}
+          index={29}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -3673,7 +3537,7 @@ const Browse_07_Medication = () => {
               What was the average monthly cost of the supplements?
             </span>
           }
-          index={31}
+          index={30}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -3708,7 +3572,7 @@ const Browse_07_Medication = () => {
               What was the effect of the supplements on Bella&lsquo;s breathing?
             </span>
           }
-          index={32}
+          index={31}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -3848,7 +3712,7 @@ const Browse_07_Medication = () => {
               What was the effect of the supplements on Bella&lsquo;s mobility or behavior?
             </span>
           }
-          index={33}
+          index={32}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -3990,7 +3854,7 @@ const Browse_07_Medication = () => {
               Have you purchased products that are advertised as a blend or protocol of ingredients created for LP/GOLPP? 
             </span>
           }
-          index={34}
+          index={33}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -4021,7 +3885,7 @@ const Browse_07_Medication = () => {
               What was the average monthly cost of the blends or protocols?
             </span>
           }
-          index={35}
+          index={34}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -4056,7 +3920,7 @@ const Browse_07_Medication = () => {
               What was the effect of the blends or protocols on Bella&lsquo;s breathing?
             </span>
           }
-          index={36}
+          index={35}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -4196,7 +4060,7 @@ const Browse_07_Medication = () => {
               What was the effect of the blends or protocols on Bella&lsquo;s mobility or behavior?
             </span>
           }
-          index={37}
+          index={36}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

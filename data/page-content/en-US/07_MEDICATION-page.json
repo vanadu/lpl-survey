@@ -68,7 +68,7 @@
                 },
                 {
                   "value": "STEROID",
-                  "text": "Prednisone or other steriod"
+                  "text": "Steroid (i.e. Prednisone, Meloxicam)"
                 },      
                 {
                   "value": "ANTIHISTAMINE",
@@ -79,8 +79,8 @@
                   "text": "Cerenia (maripotant citrate)"
                 },
                 {
-                  "value": "MELOXICAM",
-                  "text": "Meloxicam"
+                  "value": "THEOPHYLLINE",
+                  "text": "Theophylline"
                 },
                 {
                   "value": "ACEPROMINE",
@@ -129,8 +129,7 @@
             {
               "type": "html",
               "name": "MedicationRatingText",
-              "title": "Medications can affect not only breathing, but also behavior and mobility. This section asks you to rate the medications separately for their effect on {CmpnName}'s breathing and mobility/behavior.",
-              "html": ""
+              "html": "Medications can affect not only breathing, but also behavior and mobility. This section asks you to rate the medications separately for their effect on {CmpnName}&lsquo;s breathing and mobility/behavior. If you&lsquo;re not sure how effective the medication was, please select option 3, &lsquo;no effect&rsquo;."
             },
             {
               "type": "rating",
@@ -145,8 +144,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -162,8 +160,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -179,8 +176,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -196,8 +192,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -213,8 +208,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -230,8 +224,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -247,8 +240,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },    
             {
@@ -264,8 +256,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },    
             {
@@ -281,8 +272,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },   
             {
@@ -298,8 +288,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },   
             {
@@ -315,8 +304,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },   
             {
@@ -332,8 +320,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },  
             {
@@ -349,8 +336,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },   
             {
@@ -366,8 +352,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },   
             {
@@ -383,8 +368,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -400,8 +384,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },      
             {
@@ -417,8 +400,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },   
             {
@@ -434,8 +416,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },   
             {
@@ -451,8 +432,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -468,8 +448,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },     
             {
@@ -485,8 +464,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },   
             {
@@ -502,8 +480,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             }
           ]
@@ -545,24 +522,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
-              ]
-            },
-            {
-              "type": "rating",
-              "name": "MedicationRefluxMedicationsAPEffect",
-              "title": "How did the reflux medications affect {CmpnName}'s risk of aspiration pneumonia?",
-              "description": "1 = very negative, 3 = no effect, 5 = yes, very positive",
-              "isRequired": true,
-              "displayMode": "buttons",
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             }
           ]
@@ -682,6 +642,12 @@
             "showNoneItem": false
             },
             {
+              "type": "html",
+              "name": "MedicationSupplementsRatingText",
+              "title": "This section asks you to rate the effectiveness of the supplements. If you&lsquo;re not sure how effective the supplements were, please select option 3, &lsquo;no effect&rsquo;.",
+              "html": ""
+            },
+            {
               "type": "rating",
               "name": "MedicationSupplementsBreathing",
               "title": "What was the effect of the supplements on {CmpnName}'s breathing?",
@@ -694,8 +660,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -711,8 +676,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             }
           ]
@@ -769,7 +733,12 @@
               "showOtherItem": false,
               "showNoneItem": false
             },
-
+            {
+              "type": "html",
+              "name": "MedicationProtocolRatingText",
+              "title": "This section asks you to rate the effectiveness of the protocols. If you&lsquo;re not sure how effective the protocol were, please select option 3, &lsquo;no effect&rsquo;.",
+              "html": ""
+            },
             {
               "type": "rating",
               "name": "MedicationProtocolBreathing",
@@ -783,8 +752,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -800,8 +768,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             }
           ]

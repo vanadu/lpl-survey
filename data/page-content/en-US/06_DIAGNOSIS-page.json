@@ -53,7 +53,7 @@
             {
               "type": "radiogroup",
               "name": "DiagnosisMisdiagnosis",
-              "title": "Did any of these specialists misdiagnose {CmpnName}'s symptoms?",
+              "title": "Were {CmpnName}'s symptoms ever misdiagnosed?",
               "isRequired": true,
               "choices": [
                 {
@@ -228,7 +228,7 @@
                 {
                   "type": "radiogroup",
                   "name": "DiagnosisPrecededSurgery",
-                  "title": "Did {CmpnName} have LP surgery immediately after the diagnosis?",
+                  "title": "Did {CmpnName} undergo a procedure for LP (i.e., surgery or stent implant) immediately after the diagnosis?",
                   "isRequired": true,
                   "choices": [
                     {

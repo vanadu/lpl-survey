@@ -71,7 +71,12 @@
               ],
               "showOtherItem": true
             },
-
+            {
+              "type": "html",
+              "name": "TherapyRatingText",
+              "title": "This section asks you to rate the effectiveness of the therapy. If you&lsquo;re not sure if the therapy was effective, please select option 3, &lsquo;no effect&rsquo;.",
+              "html": ""
+            },
             {
               "type": "rating",
               "name": "TherapyAcupunctureRatingBreathing",
@@ -102,8 +107,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -119,8 +123,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -136,8 +139,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -153,8 +155,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -170,8 +171,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -187,8 +187,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -204,8 +203,7 @@
                 { "value": 2, "text": "2" },
                 { "value": 3, "text": "3" },
                 { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" },
-                { "value": "DONT_KNOW", "text": "Don't know" }
+                { "value": 5, "text": "5" }
               ]
             },
 
