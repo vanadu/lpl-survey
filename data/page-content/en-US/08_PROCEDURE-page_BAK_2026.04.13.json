@@ -1,0 +1,874 @@
+{
+  "name": "PROCEDURE-page",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "ProcedureCard1Panel",
+      "elements": [
+        {
+          "type": "html",
+          "name": "ProcedureHeading",
+          "html": "<h2>Veterinary-Medical Procedures for&nbsp;LP</h2>"
+        },
+        {
+          "type": "html",
+          "name": "ProcedureText",
+          "html": "<p>This section asks questions about veterinary procedures such as surgery or stent implant that {CmpnName} underwent to treat laryngeal paralysis. </p>"
+        },
+        {
+          "type": "boolean",
+          "name": "ProcedureDidHave",
+          "title": "Did {CmpnName} undergo a veterinary-medical procedure such as surgery or a stent implant for LP/GOLPP?",
+          "isRequired": true,
+          "labelTrue": "Yes",
+          "labelFalse": "No",
+          "swapOrder": true
+        },
+
+        {
+          "type": "panel",
+          "name": "ProcedureDetailsPanel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "ProcedureAgePanel",
+              "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
+              "visibleIf": "{ProcedureDidHave} = true",
+              "elements": [
+
+                {
+                  "type": "panel",
+                  "name": "ProcedureAgeDetailsPanel",
+                  "description": "Please enter years and months.",
+                  "elements": [
+
+                    {
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "ProcedureAgeYears",
+                      "title": "Years",
+                      "isRequired": true,
+                      "min": "1",
+                      "max": "40",
+                        "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 1,
+                          "maxValue": 40,
+                          "text": "Age must be between 1 and 40"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "inputType": "number",
+                      "name": "ProcedureAgeMonths",
+                      "title": "Months (0 - 11)",
+                      "isRequired": true,
+                      "min": 0,
+                      "max": 11,
+                      "validators": [
+                        {
+                          "type": "numeric",
+                          "minValue": 0,
+                          "maxValue": 11,
+                          "text": "Months must be between 0 and 11"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "ProcedureScheduled",
+              "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "labelTrue": "Scheduled",
+              "labelFalse": "Emergency",
+              "swapOrder": true
+            },
+            {
+            "type": "dropdown",
+            "name": "ProcedureScheduledWait",
+            "title": "How far in advance was the procedure scheduled?",
+            "isRequired": true,
+            "visibleIf": "{ProcedureDidHave} = true && {ProcedureScheduled} = 'SCHEDULED'",
+            "choices": [
+              {
+                "value": "LESS_THAN_TWO_WEEKS",
+                "text": "Less than two weeks"
+              },
+              {
+                "value": "TWO_TO_FOUR_WEEKS",
+                "text": "Two to four weeks"
+              },
+              {
+                "value": "FOUR_TO_EIGHT_WEEKS",
+                "text": "Four to eight weeks"
+              },
+              {
+                "value": "OVER_EIGHT_WEEKS",
+                "text": "More than eight weeks"
+              }
+            ],
+            "showOtherItem": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "ProcedureCard2Panel",
+      "elements": [
+
+        {
+          "type": "panel",
+          "name": "ProcedureTypePanel",
+          "elements": [
+            {
+            "type": "checkbox",
+            "name": "ProcedureType",
+            "title": "What kind of procedure or procedures did {CmpnName} have?",
+            "description": "Please check all that apply.",
+            "isRequired": true,
+            "visibleIf": "{ProcedureDidHave} = true",
+            "choices": [
+              {
+                "value": "TIEBACK",
+                "text": "Tieback (Unilateral Arytenoid Lateralization)"
+              },
+              {
+                "value": "BVEAP",
+                "text": "BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)"
+              },
+              {
+                "value": "STENT",
+                "text": "Laryngeal stent"
+              },
+              { "value": "ARYTENOIDECTOMY",
+                "text": "Partial arytenoidectomy"  
+              },
+              { "value": "VENTRILOCORDECTOMY",
+                "text": "Ventrilocordectomy"  
+              }
+            ],
+            "showOtherItem": true
+            },
+            {
+              "type": "ranking",
+              "name": "ProcedureSequence",
+              "title": "In what order were these procedures performed?",
+              "description": "Please drag and drop the procedures into the order in which they were performed, first to last.",
+              "choicesFromQuestion": "ProcedureType",
+              "choicesFromQuestionMode": "selected",
+              "hideIfChoicesEmpty": true,
+              "visibleIf": "{ProcedureType.length} > 1"
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "ProcedureTiebackPanel",
+          "title": "Questions about {CmpnName}'s tieback surgery",
+          "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TIEBACK'",
+          "elements": [
+
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureTiebackSuturesFail",
+              "title": "Did the sutures ever fail, causing a return of {CmpnName} LP symptoms?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },  
+            
+            {
+              "type": "radiogroup",
+              "name": "ProcedureTiebackSuturesFailTime",
+              "title": "How long after the tieback surgery did the sutures fail?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
+              "choices": [
+                {
+                  "value": "UNDER_TWO_MONTHS",
+                  "text": "Less than two months"
+                },
+                {
+                  "value": "TWO_TO_SIX_MONTHS",
+                  "text": "Two to six months"
+                },
+                {
+                  "value": "MORE_THAN_SIX_MONTHS",
+                  "text": "More than six months"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "boolean",
+              "name": "ProcedureTiebackRepeat",
+              "title": "Did you repeat the tieback on the other side after the first suture failure?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "swapOrder": true
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "ProcedureBveapPanel",
+          "title": "Questions about {CmpnName}'s BVEAP surgery",
+          "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'BVEAP'",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "ProcedureBveapReasons",
+              "title": "Why did you choose BVEAP over other surgery types?",
+              "description": "Please choose all that apply.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "AP_RISK",
+                  "text": "Reduced risk of aspiration pneumonia"
+                },
+                {
+                  "value": "SWIM",
+                  "text": "Ability to swim post-op"
+                },
+                {
+                  "value": "PERMANENCE",
+                  "text": "No risk of return of symptoms due to suture failure"
+                },
+                {
+                  "value": "REPUTATION",
+                  "text": "Reputation of surgeon"
+                }
+              ],
+              "showOtherItem": true
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "ProcedureStentPanel",
+          "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'STENT'",
+          "elements": [
+
+            {
+              "type": "dropdown",
+              "name": "ProcedureStentType",
+              "title": "What type of stent implant did {CmpnName} receive?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "SILICONE",
+                  "text": "Silicone"
+                },
+                {
+                  "value": "DEXSTENT",
+                  "text": "Dextronix DexStent LE Nitinol wire"
+                },
+                {
+                  "value": "NITINOL_MESH",
+                  "text": "Nitinol mesh"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureDexstentPanel",
+              "visibleIf": "{ProcedureStentType} contains 'DEXSTENT'",
+              "elements": [
+                {
+                  "type": "html",
+                  "name": "ProcedureDexstentText",
+                  "html": "<b>IMPORTANT</b>: The Dextronix DexStent LE Nitinol wire stent device has been discontinued by the manufacturer. Report parties involved in the sale or use of this device to your local veterinary regulatory agency."
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "ProcedureStentDidMigrate",
+              "title": "Did {CmpnName} eject or 'cough out' the stent, or did it migrate out of position?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureStentType} = 'SILICONE' || {ProcedureStentType} = 'NITINOL_MESH'",
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "swapOrder": true
+            },
+
+            {
+              "type": "boolean",
+              "name": "ProcedureStentReplaced",
+              "title": "Was it replaced with a new stent of a different size?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureStentDidMigrate} = true && {ProcedureStentType} != 'DONT_KNOW' && {ProcedureStentType} != 'DEXSTENT' && {ProcedureStentType} != 'Other'",
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "swapOrder": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureStentHalitosis",
+              "title": "Did {CmpnName} have halitosis after the stent implant?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureStentHalitosisImprove",
+              "title": "Did {CmpnName} the halitosis improve with time?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureStentHalitosisRating",
+              "title": "How bad was {CmpnName}’s halitosis after the stent implant?",
+              "description": "1 = not bad, 5 = very bad",
+              "isRequired": true,
+              "visibleIf": "{ProcedureStentHalitosis} = 'YES'",
+              "displayMode": "buttons",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureStentInfected",
+              "title": "Did the tissue around the stent ever become infected?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureStentInfectedHandling",
+              "title": "How was the infection handled?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureStentInfected} = 'YES'",
+              "choices": [
+                {
+                  "value": "REMOVED_PERMANENTLY",
+                  "text": "The stent was permanently removed"
+                },
+                {
+                  "value": "REMOVED_AND_REPLACED",
+                  "text": "The stent was removed, disinfected, and replaced"
+                },
+                {
+                  "value": "NO_ACTION",
+                  "text": "No action was taken"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+
+              ],
+              "showOtherItem": false
+            }
+
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "ProcedureArytenoidectomyPanel",
+          "title": "Questions about partial arytenoidectomy surgery",
+          "description": "Partial arytenoidectomy is the surgical removal of a section of one of the arytenoid (laryngeal) cartilages.",
+          "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'ARYTENOIDECTOMY'",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "ProcedureArytenoidectomyReasons",
+              "title": "Why did you choose partial arytenoidectomy over other surgery types?",
+              "description": "Please choose all that apply.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "COST",
+                  "text": "Cost of this surgery compared to other surgery types"
+                },
+                {
+                  "value": "RECOMMEND_PRIMARY",
+                  "text": "Recommended by primary veterinarian"
+                },
+                {
+                  "value": "RECOMMENDED_SPECIALIST",
+                  "text": "Recommended by specialist"
+                },
+                {
+                  "value": "AVAILABILITY",
+                  "text": "Availablility"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureArytenoidectomyLaser",
+              "title": "Was the partial arytenoidectomy performed with a laser?",
+              "description": "This technique is called 'ablation'.",
+
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "isRequired": true,
+              "swapOrder": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureArytenoidectomyLaser",
+              "title": "Was the partial arytenoidectomy performed with a laser?",
+              "description": "This technique is called 'ablation'.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "ProcedureVentrilocordectomyPanel",
+          "title": "Questions about ventrilocordectomy surgery",
+          "description": "Ventrilocordectomy is the surgical removal of the vocal folds (vocal cords) that dogs use to bark.",
+          "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VENTRILOCORDECTOMY'",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "ProcedureVentrilocordectomyReasons",
+              "title": "Why did you choose ventrilocordectomy over other surgery types?",
+              "description": "Please choose all that apply.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "COST",
+                  "text": "Cost of this surgery compared to other surgery types"
+                },
+                {
+                  "value": "RECOMMEND_PRIMARY",
+                  "text": "Recommended by primary veterinarian"
+                },
+                {
+                  "value": "RECOMMENDED_SPECIALIST",
+                  "text": "Recommended by specialist"
+                },
+                {
+                  "value": "AVAILABILITY",
+                  "text": "Availablility"
+                }
+              ],
+              "showOtherItem": true
+            }
+
+          ]
+        },
+
+        {
+          "type": "panel",
+          "name": "ProcedureIssuesPanel",
+          "visibleIf": "{ProcedureDidHave} = true",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "ProcedureIncisionInfection",
+              "title": "Did {CmpnName} have any unexpected issues with infection, swelling or seroma at the incision site?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureType} notcontains 'STENT'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureIssuesThroatclear",
+              "title": "Did {CmpnName} frequently cough or throat-clear after the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureIssuesThroatclearImproved",
+              "title": "Did {CmpnName}'s coughing or throat-clearing improve over time?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureIssuesThroatclear} = 'YES'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ProcedureMedicationsPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "ProcedureAntibiotics",
+              "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the procedure?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureRefluxMeds",
+              "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the procedure?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ProcedureCostPanel",
+          "elements": [
+            {
+              "type": "dropdown",
+              "name": "ProcedureCost",
+              "title": "What was the approximate cost of the {cvProcedureTypeShort} procedure, not including post-operative complications?",
+              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
+                {
+                  "value": "UNDER_1500",
+                  "text": "Under $1500"
+                },
+                {
+                  "value": "1501_2500",
+                  "text": "$1501 - $2500"
+                },
+                {
+                  "value": "2501_4000",
+                  "text": "$2501 - $3500"
+                },
+                {
+                  "value": "4001_5500",
+                  "text": "$3501 - $4500"
+                },
+                {
+                  "value": "5501_8000",
+                  "text": "$5501 - $8000"
+                },
+                {
+                  "value": "OVER_8000",
+                  "text": "Over $8000"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureComplications",
+              "title": "Were there immediate post-operative complications that required at least one extra night of inpatient care?",
+              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+              "visibleIf": "{ProcedureDidHave} = true",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "ProcedureCostComplications",
+              "title": "What was the approximate cost of the post-operative complications, not including aspiration pneumonia?",
+              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true && {ProcedureComplications} = 'YES'",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Prefer not to say"
+                },
+                {
+                  "value": "UNDER_1500",
+                  "text": "Under $1500"
+                },
+                {
+                  "value": "1501_2500",
+                  "text": "$1501 - $2500"
+                },
+                {
+                  "value": "2501_4000",
+                  "text": "$2501 - $3500"
+                },
+                {
+                  "value": "4001_5500",
+                  "text": "$3501 - $4500"
+                },
+                {
+                  "value": "5501_8000",
+                  "text": "$5501 - $8000"
+                },
+                {
+                  "value": "OVER_8000",
+                  "text": "Over $8000"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ProcedureRatingPanel",
+          "visibleIf": "{ProcedureDidHave} = true",
+          "elements": [
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureComparison",
+              "title": "Did the surgeon explain the pros and cons of this surgery type in comparison to other LP surgery or stent procedures?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureChoice",
+              "title": "Did the surgeon offer you the choice between this surgery type other LP surgery or stent procedures?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureSurgeonInformation",
+              "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
+              "description": "1 = very unsatisfied, 5 = very satisfied",
+              "isRequired": true,
+              "displayMode": "buttons",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureSatisfaction",
+              "title": "How satisfied were you with the results of the procedure?",
+              "description": "1 = very unsatisfied, 5 = very satisfied",
+              "isRequired": true,
+              "displayMode": "buttons",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
