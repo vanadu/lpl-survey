@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-13T11:45:05.877Z",
+    "builtAt": "2026-04-16T10:39:11.750Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -734,6 +734,21 @@
       ],
       "hasTitle": true,
       "title": "How would you describe {CmpnName}'s anxiety level?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "CmpnInfoBark": {
+      "name": "CmpnInfoBark",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard2Panel",
+        "CmpnInfoDemeanorPanel"
+      ],
+      "hasTitle": true,
+      "title": "How much {cvDoThirdPersonSingular} {CmpnName} bark?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -2646,8 +2661,8 @@
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureType.length} > 1"
     },
-    "ProcedureTiebackPanel": {
-      "name": "ProcedureTiebackPanel",
+    "ProcedureUALPanel": {
+      "name": "ProcedureUALPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -2655,57 +2670,52 @@
         "PROCEDURE-page",
         "ProcedureCard2Panel"
       ],
-      "hasTitle": true,
-      "title": "Questions about {CmpnName}'s tieback surgery",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TIEBACK'"
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
-    "ProcedureTiebackSuturesFail": {
-      "name": "ProcedureTiebackSuturesFail",
+    "ProcedureUALSignsPanel": {
+      "name": "ProcedureUALSignsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureUALPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "UALPersistentCough": {
+      "name": "UALPersistentCough",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard2Panel",
-        "ProcedureTiebackPanel"
+        "ProcedureUALPanel",
+        "ProcedureUALSignsPanel"
       ],
       "hasTitle": true,
-      "title": "Did the sutures ever fail, causing a return of {CmpnName} LP symptoms?",
-      "hasVisibleIf": false,
-      "isRequired": true
+      "title": "Did your dog have a persistent cough following the procedure?",
+      "hasVisibleIf": false
     },
-    "ProcedureTiebackSuturesFailTime": {
-      "name": "ProcedureTiebackSuturesFailTime",
+    "UALPersistentCoughImproved": {
+      "name": "UALPersistentCoughImproved",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard2Panel",
-        "ProcedureTiebackPanel"
+        "ProcedureUALPanel",
+        "ProcedureUALSignsPanel"
       ],
       "hasTitle": true,
-      "title": "How long after the tieback surgery did the sutures fail?",
+      "title": "Did it improve with time?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
-      "isRequired": true
-    },
-    "ProcedureTiebackRepeat": {
-      "name": "ProcedureTiebackRepeat",
-      "type": "boolean",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureTiebackPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did you repeat the tieback on the other side after the first suture failure?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
-      "isRequired": true
+      "visibleIf": "{UALPersistentCough} = 'YES'"
     },
     "ProcedureBveapPanel": {
       "name": "ProcedureBveapPanel",

@@ -214,6 +214,14 @@ const Browse_08_Procedure = () => {
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Ventrilocordectomy</span>
             </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Partial Laryngectomy</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Tracheostomy</span>
+            </li>
           </ul>
           </div>
         </ShowAnswerContent>
@@ -238,13 +246,13 @@ const Browse_08_Procedure = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="ProcedureTiebackPanel">
-        <h3 className="browse-showanswer-title">Questions about Bella&lsquo;s tieback surgery</h3>
-      <div className="browse-question-container" id="ProcedureTiebackSuturesFail">
+      <div className="browse-panel-container" id="ProcedureUALPanel">
+      <div className="browse-panel-container" id="ProcedureUALSignsPanel">
+      <div className="browse-question-container" id="UALPersistentCough">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the sutures ever fail, causing a return of Bella LP symptoms?
+              Did your dog have a persistent cough following the procedure?
             </span>
           }
           index={8}
@@ -271,11 +279,11 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureTiebackSuturesFailTime">
+      <div className="browse-question-container" id="UALPersistentCoughImproved">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How long after the tieback surgery did the sutures fail?
+              Did it improve with time?
             </span>
           }
           index={9}
@@ -287,15 +295,11 @@ const Browse_08_Procedure = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Less than two months</span>
+              <span>Yes</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Two to six months</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>More than six months</span>
+              <span>No</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
@@ -305,32 +309,6 @@ const Browse_08_Procedure = () => {
           </div>
         </ShowAnswerContent>
       </div>
-
-      <div className="browse-question-container" id="ProcedureTiebackRepeat">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did you repeat the tieback on the other side after the first suture failure?
-            </span>
-          }
-          index={10}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-boolean">
-              <span className="browse-showanswer-icon browse-showanswer-icon--boolean" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
       </div>
       </div>
 
@@ -343,7 +321,7 @@ const Browse_08_Procedure = () => {
               Why did you choose BVEAP over other surgery types?
             </span>
           }
-          index={11}
+          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -380,7 +358,7 @@ const Browse_08_Procedure = () => {
               What type of stent implant did Bella receive?
             </span>
           }
-          index={12}
+          index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -421,7 +399,7 @@ const Browse_08_Procedure = () => {
               Did Bella eject or &lsquo;cough out&lsquo; the stent, or did it migrate out of position?
             </span>
           }
-          index={13}
+          index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -448,7 +426,7 @@ const Browse_08_Procedure = () => {
               Was it replaced with a new stent of a different size?
             </span>
           }
-          index={14}
+          index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -475,7 +453,7 @@ const Browse_08_Procedure = () => {
               Did Bella have halitosis after the stent implant?
             </span>
           }
-          index={15}
+          index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -506,7 +484,7 @@ const Browse_08_Procedure = () => {
               Did Bella the halitosis improve with time?
             </span>
           }
-          index={16}
+          index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -537,7 +515,7 @@ const Browse_08_Procedure = () => {
               How bad was Bella’s halitosis after the stent implant?
             </span>
           }
-          index={17}
+          index={16}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -677,7 +655,7 @@ const Browse_08_Procedure = () => {
               Did the tissue around the stent ever become infected?
             </span>
           }
-          index={18}
+          index={17}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -708,7 +686,7 @@ const Browse_08_Procedure = () => {
               How was the infection handled?
             </span>
           }
-          index={19}
+          index={18}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -746,7 +724,7 @@ const Browse_08_Procedure = () => {
               Why did you choose partial arytenoidectomy over other surgery types?
             </span>
           }
-          index={20}
+          index={19}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -781,7 +759,7 @@ const Browse_08_Procedure = () => {
               Was the partial arytenoidectomy performed with a laser?
             </span>
           }
-          index={21}
+          index={20}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -801,7 +779,7 @@ const Browse_08_Procedure = () => {
               Was the partial arytenoidectomy performed with a laser?
             </span>
           }
-          index={22}
+          index={21}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -835,7 +813,7 @@ const Browse_08_Procedure = () => {
               Why did you choose ventrilocordectomy over other surgery types?
             </span>
           }
-          index={23}
+          index={22}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -872,7 +850,7 @@ const Browse_08_Procedure = () => {
               Did Bella have any unexpected issues with infection, swelling or seroma at the incision site?
             </span>
           }
-          index={24}
+          index={23}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -903,7 +881,7 @@ const Browse_08_Procedure = () => {
               Did Bella frequently cough or throat-clear after the procedure?
             </span>
           }
-          index={25}
+          index={24}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -934,7 +912,7 @@ const Browse_08_Procedure = () => {
               Did Bella&lsquo;s coughing or throat-clearing improve over time?
             </span>
           }
-          index={26}
+          index={25}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -967,7 +945,7 @@ const Browse_08_Procedure = () => {
               Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the procedure?
             </span>
           }
-          index={27}
+          index={26}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -998,7 +976,7 @@ const Browse_08_Procedure = () => {
               Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the procedure?
             </span>
           }
-          index={28}
+          index={27}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1031,7 +1009,7 @@ const Browse_08_Procedure = () => {
               What was the approximate cost of the &#123;cvProcedureTypeShort&#125; procedure, not including post-operative complications?
             </span>
           }
-          index={29}
+          index={28}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1078,7 +1056,7 @@ const Browse_08_Procedure = () => {
               Were there immediate post-operative complications that required at least one extra night of inpatient care?
             </span>
           }
-          index={30}
+          index={29}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1109,7 +1087,7 @@ const Browse_08_Procedure = () => {
               What was the approximate cost of the post-operative complications, not including aspiration pneumonia?
             </span>
           }
-          index={31}
+          index={30}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1158,7 +1136,7 @@ const Browse_08_Procedure = () => {
               Did the surgeon explain the pros and cons of this surgery type in comparison to other LP surgery or stent procedures?
             </span>
           }
-          index={32}
+          index={31}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1189,7 +1167,7 @@ const Browse_08_Procedure = () => {
               Did the surgeon offer you the choice between this surgery type other LP surgery or stent procedures?
             </span>
           }
-          index={33}
+          index={32}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1220,7 +1198,7 @@ const Browse_08_Procedure = () => {
               How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??
             </span>
           }
-          index={34}
+          index={33}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1360,7 +1338,7 @@ const Browse_08_Procedure = () => {
               How satisfied were you with the results of the procedure?
             </span>
           }
-          index={35}
+          index={34}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

@@ -138,7 +138,7 @@
             "visibleIf": "{ProcedureDidHave} = true",
             "choices": [
               {
-                "value": "TIEBACK",
+                "value": "UAL",
                 "text": "Tieback (Unilateral Arytenoid Lateralization)"
               },
               {
@@ -146,14 +146,20 @@
                 "text": "BVEAP (Bilateral Vocal Fold Excision & Arytenoid Pexy)"
               },
               {
-                "value": "STENT",
+                "value": "ESI",
                 "text": "Laryngeal stent"
               },
-              { "value": "ARYTENOIDECTOMY",
+              { "value": "PAE",
                 "text": "Partial arytenoidectomy"  
               },
-              { "value": "VENTRILOCORDECTOMY",
+              { "value": "VCC",
                 "text": "Ventrilocordectomy"  
+              },
+              { "value": "PLE",
+                "text": "Partial Laryngectomy"  
+              },
+              { "value": "TT",
+                "text": "Tracheostomy"  
               }
             ],
             "showOtherItem": true
@@ -171,74 +177,66 @@
           ]
         },
 
+
+
+
         {
           "type": "panel",
-          "name": "ProcedureTiebackPanel",
-          "title": "Questions about {CmpnName}'s tieback surgery",
-          "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TIEBACK'",
+          "name": "ProcedureUALPanel",
           "elements": [
-
-
             {
-              "type": "radiogroup",
-              "name": "ProcedureTiebackSuturesFail",
-              "title": "Did the sutures ever fail, causing a return of {CmpnName} LP symptoms?",
-              "isRequired": true,
-              "choices": [
+              "type": "panel",
+              "name": "ProcedureUALSignsPanel",
+              "elements": [
                 {
-                  "value": "YES",
-                  "text": "Yes"
+                  "type": "radiogroup",
+                  "name": "UALPersistentCough",
+                  "title": "Did your dog have a persistent cough following the procedure?",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
                 },
                 {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
+                  "type": "radiogroup",
+                  "name": "UALPersistentCoughImproved",
+                  "title": "Did it improve with time?",
+                  "visibleIf": "{UALPersistentCough} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
                 }
-              ],
-              "showOtherItem": false
-            },  
-            
-            {
-              "type": "radiogroup",
-              "name": "ProcedureTiebackSuturesFailTime",
-              "title": "How long after the tieback surgery did the sutures fail?",
-              "isRequired": true,
-              "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
-              "choices": [
-                {
-                  "value": "UNDER_TWO_MONTHS",
-                  "text": "Less than two months"
-                },
-                {
-                  "value": "TWO_TO_SIX_MONTHS",
-                  "text": "Two to six months"
-                },
-                {
-                  "value": "MORE_THAN_SIX_MONTHS",
-                  "text": "More than six months"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "boolean",
-              "name": "ProcedureTiebackRepeat",
-              "title": "Did you repeat the tieback on the other side after the first suture failure?",
-              "isRequired": true,
-              "visibleIf": "{ProcedureTiebackSuturesFail} = 'YES'",
-              "labelTrue": "Yes",
-              "labelFalse": "No",
-              "swapOrder": true
+              ]
             }
           ]
         },
+
+
+
+
+
+
 
         {
           "type": "panel",
