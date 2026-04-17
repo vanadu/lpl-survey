@@ -100,6 +100,25 @@ export function getStyleDirectives(item) {
     "MedicationSupplementsDidPurchase",
     "MedicationProtocolDidPurchase",
 
+
+
+    "ProcedureUALCough",
+    "ProcedureUALGagRetch",
+    "ProcedureUALRegurgitate",
+    "ProcedureUALMucus",
+
+
+
+
+
+
+
+
+
+
+
+
+
     "ProcedureTiebackIncisionInfection",
     "ProcedureTiebackSuturesFail",
     "ProcedureTiebackCount",
@@ -152,8 +171,9 @@ export function getStyleDirectives(item) {
     "SymptomsAgeYears",
     "SymptomsAgeMonths",
 
-    "ProcedureAgeYears",
-    "ProcedureAgeMonths",
+    "ProcedureUALAgeYears",
+    "ProcedureUALAgeMonths",
+
   ]);
 
   const CONTROL_WIDTH_300 = new Set([
@@ -220,8 +240,15 @@ export function getStyleDirectives(item) {
 
     "DiagnosisDetailsPanel",
 
-    "ProcedureAgePanel",
-    "ProcedureAgeDetailsPanel"
+
+    "ProcedureUALAgePanel",
+    "ProcedureUALAgeDetailsPanel",
+    "ProcedureUALSignsPanel",
+
+
+
+
+
   ]);
 
   // Only use to make panel contents two-column to make them look the same as two-column questions.
@@ -231,7 +258,13 @@ export function getStyleDirectives(item) {
     "dcsdCmpnInfoAgeDetailsPanel",
     "lvngCmpnInfoAgeDetailsPanel",
     "SymptomsAgeDetailsPanel",
-    "ProcedureAgeDetailsPanel",
+
+
+    "ProcedureUALAgeDetailsPanel",
+
+
+
+
     // "dcsdCmpnInfoAgePanel",
     // "SymptomsAgePanel",
     // "CmpnInfoWeightDetailsPanel",
@@ -295,6 +328,25 @@ export function getStyleDirectives(item) {
     "MedicationProtocolCost",
     "MedicationProtocolBreathing",
     "MedicationProtocolMobility",
+
+
+
+
+    "ProcedureUALCough",
+    "ProcedureUALCoughRating",
+    "ProcedureUALGagRetch",
+    "ProcedureUALGagRetchRating",
+    "ProcedureUALRegurgitate",
+    "ProcedureUALRegurgitateRating",
+    "ProcedureUALMucus",
+    "ProcedureUALMucusRating",
+
+
+
+
+
+
+
 
 
     "ProcedureScheduledWait",
@@ -388,7 +440,7 @@ export function getStyleDirectives(item) {
     "CmpnInfoDemeanor",
     "CmpnInfoAnxiety",
     "DiagnosisWho",
-    "ProcedureAgeDetailsPanel"
+    "ProcedureUALAgeDetailsPanel"
   ]);
 
   const QUESTION_SPACE_BELOW = new Set([

@@ -65,8 +65,8 @@
   "SymptomsSeverity": 1,
   "SymptomsNeckRestraint": "YES",
   "SymptomsIntubationWasIntubated": "YES",
+  "SymptomsIntubationBeforeSymptoms": "YES",
   "SymptomsIntubationCount": 5,
-  "SymptomsIntubationCountAfter": 3,
 
   "SymptomsIntubationConcerns": true,
   "SymptomsIntubationSymptoms": [
@@ -158,14 +158,42 @@
   "MedicationProtocolBreathing": 2,
   "MedicationProtocolMobility": 2,
 
+
+
   "ProcedureDidHave": true,
-  "ProcedureAgeYears": "13",
-  "ProcedureAgeMonths": "6",
   "ProcedureType":  [
-    "TIEBACK"
+    "UAL",
+    "ESI"
   ],
-  "ProcedureScheduled": "SCHEDULED",
-  "ProcedureScheduledWait": "LESS_THAN_TWO_WEEKS",
+
+  "ProcedureUALAgeYears": "13",
+  "ProcedureUALAgeMonths": "6",
+  "ProcedureUALScheduled": "SCHEDULED",
+  "ProcedureUALScheduledWait": "LESS_THAN_TWO_WEEKS",
+
+  "ProcedureUALCough": "YES",
+  "ProcedureUALCoughRating": 4,
+  "ProcedureUALGagRetch": "YES",
+  "ProcedureUALGagRetchRating": 4,
+  "ProcedureUALRegurgitate": "YES",
+  "ProcedureUALRegurgitateRating": 4,
+  "ProcedureUALMucus": "YES",
+  "ProcedureUALMucusRating": 4,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   "ProcedureIncisionInfection": "YES",
   "ProcedureCostComplications": "1501_2500",
   "ProcedureTiebackIncisionInfection": "YES",

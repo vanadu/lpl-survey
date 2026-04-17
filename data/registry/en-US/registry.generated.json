@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-16T10:39:11.750Z",
+    "builtAt": "2026-04-17T08:40:44.815Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -2498,126 +2498,6 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureDetailsPanel": {
-      "name": "ProcedureDetailsPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
-    "ProcedureAgePanel": {
-      "name": "ProcedureAgePanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureDetailsPanel"
-      ],
-      "hasTitle": true,
-      "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true"
-    },
-    "ProcedureAgeDetailsPanel": {
-      "name": "ProcedureAgeDetailsPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureDetailsPanel",
-        "ProcedureAgePanel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
-    "ProcedureAgeYears": {
-      "name": "ProcedureAgeYears",
-      "type": "text",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureDetailsPanel",
-        "ProcedureAgePanel",
-        "ProcedureAgeDetailsPanel"
-      ],
-      "hasTitle": true,
-      "title": "Years",
-      "hasVisibleIf": false,
-      "isRequired": true,
-      "hasValidators": true
-    },
-    "ProcedureAgeMonths": {
-      "name": "ProcedureAgeMonths",
-      "type": "text",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureDetailsPanel",
-        "ProcedureAgePanel",
-        "ProcedureAgeDetailsPanel"
-      ],
-      "hasTitle": true,
-      "title": "Months (0 - 11)",
-      "hasVisibleIf": false,
-      "isRequired": true,
-      "hasValidators": true
-    },
-    "ProcedureScheduled": {
-      "name": "ProcedureScheduled",
-      "type": "boolean",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureDetailsPanel"
-      ],
-      "hasTitle": true,
-      "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true",
-      "isRequired": true
-    },
-    "ProcedureScheduledWait": {
-      "name": "ProcedureScheduledWait",
-      "type": "dropdown",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureDetailsPanel"
-      ],
-      "hasTitle": true,
-      "title": "How far in advance was the procedure scheduled?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureScheduled} = 'SCHEDULED'",
-      "isRequired": true
-    },
-    "ProcedureCard2Panel": {
-      "name": "ProcedureCard2Panel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
     "ProcedureTypePanel": {
       "name": "ProcedureTypePanel",
       "type": "panel",
@@ -2625,7 +2505,7 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "ProcedureCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -2637,7 +2517,7 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureTypePanel"
       ],
       "hasTitle": true,
@@ -2653,7 +2533,7 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureTypePanel"
       ],
       "hasTitle": true,
@@ -2668,10 +2548,110 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "ProcedureCard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "Questions about {CmpnName}'s tieback (UAL) surgery:",
+      "hasVisibleIf": false
+    },
+    "ProcedureUALAgePanel": {
+      "name": "ProcedureUALAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
+    },
+    "ProcedureUALAgeDetailsPanel": {
+      "name": "ProcedureUALAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel",
+        "ProcedureUALAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true"
+    },
+    "ProcedureUALAgeYears": {
+      "name": "ProcedureUALAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel",
+        "ProcedureUALAgePanel",
+        "ProcedureUALAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Years",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureUALAgeMonths": {
+      "name": "ProcedureUALAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel",
+        "ProcedureUALAgePanel",
+        "ProcedureUALAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Months (0 - 11)",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureUALScheduled": {
+      "name": "ProcedureUALScheduled",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel",
+        "ProcedureUALAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureUALScheduledWait": {
+      "name": "ProcedureUALScheduledWait",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel",
+        "ProcedureUALAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "How far in advance was the procedure scheduled?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureUALScheduled} = true",
+      "isRequired": true
     },
     "ProcedureUALSignsPanel": {
       "name": "ProcedureUALSignsPanel",
@@ -2680,45 +2660,195 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureUALPanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "UALPersistentCough": {
-      "name": "UALPersistentCough",
+    "ProcedureUALCough": {
+      "name": "ProcedureUALCough",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureUALPanel",
         "ProcedureUALSignsPanel"
       ],
       "hasTitle": true,
-      "title": "Did your dog have a persistent cough following the procedure?",
+      "title": "Did {CmpnName} have a persistent cough following the procedure?",
       "hasVisibleIf": false
     },
-    "UALPersistentCoughImproved": {
-      "name": "UALPersistentCoughImproved",
+    "ProcedureUALCoughRating": {
+      "name": "ProcedureUALCoughRating",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel",
+        "ProcedureUALSignsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the cough improve or get worse over time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALCough} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureUALGagRetch": {
+      "name": "ProcedureUALGagRetch",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureUALPanel",
         "ProcedureUALSignsPanel"
       ],
       "hasTitle": true,
-      "title": "Did it improve with time?",
-      "hasVisibleIf": true,
-      "visibleIf": "{UALPersistentCough} = 'YES'"
+      "title": "Did {CmpnName} gag or retch frequently following the procedure?",
+      "hasVisibleIf": false
     },
-    "ProcedureBveapPanel": {
-      "name": "ProcedureBveapPanel",
+    "ProcedureUALGagRetchRating": {
+      "name": "ProcedureUALGagRetchRating",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel",
+        "ProcedureUALSignsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the gagging or retching improve or get worse over time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALGagRetch} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureUALRegurgitate": {
+      "name": "ProcedureUALRegurgitate",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel",
+        "ProcedureUALSignsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} frequently regurgitate food or water following the procedure?",
+      "hasVisibleIf": false
+    },
+    "ProcedureUALRegurgitateRating": {
+      "name": "ProcedureUALRegurgitateRating",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel",
+        "ProcedureUALSignsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the regurgitation improve or get worse over time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALRegurgitate} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureUALMucus": {
+      "name": "ProcedureUALMucus",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel",
+        "ProcedureUALSignsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did frequently {CmpnName} cough up mucus or phlegm after the procedure?",
+      "hasVisibleIf": false
+    },
+    "ProcedureUALMucusRating": {
+      "name": "ProcedureUALMucusRating",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALPanel",
+        "ProcedureUALSignsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the mucus or phlegm improve or get worse over time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALMucus} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureCard2Panel": {
+      "name": "ProcedureCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureEFIPanel": {
+      "name": "ProcedureEFIPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'EFI'"
+    },
+    "ProcedureEFIType": {
+      "name": "ProcedureEFIType",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureEFIPanel"
+      ],
+      "hasTitle": true,
+      "title": "What type of stent implant did {CmpnName} receive?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureEFIDexstentPanel": {
+      "name": "ProcedureEFIDexstentPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureEFIPanel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureEFIType} contains 'DEXSTENT'"
+    },
+    "ProcedureBVEAPPanel": {
+      "name": "ProcedureBVEAPPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -2731,174 +2861,23 @@
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'BVEAP'"
     },
-    "ProcedureBveapReasons": {
-      "name": "ProcedureBveapReasons",
+    "ProcedureBVEAPReasons": {
+      "name": "ProcedureBVEAPReasons",
       "type": "checkbox",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard2Panel",
-        "ProcedureBveapPanel"
+        "ProcedureBVEAPPanel"
       ],
       "hasTitle": true,
-      "title": "Why did you choose BVEAP over other surgery types?",
+      "title": "Why did you choose this over other surgery types?",
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureStentPanel": {
-      "name": "ProcedureStentPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'STENT'"
-    },
-    "ProcedureStentType": {
-      "name": "ProcedureStentType",
-      "type": "dropdown",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureStentPanel"
-      ],
-      "hasTitle": true,
-      "title": "What type of stent implant did {CmpnName} receive?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureDexstentPanel": {
-      "name": "ProcedureDexstentPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureStentPanel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureStentType} contains 'DEXSTENT'"
-    },
-    "ProcedureStentDidMigrate": {
-      "name": "ProcedureStentDidMigrate",
-      "type": "boolean",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureStentPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did {CmpnName} eject or 'cough out' the stent, or did it migrate out of position?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureStentType} = 'SILICONE' || {ProcedureStentType} = 'NITINOL_MESH'",
-      "isRequired": true
-    },
-    "ProcedureStentReplaced": {
-      "name": "ProcedureStentReplaced",
-      "type": "boolean",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureStentPanel"
-      ],
-      "hasTitle": true,
-      "title": "Was it replaced with a new stent of a different size?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureStentDidMigrate} = true && {ProcedureStentType} != 'DONT_KNOW' && {ProcedureStentType} != 'DEXSTENT' && {ProcedureStentType} != 'Other'",
-      "isRequired": true
-    },
-    "ProcedureStentHalitosis": {
-      "name": "ProcedureStentHalitosis",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureStentPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did {CmpnName} have halitosis after the stent implant?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureStentHalitosisImprove": {
-      "name": "ProcedureStentHalitosisImprove",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureStentPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did {CmpnName} the halitosis improve with time?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureStentHalitosisRating": {
-      "name": "ProcedureStentHalitosisRating",
-      "type": "rating",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureStentPanel"
-      ],
-      "hasTitle": true,
-      "title": "How bad was {CmpnName}’s halitosis after the stent implant?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureStentHalitosis} = 'YES'",
-      "isRequired": true
-    },
-    "ProcedureStentInfected": {
-      "name": "ProcedureStentInfected",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureStentPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did the tissue around the stent ever become infected?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureStentInfectedHandling": {
-      "name": "ProcedureStentInfectedHandling",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureStentPanel"
-      ],
-      "hasTitle": true,
-      "title": "How was the infection handled?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureStentInfected} = 'YES'",
-      "isRequired": true
-    },
-    "ProcedureArytenoidectomyPanel": {
-      "name": "ProcedureArytenoidectomyPanel",
+    "ProcedurePAEPanel": {
+      "name": "ProcedurePAEPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -2909,40 +2888,39 @@
       "hasTitle": true,
       "title": "Questions about partial arytenoidectomy surgery",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'ARYTENOIDECTOMY'"
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'PAE'"
     },
-    "ProcedureArytenoidectomyReasons": {
-      "name": "ProcedureArytenoidectomyReasons",
+    "ProcedurePAEReasons": {
+      "name": "ProcedurePAEReasons",
       "type": "checkbox",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard2Panel",
-        "ProcedureArytenoidectomyPanel"
+        "ProcedurePAEPanel"
       ],
       "hasTitle": true,
-      "title": "Why did you choose partial arytenoidectomy over other surgery types?",
+      "title": "Why did you choose this over other surgery types?",
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureArytenoidectomyLaser": {
-      "name": "ProcedureArytenoidectomyLaser",
+    "ProcedurePAELaser": {
+      "name": "ProcedurePAELaser",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard2Panel",
-        "ProcedureArytenoidectomyPanel"
+        "ProcedurePAEPanel"
       ],
       "hasTitle": true,
-      "title": "Was the partial arytenoidectomy performed with a laser?",
-      "hasVisibleIf": false,
-      "isRequired": true
+      "title": "Was the procedure performed with a laser?",
+      "hasVisibleIf": false
     },
-    "ProcedureVentrilocordectomyPanel": {
-      "name": "ProcedureVentrilocordectomyPanel",
+    "ProcedureVCCPanel": {
+      "name": "ProcedureVCCPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -2951,131 +2929,41 @@
         "ProcedureCard2Panel"
       ],
       "hasTitle": true,
-      "title": "Questions about ventrilocordectomy surgery",
+      "title": "Questions about ventrilocordectomy (debarking, vocal fold removal) surgery",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VENTRILOCORDECTOMY'"
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VCC'"
     },
-    "ProcedureVentrilocordectomyReasons": {
-      "name": "ProcedureVentrilocordectomyReasons",
+    "ProcedureVCCReasons": {
+      "name": "ProcedureVCCReasons",
       "type": "checkbox",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard2Panel",
-        "ProcedureVentrilocordectomyPanel"
+        "ProcedureVCCPanel"
       ],
       "hasTitle": true,
       "title": "Why did you choose ventrilocordectomy over other surgery types?",
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureIssuesPanel": {
-      "name": "ProcedureIssuesPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true"
-    },
-    "ProcedureIncisionInfection": {
-      "name": "ProcedureIncisionInfection",
+    "ProcedureVCCLaser": {
+      "name": "ProcedureVCCLaser",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard2Panel",
-        "ProcedureIssuesPanel"
+        "ProcedureVCCPanel"
       ],
       "hasTitle": true,
-      "title": "Did {CmpnName} have any unexpected issues with infection, swelling or seroma at the incision site?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureType} notcontains 'STENT'",
-      "isRequired": true
-    },
-    "ProcedureIssuesThroatclear": {
-      "name": "ProcedureIssuesThroatclear",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureIssuesPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did {CmpnName} frequently cough or throat-clear after the procedure?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureIssuesThroatclearImproved": {
-      "name": "ProcedureIssuesThroatclearImproved",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureIssuesPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did {CmpnName}'s coughing or throat-clearing improve over time?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureIssuesThroatclear} = 'YES'",
-      "isRequired": true
-    },
-    "ProcedureMedicationsPanel": {
-      "name": "ProcedureMedicationsPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel"
-      ],
-      "hasTitle": false,
+      "title": "Was the procedure performed with a laser?",
       "hasVisibleIf": false
     },
-    "ProcedureAntibiotics": {
-      "name": "ProcedureAntibiotics",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureMedicationsPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did the surgeon/stent provider give you antibiotics to prevent aspiration pneumonia after the procedure?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true",
-      "isRequired": true
-    },
-    "ProcedureRefluxMeds": {
-      "name": "ProcedureRefluxMeds",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureMedicationsPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did the surgeon/stent provider give you medications to control acid reflux (GERD) after the procedure?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true",
-      "isRequired": true
-    },
-    "ProcedureCostPanel": {
-      "name": "ProcedureCostPanel",
+    "ProcedurePLEPanel": {
+      "name": "ProcedurePLEPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -3083,58 +2971,28 @@
         "PROCEDURE-page",
         "ProcedureCard2Panel"
       ],
-      "hasTitle": false,
-      "hasVisibleIf": false
+      "hasTitle": true,
+      "title": "Questions about partial laryngectomy (partial removal of larynx) surgery",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'PLE'"
     },
-    "ProcedureCost": {
-      "name": "ProcedureCost",
-      "type": "dropdown",
+    "ProcedurePLEReasons": {
+      "name": "ProcedurePLEReasons",
+      "type": "checkbox",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard2Panel",
-        "ProcedureCostPanel"
+        "ProcedurePLEPanel"
       ],
       "hasTitle": true,
-      "title": "What was the approximate cost of the {cvProcedureTypeShort} procedure, not including post-operative complications?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true",
+      "title": "Why did you choose partial laryngectomy over other surgery types?",
+      "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureComplications": {
-      "name": "ProcedureComplications",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureCostPanel"
-      ],
-      "hasTitle": true,
-      "title": "Were there immediate post-operative complications that required at least one extra night of inpatient care?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true"
-    },
-    "ProcedureCostComplications": {
-      "name": "ProcedureCostComplications",
-      "type": "dropdown",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureCostPanel"
-      ],
-      "hasTitle": true,
-      "title": "What was the approximate cost of the post-operative complications, not including aspiration pneumonia?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureComplications} = 'YES'",
-      "isRequired": true
-    },
-    "ProcedureRatingPanel": {
-      "name": "ProcedureRatingPanel",
+    "ProcedureTTPanel": {
+      "name": "ProcedureTTPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -3142,67 +3000,52 @@
         "PROCEDURE-page",
         "ProcedureCard2Panel"
       ],
-      "hasTitle": false,
+      "hasTitle": true,
+      "title": "Questions about tracheostomy",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true"
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TT'"
     },
-    "ProcedureComparison": {
-      "name": "ProcedureComparison",
-      "type": "radiogroup",
+    "ProcedureTTReasons": {
+      "name": "ProcedureTTReasons",
+      "type": "checkbox",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard2Panel",
-        "ProcedureRatingPanel"
+        "ProcedureTTPanel"
       ],
       "hasTitle": true,
-      "title": "Did the surgeon explain the pros and cons of this surgery type in comparison to other LP surgery or stent procedures?",
+      "title": "Why did you choose laryngectomy over other surgery types?",
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureChoice": {
-      "name": "ProcedureChoice",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
+    "ProcedureOtherPanel": {
+      "name": "ProcedureOtherPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureRatingPanel"
+        "ProcedureCard2Panel"
       ],
       "hasTitle": true,
-      "title": "Did the surgeon offer you the choice between this surgery type other LP surgery or stent procedures?",
-      "hasVisibleIf": false,
-      "isRequired": true
+      "title": "Questions about tracheostomy",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'OTHER'"
     },
-    "ProcedureSurgeonInformation": {
-      "name": "ProcedureSurgeonInformation",
-      "type": "rating",
+    "ProcedureOtherReasons": {
+      "name": "ProcedureOtherReasons",
+      "type": "checkbox",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard2Panel",
-        "ProcedureRatingPanel"
+        "ProcedureOtherPanel"
       ],
       "hasTitle": true,
-      "title": "How satisfied were you with the information the surgeon provided to you about the risks and possible complications of the procedure??",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureSatisfaction": {
-      "name": "ProcedureSatisfaction",
-      "type": "rating",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
-        "ProcedureRatingPanel"
-      ],
-      "hasTitle": true,
-      "title": "How satisfied were you with the results of the procedure?",
+      "title": "Why did you choose this kind of surgery over others?",
       "hasVisibleIf": false,
       "isRequired": true
     },

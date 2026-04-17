@@ -1016,7 +1016,7 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
   background-position: center bottom;
 
   @include ldesktop {
-    padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    padding-bottom: calc(.25 * (var(--sjs-base-unit, var(--base-unit, 8px))));
     margin-bottom: calc(.75 * (var(--sjs-base-unit, var(--base-unit, 8px))));
   }
 
