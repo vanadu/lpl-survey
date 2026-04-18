@@ -388,7 +388,7 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALPeriopTiebackRepeat">
+      <div className="browse-question-container" id="ProcedureUALExtendedStayTiebackRepeat">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -450,58 +450,58 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALCost">
+      <div className="browse-question-container" id="ProcedureUALMedications">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What was the approximate cost of the surgery, not including post-operative complications?
+              What medications did you receive from Bella after the surgery?
             </span>
           }
           index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
+
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>None or don&lsquo;t know</span>
             </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $1500</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Pain medications (i.e. paracetamol or other NSAID, gabapentin)</span>
             </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$1501 - $2500</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Reflux medications (i.e. cisipride, famotidine, omeprazole)</span>
             </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2501 - $3500</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Antibiotics</span>
             </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$3501 - $4500</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Steroid (i.e. prednisone, meloxicam, metacam)</span>
             </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$5501 - $8000</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Sedative (i.e. trazodone, tramadol)</span>
             </li>
-            <li className="browse-showanswer-dropdown">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $8000</span>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Cerenia (maropitant citrate)</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALComplicationsCost">
+      <div className="browse-question-container" id="ProcedureUALCost">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What was total cost of the complications of the surgery?
+              About what was the cost of the surgery, not including post-operative complications?
             </span>
           }
           index={15}
@@ -513,23 +513,23 @@ const Browse_08_Procedure = () => {
           <ul>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Prefer not to say</span>
+              <span>Don&lsquo;t know or prefer not to say</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $1500</span>
+              <span>Under $3000</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$1501 - $2500</span>
+              <span>$3000 - $4500</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$2501 - $3500</span>
+              <span>$4500 - $6000</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$3501 - $4500</span>
+              <span>$6000 - $8000</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
@@ -537,7 +537,54 @@ const Browse_08_Procedure = () => {
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $8000</span>
+              <span>Over $10,000</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ProcedureUALComplicationsCost">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              About what was total cost of the complications of the surgery?
+            </span>
+          }
+          index={16}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know or prefer not to say</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Under $500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$50 - $1000</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$1000 - $2000</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$2000 - $3000</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$3000 - $5000</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Over $5000</span>
             </li>
           </ul>
           </div>
@@ -554,7 +601,7 @@ const Browse_08_Procedure = () => {
               What type of stent implant did Bella receive?
             </span>
           }
-          index={16}
+          index={17}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -598,7 +645,7 @@ const Browse_08_Procedure = () => {
               Why did you choose this over other surgery types?
             </span>
           }
-          index={17}
+          index={18}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -636,7 +683,7 @@ const Browse_08_Procedure = () => {
               Why did you choose this over other surgery types?
             </span>
           }
-          index={18}
+          index={19}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -671,7 +718,7 @@ const Browse_08_Procedure = () => {
               Was the procedure performed with a laser?
             </span>
           }
-          index={19}
+          index={20}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -705,7 +752,7 @@ const Browse_08_Procedure = () => {
               Why did you choose ventrilocordectomy over other surgery types?
             </span>
           }
-          index={20}
+          index={21}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -740,7 +787,7 @@ const Browse_08_Procedure = () => {
               Was the procedure performed with a laser?
             </span>
           }
-          index={21}
+          index={22}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -774,7 +821,7 @@ const Browse_08_Procedure = () => {
               Why did you choose partial laryngectomy over other surgery types?
             </span>
           }
-          index={22}
+          index={23}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -812,7 +859,7 @@ const Browse_08_Procedure = () => {
               Why did you choose laryngectomy over other surgery types?
             </span>
           }
-          index={23}
+          index={24}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -850,7 +897,7 @@ const Browse_08_Procedure = () => {
               Why did you choose this kind of surgery over others?
             </span>
           }
-          index={24}
+          index={25}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -889,7 +936,7 @@ const Browse_08_Procedure = () => {
               sdradio3
             </span>
           }
-          index={25}
+          index={26}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -922,7 +969,7 @@ const Browse_08_Procedure = () => {
               sdradio3
             </span>
           }
-          index={26}
+          index={27}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -955,7 +1002,7 @@ const Browse_08_Procedure = () => {
               sdradio3
             </span>
           }
-          index={27}
+          index={28}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -988,7 +1035,7 @@ const Browse_08_Procedure = () => {
               sdradio3
             </span>
           }
-          index={28}
+          index={29}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1021,7 +1068,7 @@ const Browse_08_Procedure = () => {
               sdradio3
             </span>
           }
-          index={29}
+          index={30}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1054,7 +1101,7 @@ const Browse_08_Procedure = () => {
               sdradio3
             </span>
           }
-          index={30}
+          index={31}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1087,7 +1134,7 @@ const Browse_08_Procedure = () => {
               sdradio3
             </span>
           }
-          index={31}
+          index={32}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1120,7 +1167,7 @@ const Browse_08_Procedure = () => {
               sdradio3
             </span>
           }
-          index={32}
+          index={33}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

@@ -67,6 +67,7 @@ export function getStyleDirectives(item) {
     "ProcedureType",
     "ProcedureUALExtendedStay",
     "ProcedureUALExtendedStayReason",
+    "ProcedureUALMedications",
 
 
     "BreathingCrisisProductRecommendedType",
@@ -115,6 +116,7 @@ export function getStyleDirectives(item) {
     "ProcedureUALIncisionSite",
     "ProcedureUALOralBleeding",
     "ProcedureUALFollowupCare",
+    "ProcedureUALExtendedStayTiebackRepeat",
   
 
 
@@ -182,10 +184,11 @@ export function getStyleDirectives(item) {
     "MedicationSupplementsCost",
     "MedicationProtocolCost",
 
-    "ProcedureScheduledWait",
-    "ProcedureCost",
-    "ProcedureCostComplications",
-    "ProcedureStentType",
+    "ProcedureUALScheduledWait",
+    "ProcedureUALCost",
+    "ProcedureUALComplicationsCost",
+
+    "ProcedureEFIType",
 
     "TherapyCost",
 
@@ -325,6 +328,23 @@ export function getStyleDirectives(item) {
 
 
 
+    "ProcedureSequence",
+    "ProcedureUALIncisionComplications",
+    "ProcedureUALOralBleeding",
+    "ProcedureUALExtendedStay",
+    "ProcedureUALExtendedStayReason",
+    "ProcedureUALExtendedStayTiebackRepeat",
+    "ProcedureUALFollowupCare",
+    "ProcedureUALMedications",
+
+
+
+    "ProcedureUALCost",
+    "ProcedureUALComplicationsCost",
+
+
+
+
     "ProcedureUALCoughRating",
     "ProcedureUALGagRetch",
     "ProcedureUALGagRetchRating",
@@ -336,31 +356,10 @@ export function getStyleDirectives(item) {
 
 
 
+    "ProcedureUALChoice",
+    "ProcedureUALSatisfaction",
 
 
-
-
-
-
-
-    "ProcedureScheduledWait",
-    "ProcedureTiebackSuturesFailTime",
-    "ProcedureTiebackRepeat",
-    "ProcedureTiebackCount",
-    "ProcedureStentDidMigrate",
-    "ProcedureStentReplaced",
-    "ProcedureStentHalitosis",
-    "ProcedureStentHalitosisRating",
-    "ProcedureStentInfected",
-    "ProcedureStentInfectedHandling",
-    "ProcedureComplications",
-    "ProcedureCostComplications",
-    "ProcedureIssuesThroatclear",
-    "ProcedureIssuesThroatclearImproved",
-    "ProcedureRefluxMeds",
-    "ProcedureChoice",
-    "ProcedureSurgeonInformation",
-    "ProcedureSatisfaction",
 
     "TherapyType",
     "TherapyAcupunctureRatingBreathing",

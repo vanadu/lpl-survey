@@ -171,7 +171,26 @@
   "ProcedureUALScheduled": "SCHEDULED",
   "ProcedureUALScheduledWait": "LESS_THAN_TWO_WEEKS",
 
-  "ProcedureUALCough": "YES",
+  "ProcedureUALIncisionComplications": "YES",
+  "ProcedureUALOralBleeding": "YES",
+  "ProcedureUALExtendedStay": "ONE_DAY",
+  "ProcedureUALExtendedStayReason": [
+    "ASPIRATION",
+    "SUTURE_FAILURE"
+  ],
+  "ProcedureUALExtendedStayTiebackRepeat": "YES",
+  "ProcedureUALFollowupCare": "YES",
+  "ProcedureUALMedications": [
+    "PAIN",
+    "STEROID",
+    "REFLUX",
+    "SEDATIVE"
+  ],
+  "ProcedureUALCost": "OVER_8000",
+  "ProcedureUALComplicationsCost": "1501_2500",
+
+
+
   "ProcedureUALCoughRating": 4,
   "ProcedureUALGagRetch": "YES",
   "ProcedureUALGagRetchRating": 4,

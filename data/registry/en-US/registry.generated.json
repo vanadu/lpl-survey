@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-18T10:35:28.977Z",
+    "builtAt": "2026-04-18T11:44:12.789Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -2729,8 +2729,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureUALPeriopTiebackRepeat": {
-      "name": "ProcedureUALPeriopTiebackRepeat",
+    "ProcedureUALExtendedStayTiebackRepeat": {
+      "name": "ProcedureUALExtendedStayTiebackRepeat",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
@@ -2762,6 +2762,22 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "ProcedureUALMedications": {
+      "name": "ProcedureUALMedications",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALCard1Panel",
+        "ProcedureUALSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What medications did you receive from {CmpnName} after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "ProcedureUALCost": {
       "name": "ProcedureUALCost",
       "type": "dropdown",
@@ -2774,7 +2790,7 @@
         "ProcedureUALSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "What was the approximate cost of the surgery, not including post-operative complications?",
+      "title": "About what was the cost of the surgery, not including post-operative complications?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
@@ -2791,7 +2807,7 @@
         "ProcedureUALSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "What was total cost of the complications of the surgery?",
+      "title": "About what was total cost of the complications of the surgery?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureUALExtendedStay} = true || {ProcedureUALFollowupCare} = 'YES'",
       "isRequired": true
