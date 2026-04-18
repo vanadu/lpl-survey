@@ -3550,17 +3550,21 @@
             },
             {
               "type": "panel",
-              "name": "ProcedureUALPanel",
-              "title": "Questions about {CmpnName}'s tieback (UAL) surgery:",
+              "name": "ProcedureUALCard1Panel",
               "elements": [
+                {
+                  "type": "html",
+                  "name": "ProcedureUALHeading",
+                  "html": "<h3>Questions About {CmpnName}'s Tieback (UAL) Surgery<h3>"
+                },
                 {
                   "type": "panel",
                   "name": "ProcedureUALAgePanel",
+                  "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
                   "elements": [
                     {
                       "type": "panel",
                       "name": "ProcedureUALAgeDetailsPanel",
-                      "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
                       "description": "Please enter years and months.",
                       "visibleIf": "{ProcedureDidHave} = true",
                       "elements": [
@@ -3639,13 +3643,19 @@
                   ]
                 },
                 {
+                  "type": "html",
+                  "name": "ProcedureUALSurgeryOpHeading",
+                  "html": "<h4>These questions ask about issues {CmpnName} had immediately after surgery.</h4>"
+                },
+                {
                   "type": "panel",
-                  "name": "ProcedureUALSignsPanel",
+                  "name": "ProcedureUALSurgeryPanel",
                   "elements": [
                     {
                       "type": "radiogroup",
-                      "name": "ProcedureUALCough",
-                      "title": "Did {CmpnName} have a persistent cough following the procedure?",
+                      "name": "ProcedureUALIncisionComplications",
+                      "title": "Did {CmpnName} have any infection or swelling at the incision site?",
+                      "isRequired": true,
                       "choices": [
                         {
                           "value": "YES",
@@ -3658,43 +3668,14 @@
                         {
                           "value": "DONT_KNOW",
                           "text": "Don't know"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "rating",
-                      "name": "ProcedureUALCoughRating",
-                      "title": "Did the cough improve or get worse over time?",
-                      "description": "1 = much worse, 3 = no change, 5 = got much better",
-                      "isRequired": true,
-                      "visibleIf": "{ProcedureUALCough} = 'YES'",
-                      "rateValues": [
-                        {
-                          "value": 1,
-                          "text": "1"
-                        },
-                        {
-                          "value": 2,
-                          "text": "2"
-                        },
-                        {
-                          "value": 3,
-                          "text": "3"
-                        },
-                        {
-                          "value": 4,
-                          "text": "4"
-                        },
-                        {
-                          "value": 5,
-                          "text": "5"
                         }
                       ]
                     },
                     {
                       "type": "radiogroup",
-                      "name": "ProcedureUALGagRetch",
-                      "title": "Did {CmpnName} gag or retch frequently following the procedure?",
+                      "name": "ProcedureUALOralBleeding",
+                      "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
+                      "isRequired": true,
                       "choices": [
                         {
                           "value": "YES",
@@ -3707,43 +3688,69 @@
                         {
                           "value": "DONT_KNOW",
                           "text": "Don't know"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "rating",
-                      "name": "ProcedureUALGagRetchRating",
-                      "title": "Did the gagging or retching improve or get worse over time?",
-                      "description": "1 = much worse, 3 = no change, 5 = got much better",
-                      "isRequired": true,
-                      "visibleIf": "{ProcedureUALGagRetch} = 'YES'",
-                      "rateValues": [
-                        {
-                          "value": 1,
-                          "text": "1"
-                        },
-                        {
-                          "value": 2,
-                          "text": "2"
-                        },
-                        {
-                          "value": 3,
-                          "text": "3"
-                        },
-                        {
-                          "value": 4,
-                          "text": "4"
-                        },
-                        {
-                          "value": 5,
-                          "text": "5"
                         }
                       ]
                     },
                     {
                       "type": "radiogroup",
-                      "name": "ProcedureUALRegurgitate",
-                      "title": "Did {CmpnName} frequently regurgitate food or water following the procedure?",
+                      "name": "ProcedureUALExtendedStay",
+                      "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
+                      "isRequired": true,
+                      "choices": [
+                        {
+                          "value": "NO",
+                          "text": "No"
+                        },
+                        {
+                          "value": "ONE_DAY",
+                          "text": "Yes, one extra day"
+                        },
+                        {
+                          "value": "TWO_DAYS",
+                          "text": "Yes, two days"
+                        },
+                        {
+                          "value": "THREE_DAYS",
+                          "text": "Yes, three days or more"
+                        }
+                      ],
+                      "showOtherItem": false
+                    },
+                    {
+                      "type": "checkbox",
+                      "name": "ProcedureUALExtendedStayReason",
+                      "title": "Why did {CmpnName} need extended inpatient care?",
+                      "isRequired": true,
+                      "choices": [
+                        {
+                          "value": "ASPIRATION",
+                          "text": "Aspiration pneumonia"
+                        },
+                        {
+                          "value": "ANESTHESIA",
+                          "text": "Adverse reaction to anesthesia"
+                        },
+                        {
+                          "value": "SUTURE_FAILURE",
+                          "text": "Suture failure"
+                        },
+                        {
+                          "value": "RESPIRATORY",
+                          "text": "Respiratory crisis"
+                        },
+                        {
+                          "value": "STROKE",
+                          "text": "Stroke or cardiac event"
+                        }
+                      ],
+                      "showOtherItem": true
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "ProcedureUALPeriopTiebackRepeat",
+                      "title": "Did the surgeon attempt a second tieback on the other side?",
+                      "isRequired": true,
+                      "visibleIf": "{ProcedureUALExtendedStayReason} contains 'SUTURE_FAILURE'",
                       "choices": [
                         {
                           "value": "YES",
@@ -3756,43 +3763,14 @@
                         {
                           "value": "DONT_KNOW",
                           "text": "Don't know"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "rating",
-                      "name": "ProcedureUALRegurgitateRating",
-                      "title": "Did the regurgitation improve or get worse over time?",
-                      "description": "1 = much worse, 3 = no change, 5 = got much better",
-                      "isRequired": true,
-                      "visibleIf": "{ProcedureUALRegurgitate} = 'YES'",
-                      "rateValues": [
-                        {
-                          "value": 1,
-                          "text": "1"
-                        },
-                        {
-                          "value": 2,
-                          "text": "2"
-                        },
-                        {
-                          "value": 3,
-                          "text": "3"
-                        },
-                        {
-                          "value": 4,
-                          "text": "4"
-                        },
-                        {
-                          "value": 5,
-                          "text": "5"
                         }
                       ]
                     },
                     {
                       "type": "radiogroup",
-                      "name": "ProcedureUALMucus",
-                      "title": "Did frequently {CmpnName} cough up mucus or phlegm after the procedure?",
+                      "name": "ProcedureUALFollowupCare",
+                      "title": "In the four weeks after surgery, did {CmpnName} need another visit to a veterinary professional because of complications?",
+                      "isRequired": true,
                       "choices": [
                         {
                           "value": "YES",
@@ -3806,48 +3784,91 @@
                           "value": "DONT_KNOW",
                           "text": "Don't know"
                         }
-                      ]
+                      ],
+                      "showOtherItem": false
                     },
                     {
-                      "type": "rating",
-                      "name": "ProcedureUALMucusRating",
-                      "title": "Did the mucus or phlegm improve or get worse over time?",
-                      "description": "1 = much worse, 3 = no change, 5 = got much better",
+                      "type": "dropdown",
+                      "name": "ProcedureUALCost",
+                      "title": "What was the approximate cost of the surgery, not including post-operative complications?",
+                      "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                       "isRequired": true,
-                      "visibleIf": "{ProcedureUALMucus} = 'YES'",
-                      "rateValues": [
+                      "visibleIf": "{ProcedureDidHave} = true",
+                      "choices": [
                         {
-                          "value": 1,
-                          "text": "1"
+                          "value": "NOT_SAY",
+                          "text": "Prefer not to say"
                         },
                         {
-                          "value": 2,
-                          "text": "2"
+                          "value": "UNDER_1500",
+                          "text": "Under $1500"
                         },
                         {
-                          "value": 3,
-                          "text": "3"
+                          "value": "1501_2500",
+                          "text": "$1501 - $2500"
                         },
                         {
-                          "value": 4,
-                          "text": "4"
+                          "value": "2501_4000",
+                          "text": "$2501 - $3500"
                         },
                         {
-                          "value": 5,
-                          "text": "5"
+                          "value": "4001_5500",
+                          "text": "$3501 - $4500"
+                        },
+                        {
+                          "value": "5501_8000",
+                          "text": "$5501 - $8000"
+                        },
+                        {
+                          "value": "OVER_8000",
+                          "text": "Over $8000"
                         }
-                      ]
+                      ],
+                      "showOtherItem": false
+                    },
+                    {
+                      "type": "dropdown",
+                      "name": "ProcedureUALComplicationsCost",
+                      "title": "What was total cost of the complications of the surgery?",
+                      "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+                      "isRequired": true,
+                      "visibleIf": "{ProcedureUALExtendedStay} = true || {ProcedureUALFollowupCare} = 'YES'",
+                      "choices": [
+                        {
+                          "value": "NOT_SAY",
+                          "text": "Prefer not to say"
+                        },
+                        {
+                          "value": "UNDER_1500",
+                          "text": "Under $1500"
+                        },
+                        {
+                          "value": "1501_2500",
+                          "text": "$1501 - $2500"
+                        },
+                        {
+                          "value": "2501_4000",
+                          "text": "$2501 - $3500"
+                        },
+                        {
+                          "value": "4001_5500",
+                          "text": "$3501 - $4500"
+                        },
+                        {
+                          "value": "5501_8000",
+                          "text": "$5501 - $8000"
+                        },
+                        {
+                          "value": "OVER_8000",
+                          "text": "Over $8000"
+                        }
+                      ],
+                      "showOtherItem": false
                     }
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "ProcedureCard2Panel",
-          "elements": [
+            },
             {
               "type": "panel",
               "name": "ProcedureEFIPanel",
@@ -4134,6 +4155,228 @@
                     }
                   ],
                   "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ProcedureCard2Panel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "ProcedureUALCard2Panel",
+              "visibleIf": "{ProcedureType} = 'UAL'",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "XXX",
+                  "title": "sdradio3",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureESICard2Panel",
+              "visibleIf": "{ProcedureType} = 'EFI'",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "XXX",
+                  "title": "sdradio3",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureBVEAPCard2Panel",
+              "visibleIf": "{ProcedureType} = 'BVEAP'",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "XXX",
+                  "title": "sdradio3",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedurePAECard2Panel",
+              "visibleIf": "{ProcedureType} = 'PAE'",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "XXX",
+                  "title": "sdradio3",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureVCCCard2Panel",
+              "visibleIf": "{ProcedureType} = 'VCC'",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "XXX",
+                  "title": "sdradio3",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedurePLECard2Panel",
+              "visibleIf": "{ProcedureType} = 'PLE'",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "XXX",
+                  "title": "sdradio3",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureTTCard2Panel",
+              "visibleIf": "{ProcedureType} = 'TT'",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "XXX",
+                  "title": "sdradio3",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "ProcedureOtherCard2Panel",
+              "visibleIf": "{ProcedureType} = 'Other'",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "XXX",
+                  "title": "sdradio3",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
                 }
               ]
             }

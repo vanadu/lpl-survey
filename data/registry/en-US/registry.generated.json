@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-17T08:40:44.815Z",
+    "builtAt": "2026-04-18T10:35:28.977Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -2541,8 +2541,8 @@
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureType.length} > 1"
     },
-    "ProcedureUALPanel": {
-      "name": "ProcedureUALPanel",
+    "ProcedureUALCard1Panel": {
+      "name": "ProcedureUALCard1Panel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -2550,8 +2550,7 @@
         "PROCEDURE-page",
         "ProcedureCard1Panel"
       ],
-      "hasTitle": true,
-      "title": "Questions about {CmpnName}'s tieback (UAL) surgery:",
+      "hasTitle": false,
       "hasVisibleIf": false
     },
     "ProcedureUALAgePanel": {
@@ -2562,9 +2561,10 @@
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel"
+        "ProcedureUALCard1Panel"
       ],
-      "hasTitle": false,
+      "hasTitle": true,
+      "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
       "hasVisibleIf": false
     },
     "ProcedureUALAgeDetailsPanel": {
@@ -2575,11 +2575,10 @@
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel",
+        "ProcedureUALCard1Panel",
         "ProcedureUALAgePanel"
       ],
-      "hasTitle": true,
-      "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
+      "hasTitle": false,
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = true"
     },
@@ -2591,7 +2590,7 @@
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel",
+        "ProcedureUALCard1Panel",
         "ProcedureUALAgePanel",
         "ProcedureUALAgeDetailsPanel"
       ],
@@ -2609,7 +2608,7 @@
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel",
+        "ProcedureUALCard1Panel",
         "ProcedureUALAgePanel",
         "ProcedureUALAgeDetailsPanel"
       ],
@@ -2627,7 +2626,7 @@
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel",
+        "ProcedureUALCard1Panel",
         "ProcedureUALAgePanel"
       ],
       "hasTitle": true,
@@ -2644,7 +2643,7 @@
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel",
+        "ProcedureUALCard1Panel",
         "ProcedureUALAgePanel"
       ],
       "hasTitle": true,
@@ -2653,157 +2652,149 @@
       "visibleIf": "{ProcedureDidHave} = true && {ProcedureUALScheduled} = true",
       "isRequired": true
     },
-    "ProcedureUALSignsPanel": {
-      "name": "ProcedureUALSignsPanel",
+    "ProcedureUALSurgeryPanel": {
+      "name": "ProcedureUALSurgeryPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel"
+        "ProcedureUALCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "ProcedureUALCough": {
-      "name": "ProcedureUALCough",
+    "ProcedureUALIncisionComplications": {
+      "name": "ProcedureUALIncisionComplications",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel",
-        "ProcedureUALSignsPanel"
+        "ProcedureUALCard1Panel",
+        "ProcedureUALSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Did {CmpnName} have a persistent cough following the procedure?",
-      "hasVisibleIf": false
-    },
-    "ProcedureUALCoughRating": {
-      "name": "ProcedureUALCoughRating",
-      "type": "rating",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureUALPanel",
-        "ProcedureUALSignsPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did the cough improve or get worse over time?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureUALCough} = 'YES'",
+      "title": "Did {CmpnName} have any infection or swelling at the incision site?",
+      "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureUALGagRetch": {
-      "name": "ProcedureUALGagRetch",
+    "ProcedureUALOralBleeding": {
+      "name": "ProcedureUALOralBleeding",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel",
-        "ProcedureUALSignsPanel"
+        "ProcedureUALCard1Panel",
+        "ProcedureUALSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Did {CmpnName} gag or retch frequently following the procedure?",
-      "hasVisibleIf": false
-    },
-    "ProcedureUALGagRetchRating": {
-      "name": "ProcedureUALGagRetchRating",
-      "type": "rating",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureUALPanel",
-        "ProcedureUALSignsPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did the gagging or retching improve or get worse over time?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureUALGagRetch} = 'YES'",
+      "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
+      "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureUALRegurgitate": {
-      "name": "ProcedureUALRegurgitate",
+    "ProcedureUALExtendedStay": {
+      "name": "ProcedureUALExtendedStay",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel",
-        "ProcedureUALSignsPanel"
+        "ProcedureUALCard1Panel",
+        "ProcedureUALSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Did {CmpnName} frequently regurgitate food or water following the procedure?",
-      "hasVisibleIf": false
+      "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
     },
-    "ProcedureUALRegurgitateRating": {
-      "name": "ProcedureUALRegurgitateRating",
-      "type": "rating",
+    "ProcedureUALExtendedStayReason": {
+      "name": "ProcedureUALExtendedStayReason",
+      "type": "checkbox",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel",
-        "ProcedureUALSignsPanel"
+        "ProcedureUALCard1Panel",
+        "ProcedureUALSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Did the regurgitation improve or get worse over time?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureUALRegurgitate} = 'YES'",
+      "title": "Why did {CmpnName} need extended inpatient care?",
+      "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureUALMucus": {
-      "name": "ProcedureUALMucus",
+    "ProcedureUALPeriopTiebackRepeat": {
+      "name": "ProcedureUALPeriopTiebackRepeat",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel",
-        "ProcedureUALSignsPanel"
+        "ProcedureUALCard1Panel",
+        "ProcedureUALSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Did frequently {CmpnName} cough up mucus or phlegm after the procedure?",
-      "hasVisibleIf": false
+      "title": "Did the surgeon attempt a second tieback on the other side?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALExtendedStayReason} contains 'SUTURE_FAILURE'",
+      "isRequired": true
     },
-    "ProcedureUALMucusRating": {
-      "name": "ProcedureUALMucusRating",
-      "type": "rating",
+    "ProcedureUALFollowupCare": {
+      "name": "ProcedureUALFollowupCare",
+      "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
         "PROCEDURE-page",
         "ProcedureCard1Panel",
-        "ProcedureUALPanel",
-        "ProcedureUALSignsPanel"
+        "ProcedureUALCard1Panel",
+        "ProcedureUALSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Did the mucus or phlegm improve or get worse over time?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureUALMucus} = 'YES'",
+      "title": "In the four weeks after surgery, did {CmpnName} need another visit to a veterinary professional because of complications?",
+      "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureCard2Panel": {
-      "name": "ProcedureCard2Panel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
+    "ProcedureUALCost": {
+      "name": "ProcedureUALCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
       "path": [
-        "PROCEDURE-page"
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALCard1Panel",
+        "ProcedureUALSurgeryPanel"
       ],
-      "hasTitle": false,
-      "hasVisibleIf": false
+      "hasTitle": true,
+      "title": "What was the approximate cost of the surgery, not including post-operative complications?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureUALComplicationsCost": {
+      "name": "ProcedureUALComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel",
+        "ProcedureUALCard1Panel",
+        "ProcedureUALSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was total cost of the complications of the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALExtendedStay} = true || {ProcedureUALFollowupCare} = 'YES'",
+      "isRequired": true
     },
     "ProcedureEFIPanel": {
       "name": "ProcedureEFIPanel",
@@ -2812,7 +2803,7 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "ProcedureCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
@@ -2825,7 +2816,7 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureEFIPanel"
       ],
       "hasTitle": true,
@@ -2840,7 +2831,7 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureEFIPanel"
       ],
       "hasTitle": false,
@@ -2854,7 +2845,7 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "ProcedureCard1Panel"
       ],
       "hasTitle": true,
       "title": "Questions about {CmpnName}'s BVEAP surgery",
@@ -2868,7 +2859,7 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureBVEAPPanel"
       ],
       "hasTitle": true,
@@ -2883,7 +2874,7 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "ProcedureCard1Panel"
       ],
       "hasTitle": true,
       "title": "Questions about partial arytenoidectomy surgery",
@@ -2897,7 +2888,7 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedurePAEPanel"
       ],
       "hasTitle": true,
@@ -2912,7 +2903,7 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedurePAEPanel"
       ],
       "hasTitle": true,
@@ -2926,7 +2917,7 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "ProcedureCard1Panel"
       ],
       "hasTitle": true,
       "title": "Questions about ventrilocordectomy (debarking, vocal fold removal) surgery",
@@ -2940,7 +2931,7 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureVCCPanel"
       ],
       "hasTitle": true,
@@ -2955,7 +2946,7 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureVCCPanel"
       ],
       "hasTitle": true,
@@ -2969,7 +2960,7 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "ProcedureCard1Panel"
       ],
       "hasTitle": true,
       "title": "Questions about partial laryngectomy (partial removal of larynx) surgery",
@@ -2983,7 +2974,7 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedurePLEPanel"
       ],
       "hasTitle": true,
@@ -2998,7 +2989,7 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "ProcedureCard1Panel"
       ],
       "hasTitle": true,
       "title": "Questions about tracheostomy",
@@ -3012,7 +3003,7 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureTTPanel"
       ],
       "hasTitle": true,
@@ -3027,7 +3018,7 @@
       "collect": false,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "ProcedureCard1Panel"
       ],
       "hasTitle": true,
       "title": "Questions about tracheostomy",
@@ -3041,11 +3032,141 @@
       "collect": true,
       "path": [
         "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "ProcedureCard1Panel",
         "ProcedureOtherPanel"
       ],
       "hasTitle": true,
       "title": "Why did you choose this kind of surgery over others?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureCard2Panel": {
+      "name": "ProcedureCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureUALCard2Panel": {
+      "name": "ProcedureUALCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureType} = 'UAL'"
+    },
+    "ProcedureESICard2Panel": {
+      "name": "ProcedureESICard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureType} = 'EFI'"
+    },
+    "ProcedureBVEAPCard2Panel": {
+      "name": "ProcedureBVEAPCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureType} = 'BVEAP'"
+    },
+    "ProcedurePAECard2Panel": {
+      "name": "ProcedurePAECard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureType} = 'PAE'"
+    },
+    "ProcedureVCCCard2Panel": {
+      "name": "ProcedureVCCCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureType} = 'VCC'"
+    },
+    "ProcedurePLECard2Panel": {
+      "name": "ProcedurePLECard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureType} = 'PLE'"
+    },
+    "ProcedureTTCard2Panel": {
+      "name": "ProcedureTTCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureType} = 'TT'"
+    },
+    "ProcedureOtherCard2Panel": {
+      "name": "ProcedureOtherCard2Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureType} = 'Other'"
+    },
+    "XXX": {
+      "name": "XXX",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard2Panel",
+        "ProcedureOtherCard2Panel"
+      ],
+      "hasTitle": true,
+      "title": "sdradio3",
       "hasVisibleIf": false,
       "isRequired": true
     },

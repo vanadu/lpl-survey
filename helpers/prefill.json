@@ -180,6 +180,8 @@
   "ProcedureUALMucus": "YES",
   "ProcedureUALMucusRating": 4,
 
+  "ProcedureUALBreathingPostOp": 5,
+  "ProcedureUALBreathingLongTerm": 1,
 
 
 
@@ -194,33 +196,9 @@
 
 
 
-  "ProcedureIncisionInfection": "YES",
-  "ProcedureCostComplications": "1501_2500",
-  "ProcedureTiebackIncisionInfection": "YES",
-  "ProcedureTiebackSuturesFail": "YES",
-  "ProcedureTiebackSuturesFailTime": "UNDER_TWO_MONTHS",
-  "ProcedureTiebackRepeat": false,
-  "ProcedureStentType": "SILICONE",
-  "ProcedureStentDidMigrate": true,
-  "ProcedureStentReplaced": true,
-  "ProcedureStentHalitosis": "YES",
-  "ProcedureStentHalitosisRating": 2,
-  "ProcedureStentInfected": "YES",
-  "ProcedureStentInfectedHandling": "REMOVED_AND_REPLACED",
-  "ProcedureStentCostOnce": "1501_2500",
-  "ProcedureStentCostRepeat": "2001_3000",
-  "ProcedureStentComplications": "NO",
-  "ProcedureIssuesThroatclear": "YES",
-  "ProcedureIssuesThroatclearImproved": "YES",
-  "ProcedureAntibiotics": "YES",
-  "ProcedureRefluxMeds": "NO",
-  "ProcedureCost": "2501_4000",
-  "ProcedureComplications": "YES",
-  "ProcedureComplicationsCost": "1501_2500",
-  "ProcedureComparison": "YES",
-  "ProcedureChoice": "YES",
-  "ProcedureSurgeonInformation": 5,
-  "ProcedureSatisfaction": 5,
+
+
+
 
 
 

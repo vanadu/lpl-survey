@@ -65,7 +65,9 @@ export function getStyleDirectives(item) {
     "MedicationSupplementsType",
 
     "ProcedureType",
-    "ProcedureScheduled",
+    "ProcedureUALExtendedStay",
+    "ProcedureUALExtendedStayReason",
+
 
     "BreathingCrisisProductRecommendedType",
     "BreathingAspirationCount",
@@ -102,11 +104,18 @@ export function getStyleDirectives(item) {
 
 
 
+    "ProcedureUALIncisionComplications",
+
+
     "ProcedureUALCough",
     "ProcedureUALGagRetch",
     "ProcedureUALRegurgitate",
     "ProcedureUALMucus",
 
+    "ProcedureUALIncisionSite",
+    "ProcedureUALOralBleeding",
+    "ProcedureUALFollowupCare",
+  
 
 
 
@@ -119,29 +128,6 @@ export function getStyleDirectives(item) {
 
 
 
-    "ProcedureTiebackIncisionInfection",
-    "ProcedureTiebackSuturesFail",
-    "ProcedureTiebackCount",
-
-    "ProcedureStentHalitosis",
-    "ProcedureStentInfected",
-    "ProcedureIssuesThroatclear",
-    "ProcedureIssuesThroatclearImproved",
-    "ProcedureIncisionInfection",
-    "ProcedureAntibiotics",
-    "ProcedureRefluxMeds",
-
-    "TherapyDidHave",
-
-    "BreathingCrisisCount",
-    "BreathingEmergencyCount",
-    "BreathingCrisisDidHave",
-    "BreathingEmergencyDidHave",
-    "BreathingOxygenDidUse",
-
-    "ProcedureComplications",
-    "ProcedureComparison",
-    "ProcedureChoice",
 
     "BreathingCrisisAdvice",
     "BreathingCrisisProductRecommended",
@@ -241,10 +227,15 @@ export function getStyleDirectives(item) {
     "DiagnosisDetailsPanel",
 
 
-    "ProcedureUALAgePanel",
-    "ProcedureUALAgeDetailsPanel",
-    "ProcedureUALSignsPanel",
 
+    "ProcedureUALCard1Panel",
+
+    // "ProcedureUALAgePanel",
+    "ProcedureUALAgeDetailsPanel",
+    // "ProcedureUALPostOpPanel",
+
+
+    "ProcedureCard2Panel",
 
 
 
@@ -261,6 +252,8 @@ export function getStyleDirectives(item) {
 
 
     "ProcedureUALAgeDetailsPanel",
+
+    // "ProcedureUALPeriopAspirationPneumonia"
 
 
 
@@ -332,7 +325,6 @@ export function getStyleDirectives(item) {
 
 
 
-    "ProcedureUALCough",
     "ProcedureUALCoughRating",
     "ProcedureUALGagRetch",
     "ProcedureUALGagRetchRating",
@@ -340,6 +332,8 @@ export function getStyleDirectives(item) {
     "ProcedureUALRegurgitateRating",
     "ProcedureUALMucus",
     "ProcedureUALMucusRating",
+
+
 
 
 

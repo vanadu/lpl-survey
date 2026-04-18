@@ -139,11 +139,14 @@ const Browse_08_Procedure = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="ProcedureUALPanel">
-        <h3 className="browse-showanswer-title">Questions about Bella&lsquo;s tieback (UAL) surgery:</h3>
+      <div className="browse-panel-container" id="ProcedureUALCard1Panel">
+      <div className="browse-content-block" id="ProcedureUALHeading">
+        <h3 className="browse-content-subheading">Questions About Bella&lsquo;s Tieback (UAL) Surgery</h3>
+      </div>
+
       <div className="browse-panel-container" id="ProcedureUALAgePanel">
-      <div className="browse-panel-container" id="ProcedureUALAgeDetailsPanel">
         <h3 className="browse-showanswer-title">At about what age did Bella have the first procedure for LP/ GOLPP?</h3>
+      <div className="browse-panel-container" id="ProcedureUALAgeDetailsPanel">
       <div className="browse-question-container" id="ProcedureUALAgeYears">
         <ShowAnswerContent
           header={
@@ -244,12 +247,16 @@ const Browse_08_Procedure = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="ProcedureUALSignsPanel">
-      <div className="browse-question-container" id="ProcedureUALCough">
+      <div className="browse-content-block" id="ProcedureUALSurgeryOpHeading">
+        <p className="browse-content-text">These questions ask about issues Bella had immediately after surgery.</p>
+      </div>
+
+      <div className="browse-panel-container" id="ProcedureUALSurgeryPanel">
+      <div className="browse-question-container" id="ProcedureUALIncisionComplications">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella have a persistent cough following the procedure?
+              Did Bella have any infection or swelling at the incision site?
             </span>
           }
           index={8}
@@ -276,154 +283,14 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALCoughRating">
+      <div className="browse-question-container" id="ProcedureUALOralBleeding">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the cough improve or get worse over time?
+              Did Bella have bleeding in the mouth or from the inside the throat?
             </span>
           }
           index={9}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">1 = much worse, 3 = no change, 5 = got much better</p>
-          <div className="showanswer__content-block">
-          <div className="browse-showanswer-rating" aria-hidden="true">
-                
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        1
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        2
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        3
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        4
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        5
-                      </text>
-                    </svg>
-                  </span>
-              </div>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureUALGagRetch">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did Bella gag or retch frequently following the procedure?
-            </span>
-          }
-          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -447,151 +314,85 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALGagRetchRating">
+      <div className="browse-question-container" id="ProcedureUALExtendedStay">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the gagging or retching improve or get worse over time?
+              Did Bella need to stay longer than expected at the hospital after the procedure?
+            </span>
+          }
+          index={10}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes, one extra day</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes, two days</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes, three days or more</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ProcedureUALExtendedStayReason">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Why did Bella need extended inpatient care?
             </span>
           }
           index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1 = much worse, 3 = no change, 5 = got much better</p>
+
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-rating" aria-hidden="true">
-                
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        1
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        2
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        3
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        4
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        5
-                      </text>
-                    </svg>
-                  </span>
-              </div>
+          <ul>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Aspiration pneumonia</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Adverse reaction to anesthesia</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Suture failure</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Respiratory crisis</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Stroke or cardiac event</span>
+            </li>
+          </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALRegurgitate">
+      <div className="browse-question-container" id="ProcedureUALPeriopTiebackRepeat">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella frequently regurgitate food or water following the procedure?
+              Did the surgeon attempt a second tieback on the other side?
             </span>
           }
           index={12}
@@ -618,154 +419,14 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALRegurgitateRating">
+      <div className="browse-question-container" id="ProcedureUALFollowupCare">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the regurgitation improve or get worse over time?
+              In the four weeks after surgery, did Bella need another visit to a veterinary professional because of complications?
             </span>
           }
           index={13}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          <p className="browse-question-description">1 = much worse, 3 = no change, 5 = got much better</p>
-          <div className="showanswer__content-block">
-          <div className="browse-showanswer-rating" aria-hidden="true">
-                
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        1
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        2
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        3
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        4
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        5
-                      </text>
-                    </svg>
-                  </span>
-              </div>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureUALMucus">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did frequently Bella cough up mucus or phlegm after the procedure?
-            </span>
-          }
-          index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -789,150 +450,102 @@ const Browse_08_Procedure = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALMucusRating">
+      <div className="browse-question-container" id="ProcedureUALCost">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the mucus or phlegm improve or get worse over time?
+              What was the approximate cost of the surgery, not including post-operative complications?
+            </span>
+          }
+          index={14}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Prefer not to say</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Under $1500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$1501 - $2500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$2501 - $3500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$3501 - $4500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$5501 - $8000</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Over $8000</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ProcedureUALComplicationsCost">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              What was total cost of the complications of the surgery?
             </span>
           }
           index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1 = much worse, 3 = no change, 5 = got much better</p>
+          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
-          <div className="browse-showanswer-rating" aria-hidden="true">
-                
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        1
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        2
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        3
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        4
-                      </text>
-                    </svg>
-                  </span>
-                  <span className="browse-showanswer-rating-item">
-                    <svg
-                      className="browse-showanswer-rating-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <text
-                        x="8"
-                        y="8"
-                        textAnchor="middle"
-                        dominantBaseline="central"
-                        fontFamily="Arial, Helvetica, sans-serif"
-                        fontSize="8"
-                        fill="currentColor"
-                      >
-                        5
-                      </text>
-                    </svg>
-                  </span>
-              </div>
+          <ul>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Prefer not to say</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Under $1500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$1501 - $2500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$2501 - $3500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$3501 - $4500</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>$5501 - $8000</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Over $8000</span>
+            </li>
+          </ul>
           </div>
         </ShowAnswerContent>
       </div>
       </div>
       </div>
-      </div>
 
-      <div className="browse-panel-container" id="ProcedureCard2Panel">
       <div className="browse-panel-container" id="ProcedureEFIPanel">
       <div className="browse-question-container" id="ProcedureEFIType">
         <ShowAnswerContent
@@ -1259,6 +872,272 @@ const Browse_08_Procedure = () => {
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Availability</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="ProcedureCard2Panel">
+      <div className="browse-panel-container" id="ProcedureUALCard2Panel">
+      <div className="browse-question-container" id="XXX">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              sdradio3
+            </span>
+          }
+          index={25}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="ProcedureESICard2Panel">
+      <div className="browse-question-container" id="XXX">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              sdradio3
+            </span>
+          }
+          index={26}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="ProcedureBVEAPCard2Panel">
+      <div className="browse-question-container" id="XXX">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              sdradio3
+            </span>
+          }
+          index={27}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="ProcedurePAECard2Panel">
+      <div className="browse-question-container" id="XXX">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              sdradio3
+            </span>
+          }
+          index={28}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="ProcedureVCCCard2Panel">
+      <div className="browse-question-container" id="XXX">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              sdradio3
+            </span>
+          }
+          index={29}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="ProcedurePLECard2Panel">
+      <div className="browse-question-container" id="XXX">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              sdradio3
+            </span>
+          }
+          index={30}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="ProcedureTTCard2Panel">
+      <div className="browse-question-container" id="XXX">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              sdradio3
+            </span>
+          }
+          index={31}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+      </div>
+
+      <div className="browse-panel-container" id="ProcedureOtherCard2Panel">
+      <div className="browse-question-container" id="XXX">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              sdradio3
+            </span>
+          }
+          index={32}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>

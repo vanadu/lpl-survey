@@ -92,11 +92,11 @@
             {
               "type": "panel",
               "name": "ProcedureUALAgePanel",
-              "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
               "elements": [
                 {
                   "type": "panel",
                   "name": "ProcedureUALAgeDetailsPanel",
+                  "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
                   "description": "Please enter years and months.",
                   "visibleIf": "{ProcedureDidHave} = true",
                   "elements": [
@@ -177,7 +177,7 @@
             {
               "type": "html",
               "name": "ProcedureUALSurgeryOpHeading",
-              "html": "<h4>These questions ask about issues {CmpnName} had immediately after surgery.</h4>"
+              "html": "<h4>These questions ask about any issues {CmpnName} had immediately after surgery.</h4>"
             },
             {
               "type": "panel",
@@ -226,7 +226,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ProcedureUALExtendedStay",
-                  "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
+                  "title": "Did {CmpnName} have stay longer than expected at the hospital after the procedure?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -301,7 +301,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ProcedureUALFollowupCare",
-                  "title": "In the four weeks after surgery, did {CmpnName} need another visit to a veterinary professional because of complications?",
+                  "title": "Did CmpnName need another visit to a veterinary professional because of complications, not including the scheduled post-operative follow-up?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -315,84 +315,6 @@
                     {
                       "value": "DONT_KNOW",
                       "text": "Don't know"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "dropdown",
-                  "name": "ProcedureUALCost",
-                  "title": "What was the approximate cost of the surgery, not including post-operative complications?",
-                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-                  "isRequired": true,
-                  "visibleIf": "{ProcedureDidHave} = true",
-                  "choices": [
-                    {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
-                    },
-                    {
-                      "value": "UNDER_1500",
-                      "text": "Under $1500"
-                    },
-                    {
-                      "value": "1501_2500",
-                      "text": "$1501 - $2500"
-                    },
-                    {
-                      "value": "2501_4000",
-                      "text": "$2501 - $3500"
-                    },
-                    {
-                      "value": "4001_5500",
-                      "text": "$3501 - $4500"
-                    },
-                    {
-                      "value": "5501_8000",
-                      "text": "$5501 - $8000"
-                    },
-                    {
-                      "value": "OVER_8000",
-                      "text": "Over $8000"
-                    }
-                  ],
-                  "showOtherItem": false
-                },
-                {
-                  "type": "dropdown",
-                  "name": "ProcedureUALComplicationsCost",
-                  "title": "What was total cost of the complications of the surgery?",
-                  "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
-                  "isRequired": true,
-                  "visibleIf": "{ProcedureUALExtendedStay} = true || {ProcedureUALFollowupCare} = 'YES'",
-                  "choices": [
-                    {
-                      "value": "NOT_SAY",
-                      "text": "Prefer not to say"
-                    },
-                    {
-                      "value": "UNDER_1500",
-                      "text": "Under $1500"
-                    },
-                    {
-                      "value": "1501_2500",
-                      "text": "$1501 - $2500"
-                    },
-                    {
-                      "value": "2501_4000",
-                      "text": "$2501 - $3500"
-                    },
-                    {
-                      "value": "4001_5500",
-                      "text": "$3501 - $4500"
-                    },
-                    {
-                      "value": "5501_8000",
-                      "text": "$5501 - $8000"
-                    },
-                    {
-                      "value": "OVER_8000",
-                      "text": "Over $8000"
                     }
                   ],
                   "showOtherItem": false

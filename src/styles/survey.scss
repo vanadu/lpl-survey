@@ -76,6 +76,9 @@ label {
   // !VA h2 font size and height
   --sjs-article-font-x-large-fontSize: calc(1.3 * (var(--sjs-font-size, 16px)));
   --sjs-article-font-x-large-lineHeight: calc(1.4 * (var(--sjs-font-size, 16px)));
+
+
+
   // !VA Question titles, a little smaller than the base font size.
   // !VA NOTE: SOME OF THESE ELEMENTS LINE HEIGHT MUST BE SET IN THE ELEMENT CSS!
   --sjs-font-questiontitle-size: calc(.9 * (var(--sjs-font-size)));
@@ -257,6 +260,14 @@ label {
 // !VA H3 DEFAULT: NO PADDING OR MARGIN ON THE H2. Line-height determines whitespace. 
 .sd-container-modern .sd-element__content .sd-html h3 {
   font-family: $secondary_font;
+}
+
+.sd-container-modern .sd-element__content .sd-html h4 {
+  font-size: var(--sjs-article-font-medium-fontSize, calc(.9 * (var(--sjs-font-size, 16px))));
+  font-family: $primary_font;
+  color: #212121;
+  font-weight: 500;
+  margin-left: var(--s-5);
 }
 
 .sd-container-modern .sd-question {
