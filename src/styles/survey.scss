@@ -266,8 +266,21 @@ label {
   font-size: var(--sjs-article-font-medium-fontSize, calc(.9 * (var(--sjs-font-size, 16px))));
   font-family: $primary_font;
   color: #212121;
-  font-weight: 500;
-  margin-left: var(--s-5);
+  font-weight: 600;
+  // margin-left: var(--s-5);
+
+
+  position: relative;
+  padding-left: 1rem;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: currentColor;
+  }
 }
 
 .sd-container-modern .sd-question {

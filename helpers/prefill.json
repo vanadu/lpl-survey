@@ -165,12 +165,12 @@
     "UAL",
     "ESI"
   ],
-
   "ProcedureUALAgeYears": "13",
   "ProcedureUALAgeMonths": "6",
   "ProcedureUALScheduled": "SCHEDULED",
   "ProcedureUALScheduledWait": "LESS_THAN_TWO_WEEKS",
-
+  "ProcedureUALDifference": "NO",
+  "ProcedureUALChoice": "NO",
   "ProcedureUALIncisionComplications": "YES",
   "ProcedureUALOralBleeding": "YES",
   "ProcedureUALExtendedStay": "ONE_DAY",
@@ -178,7 +178,7 @@
     "ASPIRATION",
     "SUTURE_FAILURE"
   ],
-  "ProcedureUALExtendedStayTiebackRepeat": "YES",
+  "ProcedureUALExtendedStayRepeatProcedure": "YES",
   "ProcedureUALFollowupCare": "YES",
   "ProcedureUALMedications": [
     "PAIN",
@@ -186,25 +186,58 @@
     "REFLUX",
     "SEDATIVE"
   ],
-  "ProcedureUALCost": "OVER_8000",
-  "ProcedureUALComplicationsCost": "1501_2500",
-
-
-
-  "ProcedureUALCoughRating": 4,
-  "ProcedureUALGagRetch": "YES",
-  "ProcedureUALGagRetchRating": 4,
-  "ProcedureUALRegurgitate": "YES",
-  "ProcedureUALRegurgitateRating": 4,
-  "ProcedureUALMucus": "YES",
-  "ProcedureUALMucusRating": 4,
-
+  "ProcedureUALCost": "6000_8000",
+  "ProcedureUALComplicationsCost": "500_1000",
   "ProcedureUALBreathingPostOp": 5,
-  "ProcedureUALBreathingLongTerm": 1,
+  "ProcedureUALCoughGagRetch": "YES",
+  "ProcedureUALCoughGagRetchChange": 4,
+  "ProcedureUALBadBreath": "YES",
+  "ProcedureUALBadBreathChange": 4,
+  "ProcedureUALRegurgitate": "YES",
+  "ProcedureUALRegurgitateChange": 4,
+  "ProcedureUALMucus": "YES",
+  "ProcedureUALMucusChange": 4,
+  "ProcedureUALBreathingLongTerm": "SYMPTOMS_RETURNED",
+  "ProcedureUALSymptomsReturnedTime": "WEEKS",
+  "ProcedureUALLongTermRepeatProcedure": false,
+  "ProcedureUALSatisfaction": 2,
 
-
-
-
+  "ProcedureESIAgeYears": "13",
+  "ProcedureESIAgeMonths": "6",
+  "ProcedureESIScheduled": "SCHEDULED",
+  "ProcedureESIScheduledWait": "LESS_THAN_TWO_WEEKS",
+  "ProcedureESIDifference": "NO",
+  "ProcedureESIChoice": "NO",
+  "ProcedureESIIncisionComplications": "YES",
+  "ProcedureESIOralBleeding": "YES",
+  "ProcedureESIExtendedStay": "ONE_DAY",
+  "ProcedureESIExtendedStayReason": [
+    "ASPIRATION",
+    "MIGRATED"
+  ],
+  "ProcedureESIExtendedStayRepeatProcedure": "YES",
+  "ProcedureESIFollowupCare": "YES",
+  "ProcedureESIMedications": [
+    "PAIN",
+    "STEROID",
+    "REFLUX",
+    "SEDATIVE"
+  ],
+  "ProcedureESICost": "6000_8000",
+  "ProcedureESIComplicationsCost": "500_1000",
+  "ProcedureESIBreathingPostOp": 5,
+  "ProcedureESICoughGagRetch": "YES",
+  "ProcedureESICoughGagRetchChange": 4,
+  "ProcedureESIBadBreath": "YES",
+  "ProcedureESIBadBreathChange": 4,
+  "ProcedureESIRegurgitate": "YES",
+  "ProcedureESIRegurgitateChange": 4,
+  "ProcedureESIMucus": "YES",
+  "ProcedureESIMucusChange": 4,
+  "ProcedureESIBreathingLongTerm": "SYMPTOMS_RETURNED",
+  "ProcedureESISymptomsReturnedTime": "WEEKS",
+  "ProcedureESILongTermRepeatProcedure": false,
+  "ProcedureESISatisfaction": 2,
 
 
 

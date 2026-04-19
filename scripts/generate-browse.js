@@ -32,7 +32,15 @@ const pageFiles = [
   "05_PRIMARY-page.json",
   "06_DIAGNOSIS-page.json",
   "07_MEDICATION-page.json",
-  "08_PROCEDURE-page.json", 
+  "08_PROCEDURE-page.json",
+  "08A_PROCEDURE_UAL-page.json",
+  "08B_PROCEDURE_ESI-page.json",
+  "08C_PROCEDURE_BVEAP-page.json",
+  "08D_PROCEDURE_PAE-page.json",
+  "08E_PROCEDURE_VCC-page.json",
+  "08F_PROCEDURE_PLE-page.json",
+  "08G_PROCEDURE_TT-page.json",
+  "08H_PROCEDURE_OTHER-page.json",
   "09_THERAPY-page.json",
   "10_BREATHING-page.json",
   "11_NEUROPATHY-page.json",
@@ -158,7 +166,7 @@ function isExcludedElement(el, exclusions) {
 }
 
 function parsePageFileInfo(filename) {
-  const match = filename.match(/^(\d{2})_(.+)-page\.json$/);
+  const match = filename.match(/^(\d{2}[A-Z]?)_(.+)-page\.json$/);
 
   if (!match) {
     throw new Error(`Invalid source page filename format: ${filename}`);

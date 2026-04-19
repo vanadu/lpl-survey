@@ -1,0 +1,691 @@
+{
+  "name": "PROCEDURE_UAL-page",
+  "visibleIf": "{ProcedureDidHave} = true and {ProcedureType} contains 'UAL'",
+  "elements": [
+    {
+      "type": "panel",
+      "name": "ProcedureUALCard1Panel",
+      "elements": [
+        {
+              "type": "html",
+              "name": "ProcedureUALHeading",
+              "html": "<h2>Questions About {CmpnName}'s Tieback (UAL) Surgery<h2>"
+        },
+        {
+          "type": "panel",
+          "name": "ProcedureUALAgePanel",
+          "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "ProcedureUALAgeDetailsPanel",
+              "description": "Please enter years and months.",
+              "visibleIf": "{ProcedureDidHave} = true",
+              "elements": [
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "ProcedureUALAgeYears",
+                  "title": "Years",
+                  "isRequired": true,
+                  "min": "1",
+                  "max": "40",
+                    "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 1,
+                      "maxValue": 40,
+                      "text": "Age must be between 1 and 40"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "inputType": "number",
+                  "name": "ProcedureUALAgeMonths",
+                  "title": "Months (0 - 11)",
+                  "isRequired": true,
+                  "min": 0,
+                  "max": 11,
+                  "validators": [
+                    {
+                      "type": "numeric",
+                      "minValue": 0,
+                      "maxValue": 11,
+                      "text": "Months must be between 0 and 11"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "ProcedureUALScheduled",
+              "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "labelTrue": "Scheduled",
+              "labelFalse": "Emergency",
+              "swapOrder": true
+            },
+            {
+            "type": "dropdown",
+            "name": "ProcedureUALScheduledWait",
+            "title": "How far in advance was the procedure scheduled?",
+            "isRequired": true,
+            "visibleIf": "{ProcedureDidHave} = true && {ProcedureUALScheduled} = true",
+            "choices": [
+              {
+                "value": "LESS_THAN_TWO_WEEKS",
+                "text": "Less than two weeks"
+              },
+              {
+                "value": "TWO_TO_FOUR_WEEKS",
+                "text": "Two to four weeks"
+              },
+              {
+                "value": "FOUR_TO_EIGHT_WEEKS",
+                "text": "Four to eight weeks"
+              },
+              {
+                "value": "OVER_EIGHT_WEEKS",
+                "text": "More than eight weeks"
+              }
+            ],
+            "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALDifference",
+              "title": "Did the surgeon explain the difference between tieback and other surgery or procedure types?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALChoice",
+              "title": "Did the surgeon offer you a choice between tieback and any other procedure type?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ProcedureUALSurgeryPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedureUALPostOpHeading",
+              "html": "<h4>These questions ask about issues {CmpnName} had immediately after surgery.</h4>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALIncisionComplications",
+              "title": "Did {CmpnName} have any infection or swelling at the incision site?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALOralBleeding",
+              "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALExtendedStay",
+              "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "ONE_DAY",
+                  "text": "Yes, one extra day"
+                },
+                {
+                  "value": "TWO_DAYS",
+                  "text": "Yes, two days"
+                },
+                {
+                  "value": "THREE_DAYS",
+                  "text": "Yes, three days or more"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "ProcedureUALExtendedStayReason",
+              "title": "Why did {CmpnName} need extended inpatient care?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureUALExtendedStay} != 'NO'",
+              "choices": [
+                {
+                  "value": "ASPIRATION",
+                  "text": "Aspiration pneumonia"
+                },
+                {
+                  "value": "ANESTHESIA",
+                  "text": "Adverse reaction to anesthesia"
+                },
+                {
+                  "value": "SUTURE_FAILURE",
+                  "text": "Suture failure"
+                },
+                {
+                  "value": "RESPIRATORY",
+                  "text": "Respiratory crisis"
+                },
+                {
+                  "value": "STROKE",
+                  "text": "Stroke or cardiac event"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALExtendedStayRepeatProcedure",
+              "title": "Did the surgeon attempt a second tieback on the other side?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureUALExtendedStayReason} contains 'SUTURE_FAILURE'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALFollowupCare",
+              "title": "In the four weeks after surgery, did {CmpnName} need another visit to a veterinary professional because of complications?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "checkbox",
+              "name": "ProcedureUALMedications",
+              "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "DONT_KNOW",
+                  "text": "None or don't know"
+                },
+                {
+                  "value": "PAIN",
+                  "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
+                },
+                {
+                  "value": "REFLUX",
+                  "text": "Reflux medications (i.e. cisipride, famotidine, omeprazole)"
+                },
+                {
+                  "value": "ANTIBIOTIC",
+                  "text": "Antibiotics"
+                },
+                {
+                  "value": "STEROID",
+                  "text": "Steroid (i.e. prednisone, meloxicam, metacam)"
+                },
+                {
+                  "value": "SEDATIVE",
+                  "text": "Sedative (i.e. trazodone, tramadol)"
+                },
+                {
+                  "value": "MAROPITANT",
+                  "text": "Cerenia (maropitant citrate)"
+                }
+              ],
+              "showOtherItem": true
+            }
+          ]
+        },
+
+
+
+        {
+          "type": "panel",
+          "name": "ProcedureUALCostPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedureUALCostHeading",
+              "html": "<h4>These questions are about the approximate cost of the surgery. Rough estimates are fine.</h4>"
+            },
+            {
+              "type": "dropdown",
+              "name": "ProcedureUALCost",
+              "title": "About what was the cost of the surgery, not including post-operative complications?",
+              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+              "isRequired": true,
+              "visibleIf": "{ProcedureDidHave} = true",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Don't know or prefer not to say"
+                },
+                {
+                  "value": "UNDER_1500",
+                  "text": "Under $1500"
+                },
+                {
+                  "value": "1500_3000",
+                  "text": "$1500 - $3000"
+                },
+                {
+                  "value": "3000_5000",
+                  "text": "$3000 - $5000"
+                },
+                {
+                  "value": "5000_7000",
+                  "text": "$5000 - $7000"
+                },
+                {
+                  "value": "7000_9000",
+                  "text": "$700 - $9000"
+                },
+                {
+                  "value": "OVER_9000",
+                  "text": "Over $9000"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "ProcedureUALComplicationsCost",
+              "title": "About what was total cost of the complications of the surgery?",
+              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
+              "isRequired": true,
+              "visibleIf": "{ProcedureUALExtendedStay} != 'NO' || {ProcedureUALFollowupCare} = 'YES'",
+              "choices": [
+                {
+                  "value": "NOT_SAY",
+                  "text": "Don't know or prefer not to say"
+                },
+                {
+                  "value": "UNDER_500",
+                  "text": "Under $500"
+                },
+                {
+                  "value": "500_1000",
+                  "text": "$500 - $1000"
+                },
+                {
+                  "value": "1000_2000",
+                  "text": "$1000 - $2000"
+                },
+                {
+                  "value": "2000_3000",
+                  "text": "$2000 - $3000"
+                },
+                {
+                  "value": "3000_5000",
+                  "text": "$3000 - $5000"
+                },
+                {
+                  "value": "OVER_5000",
+                  "text": "Over $5000"
+                }
+              ],
+              "showOtherItem": false
+            }
+          ]
+        }
+
+
+      ]
+    },
+
+    {
+      "type": "panel",
+      "name": "ProcedureUALCard2Panel",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "ProcedureUALConditionPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedureUALConditionHeading",
+              "html": "<h4>These questions are about {CmpnName}'s condition in weeks after the surgery.</h4>"
+            },
+    
+
+            {
+              "type": "rating",
+              "name": "ProcedureUALBreathingPostOp",
+              "title": "How would you rate {CmpnName}'s breathing in the time right after the tieback surgery?",
+              "description": "1 = no improvement, 3 = moderate improvement, 5 = very much improved",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALCoughGagRetch",
+              "title": "Did {CmpnName} cough, gag, or retch more than before the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureUALCoughGagRetchChange",
+              "title": "Did the coughing, gagging or retching get better or worse with time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
+              "isRequired": true,
+              "visibleIf": "{ProcedureUALCoughGagRetch} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALBadBreath",
+              "title": "Did {CmpnName} develop bad breath after the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureUALBadBreathChange",
+              "title": "Did the bad breath get better or worse over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
+              "isRequired": true,
+              "visibleIf": "{ProcedureUALBadBreath} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALRegurgitate",
+              "title": "Did {CmpnName} regurgitate food or water more frequently than before the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureUALRegurgitateChange",
+              "title": "Did the regurgitation get less or more frequent with time?",
+              "description": "1 = less frequent, 3 = stayed about the same, 5 = more frequent",
+              "isRequired": true,
+              "visibleIf": "{ProcedureUALRegurgitate} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALMucus",
+              "title": "Did {CmpnName} cough up mucus or phlegm more frequently than before the procedure?",
+              "isRequired": true,
+              
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureUALMucusChange",
+              "title": "Did the mucus or phlegm production decrease or increase over time?",
+              "description": "1 = decreased, 3 = stayed about the same, 5 = increased",
+              "isRequired": true,
+              "visibleIf": "{ProcedureUALMucus} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ProcedureUALLongTermPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedureUALLongTermHeading",
+              "html": "<h4>These questions are about the long-term effects of {CmpnName}'s tieback surgery.</h4>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALBreathingLongTerm",
+              "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the tieback surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO_CHANGE",
+                  "text": "No change"
+                },
+                {
+                  "value": "PROGRESSIVELY_BETTER",
+                  "text": "Got progressively better over time"
+                },
+                {
+                  "value": "PROGRESSIVELY_WORSE",
+                  "text": "Got progressively worse over time"
+                },
+                {
+                  "value": "SYMPTOMS_RETURNED",
+                  "text": "After initial improvement, all the LP symptoms returned"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "ProcedureUALSymptomsReturnedTime",
+              "title": "How long did it take for the LP symptoms to return?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureUALBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
+              "choices": [
+                {
+                  "value": "IMMEDIATELY",
+                  "text": "Almost immediately"
+                },
+                {
+                  "value": "WEEKS",
+                  "text": "Several weeks"
+                },
+                {
+                  "value": "MONTHS",
+                  "text": "Several months"
+                },
+                {
+                  "value": "YEAR",
+                  "text": "Over a year"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't remember or don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "boolean",
+              "name": "ProcedureUALLongTermRepeatProcedure",
+              "title": "If the return of LP symptoms was due to suture failure, did {CmpnName} have a second tieback operation?",
+              "visibleIf": "{ProcedureUALBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
+              "labelTrue": "Yes",
+              "labelFalse": "No",
+              "isRequired": true,
+              "swapOrder": true
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureUALSatisfaction",
+              "title": "How would you rate your satisfaction with {CmpnName}'s tieback procedure?",
+              "description": "1 = not at all satisfied, 3 = moderately satisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

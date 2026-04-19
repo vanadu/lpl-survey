@@ -24,6 +24,25 @@ export function getStyleDirectives(item) {
     "MedicationCard2Panel",
     "ProcedureCard1Panel",
     "ProcedureCard2Panel",
+
+    "ProcedureUALCard1Panel",
+    "ProcedureUALCard2Panel",
+    "ProcedureESICard1Panel",
+    "ProcedureESICard2Panel",
+    "ProcedureBVEAPCard1Panel",
+    "ProcedurePAEAPCard2Panel",
+    "ProcedurePAECard1Panel",
+    "ProcedureVCCCard2Panel",
+    "ProcedureVCCCard1Panel",
+    "ProcedurePLECard2Panel",
+    "ProcedurePLECard1Panel",
+    "ProcedureTTCard2Panel",
+    "ProcedureTTCard1Panel",
+    "ProcedureOtherCard2Panel",
+    "ProcedureOtherCard2Panel",
+
+
+
     "TherapyCard1Panel",
     "TherapyCard2Panel",
     "BreathingCard1Panel",
@@ -68,6 +87,9 @@ export function getStyleDirectives(item) {
     "ProcedureUALExtendedStay",
     "ProcedureUALExtendedStayReason",
     "ProcedureUALMedications",
+    "ProcedureESIExtendedStay",
+    "ProcedureESIExtendedStayReason",
+    "ProcedureESIMedications",
 
 
     "BreathingCrisisProductRecommendedType",
@@ -103,22 +125,37 @@ export function getStyleDirectives(item) {
     "MedicationSupplementsDidPurchase",
     "MedicationProtocolDidPurchase",
 
-
-
+    "ProcedureUALDifference",
+    "ProcedureUALChoice",
     "ProcedureUALIncisionComplications",
-
-
-    "ProcedureUALCough",
-    "ProcedureUALGagRetch",
-    "ProcedureUALRegurgitate",
-    "ProcedureUALMucus",
-
     "ProcedureUALIncisionSite",
     "ProcedureUALOralBleeding",
     "ProcedureUALFollowupCare",
-    "ProcedureUALExtendedStayTiebackRepeat",
-  
+    "ProcedureUALExtendedStayRepeatProcedure",
+    "ProcedureUALCoughGagRetch",
+    "ProcedureUALCoughGagRetchChange",
+    "ProcedureUALBadBreath",
+    "ProcedureUALBadBreathChange",
+    "ProcedureUALRegurgitate",
+    "ProcedureUALRegurgitateChange",
+    "ProcedureUALMucus",
+    "ProcedureUALMucusChange",
 
+    "ProcedureESIDifference",
+    "ProcedureESIChoice",
+    "ProcedureESIIncisionComplications",
+    "ProcedureESIIncisionSite",
+    "ProcedureESIOralBleeding",
+    "ProcedureESIFollowupCare",
+    "ProcedureESIExtendedStayRepeatProcedure",
+    "ProcedureESICoughGagRetch",
+    "ProcedureESICoughGagRetchChange",
+    "ProcedureESIBadBreath",
+    "ProcedureESIBadBreathChange",
+    "ProcedureESIRegurgitate",
+    "ProcedureESIRegurgitateChange",
+    "ProcedureESIMucus",
+    "ProcedureESIMucusChange",
 
 
 
@@ -161,6 +198,8 @@ export function getStyleDirectives(item) {
 
     "ProcedureUALAgeYears",
     "ProcedureUALAgeMonths",
+    "ProcedureESIAgeYears",
+    "ProcedureESIAgeMonths",
 
   ]);
 
@@ -184,11 +223,17 @@ export function getStyleDirectives(item) {
     "MedicationSupplementsCost",
     "MedicationProtocolCost",
 
+
     "ProcedureUALScheduledWait",
     "ProcedureUALCost",
     "ProcedureUALComplicationsCost",
+    "ProcedureUALSymptomsReturnedTime",
+    "ProcedureESIScheduledWait",
+    "ProcedureESICost",
+    "ProcedureESIComplicationsCost",
+    "ProcedureESISymptomsReturnedTime",
 
-    "ProcedureEFIType",
+    "ProcedureESIType",
 
     "TherapyCost",
 
@@ -232,13 +277,15 @@ export function getStyleDirectives(item) {
 
 
     "ProcedureUALCard1Panel",
+    "ProcedureESICard1Panel",
 
     // "ProcedureUALAgePanel",
     "ProcedureUALAgeDetailsPanel",
+    "ProcedureESIAgeDetailsPanel",
     // "ProcedureUALPostOpPanel",
 
 
-    "ProcedureCard2Panel",
+
 
 
 
@@ -255,6 +302,7 @@ export function getStyleDirectives(item) {
 
 
     "ProcedureUALAgeDetailsPanel",
+    "ProcedureESIAgeDetailsPanel",
 
     // "ProcedureUALPeriopAspirationPneumonia"
 
@@ -329,35 +377,56 @@ export function getStyleDirectives(item) {
 
 
     "ProcedureSequence",
+
+    "ProcedureUALDifference",
+    "ProcedureUALChoice",
     "ProcedureUALIncisionComplications",
     "ProcedureUALOralBleeding",
     "ProcedureUALExtendedStay",
     "ProcedureUALExtendedStayReason",
-    "ProcedureUALExtendedStayTiebackRepeat",
+    "ProcedureUALExtendedStayRepeatProcedure",
     "ProcedureUALFollowupCare",
     "ProcedureUALMedications",
-
-
-
     "ProcedureUALCost",
     "ProcedureUALComplicationsCost",
-
-
-
-
-    "ProcedureUALCoughRating",
-    "ProcedureUALGagRetch",
-    "ProcedureUALGagRetchRating",
+    "ProcedureUALBreathingPostOp",
+    "ProcedureUALCoughGagRetch",
+    "ProcedureUALCoughGagRetchChange",
+    "ProcedureUALBadBreath",
+    "ProcedureUALBadBreathChange",
     "ProcedureUALRegurgitate",
-    "ProcedureUALRegurgitateRating",
+    "ProcedureUALRegurgitateChange",
     "ProcedureUALMucus",
-    "ProcedureUALMucusRating",
-
-
-
-
-    "ProcedureUALChoice",
+    "ProcedureUALMucusChange",
+    "ProcedureUALBreathingLongTerm",
+    "ProcedureUALSymptomsReturnedTime",
+    "ProcedureUALLongTermRepeatProcedure",
     "ProcedureUALSatisfaction",
+
+    "ProcedureESIDifference",
+    "ProcedureESIChoice",
+    "ProcedureESIIncisionComplications",
+    "ProcedureESIOralBleeding",
+    "ProcedureESIExtendedStay",
+    "ProcedureESIExtendedStayReason",
+    "ProcedureESIExtendedStayRepeatProcedure",
+    "ProcedureESIFollowupCare",
+    "ProcedureESIMedications",
+    "ProcedureESICost",
+    "ProcedureESIComplicationsCost",
+    "ProcedureESIBreathingPostOp",
+    "ProcedureESICoughGagRetch",
+    "ProcedureESICoughGagRetchChange",
+    "ProcedureESIBadBreath",
+    "ProcedureESIBadBreathChange",
+    "ProcedureESIRegurgitate",
+    "ProcedureESIRegurgitateChange",
+    "ProcedureESIMucus",
+    "ProcedureESIMucusChange",
+    "ProcedureESIBreathingLongTerm",
+    "ProcedureESISymptomsReturnedTime",
+    "ProcedureESILongTermRepeatProcedure",
+    "ProcedureESISatisfaction",
 
 
 

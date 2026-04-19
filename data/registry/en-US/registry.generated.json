@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-19T08:58:34.209Z",
+    "builtAt": "2026-04-19T13:38:52.423Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -2547,8 +2547,7 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel"
+        "PROCEDURE_UAL-page"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -2559,8 +2558,7 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel"
       ],
       "hasTitle": true,
@@ -2573,8 +2571,7 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALAgePanel"
       ],
@@ -2588,8 +2585,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALAgePanel",
         "ProcedureUALAgeDetailsPanel"
@@ -2606,8 +2602,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALAgePanel",
         "ProcedureUALAgeDetailsPanel"
@@ -2624,8 +2619,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALAgePanel"
       ],
@@ -2641,8 +2635,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALAgePanel"
       ],
@@ -2652,14 +2645,43 @@
       "visibleIf": "{ProcedureDidHave} = true && {ProcedureUALScheduled} = true",
       "isRequired": true
     },
+    "ProcedureUALDifference": {
+      "name": "ProcedureUALDifference",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard1Panel",
+        "ProcedureUALAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon explain the difference between tieback and other surgery or procedure types?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureUALChoice": {
+      "name": "ProcedureUALChoice",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard1Panel",
+        "ProcedureUALAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon offer you a choice between tieback and any other procedure type?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "ProcedureUALSurgeryPanel": {
       "name": "ProcedureUALSurgeryPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel"
       ],
       "hasTitle": false,
@@ -2671,8 +2693,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALSurgeryPanel"
       ],
@@ -2687,8 +2708,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALSurgeryPanel"
       ],
@@ -2703,8 +2723,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALSurgeryPanel"
       ],
@@ -2719,24 +2738,23 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALSurgeryPanel"
       ],
       "hasTitle": true,
       "title": "Why did {CmpnName} need extended inpatient care?",
-      "hasVisibleIf": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALExtendedStay} != 'NO'",
       "isRequired": true
     },
-    "ProcedureUALExtendedStayTiebackRepeat": {
-      "name": "ProcedureUALExtendedStayTiebackRepeat",
+    "ProcedureUALExtendedStayRepeatProcedure": {
+      "name": "ProcedureUALExtendedStayRepeatProcedure",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALSurgeryPanel"
       ],
@@ -2752,8 +2770,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALSurgeryPanel"
       ],
@@ -2768,15 +2785,26 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
         "ProcedureUALSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "What medications did you receive from {CmpnName} after the surgery?",
+      "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
       "hasVisibleIf": false,
       "isRequired": true
+    },
+    "ProcedureUALCostPanel": {
+      "name": "ProcedureUALCostPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "ProcedureUALCost": {
       "name": "ProcedureUALCost",
@@ -2784,10 +2812,9 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
-        "ProcedureUALSurgeryPanel"
+        "ProcedureUALCostPanel"
       ],
       "hasTitle": true,
       "title": "About what was the cost of the surgery, not including post-operative complications?",
@@ -2801,271 +2828,15 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
+        "PROCEDURE_UAL-page",
         "ProcedureUALCard1Panel",
-        "ProcedureUALSurgeryPanel"
+        "ProcedureUALCostPanel"
       ],
       "hasTitle": true,
       "title": "About what was total cost of the complications of the surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureUALExtendedStay} = true || {ProcedureUALFollowupCare} = 'YES'",
+      "visibleIf": "{ProcedureUALExtendedStay} != 'NO' || {ProcedureUALFollowupCare} = 'YES'",
       "isRequired": true
-    },
-    "ProcedureEFIPanel": {
-      "name": "ProcedureEFIPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'EFI'"
-    },
-    "ProcedureEFIType": {
-      "name": "ProcedureEFIType",
-      "type": "dropdown",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureEFIPanel"
-      ],
-      "hasTitle": true,
-      "title": "What type of stent implant did {CmpnName} receive?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureEFIDexstentPanel": {
-      "name": "ProcedureEFIDexstentPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureEFIPanel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureEFIType} contains 'DEXSTENT'"
-    },
-    "ProcedureBVEAPPanel": {
-      "name": "ProcedureBVEAPPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel"
-      ],
-      "hasTitle": true,
-      "title": "Questions about {CmpnName}'s BVEAP surgery",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'BVEAP'"
-    },
-    "ProcedureBVEAPReasons": {
-      "name": "ProcedureBVEAPReasons",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureBVEAPPanel"
-      ],
-      "hasTitle": true,
-      "title": "Why did you choose this over other surgery types?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedurePAEPanel": {
-      "name": "ProcedurePAEPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel"
-      ],
-      "hasTitle": true,
-      "title": "Questions about partial arytenoidectomy surgery",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'PAE'"
-    },
-    "ProcedurePAEReasons": {
-      "name": "ProcedurePAEReasons",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedurePAEPanel"
-      ],
-      "hasTitle": true,
-      "title": "Why did you choose this over other surgery types?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedurePAELaser": {
-      "name": "ProcedurePAELaser",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedurePAEPanel"
-      ],
-      "hasTitle": true,
-      "title": "Was the procedure performed with a laser?",
-      "hasVisibleIf": false
-    },
-    "ProcedureVCCPanel": {
-      "name": "ProcedureVCCPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel"
-      ],
-      "hasTitle": true,
-      "title": "Questions about ventrilocordectomy (debarking, vocal fold removal) surgery",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'VCC'"
-    },
-    "ProcedureVCCReasons": {
-      "name": "ProcedureVCCReasons",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureVCCPanel"
-      ],
-      "hasTitle": true,
-      "title": "Why did you choose ventrilocordectomy over other surgery types?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureVCCLaser": {
-      "name": "ProcedureVCCLaser",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureVCCPanel"
-      ],
-      "hasTitle": true,
-      "title": "Was the procedure performed with a laser?",
-      "hasVisibleIf": false
-    },
-    "ProcedurePLEPanel": {
-      "name": "ProcedurePLEPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel"
-      ],
-      "hasTitle": true,
-      "title": "Questions about partial laryngectomy (partial removal of larynx) surgery",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'PLE'"
-    },
-    "ProcedurePLEReasons": {
-      "name": "ProcedurePLEReasons",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedurePLEPanel"
-      ],
-      "hasTitle": true,
-      "title": "Why did you choose partial laryngectomy over other surgery types?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureTTPanel": {
-      "name": "ProcedureTTPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel"
-      ],
-      "hasTitle": true,
-      "title": "Questions about tracheostomy",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'TT'"
-    },
-    "ProcedureTTReasons": {
-      "name": "ProcedureTTReasons",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureTTPanel"
-      ],
-      "hasTitle": true,
-      "title": "Why did you choose laryngectomy over other surgery types?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureOtherPanel": {
-      "name": "ProcedureOtherPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel"
-      ],
-      "hasTitle": true,
-      "title": "Questions about tracheostomy",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureDidHave} = true && {ProcedureType} contains 'OTHER'"
-    },
-    "ProcedureOtherReasons": {
-      "name": "ProcedureOtherReasons",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE-page",
-        "ProcedureCard1Panel",
-        "ProcedureOtherPanel"
-      ],
-      "hasTitle": true,
-      "title": "Why did you choose this kind of surgery over others?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureCard2Panel": {
-      "name": "ProcedureCard2Panel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "PROCEDURE-page"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
     },
     "ProcedureUALCard2Panel": {
       "name": "ProcedureUALCard2Panel",
@@ -3073,12 +2844,532 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "PROCEDURE_UAL-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureUALConditionPanel": {
+      "name": "ProcedureUALConditionPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureUALBreathingPostOp": {
+      "name": "ProcedureUALBreathingPostOp",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "How would you rate {CmpnName}'s breathing in the time right after the tieback surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureUALCoughGagRetch": {
+      "name": "ProcedureUALCoughGagRetch",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} cough, gag, or retch more than before the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureUALCoughGagRetchChange": {
+      "name": "ProcedureUALCoughGagRetchChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the coughing, gagging or retching get better or worse with time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALCoughGagRetch} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureUALBadBreath": {
+      "name": "ProcedureUALBadBreath",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} develop bad breath after the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureUALBadBreathChange": {
+      "name": "ProcedureUALBadBreathChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the bad breath get better or worse over time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALBadBreath} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureUALRegurgitate": {
+      "name": "ProcedureUALRegurgitate",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} regurgitate food or water more frequently than before the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureUALRegurgitateChange": {
+      "name": "ProcedureUALRegurgitateChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the regurgitation get less or more frequent with time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALRegurgitate} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureUALMucus": {
+      "name": "ProcedureUALMucus",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} cough up mucus or phlegm more frequently than before the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureUALMucusChange": {
+      "name": "ProcedureUALMucusChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the mucus or phlegm production decrease or increase over time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALMucus} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureUALLongTermPanel": {
+      "name": "ProcedureUALLongTermPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureUALBreathingLongTerm": {
+      "name": "ProcedureUALBreathingLongTerm",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALLongTermPanel"
+      ],
+      "hasTitle": true,
+      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the tieback surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureUALSymptomsReturnedTime": {
+      "name": "ProcedureUALSymptomsReturnedTime",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALLongTermPanel"
+      ],
+      "hasTitle": true,
+      "title": "How long did it take for the LP symptoms to return?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
+      "isRequired": true
+    },
+    "ProcedureUALLongTermRepeatProcedure": {
+      "name": "ProcedureUALLongTermRepeatProcedure",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALLongTermPanel"
+      ],
+      "hasTitle": true,
+      "title": "If the return of LP symptoms was due to suture failure, did {CmpnName} have a second tieback operation?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureUALBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
+      "isRequired": true
+    },
+    "ProcedureUALSatisfaction": {
+      "name": "ProcedureUALSatisfaction",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard2Panel",
+        "ProcedureUALLongTermPanel"
+      ],
+      "hasTitle": true,
+      "title": "How would you rate your satisfaction with {CmpnName}'s tieback procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESICard1Panel": {
+      "name": "ProcedureESICard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_ESI-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureESIAgePanel": {
+      "name": "ProcedureESIAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "At about what age did {CmpnName} have the stent procedure for LP/ GOLPP?",
+      "hasVisibleIf": false
+    },
+    "ProcedureESIAgeDetailsPanel": {
+      "name": "ProcedureESIAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESIAgePanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureType} = 'UAL'"
+      "visibleIf": "{ProcedureDidHave} = true"
+    },
+    "ProcedureESIAgeYears": {
+      "name": "ProcedureESIAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESIAgePanel",
+        "ProcedureESIAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Years",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureESIAgeMonths": {
+      "name": "ProcedureESIAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESIAgePanel",
+        "ProcedureESIAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Months (0 - 11)",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureESIScheduled": {
+      "name": "ProcedureESIScheduled",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESIAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureESIScheduledWait": {
+      "name": "ProcedureESIScheduledWait",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESIAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "How far in advance was the procedure scheduled?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureESIScheduled} = true",
+      "isRequired": true
+    },
+    "ProcedureESIDifference": {
+      "name": "ProcedureESIDifference",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESIAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon explain the difference between the stent implant and other surgery or procedure types?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESIChoice": {
+      "name": "ProcedureESIChoice",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESIAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon offer you a choice between the stent implant and any other procedure type?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESISurgeryPanel": {
+      "name": "ProcedureESISurgeryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureESIIncisionComplications": {
+      "name": "ProcedureESIIncisionComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESISurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have any infection or swelling at the incision site?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESIOralBleeding": {
+      "name": "ProcedureESIOralBleeding",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESISurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESIExtendedStay": {
+      "name": "ProcedureESIExtendedStay",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESISurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESIExtendedStayReason": {
+      "name": "ProcedureESIExtendedStayReason",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESISurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Why did {CmpnName} need extended inpatient care?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureESIExtendedStay} != 'NO'",
+      "isRequired": true
+    },
+    "ProcedureESIExtendedStayRepeatProcedure": {
+      "name": "ProcedureESIExtendedStayRepeatProcedure",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESISurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon attempt to implant another stent of a different size?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureESIExtendedStayReason} contains 'MIGRATED'",
+      "isRequired": true
+    },
+    "ProcedureESIFollowupCare": {
+      "name": "ProcedureESIFollowupCare",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESISurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "In the four weeks after the stent procedure, did {CmpnName} need another visit to a veterinary professional because of complications?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESIMedications": {
+      "name": "ProcedureESIMedications",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESISurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What medications were prescribed or provided for {CmpnName} after the stent procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESICostPanel": {
+      "name": "ProcedureESICostPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureESICost": {
+      "name": "ProcedureESICost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESICostPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was the cost of the stent procedure, not including post-operative complications?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureESIComplicationsCost": {
+      "name": "ProcedureESIComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESICostPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was total cost of the complications of the stent procedure?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureESIExtendedStay} != 'NO' || {ProcedureESIFollowupCare} = 'YES'",
+      "isRequired": true
     },
     "ProcedureESICard2Panel": {
       "name": "ProcedureESICard2Panel",
@@ -3086,12 +3377,489 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "PROCEDURE_ESI-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureESIConditionPanel": {
+      "name": "ProcedureESIConditionPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureESIBreathingPostOp": {
+      "name": "ProcedureESIBreathingPostOp",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESIConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "How would you rate {CmpnName}'s breathing in the time right after the tieback surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESICoughGagRetch": {
+      "name": "ProcedureESICoughGagRetch",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESIConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} cough, gag, or retch more than before the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESICoughGagRetchChange": {
+      "name": "ProcedureESICoughGagRetchChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESIConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the coughing, gagging or retching get better or worse with time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureESICoughGagRetch} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureESIBadBreath": {
+      "name": "ProcedureESIBadBreath",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESIConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} develop bad breath after the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESIBadBreathChange": {
+      "name": "ProcedureESIBadBreathChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESIConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the bad breath get better or worse over time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureESIBadBreath} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureESIRegurgitate": {
+      "name": "ProcedureESIRegurgitate",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESIConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} regurgitate food or water more frequently than before the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESIRegurgitateChange": {
+      "name": "ProcedureESIRegurgitateChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESIConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the regurgitation get less or more frequent with time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureESIRegurgitate} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureESIMucus": {
+      "name": "ProcedureESIMucus",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESIConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} cough up mucus or phlegm more frequently than before the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESIMucusChange": {
+      "name": "ProcedureESIMucusChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESIConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the mucus or phlegm production decrease or increase over time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureESIMucus} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureESILongTermPanel": {
+      "name": "ProcedureESILongTermPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureESIBreathingLongTerm": {
+      "name": "ProcedureESIBreathingLongTerm",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESILongTermPanel"
+      ],
+      "hasTitle": true,
+      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the stent procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESISymptomsReturnedTime": {
+      "name": "ProcedureESISymptomsReturnedTime",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESILongTermPanel"
+      ],
+      "hasTitle": true,
+      "title": "How long did it take for the LP symptoms to return?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureESIBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
+      "isRequired": true
+    },
+    "ProcedureESILongTermRepeatProcedure": {
+      "name": "ProcedureESILongTermRepeatProcedure",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESILongTermPanel"
+      ],
+      "hasTitle": true,
+      "title": "If the return of LP symptoms was because the stent migrated or was coughed out, did {CmpnName} have a second stent procedure?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureESIBreathingLongTerm} = 'MIGRATED'",
+      "isRequired": true
+    },
+    "ProcedureESISatisfaction": {
+      "name": "ProcedureESISatisfaction",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard2Panel",
+        "ProcedureESILongTermPanel"
+      ],
+      "hasTitle": true,
+      "title": "How would you rate your satisfaction with {CmpnName}'s stent implant?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureBVEAPCard1Panel": {
+      "name": "ProcedureBVEAPCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_BVEAP-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureBVEAPAgePanel": {
+      "name": "ProcedureBVEAPAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "At about what age did {CmpnName} have the BVEAP procedure for LP/ GOLPP?",
+      "hasVisibleIf": false
+    },
+    "ProcedureBVEAPAgeDetailsPanel": {
+      "name": "ProcedureBVEAPAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPAgePanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureType} = 'EFI'"
+      "visibleIf": "{ProcedureDidHave} = true"
+    },
+    "ProcedureBVEAPAgeYears": {
+      "name": "ProcedureBVEAPAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPAgePanel",
+        "ProcedureBVEAPAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Years",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureBVEAPAgeMonths": {
+      "name": "ProcedureBVEAPAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPAgePanel",
+        "ProcedureBVEAPAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Months (0 - 11)",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureBVEAPScheduled": {
+      "name": "ProcedureBVEAPScheduled",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureBVEAPScheduledWait": {
+      "name": "ProcedureBVEAPScheduledWait",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "How far in advance was the procedure scheduled?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureBVEAPScheduled} = true",
+      "isRequired": true
+    },
+    "ProcedureBVEAPSurgeryPanel": {
+      "name": "ProcedureBVEAPSurgeryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureBVEAPIncisionComplications": {
+      "name": "ProcedureBVEAPIncisionComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have any infection or swelling at the incision site?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureBVEAPOralBleeding": {
+      "name": "ProcedureBVEAPOralBleeding",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureBVEAPExtendedStay": {
+      "name": "ProcedureBVEAPExtendedStay",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureBVEAPExtendedStayReason": {
+      "name": "ProcedureBVEAPExtendedStayReason",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Why did {CmpnName} need extended inpatient care?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureBVEAPExtendedStaySalvage": {
+      "name": "ProcedureBVEAPExtendedStaySalvage",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon attempt a different or salvage procedure after the first one failed?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureBVEAPExtendedStayReason} contains 'FAILURE'",
+      "isRequired": true
+    },
+    "ProcedureBVEAPFollowupCare": {
+      "name": "ProcedureBVEAPFollowupCare",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "In the four weeks after surgery, did {CmpnName} need another visit to a veterinary professional because of complications?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureBVEAPMedications": {
+      "name": "ProcedureBVEAPMedications",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What medications did you receive from {CmpnName} after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureBVEAPCost": {
+      "name": "ProcedureBVEAPCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was the cost of the surgery, not including post-operative complications?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureBVEAPComplicationsCost": {
+      "name": "ProcedureBVEAPComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was total cost of the complications of the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureBVEAPExtendedStay} !='NO' || {ProcedureBVEAPFollowupCare} = 'YES'",
+      "isRequired": true
     },
     "ProcedureBVEAPCard2Panel": {
       "name": "ProcedureBVEAPCard2Panel",
@@ -3099,12 +3867,264 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "PROCEDURE_BVEAP-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedurePAECard1Panel": {
+      "name": "ProcedurePAECard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_PAE-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedurePAEAgePanel": {
+      "name": "ProcedurePAEAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "At about what age did {CmpnName} have the partial arytenoidectomy procedure for LP/ GOLPP?",
+      "hasVisibleIf": false
+    },
+    "ProcedurePAEAgeDetailsPanel": {
+      "name": "ProcedurePAEAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAEAgePanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureType} = 'BVEAP'"
+      "visibleIf": "{ProcedureDidHave} = true"
+    },
+    "ProcedurePAEAgeYears": {
+      "name": "ProcedurePAEAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAEAgePanel",
+        "ProcedurePAEAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Years",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedurePAEAgeMonths": {
+      "name": "ProcedurePAEAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAEAgePanel",
+        "ProcedurePAEAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Months (0 - 11)",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedurePAEScheduled": {
+      "name": "ProcedurePAEScheduled",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAEAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedurePAEScheduledWait": {
+      "name": "ProcedurePAEScheduledWait",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAEAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "How far in advance was the procedure scheduled?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedurePAEScheduled} = true",
+      "isRequired": true
+    },
+    "ProcedurePAESurgeryPanel": {
+      "name": "ProcedurePAESurgeryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedurePAEIncisionComplications": {
+      "name": "ProcedurePAEIncisionComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have any infection or swelling at the incision site?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePAEOralBleeding": {
+      "name": "ProcedurePAEOralBleeding",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePAEExtendedStay": {
+      "name": "ProcedurePAEExtendedStay",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePAEExtendedStayReason": {
+      "name": "ProcedurePAEExtendedStayReason",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Why did {CmpnName} need extended inpatient care?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePAEExtendedStayTiebackRepeat": {
+      "name": "ProcedurePAEExtendedStayTiebackRepeat",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon attempt a second tieback on the other side?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedurePAEExtendedStayReason} contains 'SUTURE_FAILURE'",
+      "isRequired": true
+    },
+    "ProcedurePAEFollowupCare": {
+      "name": "ProcedurePAEFollowupCare",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "In the four weeks after surgery, did {CmpnName} need another visit to a veterinary professional because of complications?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePAEMedications": {
+      "name": "ProcedurePAEMedications",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What medications did you receive from {CmpnName} after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePAECost": {
+      "name": "ProcedurePAECost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was the cost of the surgery, not including post-operative complications?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedurePAEComplicationsCost": {
+      "name": "ProcedurePAEComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was total cost of the complications of the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedurePAEExtendedStay} != 'NO' || {ProcedurePAEFollowupCare} = 'YES'",
+      "isRequired": true
     },
     "ProcedurePAECard2Panel": {
       "name": "ProcedurePAECard2Panel",
@@ -3112,12 +4132,264 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "PROCEDURE_PAE-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureVCCCard1Panel": {
+      "name": "ProcedureVCCCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_VCC-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureVCCAgePanel": {
+      "name": "ProcedureVCCAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "At about what age did {CmpnName} have the ventrilucordectomy procedure for LP/ GOLPP?",
+      "hasVisibleIf": false
+    },
+    "ProcedureVCCAgeDetailsPanel": {
+      "name": "ProcedureVCCAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCAgePanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureType} = 'PAE'"
+      "visibleIf": "{ProcedureDidHave} = true"
+    },
+    "ProcedureVCCAgeYears": {
+      "name": "ProcedureVCCAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCAgePanel",
+        "ProcedureVCCAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Years",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureVCCAgeMonths": {
+      "name": "ProcedureVCCAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCAgePanel",
+        "ProcedureVCCAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Months (0 - 11)",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureVCCScheduled": {
+      "name": "ProcedureVCCScheduled",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureVCCScheduledWait": {
+      "name": "ProcedureVCCScheduledWait",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "How far in advance was the procedure scheduled?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureVCCScheduled} = true",
+      "isRequired": true
+    },
+    "ProcedureVCCSurgeryPanel": {
+      "name": "ProcedureVCCSurgeryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureVCCIncisionComplications": {
+      "name": "ProcedureVCCIncisionComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have any infection or swelling at the incision site?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVCCOralBleeding": {
+      "name": "ProcedureVCCOralBleeding",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVCCExtendedStay": {
+      "name": "ProcedureVCCExtendedStay",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVCCExtendedStayReason": {
+      "name": "ProcedureVCCExtendedStayReason",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Why did {CmpnName} need extended inpatient care?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVCCExtendedStayTiebackRepeat": {
+      "name": "ProcedureVCCExtendedStayTiebackRepeat",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon attempt a second tieback on the other side?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureVCCExtendedStayReason} contains 'SUTURE_FAILURE'",
+      "isRequired": true
+    },
+    "ProcedureVCCFollowupCare": {
+      "name": "ProcedureVCCFollowupCare",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "In the four weeks after surgery, did {CmpnName} need another visit to a veterinary professional because of complications?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVCCMedications": {
+      "name": "ProcedureVCCMedications",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What medications did you receive from {CmpnName} after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVCCCost": {
+      "name": "ProcedureVCCCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was the cost of the surgery, not including post-operative complications?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureVCCComplicationsCost": {
+      "name": "ProcedureVCCComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was total cost of the complications of the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureVCCExtendedStay} = true || {ProcedureVCCFollowupCare} = 'YES'",
+      "isRequired": true
     },
     "ProcedureVCCCard2Panel": {
       "name": "ProcedureVCCCard2Panel",
@@ -3125,12 +4397,264 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "PROCEDURE_VCC-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedurePLECard1Panel": {
+      "name": "ProcedurePLECard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_PLE-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedurePLEAgePanel": {
+      "name": "ProcedurePLEAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "At about what age did {CmpnName} have the partial laryngectomy procedure for LP/ GOLPP?",
+      "hasVisibleIf": false
+    },
+    "ProcedurePLEAgeDetailsPanel": {
+      "name": "ProcedurePLEAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLEAgePanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureType} = 'VCC'"
+      "visibleIf": "{ProcedureDidHave} = true"
+    },
+    "ProcedurePLEAgeYears": {
+      "name": "ProcedurePLEAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLEAgePanel",
+        "ProcedurePLEAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Years",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedurePLEAgeMonths": {
+      "name": "ProcedurePLEAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLEAgePanel",
+        "ProcedurePLEAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Months (0 - 11)",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedurePLEScheduled": {
+      "name": "ProcedurePLEScheduled",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLEAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedurePLEScheduledWait": {
+      "name": "ProcedurePLEScheduledWait",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLEAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "How far in advance was the procedure scheduled?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedurePLEScheduled} = true",
+      "isRequired": true
+    },
+    "ProcedurePLESurgeryPanel": {
+      "name": "ProcedurePLESurgeryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedurePLEIncisionComplications": {
+      "name": "ProcedurePLEIncisionComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have any infection or swelling at the incision site?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePLEOralBleeding": {
+      "name": "ProcedurePLEOralBleeding",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePLEExtendedStay": {
+      "name": "ProcedurePLEExtendedStay",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePLEExtendedStayReason": {
+      "name": "ProcedurePLEExtendedStayReason",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Why did {CmpnName} need extended inpatient care?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePLEExtendedStayTiebackRepeat": {
+      "name": "ProcedurePLEExtendedStayTiebackRepeat",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon attempt a second tieback on the other side?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedurePLEExtendedStayReason} contains 'SUTURE_FAILURE'",
+      "isRequired": true
+    },
+    "ProcedurePLEFollowupCare": {
+      "name": "ProcedurePLEFollowupCare",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "In the four weeks after surgery, did {CmpnName} need another visit to a veterinary professional because of complications?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePLEMedications": {
+      "name": "ProcedurePLEMedications",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What medications did you receive from {CmpnName} after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePLECost": {
+      "name": "ProcedurePLECost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was the cost of the surgery, not including post-operative complications?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedurePLEComplicationsCost": {
+      "name": "ProcedurePLEComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was total cost of the complications of the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedurePLEExtendedStay} = true || {ProcedurePLEFollowupCare} = 'YES'",
+      "isRequired": true
     },
     "ProcedurePLECard2Panel": {
       "name": "ProcedurePLECard2Panel",
@@ -3138,12 +4662,264 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "PROCEDURE_PLE-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureTTCard1Panel": {
+      "name": "ProcedureTTCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_TT-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureTTAgePanel": {
+      "name": "ProcedureTTAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "At about what age did {CmpnName} have the tracheostomy procedure for LP/ GOLPP?",
+      "hasVisibleIf": false
+    },
+    "ProcedureTTAgeDetailsPanel": {
+      "name": "ProcedureTTAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTAgePanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureType} = 'PLE'"
+      "visibleIf": "{ProcedureDidHave} = true"
+    },
+    "ProcedureTTAgeYears": {
+      "name": "ProcedureTTAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTAgePanel",
+        "ProcedureTTAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Years",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureTTAgeMonths": {
+      "name": "ProcedureTTAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTAgePanel",
+        "ProcedureTTAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Months (0 - 11)",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureTTScheduled": {
+      "name": "ProcedureTTScheduled",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureTTScheduledWait": {
+      "name": "ProcedureTTScheduledWait",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "How far in advance was the procedure scheduled?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureTTScheduled} = true",
+      "isRequired": true
+    },
+    "ProcedureTTSurgeryPanel": {
+      "name": "ProcedureTTSurgeryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureTTIncisionComplications": {
+      "name": "ProcedureTTIncisionComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have any infection or swelling at the incision site?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTTOralBleeding": {
+      "name": "ProcedureTTOralBleeding",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTTExtendedStay": {
+      "name": "ProcedureTTExtendedStay",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTTExtendedStayReason": {
+      "name": "ProcedureTTExtendedStayReason",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Why did {CmpnName} need extended inpatient care?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTTExtendedStayTiebackRepeat": {
+      "name": "ProcedureTTExtendedStayTiebackRepeat",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon attempt a second tieback on the other side?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureTTExtendedStayReason} contains 'SUTURE_FAILURE'",
+      "isRequired": true
+    },
+    "ProcedureTTFollowupCare": {
+      "name": "ProcedureTTFollowupCare",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "In the four weeks after surgery, did {CmpnName} need another visit to a veterinary professional because of complications?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTTMedications": {
+      "name": "ProcedureTTMedications",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What medications did you receive from {CmpnName} after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTTCost": {
+      "name": "ProcedureTTCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was the cost of the surgery, not including post-operative complications?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureTTComplicationsCost": {
+      "name": "ProcedureTTComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was total cost of the complications of the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureTTExtendedStay} != 'NO' || {ProcedureTTFollowupCare} = 'YES'",
+      "isRequired": true
     },
     "ProcedureTTCard2Panel": {
       "name": "ProcedureTTCard2Panel",
@@ -3151,12 +4927,264 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "PROCEDURE_TT-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureOtherCard1Panel": {
+      "name": "ProcedureOtherCard1Panel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_OTHER-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureOtherAgePanel": {
+      "name": "ProcedureOtherAgePanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel"
+      ],
+      "hasTitle": true,
+      "title": "At about what age did {CmpnName} have the LP/GOLPP surgery?",
+      "hasVisibleIf": false
+    },
+    "ProcedureOtherAgeDetailsPanel": {
+      "name": "ProcedureOtherAgeDetailsPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherAgePanel"
       ],
       "hasTitle": false,
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureType} = 'TT'"
+      "visibleIf": "{ProcedureDidHave} = true"
+    },
+    "ProcedureOtherAgeYears": {
+      "name": "ProcedureOtherAgeYears",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherAgePanel",
+        "ProcedureOtherAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Years",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureOtherAgeMonths": {
+      "name": "ProcedureOtherAgeMonths",
+      "type": "text",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherAgePanel",
+        "ProcedureOtherAgeDetailsPanel"
+      ],
+      "hasTitle": true,
+      "title": "Months (0 - 11)",
+      "hasVisibleIf": false,
+      "isRequired": true,
+      "hasValidators": true
+    },
+    "ProcedureOtherScheduled": {
+      "name": "ProcedureOtherScheduled",
+      "type": "boolean",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureOtherScheduledWait": {
+      "name": "ProcedureOtherScheduledWait",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "How far in advance was the procedure scheduled?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true && {ProcedureOtherScheduled} = true",
+      "isRequired": true
+    },
+    "ProcedureOtherSurgeryPanel": {
+      "name": "ProcedureOtherSurgeryPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureOtherIncisionComplications": {
+      "name": "ProcedureOtherIncisionComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have any infection or swelling at the incision site?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherOralBleeding": {
+      "name": "ProcedureOtherOralBleeding",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherExtendedStay": {
+      "name": "ProcedureOtherExtendedStay",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherExtendedStayReason": {
+      "name": "ProcedureOtherExtendedStayReason",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Why did {CmpnName} need extended inpatient care?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherExtendedStayTiebackRepeat": {
+      "name": "ProcedureOtherExtendedStayTiebackRepeat",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon aOtherempt a second tieback on the other side?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureOtherExtendedStayReason} contains 'SUTURE_FAILURE'",
+      "isRequired": true
+    },
+    "ProcedureOtherFollowupCare": {
+      "name": "ProcedureOtherFollowupCare",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "In the four weeks after surgery, did {CmpnName} need another visit to a veterinary professional because of complications?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherMedications": {
+      "name": "ProcedureOtherMedications",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What medications did you receive from {CmpnName} after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherCost": {
+      "name": "ProcedureOtherCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was the cost of the surgery, not including post-operative complications?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureDidHave} = true",
+      "isRequired": true
+    },
+    "ProcedureOtherComplicationsCost": {
+      "name": "ProcedureOtherComplicationsCost",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_OTHER-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "About what was total cost of the complications of the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureOtherExtendedStay} != 'NO' || {ProcedureOtherFollowupCare} = 'YES'",
+      "isRequired": true
     },
     "ProcedureOtherCard2Panel": {
       "name": "ProcedureOtherCard2Panel",
@@ -3164,12 +5192,10 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel"
+        "PROCEDURE_OTHER-page"
       ],
       "hasTitle": false,
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureType} = 'Other'"
+      "hasVisibleIf": false
     },
     "XXX": {
       "name": "XXX",
@@ -3177,8 +5203,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE-page",
-        "ProcedureCard2Panel",
+        "PROCEDURE_OTHER-page",
         "ProcedureOtherCard2Panel"
       ],
       "hasTitle": true,
