@@ -482,27 +482,27 @@ const Browse_08B_ProcedureEsi = () => {
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Under $3000</span>
+              <span>Under $1500</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$3000 - $4500</span>
+              <span>$1500 - $3000</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$4500 - $6000</span>
+              <span>$3000 - $5000</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$6000 - $8000</span>
+              <span>$5000 - $7000</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$5501 - $8000</span>
+              <span>$700 - $9000</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Over $10,000</span>
+              <span>Over $9000</span>
             </li>
           </ul>
           </div>
