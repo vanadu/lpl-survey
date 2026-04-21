@@ -206,7 +206,7 @@
             {
               "type": "radiogroup",
               "name": "SymptomsIntubationBeforeSymptoms",
-              "title": "Was {CmpnName} intubated under anesthesia immediately prior to the first appearance of LP/GOLPP symptoms?",
+              "title": "Was {CmpnName} intubated under anesthesia in the weeks prior to the first appearance of LP/GOLPP symptoms?",
               "isRequired": true,
               "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
               "choices": [
@@ -228,7 +228,7 @@
               "type": "boolean",
               "name": "SymptomsIntubationConcerns",
               "title": "Do you remember having any concerns about how the intubation or anesthesia affected {CmpnName}?",
-              "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES'",
+              "visibleIf": "{SymptomsIntubationBeforeSymptoms} = 'YES'",
               "labelTrue": "Yes",
               "labelFalse": "No",
               "swapOrder": true,
@@ -239,7 +239,7 @@
               "name": "SymptomsIntubationSymptoms",
               "title": "What symptoms or behaviors did {CmpnName} have after the intubation under anesthesia?",
               "isRequired": true,
-              "visibleIf": "{SymptomsIntubationWasIntubated} = 'YES' && {SymptomsIntubationConcerns} = true",
+              "visibleIf": "{SymptomsIntubationConcerns} = true",
               "choices": [
                 {
                   "value": "COUGHING",

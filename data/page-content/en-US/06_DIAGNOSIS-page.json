@@ -194,8 +194,7 @@
                     "text": "Longer than a year"
                   }
                 ],
-                "showOtherItem": false,
-                "required": true
+                "showOtherItem": false
                 },
                 {
                   "type": "radiogroup",

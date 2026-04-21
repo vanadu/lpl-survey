@@ -253,7 +253,7 @@
               "title": "What did the previous primary vet say or do that caused you to change to a different veterinarian?",
               "description": "Please check all that apply.",
               "isRequired": true,
-              "visibleIf": "{PrimaryChangedVets} != 'NO'",
+              "visibleIf": "{PrimaryChangedVets} = 'ONCE' || {PrimaryChangedVets} = 'MORE_THAN_ONCE'",
               "choices": [
                 {
                   "value": "NOTHING_CAN_BE_DONE",

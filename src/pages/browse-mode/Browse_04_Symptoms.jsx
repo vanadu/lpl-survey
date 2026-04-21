@@ -393,7 +393,7 @@ const Browse_04_Symptoms = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Was Bella intubated under anesthesia immediately prior to the first appearance of LP/GOLPP symptoms?
+              Was Bella intubated under anesthesia in the weeks prior to the first appearance of LP/GOLPP symptoms?
             </span>
           }
           index={8}

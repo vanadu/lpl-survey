@@ -97,11 +97,11 @@ export function getStyleDirectives(item) {
     "BreathingAspirationAfterProcedure",
 
     "NeuropathyOtherIssues",
-
+    "ConclusionQOL",
     "ConclusionNewSymptomsType",
-    "ConclusionGeneralCondition",
+    "ConclusionOtherHealthIssuesNew",
     "ConclusionLifestyleChangesDetails",
-    "ConclusionOtherConditions",
+    "ConclusionNewSymptomsType",
     "ConclusionOtherPathTimeframe"
 
   ]);
@@ -203,7 +203,7 @@ export function getStyleDirectives(item) {
 
   ]);
 
-  
+
   const CONTROL_WIDTH_300 = new Set([
     "CmpnName",
     "UserInfoContactTypeEmail",
@@ -470,12 +470,13 @@ export function getStyleDirectives(item) {
 
     "ConclusionNewSymptomsType",
     "ConclusionLifestyleChangesDetails",
-    "ConclusionGeneralCondition",
     "ConclusionQOL",
+    "ConclusionQOLRating",
 
 
 
-    "ConclusionOtherConditions",
+    "ConclusionOtherHealthIssues",
+    "ConclusionOtherHealthIssuesNew",
     "ConclusionLifestyleChanges",
     "ConclusionUserLifestyle",
     "ConclusionUserDistress",
@@ -531,7 +532,7 @@ export function getStyleDirectives(item) {
     "NeuropathySymptomsBreathingOnset",
     "NeuropathySymptomsHindEndOnset",
 
-    "ConclusionOtherConditionsNew",
+    "ConclusionOtherHealthIssuesNew",
   ]);
 
   // !VA CARD applies only to the closest framed card panel

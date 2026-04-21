@@ -123,9 +123,7 @@
                 "text": "Over $200"
               }
             ],
-            "showOtherItem": true,
-            "showNoneItem": true,
-            "required": true
+            "showOtherItem": false
             },
             {
               "type": "rating",
@@ -513,7 +511,7 @@
               "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "displayMode": "buttons",
-              "visibleIf": "{MedicationRefluxMedications} != 'NO'",
+              "visibleIf": "{MedicationRefluxMedications} = 'YES_PRESCRIBED' || {MedicationRefluxMedications} = 'YES_UNPRESCRIBED'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

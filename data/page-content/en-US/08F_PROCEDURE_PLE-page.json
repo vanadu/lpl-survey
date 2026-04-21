@@ -242,7 +242,7 @@
               "name": "ProcedurePLEExtendedStayReason",
               "title": "Why did {CmpnName} need extended inpatient care?",
               "isRequired": true,
-              "visibleIf": "{ProcedurePLEExtendedStay} != 'NO'",
+              "visibleIf": "{ProcedurePLEExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
               "choices": [
                 {
                   "value": "ASPIRATION",
@@ -370,7 +370,7 @@
                 },
                 {
                   "value": "7000_9000",
-                  "text": "$700 - $9000"
+                  "text": "$7000 - $9000"
                 },
                 {
                   "value": "OVER_9000",

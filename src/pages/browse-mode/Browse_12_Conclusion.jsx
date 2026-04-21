@@ -62,7 +62,7 @@ const Browse_12_Conclusion = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella develop new symptoms over the course of his LP/GOLPP journey?
+              Did Bella develop new LP/GOLPP symptoms as time progressed?
             </span>
           }
           index={1}
@@ -179,7 +179,7 @@ const Browse_12_Conclusion = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Please describe any lifestyle restrictions or changes you made for Bella due to her LP/GOLPP:
+              Please describe any changes you made to Bella&lsquo;s lifestyle due to her LP/GOLPP:
             </span>
           }
           index={4}
@@ -213,16 +213,20 @@ const Browse_12_Conclusion = () => {
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Restricted interaction with people or other animals</span>
             </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Harness, carrier, or other mobility products</span>
+            </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ConclusionGeneralCondition">
+      <div className="browse-question-container" id="ConclusionQOL">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How has Bella&lsquo;s condition changed since the first LP/GOLPP symptoms appeared?
+              How has Bella&lsquo;s quality of life changed since the first LP/GOLPP symptoms appeared?
             </span>
           }
           index={5}
@@ -269,7 +273,7 @@ const Browse_12_Conclusion = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ConclusionQOL">
+      <div className="browse-question-container" id="ConclusionQOLRating">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -410,12 +414,12 @@ const Browse_12_Conclusion = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="ConclusionOtherConditionsPanel">
-      <div className="browse-question-container" id="ConclusionOtherConditionsNew">
+      <div className="browse-panel-container" id="ConclusionOtherHealthIssuesPanel">
+      <div className="browse-question-container" id="ConclusionOtherHealthIssues">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella develop any new conditions during her LP/GOLPP journey that she didn&lsquo;t have before?
+              Did Bella develop any new health issues during her LP/GOLPP journey?
             </span>
           }
           index={7}
@@ -438,11 +442,11 @@ const Browse_12_Conclusion = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ConclusionOtherConditions">
+      <div className="browse-question-container" id="ConclusionOtherHealthIssuesNew">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What other conditions did Bella develop during her LP/GOLPP journey?
+              What new health issues did Bella develop during her LP/GOLPP journey?
             </span>
           }
           index={8}

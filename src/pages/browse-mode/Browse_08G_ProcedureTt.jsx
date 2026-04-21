@@ -29,26 +29,26 @@ const Browse_08G_ProcedureTt = () => {
           <span aria-hidden="true"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M208,48V208a8,8,0,0,1-13.66,5.66L128,147.31V208a8,8,0,0,1-13.66,5.66l-80-80a8,8,0,0,1,0-11.32l80-80A8,8,0,0,1,128,48v60.69l66.34-66.35A8,8,0,0,1,208,48Z"></path></svg><span className="sr-only">Previous</span>
           </span>
         </Link>
-        <div className="browse-page-marker" id="PROCEDURE_PLE-page"></div>
+        <div className="browse-page-marker" id="PROCEDURE_TT-page"></div>
         <Link className="browse-page-nav__next" href="/browse-mode/Browse_08H_ProcedureOther" aria-label="Next page">
           <span aria-hidden="true"><span className="sr-only">Next</span><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M221.66,133.66l-80,80A8,8,0,0,1,128,208V147.31L61.66,213.66A8,8,0,0,1,48,208V48a8,8,0,0,1,13.66-5.66L128,108.69V48a8,8,0,0,1,13.66-5.66l80,80A8,8,0,0,1,221.66,133.66Z"></path></svg>
           </span>
         </Link>
       </div>
 
-      <div className="browse-panel-container" id="ProcedurePLECard1Panel">
-      <div className="browse-content-block" id="ProcedurePLEHeading">
+      <div className="browse-panel-container" id="ProcedureTTCard1Panel">
+      <div className="browse-content-block" id="ProcedureTTHeading">
         <h2 className="browse-content-heading">Questions About Bella&lsquo;s Tracheostomy Surgery</h2>
       </div>
 
-      <div className="browse-content-block" id="ProcedurePLEText">
+      <div className="browse-content-block" id="ProcedureTTText">
         <p className="browse-content-text">The arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. With a partial laryngectomy, one side of the arytenoid cartilages is partially removed and the vocal folds are partially removed to create a larger opening through the paralyzed larynx for the patient to breathe through.</p>
       </div>
 
-      <div className="browse-panel-container" id="ProcedurePLEAgePanel">
+      <div className="browse-panel-container" id="ProcedureTTAgePanel">
         <h3 className="browse-showanswer-title">About how old was Bella when she had the partial laryngectomy surgery for LP?</h3>
-      <div className="browse-panel-container" id="ProcedurePLEAgeDetailsPanel">
-      <div className="browse-question-container" id="ProcedurePLEAgeYears">
+      <div className="browse-panel-container" id="ProcedureTTAgeDetailsPanel">
+      <div className="browse-question-container" id="ProcedureTTAgeYears">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -66,7 +66,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEAgeMonths">
+      <div className="browse-question-container" id="ProcedureTTAgeMonths">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -85,7 +85,7 @@ const Browse_08G_ProcedureTt = () => {
       </div>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEScheduled">
+      <div className="browse-question-container" id="ProcedureTTScheduled">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -112,7 +112,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEScheduledWait">
+      <div className="browse-question-container" id="ProcedureTTScheduledWait">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -132,7 +132,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEDifference">
+      <div className="browse-question-container" id="ProcedureTTDifference">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -163,7 +163,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLELaser">
+      <div className="browse-question-container" id="ProcedureTTLaser">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -194,7 +194,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEChoice">
+      <div className="browse-question-container" id="ProcedureTTChoice">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -226,12 +226,12 @@ const Browse_08G_ProcedureTt = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="ProcedurePLESurgeryPanel">
-      <div className="browse-content-block" id="ProcedurePLEPostOpHeading">
+      <div className="browse-panel-container" id="ProcedureTTSurgeryPanel">
+      <div className="browse-content-block" id="ProcedureTTPostOpHeading">
         <p className="browse-content-text">These questions ask about issues Bella had immediately after surgery.</p>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEIncisionComplications">
+      <div className="browse-question-container" id="ProcedureTTIncisionComplications">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -262,7 +262,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEOralBleeding">
+      <div className="browse-question-container" id="ProcedureTTOralBleeding">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -293,7 +293,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEExtendedStay">
+      <div className="browse-question-container" id="ProcedureTTExtendedStay">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -328,7 +328,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEExtendedStayReason">
+      <div className="browse-question-container" id="ProcedureTTExtendedStayReason">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -367,7 +367,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEFollowupCare">
+      <div className="browse-question-container" id="ProcedureTTFollowupCare">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -398,7 +398,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEMedications">
+      <div className="browse-question-container" id="ProcedureTTMedications">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -446,12 +446,12 @@ const Browse_08G_ProcedureTt = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="ProcedurePLECostPanel">
-      <div className="browse-content-block" id="ProcedurePLECostHeading">
+      <div className="browse-panel-container" id="ProcedureTTCostPanel">
+      <div className="browse-content-block" id="ProcedureTTCostHeading">
         <p className="browse-content-text">These questions are about the approximate cost of the surgery. Rough estimates are fine.</p>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLECost">
+      <div className="browse-question-container" id="ProcedureTTCost">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -462,7 +462,7 @@ const Browse_08G_ProcedureTt = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
+          <p className="browse-question-description">TTase provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
@@ -487,7 +487,7 @@ const Browse_08G_ProcedureTt = () => {
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>$700 - $9000</span>
+              <span>$7000 - $9000</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
@@ -498,7 +498,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEComplicationsCost">
+      <div className="browse-question-container" id="ProcedureTTComplicationsCost">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -509,7 +509,7 @@ const Browse_08G_ProcedureTt = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">Please provide the pre-insurance cost, not the out-of-pocket cost.</p>
+          <p className="browse-question-description">TTase provide the pre-insurance cost, not the out-of-pocket cost.</p>
           <div className="showanswer__content-block">
           <ul>
             <li className="browse-showanswer-dropdown">
@@ -547,13 +547,13 @@ const Browse_08G_ProcedureTt = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="ProcedurePLECard2Panel">
-      <div className="browse-panel-container" id="ProcedurePLEConditionPanel">
-      <div className="browse-content-block" id="ProcedurePLEConditionHeading">
+      <div className="browse-panel-container" id="ProcedureTTCard2Panel">
+      <div className="browse-panel-container" id="ProcedureTTConditionPanel">
+      <div className="browse-content-block" id="ProcedureTTConditionHeading">
         <p className="browse-content-text">These questions are about Bella&lsquo;s condition in the weeks after the surgery.</p>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEBreathingPostOp">
+      <div className="browse-question-container" id="ProcedureTTBreathingPostOp">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -693,7 +693,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLECoughGagRetch">
+      <div className="browse-question-container" id="ProcedureTTCoughGagRetch">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -724,7 +724,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLECoughGagRetchChange">
+      <div className="browse-question-container" id="ProcedureTTCoughGagRetchChange">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -864,7 +864,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEBadBreath">
+      <div className="browse-question-container" id="ProcedureTTBadBreath">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -895,7 +895,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEBadBreathChange">
+      <div className="browse-question-container" id="ProcedureTTBadBreathChange">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -1035,7 +1035,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLERegurgitate">
+      <div className="browse-question-container" id="ProcedureTTRegurgitate">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -1066,7 +1066,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLERegurgitateChange">
+      <div className="browse-question-container" id="ProcedureTTRegurgitateChange">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -1206,7 +1206,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEMucus">
+      <div className="browse-question-container" id="ProcedureTTMucus">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -1237,7 +1237,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEMucusChange">
+      <div className="browse-question-container" id="ProcedureTTMucusChange">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -1378,12 +1378,12 @@ const Browse_08G_ProcedureTt = () => {
       </div>
       </div>
 
-      <div className="browse-panel-container" id="ProcedurePLELongTermPanel">
-      <div className="browse-content-block" id="ProcedurePLELongTermHeading">
+      <div className="browse-panel-container" id="ProcedureTTLongTermPanel">
+      <div className="browse-content-block" id="ProcedureTTLongTermHeading">
         <p className="browse-content-text">These questions are about the long-term effects of Bella&lsquo;s laryngectomy surgery.</p>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLEBreathingLongTerm">
+      <div className="browse-question-container" id="ProcedureTTBreathingLongTerm">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -1422,7 +1422,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLESymptomsReturnedTime">
+      <div className="browse-question-container" id="ProcedureTTSymptomsReturnedTime">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -1461,7 +1461,7 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedurePLESatisfaction">
+      <div className="browse-question-container" id="ProcedureTTSatisfaction">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
