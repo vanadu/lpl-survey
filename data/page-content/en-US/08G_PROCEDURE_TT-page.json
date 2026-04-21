@@ -1,31 +1,36 @@
 {
-  "name": "PROCEDURE_TT-page",
-  "visibleIf": "{ProcedureDidHave} = true and {ProcedureType} contains 'TT'",
+  "name": "PROCEDURE_PLE-page",
+  "visibleIf": "{ProcedureDidHave} = true and {ProcedureType} contains 'PLE'",
   "elements": [
     {
       "type": "panel",
-      "name": "ProcedureTTCard1Panel",
+      "name": "ProcedurePLECard1Panel",
       "elements": [
         {
               "type": "html",
-              "name": "ProcedureTTHeading",
-              "html": "<h3>Questions About {CmpnName}'s Tracheostomy Surgery<h3>"
+              "name": "ProcedurePLEHeading",
+              "html": "<h2>Questions About {CmpnName}'s Tracheostomy Surgery<h2>"
+        },
+        {
+              "type": "html",
+              "name": "ProcedurePLEText",
+              "html": "<p>The arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. With a partial laryngectomy, one side of the arytenoid cartilages is partially removed and the vocal folds are partially removed to create a larger opening through the paralyzed larynx for the patient to breathe through.</p>"
         },
         {
           "type": "panel",
-          "name": "ProcedureTTAgePanel",
-          "title": "At about what age did {CmpnName} have the tracheostomy procedure for LP/ GOLPP?",
+          "name": "ProcedurePLEAgePanel",
+          "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the partial laryngectomy surgery for LP?",
           "elements": [
             {
               "type": "panel",
-              "name": "ProcedureTTAgeDetailsPanel",
+              "name": "ProcedurePLEAgeDetailsPanel",
               "description": "Please enter years and months.",
               "visibleIf": "{ProcedureDidHave} = true",
               "elements": [
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "ProcedureTTAgeYears",
+                  "name": "ProcedurePLEAgeYears",
                   "title": "Years",
                   "isRequired": true,
                   "min": "1",
@@ -42,7 +47,7 @@
                 {
                   "type": "text",
                   "inputType": "number",
-                  "name": "ProcedureTTAgeMonths",
+                  "name": "ProcedurePLEAgeMonths",
                   "title": "Months (0 - 11)",
                   "isRequired": true,
                   "min": 0,
@@ -60,7 +65,7 @@
             },
             {
               "type": "boolean",
-              "name": "ProcedureTTScheduled",
+              "name": "ProcedurePLEScheduled",
               "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
               "isRequired": true,
               "visibleIf": "{ProcedureDidHave} = true",
@@ -70,11 +75,11 @@
             },
             {
             "type": "dropdown",
-            "name": "ProcedureTTScheduledWait",
+            "name": "ProcedurePLEScheduledWait",
             "title": "How far in advance was the procedure scheduled?",
             "isRequired": true,
-            "visibleIf": "{ProcedureDidHave} = true && {ProcedureTTScheduled} = true",
-            "choices": [
+            "visibleIf": "{ProcedureDidHave} = true && {ProcedurePLEScheduled} = true",
+            "choicesPLE": [
               {
                 "value": "LESS_THAN_TWO_WEEKS",
                 "text": "Less than two weeks"
@@ -93,21 +98,83 @@
               }
             ],
             "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePLEDifference",
+              "title": "Did the surgeon explain the difference between the partial laryngectomy and other surgery or procedure types?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePLELaser",
+              "title": "Was the laryngectomy performed with a laser?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePLEChoice",
+              "title": "Did the surgeon offer you a choice between partial laryngectomy and any other procedure type?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
             }
           ]
         },
         {
-          "type": "html",
-          "name": "ProcedureTTSurgeryOpHeading",
-          "html": "<h4>These questions ask about issues {CmpnName} had immediately after surgery.</h4>"
-        },
-        {
           "type": "panel",
-          "name": "ProcedureTTSurgeryPanel",
+          "name": "ProcedurePLESurgeryPanel",
           "elements": [
             {
+              "type": "html",
+              "name": "ProcedurePLEPostOpHeading",
+              "html": "<h4>These questions ask about issues {CmpnName} had immediately after surgery.</h4>"
+            },
+            {
               "type": "radiogroup",
-              "name": "ProcedureTTIncisionComplications",
+              "name": "ProcedurePLEIncisionComplications",
               "title": "Did {CmpnName} have any infection or swelling at the incision site?",
               "isRequired": true,
               "choices": [
@@ -127,7 +194,7 @@
             },
             {
               "type": "radiogroup",
-              "name": "ProcedureTTOralBleeding",
+              "name": "ProcedurePLEOralBleeding",
               "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
               "isRequired": true,
               "choices": [
@@ -147,7 +214,7 @@
             },
             {
               "type": "radiogroup",
-              "name": "ProcedureTTExtendedStay",
+              "name": "ProcedurePLEExtendedStay",
               "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
               "isRequired": true,
               "choices": [
@@ -172,9 +239,10 @@
             },
             {
               "type": "checkbox",
-              "name": "ProcedureTTExtendedStayReason",
+              "name": "ProcedurePLEExtendedStayReason",
               "title": "Why did {CmpnName} need extended inpatient care?",
               "isRequired": true,
+              "visibleIf": "{ProcedurePLEExtendedStay} != 'NO'",
               "choices": [
                 {
                   "value": "ASPIRATION",
@@ -199,30 +267,10 @@
               ],
               "showOtherItem": true
             },
+
             {
               "type": "radiogroup",
-              "name": "ProcedureTTExtendedStayTiebackRepeat",
-              "title": "Did the surgeon attempt a second tieback on the other side?",
-              "isRequired": true,
-              "visibleIf": "{ProcedureTTExtendedStayReason} contains 'SUTURE_FAILURE'",
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ]
-            },
-            {
-              "type": "radiogroup",
-              "name": "ProcedureTTFollowupCare",
+              "name": "ProcedurePLEFollowupCare",
               "title": "In the four weeks after surgery, did {CmpnName} need another visit to a veterinary professional because of complications?",
               "isRequired": true,
               "choices": [
@@ -243,8 +291,8 @@
             },
             {
               "type": "checkbox",
-              "name": "ProcedureTTMedications",
-              "title": "What medications did you receive from {CmpnName} after the surgery?",
+              "name": "ProcedurePLEMedications",
+              "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
               "isRequired": true,
               "choices": [
                 {
@@ -253,7 +301,7 @@
                 },
                 {
                   "value": "PAIN",
-                  "text": "Pain medications (i.e. paracetamol or other NSAID, gabapentin)"
+                  "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
                 },
                 {
                   "value": "REFLUX",
@@ -277,10 +325,24 @@
                 }
               ],
               "showOtherItem": true
-            },   
+            }
+          ]
+        },
+
+
+
+        {
+          "type": "panel",
+          "name": "ProcedurePLECostPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedurePLECostHeading",
+              "html": "<h4>These questions are about the approximate cost of the surgery. Rough estimates are fine.</h4>"
+            },
             {
               "type": "dropdown",
-              "name": "ProcedureTTCost",
+              "name": "ProcedurePLECost",
               "title": "About what was the cost of the surgery, not including post-operative complications?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
@@ -291,39 +353,39 @@
                   "text": "Don't know or prefer not to say"
                 },
                 {
-                  "value": "UNDER_3000",
-                  "text": "Under $3000"
+                  "value": "UNDER_1500",
+                  "text": "Under $1500"
                 },
                 {
-                  "value": "3000_4500",
-                  "text": "$3000 - $4500"
+                  "value": "1500_3000",
+                  "text": "$1500 - $3000"
                 },
                 {
-                  "value": "4500_6000",
-                  "text": "$4500 - $6000"
+                  "value": "3000_5000",
+                  "text": "$3000 - $5000"
                 },
                 {
-                  "value": "6000_8000",
-                  "text": "$6000 - $8000"
+                  "value": "5000_7000",
+                  "text": "$5000 - $7000"
                 },
                 {
-                  "value": "8000_10000",
-                  "text": "$5501 - $8000"
+                  "value": "7000_9000",
+                  "text": "$700 - $9000"
                 },
                 {
-                  "value": "OVER_10000",
-                  "text": "Over $10,000"
+                  "value": "OVER_9000",
+                  "text": "Over $9000"
                 }
               ],
               "showOtherItem": false
             },
             {
               "type": "dropdown",
-              "name": "ProcedureTTComplicationsCost",
+              "name": "ProcedurePLEComplicationsCost",
               "title": "About what was total cost of the complications of the surgery?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
-              "visibleIf": "{ProcedureTTExtendedStay} != 'NO' || {ProcedureTTFollowupCare} = 'YES'",
+              "visibleIf": "{ProcedurePLEExtendedStay} != 'NO' || {ProcedurePLEFollowupCare} = 'YES'",
               "choices": [
                 {
                   "value": "NOT_SAY",
@@ -335,7 +397,7 @@
                 },
                 {
                   "value": "500_1000",
-                  "text": "$50 - $1000"
+                  "text": "$500 - $1000"
                 },
                 {
                   "value": "1000_2000",
@@ -359,37 +421,268 @@
           ]
         }
 
+
       ]
     },
 
     {
       "type": "panel",
-      "name": "ProcedureTTCard2Panel",
+      "name": "ProcedurePLECard2Panel",
       "elements": [
         {
-          "type": "radiogroup",
-          "name": "XXX",
-          "title": "sdradio3",
-          "isRequired": true,
-          "choices": [
+          "type": "panel",
+          "name": "ProcedurePLEConditionPanel",
+          "elements": [
             {
-              "value": "YES",
-              "text": "Yes"
+              "type": "html",
+              "name": "ProcedurePLEConditionHeading",
+              "html": "<h4>These questions are about {CmpnName}'s condition in the weeks after the surgery.</h4>"
+            },
+    
+
+            {
+              "type": "rating",
+              "name": "ProcedurePLEBreathingPostOp",
+              "title": "How would you rate {CmpnName}'s breathing in the time right after the laryngectomy surgery?",
+              "description": "1 = no improvement, 3 = moderate improvement, 5 = very much improved",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePLECoughGagRetch",
+              "title": "Did {CmpnName} cough, gag, or retch more than before the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
             },
             {
-              "value": "NO",
-              "text": "No"
+              "type": "rating",
+              "name": "ProcedurePLECoughGagRetchChange",
+              "title": "Did the coughing, gagging or retching get better or worse with time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
+              "isRequired": true,
+              "visibleIf": "{ProcedurePLECoughGagRetch} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
             },
             {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
+              "type": "radiogroup",
+              "name": "ProcedurePLEBadBreath",
+              "title": "Did {CmpnName} develop bad breath after the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedurePLEBadBreathChange",
+              "title": "Did the bad breath get better or worse over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
+              "isRequired": true,
+              "visibleIf": "{ProcedurePLEBadBreath} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePLERegurgitate",
+              "title": "Did {CmpnName} regurgitate food or water more frequently than before the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedurePLERegurgitateChange",
+              "title": "Did the regurgitation get less or more frequent with time?",
+              "description": "1 = less frequent, 3 = stayed about the same, 5 = more frequent",
+              "isRequired": true,
+              "visibleIf": "{ProcedurePLERegurgitate} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePLEMucus",
+              "title": "Did {CmpnName} cough up mucus or phlegm more frequently than before the procedure?",
+              "isRequired": true,
+              
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedurePLEMucusChange",
+              "title": "Did the mucus or phlegm production decrease or increase over time?",
+              "description": "1 = decreased, 3 = stayed about the same, 5 = increased",
+              "isRequired": true,
+              "visibleIf": "{ProcedurePLEMucus} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ProcedurePLELongTermPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedurePLELongTermHeading",
+              "html": "<h4>These questions are about the long-term effects of {CmpnName}'s laryngectomy surgery.</h4>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePLEBreathingLongTerm",
+              "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the laryngectomy surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO_CHANGE",
+                  "text": "No change"
+                },
+                {
+                  "value": "PROGRESSIVELY_BETTER",
+                  "text": "Got progressively better over time"
+                },
+                {
+                  "value": "PROGRESSIVELY_WORSE",
+                  "text": "Got progressively worse over time"
+                },
+                {
+                  "value": "SYMPTOMS_RETURNED",
+                  "text": "After initial improvement, all the LP symptoms returned"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "ProcedurePLESymptomsReturnedTime",
+              "title": "How long did it take for the LP symptoms to return?",
+              "isRequired": true,
+              "visibleIf": "{ProcedurePLEBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
+              "choices": [
+                {
+                  "value": "IMMEDIATELY",
+                  "text": "Almost immediately"
+                },
+                {
+                  "value": "WEEKS",
+                  "text": "Several weeks"
+                },
+                {
+                  "value": "MONTHS",
+                  "text": "Several months"
+                },
+                {
+                  "value": "YEAR",
+                  "text": "Over a year"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't remember or don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "rating",
+              "name": "ProcedurePLESatisfaction",
+              "title": "How would you rate your satisfaction with {CmpnName}'s laryngectomy procedure?",
+              "description": "1 = not at all satisfied, 3 = moderately satisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
             }
           ]
         }
       ]
     }
-
-
-
   ]
 }

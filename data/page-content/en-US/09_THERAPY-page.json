@@ -213,7 +213,7 @@
               "title": "Average monthly cost of {CmpnName}'s acupuncture or other therapies:",
               "description": "If you don't know exactly, it's OK to guesstimate.",
               "isRequired": true,
-              "visibleIf": "{TherapyType} notempty",
+              "visibleIf": "{TherapyDidHave} = 'YES'",
               "choices": [
                 {
                   "value": "UNDER_100",
@@ -233,8 +233,7 @@
                 }
               ],
               "showOtherItem": true,
-              "showNoneItem": true,
-              "required": true
+              "showNoneItem": true
             }
 
           ]

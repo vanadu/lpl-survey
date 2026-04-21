@@ -292,10 +292,6 @@ const Browse_11_Neuropathy = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Increased anxiety</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Disorientation or cognitive changes</span>
             </li>
             <li className="browse-showanswer-checkbox">

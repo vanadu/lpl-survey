@@ -14,7 +14,7 @@
         {
           "type": "panel",
           "name": "ProcedureUALAgePanel",
-          "title": "At about what age did {CmpnName} have the first procedure for LP/ GOLPP?",
+          "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the first tieback surgery for LP?",
           "elements": [
             {
               "type": "panel",
@@ -429,7 +429,7 @@
             {
               "type": "html",
               "name": "ProcedureUALConditionHeading",
-              "html": "<h4>These questions are about {CmpnName}'s condition in weeks after the surgery.</h4>"
+              "html": "<h4>These questions are about {CmpnName}'s condition in the weeks after the surgery.</h4>"
             },
     
 
@@ -660,10 +660,31 @@
               "showOtherItem": false
             },
             {
+              "type": "radiogroup",
+              "name": "ProcedureUALSutureFailure",
+              "title": "Was suture failure identified as the reason for the return of {CmpnName}'s LP symptoms?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureUALBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
               "type": "boolean",
               "name": "ProcedureUALLongTermRepeatProcedure",
-              "title": "If the return of LP symptoms was due to suture failure, did {CmpnName} have a second tieback operation?",
-              "visibleIf": "{ProcedureUALBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
+              "title": "Did {CmpnName} have a second tieback operation after the first suture failure?",
+              "visibleIf": "{ProcedureUALBreathingLongTerm} = 'SYMPTOMS_RETURNED' && {ProcedureUALSutureFailure} = 'YES'",
               "labelTrue": "Yes",
               "labelFalse": "No",
               "isRequired": true,

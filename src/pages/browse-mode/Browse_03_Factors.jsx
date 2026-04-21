@@ -297,7 +297,7 @@ const Browse_03_Factors = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Cost of surgical/stent procedure:
+              Cost of veterinary treatment like surgery:
             </span>
           }
           index={5}
@@ -437,7 +437,7 @@ const Browse_03_Factors = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Added cost of possible post-op complications such as aspiration pneumonia:
+              Added cost of possible post-op complications such as aspiration pneumonia that could require inpatient care:
             </span>
           }
           index={6}

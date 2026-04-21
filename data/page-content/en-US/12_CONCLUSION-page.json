@@ -158,7 +158,7 @@
               },
               {
                 "value": "SWIMMING",
-                "text": "Restricted swimming and access to water"
+                "text": "Swimming restrictions"
               },
               {
                 "value": "STAIRS",
@@ -166,7 +166,11 @@
               },
               {
                 "value": "INTERACTION",
-                "text": "Limitations on interaction with people or other animals"
+                "text": "Restricted interaction with people or other animals"
+              },
+              {
+                "value": "MOBILITY_AIDS",
+                "text": "Harness, carrier, or other mobility products"
               }
             ],
             "showOtherItem": true

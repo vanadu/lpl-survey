@@ -105,7 +105,7 @@
         {
           "type": "html",
           "name": "FactorsInfoText",
-          "html": "These questions ask which factors played a role in the decisions you&lsquo;ve made about {CmpnName}'s&nbsp;LP/GOLPP."
+          "html": "<h4>These questions ask which factors played a role in the decisions you&lsquo;ve made about {CmpnName}'s&nbsp;LP/GOLPP.</h4>"
         },
         {
           "type": "panel",
@@ -115,7 +115,7 @@
             {
               "type": "rating",
               "name": "FactorsProcedureCost",
-              "title": "Cost of surgical/stent procedure:",
+              "title": "Cost of veterinary treatment like surgery:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
               "displayMode": "buttons",
@@ -130,7 +130,7 @@
             {
               "type": "rating",
               "name": "FactorsComplicationsCost",
-              "title": "Added cost of possible post-op complications such as aspiration pneumonia:",
+              "title": "Added cost of possible post-op complications such as aspiration pneumonia that could require inpatient care:",
               "description": "1 = less important, 5 = more important",
               "isRequired": true,
               "displayMode": "buttons",

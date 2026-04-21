@@ -175,10 +175,6 @@ const Browse_07_Medication = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-content-block" id="MedicationRatingText">
-        <p className="browse-content-text">Medications can affect not only breathing, but also behavior and mobility. This section asks you to rate the medications separately for their effect on Bella&amp;lsquo;s breathing and mobility/behavior. If you&amp;lsquo;re not sure how effective the medication was, please select option 3, &amp;lsquo;no effect&amp;rsquo;.</p>
-      </div>
-
       <div className="browse-question-container" id="MedicationPrescriptionDoxepinRatingBreathing">
         <ShowAnswerContent
           header={

@@ -42,7 +42,7 @@ const Browse_08A_ProcedureUal = () => {
       </div>
 
       <div className="browse-panel-container" id="ProcedureUALAgePanel">
-        <h3 className="browse-showanswer-title">At about what age did Bella have the first procedure for LP/ GOLPP?</h3>
+        <h3 className="browse-showanswer-title">About how old was Bella when she had the first tieback surgery for LP?</h3>
       <div className="browse-panel-container" id="ProcedureUALAgeDetailsPanel">
       <div className="browse-question-container" id="ProcedureUALAgeYears">
         <ShowAnswerContent
@@ -561,7 +561,7 @@ const Browse_08A_ProcedureUal = () => {
       <div className="browse-panel-container" id="ProcedureUALCard2Panel">
       <div className="browse-panel-container" id="ProcedureUALConditionPanel">
       <div className="browse-content-block" id="ProcedureUALConditionHeading">
-        <p className="browse-content-text">These questions are about Bella&lsquo;s condition in weeks after the surgery.</p>
+        <p className="browse-content-text">These questions are about Bella&lsquo;s condition in the weeks after the surgery.</p>
       </div>
 
       <div className="browse-question-container" id="ProcedureUALBreathingPostOp">
@@ -1472,14 +1472,45 @@ const Browse_08A_ProcedureUal = () => {
         </ShowAnswerContent>
       </div>
 
+      <div className="browse-question-container" id="ProcedureUALSutureFailure">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Was suture failure identified as the reason for the return of Bella&lsquo;s LP symptoms?
+            </span>
+          }
+          index={27}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
       <div className="browse-question-container" id="ProcedureUALLongTermRepeatProcedure">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              If the return of LP symptoms was due to suture failure, did Bella have a second tieback operation?
+              Did Bella have a second tieback operation after the first suture failure?
             </span>
           }
-          index={27}
+          index={28}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1506,7 +1537,7 @@ const Browse_08A_ProcedureUal = () => {
               How would you rate your satisfaction with Bella&lsquo;s tieback procedure?
             </span>
           }
-          index={28}
+          index={29}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

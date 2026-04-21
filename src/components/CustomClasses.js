@@ -100,6 +100,7 @@ export function getStyleDirectives(item) {
 
     "ConclusionNewSymptomsType",
     "ConclusionGeneralCondition",
+    "ConclusionLifestyleChangesDetails",
     "ConclusionOtherConditions",
     "ConclusionOtherPathTimeframe"
 
@@ -140,6 +141,7 @@ export function getStyleDirectives(item) {
     "ProcedureUALRegurgitateChange",
     "ProcedureUALMucus",
     "ProcedureUALMucusChange",
+    "ProcedureUALSutureFailure",
 
     "ProcedureESIDifference",
     "ProcedureESIChoice",
@@ -160,16 +162,14 @@ export function getStyleDirectives(item) {
 
 
 
-
-
-
-
-
-
-
-
+    "TherapyDidHave",
+       
+    "BreathingCrisisDidHave",
+    "BreathingEmergencyDidHave",
     "BreathingCrisisAdvice",
     "BreathingCrisisProductRecommended",
+    "BreathingOxygenDidUse",
+
     "BreathingAspirationDidHave",
     "BreathingAspirationInpatient",
     "BreathingAspirationProcedureAntibiotics",
@@ -203,6 +203,7 @@ export function getStyleDirectives(item) {
 
   ]);
 
+  
   const CONTROL_WIDTH_300 = new Set([
     "CmpnName",
     "UserInfoContactTypeEmail",
@@ -237,7 +238,13 @@ export function getStyleDirectives(item) {
 
     "TherapyCost",
 
+    "BreathingCrisisCount",
+    "BreathingEmergencyCount",
+
     "BreathingEmergencyCost",
+
+
+
     "BreathingAspirationCost",
 
     "NeuropathySymptomsBreathingOnset",
@@ -274,7 +281,7 @@ export function getStyleDirectives(item) {
 
     "DiagnosisDetailsPanel",
 
-
+    "MedicationPrescriptionRatingPanel",
 
     "ProcedureUALCard1Panel",
     "ProcedureESICard1Panel",
@@ -322,6 +329,7 @@ export function getStyleDirectives(item) {
     "UserInfoStateRegionPanel",
 
     "CmpnInfoWeightPanel",
+    "CmpnInfoHasInsurance",
 
     "FactorsSourcesTypes",
     "FactorsBestSource",
@@ -400,6 +408,7 @@ export function getStyleDirectives(item) {
     "ProcedureUALMucusChange",
     "ProcedureUALBreathingLongTerm",
     "ProcedureUALSymptomsReturnedTime",
+    "ProcedureUALSutureFailure",
     "ProcedureUALLongTermRepeatProcedure",
     "ProcedureUALSatisfaction",
 
@@ -467,8 +476,9 @@ export function getStyleDirectives(item) {
 
 
     "ConclusionOtherConditions",
-
+    "ConclusionLifestyleChanges",
     "ConclusionUserLifestyle",
+    "ConclusionUserDistress",
 
 
     "ConclusionOtherPathDetails",
@@ -502,7 +512,8 @@ export function getStyleDirectives(item) {
     "CmpnInfoDemeanor",
     "CmpnInfoAnxiety",
     "DiagnosisWho",
-    "ProcedureUALAgeDetailsPanel"
+    "ProcedureUALAgeDetailsPanel",
+    "ProcedureESIAgeDetailsPanel"
   ]);
 
   const QUESTION_SPACE_BELOW = new Set([

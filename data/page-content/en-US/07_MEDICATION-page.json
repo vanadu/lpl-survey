@@ -97,6 +97,7 @@
               ],
               "showOtherItem": true
             },
+            
             {
             "type": "dropdown",
             "name": "MedicationPrescriptionCost",
@@ -125,11 +126,6 @@
             "showOtherItem": true,
             "showNoneItem": true,
             "required": true
-            },
-            {
-              "type": "html",
-              "name": "MedicationRatingText",
-              "html": "Medications can affect not only breathing, but also behavior and mobility. This section asks you to rate the medications separately for their effect on {CmpnName}&lsquo;s breathing and mobility/behavior. If you&lsquo;re not sure how effective the medication was, please select option 3, &lsquo;no effect&rsquo;."
             },
             {
               "type": "rating",
@@ -517,6 +513,7 @@
               "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "displayMode": "buttons",
+              "visibleIf": "{MedicationRefluxMedications} != 'NO'",
               "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

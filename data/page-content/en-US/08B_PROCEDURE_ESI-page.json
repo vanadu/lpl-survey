@@ -143,7 +143,7 @@
             {
               "type": "html",
               "name": "ProcedureESIPostOpHeading",
-              "html": "<h4>These questions ask about issues {CmpnName} had immediately after surgery.</h4>"
+              "html": "<h4>These questions ask about issues {CmpnName} had immediately after stent procedure.</h4>"
             },
             {
               "type": "radiogroup",
@@ -245,7 +245,7 @@
               "name": "ProcedureESIExtendedStayRepeatProcedure",
               "title": "Did the surgeon attempt to implant another stent of a different size?",
               "isRequired": true,
-              "visibleIf": "{ProcedureESIExtendedStayReason} contains 'MIGRATED'",
+              "visibleIf": "{ProcedureESIExtendedStay} != 'NO' && {ProcedureESIExtendedStayReason} contains 'MIGRATED'",
               "choices": [
                 {
                   "value": "YES",
@@ -289,8 +289,8 @@
               "isRequired": true,
               "choices": [
                 {
-                  "value": "DONT_KNOW",
-                  "text": "None or don't know"
+                  "value": "NONE",
+                  "text": "None or don't remember"
                 },
                 {
                   "value": "PAIN",
@@ -315,15 +315,16 @@
                 {
                   "value": "MAROPITANT",
                   "text": "Cerenia (maropitant citrate)"
+                },
+                {
+                  "value": "COUGH_SUPPRESSANT",
+                  "text": "Codeine or other cough suppressant"
                 }
               ],
               "showOtherItem": true
             }
           ]
         },
-
-
-
         {
           "type": "panel",
           "name": "ProcedureESICostPanel",
@@ -426,12 +427,12 @@
             {
               "type": "html",
               "name": "ProcedureESIConditionHeading",
-              "html": "<h4>These questions are about {CmpnName}'s condition in weeks after the surgery.</h4>"
+              "html": "<h4>These questions are about {CmpnName}'s condition in the weeks after the stent procedure.</h4>"
             },
             {
               "type": "rating",
               "name": "ProcedureESIBreathingPostOp",
-              "title": "How would you rate {CmpnName}'s breathing in the time right after the tieback surgery?",
+              "title": "How would you rate {CmpnName}'s breathing in the time right after the stent implant?",
               "description": "1 = no improvement, 3 = moderate improvement, 5 = very much improved",
               "isRequired": true,
               "rateValues": [
@@ -495,6 +496,21 @@
                   "value": "DONT_KNOW",
                   "text": "Don't know"
                 }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureESIBadBreathStrength",
+              "title": "How strong was {CmpnName}'s halitosis?",
+              "description": "1 = not very strong, 3 = moderate, 5 = extremely strong",
+              "isRequired": true,
+              "visibleIf": "{ProcedureType} contains 'ESI' && {ProcedureESIBadBreath} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
               ]
             },
             {
@@ -656,7 +672,7 @@
               "type": "boolean",
               "name": "ProcedureESILongTermRepeatProcedure",
               "title": "If the return of LP symptoms was because the stent migrated or was coughed out, did {CmpnName} have a second stent procedure?",
-              "visibleIf": "{ProcedureESIBreathingLongTerm} = 'MIGRATED'",
+              "visibleIf": "{ProcedureESIBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
               "labelTrue": "Yes",
               "labelFalse": "No",
               "isRequired": true,

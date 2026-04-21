@@ -137,7 +137,7 @@
                     },
                     {
                       "value": "SCOPE",
-                      "text": "Video endoscope or laryngoscope under anesthesia"
+                      "text": "Video endoscope or laryngoscope under sedation"
                     },
                     {
                       "value": "DONT_KNOW",
@@ -200,7 +200,7 @@
                 {
                   "type": "radiogroup",
                   "name": "DiagnosisCost",
-                  "title": "What was the pre-insurance cost of the diagnosis?",
+                  "title": "Approximately what was the pre-insurance cost of the diagnosis?",
                   "isRequired": true,
                   "choices": [
                     {

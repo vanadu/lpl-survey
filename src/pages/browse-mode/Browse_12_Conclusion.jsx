@@ -203,7 +203,7 @@ const Browse_12_Conclusion = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Restricted swimming and access to water</span>
+              <span>Swimming restrictions</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -211,7 +211,7 @@ const Browse_12_Conclusion = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Limitations on interaction with people or other animals</span>
+              <span>Restricted interaction with people or other animals</span>
             </li>
           </ul>
           </div>

@@ -9,12 +9,17 @@
         {
               "type": "html",
               "name": "ProcedurePAEHeading",
-              "html": "<h3>Questions About {CmpnName}'s Partial Arytenoidectomy Surgery<h3>"
+              "html": "<h2>Questions About {CmpnName}'s Arytenoidectomy Surgery<h2>"
+        },
+        {
+              "type": "html",
+              "name": "ProcedurePAEText",
+              "html": "<p>With LP, the arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. Partial arytenoidectomy removes part of one side of the arytenoid cartilage to open up a space to breathe through.</p>"
         },
         {
           "type": "panel",
           "name": "ProcedurePAEAgePanel",
-          "title": "At about what age did {CmpnName} have the partial arytenoidectomy procedure for LP/ GOLPP?",
+          "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the artytenoidectomy surgery for LP?",
           "elements": [
             {
               "type": "panel",
@@ -93,18 +98,80 @@
               }
             ],
             "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePAEDifference",
+              "title": "Did the surgeon explain the difference between the partial arytenoidectomy and other surgery or procedure types?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePAELaser",
+              "title": "Was the arytenoidectomy performed with a laser?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePAEChoice",
+              "title": "Did the surgeon offer you a choice between partial arytenoidectomy and any other procedure type?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "html",
-          "name": "ProcedurePAESurgeryOpHeading",
-          "html": "<h4>These questions ask about issues {CmpnName} had immediately after surgery.</h4>"
         },
         {
           "type": "panel",
           "name": "ProcedurePAESurgeryPanel",
           "elements": [
+            {
+              "type": "html",
+              "name": "ProcedurePAEPostOpHeading",
+              "html": "<h4>These questions ask about issues {CmpnName} had immediately after surgery.</h4>"
+            },
             {
               "type": "radiogroup",
               "name": "ProcedurePAEIncisionComplications",
@@ -175,6 +242,7 @@
               "name": "ProcedurePAEExtendedStayReason",
               "title": "Why did {CmpnName} need extended inpatient care?",
               "isRequired": true,
+              "visibleIf": "{ProcedurePAEExtendedStay} != 'NO'",
               "choices": [
                 {
                   "value": "ASPIRATION",
@@ -199,27 +267,7 @@
               ],
               "showOtherItem": true
             },
-            {
-              "type": "radiogroup",
-              "name": "ProcedurePAEExtendedStayTiebackRepeat",
-              "title": "Did the surgeon attempt a second tieback on the other side?",
-              "isRequired": true,
-              "visibleIf": "{ProcedurePAEExtendedStayReason} contains 'SUTURE_FAILURE'",
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ]
-            },
+
             {
               "type": "radiogroup",
               "name": "ProcedurePAEFollowupCare",
@@ -244,7 +292,7 @@
             {
               "type": "checkbox",
               "name": "ProcedurePAEMedications",
-              "title": "What medications did you receive from {CmpnName} after the surgery?",
+              "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
               "isRequired": true,
               "choices": [
                 {
@@ -253,7 +301,7 @@
                 },
                 {
                   "value": "PAIN",
-                  "text": "Pain medications (i.e. paracetamol or other NSAID, gabapentin)"
+                  "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
                 },
                 {
                   "value": "REFLUX",
@@ -277,7 +325,21 @@
                 }
               ],
               "showOtherItem": true
-            },   
+            }
+          ]
+        },
+
+
+
+        {
+          "type": "panel",
+          "name": "ProcedurePAECostPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedurePAECostHeading",
+              "html": "<h4>These questions are about the approximate cost of the surgery. Rough estimates are fine.</h4>"
+            },
             {
               "type": "dropdown",
               "name": "ProcedurePAECost",
@@ -291,28 +353,28 @@
                   "text": "Don't know or prefer not to say"
                 },
                 {
-                  "value": "UNDER_3000",
-                  "text": "Under $3000"
+                  "value": "UNDER_1500",
+                  "text": "Under $1500"
                 },
                 {
-                  "value": "3000_4500",
-                  "text": "$3000 - $4500"
+                  "value": "1500_3000",
+                  "text": "$1500 - $3000"
                 },
                 {
-                  "value": "4500_6000",
-                  "text": "$4500 - $6000"
+                  "value": "3000_5000",
+                  "text": "$3000 - $5000"
                 },
                 {
-                  "value": "6000_8000",
-                  "text": "$6000 - $8000"
+                  "value": "5000_7000",
+                  "text": "$5000 - $7000"
                 },
                 {
-                  "value": "8000_10000",
-                  "text": "$5501 - $8000"
+                  "value": "7000_9000",
+                  "text": "$700 - $9000"
                 },
                 {
-                  "value": "OVER_10000",
-                  "text": "Over $10,000"
+                  "value": "OVER_9000",
+                  "text": "Over $9000"
                 }
               ],
               "showOtherItem": false
@@ -335,7 +397,7 @@
                 },
                 {
                   "value": "500_1000",
-                  "text": "$50 - $1000"
+                  "text": "$500 - $1000"
                 },
                 {
                   "value": "1000_2000",
@@ -359,6 +421,7 @@
           ]
         }
 
+
       ]
     },
 
@@ -367,29 +430,259 @@
       "name": "ProcedurePAECard2Panel",
       "elements": [
         {
-          "type": "radiogroup",
-          "name": "XXX",
-          "title": "sdradio3",
-          "isRequired": true,
-          "choices": [
+          "type": "panel",
+          "name": "ProcedurePAEConditionPanel",
+          "elements": [
             {
-              "value": "YES",
-              "text": "Yes"
+              "type": "html",
+              "name": "ProcedurePAEConditionHeading",
+              "html": "<h4>These questions are about {CmpnName}'s condition in the weeks after the surgery.</h4>"
+            },
+    
+
+            {
+              "type": "rating",
+              "name": "ProcedurePAEBreathingPostOp",
+              "title": "How would you rate {CmpnName}'s breathing in the time right after the arytenoidectomy surgery?",
+              "description": "1 = no improvement, 3 = moderate improvement, 5 = very much improved",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePAECoughGagRetch",
+              "title": "Did {CmpnName} cough, gag, or retch more than before the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
             },
             {
-              "value": "NO",
-              "text": "No"
+              "type": "rating",
+              "name": "ProcedurePAECoughGagRetchChange",
+              "title": "Did the coughing, gagging or retching get better or worse with time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
+              "isRequired": true,
+              "visibleIf": "{ProcedurePAECoughGagRetch} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
             },
             {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
+              "type": "radiogroup",
+              "name": "ProcedurePAEBadBreath",
+              "title": "Did {CmpnName} develop bad breath after the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedurePAEBadBreathChange",
+              "title": "Did the bad breath get better or worse over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
+              "isRequired": true,
+              "visibleIf": "{ProcedurePAEBadBreath} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePAERegurgitate",
+              "title": "Did {CmpnName} regurgitate food or water more frequently than before the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedurePAERegurgitateChange",
+              "title": "Did the regurgitation get less or more frequent with time?",
+              "description": "1 = less frequent, 3 = stayed about the same, 5 = more frequent",
+              "isRequired": true,
+              "visibleIf": "{ProcedurePAERegurgitate} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePAEMucus",
+              "title": "Did {CmpnName} cough up mucus or phlegm more frequently than before the procedure?",
+              "isRequired": true,
+              
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedurePAEMucusChange",
+              "title": "Did the mucus or phlegm production decrease or increase over time?",
+              "description": "1 = decreased, 3 = stayed about the same, 5 = increased",
+              "isRequired": true,
+              "visibleIf": "{ProcedurePAEMucus} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ProcedurePAELongTermPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedurePAELongTermHeading",
+              "html": "<h4>These questions are about the long-term effects of {CmpnName}'s arytenoidectomy surgery.</h4>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePAEBreathingLongTerm",
+              "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the arytenoidectomy surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO_CHANGE",
+                  "text": "No change"
+                },
+                {
+                  "value": "PROGRESSIVELY_BETTER",
+                  "text": "Got progressively better over time"
+                },
+                {
+                  "value": "PROGRESSIVELY_WORSE",
+                  "text": "Got progressively worse over time"
+                },
+                {
+                  "value": "SYMPTOMS_RETURNED",
+                  "text": "After initial improvement, all the LP symptoms returned"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "ProcedurePAESymptomsReturnedTime",
+              "title": "How long did it take for the LP symptoms to return?",
+              "isRequired": true,
+              "visibleIf": "{ProcedurePAEBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
+              "choices": [
+                {
+                  "value": "IMMEDIATELY",
+                  "text": "Almost immediately"
+                },
+                {
+                  "value": "WEEKS",
+                  "text": "Several weeks"
+                },
+                {
+                  "value": "MONTHS",
+                  "text": "Several months"
+                },
+                {
+                  "value": "YEAR",
+                  "text": "Over a year"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't remember or don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "rating",
+              "name": "ProcedurePAESatisfaction",
+              "title": "How would you rate your satisfaction with {CmpnName}'s arytenoidectomy procedure?",
+              "description": "1 = not at all satisfied, 3 = moderately satisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
             }
           ]
         }
       ]
     }
-
-
-
   ]
 }

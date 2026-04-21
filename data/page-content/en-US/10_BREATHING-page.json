@@ -445,7 +445,7 @@
               "name": "BreathingAspirationAfterRefluxMeds",
               "title": "Did {CmpnName} ever get aspiration pneumonia after taking medications for acid reflux (GERD) regularly?",
               "isRequired": true,
-              "visibleIf": "{MedicationRefluxMedications} != 'NO'",
+              "visibleIf": "{BreathingAspirationDidHave} = 'YES' && {MedicationRefluxMedications} != 'NO'",
               "choices": [
                 {
                   "value": "YES",

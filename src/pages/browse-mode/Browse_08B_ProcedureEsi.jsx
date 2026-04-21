@@ -208,7 +208,7 @@ const Browse_08B_ProcedureEsi = () => {
 
       <div className="browse-panel-container" id="ProcedureESISurgeryPanel">
       <div className="browse-content-block" id="ProcedureESIPostOpHeading">
-        <p className="browse-content-text">These questions ask about issues Bella had immediately after surgery.</p>
+        <p className="browse-content-text">These questions ask about issues Bella had immediately after stent procedure.</p>
       </div>
 
       <div className="browse-question-container" id="ProcedureESIIncisionComplications">
@@ -425,7 +425,7 @@ const Browse_08B_ProcedureEsi = () => {
           <ul>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>None or don&lsquo;t know</span>
+              <span>None or don&lsquo;t remember</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -450,6 +450,10 @@ const Browse_08B_ProcedureEsi = () => {
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Cerenia (maropitant citrate)</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Codeine or other cough suppressant</span>
             </li>
           </ul>
           </div>
@@ -561,14 +565,14 @@ const Browse_08B_ProcedureEsi = () => {
       <div className="browse-panel-container" id="ProcedureESICard2Panel">
       <div className="browse-panel-container" id="ProcedureESIConditionPanel">
       <div className="browse-content-block" id="ProcedureESIConditionHeading">
-        <p className="browse-content-text">These questions are about Bella&lsquo;s condition in weeks after the surgery.</p>
+        <p className="browse-content-text">These questions are about Bella&lsquo;s condition in the weeks after the stent procedure.</p>
       </div>
 
       <div className="browse-question-container" id="ProcedureESIBreathingPostOp">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How would you rate Bella&lsquo;s breathing in the time right after the tieback surgery?
+              How would you rate Bella&lsquo;s breathing in the time right after the stent implant?
             </span>
           }
           index={16}
@@ -906,6 +910,146 @@ const Browse_08B_ProcedureEsi = () => {
         </ShowAnswerContent>
       </div>
 
+      <div className="browse-question-container" id="ProcedureESIBadBreathStrength">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              How strong was Bella&lsquo;s halitosis?
+            </span>
+          }
+          index={20}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <p className="browse-question-description">1 = not very strong, 3 = moderate, 5 = extremely strong</p>
+          <div className="showanswer__content-block">
+          <div className="browse-showanswer-rating" aria-hidden="true">
+                
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        4
+                      </text>
+                    </svg>
+                  </span>
+                  <span className="browse-showanswer-rating-item">
+                    <svg
+                      className="browse-showanswer-rating-svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <text
+                        x="8"
+                        y="8"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fontFamily="Arial, Helvetica, sans-serif"
+                        fontSize="8"
+                        fill="currentColor"
+                      >
+                        5
+                      </text>
+                    </svg>
+                  </span>
+              </div>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
       <div className="browse-question-container" id="ProcedureESIBadBreathChange">
         <ShowAnswerContent
           header={
@@ -913,7 +1057,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did the bad breath get better or worse over time?
             </span>
           }
-          index={20}
+          index={21}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1053,7 +1197,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did Bella regurgitate food or water more frequently than before the procedure?
             </span>
           }
-          index={21}
+          index={22}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1084,7 +1228,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did the regurgitation get less or more frequent with time?
             </span>
           }
-          index={22}
+          index={23}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1224,7 +1368,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did Bella cough up mucus or phlegm more frequently than before the procedure?
             </span>
           }
-          index={23}
+          index={24}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1255,7 +1399,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did the mucus or phlegm production decrease or increase over time?
             </span>
           }
-          index={24}
+          index={25}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1401,7 +1545,7 @@ const Browse_08B_ProcedureEsi = () => {
               How would you describe how Bella&lsquo;s breathing changed in the months and years following the stent procedure?
             </span>
           }
-          index={25}
+          index={26}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1440,7 +1584,7 @@ const Browse_08B_ProcedureEsi = () => {
               How long did it take for the LP symptoms to return?
             </span>
           }
-          index={26}
+          index={27}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1479,7 +1623,7 @@ const Browse_08B_ProcedureEsi = () => {
               If the return of LP symptoms was because the stent migrated or was coughed out, did Bella have a second stent procedure?
             </span>
           }
-          index={27}
+          index={28}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1506,7 +1650,7 @@ const Browse_08B_ProcedureEsi = () => {
               How would you rate your satisfaction with Bella&lsquo;s stent implant?
             </span>
           }
-          index={28}
+          index={29}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

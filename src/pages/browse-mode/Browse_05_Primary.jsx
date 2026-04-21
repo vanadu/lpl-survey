@@ -50,7 +50,7 @@ const Browse_05_Primary = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?
+              Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx or throat?
             </span>
           }
           index={1}
@@ -316,7 +316,7 @@ const Browse_05_Primary = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did you ever change primary veterinarians because how they handled Bella&lsquo;s LP/GOLPP symptoms?
+              Did you ever change primary veterinarians because of how they handled Bella&lsquo;s LP/GOLPP symptoms?
             </span>
           }
           index={9}

@@ -2,8 +2,6 @@
   "name": "PROCEDURE_VCC-page",
   "visibleIf": "{ProcedureDidHave} = true and {ProcedureType} contains 'VCC'",
   "elements": [
-
-
     {
       "type": "panel",
       "name": "ProcedureVCCCard1Panel",
@@ -11,12 +9,17 @@
         {
               "type": "html",
               "name": "ProcedureVCCHeading",
-              "html": "<h3>Questions About {CmpnName}'s Ventrilucordectomy Surgery<h3>"
+              "html": "<h2>Questions About {CmpnName}'s Ventrilucordectomy Surgery<h2>"
+        },
+        {
+              "type": "html",
+              "name": "ProcedureVCCText",
+              "html": "<p>Ventrilucordectomy is often referred to as vocal fold excision, vocal cord removal, or debarking. As a treatment for LP, the procedure removes the patient&lsquo;s vocal cords which creates a larger airway through the paralyzed larynx, allowing the patient to breathe better.</p>"
         },
         {
           "type": "panel",
           "name": "ProcedureVCCAgePanel",
-          "title": "At about what age did {CmpnName} have the ventrilucordectomy procedure for LP/ GOLPP?",
+          "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the ventrilucordectomy surgery for LP?",
           "elements": [
             {
               "type": "panel",
@@ -95,18 +98,80 @@
               }
             ],
             "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureVCCDifference",
+              "title": "Did the surgeon explain the difference between the ventrilucordectomy and other surgery or procedure types?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureVCCLaser",
+              "title": "Was the ventrilucordectomy performed with a laser?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureVCCChoice",
+              "title": "Did the surgeon offer you a choice between ventrilucordectomy and any other procedure type?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "html",
-          "name": "ProcedureVCCSurgeryOpHeading",
-          "html": "<h4>These questions ask about issues {CmpnName} had immediately after surgery.</h4>"
         },
         {
           "type": "panel",
           "name": "ProcedureVCCSurgeryPanel",
           "elements": [
+            {
+              "type": "html",
+              "name": "ProcedureVCCPostOpHeading",
+              "html": "<h4>These questions ask about issues {CmpnName} had immediately after surgery.</h4>"
+            },
             {
               "type": "radiogroup",
               "name": "ProcedureVCCIncisionComplications",
@@ -177,6 +242,7 @@
               "name": "ProcedureVCCExtendedStayReason",
               "title": "Why did {CmpnName} need extended inpatient care?",
               "isRequired": true,
+              "visibleIf": "{ProcedureVCCExtendedStay} != 'NO'",
               "choices": [
                 {
                   "value": "ASPIRATION",
@@ -201,27 +267,7 @@
               ],
               "showOtherItem": true
             },
-            {
-              "type": "radiogroup",
-              "name": "ProcedureVCCExtendedStayTiebackRepeat",
-              "title": "Did the surgeon attempt a second tieback on the other side?",
-              "isRequired": true,
-              "visibleIf": "{ProcedureVCCExtendedStayReason} contains 'SUTURE_FAILURE'",
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ]
-            },
+
             {
               "type": "radiogroup",
               "name": "ProcedureVCCFollowupCare",
@@ -246,7 +292,7 @@
             {
               "type": "checkbox",
               "name": "ProcedureVCCMedications",
-              "title": "What medications did you receive from {CmpnName} after the surgery?",
+              "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
               "isRequired": true,
               "choices": [
                 {
@@ -255,7 +301,7 @@
                 },
                 {
                   "value": "PAIN",
-                  "text": "Pain medications (i.e. paracetamol or other NSAID, gabapentin)"
+                  "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
                 },
                 {
                   "value": "REFLUX",
@@ -279,7 +325,21 @@
                 }
               ],
               "showOtherItem": true
-            },   
+            }
+          ]
+        },
+
+
+
+        {
+          "type": "panel",
+          "name": "ProcedureVCCCostPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedureVCCCostHeading",
+              "html": "<h4>These questions are about the approximate cost of the surgery. Rough estimates are fine.</h4>"
+            },
             {
               "type": "dropdown",
               "name": "ProcedureVCCCost",
@@ -293,28 +353,28 @@
                   "text": "Don't know or prefer not to say"
                 },
                 {
-                  "value": "UNDER_3000",
-                  "text": "Under $3000"
+                  "value": "UNDER_1500",
+                  "text": "Under $1500"
                 },
                 {
-                  "value": "3000_4500",
-                  "text": "$3000 - $4500"
+                  "value": "1500_3000",
+                  "text": "$1500 - $3000"
                 },
                 {
-                  "value": "4500_6000",
-                  "text": "$4500 - $6000"
+                  "value": "3000_5000",
+                  "text": "$3000 - $5000"
                 },
                 {
-                  "value": "6000_8000",
-                  "text": "$6000 - $8000"
+                  "value": "5000_7000",
+                  "text": "$5000 - $7000"
                 },
                 {
-                  "value": "8000_10000",
-                  "text": "$5501 - $8000"
+                  "value": "7000_9000",
+                  "text": "$700 - $9000"
                 },
                 {
-                  "value": "OVER_10000",
-                  "text": "Over $10,000"
+                  "value": "OVER_9000",
+                  "text": "Over $9000"
                 }
               ],
               "showOtherItem": false
@@ -325,7 +385,7 @@
               "title": "About what was total cost of the complications of the surgery?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
-              "visibleIf": "{ProcedureVCCExtendedStay} = true || {ProcedureVCCFollowupCare} = 'YES'",
+              "visibleIf": "{ProcedureVCCExtendedStay} != 'NO' || {ProcedureVCCFollowupCare} = 'YES'",
               "choices": [
                 {
                   "value": "NOT_SAY",
@@ -337,7 +397,7 @@
                 },
                 {
                   "value": "500_1000",
-                  "text": "$50 - $1000"
+                  "text": "$500 - $1000"
                 },
                 {
                   "value": "1000_2000",
@@ -361,6 +421,7 @@
           ]
         }
 
+
       ]
     },
 
@@ -369,29 +430,259 @@
       "name": "ProcedureVCCCard2Panel",
       "elements": [
         {
-          "type": "radiogroup",
-          "name": "XXX",
-          "title": "sdradio3",
-          "isRequired": true,
-          "choices": [
+          "type": "panel",
+          "name": "ProcedureVCCConditionPanel",
+          "elements": [
             {
-              "value": "YES",
-              "text": "Yes"
+              "type": "html",
+              "name": "ProcedureVCCConditionHeading",
+              "html": "<h4>These questions are about {CmpnName}'s condition in the weeks after the surgery.</h4>"
+            },
+    
+
+            {
+              "type": "rating",
+              "name": "ProcedureVCCBreathingPostOp",
+              "title": "How would you rate {CmpnName}'s breathing in the time right after the ventrilucordectomy surgery?",
+              "description": "1 = no improvement, 3 = moderate improvement, 5 = very much improved",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureVCCCoughGagRetch",
+              "title": "Did {CmpnName} cough, gag, or retch more than before the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
             },
             {
-              "value": "NO",
-              "text": "No"
+              "type": "rating",
+              "name": "ProcedureVCCCoughGagRetchChange",
+              "title": "Did the coughing, gagging or retching get better or worse with time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
+              "isRequired": true,
+              "visibleIf": "{ProcedureVCCCoughGagRetch} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
             },
             {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
+              "type": "radiogroup",
+              "name": "ProcedureVCCBadBreath",
+              "title": "Did {CmpnName} develop bad breath after the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureVCCBadBreathChange",
+              "title": "Did the bad breath get better or worse over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
+              "isRequired": true,
+              "visibleIf": "{ProcedureVCCBadBreath} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureVCCRegurgitate",
+              "title": "Did {CmpnName} regurgitate food or water more frequently than before the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureVCCRegurgitateChange",
+              "title": "Did the regurgitation get less or more frequent with time?",
+              "description": "1 = less frequent, 3 = stayed about the same, 5 = more frequent",
+              "isRequired": true,
+              "visibleIf": "{ProcedureVCCRegurgitate} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureVCCMucus",
+              "title": "Did {CmpnName} cough up mucus or phlegm more frequently than before the procedure?",
+              "isRequired": true,
+              
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureVCCMucusChange",
+              "title": "Did the mucus or phlegm production decrease or increase over time?",
+              "description": "1 = decreased, 3 = stayed about the same, 5 = increased",
+              "isRequired": true,
+              "visibleIf": "{ProcedureVCCMucus} = 'YES'",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ProcedureVCCLongTermPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedureVCCLongTermHeading",
+              "html": "<h4>These questions are about the long-term effects of {CmpnName}'s ventrilucordectomy surgery.</h4>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureVCCBreathingLongTerm",
+              "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the ventrilucordectomy surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "NO_CHANGE",
+                  "text": "No change"
+                },
+                {
+                  "value": "PROGRESSIVELY_BETTER",
+                  "text": "Got progressively better over time"
+                },
+                {
+                  "value": "PROGRESSIVELY_WORSE",
+                  "text": "Got progressively worse over time"
+                },
+                {
+                  "value": "SYMPTOMS_RETURNED",
+                  "text": "After initial improvement, all the LP symptoms returned"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "ProcedureVCCSymptomsReturnedTime",
+              "title": "How long did it take for the LP symptoms to return?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureVCCBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
+              "choices": [
+                {
+                  "value": "IMMEDIATELY",
+                  "text": "Almost immediately"
+                },
+                {
+                  "value": "WEEKS",
+                  "text": "Several weeks"
+                },
+                {
+                  "value": "MONTHS",
+                  "text": "Several months"
+                },
+                {
+                  "value": "YEAR",
+                  "text": "Over a year"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't remember or don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "rating",
+              "name": "ProcedureVCCSatisfaction",
+              "title": "How would you rate your satisfaction with {CmpnName}'s ventrilucordectomy procedure?",
+              "description": "1 = not at all satisfied, 3 = moderately satisfied, 5 = very satisfied",
+              "isRequired": true,
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" }
+              ]
             }
           ]
         }
       ]
     }
-
-
-
   ]
 }

@@ -23,7 +23,7 @@
             {
               "type": "radiogroup",
               "name": "PrimaryInflammation",
-              "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx/pharynx area?",
+              "title": "Did your current primary veterinarian observe any inflammation, irritation, or infection in the larynx or throat?",
               "isRequired": true,
               "choices": [
                 {
@@ -229,7 +229,7 @@
             {
               "type": "radiogroup",
               "name": "PrimaryChangedVets",
-              "title": "Did you ever change primary veterinarians because how they handled {CmpnName}'s LP/GOLPP symptoms?",
+              "title": "Did you ever change primary veterinarians because of how they handled {CmpnName}'s LP/GOLPP symptoms?",
               "isRequired": true,
               "choices": [
                 {

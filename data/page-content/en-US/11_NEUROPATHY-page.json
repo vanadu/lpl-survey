@@ -79,6 +79,7 @@
               "name": "NeuropathyFrontLegs",
               "title": "Did {CmpnName} also suffer from weakness in the front legs?",
               "isRequired": true,
+              "visibleIf": "{NeuropathySymptoms} = 'YES'",
               "choices": [
                 {
                   "value": "YES",
@@ -223,10 +224,6 @@
                 {
                   "value": "TREMORS",
                   "text": "Tremors"
-                },
-                {
-                  "value": "ANXIETY",
-                  "text": "Increased anxiety"
                 },
                 {
                   "value": "COGNITIVE",

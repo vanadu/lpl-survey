@@ -190,7 +190,7 @@ const Browse_06_Diagnosis = () => {
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Video endoscope or laryngoscope under anesthesia</span>
+              <span>Video endoscope or laryngoscope under sedation</span>
             </li>
             <li className="browse-showanswer-dropdown">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
@@ -275,7 +275,7 @@ const Browse_06_Diagnosis = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What was the pre-insurance cost of the diagnosis?
+              Approximately what was the pre-insurance cost of the diagnosis?
             </span>
           }
           index={7}
