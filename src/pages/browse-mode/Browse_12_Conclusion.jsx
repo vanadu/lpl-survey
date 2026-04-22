@@ -782,7 +782,7 @@ const Browse_12_Conclusion = () => {
       <div className="browse-panel-container" id="ConclusionCard2Panel">
       <div className="browse-panel-container" id="ConclusionCauseOfDeathPanel">
       <div className="browse-content-block" id="ConclusionCauseOfDeathHeading">
-        <p className="browse-content-text">Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This question asks about the primary cause of Bella&lsquo;s passing, not whether humane euthanasia was chosen to help them cross over.</p>
+        <p className="browse-content-text">Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This question asks about the primary cause of Bella&lsquo;s passing.</p>
       </div>
 
       <div className="browse-question-container" id="ConclusionCauseOfDeath">
@@ -821,7 +821,7 @@ const Browse_12_Conclusion = () => {
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Poor quality of life due to aging</span>
+              <span>Quality of life due to old age</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>

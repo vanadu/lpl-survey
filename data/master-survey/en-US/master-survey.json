@@ -10925,7 +10925,7 @@
                 {
                   "type": "html",
                   "name": "ConclusionCauseOfDeathHeading",
-                  "html": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This question asks about the primary cause of {CmpnName}'s passing, not whether humane euthanasia was chosen to help them cross over."
+                  "html": "Euthanasia is a humane way to say goodbye when a beloved animal companion has reached end-of-life. This question asks about the primary cause of {CmpnName}'s passing."
                 },
                 {
                   "type": "radiogroup",
@@ -10955,7 +10955,7 @@
                     },
                     {
                       "value": "QOL_AGING",
-                      "text": "Poor quality of life due to aging"
+                      "text": "Quality of life due to old age"
                     },
                     {
                       "value": "STOPPED_EATING",
@@ -10963,7 +10963,7 @@
                     }
                   ],
                   "showOtherItem": true,
-                  "otherText": "Other cause unrelated to GOLPP (please explain)"
+                  "otherText": "Other illness or injury unrelated to GOLPP (description optional)"
                 }
               ]
             },
