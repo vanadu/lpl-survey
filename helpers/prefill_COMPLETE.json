@@ -178,7 +178,8 @@
   ],
   "ProcedureUALExtendedStayRepeatProcedure": "YES",
   "ProcedureUALFollowupCare": "YES",
-  "ProcedureUALMedications": [
+  "ProcedureUALMedications": "YES",
+  "ProcedureUALMedicationsType": [
     "PAIN",
     "STEROID",
     "REFLUX",
@@ -216,10 +217,11 @@
   ],
   "ProcedureESIExtendedStayRepeatProcedure": "YES",
   "ProcedureESIFollowupCare": "YES",
-  "ProcedureESIMedications": [
+  "ProcedureESIMedications": "YES",
+  "ProcedureESIMedicationsType": [
     "PAIN",
     "STEROID",
-    "COUGH_SUPPRESSANT",
+    "REFLUX",
     "SEDATIVE"
   ],
   "ProcedureESICost": "1500_3000",
@@ -255,7 +257,8 @@
   ],
   "ProcedureBVEAPExtendedStayRepeatProcedure": "YES",
   "ProcedureBVEAPFollowupCare": "YES",
-  "ProcedureBVEAPMedications": [
+  "ProcedureBVEAPMedications": "YES",
+  "ProcedureBVEAPMedicationsType": [
     "PAIN",
     "STEROID",
     "REFLUX",
@@ -278,13 +281,6 @@
   "ProcedureBVEAPLongTermRepeatProcedure": false,
   "ProcedureBVEAPSatisfaction": 2,
 
-
-
-
-
-
-
-
   "ProcedurePAEAgeYears": "13",
   "ProcedurePAEAgeMonths": "6",
   "ProcedurePAEScheduled": "SCHEDULED",
@@ -300,7 +296,8 @@
   ],
   "ProcedurePAEExtendedStayRepeatProcedure": "YES",
   "ProcedurePAEFollowupCare": "YES",
-  "ProcedurePAEMedications": [
+  "ProcedurePAEMedications": "YES",
+  "ProcedurePAEMedicationsType": [
     "PAIN",
     "STEROID",
     "REFLUX",
@@ -323,11 +320,6 @@
   "ProcedurePAELongTermRepeatProcedure": false,
   "ProcedurePAESatisfaction": 2,
 
-
-
-
-
-
   "ProcedureVCCAgeYears": "13",
   "ProcedureVCCAgeMonths": "6",
   "ProcedureVCCScheduled": "SCHEDULED",
@@ -343,7 +335,8 @@
   ],
   "ProcedureVCCExtendedStayRepeatProcedure": "YES",
   "ProcedureVCCFollowupCare": "YES",
-  "ProcedureVCCMedications": [
+  "ProcedureVCCMedications": "YES",
+  "ProcedureVCCMedicationsType": [
     "PAIN",
     "STEROID",
     "REFLUX",
@@ -366,12 +359,123 @@
   "ProcedureVCCLongTermRepeatProcedure": false,
   "ProcedureVCCSatisfaction": 2,
 
+  "ProcedurePLEAgeYears": "13",
+  "ProcedurePLEAgeMonths": "6",
+  "ProcedurePLEScheduled": "SCHEDULED",
+  "ProcedurePLEScheduledWait": "LESS_THAN_TWO_WEEKS",
+  "ProcedurePLEDifference": "NO",
+  "ProcedurePLEChoice": "NO",
+  "ProcedurePLEIncisionComplications": "YES",
+  "ProcedurePLEOralBleeding": "YES",
+  "ProcedurePLEExtendedStay": "ONE_DAY",
+  "ProcedurePLEExtendedStayReason": [
+    "ASPIRATION",
+    "SUTURE_FAILURE"
+  ],
+  "ProcedurePLEExtendedStayRepeatProcedure": "YES",
+  "ProcedurePLEFollowupCare": "YES",
+  "ProcedurePLEMedications": "YES",
+  "ProcedurePLEMedicationsType": [
+    "PAIN",
+    "STEROID",
+    "REFLUX",
+    "SEDATIVE"
+  ],
+  "ProcedurePLECost": "5000_7000",
+  "ProcedurePLEComplicationsCost": "500_1000",
+  "ProcedurePLEBreathingPostOp": 5,
+  "ProcedurePLECoughGagRetch": "YES",
+  "ProcedurePLECoughGagRetchChange": 4,
+  "ProcedurePLEBadBreath": "YES",
+  "ProcedurePLEBadBreathChange": 4,
+  "ProcedurePLERegurgitate": "YES",
+  "ProcedurePLERegurgitateChange": 4,
+  "ProcedurePLEMucus": "YES",
+  "ProcedurePLEMucusChange": 4,
+  "ProcedurePLEBreathingLongTerm": "SYMPTOMS_RETURNED",
+  "ProcedurePLESymptomsReturnedTime": "WEEKS",
+  "ProcedurePLESutureFailure": "YES",
+  "ProcedurePLELongTermRepeatProcedure": false,
+  "ProcedurePLESatisfaction": 2,
 
 
+  "ProcedureTTAgeYears": "13",
+  "ProcedureTTAgeMonths": "6",
+  "ProcedureTTScheduled": "SCHEDULED",
+  "ProcedureTTScheduledWait": "LESS_THAN_TWO_WEEKS",
+  "ProcedureTTDifference": "NO",
+  "ProcedureTTChoice": "NO",
+  "ProcedureTTIncisionComplications": "YES",
+  "ProcedureTTOralBleeding": "YES",
+  "ProcedureTTExtendedStay": "ONE_DAY",
+  "ProcedureTTExtendedStayReason": [
+    "ASPIRATION",
+    "SUTURE_FAILURE"
+  ],
+  "ProcedureTTExtendedStayRepeatProcedure": "YES",
+  "ProcedureTTFollowupCare": "YES",
+  "ProcedureTTMedications": "YES",
+  "ProcedureTTMedicationsType": [
+    "PAIN",
+    "STEROID",
+    "REFLUX",
+    "SEDATIVE"
+  ],
+  "ProcedureTTCost": "5000_7000",
+  "ProcedureTTComplicationsCost": "500_1000",
+  "ProcedureTTBreathingPostOp": 5,
+  "ProcedureTTCoughGagRetch": "YES",
+  "ProcedureTTCoughGagRetchChange": 4,
+  "ProcedureTTBadBreath": "YES",
+  "ProcedureTTBadBreathChange": 4,
+  "ProcedureTTRegurgitate": "YES",
+  "ProcedureTTRegurgitateChange": 4,
+  "ProcedureTTMucus": "YES",
+  "ProcedureTTMucusChange": 4,
+  "ProcedureTTBreathingLongTerm": "SYMPTOMS_RETURNED",
+  "ProcedureTTSymptomsReturnedTime": "WEEKS",
+  "ProcedureTTSutureFailure": "YES",
+  "ProcedureTTLongTermRepeatProcedure": false,
+  "ProcedureTTSatisfaction": 2,
 
-
-
-
+  "ProcedureOtherAgeYears": "13",
+  "ProcedureOtherAgeMonths": "6",
+  "ProcedureOtherScheduled": "SCHEDULED",
+  "ProcedureOtherScheduledWait": "LESS_THAN_TWO_WEEKS",
+  "ProcedureOtherDifference": "NO",
+  "ProcedureOtherChoice": "NO",
+  "ProcedureOtherIncisionComplications": "YES",
+  "ProcedureOtherOralBleeding": "YES",
+  "ProcedureOtherExtendedStay": "ONE_DAY",
+  "ProcedureOtherExtendedStayReason": [
+    "ASPIRATION",
+    "SUTURE_FAILURE"
+  ],
+  "ProcedureOtherExtendedStayRepeatProcedure": "YES",
+  "ProcedureOtherFollowupCare": "YES",
+  "ProcedureOtherMedications": "YES",
+  "ProcedureOtherMedicationsType": [
+    "PAIN",
+    "STEROID",
+    "REFLUX",
+    "SEDATIVE"
+  ],
+  "ProcedureOtherCost": "5000_7000",
+  "ProcedureOtherComplicationsCost": "500_1000",
+  "ProcedureOtherBreathingPostOp": 5,
+  "ProcedureOtherCoughGagRetch": "YES",
+  "ProcedureOtherCoughGagRetchChange": 4,
+  "ProcedureOtherBadBreath": "YES",
+  "ProcedureOtherBadBreathChange": 4,
+  "ProcedureOtherRegurgitate": "YES",
+  "ProcedureOtherRegurgitateChange": 4,
+  "ProcedureOtherMucus": "YES",
+  "ProcedureOtherMucusChange": 4,
+  "ProcedureOtherBreathingLongTerm": "SYMPTOMS_RETURNED",
+  "ProcedureOtherSymptomsReturnedTime": "WEEKS",
+  "ProcedureOtherSutureFailure": "YES",
+  "ProcedureOtherLongTermRepeatProcedure": false,
+  "ProcedureOtherSatisfaction": 2,
 
 
 

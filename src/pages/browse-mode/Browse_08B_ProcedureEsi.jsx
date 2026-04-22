@@ -211,37 +211,6 @@ const Browse_08B_ProcedureEsi = () => {
         <p className="browse-content-text">These questions ask about issues Bella had immediately after stent procedure.</p>
       </div>
 
-      <div className="browse-question-container" id="ProcedureESIIncisionComplications">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did Bella have any infection or swelling at the incision site?
-            </span>
-          }
-          index={7}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
       <div className="browse-question-container" id="ProcedureESIOralBleeding">
         <ShowAnswerContent
           header={
@@ -249,7 +218,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did Bella have bleeding in the mouth or from the inside the throat?
             </span>
           }
-          index={8}
+          index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -280,7 +249,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did Bella need to stay longer than expected at the hospital after the procedure?
             </span>
           }
-          index={9}
+          index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -315,7 +284,7 @@ const Browse_08B_ProcedureEsi = () => {
               Why did Bella need extended inpatient care?
             </span>
           }
-          index={10}
+          index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -354,7 +323,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did the surgeon attempt to implant another stent of a different size?
             </span>
           }
-          index={11}
+          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -385,7 +354,7 @@ const Browse_08B_ProcedureEsi = () => {
               In the four weeks after the stent procedure, did Bella need another visit to a veterinary professional because of complications?
             </span>
           }
-          index={12}
+          index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -416,7 +385,7 @@ const Browse_08B_ProcedureEsi = () => {
               What medications were prescribed or provided for Bella after the stent procedure?
             </span>
           }
-          index={13}
+          index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -473,7 +442,7 @@ const Browse_08B_ProcedureEsi = () => {
               About what was the cost of the stent procedure, not including post-operative complications?
             </span>
           }
-          index={14}
+          index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -520,7 +489,7 @@ const Browse_08B_ProcedureEsi = () => {
               About what was total cost of the complications of the stent procedure?
             </span>
           }
-          index={15}
+          index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -575,7 +544,7 @@ const Browse_08B_ProcedureEsi = () => {
               How would you rate Bella&lsquo;s breathing in the time right after the stent implant?
             </span>
           }
-          index={16}
+          index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -715,7 +684,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did Bella cough, gag, or retch more than before the procedure?
             </span>
           }
-          index={17}
+          index={16}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -746,7 +715,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did the coughing, gagging or retching get better or worse with time?
             </span>
           }
-          index={18}
+          index={17}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -886,7 +855,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did Bella develop bad breath after the procedure?
             </span>
           }
-          index={19}
+          index={18}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -917,7 +886,7 @@ const Browse_08B_ProcedureEsi = () => {
               How strong was Bella&lsquo;s halitosis?
             </span>
           }
-          index={20}
+          index={19}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1057,7 +1026,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did the bad breath get better or worse over time?
             </span>
           }
-          index={21}
+          index={20}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1197,7 +1166,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did Bella regurgitate food or water more frequently than before the procedure?
             </span>
           }
-          index={22}
+          index={21}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1228,7 +1197,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did the regurgitation get less or more frequent with time?
             </span>
           }
-          index={23}
+          index={22}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1368,7 +1337,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did Bella cough up mucus or phlegm more frequently than before the procedure?
             </span>
           }
-          index={24}
+          index={23}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1399,7 +1368,7 @@ const Browse_08B_ProcedureEsi = () => {
               Did the mucus or phlegm production decrease or increase over time?
             </span>
           }
-          index={25}
+          index={24}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1545,7 +1514,7 @@ const Browse_08B_ProcedureEsi = () => {
               How would you describe how Bella&lsquo;s breathing changed in the months and years following the stent procedure?
             </span>
           }
-          index={26}
+          index={25}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1584,7 +1553,7 @@ const Browse_08B_ProcedureEsi = () => {
               How long did it take for the LP symptoms to return?
             </span>
           }
-          index={27}
+          index={26}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1623,7 +1592,7 @@ const Browse_08B_ProcedureEsi = () => {
               If the return of LP symptoms was because the stent migrated or was coughed out, did Bella have a second stent procedure?
             </span>
           }
-          index={28}
+          index={27}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1650,7 +1619,7 @@ const Browse_08B_ProcedureEsi = () => {
               How would you rate your satisfaction with Bella&lsquo;s stent implant?
             </span>
           }
-          index={29}
+          index={28}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

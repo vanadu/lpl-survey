@@ -44,7 +44,6 @@ const Browse_10_Breathing = () => {
       <div className="browse-content-block" id="BreathingText">
         <p className="browse-content-text">This section asks questions about Bella&lsquo;s experience with breathing crises and aspiration pneumonia.</p>
       </div>
-      </div>
 
       <div className="browse-panel-container" id="BreathingCrisisPanel">
       <div className="browse-question-container" id="BreathingCrisisDidHave">
@@ -722,6 +721,7 @@ const Browse_10_Breathing = () => {
               </div>
           </div>
         </ShowAnswerContent>
+      </div>
       </div>
       </div>
 

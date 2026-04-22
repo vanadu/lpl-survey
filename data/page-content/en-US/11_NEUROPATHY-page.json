@@ -208,32 +208,32 @@
             {
               "type": "checkbox",
               "name": "NeuropathyOtherIssues",
-              "title": "Over the course of {CmpnName}'s LP/GOLPP, did any of these issues also appear?",
+              "title": "Over the course of {CmpnName}'s LP/GOLPP, which of these issues also appeared?",
               "isRequired": true,
               "choices": [
                 {
                   "value": "NONE",
-                  "text": "No, {CmpnName} never had any of these issues"
+                  "text": "None"
                 },
                 {
                   "value": "FACIAL_PARALYSIS",
-                  "text": "Increased anxiety"
+                  "text": "Facial paralysis"
                 },
                 {
                   "value": "TREMORS",
                   "text": "Tremors"
                 },
                 {
-                  "value": "COGNITIVE",
-                  "text": "Disorientation or cognitive changes"
+                  "value": "CRAMPING",
+                  "text": "Seizure or cramping of limbs"
                 },
                 {
-                  "value": "BEHAVIOR",
-                  "text": "Changes in behavior or personality"
+                  "value": "BALANCE",
+                  "text": "Loss of balance"
                 },
                 {
-                  "value": "APPETITE",
-                  "text": "Changes in appetite"
+                  "value": "LEG_MOVEMENTS",
+                  "text": "Strange leg movements (criss-crossing, etc)"
                 },
                 {
                   "value": "HEAD_TILT",
@@ -247,9 +247,6 @@
               ],
               "showOtherItem": false
             }
-
-
-
           ]
         }
       ]

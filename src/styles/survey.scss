@@ -267,19 +267,30 @@ label {
   font-family: $primary_font;
   color: #212121;
   font-weight: 600;
+  line-height: 1.5;
   // margin-left: var(--s-5);
 
 
   position: relative;
   padding-left: 1rem;
+  padding-bottom: var(--s-2);
   &::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 0.75rem;
+    top: 0.375rem;
     width: 0.5rem;
     height: 0.5rem;
     background: currentColor;
+    @include tablet {
+      top: 0.575rem;
+    }
+    @include desktop {
+      top: 0.575rem;
+    }
+    @include ldesktop {
+      top: 0.575rem;
+    }
   }
 }
 

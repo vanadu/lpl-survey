@@ -268,7 +268,7 @@ const Browse_11_Neuropathy = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Over the course of Bella&lsquo;s LP/GOLPP, did any of these issues also appear?
+              Over the course of Bella&lsquo;s LP/GOLPP, which of these issues also appeared?
             </span>
           }
           index={7}
@@ -280,11 +280,11 @@ const Browse_11_Neuropathy = () => {
           <ul>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>No, Bella never had any of these issues</span>
+              <span>None</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Increased anxiety</span>
+              <span>Facial paralysis</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -292,15 +292,15 @@ const Browse_11_Neuropathy = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Disorientation or cognitive changes</span>
+              <span>Seizure or cramping of limbs</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Changes in behavior or personality</span>
+              <span>Loss of balance</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Changes in appetite</span>
+              <span>Strange leg movements (criss-crossing, etc)</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>

@@ -177,14 +177,35 @@
             "showOtherItem": true
           },
           {
-            "type": "checkbox",
+            "type": "radiogroup",
             "name": "ConclusionQOL",
-            "title": "How has {CmpnName}'s quality of life changed since the first LP/GOLPP symptoms appeared?",
+            "title": "Do you feel like {CmpnName}'s quality of life has changed since the first LP/GOLPP symptoms appeared?",
             "isRequired": true,
             "choices": [
               {
-                "value": "NO_CHANGE",
-                "text": "No significant change"
+                "value": "YES",
+                "text": "Yes"
+              },
+              {
+                "value": "NO",
+                "text": "No"
+              },
+              {
+                "value": "DONT_KNOW",
+                "text": "Don't know"
+              }
+            ]
+          },
+          {
+            "type": "checkbox",
+            "name": "ConclusionQOLIssues",
+            "title": "How has {CmpnName}'s quality of life changed since the first LP/GOLPP symptoms appeared?",
+            "isRequired": true,
+            "visibleIf": "{ConclusionQOL} = 'YES'",
+            "choices": [
+              {
+                "value": "PAIN",
+                "text": "Noticeable pain or discomfort"
               },
               {
                 "value": "KNUCKLING",
@@ -192,10 +213,10 @@
               },
               {
                 "value": "FALLING",
-                "text": "Frequent falling while walking"
+                "text": "Frequent falling"
               },
               {
-                "value": "GET_UP",
+                "value": "GETTING_UP",
                 "text": "Difficulty getting up or standing"
               },
               {
@@ -223,6 +244,7 @@
             "title": "How would you rate {CmpnName}'s quality of life at this stage?",
             "description": "1 = very poor, 3 = fair, 5 = very good",
             "isRequired": true,
+            "displayMode": "buttons",
             "rateValues": [
                 { "value": 1, "text": "1" },
                 { "value": 2, "text": "2" },

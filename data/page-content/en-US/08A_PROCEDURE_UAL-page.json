@@ -283,25 +283,41 @@
               "showOtherItem": false
             },
             {
-              "type": "checkbox",
+              "type": "radiogroup",
               "name": "ProcedureUALMedications",
-              "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
+              "title": "Were prescriptions medications provided for {CmpnName} after the procedure?",
               "isRequired": true,
               "choices": [
                 {
-                  "value": "DONT_KNOW",
-                  "text": "None or don't know"
+                  "value": "YES",
+                  "text": "Yes"
                 },
                 {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "ProcedureUALMedicationsType",
+              "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
                   "value": "PAIN",
-                  "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
+                  "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, opiods)"
                 },
                 {
                   "value": "REFLUX",
                   "text": "Reflux medications (i.e. cisipride, famotidine, omeprazole)"
                 },
                 {
-                  "value": "ANTIBIOTIC",
+                  "value": "ANTIBIOTICS",
                   "text": "Antibiotics"
                 },
                 {
@@ -310,11 +326,15 @@
                 },
                 {
                   "value": "SEDATIVE",
-                  "text": "Sedative (i.e. trazodone, tramadol)"
+                  "text": "Sedative (i.e. trazodone, gabapentin, acepromazine)"
                 },
                 {
                   "value": "MAROPITANT",
                   "text": "Cerenia (maropitant citrate)"
+                },
+                {
+                  "value": "COUGH_SUPPRESSANT",
+                  "text": "Cough suppressants (i.e. codeine, dextromethorphan, guaifenesin)"
                 }
               ],
               "showOtherItem": true
@@ -472,8 +492,8 @@
             {
               "type": "rating",
               "name": "ProcedureUALCoughGagRetchChange",
-              "title": "Did the coughing, gagging or retching get better or worse with time?",
-              "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
+              "title": "Over time, did {CmpnName} cough, gag, or retch more or less frequently?",
+              "description": "1 = more frequently, 3 = stayed about the same, 5 = less frequently",
               "isRequired": true,
               "visibleIf": "{ProcedureUALCoughGagRetch} = 'YES'",
               "rateValues": [
@@ -542,8 +562,8 @@
             {
               "type": "rating",
               "name": "ProcedureUALRegurgitateChange",
-              "title": "Did the regurgitation get less or more frequent with time?",
-              "description": "1 = less frequent, 3 = stayed about the same, 5 = more frequent",
+              "title": "Over time, did {CmpnName} regurgitate food or water more or less frequently?",
+              "description": "1 = more frequently, 3 = stayed about the same, 5 = less frequently",
               "isRequired": true,
               "visibleIf": "{ProcedureUALRegurgitate} = 'YES'",
               "rateValues": [
@@ -578,8 +598,8 @@
             {
               "type": "rating",
               "name": "ProcedureUALMucusChange",
-              "title": "Did the mucus or phlegm production decrease or increase over time?",
-              "description": "1 = decreased, 3 = stayed about the same, 5 = increased",
+              "title": "Over time, did {CmpnName} cough up mucus or phlegm more or less frequently?",
+              "description": "1 = more frequently, 3 = stayed about the same, 5 = less frequently",
               "isRequired": true,
               "visibleIf": "{ProcedureUALMucus} = 'YES'",
               "rateValues": [

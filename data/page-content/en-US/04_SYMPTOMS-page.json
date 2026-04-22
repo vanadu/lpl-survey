@@ -120,7 +120,14 @@
               "description": "1 = mild, 5 = severe",
               "displayMode": "buttons", 
               "isRequired": true
-            },
+            }
+
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "SymptomsIntubationPanel",
+          "elements": [
             {
               "type": "radiogroup",
               "name": "SymptomsNeckRestraint",
@@ -140,15 +147,8 @@
                   "text": "Don't know"
                 }
               ],
-              "showOtherItem": false,
-              "swapOrder": true
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "SymptomsIntubationPanel",
-          "elements": [
+              "showOtherItem": false
+            },
             {
               "type": "radiogroup",
               "name": "SymptomsIntubationWasIntubated",

@@ -452,7 +452,7 @@ export default function SurveyComponentMaster() {
         },
         {
           source: "SymptomsOtherConditionsType",
-          target: "ConclusionOtherConditions",
+          target: "ConclusionOtherHealthIssuesNew",
           options: { onlyIfEmpty: true, copyOther: true },
         },
       ],

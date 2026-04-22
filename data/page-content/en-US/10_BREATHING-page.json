@@ -14,345 +14,346 @@
           "type": "html",
           "name": "BreathingText",
           "html": "<p>This section asks questions about {CmpnName}'s experience with breathing crises and aspiration pneumonia. </p>"
+        },
+        {
+          "type": "panel",
+          "name": "BreathingCrisisPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisDidHave",
+              "title": "Did {CmpnName} ever have a breathing crisis that caused you to fear for {cvGenderObjectPronoun} life?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "BreathingCrisisCount",
+              "title": "How many such breathing crises did {CmpnName} have?",
+              "isRequired": true,
+              "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
+              "choices": [
+                {
+                  "value": 1,
+                  "text": "One"
+                },
+                {
+                  "value": 2,
+                  "text": "Two"
+                },
+                {
+                  "value": 3,
+                  "text": "Three"
+                },
+                {
+                  "value": 4,
+                  "text": "Four"
+                },
+                {
+                  "value": 5,
+                  "text": "Five"
+                },
+                {
+                  "value": 6,
+                  "text": "Six or more"
+                }
+
+              ],
+              "showOtherItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingEmergencyDidHave",
+              "title": "Did {CmpnName} ever have a breathing emergency that required a visit to a veterinary professional?",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "BreathingEmergencyCount",
+              "title": "How many visits did {CmpnName} make to veterinary professionals because of a breathing crisis?",
+              "visibleIf": "{BreathingEmergencyDidHave} = 'YES'",   
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": 1,
+                  "text": "One"
+                },
+                {
+                  "value": 2,
+                  "text": "Two"
+                },
+                {
+                  "value": 3,
+                  "text": "Three"
+                },
+                {
+                  "value": 4,
+                  "text": "Four"
+                },
+                {
+                  "value": 5,
+                  "text": "Five"
+                },
+                {
+                  "value": 6,
+                  "text": "Six or more"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "dropdown",
+              "name": "BreathingEmergencyCost",
+              "title": "About what was the total pre-insurance cost of these visits?",
+              "visibleIf": "{BreathingEmergencyDidHave} = 'YES'",   
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "LESS_THAN_250",
+                  "text": "Less than $250"
+                },
+                {
+                  "value": "250_500",
+                  "text": "$250 - $500"
+                },
+                {
+                  "value": "500_1000",
+                  "text": "$500 - $1000"
+                },
+                {
+                  "value": "MORE_THAN_1000",
+                  "text": "More than $1000"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or prefer not to say"
+                }
+              ],
+              "showOtherItem": false,
+              "showNoneItem": false
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisAdvice",
+              "title": "Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "BreathingCrisisAdviceType",
+              "title": "What advice did they give you to help you deal with a breathing crisis?",
+              "description": "Please check all that apply",
+              "isRequired": true,
+              "visibleIf": "{BreathingCrisisAdvice} = 'YES'",
+              "choices": [
+                {
+                  "value": "SEDATIVE",
+                  "text": "Adminster a sedative"
+                },
+                {
+                  "value": "COOL_PLACE",
+                  "text": "Get them to a cool place"
+                },
+                {
+                  "value": "SUPPLEMENTAL_OXYGEN",
+                  "text": "Administer supplemental oxygen"
+                },
+                {
+                  "value": "COOLING_AGENT",
+                  "text": "Apply ice, a cooling vest, or some other cooling agent"
+                },
+                {
+                  "value": "BLOW_AIR",
+                  "text": "Blow air into their nose (CPR)"
+                },
+                {
+                  "value": "EMERGENCY_FACILITY",
+                  "text": "Bring them to an emergency facility immediately"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingCrisisProductRecommended",
+              "title": "Did a veterinary professional recommend or provide you with a substance or product to deal with a breathing crisis?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ],
+              "showOtherItem": false
+            },
+            {
+            "type": "checkbox",
+            "name": "BreathingCrisisProductRecommendedType",
+            "title": "What substance or product did they provide or recommend?",
+            "isRequired": true,
+            "visibleIf": "{BreathingCrisisProductRecommended} = 'YES'",
+            "choices": [
+              {
+                "value": "SEDATIVE",
+                "text": "Sedative"
+              },
+              {
+                "value": "STEROID",
+                "text": "Steroid, i.e., prednisone"
+              },
+              {
+                "value": "OXYGEN",
+                "text": "Supplemental oxygen"
+              }
+            ],
+            "showOtherItem": true
+            },
+            {
+            "type": "dropdown",
+            "name": "BreathingCrisisProductRecommendedForm",
+            "title": "In what form was the sedative or steroid provided?",
+            "isRequired": true,
+            "visibleIf": "{BreathingCrisisProductRecommended} = 'STEROID' || {BreathingCrisisProductRecommended} = 'SEDATIVE'",
+            "choices": [
+              {
+                "value": "INJECTIBLE",
+                "text": "Injectible"
+              },
+              {
+                "value": "LIQUID",
+                "text": "Liquid"
+              },
+              {
+                "value": "SUPPOSITORY",
+                "text": "Suppository"
+              },
+              {
+                "value": "GEL",
+                "text": "Gel or paste"
+              },
+              {
+                "value": "PILL",
+                "text": "Pill or tablet"
+              },
+              {
+                "value": "DONT_KNOW",
+                "text": "Don't know"
+              }
+            ],
+            "showOtherItem": true,
+            "showNoneItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "BreathingOxygenDidUse",
+              "title": "Did you ever use a supplemental oxygen product for {CmpnName}?",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "BreathingCrisisOxygenPrevent",
+              "title": "Did the supplemental oxygen help prevent a breathing crisis?",
+              "description": "1 - did not help at all,  3 = helped somewhat, 5 = helped very much",
+              "isRequired": true,
+              "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
+              "displayMode": "buttons",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "BreathingCrisisOxygenRevive",
+              "title": "Did the supplemental oxygen help revive {CmpnName} from a breathing crisis?",
+              "description": "1 - did not help at all, 3 = helped somewhat, 5 = helped very much",
+              "isRequired": true,
+              "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
+              "displayMode": "buttons",
+              "rateValues": [
+                { "value": 1, "text": "1" },
+                { "value": 2, "text": "2" },
+                { "value": 3, "text": "3" },
+                { "value": 4, "text": "4" },
+                { "value": 5, "text": "5" },
+                { "value": "DONT_KNOW", "text": "Don't know" }
+              ]
+            }
+          ]
         }
       ]
     },
 
-    {
-      "type": "panel",
-      "name": "BreathingCrisisPanel",
-      "elements": [
-        {
-          "type": "radiogroup",
-          "name": "BreathingCrisisDidHave",
-          "title": "Did {CmpnName} ever have a breathing crisis that caused you to fear for {cvGenderObjectPronoun} life?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "YES",
-              "text": "Yes"
-            },
-            {
-              "value": "NO",
-              "text": "No"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            }
-          ],
-          "showOtherItem": false
-        },
-        {
-          "type": "dropdown",
-          "name": "BreathingCrisisCount",
-          "title": "How many such breathing crises did {CmpnName} have?",
-          "isRequired": true,
-          "visibleIf": "{BreathingCrisisDidHave} = 'YES'",
-          "choices": [
-            {
-              "value": 1,
-              "text": "One"
-            },
-            {
-              "value": 2,
-              "text": "Two"
-            },
-            {
-              "value": 3,
-              "text": "Three"
-            },
-            {
-              "value": 4,
-              "text": "Four"
-            },
-            {
-              "value": 5,
-              "text": "Five"
-            },
-            {
-              "value": 6,
-              "text": "Six or more"
-            }
 
-          ],
-          "showOtherItem": false
-        },
-        {
-          "type": "radiogroup",
-          "name": "BreathingEmergencyDidHave",
-          "title": "Did {CmpnName} ever have a breathing emergency that required a visit to a veterinary professional?",
-          "choices": [
-            {
-              "value": "YES",
-              "text": "Yes"
-            },
-            {
-              "value": "NO",
-              "text": "No"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            }
-          ],
-          "showOtherItem": false,
-          "showNoneItem": false
-        },
-        {
-          "type": "dropdown",
-          "name": "BreathingEmergencyCount",
-          "title": "How many visits did {CmpnName} make to veterinary professionals because of a breathing crisis?",
-          "visibleIf": "{BreathingEmergencyDidHave} = 'YES'",   
-          "isRequired": true,
-          "choices": [
-            {
-              "value": 1,
-              "text": "One"
-            },
-            {
-              "value": 2,
-              "text": "Two"
-            },
-            {
-              "value": 3,
-              "text": "Three"
-            },
-            {
-              "value": 4,
-              "text": "Four"
-            },
-            {
-              "value": 5,
-              "text": "Five"
-            },
-            {
-              "value": 6,
-              "text": "Six or more"
-            }
-          ],
-          "showOtherItem": false,
-          "showNoneItem": false
-        },
-        {
-          "type": "dropdown",
-          "name": "BreathingEmergencyCost",
-          "title": "About what was the total pre-insurance cost of these visits?",
-          "visibleIf": "{BreathingEmergencyDidHave} = 'YES'",   
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "LESS_THAN_250",
-              "text": "Less than $250"
-            },
-            {
-              "value": "250_500",
-              "text": "$250 - $500"
-            },
-            {
-              "value": "500_1000",
-              "text": "$500 - $1000"
-            },
-            {
-              "value": "MORE_THAN_1000",
-              "text": "More than $1000"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know or prefer not to say"
-            }
-          ],
-          "showOtherItem": false,
-          "showNoneItem": false
-        },
-        {
-          "type": "radiogroup",
-          "name": "BreathingCrisisAdvice",
-          "title": "Did a veterinary professional give you any advice on how to deal with an LP-induced breathing emergency/crisis?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "YES",
-              "text": "Yes"
-            },
-            {
-              "value": "NO",
-              "text": "No"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            }
-          ]
-        },
-        {
-          "type": "checkbox",
-          "name": "BreathingCrisisAdviceType",
-          "title": "What advice did they give you to help you deal with a breathing crisis?",
-          "description": "Please check all that apply",
-          "isRequired": true,
-          "visibleIf": "{BreathingCrisisAdvice} = 'YES'",
-          "choices": [
-            {
-              "value": "SEDATIVE",
-              "text": "Adminster a sedative"
-            },
-            {
-              "value": "COOL_PLACE",
-              "text": "Get them to a cool place"
-            },
-            {
-              "value": "SUPPLEMENTAL_OXYGEN",
-              "text": "Administer supplemental oxygen"
-            },
-            {
-              "value": "COOLING_AGENT",
-              "text": "Apply ice, a cooling vest, or some other cooling agent"
-            },
-            {
-              "value": "BLOW_AIR",
-              "text": "Blow air into their nose (CPR)"
-            },
-            {
-              "value": "EMERGENCY_FACILITY",
-              "text": "Bring them to an emergency facility immediately"
-            }
-          ],
-          "showOtherItem": true
-        },
-        {
-          "type": "radiogroup",
-          "name": "BreathingCrisisProductRecommended",
-          "title": "Did a veterinary professional recommend or provide you with a substance or product to deal with a breathing crisis?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "YES",
-              "text": "Yes"
-            },
-            {
-              "value": "NO",
-              "text": "No"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            }
-          ],
-          "showOtherItem": false
-        },
-        {
-        "type": "checkbox",
-        "name": "BreathingCrisisProductRecommendedType",
-        "title": "What substance or product did they provide or recommend?",
-        "isRequired": true,
-        "visibleIf": "{BreathingCrisisProductRecommended} = 'YES'",
-        "choices": [
-          {
-            "value": "SEDATIVE",
-            "text": "Sedative"
-          },
-          {
-            "value": "STEROID",
-            "text": "Steroid, i.e., prednisone"
-          },
-          {
-            "value": "OXYGEN",
-            "text": "Supplemental oxygen"
-          }
-        ],
-        "showOtherItem": true
-        },
-        {
-        "type": "dropdown",
-        "name": "BreathingCrisisProductRecommendedForm",
-        "title": "In what form was the sedative or steroid provided?",
-        "isRequired": true,
-        "visibleIf": "{BreathingCrisisProductRecommended} = 'STEROID' || {BreathingCrisisProductRecommended} = 'SEDATIVE'",
-        "choices": [
-          {
-            "value": "INJECTIBLE",
-            "text": "Injectible"
-          },
-          {
-            "value": "LIQUID",
-            "text": "Liquid"
-          },
-          {
-            "value": "SUPPOSITORY",
-            "text": "Suppository"
-          },
-          {
-            "value": "GEL",
-            "text": "Gel or paste"
-          },
-          {
-            "value": "PILL",
-            "text": "Pill or tablet"
-          },
-          {
-            "value": "DONT_KNOW",
-            "text": "Don't know"
-          }
-        ],
-        "showOtherItem": true,
-        "showNoneItem": true
-        },
-        {
-          "type": "radiogroup",
-          "name": "BreathingOxygenDidUse",
-          "title": "Did you ever use a supplemental oxygen product for {CmpnName}?",
-          "choices": [
-            {
-              "value": "YES",
-              "text": "Yes"
-            },
-            {
-              "value": "NO",
-              "text": "No"
-            },
-            {
-              "value": "DONT_KNOW",
-              "text": "Don't know"
-            }
-          ]
-        },
-        {
-          "type": "rating",
-          "name": "BreathingCrisisOxygenPrevent",
-          "title": "Did the supplemental oxygen help prevent a breathing crisis?",
-          "description": "1 - did not help at all,  3 = helped somewhat, 5 = helped very much",
-          "isRequired": true,
-          "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
-          "displayMode": "buttons",
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" },
-            { "value": "DONT_KNOW", "text": "Don't know" }
-          ]
-        },
-        {
-          "type": "rating",
-          "name": "BreathingCrisisOxygenRevive",
-          "title": "Did the supplemental oxygen help revive {CmpnName} from a breathing crisis?",
-          "description": "1 - did not help at all, 3 = helped somewhat, 5 = helped very much",
-          "isRequired": true,
-          "visibleIf": "{BreathingOxygenDidUse} = 'YES'",
-          "displayMode": "buttons",
-          "rateValues": [
-            { "value": 1, "text": "1" },
-            { "value": 2, "text": "2" },
-            { "value": 3, "text": "3" },
-            { "value": 4, "text": "4" },
-            { "value": 5, "text": "5" },
-            { "value": "DONT_KNOW", "text": "Don't know" }
-          ]
-        }
-      ]
-    },
     {
       "type": "panel",
       "name": "BreathingCard2Panel",
@@ -361,7 +362,6 @@
           "type": "panel",
           "name": "BreathingAspirationPanel",
           "elements": [
-
             {
               "type": "radiogroup",
               "name": "BreathingAspirationDidHave",

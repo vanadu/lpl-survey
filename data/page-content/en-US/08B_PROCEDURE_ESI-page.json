@@ -147,26 +147,6 @@
             },
             {
               "type": "radiogroup",
-              "name": "ProcedureESIIncisionComplications",
-              "title": "Did {CmpnName} have any infection or swelling at the incision site?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ]
-            },
-            {
-              "type": "radiogroup",
               "name": "ProcedureESIOralBleeding",
               "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
               "isRequired": true,

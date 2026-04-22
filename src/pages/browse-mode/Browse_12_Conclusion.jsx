@@ -226,7 +226,7 @@ const Browse_12_Conclusion = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How has Bella&lsquo;s quality of life changed since the first LP/GOLPP symptoms appeared?
+              Do you feel like Bella&lsquo;s quality of life has changed since the first LP/GOLPP symptoms appeared?
             </span>
           }
           index={5}
@@ -236,9 +236,40 @@ const Browse_12_Conclusion = () => {
 
           <div className="showanswer__content-block">
           <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ConclusionQOLIssues">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              How has Bella&lsquo;s quality of life changed since the first LP/GOLPP symptoms appeared?
+            </span>
+          }
+          index={6}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>No significant change</span>
+              <span>Noticeable pain or discomfort</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -246,7 +277,7 @@ const Browse_12_Conclusion = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Frequent falling while walking</span>
+              <span>Frequent falling</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -280,7 +311,7 @@ const Browse_12_Conclusion = () => {
               How would you rate Bella&lsquo;s quality of life at this stage?
             </span>
           }
-          index={6}
+          index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -422,7 +453,7 @@ const Browse_12_Conclusion = () => {
               Did Bella develop any new health issues during her LP/GOLPP journey?
             </span>
           }
-          index={7}
+          index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -449,7 +480,7 @@ const Browse_12_Conclusion = () => {
               What new health issues did Bella develop during her LP/GOLPP journey?
             </span>
           }
-          index={8}
+          index={9}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -504,7 +535,7 @@ const Browse_12_Conclusion = () => {
               Has Bella&lsquo;s LP/GOLPP resulted in a substantial change to your lifestyle?
             </span>
           }
-          index={9}
+          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -644,7 +675,7 @@ const Browse_12_Conclusion = () => {
               Has Bella&lsquo;s LP/GOLPP caused you or anyone in your family significant emotional distress or anxiety?
             </span>
           }
-          index={10}
+          index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -792,7 +823,7 @@ const Browse_12_Conclusion = () => {
               What was the ultimate reason why Bella crossed over the Rainbow Bridge?
             </span>
           }
-          index={11}
+          index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -842,7 +873,7 @@ const Browse_12_Conclusion = () => {
               ConclusionOtherPath
             </span>
           }
-          index={12}
+          index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -873,7 +904,7 @@ const Browse_12_Conclusion = () => {
               What do you think you would do differently?
             </span>
           }
-          index={13}
+          index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -904,7 +935,7 @@ const Browse_12_Conclusion = () => {
               If you had another LP/GOLPP dog, would you do the surgical/stent procedure earlier or later?
             </span>
           }
-          index={14}
+          index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -939,7 +970,7 @@ const Browse_12_Conclusion = () => {
               If you were to have another LP/GOLPP companion, what if anything would you differently?
             </span>
           }
-          index={15}
+          index={16}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -970,7 +1001,7 @@ const Browse_12_Conclusion = () => {
               Please add any brief comments about your LP/GOLPP journey (optional, maximum 250 characters).
             </span>
           }
-          index={16}
+          index={17}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

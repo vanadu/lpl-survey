@@ -281,7 +281,9 @@ const Browse_04_Symptoms = () => {
           </div>
         </ShowAnswerContent>
       </div>
+      </div>
 
+      <div className="browse-panel-container" id="SymptomsIntubationPanel">
       <div className="browse-question-container" id="SymptomsNeckRestraint">
         <ShowAnswerContent
           header={
@@ -312,9 +314,7 @@ const Browse_04_Symptoms = () => {
           </div>
         </ShowAnswerContent>
       </div>
-      </div>
 
-      <div className="browse-panel-container" id="SymptomsIntubationPanel">
       <div className="browse-question-container" id="SymptomsIntubationWasIntubated">
         <ShowAnswerContent
           header={
