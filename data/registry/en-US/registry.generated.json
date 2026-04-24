@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-24T09:10:24.992Z",
+    "builtAt": "2026-04-24T10:27:18.191Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -6228,7 +6228,7 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE_OTHER-page"
+        "PROCEDURE_Other-page"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -6239,11 +6239,11 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel"
       ],
       "hasTitle": true,
-      "title": "At about what age did {CmpnName} have the LP/GOLPP surgery?",
+      "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the ventrilucordectomy surgery for LP?",
       "hasVisibleIf": false
     },
     "ProcedureOtherAgeDetailsPanel": {
@@ -6252,7 +6252,7 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
         "ProcedureOtherAgePanel"
       ],
@@ -6266,7 +6266,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
         "ProcedureOtherAgePanel",
         "ProcedureOtherAgeDetailsPanel"
@@ -6283,7 +6283,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
         "ProcedureOtherAgePanel",
         "ProcedureOtherAgeDetailsPanel"
@@ -6300,7 +6300,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
         "ProcedureOtherAgePanel"
       ],
@@ -6316,7 +6316,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
         "ProcedureOtherAgePanel"
       ],
@@ -6326,13 +6326,58 @@
       "visibleIf": "{ProcedureDidHave} = true && {ProcedureOtherScheduled} = true",
       "isRequired": true
     },
+    "ProcedureOtherDifference": {
+      "name": "ProcedureOtherDifference",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon explain the difference between the ventrilucordectomy and other surgery or procedure types?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherLaser": {
+      "name": "ProcedureOtherLaser",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Was the ventrilucordectomy performed with a laser?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherChoice": {
+      "name": "ProcedureOtherChoice",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherAgePanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the surgeon offer you a choice between ventrilucordectomy and any other procedure type?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "ProcedureOtherSurgeryPanel": {
       "name": "ProcedureOtherSurgeryPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel"
       ],
       "hasTitle": false,
@@ -6344,7 +6389,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
         "ProcedureOtherSurgeryPanel"
       ],
@@ -6359,7 +6404,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
         "ProcedureOtherSurgeryPanel"
       ],
@@ -6374,7 +6419,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
         "ProcedureOtherSurgeryPanel"
       ],
@@ -6389,29 +6434,14 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
         "ProcedureOtherSurgeryPanel"
       ],
       "hasTitle": true,
       "title": "Why did {CmpnName} need extended inpatient care?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureOtherExtendedStayTiebackRepeat": {
-      "name": "ProcedureOtherExtendedStayTiebackRepeat",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE_OTHER-page",
-        "ProcedureOtherCard1Panel",
-        "ProcedureOtherSurgeryPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did the surgeon aOtherempt a second tieback on the other side?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureOtherExtendedStayReason} contains 'SUTURE_FAILURE'",
+      "visibleIf": "{ProcedureOtherExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
       "isRequired": true
     },
     "ProcedureOtherFollowupCare": {
@@ -6420,7 +6450,7 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
         "ProcedureOtherSurgeryPanel"
       ],
@@ -6435,14 +6465,26 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
         "ProcedureOtherSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "What medications did you receive from {CmpnName} after the surgery?",
+      "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
       "hasVisibleIf": false,
       "isRequired": true
+    },
+    "ProcedureOtherCostPanel": {
+      "name": "ProcedureOtherCostPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "ProcedureOtherCost": {
       "name": "ProcedureOtherCost",
@@ -6450,9 +6492,9 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
-        "ProcedureOtherSurgeryPanel"
+        "ProcedureOtherCostPanel"
       ],
       "hasTitle": true,
       "title": "About what was the cost of the surgery, not including post-operative complications?",
@@ -6466,9 +6508,9 @@
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
+        "PROCEDURE_Other-page",
         "ProcedureOtherCard1Panel",
-        "ProcedureOtherSurgeryPanel"
+        "ProcedureOtherCostPanel"
       ],
       "hasTitle": true,
       "title": "About what was total cost of the complications of the surgery?",
@@ -6482,22 +6524,217 @@
       "role": "panel",
       "collect": false,
       "path": [
-        "PROCEDURE_OTHER-page"
+        "PROCEDURE_Other-page"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "XXX": {
-      "name": "XXX",
+    "ProcedureOtherConditionPanel": {
+      "name": "ProcedureOtherConditionPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureOtherBreathingPostOp": {
+      "name": "ProcedureOtherBreathingPostOp",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "How would you rate {CmpnName}'s breathing in the time right after the ventrilucordectomy surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherCoughGagRetch": {
+      "name": "ProcedureOtherCoughGagRetch",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
       "path": [
-        "PROCEDURE_OTHER-page",
-        "ProcedureOtherCard2Panel"
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherConditionPanel"
       ],
       "hasTitle": true,
-      "title": "sdradio3",
+      "title": "Did {CmpnName} cough, gag, or retch more than before the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherCoughGagRetchChange": {
+      "name": "ProcedureOtherCoughGagRetchChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the coughing, gagging or retching get better or worse with time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureOtherCoughGagRetch} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureOtherBadBreath": {
+      "name": "ProcedureOtherBadBreath",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} develop bad breath after the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherBadBreathChange": {
+      "name": "ProcedureOtherBadBreathChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the bad breath get better or worse over time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureOtherBadBreath} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureOtherRegurgitate": {
+      "name": "ProcedureOtherRegurgitate",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} regurgitate food or water more frequently than before the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherRegurgitateChange": {
+      "name": "ProcedureOtherRegurgitateChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the regurgitation get less or more frequent with time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureOtherRegurgitate} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureOtherMucus": {
+      "name": "ProcedureOtherMucus",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did {CmpnName} cough up mucus or phlegm more frequently than before the procedure?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherMucusChange": {
+      "name": "ProcedureOtherMucusChange",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherConditionPanel"
+      ],
+      "hasTitle": true,
+      "title": "Did the mucus or phlegm production decrease or increase over time?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureOtherMucus} = 'YES'",
+      "isRequired": true
+    },
+    "ProcedureOtherLongTermPanel": {
+      "name": "ProcedureOtherLongTermPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureOtherBreathingLongTerm": {
+      "name": "ProcedureOtherBreathingLongTerm",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherLongTermPanel"
+      ],
+      "hasTitle": true,
+      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the ventrilucordectomy surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureOtherSymptomsReturnedTime": {
+      "name": "ProcedureOtherSymptomsReturnedTime",
+      "type": "dropdown",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherLongTermPanel"
+      ],
+      "hasTitle": true,
+      "title": "How long did it take for the LP symptoms to return?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureOtherBreathingLongTerm} = 'SYMPTOMS_RETURNED'",
+      "isRequired": true
+    },
+    "ProcedureOtherSatisfaction": {
+      "name": "ProcedureOtherSatisfaction",
+      "type": "rating",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard2Panel",
+        "ProcedureOtherLongTermPanel"
+      ],
+      "hasTitle": true,
+      "title": "How would you rate your satisfaction with {CmpnName}'s ventrilucordectomy procedure?",
       "hasVisibleIf": false,
       "isRequired": true
     },
