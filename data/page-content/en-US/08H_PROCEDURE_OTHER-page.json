@@ -9,17 +9,17 @@
         {
               "type": "html",
               "name": "ProcedureOtherHeading",
-              "html": "<h2>Questions About {CmpnName}'s Ventrilucordectomy Surgery<h2>"
+              "html": "<h2>Questions About {CmpnName}'s LP Surgery<h2>"
         },
         {
               "type": "html",
               "name": "ProcedureOtherText",
-              "html": "<p>Ventrilucordectomy is often referred to as vocal fold excision, vocal cord removal, or debarking. As a treatment for LP, the procedure removes the patient&lsquo;s vocal cords which creates a larger airway through the paralyzed larynx, allowing the patient to breathe better.</p>"
+              "html": "<p>If you're not sure what kind of surgery or procedure {CmpnName} had, please fill out the survey as best as you can.</p>"
         },
         {
           "type": "panel",
           "name": "ProcedureOtherAgePanel",
-          "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the ventrilucordectomy surgery for LP?",
+          "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the LP surgery?",
           "elements": [
             {
               "type": "panel",
@@ -102,7 +102,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureOtherDifference",
-              "title": "Did the surgeon explain the difference between the ventrilucordectomy and other surgery or procedure types?",
+              "title": "Did the surgeon explain the difference between the surgery {CmpnName} had other surgery or procedure types?",
               "isRequired": true,
               "choices": [
                 {
@@ -123,7 +123,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureOtherLaser",
-              "title": "Was the ventrilucordectomy performed with a laser?",
+              "title": "Was the LP surgery {CmpnName} had performed with a laser?",
               "isRequired": true,
               "choices": [
                 {
@@ -144,7 +144,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureOtherChoice",
-              "title": "Did the surgeon offer you a choice between ventrilucordectomy and any other procedure type?",
+              "title": "Did the surgeon offer you a choice between the surgery type {CmpnName} had and any other procedure type?",
               "isRequired": true,
               "choices": [
                 {
@@ -443,7 +443,7 @@
             {
               "type": "rating",
               "name": "ProcedureOtherBreathingPostOp",
-              "title": "How would you rate {CmpnName}'s breathing in the time right after the ventrilucordectomy surgery?",
+              "title": "How would you rate {CmpnName}'s breathing in the time right after the LP surgery?",
               "description": "1 = no improvement, 3 = moderate improvement, 5 = very much improved",
               "isRequired": true,
               "rateValues": [
@@ -606,12 +606,12 @@
             {
               "type": "html",
               "name": "ProcedureOtherLongTermHeading",
-              "html": "<h4>These questions are about the long-term effects of {CmpnName}'s ventrilucordectomy surgery.</h4>"
+              "html": "<h4>These questions are about the long-term effects of {CmpnName}'s LP surgery.</h4>"
             },
             {
               "type": "radiogroup",
               "name": "ProcedureOtherBreathingLongTerm",
-              "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the ventrilucordectomy surgery?",
+              "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the LP surgery?",
               "isRequired": true,
               "choices": [
                 {
@@ -669,7 +669,7 @@
             {
               "type": "rating",
               "name": "ProcedureOtherSatisfaction",
-              "title": "How would you rate your satisfaction with {CmpnName}'s ventrilucordectomy procedure?",
+              "title": "How would you rate your satisfaction with the procedure {CmpnName} had?",
               "description": "1 = not at all satisfied, 3 = moderately satisfied, 5 = very satisfied",
               "isRequired": true,
               "rateValues": [
