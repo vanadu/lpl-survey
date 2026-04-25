@@ -152,6 +152,7 @@ function main() {
     );
   } catch (err) {
     console.error("❌ Schema build failed:", err);
+    process.exit(1);
   }
 }
 

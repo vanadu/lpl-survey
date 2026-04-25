@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-24T10:27:18.191Z",
+    "builtAt": "2026-04-25T09:37:43.051Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -6243,7 +6243,7 @@
         "ProcedureOtherCard1Panel"
       ],
       "hasTitle": true,
-      "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the ventrilucordectomy surgery for LP?",
+      "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the LP surgery?",
       "hasVisibleIf": false
     },
     "ProcedureOtherAgeDetailsPanel": {
@@ -6337,7 +6337,7 @@
         "ProcedureOtherAgePanel"
       ],
       "hasTitle": true,
-      "title": "Did the surgeon explain the difference between the ventrilucordectomy and other surgery or procedure types?",
+      "title": "Did the surgeon explain the difference between the surgery {CmpnName} had other surgery or procedure types?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -6352,7 +6352,7 @@
         "ProcedureOtherAgePanel"
       ],
       "hasTitle": true,
-      "title": "Was the ventrilucordectomy performed with a laser?",
+      "title": "Was the LP surgery {CmpnName} had performed with a laser?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -6367,7 +6367,7 @@
         "ProcedureOtherAgePanel"
       ],
       "hasTitle": true,
-      "title": "Did the surgeon offer you a choice between ventrilucordectomy and any other procedure type?",
+      "title": "Did the surgeon offer you a choice between the surgery type {CmpnName} had and any other procedure type?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -6552,7 +6552,7 @@
         "ProcedureOtherConditionPanel"
       ],
       "hasTitle": true,
-      "title": "How would you rate {CmpnName}'s breathing in the time right after the ventrilucordectomy surgery?",
+      "title": "How would you rate {CmpnName}'s breathing in the time right after the LP surgery?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -6703,7 +6703,7 @@
         "ProcedureOtherLongTermPanel"
       ],
       "hasTitle": true,
-      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the ventrilucordectomy surgery?",
+      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the LP surgery?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -6734,7 +6734,7 @@
         "ProcedureOtherLongTermPanel"
       ],
       "hasTitle": true,
-      "title": "How would you rate your satisfaction with {CmpnName}'s ventrilucordectomy procedure?",
+      "title": "How would you rate your satisfaction with the procedure {CmpnName} had?",
       "hasVisibleIf": false,
       "isRequired": true
     },

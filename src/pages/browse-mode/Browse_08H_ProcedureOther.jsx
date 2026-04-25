@@ -38,15 +38,15 @@ const Browse_08H_ProcedureOther = () => {
 
       <div className="browse-panel-container" id="ProcedureOtherCard1Panel">
       <div className="browse-content-block" id="ProcedureOtherHeading">
-        <h2 className="browse-content-heading">Questions About Bella&lsquo;s Ventrilucordectomy Surgery</h2>
+        <h2 className="browse-content-heading">Questions About Bella&lsquo;s LP Surgery</h2>
       </div>
 
       <div className="browse-content-block" id="ProcedureOtherText">
-        <p className="browse-content-text">Ventrilucordectomy is often referred to as vocal fold excision, vocal cord removal, or debarking. As a treatment for LP, the procedure removes the patient&amp;lsquo;s vocal cords which creates a larger airway through the paralyzed larynx, allowing the patient to breathe better.</p>
+        <p className="browse-content-text">If you&lsquo;re not sure what kind of surgery or procedure Bella had, please fill out the survey as best as you can.</p>
       </div>
 
       <div className="browse-panel-container" id="ProcedureOtherAgePanel">
-        <h3 className="browse-showanswer-title">About how old was Bella when she had the ventrilucordectomy surgery for LP?</h3>
+        <h3 className="browse-showanswer-title">About how old was Bella when she had the LP surgery?</h3>
       <div className="browse-panel-container" id="ProcedureOtherAgeDetailsPanel">
       <div className="browse-question-container" id="ProcedureOtherAgeYears">
         <ShowAnswerContent
@@ -151,7 +151,7 @@ const Browse_08H_ProcedureOther = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon explain the difference between the ventrilucordectomy and other surgery or procedure types?
+              Did the surgeon explain the difference between the surgery Bella had other surgery or procedure types?
             </span>
           }
           index={5}
@@ -182,7 +182,7 @@ const Browse_08H_ProcedureOther = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Was the ventrilucordectomy performed with a laser?
+              Was the LP surgery Bella had performed with a laser?
             </span>
           }
           index={6}
@@ -213,7 +213,7 @@ const Browse_08H_ProcedureOther = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon offer you a choice between ventrilucordectomy and any other procedure type?
+              Did the surgeon offer you a choice between the surgery type Bella had and any other procedure type?
             </span>
           }
           index={7}
@@ -572,7 +572,7 @@ const Browse_08H_ProcedureOther = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How would you rate Bella&lsquo;s breathing in the time right after the ventrilucordectomy surgery?
+              How would you rate Bella&lsquo;s breathing in the time right after the LP surgery?
             </span>
           }
           index={16}
@@ -1395,14 +1395,14 @@ const Browse_08H_ProcedureOther = () => {
 
       <div className="browse-panel-container" id="ProcedureOtherLongTermPanel">
       <div className="browse-content-block" id="ProcedureOtherLongTermHeading">
-        <p className="browse-content-text">These questions are about the long-term effects of Bella&lsquo;s ventrilucordectomy surgery.</p>
+        <p className="browse-content-text">These questions are about the long-term effects of Bella&lsquo;s LP surgery.</p>
       </div>
 
       <div className="browse-question-container" id="ProcedureOtherBreathingLongTerm">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How would you describe how Bella&lsquo;s breathing changed in the months and years following the ventrilucordectomy surgery?
+              How would you describe how Bella&lsquo;s breathing changed in the months and years following the LP surgery?
             </span>
           }
           index={25}
@@ -1480,7 +1480,7 @@ const Browse_08H_ProcedureOther = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How would you rate your satisfaction with Bella&lsquo;s ventrilucordectomy procedure?
+              How would you rate your satisfaction with the procedure Bella had?
             </span>
           }
           index={27}
