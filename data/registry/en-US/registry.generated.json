@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-25T11:30:34.832Z",
+    "builtAt": "2026-04-25T14:16:09.306Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -3299,8 +3299,23 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureESIExtendedStayReason": {
-      "name": "ProcedureESIExtendedStayReason",
+    "ProcedureESIComplications": {
+      "name": "ProcedureESIComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel",
+        "ProcedureESISurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there unexpected complications during or immediately after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureESIComplicationsType": {
+      "name": "ProcedureESIComplicationsType",
       "type": "checkbox",
       "role": "question",
       "collect": true,
@@ -3310,13 +3325,13 @@
         "ProcedureESISurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Why did {CmpnName} need extended inpatient care?",
+      "title": "What was the nature of the complications that occurred during or immediately after the surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureESIExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
+      "visibleIf": "{ProcedureESIComplications} = 'YES'",
       "isRequired": true
     },
-    "ProcedureESIExtendedStayRepeatProcedure": {
-      "name": "ProcedureESIExtendedStayRepeatProcedure",
+    "ProcedureESIComplicationsRepeatProcedure": {
+      "name": "ProcedureESIComplicationsRepeatProcedure",
       "type": "radiogroup",
       "role": "question",
       "collect": true,
@@ -3328,7 +3343,7 @@
       "hasTitle": true,
       "title": "Did the surgeon attempt to implant another stent of a different size?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureESIExtendedStay} != 'NO' && {ProcedureESIExtendedStayReason} contains 'MIGRATED'",
+      "visibleIf": "{ProcedureESIComplicationsType} contains 'MIGRATED'",
       "isRequired": true
     },
     "ProcedureESIFollowupCare": {
@@ -3405,8 +3420,8 @@
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
     },
-    "ProcedureESIComplicationsCost": {
-      "name": "ProcedureESIComplicationsCost",
+    "ProcedureESIFollowupCost": {
+      "name": "ProcedureESIFollowupCost",
       "type": "dropdown",
       "role": "question",
       "collect": true,
@@ -3418,7 +3433,7 @@
       "hasTitle": true,
       "title": "About what was total cost of the complications of the stent procedure?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureESIExtendedStay} != 'NO' || {ProcedureESIFollowupCare} = 'YES'",
+      "visibleIf": "{ProcedureESIFollowupCare} = 'YES'",
       "isRequired": true
     },
     "ProcedureESICard2Panel": {
@@ -3485,7 +3500,7 @@
         "ProcedureESIConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the coughing, gagging or retching get better or worse with time?",
+      "title": "Did the coughing, gagging or retching get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureESICoughGagRetch} = 'YES'",
       "isRequired": true
@@ -3516,7 +3531,7 @@
         "ProcedureESIConditionPanel"
       ],
       "hasTitle": true,
-      "title": "How strong was {CmpnName}'s halitosis?",
+      "title": "How strong was {CmpnName}'s bad breath?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureType} contains 'ESI' && {ProcedureESIBadBreath} = 'YES'",
       "isRequired": true
@@ -3532,7 +3547,7 @@
         "ProcedureESIConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the bad breath get better or worse over time?",
+      "title": "Did the bad breath get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureESIBadBreath} = 'YES'",
       "isRequired": true
@@ -3563,7 +3578,7 @@
         "ProcedureESIConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the regurgitation get less or more frequent with time?",
+      "title": "Did the regurgitating get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureESIRegurgitate} = 'YES'",
       "isRequired": true
@@ -3594,7 +3609,7 @@
         "ProcedureESIConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the mucus or phlegm production decrease or increase over time?",
+      "title": "Did the mucus or phlegm production get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureESIMucus} = 'YES'",
       "isRequired": true
@@ -3622,7 +3637,7 @@
         "ProcedureESILongTermPanel"
       ],
       "hasTitle": true,
-      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the stent procedure?",
+      "title": "In the long-term, how did {CmpnName}'s breathing change over time after the stent procedure",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -3849,6 +3864,37 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "ProcedureBVEAPComplications": {
+      "name": "ProcedureBVEAPComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there unexpected complications during or immediately after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureBVEAPComplicationsType": {
+      "name": "ProcedureBVEAPComplicationsType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel",
+        "ProcedureBVEAPSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the nature of the complications that occurred during or immediately after the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureBVEAPComplications} = 'YES'",
+      "isRequired": true
+    },
     "ProcedureBVEAPExtendedStay": {
       "name": "ProcedureBVEAPExtendedStay",
       "type": "radiogroup",
@@ -3862,38 +3908,6 @@
       "hasTitle": true,
       "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
       "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureBVEAPExtendedStayReason": {
-      "name": "ProcedureBVEAPExtendedStayReason",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE_BVEAP-page",
-        "ProcedureBVEAPCard1Panel",
-        "ProcedureBVEAPSurgeryPanel"
-      ],
-      "hasTitle": true,
-      "title": "Why did {CmpnName} need extended inpatient care?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureBVEAPExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
-      "isRequired": true
-    },
-    "ProcedureBVEAPExtendedStayRepeatProcedure": {
-      "name": "ProcedureBVEAPExtendedStayRepeatProcedure",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE_BVEAP-page",
-        "ProcedureBVEAPCard1Panel",
-        "ProcedureBVEAPSurgeryPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did the surgeon attempt a second tieback on the other side?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureBVEAPExtendedStayReason} contains 'SUTURE_FAILURE'",
       "isRequired": true
     },
     "ProcedureBVEAPFollowupCare": {
@@ -3970,8 +3984,8 @@
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
     },
-    "ProcedureBVEAPComplicationsCost": {
-      "name": "ProcedureBVEAPComplicationsCost",
+    "ProcedureBVEAPFollowupCost": {
+      "name": "ProcedureBVEAPFollowupCost",
       "type": "dropdown",
       "role": "question",
       "collect": true,
@@ -3983,7 +3997,7 @@
       "hasTitle": true,
       "title": "About what was total cost of the complications of the surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureBVEAPExtendedStay} != 'NO' || {ProcedureBVEAPFollowupCare} = 'YES'",
+      "visibleIf": "{ProcedureBVEAPFollowupCare} = 'YES'",
       "isRequired": true
     },
     "ProcedureBVEAPCard2Panel": {
@@ -4050,7 +4064,7 @@
         "ProcedureBVEAPConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the coughing, gagging or retching get better or worse with time?",
+      "title": "Did the coughing, gagging or retching get worse or better with time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureBVEAPCoughGagRetch} = 'YES'",
       "isRequired": true
@@ -4081,7 +4095,7 @@
         "ProcedureBVEAPConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the bad breath get better or worse over time?",
+      "title": "Did the bad breath get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureBVEAPBadBreath} = 'YES'",
       "isRequired": true
@@ -4112,7 +4126,7 @@
         "ProcedureBVEAPConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the regurgitation get less or more frequent with time?",
+      "title": "Did the regurgitating get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureBVEAPRegurgitate} = 'YES'",
       "isRequired": true
@@ -4143,7 +4157,7 @@
         "ProcedureBVEAPConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the mucus or phlegm production decrease or increase over time?",
+      "title": "Did the mucus or phlegm production get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureBVEAPMucus} = 'YES'",
       "isRequired": true
@@ -4171,7 +4185,7 @@
         "ProcedureBVEAPLongTermPanel"
       ],
       "hasTitle": true,
-      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the BVEAP surgery?",
+      "title": "In the long-term, how did {CmpnName}'s breathing change over time after the surgery?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -4397,6 +4411,37 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "ProcedurePAEComplications": {
+      "name": "ProcedurePAEComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there unexpected complications during or immediately after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedurePAEComplicationsType": {
+      "name": "ProcedurePAEComplicationsType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel",
+        "ProcedurePAESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the nature of the complications that occurred during or immediately after the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedurePAEComplications} = 'YES'",
+      "isRequired": true
+    },
     "ProcedurePAEExtendedStay": {
       "name": "ProcedurePAEExtendedStay",
       "type": "radiogroup",
@@ -4410,22 +4455,6 @@
       "hasTitle": true,
       "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
       "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedurePAEExtendedStayReason": {
-      "name": "ProcedurePAEExtendedStayReason",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE_PAE-page",
-        "ProcedurePAECard1Panel",
-        "ProcedurePAESurgeryPanel"
-      ],
-      "hasTitle": true,
-      "title": "Why did {CmpnName} need extended inpatient care?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedurePAEExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
       "isRequired": true
     },
     "ProcedurePAEFollowupCare": {
@@ -4502,8 +4531,8 @@
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
     },
-    "ProcedurePAEComplicationsCost": {
-      "name": "ProcedurePAEComplicationsCost",
+    "ProcedurePAEFollowupCost": {
+      "name": "ProcedurePAEFollowupCost",
       "type": "dropdown",
       "role": "question",
       "collect": true,
@@ -4515,7 +4544,7 @@
       "hasTitle": true,
       "title": "About what was total cost of the complications of the surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedurePAEExtendedStay} != 'NO' || {ProcedurePAEFollowupCare} = 'YES'",
+      "visibleIf": "{ProcedurePAEFollowupCare} = 'YES'",
       "isRequired": true
     },
     "ProcedurePAECard2Panel": {
@@ -4582,7 +4611,7 @@
         "ProcedurePAEConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the coughing, gagging or retching get better or worse with time?",
+      "title": "Did the coughing, gagging or retching get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedurePAECoughGagRetch} = 'YES'",
       "isRequired": true
@@ -4613,7 +4642,7 @@
         "ProcedurePAEConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the bad breath get better or worse over time?",
+      "title": "Did the bad breath get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedurePAEBadBreath} = 'YES'",
       "isRequired": true
@@ -4644,7 +4673,7 @@
         "ProcedurePAEConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the regurgitation get less or more frequent with time?",
+      "title": "Did the regurgitating get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedurePAERegurgitate} = 'YES'",
       "isRequired": true
@@ -4675,7 +4704,7 @@
         "ProcedurePAEConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the mucus or phlegm production decrease or increase over time?",
+      "title": "Did the mucus or phlegm production get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedurePAEMucus} = 'YES'",
       "isRequired": true
@@ -4703,7 +4732,7 @@
         "ProcedurePAELongTermPanel"
       ],
       "hasTitle": true,
-      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the arytenoidectomy surgery?",
+      "title": "In the long-term, how did {CmpnName}'s breathing change over time?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -4929,6 +4958,37 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "ProcedureVCCComplications": {
+      "name": "ProcedureVCCComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there unexpected complications during or immediately after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureVCCComplicationsType": {
+      "name": "ProcedureVCCComplicationsType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel",
+        "ProcedureVCCSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the nature of the complications that occurred during or immediately after the surgery?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureVCCComplications} = 'YES'",
+      "isRequired": true
+    },
     "ProcedureVCCExtendedStay": {
       "name": "ProcedureVCCExtendedStay",
       "type": "radiogroup",
@@ -4942,22 +5002,6 @@
       "hasTitle": true,
       "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
       "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureVCCExtendedStayReason": {
-      "name": "ProcedureVCCExtendedStayReason",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE_VCC-page",
-        "ProcedureVCCCard1Panel",
-        "ProcedureVCCSurgeryPanel"
-      ],
-      "hasTitle": true,
-      "title": "Why did {CmpnName} need extended inpatient care?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureVCCExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
       "isRequired": true
     },
     "ProcedureVCCFollowupCare": {
@@ -5034,8 +5078,8 @@
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
     },
-    "ProcedureVCCComplicationsCost": {
-      "name": "ProcedureVCCComplicationsCost",
+    "ProcedureVCCFollowupCost": {
+      "name": "ProcedureVCCFollowupCost",
       "type": "dropdown",
       "role": "question",
       "collect": true,
@@ -5047,7 +5091,7 @@
       "hasTitle": true,
       "title": "About what was total cost of the complications of the surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureVCCExtendedStay} != 'NO' || {ProcedureVCCFollowupCare} = 'YES'",
+      "visibleIf": "{ProcedureVCCFollowupCare} = 'YES'",
       "isRequired": true
     },
     "ProcedureVCCCard2Panel": {
@@ -5114,7 +5158,7 @@
         "ProcedureVCCConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the coughing, gagging or retching get better or worse with time?",
+      "title": "Did the coughing, gagging or retching get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureVCCCoughGagRetch} = 'YES'",
       "isRequired": true
@@ -5145,7 +5189,7 @@
         "ProcedureVCCConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the bad breath get better or worse over time?",
+      "title": "Did the bad breath get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureVCCBadBreath} = 'YES'",
       "isRequired": true
@@ -5176,7 +5220,7 @@
         "ProcedureVCCConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the regurgitation get less or more frequent with time?",
+      "title": "Did the regurgitating get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureVCCRegurgitate} = 'YES'",
       "isRequired": true
@@ -5207,7 +5251,7 @@
         "ProcedureVCCConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the mucus or phlegm production decrease or increase over time?",
+      "title": "Did the mucus or phlegm production get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureVCCMucus} = 'YES'",
       "isRequired": true
@@ -5235,7 +5279,7 @@
         "ProcedureVCCLongTermPanel"
       ],
       "hasTitle": true,
-      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the ventrilucordectomy surgery?",
+      "title": "In the long-term, how did {CmpnName}'s breathing change over time after the surgery?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -5461,6 +5505,21 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "ProcedurePLEComplications": {
+      "name": "ProcedurePLEComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel",
+        "ProcedurePLESurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there unexpected complications during or immediately after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "ProcedurePLEExtendedStay": {
       "name": "ProcedurePLEExtendedStay",
       "type": "radiogroup",
@@ -5476,8 +5535,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedurePLEExtendedStayReason": {
-      "name": "ProcedurePLEExtendedStayReason",
+    "ProcedurePLEComplicationsType": {
+      "name": "ProcedurePLEComplicationsType",
       "type": "checkbox",
       "role": "question",
       "collect": true,
@@ -5487,9 +5546,9 @@
         "ProcedurePLESurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Why did {CmpnName} need extended inpatient care?",
+      "title": "What was the nature of the complications that occurred during or immediately after the surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedurePLEExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
+      "visibleIf": "{ProcedurePLEComplications} = 'YES'",
       "isRequired": true
     },
     "ProcedurePLEFollowupCare": {
@@ -5566,8 +5625,8 @@
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
     },
-    "ProcedurePLEComplicationsCost": {
-      "name": "ProcedurePLEComplicationsCost",
+    "ProcedurePLEFollowupCost": {
+      "name": "ProcedurePLEFollowupCost",
       "type": "dropdown",
       "role": "question",
       "collect": true,
@@ -5579,7 +5638,7 @@
       "hasTitle": true,
       "title": "About what was total cost of the complications of the surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedurePLEExtendedStay} != 'NO' || {ProcedurePLEFollowupCare} = 'YES'",
+      "visibleIf": "{ProcedurePLEFollowupCare} = 'YES'",
       "isRequired": true
     },
     "ProcedurePLECard2Panel": {
@@ -5646,7 +5705,7 @@
         "ProcedurePLEConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the coughing, gagging or retching get better or worse with time?",
+      "title": "Did the coughing, gagging or retching get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedurePLECoughGagRetch} = 'YES'",
       "isRequired": true
@@ -5677,7 +5736,7 @@
         "ProcedurePLEConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the bad breath get better or worse over time?",
+      "title": "Did the bad breath get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedurePLEBadBreath} = 'YES'",
       "isRequired": true
@@ -5708,7 +5767,7 @@
         "ProcedurePLEConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the regurgitation get less or more frequent with time?",
+      "title": "Did the regurgitating get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedurePLERegurgitate} = 'YES'",
       "isRequired": true
@@ -5739,7 +5798,7 @@
         "ProcedurePLEConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the mucus or phlegm production decrease or increase over time?",
+      "title": "Did the mucus or phlegm production get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedurePLEMucus} = 'YES'",
       "isRequired": true
@@ -5767,7 +5826,7 @@
         "ProcedurePLELongTermPanel"
       ],
       "hasTitle": true,
-      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the laryngectomy surgery?",
+      "title": "In the long-term, how did {CmpnName}'s breathing change over time after the surgery?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -5993,6 +6052,21 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "ProcedureTTComplications": {
+      "name": "ProcedureTTComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there unexpected complications during or immediately after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "ProcedureTTExtendedStay": {
       "name": "ProcedureTTExtendedStay",
       "type": "radiogroup",
@@ -6008,8 +6082,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureTTExtendedStayReason": {
-      "name": "ProcedureTTExtendedStayReason",
+    "ProcedureTTComplicationsType": {
+      "name": "ProcedureTTComplicationsType",
       "type": "checkbox",
       "role": "question",
       "collect": true,
@@ -6021,7 +6095,7 @@
       "hasTitle": true,
       "title": "Why did {CmpnName} need extended inpatient care?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureTTExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
+      "visibleIf": "{ProcedureTTComplications} = 'YES'",
       "isRequired": true
     },
     "ProcedureTTFollowupCare": {
@@ -6098,8 +6172,8 @@
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
     },
-    "ProcedureTTComplicationsCost": {
-      "name": "ProcedureTTComplicationsCost",
+    "ProcedureTTFollowupCost": {
+      "name": "ProcedureTTFollowupCost",
       "type": "dropdown",
       "role": "question",
       "collect": true,
@@ -6111,7 +6185,7 @@
       "hasTitle": true,
       "title": "About what was total cost of the complications of the surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureTTExtendedStay} != 'NO' || {ProcedureTTFollowupCare} = 'YES'",
+      "visibleIf": "{ProcedureTTFollowupCare} = 'YES'",
       "isRequired": true
     },
     "ProcedureTTCard2Panel": {
@@ -6178,7 +6252,7 @@
         "ProcedureTTConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the coughing, gagging or retching get better or worse with time?",
+      "title": "Did the coughing, gagging or retching get worse or with time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureTTCoughGagRetch} = 'YES'",
       "isRequired": true
@@ -6209,7 +6283,7 @@
         "ProcedureTTConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the bad breath get better or worse over time?",
+      "title": "Did the bad breath get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureTTBadBreath} = 'YES'",
       "isRequired": true
@@ -6240,7 +6314,7 @@
         "ProcedureTTConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the regurgitation get less or more frequent with time?",
+      "title": "Did the regurgitating get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureTTRegurgitate} = 'YES'",
       "isRequired": true
@@ -6271,7 +6345,7 @@
         "ProcedureTTConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the mucus or phlegm production decrease or increase over time?",
+      "title": "Did the mucus or phlegm production get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureTTMucus} = 'YES'",
       "isRequired": true
@@ -6299,7 +6373,7 @@
         "ProcedureTTLongTermPanel"
       ],
       "hasTitle": true,
-      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the laryngectomy surgery?",
+      "title": "In the long-term, how did {CmpnName}'s breathing change over time after surgery?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -6525,6 +6599,21 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
+    "ProcedureOtherComplications": {
+      "name": "ProcedureOtherComplications",
+      "type": "radiogroup",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard1Panel",
+        "ProcedureOtherSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "Were there unexpected complications during or immediately after the surgery?",
+      "hasVisibleIf": false,
+      "isRequired": true
+    },
     "ProcedureOtherExtendedStay": {
       "name": "ProcedureOtherExtendedStay",
       "type": "radiogroup",
@@ -6540,8 +6629,8 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureOtherExtendedStayReason": {
-      "name": "ProcedureOtherExtendedStayReason",
+    "ProcedureOtherComplicationsType": {
+      "name": "ProcedureOtherComplicationsType",
       "type": "checkbox",
       "role": "question",
       "collect": true,
@@ -6551,9 +6640,9 @@
         "ProcedureOtherSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Why did {CmpnName} need extended inpatient care?",
+      "title": "What was the nature of the complications that occurred during or immediately after the surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureOtherExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
+      "visibleIf": "{ProcedureOtherComplications} = 'YES'",
       "isRequired": true
     },
     "ProcedureOtherFollowupCare": {
@@ -6630,8 +6719,8 @@
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
     },
-    "ProcedureOtherComplicationsCost": {
-      "name": "ProcedureOtherComplicationsCost",
+    "ProcedureOtherFollowupCost": {
+      "name": "ProcedureOtherFollowupCost",
       "type": "dropdown",
       "role": "question",
       "collect": true,
@@ -6643,7 +6732,7 @@
       "hasTitle": true,
       "title": "About what was total cost of the complications of the surgery?",
       "hasVisibleIf": true,
-      "visibleIf": "{ProcedureOtherExtendedStay} != 'NO' || {ProcedureOtherFollowupCare} = 'YES'",
+      "visibleIf": "{ProcedureOtherFollowupCare} = 'YES'",
       "isRequired": true
     },
     "ProcedureOtherCard2Panel": {
@@ -6710,7 +6799,7 @@
         "ProcedureOtherConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the coughing, gagging or retching get better or worse with time?",
+      "title": "Did the coughing, gagging or retching get worse or better with time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureOtherCoughGagRetch} = 'YES'",
       "isRequired": true
@@ -6741,7 +6830,7 @@
         "ProcedureOtherConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the bad breath get better or worse over time?",
+      "title": "Did the bad breath get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureOtherBadBreath} = 'YES'",
       "isRequired": true
@@ -6772,7 +6861,7 @@
         "ProcedureOtherConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the regurgitation get less or more frequent with time?",
+      "title": "Did the regurgitating get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureOtherRegurgitate} = 'YES'",
       "isRequired": true
@@ -6803,7 +6892,7 @@
         "ProcedureOtherConditionPanel"
       ],
       "hasTitle": true,
-      "title": "Did the mucus or phlegm production decrease or increase over time?",
+      "title": "Did the mucus or phlegm production get worse or better over time?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureOtherMucus} = 'YES'",
       "isRequired": true
@@ -6831,7 +6920,7 @@
         "ProcedureOtherLongTermPanel"
       ],
       "hasTitle": true,
-      "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the LP surgery?",
+      "title": "In the long-term, how did {CmpnName}'s breathing change over time after the surgery?",
       "hasVisibleIf": false,
       "isRequired": true
     },

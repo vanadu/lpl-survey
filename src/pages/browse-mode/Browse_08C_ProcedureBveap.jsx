@@ -273,11 +273,11 @@ const Browse_08C_ProcedureBveap = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureBVEAPExtendedStay">
+      <div className="browse-question-container" id="ProcedureBVEAPComplications">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella need to stay longer than expected at the hospital after the procedure?
+              Were there unexpected complications during or immediately after the surgery?
             </span>
           }
           index={9}
@@ -289,30 +289,26 @@ const Browse_08C_ProcedureBveap = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>No</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes, one extra day</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes, two days</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes, three days or more</span>
+              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureBVEAPExtendedStayReason">
+      <div className="browse-question-container" id="ProcedureBVEAPComplicationsType">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Why did Bella need extended inpatient care?
+              What was the nature of the complications that occurred during or immediately after the surgery?
             </span>
           }
           index={10}
@@ -342,16 +338,20 @@ const Browse_08C_ProcedureBveap = () => {
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Stroke or cardiac event</span>
             </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Don&lsquo;t know or prefer not to say</span>
+            </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureBVEAPExtendedStayRepeatProcedure">
+      <div className="browse-question-container" id="ProcedureBVEAPExtendedStay">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon attempt a second tieback on the other side?
+              Did Bella need to stay longer than expected at the hospital after the procedure?
             </span>
           }
           index={11}
@@ -363,15 +363,19 @@ const Browse_08C_ProcedureBveap = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>No</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
+              <span>Yes, one extra day</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes, two days</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes, three days or more</span>
             </li>
           </ul>
           </div>
@@ -540,7 +544,7 @@ const Browse_08C_ProcedureBveap = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureBVEAPComplicationsCost">
+      <div className="browse-question-container" id="ProcedureBVEAPFollowupCost">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -770,7 +774,7 @@ const Browse_08C_ProcedureBveap = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the coughing, gagging or retching get better or worse with time?
+              Did the coughing, gagging or retching get worse or better with time?
             </span>
           }
           index={19}
@@ -941,7 +945,7 @@ const Browse_08C_ProcedureBveap = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the bad breath get better or worse over time?
+              Did the bad breath get worse or better over time?
             </span>
           }
           index={21}
@@ -1112,14 +1116,14 @@ const Browse_08C_ProcedureBveap = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the regurgitation get less or more frequent with time?
+              Did the regurgitating get worse or better over time?
             </span>
           }
           index={23}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1 = less frequent, 3 = stayed about the same, 5 = more frequent</p>
+          <p className="browse-question-description">1 = much worse, 3 = stayed about the same, 5 = much better</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-rating" aria-hidden="true">
                 
@@ -1283,14 +1287,14 @@ const Browse_08C_ProcedureBveap = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the mucus or phlegm production decrease or increase over time?
+              Did the mucus or phlegm production get worse or better over time?
             </span>
           }
           index={25}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1 = decreased, 3 = stayed about the same, 5 = increased</p>
+          <p className="browse-question-description">1 = much worse, 3 = stayed about the same, 5 = much better</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-rating" aria-hidden="true">
                 
@@ -1429,7 +1433,7 @@ const Browse_08C_ProcedureBveap = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How would you describe how Bella&lsquo;s breathing changed in the months and years following the BVEAP surgery?
+              In the long-term, how did Bella&lsquo;s breathing change over time after the surgery?
             </span>
           }
           index={26}

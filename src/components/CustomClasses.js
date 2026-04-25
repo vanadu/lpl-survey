@@ -87,22 +87,29 @@ export function getStyleDirectives(item) {
     "ProcedureUALExtendedStay",
     "ProcedureUALExtendedStayReason",
     "ProcedureUALMedicationsType",
+    "ProcedureUALComplicationsType",
+
 
     "ProcedureESIExtendedStay",
     "ProcedureESIExtendedStayReason",
     "ProcedureESIMedicationsType",
+    "ProcedureESIComplicationsType",
 
     "ProcedureBVEAPExtendedStay",
     "ProcedureBVEAPExtendedStayReason",
     "ProcedureBVEAPMedicationsType",
+    "ProcedureBVEAPComplicationsType",
 
     "ProcedurePAEExtendedStay",
     "ProcedurePAEExtendedStayReason",
     "ProcedurePAEMedicationsType",
+    "ProcedurePAEComplicationsType",
 
     "ProcedureVCCExtendedStay",
     "ProcedureVCCExtendedStayReason",
     "ProcedureVCCMedicationsType",
+    "ProcedureVCCComplicationsType",
+
 
     "ProcedurePLEExtendedStay",
     "ProcedurePLEExtendedStayReason",
@@ -111,10 +118,12 @@ export function getStyleDirectives(item) {
     "ProcedureTTExtendedStay",
     "ProcedureTTExtendedStayReason",
     "ProcedureTTMedicationsType",
+    "ProcedureTTLComplicationsType",
 
     "ProcedureOtherExtendedStay",
     "ProcedureOtherExtendedStayReason",
     "ProcedureOtherMedicationsType",
+    "ProcedureOtherComplicationsType",
 
     "BreathingCrisisProductRecommendedType",
 
@@ -154,6 +163,7 @@ export function getStyleDirectives(item) {
     "ProcedureUALIncisionComplications",
     "ProcedureUALIncisionSite",
     "ProcedureUALOralBleeding",
+    "ProcedureUALComplications",
     "ProcedureUALFollowupCare",
     "ProcedureUALMedications",
     "ProcedureUALExtendedStayRepeatProcedure",
@@ -172,6 +182,7 @@ export function getStyleDirectives(item) {
     "ProcedureESIIncisionComplications",
     "ProcedureESIIncisionSite",
     "ProcedureESIOralBleeding",
+    "ProcedureESIComplications",
     "ProcedureESIFollowupCare",
     "ProcedureESIMedications",
     "ProcedureESIExtendedStayRepeatProcedure",
@@ -189,6 +200,7 @@ export function getStyleDirectives(item) {
     "ProcedureBVEAPIncisionComplications",
     "ProcedureBVEAPIncisionSite",
     "ProcedureBVEAPOralBleeding",
+    "ProcedureBVEAPComplications",
     "ProcedureBVEAPFollowupCare",
     "ProcedureBVEAPMedications",
     "ProcedureBVEAPExtendedStayRepeatProcedure",
@@ -208,6 +220,7 @@ export function getStyleDirectives(item) {
     "ProcedurePAEIncisionComplications",
     "ProcedurePAEIncisionSite",
     "ProcedurePAEOralBleeding",
+    "ProcedurePAEComplications",
     "ProcedurePAEFollowupCare",
     "ProcedurePAEMedications",
     "ProcedurePAEExtendedStayRepeatProcedure",
@@ -225,6 +238,7 @@ export function getStyleDirectives(item) {
     "ProcedureVCCIncisionComplications",
     "ProcedureVCCIncisionSite",
     "ProcedureVCCOralBleeding",
+    "ProcedureVCCComplications",
     "ProcedureVCCFollowupCare",
     "ProcedureVCCMedications",
     "ProcedureVCCExtendedStayRepeatProcedure",
@@ -242,6 +256,7 @@ export function getStyleDirectives(item) {
     "ProcedurePLEIncisionComplications",
     "ProcedurePLEIncisionSite",
     "ProcedurePLEOralBleeding",
+    "ProcedurePLEComplications",
     "ProcedurePLEFollowupCare",
     "ProcedurePLEMedications",
     "ProcedurePLEExtendedStayRepeatProcedure",
@@ -259,6 +274,7 @@ export function getStyleDirectives(item) {
     "ProcedureTTIncisionComplications",
     "ProcedureTTIncisionSite",
     "ProcedureTTOralBleeding",
+    "ProcedureTTLComplications",
     "ProcedureTTFollowupCare",
     "ProcedureTTMedications",
     "ProcedureTTExtendedStayRepeatProcedure",
@@ -276,6 +292,7 @@ export function getStyleDirectives(item) {
     "ProcedureOtherIncisionComplications",
     "ProcedureOtherIncisionSite",
     "ProcedureOtherOralBleeding",
+    "ProcedureOtherComplications",
     "ProcedureOtherFollowupCare",
     "ProcedureOtherMedications",
     "ProcedureOtherExtendedStayRepeatProcedure",
@@ -365,7 +382,7 @@ export function getStyleDirectives(item) {
 
     "ProcedureUALScheduledWait",
     "ProcedureUALCost",
-    "ProcedureUALComplicationsCost",
+    "ProcedureUALFollowupCost",
     "ProcedureUALSymptomsReturnedTime",
 
     "ProcedureESIScheduledWait",
@@ -416,10 +433,6 @@ export function getStyleDirectives(item) {
 
     "NeuropathySymptomsBreathingOnset",
     "NeuropathySymptomsHindEndOnset",
-
-
-
-
 
 
   ]);
@@ -561,12 +574,13 @@ export function getStyleDirectives(item) {
 
     "ProcedureSequence",
 
-    "ProcedureUALScheduled",
     "ProcedureUALScheduledWait",
     "ProcedureUALDifference",
     "ProcedureUALChoice",
     "ProcedureUALIncisionComplications",
     "ProcedureUALOralBleeding",
+    "ProcedureUALComplications",
+    "ProcedureUALComplicationsType",
     "ProcedureUALExtendedStay",
     "ProcedureUALExtendedStayReason",
     "ProcedureUALExtendedStayRepeatProcedure",
@@ -575,7 +589,7 @@ export function getStyleDirectives(item) {
     "ProcedureUALMedicationsType",
     "ProcedureUALMedicationsType",
     "ProcedureUALCost",
-    "ProcedureUALComplicationsCost",
+    "ProcedureUALFollowupCost",
     "ProcedureUALBreathingPostOp",
     "ProcedureUALCoughGagRetch",
     "ProcedureUALCoughGagRetchChange",
@@ -591,7 +605,6 @@ export function getStyleDirectives(item) {
     "ProcedureUALLongTermRepeatProcedure",
     "ProcedureUALSatisfaction",
 
-    "ProcedureESIScheduled",
     "ProcedureESIScheduledWait",
     "ProcedureESIDifference",
     "ProcedureESIChoice",
@@ -620,7 +633,6 @@ export function getStyleDirectives(item) {
     "ProcedureESISatisfaction",
 
 
-    "ProcedureBVEAPScheduled",
     "ProcedureBVEAPScheduledWait",
     "ProcedureBVEAPDifference",
     "ProcedureBVEAPChoice",
@@ -648,7 +660,6 @@ export function getStyleDirectives(item) {
     "ProcedureBVEAPLongTermRepeatProcedure",
     "ProcedureBVEAPSatisfaction",
 
-    "ProcedurePAEScheduled",
     "ProcedurePAEScheduledWait",
     "ProcedurePAEDifference",
     "ProcedurePAELaser",
@@ -677,7 +688,6 @@ export function getStyleDirectives(item) {
     "ProcedurePAELongTermRepeatProcedure",
     "ProcedurePAESatisfaction",
 
-    "ProcedureVCCScheduled",
     "ProcedureVCCScheduledWait",
     "ProcedureVCCDifference",
     "ProcedureVCCLaser",
@@ -706,7 +716,6 @@ export function getStyleDirectives(item) {
     "ProcedureVCCLongTermRepeatProcedure",
     "ProcedureVCCSatisfaction",
 
-    "ProcedurePLEScheduled",
     "ProcedurePLEScheduledWait",
     "ProcedurePLEDifference",
     "ProcedurePLELaser",
@@ -735,7 +744,6 @@ export function getStyleDirectives(item) {
     "ProcedurePLELongTermRepeatProcedure",
     "ProcedurePLESatisfaction",
 
-    "ProcedureTTScheduled",
     "ProcedureTTScheduledWait",
     "ProcedureTTDifference",
     "ProcedureTTChoice",
@@ -763,7 +771,6 @@ export function getStyleDirectives(item) {
     "ProcedureTTLongTermRepeatProcedure",
     "ProcedureTTSatisfaction",
 
-    "ProcedureOtherScheduled",
     "ProcedureOtherScheduledWait",
     "ProcedureOtherDifference",
     "ProcedureOtherChoice",

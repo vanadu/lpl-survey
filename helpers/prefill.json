@@ -167,13 +167,17 @@
   "ProcedureUALChoice": "NO",
   "ProcedureUALIncisionComplications": "NO",
   "ProcedureUALOralBleeding": "NO",
-  "ProcedureUALExtendedStay": "ONE_DAY",
-  "ProcedureUALExtendedStayReason": [
+
+  "ProcedureUALComplications": "YES",
+  "ProcedureUALComplicationsType": [
     "ASPIRATION",
     "ANESTHESIA",
     "SUTURE_FAILURE"
   ],
-  "ProcedureUALExtendedStayRepeatProcedure": "NO",
+
+  "ProcedureUALComplicationsRepeatProcedure": "NO",
+
+  "ProcedureUALExtendedStay": "ONE_DAY",
   "ProcedureUALFollowupCare": "YES",
   "ProcedureUALMedications": "YES",
   "ProcedureUALMedicationsType": [
@@ -205,13 +209,16 @@
   "ProcedureESIChoice": "NO",
   "ProcedureESIIncisionComplications": "NO",
   "ProcedureESIOralBleeding": "NO",
-  "ProcedureESIExtendedStay": "ONE_DAY",
-  "ProcedureESIExtendedStayReason": [
+
+  "ProcedureESIComplications": "YES",
+  "ProcedureESIComplicationsType": [
     "ASPIRATION",
     "ANESTHESIA",
-    "SUTURE_FAILURE"
+    "MIGRATED"
   ],
-  "ProcedureESIExtendedStayRepeatProcedure": "NO",
+
+  "ProcedureESIExtendedStay": "ONE_DAY",
+  "ProcedureESIComplicationsRepeatProcedure": "NO",
   "ProcedureESIFollowupCare": "YES",
   "ProcedureESIMedications": "YES",
   "ProcedureESIMedicationsType": [
@@ -231,7 +238,6 @@
   "ProcedureESIMucusChange": 3,
   "ProcedureESIBreathingLongTerm": "SYMPTOMS_RETURNED",
   "ProcedureESISymptomsReturnedTime": "YEAR",
-  "ProcedureESISutureFailure": "YES",
   "ProcedureESILongTermRepeatProcedure": false,
   "ProcedureESISatisfaction": 3,
 
@@ -243,13 +249,12 @@
   "ProcedureBVEAPChoice": "NO",
   "ProcedureBVEAPIncisionComplications": "NO",
   "ProcedureBVEAPOralBleeding": "NO",
-  "ProcedureBVEAPExtendedStay": "ONE_DAY",
-  "ProcedureBVEAPExtendedStayReason": [
+  "ProcedureBVEAPComplications": "YES",
+  "ProcedureBVEAPComplicationsType": [
     "ASPIRATION",
-    "ANESTHBVEAPA",
-    "SUTURE_FAILURE"
+    "ANESTHESIA"
   ],
-  "ProcedureBVEAPExtendedStayRepeatProcedure": "NO",
+  "ProcedureBVEAPExtendedStay": "ONE_DAY",
   "ProcedureBVEAPFollowupCare": "YES",
   "ProcedureBVEAPMedications": "YES",
   "ProcedureBVEAPMedicationsType": [
@@ -282,13 +287,14 @@
   "ProcedurePAEChoice": "NO",
   "ProcedurePAEIncisionComplications": "NO",
   "ProcedurePAEOralBleeding": "NO",
-  "ProcedurePAEExtendedStay": "ONE_DAY",
-  "ProcedurePAEExtendedStayReason": [
+
+  "ProcedurePAEComplications": "YES",
+  "ProcedurePAEComplicationsType": [
     "ASPIRATION",
-    "ANESTHPAEA",
-    "SUTURE_FAILURE"
+    "ANESTHESIA"
   ],
-  "ProcedurePAEExtendedStayRepeatProcedure": "NO",
+
+  "ProcedurePAEExtendedStay": "ONE_DAY",
   "ProcedurePAEFollowupCare": "YES",
   "ProcedurePAEMedications": "YES",
   "ProcedurePAEMedicationsType": [
@@ -308,8 +314,6 @@
   "ProcedurePAEMucusChange": 3,
   "ProcedurePAEBreathingLongTerm": "SYMPTOMS_RETURNED",
   "ProcedurePAESymptomsReturnedTime": "YEAR",
-  "ProcedurePAESutureFailure": "YES",
-  "ProcedurePAELongTermRepeatProcedure": false,
   "ProcedurePAESatisfaction": 3,
 
   "ProcedureVCCAgeYears": "13",
@@ -321,13 +325,14 @@
   "ProcedureVCCChoice": "NO",
   "ProcedureVCCIncisionComplications": "NO",
   "ProcedureVCCOralBleeding": "NO",
-  "ProcedureVCCExtendedStay": "ONE_DAY",
-  "ProcedureVCCExtendedStayReason": [
+
+  "ProcedureVCCComplications": "YES",
+  "ProcedureVCCComplicationsType": [
     "ASPIRATION",
-    "ANESTHVCCA",
-    "SUTURE_FAILURE"
+    "ANESTHESIA"
   ],
-  "ProcedureVCCExtendedStayRepeatProcedure": "NO",
+
+  "ProcedureVCCExtendedStay": "ONE_DAY",
   "ProcedureVCCFollowupCare": "YES",
   "ProcedureVCCMedications": "YES",
   "ProcedureVCCMedicationsType": [
@@ -347,8 +352,6 @@
   "ProcedureVCCMucusChange": 3,
   "ProcedureVCCBreathingLongTerm": "SYMPTOMS_RETURNED",
   "ProcedureVCCSymptomsReturnedTime": "YEAR",
-  "ProcedureVCCSutureFailure": "YES",
-  "ProcedureVCCLongTermRepeatProcedure": false,
   "ProcedureVCCSatisfaction": 3,
 
   "ProcedurePLEAgeYears": "13",
@@ -360,13 +363,12 @@
   "ProcedurePLEChoice": "NO",
   "ProcedurePLEIncisionComplications": "NO",
   "ProcedurePLEOralBleeding": "NO",
-  "ProcedurePLEExtendedStay": "ONE_DAY",
-  "ProcedurePLEExtendedStayReason": [
+  "ProcedurePLEComplications": "YES",
+  "ProcedurePLEComplicationsType": [
     "ASPIRATION",
-    "ANESTHPLEA",
-    "SUTURE_FAILURE"
+    "ANESTHESIA"
   ],
-  "ProcedurePLEExtendedStayRepeatProcedure": "NO",
+  "ProcedurePLEExtendedStay": "ONE_DAY",
   "ProcedurePLEFollowupCare": "YES",
   "ProcedurePLEMedications": "YES",
   "ProcedurePLEMedicationsType": [
@@ -386,8 +388,6 @@
   "ProcedurePLEMucusChange": 3,
   "ProcedurePLEBreathingLongTerm": "SYMPTOMS_RETURNED",
   "ProcedurePLESymptomsReturnedTime": "YEAR",
-  "ProcedurePLESutureFailure": "YES",
-  "ProcedurePLELongTermRepeatProcedure": false,
   "ProcedurePLESatisfaction": 3,
 
   "ProcedureTTAgeYears": "13",
@@ -398,13 +398,13 @@
   "ProcedureTTChoice": "NO",
   "ProcedureTTIncisionComplications": "NO",
   "ProcedureTTOralBleeding": "NO",
-  "ProcedureTTExtendedStay": "ONE_DAY",
-  "ProcedureTTExtendedStayReason": [
+
+  "ProcedureTTComplications": "YES",
+  "ProcedureTTComplicationsType": [
     "ASPIRATION",
-    "ANESTHTTA",
-    "SUTURE_FAILURE"
+    "ANESTHESIA"
   ],
-  "ProcedureTTExtendedStayRepeatProcedure": "NO",
+
   "ProcedureTTFollowupCare": "YES",
   "ProcedureTTMedications": "YES",
   "ProcedureTTMedicationsType": [
@@ -424,8 +424,6 @@
   "ProcedureTTMucusChange": 3,
   "ProcedureTTBreathingLongTerm": "SYMPTOMS_RETURNED",
   "ProcedureTTSymptomsReturnedTime": "YEAR",
-  "ProcedureTTSutureFailure": "YES",
-  "ProcedureTTLongTermRepeatProcedure": false,
   "ProcedureTTSatisfaction": 3,
 
   "ProcedureOtherAgeYears": "13",
@@ -436,12 +434,12 @@
   "ProcedureOtherChoice": "NO",
   "ProcedureOtherIncisionComplications": "NO",
   "ProcedureOtherOralBleeding": "NO",
-  "ProcedureOtherExtendedStay": "ONE_DAY",
-  "ProcedureOtherExtendedStayReason": [
+  "ProcedureOtherComplications": "YES",
+  "ProcedureOtherComplicationsType": [
     "ASPIRATION",
-    "ANESTHOtherA",
-    "SUTURE_FAILURE"
+    "ANESTHESIA"
   ],
+  "ProcedureOtherExtendedStay": "ONE_DAY",
   "ProcedureOtherExtendedStayRepeatProcedure": "NO",
   "ProcedureOtherFollowupCare": "YES",
   "ProcedureOtherMedications": "YES",
@@ -462,8 +460,6 @@
   "ProcedureOtherMucusChange": 3,
   "ProcedureOtherBreathingLongTerm": "SYMPTOMS_RETURNED",
   "ProcedureOtherSymptomsReturnedTime": "YEAR",
-  "ProcedureOtherSutureFailure": "YES",
-  "ProcedureOtherLongTermRepeatProcedure": false,
   "ProcedureOtherSatisfaction": 3,
 
   "TherapyDidHave": "YES",
