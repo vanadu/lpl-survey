@@ -294,6 +294,7 @@
               "name": "ProcedureTTMedications",
               "title": "Were prescription medications provided for {CmpnName} after the procedure?",
               "isRequired": true,
+              "visibleIf": "{ProcedureTTMedications} = 'YES'",              
               "choices": [
                 {
                   "value": "YES",
@@ -314,6 +315,7 @@
               "name": "ProcedureTTMedicationsType",
               "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
               "isRequired": true,
+              
               "choices": [
                 {
                   "value": "PAIN",

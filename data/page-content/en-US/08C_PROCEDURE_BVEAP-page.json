@@ -308,6 +308,7 @@
               "name": "ProcedureBVEAPMedicationsType",
               "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
               "isRequired": true,
+              "visibleIf": "{ProcedureBVEAPMedications} = 'YES'",
               "choices": [
                 {
                   "value": "PAIN",

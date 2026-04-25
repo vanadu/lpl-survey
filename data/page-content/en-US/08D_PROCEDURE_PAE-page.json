@@ -314,6 +314,7 @@
               "name": "ProcedurePAEMedicationsType",
               "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
               "isRequired": true,
+              "visibleIf": "{ProcedurePAEMedications} = 'YES'",
               "choices": [
                 {
                   "value": "PAIN",
