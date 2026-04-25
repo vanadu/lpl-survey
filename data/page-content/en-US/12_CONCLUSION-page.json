@@ -47,8 +47,8 @@
         "elements": [
           {
             "type": "radiogroup",
-            "name": "ConclusionNewSymptoms",
-            "title": "Did {CmpnName} develop new LP/GOLPP symptoms as time progressed?",
+            "name": "ConclusionSymptomsChanged",
+            "title": "Did {CmpnName}'s LP/GOLPP symptoms change {cvGenderObjectPronoun} as time progressed?",
             "isRequired": true,
             "choices": [
               {
@@ -68,11 +68,11 @@
           },
           {
             "type": "checkbox",
-            "name": "ConclusionNewSymptomsType",
+            "name": "ConclusionSymptomsChangedDetails",
             "description": "The symptoms you selected earlier in the survey are preselected here.",
-            "title": "What other LP/GOLPP symptoms did {CmpnName} develop since he first showed LP/GOLPP symptoms?",
+            "title": "Please select or deselect symptoms {CmpnName} has or had at this stage in {cvGenderObjectPronoun} LP/GOLPP journey.",
             "isRequired": true,
-            "visibleIf": "{ConclusionNewSymptoms} = 'YES'",
+            "visibleIf": "{ConclusionSymptomsChanged} = 'YES'",
             "choices": [
               {
                 "value": "STRIDOR",

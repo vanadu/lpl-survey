@@ -212,6 +212,65 @@
                 }
               ]
             },
+
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePAEComplications",
+              "title": "Were there unexpected complications during or immediately after the surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+            {
+              "type": "checkbox",
+              "name": "ProcedurePAEComplicationsType",
+              "title": "What was the nature of the complications that occurred during or immediately after the surgery?",
+              "isRequired": true,
+              "visibleIf": "{ProcedurePAEComplications} = 'YES'",
+              "choices": [
+                {
+                  "value": "ASPIRATION",
+                  "text": "Aspiration pneumonia"
+                },
+                {
+                  "value": "ANESTHESIA",
+                  "text": "Adverse reaction to anesthesia"
+                },
+                {
+                  "value": "SUTURE_FAILURE",
+                  "text": "Suture failure"
+                },
+                {
+                  "value": "RESPIRATORY",
+                  "text": "Respiratory crisis"
+                },
+                {
+                  "value": "STROKE",
+                  "text": "Stroke or cardiac event"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or prefer not to say"
+                }
+              ],
+              "showOtherItem": true
+            },
+
+
             {
               "type": "radiogroup",
               "name": "ProcedurePAEExtendedStay",
@@ -237,36 +296,7 @@
               ],
               "showOtherItem": false
             },
-            {
-              "type": "checkbox",
-              "name": "ProcedurePAEExtendedStayReason",
-              "title": "Why did {CmpnName} need extended inpatient care?",
-              "isRequired": true,
-              "visibleIf": "{ProcedurePAEExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
-              "choices": [
-                {
-                  "value": "ASPIRATION",
-                  "text": "Aspiration pneumonia"
-                },
-                {
-                  "value": "ANESTHESIA",
-                  "text": "Adverse reaction to anesthesia"
-                },
-                {
-                  "value": "SUTURE_FAILURE",
-                  "text": "Suture failure"
-                },
-                {
-                  "value": "RESPIRATORY",
-                  "text": "Respiratory crisis"
-                },
-                {
-                  "value": "STROKE",
-                  "text": "Stroke or cardiac event"
-                }
-              ],
-              "showOtherItem": true
-            },
+
 
             {
               "type": "radiogroup",
@@ -402,11 +432,11 @@
             },
             {
               "type": "dropdown",
-              "name": "ProcedurePAEComplicationsCost",
+              "name": "ProcedurePAEFollowupCost",
               "title": "About what was total cost of the complications of the surgery?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
-              "visibleIf": "{ProcedurePAEExtendedStay} != 'NO' || {ProcedurePAEFollowupCare} = 'YES'",
+              "visibleIf": "{ProcedurePAEFollowupCare} = 'YES'",
               "choices": [
                 {
                   "value": "NOT_SAY",
@@ -500,7 +530,7 @@
             {
               "type": "rating",
               "name": "ProcedurePAECoughGagRetchChange",
-              "title": "Did the coughing, gagging or retching get better or worse with time?",
+              "title": "Did the coughing, gagging or retching get worse or better over time?",
               "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
               "isRequired": true,
               "visibleIf": "{ProcedurePAECoughGagRetch} = 'YES'",
@@ -535,7 +565,7 @@
             {
               "type": "rating",
               "name": "ProcedurePAEBadBreathChange",
-              "title": "Did the bad breath get better or worse over time?",
+              "title": "Did the bad breath get worse or better over time?",
               "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
               "isRequired": true,
               "visibleIf": "{ProcedurePAEBadBreath} = 'YES'",
@@ -570,8 +600,8 @@
             {
               "type": "rating",
               "name": "ProcedurePAERegurgitateChange",
-              "title": "Did the regurgitation get less or more frequent with time?",
-              "description": "1 = less frequent, 3 = stayed about the same, 5 = more frequent",
+              "title": "Did the regurgitating get worse or better over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
               "isRequired": true,
               "visibleIf": "{ProcedurePAERegurgitate} = 'YES'",
               "rateValues": [
@@ -606,8 +636,8 @@
             {
               "type": "rating",
               "name": "ProcedurePAEMucusChange",
-              "title": "Did the mucus or phlegm production decrease or increase over time?",
-              "description": "1 = decreased, 3 = stayed about the same, 5 = increased",
+              "title": "Did the mucus or phlegm production get worse or better over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
               "isRequired": true,
               "visibleIf": "{ProcedurePAEMucus} = 'YES'",
               "rateValues": [
@@ -632,7 +662,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedurePAEBreathingLongTerm",
-              "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the arytenoidectomy surgery?",
+              "title": "In the long-term, how did {CmpnName}'s breathing change over time?",
               "isRequired": true,
               "choices": [
                 {

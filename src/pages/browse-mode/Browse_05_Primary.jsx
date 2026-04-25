@@ -239,6 +239,10 @@ const Browse_05_Primary = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Stent provider</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Holistic or acupuncturist</span>
             </li>
           </ul>

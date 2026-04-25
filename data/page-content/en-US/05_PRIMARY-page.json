@@ -161,6 +161,10 @@
                   "text": "Soft-tissue specialist/surgeon"
                 },
                 {
+                  "value": "STENT_PROVIDER",
+                  "text": "Stent provider"
+                },
+                {
                   "value": "HOLISTIC",
                   "text": "Holistic or acupuncturist"
                 }

@@ -58,11 +58,11 @@ const Browse_12_Conclusion = () => {
       </div>
 
       <div className="browse-panel-container" id="ConclusionDetailsPanel">
-      <div className="browse-question-container" id="ConclusionNewSymptoms">
+      <div className="browse-question-container" id="ConclusionSymptomsChanged">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella develop new LP/GOLPP symptoms as time progressed?
+              Did Bella&lsquo;s LP/GOLPP symptoms change her as time progressed?
             </span>
           }
           index={1}
@@ -89,11 +89,11 @@ const Browse_12_Conclusion = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ConclusionNewSymptomsType">
+      <div className="browse-question-container" id="ConclusionSymptomsChangedDetails">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What other LP/GOLPP symptoms did Bella develop since he first showed LP/GOLPP symptoms?
+              Please select or deselect symptoms Bella has or had at this stage in her LP/GOLPP journey.
             </span>
           }
           index={2}

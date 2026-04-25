@@ -212,6 +212,30 @@
                 }
               ]
             },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedurePLEComplications",
+              "title": "Were there unexpected complications during or immediately after the surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+
+
             {
               "type": "radiogroup",
               "name": "ProcedurePLEExtendedStay",
@@ -239,10 +263,10 @@
             },
             {
               "type": "checkbox",
-              "name": "ProcedurePLEExtendedStayReason",
-              "title": "Why did {CmpnName} need extended inpatient care?",
+              "name": "ProcedurePLEComplicationsType",
+              "title": "What was the nature of the complications that occurred during or immediately after the surgery?",
               "isRequired": true,
-              "visibleIf": "{ProcedurePLEExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
+              "visibleIf": "{ProcedurePLEComplications} = 'YES'",
               "choices": [
                 {
                   "value": "ASPIRATION",
@@ -263,6 +287,10 @@
                 {
                   "value": "STROKE",
                   "text": "Stroke or cardiac event"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or prefer not to say"
                 }
               ],
               "showOtherItem": true
@@ -403,11 +431,11 @@
             },
             {
               "type": "dropdown",
-              "name": "ProcedurePLEComplicationsCost",
+              "name": "ProcedurePLEFollowupCost",
               "title": "About what was total cost of the complications of the surgery?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
-              "visibleIf": "{ProcedurePLEExtendedStay} != 'NO' || {ProcedurePLEFollowupCare} = 'YES'",
+              "visibleIf": "{ProcedurePLEFollowupCare} = 'YES'",
               "choices": [
                 {
                   "value": "NOT_SAY",
@@ -501,7 +529,7 @@
             {
               "type": "rating",
               "name": "ProcedurePLECoughGagRetchChange",
-              "title": "Did the coughing, gagging or retching get better or worse with time?",
+              "title": "Did the coughing, gagging or retching get worse or better over time?",
               "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
               "isRequired": true,
               "visibleIf": "{ProcedurePLECoughGagRetch} = 'YES'",
@@ -536,7 +564,7 @@
             {
               "type": "rating",
               "name": "ProcedurePLEBadBreathChange",
-              "title": "Did the bad breath get better or worse over time?",
+              "title": "Did the bad breath get worse or better over time?",
               "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
               "isRequired": true,
               "visibleIf": "{ProcedurePLEBadBreath} = 'YES'",
@@ -571,8 +599,8 @@
             {
               "type": "rating",
               "name": "ProcedurePLERegurgitateChange",
-              "title": "Did the regurgitation get less or more frequent with time?",
-              "description": "1 = less frequent, 3 = stayed about the same, 5 = more frequent",
+              "title": "Did the regurgitating get worse or better over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
               "isRequired": true,
               "visibleIf": "{ProcedurePLERegurgitate} = 'YES'",
               "rateValues": [
@@ -607,8 +635,8 @@
             {
               "type": "rating",
               "name": "ProcedurePLEMucusChange",
-              "title": "Did the mucus or phlegm production decrease or increase over time?",
-              "description": "1 = decreased, 3 = stayed about the same, 5 = increased",
+              "title": "Did the mucus or phlegm production get worse or better over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
               "isRequired": true,
               "visibleIf": "{ProcedurePLEMucus} = 'YES'",
               "rateValues": [
@@ -633,7 +661,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedurePLEBreathingLongTerm",
-              "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the laryngectomy surgery?",
+              "title": "In the long-term, how did {CmpnName}'s breathing change over time after the surgery?",
               "isRequired": true,
               "choices": [
                 {

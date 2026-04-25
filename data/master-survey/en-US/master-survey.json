@@ -1880,6 +1880,10 @@
                       "text": "Soft-tissue specialist/surgeon"
                     },
                     {
+                      "value": "STENT_PROVIDER",
+                      "text": "Stent provider"
+                    },
+                    {
                       "value": "HOLISTIC",
                       "text": "Holistic or acupuncturist"
                     }
@@ -3733,6 +3737,81 @@
                 },
                 {
                   "type": "radiogroup",
+                  "name": "ProcedureUALComplications",
+                  "title": "Were there unexpected complications during or immediately after the surgery?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ProcedureUALComplicationsType",
+                  "title": "What was the nature of the complications that occurred during or immediately after the surgery?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureUALComplications} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "ASPIRATION",
+                      "text": "Aspiration pneumonia"
+                    },
+                    {
+                      "value": "ANESTHESIA",
+                      "text": "Adverse reaction to anesthesia"
+                    },
+                    {
+                      "value": "SUTURE_FAILURE",
+                      "text": "Suture failure"
+                    },
+                    {
+                      "value": "RESPIRATORY",
+                      "text": "Respiratory crisis"
+                    },
+                    {
+                      "value": "STROKE",
+                      "text": "Stroke or cardiac event"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know or prefer not to say"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "ProcedureUALComplicationsRepeatProcedure",
+                  "title": "Did the surgeon attempt a second tieback on the other side?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureUALComplicationsType} contains 'SUTURE_FAILURE'",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
                   "name": "ProcedureUALExtendedStay",
                   "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
                   "isRequired": true,
@@ -3755,57 +3834,6 @@
                     }
                   ],
                   "showOtherItem": false
-                },
-                {
-                  "type": "checkbox",
-                  "name": "ProcedureUALExtendedStayReason",
-                  "title": "Why did {CmpnName} need extended inpatient care?",
-                  "isRequired": true,
-                  "visibleIf": "{ProcedureUALExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
-                  "choices": [
-                    {
-                      "value": "ASPIRATION",
-                      "text": "Aspiration pneumonia"
-                    },
-                    {
-                      "value": "ANESTHESIA",
-                      "text": "Adverse reaction to anesthesia"
-                    },
-                    {
-                      "value": "SUTURE_FAILURE",
-                      "text": "Suture failure"
-                    },
-                    {
-                      "value": "RESPIRATORY",
-                      "text": "Respiratory crisis"
-                    },
-                    {
-                      "value": "STROKE",
-                      "text": "Stroke or cardiac event"
-                    }
-                  ],
-                  "showOtherItem": true
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "ProcedureUALExtendedStayRepeatProcedure",
-                  "title": "Did the surgeon attempt a second tieback on the other side?",
-                  "isRequired": true,
-                  "visibleIf": "{ProcedureUALExtendedStayReason} contains 'SUTURE_FAILURE'",
-                  "choices": [
-                    {
-                      "value": "YES",
-                      "text": "Yes"
-                    },
-                    {
-                      "value": "NO",
-                      "text": "No"
-                    },
-                    {
-                      "value": "DONT_KNOW",
-                      "text": "Don't know"
-                    }
-                  ]
                 },
                 {
                   "type": "radiogroup",
@@ -3831,7 +3859,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ProcedureUALMedications",
-                  "title": "Were prescriptions medications provided for {CmpnName} after the procedure?",
+                  "title": "Were prescription medications provided for {CmpnName} after the procedure?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -3853,6 +3881,7 @@
                   "name": "ProcedureUALMedicationsType",
                   "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
                   "isRequired": true,
+                  "visibleIf": "{ProcedureUALMedications} = 'YES'",
                   "choices": [
                     {
                       "value": "PAIN",
@@ -3899,7 +3928,7 @@
                 {
                   "type": "dropdown",
                   "name": "ProcedureUALCost",
-                  "title": "About what was the cost of the surgery, not including post-operative complications?",
+                  "title": "About what was the cost of the surgery including immediate post-operative complications?",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
                   "visibleIf": "{ProcedureDidHave} = true",
@@ -3937,11 +3966,11 @@
                 },
                 {
                   "type": "dropdown",
-                  "name": "ProcedureUALComplicationsCost",
-                  "title": "About what was total cost of the complications of the surgery?",
+                  "name": "ProcedureUALFollowupCost",
+                  "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the surgery?",
                   "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
                   "isRequired": true,
-                  "visibleIf": "{ProcedureUALExtendedStay} != 'NO' || {ProcedureUALFollowupCare} = 'YES'",
+                  "visibleIf": "{ProcedureUALFollowupCare} = 'YES'",
                   "choices": [
                     {
                       "value": "NOT_SAY",
@@ -4043,8 +4072,8 @@
                 {
                   "type": "rating",
                   "name": "ProcedureUALCoughGagRetchChange",
-                  "title": "Over time, did {CmpnName} cough, gag, or retch more or less frequently?",
-                  "description": "1 = more frequently, 3 = stayed about the same, 5 = less frequently",
+                  "title": "Did the coughing, gagging or retching get worse or better over time?",
+                  "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
                   "isRequired": true,
                   "visibleIf": "{ProcedureUALCoughGagRetch} = 'YES'",
                   "rateValues": [
@@ -4093,7 +4122,7 @@
                 {
                   "type": "rating",
                   "name": "ProcedureUALBadBreathChange",
-                  "title": "Did the bad breath get better or worse over time?",
+                  "title": "Did the bad breath get worse or better over time?",
                   "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
                   "isRequired": true,
                   "visibleIf": "{ProcedureUALBadBreath} = 'YES'",
@@ -4143,8 +4172,8 @@
                 {
                   "type": "rating",
                   "name": "ProcedureUALRegurgitateChange",
-                  "title": "Over time, did {CmpnName} regurgitate food or water more or less frequently?",
-                  "description": "1 = more frequently, 3 = stayed about the same, 5 = less frequently",
+                  "title": "Did the regurgitating get worse or better over time?",
+                  "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
                   "isRequired": true,
                   "visibleIf": "{ProcedureUALRegurgitate} = 'YES'",
                   "rateValues": [
@@ -4193,8 +4222,8 @@
                 {
                   "type": "rating",
                   "name": "ProcedureUALMucusChange",
-                  "title": "Over time, did {CmpnName} cough up mucus or phlegm more or less frequently?",
-                  "description": "1 = more frequently, 3 = stayed about the same, 5 = less frequently",
+                  "title": "Did the mucus or phlegm production get worse or better over time?",
+                  "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
                   "isRequired": true,
                   "visibleIf": "{ProcedureUALMucus} = 'YES'",
                   "rateValues": [
@@ -4234,7 +4263,7 @@
                 {
                   "type": "radiogroup",
                   "name": "ProcedureUALBreathingLongTerm",
-                  "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the tieback surgery?",
+                  "title": "In the long-term, how did {CmpnName}'s breathing change over time?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -4620,25 +4649,42 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "checkbox",
+                  "type": "radiogroup",
                   "name": "ProcedureESIMedications",
-                  "title": "What medications were prescribed or provided for {CmpnName} after the stent procedure?",
+                  "title": "Were prescription medications provided for {CmpnName} after the procedure?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "NONE",
-                      "text": "None or don't remember"
+                      "value": "YES",
+                      "text": "Yes"
                     },
                     {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ProcedureESIMedicationsType",
+                  "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureESIMedications} = 'YES'",
+                  "choices": [
+                    {
                       "value": "PAIN",
-                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
+                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, opiods)"
                     },
                     {
                       "value": "REFLUX",
                       "text": "Reflux medications (i.e. cisipride, famotidine, omeprazole)"
                     },
                     {
-                      "value": "ANTIBIOTIC",
+                      "value": "ANTIBIOTICS",
                       "text": "Antibiotics"
                     },
                     {
@@ -4647,7 +4693,7 @@
                     },
                     {
                       "value": "SEDATIVE",
-                      "text": "Sedative (i.e. trazodone, tramadol)"
+                      "text": "Sedative (i.e. trazodone, gabapentin, acepromazine)"
                     },
                     {
                       "value": "MAROPITANT",
@@ -4655,7 +4701,7 @@
                     },
                     {
                       "value": "COUGH_SUPPRESSANT",
-                      "text": "Codeine or other cough suppressant"
+                      "text": "Cough suppressants (i.e. codeine, dextromethorphan, guaifenesin)"
                     }
                   ],
                   "showOtherItem": true
@@ -5424,25 +5470,42 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "checkbox",
+                  "type": "radiogroup",
                   "name": "ProcedureBVEAPMedications",
-                  "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
+                  "title": "Were prescription medications provided for {CmpnName} after the procedure?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "DONT_KNOW",
-                      "text": "None or don't know"
+                      "value": "YES",
+                      "text": "Yes"
                     },
                     {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ProcedureBVEAPMedicationsType",
+                  "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureBVEAPMedications} = 'YES'",
+                  "choices": [
+                    {
                       "value": "PAIN",
-                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
+                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, opiods)"
                     },
                     {
                       "value": "REFLUX",
                       "text": "Reflux medications (i.e. cisipride, famotidine, omeprazole)"
                     },
                     {
-                      "value": "ANTIBIOTIC",
+                      "value": "ANTIBIOTICS",
                       "text": "Antibiotics"
                     },
                     {
@@ -5451,11 +5514,15 @@
                     },
                     {
                       "value": "SEDATIVE",
-                      "text": "Sedative (i.e. trazodone, tramadol)"
+                      "text": "Sedative (i.e. trazodone, gabapentin, acepromazine)"
                     },
                     {
                       "value": "MAROPITANT",
                       "text": "Cerenia (maropitant citrate)"
+                    },
+                    {
+                      "value": "COUGH_SUPPRESSANT",
+                      "text": "Cough suppressants (i.e. codeine, dextromethorphan, guaifenesin)"
                     }
                   ],
                   "showOtherItem": true
@@ -6188,25 +6255,42 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "checkbox",
+                  "type": "radiogroup",
                   "name": "ProcedurePAEMedications",
-                  "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
+                  "title": "Were prescription medications provided for {CmpnName} after the procedure?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "DONT_KNOW",
-                      "text": "None or don't know"
+                      "value": "YES",
+                      "text": "Yes"
                     },
                     {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ProcedurePAEMedicationsType",
+                  "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedurePAEMedications} = 'YES'",
+                  "choices": [
+                    {
                       "value": "PAIN",
-                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
+                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, opiods)"
                     },
                     {
                       "value": "REFLUX",
                       "text": "Reflux medications (i.e. cisipride, famotidine, omeprazole)"
                     },
                     {
-                      "value": "ANTIBIOTIC",
+                      "value": "ANTIBIOTICS",
                       "text": "Antibiotics"
                     },
                     {
@@ -6215,11 +6299,15 @@
                     },
                     {
                       "value": "SEDATIVE",
-                      "text": "Sedative (i.e. trazodone, tramadol)"
+                      "text": "Sedative (i.e. trazodone, gabapentin, acepromazine)"
                     },
                     {
                       "value": "MAROPITANT",
                       "text": "Cerenia (maropitant citrate)"
+                    },
+                    {
+                      "value": "COUGH_SUPPRESSANT",
+                      "text": "Cough suppressants (i.e. codeine, dextromethorphan, guaifenesin)"
                     }
                   ],
                   "showOtherItem": true
@@ -6952,25 +7040,42 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "checkbox",
+                  "type": "radiogroup",
                   "name": "ProcedureVCCMedications",
-                  "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
+                  "title": "Were prescription medications provided for {CmpnName} after the procedure?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "DONT_KNOW",
-                      "text": "None or don't know"
+                      "value": "YES",
+                      "text": "Yes"
                     },
                     {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ProcedureVCCMedicationsType",
+                  "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureVCCMedications} = 'YES'",
+                  "choices": [
+                    {
                       "value": "PAIN",
-                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
+                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, opiods)"
                     },
                     {
                       "value": "REFLUX",
                       "text": "Reflux medications (i.e. cisipride, famotidine, omeprazole)"
                     },
                     {
-                      "value": "ANTIBIOTIC",
+                      "value": "ANTIBIOTICS",
                       "text": "Antibiotics"
                     },
                     {
@@ -6979,11 +7084,15 @@
                     },
                     {
                       "value": "SEDATIVE",
-                      "text": "Sedative (i.e. trazodone, tramadol)"
+                      "text": "Sedative (i.e. trazodone, gabapentin, acepromazine)"
                     },
                     {
                       "value": "MAROPITANT",
                       "text": "Cerenia (maropitant citrate)"
+                    },
+                    {
+                      "value": "COUGH_SUPPRESSANT",
+                      "text": "Cough suppressants (i.e. codeine, dextromethorphan, guaifenesin)"
                     }
                   ],
                   "showOtherItem": true
@@ -7716,25 +7825,42 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "checkbox",
+                  "type": "radiogroup",
                   "name": "ProcedurePLEMedications",
-                  "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
+                  "title": "Were prescription medications provided for {CmpnName} after the procedure?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedurePLEMedications} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ProcedurePLEMedicationsType",
+                  "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "DONT_KNOW",
-                      "text": "None or don't know"
-                    },
-                    {
                       "value": "PAIN",
-                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
+                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, opiods)"
                     },
                     {
                       "value": "REFLUX",
                       "text": "Reflux medications (i.e. cisipride, famotidine, omeprazole)"
                     },
                     {
-                      "value": "ANTIBIOTIC",
+                      "value": "ANTIBIOTICS",
                       "text": "Antibiotics"
                     },
                     {
@@ -7743,11 +7869,15 @@
                     },
                     {
                       "value": "SEDATIVE",
-                      "text": "Sedative (i.e. trazodone, tramadol)"
+                      "text": "Sedative (i.e. trazodone, gabapentin, acepromazine)"
                     },
                     {
                       "value": "MAROPITANT",
                       "text": "Cerenia (maropitant citrate)"
+                    },
+                    {
+                      "value": "COUGH_SUPPRESSANT",
+                      "text": "Cough suppressants (i.e. codeine, dextromethorphan, guaifenesin)"
                     }
                   ],
                   "showOtherItem": true
@@ -8480,25 +8610,42 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "checkbox",
+                  "type": "radiogroup",
                   "name": "ProcedureTTMedications",
-                  "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
+                  "title": "Were prescription medications provided for {CmpnName} after the procedure?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureTTMedications} = 'YES'",
+                  "choices": [
+                    {
+                      "value": "YES",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ProcedureTTMedicationsType",
+                  "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "DONT_KNOW",
-                      "text": "None or don't know"
-                    },
-                    {
                       "value": "PAIN",
-                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
+                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, opiods)"
                     },
                     {
                       "value": "REFLUX",
                       "text": "Reflux medications (i.e. cisipride, famotidine, omeprazole)"
                     },
                     {
-                      "value": "ANTIBIOTIC",
+                      "value": "ANTIBIOTICS",
                       "text": "Antibiotics"
                     },
                     {
@@ -8507,11 +8654,15 @@
                     },
                     {
                       "value": "SEDATIVE",
-                      "text": "Sedative (i.e. trazodone, tramadol)"
+                      "text": "Sedative (i.e. trazodone, gabapentin, acepromazine)"
                     },
                     {
                       "value": "MAROPITANT",
                       "text": "Cerenia (maropitant citrate)"
+                    },
+                    {
+                      "value": "COUGH_SUPPRESSANT",
+                      "text": "Cough suppressants (i.e. codeine, dextromethorphan, guaifenesin)"
                     }
                   ],
                   "showOtherItem": true
@@ -9244,25 +9395,42 @@
                   "showOtherItem": false
                 },
                 {
-                  "type": "checkbox",
+                  "type": "radiogroup",
                   "name": "ProcedureOtherMedications",
-                  "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
+                  "title": "Were prescription medications provided for {CmpnName} after the procedure?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "DONT_KNOW",
-                      "text": "None or don't know"
+                      "value": "YES",
+                      "text": "Yes"
                     },
                     {
+                      "value": "NO",
+                      "text": "No"
+                    },
+                    {
+                      "value": "DONT_KNOW",
+                      "text": "Don't know"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "ProcedureOtherMedicationsType",
+                  "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
+                  "isRequired": true,
+                  "visibleIf": "{ProcedureOtherMedications} = 'YES'",
+                  "choices": [
+                    {
                       "value": "PAIN",
-                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
+                      "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, opiods)"
                     },
                     {
                       "value": "REFLUX",
                       "text": "Reflux medications (i.e. cisipride, famotidine, omeprazole)"
                     },
                     {
-                      "value": "ANTIBIOTIC",
+                      "value": "ANTIBIOTICS",
                       "text": "Antibiotics"
                     },
                     {
@@ -9271,11 +9439,15 @@
                     },
                     {
                       "value": "SEDATIVE",
-                      "text": "Sedative (i.e. trazodone, tramadol)"
+                      "text": "Sedative (i.e. trazodone, gabapentin, acepromazine)"
                     },
                     {
                       "value": "MAROPITANT",
                       "text": "Cerenia (maropitant citrate)"
+                    },
+                    {
+                      "value": "COUGH_SUPPRESSANT",
+                      "text": "Cough suppressants (i.e. codeine, dextromethorphan, guaifenesin)"
                     }
                   ],
                   "showOtherItem": true
@@ -10958,8 +11130,8 @@
               "elements": [
                 {
                   "type": "radiogroup",
-                  "name": "ConclusionNewSymptoms",
-                  "title": "Did {CmpnName} develop new LP/GOLPP symptoms as time progressed?",
+                  "name": "ConclusionSymptomsChanged",
+                  "title": "Did {CmpnName}'s LP/GOLPP symptoms change {cvGenderObjectPronoun} as time progressed?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -10979,11 +11151,11 @@
                 },
                 {
                   "type": "checkbox",
-                  "name": "ConclusionNewSymptomsType",
+                  "name": "ConclusionSymptomsChangedDetails",
                   "description": "The symptoms you selected earlier in the survey are preselected here.",
-                  "title": "What other LP/GOLPP symptoms did {CmpnName} develop since he first showed LP/GOLPP symptoms?",
+                  "title": "Please select or deselect symptoms {CmpnName} has or had at this stage in {cvGenderObjectPronoun} LP/GOLPP journey.",
                   "isRequired": true,
-                  "visibleIf": "{ConclusionNewSymptoms} = 'YES'",
+                  "visibleIf": "{ConclusionSymptomsChanged} = 'YES'",
                   "choices": [
                     {
                       "value": "STRIDOR",

@@ -273,11 +273,11 @@ const Browse_08A_ProcedureUal = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALExtendedStay">
+      <div className="browse-question-container" id="ProcedureUALComplications">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella need to stay longer than expected at the hospital after the procedure?
+              Were there unexpected complications during or immediately after the surgery?
             </span>
           }
           index={9}
@@ -289,30 +289,26 @@ const Browse_08A_ProcedureUal = () => {
           <ul>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
               <span>No</span>
             </li>
             <li className="browse-showanswer-radio">
               <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes, one extra day</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes, two days</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes, three days or more</span>
+              <span>Don&lsquo;t know</span>
             </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALExtendedStayReason">
+      <div className="browse-question-container" id="ProcedureUALComplicationsType">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Why did Bella need extended inpatient care?
+              What was the nature of the complications that occurred during or immediately after the surgery?
             </span>
           }
           index={10}
@@ -342,12 +338,16 @@ const Browse_08A_ProcedureUal = () => {
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Stroke or cardiac event</span>
             </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Don&lsquo;t know or prefer not to say</span>
+            </li>
           </ul>
           </div>
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALExtendedStayRepeatProcedure">
+      <div className="browse-question-container" id="ProcedureUALComplicationsRepeatProcedure">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
@@ -378,6 +378,41 @@ const Browse_08A_ProcedureUal = () => {
         </ShowAnswerContent>
       </div>
 
+      <div className="browse-question-container" id="ProcedureUALExtendedStay">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              Did Bella need to stay longer than expected at the hospital after the procedure?
+            </span>
+          }
+          index={12}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes, one extra day</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes, two days</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes, three days or more</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
       <div className="browse-question-container" id="ProcedureUALFollowupCare">
         <ShowAnswerContent
           header={
@@ -385,7 +420,7 @@ const Browse_08A_ProcedureUal = () => {
               In the four weeks after surgery, did Bella need another visit to a veterinary professional because of complications?
             </span>
           }
-          index={12}
+          index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -413,10 +448,10 @@ const Browse_08A_ProcedureUal = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Were prescriptions medications provided for Bella after the procedure?
+              Were prescription medications provided for Bella after the procedure?
             </span>
           }
-          index={13}
+          index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -447,7 +482,7 @@ const Browse_08A_ProcedureUal = () => {
               What medications were prescribed or provided for Bella after the procedure?
             </span>
           }
-          index={14}
+          index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -497,10 +532,10 @@ const Browse_08A_ProcedureUal = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About what was the cost of the surgery, not including post-operative complications?
+              About what was the cost of the surgery including immediate post-operative complications?
             </span>
           }
-          index={15}
+          index={16}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -540,14 +575,14 @@ const Browse_08A_ProcedureUal = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureUALComplicationsCost">
+      <div className="browse-question-container" id="ProcedureUALFollowupCost">
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About what was total cost of the complications of the surgery?
+              About what was total cost of follow-up care or procedures that Bella needed as a result of the surgery?
             </span>
           }
-          index={16}
+          index={17}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -602,7 +637,7 @@ const Browse_08A_ProcedureUal = () => {
               How would you rate Bella&lsquo;s breathing in the time right after the tieback surgery?
             </span>
           }
-          index={17}
+          index={18}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -742,7 +777,7 @@ const Browse_08A_ProcedureUal = () => {
               Did Bella cough, gag, or retch more than before the procedure?
             </span>
           }
-          index={18}
+          index={19}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -770,14 +805,14 @@ const Browse_08A_ProcedureUal = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Over time, did Bella cough, gag, or retch more or less frequently?
+              Did the coughing, gagging or retching get worse or better over time?
             </span>
           }
-          index={19}
+          index={20}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1 = more frequently, 3 = stayed about the same, 5 = less frequently</p>
+          <p className="browse-question-description">1 = much worse, 3 = stayed about the same, 5 = got much better</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-rating" aria-hidden="true">
                 
@@ -913,7 +948,7 @@ const Browse_08A_ProcedureUal = () => {
               Did Bella develop bad breath after the procedure?
             </span>
           }
-          index={20}
+          index={21}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -941,10 +976,10 @@ const Browse_08A_ProcedureUal = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the bad breath get better or worse over time?
+              Did the bad breath get worse or better over time?
             </span>
           }
-          index={21}
+          index={22}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1084,7 +1119,7 @@ const Browse_08A_ProcedureUal = () => {
               Did Bella regurgitate food or water more frequently than before the procedure?
             </span>
           }
-          index={22}
+          index={23}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1112,14 +1147,14 @@ const Browse_08A_ProcedureUal = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Over time, did Bella regurgitate food or water more or less frequently?
+              Did the regurgitating get worse or better over time?
             </span>
           }
-          index={23}
+          index={24}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1 = more frequently, 3 = stayed about the same, 5 = less frequently</p>
+          <p className="browse-question-description">1 = much worse, 3 = stayed about the same, 5 = much better</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-rating" aria-hidden="true">
                 
@@ -1255,7 +1290,7 @@ const Browse_08A_ProcedureUal = () => {
               Did Bella cough up mucus or phlegm more frequently than before the procedure?
             </span>
           }
-          index={24}
+          index={25}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1283,14 +1318,14 @@ const Browse_08A_ProcedureUal = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Over time, did Bella cough up mucus or phlegm more or less frequently?
+              Did the mucus or phlegm production get worse or better over time?
             </span>
           }
-          index={25}
+          index={26}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
-          <p className="browse-question-description">1 = more frequently, 3 = stayed about the same, 5 = less frequently</p>
+          <p className="browse-question-description">1 = much worse, 3 = stayed about the same, 5 = much better</p>
           <div className="showanswer__content-block">
           <div className="browse-showanswer-rating" aria-hidden="true">
                 
@@ -1429,10 +1464,10 @@ const Browse_08A_ProcedureUal = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How would you describe how Bella&lsquo;s breathing changed in the months and years following the tieback surgery?
+              In the long-term, how did Bella&lsquo;s breathing change over time?
             </span>
           }
-          index={26}
+          index={27}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1471,7 +1506,7 @@ const Browse_08A_ProcedureUal = () => {
               How long did it take for the LP symptoms to return?
             </span>
           }
-          index={27}
+          index={28}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1510,7 +1545,7 @@ const Browse_08A_ProcedureUal = () => {
               Was suture failure identified as the reason for the return of Bella&lsquo;s LP symptoms?
             </span>
           }
-          index={28}
+          index={29}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1541,7 +1576,7 @@ const Browse_08A_ProcedureUal = () => {
               Did Bella have a second tieback operation after the first suture failure?
             </span>
           }
-          index={29}
+          index={30}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1568,7 +1603,7 @@ const Browse_08A_ProcedureUal = () => {
               How would you rate your satisfaction with Bella&lsquo;s tieback procedure?
             </span>
           }
-          index={30}
+          index={31}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

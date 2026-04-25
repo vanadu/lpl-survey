@@ -185,6 +185,85 @@
                 }
               ]
             },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALComplications",
+              "title": "Were there unexpected complications during or immediately after the surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+            {
+              "type": "checkbox",
+              "name": "ProcedureUALComplicationsType",
+              "title": "What was the nature of the complications that occurred during or immediately after the surgery?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureUALComplications} = 'YES'",
+              "choices": [
+                {
+                  "value": "ASPIRATION",
+                  "text": "Aspiration pneumonia"
+                },
+                {
+                  "value": "ANESTHESIA",
+                  "text": "Adverse reaction to anesthesia"
+                },
+                {
+                  "value": "SUTURE_FAILURE",
+                  "text": "Suture failure"
+                },
+                {
+                  "value": "RESPIRATORY",
+                  "text": "Respiratory crisis"
+                },
+                {
+                  "value": "STROKE",
+                  "text": "Stroke or cardiac event"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or prefer not to say"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "ProcedureUALComplicationsRepeatProcedure",
+              "title": "Did the surgeon attempt a second tieback on the other side?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureUALComplicationsType} contains 'SUTURE_FAILURE'",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+
             {
               "type": "radiogroup",
               "name": "ProcedureUALExtendedStay",
@@ -209,57 +288,6 @@
                 }
               ],
               "showOtherItem": false
-            },
-            {
-              "type": "checkbox",
-              "name": "ProcedureUALExtendedStayReason",
-              "title": "Why did {CmpnName} need extended inpatient care?",
-              "isRequired": true,
-              "visibleIf": "{ProcedureUALExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
-              "choices": [
-                {
-                  "value": "ASPIRATION",
-                  "text": "Aspiration pneumonia"
-                },
-                {
-                  "value": "ANESTHESIA",
-                  "text": "Adverse reaction to anesthesia"
-                },
-                {
-                  "value": "SUTURE_FAILURE",
-                  "text": "Suture failure"
-                },
-                {
-                  "value": "RESPIRATORY",
-                  "text": "Respiratory crisis"
-                },
-                {
-                  "value": "STROKE",
-                  "text": "Stroke or cardiac event"
-                }
-              ],
-              "showOtherItem": true
-            },
-            {
-              "type": "radiogroup",
-              "name": "ProcedureUALExtendedStayRepeatProcedure",
-              "title": "Did the surgeon attempt a second tieback on the other side?",
-              "isRequired": true,
-              "visibleIf": "{ProcedureUALExtendedStayReason} contains 'SUTURE_FAILURE'",
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ]
             },
             {
               "type": "radiogroup",
@@ -357,7 +385,7 @@
             {
               "type": "dropdown",
               "name": "ProcedureUALCost",
-              "title": "About what was the cost of the surgery, not including post-operative complications?",
+              "title": "About what was the cost of the surgery including immediate post-operative complications?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
               "visibleIf": "{ProcedureDidHave} = true",
@@ -395,11 +423,11 @@
             },
             {
               "type": "dropdown",
-              "name": "ProcedureUALComplicationsCost",
-              "title": "About what was total cost of the complications of the surgery?",
+              "name": "ProcedureUALFollowupCost",
+              "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the surgery?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
-              "visibleIf": "{ProcedureUALExtendedStay} != 'NO' || {ProcedureUALFollowupCare} = 'YES'",
+              "visibleIf": "{ProcedureUALFollowupCare} = 'YES'",
               "choices": [
                 {
                   "value": "NOT_SAY",
@@ -493,8 +521,8 @@
             {
               "type": "rating",
               "name": "ProcedureUALCoughGagRetchChange",
-              "title": "Over time, did {CmpnName} cough, gag, or retch more or less frequently?",
-              "description": "1 = more frequently, 3 = stayed about the same, 5 = less frequently",
+              "title": "Did the coughing, gagging or retching get worse or better over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
               "isRequired": true,
               "visibleIf": "{ProcedureUALCoughGagRetch} = 'YES'",
               "rateValues": [
@@ -528,7 +556,7 @@
             {
               "type": "rating",
               "name": "ProcedureUALBadBreathChange",
-              "title": "Did the bad breath get better or worse over time?",
+              "title": "Did the bad breath get worse or better over time?",
               "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
               "isRequired": true,
               "visibleIf": "{ProcedureUALBadBreath} = 'YES'",
@@ -563,8 +591,8 @@
             {
               "type": "rating",
               "name": "ProcedureUALRegurgitateChange",
-              "title": "Over time, did {CmpnName} regurgitate food or water more or less frequently?",
-              "description": "1 = more frequently, 3 = stayed about the same, 5 = less frequently",
+              "title": "Did the regurgitating get worse or better over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
               "isRequired": true,
               "visibleIf": "{ProcedureUALRegurgitate} = 'YES'",
               "rateValues": [
@@ -599,8 +627,8 @@
             {
               "type": "rating",
               "name": "ProcedureUALMucusChange",
-              "title": "Over time, did {CmpnName} cough up mucus or phlegm more or less frequently?",
-              "description": "1 = more frequently, 3 = stayed about the same, 5 = less frequently",
+              "title": "Did the mucus or phlegm production get worse or better over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
               "isRequired": true,
               "visibleIf": "{ProcedureUALMucus} = 'YES'",
               "rateValues": [
@@ -625,7 +653,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureUALBreathingLongTerm",
-              "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the tieback surgery?",
+              "title": "In the long-term, how did {CmpnName}'s breathing change over time?",
               "isRequired": true,
               "choices": [
                 {

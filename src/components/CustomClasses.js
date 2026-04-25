@@ -116,14 +116,8 @@ export function getStyleDirectives(item) {
     "ProcedureOtherExtendedStayReason",
     "ProcedureOtherMedicationsType",
 
-
-
-
-
-
     "BreathingCrisisProductRecommendedType",
-    "BreathingAspirationCount",
-    "BreathingAspirationAfterProcedure",
+
 
     "NeuropathyOtherIssues",
     "ConclusionQOLIssues",
@@ -415,11 +409,9 @@ export function getStyleDirectives(item) {
 
     "BreathingCrisisCount",
     "BreathingEmergencyCount",
-
     "BreathingEmergencyCost",
-
-
-
+    "BreathingAspirationCount",
+    "BreathingAspirationAfterProcedure",
     "BreathingAspirationCost",
 
     "NeuropathySymptomsBreathingOnset",
@@ -580,6 +572,8 @@ export function getStyleDirectives(item) {
     "ProcedureUALExtendedStayRepeatProcedure",
     "ProcedureUALFollowupCare",
     "ProcedureUALMedications",
+    "ProcedureUALMedicationsType",
+    "ProcedureUALMedicationsType",
     "ProcedureUALCost",
     "ProcedureUALComplicationsCost",
     "ProcedureUALBreathingPostOp",
@@ -608,6 +602,7 @@ export function getStyleDirectives(item) {
     "ProcedureESIExtendedStayRepeatProcedure",
     "ProcedureESIFollowupCare",
     "ProcedureESIMedications",
+    "ProcedureESIMedicationsType",
     "ProcedureESICost",
     "ProcedureESIComplicationsCost",
     "ProcedureESIBreathingPostOp",
@@ -636,6 +631,7 @@ export function getStyleDirectives(item) {
     "ProcedureBVEAPExtendedStayRepeatProcedure",
     "ProcedureBVEAPFollowupCare",
     "ProcedureBVEAPMedications",
+    "ProcedureBVEAPMedicationsType",
     "ProcedureBVEAPCost",
     "ProcedureBVEAPComplicationsCost",
     "ProcedureBVEAPBreathingPostOp",
@@ -664,6 +660,7 @@ export function getStyleDirectives(item) {
     "ProcedurePAEExtendedStayRepeatProcedure",
     "ProcedurePAEFollowupCare",
     "ProcedurePAEMedications",
+    "ProcedurePAEMedicationsType",
     "ProcedurePAECost",
     "ProcedurePAEComplicationsCost",
     "ProcedurePAEBreathingPostOp",
@@ -692,6 +689,7 @@ export function getStyleDirectives(item) {
     "ProcedureVCCExtendedStayRepeatProcedure",
     "ProcedureVCCFollowupCare",
     "ProcedureVCCMedications",
+    "ProcedureVCCMedicationsType",    
     "ProcedureVCCCost",
     "ProcedureVCCComplicationsCost",
     "ProcedureVCCBreathingPostOp",
@@ -720,6 +718,7 @@ export function getStyleDirectives(item) {
     "ProcedurePLEExtendedStayRepeatProcedure",
     "ProcedurePLEFollowupCare",
     "ProcedurePLEMedications",
+    "ProcedurePLEMedicationsType",
     "ProcedurePLECost",
     "ProcedurePLEComplicationsCost",
     "ProcedurePLEBreathingPostOp",
@@ -747,6 +746,7 @@ export function getStyleDirectives(item) {
     "ProcedureTTExtendedStayRepeatProcedure",
     "ProcedureTTFollowupCare",
     "ProcedureTTMedications",
+    "ProcedureTTMedicationsType",
     "ProcedureTTCost",
     "ProcedureTTComplicationsCost",
     "ProcedureTTBreathingPostOp",
@@ -774,6 +774,7 @@ export function getStyleDirectives(item) {
     "ProcedureOtherExtendedStayRepeatProcedure",
     "ProcedureOtherFollowupCare",
     "ProcedureOtherMedications",
+    "ProcedureOtherMedicationsType",
     "ProcedureOtherCost",
     "ProcedureOtherComplicationsCost",
     "ProcedureOtherBreathingPostOp",

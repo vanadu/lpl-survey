@@ -190,12 +190,35 @@
               ],
               "showOtherItem": false
             },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureESIComplications",
+              "title": "Were there unexpected complications during or immediately after the surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+
             {
               "type": "checkbox",
-              "name": "ProcedureESIExtendedStayReason",
-              "title": "Why did {CmpnName} need extended inpatient care?",
+              "name": "ProcedureESIComplicationsType",
+              "title": "What was the nature of the complications that occurred during or immediately after the surgery?",
               "isRequired": true,
-              "visibleIf": "{ProcedureESIExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
+              "visibleIf": "{ProcedureESIComplications} = 'YES'",
               "choices": [
                 {
                   "value": "ASPIRATION",
@@ -216,16 +239,20 @@
                 {
                   "value": "STROKE",
                   "text": "Stroke or cardiac event"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or prefer not to say"
                 }
               ],
               "showOtherItem": true
             },
             {
               "type": "radiogroup",
-              "name": "ProcedureESIExtendedStayRepeatProcedure",
+              "name": "ProcedureESIComplicationsRepeatProcedure",
               "title": "Did the surgeon attempt to implant another stent of a different size?",
               "isRequired": true,
-              "visibleIf": "{ProcedureESIExtendedStay} != 'NO' && {ProcedureESIExtendedStayReason} contains 'MIGRATED'",
+              "visibleIf": "{ProcedureESIComplicationsType} contains 'MIGRATED'",
               "choices": [
                 {
                   "value": "YES",
@@ -372,11 +399,11 @@
             },
             {
               "type": "dropdown",
-              "name": "ProcedureESIComplicationsCost",
+              "name": "ProcedureESIFollowupCost",
               "title": "About what was total cost of the complications of the stent procedure?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
-              "visibleIf": "{ProcedureESIExtendedStay} != 'NO' || {ProcedureESIFollowupCare} = 'YES'",
+              "visibleIf": "{ProcedureESIFollowupCare} = 'YES'",
               "choices": [
                 {
                   "value": "NOT_SAY",
@@ -463,7 +490,7 @@
             {
               "type": "rating",
               "name": "ProcedureESICoughGagRetchChange",
-              "title": "Did the coughing, gagging or retching get better or worse with time?",
+              "title": "Did the coughing, gagging or retching get worse or better over time?",
               "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
               "isRequired": true,
               "visibleIf": "{ProcedureESICoughGagRetch} = 'YES'",
@@ -498,7 +525,7 @@
             {
               "type": "rating",
               "name": "ProcedureESIBadBreathStrength",
-              "title": "How strong was {CmpnName}'s halitosis?",
+              "title": "How strong was {CmpnName}'s bad breath?",
               "description": "1 = not very strong, 3 = moderate, 5 = extremely strong",
               "isRequired": true,
               "visibleIf": "{ProcedureType} contains 'ESI' && {ProcedureESIBadBreath} = 'YES'",
@@ -513,7 +540,7 @@
             {
               "type": "rating",
               "name": "ProcedureESIBadBreathChange",
-              "title": "Did the bad breath get better or worse over time?",
+              "title": "Did the bad breath get worse or better over time?",
               "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
               "isRequired": true,
               "visibleIf": "{ProcedureESIBadBreath} = 'YES'",
@@ -548,8 +575,8 @@
             {
               "type": "rating",
               "name": "ProcedureESIRegurgitateChange",
-              "title": "Did the regurgitation get less or more frequent with time?",
-              "description": "1 = less frequent, 3 = stayed about the same, 5 = more frequent",
+              "title": "Did the regurgitating get worse or better over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
               "isRequired": true,
               "visibleIf": "{ProcedureESIRegurgitate} = 'YES'",
               "rateValues": [
@@ -584,8 +611,8 @@
             {
               "type": "rating",
               "name": "ProcedureESIMucusChange",
-              "title": "Did the mucus or phlegm production decrease or increase over time?",
-              "description": "1 = decreased, 3 = stayed about the same, 5 = increased",
+              "title": "Did the mucus or phlegm production get worse or better over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
               "isRequired": true,
               "visibleIf": "{ProcedureESIMucus} = 'YES'",
               "rateValues": [
@@ -610,7 +637,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureESIBreathingLongTerm",
-              "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the stent procedure?",
+              "title": "In the long-term, how did {CmpnName}'s breathing change over time after the stent procedure",
               "isRequired": true,
               "choices": [
                 {

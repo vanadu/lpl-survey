@@ -417,7 +417,7 @@ const Browse_08H_ProcedureOther = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              What medications were prescribed or provided for Bella after the surgery?
+              Were prescription medications provided for Bella after the procedure?
             </span>
           }
           index={13}
@@ -427,13 +427,40 @@ const Browse_08H_ProcedureOther = () => {
 
           <div className="showanswer__content-block">
           <ul>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>None or don&lsquo;t know</span>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Yes</span>
             </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>No</span>
+            </li>
+            <li className="browse-showanswer-radio">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Don&lsquo;t know</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
+      <div className="browse-question-container" id="ProcedureOtherMedicationsType">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              What medications were prescribed or provided for Bella after the procedure?
+            </span>
+          }
+          index={14}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)</span>
+              <span>Pain medications (i.e. acetaminophen, paracetamol or other NSAID, opiods)</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
@@ -449,11 +476,15 @@ const Browse_08H_ProcedureOther = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Sedative (i.e. trazodone, tramadol)</span>
+              <span>Sedative (i.e. trazodone, gabapentin, acepromazine)</span>
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Cerenia (maropitant citrate)</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Cough suppressants (i.e. codeine, dextromethorphan, guaifenesin)</span>
             </li>
           </ul>
           </div>
@@ -473,7 +504,7 @@ const Browse_08H_ProcedureOther = () => {
               About what was the cost of the surgery, not including post-operative complications?
             </span>
           }
-          index={14}
+          index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -520,7 +551,7 @@ const Browse_08H_ProcedureOther = () => {
               About what was total cost of the complications of the surgery?
             </span>
           }
-          index={15}
+          index={16}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -575,7 +606,7 @@ const Browse_08H_ProcedureOther = () => {
               How would you rate Bella&lsquo;s breathing in the time right after the LP surgery?
             </span>
           }
-          index={16}
+          index={17}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -715,7 +746,7 @@ const Browse_08H_ProcedureOther = () => {
               Did Bella cough, gag, or retch more than before the procedure?
             </span>
           }
-          index={17}
+          index={18}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -746,7 +777,7 @@ const Browse_08H_ProcedureOther = () => {
               Did the coughing, gagging or retching get better or worse with time?
             </span>
           }
-          index={18}
+          index={19}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -886,7 +917,7 @@ const Browse_08H_ProcedureOther = () => {
               Did Bella develop bad breath after the procedure?
             </span>
           }
-          index={19}
+          index={20}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -917,7 +948,7 @@ const Browse_08H_ProcedureOther = () => {
               Did the bad breath get better or worse over time?
             </span>
           }
-          index={20}
+          index={21}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1057,7 +1088,7 @@ const Browse_08H_ProcedureOther = () => {
               Did Bella regurgitate food or water more frequently than before the procedure?
             </span>
           }
-          index={21}
+          index={22}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1088,7 +1119,7 @@ const Browse_08H_ProcedureOther = () => {
               Did the regurgitation get less or more frequent with time?
             </span>
           }
-          index={22}
+          index={23}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1228,7 +1259,7 @@ const Browse_08H_ProcedureOther = () => {
               Did Bella cough up mucus or phlegm more frequently than before the procedure?
             </span>
           }
-          index={23}
+          index={24}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1259,7 +1290,7 @@ const Browse_08H_ProcedureOther = () => {
               Did the mucus or phlegm production decrease or increase over time?
             </span>
           }
-          index={24}
+          index={25}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1405,7 +1436,7 @@ const Browse_08H_ProcedureOther = () => {
               How would you describe how Bella&lsquo;s breathing changed in the months and years following the LP surgery?
             </span>
           }
-          index={25}
+          index={26}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1444,7 +1475,7 @@ const Browse_08H_ProcedureOther = () => {
               How long did it take for the LP symptoms to return?
             </span>
           }
-          index={26}
+          index={27}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1483,7 +1514,7 @@ const Browse_08H_ProcedureOther = () => {
               How would you rate your satisfaction with the procedure Bella had?
             </span>
           }
-          index={27}
+          index={28}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

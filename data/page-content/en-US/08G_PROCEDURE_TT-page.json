@@ -24,7 +24,7 @@
             {
               "type": "panel",
               "name": "ProcedureTTAgeDetailsPanel",
-              "description": "TTase enter years and months.",
+              "description": "Please enter years and months.",
               "visibleIf": "{ProcedureDidHave} = true",
               "elements": [
                 {
@@ -212,6 +212,30 @@
                 }
               ]
             },
+
+            {
+              "type": "radiogroup",
+              "name": "ProcedureTTComplications",
+              "title": "Were there unexpected complications during or immediately after the surgery?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "Yes"
+                },
+                {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+
+
+
             {
               "type": "radiogroup",
               "name": "ProcedureTTExtendedStay",
@@ -239,10 +263,10 @@
             },
             {
               "type": "checkbox",
-              "name": "ProcedureTTExtendedStayReason",
+              "name": "ProcedureTTComplicationsType",
               "title": "Why did {CmpnName} need extended inpatient care?",
               "isRequired": true,
-              "visibleIf": "{ProcedureTTExtendedStay} != 'NO' and {ProcedureUALExtendedStay} notempty",
+              "visibleIf": "{ProcedureTTComplications} = 'YES'",
               "choices": [
                 {
                   "value": "ASPIRATION",
@@ -263,6 +287,10 @@
                 {
                   "value": "STROKE",
                   "text": "Stroke or cardiac event"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or prefer not to say"
                 }
               ],
               "showOtherItem": true
@@ -366,7 +394,7 @@
               "type": "dropdown",
               "name": "ProcedureTTCost",
               "title": "About what was the cost of the surgery, not including post-operative complications?",
-              "description": "TTase provide the pre-insurance cost, not the out-of-pocket cost.",
+              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
               "visibleIf": "{ProcedureDidHave} = true",
               "choices": [
@@ -403,11 +431,11 @@
             },
             {
               "type": "dropdown",
-              "name": "ProcedureTTComplicationsCost",
+              "name": "ProcedureTTFollowupCost",
               "title": "About what was total cost of the complications of the surgery?",
-              "description": "TTase provide the pre-insurance cost, not the out-of-pocket cost.",
+              "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
-              "visibleIf": "{ProcedureTTExtendedStay} != 'NO' || {ProcedureTTFollowupCare} = 'YES'",
+              "visibleIf": "{ProcedureTTFollowupCare} = 'YES'",
               "choices": [
                 {
                   "value": "NOT_SAY",
@@ -501,7 +529,7 @@
             {
               "type": "rating",
               "name": "ProcedureTTCoughGagRetchChange",
-              "title": "Did the coughing, gagging or retching get better or worse with time?",
+              "title": "Did the coughing, gagging or retching get worse or with time?",
               "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
               "isRequired": true,
               "visibleIf": "{ProcedureTTCoughGagRetch} = 'YES'",
@@ -536,7 +564,7 @@
             {
               "type": "rating",
               "name": "ProcedureTTBadBreathChange",
-              "title": "Did the bad breath get better or worse over time?",
+              "title": "Did the bad breath get worse or better over time?",
               "description": "1 = much worse, 3 = stayed about the same, 5 = got much better",
               "isRequired": true,
               "visibleIf": "{ProcedureTTBadBreath} = 'YES'",
@@ -571,8 +599,8 @@
             {
               "type": "rating",
               "name": "ProcedureTTRegurgitateChange",
-              "title": "Did the regurgitation get less or more frequent with time?",
-              "description": "1 = less frequent, 3 = stayed about the same, 5 = more frequent",
+              "title": "Did the regurgitating get worse or better over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
               "isRequired": true,
               "visibleIf": "{ProcedureTTRegurgitate} = 'YES'",
               "rateValues": [
@@ -607,9 +635,9 @@
             {
               "type": "rating",
               "name": "ProcedureTTMucusChange",
-              "title": "Did the mucus or phlegm production decrease or increase over time?",
-              "description": "1 = decreased, 3 = stayed about the same, 5 = increased",
               "isRequired": true,
+              "title": "Did the mucus or phlegm production get worse or better over time?",
+              "description": "1 = much worse, 3 = stayed about the same, 5 = much better",
               "visibleIf": "{ProcedureTTMucus} = 'YES'",
               "rateValues": [
                 { "value": 1, "text": "1" },
@@ -633,7 +661,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureTTBreathingLongTerm",
-              "title": "How would you describe how {CmpnName}'s breathing changed in the months and years following the laryngectomy surgery?",
+              "title": "In the long-term, how did {CmpnName}'s breathing change over time after surgery?",
               "isRequired": true,
               "choices": [
                 {
