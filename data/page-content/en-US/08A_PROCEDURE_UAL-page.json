@@ -285,7 +285,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureUALMedications",
-              "title": "Were prescriptions medications provided for {CmpnName} after the procedure?",
+              "title": "Were prescription medications provided for {CmpnName} after the procedure?",
               "isRequired": true,
               "choices": [
                 {

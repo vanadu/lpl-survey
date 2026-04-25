@@ -290,25 +290,41 @@
               "showOtherItem": false
             },
             {
-              "type": "checkbox",
+              "type": "radiogroup",
               "name": "ProcedureTTMedications",
-              "title": "What medications were prescribed or provided for {CmpnName} after the surgery?",
+              "title": "Were prescription medications provided for {CmpnName} after the procedure?",
               "isRequired": true,
               "choices": [
                 {
-                  "value": "DONT_KNOW",
-                  "text": "None or don't know"
+                  "value": "YES",
+                  "text": "Yes"
                 },
                 {
+                  "value": "NO",
+                  "text": "No"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "ProcedureTTMedicationsType",
+              "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
+              "isRequired": true,
+              "choices": [
+                {
                   "value": "PAIN",
-                  "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, gabapentin)"
+                  "text": "Pain medications (i.e. acetaminophen, paracetamol or other NSAID, opiods)"
                 },
                 {
                   "value": "REFLUX",
                   "text": "Reflux medications (i.e. cisipride, famotidine, omeprazole)"
                 },
                 {
-                  "value": "ANTIBIOTIC",
+                  "value": "ANTIBIOTICS",
                   "text": "Antibiotics"
                 },
                 {
@@ -317,11 +333,15 @@
                 },
                 {
                   "value": "SEDATIVE",
-                  "text": "Sedative (i.e. trazodone, tramadol)"
+                  "text": "Sedative (i.e. trazodone, gabapentin, acepromazine)"
                 },
                 {
                   "value": "MAROPITANT",
                   "text": "Cerenia (maropitant citrate)"
+                },
+                {
+                  "value": "COUGH_SUPPRESSANT",
+                  "text": "Cough suppressants (i.e. codeine, dextromethorphan, guaifenesin)"
                 }
               ],
               "showOtherItem": true
