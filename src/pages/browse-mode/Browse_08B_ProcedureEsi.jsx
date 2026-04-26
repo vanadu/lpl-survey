@@ -548,7 +548,7 @@ const Browse_08B_ProcedureEsi = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About what was total cost of the complications of the stent procedure?
+              About what was total cost of follow-up care or procedures that Bella needed as a result of the stent implant?
             </span>
           }
           index={16}

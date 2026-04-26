@@ -126,7 +126,22 @@ const Browse_08F_ProcedurePle = () => {
 
           <div className="showanswer__content-block">
           <ul>
-
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Less than two weeks</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Two to four weeks</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Four to eight weeks</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>More than eight weeks</span>
+            </li>
           </ul>
           </div>
         </ShowAnswerContent>
@@ -383,10 +398,6 @@ const Browse_08F_ProcedurePle = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Suture failure</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Respiratory crisis</span>
             </li>
             <li className="browse-showanswer-checkbox">
@@ -568,7 +579,7 @@ const Browse_08F_ProcedurePle = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About what was total cost of the complications of the surgery?
+              About what was total cost of follow-up care or procedures that Bella needed as a result of the surgery?
             </span>
           }
           index={17}

@@ -42,11 +42,11 @@ const Browse_08G_ProcedureTt = () => {
       </div>
 
       <div className="browse-content-block" id="ProcedureTTText">
-        <p className="browse-content-text">The arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. With a partial laryngectomy, one side of the arytenoid cartilages is partially removed and the vocal folds are partially removed to create a larger opening through the paralyzed larynx for the patient to breathe through.</p>
+        <p className="browse-content-text">Tracheostomy is most often performed as a salvage procedure in emergencies or after other LP surgeries have failed.</p>
       </div>
 
       <div className="browse-panel-container" id="ProcedureTTAgePanel">
-        <h3 className="browse-showanswer-title">About how old was Bella when she had the partial laryngectomy surgery for LP?</h3>
+        <h3 className="browse-showanswer-title">About how old was Bella when she had the tracheostomy?</h3>
       <div className="browse-panel-container" id="ProcedureTTAgeDetailsPanel">
       <div className="browse-question-container" id="ProcedureTTAgeYears">
         <ShowAnswerContent
@@ -89,7 +89,7 @@ const Browse_08G_ProcedureTt = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?
+              Was it an scheduled procedure procedure or was it done as an emergency or after a different LP surgery had failed?
             </span>
           }
           index={3}
@@ -126,7 +126,22 @@ const Browse_08G_ProcedureTt = () => {
 
           <div className="showanswer__content-block">
           <ul>
-
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Less than two weeks</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Two to four weeks</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>Four to eight weeks</span>
+            </li>
+            <li className="browse-showanswer-dropdown">
+              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
+              <span>More than eight weeks</span>
+            </li>
           </ul>
           </div>
         </ShowAnswerContent>
@@ -136,41 +151,10 @@ const Browse_08G_ProcedureTt = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon explain the difference between the partial laryngectomy and other surgery or procedure types?
+              Did the surgeon explain the difference between the tracheostomy and other surgery or procedure types?
             </span>
           }
           index={5}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureTTLaser">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Was the laryngectomy performed with a laser?
-            </span>
-          }
-          index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -198,10 +182,10 @@ const Browse_08G_ProcedureTt = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did the surgeon offer you a choice between partial laryngectomy and any other procedure type?
+              Did the surgeon offer you a choice between tracheostomy and any other procedure type?
             </span>
           }
-          index={7}
+          index={6}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -238,38 +222,7 @@ const Browse_08G_ProcedureTt = () => {
               Did Bella have any infection or swelling at the incision site?
             </span>
           }
-          index={8}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Yes</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>No</span>
-            </li>
-            <li className="browse-showanswer-radio">
-              <span className="browse-showanswer-icon browse-showanswer-icon--radio" aria-hidden="true"></span>
-              <span>Don&lsquo;t know</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
-      <div className="browse-question-container" id="ProcedureTTOralBleeding">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Did Bella have bleeding in the mouth or from the inside the throat?
-            </span>
-          }
-          index={9}
+          index={7}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -297,10 +250,10 @@ const Browse_08G_ProcedureTt = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Were there unexpected complications during or immediately after the surgery?
+              Were there unexpected complications during or immediately after the tracheostomy?
             </span>
           }
-          index={10}
+          index={8}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -324,6 +277,45 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
+      <div className="browse-question-container" id="ProcedureTTComplicationsType">
+        <ShowAnswerContent
+          header={
+            <span className="showanswer__title">
+              What was the nature of the complications that occurred during or immediately after the procedure?
+            </span>
+          }
+          index={9}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+
+          <div className="showanswer__content-block">
+          <ul>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Aspiration pneumonia</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Adverse reaction to anesthesia</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Respiratory crisis</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Stroke or cardiac event</span>
+            </li>
+            <li className="browse-showanswer-checkbox">
+              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
+              <span>Don&lsquo;t know or prefer not to say</span>
+            </li>
+          </ul>
+          </div>
+        </ShowAnswerContent>
+      </div>
+
       <div className="browse-question-container" id="ProcedureTTExtendedStay">
         <ShowAnswerContent
           header={
@@ -331,7 +323,7 @@ const Browse_08G_ProcedureTt = () => {
               Did Bella need to stay longer than expected at the hospital after the procedure?
             </span>
           }
-          index={11}
+          index={10}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -359,49 +351,6 @@ const Browse_08G_ProcedureTt = () => {
         </ShowAnswerContent>
       </div>
 
-      <div className="browse-question-container" id="ProcedureTTComplicationsType">
-        <ShowAnswerContent
-          header={
-            <span className="showanswer__title">
-              Why did Bella need extended inpatient care?
-            </span>
-          }
-          index={12}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-
-          <div className="showanswer__content-block">
-          <ul>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Aspiration pneumonia</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Adverse reaction to anesthesia</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Suture failure</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Respiratory crisis</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Stroke or cardiac event</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Don&lsquo;t know or prefer not to say</span>
-            </li>
-          </ul>
-          </div>
-        </ShowAnswerContent>
-      </div>
-
       <div className="browse-question-container" id="ProcedureTTFollowupCare">
         <ShowAnswerContent
           header={
@@ -409,7 +358,7 @@ const Browse_08G_ProcedureTt = () => {
               In the four weeks after surgery, did Bella need another visit to a veterinary professional because of complications?
             </span>
           }
-          index={13}
+          index={11}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -440,7 +389,7 @@ const Browse_08G_ProcedureTt = () => {
               Were prescription medications provided for Bella after the procedure?
             </span>
           }
-          index={14}
+          index={12}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -471,7 +420,7 @@ const Browse_08G_ProcedureTt = () => {
               What medications were prescribed or provided for Bella after the procedure?
             </span>
           }
-          index={15}
+          index={13}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -521,10 +470,10 @@ const Browse_08G_ProcedureTt = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About what was the cost of the surgery, not including post-operative complications?
+              About what was the cost of the tracheostomy procedure, not including post-operative complications?
             </span>
           }
-          index={16}
+          index={14}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -568,10 +517,10 @@ const Browse_08G_ProcedureTt = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About what was total cost of the complications of the surgery?
+              About what was total cost of follow-up care or procedures that Bella needed as a result of the tracheostomy?
             </span>
           }
-          index={17}
+          index={15}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -623,10 +572,10 @@ const Browse_08G_ProcedureTt = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How would you rate Bella&lsquo;s breathing in the time right after the laryngectomy surgery?
+              How would you rate Bella&lsquo;s breathing in the time right after the tracheostomy?
             </span>
           }
-          index={18}
+          index={16}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -766,7 +715,7 @@ const Browse_08G_ProcedureTt = () => {
               Did Bella cough, gag, or retch more than before the procedure?
             </span>
           }
-          index={19}
+          index={17}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -797,7 +746,7 @@ const Browse_08G_ProcedureTt = () => {
               Did the coughing, gagging or retching get worse or with time?
             </span>
           }
-          index={20}
+          index={18}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -937,7 +886,7 @@ const Browse_08G_ProcedureTt = () => {
               Did Bella develop bad breath after the procedure?
             </span>
           }
-          index={21}
+          index={19}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -968,7 +917,7 @@ const Browse_08G_ProcedureTt = () => {
               Did the bad breath get worse or better over time?
             </span>
           }
-          index={22}
+          index={20}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1108,7 +1057,7 @@ const Browse_08G_ProcedureTt = () => {
               Did Bella regurgitate food or water more frequently than before the procedure?
             </span>
           }
-          index={23}
+          index={21}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1139,7 +1088,7 @@ const Browse_08G_ProcedureTt = () => {
               Did the regurgitating get worse or better over time?
             </span>
           }
-          index={24}
+          index={22}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1279,7 +1228,7 @@ const Browse_08G_ProcedureTt = () => {
               Did Bella cough up mucus or phlegm more frequently than before the procedure?
             </span>
           }
-          index={25}
+          index={23}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1310,7 +1259,7 @@ const Browse_08G_ProcedureTt = () => {
               Did the mucus or phlegm production get worse or better over time?
             </span>
           }
-          index={26}
+          index={24}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1446,7 +1395,7 @@ const Browse_08G_ProcedureTt = () => {
 
       <div className="browse-panel-container" id="ProcedureTTLongTermPanel">
       <div className="browse-content-block" id="ProcedureTTLongTermHeading">
-        <p className="browse-content-text">These questions are about the long-term effects of Bella&lsquo;s laryngectomy surgery.</p>
+        <p className="browse-content-text">These questions are about the long-term effects of Bella&lsquo;s tracheostomy.</p>
       </div>
 
       <div className="browse-question-container" id="ProcedureTTBreathingLongTerm">
@@ -1456,7 +1405,7 @@ const Browse_08G_ProcedureTt = () => {
               In the long-term, how did Bella&lsquo;s breathing change over time after surgery?
             </span>
           }
-          index={27}
+          index={25}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1495,7 +1444,7 @@ const Browse_08G_ProcedureTt = () => {
               How long did it take for the LP symptoms to return?
             </span>
           }
-          index={28}
+          index={26}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >
@@ -1531,10 +1480,10 @@ const Browse_08G_ProcedureTt = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              How would you rate your satisfaction with Bella&lsquo;s laryngectomy procedure?
+              How would you rate your satisfaction with Bella&lsquo;s tracheostomy?
             </span>
           }
-          index={29}
+          index={27}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         >

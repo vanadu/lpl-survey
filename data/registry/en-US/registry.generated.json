@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-25T14:16:09.306Z",
+    "builtAt": "2026-04-26T11:46:57.985Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -3431,7 +3431,7 @@
         "ProcedureESICostPanel"
       ],
       "hasTitle": true,
-      "title": "About what was total cost of the complications of the stent procedure?",
+      "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the stent implant?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureESIFollowupCare} = 'YES'",
       "isRequired": true
@@ -3995,7 +3995,7 @@
         "ProcedureBVEAPCostPanel"
       ],
       "hasTitle": true,
-      "title": "About what was total cost of the complications of the surgery?",
+      "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the surgery?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureBVEAPFollowupCare} = 'YES'",
       "isRequired": true
@@ -4542,7 +4542,7 @@
         "ProcedurePAECostPanel"
       ],
       "hasTitle": true,
-      "title": "About what was total cost of the complications of the surgery?",
+      "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the surgery?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedurePAEFollowupCare} = 'YES'",
       "isRequired": true
@@ -5089,7 +5089,7 @@
         "ProcedureVCCCostPanel"
       ],
       "hasTitle": true,
-      "title": "About what was total cost of the complications of the surgery?",
+      "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the surgery?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureVCCFollowupCare} = 'YES'",
       "isRequired": true
@@ -5578,8 +5578,7 @@
       ],
       "hasTitle": true,
       "title": "Were prescription medications provided for {CmpnName} after the procedure?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedurePLEMedications} = 'YES'",
+      "hasVisibleIf": false,
       "isRequired": true
     },
     "ProcedurePLEMedicationsType": {
@@ -5594,7 +5593,8 @@
       ],
       "hasTitle": true,
       "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
-      "hasVisibleIf": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedurePLEMedications} = 'YES'",
       "isRequired": true
     },
     "ProcedurePLECostPanel": {
@@ -5636,7 +5636,7 @@
         "ProcedurePLECostPanel"
       ],
       "hasTitle": true,
-      "title": "About what was total cost of the complications of the surgery?",
+      "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the surgery?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedurePLEFollowupCare} = 'YES'",
       "isRequired": true
@@ -5882,7 +5882,7 @@
         "ProcedureTTCard1Panel"
       ],
       "hasTitle": true,
-      "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the partial laryngectomy surgery for LP?",
+      "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the tracheostomy?",
       "hasVisibleIf": false
     },
     "ProcedureTTAgeDetailsPanel": {
@@ -5944,7 +5944,7 @@
         "ProcedureTTAgePanel"
       ],
       "hasTitle": true,
-      "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+      "title": "Was it an scheduled procedure procedure or was it done as an emergency or after a different LP surgery had failed?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
@@ -5976,22 +5976,7 @@
         "ProcedureTTAgePanel"
       ],
       "hasTitle": true,
-      "title": "Did the surgeon explain the difference between the partial laryngectomy and other surgery or procedure types?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureTTLaser": {
-      "name": "ProcedureTTLaser",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE_TT-page",
-        "ProcedureTTCard1Panel",
-        "ProcedureTTAgePanel"
-      ],
-      "hasTitle": true,
-      "title": "Was the laryngectomy performed with a laser?",
+      "title": "Did the surgeon explain the difference between the tracheostomy and other surgery or procedure types?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -6006,7 +5991,7 @@
         "ProcedureTTAgePanel"
       ],
       "hasTitle": true,
-      "title": "Did the surgeon offer you a choice between partial laryngectomy and any other procedure type?",
+      "title": "Did the surgeon offer you a choice between tracheostomy and any other procedure type?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -6037,21 +6022,6 @@
       "hasVisibleIf": false,
       "isRequired": true
     },
-    "ProcedureTTOralBleeding": {
-      "name": "ProcedureTTOralBleeding",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE_TT-page",
-        "ProcedureTTCard1Panel",
-        "ProcedureTTSurgeryPanel"
-      ],
-      "hasTitle": true,
-      "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
     "ProcedureTTComplications": {
       "name": "ProcedureTTComplications",
       "type": "radiogroup",
@@ -6063,8 +6033,24 @@
         "ProcedureTTSurgeryPanel"
       ],
       "hasTitle": true,
-      "title": "Were there unexpected complications during or immediately after the surgery?",
+      "title": "Were there unexpected complications during or immediately after the tracheostomy?",
       "hasVisibleIf": false,
+      "isRequired": true
+    },
+    "ProcedureTTComplicationsType": {
+      "name": "ProcedureTTComplicationsType",
+      "type": "checkbox",
+      "role": "question",
+      "collect": true,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel",
+        "ProcedureTTSurgeryPanel"
+      ],
+      "hasTitle": true,
+      "title": "What was the nature of the complications that occurred during or immediately after the procedure?",
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureTTComplications} = 'YES'",
       "isRequired": true
     },
     "ProcedureTTExtendedStay": {
@@ -6080,22 +6066,6 @@
       "hasTitle": true,
       "title": "Did {CmpnName} need to stay longer than expected at the hospital after the procedure?",
       "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "ProcedureTTComplicationsType": {
-      "name": "ProcedureTTComplicationsType",
-      "type": "checkbox",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "PROCEDURE_TT-page",
-        "ProcedureTTCard1Panel",
-        "ProcedureTTSurgeryPanel"
-      ],
-      "hasTitle": true,
-      "title": "Why did {CmpnName} need extended inpatient care?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureTTComplications} = 'YES'",
       "isRequired": true
     },
     "ProcedureTTFollowupCare": {
@@ -6125,8 +6095,7 @@
       ],
       "hasTitle": true,
       "title": "Were prescription medications provided for {CmpnName} after the procedure?",
-      "hasVisibleIf": true,
-      "visibleIf": "{ProcedureTTMedications} = 'YES'",
+      "hasVisibleIf": false,
       "isRequired": true
     },
     "ProcedureTTMedicationsType": {
@@ -6141,7 +6110,8 @@
       ],
       "hasTitle": true,
       "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
-      "hasVisibleIf": false,
+      "hasVisibleIf": true,
+      "visibleIf": "{ProcedureTTMedications} = 'YES'",
       "isRequired": true
     },
     "ProcedureTTCostPanel": {
@@ -6167,7 +6137,7 @@
         "ProcedureTTCostPanel"
       ],
       "hasTitle": true,
-      "title": "About what was the cost of the surgery, not including post-operative complications?",
+      "title": "About what was the cost of the tracheostomy procedure, not including post-operative complications?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureDidHave} = true",
       "isRequired": true
@@ -6183,7 +6153,7 @@
         "ProcedureTTCostPanel"
       ],
       "hasTitle": true,
-      "title": "About what was total cost of the complications of the surgery?",
+      "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the tracheostomy?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureTTFollowupCare} = 'YES'",
       "isRequired": true
@@ -6222,7 +6192,7 @@
         "ProcedureTTConditionPanel"
       ],
       "hasTitle": true,
-      "title": "How would you rate {CmpnName}'s breathing in the time right after the laryngectomy surgery?",
+      "title": "How would you rate {CmpnName}'s breathing in the time right after the tracheostomy?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -6404,7 +6374,7 @@
         "ProcedureTTLongTermPanel"
       ],
       "hasTitle": true,
-      "title": "How would you rate your satisfaction with {CmpnName}'s laryngectomy procedure?",
+      "title": "How would you rate your satisfaction with {CmpnName}'s tracheostomy?",
       "hasVisibleIf": false,
       "isRequired": true
     },
@@ -6730,7 +6700,7 @@
         "ProcedureOtherCostPanel"
       ],
       "hasTitle": true,
-      "title": "About what was total cost of the complications of the surgery?",
+      "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the surgery?",
       "hasVisibleIf": true,
       "visibleIf": "{ProcedureOtherFollowupCare} = 'YES'",
       "isRequired": true

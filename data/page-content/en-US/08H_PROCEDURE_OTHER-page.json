@@ -270,15 +270,12 @@
               "choices": [
                 {
                   "value": "ASPIRATION",
+                  
                   "text": "Aspiration pneumonia"
                 },
                 {
                   "value": "ANESTHESIA",
                   "text": "Adverse reaction to anesthesia"
-                },
-                {
-                  "value": "SUTURE_FAILURE",
-                  "text": "Suture failure"
                 },
                 {
                   "value": "RESPIRATORY",
@@ -429,7 +426,7 @@
             {
               "type": "dropdown",
               "name": "ProcedureOtherFollowupCost",
-              "title": "About what was total cost of the complications of the surgery?",
+              "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the surgery?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
               "visibleIf": "{ProcedureOtherFollowupCare} = 'YES'",

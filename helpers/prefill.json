@@ -157,7 +157,13 @@
 
   "ProcedureDidHave": true,
   "ProcedureType":  [
-    "UAL"
+    "UAL",
+    "ESI",
+    "BVEAP",
+    "PAE",
+    "VCC",
+    "PLE",
+    "TT"
   ],
   "ProcedureUALAgeYears": "13",
   "ProcedureUALAgeMonths": "6",
@@ -185,7 +191,7 @@
     "MAROPITANT"
   ],
   "ProcedureUALCost": "3000_5000",
-  "ProcedureUALComplicationsCost": "1000_2000",
+  "ProcedureUALFollowupCost": "1000_2000",
   "ProcedureUALBreathingPostOp": 5,
   "ProcedureUALCoughGagRetch": "YES",
   "ProcedureUALCoughGagRetchChange": 3,
@@ -226,7 +232,7 @@
     "MAROPITANT"
   ],
   "ProcedureESICost": "3000_5000",
-  "ProcedureESIComplicationsCost": "1000_2000",
+  "ProcedureESIFollowupCost": "1000_2000",
   "ProcedureESIBreathingPostOp": 5,
   "ProcedureESICoughGagRetch": "YES",
   "ProcedureESICoughGagRetchChange": 3,
@@ -262,7 +268,7 @@
     "MAROPITANT"
   ],
   "ProcedureBVEAPCost": "3000_5000",
-  "ProcedureBVEAPComplicationsCost": "1000_2000",
+  "ProcedureBVEAPFollowupCost": "1000_2000",
   "ProcedureBVEAPBreathingPostOp": 5,
   "ProcedureBVEAPCoughGagRetch": "YES",
   "ProcedureBVEAPCoughGagRetchChange": 3,
@@ -302,7 +308,7 @@
     "MAROPITANT"
   ],
   "ProcedurePAECost": "3000_5000",
-  "ProcedurePAEComplicationsCost": "1000_2000",
+  "ProcedurePAEFollowupCost": "1000_2000",
   "ProcedurePAEBreathingPostOp": 5,
   "ProcedurePAECoughGagRetch": "YES",
   "ProcedurePAECoughGagRetchChange": 3,
@@ -340,7 +346,7 @@
     "MAROPITANT"
   ],
   "ProcedureVCCCost": "3000_5000",
-  "ProcedureVCCComplicationsCost": "1000_2000",
+  "ProcedureVCCFollowupCost": "1000_2000",
   "ProcedureVCCBreathingPostOp": 5,
   "ProcedureVCCCoughGagRetch": "YES",
   "ProcedureVCCCoughGagRetchChange": 3,
@@ -376,7 +382,7 @@
     "MAROPITANT"
   ],
   "ProcedurePLECost": "3000_5000",
-  "ProcedurePLEComplicationsCost": "1000_2000",
+  "ProcedurePLEFollowupCost": "1000_2000",
   "ProcedurePLEBreathingPostOp": 5,
   "ProcedurePLECoughGagRetch": "YES",
   "ProcedurePLECoughGagRetchChange": 3,
@@ -404,7 +410,7 @@
     "ASPIRATION",
     "ANESTHESIA"
   ],
-
+  "ProcedureTTExtendedStay": "ONE_DAY",
   "ProcedureTTFollowupCare": "YES",
   "ProcedureTTMedications": "YES",
   "ProcedureTTMedicationsType": [
@@ -412,7 +418,7 @@
     "MAROPITANT"
   ],
   "ProcedureTTCost": "3000_5000",
-  "ProcedureTTComplicationsCost": "1000_2000",
+  "ProcedureTTFollowupCost": "1000_2000",
   "ProcedureTTBreathingPostOp": 5,
   "ProcedureTTCoughGagRetch": "YES",
   "ProcedureTTCoughGagRetchChange": 3,
@@ -440,7 +446,6 @@
     "ANESTHESIA"
   ],
   "ProcedureOtherExtendedStay": "ONE_DAY",
-  "ProcedureOtherExtendedStayRepeatProcedure": "NO",
   "ProcedureOtherFollowupCare": "YES",
   "ProcedureOtherMedications": "YES",
   "ProcedureOtherMedicationsType": [
@@ -448,7 +453,7 @@
     "MAROPITANT"
   ],
   "ProcedureOtherCost": "3000_5000",
-  "ProcedureOtherComplicationsCost": "1000_2000",
+  "ProcedureOtherFollowupCost": "1000_2000",
   "ProcedureOtherBreathingPostOp": 5,
   "ProcedureOtherCoughGagRetch": "YES",
   "ProcedureOtherCoughGagRetchChange": 3,

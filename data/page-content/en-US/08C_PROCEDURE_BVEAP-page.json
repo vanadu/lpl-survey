@@ -224,10 +224,6 @@
                   "text": "Adverse reaction to anesthesia"
                 },
                 {
-                  "value": "SUTURE_FAILURE",
-                  "text": "Suture failure"
-                },
-                {
                   "value": "RESPIRATORY",
                   "text": "Respiratory crisis"
                 },
@@ -404,7 +400,7 @@
             {
               "type": "dropdown",
               "name": "ProcedureBVEAPFollowupCost",
-              "title": "About what was total cost of the complications of the surgery?",
+              "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the surgery?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
               "visibleIf": "{ProcedureBVEAPFollowupCare} = 'YES'",

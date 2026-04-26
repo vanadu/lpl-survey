@@ -79,7 +79,7 @@
             "title": "How far in advance was the procedure scheduled?",
             "isRequired": true,
             "visibleIf": "{ProcedureDidHave} = true && {ProcedurePLEScheduled} = true",
-            "choicesPLE": [
+            "choices": [
               {
                 "value": "LESS_THAN_TWO_WEEKS",
                 "text": "Less than two weeks"
@@ -277,10 +277,6 @@
                   "text": "Adverse reaction to anesthesia"
                 },
                 {
-                  "value": "SUTURE_FAILURE",
-                  "text": "Suture failure"
-                },
-                {
                   "value": "RESPIRATORY",
                   "text": "Respiratory crisis"
                 },
@@ -322,7 +318,6 @@
               "name": "ProcedurePLEMedications",
               "title": "Were prescription medications provided for {CmpnName} after the procedure?",
               "isRequired": true,
-              "visibleIf": "{ProcedurePLEMedications} = 'YES'",              
               "choices": [
                 {
                   "value": "YES",
@@ -343,7 +338,7 @@
               "name": "ProcedurePLEMedicationsType",
               "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
               "isRequired": true,
-              
+              "visibleIf": "{ProcedurePLEMedications} = 'YES'", 
               "choices": [
                 {
                   "value": "PAIN",
@@ -432,7 +427,7 @@
             {
               "type": "dropdown",
               "name": "ProcedurePLEFollowupCost",
-              "title": "About what was total cost of the complications of the surgery?",
+              "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the surgery?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
               "visibleIf": "{ProcedurePLEFollowupCare} = 'YES'",

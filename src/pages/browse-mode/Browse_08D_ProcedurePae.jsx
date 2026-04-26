@@ -363,10 +363,6 @@ const Browse_08D_ProcedurePae = () => {
             </li>
             <li className="browse-showanswer-checkbox">
               <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
-              <span>Suture failure</span>
-            </li>
-            <li className="browse-showanswer-checkbox">
-              <span className="browse-showanswer-icon browse-showanswer-icon--checkbox" aria-hidden="true"></span>
               <span>Respiratory crisis</span>
             </li>
             <li className="browse-showanswer-checkbox">
@@ -583,7 +579,7 @@ const Browse_08D_ProcedurePae = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              About what was total cost of the complications of the surgery?
+              About what was total cost of follow-up care or procedures that Bella needed as a result of the surgery?
             </span>
           }
           index={17}

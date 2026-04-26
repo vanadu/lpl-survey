@@ -14,12 +14,12 @@
         {
               "type": "html",
               "name": "ProcedureTTText",
-              "html": "<p>The arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. With a partial laryngectomy, one side of the arytenoid cartilages is partially removed and the vocal folds are partially removed to create a larger opening through the paralyzed larynx for the patient to breathe through.</p>"
+              "html": "<p>Tracheostomy is most often performed as a salvage procedure in emergencies or after other LP surgeries have failed.</p>"
         },
         {
           "type": "panel",
           "name": "ProcedureTTAgePanel",
-          "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the partial laryngectomy surgery for LP?",
+          "title": "About how old was {CmpnName} when {cvGenderSubjectPronoun} had the tracheostomy?",
           "elements": [
             {
               "type": "panel",
@@ -66,7 +66,7 @@
             {
               "type": "boolean",
               "name": "ProcedureTTScheduled",
-              "title": "Was it a scheduled procedure or an emergency procedure due to an LP-induced breathing crisis?",
+              "title": "Was it an scheduled procedure procedure or was it done as an emergency or after a different LP surgery had failed?",
               "isRequired": true,
               "visibleIf": "{ProcedureDidHave} = true",
               "labelTrue": "Scheduled",
@@ -79,7 +79,7 @@
             "title": "How far in advance was the procedure scheduled?",
             "isRequired": true,
             "visibleIf": "{ProcedureDidHave} = true && {ProcedureTTScheduled} = true",
-            "choicesTT": [
+            "choices": [
               {
                 "value": "LESS_THAN_TWO_WEEKS",
                 "text": "Less than two weeks"
@@ -102,28 +102,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureTTDifference",
-              "title": "Did the surgeon explain the difference between the partial laryngectomy and other surgery or procedure types?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ]
-            },
-
-            {
-              "type": "radiogroup",
-              "name": "ProcedureTTLaser",
-              "title": "Was the laryngectomy performed with a laser?",
+              "title": "Did the surgeon explain the difference between the tracheostomy and other surgery or procedure types?",
               "isRequired": true,
               "choices": [
                 {
@@ -144,7 +123,7 @@
             {
               "type": "radiogroup",
               "name": "ProcedureTTChoice",
-              "title": "Did the surgeon offer you a choice between partial laryngectomy and any other procedure type?",
+              "title": "Did the surgeon offer you a choice between tracheostomy and any other procedure type?",
               "isRequired": true,
               "choices": [
                 {
@@ -192,31 +171,11 @@
                 }
               ]
             },
-            {
-              "type": "radiogroup",
-              "name": "ProcedureTTOralBleeding",
-              "title": "Did {CmpnName} have bleeding in the mouth or from the inside the throat?",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ]
-            },
 
             {
               "type": "radiogroup",
               "name": "ProcedureTTComplications",
-              "title": "Were there unexpected complications during or immediately after the surgery?",
+              "title": "Were there unexpected complications during or immediately after the tracheostomy?",
               "isRequired": true,
               "choices": [
                 {
@@ -234,7 +193,36 @@
               ]
             },
 
-
+            {
+              "type": "checkbox",
+              "name": "ProcedureTTComplicationsType",
+              "title": "What was the nature of the complications that occurred during or immediately after the procedure?",
+              "isRequired": true,
+              "visibleIf": "{ProcedureTTComplications} = 'YES'",
+              "choices": [
+                {
+                  "value": "ASPIRATION",
+                  "text": "Aspiration pneumonia"
+                },
+                {
+                  "value": "ANESTHESIA",
+                  "text": "Adverse reaction to anesthesia"
+                },
+                {
+                  "value": "RESPIRATORY",
+                  "text": "Respiratory crisis"
+                },
+                {
+                  "value": "STROKE",
+                  "text": "Stroke or cardiac event"
+                },
+                {
+                  "value": "DONT_KNOW",
+                  "text": "Don't know or prefer not to say"
+                }
+              ],
+              "showOtherItem": true
+            },
 
             {
               "type": "radiogroup",
@@ -261,40 +249,7 @@
               ],
               "showOtherItem": false
             },
-            {
-              "type": "checkbox",
-              "name": "ProcedureTTComplicationsType",
-              "title": "Why did {CmpnName} need extended inpatient care?",
-              "isRequired": true,
-              "visibleIf": "{ProcedureTTComplications} = 'YES'",
-              "choices": [
-                {
-                  "value": "ASPIRATION",
-                  "text": "Aspiration pneumonia"
-                },
-                {
-                  "value": "ANESTHESIA",
-                  "text": "Adverse reaction to anesthesia"
-                },
-                {
-                  "value": "SUTURE_FAILURE",
-                  "text": "Suture failure"
-                },
-                {
-                  "value": "RESPIRATORY",
-                  "text": "Respiratory crisis"
-                },
-                {
-                  "value": "STROKE",
-                  "text": "Stroke or cardiac event"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know or prefer not to say"
-                }
-              ],
-              "showOtherItem": true
-            },
+
 
             {
               "type": "radiogroup",
@@ -322,7 +277,6 @@
               "name": "ProcedureTTMedications",
               "title": "Were prescription medications provided for {CmpnName} after the procedure?",
               "isRequired": true,
-              "visibleIf": "{ProcedureTTMedications} = 'YES'",              
               "choices": [
                 {
                   "value": "YES",
@@ -343,7 +297,7 @@
               "name": "ProcedureTTMedicationsType",
               "title": "What medications were prescribed or provided for {CmpnName} after the procedure?",
               "isRequired": true,
-              
+              "visibleIf": "{ProcedureTTMedications} = 'YES'", 
               "choices": [
                 {
                   "value": "PAIN",
@@ -393,7 +347,7 @@
             {
               "type": "dropdown",
               "name": "ProcedureTTCost",
-              "title": "About what was the cost of the surgery, not including post-operative complications?",
+              "title": "About what was the cost of the tracheostomy procedure, not including post-operative complications?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
               "visibleIf": "{ProcedureDidHave} = true",
@@ -432,7 +386,7 @@
             {
               "type": "dropdown",
               "name": "ProcedureTTFollowupCost",
-              "title": "About what was total cost of the complications of the surgery?",
+              "title": "About what was total cost of follow-up care or procedures that {CmpnName} needed as a result of the tracheostomy?",
               "description": "Please provide the pre-insurance cost, not the out-of-pocket cost.",
               "isRequired": true,
               "visibleIf": "{ProcedureTTFollowupCare} = 'YES'",
@@ -493,7 +447,7 @@
             {
               "type": "rating",
               "name": "ProcedureTTBreathingPostOp",
-              "title": "How would you rate {CmpnName}'s breathing in the time right after the laryngectomy surgery?",
+              "title": "How would you rate {CmpnName}'s breathing in the time right after the tracheostomy?",
               "description": "1 = no improvement, 3 = moderate improvement, 5 = very much improved",
               "isRequired": true,
               "rateValues": [
@@ -656,7 +610,7 @@
             {
               "type": "html",
               "name": "ProcedureTTLongTermHeading",
-              "html": "<h4>These questions are about the long-term effects of {CmpnName}'s laryngectomy surgery.</h4>"
+              "html": "<h4>These questions are about the long-term effects of {CmpnName}'s tracheostomy.</h4>"
             },
             {
               "type": "radiogroup",
@@ -719,7 +673,7 @@
             {
               "type": "rating",
               "name": "ProcedureTTSatisfaction",
-              "title": "How would you rate your satisfaction with {CmpnName}'s laryngectomy procedure?",
+              "title": "How would you rate your satisfaction with {CmpnName}'s tracheostomy?",
               "description": "1 = not at all satisfied, 3 = moderately satisfied, 5 = very satisfied",
               "isRequired": true,
               "rateValues": [
