@@ -519,7 +519,7 @@
     "EYE_MOVEMENTS"
   ],
 
-  "ConclusionNewSymptoms": "YES",
+  "ConclusionSymptomsChanged": "YES",
   "ConclusionLifestyleChanges": "YES",
   "ConclusionLifestyleChangesDetails": [
    "EXERCISE",

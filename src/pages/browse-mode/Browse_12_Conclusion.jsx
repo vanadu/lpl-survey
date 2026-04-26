@@ -62,7 +62,7 @@ const Browse_12_Conclusion = () => {
         <ShowAnswerContent
           header={
             <span className="showanswer__title">
-              Did Bella&lsquo;s LP/GOLPP symptoms change her as time progressed?
+              Did Bella&lsquo;s LP/GOLPP symptoms change as time progressed?
             </span>
           }
           index={1}

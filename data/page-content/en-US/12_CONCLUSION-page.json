@@ -48,7 +48,7 @@
           {
             "type": "radiogroup",
             "name": "ConclusionSymptomsChanged",
-            "title": "Did {CmpnName}'s LP/GOLPP symptoms change {cvGenderObjectPronoun} as time progressed?",
+            "title": "Did {CmpnName}'s LP/GOLPP symptoms change as time progressed?",
             "isRequired": true,
             "choices": [
               {

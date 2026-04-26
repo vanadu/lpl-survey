@@ -575,15 +575,19 @@ export default function SurveyComponentMaster() {
   return (
     <>
       {isSubmitting && (
-        <div className="success-container-wrap">
-          <div className="success-container isVisible">
-            <div className={`success-spinnerWrap ${isSubmitting ? "isShown" : "isHidden"}`}>
-              <div className="spinner-object" aria-label="Loading" />
-              <p className="success-text">Submitting…</p>
-              <p className="survey-spacer">&nbsp;</p>
+        // <section>
+          <div className="page home">
+            <div className="success-container-wrap">
+              <div className="success-container isVisible">
+                <div className={`success-spinnerWrap ${isSubmitting ? "isShown" : "isHidden"}`}>
+                  <div className="spinner-object" aria-label="Loading" />
+                  <p className="success-text">Submitting…</p>
+                  <p className="survey-spacer">&nbsp;</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        // </section>
       )}
 
       <div className={`surveyFadeWrap ${isSurveyReady ? "isReady" : ""}`}>

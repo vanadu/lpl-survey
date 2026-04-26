@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-04-26T11:46:57.985Z",
+    "builtAt": "2026-04-26T14:44:16.362Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -7698,7 +7698,7 @@
         "ConclusionDetailsPanel"
       ],
       "hasTitle": true,
-      "title": "Did {CmpnName}'s LP/GOLPP symptoms change {cvGenderObjectPronoun} as time progressed?",
+      "title": "Did {CmpnName}'s LP/GOLPP symptoms change as time progressed?",
       "hasVisibleIf": false,
       "isRequired": true
     },

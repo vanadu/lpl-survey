@@ -130,6 +130,7 @@ export function getStyleDirectives(item) {
 
 
     "NeuropathyOtherIssues",
+    "ConclusionSymptomsChangedDetails",
     "ConclusionQOLIssues",
     "ConclusionNewSymptomsType",
     "ConclusionOtherHealthIssuesNew",
@@ -317,6 +318,7 @@ export function getStyleDirectives(item) {
 
     "NeuropathySymptoms",
     "NeuropathyFrontLegs",
+    "ConclusionSymptomsChanged",
     "ConclusionQOL",
     "ConclusionNewSymptoms",
     "ConclusionLifestyleChanges",
@@ -757,7 +759,6 @@ export function getStyleDirectives(item) {
     "ProcedureTTOralBleeding",
     "ProcedureTTExtendedStay",
     "ProcedureTTComplicationsType",
-    "ProcedureTTExtendedStayRepeatProcedure",
     "ProcedureTTFollowupCare",
     "ProcedureTTMedications",
     "ProcedureTTMedicationsType",
@@ -834,7 +835,8 @@ export function getStyleDirectives(item) {
     "NeuropathySymptomsTypeProgression",
     "NeuropathyOtherIssues",
 
-    "ConclusionNewSymptomsType",
+
+    "ConclusionSymptomsChangedDetails",
     "ConclusionLifestyleChangesDetails",
     "ConclusionQOL",
     "ConclusionQOLIssues",
