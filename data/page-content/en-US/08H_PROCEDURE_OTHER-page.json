@@ -13,7 +13,7 @@
             {
               "type": "html",
               "name": "ProcedureOtherHeading",
-              "html": "<h2>Questions About {CmpnName}'s LP Surgery<h2>"
+              "html": "<h2>Questions About {CmpnName}'s LP Surgery</h2>"
             },
             {
               "type": "html",

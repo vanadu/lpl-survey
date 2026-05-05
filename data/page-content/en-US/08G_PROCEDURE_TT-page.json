@@ -13,7 +13,7 @@
             {
               "type": "html",
               "name": "ProcedureTTHeading",
-              "html": "<h2>Questions About {CmpnName}'s Tracheostomy Surgery<h2>"
+              "html": "<h2>Questions About {CmpnName}'s Tracheostomy Surgery</h2>"
             },
             {
               "type": "html",

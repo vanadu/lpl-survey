@@ -13,7 +13,7 @@
             {
               "type": "html",
               "name": "ProcedureESIHeading",
-              "html": "<h2>{CmpnName}'s Stent Implant Procedure<h2>"
+              "html": "<h2>{CmpnName}'s Stent Implant Procedure</h2>"
             },
             {
               "type": "html",

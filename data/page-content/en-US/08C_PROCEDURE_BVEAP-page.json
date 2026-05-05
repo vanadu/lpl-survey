@@ -13,7 +13,7 @@
             {
             "type": "html",
             "name": "ProcedureBVEAPHeading",
-            "html": "<h2>Questions About {CmpnName}'s BVEAP Surgery<h2>"
+            "html": "<h2>Questions About {CmpnName}'s BVEAP Surgery</h2>"
             },
             {
               "type": "html",

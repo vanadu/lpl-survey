@@ -13,7 +13,7 @@
             {
             "type": "html",
             "name": "ProcedurePAEHeading",
-            "html": "<h2>{CmpnName}'s Arytenoidectomy Surgery<h2>"
+            "html": "<h2>{CmpnName}'s Arytenoidectomy Surgery</h2>"
             },
             {
               "type": "html",

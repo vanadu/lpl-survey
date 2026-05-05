@@ -609,7 +609,7 @@ export function getStyleDirectives(item) {
     "ProcedureUALComplicationsType",
     "ProcedureUALExtendedStay",
     "ProcedureUALComplicationsType",
-    "ProcedureUALExtendedStayRepeatProcedure",
+    "ProcedureUALComplicationsRepeatProcedure",
     "ProcedureUALFollowupCare",
     "ProcedureUALMedications",
     "ProcedureUALMedicationsType",
