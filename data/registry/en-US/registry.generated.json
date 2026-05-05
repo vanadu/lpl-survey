@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-05-05T09:37:22.895Z",
+    "builtAt": "2026-05-05T10:38:30.159Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -179,6 +179,18 @@
       "hasVisibleIf": true,
       "visibleIf": "{CmpnName} notempty",
       "isRequired": true
+    },
+    "UserInfoAboutHeadPanel": {
+      "name": "UserInfoAboutHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
     },
     "UserInfoVerificationPanel": {
       "name": "UserInfoVerificationPanel",
@@ -1468,8 +1480,8 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "XXXHeadPanel": {
-      "name": "XXXHeadPanel",
+    "PrimaryHeadPanel": {
+      "name": "PrimaryHeadPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,

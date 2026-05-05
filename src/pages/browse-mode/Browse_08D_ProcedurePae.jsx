@@ -39,11 +39,15 @@ const Browse_08D_ProcedurePae = () => {
       <div className="browse-panel-container" id="ProcedurePAECard1Panel">
       <div className="browse-panel-container" id="ProcedurePAEHeadPanel">
       <div className="browse-content-block" id="ProcedurePAEHeading">
-        <h2 className="browse-content-heading">Questions About Bella&lsquo;s Arytenoidectomy Surgery</h2>
+        <h2 className="browse-content-heading">Bella&lsquo;s Arytenoidectomy Surgery</h2>
       </div>
 
       <div className="browse-content-block" id="ProcedurePAEText">
-        <p className="browse-content-text">With LP, the arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. Partial arytenoidectomy removes part of one side of the arytenoid cartilage to open up a space to breathe through.</p>
+        <p className="browse-content-text">This section asks questions about the Bella&lsquo;s arytenoidectomy surgery.</p>
+      </div>
+
+      <div className="browse-content-block" id="ProcedurePAEText">
+        <p className="browse-content-text">The arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. Partial arytenoidectomy removes part of one side of the arytenoid cartilage to open up a space to breathe through.</p>
       </div>
       </div>
 

@@ -54,6 +54,30 @@ export function getStyleDirectives(item) {
     "ConclusionCard2Panel",
   ]);
 
+  const HEAD_PANELS = new Set([
+    "UserInfoHeadPanel",
+    "UserInfoAboutHeadPanel",
+    "CmpnInfoHeadPanel",
+    "FactorsHeadPanel",
+    "SymptomsHeadPanel",
+    "PrimaryHeadPanel",
+    "DiagnosisHeadPanel",
+    "MedicationHeadPanel",
+    "ProcedureHeadPanel",
+    "ProcedureUALHeadPanel",
+    "ProcedureESIHeadPanel",
+    "ProcedureBVEAPHeadPanel",
+    "ProcedurePAEHeadPanel",
+    "ProcedureVCCHeadPanel",
+    "ProcedurePLEHeadPanel",
+    "ProcedureTTHeadPanel",
+    "ProcedureOtherHeadPanel",
+    "TherapyHeadPanel",
+    "BreathingHeadPanel",
+    "NeuropathyHeadPanel",
+    "ConclusionHeadPanel",
+  ]);
+
   const ITEMS_TWO_COL = new Set([
     "LandingConsent",
     "LandingPrivacyConsentLinksPanel",
@@ -444,7 +468,6 @@ export function getStyleDirectives(item) {
 
   // Only use to remove borders on panels
   const PANEL_NO_BORDER = new Set([
-    // "UserInfoLifeStatusNamePanel",
     "UserInfoNameCountryPanel",
     "UserInfoStateRegionPanel",
     "CmpnInfoAnimalTypePanel",
@@ -915,6 +938,10 @@ export function getStyleDirectives(item) {
   // !VA CARD applies only to the closest framed card panel
   if (CARD_PANELS.has(name)) {
     directives.push({ target: "card", className: "survey-card-panel" });
+  }
+
+  if (HEAD_PANELS.has(name)) {
+    directives.push({ target: "panel", className: "survey-head-panel" });
   }
 
   // !VA ITEMS only applies to elements with .sd-selectbase or fieldset.sd-selectbase

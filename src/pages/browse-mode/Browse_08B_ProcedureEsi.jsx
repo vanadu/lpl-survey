@@ -39,7 +39,11 @@ const Browse_08B_ProcedureEsi = () => {
       <div className="browse-panel-container" id="ProcedureESICard1Panel">
       <div className="browse-panel-container" id="ProcedureESIHeadPanel">
       <div className="browse-content-block" id="ProcedureESIHeading">
-        <h2 className="browse-content-heading">Questions About Bella&lsquo;s Stent Procedure</h2>
+        <h2 className="browse-content-heading">Bella&lsquo;s Stent Implant Procedure</h2>
+      </div>
+
+      <div className="browse-content-block" id="ProcedureESIText">
+        <p className="browse-content-text">This section asks questions about Bella&lsquo;s stent implant procedure.</p>
       </div>
       </div>
 

@@ -13,12 +13,17 @@
             {
                   "type": "html",
                   "name": "ProcedureVCCHeading",
-                  "html": "<h2>Questions About {CmpnName}'s Ventrilucordectomy Surgery<h2>"
+                  "html": "<h2>{CmpnName}'s Ventrilucordectomy Surgery<h2>"
             },
             {
-                  "type": "html",
-                  "name": "ProcedureVCCText",
-                  "html": "<p>Ventrilucordectomy is often referred to as vocal fold excision, vocal cord removal, or debarking. As a treatment for LP, the procedure removes the patient&lsquo;s vocal cords which creates a larger airway through the paralyzed larynx, allowing the patient to breathe better.</p>"
+              "type": "html",
+              "name": "ProcedureVCCText",
+              "html": "This section asks questions about {CmpnName}'s ventrilucordectomy surgery."
+            },
+            {
+              "type": "html",
+              "name": "ProcedureVCCText",
+              "html": "<p>Ventrilucordectomy is often referred to as vocal fold excision, vocal cord removal, or debarking. As a treatment for LP, the procedure removes the patient&lsquo;s vocal cords which creates a larger airway through the paralyzed larynx, allowing the patient to breathe better.</p>"
             }      
           ]
         },

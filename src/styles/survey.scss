@@ -477,7 +477,7 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
   padding: 0!important;
   margin: 0!important;
   .sd-panel__content {
-      padding: 0!important;
+    padding: 0!important;
     margin: 0!important;
   }
 }
@@ -580,6 +580,22 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 // =====================================================
 // !VA ELEMENT-SPECIFIC STYLING and CUSTOM PANEL LAYOUTS
 // =====================================================
+
+
+
+  .sd-container-modern .survey-head-panel {
+  border: none!important;
+  box-shadow: none!important;
+  padding: 0!important;
+  margin: 0!important;
+    padding-top: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-right: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-left: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  // background: rgba(0, 0, 255, .3) !important; //devblue
+}
+
+
 /* ---------------------------
   !VA HEADER PANEL ON LANDING PAGE ONLY STYLES
 ------------------------------*/

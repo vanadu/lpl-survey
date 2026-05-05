@@ -41,6 +41,10 @@ const Browse_08C_ProcedureBveap = () => {
       <div className="browse-content-block" id="ProcedureBVEAPHeading">
         <h2 className="browse-content-heading">Questions About Bella&lsquo;s BVEAP Surgery</h2>
       </div>
+
+      <div className="browse-content-block" id="ProcedureBVEAPText">
+        <p className="browse-content-text">This section asks questions about Bella&lsquo;s BVEAP surgery.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="ProcedureBVEAPAgePanel">

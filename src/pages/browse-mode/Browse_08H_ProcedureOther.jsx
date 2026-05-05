@@ -43,7 +43,7 @@ const Browse_08H_ProcedureOther = () => {
       </div>
 
       <div className="browse-content-block" id="ProcedureOtherText">
-        <p className="browse-content-text">If you&lsquo;re not sure what kind of surgery or procedure Bella had, please fill out the survey as best as you can.</p>
+        <p className="browse-content-text">If you&lsquo;re not sure what kind of surgery or procedure Bella had, please answer the questions as best as you can.</p>
       </div>
       </div>
 

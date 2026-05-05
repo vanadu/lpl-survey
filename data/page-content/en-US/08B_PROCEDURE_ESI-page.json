@@ -13,8 +13,14 @@
             {
               "type": "html",
               "name": "ProcedureESIHeading",
-              "html": "<h2>Questions About {CmpnName}'s Stent Procedure<h2>"
+              "html": "<h2>{CmpnName}'s Stent Implant Procedure<h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedureESIText",
+              "html": "This section asks questions about {CmpnName}'s stent implant procedure."
             }
+
           ]
         },
         {

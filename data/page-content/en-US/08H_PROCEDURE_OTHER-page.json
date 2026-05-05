@@ -16,9 +16,9 @@
               "html": "<h2>Questions About {CmpnName}'s LP Surgery<h2>"
             },
             {
-                  "type": "html",
-                  "name": "ProcedureOtherText",
-                  "html": "<p>If you're not sure what kind of surgery or procedure {CmpnName} had, please fill out the survey as best as you can.</p>"
+              "type": "html",
+              "name": "ProcedureOtherText",
+              "html": "<p>If you're not sure what kind of surgery or procedure {CmpnName} had, please answer the questions as best as you can.</p>"
             }
           ]
         },

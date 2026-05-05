@@ -1,7 +1,6 @@
 {
   "name": "CONCLUSION-page",
   "elements": [
-
     {
       "type": "panel",
       "name": "ConclusionCard1Panel",

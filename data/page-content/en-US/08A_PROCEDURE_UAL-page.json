@@ -13,7 +13,12 @@
             {
               "type": "html",
               "name": "ProcedureUALHeading",
-              "html": "<h2>Questions About {CmpnName}'s Tieback (UAL) Surgery<h2>"
+              "html": "<h2>{CmpnName}'s Tieback (UAL) Surgery<h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedureUALText",
+              "html": "This section asks questions about {CmpnName}'s tieback surgery."
             }
           ]
         },        

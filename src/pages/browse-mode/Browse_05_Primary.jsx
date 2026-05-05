@@ -37,7 +37,7 @@ const Browse_05_Primary = () => {
       </div>
 
       <div className="browse-panel-container" id="PrimaryCard1Panel">
-      <div className="browse-panel-container" id="XXXHeadPanel">
+      <div className="browse-panel-container" id="PrimaryHeadPanel">
       <div className="browse-content-block" id="PrimaryHeading">
         <h2 className="browse-content-heading">Your Primary Veterinarian and Bella&lsquo;s LP/GOLPP</h2>
       </div>

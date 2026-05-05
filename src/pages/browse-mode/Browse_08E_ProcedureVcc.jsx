@@ -39,7 +39,11 @@ const Browse_08E_ProcedureVcc = () => {
       <div className="browse-panel-container" id="ProcedureVCCCard1Panel">
       <div className="browse-panel-container" id="ProcedureVCCHeadPanel">
       <div className="browse-content-block" id="ProcedureVCCHeading">
-        <h2 className="browse-content-heading">Questions About Bella&lsquo;s Ventrilucordectomy Surgery</h2>
+        <h2 className="browse-content-heading">Bella&lsquo;s Ventrilucordectomy Surgery</h2>
+      </div>
+
+      <div className="browse-content-block" id="ProcedureVCCText">
+        <p className="browse-content-text">This section asks questions about Bella&lsquo;s ventrilucordectomy surgery.</p>
       </div>
 
       <div className="browse-content-block" id="ProcedureVCCText">

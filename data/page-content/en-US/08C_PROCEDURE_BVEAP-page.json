@@ -14,6 +14,11 @@
             "type": "html",
             "name": "ProcedureBVEAPHeading",
             "html": "<h2>Questions About {CmpnName}'s BVEAP Surgery<h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedureBVEAPText",
+              "html": "This section asks questions about {CmpnName}'s BVEAP surgery."
             }
           ]
         },

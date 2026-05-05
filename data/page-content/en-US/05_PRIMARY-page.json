@@ -7,7 +7,7 @@
       "elements": [
         {
           "type": "panel",
-          "name": "XXXHeadPanel",
+          "name": "PrimaryHeadPanel",
           "elements": [
             {
               "type": "html",

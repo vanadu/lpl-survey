@@ -89,11 +89,12 @@ const Browse_01_UserInfo = () => {
       </div>
       </div>
 
+      <div className="browse-panel-container" id="UserInfoAboutHeadPanel">
       <div className="browse-content-block" id="UserInfoHeading">
         <h2 className="browse-content-heading">About You</h2>
       </div>
 
-      <div className="browse-content-block" id="UserInfoText">
+      <div className="browse-content-block" id="UserInfoAboutText">
         <p className="browse-content-text">We&lsquo;re asking for your first name, which country you live in, and some optional demographics to help us understand the people who are making choices for their beloved LP companions. We also ask for contact info to prevent fake respondents and make sure each respondent is unique and verifiable.</p>
       </div>
 
@@ -103,6 +104,7 @@ const Browse_01_UserInfo = () => {
 
       <div className="browse-content-block" id="UserInfoMayContactText">
         <p className="browse-content-text">With your consent, we may also contact you to talk in more detail about your experience with LP.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="UserInfoVerificationPanel">
@@ -152,7 +154,11 @@ const Browse_01_UserInfo = () => {
       </div>
 
       <div className="browse-content-block" id="UserInfoContactTypeFacebookInstructions">
-        <p className="browse-content-text">Please go to your Facebook account page and copy the URL, then paste it below. Example: https://facebook.com/my.user.name.</p>
+        <p className="browse-content-text">Please go to your Facebook account page and copy the URL, then paste it below.</p>
+      </div>
+
+      <div className="browse-content-block" id="UserInfoContactTypeFacebookExample">
+        <p className="browse-content-text">Example: https://facebook.com/my.user.name.</p>
       </div>
 
       <div className="browse-question-container" id="UserInfoContactTypeFacebook">
