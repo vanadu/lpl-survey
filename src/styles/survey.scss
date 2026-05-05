@@ -254,7 +254,16 @@ label {
   // !VA Reduced line height
   line-height: calc(1.25 * (var(--sjs-article-font-x-large-lineHeight, var(--sjs-font-size, 16px))));
   // !VA Added top padding
-  padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  @include tablet {
+    padding-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  }
+  @include desktop {
+    padding-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  }
+  @include ldesktop {
+    padding-top: calc(2.5 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+  }
 }
 
 // !VA H3 DEFAULT: NO PADDING OR MARGIN ON THE H2. Line-height determines whitespace. 
@@ -453,104 +462,6 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
 /* ---------------------------
   !VA  PASSTHROUGH STYLES
 ------------------------------*/
-// !VA FOR REVIEW - Modify to apply to tablet+ where applicable.
-.landing-title-head-container {
-}
-
-.landing-title-heading,  {
-  font-family: $secondary_font!important;
-  // !VA Override the default 
-  font-size: calc(1.75 * (var(--sjs-font-size, 16px)));
-  text-align: center;
-  @include ldesktop {
-    // font-size: var(--sjs-article-font-x-large-fontSize, calc(3 * (var(--sjs-font-size, 48px))))!important;
-    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-    text-align: left;
-  }
-}
-
-.landing-title-subheading {
-  font-family: $primary_font!important;
-  // padding: 0!important;
-  // margin: .5rem 0 0 0!important;
-  color: #6b6b6b!important;
-  // font-size: 1.313rem!important;
-  // line-height: 1.75rem!important;
-  // font-weight: 600!important;
-  // --sjs-font-size: 15px;
-  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-  padding: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
-  font-size: var(--sjs-article-font-default-fontSize, calc(3 * (var(--sjs-font-size, 16px))))!important;
-  font-weight: 600;
-  text-align: center;
-  @include tablet {
-
-  }
-  @include ldesktop {
-    // margin: .5rem 0 0 0!important;
-    // --sjs-font-size: 18px;
-    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-    text-align: left;
-  }
-}
-
-.landing-survey-version-container {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100%;
-  
-  padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-  // margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-
-  @include tablet {
-    justify-content: flex-end;
-    margin-right: 40px;
-  }
-  @include desktop {
-    justify-content: flex-end;
-    margin-right: 40px;
-  }
-  @include ldesktop {
-    justify-content: flex-end;
-    margin-right: 40px!important;
-    margin-top: -10px!important;
-  }
-}
-.landing-survey-version-text {
-  width: 100%;
-  font-family: $secondary_font!important;
-  color: #353535!important;
-  // --sjs-font-size: 15px;
-  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
-  text-align: left;
-  padding: 0!important;
-  margin: 0!important;
-}
-.survey-version-logo {
-  display: block;
-  width: 80px;
-  margin: 0 auto;
-  height: auto;
-  @include tablet {
-    display: block;
-    width: 120px
-  }
-  @include desktop {
-    display: block;
-    width: 120px
-  }
-  @include ldesktop {
-    display: block; 
-    width: 100px;
-  }
-}
-
 .survey-card-panel {
   // box-shadow: var(--sjs-shadow-small, 0px 1px 2px 0px rgba(0, 0, 0, 0.15));
   box-shadow: none!important;
@@ -685,6 +596,9 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
       padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
       padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
       padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+
+      margin-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+
       border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
       border-radius: 0!important;
     }
@@ -701,6 +615,124 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
     @include ldesktop { flex-direction: row; }
   }
 }
+
+[data-name="LandingHeaderPanel"] {
+
+  .landing-title-heading  {
+    font-family: $secondary_font!important;
+    // !VA Override the default 
+    // font-size: calc(1.75 * (var(--sjs-font-size, 16px)));
+    text-align: center;
+
+    @include ldesktop {
+      text-align: left;
+      padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    }
+  }
+
+.landing-title-subheading {
+  font-family: $primary_font!important;
+  // padding: 0!important;
+  // margin: .5rem 0 0 0!important;
+  color: #6b6b6b!important;
+  // font-size: 1.313rem!important;
+  // line-height: 1.75rem!important;
+  // font-weight: 600!important;
+  // --sjs-font-size: 15px;
+  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  font-size: var(--sjs-article-font-default-fontSize, calc(3 * (var(--sjs-font-size, 16px))))!important;
+  font-weight: 600;
+  text-align: center;
+  @include tablet {
+    text-align: left;
+    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  }
+  @include desktop {
+    text-align: left;
+    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  }
+  @include ldesktop {
+    text-align: left;
+    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  }
+}
+
+.landing-survey-version-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  
+  padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+  // margin-bottom: calc(1.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+
+  @include tablet {
+    justify-content: flex-end;
+    margin-right: 40px;
+  }
+  @include desktop {
+    justify-content: flex-end;
+    margin-right: 40px;
+  }
+  @include ldesktop {
+    justify-content: flex-end;
+    margin-right: 40px!important;
+    margin-top: -10px!important;
+  }
+}
+.landing-survey-version-text {
+  width: 100%;
+  font-family: $secondary_font!important;
+  color: #353535!important;
+  // --sjs-font-size: 15px;
+  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
+  text-align: left;
+  padding: 0!important;
+  margin: 0!important;
+}
+.survey-version-logo {
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+  height: auto;
+  @include tablet {
+    display: block;
+    width: 120px
+  }
+  @include desktop {
+    display: block;
+    width: 120px
+  }
+  @include ldesktop {
+    display: block; 
+    width: 100px;
+  }
+}
+
+
+
+
+}
+
+
+
+// !VA FOR REVIEW - Modify to apply to tablet+ where applicable.
+.landing-title-head-container {
+}
+
+
+
+
+
+
+
+
 
 [data-name="LandingWelcomePanel"] {
   &.sd-element--nested-with-borders {

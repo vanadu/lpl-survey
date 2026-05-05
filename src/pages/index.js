@@ -38,18 +38,33 @@ const Home = () => {
           <h1>Welcome to the <span className="no-wrap">2026&nbsp;LP/GOLPP&nbsp;Survey!</span></h1>
             <Link href='survey-mode' className='survey-mode-link link-dark'>
             <BsClipboardCheck className="survey-mode-icon" />
-                <span className="survey-mode-link-text">Take Survey Now!</span>
+                <span className="survey-mode-link-text">Start Survey Now!</span>
             </Link>
         </section>
 
         <section className="content-body">
-
-
           <article className="card">
             <p>
-              The first things people want to know about a survey is how long it will take and whether they can do it on their phones.
+              The first things people want to know about a survey whether they should take it, how long it will take, and whether they can do it on their phones.
             </p>
             <div className="home-showmore-container">
+
+            <ShowMoreContent
+              header={
+                <h3 className="showmore__title">
+                  Who should take this survey?
+                </h3>
+              }
+              index={1}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}>
+                <p className="showmore_content_inline">
+                  If you have or have ever had a dog who had symptoms of laryngeal paralysis (LarPar, LP) or was ever diagnosed or treated for laryngeal paralysis, then we encourage you to participate in this study by taking the survey.
+                </p>
+                <p>
+                  Even if your dog was never officially diagnosed with LP your LP/GOLPP journey holds information that can make a difference. Your experience matters!  
+                </p>
+            </ShowMoreContent>
 
             <ShowMoreContent
               header={
@@ -57,14 +72,25 @@ const Home = () => {
                   How much time does the survey take?
                 </h3>
               }
-              index={1}
+              index={2}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}>
                 <p className="showmore_content_inline">
-                  Completing the survey could take five minutes or twenty &mdash; it all depends on your personal LP/GOLPP experience. 
+                  Completing the survey could take five minutes or twenty &mdash; it all depends on your LP/GOLPP journey. The interactive design only shows questions that are relevant for your personal experience. But even if your LP/GOLPP journey has been very involved with surgery, medications and therapies, you&lsquo;ll be able to complete it over your morning coffee or tea.  
                 </p>
+            </ShowMoreContent>
+
+            <ShowMoreContent
+              header={
+                <h3 className="showmore__title">
+                  Can I take the survey on my phone?
+                </h3>
+              }
+              index={3}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}>
                 <p className="showmore_content_inline">
-                  The interactive, mobile-friendly design lets you answer questions while you watch TV or do other things. It remembers your place, so you can come back to it whenever you have a few minutes. The important thing is that you complete the questions and submit your responses whenever it fits into your schedule. Your experience matters!
+                  Yes, the mobile-friendly design is absolutely useable on phones. But due to the size of the screen it will take a bit longer than doing it on larger devices. The survey is optimized for tablets and remembers your place in the browser, so you can answer questions while you watch TV or do other things. If you get interrupted, you can come back to it later. The important thing is that you complete the questions and submit your responses whenever it fits into your schedule.
                 </p>
             </ShowMoreContent>
             
@@ -75,7 +101,11 @@ const Home = () => {
 
           <article className="card home-content">
             <h2 className="home-about-heading">Your experience matters!</h2>
-            <p>This survey is the first phase of a long-range research study focused on better understanding canine laryngeal paralysis (LP) and geriatric-onset laryngeal paralysis &amp; polyneuropathy (GOLPP).</p>
+            <h3 className='article-heading'>What is the 2026 LP/GOLPP Survey?</h3>
+            
+            <p>This survey is the first phase of a long-range research study focused on better understanding canine laryngeal paralysis (LP) and geriatric-onset laryngeal paralysis &amp; polyneuropathy (GOLPP) and associated conditions.</p>
+
+            <p>Since GOLPP (Geriatric Onset Laryngeal Paralysis and Polyneuropathy) was first posited as cause of LP in senior dogs in the early 2010&lsquo;s, vagus nerve degeneration has gained widespread acceptance as root cause of laryngeal paralysis in older dogs. But how this ties in to other conditions like reflux,  megaesophagus, and tracheal collapse, and how those symptoms interrelate with LP/GOLPP pre- and post-surgery is largely unexplored territory. This survey is the first step in a multi-year, international initiative to gather actionable data that could help answer these and many other questions about LP/GOLPP.</p>
             
             <h3 className='article-heading'>Why now and why you?</h3>
             <p>Today, there are no clearly established treatment protocols for LP. Veterinarians often have to rely on general medical approaches to manage a condition that is still not well understood. The most common surgical treatment dates back to the 1980s, and efforts to expand or rethink treatment options have been limited. At the same time, there is very little accessible, up-to-date information available to support ongoing education about the disease.</p>
