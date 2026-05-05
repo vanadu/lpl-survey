@@ -37,12 +37,14 @@ const Browse_04_Symptoms = () => {
       </div>
 
       <div className="browse-panel-container" id="SymptomsCard1Panel">
+      <div className="browse-panel-container" id="SymptomsHeadPanel">
       <div className="browse-content-block" id="SymptomsHeading">
         <h2 className="browse-content-heading">Bella&lsquo;s Early LP/GOLPP Symptoms</h2>
       </div>
 
       <div className="browse-content-block" id="SymptomsText">
         <p className="browse-content-text">This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe Bella might have it.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="SymptomsDetailsPanel">

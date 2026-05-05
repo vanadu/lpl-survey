@@ -5,17 +5,23 @@
       "type": "panel",
       "name": "SymptomsCard1Panel",
       "elements": [
-        {
-          "type": "html",
-          "name": "SymptomsHeading",
-          "html": "<h2>{CmpnName}'s Early LP/GOLPP Symptoms</h2>"
-        },
-        {
-          "type": "html",
-          "name": "SymptomsText",
-          "html": "<p>This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
-        },
 
+        {
+          "type": "panel",
+          "name": "SymptomsHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "SymptomsHeading",
+              "html": "<h2>{CmpnName}'s Early LP/GOLPP Symptoms</h2>"
+            },
+            {
+              "type": "html",
+              "name": "SymptomsText",
+              "html": "<p>This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
+            }
+          ]
+        },
         {
           "type": "panel",
           "name": "SymptomsDetailsPanel",

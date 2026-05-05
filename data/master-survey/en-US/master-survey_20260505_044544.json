@@ -237,25 +237,19 @@
           "name": "UserInfoCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "UserInfoHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "UserInfoHead",
-                  "html": "<h2>Before You Begin</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "UserInfoText1",
-                  "html": "<p>If you're still grieving from the loss of your Lar Par companion, maybe it's best to do the survey later when you've had time to heal. </p>"
-                },
-                {
-                  "type": "html",
-                  "name": "UserInfoText2",
-                  "html": "<p>If you'd like to continue now, please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.<br></p>"
-                }
-              ]
+              "type": "html",
+              "name": "UserInfoHead",
+              "html": "<h2>Before You Begin</h2>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoText1",
+              "html": "<p>If you're still grieving from the loss of your Lar Par companion, maybe it's best to do the survey later when you've had time to heal. </p>"
+            },
+            {
+              "type": "html",
+              "name": "UserInfoText2",
+              "html": "<p>If you'd like to continue now, please tell us your LP companion's name and if they have crossed over the Rainbow Bridge.</p>"
             },
             {
               "type": "panel",
@@ -516,20 +510,14 @@
           "name": "CmpnInfoCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "CmpnInfoHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "CmpnInfoHeading",
-                  "html": "<h2>About Your LP/GOLPP companion</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "CmpnInfoText",
-                  "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
-                }
-              ]
+              "type": "html",
+              "name": "CmpnInfoHeading",
+              "html": "<h2>About Your LP/GOLPP companion</h2>"
+            },
+            {
+              "type": "html",
+              "name": "CmpnInfoText",
+              "html": "<p>This section asks basic questions about your companion's species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don't know exact information, it's OK to guesstimate.</p>"
             },
             {
               "type": "panel",
@@ -847,25 +835,19 @@
           "name": "FactorsCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "FactorsHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "FactorsHeading",
-                  "html": "<h2>Your LP/GOLPP Decisions</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "FactorsText",
-                  "html": "<p>This section asks some questions about how you learned about LP/GOLPP and about your decision-making process. Please don&lsquo;t overthink. In this section it&lsquo;s best to answer according to your first impulse.</p>"
-                },
-                {
-                  "type": "html",
-                  "name": "FactorsInfoText",
-                  "html": "These questions ask about how you learned what you know about LP/GOLPP."
-                }
-              ]
+              "type": "html",
+              "name": "FactorsHeading",
+              "html": "<h2>Your LP/GOLPP Decisions</h2>"
+            },
+            {
+              "type": "html",
+              "name": "FactorsText",
+              "html": "<p>This section asks some questions about how you learned about LP/GOLPP and about your decision-making process. Please don&lsquo;t overthink. In this section it&lsquo;s best to answer according to your first impulse.</p>"
+            },
+            {
+              "type": "html",
+              "name": "FactorsInfoText",
+              "html": "These questions ask about how you learned what you know about LP/GOLPP."
             },
             {
               "type": "panel",
@@ -1388,20 +1370,14 @@
           "name": "SymptomsCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "SymptomsHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "SymptomsHeading",
-                  "html": "<h2>{CmpnName}'s Early LP/GOLPP Symptoms</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "SymptomsText",
-                  "html": "<p>This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
-                }
-              ]
+              "type": "html",
+              "name": "SymptomsHeading",
+              "html": "<h2>{CmpnName}'s Early LP/GOLPP Symptoms</h2>"
+            },
+            {
+              "type": "html",
+              "name": "SymptomsText",
+              "html": "<p>This section asks questions about the early phase of your LP/GOLPP journey and how you came to believe {CmpnName} might have it.</p>"
             },
             {
               "type": "panel",
@@ -1756,20 +1732,14 @@
           "name": "PrimaryCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "XXXHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "PrimaryHeading",
-                  "html": "<h2>Your Primary Veterinarian and {CmpnName}'s LP/GOLPP</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "PrimaryText",
-                  "html": "<p>This section asks questions about how your primary veterinarian(s) handled {CmpnName}'s LP/GOLPP symptoms.</p>"
-                }
-              ]
+              "type": "html",
+              "name": "PrimaryHeading",
+              "html": "<h2>Your Primary Veterinarian and {CmpnName}'s LP/GOLPP</h2>"
+            },
+            {
+              "type": "html",
+              "name": "PrimaryText",
+              "html": "<p>This section asks questions about how your primary veterinarian(s) handled {CmpnName}'s LP/GOLPP symptoms.</p>"
             },
             {
               "type": "panel",
@@ -2078,20 +2048,14 @@
           "name": "DiagnosisCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "DiagnosisHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "DiagnosisHeading",
-                  "html": "<h2>{CmpnName}'s LP/GOLPP Diagnosis</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "DiagnosisText",
-                  "html": "<p>This section asks about {CmpnName}'s LP/GOLPP diagnosis.</p>"
-                }
-              ]
+              "type": "html",
+              "name": "DiagnosisHeading",
+              "html": "<h2>{CmpnName}'s LP/GOLPP Diagnosis</h2>"
+            },
+            {
+              "type": "html",
+              "name": "DiagnosisText",
+              "html": "<p>This section asks about {CmpnName}'s LP/GOLPP diagnosis.</p>"
             },
             {
               "type": "panel",
@@ -2337,20 +2301,14 @@
           "name": "MedicationCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "MedicationHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "MedicationHeading",
-                  "html": "<h2>{CmpnName}'s LP/GOLPP Medications</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "MedicationTextImportant",
-                  "html": "<p>This section asks about prescription and non-prescription medications and supplements {CmpnName} has taken for LP/GOLPP. </p>"
-                }
-              ]
+              "type": "html",
+              "name": "MedicationHeading",
+              "html": "<h2>{CmpnName}'s LP/GOLPP Medications</h2>"
+            },
+            {
+              "type": "html",
+              "name": "MedicationTextImportant",
+              "html": "<p>This section asks about prescription and non-prescription medications and supplements {CmpnName} has taken for LP/GOLPP. </p>"
             },
             {
               "type": "panel",
@@ -3518,20 +3476,14 @@
           "name": "ProcedureCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "ProcedureHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "ProcedureHeading",
-                  "html": "<h2>Veterinary-Medical Procedures for&nbsp;LP</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "ProcedureText",
-                  "html": "<p>This section asks questions about veterinary procedures such as surgery or stent implant that {CmpnName} underwent to treat laryngeal paralysis. </p>"
-                }
-              ]
+              "type": "html",
+              "name": "ProcedureHeading",
+              "html": "<h2>Veterinary-Medical Procedures for&nbsp;LP</h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedureText",
+              "html": "<p>This section asks questions about veterinary procedures such as surgery or stent implant that {CmpnName} underwent to treat laryngeal paralysis. </p>"
             },
             {
               "type": "boolean",
@@ -3610,15 +3562,9 @@
           "name": "ProcedureUALCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "ProcedureUALHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "ProcedureUALHeading",
-                  "html": "<h2>Questions About {CmpnName}'s Tieback (UAL) Surgery<h2>"
-                }
-              ]
+              "type": "html",
+              "name": "ProcedureUALHeading",
+              "html": "<h2>Questions About {CmpnName}'s Tieback (UAL) Surgery<h2>"
             },
             {
               "type": "panel",
@@ -4452,15 +4398,9 @@
           "name": "ProcedureESICard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "ProcedureESIHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "ProcedureESIHeading",
-                  "html": "<h2>Questions About {CmpnName}'s Stent Procedure<h2>"
-                }
-              ]
+              "type": "html",
+              "name": "ProcedureESIHeading",
+              "html": "<h2>Questions About {CmpnName}'s Stent Procedure<h2>"
             },
             {
               "type": "panel",
@@ -5283,15 +5223,9 @@
           "name": "ProcedureBVEAPCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "ProcedureBVEAPHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "ProcedureBVEAPHeading",
-                  "html": "<h2>Questions About {CmpnName}'s BVEAP Surgery<h2>"
-                }
-              ]
+              "type": "html",
+              "name": "ProcedureBVEAPHeading",
+              "html": "<h2>Questions About {CmpnName}'s BVEAP Surgery<h2>"
             },
             {
               "type": "panel",
@@ -6069,20 +6003,14 @@
           "name": "ProcedurePAECard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "ProcedurePAEHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "ProcedurePAEHeading",
-                  "html": "<h2>Questions About {CmpnName}'s Arytenoidectomy Surgery<h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "ProcedurePAEText",
-                  "html": "<p>With LP, the arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. Partial arytenoidectomy removes part of one side of the arytenoid cartilage to open up a space to breathe through.</p>"
-                }
-              ]
+              "type": "html",
+              "name": "ProcedurePAEHeading",
+              "html": "<h2>Questions About {CmpnName}'s Arytenoidectomy Surgery<h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedurePAEText",
+              "html": "<p>With LP, the arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. Partial arytenoidectomy removes part of one side of the arytenoid cartilage to open up a space to breathe through.</p>"
             },
             {
               "type": "panel",
@@ -6880,20 +6808,14 @@
           "name": "ProcedureVCCCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "ProcedureVCCHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "ProcedureVCCHeading",
-                  "html": "<h2>Questions About {CmpnName}'s Ventrilucordectomy Surgery<h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "ProcedureVCCText",
-                  "html": "<p>Ventrilucordectomy is often referred to as vocal fold excision, vocal cord removal, or debarking. As a treatment for LP, the procedure removes the patient&lsquo;s vocal cords which creates a larger airway through the paralyzed larynx, allowing the patient to breathe better.</p>"
-                }
-              ]
+              "type": "html",
+              "name": "ProcedureVCCHeading",
+              "html": "<h2>Questions About {CmpnName}'s Ventrilucordectomy Surgery<h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedureVCCText",
+              "html": "<p>Ventrilucordectomy is often referred to as vocal fold excision, vocal cord removal, or debarking. As a treatment for LP, the procedure removes the patient&lsquo;s vocal cords which creates a larger airway through the paralyzed larynx, allowing the patient to breathe better.</p>"
             },
             {
               "type": "panel",
@@ -7691,20 +7613,14 @@
           "name": "ProcedurePLECard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "ProcedurePLEHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "ProcedurePLEHeading",
-                  "html": "<h2>Questions About {CmpnName}'s Partial Laryngectomy Surgery<h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "ProcedurePLEText",
-                  "html": "<p>With LP, the arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. With a partial laryngectomy, the one side of the arytenoid cartilages are partially removed and the vocal folds are partially removed to create a larger opening through the paralyzed larynx that for the patient to breathe through.</p>"
-                }
-              ]
+              "type": "html",
+              "name": "ProcedurePLEHeading",
+              "html": "<h2>Questions About {CmpnName}'s Partial Laryngectomy Surgery<h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedurePLEText",
+              "html": "<p>With LP, the arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. With a partial laryngectomy, the one side of the arytenoid cartilages are partially removed and the vocal folds are partially removed to create a larger opening through the paralyzed larynx that for the patient to breathe through.</p>"
             },
             {
               "type": "panel",
@@ -8502,30 +8418,14 @@
           "name": "ProcedureTTCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "ProcedureTTXHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "ProcedureTTHeading",
-                  "html": "<h2>Questions About {CmpnName}'s Tracheostomy Surgery<h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "ProcedureTTText",
-                  "html": "<p>Tracheostomy is most often performed as a salvage procedure in emergencies or after other LP surgeries have failed.</p>"
-                },
-                {
-                  "type": "html",
-                  "name": "ProcedureTTHeading",
-                  "html": "<h2>Questions About {CmpnName}'s Tracheostomy Surgery<h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "ProcedureTTText",
-                  "html": "<p>Tracheostomy is most often performed as a salvage procedure in emergencies or after other LP surgeries have failed.</p>"
-                }
-              ]
+              "type": "html",
+              "name": "ProcedureTTHeading",
+              "html": "<h2>Questions About {CmpnName}'s Tracheostomy Surgery<h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedureTTText",
+              "html": "<p>Tracheostomy is most often performed as a salvage procedure in emergencies or after other LP surgeries have failed.</p>"
             },
             {
               "type": "panel",
@@ -9283,20 +9183,14 @@
           "name": "ProcedureOtherCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "ProcedureOtherHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "ProcedureOtherHeading",
-                  "html": "<h2>Questions About {CmpnName}'s LP Surgery<h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "ProcedureOtherText",
-                  "html": "<p>If you're not sure what kind of surgery or procedure {CmpnName} had, please fill out the survey as best as you can.</p>"
-                }
-              ]
+              "type": "html",
+              "name": "ProcedureOtherHeading",
+              "html": "<h2>Questions About {CmpnName}'s LP Surgery<h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedureOtherText",
+              "html": "<p>If you're not sure what kind of surgery or procedure {CmpnName} had, please fill out the survey as best as you can.</p>"
             },
             {
               "type": "panel",
@@ -10093,20 +9987,14 @@
           "name": "TherapyCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "TherapyHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "TherapyHeading",
-                  "html": "<h2>Therapy for LP/GOLPP</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "TherapyText",
-                  "html": "<p>This section asks about non-traditional treatments or therapy {CmpnName} has had for LP/GOLPP.</p>"
-                }
-              ]
+              "type": "html",
+              "name": "TherapyHeading",
+              "html": "<h2>Therapy for LP/GOLPP</h2>"
+            },
+            {
+              "type": "html",
+              "name": "TherapyText",
+              "html": "<p>This section asks about non-traditional treatments or therapy {CmpnName} has had for LP/GOLPP.</p>"
             },
             {
               "type": "panel",
@@ -10459,20 +10347,14 @@
           "name": "BreathingCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "BreathingHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "BreathingHeading",
-                  "html": "<h2>Breathing Crises and Aspiration Pneumonia</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "BreathingText",
-                  "html": "<p>This section asks questions about {CmpnName}'s experience with breathing crises and aspiration pneumonia. </p>"
-                }
-              ]
+              "type": "html",
+              "name": "BreathingHeading",
+              "html": "<h2>Breathing Crises and Aspiration Pneumonia</h2>"
+            },
+            {
+              "type": "html",
+              "name": "BreathingText",
+              "html": "<p>This section asks questions about {CmpnName}'s experience with breathing crises and aspiration pneumonia. </p>"
             },
             {
               "type": "panel",
@@ -11056,20 +10938,14 @@
           "name": "NeuropathyCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "NeuropathyHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "NeuropathyHeading",
-                  "html": "<h2>Hind-End Weakness and Polyneuropathy</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "NeuropathyText",
-                  "html": "<p>This section asks questions about whether {CmpnName} showed symptoms of polyneuropathy and how these symptoms progressed over time. </p>"
-                }
-              ]
+              "type": "html",
+              "name": "NeuropathyHeading",
+              "html": "<h2>Hind-End Weakness and Polyneuropathy</h2>"
+            },
+            {
+              "type": "html",
+              "name": "NeuropathyText",
+              "html": "<p>This section asks questions about whether {CmpnName} showed symptoms of polyneuropathy and how these symptoms progressed over time. </p>"
             },
             {
               "type": "html",
@@ -11303,20 +11179,14 @@
           "name": "ConclusionCard1Panel",
           "elements": [
             {
-              "type": "panel",
-              "name": "ConclusionHeadPanel",
-              "elements": [
-                {
-                  "type": "html",
-                  "name": "ConclusionHeading",
-                  "html": "<h2>Conclusion</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "Conclusion",
-                  "html": "<p>The last section of this survey references your earlier responses to determine how {CmpnName}'s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression. </p>"
-                }
-              ]
+              "type": "html",
+              "name": "ConclusionHeading",
+              "html": "<h2>Conclusion</h2>"
+            },
+            {
+              "type": "html",
+              "name": "Conclusion",
+              "html": "<p>The last section of this survey references your earlier responses to determine how {CmpnName}'s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression. </p>"
             },
             {
               "type": "panel",

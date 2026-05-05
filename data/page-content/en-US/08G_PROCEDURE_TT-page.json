@@ -7,14 +7,30 @@
       "name": "ProcedureTTCard1Panel",
       "elements": [
         {
+          "type": "panel",
+          "name": "ProcedureTTXHeadPanel",
+          "elements": [
+            {
               "type": "html",
               "name": "ProcedureTTHeading",
               "html": "<h2>Questions About {CmpnName}'s Tracheostomy Surgery<h2>"
-        },
-        {
+            },
+            {
               "type": "html",
               "name": "ProcedureTTText",
               "html": "<p>Tracheostomy is most often performed as a salvage procedure in emergencies or after other LP surgeries have failed.</p>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedureTTHeading",
+              "html": "<h2>Questions About {CmpnName}'s Tracheostomy Surgery<h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedureTTText",
+              "html": "<p>Tracheostomy is most often performed as a salvage procedure in emergencies or after other LP surgeries have failed.</p>"
+            }
+          ]
         },
         {
           "type": "panel",

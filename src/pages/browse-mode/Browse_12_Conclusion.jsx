@@ -37,12 +37,14 @@ const Browse_12_Conclusion = () => {
       </div>
 
       <div className="browse-panel-container" id="ConclusionCard1Panel">
+      <div className="browse-panel-container" id="ConclusionHeadPanel">
       <div className="browse-content-block" id="ConclusionHeading">
         <h2 className="browse-content-heading">Conclusion</h2>
       </div>
 
       <div className="browse-content-block" id="Conclusion">
         <p className="browse-content-text">The last section of this survey references your earlier responses to determine how Bella&lsquo;s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="ConclusionsPanelLifeStatusTrue">

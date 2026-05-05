@@ -7,10 +7,16 @@
       "name": "ProcedureUALCard1Panel",
       "elements": [
         {
+          "type": "panel",
+          "name": "ProcedureUALHeadPanel",
+          "elements": [
+            {
               "type": "html",
               "name": "ProcedureUALHeading",
               "html": "<h2>Questions About {CmpnName}'s Tieback (UAL) Surgery<h2>"
-        },
+            }
+          ]
+        },        
         {
           "type": "panel",
           "name": "ProcedureUALAgePanel",

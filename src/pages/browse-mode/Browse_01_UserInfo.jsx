@@ -37,6 +37,7 @@ const Browse_01_UserInfo = () => {
       </div>
 
       <div className="browse-panel-container" id="UserInfoCard1Panel">
+      <div className="browse-panel-container" id="UserInfoHeadPanel">
       <div className="browse-content-block" id="UserInfoHead">
         <h2 className="browse-content-heading">Before You Begin</h2>
       </div>
@@ -47,6 +48,7 @@ const Browse_01_UserInfo = () => {
 
       <div className="browse-content-block" id="UserInfoText2">
         <p className="browse-content-text">If you&lsquo;d like to continue now, please tell us your LP companion&lsquo;s name and if they have crossed over the Rainbow Bridge.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="UserInfoLifeStatusNamePanel">

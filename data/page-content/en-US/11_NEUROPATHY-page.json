@@ -6,16 +6,21 @@
       "type": "panel",
       "name": "NeuropathyCard1Panel",
       "elements": [
-
         {
-          "type": "html",
-          "name": "NeuropathyHeading",
-          "html": "<h2>Hind-End Weakness and Polyneuropathy</h2>"
-        },
-        {
-          "type": "html",
-          "name": "NeuropathyText",
-          "html": "<p>This section asks questions about whether {CmpnName} showed symptoms of polyneuropathy and how these symptoms progressed over time. </p>"
+          "type": "panel",
+          "name": "NeuropathyHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "NeuropathyHeading",
+              "html": "<h2>Hind-End Weakness and Polyneuropathy</h2>"
+            },
+            {
+              "type": "html",
+              "name": "NeuropathyText",
+              "html": "<p>This section asks questions about whether {CmpnName} showed symptoms of polyneuropathy and how these symptoms progressed over time. </p>"
+            }
+          ]
         },
         {
           "type": "html",

@@ -37,12 +37,14 @@ const Browse_08E_ProcedureVcc = () => {
       </div>
 
       <div className="browse-panel-container" id="ProcedureVCCCard1Panel">
+      <div className="browse-panel-container" id="ProcedureVCCHeadPanel">
       <div className="browse-content-block" id="ProcedureVCCHeading">
         <h2 className="browse-content-heading">Questions About Bella&lsquo;s Ventrilucordectomy Surgery</h2>
       </div>
 
       <div className="browse-content-block" id="ProcedureVCCText">
         <p className="browse-content-text">Ventrilucordectomy is often referred to as vocal fold excision, vocal cord removal, or debarking. As a treatment for LP, the procedure removes the patient&amp;lsquo;s vocal cords which creates a larger airway through the paralyzed larynx, allowing the patient to breathe better.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="ProcedureVCCAgePanel">

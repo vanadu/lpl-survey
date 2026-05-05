@@ -6,14 +6,20 @@
       "name": "BreathingCard1Panel",
       "elements": [
         {
-          "type": "html",
-          "name": "BreathingHeading",
-          "html": "<h2>Breathing Crises and Aspiration Pneumonia</h2>"
-        },
-        {
-          "type": "html",
-          "name": "BreathingText",
-          "html": "<p>This section asks questions about {CmpnName}'s experience with breathing crises and aspiration pneumonia. </p>"
+          "type": "panel",
+          "name": "BreathingHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "BreathingHeading",
+              "html": "<h2>Breathing Crises and Aspiration Pneumonia</h2>"
+            },
+            {
+              "type": "html",
+              "name": "BreathingText",
+              "html": "<p>This section asks questions about {CmpnName}'s experience with breathing crises and aspiration pneumonia. </p>"
+            }
+          ]
         },
         {
           "type": "panel",

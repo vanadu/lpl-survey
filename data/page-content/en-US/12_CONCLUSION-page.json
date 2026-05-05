@@ -7,14 +7,20 @@
       "name": "ConclusionCard1Panel",
       "elements": [
         {
-          "type": "html",
-          "name": "ConclusionHeading",
-          "html": "<h2>Conclusion</h2>"
-        },
-        {
-          "type": "html",
-          "name": "Conclusion",
-          "html": "<p>The last section of this survey references your earlier responses to determine how {CmpnName}'s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression. </p>"
+          "type": "panel",
+          "name": "ConclusionHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ConclusionHeading",
+              "html": "<h2>Conclusion</h2>"
+            },
+            {
+              "type": "html",
+              "name": "Conclusion",
+              "html": "<p>The last section of this survey references your earlier responses to determine how {CmpnName}'s LP/GOLPP developed over time and what factors may have played a role in the LP/GOLPP progression. </p>"
+            }
+          ]
         },
         {
           "type": "panel",

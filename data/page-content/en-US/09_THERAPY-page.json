@@ -6,19 +6,22 @@
       "type": "panel",
       "name": "TherapyCard1Panel",
       "elements": [
-
-
         {
-          "type": "html",
-          "name": "TherapyHeading",
-          "html": "<h2>Therapy for LP/GOLPP</h2>"
+          "type": "panel",
+          "name": "TherapyHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "TherapyHeading",
+              "html": "<h2>Therapy for LP/GOLPP</h2>"
+            },
+            {
+              "type": "html",
+              "name": "TherapyText",
+              "html": "<p>This section asks about non-traditional treatments or therapy {CmpnName} has had for LP/GOLPP.</p>"
+            }
+          ]
         },
-        {
-          "type": "html",
-          "name": "TherapyText",
-          "html": "<p>This section asks about non-traditional treatments or therapy {CmpnName} has had for LP/GOLPP.</p>"
-        },
-
         {
           "type": "panel",
           "name": "TherapyTypePanel",

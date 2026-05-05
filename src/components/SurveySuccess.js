@@ -21,8 +21,6 @@ const SurveySuccess = () => {
   }, []);
 
 
-
-
   return (
     <>
           <div className="success-container-wrap">

@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-05-05T07:43:43.550Z",
+    "builtAt": "2026-05-05T09:37:22.895Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -121,6 +121,18 @@
       "collect": false,
       "path": [
         "USER_INFO-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "UserInfoHeadPanel": {
+      "name": "UserInfoHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "USER_INFO-page",
+        "UserInfoCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -390,6 +402,18 @@
       "collect": false,
       "path": [
         "CMPN_INFO-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "CmpnInfoHeadPanel": {
+      "name": "CmpnInfoHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CMPN_INFO-page",
+        "CmpnInfoCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -778,6 +802,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "FactorsHeadPanel": {
+      "name": "FactorsHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "FACTORS-page",
+        "FactorsCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "FactorsSourcesPanel": {
       "name": "FactorsSourcesPanel",
       "type": "panel",
@@ -1144,6 +1180,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "SymptomsHeadPanel": {
+      "name": "SymptomsHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "SYMPTOMS-page",
+        "SymptomsCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "SymptomsDetailsPanel": {
       "name": "SymptomsDetailsPanel",
       "type": "panel",
@@ -1420,6 +1468,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "XXXHeadPanel": {
+      "name": "XXXHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PRIMARY-page",
+        "PrimaryCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "PrimaryInflammationPanel": {
       "name": "PrimaryInflammationPanel",
       "type": "panel",
@@ -1670,6 +1730,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "DiagnosisHeadPanel": {
+      "name": "DiagnosisHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "DIAGNOSIS-page",
+        "DiagnosisCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "DiagnosisSpecialistPanel": {
       "name": "DiagnosisSpecialistPanel",
       "type": "panel",
@@ -1840,6 +1912,18 @@
       "collect": false,
       "path": [
         "Medication-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "MedicationHeadPanel": {
+      "name": "MedicationHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "Medication-page",
+        "MedicationCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -2486,6 +2570,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "ProcedureHeadPanel": {
+      "name": "ProcedureHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE-page",
+        "ProcedureCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ProcedureDidHave": {
       "name": "ProcedureDidHave",
       "type": "boolean",
@@ -2550,6 +2646,18 @@
       "collect": false,
       "path": [
         "PROCEDURE_UAL-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureUALHeadPanel": {
+      "name": "ProcedureUALHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_UAL-page",
+        "ProcedureUALCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -3134,6 +3242,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "ProcedureESIHeadPanel": {
+      "name": "ProcedureESIHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_ESI-page",
+        "ProcedureESICard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ProcedureESIAgePanel": {
       "name": "ProcedureESIAgePanel",
       "type": "panel",
@@ -3699,6 +3819,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "ProcedureBVEAPHeadPanel": {
+      "name": "ProcedureBVEAPHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_BVEAP-page",
+        "ProcedureBVEAPCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ProcedureBVEAPAgePanel": {
       "name": "ProcedureBVEAPAgePanel",
       "type": "panel",
@@ -4227,6 +4359,18 @@
       "collect": false,
       "path": [
         "PROCEDURE_PAE-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedurePAEHeadPanel": {
+      "name": "ProcedurePAEHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_PAE-page",
+        "ProcedurePAECard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -4778,6 +4922,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "ProcedureVCCHeadPanel": {
+      "name": "ProcedureVCCHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_VCC-page",
+        "ProcedureVCCCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ProcedureVCCAgePanel": {
       "name": "ProcedureVCCAgePanel",
       "type": "panel",
@@ -5321,6 +5477,18 @@
       "collect": false,
       "path": [
         "PROCEDURE_PLE-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedurePLEHeadPanel": {
+      "name": "ProcedurePLEHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_PLE-page",
+        "ProcedurePLECard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -5872,6 +6040,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "ProcedureTTXHeadPanel": {
+      "name": "ProcedureTTXHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_TT-page",
+        "ProcedureTTCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "ProcedureTTAgePanel": {
       "name": "ProcedureTTAgePanel",
       "type": "panel",
@@ -6385,6 +6565,18 @@
       "collect": false,
       "path": [
         "PROCEDURE_Other-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ProcedureOtherHeadPanel": {
+      "name": "ProcedureOtherHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "PROCEDURE_Other-page",
+        "ProcedureOtherCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -6936,6 +7128,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "TherapyHeadPanel": {
+      "name": "TherapyHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "THERAPY-page",
+        "TherapyCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "TherapyTypePanel": {
       "name": "TherapyTypePanel",
       "type": "panel",
@@ -7130,6 +7334,18 @@
       "collect": false,
       "path": [
         "BREATHING-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "BreathingHeadPanel": {
+      "name": "BreathingHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "BREATHING-page",
+        "BreathingCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false
@@ -7492,6 +7708,18 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
+    "NeuropathyHeadPanel": {
+      "name": "NeuropathyHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "NEUROPATHY-page",
+        "NeuropathyCard1Panel"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
     "NeuropathySymptomsPanel": {
       "name": "NeuropathySymptomsPanel",
       "type": "panel",
@@ -7645,6 +7873,18 @@
       "collect": false,
       "path": [
         "CONCLUSION-page"
+      ],
+      "hasTitle": false,
+      "hasVisibleIf": false
+    },
+    "ConclusionHeadPanel": {
+      "name": "ConclusionHeadPanel",
+      "type": "panel",
+      "role": "panel",
+      "collect": false,
+      "path": [
+        "CONCLUSION-page",
+        "ConclusionCard1Panel"
       ],
       "hasTitle": false,
       "hasVisibleIf": false

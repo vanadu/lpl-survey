@@ -7,9 +7,15 @@
       "name": "ProcedureBVEAPCard1Panel",
       "elements": [
         {
-              "type": "html",
-              "name": "ProcedureBVEAPHeading",
-              "html": "<h2>Questions About {CmpnName}'s BVEAP Surgery<h2>"
+          "type": "panel",
+          "name": "ProcedureBVEAPHeadPanel",
+          "elements": [
+            {
+            "type": "html",
+            "name": "ProcedureBVEAPHeading",
+            "html": "<h2>Questions About {CmpnName}'s BVEAP Surgery<h2>"
+            }
+          ]
         },
         {
           "type": "panel",

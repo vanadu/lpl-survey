@@ -37,6 +37,7 @@ const Browse_03_Factors = () => {
       </div>
 
       <div className="browse-panel-container" id="FactorsCard1Panel">
+      <div className="browse-panel-container" id="FactorsHeadPanel">
       <div className="browse-content-block" id="FactorsHeading">
         <h2 className="browse-content-heading">Your LP/GOLPP Decisions</h2>
       </div>
@@ -47,6 +48,7 @@ const Browse_03_Factors = () => {
 
       <div className="browse-content-block" id="FactorsInfoText">
         <p className="browse-content-text">These questions ask about how you learned what you know about LP/GOLPP.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="FactorsSourcesPanel">

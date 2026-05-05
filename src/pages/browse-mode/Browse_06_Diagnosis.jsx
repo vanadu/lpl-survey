@@ -37,12 +37,14 @@ const Browse_06_Diagnosis = () => {
       </div>
 
       <div className="browse-panel-container" id="DiagnosisCard1Panel">
+      <div className="browse-panel-container" id="DiagnosisHeadPanel">
       <div className="browse-content-block" id="DiagnosisHeading">
         <h2 className="browse-content-heading">Bella&lsquo;s LP/GOLPP Diagnosis</h2>
       </div>
 
       <div className="browse-content-block" id="DiagnosisText">
         <p className="browse-content-text">This section asks about Bella&lsquo;s LP/GOLPP diagnosis.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="DiagnosisSpecialistPanel">

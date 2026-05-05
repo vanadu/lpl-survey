@@ -37,8 +37,10 @@ const Browse_08A_ProcedureUal = () => {
       </div>
 
       <div className="browse-panel-container" id="ProcedureUALCard1Panel">
+      <div className="browse-panel-container" id="ProcedureUALHeadPanel">
       <div className="browse-content-block" id="ProcedureUALHeading">
         <h2 className="browse-content-heading">Questions About Bella&lsquo;s Tieback (UAL) Surgery</h2>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="ProcedureUALAgePanel">

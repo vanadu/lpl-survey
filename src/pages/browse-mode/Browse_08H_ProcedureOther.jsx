@@ -37,12 +37,14 @@ const Browse_08H_ProcedureOther = () => {
       </div>
 
       <div className="browse-panel-container" id="ProcedureOtherCard1Panel">
+      <div className="browse-panel-container" id="ProcedureOtherHeadPanel">
       <div className="browse-content-block" id="ProcedureOtherHeading">
         <h2 className="browse-content-heading">Questions About Bella&lsquo;s LP Surgery</h2>
       </div>
 
       <div className="browse-content-block" id="ProcedureOtherText">
         <p className="browse-content-text">If you&lsquo;re not sure what kind of surgery or procedure Bella had, please fill out the survey as best as you can.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="ProcedureOtherAgePanel">

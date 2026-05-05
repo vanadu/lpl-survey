@@ -7,9 +7,15 @@
       "name": "ProcedureESICard1Panel",
       "elements": [
         {
-          "type": "html",
-          "name": "ProcedureESIHeading",
-          "html": "<h2>Questions About {CmpnName}'s Stent Procedure<h2>"
+          "type": "panel",
+          "name": "ProcedureESIHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedureESIHeading",
+              "html": "<h2>Questions About {CmpnName}'s Stent Procedure<h2>"
+            }
+          ]
         },
         {
           "type": "panel",

@@ -37,12 +37,14 @@ const Browse_08F_ProcedurePle = () => {
       </div>
 
       <div className="browse-panel-container" id="ProcedurePLECard1Panel">
+      <div className="browse-panel-container" id="ProcedurePLEHeadPanel">
       <div className="browse-content-block" id="ProcedurePLEHeading">
         <h2 className="browse-content-heading">Questions About Bella&lsquo;s Partial Laryngectomy Surgery</h2>
       </div>
 
       <div className="browse-content-block" id="ProcedurePLEText">
         <p className="browse-content-text">With LP, the arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. With a partial laryngectomy, the one side of the arytenoid cartilages are partially removed and the vocal folds are partially removed to create a larger opening through the paralyzed larynx that for the patient to breathe through.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="ProcedurePLEAgePanel">

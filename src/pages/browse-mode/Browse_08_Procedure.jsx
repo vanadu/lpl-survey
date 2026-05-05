@@ -37,12 +37,14 @@ const Browse_08_Procedure = () => {
       </div>
 
       <div className="browse-panel-container" id="ProcedureCard1Panel">
+      <div className="browse-panel-container" id="ProcedureHeadPanel">
       <div className="browse-content-block" id="ProcedureHeading">
         <h2 className="browse-content-heading">Veterinary-Medical Procedures for LP</h2>
       </div>
 
       <div className="browse-content-block" id="ProcedureText">
         <p className="browse-content-text">This section asks questions about veterinary procedures such as surgery or stent implant that Bella underwent to treat laryngeal paralysis.</p>
+      </div>
       </div>
 
       <div className="browse-question-container" id="ProcedureDidHave">

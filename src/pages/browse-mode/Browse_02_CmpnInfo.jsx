@@ -37,12 +37,14 @@ const Browse_02_CmpnInfo = () => {
       </div>
 
       <div className="browse-panel-container" id="CmpnInfoCard1Panel">
+      <div className="browse-panel-container" id="CmpnInfoHeadPanel">
       <div className="browse-content-block" id="CmpnInfoHeading">
         <h2 className="browse-content-heading">About Your LP/GOLPP companion</h2>
       </div>
 
       <div className="browse-content-block" id="CmpnInfoText">
         <p className="browse-content-text">This section asks basic questions about your companion&lsquo;s species, age, breed, weight, and demeanor. The answers are required to continue with the survey. If you don&lsquo;t know exact information, it&lsquo;s OK to guesstimate.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="CmpnInfoDetailsPanel">

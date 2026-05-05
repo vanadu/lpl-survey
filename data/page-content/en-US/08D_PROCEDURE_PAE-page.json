@@ -7,14 +7,20 @@
       "name": "ProcedurePAECard1Panel",
       "elements": [
         {
-              "type": "html",
-              "name": "ProcedurePAEHeading",
-              "html": "<h2>Questions About {CmpnName}'s Arytenoidectomy Surgery<h2>"
-        },
-        {
-              "type": "html",
-              "name": "ProcedurePAEText",
-              "html": "<p>With LP, the arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. Partial arytenoidectomy removes part of one side of the arytenoid cartilage to open up a space to breathe through.</p>"
+          "type": "panel",
+          "name": "ProcedurePAEHeadPanel",
+          "elements": [
+            {
+            "type": "html",
+            "name": "ProcedurePAEHeading",
+            "html": "<h2>Questions About {CmpnName}'s Arytenoidectomy Surgery<h2>"
+            },
+            {
+                  "type": "html",
+                  "name": "ProcedurePAEText",
+                  "html": "<p>With LP, the arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. Partial arytenoidectomy removes part of one side of the arytenoid cartilage to open up a space to breathe through.</p>"
+            }
+          ]
         },
         {
           "type": "panel",

@@ -6,14 +6,20 @@
       "name": "PrimaryCard1Panel",
       "elements": [
         {
-          "type": "html",
-          "name": "PrimaryHeading",
-          "html": "<h2>Your Primary Veterinarian and {CmpnName}'s LP/GOLPP</h2>"
-        },
-        {
-          "type": "html",
-          "name": "PrimaryText",
-          "html": "<p>This section asks questions about how your primary veterinarian(s) handled {CmpnName}'s LP/GOLPP symptoms.</p>"
+          "type": "panel",
+          "name": "XXXHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "PrimaryHeading",
+              "html": "<h2>Your Primary Veterinarian and {CmpnName}'s LP/GOLPP</h2>"
+            },
+            {
+              "type": "html",
+              "name": "PrimaryText",
+              "html": "<p>This section asks questions about how your primary veterinarian(s) handled {CmpnName}'s LP/GOLPP symptoms.</p>"
+            }
+          ]
         },
         {
           "type": "panel",

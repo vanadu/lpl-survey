@@ -47,7 +47,11 @@ const Browse_00_Landing = () => {
       </div>
 
       <div className="browse-content-block" id="LandingWelcomeText2">
-        <p className="browse-content-text">By sharing what you’ve seen &amp;mdash; symptoms, treatments, and day-to-day changes &amp;mdash; you can help build a clearer understanding of how this disease progresses and what actually helps. Each response adds to a growing body of real-world knowledge, helping to identify patterns, compare outcomes, and move toward better answers for animals with LP and the people who care for them.</p>
+        <p className="browse-content-text">By sharing what you’ve seen &amp;mdash; symptoms, treatments, and day-to-day changes &amp;mdash; you can help build a clearer understanding of how this disease progresses and what actually helps.</p>
+      </div>
+
+      <div className="browse-content-block" id="LandingWelcomeText2">
+        <p className="browse-content-text">Each response adds to a growing body of real-world knowledge, helping to identify patterns, compare outcomes, and move toward better answers for animals with LP and the people who care for them.</p>
       </div>
       </div>
       </div>

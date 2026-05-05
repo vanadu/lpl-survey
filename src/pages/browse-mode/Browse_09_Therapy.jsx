@@ -37,12 +37,14 @@ const Browse_09_Therapy = () => {
       </div>
 
       <div className="browse-panel-container" id="TherapyCard1Panel">
+      <div className="browse-panel-container" id="TherapyHeadPanel">
       <div className="browse-content-block" id="TherapyHeading">
         <h2 className="browse-content-heading">Therapy for LP/GOLPP</h2>
       </div>
 
       <div className="browse-content-block" id="TherapyText">
         <p className="browse-content-text">This section asks about non-traditional treatments or therapy Bella has had for LP/GOLPP.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="TherapyTypePanel">

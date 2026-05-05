@@ -37,12 +37,14 @@ const Browse_10_Breathing = () => {
       </div>
 
       <div className="browse-panel-container" id="BreathingCard1Panel">
+      <div className="browse-panel-container" id="BreathingHeadPanel">
       <div className="browse-content-block" id="BreathingHeading">
         <h2 className="browse-content-heading">Breathing Crises and Aspiration Pneumonia</h2>
       </div>
 
       <div className="browse-content-block" id="BreathingText">
         <p className="browse-content-text">This section asks questions about Bella&lsquo;s experience with breathing crises and aspiration pneumonia.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="BreathingCrisisPanel">

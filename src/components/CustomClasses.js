@@ -533,7 +533,9 @@ export function getStyleDirectives(item) {
     "SymptomsIntubationBeforeSymptoms",
     "SymptomsIntubationConcerns",
     "SymptomsOtherConditionsType",
+    "SymptomsIntubationWasIntubated",
     "SymptomsIntubationSymptoms",
+
 
     "PrimaryReflux",
     "PrimaryInfoDetails",

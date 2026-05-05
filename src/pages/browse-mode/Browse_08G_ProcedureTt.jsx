@@ -37,12 +37,22 @@ const Browse_08G_ProcedureTt = () => {
       </div>
 
       <div className="browse-panel-container" id="ProcedureTTCard1Panel">
+      <div className="browse-panel-container" id="ProcedureTTXHeadPanel">
       <div className="browse-content-block" id="ProcedureTTHeading">
         <h2 className="browse-content-heading">Questions About Bella&lsquo;s Tracheostomy Surgery</h2>
       </div>
 
       <div className="browse-content-block" id="ProcedureTTText">
         <p className="browse-content-text">Tracheostomy is most often performed as a salvage procedure in emergencies or after other LP surgeries have failed.</p>
+      </div>
+
+      <div className="browse-content-block" id="ProcedureTTHeading">
+        <h2 className="browse-content-heading">Questions About Bella&lsquo;s Tracheostomy Surgery</h2>
+      </div>
+
+      <div className="browse-content-block" id="ProcedureTTText">
+        <p className="browse-content-text">Tracheostomy is most often performed as a salvage procedure in emergencies or after other LP surgeries have failed.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="ProcedureTTAgePanel">

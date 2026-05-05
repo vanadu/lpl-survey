@@ -37,12 +37,14 @@ const Browse_11_Neuropathy = () => {
       </div>
 
       <div className="browse-panel-container" id="NeuropathyCard1Panel">
+      <div className="browse-panel-container" id="NeuropathyHeadPanel">
       <div className="browse-content-block" id="NeuropathyHeading">
         <h2 className="browse-content-heading">Hind-End Weakness and Polyneuropathy</h2>
       </div>
 
       <div className="browse-content-block" id="NeuropathyText">
         <p className="browse-content-text">This section asks questions about whether Bella showed symptoms of polyneuropathy and how these symptoms progressed over time.</p>
+      </div>
       </div>
 
       <div className="browse-content-block" id="NeuropathyText">

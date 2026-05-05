@@ -7,14 +7,20 @@
       "name": "ProcedurePLECard1Panel",
       "elements": [
         {
-              "type": "html",
-              "name": "ProcedurePLEHeading",
-              "html": "<h2>Questions About {CmpnName}'s Partial Laryngectomy Surgery<h2>"
-        },
-        {
-              "type": "html",
-              "name": "ProcedurePLEText",
-              "html": "<p>With LP, the arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. With a partial laryngectomy, the one side of the arytenoid cartilages are partially removed and the vocal folds are partially removed to create a larger opening through the paralyzed larynx that for the patient to breathe through.</p>"
+          "type": "panel",
+          "name": "ProcedurePLEHeadPanel",
+          "elements": [
+            {
+                  "type": "html",
+                  "name": "ProcedurePLEHeading",
+                  "html": "<h2>Questions About {CmpnName}'s Partial Laryngectomy Surgery<h2>"
+            },
+            {
+                  "type": "html",
+                  "name": "ProcedurePLEText",
+                  "html": "<p>With LP, the arytenoid cartilages are the parts of the larynx that are paralyzed, causing a blockage of the airway. With a partial laryngectomy, the one side of the arytenoid cartilages are partially removed and the vocal folds are partially removed to create a larger opening through the paralyzed larynx that for the patient to breathe through.</p>"
+            }      
+          ]
         },
         {
           "type": "panel",

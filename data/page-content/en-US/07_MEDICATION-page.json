@@ -7,16 +7,22 @@
       "name": "MedicationCard1Panel",
       "elements": [
         {
-          "type": "html",
-          "name": "MedicationHeading",
-          "html": "<h2>{CmpnName}'s LP/GOLPP Medications</h2>"
+          "type": "panel",
+          "name": "MedicationHeadPanel",
+          "elements": [
+      
+            {
+              "type": "html",
+              "name": "MedicationHeading",
+              "html": "<h2>{CmpnName}'s LP/GOLPP Medications</h2>"
+            },
+            {
+              "type": "html",
+              "name": "MedicationTextImportant",
+              "html": "<p>This section asks about prescription and non-prescription medications and supplements {CmpnName} has taken for LP/GOLPP. </p>"
+            }
+          ]
         },
-        {
-          "type": "html",
-          "name": "MedicationTextImportant",
-          "html": "<p>This section asks about prescription and non-prescription medications and supplements {CmpnName} has taken for LP/GOLPP. </p>"
-        },
-        
         {
           "type": "panel",
           "name": "MedicationPrescriptionPanel",

@@ -17,7 +17,7 @@
             {
               "type": "html",
               "name": "LandingVersion",
-              "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 0.9/26.03.27.01</p></div></div>"
+              "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 1.0/26.05.06.01</p></div></div>"
             }
           ]
         },
@@ -38,7 +38,12 @@
             {
               "type": "html",
               "name": "LandingWelcomeText2",
-              "html": "By sharing what you’ve seen &mdash; symptoms, treatments, and day-to-day changes &mdash; you can help build a clearer understanding of how this disease progresses and what actually helps. Each response adds to a growing body of real-world knowledge, helping to identify patterns, compare outcomes, and move toward better answers for animals with LP and the people who care for them."
+              "html": "By sharing what you’ve seen &mdash; symptoms, treatments, and day-to-day changes &mdash; you can help build a clearer understanding of how this disease progresses and what actually helps. "
+            },
+            {
+              "type": "html",
+              "name": "LandingWelcomeText2",
+              "html": "Each response adds to a growing body of real-world knowledge, helping to identify patterns, compare outcomes, and move toward better answers for animals with LP and the people who care for them."
             }
 
           ]

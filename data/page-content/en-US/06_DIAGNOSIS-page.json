@@ -7,15 +7,22 @@
       "name": "DiagnosisCard1Panel",
       "elements": [
         {
-          "type": "html",
-          "name": "DiagnosisHeading",
-          "html": "<h2>{CmpnName}'s LP/GOLPP Diagnosis</h2>"
+          "type": "panel",
+          "name": "DiagnosisHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "DiagnosisHeading",
+              "html": "<h2>{CmpnName}'s LP/GOLPP Diagnosis</h2>"
+            },
+            {
+              "type": "html",
+              "name": "DiagnosisText",
+              "html": "<p>This section asks about {CmpnName}'s LP/GOLPP diagnosis.</p>"
+            }
+          ]
         },
-        {
-          "type": "html",
-          "name": "DiagnosisText",
-          "html": "<p>This section asks about {CmpnName}'s LP/GOLPP diagnosis.</p>"
-        },
+
         {
           "type": "panel",
           "name": "DiagnosisSpecialistPanel",

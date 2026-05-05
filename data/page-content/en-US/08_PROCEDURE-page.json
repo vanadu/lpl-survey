@@ -6,16 +6,21 @@
       "name": "ProcedureCard1Panel",
       "elements": [
         {
-          "type": "html",
-          "name": "ProcedureHeading",
-          "html": "<h2>Veterinary-Medical Procedures for&nbsp;LP</h2>"
+          "type": "panel",
+          "name": "ProcedureHeadPanel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "ProcedureHeading",
+              "html": "<h2>Veterinary-Medical Procedures for&nbsp;LP</h2>"
+            },
+            {
+              "type": "html",
+              "name": "ProcedureText",
+              "html": "<p>This section asks questions about veterinary procedures such as surgery or stent implant that {CmpnName} underwent to treat laryngeal paralysis. </p>"
+            }
+          ]
         },
-        {
-          "type": "html",
-          "name": "ProcedureText",
-          "html": "<p>This section asks questions about veterinary procedures such as surgery or stent implant that {CmpnName} underwent to treat laryngeal paralysis. </p>"
-        },
-
         {
           "type": "boolean",
           "name": "ProcedureDidHave",

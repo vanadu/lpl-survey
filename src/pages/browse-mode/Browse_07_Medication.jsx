@@ -37,12 +37,14 @@ const Browse_07_Medication = () => {
       </div>
 
       <div className="browse-panel-container" id="MedicationCard1Panel">
+      <div className="browse-panel-container" id="MedicationHeadPanel">
       <div className="browse-content-block" id="MedicationHeading">
         <h2 className="browse-content-heading">Bella&lsquo;s LP/GOLPP Medications</h2>
       </div>
 
       <div className="browse-content-block" id="MedicationTextImportant">
         <p className="browse-content-text">This section asks about prescription and non-prescription medications and supplements Bella has taken for LP/GOLPP.</p>
+      </div>
       </div>
 
       <div className="browse-panel-container" id="MedicationPrescriptionPanel">

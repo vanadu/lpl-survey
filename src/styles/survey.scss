@@ -177,8 +177,10 @@ label {
 
 // !VA Overrides default.scss
 .sd-panel.sd-element--nested > .sd-panel__content {
-    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
-    padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+    // padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+    // padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))));
+    padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px))));
     --animation-padding-top: var(--sd-base-padding);
 }
 
@@ -278,11 +280,18 @@ label {
   font-weight: 600;
   line-height: 1.5;
   // margin-left: var(--s-5);
-
-
   position: relative;
   padding-left: 1rem;
-  padding-bottom: var(--s-2);
+  margin-top: var(--s-1);
+  @include tablet {
+    margin-top: var(--s-2);
+  }
+  @include desktop {
+    margin-top: var(--s-2);
+  }
+  @include ldesktop {
+    margin-top: var(--s-2);
+  }
   &::before {
     content: "";
     position: absolute;
@@ -585,20 +594,26 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
     margin: 0!important;
     @include tablet { 
       border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
-      padding: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+      padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      margin-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     }
     @include desktop { 
       border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
-      padding: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px))))!important;
+      padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      margin-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     }
     @include ldesktop { 
       padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
       padding-right: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-      padding-bottom: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      padding-bottom: calc(0 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
       padding-left: calc(3 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-
-      margin-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
-
+      margin-top: calc(2 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
       border: 1px solid var(--sjs-border-light, var(--border-light, #eaeaea)); 
       border-radius: 0!important;
     }
@@ -624,37 +639,38 @@ IMPORTANT: box-shadow is the panel border on sd-element--with-frame!
     // font-size: calc(1.75 * (var(--sjs-font-size, 16px)));
     text-align: center;
 
+    @include tablet {
+      text-align: left;
+      padding-top: calc(.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    }
+    @include desktop {
+      text-align: left;
+      padding-top: calc(.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    }
     @include ldesktop {
       text-align: left;
-      padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+      padding-top: calc(.5 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
     }
   }
 
 .landing-title-subheading {
   font-family: $primary_font!important;
-  // padding: 0!important;
-  // margin: .5rem 0 0 0!important;
   color: #6b6b6b!important;
-  // font-size: 1.313rem!important;
-  // line-height: 1.75rem!important;
-  // font-weight: 600!important;
-  // --sjs-font-size: 15px;
-  // line-height: calc(1.25 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 15px))));
   padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   font-size: var(--sjs-article-font-default-fontSize, calc(3 * (var(--sjs-font-size, 16px))))!important;
   font-weight: 600;
   text-align: center;
   @include tablet {
     text-align: left;
-    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-top: calc(1.25 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   }
   @include desktop {
     text-align: left;
-    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-top: calc(1.25 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   }
   @include ldesktop {
     text-align: left;
-    padding-top: calc(1 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
+    padding-top: calc(1.25 * (var(--sjs-base-unit, var(--base-unit, 8px)))) !important;
   }
 }
 
