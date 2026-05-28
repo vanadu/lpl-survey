@@ -1769,48 +1769,6 @@ article .consent-info, article .privacy-info {
 // !VA CONTACT FORM MODIFICATIONS
 // =============================
 
-// .section {
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: flex-start;
-//   width: 100%;
-//   background:   var(--c-form-bg);
-//   color: --content-text;
-// }
-
-// .section-content {
-//   @include mphone {
-//     padding: 0 1.5rem 0 1rem;
-//   }
-//   @include lphone {
-//     padding: 0 1.5rem 0 1.25rem;
-//   }
-//   @include tablet {
-//     display: block;
-//     width: 740px;
-//   }
-//   @include desktop {
-//     display: block;
-//     width: 860px;
-//     margin: 0 auto;
-//     padding: 0;
-//   }
-//   @include ldesktop {
-//     display: block;
-//     width: 960px;
-//     padding: 0;
-//   }
-
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   width: 100%;
-//   padding: 0 var(--s-3) 0;
-// }
-
 .container-flex-center {
   display: flex;
   flex-direction: column;

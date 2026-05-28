@@ -56,11 +56,11 @@ const SurveyFaqs = () => {
 
         <section className="content-body">
 
-          <article>
+          <section className='faq-heading'>
             <p>Here are some answers to frequently-asked questions about the <span className="emphasis">LP/GOLPP Survey 2026</span>.</p>
-          </article> 
+          </section> 
 
-          <article>
+          <section className='faq-section'>
             <ShowMoreContent
               header={
                 <h3 className="showmore__title">
@@ -77,10 +77,9 @@ const SurveyFaqs = () => {
                   The interactive, mobile-friendly design lets you answer questions while you watch TV or do other things. It remembers your place, so you can come back to it whenever you have a few minutes. The important thing is that you complete the questions and submit your responses whenever it fits into your schedule. Your experience matters!
                 </p>
             </ShowMoreContent>
-          </article>
+          </section>
 
-          <article>
-
+          <section className='faq-section'>
             <ShowMoreContent
               header={
                 <h3 className="showmore__title">
@@ -97,10 +96,9 @@ const SurveyFaqs = () => {
                 The objective is to draw inferences about which approaches result in more or fewer health events that require veterinary care and improve the quality of life of the patient. Cost is the only empirical data available for reference, and that&lsquo;s why it appears so often in the survey.
               </p>
             </ShowMoreContent>
-          </article>
+          </section>
 
-          <article>
-
+          <section className='faq-section'>
             <ShowMoreContent
               header={
                 <h3 className="showmore__title">
@@ -118,10 +116,9 @@ const SurveyFaqs = () => {
                 </ul>
             </ShowMoreContent>
 
-          </article>
+          </section>
 
-          <article>
-
+          <section className='faq-section'>
             <ShowMoreContent
               header={
                 <h3 className="showmore__title">
@@ -146,11 +143,10 @@ const SurveyFaqs = () => {
                   You can&lsquo;t submit responses in <span className="emphasis">Browse Mode</span>. For the fully customized survey experience and to share the details of your LP/GOLPP journey, run the survey in full <span className="emphasis">Survey Mode</span >.
                 </p>
             </ShowMoreContent>
-          </article>
+          </section>
 
 
-          <article>
-
+          <section className='faq-section'>
             <ShowMoreContent
               header={
                 <h3 className="showmore__title">
@@ -164,11 +160,9 @@ const SurveyFaqs = () => {
                   Highlighted text in <span className="emphasis">Browse Mode</span> summarizes a section that would require a user response in <span className="emphasis">Survey Mode</span> and indicates descriptive text that isn&lsquo;t relevant in <span className="emphasis">Survey Mode</span>. 
                 </p>
             </ShowMoreContent>
+          </section>
 
-          </article>
-
-          <article>
-
+          <section className='faq-section'>
             <ShowMoreContent
               header={
                 <h3 className="showmore__title">
@@ -182,10 +176,9 @@ const SurveyFaqs = () => {
                   <span className="emphasis">Browse Mode</span> doesn&lsquo;t collect any data &mdash; it&lsquo;s purely for informational purposes. If you take the survey in <span className="emphasis">Survey Mode</span>, you&lsquo;ll find links to our <span className="emphasis">Privacy</span> and <span className="emphasis">Consent</span> policies that you can review before you provide any personal information. 
                 </p>
             </ShowMoreContent>
+          </section>
 
-          </article>
-
-        </section>
+       </section>{/* /content-body */}
 
       </main>
 

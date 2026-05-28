@@ -1,45 +1,78 @@
-export default function LearnMoreContent({
+import { useId, useRef } from 'react'
+import { FaPlusSquare, FaMinusSquare } from 'react-icons/fa'
+
+const OPEN_SCROLL_DELAY = 300
+
+const LearnMoreContent = ({
   id,
-  label,
+  header,
+  anchor,
   children,
   openSection,
   setOpenSection,
-}) {
+}) => {
+  const isOpen = openSection === id
+  const contentId = useId()
+  const showmoreRef = useRef(null)
+  const triggerRef = useRef(null)
 
-  // Check whether THIS section is currently open
-  const isOpen = openSection === id;
-
-  // Toggle logic
   const handleToggle = () => {
-
-    // Close if already open
     if (isOpen) {
-      setOpenSection(null);
+      const triggerTopBefore = triggerRef.current?.getBoundingClientRect().top ?? 0
+
+      setOpenSection(null)
+
+      requestAnimationFrame(() => {
+        const triggerTopAfter = triggerRef.current?.getBoundingClientRect().top ?? 0
+        const delta = triggerTopAfter - triggerTopBefore
+
+        if (delta !== 0) {
+          window.scrollBy(0, delta)
+        }
+      })
+
+      return
     }
 
-    // Otherwise open this section
-    else {
-      setOpenSection(id);
-    }
-  };
+    setOpenSection(id)
+
+    window.setTimeout(() => {
+      showmoreRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }, OPEN_SCROLL_DELAY)
+  }
 
   return (
-    <div className="learn-more-wrapper">
-
+    <div
+      className={`showmore ${isOpen ? 'showmore--open' : ''}`}
+      ref={showmoreRef}
+      id={anchor || undefined}
+    >
       <button
+        ref={triggerRef}
         type="button"
-        className="learn-more-button"
+        className="showmore__trigger"
+        aria-expanded={isOpen}
+        aria-controls={contentId}
         onClick={handleToggle}
       >
-        {isOpen ? 'Show less' : label}
+        <span className="showmore__icon" aria-hidden="true">
+          {isOpen ? <FaMinusSquare /> : <FaPlusSquare />}
+        </span>
+        {header}
       </button>
 
-      {isOpen && (
-        <div className="learn-more-content">
-          {children}
-        </div>
-      )}
-
+      <div
+        id={contentId}
+        className="showmore__content"
+        hidden={!isOpen}
+      >
+        {children}
+      </div>
     </div>
-  );
+  )
 }
+
+export default LearnMoreContent
