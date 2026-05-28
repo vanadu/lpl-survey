@@ -585,8 +585,8 @@
                   "text": "Lion's mane"
                 },
                 {
-                  "value": "MYELIN_SHEATH",
-                  "text": "Myelin sheath"
+                  "value": "BOVINE_BRAIN",
+                  "text": "Bovine Brain"
                 },
                 {
                   "value": "EGG_SHELL",
@@ -597,7 +597,7 @@
                   "text": "Ursolic acid"
                 },
                 {
-                  "valuinitiative= 'YES'e": "PRIMROSE",
+                  "value": "PRIMROSE",
                   "text": "Evening Primrose Oil"
                 },
                 {
@@ -671,98 +671,6 @@
               "description": "1 = very negative, 3 = no effect, 5 = very positive",
               "isRequired": true,
               "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
-              "displayMode": "buttons",
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "panel",
-          "name": "MedicationProtocolPanel",
-          "elements": [
-            {
-              "type": "radiogroup",
-              "name": "MedicationProtocolDidPurchase",
-              "title": "Have you purchased products that are advertised as a blend or protocol of ingredients created for LP/GOLPP? ",
-              "isRequired": true,
-              "choices": [
-                {
-                  "value": "YES",
-                  "text": "Yes"
-                },
-                {
-                  "value": "NO",
-                  "text": "No"
-                },
-                {
-                  "value": "DONT_KNOW",
-                  "text": "Don't know"
-                }
-              ],
-              "showOtherItem": false
-            },
-            {
-              "type": "dropdown",
-              "name": "MedicationProtocolCost",
-              "title": "What was the average monthly cost of the blends or protocols?",
-              "isRequired": true,
-              "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
-              "choices": [
-                {
-                  "value": "UNDER_50",
-                  "text": "Under $50"
-                },
-                {
-                  "value": "51_100",
-                  "text": "$51-$100"
-                },
-                {
-                  "value": "101_150",
-                  "text": "$101-$150"
-                },
-                {
-                  "value": "OVER_150",
-                  "text": "Over $150"
-                }
-              ],
-              "showOtherItem": false,
-              "showNoneItem": false
-            },
-            {
-              "type": "html",
-              "name": "MedicationProtocolRatingText",
-              "title": "This section asks you to rate the effectiveness of the protocols. If you&lsquo;re not sure how effective the protocol were, please select option 3, &lsquo;no effect&rsquo;.",
-              "html": ""
-            },
-            {
-              "type": "rating",
-              "name": "MedicationProtocolBreathing",
-              "title": "What was the effect of the blends or protocols on {CmpnName}'s breathing?",
-              "description": "1 = very negative, 3 = no effect, 5 = very positive",
-              "isRequired": true,
-              "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
-              "displayMode": "buttons",
-              "rateValues": [
-                { "value": 1, "text": "1" },
-                { "value": 2, "text": "2" },
-                { "value": 3, "text": "3" },
-                { "value": 4, "text": "4" },
-                { "value": 5, "text": "5" }
-              ]
-            },
-            {
-              "type": "rating",
-              "name": "MedicationProtocolMobility",
-              "title": "What was the effect of the blends or protocols on {CmpnName}'s mobility or behavior?",
-              "description": "1 = very negative, 3 = no effect, 5 = very positive",
-              "isRequired": true,
-              "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
               "displayMode": "buttons",
               "rateValues": [
                 { "value": 1, "text": "1" },

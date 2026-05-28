@@ -51,10 +51,6 @@ const SurveyFaqs = () => {
 
 
         <section className="content-body home-head">
-            <Link href='survey-mode' className='survey-mode-link link-dark'>
-            <BsClipboardCheck className="survey-mode-icon" />
-                <span className="survey-mode-link-text">Take Survey Now!</span>
-            </Link>
             <h1>2026&nbsp;LP/GOLPP&nbsp;Survey FAQs</h1>
         </section>
 

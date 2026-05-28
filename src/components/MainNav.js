@@ -55,12 +55,13 @@ export default function MainNav() {
           </li>
 
           <li className={styles.desktop_nav_item}>
-            <Link href="/survey-mode">Survey</Link>
+            <Link href="/survey-faqs">FAQs</Link>
           </li>
 
           <li className={styles.desktop_nav_item}>
-            <Link href="/survey-faqs">FAQs</Link>
+            <Link href="/survey-method">Method</Link>
           </li>
+
 
           <li className={styles.desktop_nav_item}>
             <Link href="/survey-share">Share</Link>
@@ -117,11 +118,11 @@ export default function MainNav() {
             </li>
 
             <li className={styles.mobile_nav_item}>
-              <Link href="/survey-mode" onClick={closeMenu}>Survey</Link>
+              <Link href="/survey-faqs" onClick={closeMenu}>FAQs</Link>
             </li>
 
             <li className={styles.mobile_nav_item}>
-              <Link href="/survey-faqs" onClick={closeMenu}>FAQs</Link>
+              <Link href="/survey-" onClick={closeMenu}>Method</Link>
             </li>
 
             <li className={styles.mobile_nav_item}>

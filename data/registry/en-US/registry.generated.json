@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-05-17T08:26:42.161Z",
+    "builtAt": "2026-05-28T12:26:38.644Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -2494,81 +2494,6 @@
       "title": "What was the effect of the supplements on {CmpnName}'s mobility or behavior?",
       "hasVisibleIf": true,
       "visibleIf": "{MedicationSupplementsDidPurchase} = 'YES'",
-      "isRequired": true
-    },
-    "MedicationProtocolPanel": {
-      "name": "MedicationProtocolPanel",
-      "type": "panel",
-      "role": "panel",
-      "collect": false,
-      "path": [
-        "Medication-page",
-        "MedicationCard2Panel"
-      ],
-      "hasTitle": false,
-      "hasVisibleIf": false
-    },
-    "MedicationProtocolDidPurchase": {
-      "name": "MedicationProtocolDidPurchase",
-      "type": "radiogroup",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "Medication-page",
-        "MedicationCard2Panel",
-        "MedicationProtocolPanel"
-      ],
-      "hasTitle": true,
-      "title": "Have you purchased products that are advertised as a blend or protocol of ingredients created for LP/GOLPP?",
-      "hasVisibleIf": false,
-      "isRequired": true
-    },
-    "MedicationProtocolCost": {
-      "name": "MedicationProtocolCost",
-      "type": "dropdown",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "Medication-page",
-        "MedicationCard2Panel",
-        "MedicationProtocolPanel"
-      ],
-      "hasTitle": true,
-      "title": "What was the average monthly cost of the blends or protocols?",
-      "hasVisibleIf": true,
-      "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
-      "isRequired": true
-    },
-    "MedicationProtocolBreathing": {
-      "name": "MedicationProtocolBreathing",
-      "type": "rating",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "Medication-page",
-        "MedicationCard2Panel",
-        "MedicationProtocolPanel"
-      ],
-      "hasTitle": true,
-      "title": "What was the effect of the blends or protocols on {CmpnName}'s breathing?",
-      "hasVisibleIf": true,
-      "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
-      "isRequired": true
-    },
-    "MedicationProtocolMobility": {
-      "name": "MedicationProtocolMobility",
-      "type": "rating",
-      "role": "question",
-      "collect": true,
-      "path": [
-        "Medication-page",
-        "MedicationCard2Panel",
-        "MedicationProtocolPanel"
-      ],
-      "hasTitle": true,
-      "title": "What was the effect of the blends or protocols on {CmpnName}'s mobility or behavior?",
-      "hasVisibleIf": true,
-      "visibleIf": "{MedicationProtocolDidPurchase} = 'YES'",
       "isRequired": true
     },
     "ProcedureCard1Panel": {
