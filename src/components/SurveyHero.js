@@ -70,7 +70,7 @@ const SurveyHero = () => {
 
           <div className="hero-cta-container">
             <BsClipboardCheck className="hero-cta-icon" />
-                <span className="hero-cta-link-text">Start Survey</span>
+            <span className="hero-cta-link-text">Start Survey</span>
           </div>
 
         </div>

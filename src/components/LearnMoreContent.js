@@ -17,13 +17,17 @@ const LearnMoreContent = ({
   const triggerRef = useRef(null)
 
   const handleToggle = () => {
+
     if (isOpen) {
-      const triggerTopBefore = triggerRef.current?.getBoundingClientRect().top ?? 0
+      const triggerTopBefore =
+        triggerRef.current?.getBoundingClientRect().top ?? 0
 
       setOpenSection(null)
 
       requestAnimationFrame(() => {
-        const triggerTopAfter = triggerRef.current?.getBoundingClientRect().top ?? 0
+        const triggerTopAfter =
+          triggerRef.current?.getBoundingClientRect().top ?? 0
+
         const delta = triggerTopAfter - triggerTopBefore
 
         if (delta !== 0) {
@@ -61,7 +65,7 @@ const LearnMoreContent = ({
         <span className="showmore__icon" aria-hidden="true">
           {isOpen ? <FaMinusSquare /> : <FaPlusSquare />}
         </span>
-        {header}
+       {header}
       </button>
 
       <div

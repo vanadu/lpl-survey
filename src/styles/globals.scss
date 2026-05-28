@@ -539,73 +539,6 @@ span.no-wrap {
 /* !VA  START SURVEY PAGE STYLES 
 ---------------------------
 */
-
-// !VA Deprecated as per Chat
-// .survey-link-container {
-//   width: 100%;
-//   margin: var(--s-2) var(--s-6) var(--s-1);
-//   display: block;
-//   margin: 0 auto;
-//   @include tablet {
-//     width: 55%;
-//   }
-//   @include desktop {
-//     width: 55%;
-//   }
-//   @include ldesktop {
-//     width: 55%;
-//     // flex-direction: row;
-//   }
-// }
-
-// .survey-links {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: space-between;
-//   margin: var(--s-2) var(--s-2) 0;
-//   &.browse, &.home {
-//     justify-content: center;
-//   }
-//   @include tablet {
-//     flex-direction: row;
-//     // width: 60%;
-//     justify-content: space-between;
-//     background: rgba(255, 255, 0, .3) !important; //devyel
-//   }
-//   @include desktop {
-//     flex-direction: row;
-//   }
-//   @include ldesktop {
-//     flex-direction: row;
-//   }
-// }
-
-// .survey-mode-link {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .survey-mode-icon  {
-//   margin-right: var(--s-2);
-//   width: var(--s-5);
-//   height: auto;
-//   color: var(--c-text-accent);
-
-// }
-
-// .survey-mode-link-text {
-//   font-family: var(--font-secondary);;
-//   color: var(--c-text-accent);
-//   text-align: center;
-//   font-size: var(--font-size-xl);
-//   font-weight: 600;
-//   text-decoration: underline;
-//   margin: 0 0 var(--s-2) 0 ;
-// }
-
 .survey-faqs-heading {
   margin: 0 0 var(--s-4) 0!important;
 }
@@ -649,6 +582,11 @@ span.no-wrap {
 }
 
 .home-head, .consent-info, .privacy-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-bottom: var(--s-3);
+  // width: 320px;
   h1 {
     width: 100%;
     font-family: var(--font-secondary);
@@ -663,11 +601,6 @@ span.no-wrap {
       }
     }
   }
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s-3);
-  margin-bottom: var(--s-3);
-  // width: 320px;
   @include tablet {
     width: 740px;
     width: 100%;
@@ -747,6 +680,63 @@ ul.showmore_survey_icons_description {
     vertical-align: text-bottom;
   }
 }
+
+/* !VA  METHOD PAGE  STYLES 
+---------------------------
+*/
+.method-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-bottom: var(--s-3);
+  padding-bottom: 0;
+  // width: 320px;
+  @include tablet {
+    width: 740px;
+    width: 100%;
+  }
+  @include desktop {
+    width: 920px;
+    width: 100%;
+  }
+  @include ldesktop {
+    width: 920px;
+  }
+}
+
+.method .content-body {
+    h1 {
+    width: 100%;
+    font-family: var(--font-secondary);
+    margin: var(--s-3) 0 0 0;
+    padding-bottom: 0;
+    font-size: var(--font-size-lg);
+    line-height: 1.25;
+    text-align: center;
+    @include mphone {
+      font-size: var(--font-size-xl);
+      .no-wrap {
+        .whitespace: nowrap;
+      }
+    }
+  }
+  h2 {
+    padding-bottom: var(--s-1);
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-md);
+  }
+  h3 {
+    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
+  }
+  p {
+    font-size: var(--font-size-sm);
+  }
+}
+
+
+
+
 
 /* !VA  SHARE PAGE  STYLES 
 ---------------------------
@@ -1413,6 +1403,42 @@ ul.showmore_survey_icons_description {
    Modified Showasnwer Component 
    Use to distinguish between JSX content and generated Browse Mode content
    ========================================================================== */
+// !VA TEST
+.content-text {
+  width: 100%;
+  padding: .25rem 0 .188rem;
+  text-align: left;
+  @include mphone {
+    padding: .25rem 0;
+  }
+  @include lphone {
+    padding: .25rem 0;
+  }
+  @include tablet {
+    padding: .25rem 0 .125rem;
+  }
+  
+  @include desktop {
+    padding: .25rem 0;
+  }
+  @include ldesktop {
+    padding: .25rem 0;
+  }
+  // !VA 2024 Added width 100% here so the showmore link would justify left. Otherwise, it will appear centered
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .showmore-container {
   scroll-margin-top: var(--disclosure-scroll-margin-top);
 
@@ -1468,10 +1494,8 @@ ul.showmore_survey_icons_description {
 
 .showmore__content {
   color: var(--showmore-text-color);
-  padding: 0.375rem 0 var(--s-1) 1.45rem;
   padding: var(--s-2) 0 var(--s-1) var(--s-4);
   border-left: 3px solid #e1e1e1;
-
   ul {
       padding: 0;
       margin: 0;
@@ -1517,13 +1541,54 @@ ul.showmore_survey_icons_description {
 }
 
 
+.showmore {
+  scroll-margin-top: 30px;
+}
 
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   LearnMore Component Styles
+   Smaller font, tighter plus/minus icon formatting
+   Used on Method page
+   Overrides for ShowMoreContent component styles
+   ========================================================================== */
+  // !VA showmore__label is ONLY defined in the LearnMoreContent component
+  .method .showmore {
+    margin: 0 0 0 var(--s-2);
+  }
+  
+  .method .showmore__content {
+    padding: 0 0 0 var(--s-4);
+    margin-bottom: var(--s-2)
+  }
+
+  // .method .showmore__trigger {
+  //   padding-left: var(--s-2)!important;
+  // }
+  
+  .method .showmore button {
+    padding: 0 0 var(--s-2) 0;
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    background: rgba(255, 255, 0, .3) !important; //devyel
+  }
 
 
 /* ==========================================================================
    Showanswer
    Lighter, text-flow disclosure
    Best for compact supporting detail
+   Used in Browse Mode
    ========================================================================== */
 
 .showanswer-container {

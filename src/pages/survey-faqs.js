@@ -176,6 +176,10 @@ const SurveyFaqs = () => {
                   <span className="emphasis">Browse Mode</span> doesn&lsquo;t collect any data &mdash; it&lsquo;s purely for informational purposes. If you take the survey in <span className="emphasis">Survey Mode</span>, you&lsquo;ll find links to our <span className="emphasis">Privacy</span> and <span className="emphasis">Consent</span> policies that you can review before you provide any personal information. 
                 </p>
             </ShowMoreContent>
+
+
+
+
           </section>
 
        </section>{/* /content-body */}

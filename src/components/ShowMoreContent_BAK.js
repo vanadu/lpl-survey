@@ -14,10 +14,23 @@ const ShowMoreContent = ({
   const isOpen = activeIndex === index
   const contentId = useId()
   const showmoreRef = useRef(null)
+  const triggerRef = useRef(null)
 
   const handleToggle = () => {
     if (isOpen) {
+      const triggerTopBefore = triggerRef.current?.getBoundingClientRect().top ?? 0
+
       setActiveIndex(null)
+
+      requestAnimationFrame(() => {
+        const triggerTopAfter = triggerRef.current?.getBoundingClientRect().top ?? 0
+        const delta = triggerTopAfter - triggerTopBefore
+
+        if (delta !== 0) {
+          window.scrollBy(0, delta)
+        }
+      })
+
       return
     }
 
@@ -38,6 +51,7 @@ const ShowMoreContent = ({
       id={anchor || undefined}
     >
       <button
+        ref={triggerRef}
         type="button"
         className="showmore__trigger"
         aria-expanded={isOpen}
@@ -50,14 +64,13 @@ const ShowMoreContent = ({
         {header}
       </button>
 
-      {isOpen && (
-        <div
-          id={contentId}
-          className="showmore__content"
-        >
-          {children}
-        </div>
-      )}
+      <div
+        id={contentId}
+        className="showmore__content"
+        hidden={!isOpen}
+      >
+        {children}
+      </div>
     </div>
   )
 }
