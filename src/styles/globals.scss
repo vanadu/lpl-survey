@@ -1550,8 +1550,8 @@ ul.showmore_survey_icons_description {
 }
 
 .learnmore {
-  background: var(--learnmore-background);
-  color: var(--learnmore-text-color);
+  background: var(--showmore-background);
+  color: var(--showmore-text-color);
   border: 0;
   margin: var(--s-2) 0;
   padding: 0;
@@ -1562,6 +1562,7 @@ ul.showmore_survey_icons_description {
   align-items: flex-start;
   gap: var(--disclosure-gap-tight);
   color: var(--c-link-accent);
+  vertical-align: -1px;
   width: auto;
   max-width: 100%;
   // !VA Overrides and custom styles
@@ -1584,13 +1585,13 @@ ul.showmore_survey_icons_description {
 
 .learnmore__icon {
   color: var(--learnmore-icon-color);
-  margin-top: 0.313rem;
+  margin-top: 0.25rem;
   font-size: 0.95rem;
 }
 
 .learnmore__title {
   font-family: var(--font-primary)!important;
-  color: var(--learnmore-link-color);
+  color: var(--showmore-link-color);
   font-size: var(--font-size-md)!important;
   line-height: var(--disclosure-title-line-height);
   font-weight: 700;
