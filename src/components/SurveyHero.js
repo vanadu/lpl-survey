@@ -20,41 +20,42 @@ const SurveyHero = () => {
   return (
     <>
     <div className="hero-wrapper">
-      <Link href='/'>
+
         <div className="hero-link-container">
-          <div className="hero-content">
-              <div className="hero">
-                <div className="hero__grid">
+          <Link href='/'>
+            <div className="hero-content">
+                <div className="hero">
+                  <div className="hero__grid">
 
-                  <div className="hero__cell"><Image src={HeroImg01} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                  <div className="hero__cell"><Image src={HeroImg02} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                  <div className="hero__cell"><Image src={HeroImg03} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                  <div className="hero__cell"><Image src={HeroImg04} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                  <div className="hero__cell"><Image src={HeroImg05} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                  <div className="hero__cell"><Image src={HeroImg06} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                  <div className="hero__cell"><Image src={HeroImg07} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                  <div className="hero__cell"><Image src={HeroImg08} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                  <div className="hero__cell"><Image src={HeroImg09} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                  <div className="hero__cell"><Image src={HeroImg10} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                  <div className="hero__cell"><Image src={HeroImg11} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                  <div className="hero__cell"><Image src={HeroImg12} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
-                </div>
-
-                <div className="hero__overlay"></div>
-
-                <div className="hero__content">
-                  <div className="hero-title-container">
-                    <h2 className="hero-title-heading">LP/GOLPP<span className="mobile-show-inline"><br /></span><span className="no-wrap">&nbsp;Survey&nbsp;2026</span></h2>
+                    <div className="hero__cell"><Image src={HeroImg01} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+                    <div className="hero__cell"><Image src={HeroImg02} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+                    <div className="hero__cell"><Image src={HeroImg03} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+                    <div className="hero__cell"><Image src={HeroImg04} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+                    <div className="hero__cell"><Image src={HeroImg05} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+                    <div className="hero__cell"><Image src={HeroImg06} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+                    <div className="hero__cell"><Image src={HeroImg07} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+                    <div className="hero__cell"><Image src={HeroImg08} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+                    <div className="hero__cell"><Image src={HeroImg09} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+                    <div className="hero__cell"><Image src={HeroImg10} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+                    <div className="hero__cell"><Image src={HeroImg11} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
+                    <div className="hero__cell"><Image src={HeroImg12} className="hero__tile" alt="LarParLife.org LP/GOLPP hero image" /></div>
                   </div>
-                  {/* <div className="hero-cta-container">
-                    <BsClipboardCheck className="hero-cta-icon" />
-                    <div className="hero-cta-text">Start Now!</div>
-                  </div> */}
+
+                  <div className="hero__overlay"></div>
+
+                  <div className="hero__content">
+                    <div className="hero-title-container">
+                      <h2 className="hero-title-heading">LP/GOLPP<span className="mobile-show-inline"><br /></span><span className="no-wrap">&nbsp;Survey&nbsp;2026</span></h2>
+                    </div>
+                    {/* <div className="hero-cta-container">
+                      <BsClipboardCheck className="hero-cta-icon" />
+                      <div className="hero-cta-text">Start Now!</div>
+                    </div> */}
+                  </div>
                 </div>
-              </div>
 
-          </div>
-
+            </div>
+          </Link>
           <div className="hero-subtext-container">
             <div className="hero-subtext">
               <h3 className="hero-slug">powered by larparlife.org</h3>
@@ -63,18 +64,20 @@ const SurveyHero = () => {
             <div className="logo-container">
               <Image 
                 src={Logo} 
-                className="hero-logo" alt="XXX" 
+                className="hero-logo" alt="LarParLife Logo" 
               />
             </div>
           </div>
 
           <div className="hero-cta-container">
+            <Link href='/survey-mode' className='link-dark'>
             <BsClipboardCheck className="hero-cta-icon" />
             <span className="hero-cta-link-text">Start Survey</span>
+            </Link>
           </div>
 
         </div>
-      </Link>
+
     </div>
     
     

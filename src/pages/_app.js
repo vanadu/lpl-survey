@@ -20,7 +20,8 @@ import Layout from '../components/Layout'
 import '../styles/globals.css'
 import "../styles/globals.scss";
 // import "../styles/survey.scss";      // ✅ global, allowed here
-import "survey-core/survey-core.css"; // import the SurveyJS stylesheet
+// !VA TEST
+import "survey-core/survey-core.css"; // import the SurveyJS stylesheets
 
 // !VA If loading a variable font, you don't need to specify the font weight
 const oswald = Oswald({
@@ -70,7 +71,8 @@ function MyApp({ Component, pageProps }) {
 
 
   // }, [router.events]);
-  },[]);
+  // },[]);
+  });
 
 
 
