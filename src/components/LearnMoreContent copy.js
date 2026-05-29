@@ -13,10 +13,11 @@ const LearnMoreContent = ({
 }) => {
   const isOpen = openSection === id
   const contentId = useId()
-  const learnmoreRef = useRef(null)
+  const showmoreRef = useRef(null)
   const triggerRef = useRef(null)
 
   const handleToggle = () => {
+
     if (isOpen) {
       const triggerTopBefore =
         triggerRef.current?.getBoundingClientRect().top ?? 0
@@ -40,7 +41,7 @@ const LearnMoreContent = ({
     setOpenSection(id)
 
     window.setTimeout(() => {
-      learnmoreRef.current?.scrollIntoView({
+      showmoreRef.current?.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       })
@@ -48,33 +49,33 @@ const LearnMoreContent = ({
   }
 
   return (
-    <span
-      className={`learnmore ${isOpen ? 'learnmore--open' : ''}`}
-      ref={learnmoreRef}
+    <div
+      className={`showmore ${isOpen ? 'showmore--open' : ''}`}
+      ref={showmoreRef}
       id={anchor || undefined}
     >
       <button
         ref={triggerRef}
         type="button"
-        className="learnmore__trigger"
+        className="showmore__trigger"
         aria-expanded={isOpen}
         aria-controls={contentId}
         onClick={handleToggle}
       >
-        <span className="learnmore__icon" aria-hidden="true">
+        <span className="showmore__icon" aria-hidden="true">
           {isOpen ? <FaMinusSquare /> : <FaPlusSquare />}
         </span>
-        {header}
+       {header}
       </button>
 
       <div
         id={contentId}
-        className="learnmore__content"
+        className="showmore__content"
         hidden={!isOpen}
       >
         {children}
       </div>
-    </span>
+    </div>
   )
 }
 

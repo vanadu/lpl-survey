@@ -684,6 +684,16 @@ ul.showmore_survey_icons_description {
 /* !VA  METHOD PAGE  STYLES 
 ---------------------------
 */
+// !VA Section separator
+.method hr {
+  margin: var(--s-1) var(--s-4) var(--s-3) var(--s-2);
+  color: blue;
+  height: 1px;
+  border-width:0;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+
 .method-head {
   display: flex;
   flex-wrap: wrap;
@@ -729,7 +739,7 @@ ul.showmore_survey_icons_description {
     font-family: var(--font-primary);
     font-family: var(--font-secondary);
   }
-  p {
+  p, li {
     font-size: var(--font-size-sm);
   }
 }
@@ -1403,41 +1413,6 @@ ul.showmore_survey_icons_description {
    Modified Showasnwer Component 
    Use to distinguish between JSX content and generated Browse Mode content
    ========================================================================== */
-// !VA TEST
-.content-text {
-  width: 100%;
-  padding: .25rem 0 .188rem;
-  text-align: left;
-  @include mphone {
-    padding: .25rem 0;
-  }
-  @include lphone {
-    padding: .25rem 0;
-  }
-  @include tablet {
-    padding: .25rem 0 .125rem;
-  }
-  
-  @include desktop {
-    padding: .25rem 0;
-  }
-  @include ldesktop {
-    padding: .25rem 0;
-  }
-  // !VA 2024 Added width 100% here so the showmore link would justify left. Otherwise, it will appear centered
-
-}
-
-
-
-
-
-
-
-
-
-
-
 
 .showmore-container {
   scroll-margin-top: var(--disclosure-scroll-margin-top);
@@ -1541,19 +1516,6 @@ ul.showmore_survey_icons_description {
 }
 
 
-.showmore {
-  scroll-margin-top: 30px;
-}
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================================
    LearnMore Component Styles
    Smaller font, tighter plus/minus icon formatting
@@ -1561,26 +1523,133 @@ ul.showmore_survey_icons_description {
    Overrides for ShowMoreContent component styles
    ========================================================================== */
   // !VA showmore__label is ONLY defined in the LearnMoreContent component
-  .method .showmore {
-    margin: 0 0 0 var(--s-2);
-  }
-  
-  .method .showmore__content {
-    padding: 0 0 0 var(--s-4);
-    margin-bottom: var(--s-2)
-  }
+.method .learnmore {
+  margin: 0 0 0 var(--s-2);
+}
 
-  // .method .showmore__trigger {
-  //   padding-left: var(--s-2)!important;
-  // }
-  
-  .method .showmore button {
-    padding: 0 0 var(--s-2) 0;
-    margin: 0;
-    font-family: var(--font-primary);
-    font-size: var(--font-size-xs);
-    font-weight: 600;
+.method .learnmore__content {
+  padding: 0 0 0 var(--s-4);
+  margin-bottom: var(--s-2)
+}
+
+// .method .learnmore__trigger {
+//   padding-left: var(--s-2)!important;
+// }
+
+.method .learnmore button {
+  padding: 0 0 var(--s-2) 0;
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+.learnmore-container {
+  scroll-margin-top: var(--disclosure-scroll-margin-top);
+
+}
+
+.learnmore {
+  background: var(--learnmore-background);
+  color: var(--learnmore-text-color);
+  border: 0;
+  margin: var(--s-2) 0;
+  padding: 0;
+}
+
+.learnmore__trigger {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--disclosure-gap-tight);
+  color: var(--c-link-accent);
+  width: auto;
+  max-width: 100%;
+  // !VA Overrides and custom styles
+  border: none!important;
+  background: none!important;
+  text-align: left;
+}
+
+.learnmore__trigger:hover .learnmore__title,
+.learnmore__trigger:focus-visible .learnmore__title {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.learnmore__trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: var(--disclosure-radius);
+}
+
+.learnmore__icon {
+  color: var(--learnmore-icon-color);
+  margin-top: 0.313rem;
+  font-size: 0.95rem;
+}
+
+.learnmore__title {
+  font-family: var(--font-primary)!important;
+  color: var(--learnmore-link-color);
+  font-size: var(--font-size-md)!important;
+  line-height: var(--disclosure-title-line-height);
+  font-weight: 700;
+}
+
+
+.learnmore__content {
+  color: var(--learnmore-text-color);
+  padding: var(--s-2) 0 var(--s-1) var(--s-4);
+  border-left: 3px solid #e1e1e1;
+  ul {
+      padding: 0;
+      margin: 0;
   }
+}
+
+.learnmore__content > :first-child {
+  margin-top: 0;
+}
+
+.learnmore__content > :last-child {
+  margin-bottom: 0;
+}
+
+/* Helpers based on the sample page usage */
+.learnmore__text,
+.learnmore-content-text {
+  font-size: var(--disclosure-body-font-size);
+  line-height: var(--disclosure-body-line-height);
+}
+
+.learnmore__content-space {
+  display: block;
+  height: 0.625rem;
+}
+
+.learnmore__content-inline {
+  display: inline;
+}
+
+.learnmore__content-block {
+  display: block;
+}
+
+.learnmore__content a {
+  color: var( --c-link-accent);
+  text-underline-offset: 0.12em;
+}
+
+/* Optional state hook */
+.learnmore.learnmore--open .learnmore__title {
+  text-decoration-thickness: 0.08em;
+}
+
+
+
+
+
+
 
 
 /* ==========================================================================
