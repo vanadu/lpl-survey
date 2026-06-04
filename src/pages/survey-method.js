@@ -57,6 +57,9 @@ const Method = () => {
               <li className="survey-method-toc__item">
                 <a className="survey-method-toc__link" href="#platform_reusuability">Platform Reuseablity in Other Veterinary-Medical Contexts</a>
               </li>
+              <li className="survey-method-toc__item">
+                <a className="survey-method-toc__link" href="#internationalization_and_localization">Internationalization and Localization</a>
+              </li>
             </ol>
           </nav>
         </section>
@@ -145,7 +148,7 @@ const Method = () => {
   <hr className="survey-method-section-separator" />
 
   <a href="#top" className="back-to-top">
-    ↑ Back to Top
+    <span className="back-to-top-icon">↑</span> Back to Top
   </a>
 
   <h2>2. Platform Design and Implementation</h2>
@@ -294,7 +297,7 @@ const Method = () => {
 
         <section className="content-body" id="respondent_population_and_recruitment">
           <a href="#top" className="back-to-top">
-            ↑ Back to Top
+            <span className="back-to-top-icon">↑</span> Back to Top
           </a>
           <h2>3. Respondent Population and Recruitment</h2>
 
@@ -384,7 +387,7 @@ const Method = () => {
 
           <section className="subsection" id="survey_development_approach">
             <a href="#top" className="back-to-top">
-              ↑ Back to Top
+              <span className="back-to-top-icon">↑</span> Back to Top
             </a>
             <h3>4.1 Survey Development Approach</h3>
             <p>The survey was developed as a structured observational instrument designed to collect detailed owner-reported information relating to canine laryngeal paralysis (LP/GOLPP), associated interventions, disease progression, complications, and long-term outcomes.</p>
@@ -487,7 +490,7 @@ const Method = () => {
 
           <section className="subsection" id="submission_workflow">
             <a href="#top" className="back-to-top">
-              ↑ Back to Top
+              <span className="back-to-top-icon">↑</span> Back to Top
             </a>            
             <h3>5.1 Submission Workflow</h3>
             <p>Survey responses are submitted electronically through the project&lsquo;s web-based platform.</p>
@@ -596,7 +599,7 @@ const Method = () => {
 
           <section className="subsection" id="descriptive_analysis">
             <a href="#top" className="back-to-top">
-              ↑ Back to Top
+              <span className="back-to-top-icon">↑</span> Back to Top
             </a>            
             <h3>6.1 Descriptive Analysis</h3>
             <p>The primary analytical objective of the survey is descriptive.</p>
@@ -683,7 +686,7 @@ const Method = () => {
 
           <section className="subsection" id="privacy_and_data_handling">
             <a href="#top" className="back-to-top">
-              ↑ Back to Top
+              <span className="back-to-top-icon">↑</span> Back to Top
             </a>            
             <h3>7.1 Privacy and Data Handling</h3>
             <p>The project seeks to collect and manage participant-submitted information in a responsible manner consistent with its observational and educational objectives.</p>
@@ -739,7 +742,7 @@ const Method = () => {
 
           <section className="subsection" id="planned_refinements">
             <a href="#top" className="back-to-top">
-              ↑ Back to Top
+              <span className="back-to-top-icon">↑</span> Back to Top
             </a>            
             <h3>8.1 Planned Refinements</h3>
             <p>The survey is intended to remain an evolving project subject to ongoing review and refinement.</p>
@@ -789,6 +792,8 @@ const Method = () => {
             {/* End LearnMoreContent */}
           </section>
         </section>
+
+        <hr className="survey-method-section-separator" />
 
         <section className="content-body" id="platform_reusuability">
           <h2>9. Platform Reuseablity in Other Veterinary-Medical Contexts</h2>
@@ -841,9 +846,55 @@ const Method = () => {
             </LearnMoreContent>
             {/* End LearnMoreContent */}
           </section>
-
-
         </section>
+        
+        <hr className="survey-method-section-separator" />
+
+        <section className="content-body" id="internationalization_and_localization">
+          <h2>10. Internationalization and Localization</h2>
+          <section className="subsection" id="multilanguage_design_architecture">
+            <h3>10.1 Multi-Language Design Architecture</h3>
+            <p>The platform architecture was designed with future internationalization and localization requirements in mind.</p>
+            <LearnMoreContent
+              id="multilanguage_design_architecture"
+              header="Read more..."
+              openSection={openSection}
+              setOpenSection={setOpenSection}
+              >
+              <p>
+                Although the current implementation is presented primarily in English and focuses on a specific veterinary-medical subject area, the underlying framework supports adaptation to multiple languages, regions, and cultural contexts without requiring fundamental changes to the supporting infrastructure.
+              </p>
+              <p>
+                Survey content, informational resources, response options, labels, instructional text, and other user-facing elements can be separated from the technical systems responsible for presentation, navigation, branching logic, validation, data collection, and reporting. This separation allows language-specific content to be developed and maintained independently of the underlying platform architecture.
+              </p>
+            </LearnMoreContent>
+            {/* End LearnMoreContent */}
+          </section>
+
+          <section className="subsection" id="integrated_internationalization_support">
+            <h3>10.2 Integrated Internationalization Support</h3>
+            <p>The framework can also accommodate regional differences in terminology, measurement systems, date formats, procedural nomenclature, and other factors that may vary across veterinary communities, professional organizations, or geographic regions.</p>
+            <LearnMoreContent
+              id="integrated_internationalization_support"
+              header="Read more..."
+              openSection={openSection}
+              setOpenSection={setOpenSection}
+              >
+              <p>
+                Such flexibility may be particularly valuable for diseases and treatment approaches that involve international participation, multinational collaboration, or geographically diverse respondent populations.
+              </p>
+              <p>
+                By incorporating internationalization considerations into the platform design from the outset, future projects may expand into additional languages and jurisdictions without requiring extensive redevelopment of the underlying technology stack. This approach reduces future implementation effort and creates opportunities for broader participation, cross-regional comparison, and more diverse observational datasets while preserving consistency within the overall survey framework.
+              </p>
+            </LearnMoreContent>
+            {/* End LearnMoreContent */}
+          </section>
+        </section>
+
+
+
+
+
 
       </main>
     </>
