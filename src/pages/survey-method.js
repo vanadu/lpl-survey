@@ -330,7 +330,7 @@ const Method = () => {
               setOpenSection={setOpenSection}
               >
               <p>The survey seeks input from owners whose dogs have undergone common surgical procedures such as unilateral arytenoid lateralization (tie-back), as well as less common interventions including endolaryngeal stenting, partial arytenoidectomy, ventriculocordectomy, permanent tracheostomy, and other emerging or procedure-specific approaches. Responses from owners who elected non-surgical management are also considered valuable for comparative and descriptive analysis.</p>
-              <p>The survey does not require referral from a veterinarian, specialist, advocacy organization, or research institution. Participation occurs voluntarily through self-enrollment. Respondents are responsible for determining whether they possess sufficient knowledge of their dog's medical history, diagnosis, treatment, and outcomes to provide meaningful responses.</p>
+              <p>The survey does not require referral from a veterinarian, specialist, advocacy organization, or research institution. Participation occurs voluntarily through self-enrollment. Respondents are responsible for determining whether they possess sufficient knowledge of their dog&lsquo;s medical history, diagnosis, treatment, and outcomes to provide meaningful responses.</p>
             </LearnMoreContent>
             {/* End LearnMoreContent */}
           </section>
@@ -345,7 +345,7 @@ const Method = () => {
               openSection={openSection}
               setOpenSection={setOpenSection}
               >
-              <p>These channels may include search-engine discovery, social media platforms, disease-specific discussion groups, educational resources, advocacy communities, veterinary referrals, and word-of-mouth recommendations. The survey platform incorporates publicly accessible informational content intended to improve discoverability and allow potential participants to evaluate the project's objectives before choosing whether to participate.</p>
+              <p>These channels may include search-engine discovery, social media platforms, disease-specific discussion groups, educational resources, advocacy communities, veterinary referrals, and word-of-mouth recommendations. The survey platform incorporates publicly accessible informational content intended to improve discoverability and allow potential participants to evaluate the project&lsquo;s objectives before choosing whether to participate.</p>
             </LearnMoreContent>
             {/* End LearnMoreContent */}
           </section>
@@ -376,7 +376,7 @@ const Method = () => {
               openSection={openSection}
               setOpenSection={setOpenSection}
               >
-              <p>As a result, completion requires a greater time commitment than many conventional online surveys. While survey length may discourage participation by some potential respondents, it may also encourage participation by individuals who are more familiar with their dog's medical history and more willing to provide thoughtful, comprehensive responses.</p>
+              <p>As a result, completion requires a greater time commitment than many conventional online surveys. While survey length may discourage participation by some potential respondents, it may also encourage participation by individuals who are more familiar with their dog&lsquo;s medical history and more willing to provide thoughtful, comprehensive responses.</p>
               <p>This effect may help reduce the proportion of incomplete, impulsive, or minimally engaged submissions and improve the overall depth and interpretive value of the collected dataset. Nevertheless, the possibility that survey length influences participation patterns represents an additional source of self-selection bias that should be considered when interpreting survey findings.</p>
             </LearnMoreContent>
             {/* End LearnMoreContent */}
@@ -496,7 +496,7 @@ const Method = () => {
               ↑ Back to Top
             </a>            
             <h3>5.1 Submission Workflow</h3>
-            <p>Survey responses are submitted electronically through the project's web-based platform.</p>
+            <p>Survey responses are submitted electronically through the project&lsquo;s web-based platform.</p>
             {/* Start LearnMoreContent */}
             <LearnMoreContent
               id="submission_workflow"
@@ -504,7 +504,7 @@ const Method = () => {
               openSection={openSection}
               setOpenSection={setOpenSection}
               >
-              <p>Respondents may complete the survey in a single session or return to continue completion at a later time where platform functionality permits. Submitted responses are stored within the project's data infrastructure for subsequent review, analysis, and aggregation.</p>
+              <p>Respondents may complete the survey in a single session or return to continue completion at a later time where platform functionality permits. Submitted responses are stored within the project&lsquo;s data infrastructure for subsequent review, analysis, and aggregation.</p>
               <p>The survey is designed to support ongoing data collection without predefined enrollment periods or submission deadlines. This approach allows continued accumulation of observational data as new participants discover the project and as existing respondents experience additional disease progression, treatment decisions, or long-term outcomes.</p>
             </LearnMoreContent>
             {/* End LearnMoreContent */}
@@ -545,7 +545,7 @@ const Method = () => {
 
           <section className="subsection" id="handling_incomplete_or_ambiguous_responses">
             <h3>5.4 Handling Incomplete or Ambiguous Responses</h3>
-            <p>Not all respondents will possess complete medical records or detailed knowledge of every aspect of their dog's diagnosis, treatment history, or long-term management.</p>
+            <p>Not all respondents will possess complete medical records or detailed knowledge of every aspect of their dog&lsquo;s diagnosis, treatment history, or long-term management.</p>
             {/* Start LearnMoreContent */}
             <LearnMoreContent
               id="handling_incomplete_or_ambiguous_responses"
@@ -554,7 +554,7 @@ const Method = () => {
               setOpenSection={setOpenSection}
               >
               <p>The survey therefore permits respondents to indicate when information is unavailable, uncertain, or unknown rather than requiring speculative responses.</p>
-              <p>Incomplete submissions may still provide valuable information and may be retained for analysis where sufficient data exist to support meaningful interpretation. However, meaningful participation requires a minimum level of familiarity with the dog's medical history and clinical experience. To support data quality, the project may establish review criteria based on factors such as response completeness, internal consistency, and the proportion of questions answered as "Don't Know" or equivalent uncertainty responses. Submissions that exceed defined thresholds for missing or unknown information may be flagged for further review, excluded from selected analyses, or omitted from the dataset when insufficient information exists to support reliable interpretation.</p>
+              <p>Incomplete submissions may still provide valuable information and may be retained for analysis where sufficient data exist to support meaningful interpretation. However, meaningful participation requires a minimum level of familiarity with the dog&lsquo;s medical history and clinical experience. To support data quality, the project may establish review criteria based on factors such as response completeness, internal consistency, and the proportion of questions answered as &ldquo;Don&lsquo;t Know&rdquo; or equivalent uncertainty responses. Submissions that exceed defined thresholds for missing or unknown information may be flagged for further review, excluded from selected analyses, or omitted from the dataset when insufficient information exists to support reliable interpretation.</p>
               <p>Similarly, ambiguous, contradictory, or internally inconsistent responses may be excluded from specific analyses when data quality cannot be reasonably established.</p>
             </LearnMoreContent>
             {/* End LearnMoreContent */}
