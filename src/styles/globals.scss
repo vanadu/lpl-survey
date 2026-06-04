@@ -744,7 +744,17 @@ ul.showmore_survey_icons_description {
   }
 }
 
+.survey-method-toc {
+  li {
+    padding-bottom: 0;
+  }
+}
 
+.survey-method-toc__link {
+  color: var( --c-link-accent);
+  font-weight: 600;
+  text-decoration: underline;
+}
 
 
 

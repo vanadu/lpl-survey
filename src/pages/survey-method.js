@@ -25,37 +25,41 @@ const Method = () => {
 
         <hr className="method-section-rule" />
 
+        <section className="content-body">
+          <nav className="survey-method-toc" aria-label="Survey methodology sections">
+            <h2 className="survey-method-toc__heading">Contents</h2>
 
-        <nav className="survey-method-toc" aria-label="Survey methodology sections">
-          <h2 className="survey-method-toc__heading">Contents</h2>
-
-          <ol className="survey-method-toc__list">
-            <li className="survey-method-toc__item">
-              <a className="survey-method-toc__link" href="#overview">1. Overview</a>
-            </li>
-            <li className="survey-method-toc__item">
-              <a className="survey-method-toc__link" href="#technical_overview">2. Implementation</a>
-            </li>
-            <li className="survey-method-toc__item">
-              <a className="survey-method-toc__link" href="#respondent_population_and_recruitment">3. Respondent Population and Recruitment</a>
-            </li>
-            <li className="survey-method-toc__item">
-              <a className="survey-method-toc__link" href="#survey_structure_and_methodology">4. Survey Structure and Methodology</a>
-            </li>
-            <li className="survey-method-toc__item">
-              <a className="survey-method-toc__link" href="#data_collection_and_quality_control">5. Data Collection and Quality Control</a>
-            </li>
-            <li className="survey-method-toc__item">
-              <a className="survey-method-toc__link" href="#analysis_framework">6. Analysis Framework</a>
-            </li>
-            <li className="survey-method-toc__item">
-              <a className="survey-method-toc__link" href="#transparency_and_ethics">7. Transparency and Ethics</a>
-            </li>
-            <li className="survey-method-toc__item">
-              <a className="survey-method-toc__link" href="#future_development">8. Future Development</a>
-            </li>
-          </ol>
-        </nav>
+            <ol className="survey-method-toc__list">
+              <li className="survey-method-toc__item">
+                <a className="survey-method-toc__link" href="#overview">Overview</a>
+              </li>
+              <li className="survey-method-toc__item">
+                <a className="survey-method-toc__link" href="#implementation">Implementation</a>
+              </li>
+              <li className="survey-method-toc__item">
+                <a className="survey-method-toc__link" href="#respondent_population_and_recruitment">Respondent Population and Recruitment</a>
+              </li>
+              <li className="survey-method-toc__item">
+                <a className="survey-method-toc__link" href="#survey_structure_and_methodology">Survey Structure and Methodology</a>
+              </li>
+              <li className="survey-method-toc__item">
+                <a className="survey-method-toc__link" href="#data_collection_and_quality_control">Data Collection and Quality Control</a>
+              </li>
+              <li className="survey-method-toc__item">
+                <a className="survey-method-toc__link" href="#analysis_framework">Analysis Framework</a>
+              </li>
+              <li className="survey-method-toc__item">
+                <a className="survey-method-toc__link" href="#transparency_and_ethics">Transparency and Ethics</a>
+              </li>
+              <li className="survey-method-toc__item">
+                <a className="survey-method-toc__link" href="#future_development">Future Development</a>
+              </li>
+              <li className="survey-method-toc__item">
+                <a className="survey-method-toc__link" href="#platform_reusuability">Platform Reuseablity in Other Veterinary-Medical Contexts</a>
+              </li>
+            </ol>
+          </nav>
+        </section>
 
         <hr className="method-section-rule" />
 
@@ -137,7 +141,7 @@ const Method = () => {
 
 
 
-<section className="survey-method-section" id="implementation">
+<section className="content-body" id="implementation">
   <hr className="survey-method-section-separator" />
 
   <a href="#top" className="back-to-top">
@@ -151,20 +155,18 @@ const Method = () => {
 
     <p>
       The survey is implemented as a standalone web-based platform rather than
-      through a third-party survey service. This approach provides direct control
-      over survey structure, content presentation, deployment, maintenance,
-      supporting resources, and long-term project direction.
+      through a third-party survey service. 
     </p>
 
     {/* LearnMoreContent start */}
     <LearnMoreContent
       id="section_2_1"
-      header="Learn more about dedicated platform design"
+      header="More..."
       openSection={openSection}
       setOpenSection={setOpenSection}
     >
       <p>
-        Independent platform development also allows the survey to evolve beyond
+        This approach provides direct control over survey structure, content presentation, deployment, maintenance, supporting resources, and long-term project direction. Independent platform development also allows the survey to evolve beyond
         the limitations of conventional form-based survey tools. Survey content,
         branching logic, procedural categories, informational pages, and future
         analytical features can be revised as project needs change.
@@ -178,23 +180,19 @@ const Method = () => {
 
     <p>
       The platform was designed to support long-term data collection without a
-      fixed enrollment period or predefined project end date. This structure
-      allows the survey to accumulate responses over time as awareness,
-      participation, and follow-up opportunities increase.
+      fixed enrollment period or predefined project end date. 
     </p>
 
     {/* LearnMoreContent start */}
     <LearnMoreContent
       id="section_2_2"
-      header="Learn more about long-term scalability"
+      header="More..."
       openSection={openSection}
       setOpenSection={setOpenSection}
     >
       <p>
-        The platform can also support future expansion of survey content,
-        procedure-specific sections, educational resources, outcome categories,
-        and analytical capabilities without requiring a fundamental redesign of
-        the project.
+        This structure allows the survey to accumulate responses over time as awareness,
+        participation, and follow-up opportunities increase.The platform can also support future expansion of survey content, procedure-specific sections, educational resources, outcome categories, and analytical capabilities without requiring a fundamental redesign of the project.
       </p>
     </LearnMoreContent>
     {/* LearnMoreContent end */}
@@ -205,23 +203,19 @@ const Method = () => {
 
     <p>
       The survey platform was developed with emphasis on maintainability,
-      structured data handling, usability, and operational stability. Its
-      architecture supports ongoing revision of survey content, terminology,
-      branching logic, and supporting information.
+      structured data handling, usability, and operational stability. 
     </p>
 
     {/* LearnMoreContent start */}
     <LearnMoreContent
       id="section_2_3"
-      header="Learn more about technical architecture"
+      header="More..."
       openSection={openSection}
       setOpenSection={setOpenSection}
     >
       <p>
-        This design allows the project to respond to emerging informational
-        needs, correct or clarify survey content, and incorporate future
-        refinements while preserving continuity of the survey framework and
-        accumulated methodological experience.
+        Its architecture supports ongoing revision of survey content, terminology,
+      branching logic, and supporting information. This design allows the project to respond to emerging informational needs, correct or clarify survey content, and incorporate future refinements while preserving continuity of the survey framework and accumulated methodological experience.
       </p>
     </LearnMoreContent>
     {/* LearnMoreContent end */}
@@ -239,7 +233,7 @@ const Method = () => {
     {/* LearnMoreContent start */}
     <LearnMoreContent
       id="section_2_4"
-      header="Learn more about public accessibility"
+      header="More..."
       openSection={openSection}
       setOpenSection={setOpenSection}
     >
@@ -265,7 +259,7 @@ const Method = () => {
     {/* LearnMoreContent start */}
     <LearnMoreContent
       id="section_2_5"
-      header="Learn more about independent ownership"
+      header="More..."
       openSection={openSection}
       setOpenSection={setOpenSection}
     >
@@ -794,6 +788,61 @@ const Method = () => {
             </LearnMoreContent>
             {/* End LearnMoreContent */}
           </section>
+        </section>
+
+        <section className="content-body" id="platform_reusuability">
+          <h2>9. Platform Reuseablity in Other Veterinary-Medical Contexts</h2>
+          <section className="subsection" id="platform_infrastructure_vs_survey_content">
+            <h3>9.1 Platform Infrastructure vs. Survey Content</h3>
+            <p>
+              The biggest challenge in a self-hosted survey project such as the <span className="emphasis">2026 LP/GOLPP Survey</span>  lies not in the design and implementation of the disease-specific questionnaire itself, but in the creation of a reliable and coherent underlying platform infrastructure. 
+            </p>
+            <LearnMoreContent
+              id="platform_infrastructure_vs_survey_content"
+              header="Read more..."
+              openSection={openSection}
+              setOpenSection={setOpenSection}
+              >
+              <p>The platform incorporates a reusable combination of front-end and back-end technologies, survey-engine integration, branching-logic systems, data-handling workflows, content-management structures, validation mechanisms, deployment procedures, and supporting development tools intended to support long-term observational research projects.</p>
+            </LearnMoreContent>
+            {/* End LearnMoreContent */}
+
+
+          </section>
+
+          <section className="subsection" id="separation_of_concerns">
+            <h3>9.2 Separation of Concerns </h3>
+            <p>The architecture was designed to separate survey content from the technical framework that delivers, validates, stores, and manages collected information.</p>
+            <LearnMoreContent
+              id="separation_of_concerns"
+              header="Read more..."
+              openSection={openSection}
+              setOpenSection={setOpenSection}
+              >
+              <p>As a result, future projects can leverage the existing infrastructure while replacing only the subject-matter content, survey logic, terminology, and research objectives appropriate to a different disease, specialty, or investigative focus.</p>
+            </LearnMoreContent>
+            {/* End LearnMoreContent */}
+          </section>
+
+          <section className="subsection" id="reuseable_survey_framework ">
+            <h3>9.3 Reuseable Survey Framework for Veterinary-Medical Data Collection</h3>
+            <p>A core objective of this project was to generate a digital framework and comprehensive toolset to eliminate the need for future project sponsors, researchers, advocacy organizations, veterinary institutions, or other stakeholders to recreate foundational survey infrastructure from the ground up.</p>
+            <LearnMoreContent
+              id="reuseable_survey_framework"
+              header="Read more..."
+              openSection={openSection}
+              setOpenSection={setOpenSection}
+              >
+              <p>
+                Instead, existing technical components can be adapted and extended to support new research initiatives while benefiting from previously developed workflows, tested implementation patterns, and accumulated operational experience.</p>
+              <p>
+                The resulting framework represents a reusable foundation for future veterinary-medical data-collection projects and provides a practical starting point upon which subject-matter experts can build without first solving the numerous technical challenges associated with developing and maintaining a modern survey platform.
+              </p>
+            </LearnMoreContent>
+            {/* End LearnMoreContent */}
+          </section>
+
+
         </section>
 
       </main>
