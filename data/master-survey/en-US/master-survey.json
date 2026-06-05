@@ -127,7 +127,7 @@
                 {
                   "type": "html",
                   "name": "LandingVersion",
-                  "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 1.0/26.05.06.01</p></div></div>"
+                  "html": "<div class='landing-survey-version-container'><div class='landing-survey-version'><img src='./img-lpl-logo.png' class='survey-version-logo' alt='LarParLife.org logo' width='500' height='600'><p class='landing-survey-version-text'>Version 1.0/26.06.05.01</p></div></div>"
                 }
               ]
             },
@@ -8424,22 +8424,12 @@
           "elements": [
             {
               "type": "panel",
-              "name": "ProcedureTTXHeadPanel",
+              "name": "ProcedureTTHeadPanel",
               "elements": [
                 {
                   "type": "html",
                   "name": "ProcedureTTHeading",
                   "html": "<h2>Questions About {CmpnName}'s Tracheostomy Surgery</h2>"
-                },
-                {
-                  "type": "html",
-                  "name": "ProcedureTTText",
-                  "html": "<p>Tracheostomy is most often performed as a salvage procedure in emergencies or after other LP surgeries have failed.</p>"
-                },
-                {
-                  "type": "html",
-                  "name": "ProcedureTTHeading",
-                  "html": "<h2>Questions About {CmpnName}'s Tracheostomy Surgery<h2>"
                 },
                 {
                   "type": "html",
@@ -11676,11 +11666,12 @@
             {
               "type": "panel",
               "name": "ConclusionOtherPathPanel",
-              "title": "These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?",
+              "title": "These questions speculate about what you would do if you were to have another dog with LP/GOLPP knowing what you know now about {CmpnName}'s LP/GOLPP journey.",
               "elements": [
                 {
                   "type": "radiogroup",
                   "name": "ConclusionOtherPath",
+                  "title": "If you were to have another dog with LP/GOLPP, would you do anything differently?",
                   "isRequired": true,
                   "choices": [
                     {

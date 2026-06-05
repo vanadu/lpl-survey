@@ -196,12 +196,7 @@ span.no-wrap {
 
 
 
-/* !VA  SURVEY HERO STYLES 
----------------------------
-*/
-/* --------------------------------------------------
-   Survey Hero
--------------------------------------------------- */
+/* !VA  SURVEY HERO STYLES */
 /* --------------------------------------------------
    Survey Hero
 -------------------------------------------------- */
@@ -324,7 +319,11 @@ span.no-wrap {
   object-position: center center;
 }
 
-.hero__content {
+.hero__overlay {
+  // !VA Empty div
+}
+
+.hero__headline {
   position: relative;
   z-index: 3;
   width: 100%;
@@ -342,7 +341,7 @@ span.no-wrap {
 
 }
 
-.hero-title-container {
+.hero-headline-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -361,7 +360,7 @@ span.no-wrap {
   }
 }
 
-.hero-title-heading  {
+.hero-headline-heading  {
   width: 100%;
   font-family: var(--font-secondary)!important;
   font-size: var(--font-size-6xl);
@@ -378,13 +377,6 @@ span.no-wrap {
 }
 
 .hero-cta-container {
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: center;
-  // // align-items: flex-end;
-  // width: 100%;
-  // padding-bottom: var(--s-3);
-  // position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -425,30 +417,6 @@ span.no-wrap {
   margin: 0 0 var(--s-2) 0 ;
 }
 
-
-
-
-
-
-
-// .hero-cta-text {
-//   font-family: var(--font-primary);
-//   color: #FFFFFF;
-//   font-size: var(--font-size-3xl);
-//   // font-variant: small-caps;
-//   // text-shadow: 2px 2px 2px white;
-//   font-weight: 700;
-//   // opacity: .9;
-// }
-
-// .hero-cta-icon {
-//   margin-right: var(--s-2);
-//   width: var(--s-6);
-//   width: 46px;
-//   height: auto;
-//   color: #FFFFFF;
-// }
-
 .hero-subtext-container {
   position: relative;
   width: 100%;
@@ -459,6 +427,10 @@ span.no-wrap {
   padding: 0 var(--s-2);
 }
 
+.hero-subtext {
+  // !VA No styles
+}
+
 .hero-slug {
   font-size: var(--font-size-sm);
   color: #313131;
@@ -466,7 +438,6 @@ span.no-wrap {
   text-transform: uppercase;
   @include mphone {
     font-size: var(--font-size-sm);
-    
   }
 }
 
@@ -485,6 +456,10 @@ span.no-wrap {
   }
 }
 
+.hero-logo-container {
+  // !VA No styles
+}
+
 .hero-logo {
   width: 80px;
   height: auto;
@@ -494,46 +469,18 @@ span.no-wrap {
   }
 }
 
-.hero-title-subheading {
-  font-family: var(--font-primary);
-  color: #bfbfbf;
-  padding: var(--s-1) 0;
-  font-size: var(--font-size-3xl);
-  font-weight: 600;
-  text-align: center;
-  font-variant: small-caps;
-  @include ldesktop {
-    // line-height: calc(2 * (var(--sjs-font-questiontitle-size, var(--sjs-font-size, 16px))));
-    text-align: left;
+/* !VA  BROWSE HERO STYLES */
+.browse-hero-content {
+  background: rgba(255, 255, 0, .3) !important; //devyel
+  background: rgba(255, 255, 0, .3) !important; //devyel
+  h2 {
+    font-family: var(--font-secondary);
+    text-align: center;
+  }
+  hr {
+    margin: var(--s-2) 0;
   }
 }
-
-
-.hero-version-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-version-logo {
-  display: block;
-  width: 80px;
-  margin: 0 auto;
-  height: auto;
-  opacity: .85;
-  @include tablet {
-    display: block;
-    width: 120px
-  }
-  @include desktop {
-    display: block;
-    width: 120px
-  }
-  @include ldesktop {
-    display: block; 
-    width: 200px;
-  }
-}
-
 
 
 /* !VA  START SURVEY PAGE STYLES 
@@ -840,6 +787,26 @@ ul.showmore_survey_icons_description {
   padding: var(--s-2) var(--s-6) 0;
 }
 
+.browse-page-nav {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    font-size: var(--font-size-md);
+    color: var(--c-link-accent);
+    
+  }
+  span.is-disabled {
+    font-size: var(--font-size-md);
+    color: gray;
+  }
+  svg {
+    vertical-align: -3px;
+  }
+}
+
 // !VA browse-header styles appears on every browse page
 .browse-header-container {
   display: flex;
@@ -877,7 +844,7 @@ ul.showmore_survey_icons_description {
 .browse-content-heading {
   margin: 0 0 var(--s-2) 0;
   font-family: var(--font-secondary);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
 }
 
 .browse-content-subheading {
@@ -945,15 +912,79 @@ ul.showmore_survey_icons_description {
 #PrimaryReferralPanel,
 #PrimarySurgeryPanel,
 #PrimaryConfidencePanel,
-// #,
-// #,
-// #,
-// #,
-// #,
-// #,
-// #,
-// #,
-// #,
+#DiagnosisDetailsPanel,
+#MedicationHeadPanel,
+#MedicationPrescriptionPanel,
+#MedicationRefluxMedicationPanel,
+#MedicationSupplementsTypePanel,
+#ProcedureHeadPanel,
+#ProcedureTypePanel,
+#ProcedureUALHeadPanel,
+#ProcedureUALAgePanel,
+#ProcedureUALAgeDetailsPanel,
+#ProcedureUALSurgeryPanel,
+#ProcedureUALCostPanel,
+#ProcedureUALConditionPanel,
+#ProcedureUALLongTermPanel,
+#ProcedureESIHeadPanel,
+#ProcedureESIAgePanel,
+#ProcedureESIAgeDetailsPanel,
+#ProcedureESISurgeryPanel,
+#ProcedureESICostPanel,
+#ProcedureESIConditionPanel,
+#ProcedureESILongTermPanel,
+
+#ProcedureBVEAPHeadPanel,
+#ProcedureBVEAPAgePanel,
+#ProcedureBVEAPAgeDetailsPanel,
+#ProcedureBVEAPSurgeryPanel,
+#ProcedureBVEAPCostPanel,
+#ProcedureBVEAPConditionPanel,
+#ProcedureBVEAPLongTermPanel,
+
+#ProcedurePAEHeadPanel,
+#ProcedurePAEAgePanel,
+#ProcedurePAEAgeDetailsPanel,
+#ProcedurePAESurgeryPanel,
+#ProcedurePAECostPanel,
+#ProcedurePAEConditionPanel,
+#ProcedurePAELongTermPanel,
+
+#ProcedureVCCHeadPanel,
+#ProcedureVCCAgePanel,
+#ProcedureVCCAgeDetailsPanel,
+#ProcedureVCCSurgeryPanel,
+#ProcedureVCCCostPanel,
+#ProcedureVCCConditionPanel,
+#ProcedureVCCLongTermPanel,
+#ProcedurePLEHeadPanel,
+#ProcedurePLEAgePanel,
+#ProcedurePLEAgeDetailsPanel,
+#ProcedurePLESurgeryPanel,
+#ProcedurePLECostPanel,
+#ProcedurePLEConditionPanel,
+#ProcedurePLELongTermPanel,
+#ProcedureTTHeadPanel,
+#ProcedureTTAgePanel,
+#ProcedureTTAgeDetailsPanel,
+#ProcedureTTSurgeryPanel,
+#ProcedureTTCostPanel,
+#ProcedureTTConditionPanel,
+#ProcedureTTLongTermPanel,
+#ProcedureOtherHeadPanel,
+#ProcedureOtherAgePanel,
+#ProcedureOtherAgeDetailsPanel,
+#ProcedureOtherSurgeryPanel,
+#ProcedureOtherCostPanel,
+#ProcedureOtherConditionPanel,
+#ProcedureOtherLongTermPanel,
+
+#TherapyHeadPanel,
+#TherapyTypePanel,
+#BreathingHeadPanel,
+#BreathingCrisisPanel,
+#BreathingAspirationPanel,
+// #NeuropathyHeadPanel,
 // #,
 // #,
 // #,

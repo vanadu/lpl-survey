@@ -43,14 +43,10 @@ const SurveyHero = () => {
 
                   <div className="hero__overlay"></div>
 
-                  <div className="hero__content">
-                    <div className="hero-title-container">
-                      <h2 className="hero-title-heading">LP/GOLPP<span className="mobile-show-inline"><br /></span><span className="no-wrap">&nbsp;Survey&nbsp;2026</span></h2>
+                  <div className="hero__headline">
+                    <div className="hero-headline-container">
+                      <h2 className="hero-headline-heading">LP/GOLPP<span className="mobile-show-inline"><br /></span><span className="no-wrap">&nbsp;Survey&nbsp;2026</span></h2>
                     </div>
-                    {/* <div className="hero-cta-container">
-                      <BsClipboardCheck className="hero-cta-icon" />
-                      <div className="hero-cta-text">Start Now!</div>
-                    </div> */}
                   </div>
                 </div>
 
@@ -59,7 +55,7 @@ const SurveyHero = () => {
           <div className="hero-subtext-container">
             <div className="hero-subtext">
               <h3 className="hero-slug">powered by larparlife.org</h3>
-              <p className="hero-version">Version 0.9/26.03.27.01</p>
+              <p className="hero-version">Version 1.0/26.06.05.01</p>
             </div>
             <div className="logo-container">
               <Image 

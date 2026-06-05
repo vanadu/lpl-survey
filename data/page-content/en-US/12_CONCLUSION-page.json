@@ -417,11 +417,12 @@
         {
           "type": "panel",
           "name": "ConclusionOtherPathPanel",
-          "title": "These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?",
+          "title": "These questions speculate about what you would do if you were to have another dog with LP/GOLPP knowing what you know now about {CmpnName}'s LP/GOLPP journey.",
           "elements": [
             {
               "type": "radiogroup",
               "name": "ConclusionOtherPath",
+              "title": "If you were to have another dog with LP/GOLPP, would you do anything differently?",
               "isRequired": true,
               "choices": [
                 {

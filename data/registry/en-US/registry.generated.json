@@ -1,7 +1,7 @@
 {
   "meta": {
     "registryVersion": "1.0.0",
-    "builtAt": "2026-06-05T11:55:16.394Z",
+    "builtAt": "2026-06-05T16:03:09.818Z",
     "builtFrom": "E:\\cara\\larparlife-bin\\lpl-survey\\lpl-survey-scss\\data\\master-survey\\en-US\\master-survey.json",
     "calculatedValues": [
       "cvAgeInMonths",
@@ -5977,8 +5977,8 @@
       "hasTitle": false,
       "hasVisibleIf": false
     },
-    "ProcedureTTXHeadPanel": {
-      "name": "ProcedureTTXHeadPanel",
+    "ProcedureTTHeadPanel": {
+      "name": "ProcedureTTHeadPanel",
       "type": "panel",
       "role": "panel",
       "collect": false,
@@ -8094,7 +8094,7 @@
         "ConclusionCard2Panel"
       ],
       "hasTitle": true,
-      "title": "These questions are speculative. If you were to have another dog with LP, would you choose a different path along their LP/GOLPP journey?",
+      "title": "These questions speculate about what you would do if you were to have another dog with LP/GOLPP knowing what you know now about {CmpnName}'s LP/GOLPP journey.",
       "hasVisibleIf": false
     },
     "ConclusionOtherPath": {
@@ -8107,7 +8107,8 @@
         "ConclusionCard2Panel",
         "ConclusionOtherPathPanel"
       ],
-      "hasTitle": false,
+      "hasTitle": true,
+      "title": "If you were to have another dog with LP/GOLPP, would you do anything differently?",
       "hasVisibleIf": false,
       "isRequired": true
     },

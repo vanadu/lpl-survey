@@ -10,7 +10,7 @@ const DATA_ROOT_DIR = path.join(PROJECT_ROOT, "data");
 const PAGE_CONTENT_DIR = path.join(DATA_ROOT_DIR, "page-content", "en-US");
 const OUTPUT_DIR = path.join(PROJECT_ROOT, "src", "pages", "browse-mode");
 const COMPONENT_IMPORT_PATH = "../../components/ShowAnswerContent";
-const BROWSEMENU_IMPORT_PATH = "../../components/BrowseMenu";
+const BROWSEHERO_IMPORT_PATH = "../../components/BrowseHero";
 
 const EXCLUSIONS_PATH = path.join(
   PROJECT_ROOT,
@@ -626,7 +626,8 @@ function renderPageNav(pageObj, navContext) {
 
   return `      <div className="browse-page-nav" aria-label="Browse page navigation">
 ${prevControl}
-        <div className="browse-page-marker"${markerId}></div>
+
+ 
 ${nextControl}
       </div>`;
 }
@@ -668,7 +669,7 @@ function buildPageComponent(pageObj, fileInfo, exclusions, sourceFilename, navCo
 
   return `import React, { useState } from "react";
 import ShowAnswerContent from "${COMPONENT_IMPORT_PATH}";
-import BrowseMenu from "${BROWSEMENU_IMPORT_PATH}";
+import BrowseHero from "${BROWSEHERO_IMPORT_PATH}";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "public/img-lpl-org-logo.png";
@@ -679,17 +680,9 @@ const ${fileInfo.componentName} = () => {
 
   return (
     <>
-      <BrowseMenu />
       <main className="page browse">
         <header className="browse-header-container">
-          <div className="browse-header-title-container">
-            <h2 className="browse-header-title">LP-GOLPP Survey 2026</h2>
-            <p className="browse-header-slug">powered by larparlife.org</p>
-            <p className="browse-header-mode">Browse Mode</p>
-          </div>
-          <div className="browse-logo-container">
-            <Image src={Logo} className="browse-header-logo" alt="LarParLife.org" />
-          </div>
+          <BrowseHero />
         </header>
         <div className="browse-page">
 ${pageNav}
