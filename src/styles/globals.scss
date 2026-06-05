@@ -916,19 +916,71 @@ ul.showmore_survey_icons_description {
 // !VA LANDING browse mode modifications
 // -------------------------------------
 
+
+// !VA Remove border and whitespace from panels
+#LandingWelcomePanel, 
+#CmpnInfoAnimalTypePanel,
+#CmpnInfoBreedGenderPanel,
+#CmpnInfoWeightPanel,
+#CmpnInfoWeightDetailsPanel,
+#dcsdCmpnInfoAgeDetailsPanel,
+#lvngCmpnInfoAgeDetailsPanel,
+#FactorsHeadPanel,
+#FactorsSourcesPanel,
+#FactorsCostPanel,
+#FactorsSymptomsPanel,
+#FactorsSurgeryRisksPanel,
+#FactorsGeneralPanel,
+#FactorsCircumstancesPanel,
+#FactorsOtherPanel,
+#SymptomsHeadPanel,
+#SymptomsAgePanel,
+#SymptomsAgeDetailsPanel,
+#SymptomsDetailsPanel,
+#SymptomsIntubationPanel,
+#SymptomsOtherConditionsPanel,
+#PrimaryHeadPanel,
+#PrimaryInflammationPanel,
+#PrimaryInfoPanel,
+#PrimaryReferralPanel,
+#PrimarySurgeryPanel,
+#PrimaryConfidencePanel,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+// #,
+
+{ border: none; margin: 0; padding: 0 }
+
 // !VA Hide elements
 #LandingHeaderPanel, #LandingAboutPrivacyText01, #LandingAboutPrivacyOrderedList, #LandingConsentText, #LandingConsent { display: none; }
 
-// !VA Remove border and whitespace
-#LandingWelcomePanel { border: none; margin: 0; padding: 0 }
 
 // !VA Content changes 
 #LandingAboutPrivacyHeading::after {
-  content: "This section of the survey explains what personal information the survey collects and displayslinks to our Privacy Policy.";
+  content: "This section of the survey explains what personal information the survey collects and displays links to our Privacy Policy.";
+  background: var(--c-content-highlight);
 }
 
 #LandingAboutConsentHeading::after {
   content: "This section of the survey asks for your consent to proceed with the survey and links to our Consent Policy.";
+  background: var(--c-content-highlight);
 }
 
 // !VA USER_INFO Content modifications
@@ -939,12 +991,13 @@ ul.showmore_survey_icons_description {
 
 // Browse-specific text
 #UserInfoHead::after {
-    content: "This section of the survey asks for your companion's name, whether your companion has crossed over the Rainbow Bridge, and if you're sure like to continue.";
+  content: "This section of the survey asks for your companion's name, whether your companion has crossed over the Rainbow Bridge, and if you're sure like to continue.";
+  background: var(--c-content-highlight);
 }
 
 #UserInfoHeading::after {
-    content: "Here you'll be asked your first name, a contact address (Facebook or email), which country you live in, and optional questions about your age and gender.";
-    margin: 0 0 var(--s-) 0;
+  content: "Here you'll be asked your first name, a contact address (Facebook or email), which country you live in, and optional questions about your age and gender.";
+    background: var(--c-content-highlight);
 
 }
 
