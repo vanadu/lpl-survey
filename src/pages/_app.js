@@ -96,36 +96,32 @@ function MyApp({ Component, pageProps }) {
       </Head>
       
       <Layout>
-        <DefaultSeo
-          title="Lar Par in Dogs: The 21st Century Guide to Canine Laryngeal Paralysis"
-          description="All about about laryngeal paralysis in dogs: symptoms, surgery, stent and other alternative treatments."
-          openGraph={{
-            title: 'Lar Par in Dogs: The 21st Century Guide to Canine Laryngeal Paralysis',
-            description: 'All about about laryngeal paralysis in dogs: symptoms, surgery, stent and other alternative treatments.',
-            type: 'website',
-            locale: 'en_US',
-            url: 'https://larparlife.com',
-            images: {
-              url: 'https://staging.crossandhigh.com/images/img-opengraph-larparlife.jpg',
-              width: '1650',
-              height: '856',
-              alt: 'Lar Par Life'
-            }
-          }}
-
-          twitter={{
-            description: 'laryngeal paralysis in dogs: symptoms, surgery, stent and other alternative treatments.',
-            handle: '@larparlife',
-            site: '@larparlife',
-            images: {
-              url: 'https://staging.crossandhigh.com/images/TwitterCardImage_LarParLife_2022.12.12A.jpg',
-              width: '1650',
-              height: '856',
-              alt: 'Lar Par Life'
+      <DefaultSeo
+        title="LarPar/GOLPP Survey 2026."
+        description="Survey to collect LP/GOLPP information from the people who love their LP dogs the most."
+        openGraph={{
+          title: 'LarPar/GOLPP Survey 2026: Powered by larparlife.org',
+          description: 'Survey to collect LP/GOLPP information from the people who love their LP dogs the most.',
+          type: 'website',
+          locale: 'en_US',
+          url: 'https://larparlife.org',
+          images: [
+            {
+              url: 'https://larparlife.org/og/lplsurvey-og.png',
+              width: 1200,
+              height: 630,
+              alt: 'LarPar/GOLPP Survey 2026',
+              type: 'image/png',
             },
-            cardType: 'summary_large_image',
-          }}
-          />
+          ],
+          site_name: 'LarParLife.org',
+        }}
+        twitter={{
+          handle: '@larparlife',
+          site: '@larparlife',
+          cardType: 'summary_large_image',
+        }}
+      />
         <Component {...pageProps} />
       </Layout>
     </>

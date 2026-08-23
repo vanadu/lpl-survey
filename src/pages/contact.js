@@ -125,7 +125,7 @@ export default function MessageForm() {
   return (
     <>
       <NextSeo 
-        title="LP/GOLPP Survey 2006: Contact Us"
+        title="LP/GOLPP Survey 2026: Contact Us"
         description="Contact us to provide feedback, suggestions or comments about the 2026 LP/GOLPP Survey powered by LarParLife.org."
         canonical="https://larparlife.com/contact"
       />
